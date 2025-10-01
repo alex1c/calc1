@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Header from '@/components/header';
+import Breadcrumbs from '@/components/breadcrumbs';
 import PaperWeightCalculator from '@/components/calculators/paper-weight-calculator';
 import { Metadata } from 'next';
 
@@ -15,12 +16,13 @@ export default function PaperWeightPage() {
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
+			<Breadcrumbs
+				items={[
+					{ label: 'Математика', href: '/math' },
+					{ label: 'Калькулятор веса бумаги' },
+				]}
+			/>
 			<PaperWeightCalculator />
 		</div>
 	);
 }
-
-
-
-
-

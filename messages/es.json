@@ -13,6 +13,21 @@
 		"name": "Calculadora #1",
 		"slogan": "Un sitio. Todas las calculadoras."
 	},
+	"breadcrumbs": {
+		"home": "Inicio",
+		"categories": {
+			"finance": "Finanzas",
+			"math": "Matemáticas",
+			"life": "Vida",
+			"auto": "Auto",
+			"construction": "Construcción",
+			"time": "Tiempo",
+			"health": "Salud",
+			"science": "Ciencia",
+			"converter": "Convertidores",
+			"fun": "Diversión"
+		}
+	},
 	"navigation": {
 		"home": "Inicio",
 		"finance": "Finanzas",

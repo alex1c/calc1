@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Header from '@/components/header';
+import Breadcrumbs from '@/components/breadcrumbs';
 import MortgageCalculator from '@/components/calculators/mortgage-calculator';
 import { Metadata } from 'next';
 
@@ -15,6 +16,12 @@ export default function MortgagePage() {
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
+			<Breadcrumbs
+				items={[
+					{ label: 'Финансы', href: '/finance' },
+					{ label: 'Ипотечный калькулятор' },
+				]}
+			/>
 			<MortgageCalculator />
 		</div>
 	);

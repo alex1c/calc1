@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Header from '@/components/header';
+import Breadcrumbs from '@/components/breadcrumbs';
 import BMICalculator from '@/components/calculators/bmi-calculator';
 import { Metadata } from 'next';
 
@@ -15,12 +16,13 @@ export default function BMIPage() {
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
+			<Breadcrumbs
+				items={[
+					{ label: 'Здоровье', href: '/health' },
+					{ label: 'Калькулятор ИМТ' },
+				]}
+			/>
 			<BMICalculator />
 		</div>
 	);
 }
-
-
-
-
-

@@ -13,6 +13,21 @@
 		"name": "Rechner #1",
 		"slogan": "Eine Seite. Alle Rechner."
 	},
+	"breadcrumbs": {
+		"home": "Startseite",
+		"categories": {
+			"finance": "Finanzen",
+			"math": "Mathematik",
+			"life": "Leben",
+			"auto": "Auto",
+			"construction": "Bauwesen",
+			"time": "Zeit",
+			"health": "Gesundheit",
+			"science": "Wissenschaft",
+			"converter": "Konverter",
+			"fun": "Spaß"
+		}
+	},
 	"navigation": {
 		"home": "Startseite",
 		"finance": "Finanzen",

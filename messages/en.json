@@ -13,6 +13,21 @@
 		"name": "Calculator #1",
 		"slogan": "One site. All calculators."
 	},
+	"breadcrumbs": {
+		"home": "Home",
+		"categories": {
+			"finance": "Finance",
+			"math": "Math",
+			"life": "Life",
+			"auto": "Auto",
+			"construction": "Construction",
+			"time": "Time",
+			"health": "Health",
+			"science": "Science",
+			"converter": "Converters",
+			"fun": "Fun"
+		}
+	},
 	"navigation": {
 		"home": "Home",
 		"finance": "Finance",

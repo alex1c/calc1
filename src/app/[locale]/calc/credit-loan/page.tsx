@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Header from '@/components/header';
+import Breadcrumbs from '@/components/breadcrumbs';
 import CreditCalculator from '@/components/calculators/credit-calculator';
 import { Metadata } from 'next';
 
@@ -15,6 +16,12 @@ export default function CreditLoanPage() {
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
+			<Breadcrumbs
+				items={[
+					{ label: 'Финансы', href: '/finance' },
+					{ label: 'Кредитный калькулятор' },
+				]}
+			/>
 			<CreditCalculator />
 		</div>
 	);
