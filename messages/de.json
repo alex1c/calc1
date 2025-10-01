@@ -186,6 +186,166 @@
 					"consult": "Mit Finanzexperten beraten"
 				}
 			}
+		},
+		"deposit": {
+			"title": "Einlagenrechner",
+			"description": "Berechnen Sie Bankeinlagen-Renditen mit Kapitalisierung, Einzahlungen und Abhebungen",
+			"seo": "Einlagenrechner, Bankeinlage, Sparkonto, Zinskapitalisierung",
+			"form": {
+				"title": "Einlagenparameter",
+				"currency": "Währung",
+				"amount": "Einlagenbetrag",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"depositType": "Einlagentyp",
+				"depositTypes": {
+					"simple": "Einfache Zinsen (ohne Kapitalisierung)",
+					"capitalized": "Mit Zinskapitalisierung",
+					"compound": "Zinseszins (monatliche Verzinsung)"
+				},
+				"capitalizationPeriod": "Kapitalisierungsperiode",
+				"capitalizationPeriods": {
+					"monthly": "Monatlich",
+					"quarterly": "Vierteljährlich",
+					"yearly": "Jährlich"
+				},
+				"monthlyAddition": "Monatliche Einzahlung",
+				"monthlyWithdrawal": "Monatliche Abhebung",
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Einlagenparameter ein und klicken Sie auf 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"finalAmount": "Endbetrag",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveRate": "Effektiver Zinssatz",
+				"term": "Einlagenlaufzeit",
+				"months": "Monate",
+				"downloadSchedule": "Zeitplan herunterladen (CSV)",
+				"scheduleTitle": "Zinsabgrenzungsplan",
+				"table": {
+					"month": "Monat",
+					"startAmount": "Anfangsbetrag",
+					"interestEarned": "Verdiente Zinsen",
+					"addition": "Einzahlung",
+					"withdrawal": "Abhebung",
+					"endAmount": "Endbetrag",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Alles über Bankeinlagen: Berechnungen, Typen und Tipps",
+				"overview": {
+					"title": "Was ist eine Bankeinlage",
+					"content": "Eine Bankeinlage ist eine Möglichkeit, Ihr Geld zu erhalten und zu vermehren, indem Sie es zu einem bestimmten Zinssatz bei einer Bank anlegen. Es ist eine der zuverlässigsten und beliebtesten Anlagemethoden für Privatpersonen."
+				},
+				"types": {
+					"title": "Arten von Bankeinlagen",
+					"content": "Es gibt mehrere Hauptarten von Bankeinlagen:",
+					"simple": "Einfache Zinseinlagen — Zinsen werden berechnet, aber nicht zum Kapital hinzugefügt",
+					"capitalized": "Kapitalisierte Einlagen — Zinsen werden periodisch zum Kapital hinzugefügt",
+					"compound": "Zinseszins-Einlagen — Zinsen werden auf den ständig wachsenden Betrag berechnet"
+				},
+				"advantages": {
+					"title": "Vorteile von Bankeinlagen",
+					"content": "Bankeinlagen haben viele Vorteile:",
+					"safety": "Hohe Zuverlässigkeit und Einlagensicherung",
+					"guaranteed": "Garantierte Rendite",
+					"liquidity": "Möglichkeit der vorzeitigen Abhebung (mit Zinsverlust)",
+					"tax": "Steuervorteile bei Zinsen"
+				},
+				"tips": {
+					"title": "Tipps zur Einlagenauswahl",
+					"content": "Um maximalen Nutzen aus Bankeinlagen zu ziehen:",
+					"compare": "Vergleichen Sie Bedingungen bei verschiedenen Banken",
+					"term": "Wählen Sie optimale Einlagenlaufzeit",
+					"capitalization": "Betrachten Sie Einlagen mit Zinskapitalisierung",
+					"early": "Berücksichtigen Sie vorzeitige Abhebungsoptionen"
+				}
+			}
+		},
+		"savings": {
+			"title": "Sparrechner",
+			"description": "Berechnen Sie Ersparnisse, monatliche Beiträge und das Erreichen finanzieller Ziele",
+			"seo": "Sparrechner, Ersparnisse, finanzielle Ziele, Geldmanagement",
+			"form": {
+				"title": "Sparparameter",
+				"targetAmount": "Zielbetrag (€)",
+				"initialAmount": "Anfangsbetrag (€)",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"monthlyContribution": "Monatlicher Beitrag (€)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"interestType": "Zinstyp",
+				"interestTypes": {
+					"none": "Keine Zinsen",
+					"simple": "Einfache Zinsen",
+					"compound": "Zinseszinsen"
+				},
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Sparparameter ein und klicken Sie 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"finalAmount": "Endbetrag",
+				"totalContributions": "Gesamtbeiträge",
+				"totalInterest": "Zinserträge",
+				"monthlyContribution": "Monatlicher Beitrag",
+				"achievementMessage": "Ziel im {month}. Monat erreicht",
+				"notAchievable": "Ziel mit aktuellen Parametern nicht erreichbar",
+				"downloadSchedule": "Zeitplan herunterladen (CSV)",
+				"scheduleTitle": "Sparplan",
+				"table": {
+					"month": "Monat",
+					"startAmount": "Anfang",
+					"contribution": "Beitrag",
+					"interest": "Zinsen",
+					"endAmount": "Ende",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Alles über Sparen: Berechnungen, Strategien und Tipps",
+				"overview": {
+					"title": "Was ist Sparen",
+					"content": "Sparen ist der Prozess der schrittweisen Geldansammlung zur Erreichung finanzieller Ziele. Es ist die Grundlage finanzieller Stabilität und Unabhängigkeit."
+				},
+				"advantages": {
+					"title": "Sparvorteile",
+					"content": "Sparen bietet viele Vorteile:",
+					"goalSetting": "Erreichen finanzieller Ziele",
+					"compoundInterest": "Zinseszinseffekt",
+					"flexibility": "Flexibilität im Finanzmanagement",
+					"discipline": "Entwicklung finanzieller Disziplin"
+				},
+				"strategies": {
+					"title": "Sparstrategien",
+					"content": "Es gibt mehrere effektive Sparstrategien:",
+					"automation": "Automatisierung des Sparens",
+					"investment": "Geldanlage",
+					"budgeting": "Budgetplanung",
+					"emergency": "Notfallfonds erstellen"
+				},
+				"tips": {
+					"title": "Spartipps",
+					"content": "Für erfolgreiches Sparen:",
+					"start": "Beginnen Sie mit kleinen Beträgen",
+					"consistency": "Seien Sie konsequent",
+					"review": "Überprüfen Sie regelmäßig Ihre Ziele",
+					"patience": "Seien Sie geduldig"
+				}
+			}
 		}
 	}
 }

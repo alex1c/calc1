@@ -1,45 +1,64 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { CreditCard, Calculator, TrendingUp, DollarSign } from 'lucide-react';
+import {
+	CreditCard,
+	Calculator,
+	TrendingUp,
+	PiggyBank,
+	Car,
+	Home,
+} from 'lucide-react';
 
-const calculators = [
+const getCalculators = (t: any) => [
 	{
 		id: 'credit-loan',
-		title: 'Credit Loan Calculator',
-		description:
-			'Calculate monthly loan payments, total interest, and payment schedule',
+		title: t('calculators.credit-loan.title'),
+		description: t('calculators.credit-loan.description'),
 		icon: CreditCard,
 		href: '/calc/credit-loan',
 	},
 	{
 		id: 'mortgage',
-		title: 'Mortgage Calculator',
-		description:
-			'Calculate mortgage payments, amortization schedule, and total cost',
-		icon: Calculator,
+		title: t('calculators.mortgage.title'),
+		description: t('calculators.mortgage.description'),
+		icon: Home,
 		href: '/calc/mortgage',
 	},
 	{
+		id: 'auto-loan',
+		title: t('calculators.auto-loan.title'),
+		description: t('calculators.auto-loan.description'),
+		icon: Car,
+		href: '/calc/auto-loan',
+	},
+	{
+		id: 'consumer-loan',
+		title: t('calculators.consumer-loan.title'),
+		description: t('calculators.consumer-loan.description'),
+		icon: Calculator,
+		href: '/calc/consumer-loan',
+	},
+	{
 		id: 'investment',
-		title: 'Investment Calculator',
-		description:
-			'Calculate compound interest, future value, and investment returns',
+		title: t('calculators.deposit.title'),
+		description: t('calculators.deposit.description'),
 		icon: TrendingUp,
 		href: '/calc/investment',
 	},
 	{
-		id: 'tax',
-		title: 'Tax Calculator',
-		description: 'Calculate income tax, deductions, and tax savings',
-		icon: DollarSign,
-		href: '/calc/tax',
+		id: 'savings',
+		title: t('calculators.savings.title'),
+		description: t('calculators.savings.description'),
+		icon: PiggyBank,
+		href: '/calc/savings',
 	},
 ];
 
 export default function FinancePage() {
 	const t = useTranslations();
 	const locale = useLocale();
+	const calculators = getCalculators(t);
 
 	return (
 		<div className='min-h-screen bg-gray-50'>

@@ -1,7 +1,6 @@
 {
-  "/not-found": "app/not-found.js",
+  "/[locale]/calc/savings/page": "app/[locale]/calc/savings/page.js",
   "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/search/page": "app/[locale]/search/page.js",
   "/[locale]/finance/page": "app/[locale]/finance/page.js",
   "/[locale]/calc/credit-loan/page": "app/[locale]/calc/credit-loan/page.js",
   "/[locale]/calc/mortgage/page": "app/[locale]/calc/mortgage/page.js",

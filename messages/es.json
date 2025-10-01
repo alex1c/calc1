@@ -186,6 +186,166 @@
 					"consult": "Consultar con expertos financieros"
 				}
 			}
+		},
+		"deposit": {
+			"title": "Calculadora de Depósitos",
+			"description": "Calcular rendimientos de depósitos bancarios con capitalización, aportaciones y retiros",
+			"seo": "calculadora de depósitos, depósito bancario, cuenta de ahorros, capitalización de intereses",
+			"form": {
+				"title": "Parámetros del Depósito",
+				"currency": "Moneda",
+				"amount": "Cantidad del Depósito",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"depositType": "Tipo de Depósito",
+				"depositTypes": {
+					"simple": "Interés Simple (Sin Capitalización)",
+					"capitalized": "Con Capitalización de Intereses",
+					"compound": "Interés Compuesto (Capitalización Mensual)"
+				},
+				"capitalizationPeriod": "Período de Capitalización",
+				"capitalizationPeriods": {
+					"monthly": "Mensual",
+					"quarterly": "Trimestral",
+					"yearly": "Anual"
+				},
+				"monthlyAddition": "Aportación Mensual",
+				"monthlyWithdrawal": "Retiro Mensual",
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros del depósito y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"finalAmount": "Cantidad Final",
+				"totalInterest": "Intereses Totales",
+				"effectiveRate": "Tasa Efectiva",
+				"term": "Plazo del Depósito",
+				"months": "meses",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Acumulación de Intereses",
+				"table": {
+					"month": "Mes",
+					"startAmount": "Cantidad Inicial",
+					"interestEarned": "Intereses Devengados",
+					"addition": "Aportación",
+					"withdrawal": "Retiro",
+					"endAmount": "Cantidad Final",
+					"moreMonths": "meses adicionales"
+				}
+			},
+			"seo": {
+				"title": "Todo sobre Depósitos Bancarios: Cálculos, Tipos y Consejos",
+				"overview": {
+					"title": "Qué es un Depósito Bancario",
+					"content": "Un depósito bancario es una forma de preservar y hacer crecer su dinero colocándolo en un banco a una tasa de interés determinada. Es una de las formas de inversión más confiables y populares para particulares."
+				},
+				"types": {
+					"title": "Tipos de Depósitos Bancarios",
+					"content": "Existen varios tipos principales de depósitos bancarios:",
+					"simple": "Depósitos de interés simple — los intereses se calculan pero no se suman al capital",
+					"capitalized": "Depósitos capitalizados — los intereses se suman periódicamente al capital",
+					"compound": "Depósitos de interés compuesto — los intereses se calculan sobre la cantidad en constante crecimiento"
+				},
+				"advantages": {
+					"title": "Ventajas de los Depósitos Bancarios",
+					"content": "Los depósitos bancarios tienen muchas ventajas:",
+					"safety": "Alta confiabilidad y protección de depósitos",
+					"guaranteed": "Rendimientos garantizados",
+					"liquidity": "Opción de retiro anticipado (con pérdida de intereses)",
+					"tax": "Beneficios fiscales en intereses"
+				},
+				"tips": {
+					"title": "Consejos para Seleccionar Depósitos",
+					"content": "Para obtener el máximo beneficio de los depósitos bancarios:",
+					"compare": "Compare condiciones en diferentes bancos",
+					"term": "Elija el plazo óptimo del depósito",
+					"capitalization": "Considere depósitos con capitalización de intereses",
+					"early": "Tenga en cuenta las opciones de retiro anticipado"
+				}
+			}
+		},
+		"savings": {
+			"title": "Calculadora de Ahorros",
+			"description": "Calcular ahorros, contribuciones mensuales y alcanzar objetivos financieros",
+			"seo": "calculadora de ahorros, ahorros, objetivos financieros, gestión del dinero",
+			"form": {
+				"title": "Parámetros de Ahorro",
+				"targetAmount": "Cantidad Objetivo (€)",
+				"initialAmount": "Cantidad Inicial (€)",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"monthlyContribution": "Contribución Mensual (€)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"interestType": "Tipo de Interés",
+				"interestTypes": {
+					"none": "Sin Intereses",
+					"simple": "Interés Simple",
+					"compound": "Interés Compuesto"
+				},
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese parámetros de ahorro y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"finalAmount": "Cantidad Final",
+				"totalContributions": "Contribuciones Totales",
+				"totalInterest": "Intereses Ganados",
+				"monthlyContribution": "Contribución Mensual",
+				"achievementMessage": "Objetivo alcanzado en el mes {month}",
+				"notAchievable": "Objetivo no alcanzable con parámetros actuales",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Ahorros",
+				"table": {
+					"month": "Mes",
+					"startAmount": "Inicio",
+					"contribution": "Contribución",
+					"interest": "Intereses",
+					"endAmount": "Final",
+					"moreMonths": "meses más"
+				}
+			},
+			"seo": {
+				"title": "Todo sobre Ahorros: Cálculos, Estrategias y Consejos",
+				"overview": {
+					"title": "Qué son los Ahorros",
+					"content": "Los ahorros son el proceso de acumular dinero gradualmente para alcanzar objetivos financieros. Es la base de la estabilidad e independencia financiera."
+				},
+				"advantages": {
+					"title": "Beneficios de los Ahorros",
+					"content": "Los ahorros proporcionan muchos beneficios:",
+					"goalSetting": "Alcanzar objetivos financieros",
+					"compoundInterest": "Efecto del interés compuesto",
+					"flexibility": "Flexibilidad en la gestión financiera",
+					"discipline": "Desarrollar disciplina financiera"
+				},
+				"strategies": {
+					"title": "Estrategias de Ahorro",
+					"content": "Existen varias estrategias efectivas de ahorro:",
+					"automation": "Automatizar ahorros",
+					"investment": "Invertir fondos",
+					"budgeting": "Planificación presupuestaria",
+					"emergency": "Crear fondo de emergencia"
+				},
+				"tips": {
+					"title": "Consejos de Ahorro",
+					"content": "Para ahorrar exitosamente:",
+					"start": "Comience con cantidades pequeñas",
+					"consistency": "Sea consistente",
+					"review": "Revise regularmente sus objetivos",
+					"patience": "Sea paciente"
+				}
+			}
 		}
 	}
 }

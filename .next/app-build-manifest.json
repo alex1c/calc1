@@ -61,10 +61,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/calc/investment/page.js"
     ],
-    "/not-found": [
+    "/[locale]/calc/consumer-loan/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/[locale]/calc/consumer-loan/page.js"
+    ],
+    "/[locale]/calc/savings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/savings/page.js"
     ]
   }
 }

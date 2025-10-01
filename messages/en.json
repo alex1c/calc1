@@ -274,6 +274,340 @@
 					"consult": "Consult with mortgage brokers"
 				}
 			}
+		},
+		"deposit": {
+			"title": "Deposit Calculator",
+			"description": "Calculate bank deposit returns with capitalization, additions and withdrawals",
+			"seo": "deposit calculator, bank deposit, savings account, interest capitalization",
+			"form": {
+				"title": "Deposit Parameters",
+				"currency": "Currency",
+				"amount": "Deposit Amount",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"depositType": "Deposit Type",
+				"depositTypes": {
+					"simple": "Simple Interest (No Capitalization)",
+					"capitalized": "With Interest Capitalization",
+					"compound": "Compound Interest (Monthly Compounding)"
+				},
+				"capitalizationPeriod": "Capitalization Period",
+				"capitalizationPeriods": {
+					"monthly": "Monthly",
+					"quarterly": "Quarterly",
+					"yearly": "Yearly"
+				},
+				"monthlyAddition": "Monthly Addition",
+				"monthlyWithdrawal": "Monthly Withdrawal",
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter deposit parameters and click 'Calculate'",
+				"summary": "Summary",
+				"finalAmount": "Final Amount",
+				"totalInterest": "Total Interest",
+				"effectiveRate": "Effective Rate",
+				"term": "Deposit Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Interest Accrual Schedule",
+				"table": {
+					"month": "Month",
+					"startAmount": "Start Amount",
+					"interestEarned": "Interest Earned",
+					"addition": "Addition",
+					"withdrawal": "Withdrawal",
+					"endAmount": "End Amount",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Everything About Bank Deposits: Calculations, Types, and Tips",
+				"overview": {
+					"title": "What is a Bank Deposit",
+					"content": "A bank deposit is a way to preserve and grow your money by placing it in a bank at a certain interest rate. It's one of the most reliable and popular investment methods for individuals."
+				},
+				"types": {
+					"title": "Types of Bank Deposits",
+					"content": "There are several main types of bank deposits:",
+					"simple": "Simple interest deposits — interest is calculated but not added to the principal",
+					"capitalized": "Capitalized deposits — interest is periodically added to the principal",
+					"compound": "Compound interest deposits — interest is calculated on the constantly growing amount"
+				},
+				"advantages": {
+					"title": "Bank Deposit Advantages",
+					"content": "Bank deposits have many advantages:",
+					"safety": "High reliability and deposit protection",
+					"guaranteed": "Guaranteed returns",
+					"liquidity": "Early withdrawal option (with interest loss)",
+					"tax": "Tax benefits on interest"
+				},
+				"tips": {
+					"title": "Deposit Selection Tips",
+					"content": "To get maximum benefit from bank deposits:",
+					"compare": "Compare terms at different banks",
+					"term": "Choose optimal deposit term",
+					"capitalization": "Consider deposits with interest capitalization",
+					"early": "Consider early withdrawal options"
+				}
+			}
+		},
+		"auto-loan": {
+			"title": "Auto Loan Calculator",
+			"description": "Calculate monthly auto loan payments, total interest, and create detailed payment schedules for car financing",
+			"seo": "auto loan calculator, auto loan calculation, monthly auto loan payment, car loan",
+			"form": {
+				"title": "Auto Loan Parameters",
+				"carValue": "Car Value ($)",
+				"downPayment": "Down Payment ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter auto loan parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Everything About Auto Loans: Calculations, Programs, and Tips",
+				"overview": {
+					"title": "What is an Auto Loan",
+					"content": "An auto loan is a secured loan for purchasing a car where the vehicle serves as collateral. It's one of the most popular ways to buy a car, allowing you to spread large expenses over a long period."
+				},
+				"advantages": {
+					"title": "Auto Loan Benefits",
+					"content": "Auto loans provide many advantages for car acquisition:",
+					"quickApproval": "Quick application approval",
+					"lowRates": "Relatively low interest rates",
+					"flexibleTerms": "Flexible repayment terms",
+					"earlyRepayment": "Early repayment options"
+				},
+				"requirements": {
+					"title": "Borrower Requirements",
+					"content": "To get an auto loan, you must meet certain requirements:",
+					"age": "Age from 21 to 65 years",
+					"income": "Stable income with supporting documents",
+					"creditHistory": "Positive credit history",
+					"documents": "Complete documentation package"
+				},
+				"programs": {
+					"title": "Auto Loan Programs",
+					"content": "Banks offer various auto loan programs:",
+					"newCar": {
+						"title": "New Car Loan",
+						"desc": "Special conditions for purchasing new vehicles"
+					},
+					"usedCar": {
+						"title": "Used Car Loan",
+						"desc": "Terms for purchasing vehicles with mileage"
+					}
+				},
+				"tips": {
+					"title": "Auto Loan Tips",
+					"content": "To get favorable auto loan terms:",
+					"compare": "Compare offers from different banks",
+					"insurance": "Consider car insurance",
+					"early": "Consider early repayment",
+					"consult": "Consult with car dealerships"
+				}
+			}
+		},
+		"consumer-loan": {
+			"title": "Consumer Loan Calculator",
+			"description": "Calculate monthly consumer loan payments, total interest, and create detailed payment schedules",
+			"seo": "consumer loan calculator, consumer loan calculation, monthly loan payment, personal loan",
+			"form": {
+				"title": "Loan Parameters",
+				"loanAmount": "Loan Amount ($)",
+				"downPayment": "Down Payment ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter loan parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Everything About Consumer Loans: Calculations, Types, and Tips",
+				"overview": {
+					"title": "What is a Consumer Loan",
+					"content": "A consumer loan is an unsecured loan for any purpose without collateral. It's one of the most accessible ways to get money for various needs."
+				},
+				"advantages": {
+					"title": "Consumer Loan Benefits",
+					"content": "Consumer loans have many advantages:",
+					"quickApproval": "Quick application approval",
+					"noCollateral": "No collateral required",
+					"flexibleTerms": "Flexible repayment terms",
+					"earlyRepayment": "Early repayment options"
+				},
+				"requirements": {
+					"title": "Borrower Requirements",
+					"content": "To get a consumer loan, you must meet certain requirements:",
+					"age": "Age from 18 to 70 years",
+					"income": "Stable income with supporting documents",
+					"creditHistory": "Positive credit history",
+					"documents": "Minimal documentation package"
+				},
+				"types": {
+					"title": "Types of Consumer Loans",
+					"content": "There are several types of consumer loans:",
+					"refinancing": {
+						"title": "Refinancing",
+						"desc": "Combining multiple loans into one with better terms"
+					},
+					"emergency": {
+						"title": "Emergency Loan",
+						"desc": "Quick access to funds for urgent needs"
+					}
+				},
+				"tips": {
+					"title": "Consumer Loan Tips",
+					"content": "To get favorable consumer loan terms:",
+					"compare": "Compare offers from different banks",
+					"creditScore": "Maintain good credit history",
+					"early": "Consider early repayment",
+					"consult": "Consult with financial experts"
+				}
+			}
+		},
+		"savings": {
+			"title": "Savings Calculator",
+			"description": "Calculate savings, monthly contributions, and achieving financial goals",
+			"seo": "savings calculator, savings, financial goals, money management",
+			"form": {
+				"title": "Savings Parameters",
+				"targetAmount": "Target Amount ($)",
+				"initialAmount": "Initial Amount ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"monthlyContribution": "Monthly Contribution ($)",
+				"interestRate": "Interest Rate (% per year)",
+				"interestType": "Interest Type",
+				"interestTypes": {
+					"none": "No Interest",
+					"simple": "Simple Interest",
+					"compound": "Compound Interest"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter savings parameters and click 'Calculate'",
+				"summary": "Summary",
+				"finalAmount": "Final Amount",
+				"totalContributions": "Total Contributions",
+				"totalInterest": "Interest Earned",
+				"monthlyContribution": "Monthly Contribution",
+				"achievementMessage": "Goal achieved in month {month}",
+				"notAchievable": "Goal not achievable with current parameters",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Savings Schedule",
+				"table": {
+					"month": "Month",
+					"startAmount": "Start",
+					"contribution": "Contribution",
+					"interest": "Interest",
+					"endAmount": "End",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Everything About Savings: Calculations, Strategies, and Tips",
+				"overview": {
+					"title": "What is Savings",
+					"content": "Savings is the process of gradually accumulating money to achieve financial goals. It's the foundation of financial stability and independence."
+				},
+				"advantages": {
+					"title": "Savings Benefits",
+					"content": "Savings provide many advantages:",
+					"goalSetting": "Achieving financial goals",
+					"compoundInterest": "Compound interest effect",
+					"flexibility": "Financial management flexibility",
+					"discipline": "Developing financial discipline"
+				},
+				"strategies": {
+					"title": "Savings Strategies",
+					"content": "There are several effective savings strategies:",
+					"automation": "Automating savings",
+					"investment": "Investing funds",
+					"budgeting": "Budget planning",
+					"emergency": "Creating emergency fund"
+				},
+				"tips": {
+					"title": "Savings Tips",
+					"content": "For successful savings:",
+					"start": "Start with small amounts",
+					"consistency": "Be consistent",
+					"review": "Regularly review goals",
+					"patience": "Be patient"
+				}
+			}
 		}
 	}
 }
