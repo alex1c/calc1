@@ -81,8 +81,111 @@
 		},
 		"credit-loan": {
 			"title": "Kreditrechner",
-			"description": "Kreditzahlungen berechnen",
-			"seo": "Kreditrechner, Kreditberechnung, monatliche Zahlung"
+			"description": "Monatliche Kreditzahlungen, Gesamtzinsen berechnen und detaillierte Zahlungspläne für jeden Kredit erstellen",
+			"seo": "Kreditrechner, Kreditberechnung, monatliche Zahlung, Hypothekenrechner, Autokreditrechner",
+			"form": {
+				"title": "Kreditparameter",
+				"loanType": "Kreditart",
+				"loanTypes": {
+					"mortgage": "Hypothek",
+					"auto": "Autokredit",
+					"personal": "Ratenkredit"
+				},
+				"loanAmount": "Kreditsumme (€)",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"downPayment": "Anzahlung (€)",
+				"additionalPayment": "Zusätzliche monatliche Zahlung (€)",
+				"paymentType": "Tilgungsschema",
+				"paymentTypes": {
+					"annuity": "Annuitätentilgung (gleichbleibend)",
+					"differentiated": "Ratenkredit (abnehmend)"
+				},
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Kreditparameter ein und klicken Sie 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"monthlyPayment": "Monatliche Zahlung",
+				"totalPayments": "Gesamtzahlungen",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveTerm": "Effektive Laufzeit",
+				"months": "Monate",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Zahlungsplan",
+				"table": {
+					"month": "Monat",
+					"payment": "Zahlung",
+					"interest": "Zinsen",
+					"principal": "Tilgung",
+					"balance": "Restschuld",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Alles über Kredite: Arten, Zinssätze und Tilgungsmethoden",
+				"types": {
+					"title": "Kreditarten",
+					"content": "Im modernen Bankensystem gibt es viele Kreditarten, die jeweils für spezifische Finanzbedürfnisse konzipiert sind:",
+					"mortgage": "Hypothekendarlehen",
+					"mortgageDesc": "langfristiges Darlehen für Immobilienkauf mit der erworbenen Immobilie als Sicherheit",
+					"auto": "Autokredit",
+					"autoDesc": "Kredit für Autokauf mit dem Fahrzeug als Sicherheit",
+					"personal": "Ratenkredit",
+					"personalDesc": "unbesicherter Kredit für persönliche Bedürfnisse ohne Sicherheiten",
+					"business": "Geschäftskredit",
+					"businessDesc": "Kredit für Unternehmensentwicklung und Betriebskapital",
+					"refinancing": "Umschuldung",
+					"refinancingDesc": "Kreditumstrukturierung zur Verbesserung der Bedingungen bestehender Schulden"
+				},
+				"rates": {
+					"title": "Zinssatzarten",
+					"content": "Der Zinssatz ist ein Schlüsselparameter des Kredits, der die Kosten der geliehenen Mittel bestimmt:",
+					"fixed": "Fester Zinssatz",
+					"fixedDesc": "bleibt während der gesamten Kreditlaufzeit unverändert und gewährleistet Zahlungsvorhersagbarkeit",
+					"variable": "Variabler Zinssatz",
+					"variableDesc": "ändert sich basierend auf Zentralbankzinsen und Marktbedingungen",
+					"mixed": "Gemischter Zinssatz",
+					"mixedDesc": "fest für den Anfangszeitraum, dann wechselt zu variabel"
+				},
+				"payment": {
+					"title": "Kredittilgungsschemata",
+					"content": "Die Wahl des Tilgungsschemas beeinflusst die Höhe der monatlichen Zahlungen und die Gesamtzinsen:",
+					"annuity": {
+						"title": "Annuitätentilgung",
+						"desc": "gleichbleibende monatliche Zahlungen während der gesamten Kreditlaufzeit",
+						"advantages": "Vorteile: Budgetstabilität, einfache Ausgabenplanung"
+					},
+					"differentiated": {
+						"title": "Ratenkredit",
+						"desc": "abnehmende Zahlungen mit fester Tilgungsrate",
+						"advantages": "Vorteile: niedrigere Gesamtzinsen, schnellere Tilgung"
+					}
+				},
+				"factors": {
+					"title": "Faktoren, die Kreditbedingungen beeinflussen",
+					"content": "Banken berücksichtigen viele Faktoren bei der Bestimmung von Zinssätzen und Kreditbedingungen:",
+					"creditHistory": "Kredithistorie und Bonität des Kreditnehmers",
+					"income": "Einkommensniveau und Beschäftigungsstabilität",
+					"downPayment": "Anzahlungshöhe",
+					"term": "Kreditlaufzeit",
+					"collateral": "Verfügbarkeit von Sicherheiten"
+				},
+				"tips": {
+					"title": "Nützliche Kredittipps",
+					"content": "Um die günstigsten Kreditbedingungen zu erhalten, wird empfohlen:",
+					"compare": "Angebote mehrerer Banken vergleichen",
+					"early": "Möglichkeiten der vorzeitigen Tilgung prüfen",
+					"insurance": "Notwendigkeit der Versicherung bewerten",
+					"consult": "Mit Finanzexperten beraten"
+				}
+			}
 		}
 	}
 }

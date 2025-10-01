@@ -81,8 +81,111 @@
 		},
 		"credit-loan": {
 			"title": "Calculadora de Crédito",
-			"description": "Calcular pagos de préstamo",
-			"seo": "Calculadora de crédito, cálculo de préstamo, pago mensual"
+			"description": "Calcular pagos mensuales de préstamos, intereses totales y crear cronogramas de pagos detallados para cualquier préstamo o crédito",
+			"seo": "calculadora de crédito, cálculo de préstamo, pago mensual, calculadora de hipoteca, calculadora de préstamo de auto",
+			"form": {
+				"title": "Parámetros del Préstamo",
+				"loanType": "Tipo de Préstamo",
+				"loanTypes": {
+					"mortgage": "Hipoteca",
+					"auto": "Préstamo de Auto",
+					"personal": "Préstamo Personal"
+				},
+				"loanAmount": "Monto del Préstamo ($)",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"downPayment": "Pago Inicial ($)",
+				"additionalPayment": "Pago Mensual Adicional ($)",
+				"paymentType": "Esquema de Pago",
+				"paymentTypes": {
+					"annuity": "Pagos Anuales (Iguales)",
+					"differentiated": "Pagos Diferenciales (Decrecientes)"
+				},
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros del préstamo y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"monthlyPayment": "Pago Mensual",
+				"totalPayments": "Pagos Totales",
+				"totalInterest": "Intereses Totales",
+				"effectiveTerm": "Plazo Efectivo",
+				"months": "meses",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Pagos",
+				"table": {
+					"month": "Mes",
+					"payment": "Pago",
+					"interest": "Intereses",
+					"principal": "Principal",
+					"balance": "Saldo",
+					"moreMonths": "meses adicionales"
+				}
+			},
+			"seo": {
+				"title": "Todo sobre Préstamos: Tipos, Tasas y Métodos de Pago",
+				"types": {
+					"title": "Tipos de Préstamos",
+					"content": "En el sistema bancario moderno existen muchos tipos de préstamos, cada uno diseñado para resolver necesidades financieras específicas:",
+					"mortgage": "Préstamo Hipotecario",
+					"mortgageDesc": "préstamo a largo plazo para compra de bienes raíces con la propiedad como garantía",
+					"auto": "Préstamo de Auto",
+					"autoDesc": "préstamo para compra de vehículo con el automóvil como garantía",
+					"personal": "Préstamo Personal",
+					"personalDesc": "préstamo no garantizado para necesidades personales sin requerir garantías",
+					"business": "Préstamo Empresarial",
+					"businessDesc": "préstamo para desarrollo empresarial y necesidades de capital de trabajo",
+					"refinancing": "Refinanciamiento",
+					"refinancingDesc": "reestructuración de préstamo para mejorar condiciones de deuda existente"
+				},
+				"rates": {
+					"title": "Tipos de Tasas de Interés",
+					"content": "La tasa de interés es un parámetro clave del préstamo que determina el costo de los fondos prestados:",
+					"fixed": "Tasa Fija",
+					"fixedDesc": "permanece sin cambios durante todo el plazo del préstamo, asegurando previsibilidad de pagos",
+					"variable": "Tasa Variable",
+					"variableDesc": "cambia basándose en tasas del banco central y condiciones del mercado",
+					"mixed": "Tasa Mixta",
+					"mixedDesc": "fija por período inicial, luego se convierte en variable"
+				},
+				"payment": {
+					"title": "Esquemas de Pago de Préstamos",
+					"content": "La elección del esquema de pago afecta los montos de pago mensual y el interés total pagado:",
+					"annuity": {
+						"title": "Pagos Anuales",
+						"desc": "pagos mensuales iguales durante todo el plazo del préstamo",
+						"advantages": "Ventajas: estabilidad presupuestaria, fácil planificación de gastos"
+					},
+					"differentiated": {
+						"title": "Pagos Diferenciales",
+						"desc": "pagos decrecientes con porción fija de capital",
+						"advantages": "Ventajas: menor interés total, pago más rápido del capital"
+					}
+				},
+				"factors": {
+					"title": "Factores que Afectan las Condiciones del Préstamo",
+					"content": "Los bancos consideran múltiples factores al determinar tasas de interés y condiciones de préstamo:",
+					"creditHistory": "Historial crediticio y calificación del prestatario",
+					"income": "Nivel de ingresos y estabilidad laboral",
+					"downPayment": "Monto del pago inicial",
+					"term": "Plazo del préstamo",
+					"collateral": "Disponibilidad de garantías"
+				},
+				"tips": {
+					"title": "Consejos Útiles sobre Préstamos",
+					"content": "Para obtener las condiciones de préstamo más favorables, se recomienda:",
+					"compare": "Comparar ofertas de múltiples bancos",
+					"early": "Considerar opciones de pago anticipado",
+					"insurance": "Evaluar la necesidad de seguros",
+					"consult": "Consultar con expertos financieros"
+				}
+			}
 		}
 	}
 }

@@ -80,9 +80,200 @@
 			"seo": "BMI calculator, body mass index, normal weight"
 		},
 		"credit-loan": {
-			"title": "Credit Calculator",
-			"description": "Calculate loan payments",
-			"seo": "Credit calculator, loan calculation, monthly payment"
+			"title": "Credit Loan Calculator",
+			"description": "Calculate monthly loan payments, total interest, and create detailed payment schedules for any loan or credit",
+			"seo": "credit calculator, loan calculation, monthly payment, mortgage calculator, auto loan calculator",
+			"form": {
+				"title": "Loan Parameters",
+				"loanType": "Loan Type",
+				"loanTypes": {
+					"mortgage": "Mortgage",
+					"auto": "Auto Loan",
+					"personal": "Personal Loan"
+				},
+				"loanAmount": "Loan Amount ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"downPayment": "Down Payment ($)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter loan parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Everything About Loans: Types, Rates, and Payment Methods",
+				"types": {
+					"title": "Types of Loans",
+					"content": "In the modern banking system, there are many types of loans, each designed to solve specific financial needs:",
+					"mortgage": "Mortgage Loan",
+					"mortgageDesc": "long-term loan for real estate purchase secured by the property being purchased",
+					"auto": "Auto Loan",
+					"autoDesc": "loan for car purchase with the vehicle serving as collateral",
+					"personal": "Personal Loan",
+					"personalDesc": "unsecured loan for any personal needs without collateral requirements",
+					"business": "Business Loan",
+					"businessDesc": "loan for business development and working capital needs",
+					"refinancing": "Refinancing",
+					"refinancingDesc": "loan restructuring to improve terms on existing debt"
+				},
+				"rates": {
+					"title": "Types of Interest Rates",
+					"content": "Interest rate is a key loan parameter that determines the cost of borrowed funds:",
+					"fixed": "Fixed Rate",
+					"fixedDesc": "remains unchanged throughout the loan term, ensuring payment predictability",
+					"variable": "Variable Rate",
+					"variableDesc": "changes based on central bank rates and market conditions",
+					"mixed": "Mixed Rate",
+					"mixedDesc": "fixed for initial period, then converts to variable"
+				},
+				"payment": {
+					"title": "Loan Repayment Schemes",
+					"content": "The choice of repayment scheme affects monthly payment amounts and total interest paid:",
+					"annuity": {
+						"title": "Annuity Payments",
+						"desc": "equal monthly payments throughout the loan term",
+						"advantages": "Advantages: budget stability, easy expense planning"
+					},
+					"differentiated": {
+						"title": "Differentiated Payments",
+						"desc": "decreasing payments with fixed principal portion",
+						"advantages": "Advantages: lower total interest, faster principal repayment"
+					}
+				},
+				"factors": {
+					"title": "Factors Affecting Loan Terms",
+					"content": "Banks consider multiple factors when determining interest rates and loan conditions:",
+					"creditHistory": "Credit history and borrower rating",
+					"income": "Income level and employment stability",
+					"downPayment": "Down payment amount",
+					"term": "Loan term",
+					"collateral": "Collateral availability"
+				},
+				"tips": {
+					"title": "Useful Loan Tips",
+					"content": "To get the most favorable loan terms, it's recommended to:",
+					"compare": "Compare offers from multiple banks",
+					"early": "Consider early repayment options",
+					"insurance": "Evaluate insurance necessity",
+					"consult": "Consult with financial experts"
+				}
+			}
+		},
+		"mortgage": {
+			"title": "Mortgage Calculator",
+			"description": "Calculate monthly mortgage payments, total interest, and create detailed payment schedules for real estate financing",
+			"seo": "mortgage calculator, mortgage calculation, monthly mortgage payment, home loan",
+			"form": {
+				"title": "Mortgage Parameters",
+				"propertyValue": "Property Value ($)",
+				"downPayment": "Down Payment ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter mortgage parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Everything About Mortgages: Calculations, Programs, and Tips",
+				"overview": {
+					"title": "What is a Mortgage",
+					"content": "A mortgage is a long-term loan for real estate purchase where the property serves as collateral. It's one of the most popular ways to buy a home, allowing you to spread large expenses over a long period."
+				},
+				"advantages": {
+					"title": "Mortgage Benefits",
+					"content": "Mortgages provide many advantages for real estate acquisition:",
+					"longTerm": "Long-term financing up to 30 years",
+					"lowRate": "Relatively low interest rates",
+					"taxBenefits": "Tax benefits and deductions",
+					"propertyOwnership": "Opportunity to become a property owner"
+				},
+				"requirements": {
+					"title": "Borrower Requirements",
+					"content": "To get a mortgage loan, you must meet certain requirements:",
+					"income": "Stable income with supporting documents",
+					"creditHistory": "Positive credit history",
+					"downPayment": "Down payment of 10-20%",
+					"insurance": "Property and life insurance",
+					"documents": "Complete documentation package"
+				},
+				"programs": {
+					"title": "Government Programs",
+					"content": "Various mortgage support programs are available:",
+					"government": {
+						"title": "Government Support",
+						"desc": "Interest rate subsidies for young families and large families"
+					},
+					"commercial": {
+						"title": "Commercial Mortgage",
+						"desc": "Standard bank terms with market rates"
+					}
+				},
+				"tips": {
+					"title": "Mortgage Tips",
+					"content": "To get favorable mortgage terms:",
+					"compare": "Compare offers from different banks",
+					"early": "Consider early repayment options",
+					"insurance": "Evaluate insurance necessity",
+					"consult": "Consult with mortgage brokers"
+				}
+			}
 		}
 	}
 }
