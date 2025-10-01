@@ -1,30 +1,50 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Car, Fuel, Shield, CreditCard } from 'lucide-react';
+import { Car, Fuel, Shield, CreditCard, FileText } from 'lucide-react';
 
-const calculators = [
+const getCalculators = (t: any) => [
 	{
 		id: 'fuel-consumption',
-		title: 'Fuel Consumption Calculator',
-		description:
-			'Calculate fuel efficiency and consumption for your vehicle',
+		title: t('calculators.fuel-consumption.title'),
+		description: t('calculators.fuel-consumption.description'),
 		icon: Fuel,
 		href: '/calc/fuel-consumption',
 	},
 	{
 		id: 'car-loan',
-		title: 'Car Loan Calculator',
-		description: 'Calculate monthly payments for your car loan',
+		title: t('calculators.car-loan.title'),
+		description: t('calculators.car-loan.description'),
 		icon: CreditCard,
 		href: '/calc/car-loan',
 	},
 	{
 		id: 'osago',
-		title: 'OSAGO Calculator',
-		description: 'Calculate OSAGO insurance cost based on various factors',
+		title: t('calculators.osago.title'),
+		description: t('calculators.osago.description'),
 		icon: Shield,
 		href: '/calc/osago',
+	},
+	{
+		id: 'kasko',
+		title: t('calculators.kasko.title'),
+		description: t('calculators.kasko.description'),
+		icon: Shield,
+		href: '/calc/kasko',
+	},
+	{
+		id: 'vehicle-tax',
+		title: t('calculators.vehicle-tax.title'),
+		description: t('calculators.vehicle-tax.description'),
+		icon: Car,
+		href: '/calc/vehicle-tax',
+	},
+	{
+		id: 'leasing',
+		title: t('calculators.leasing.title'),
+		description: t('calculators.leasing.description'),
+		icon: FileText,
+		href: '/calc/leasing',
 	},
 	{
 		id: 'depreciation',
@@ -56,7 +76,7 @@ export default function AutoPage() {
 
 				{/* Calculators Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{calculators.map((calculator) => (
+					{getCalculators(t).map((calculator) => (
 						<Link
 							key={calculator.id}
 							href={`/${locale}/calc/${calculator.id}`}

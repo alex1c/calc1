@@ -1,7 +1,9 @@
 {
+  "/not-found": "app/not-found.js",
   "/[locale]/auto/page": "app/[locale]/auto/page.js",
-  "/[locale]/finance/page": "app/[locale]/finance/page.js",
-  "/[locale]/calc/auto-loan/page": "app/[locale]/calc/auto-loan/page.js",
-  "/[locale]/calc/car-loan/page": "app/[locale]/calc/car-loan/page.js",
-  "/[locale]/calc/osago/page": "app/[locale]/calc/osago/page.js"
+  "/[locale]/calc/osago/page": "app/[locale]/calc/osago/page.js",
+  "/[locale]/calc/kasko/page": "app/[locale]/calc/kasko/page.js",
+  "/[locale]/calc/fuel-consumption/page": "app/[locale]/calc/fuel-consumption/page.js",
+  "/[locale]/calc/vehicle-tax/page": "app/[locale]/calc/vehicle-tax/page.js",
+  "/[locale]/calc/leasing/page": "app/[locale]/calc/leasing/page.js"
 }

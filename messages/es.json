@@ -511,6 +511,263 @@
 					"documents": "Prepare todos los documentos necesarios con anticipación"
 				}
 			}
+		},
+		"kasko": {
+			"title": "Calculadora de KASKO",
+			"description": "Calcular el costo del seguro KASKO completo basado en valor del auto, edad del conductor, región y otros factores",
+			"seo": "calculadora KASKO, cálculo KASKO, costo KASKO, seguro KASKO, seguro completo de auto, seguro de auto, póliza KASKO",
+			"form": {
+				"title": "Parámetros de Cálculo KASKO",
+				"carValue": "Valor del Auto (₽)",
+				"carYear": "Año de Fabricación",
+				"driverAge": "Edad del Conductor (años)",
+				"drivingExperience": "Experiencia de Conducción (años)",
+				"region": "Región",
+				"selectRegion": "Seleccionar región",
+				"hasAlarmSystem": "Sistema Anti-robo",
+				"franchise": "Franquicia",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Entrada"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"totalCost": "Costo KASKO",
+				"details": "Detalles del Cálculo",
+				"baseRate": "Tarifa Base",
+				"regionCoeff": "Coeficiente Regional",
+				"ageCoeff": "Coeficiente de Edad",
+				"experienceCoeff": "Coeficiente de Experiencia",
+				"alarmCoeff": "Coeficiente de Alarma",
+				"franchiseCoeff": "Coeficiente de Franquicia",
+				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"seo": {
+				"title": "Calculadora KASKO: Cálculo del Costo de Seguro Completo de Auto",
+				"overview": {
+					"title": "Calculadora KASKO para Cálculo de Costo de Póliza",
+					"content": "La calculadora KASKO es una herramienta profesional para calcular el costo de la póliza de seguro completo de auto. Con nuestra calculadora puede calcular el costo exacto del KASKO considerando todos los coeficientes: valor del auto, edad y experiencia del conductor, región, sistema anti-robo y franquicia."
+				},
+				"coefficients": {
+					"title": "Coeficientes de Cálculo KASKO",
+					"content": "El costo del KASKO se calcula usando la fórmula: (Valor del Auto × Tarifa Base) × Región × Edad × Experiencia × Alarma × Franquicia",
+					"region": "Región: Moscú = 1.2, San Petersburgo = 1.1, otras regiones = 1.0",
+					"age": "Edad: menor de 22 = 1.5, 22-30 = 1.2, mayor de 30 = 1.0",
+					"experience": "Experiencia: menor de 3 años = 1.3, 3-10 años = 1.1, mayor de 10 años = 1.0",
+					"alarm": "Alarma: tiene sistema = 0.9, no tiene = 1.0",
+					"franchise": "Franquicia: ninguna = 1.0, 10,000 rub. = 0.9, 20,000 rub. = 0.8"
+				},
+				"advantages": {
+					"title": "Beneficios de Usar la Calculadora KASKO",
+					"content": "La calculadora KASKO proporciona muchos beneficios para la planificación de seguros de auto:",
+					"comprehensive": "Cobertura completa contra todos los riesgos",
+					"quick": "Cálculo rápido del costo de póliza en minutos",
+					"accurate": "Cálculo preciso con todos los coeficientes actuales",
+					"comparison": "Capacidad de comparar costos entre diferentes compañías de seguros"
+				},
+				"tips": {
+					"title": "Consejos para Seleccionar KASKO",
+					"content": "Para elegir la póliza KASKO óptima:",
+					"compare": "Compare ofertas de diferentes compañías de seguros",
+					"alarm": "Instale sistema anti-robo para reducir costos",
+					"franchise": "Considere franquicia para reducir costo de póliza",
+					"documents": "Prepare todos los documentos necesarios con anticipación"
+				}
+			}
+		},
+		"fuel-consumption": {
+			"title": "Calculadora de Consumo de Combustible",
+			"description": "Calcular cuántos kilómetros puede viajar con el combustible disponible o cuánto combustible necesita para un viaje",
+			"seo": "calculadora consumo combustible, cálculo combustible, consumo combustible, calculadora distancia, planificación combustible, ahorro combustible, planificación viajes",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"mode": "Modo de Cálculo",
+				"modes": {
+					"distance": "Calcular Distancia",
+					"distanceDesc": "Qué tan lejos puede viajar",
+					"fuel": "Calcular Combustible",
+					"fuelDesc": "Cuánto combustible necesita"
+				},
+				"consumption": "Consumo de Combustible (L/100 km)",
+				"fuelAmount": "Cantidad de Combustible en Tanque (L)",
+				"distance": "Distancia Deseada (km)",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Entrada"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"result": "Resultado",
+				"km": "km",
+				"liters": "L",
+				"distanceResult": "Puede viajar",
+				"fuelResult": "Para el viaje necesita",
+				"details": "Detalles del Cálculo",
+				"consumption": "Consumo de Combustible",
+				"fuelAmount": "Cantidad de Combustible",
+				"distance": "Distancia",
+				"calculatedDistance": "Distancia Calculada",
+				"calculatedFuel": "Combustible Calculado",
+				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"seo": {
+				"title": "Calculadora de Consumo de Combustible: Cálculo de Distancia y Requisitos de Combustible",
+				"overview": {
+					"title": "Calculadora de Consumo de Combustible para Planificación de Viajes",
+					"content": "La calculadora de consumo de combustible en línea ayuda a calcular cuántos kilómetros puede viajar con la cantidad de combustible disponible, o cuántos litros de combustible necesita para un viaje a una distancia específica con consumo conocido del automóvil."
+				},
+				"features": {
+					"title": "Características de la Calculadora",
+					"content": "Nuestra calculadora de consumo de combustible proporciona dos modos de cálculo:",
+					"distance": "Cálculo de distancia basado en cantidad de combustible y consumo",
+					"fuel": "Cálculo de requisitos de combustible para un viaje",
+					"planning": "Planificación de viajes y rutas",
+					"economy": "Monitoreo de ahorro de combustible"
+				},
+				"advantages": {
+					"title": "Beneficios de Usar la Calculadora",
+					"content": "La calculadora de consumo de combustible proporciona muchos beneficios:",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Cálculos precisos basados en datos reales",
+					"planning": "Planificación de viajes y presupuesto de combustible",
+					"savings": "Ahorro de dinero en combustible"
+				},
+				"tips": {
+					"title": "Consejos de Ahorro de Combustible",
+					"content": "Para reducir el consumo de combustible:",
+					"measure": "Mida regularmente el consumo de combustible de su automóvil",
+					"driving": "Mantenga un estilo de conducción económico",
+					"maintenance": "Mantenga su automóvil en buen estado técnico",
+					"planning": "Planifique rutas con anticipación para evitar atascos"
+				}
+			}
+		},
+		"vehicle-tax": {
+			"title": "Calculadora de Impuesto Vehicular",
+			"description": "Calcular el impuesto vehicular basado en potencia del motor, región y período de propiedad",
+			"seo": "calculadora impuesto vehicular, cálculo impuesto vehicular, impuesto vehicular, impuesto automóvil, tasas impuesto por región, tasas regionales",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"enginePower": "Potencia del Motor (hp)",
+				"region": "Región",
+				"selectRegion": "Seleccionar región",
+				"ownershipMonths": "Período de Propiedad",
+				"months": "meses",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Entrada"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"taxAmount": "Impuesto Vehicular",
+				"taxDescription": "Su impuesto vehicular será",
+				"details": "Detalles del Cálculo",
+				"enginePower": "Potencia del Motor",
+				"hp": "hp",
+				"taxRate": "Tasa de Impuesto",
+				"rubPerHp": "₽/hp",
+				"ownershipPeriod": "Período de Propiedad",
+				"ownershipCoefficient": "Coeficiente de Propiedad",
+				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"seo": {
+				"title": "Calculadora de Impuesto Vehicular: Calcular Impuesto del Auto",
+				"overview": {
+					"title": "Calculadora de Impuesto Vehicular para Propietarios de Autos",
+					"content": "La calculadora de impuesto vehicular en línea ayuda a calcular cuánto necesita pagar por su automóvil basado en la potencia del motor, región de registro y período de propiedad. Descubra su carga fiscal rápida y convenientemente."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Impuesto Vehicular",
+					"content": "El impuesto vehicular se calcula usando la fórmula:",
+					"enginePower": "Potencia del motor en caballos de fuerza",
+					"region": "Tasa de impuesto regional (₽/hp)",
+					"ownership": "Período de propiedad del automóvil en el año",
+					"formula": "Impuesto = Potencia × Tasa × (Meses de Propiedad / 12)"
+				},
+				"advantages": {
+					"title": "Beneficios de Usar la Calculadora",
+					"content": "La calculadora de impuesto vehicular proporciona muchos beneficios:",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Cálculos precisos con tasas actuales",
+					"planning": "Planificación de gastos fiscales",
+					"regions": "Consideración de peculiaridades fiscales regionales"
+				},
+				"tips": {
+					"title": "Consejos sobre Impuesto Vehicular",
+					"content": "Para el cálculo y pago correcto del impuesto vehicular:",
+					"deadline": "Observe los plazos de pago del impuesto (hasta el 1 de diciembre)",
+					"payment": "Verifique la precisión del cálculo en la oficina fiscal",
+					"ownership": "Considere solo el período de propiedad real",
+					"consultation": "Consulte asesores fiscales en caso de dudas"
+				}
+			}
+		},
+		"leasing": {
+			"title": "Calculadora de Leasing Automotriz",
+			"description": "Cálculo de pagos mensuales y costo total del leasing automotriz",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Parámetros de Leasing",
+				"carValue": "Valor del Vehículo (₽)",
+				"downPayment": "Pago Inicial",
+				"leaseTerm": "Plazo de Leasing (meses)",
+				"interestRate": "Tasa de Interés (%)",
+				"buyoutValue": "Valor de Compra",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"monthlyPayment": "Pago Mensual",
+				"monthlyPaymentDescription": "Cantidad a pagar cada mes",
+				"totalPayments": "Pagos Totales",
+				"totalCost": "Costo Total",
+				"overpayment": "Sobrepago",
+				"financingAmount": "Monto de Financiamiento",
+				"downPaymentAmount": "Pago Inicial",
+				"buyoutAmount": "Valor de Compra",
+				"details": "Detalles del Cálculo",
+				"placeholder": "Ingrese datos para calcular"
+			},
+			"seo": {
+				"title": "Calculadora de Leasing Automotriz Online",
+				"overview": {
+					"title": "Acerca de la Calculadora de Leasing Automotriz",
+					"content": "La calculadora online de leasing automotriz ayuda a calcular pagos mensuales, sobrepago y pagos totales bajo contrato de leasing. Herramienta conveniente para evaluar beneficios del leasing automotriz."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Leasing",
+					"content": "El leasing se calcula usando fórmula de anualidad considerando pago inicial, plazo del contrato, tasa de interés y valor de compra.",
+					"financing": "Monto de Financiamiento = Valor del Vehículo - Pago Inicial - Valor de Compra",
+					"payment": "Pago mensual calculado usando fórmula de anualidad",
+					"total": "Monto Total = Pago Mensual × Plazo + Pago Inicial + Valor de Compra",
+					"overpayment": "Sobrepago = Monto Total - Valor del Vehículo"
+				},
+				"advantages": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora de leasing automotriz te ayuda a tomar decisiones informadas sobre beneficios del leasing automotriz.",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Cálculos precisos usando fórmulas actuales",
+					"comparison": "Comparación con compra a crédito",
+					"planning": "Planificación de presupuesto automotriz"
+				},
+				"tips": {
+					"title": "Consejos de Leasing",
+					"content": "Al elegir leasing, considera todos los parámetros del contrato y compara con opciones de financiamiento alternativas.",
+					"downPayment": "Mayor pago inicial reduce pagos mensuales",
+					"interestRate": "Compara tasas de interés de diferentes compañías de leasing",
+					"term": "Plazo más largo aumenta sobrepago total",
+					"buyout": "El valor de compra afecta el monto de financiamiento"
+				},
+				"seo": "leasing automotriz, calculadora de leasing, leasing de autos, cálculo de leasing, pagos mensuales, sobrepago de leasing, valor de compra, pago inicial, tasa de interés, pagos de leasing, financiamiento automotriz, leasing vs crédito"
+			}
 		}
 	}
 }

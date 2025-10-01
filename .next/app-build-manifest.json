@@ -50,6 +50,31 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/calc/osago/page.js"
+    ],
+    "/[locale]/calc/kasko/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/kasko/page.js"
+    ],
+    "/[locale]/calc/fuel-consumption/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/fuel-consumption/page.js"
+    ],
+    "/[locale]/calc/vehicle-tax/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/vehicle-tax/page.js"
+    ],
+    "/[locale]/calc/leasing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/leasing/page.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ]
   }
 }

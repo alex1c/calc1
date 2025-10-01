@@ -511,6 +511,263 @@
 					"documents": "Bereiten Sie alle notwendigen Dokumente im Voraus vor"
 				}
 			}
+		},
+		"kasko": {
+			"title": "KASKO-Rechner",
+			"description": "Berechnen Sie KASKO-Vollkasko-Versicherungskosten basierend auf Fahrzeugwert, Fahreralter, Region und anderen Faktoren",
+			"seo": "KASKO-Rechner, KASKO-Berechnung, KASKO-Kosten, KASKO-Versicherung, Vollkasko-Versicherung, Kfz-Versicherung, KASKO-Police",
+			"form": {
+				"title": "KASKO-Berechnungsparameter",
+				"carValue": "Fahrzeugwert (₽)",
+				"carYear": "Baujahr",
+				"driverAge": "Fahreralter (Jahre)",
+				"drivingExperience": "Fahrerfahrung (Jahre)",
+				"region": "Region",
+				"selectRegion": "Region auswählen",
+				"hasAlarmSystem": "Diebstahlschutzanlage",
+				"franchise": "Franchise",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Eingabefehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"totalCost": "KASKO-Kosten",
+				"details": "Berechnungsdetails",
+				"baseRate": "Grundtarif",
+				"regionCoeff": "Regionskoeffizient",
+				"ageCoeff": "Alterskoeffizient",
+				"experienceCoeff": "Erfahrungskoeffizient",
+				"alarmCoeff": "Alarmkoeffizient",
+				"franchiseCoeff": "Franchisekoeffizient",
+				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"seo": {
+				"title": "KASKO-Rechner: Berechnung der Kosten für Vollkasko-Versicherung",
+				"overview": {
+					"title": "KASKO-Rechner für Policenkostenberechnung",
+					"content": "KASKO-Rechner ist ein professionelles Tool zur Berechnung der Kosten für Vollkasko-Versicherung. Mit unserem Rechner können Sie genaue KASKO-Kosten unter Berücksichtigung aller Koeffizienten berechnen: Fahrzeugwert, Fahreralter und -erfahrung, Region, Diebstahlschutzanlage und Franchise."
+				},
+				"coefficients": {
+					"title": "KASKO-Berechnungskoeffizienten",
+					"content": "KASKO-Kosten werden nach Formel berechnet: (Fahrzeugwert × Grundtarif) × Region × Alter × Erfahrung × Alarm × Franchise",
+					"region": "Region: Moskau = 1.2, St. Petersburg = 1.1, andere Regionen = 1.0",
+					"age": "Alter: unter 22 = 1.5, 22-30 = 1.2, über 30 = 1.0",
+					"experience": "Erfahrung: unter 3 Jahre = 1.3, 3-10 Jahre = 1.1, über 10 Jahre = 1.0",
+					"alarm": "Alarm: hat Anlage = 0.9, keine Anlage = 1.0",
+					"franchise": "Franchise: keine = 1.0, 10.000 Rub. = 0.9, 20.000 Rub. = 0.8"
+				},
+				"advantages": {
+					"title": "Vorteile der Nutzung des KASKO-Rechners",
+					"content": "Der KASKO-Rechner bietet viele Vorteile für die Kfz-Versicherungsplanung:",
+					"comprehensive": "Vollständige Abdeckung gegen alle Risiken",
+					"quick": "Schnelle Policenkostenberechnung in Minuten",
+					"accurate": "Genaue Berechnung mit allen aktuellen Koeffizienten",
+					"comparison": "Möglichkeit, Kosten verschiedener Versicherungsunternehmen zu vergleichen"
+				},
+				"tips": {
+					"title": "Tipps zur KASKO-Auswahl",
+					"content": "Für die optimale KASKO-Police:",
+					"compare": "Vergleichen Sie Angebote verschiedener Versicherungsunternehmen",
+					"alarm": "Installieren Sie eine Diebstahlschutzanlage zur Kostenreduzierung",
+					"franchise": "Erwägen Sie Franchise zur Policenkostenreduzierung",
+					"documents": "Bereiten Sie alle notwendigen Dokumente im Voraus vor"
+				}
+			}
+		},
+		"fuel-consumption": {
+			"title": "Kraftstoffverbrauch-Rechner",
+			"description": "Berechnen Sie, wie viele Kilometer Sie mit dem vorhandenen Kraftstoff fahren können oder wie viel Kraftstoff Sie für eine Fahrt benötigen",
+			"seo": "Kraftstoffverbrauch-Rechner, Kraftstoffberechnung, Kraftstoffverbrauch, Entfernungsrechner, Kraftstoffplanung, Kraftstoffeinsparung, Reiseplanung",
+			"form": {
+				"title": "Berechnungsparameter",
+				"mode": "Berechnungsmodus",
+				"modes": {
+					"distance": "Entfernung berechnen",
+					"distanceDesc": "Wie weit Sie fahren können",
+					"fuel": "Kraftstoff berechnen",
+					"fuelDesc": "Wie viel Kraftstoff Sie benötigen"
+				},
+				"consumption": "Kraftstoffverbrauch (L/100 km)",
+				"fuelAmount": "Kraftstoffmenge im Tank (L)",
+				"distance": "Gewünschte Entfernung (km)",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Eingabefehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"result": "Ergebnis",
+				"km": "km",
+				"liters": "L",
+				"distanceResult": "Sie können fahren",
+				"fuelResult": "Für die Fahrt benötigen Sie",
+				"details": "Berechnungsdetails",
+				"consumption": "Kraftstoffverbrauch",
+				"fuelAmount": "Kraftstoffmenge",
+				"distance": "Entfernung",
+				"calculatedDistance": "Berechnete Entfernung",
+				"calculatedFuel": "Berechneter Kraftstoff",
+				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"seo": {
+				"title": "Kraftstoffverbrauch-Rechner: Berechnung von Entfernung und Kraftstoffbedarf",
+				"overview": {
+					"title": "Kraftstoffverbrauch-Rechner für Reiseplanung",
+					"content": "Online-Kraftstoffverbrauch-Rechner hilft zu berechnen, wie viele Kilometer Sie mit der vorhandenen Kraftstoffmenge fahren können oder wie viele Liter Kraftstoff Sie für eine Fahrt über eine bestimmte Entfernung mit bekanntem Verbrauch benötigen."
+				},
+				"features": {
+					"title": "Rechner-Funktionen",
+					"content": "Unser Kraftstoffverbrauch-Rechner bietet zwei Berechnungsmodi:",
+					"distance": "Entfernungsberechnung basierend auf Kraftstoffmenge und Verbrauch",
+					"fuel": "Kraftstoffbedarfsberechnung für eine Fahrt",
+					"planning": "Reise- und Routenplanung",
+					"economy": "Kraftstoffeinsparungsüberwachung"
+				},
+				"advantages": {
+					"title": "Vorteile der Nutzung des Rechners",
+					"content": "Kraftstoffverbrauch-Rechner bietet viele Vorteile:",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Genaue Berechnungen basierend auf realen Daten",
+					"planning": "Reiseplanung und Kraftstoffbudget",
+					"savings": "Geldersparnis bei Kraftstoff"
+				},
+				"tips": {
+					"title": "Tipps zur Kraftstoffeinsparung",
+					"content": "Um den Kraftstoffverbrauch zu reduzieren:",
+					"measure": "Messen Sie regelmäßig den Kraftstoffverbrauch Ihres Autos",
+					"driving": "Halten Sie einen wirtschaftlichen Fahrstil ein",
+					"maintenance": "Halten Sie Ihr Auto in gutem technischen Zustand",
+					"planning": "Planen Sie Routen im Voraus, um Staus zu vermeiden"
+				}
+			}
+		},
+		"vehicle-tax": {
+			"title": "Kraftfahrzeugsteuer-Rechner",
+			"description": "Berechnen Sie die Kraftfahrzeugsteuer basierend auf Motorleistung, Region und Besitzzeitraum",
+			"seo": "Kraftfahrzeugsteuer-Rechner, Kraftfahrzeugsteuer-Berechnung, Kraftfahrzeugsteuer, Autosteuer, Steuersätze nach Region, regionale Steuersätze",
+			"form": {
+				"title": "Berechnungsparameter",
+				"enginePower": "Motorleistung (PS)",
+				"region": "Region",
+				"selectRegion": "Region auswählen",
+				"ownershipMonths": "Besitzzeitraum",
+				"months": "Monate",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Eingabefehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"taxAmount": "Kraftfahrzeugsteuer",
+				"taxDescription": "Ihre Kraftfahrzeugsteuer beträgt",
+				"details": "Berechnungsdetails",
+				"enginePower": "Motorleistung",
+				"hp": "PS",
+				"taxRate": "Steuersatz",
+				"rubPerHp": "₽/PS",
+				"ownershipPeriod": "Besitzzeitraum",
+				"ownershipCoefficient": "Besitzkoeffizient",
+				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"seo": {
+				"title": "Kraftfahrzeugsteuer-Rechner: Autosteuer berechnen",
+				"overview": {
+					"title": "Kraftfahrzeugsteuer-Rechner für Autobesitzer",
+					"content": "Online-Kraftfahrzeugsteuer-Rechner hilft zu berechnen, wie viel Sie für Ihr Auto basierend auf Motorleistung, Registrierungsregion und Besitzzeitraum zahlen müssen. Finden Sie Ihre Steuerbelastung schnell und bequem heraus."
+				},
+				"calculation": {
+					"title": "Wie die Kraftfahrzeugsteuer berechnet wird",
+					"content": "Die Kraftfahrzeugsteuer wird nach der Formel berechnet:",
+					"enginePower": "Motorleistung in Pferdestärken",
+					"region": "Regionaler Steuersatz (₽/PS)",
+					"ownership": "Autobesitzzeitraum im Jahr",
+					"formula": "Steuer = Leistung × Satz × (Besitzmonate / 12)"
+				},
+				"advantages": {
+					"title": "Vorteile der Nutzung des Rechners",
+					"content": "Der Kraftfahrzeugsteuer-Rechner bietet viele Vorteile:",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Genaue Berechnungen mit aktuellen Sätzen",
+					"planning": "Steuerausgabenplanung",
+					"regions": "Berücksichtigung regionaler Steuerbesonderheiten"
+				},
+				"tips": {
+					"title": "Tipps zur Kraftfahrzeugsteuer",
+					"content": "Für korrekte Kraftfahrzeugsteuer-Berechnung und -Zahlung:",
+					"deadline": "Achten Sie auf Steuerzahlungsfristen (bis 1. Dezember)",
+					"payment": "Überprüfen Sie die Berechnungsgenauigkeit beim Finanzamt",
+					"ownership": "Berücksichtigen Sie nur den tatsächlichen Besitzzeitraum",
+					"consultation": "Konsultieren Sie Steuerberater bei Zweifeln"
+				}
+			}
+		},
+		"leasing": {
+			"title": "Auto-Leasing-Rechner",
+			"description": "Berechnung der monatlichen Zahlungen und Gesamtkosten des Auto-Leasings",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Leasing-Parameter",
+				"carValue": "Fahrzeugwert (₽)",
+				"downPayment": "Anzahlung",
+				"leaseTerm": "Leasing-Laufzeit (Monate)",
+				"interestRate": "Zinssatz (%)",
+				"buyoutValue": "Kaufpreis",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"monthlyPayment": "Monatliche Rate",
+				"monthlyPaymentDescription": "Monatlich zu zahlender Betrag",
+				"totalPayments": "Gesamtzahlungen",
+				"totalCost": "Gesamtkosten",
+				"overpayment": "Mehrkosten",
+				"financingAmount": "Finanzierungsbetrag",
+				"downPaymentAmount": "Anzahlung",
+				"buyoutAmount": "Kaufpreis",
+				"details": "Berechnungsdetails",
+				"placeholder": "Daten für Berechnung eingeben"
+			},
+			"seo": {
+				"title": "Auto-Leasing-Rechner Online",
+				"overview": {
+					"title": "Über Auto-Leasing-Rechner",
+					"content": "Online Auto-Leasing-Rechner hilft bei der Berechnung monatlicher Zahlungen, Mehrkosten und Gesamtzahlungen im Leasingvertrag. Praktisches Tool zur Bewertung der Vorteile des Auto-Leasings."
+				},
+				"calculation": {
+					"title": "Wie Leasing berechnet wird",
+					"content": "Leasing wird nach der Annuitätsformel unter Berücksichtigung von Anzahlung, Vertragslaufzeit, Zinssatz und Kaufpreis berechnet.",
+					"financing": "Finanzierungsbetrag = Fahrzeugwert - Anzahlung - Kaufpreis",
+					"payment": "Monatliche Rate nach Annuitätsformel berechnet",
+					"total": "Gesamtbetrag = Monatliche Rate × Laufzeit + Anzahlung + Kaufpreis",
+					"overpayment": "Mehrkosten = Gesamtbetrag - Fahrzeugwert"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Auto-Leasing-Rechner hilft bei fundierten Entscheidungen über Auto-Leasing-Vorteile.",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Präzise Berechnungen mit aktuellen Formeln",
+					"comparison": "Vergleich mit Kreditkauf",
+					"planning": "Auto-Budgetplanung"
+				},
+				"tips": {
+					"title": "Leasing-Tipps",
+					"content": "Bei der Leasing-Wahl alle Vertragsparameter berücksichtigen und mit alternativen Finanzierungsoptionen vergleichen.",
+					"downPayment": "Höhere Anzahlung reduziert monatliche Raten",
+					"interestRate": "Zinssätze verschiedener Leasinggesellschaften vergleichen",
+					"term": "Längere Laufzeit erhöht Gesamtmehrkosten",
+					"buyout": "Kaufpreis beeinflusst Finanzierungsbetrag"
+				},
+				"seo": "Auto-Leasing, Leasing-Rechner, Auto-Leasing, Leasing-Berechnung, monatliche Zahlungen, Leasing-Mehrkosten, Kaufpreis, Anzahlung, Zinssatz, Leasing-Zahlungen, Auto-Finanzierung, Leasing vs Kredit"
+			}
 		}
 	}
 }
