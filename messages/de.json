@@ -768,6 +768,269 @@
 				},
 				"seo": "Auto-Leasing, Leasing-Rechner, Auto-Leasing, Leasing-Berechnung, monatliche Zahlungen, Leasing-Mehrkosten, Kaufpreis, Anzahlung, Zinssatz, Leasing-Zahlungen, Auto-Finanzierung, Leasing vs Kredit"
 			}
+		},
+		"customs": {
+			"title": "Auto-Zollabfertigung-Rechner",
+			"description": "Berechnung der Zollgebühren beim Autokauf aus dem Ausland",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Fahrzeugparameter",
+				"carValue": "Fahrzeugwert (€)",
+				"engineVolume": "Hubraum (cm³)",
+				"fuelType": "Kraftstoffart",
+				"carAge": "Fahrzeugalter (Jahre)",
+				"enginePower": "Motorleistung (PS)",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"total": "Gesamtbetrag",
+				"totalDescription": "Gesamtkosten der Zollabfertigung",
+				"carValue": "Fahrzeugwert in Rubel",
+				"duty": "Zollgebühr",
+				"excise": "Verbrauchsteuer",
+				"vat": "MwSt (20%)",
+				"recyclingFee": "Recyclinggebühr",
+				"details": "Berechnungsdetails",
+				"placeholder": "Daten für Berechnung eingeben"
+			},
+			"seo": {
+				"title": "Auto-Zollabfertigung-Rechner Online",
+				"overview": {
+					"title": "Über Zollabfertigung-Rechner",
+					"content": "Online Auto-Zollabfertigung-Rechner hilft bei der Berechnung ungefährer Zollzahlungen beim Autokauf aus dem Ausland: Zollgebühr, Verbrauchsteuer, MwSt und Recyclinggebühr. Nützliches Tool zur Schätzung der Autokosten."
+				},
+				"calculation": {
+					"title": "Wie Zollabfertigung berechnet wird",
+					"content": "Auto-Zollabfertigung umfasst mehrere Zahlungsarten, die nach festgelegten Tarifen und Sätzen berechnet werden.",
+					"duty": "Zollgebühr: Maximum aus 10% des Wertes oder festem Tarif nach Hubraum",
+					"excise": "Verbrauchsteuer: abhängig vom Fahrzeugalter und Hubraum",
+					"vat": "MwSt: 20% der Summe (Wert + Zoll + Verbrauchsteuer)",
+					"recycling": "Recyclinggebühr: fester Betrag 3400 ₽"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Zollabfertigung-Rechner hilft bei der Vorabschätzung der Autokosten und Budgetplanung.",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Präzise Berechnungen mit aktuellen Tarifen",
+					"planning": "Auto-Import-Budgetplanung",
+					"comparison": "Vergleich der Kosten verschiedener Autos"
+				},
+				"tips": {
+					"title": "Zollabfertigung-Tipps",
+					"content": "Beim Autokauf aus dem Ausland alle Faktoren berücksichtigen, die die Zollzahlungen beeinflussen.",
+					"age": "Junge Autos (unter 3 Jahre) haben höhere Verbrauchsteuersätze",
+					"volume": "Hubraum beeinflusst direkt Zoll- und Verbrauchsteuerbeträge",
+					"documentation": "Alle notwendigen Dokumente im Voraus vorbereiten",
+					"consultation": "Bei Zweifeln einen Zollmakler konsultieren"
+				},
+				"seo": "Auto-Zollabfertigung, Zoll-Rechner, Zollzahlungen, Auto-Import, Zollgebühr, Verbrauchsteuer, MwSt, Recyclinggebühr, Auto-Import, Zollabfertigung, Auto-Importkosten"
+			}
+		},
+		"traffic-fines": {
+			"title": "Verkehrsstrafen-Rechner",
+			"description": "Berechnung von Verkehrsstrafen für Verkehrsverstöße mit Frühzahlungsrabatt",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Verstöße auswählen",
+				"selectViolations": "Verkehrsverstöße",
+				"calculate": "Strafe berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"totalFine": "Gesamtstrafe",
+				"totalFineDescription": "Summe aller Strafen",
+				"discountTitle": "Frühzahlungsrabatt",
+				"discountAmount": "Rabattbetrag",
+				"discountedFine": "Betrag mit Rabatt",
+				"discountNote": "25% Rabatt bei Zahlung innerhalb von 20 Tagen",
+				"selectedViolations": "Ausgewählte Verstöße",
+				"placeholder": "Verstöße zur Berechnung auswählen"
+			},
+			"seo": {
+				"title": "Verkehrsstrafen-Rechner Online",
+				"overview": {
+					"title": "Über Verkehrsstrafen-Rechner",
+					"content": "Online Verkehrsstrafen-Rechner hilft bei der schnellen Berechnung von Strafbeträgen für die häufigsten Verstöße: Geschwindigkeitsüberschreitung, Parken, Rotlichtverstoß, Falschfahrer und andere. 25% Rabatt für Frühzahlung innerhalb von 20 Tagen ist enthalten."
+				},
+				"calculation": {
+					"title": "Wie Strafen berechnet werden",
+					"content": "Verkehrsstrafen werden nach Verkehrsgesetzen unter Berücksichtigung des Verstoßtyps und Frühzahlungsrabattmöglichkeit berechnet.",
+					"speed": "Geschwindigkeitsüberschreitung: von 500 bis 5000 Rubel je nach Überschreitung",
+					"safety": "Sicherheitsverstöße: Gurt, Telefon, Licht - von 500 bis 1500 Rubel",
+					"traffic": "Verkehrsverstöße: Rotlicht, Falschfahrer - von 1000 bis 5000 Rubel",
+					"parking": "Parkverstöße: von 1500 bis 5000 Rubel je nach Standort"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Verkehrsstrafen-Rechner hilft bei der schnellen Schätzung von Strafbeträgen und Budgetplanung.",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Präzise Berechnungen mit aktuellen Strafen",
+					"discount": "Frühzahlungsrabatt-Berücksichtigung",
+					"comprehensive": "Vollständige Liste der Verkehrsverstöße"
+				},
+				"tips": {
+					"title": "Verkehrsstrafen-Tipps",
+					"content": "Bei Erhalt einer Strafe ist es wichtig, Ihre Rechte und Optionen zur Reduzierung des Zahlungsbetrags zu kennen.",
+					"payment": "Zahlen Sie Strafen innerhalb von 20 Tagen für 25% Rabatt",
+					"avoidance": "Befolgen Sie Verkehrsregeln zur Vermeidung von Strafen",
+					"documentation": "Bewahren Sie Zahlungsbelege für Strafen auf",
+					"consultation": "Konsultieren Sie einen Anwalt bei strittigen Situationen"
+				},
+				"seo": "Verkehrsstrafen, Strafen-Rechner, Verkehrsverstöße, Geschwindigkeitsüberschreitung, Parkstrafe, Rotlicht, Falschfahrer, Strafenrabatt, Strafenzahlung, Verkehrsrecht"
+			}
+		},
+		"car-ownership": {
+			"title": "Autobesitz-Kosten-Rechner",
+			"description": "Berechnung der Gesamtkosten für Autobesitz inklusive aller Ausgaben",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Fahrzeugparameter",
+				"carPrice": "Fahrzeugpreis (₽)",
+				"ownershipYears": "Besitzdauer (Jahre)",
+				"annualMileage": "Jahreskilometer (km)",
+				"fuelConsumption": "Kraftstoffverbrauch (l/100km)",
+				"selectConsumption": "Kraftstoffverbrauch auswählen",
+				"fuelPrice": "Kraftstoffpreis (₽/l)",
+				"osagoCost": "OSAGO-Kosten (₽/Jahr)",
+				"kaskoCost": "KASKO-Kosten (₽/Jahr)",
+				"optional": "optional",
+				"vehicleTax": "Kraftfahrzeugsteuer (₽/Jahr)",
+				"maintenanceCost": "Wartung & Reparatur (₽/Jahr)",
+				"depreciationRate": "Abschreibung (% pro Jahr)",
+				"selectDepreciation": "Abschreibungssatz auswählen",
+				"calculate": "Besitzkosten berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"totalOwnershipCost": "Gesamte Besitzkosten",
+				"totalOwnershipDescription": "Für gesamte Besitzdauer",
+				"costPerKm": "Kosten pro 1 km",
+				"costPerKmDescription": "Durchschnittliche Kosten pro Kilometer",
+				"annualCosts": "Jahreskosten",
+				"fuel": "Kraftstoff",
+				"insurance": "Versicherung",
+				"tax": "Steuern",
+				"maintenance": "Wartung",
+				"depreciation": "Abschreibung",
+				"costBreakdown": "Kostenaufschlüsselung",
+				"placeholder": "Parameter für Berechnung eingeben"
+			},
+			"seo": {
+				"title": "Autobesitz-Kosten-Rechner Online",
+				"overview": {
+					"title": "Über Autobesitz-Kosten-Rechner",
+					"content": "Online Autobesitz-Kosten-Rechner hilft bei der Schätzung aller Ausgaben für Kraftstoff, Versicherung, Steuern, Wartung und Abschreibung. Finden Sie die realen Kosten Ihres Autos pro Jahr und für die gesamte Besitzdauer heraus."
+				},
+				"calculation": {
+					"title": "Wie Besitzkosten berechnet werden",
+					"content": "Autobesitzkosten umfassen alle mit dem Fahrzeugbetrieb verbundenen Ausgaben.",
+					"fuel": "Kraftstoff: Verbrauch × Kilometerstand × Preis pro Liter",
+					"insurance": "Versicherung: OSAGO + KASKO (optional)",
+					"tax": "Steuern: Kraftfahrzeugsteuer",
+					"maintenance": "Wartung: regelmäßige Wartung",
+					"depreciation": "Abschreibung: Fahrzeugwertverlust"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Rechner hilft Ihnen, die realen Autobesitzkosten genau zu schätzen.",
+					"comprehensive": "Alle Ausgabenarten enthalten",
+					"accurate": "Präzise Berechnungen basierend auf Ihren Daten",
+					"planning": "Auto-Budgetplanung",
+					"comparison": "Vergleichen Sie verschiedene Automodelle"
+				},
+				"tips": {
+					"title": "Tipps zur Senkung der Besitzkosten",
+					"content": "Es gibt mehrere Möglichkeiten, die Gesamtkosten für Autobesitz zu senken.",
+					"fuel": "Wählen Sie sparsame Modelle zur Senkung der Kraftstoffkosten",
+					"insurance": "Vergleichen Sie Versicherungstarife",
+					"maintenance": "Regelmäßige Wartung verhindert teure Ausfälle",
+					"depreciation": "Kaufen Sie Autos mit niedriger Abschreibung"
+				},
+				"seo": "Autobesitzkosten, Autobesitz-Rechner, Autoausgaben, Betriebskosten, Kraftstoff, Versicherung, Steuern, Wartung, Abschreibung, Kosten pro Kilometer"
+			}
+		},
+		"car-depreciation": {
+			"title": "Auto-Abschreibungsrechner",
+			"description": "Berechnung der Autowert-Abschreibung über Besitzjahre",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"initialValue": "Anfangswert (₽)",
+				"ownershipYears": "Besitzdauer (Jahre)",
+				"depreciationMethod": "Abschreibungsmethode",
+				"depreciationRate": "Abschreibungssatz pro Jahr",
+				"selectRate": "Abschreibungssatz auswählen",
+				"annualMileage": "Jahreskilometer (km)",
+				"optional": "optional",
+				"calculate": "Abschreibung berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"finalValue": "Restwert",
+				"finalValueDescription": "Autowert nach angegebenem Zeitraum",
+				"totalDepreciation": "Gesamtabschreibung",
+				"depreciationPercentage": "Abschreibungsprozentsatz",
+				"insights": "Abschreibungsanalyse",
+				"yearlyBreakdown": "Jahresaufschlüsselung",
+				"year": "Jahr",
+				"beginningValue": "Anfangswert",
+				"depreciation": "Abschreibung",
+				"endingValue": "Endwert",
+				"percentage": "Prozentsatz",
+				"placeholder": "Parameter für Berechnung eingeben"
+			},
+			"seo": {
+				"title": "Auto-Abschreibungsrechner Online",
+				"overview": {
+					"title": "Über Abschreibungsrechner",
+					"content": "Online Auto-Abschreibungsrechner hilft zu berechnen, wie der Autowert über Besitzjahre abnimmt, Abschreibungsberechnungsmethode zu wählen und zukünftige Ausgaben zu planen. Praktisches Tool zur Schätzung des Restwerts des Autos."
+				},
+				"methods": {
+					"title": "Abschreibungsberechnungsmethoden",
+					"content": "Es gibt mehrere Methoden zur Berechnung der Autoabschreibung, jede mit ihren eigenen Eigenschaften.",
+					"linear": "Lineare Methode: gleichmäßige Wertminderung jedes Jahr",
+					"declining": "Degressive Methode: Prozentsatz des verbleibenden Werts jedes Jahr",
+					"factors": "Einflussfaktoren: Alter, Kilometerstand, Zustand, Marktsituation"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Abschreibungsrechner hilft Ihnen, fundierte Entscheidungen über Autokauf und -verkauf zu treffen.",
+					"planning": "Finanzielle Ausgabenplanung",
+					"comparison": "Vergleichen Sie verschiedene Automodelle",
+					"insights": "Analytische Einblicke erhalten",
+					"financial": "Finanzplanung"
+				},
+				"tips": {
+					"title": "Tipps zur Reduzierung der Abschreibung",
+					"content": "Es gibt mehrere Möglichkeiten, den Wertverlust des Autos zu minimieren.",
+					"maintenance": "Regelmäßige Wartung",
+					"mileage": "Kilometerstand und Fahrstil kontrollieren",
+					"market": "Marktsituation beim Kauf berücksichtigen",
+					"timing": "Richtigen Zeitpunkt für den Verkauf wählen"
+				},
+				"seo": "Autoabschreibung, Abschreibungsrechner, Restwert Auto, Wertminderung, lineare Abschreibung, degressive Methode, Wertverlust, Autobewertung"
+			}
 		}
 	}
 }

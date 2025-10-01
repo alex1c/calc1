@@ -1030,6 +1030,269 @@
 				},
 				"seo": "auto leasing, leasing calculator, car leasing, leasing calculation, monthly payments, leasing overpayment, buyout value, down payment, interest rate, lease payments, car financing, leasing vs credit"
 			}
+		},
+		"customs": {
+			"title": "Car Customs Clearance Calculator",
+			"description": "Calculate customs duties when importing a car from abroad",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Car Parameters",
+				"carValue": "Car Value (€)",
+				"engineVolume": "Engine Volume (cm³)",
+				"fuelType": "Fuel Type",
+				"carAge": "Car Age (years)",
+				"enginePower": "Engine Power (HP)",
+				"calculate": "Calculate",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"total": "Total Amount",
+				"totalDescription": "Total customs clearance cost",
+				"carValue": "Car value in rubles",
+				"duty": "Customs Duty",
+				"excise": "Excise Tax",
+				"vat": "VAT (20%)",
+				"recyclingFee": "Recycling Fee",
+				"details": "Calculation Details",
+				"placeholder": "Enter data to calculate"
+			},
+			"seo": {
+				"title": "Car Customs Clearance Calculator Online",
+				"overview": {
+					"title": "About Customs Clearance Calculator",
+					"content": "Online car customs clearance calculator helps calculate approximate customs payments when importing a car from abroad: duty, excise, VAT and recycling fee. Useful tool for estimating car import costs."
+				},
+				"calculation": {
+					"title": "How Customs Clearance is Calculated",
+					"content": "Car customs clearance includes several types of payments calculated according to established tariffs and rates.",
+					"duty": "Customs duty: maximum of 10% of value or fixed tariff by engine volume",
+					"excise": "Excise tax: depends on car age and engine volume",
+					"vat": "VAT: 20% of sum (value + duty + excise)",
+					"recycling": "Recycling fee: fixed amount 3400 ₽"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Our customs clearance calculator helps you estimate car import costs in advance and plan your budget.",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Accurate calculations using current tariffs",
+					"planning": "Car import budget planning",
+					"comparison": "Comparing costs of different cars"
+				},
+				"tips": {
+					"title": "Customs Clearance Tips",
+					"content": "When importing a car, consider all factors affecting customs payment amounts.",
+					"age": "Young cars (under 3 years) have higher excise rates",
+					"volume": "Engine volume directly affects duty and excise amounts",
+					"documentation": "Prepare all necessary documents in advance",
+					"consultation": "When in doubt, consult a customs broker"
+				},
+				"seo": "car customs clearance, customs calculator, customs payments, car import, customs duty, excise tax, VAT, recycling fee, car import, customs clearance, car import costs"
+			}
+		},
+		"traffic-fines": {
+			"title": "Traffic Fines Calculator",
+			"description": "Calculate traffic fines for traffic violations with early payment discount",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Select Violations",
+				"selectViolations": "Traffic Violations",
+				"calculate": "Calculate Fine",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"totalFine": "Total Fine",
+				"totalFineDescription": "Sum of all fines",
+				"discountTitle": "Early Payment Discount",
+				"discountAmount": "Discount Amount",
+				"discountedFine": "Amount with Discount",
+				"discountNote": "25% discount applies when paying within 20 days",
+				"selectedViolations": "Selected Violations",
+				"placeholder": "Select violations to calculate"
+			},
+			"seo": {
+				"title": "Traffic Fines Calculator Online",
+				"overview": {
+					"title": "About Traffic Fines Calculator",
+					"content": "Online traffic fines calculator helps quickly calculate fine amounts for the most common violations: speeding, parking, running red lights, wrong-way driving and others. 25% discount for early payment within 20 days is included."
+				},
+				"calculation": {
+					"title": "How Fines are Calculated",
+					"content": "Traffic fines are calculated according to traffic laws considering violation type and early payment discount possibility.",
+					"speed": "Speeding: from 500 to 5000 rubles depending on excess speed",
+					"safety": "Safety violations: seatbelt, phone, lights - from 500 to 1500 rubles",
+					"traffic": "Traffic violations: red light, wrong way - from 1000 to 5000 rubles",
+					"parking": "Parking violations: from 1500 to 5000 rubles depending on location"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Our traffic fines calculator helps you quickly estimate fine amounts and plan your budget.",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Accurate calculations using current fines",
+					"discount": "Early payment discount consideration",
+					"comprehensive": "Complete list of traffic violations"
+				},
+				"tips": {
+					"title": "Traffic Fines Tips",
+					"content": "When receiving a fine, it's important to know your rights and options for reducing the payment amount.",
+					"payment": "Pay fines within 20 days to get 25% discount",
+					"avoidance": "Follow traffic rules to avoid fines",
+					"documentation": "Keep payment receipts for fines",
+					"consultation": "Consult a lawyer for disputed situations"
+				},
+				"seo": "traffic fines, fines calculator, traffic violations, speeding, parking fine, red light, wrong way, fine discount, fine payment, traffic law"
+			}
+		},
+		"car-ownership": {
+			"title": "Car Ownership Cost Calculator",
+			"description": "Calculate total car ownership costs including all expenses",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Car Parameters",
+				"carPrice": "Car Price (₽)",
+				"ownershipYears": "Ownership Period (years)",
+				"annualMileage": "Annual Mileage (km)",
+				"fuelConsumption": "Fuel Consumption (l/100km)",
+				"selectConsumption": "Select fuel consumption",
+				"fuelPrice": "Fuel Price (₽/l)",
+				"osagoCost": "OSAGO Cost (₽/year)",
+				"kaskoCost": "KASKO Cost (₽/year)",
+				"optional": "optional",
+				"vehicleTax": "Vehicle Tax (₽/year)",
+				"maintenanceCost": "Maintenance & Repair (₽/year)",
+				"depreciationRate": "Depreciation (% per year)",
+				"selectDepreciation": "Select depreciation rate",
+				"calculate": "Calculate Ownership Cost",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"totalOwnershipCost": "Total Ownership Cost",
+				"totalOwnershipDescription": "For entire ownership period",
+				"costPerKm": "Cost per 1 km",
+				"costPerKmDescription": "Average cost per kilometer",
+				"annualCosts": "Annual Costs",
+				"fuel": "Fuel",
+				"insurance": "Insurance",
+				"tax": "Taxes",
+				"maintenance": "Maintenance",
+				"depreciation": "Depreciation",
+				"costBreakdown": "Cost Breakdown",
+				"placeholder": "Enter parameters to calculate"
+			},
+			"seo": {
+				"title": "Car Ownership Cost Calculator Online",
+				"overview": {
+					"title": "About Car Ownership Cost Calculator",
+					"content": "Online car ownership cost calculator helps estimate all expenses for fuel, insurance, taxes, maintenance and depreciation. Find out the real cost of your car per year and for the entire ownership period."
+				},
+				"calculation": {
+					"title": "How Ownership Cost is Calculated",
+					"content": "Car ownership cost includes all expenses related to vehicle operation.",
+					"fuel": "Fuel: consumption × mileage × price per liter",
+					"insurance": "Insurance: OSAGO + KASKO (optional)",
+					"tax": "Taxes: vehicle tax",
+					"maintenance": "Maintenance: regular servicing",
+					"depreciation": "Depreciation: car value loss"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Our calculator helps you accurately estimate the real cost of car ownership.",
+					"comprehensive": "All expense types included",
+					"accurate": "Precise calculations based on your data",
+					"planning": "Car budget planning",
+					"comparison": "Compare different car models"
+				},
+				"tips": {
+					"title": "Tips to Reduce Ownership Cost",
+					"content": "There are several ways to reduce overall car ownership cost.",
+					"fuel": "Choose fuel-efficient models to reduce fuel expenses",
+					"insurance": "Compare insurance company rates",
+					"maintenance": "Regular maintenance prevents expensive breakdowns",
+					"depreciation": "Buy cars with low depreciation"
+				},
+				"seo": "car ownership cost, car ownership calculator, car expenses, operating cost, fuel, insurance, taxes, maintenance, depreciation, cost per kilometer"
+			}
+		},
+		"car-depreciation": {
+			"title": "Car Depreciation Calculator",
+			"description": "Calculate car value depreciation over ownership years",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"initialValue": "Initial Value (₽)",
+				"ownershipYears": "Ownership Period (years)",
+				"depreciationMethod": "Depreciation Method",
+				"depreciationRate": "Depreciation Rate per Year",
+				"selectRate": "Select depreciation rate",
+				"annualMileage": "Annual Mileage (km)",
+				"optional": "optional",
+				"calculate": "Calculate Depreciation",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"finalValue": "Residual Value",
+				"finalValueDescription": "Car value after specified period",
+				"totalDepreciation": "Total Depreciation",
+				"depreciationPercentage": "Depreciation Percentage",
+				"insights": "Depreciation Analysis",
+				"yearlyBreakdown": "Yearly Breakdown",
+				"year": "Year",
+				"beginningValue": "Beginning Value",
+				"depreciation": "Depreciation",
+				"endingValue": "Ending Value",
+				"percentage": "Percentage",
+				"placeholder": "Enter parameters to calculate"
+			},
+			"seo": {
+				"title": "Car Depreciation Calculator Online",
+				"overview": {
+					"title": "About Depreciation Calculator",
+					"content": "Online car depreciation calculator helps calculate how car value decreases over ownership years, choose depreciation calculation method and plan future expenses. Convenient tool for estimating residual car value."
+				},
+				"methods": {
+					"title": "Depreciation Calculation Methods",
+					"content": "There are several methods for calculating car depreciation, each with its own characteristics.",
+					"linear": "Linear method: uniform value reduction each year",
+					"declining": "Declining method: percentage of remaining value each year",
+					"factors": "Influencing factors: age, mileage, condition, market situation"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Our depreciation calculator helps you make informed decisions about car buying and selling.",
+					"planning": "Financial expense planning",
+					"comparison": "Compare different car models",
+					"insights": "Get analytical insights",
+					"financial": "Financial planning"
+				},
+				"tips": {
+					"title": "Tips to Reduce Depreciation",
+					"content": "There are several ways to minimize car value loss.",
+					"maintenance": "Regular maintenance",
+					"mileage": "Control mileage and driving style",
+					"market": "Consider market situation when buying",
+					"timing": "Choose the right time to sell"
+				},
+				"seo": "car depreciation, depreciation calculator, residual car value, value decrease, linear depreciation, declining method, value loss, car valuation"
+			}
 		}
 	}
 }

@@ -1,7 +1,17 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Car, Fuel, Shield, CreditCard, FileText } from 'lucide-react';
+import {
+	Car,
+	Fuel,
+	Shield,
+	CreditCard,
+	FileText,
+	Truck,
+	AlertTriangle,
+	Calculator,
+	TrendingDown,
+} from 'lucide-react';
 
 const getCalculators = (t: any) => [
 	{
@@ -47,11 +57,32 @@ const getCalculators = (t: any) => [
 		href: '/calc/leasing',
 	},
 	{
-		id: 'depreciation',
-		title: 'Car Depreciation Calculator',
-		description: 'Calculate how much your car loses value over time',
-		icon: Car,
-		href: '/calc/depreciation',
+		id: 'customs',
+		title: t('calculators.customs.title'),
+		description: t('calculators.customs.description'),
+		icon: Truck,
+		href: '/calc/customs',
+	},
+	{
+		id: 'traffic-fines',
+		title: t('calculators.traffic-fines.title'),
+		description: t('calculators.traffic-fines.description'),
+		icon: AlertTriangle,
+		href: '/calc/traffic-fines',
+	},
+	{
+		id: 'car-ownership',
+		title: t('calculators.car-ownership.title'),
+		description: t('calculators.car-ownership.description'),
+		icon: Calculator,
+		href: '/calc/car-ownership',
+	},
+	{
+		id: 'car-depreciation',
+		title: t('calculators.car-depreciation.title'),
+		description: t('calculators.car-depreciation.description'),
+		icon: TrendingDown,
+		href: '/calc/car-depreciation',
 	},
 ];
 

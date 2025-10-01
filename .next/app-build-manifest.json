@@ -71,10 +71,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/calc/leasing/page.js"
     ],
-    "/not-found": [
+    "/[locale]/calc/customs/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/[locale]/calc/customs/page.js"
+    ],
+    "/[locale]/calc/traffic-fines/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/traffic-fines/page.js"
+    ],
+    "/[locale]/calc/car-ownership/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/car-ownership/page.js"
+    ],
+    "/[locale]/calc/car-depreciation/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/calc/car-depreciation/page.js"
     ]
   }
 }

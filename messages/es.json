@@ -768,6 +768,269 @@
 				},
 				"seo": "leasing automotriz, calculadora de leasing, leasing de autos, cálculo de leasing, pagos mensuales, sobrepago de leasing, valor de compra, pago inicial, tasa de interés, pagos de leasing, financiamiento automotriz, leasing vs crédito"
 			}
+		},
+		"customs": {
+			"title": "Calculadora de Despacho Aduanero de Autos",
+			"description": "Cálculo de aranceles aduaneros al importar un auto del extranjero",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Parámetros del Vehículo",
+				"carValue": "Valor del Vehículo (€)",
+				"engineVolume": "Cilindrada (cm³)",
+				"fuelType": "Tipo de Combustible",
+				"carAge": "Edad del Vehículo (años)",
+				"enginePower": "Potencia del Motor (HP)",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"total": "Monto Total",
+				"totalDescription": "Costo total del despacho aduanero",
+				"carValue": "Valor del auto en rublos",
+				"duty": "Arancel Aduanero",
+				"excise": "Impuesto al Consumo",
+				"vat": "IVA (20%)",
+				"recyclingFee": "Tasa de Reciclaje",
+				"details": "Detalles del Cálculo",
+				"placeholder": "Ingrese datos para calcular"
+			},
+			"seo": {
+				"title": "Calculadora de Despacho Aduanero de Autos Online",
+				"overview": {
+					"title": "Acerca de la Calculadora de Despacho Aduanero",
+					"content": "La calculadora online de despacho aduanero de autos ayuda a calcular pagos aduaneros aproximados al importar un auto del extranjero: arancel, impuesto al consumo, IVA y tasa de reciclaje. Herramienta útil para estimar costos de importación de autos."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Despacho Aduanero",
+					"content": "El despacho aduanero de autos incluye varios tipos de pagos calculados según tarifas y tasas establecidas.",
+					"duty": "Arancel aduanero: máximo del 10% del valor o tarifa fija por cilindrada",
+					"excise": "Impuesto al consumo: depende de la edad del auto y cilindrada",
+					"vat": "IVA: 20% de la suma (valor + arancel + impuesto al consumo)",
+					"recycling": "Tasa de reciclaje: monto fijo 3400 ₽"
+				},
+				"advantages": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora de despacho aduanero te ayuda a estimar costos de importación de autos por adelantado y planificar tu presupuesto.",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Cálculos precisos usando tarifas actuales",
+					"planning": "Planificación de presupuesto para importación de autos",
+					"comparison": "Comparación de costos de diferentes autos"
+				},
+				"tips": {
+					"title": "Consejos de Despacho Aduanero",
+					"content": "Al importar un auto, considera todos los factores que afectan los montos de pagos aduaneros.",
+					"age": "Autos jóvenes (menos de 3 años) tienen tasas de impuesto al consumo más altas",
+					"volume": "La cilindrada afecta directamente los montos de arancel e impuesto al consumo",
+					"documentation": "Prepara todos los documentos necesarios con anticipación",
+					"consultation": "En caso de dudas, consulta a un agente aduanero"
+				},
+				"seo": "despacho aduanero de autos, calculadora de despacho aduanero, pagos aduaneros, importación de autos, arancel aduanero, impuesto al consumo, IVA, tasa de reciclaje, importación de autos, despacho aduanero, costos de importación de autos"
+			}
+		},
+		"traffic-fines": {
+			"title": "Calculadora de Multas de Tráfico",
+			"description": "Cálculo de multas de tráfico por infracciones con descuento por pago anticipado",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Seleccionar Infracciones",
+				"selectViolations": "Infracciones de Tráfico",
+				"calculate": "Calcular Multa",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"totalFine": "Multa Total",
+				"totalFineDescription": "Suma de todas las multas",
+				"discountTitle": "Descuento por Pago Anticipado",
+				"discountAmount": "Cantidad de Descuento",
+				"discountedFine": "Cantidad con Descuento",
+				"discountNote": "25% de descuento al pagar dentro de 20 días",
+				"selectedViolations": "Infracciones Seleccionadas",
+				"placeholder": "Selecciona infracciones para calcular"
+			},
+			"seo": {
+				"title": "Calculadora de Multas de Tráfico Online",
+				"overview": {
+					"title": "Acerca de la Calculadora de Multas de Tráfico",
+					"content": "La calculadora online de multas de tráfico ayuda a calcular rápidamente los montos de multas por las infracciones más comunes: exceso de velocidad, estacionamiento, semáforo en rojo, dirección incorrecta y otras. Se incluye 25% de descuento por pago anticipado dentro de 20 días."
+				},
+				"calculation": {
+					"title": "Cómo se Calculan las Multas",
+					"content": "Las multas de tráfico se calculan según las leyes de tráfico considerando el tipo de infracción y la posibilidad de descuento por pago anticipado.",
+					"speed": "Exceso de velocidad: de 500 a 5000 rublos según el exceso",
+					"safety": "Infracciones de seguridad: cinturón, teléfono, luces - de 500 a 1500 rublos",
+					"traffic": "Infracciones de tráfico: semáforo en rojo, dirección incorrecta - de 1000 a 5000 rublos",
+					"parking": "Infracciones de estacionamiento: de 1500 a 5000 rublos según ubicación"
+				},
+				"advantages": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora de multas de tráfico te ayuda a estimar rápidamente los montos de multas y planificar tu presupuesto.",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Cálculos precisos usando multas actuales",
+					"discount": "Consideración de descuento por pago anticipado",
+					"comprehensive": "Lista completa de infracciones de tráfico"
+				},
+				"tips": {
+					"title": "Consejos sobre Multas de Tráfico",
+					"content": "Al recibir una multa, es importante conocer tus derechos y opciones para reducir el monto del pago.",
+					"payment": "Paga multas dentro de 20 días para obtener 25% de descuento",
+					"avoidance": "Sigue las reglas de tráfico para evitar multas",
+					"documentation": "Guarda los comprobantes de pago de multas",
+					"consultation": "Consulta a un abogado en situaciones disputadas"
+				},
+				"seo": "multas de tráfico, calculadora de multas, infracciones de tráfico, exceso de velocidad, multa de estacionamiento, semáforo en rojo, dirección incorrecta, descuento de multa, pago de multas, ley de tráfico"
+			}
+		},
+		"car-ownership": {
+			"title": "Calculadora de Costo de Posesión de Auto",
+			"description": "Cálculo del costo total de posesión de automóvil incluyendo todos los gastos",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Parámetros del Automóvil",
+				"carPrice": "Precio del Auto (₽)",
+				"ownershipYears": "Período de Posesión (años)",
+				"annualMileage": "Kilometraje Anual (km)",
+				"fuelConsumption": "Consumo de Combustible (l/100km)",
+				"selectConsumption": "Seleccionar consumo de combustible",
+				"fuelPrice": "Precio del Combustible (₽/l)",
+				"osagoCost": "Costo OSAGO (₽/año)",
+				"kaskoCost": "Costo KASKO (₽/año)",
+				"optional": "opcional",
+				"vehicleTax": "Impuesto Vehicular (₽/año)",
+				"maintenanceCost": "Mantenimiento y Reparación (₽/año)",
+				"depreciationRate": "Depreciación (% por año)",
+				"selectDepreciation": "Seleccionar tasa de depreciación",
+				"calculate": "Calcular Costo de Posesión",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"totalOwnershipCost": "Costo Total de Posesión",
+				"totalOwnershipDescription": "Para todo el período de posesión",
+				"costPerKm": "Costo por 1 km",
+				"costPerKmDescription": "Costo promedio por kilómetro",
+				"annualCosts": "Costos Anuales",
+				"fuel": "Combustible",
+				"insurance": "Seguros",
+				"tax": "Impuestos",
+				"maintenance": "Mantenimiento",
+				"depreciation": "Depreciación",
+				"costBreakdown": "Desglose de Costos",
+				"placeholder": "Ingrese parámetros para calcular"
+			},
+			"seo": {
+				"title": "Calculadora de Costo de Posesión de Auto Online",
+				"overview": {
+					"title": "Acerca de la Calculadora de Costo de Posesión",
+					"content": "La calculadora online de costo de posesión de automóvil ayuda a estimar todos los gastos de combustible, seguros, impuestos, mantenimiento y depreciación. Descubre el costo real de tu auto por año y para todo el período de posesión."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Costo de Posesión",
+					"content": "El costo de posesión de automóvil incluye todos los gastos relacionados con la operación del vehículo.",
+					"fuel": "Combustible: consumo × kilometraje × precio por litro",
+					"insurance": "Seguros: OSAGO + KASKO (opcional)",
+					"tax": "Impuestos: impuesto vehicular",
+					"maintenance": "Mantenimiento: servicio regular",
+					"depreciation": "Depreciación: pérdida de valor del auto"
+				},
+				"advantages": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora te ayuda a estimar con precisión el costo real de posesión de automóvil.",
+					"comprehensive": "Todos los tipos de gastos incluidos",
+					"accurate": "Cálculos precisos basados en tus datos",
+					"planning": "Planificación de presupuesto para auto",
+					"comparison": "Comparar diferentes modelos de autos"
+				},
+				"tips": {
+					"title": "Consejos para Reducir el Costo de Posesión",
+					"content": "Existen varias formas de reducir el costo total de posesión de automóvil.",
+					"fuel": "Elige modelos eficientes en combustible para reducir gastos de combustible",
+					"insurance": "Compara tarifas de compañías de seguros",
+					"maintenance": "El mantenimiento regular previene averías costosas",
+					"depreciation": "Compra autos con baja depreciación"
+				},
+				"seo": "costo de posesión de auto, calculadora de posesión, gastos de auto, costo operativo, combustible, seguros, impuestos, mantenimiento, depreciación, costo por kilómetro"
+			}
+		},
+		"car-depreciation": {
+			"title": "Calculadora de Depreciación de Auto",
+			"description": "Cálculo de depreciación del valor del auto por años de posesión",
+			"breadcrumbs": {
+				"auto": "Auto"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"initialValue": "Valor Inicial (₽)",
+				"ownershipYears": "Período de Posesión (años)",
+				"depreciationMethod": "Método de Depreciación",
+				"depreciationRate": "Tasa de Depreciación por Año",
+				"selectRate": "Seleccionar tasa de depreciación",
+				"annualMileage": "Kilometraje Anual (km)",
+				"optional": "opcional",
+				"calculate": "Calcular Depreciación",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"finalValue": "Valor Residual",
+				"finalValueDescription": "Valor del auto después del período especificado",
+				"totalDepreciation": "Depreciación Total",
+				"depreciationPercentage": "Porcentaje de Depreciación",
+				"insights": "Análisis de Depreciación",
+				"yearlyBreakdown": "Desglose Anual",
+				"year": "Año",
+				"beginningValue": "Valor Inicial",
+				"depreciation": "Depreciación",
+				"endingValue": "Valor Final",
+				"percentage": "Porcentaje",
+				"placeholder": "Ingrese parámetros para calcular"
+			},
+			"seo": {
+				"title": "Calculadora de Depreciación de Auto Online",
+				"overview": {
+					"title": "Acerca de la Calculadora de Depreciación",
+					"content": "La calculadora online de depreciación de auto ayuda a calcular cómo disminuye el valor del auto por años de posesión, elegir método de cálculo de depreciación y planificar gastos futuros. Herramienta conveniente para estimar el valor residual del auto."
+				},
+				"methods": {
+					"title": "Métodos de Cálculo de Depreciación",
+					"content": "Existen varios métodos para calcular la depreciación del auto, cada uno con sus propias características.",
+					"linear": "Método lineal: reducción uniforme del valor cada año",
+					"declining": "Método decreciente: porcentaje del valor restante cada año",
+					"factors": "Factores influyentes: edad, kilometraje, condición, situación del mercado"
+				},
+				"advantages": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora de depreciación te ayuda a tomar decisiones informadas sobre compra y venta de autos.",
+					"planning": "Planificación de gastos financieros",
+					"comparison": "Comparar diferentes modelos de autos",
+					"insights": "Obtener análisis detallados",
+					"financial": "Planificación financiera"
+				},
+				"tips": {
+					"title": "Consejos para Reducir la Depreciación",
+					"content": "Existen varias formas de minimizar la pérdida de valor del auto.",
+					"maintenance": "Mantenimiento regular",
+					"mileage": "Controlar kilometraje y estilo de conducción",
+					"market": "Considerar situación del mercado al comprar",
+					"timing": "Elegir el momento adecuado para vender"
+				},
+				"seo": "depreciación de auto, calculadora de depreciación, valor residual auto, disminución de valor, depreciación lineal, método decreciente, pérdida de valor, valoración de auto"
+			}
 		}
 	}
 }
