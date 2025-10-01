@@ -361,6 +361,156 @@
 					"patience": "Sea paciente"
 				}
 			}
+		},
+		"car-loan": {
+			"title": "Calculadora de Préstamo de Auto",
+			"description": "Calcular pagos mensuales de préstamo de auto, pagos totales y crear cronogramas de pago detallados para financiamiento de vehículos",
+			"seo": "calculadora de préstamo de auto, cálculo de préstamo de auto, pago mensual de auto, financiamiento de auto, pago inicial, tasa de interés, cronograma de préstamo, seguro de vehículo",
+			"form": {
+				"title": "Parámetros del Préstamo de Auto",
+				"carValue": "Valor del Auto ($)",
+				"downPayment": "Pago Inicial ($)",
+				"termYears": "Plazo en Años",
+				"termMonths": "Plazo en Meses",
+				"interestRate": "Tasa de Interés (% anual)",
+				"additionalPayment": "Pago Adicional ($)",
+				"optional": "opcional",
+				"paymentType": "Tipo de Pago",
+				"paymentTypes": {
+					"annuity": "Pagos de Anualidad (Iguales)",
+					"differentiated": "Pagos Diferenciados (Decrecientes)"
+				},
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Entrada"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"summary": "Resumen",
+				"monthlyPayment": "Pago Mensual",
+				"totalPayments": "Pagos Totales",
+				"totalInterest": "Interés Total",
+				"effectiveTerm": "Plazo Efectivo",
+				"months": "meses",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Pagos",
+				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'",
+				"table": {
+					"month": "Mes",
+					"payment": "Pago",
+					"interest": "Interés",
+					"principal": "Principal",
+					"balance": "Saldo",
+					"moreMonths": "meses adicionales"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Préstamo de Auto: Cálculo de Pagos, Tasas y Condiciones de Financiamiento Automotriz",
+				"overview": {
+					"title": "Calculadora de Préstamo de Auto para Cálculo de Préstamo Automotriz",
+					"content": "La calculadora de préstamo de auto es una herramienta profesional para calcular préstamos automotrices, pagos mensuales, pagos totales y sobrepago. Con nuestra calculadora puede calcular condiciones óptimas de préstamo de auto, comparar diferentes ofertas bancarias y elegir la opción de financiamiento vehicular más rentable."
+				},
+				"advantages": {
+					"title": "Beneficios de Usar la Calculadora de Préstamo de Auto",
+					"content": "La calculadora de préstamo de auto proporciona muchos beneficios para la planificación de compra de auto:",
+					"quickApproval": "Aprobación rápida y recepción de fondos para compra de auto",
+					"lowRates": "Tasas de interés competitivas y condiciones de préstamo favorables",
+					"flexibleTerms": "Plazos de préstamo flexibles de 1 a 7 años",
+					"earlyRepayment": "Posibilidad de pago anticipado sin penalizaciones"
+				},
+				"requirements": {
+					"title": "Requisitos para Aprobación de Préstamo de Auto",
+					"content": "Para obtener un préstamo de auto debe cumplir con los siguientes requisitos:",
+					"age": "Edad de 18 a 65 años al momento del pago del préstamo",
+					"income": "Ingresos confirmados de al menos $500 por mes",
+					"creditHistory": "Historial crediticio positivo y sin pagos vencidos",
+					"documents": "Paquete completo de documentos: pasaporte, certificado de ingresos, licencia de conducir"
+				},
+				"programs": {
+					"title": "Programas de Préstamo de Auto",
+					"content": "Los bancos ofrecen varios programas de préstamo de auto:",
+					"newCar": {
+						"title": "Préstamo para Auto Nuevo",
+						"desc": "Condiciones especiales para compra de autos nuevos con tasas mínimas"
+					},
+					"usedCar": {
+						"title": "Préstamo para Auto Usado",
+						"desc": "Financiamiento para autos usados con condiciones flexibles"
+					}
+				},
+				"tips": {
+					"title": "Consejos para Elegir Préstamo de Auto",
+					"content": "Para elegir el préstamo de auto óptimo:",
+					"compare": "Compare ofertas de diferentes bancos y condiciones de préstamo",
+					"insurance": "Considere el costo del seguro completo y de responsabilidad civil",
+					"early": "Considere la opción de pago anticipado para ahorros",
+					"consult": "Consulte con especialistas financieros"
+				}
+			}
+		},
+		"osago": {
+			"title": "Calculadora de OSAGO",
+			"description": "Calcular el costo del seguro OSAGO basado en región, potencia del motor, edad del conductor y otros factores",
+			"seo": "calculadora OSAGO, cálculo OSAGO, costo OSAGO, seguro OSAGO, coeficiente bonus-malus, póliza OSAGO",
+			"form": {
+				"title": "Parámetros de Cálculo OSAGO",
+				"region": "Región",
+				"selectRegion": "Seleccionar región",
+				"enginePower": "Potencia del Motor (hp)",
+				"driverAge": "Edad del Conductor (años)",
+				"drivingExperience": "Experiencia de Conducción (años)",
+				"driversCount": "Número de Conductores",
+				"bonusMalus": "Coeficiente Bonus-Malus (CMB)",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores de Entrada"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"totalCost": "Costo OSAGO",
+				"details": "Detalles del Cálculo",
+				"baseRate": "Tarifa Base",
+				"territoryCoeff": "Coeficiente Territorial (CT)",
+				"ageExperienceCoeff": "Coeficiente Edad-Experiencia (CEE)",
+				"powerCoeff": "Coeficiente de Potencia (CP)",
+				"driversCoeff": "Coeficiente de Conductores (CC)",
+				"bonusMalusCoeff": "Coeficiente Bonus-Malus (CMB)",
+				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"seo": {
+				"title": "Calculadora OSAGO: Cálculo del Costo de Póliza de Seguro Obligatorio de Auto",
+				"overview": {
+					"title": "Calculadora OSAGO para Cálculo de Costo de Póliza",
+					"content": "La calculadora OSAGO es una herramienta profesional para calcular el costo de la póliza de seguro obligatorio de responsabilidad civil automotriz. Con nuestra calculadora puede calcular el costo exacto del OSAGO considerando todos los coeficientes: territorio, edad y experiencia del conductor, potencia del motor, número de conductores y coeficiente bonus-malus."
+				},
+				"coefficients": {
+					"title": "Coeficientes de Cálculo OSAGO",
+					"content": "El costo del OSAGO se calcula usando la fórmula: Tarifa Base × CT × CMB × CEE × CP × CC",
+					"territory": "CT (Coeficiente Territorial): Moscú = 2.0, San Petersburgo = 1.8, otras regiones = 1.0",
+					"ageExperience": "CEE (Edad-Experiencia): edad < 22 y experiencia < 3 años = 1.8, de lo contrario = 1.0",
+					"power": "CP (Potencia): hasta 70 hp = 0.6, 70-100 hp = 1.0, 101-120 hp = 1.1, 121-150 hp = 1.2, >150 hp = 1.4",
+					"drivers": "CC (Conductores): un conductor = 1.0, varios = 1.2, ilimitado = 1.8",
+					"bonusMalus": "CMB (Bonus-Malus): de 0.5 a 2.45 dependiendo del historial de conducción"
+				},
+				"advantages": {
+					"title": "Beneficios de Usar la Calculadora OSAGO",
+					"content": "La calculadora OSAGO proporciona muchos beneficios para la planificación de seguros:",
+					"quick": "Cálculo rápido del costo de póliza en minutos",
+					"accurate": "Cálculo preciso con todos los coeficientes actuales",
+					"comparison": "Capacidad de comparar costos entre diferentes compañías de seguros",
+					"savings": "Ahorro de tiempo y dinero al elegir la póliza óptima"
+				},
+				"tips": {
+					"title": "Consejos para Seleccionar OSAGO",
+					"content": "Para elegir la póliza OSAGO óptima:",
+					"compare": "Compare ofertas de diferentes compañías de seguros",
+					"bonusMalus": "Mantenga un buen coeficiente bonus-malus con conducción sin accidentes",
+					"early": "Renueve la póliza con anticipación para preservar descuentos",
+					"documents": "Prepare todos los documentos necesarios con anticipación"
+				}
+			}
 		}
 	}
 }

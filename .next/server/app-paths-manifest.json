@@ -1,4 +1,7 @@
 {
+  "/[locale]/auto/page": "app/[locale]/auto/page.js",
   "/[locale]/finance/page": "app/[locale]/finance/page.js",
-  "/[locale]/calc/auto-loan/page": "app/[locale]/calc/auto-loan/page.js"
+  "/[locale]/calc/auto-loan/page": "app/[locale]/calc/auto-loan/page.js",
+  "/[locale]/calc/car-loan/page": "app/[locale]/calc/car-loan/page.js",
+  "/[locale]/calc/osago/page": "app/[locale]/calc/osago/page.js"
 }

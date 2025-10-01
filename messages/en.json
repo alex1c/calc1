@@ -460,6 +460,156 @@
 				}
 			}
 		},
+		"car-loan": {
+			"title": "Car Loan Calculator",
+			"description": "Calculate monthly car loan payments, total payments, and create detailed payment schedules for vehicle financing",
+			"seo": "car loan calculator, auto loan calculator, monthly car payment, car financing, down payment, interest rate, loan schedule, vehicle insurance",
+			"form": {
+				"title": "Car Loan Parameters",
+				"carValue": "Car Value ($)",
+				"downPayment": "Down Payment ($)",
+				"termYears": "Term in Years",
+				"termMonths": "Term in Months",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Payment ($)",
+				"optional": "optional",
+				"paymentType": "Payment Type",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"errors": {
+					"title": "Input Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"placeholder": "Enter parameters and click 'Calculate'",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "additional months"
+				}
+			},
+			"seo": {
+				"title": "Car Loan Calculator: Payment Calculation, Rates and Auto Financing Conditions",
+				"overview": {
+					"title": "Car Loan Calculator for Auto Loan Calculation",
+					"content": "Car loan calculator is a professional tool for calculating auto loans, monthly payments, total payments and overpayment. With our calculator you can calculate optimal car loan conditions, compare different bank offers and choose the most profitable vehicle financing option."
+				},
+				"advantages": {
+					"title": "Benefits of Using Car Loan Calculator",
+					"content": "Car loan calculator provides many benefits for car purchase planning:",
+					"quickApproval": "Quick approval and receiving funds for car purchase",
+					"lowRates": "Competitive interest rates and favorable lending conditions",
+					"flexibleTerms": "Flexible loan terms from 1 to 7 years",
+					"earlyRepayment": "Possibility of early repayment without penalties"
+				},
+				"requirements": {
+					"title": "Requirements for Car Loan Approval",
+					"content": "To get a car loan you need to meet the following requirements:",
+					"age": "Age from 18 to 65 years at the time of loan repayment",
+					"income": "Confirmed income of at least $500 per month",
+					"creditHistory": "Positive credit history and no overdue payments",
+					"documents": "Complete document package: passport, income certificate, driver's license"
+				},
+				"programs": {
+					"title": "Car Loan Programs",
+					"content": "Banks offer various car loan programs:",
+					"newCar": {
+						"title": "New Car Loan",
+						"desc": "Special conditions for purchasing new cars with minimum rates"
+					},
+					"usedCar": {
+						"title": "Used Car Loan",
+						"desc": "Financing for used cars with flexible conditions"
+					}
+				},
+				"tips": {
+					"title": "Tips for Choosing Car Loan",
+					"content": "To choose the optimal car loan:",
+					"compare": "Compare offers from different banks and lending conditions",
+					"insurance": "Consider the cost of comprehensive and liability insurance",
+					"early": "Consider early repayment option for savings",
+					"consult": "Consult with financial specialists"
+				}
+			}
+		},
+		"osago": {
+			"title": "OSAGO Calculator",
+			"description": "Calculate OSAGO insurance cost based on region, engine power, driver age and other factors",
+			"seo": "OSAGO calculator, OSAGO calculation, OSAGO cost, OSAGO insurance, bonus-malus coefficient, OSAGO policy",
+			"form": {
+				"title": "OSAGO Calculation Parameters",
+				"region": "Region",
+				"selectRegion": "Select region",
+				"enginePower": "Engine Power (hp)",
+				"driverAge": "Driver Age (years)",
+				"drivingExperience": "Driving Experience (years)",
+				"driversCount": "Number of Drivers",
+				"bonusMalus": "Bonus-Malus Coefficient (BMC)",
+				"calculate": "Calculate",
+				"errors": {
+					"title": "Input Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"totalCost": "OSAGO Cost",
+				"details": "Calculation Details",
+				"baseRate": "Base Rate",
+				"territoryCoeff": "Territory Coefficient (TC)",
+				"ageExperienceCoeff": "Age-Experience Coefficient (AEC)",
+				"powerCoeff": "Power Coefficient (PC)",
+				"driversCoeff": "Drivers Coefficient (DC)",
+				"bonusMalusCoeff": "Bonus-Malus Coefficient (BMC)",
+				"placeholder": "Enter parameters and click 'Calculate'"
+			},
+			"seo": {
+				"title": "OSAGO Calculator: Calculate Mandatory Auto Insurance Policy Cost",
+				"overview": {
+					"title": "OSAGO Calculator for Policy Cost Calculation",
+					"content": "OSAGO calculator is a professional tool for calculating mandatory auto liability insurance policy cost. With our calculator you can calculate exact OSAGO cost considering all coefficients: territory, driver age and experience, engine power, number of drivers and bonus-malus coefficient."
+				},
+				"coefficients": {
+					"title": "OSAGO Calculation Coefficients",
+					"content": "OSAGO cost is calculated using formula: Base Rate × TC × BMC × AEC × PC × DC",
+					"territory": "TC (Territory Coefficient): Moscow = 2.0, St. Petersburg = 1.8, other regions = 1.0",
+					"ageExperience": "AEC (Age-Experience): age < 22 and experience < 3 years = 1.8, otherwise = 1.0",
+					"power": "PC (Power): up to 70 hp = 0.6, 70-100 hp = 1.0, 101-120 hp = 1.1, 121-150 hp = 1.2, >150 hp = 1.4",
+					"drivers": "DC (Drivers): one driver = 1.0, several = 1.2, unlimited = 1.8",
+					"bonusMalus": "BMC (Bonus-Malus): from 0.5 to 2.45 depending on driving history"
+				},
+				"advantages": {
+					"title": "Benefits of Using OSAGO Calculator",
+					"content": "OSAGO calculator provides many benefits for insurance planning:",
+					"quick": "Quick policy cost calculation in minutes",
+					"accurate": "Accurate calculation with all current coefficients",
+					"comparison": "Ability to compare costs across different insurance companies",
+					"savings": "Time and money savings when choosing optimal policy"
+				},
+				"tips": {
+					"title": "OSAGO Selection Tips",
+					"content": "To choose optimal OSAGO policy:",
+					"compare": "Compare offers from different insurance companies",
+					"bonusMalus": "Maintain good bonus-malus coefficient with accident-free driving",
+					"early": "Renew policy in advance to preserve discounts",
+					"documents": "Prepare all necessary documents in advance"
+				}
+			}
+		},
 		"consumer-loan": {
 			"title": "Consumer Loan Calculator",
 			"description": "Calculate monthly consumer loan payments, total interest, and create detailed payment schedules",

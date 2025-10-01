@@ -20,11 +20,11 @@ const calculators = [
 		href: '/calc/car-loan',
 	},
 	{
-		id: 'insurance',
-		title: 'Car Insurance Calculator',
-		description: 'Estimate car insurance costs and coverage options',
+		id: 'osago',
+		title: 'OSAGO Calculator',
+		description: 'Calculate OSAGO insurance cost based on various factors',
 		icon: Shield,
-		href: '/calc/insurance',
+		href: '/calc/osago',
 	},
 	{
 		id: 'depreciation',

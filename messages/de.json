@@ -361,6 +361,156 @@
 					"patience": "Seien Sie geduldig"
 				}
 			}
+		},
+		"car-loan": {
+			"title": "Autokredit-Rechner",
+			"description": "Berechnen Sie monatliche Autokredit-Zahlungen, Gesamtzahlungen und erstellen Sie detaillierte Zahlungspläne für Fahrzeugfinanzierung",
+			"seo": "Autokredit-Rechner, Autokredit-Berechnung, monatliche Autozahlung, Autofinanzierung, Anzahlung, Zinssatz, Kreditschema, Fahrzeugversicherung",
+			"form": {
+				"title": "Autokredit-Parameter",
+				"carValue": "Fahrzeugwert (€)",
+				"downPayment": "Anzahlung (€)",
+				"termYears": "Laufzeit in Jahren",
+				"termMonths": "Laufzeit in Monaten",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"additionalPayment": "Zusätzliche Zahlung (€)",
+				"optional": "optional",
+				"paymentType": "Zahlungsart",
+				"paymentTypes": {
+					"annuity": "Annuitätenzahlungen (gleich)",
+					"differentiated": "Differenzierte Zahlungen (abnehmend)"
+				},
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Eingabefehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"summary": "Zusammenfassung",
+				"monthlyPayment": "Monatliche Zahlung",
+				"totalPayments": "Gesamtzahlungen",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveTerm": "Effektive Laufzeit",
+				"months": "Monate",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Zahlungsplan",
+				"placeholder": "Parameter eingeben und 'Berechnen' klicken",
+				"table": {
+					"month": "Monat",
+					"payment": "Zahlung",
+					"interest": "Zinsen",
+					"principal": "Tilgung",
+					"balance": "Restschuld",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Autokredit-Rechner: Zahlungsberechnung, Zinssätze und Autofinanzierungsbedingungen",
+				"overview": {
+					"title": "Autokredit-Rechner für Autokredit-Berechnung",
+					"content": "Autokredit-Rechner ist ein professionelles Tool zur Berechnung von Autokrediten, monatlichen Zahlungen, Gesamtzahlungen und Überzahlungen. Mit unserem Rechner können Sie optimale Autokredit-Bedingungen berechnen, verschiedene Bankangebote vergleichen und die profitabelste Fahrzeugfinanzierungsoption wählen."
+				},
+				"advantages": {
+					"title": "Vorteile der Nutzung des Autokredit-Rechners",
+					"content": "Der Autokredit-Rechner bietet viele Vorteile für die Autokaufplanung:",
+					"quickApproval": "Schnelle Genehmigung und Erhalt von Mitteln für den Autokauf",
+					"lowRates": "Wettbewerbsfähige Zinssätze und günstige Kreditbedingungen",
+					"flexibleTerms": "Flexible Kreditlaufzeiten von 1 bis 7 Jahren",
+					"earlyRepayment": "Möglichkeit der vorzeitigen Rückzahlung ohne Strafen"
+				},
+				"requirements": {
+					"title": "Anforderungen für Autokredit-Genehmigung",
+					"content": "Um einen Autokredit zu erhalten, müssen Sie folgende Anforderungen erfüllen:",
+					"age": "Alter von 18 bis 65 Jahren zum Zeitpunkt der Kreditrückzahlung",
+					"income": "Bestätigtes Einkommen von mindestens 500€ pro Monat",
+					"creditHistory": "Positive Kredithistorie und keine überfälligen Zahlungen",
+					"documents": "Vollständiger Dokumentensatz: Reisepass, Einkommensbescheinigung, Führerschein"
+				},
+				"programs": {
+					"title": "Autokredit-Programme",
+					"content": "Banken bieten verschiedene Autokredit-Programme an:",
+					"newCar": {
+						"title": "Neuwagen-Kredit",
+						"desc": "Spezielle Bedingungen für den Kauf neuer Autos mit minimalen Zinssätzen"
+					},
+					"usedCar": {
+						"title": "Gebrauchtwagen-Kredit",
+						"desc": "Finanzierung für Gebrauchtwagen mit flexiblen Bedingungen"
+					}
+				},
+				"tips": {
+					"title": "Tipps zur Autokredit-Auswahl",
+					"content": "Für die optimale Autokredit-Auswahl:",
+					"compare": "Vergleichen Sie Angebote verschiedener Banken und Kreditbedingungen",
+					"insurance": "Berücksichtigen Sie die Kosten für Vollkasko- und Haftpflichtversicherung",
+					"early": "Erwägen Sie die Möglichkeit der vorzeitigen Rückzahlung für Einsparungen",
+					"consult": "Konsultieren Sie Finanzspezialisten"
+				}
+			}
+		},
+		"osago": {
+			"title": "OSAGO-Rechner",
+			"description": "Berechnen Sie OSAGO-Versicherungskosten basierend auf Region, Motorleistung, Fahreralter und anderen Faktoren",
+			"seo": "OSAGO-Rechner, OSAGO-Berechnung, OSAGO-Kosten, OSAGO-Versicherung, Bonus-Malus-Koeffizient, OSAGO-Police",
+			"form": {
+				"title": "OSAGO-Berechnungsparameter",
+				"region": "Region",
+				"selectRegion": "Region auswählen",
+				"enginePower": "Motorleistung (PS)",
+				"driverAge": "Fahreralter (Jahre)",
+				"drivingExperience": "Fahrerfahrung (Jahre)",
+				"driversCount": "Anzahl der Fahrer",
+				"bonusMalus": "Bonus-Malus-Koeffizient (BMK)",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Eingabefehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"totalCost": "OSAGO-Kosten",
+				"details": "Berechnungsdetails",
+				"baseRate": "Grundtarif",
+				"territoryCoeff": "Gebietskoeffizient (GK)",
+				"ageExperienceCoeff": "Alter-Erfahrung-Koeffizient (AEK)",
+				"powerCoeff": "Leistungskoeffizient (LK)",
+				"driversCoeff": "Fahrerkoeffizient (FK)",
+				"bonusMalusCoeff": "Bonus-Malus-Koeffizient (BMK)",
+				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"seo": {
+				"title": "OSAGO-Rechner: Berechnung der Kosten für Kfz-Haftpflichtversicherung",
+				"overview": {
+					"title": "OSAGO-Rechner für Policenkostenberechnung",
+					"content": "OSAGO-Rechner ist ein professionelles Tool zur Berechnung der Kosten für Kfz-Haftpflichtversicherung. Mit unserem Rechner können Sie genaue OSAGO-Kosten unter Berücksichtigung aller Koeffizienten berechnen: Gebiet, Fahreralter und -erfahrung, Motorleistung, Anzahl der Fahrer und Bonus-Malus-Koeffizient."
+				},
+				"coefficients": {
+					"title": "OSAGO-Berechnungskoeffizienten",
+					"content": "OSAGO-Kosten werden nach Formel berechnet: Grundtarif × GK × BMK × AEK × LK × FK",
+					"territory": "GK (Gebietskoeffizient): Moskau = 2.0, St. Petersburg = 1.8, andere Regionen = 1.0",
+					"ageExperience": "AEK (Alter-Erfahrung): Alter < 22 und Erfahrung < 3 Jahre = 1.8, sonst = 1.0",
+					"power": "LK (Leistung): bis 70 PS = 0.6, 70-100 PS = 1.0, 101-120 PS = 1.1, 121-150 PS = 1.2, >150 PS = 1.4",
+					"drivers": "FK (Fahrer): ein Fahrer = 1.0, mehrere = 1.2, unbegrenzt = 1.8",
+					"bonusMalus": "BMK (Bonus-Malus): von 0.5 bis 2.45 je nach Fahrhistorie"
+				},
+				"advantages": {
+					"title": "Vorteile der Nutzung des OSAGO-Rechners",
+					"content": "Der OSAGO-Rechner bietet viele Vorteile für die Versicherungsplanung:",
+					"quick": "Schnelle Policenkostenberechnung in Minuten",
+					"accurate": "Genaue Berechnung mit allen aktuellen Koeffizienten",
+					"comparison": "Möglichkeit, Kosten verschiedener Versicherungsunternehmen zu vergleichen",
+					"savings": "Zeit- und Geldersparnis bei der Wahl der optimalen Police"
+				},
+				"tips": {
+					"title": "Tipps zur OSAGO-Auswahl",
+					"content": "Für die optimale OSAGO-Police:",
+					"compare": "Vergleichen Sie Angebote verschiedener Versicherungsunternehmen",
+					"bonusMalus": "Halten Sie einen guten Bonus-Malus-Koeffizienten durch unfallfreies Fahren",
+					"early": "Verlängern Sie die Police rechtzeitig, um Rabatte zu erhalten",
+					"documents": "Bereiten Sie alle notwendigen Dokumente im Voraus vor"
+				}
+			}
 		}
 	}
 }
