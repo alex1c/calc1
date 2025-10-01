@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_rsc_messages_en_json";
+exports.ids = ["_rsc_messages_en_json"];
+exports.modules = {
+
+/***/ "(rsc)/./messages/en.json":
+/*!**************************!*\
+  !*** ./messages/en.json ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"common":{"search":"Search","language":"Language","categories":"Categories","calculators":"Calculators","calculate":"Calculate","result":"Result","clear":"Clear","favorites":"Favorites"},"brand":{"name":"Calculator #1","slogan":"One site. All calculators."},"navigation":{"home":"Home","finance":"Finance","math":"Math","life":"Life","construction":"Construction","auto":"Auto","time":"Time","health":"Health","science":"Science","converter":"Converter","fun":"Fun"},"categories":{"finance":{"title":"Financial Calculators","description":"Loans, deposits, mortgages, taxes and investments"},"math":{"title":"Mathematical Calculators","description":"Basic operations, fractions, percentages, geometry"},"life":{"title":"Life Calculators","description":"Calories, BMI, pregnancy, health"},"construction":{"title":"Construction Calculators","description":"Wallpaper, paint, concrete, roofing"},"auto":{"title":"Auto Calculators","description":"Fuel consumption, taxes, leasing, insurance"},"time":{"title":"Time and Date","description":"Date differences, age, timers"},"health":{"title":"Health and Medical","description":"BMI, heart rate, blood pressure, vitamins"},"science":{"title":"Education and Science","description":"Physics, chemistry, geometry, statistics"},"converter":{"title":"Online Converters","description":"Length, weight, temperature, speed"},"fun":{"title":"Entertainment and Hobbies","description":"Compatibility, generators, games"}},"calculators":{"paper-weight":{"title":"Paper Weight Calculator","description":"Calculate paper weight by density and number of sheets","seo":"A4 sheets calculator, paper weight calculation by density, paper weight calculator"},"bmi":{"title":"Body Mass Index","description":"Calculate BMI for weight assessment","seo":"BMI calculator, body mass index, normal weight"},"credit-loan":{"title":"Credit Calculator","description":"Calculate loan payments","seo":"Credit calculator, loan calculation, monthly payment"}}}');
+
+/***/ })
+
+};
+;
