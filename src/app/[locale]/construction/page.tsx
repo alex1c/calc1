@@ -18,10 +18,17 @@ const getCalculators = () => [
 		href: '/calc/paint',
 	},
 	{
+		id: 'tile-laminate',
+		title: 'Калькулятор плитки и ламината',
+		description: 'Расчёт количества плитки и ламината для пола',
+		icon: Square,
+		href: '/calc/tile-laminate',
+	},
+	{
 		id: 'concrete',
 		title: 'Калькулятор бетона',
 		description: 'Расчёт объёма бетона для фундаментов и плит',
-		icon: Square,
+		icon: Wrench,
 		href: '/calc/concrete',
 	},
 	{

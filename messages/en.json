@@ -1592,6 +1592,102 @@
 				},
 				"seo": "flooring calculator, tile calculation, laminate calculation, parquet calculator, carpet calculation, linoleum calculator, floor coverings, renovation calculator, floor tile, floor laminate, parquet board, floor carpet, floor linoleum, tile consumption, laminate consumption, parquet consumption, carpet consumption, linoleum consumption, renovation calculator, renovation planning, renovation budget, construction work, finishing materials, ceramic tile, porcelain stoneware, mosaic, vinyl tile, quartz vinyl tile, SPC tile, LVT tile, laminate class 32, laminate class 33, laminate class 34, oak parquet board, ash parquet board, walnut parquet board, office carpet, home carpet, commercial linoleum, domestic linoleum"
 			}
+		},
+		"tile-laminate": {
+			"title": "Tile and Laminate Calculator",
+			"description": "Calculate tile and laminate quantities for flooring",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"flooringType": "Flooring Type",
+				"roomDimensions": "Room Dimensions",
+				"roomLength": "Room Length",
+				"roomWidth": "Room Width",
+				"elementDimensions": "Element Dimensions",
+				"elementLength": "Element Length",
+				"elementWidth": "Element Width",
+				"packageInfo": "Package Information",
+				"packageQuantity": "Quantity per Package",
+				"piecesPerPackage": "pieces per package",
+				"reservePercentage": "Material Reserve",
+				"groutWidth": "Grout Width",
+				"calculate": "Calculate",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"summary": "Total needed",
+				"parameter": "Parameter",
+				"value": "Value",
+				"roomArea": "Room Area",
+				"flooringType": "Flooring Type",
+				"elementSize": "Element Size",
+				"elementArea": "Element Area",
+				"totalElements": "Total Elements",
+				"reserve": "Reserve",
+				"packagesNeeded": "Packages Needed",
+				"packages": "packages",
+				"elements": "elements",
+				"tips": {
+					"title": "Recommendations",
+					"recommendation": "We recommend taking an additional 1-2 packages for cutting and possible defects."
+				}
+			},
+			"errors": {
+				"title": "Input Errors"
+			},
+			"seo": {
+				"title": "Tile and Laminate Calculator - Floor Material Calculation | Calculator #1",
+				"overview": {
+					"title": "Tile and Laminate Calculator",
+					"content": "Online tile and laminate calculator helps calculate how much material is needed for floor or wall installation. Takes into account room dimensions, tile or panel size, as well as cutting reserve and waste."
+				},
+				"calculation": {
+					"title": "How material quantities are calculated",
+					"content": "Tile and laminate calculation includes several steps to get an accurate result.",
+					"steps": {
+						"area": "Room area calculation",
+						"element": "Single element area determination",
+						"quantity": "Total element quantity calculation",
+						"packages": "Package quantity determination",
+						"reserve": "Adding cutting reserve"
+					}
+				},
+				"materials": {
+					"title": "Floor covering types",
+					"content": "Calculator supports tile and laminate calculation considering their specifics.",
+					"tile": {
+						"title": "Tile calculation",
+						"content": "Ceramic tile quantity calculation for floor considering tile size, grout width and cutting reserve."
+					},
+					"laminate": {
+						"title": "Laminate calculation",
+						"content": "Laminate quantity calculation considering board size, quantity per package and cutting reserve."
+					}
+				},
+				"tips": {
+					"title": "Material calculation tips",
+					"content": "For accurate results, follow our recommendations when calculating tile and laminate.",
+					"measurement": "Carefully measure all room dimensions",
+					"element": "Check flooring element dimensions",
+					"package": "Clarify element quantity per package",
+					"reserve": "Add 10-15% reserve for cutting",
+					"quality": "Consider possible defects when purchasing",
+					"pattern": "For patterned coverings, increase reserve to 20%"
+				},
+				"benefits": {
+					"title": "Calculator benefits",
+					"content": "Using tile and laminate calculator provides many benefits when planning renovation.",
+					"accuracy": "Accurate material quantity calculation",
+					"cost": "Savings on material purchase",
+					"planning": "Proper purchase planning",
+					"waste": "Minimizing material waste",
+					"time": "Time savings on calculations"
+				},
+				"seo": "tile calculator, laminate calculator, tile calculation, laminate calculation, floor tile, floor laminate, tile quantity, laminate quantity, flooring area, material reserve, tile cutting, laminate cutting, floor renovation, floor finishing, flooring materials, construction materials, apartment renovation, renovation planning, renovation budget, construction work, finishing work, ceramic tile, porcelain stoneware, mosaic, vinyl tile, quartz vinyl tile, SPC tile, LVT tile, 32 class laminate, 33 class laminate, 34 class laminate, oak parquet board, ash parquet board, walnut parquet board"
+			}
 		}
 	}
 }

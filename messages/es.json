@@ -1330,6 +1330,102 @@
 				},
 				"seo": "calculadora de suelos, cálculo de baldosas, cálculo de laminado, calculadora de parquet, cálculo de moqueta, calculadora de linóleo, suelos, calculadora de renovación, baldosas para suelo, laminado para suelo, tabla de parquet, moqueta para suelo, linóleo para suelo, consumo de baldosas, consumo de laminado, consumo de parquet, consumo de moqueta, consumo de linóleo, calculadora de renovación, planificación de renovación, presupuesto de renovación, trabajos de construcción, materiales de acabado, baldosa cerámica, porcelanato, mosaico, baldosa de vinilo, baldosa de cuarzo vinilo, baldosa SPC, baldosa LVT, laminado clase 32, laminado clase 33, laminado clase 34, tabla de parquet de roble, tabla de parquet de fresno, tabla de parquet de nogal, moqueta de oficina, moqueta doméstica, linóleo comercial, linóleo doméstico"
 			}
+		},
+		"tile-laminate": {
+			"title": "Calculadora de Baldosas y Laminado",
+			"description": "Cálculo de cantidades de baldosas y laminado para suelos",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"flooringType": "Tipo de Suelo",
+				"roomDimensions": "Dimensiones de la Habitación",
+				"roomLength": "Longitud de la Habitación",
+				"roomWidth": "Ancho de la Habitación",
+				"elementDimensions": "Dimensiones del Elemento",
+				"elementLength": "Longitud del Elemento",
+				"elementWidth": "Ancho del Elemento",
+				"packageInfo": "Información del Paquete",
+				"packageQuantity": "Cantidad por Paquete",
+				"piecesPerPackage": "piezas por paquete",
+				"reservePercentage": "Reserva de Material",
+				"groutWidth": "Ancho de Junta",
+				"calculate": "Calcular",
+				"reset": "Restablecer"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"summary": "Total necesario",
+				"parameter": "Parámetro",
+				"value": "Valor",
+				"roomArea": "Área de la Habitación",
+				"flooringType": "Tipo de Suelo",
+				"elementSize": "Tamaño del Elemento",
+				"elementArea": "Área del Elemento",
+				"totalElements": "Total de Elementos",
+				"reserve": "Reserva",
+				"packagesNeeded": "Paquetes Necesarios",
+				"packages": "paquetes",
+				"elements": "elementos",
+				"tips": {
+					"title": "Recomendaciones",
+					"recommendation": "Recomendamos tomar 1-2 paquetes adicionales para cortes y posibles defectos."
+				}
+			},
+			"errors": {
+				"title": "Errores de Entrada"
+			},
+			"seo": {
+				"title": "Calculadora de Baldosas y Laminado - Cálculo de Materiales para Suelo | Calculadora #1",
+				"overview": {
+					"title": "Calculadora de Baldosas y Laminado",
+					"content": "La calculadora online de baldosas y laminado ayuda a calcular cuánto material se necesita para la instalación de suelos o paredes. Tiene en cuenta las dimensiones de la habitación, el tamaño de baldosas o paneles, así como la reserva de corte y desperdicios."
+				},
+				"calculation": {
+					"title": "Cómo se calculan las cantidades de material",
+					"content": "El cálculo de baldosas y laminado incluye varios pasos para obtener un resultado preciso.",
+					"steps": {
+						"area": "Cálculo del área de la habitación",
+						"element": "Determinación del área de un elemento",
+						"quantity": "Cálculo de la cantidad total de elementos",
+						"packages": "Determinación de la cantidad de paquetes",
+						"reserve": "Adición de reserva de corte"
+					}
+				},
+				"materials": {
+					"title": "Tipos de Suelos",
+					"content": "La calculadora soporta el cálculo de baldosas y laminado considerando sus especificidades.",
+					"tile": {
+						"title": "Cálculo de baldosas",
+						"content": "Cálculo de cantidad de baldosas cerámicas para suelo considerando el tamaño de baldosa, ancho de junta y reserva de corte."
+					},
+					"laminate": {
+						"title": "Cálculo de laminado",
+						"content": "Cálculo de cantidad de laminado considerando el tamaño de tabla, cantidad por paquete y reserva de corte."
+					}
+				},
+				"tips": {
+					"title": "Consejos para el cálculo de materiales",
+					"content": "Para obtener resultados precisos, siga nuestras recomendaciones al calcular baldosas y laminado.",
+					"measurement": "Mida cuidadosamente todas las dimensiones de la habitación",
+					"element": "Verifique las dimensiones de los elementos del suelo",
+					"package": "Aclare la cantidad de elementos por paquete",
+					"reserve": "Añada 10-15% de reserva para cortes",
+					"quality": "Considere posibles defectos al comprar",
+					"pattern": "Para suelos con patrón, aumente la reserva al 20%"
+				},
+				"benefits": {
+					"title": "Ventajas de la calculadora",
+					"content": "Usar la calculadora de baldosas y laminado proporciona muchas ventajas al planificar renovaciones.",
+					"accuracy": "Cálculo preciso de la cantidad de material",
+					"cost": "Ahorro en la compra de material",
+					"planning": "Planificación correcta de compras",
+					"waste": "Minimización de desperdicios de material",
+					"time": "Ahorro de tiempo en cálculos"
+				},
+				"seo": "calculadora de baldosas, calculadora de laminado, cálculo de baldosas, cálculo de laminado, baldosas para suelo, laminado para suelo, cantidad de baldosas, cantidad de laminado, área de suelo, reserva de material, corte de baldosas, corte de laminado, renovación de suelo, acabado de suelo, materiales de suelo, materiales de construcción, renovación de apartamento, planificación de renovación, presupuesto de renovación, trabajos de construcción, trabajos de acabado, baldosa cerámica, porcelanato, mosaico, baldosa de vinilo, baldosa de cuarzo vinilo, baldosa SPC, baldosa LVT, laminado clase 32, laminado clase 33, laminado clase 34, tabla de parquet de roble, tabla de parquet de fresno, tabla de parquet de nogal"
+			}
 		}
 	}
 }

@@ -1330,6 +1330,102 @@
 				},
 				"seo": "Bodenbelag-Rechner, Fliesenberechnung, Laminatberechnung, Parkettrechner, Teppichberechnung, Linoleumrechner, Bodenbeläge, Renovierungsrechner, Bodenfliesen, Bodenlaminat, Parkettbrett, Bodenteppich, Bodenlinoleum, Fliesenverbrauch, Laminatverbrauch, Parkettverbrauch, Teppichverbrauch, Linoleumverbrauch, Renovierungsrechner, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsmaterialien, Keramikfliesen, Feinsteinzeug, Mosaik, Vinylfliesen, Quarzvinylfliesen, SPC-Fliesen, LVT-Fliesen, Laminat Klasse 32, Laminat Klasse 33, Laminat Klasse 34, Eichenparkettbrett, Eschenparkettbrett, Nussbaumparkettbrett, Büroteppich, Hauseppich, kommerzielles Linoleum, häusliches Linoleum"
 			}
+		},
+		"tile-laminate": {
+			"title": "Fliesen- und Laminatrechner",
+			"description": "Berechnung von Fliesen- und Laminatmengen für den Boden",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"flooringType": "Bodenbelag-Typ",
+				"roomDimensions": "Raumabmessungen",
+				"roomLength": "Raumlänge",
+				"roomWidth": "Raumbreite",
+				"elementDimensions": "Elementabmessungen",
+				"elementLength": "Elementlänge",
+				"elementWidth": "Elementbreite",
+				"packageInfo": "Verpackungsinformationen",
+				"packageQuantity": "Menge pro Verpackung",
+				"piecesPerPackage": "Stück pro Verpackung",
+				"reservePercentage": "Materialreserve",
+				"groutWidth": "Fugenbreite",
+				"calculate": "Berechnen",
+				"reset": "Zurücksetzen"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"summary": "Insgesamt benötigt",
+				"parameter": "Parameter",
+				"value": "Wert",
+				"roomArea": "Raumfläche",
+				"flooringType": "Bodenbelag-Typ",
+				"elementSize": "Elementgröße",
+				"elementArea": "Elementfläche",
+				"totalElements": "Gesamtelemente",
+				"reserve": "Reserve",
+				"packagesNeeded": "Benötigte Verpackungen",
+				"packages": "Verpackungen",
+				"elements": "Elemente",
+				"tips": {
+					"title": "Empfehlungen",
+					"recommendation": "Wir empfehlen, zusätzlich 1-2 Verpackungen für Zuschnitt und mögliche Defekte zu nehmen."
+				}
+			},
+			"errors": {
+				"title": "Eingabefehler"
+			},
+			"seo": {
+				"title": "Fliesen- und Laminatrechner - Bodenmaterialberechnung | Rechner #1",
+				"overview": {
+					"title": "Fliesen- und Laminatrechner",
+					"content": "Online-Fliesen- und Laminatrechner hilft zu berechnen, wie viel Material für Boden- oder Wandverlegung benötigt wird. Berücksichtigt Raumabmessungen, Fliesen- oder Paneelgröße sowie Zuschnittreserve und Abfall."
+				},
+				"calculation": {
+					"title": "Wie Materialmengen berechnet werden",
+					"content": "Fliesen- und Laminatberechnung umfasst mehrere Schritte für ein genaues Ergebnis.",
+					"steps": {
+						"area": "Raumflächenberechnung",
+						"element": "Einzelelementflächenbestimmung",
+						"quantity": "Gesamtelementmengenberechnung",
+						"packages": "Verpackungsmengenbestimmung",
+						"reserve": "Zuschnittreserve hinzufügen"
+					}
+				},
+				"materials": {
+					"title": "Bodenbelag-Typen",
+					"content": "Rechner unterstützt Fliesen- und Laminatberechnung unter Berücksichtigung ihrer Spezifika.",
+					"tile": {
+						"title": "Fliesenberechnung",
+						"content": "Keramikfliesenmengenberechnung für Boden unter Berücksichtigung von Fliesengröße, Fugenbreite und Zuschnittreserve."
+					},
+					"laminate": {
+						"title": "Laminatberechnung",
+						"content": "Laminatmengenberechnung unter Berücksichtigung von Brettgröße, Menge pro Verpackung und Zuschnittreserve."
+					}
+				},
+				"tips": {
+					"title": "Materialberechnungstipps",
+					"content": "Für genaue Ergebnisse befolgen Sie unsere Empfehlungen bei der Berechnung von Fliesen und Laminat.",
+					"measurement": "Messen Sie alle Raumabmessungen sorgfältig",
+					"element": "Überprüfen Sie Bodenbelagelementabmessungen",
+					"package": "Klären Sie Elementmenge pro Verpackung ab",
+					"reserve": "Fügen Sie 10-15% Reserve für Zuschnitt hinzu",
+					"quality": "Berücksichtigen Sie mögliche Defekte beim Kauf",
+					"pattern": "Für gemusterte Beläge erhöhen Sie Reserve auf 20%"
+				},
+				"benefits": {
+					"title": "Rechnervorteile",
+					"content": "Die Verwendung des Fliesen- und Laminatrechners bietet viele Vorteile bei der Renovierungsplanung.",
+					"accuracy": "Genaue Materialmengenberechnung",
+					"cost": "Ersparnisse beim Materialkauf",
+					"planning": "Richtige Einkaufsplanung",
+					"waste": "Minimierung von Materialabfällen",
+					"time": "Zeitersparnis bei Berechnungen"
+				},
+				"seo": "Fliesenrechner, Laminatrechner, Fliesenberechnung, Laminatberechnung, Bodenfliesen, Bodenlaminat, Fliesenmenge, Laminatmenge, Bodenbelagsfläche, Materialreserve, Fliesenzuschnitt, Laminatzuschnitt, Bodenrenovierung, Bodenveredelung, Bodenbelagsmaterialien, Baumaterialien, Wohnungsrenovierung, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsarbeiten, Keramikfliesen, Feinsteinzeug, Mosaik, Vinylfliesen, Quarzvinylfliesen, SPC-Fliesen, LVT-Fliesen, Laminat Klasse 32, Laminat Klasse 33, Laminat Klasse 34, Eichenparkettbrett, Eschenparkettbrett, Nussbaumparkettbrett"
+			}
 		}
 	}
 }
