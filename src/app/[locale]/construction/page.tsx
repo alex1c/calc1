@@ -27,7 +27,8 @@ const getCalculators = () => [
 	{
 		id: 'concrete',
 		title: 'Калькулятор бетона',
-		description: 'Расчёт объёма бетона для фундаментов и плит',
+		description:
+			'Расчёт количества цемента, песка, щебня и воды для приготовления бетона',
 		icon: Wrench,
 		href: '/calc/concrete',
 	},

@@ -1426,6 +1426,120 @@
 				},
 				"seo": "Fliesenrechner, Laminatrechner, Fliesenberechnung, Laminatberechnung, Bodenfliesen, Bodenlaminat, Fliesenmenge, Laminatmenge, Bodenbelagsfläche, Materialreserve, Fliesenzuschnitt, Laminatzuschnitt, Bodenrenovierung, Bodenveredelung, Bodenbelagsmaterialien, Baumaterialien, Wohnungsrenovierung, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsarbeiten, Keramikfliesen, Feinsteinzeug, Mosaik, Vinylfliesen, Quarzvinylfliesen, SPC-Fliesen, LVT-Fliesen, Laminat Klasse 32, Laminat Klasse 33, Laminat Klasse 34, Eichenparkettbrett, Eschenparkettbrett, Nussbaumparkettbrett"
 			}
+		},
+		"concrete": {
+			"title": "Betonrechner",
+			"description": "Berechnung von Zement, Sand, Kies und Wasser für Betonmischung",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"volume": "Betonvolumen",
+				"volumeAmount": "Menge",
+				"volumeUnit": "Maßeinheit",
+				"grade": "Betongüte",
+				"selectGrade": "Güte auswählen",
+				"proportions": "Mischungsverhältnisse",
+				"cement": "Zement",
+				"sand": "Sand",
+				"gravel": "Kies",
+				"proportionsNote": "Verhältnisse Zement : Sand : Kies",
+				"waterCementRatio": "Wasser-Zement-Verhältnis",
+				"waterCementRatioNote": "Wasser zu Zement Verhältnis (üblicherweise 0,4-0,7)",
+				"outputUnits": "Ausgabeeinheiten",
+				"water": "Wasser",
+				"calculate": "Berechnen",
+				"reset": "Zurücksetzen"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"summary": "Gesamt",
+				"volume": "Volumen",
+				"grade": "Güte",
+				"material": "Material",
+				"amount": "Menge",
+				"unit": "Einheit",
+				"cement": "Zement",
+				"sand": "Sand",
+				"gravel": "Kies",
+				"water": "Wasser",
+				"cementBags": "Zementsäcke",
+				"bags50kg": "50kg Säcke",
+				"proportions": "Verhältnisse",
+				"proportionsText": "Zement : Sand : Kies = {cement} : {sand} : {gravel}",
+				"waterCementRatio": "W/Z-Verhältnis"
+			},
+			"errors": {
+				"title": "Eingabefehler"
+			},
+			"seo": {
+				"title": "Betonrechner - Betonmischungskomponentenberechnung | Rechner #1",
+				"overview": {
+					"title": "Online-Betonrechner",
+					"content": "Online-Betonrechner: genaue Berechnung von Zement, Sand, Kies und Wasser für die Herstellung von Betonmischung der erforderlichen Güte. Geeignet für die Berechnung von Betonmischung für Fundament, Wände und andere Bauelemente."
+				},
+				"calculation": {
+					"title": "Wie Betonzusammensetzung berechnet wird",
+					"content": "Betonzusammensetzungsberechnung umfasst mehrere Schritte für ein genaues Ergebnis.",
+					"steps": {
+						"volume": "Bestimmung des Betonvolumens",
+						"grade": "Auswahl der Betongüte",
+						"proportions": "Berechnung der Komponentenverhältnisse",
+						"water": "Bestimmung der Wassermenge",
+						"verification": "Überprüfung des Wasser-Zement-Verhältnisses"
+					}
+				},
+				"grades": {
+					"title": "Betongüten",
+					"content": "Rechner unterstützt Berechnung verschiedener Betongüten unter Berücksichtigung ihrer Eigenschaften.",
+					"M100": {
+						"title": "M100 Beton",
+						"content": "Beton für nicht tragende Konstruktionen, Stützmauern, Fundamente für leichte Gebäude."
+					},
+					"M150": {
+						"title": "M150 Beton",
+						"content": "Beton für schwach belastete Konstruktionen, Estrich, Randstreifen, Gehwege."
+					},
+					"M200": {
+						"title": "M200 Beton",
+						"content": "Beton für Fundamente, Wände, Böden im niedrigen Bau."
+					},
+					"M250": {
+						"title": "M250 Beton",
+						"content": "Beton für belastete Konstruktionen, Säulen, Balken, Bodenplatten."
+					},
+					"M300": {
+						"title": "M300 Beton",
+						"content": "Beton für hoch belastete Konstruktionen, Brücken, Viadukte, Industriegebäude."
+					},
+					"M400": {
+						"title": "M400 Beton",
+						"content": "Beton für besonders verantwortliche Konstruktionen, Wasserbauwerke."
+					}
+				},
+				"tips": {
+					"title": "Betonberechnungstipps",
+					"content": "Für genaue Ergebnisse befolgen Sie unsere Empfehlungen bei der Betonberechnung.",
+					"volume": "Messen Sie das Volumen der Betonkonstruktion sorgfältig",
+					"grade": "Wählen Sie Betongüte entsprechend den Belastungen",
+					"proportions": "Überprüfen Sie Komponentenverhältnisse",
+					"water": "Kontrollieren Sie das Wasser-Zement-Verhältnis",
+					"quality": "Verwenden Sie qualitativ hochwertige Komponenten",
+					"mixing": "Befolgen Sie die Mischungstechnologie"
+				},
+				"benefits": {
+					"title": "Rechnervorteile",
+					"content": "Die Verwendung des Betonrechners bietet viele Vorteile bei der Bauplanung.",
+					"accuracy": "Genaue Komponentenmengenberechnung",
+					"cost": "Ersparnisse bei Materialien",
+					"planning": "Richtige Einkaufsplanung",
+					"quality": "Gewährleistung der Betonqualität",
+					"waste": "Minimierung von Materialabfällen",
+					"time": "Zeitersparnis bei Berechnungen"
+				},
+				"seo": "Betonrechner, Betonberechnung, Betonzusammensetzung, Zementberechnung, Sandberechnung, Kiesberechnung, Wasser für Beton, Betongüte, M100 Beton, M150 Beton, M200 Beton, M250 Beton, M300 Beton, M400 Beton, Betonverhältnisse, Wasser-Zement-Verhältnis, Betonmischung, Fundament Beton, Wand Beton, Boden Beton, Bau Beton, Betonarbeiten, Betonkomponenten, Betonmischung, Betonmörtel, Baumaterialien, Betonkonstruktionen, monolithischer Beton, Stahlbeton, Betonblöcke, Betonplatten"
+			}
 		}
 	}
 }

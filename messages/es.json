@@ -1426,6 +1426,120 @@
 				},
 				"seo": "calculadora de baldosas, calculadora de laminado, cálculo de baldosas, cálculo de laminado, baldosas para suelo, laminado para suelo, cantidad de baldosas, cantidad de laminado, área de suelo, reserva de material, corte de baldosas, corte de laminado, renovación de suelo, acabado de suelo, materiales de suelo, materiales de construcción, renovación de apartamento, planificación de renovación, presupuesto de renovación, trabajos de construcción, trabajos de acabado, baldosa cerámica, porcelanato, mosaico, baldosa de vinilo, baldosa de cuarzo vinilo, baldosa SPC, baldosa LVT, laminado clase 32, laminado clase 33, laminado clase 34, tabla de parquet de roble, tabla de parquet de fresno, tabla de parquet de nogal"
 			}
+		},
+		"concrete": {
+			"title": "Calculadora de Hormigón",
+			"description": "Cálculo de cemento, arena, grava y agua para mezcla de hormigón",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"volume": "Volumen de Hormigón",
+				"volumeAmount": "Cantidad",
+				"volumeUnit": "Unidad de Medida",
+				"grade": "Grado de Hormigón",
+				"selectGrade": "Seleccionar Grado",
+				"proportions": "Proporciones de Mezcla",
+				"cement": "Cemento",
+				"sand": "Arena",
+				"gravel": "Grava",
+				"proportionsNote": "Proporciones cemento : arena : grava",
+				"waterCementRatio": "Relación Agua-Cemento",
+				"waterCementRatioNote": "Relación agua a cemento (usualmente 0.4-0.7)",
+				"outputUnits": "Unidades de Salida",
+				"water": "Agua",
+				"calculate": "Calcular",
+				"reset": "Restablecer"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"summary": "Total",
+				"volume": "Volumen",
+				"grade": "Grado",
+				"material": "Material",
+				"amount": "Cantidad",
+				"unit": "Unidad",
+				"cement": "Cemento",
+				"sand": "Arena",
+				"gravel": "Grava",
+				"water": "Agua",
+				"cementBags": "Sacos de Cemento",
+				"bags50kg": "sacos de 50kg",
+				"proportions": "Proporciones",
+				"proportionsText": "Cemento : Arena : Grava = {cement} : {sand} : {gravel}",
+				"waterCementRatio": "Relación A/C"
+			},
+			"errors": {
+				"title": "Errores de Entrada"
+			},
+			"seo": {
+				"title": "Calculadora de Hormigón - Cálculo de Componentes de Mezcla de Hormigón | Calculadora #1",
+				"overview": {
+					"title": "Calculadora de Hormigón Online",
+					"content": "Calculadora de hormigón online: cálculo preciso de cemento, arena, grava y agua para preparar mezcla de hormigón del grado requerido. Adecuada para calcular mezcla de hormigón para cimientos, paredes y otros elementos de construcción."
+				},
+				"calculation": {
+					"title": "Cómo se calcula la composición del hormigón",
+					"content": "El cálculo de la composición del hormigón incluye varios pasos para obtener un resultado preciso.",
+					"steps": {
+						"volume": "Determinación del volumen de hormigón",
+						"grade": "Selección del grado de hormigón",
+						"proportions": "Cálculo de proporciones de componentes",
+						"water": "Determinación de la cantidad de agua",
+						"verification": "Verificación de la relación agua-cemento"
+					}
+				},
+				"grades": {
+					"title": "Grados de Hormigón",
+					"content": "La calculadora soporta el cálculo de varios grados de hormigón considerando sus características.",
+					"M100": {
+						"title": "Hormigón M100",
+						"content": "Hormigón para estructuras no portantes, muros de contención, cimientos para edificios ligeros."
+					},
+					"M150": {
+						"title": "Hormigón M150",
+						"content": "Hormigón para estructuras ligeramente cargadas, soleras, aceras, aceras peatonales."
+					},
+					"M200": {
+						"title": "Hormigón M200",
+						"content": "Hormigón para cimientos, paredes, suelos en construcción de baja altura."
+					},
+					"M250": {
+						"title": "Hormigón M250",
+						"content": "Hormigón para estructuras cargadas, columnas, vigas, losas de suelo."
+					},
+					"M300": {
+						"title": "Hormigón M300",
+						"content": "Hormigón para estructuras altamente cargadas, puentes, viaductos, edificios industriales."
+					},
+					"M400": {
+						"title": "Hormigón M400",
+						"content": "Hormigón para estructuras de especial responsabilidad, obras hidráulicas."
+					}
+				},
+				"tips": {
+					"title": "Consejos para el cálculo de hormigón",
+					"content": "Para obtener resultados precisos, siga nuestras recomendaciones al calcular hormigón.",
+					"volume": "Mida cuidadosamente el volumen de la estructura de hormigón",
+					"grade": "Elija el grado de hormigón según las cargas",
+					"proportions": "Verifique las proporciones de los componentes",
+					"water": "Controle la relación agua-cemento",
+					"quality": "Use componentes de calidad",
+					"mixing": "Siga la tecnología de mezclado"
+				},
+				"benefits": {
+					"title": "Ventajas de la calculadora",
+					"content": "Usar la calculadora de hormigón proporciona muchas ventajas al planificar la construcción.",
+					"accuracy": "Cálculo preciso de cantidades de componentes",
+					"cost": "Ahorro en materiales",
+					"planning": "Planificación correcta de compras",
+					"quality": "Garantía de calidad del hormigón",
+					"waste": "Minimización de desperdicios de materiales",
+					"time": "Ahorro de tiempo en cálculos"
+				},
+				"seo": "calculadora de hormigón, cálculo de hormigón, composición de hormigón, cálculo de cemento, cálculo de arena, cálculo de grava, agua para hormigón, grado de hormigón, hormigón M100, hormigón M150, hormigón M200, hormigón M250, hormigón M300, hormigón M400, proporciones de hormigón, relación agua-cemento, mezcla de hormigón, cimiento hormigón, pared hormigón, suelo hormigón, construcción hormigón, trabajos de hormigón, componentes de hormigón, mezclado de hormigón, mortero de hormigón, materiales de construcción, estructuras de hormigón, hormigón monolítico, hormigón armado, bloques de hormigón, losas de hormigón"
+			}
 		}
 	}
 }

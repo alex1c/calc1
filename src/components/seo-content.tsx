@@ -36,7 +36,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								1
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.area')}
+								{t('seo.calculation.steps.volume')}
 							</p>
 						</div>
 						<div className='flex items-start'>
@@ -44,7 +44,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								2
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.element')}
+								{t('seo.calculation.steps.grade')}
 							</p>
 						</div>
 						<div className='flex items-start'>
@@ -52,7 +52,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								3
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.quantity')}
+								{t('seo.calculation.steps.proportions')}
 							</p>
 						</div>
 					</div>
@@ -62,7 +62,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								4
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.packages')}
+								{t('seo.calculation.steps.water')}
 							</p>
 						</div>
 						<div className='flex items-start'>
@@ -70,36 +70,50 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								5
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.reserve')}
+								{t('seo.calculation.steps.verification')}
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			{/* Materials Types */}
+			{/* Concrete Grades */}
 			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					{t('seo.materials.title')}
+					{t('seo.grades.title')}
 				</h2>
-				<p className='text-gray-700 mb-6'>
-					{t('seo.materials.content')}
-				</p>
+				<p className='text-gray-700 mb-6'>{t('seo.grades.content')}</p>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='border border-gray-200 rounded-lg p-4'>
 						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.materials.tile.title')}
+							{t('seo.grades.M100.title')}
 						</h3>
 						<p className='text-gray-700 text-sm'>
-							{t('seo.materials.tile.content')}
+							{t('seo.grades.M100.content')}
 						</p>
 					</div>
 					<div className='border border-gray-200 rounded-lg p-4'>
 						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.materials.laminate.title')}
+							{t('seo.grades.M200.title')}
 						</h3>
 						<p className='text-gray-700 text-sm'>
-							{t('seo.materials.laminate.content')}
+							{t('seo.grades.M200.content')}
+						</p>
+					</div>
+					<div className='border border-gray-200 rounded-lg p-4'>
+						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
+							{t('seo.grades.M300.title')}
+						</h3>
+						<p className='text-gray-700 text-sm'>
+							{t('seo.grades.M300.content')}
+						</p>
+					</div>
+					<div className='border border-gray-200 rounded-lg p-4'>
+						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
+							{t('seo.grades.M400.title')}
+						</h3>
+						<p className='text-gray-700 text-sm'>
+							{t('seo.grades.M400.content')}
 						</p>
 					</div>
 				</div>
@@ -116,25 +130,25 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.measurement')}
+								{t('seo.tips.volume')}
 							</span>
 						</li>
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.element')}
+								{t('seo.tips.grade')}
 							</span>
 						</li>
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.package')}
+								{t('seo.tips.proportions')}
 							</span>
 						</li>
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.reserve')}
+								{t('seo.tips.water')}
 							</span>
 						</li>
 					</ul>
@@ -148,7 +162,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.pattern')}
+								{t('seo.tips.mixing')}
 							</span>
 						</li>
 					</ul>

@@ -1688,6 +1688,120 @@
 				},
 				"seo": "tile calculator, laminate calculator, tile calculation, laminate calculation, floor tile, floor laminate, tile quantity, laminate quantity, flooring area, material reserve, tile cutting, laminate cutting, floor renovation, floor finishing, flooring materials, construction materials, apartment renovation, renovation planning, renovation budget, construction work, finishing work, ceramic tile, porcelain stoneware, mosaic, vinyl tile, quartz vinyl tile, SPC tile, LVT tile, 32 class laminate, 33 class laminate, 34 class laminate, oak parquet board, ash parquet board, walnut parquet board"
 			}
+		},
+		"concrete": {
+			"title": "Concrete Calculator",
+			"description": "Calculate cement, sand, gravel and water quantities for concrete mix",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"volume": "Concrete Volume",
+				"volumeAmount": "Amount",
+				"volumeUnit": "Unit of Measurement",
+				"grade": "Concrete Grade",
+				"selectGrade": "Select Grade",
+				"proportions": "Mix Proportions",
+				"cement": "Cement",
+				"sand": "Sand",
+				"gravel": "Gravel",
+				"proportionsNote": "Proportions cement : sand : gravel",
+				"waterCementRatio": "Water-Cement Ratio",
+				"waterCementRatioNote": "Water to cement ratio (usually 0.4-0.7)",
+				"outputUnits": "Output Units",
+				"water": "Water",
+				"calculate": "Calculate",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"summary": "Total",
+				"volume": "Volume",
+				"grade": "Grade",
+				"material": "Material",
+				"amount": "Amount",
+				"unit": "Unit",
+				"cement": "Cement",
+				"sand": "Sand",
+				"gravel": "Gravel",
+				"water": "Water",
+				"cementBags": "Cement Bags",
+				"bags50kg": "50kg bags",
+				"proportions": "Proportions",
+				"proportionsText": "Cement : Sand : Gravel = {cement} : {sand} : {gravel}",
+				"waterCementRatio": "W/C Ratio"
+			},
+			"errors": {
+				"title": "Input Errors"
+			},
+			"seo": {
+				"title": "Concrete Calculator - Concrete Mix Components Calculation | Calculator #1",
+				"overview": {
+					"title": "Online Concrete Calculator",
+					"content": "Online concrete calculator: accurate calculation of cement, sand, gravel and water for preparing concrete mix of the required grade. Suitable for calculating concrete mix for foundation, walls and other construction elements."
+				},
+				"calculation": {
+					"title": "How concrete composition is calculated",
+					"content": "Concrete composition calculation includes several steps to get an accurate result.",
+					"steps": {
+						"volume": "Determining concrete volume",
+						"grade": "Selecting concrete grade",
+						"proportions": "Calculating component proportions",
+						"water": "Determining water quantity",
+						"verification": "Checking water-cement ratio"
+					}
+				},
+				"grades": {
+					"title": "Concrete Grades",
+					"content": "Calculator supports calculation of various concrete grades considering their characteristics.",
+					"M100": {
+						"title": "M100 Concrete",
+						"content": "Concrete for non-load-bearing structures, retaining walls, foundations for light buildings."
+					},
+					"M150": {
+						"title": "M150 Concrete",
+						"content": "Concrete for lightly loaded structures, screeds, blind areas, sidewalks."
+					},
+					"M200": {
+						"title": "M200 Concrete",
+						"content": "Concrete for foundations, walls, floors in low-rise construction."
+					},
+					"M250": {
+						"title": "M250 Concrete",
+						"content": "Concrete for loaded structures, columns, beams, floor slabs."
+					},
+					"M300": {
+						"title": "M300 Concrete",
+						"content": "Concrete for highly loaded structures, bridges, viaducts, industrial buildings."
+					},
+					"M400": {
+						"title": "M400 Concrete",
+						"content": "Concrete for special responsibility structures, hydraulic structures."
+					}
+				},
+				"tips": {
+					"title": "Concrete calculation tips",
+					"content": "For accurate results, follow our recommendations when calculating concrete.",
+					"volume": "Carefully measure the volume of concrete structure",
+					"grade": "Choose concrete grade according to loads",
+					"proportions": "Check component proportions",
+					"water": "Control water-cement ratio",
+					"quality": "Use quality components",
+					"mixing": "Follow mixing technology"
+				},
+				"benefits": {
+					"title": "Calculator benefits",
+					"content": "Using concrete calculator provides many benefits when planning construction.",
+					"accuracy": "Accurate component quantity calculation",
+					"cost": "Savings on materials",
+					"planning": "Proper purchase planning",
+					"quality": "Ensuring concrete quality",
+					"waste": "Minimizing material waste",
+					"time": "Time savings on calculations"
+				},
+				"seo": "concrete calculator, concrete calculation, concrete composition, cement calculation, sand calculation, gravel calculation, water for concrete, concrete grade, M100 concrete, M150 concrete, M200 concrete, M250 concrete, M300 concrete, M400 concrete, concrete proportions, water-cement ratio, concrete mix, foundation concrete, wall concrete, floor concrete, construction concrete, concrete work, concrete components, concrete mixing, concrete mortar, construction materials, concrete structures, monolithic concrete, reinforced concrete, concrete blocks, concrete slabs"
+			}
 		}
 	}
 }
