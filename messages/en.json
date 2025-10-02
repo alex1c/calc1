@@ -1480,6 +1480,118 @@
 				},
 				"seo": "building materials calculator, paint calculation, putty calculation, primer calculator, tile adhesive, paint consumption, construction materials, renovation calculator, wall paint, wall putty, wall primer, tile adhesive calculation, material consumption, construction online, water-based paint, acrylic paint, oil-based paint, base putty, finish putty, acrylic primer, alkyd primer, ceramic tile, porcelain stoneware, mosaic, paint consumption per m2, putty consumption per m2, primer consumption per m2, tile adhesive consumption per m2, renovation calculator, renovation planning, renovation budget, construction work, finishing materials"
 			}
+		},
+		"flooring": {
+			"title": "Flooring Calculator",
+			"description": "Calculate tile, laminate, parquet, carpet and linoleum quantities",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"flooringType": "Flooring Type",
+				"roomDimensions": "Room Dimensions",
+				"roomLength": "Room Length",
+				"roomWidth": "Room Width",
+				"elementDimensions": "Element Dimensions",
+				"rollDimensions": "Roll Dimensions",
+				"elementLength": "Element Length",
+				"elementWidth": "Element Width",
+				"rollWidth": "Roll Width",
+				"rollLength": "Roll Length",
+				"packageInfo": "Package Information",
+				"packageQuantity": "Quantity per Package",
+				"reservePercentage": "Material Reserve",
+				"groutWidth": "Grout Width",
+				"calculate": "Calculate",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"parameter": "Parameter",
+				"value": "Value",
+				"roomArea": "Room Area",
+				"flooringType": "Flooring Type",
+				"elementSize": "Element Size",
+				"rollSize": "Roll Size",
+				"elementArea": "Element Area",
+				"rollArea": "Roll Area",
+				"totalElements": "Total Elements",
+				"totalRolls": "Total Rolls",
+				"packagesNeeded": "Packages Needed",
+				"rollsNeeded": "Rolls Needed",
+				"packages": "packages",
+				"reserve": "Reserve",
+				"tips": {
+					"title": "Recommendations",
+					"recommendation": "It is recommended to take 1-2 additional packages (or meters of roll) for cutting and possible defects."
+				}
+			},
+			"errors": {
+				"title": "Input Errors"
+			},
+			"seo": {
+				"title": "Flooring Calculator - Tile, Laminate, Parquet, Carpet | Calculator #1",
+				"overview": {
+					"title": "Flooring Calculator",
+					"content": "Online flooring calculator helps calculate the amount of tile, laminate, parquet, carpet or linoleum for your room. Takes into account room dimensions, flooring format and cutting reserve."
+				},
+				"calculation": {
+					"title": "How Flooring Quantities Are Calculated",
+					"content": "Flooring calculation includes several steps to get accurate results depending on material type.",
+					"steps": {
+						"area": "Calculate room area",
+						"element": "Determine single element area",
+						"quantity": "Calculate total element quantity",
+						"packages": "Determine package quantity",
+						"reserve": "Add cutting reserve"
+					}
+				},
+				"materials": {
+					"title": "Types of Flooring Materials",
+					"content": "Calculator supports calculation of various flooring materials considering their specifics.",
+					"tile": {
+						"title": "Tile Calculation",
+						"content": "Calculate ceramic tile quantity for floor considering tile size, grout width and cutting reserve."
+					},
+					"laminate": {
+						"title": "Laminate Calculation",
+						"content": "Calculate laminate quantity considering board size, package quantity and cutting reserve."
+					},
+					"parquet": {
+						"title": "Parquet Calculation",
+						"content": "Calculate parquet board quantity considering board size, package quantity and cutting reserve."
+					},
+					"carpet": {
+						"title": "Carpet Calculation",
+						"content": "Calculate carpet quantity considering roll width, roll length and cutting reserve."
+					},
+					"linoleum": {
+						"title": "Linoleum Calculation",
+						"content": "Calculate linoleum quantity considering roll width, roll length and cutting reserve."
+					}
+				},
+				"tips": {
+					"title": "Flooring Calculation Tips",
+					"content": "Follow our recommendations for accurate flooring calculations.",
+					"measurement": "Carefully measure all room dimensions",
+					"element": "Check flooring element dimensions",
+					"package": "Clarify element quantity per package",
+					"reserve": "Add 10-15% reserve for cutting",
+					"pattern": "Consider laying direction and pattern",
+					"waste": "Plan additional materials for complex areas"
+				},
+				"benefits": {
+					"title": "Calculator Benefits",
+					"content": "Using flooring calculator provides many advantages for renovation planning.",
+					"accuracy": "Accurate material quantity calculation",
+					"savings": "Save on buying extra materials",
+					"planning": "Proper renovation budget planning",
+					"convenience": "Convenient and fast calculation",
+					"universal": "Support for various flooring types",
+					"professional": "Professional approach to calculations"
+				},
+				"seo": "flooring calculator, tile calculation, laminate calculation, parquet calculator, carpet calculation, linoleum calculator, floor coverings, renovation calculator, floor tile, floor laminate, parquet board, floor carpet, floor linoleum, tile consumption, laminate consumption, parquet consumption, carpet consumption, linoleum consumption, renovation calculator, renovation planning, renovation budget, construction work, finishing materials, ceramic tile, porcelain stoneware, mosaic, vinyl tile, quartz vinyl tile, SPC tile, LVT tile, laminate class 32, laminate class 33, laminate class 34, oak parquet board, ash parquet board, walnut parquet board, office carpet, home carpet, commercial linoleum, domestic linoleum"
+			}
 		}
 	}
 }

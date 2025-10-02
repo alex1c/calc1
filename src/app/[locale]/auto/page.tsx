@@ -107,23 +107,26 @@ export default function AutoPage() {
 
 				{/* Calculators Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{getCalculators(t).map((calculator) => (
-						<Link
-							key={calculator.id}
-							href={`/${locale}/calc/${calculator.id}`}
-							className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
-						>
-							<div className='flex items-center mb-4'>
-								<calculator.icon className='h-8 w-8 text-blue-600 mr-3' />
-								<h3 className='text-xl font-semibold text-gray-900'>
-									{calculator.title}
-								</h3>
-							</div>
-							<p className='text-gray-600'>
-								{calculator.description}
-							</p>
-						</Link>
-					))}
+					{getCalculators(t).map((calculator) => {
+						const IconComponent = calculator.icon;
+						return (
+							<Link
+								key={calculator.id}
+								href={`/${locale}/calc/${calculator.id}`}
+								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
+							>
+								<div className='flex items-center mb-4'>
+									<IconComponent className='h-8 w-8 text-blue-600 mr-3' />
+									<h3 className='text-xl font-semibold text-gray-900'>
+										{calculator.title}
+									</h3>
+								</div>
+								<p className='text-gray-600'>
+									{calculator.description}
+								</p>
+							</Link>
+						);
+					})}
 				</div>
 			</main>
 		</div>

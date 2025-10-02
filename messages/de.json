@@ -1218,6 +1218,118 @@
 				},
 				"seo": "Baumaterialien-Rechner, Farbberechnung, Spachtelmasse-Berechnung, Grundierungsrechner, Fliesenkleber, Farbverbrauch, Baumaterialien, Renovierungsrechner, Wandfarbe, Wandspachtelmasse, Wandgrundierung, Fliesenkleber-Berechnung, Materialverbrauch, Bauwesen online, wasserbasierte Farbe, Acrylfarbe, ölbasierte Farbe, Grundspachtelmasse, Feinspachtelmasse, Acrylgrundierung, Alkydgrundierung, Keramikfliesen, Feinsteinzeug, Mosaik, Farbverbrauch pro m2, Spachtelmasse-Verbrauch pro m2, Grundierungsverbrauch pro m2, Fliesenkleber-Verbrauch pro m2, Renovierungsrechner, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsmaterialien"
 			}
+		},
+		"flooring": {
+			"title": "Bodenbelag-Rechner",
+			"description": "Berechnung von Fliesen, Laminat, Parkett, Teppich und Linoleum",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"flooringType": "Bodenbelag-Typ",
+				"roomDimensions": "Raummaße",
+				"roomLength": "Raumlänge",
+				"roomWidth": "Raumbreite",
+				"elementDimensions": "Elementmaße",
+				"rollDimensions": "Rollenmaße",
+				"elementLength": "Elementlänge",
+				"elementWidth": "Elementbreite",
+				"rollWidth": "Rollenbreite",
+				"rollLength": "Rollenlänge",
+				"packageInfo": "Verpackungsinformationen",
+				"packageQuantity": "Menge pro Verpackung",
+				"reservePercentage": "Materialreserve",
+				"groutWidth": "Fugenbreite",
+				"calculate": "Berechnen",
+				"reset": "Zurücksetzen"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"parameter": "Parameter",
+				"value": "Wert",
+				"roomArea": "Raumfläche",
+				"flooringType": "Bodenbelag-Typ",
+				"elementSize": "Elementgröße",
+				"rollSize": "Rollengröße",
+				"elementArea": "Elementfläche",
+				"rollArea": "Rollenfläche",
+				"totalElements": "Gesamtelemente",
+				"totalRolls": "Gesamtrollen",
+				"packagesNeeded": "Benötigte Verpackungen",
+				"rollsNeeded": "Benötigte Rollen",
+				"packages": "Verpackungen",
+				"reserve": "Reserve",
+				"tips": {
+					"title": "Empfehlungen",
+					"recommendation": "Es wird empfohlen, 1-2 zusätzliche Verpackungen (oder Meter Rolle) für Zuschnitt und mögliche Defekte zu nehmen."
+				}
+			},
+			"errors": {
+				"title": "Eingabefehler"
+			},
+			"seo": {
+				"title": "Bodenbelag-Rechner - Fliesen, Laminat, Parkett, Teppich | Rechner #1",
+				"overview": {
+					"title": "Bodenbelag-Rechner",
+					"content": "Online-Bodenbelag-Rechner hilft bei der Berechnung der Menge von Fliesen, Laminat, Parkett, Teppich oder Linoleum für Ihren Raum. Berücksichtigt Raummaße, Bodenbelag-Format und Zuschnittreserve."
+				},
+				"calculation": {
+					"title": "Wie Bodenbelag-Mengen berechnet werden",
+					"content": "Die Berechnung von Bodenbelägen umfasst mehrere Schritte für genaue Ergebnisse je nach Materialtyp.",
+					"steps": {
+						"area": "Raumfläche berechnen",
+						"element": "Einzelelementfläche bestimmen",
+						"quantity": "Gesamtelementmenge berechnen",
+						"packages": "Verpackungsmenge bestimmen",
+						"reserve": "Zuschnittreserve hinzufügen"
+					}
+				},
+				"materials": {
+					"title": "Arten von Bodenbelägen",
+					"content": "Der Rechner unterstützt die Berechnung verschiedener Bodenbeläge unter Berücksichtigung ihrer Besonderheiten.",
+					"tile": {
+						"title": "Fliesenberechnung",
+						"content": "Berechnung der Keramikfliesen-Menge für den Boden unter Berücksichtigung der Fliesengröße, Fugenbreite und Zuschnittreserve."
+					},
+					"laminate": {
+						"title": "Laminatberechnung",
+						"content": "Berechnung der Laminat-Menge unter Berücksichtigung der Brettgröße, Verpackungsmenge und Zuschnittreserve."
+					},
+					"parquet": {
+						"title": "Parkettberechnung",
+						"content": "Berechnung der Parkettbrett-Menge unter Berücksichtigung der Brettgröße, Verpackungsmenge und Zuschnittreserve."
+					},
+					"carpet": {
+						"title": "Teppichberechnung",
+						"content": "Berechnung der Teppich-Menge unter Berücksichtigung der Rollenbreite, Rollenlänge und Zuschnittreserve."
+					},
+					"linoleum": {
+						"title": "Linoleumberechnung",
+						"content": "Berechnung der Linoleum-Menge unter Berücksichtigung der Rollenbreite, Rollenlänge und Zuschnittreserve."
+					}
+				},
+				"tips": {
+					"title": "Tipps zur Bodenbelag-Berechnung",
+					"content": "Befolgen Sie unsere Empfehlungen für genaue Bodenbelag-Berechnungen.",
+					"measurement": "Messen Sie alle Raummaße sorgfältig",
+					"element": "Überprüfen Sie die Bodenbelag-Elementmaße",
+					"package": "Klären Sie die Elementmenge pro Verpackung",
+					"reserve": "Fügen Sie 10-15% Reserve für Zuschnitt hinzu",
+					"pattern": "Berücksichtigen Sie Verlegerichtung und Muster",
+					"waste": "Planen Sie zusätzliche Materialien für komplexe Bereiche"
+				},
+				"benefits": {
+					"title": "Rechner-Vorteile",
+					"content": "Die Verwendung des Bodenbelag-Rechners bietet viele Vorteile bei der Renovierungsplanung.",
+					"accuracy": "Genaue Materialmengenberechnung",
+					"savings": "Sparen beim Kauf zusätzlicher Materialien",
+					"planning": "Richtige Renovierungsbudgetplanung",
+					"convenience": "Bequeme und schnelle Berechnung",
+					"universal": "Unterstützung für verschiedene Bodenbelag-Typen",
+					"professional": "Professioneller Ansatz bei Berechnungen"
+				},
+				"seo": "Bodenbelag-Rechner, Fliesenberechnung, Laminatberechnung, Parkettrechner, Teppichberechnung, Linoleumrechner, Bodenbeläge, Renovierungsrechner, Bodenfliesen, Bodenlaminat, Parkettbrett, Bodenteppich, Bodenlinoleum, Fliesenverbrauch, Laminatverbrauch, Parkettverbrauch, Teppichverbrauch, Linoleumverbrauch, Renovierungsrechner, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsmaterialien, Keramikfliesen, Feinsteinzeug, Mosaik, Vinylfliesen, Quarzvinylfliesen, SPC-Fliesen, LVT-Fliesen, Laminat Klasse 32, Laminat Klasse 33, Laminat Klasse 34, Eichenparkettbrett, Eschenparkettbrett, Nussbaumparkettbrett, Büroteppich, Hauseppich, kommerzielles Linoleum, häusliches Linoleum"
+			}
 		}
 	}
 }

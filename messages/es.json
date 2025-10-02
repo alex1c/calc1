@@ -1218,6 +1218,118 @@
 				},
 				"seo": "calculadora de materiales de construcción, cálculo de pintura, cálculo de masilla, calculadora de imprimación, adhesivo para baldosas, consumo de pintura, materiales de construcción, calculadora de renovación, pintura para paredes, masilla para paredes, imprimación para paredes, cálculo de adhesivo para baldosas, consumo de materiales, construcción online, pintura al agua, pintura acrílica, pintura al aceite, masilla base, masilla de acabado, imprimación acrílica, imprimación alquídica, baldosa cerámica, porcelanato, mosaico, consumo de pintura por m2, consumo de masilla por m2, consumo de imprimación por m2, consumo de adhesivo para baldosas por m2, calculadora de renovación, planificación de renovación, presupuesto de renovación, trabajos de construcción, materiales de acabado"
 			}
+		},
+		"flooring": {
+			"title": "Calculadora de Suelos",
+			"description": "Cálculo de baldosas, laminado, parquet, moqueta y linóleo",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"flooringType": "Tipo de Suelo",
+				"roomDimensions": "Dimensiones de la Habitación",
+				"roomLength": "Longitud de la Habitación",
+				"roomWidth": "Ancho de la Habitación",
+				"elementDimensions": "Dimensiones del Elemento",
+				"rollDimensions": "Dimensiones del Rollo",
+				"elementLength": "Longitud del Elemento",
+				"elementWidth": "Ancho del Elemento",
+				"rollWidth": "Ancho del Rollo",
+				"rollLength": "Longitud del Rollo",
+				"packageInfo": "Información del Paquete",
+				"packageQuantity": "Cantidad por Paquete",
+				"reservePercentage": "Reserva de Material",
+				"groutWidth": "Ancho de Junta",
+				"calculate": "Calcular",
+				"reset": "Restablecer"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"parameter": "Parámetro",
+				"value": "Valor",
+				"roomArea": "Área de la Habitación",
+				"flooringType": "Tipo de Suelo",
+				"elementSize": "Tamaño del Elemento",
+				"rollSize": "Tamaño del Rollo",
+				"elementArea": "Área del Elemento",
+				"rollArea": "Área del Rollo",
+				"totalElements": "Total de Elementos",
+				"totalRolls": "Total de Rollos",
+				"packagesNeeded": "Paquetes Necesarios",
+				"rollsNeeded": "Rollos Necesarios",
+				"packages": "paquetes",
+				"reserve": "Reserva",
+				"tips": {
+					"title": "Recomendaciones",
+					"recommendation": "Se recomienda tomar 1-2 paquetes adicionales (o metros de rollo) para corte y posibles defectos."
+				}
+			},
+			"errors": {
+				"title": "Errores de Entrada"
+			},
+			"seo": {
+				"title": "Calculadora de Suelos - Baldosas, Laminado, Parquet, Moqueta | Calculadora #1",
+				"overview": {
+					"title": "Calculadora de Suelos",
+					"content": "La calculadora de suelos online ayuda a calcular la cantidad de baldosas, laminado, parquet, moqueta o linóleo para tu habitación. Tiene en cuenta las dimensiones de la habitación, el formato del suelo y la reserva de corte."
+				},
+				"calculation": {
+					"title": "Cómo se Calculan las Cantidades de Suelos",
+					"content": "El cálculo de suelos incluye varios pasos para obtener resultados precisos según el tipo de material.",
+					"steps": {
+						"area": "Calcular área de la habitación",
+						"element": "Determinar área de un elemento",
+						"quantity": "Calcular cantidad total de elementos",
+						"packages": "Determinar cantidad de paquetes",
+						"reserve": "Añadir reserva de corte"
+					}
+				},
+				"materials": {
+					"title": "Tipos de Materiales de Suelo",
+					"content": "La calculadora soporta el cálculo de varios materiales de suelo considerando sus especificidades.",
+					"tile": {
+						"title": "Cálculo de Baldosas",
+						"content": "Calcular cantidad de baldosas cerámicas para suelo considerando tamaño de baldosa, ancho de junta y reserva de corte."
+					},
+					"laminate": {
+						"title": "Cálculo de Laminado",
+						"content": "Calcular cantidad de laminado considerando tamaño de tabla, cantidad por paquete y reserva de corte."
+					},
+					"parquet": {
+						"title": "Cálculo de Parquet",
+						"content": "Calcular cantidad de tabla de parquet considerando tamaño de tabla, cantidad por paquete y reserva de corte."
+					},
+					"carpet": {
+						"title": "Cálculo de Moqueta",
+						"content": "Calcular cantidad de moqueta considerando ancho de rollo, longitud de rollo y reserva de corte."
+					},
+					"linoleum": {
+						"title": "Cálculo de Linóleo",
+						"content": "Calcular cantidad de linóleo considerando ancho de rollo, longitud de rollo y reserva de corte."
+					}
+				},
+				"tips": {
+					"title": "Consejos para el Cálculo de Suelos",
+					"content": "Sigue nuestras recomendaciones para cálculos precisos de suelos.",
+					"measurement": "Mide cuidadosamente todas las dimensiones de la habitación",
+					"element": "Verifica las dimensiones de los elementos del suelo",
+					"package": "Aclara la cantidad de elementos por paquete",
+					"reserve": "Añade 10-15% de reserva para corte",
+					"pattern": "Considera la dirección de colocación y el patrón",
+					"waste": "Planifica materiales adicionales para áreas complejas"
+				},
+				"benefits": {
+					"title": "Ventajas de la Calculadora",
+					"content": "Usar la calculadora de suelos proporciona muchas ventajas para la planificación de renovaciones.",
+					"accuracy": "Cálculo preciso de cantidades de material",
+					"savings": "Ahorro en la compra de materiales extra",
+					"planning": "Planificación correcta del presupuesto de renovación",
+					"convenience": "Cálculo conveniente y rápido",
+					"universal": "Soporte para varios tipos de suelos",
+					"professional": "Enfoque profesional en los cálculos"
+				},
+				"seo": "calculadora de suelos, cálculo de baldosas, cálculo de laminado, calculadora de parquet, cálculo de moqueta, calculadora de linóleo, suelos, calculadora de renovación, baldosas para suelo, laminado para suelo, tabla de parquet, moqueta para suelo, linóleo para suelo, consumo de baldosas, consumo de laminado, consumo de parquet, consumo de moqueta, consumo de linóleo, calculadora de renovación, planificación de renovación, presupuesto de renovación, trabajos de construcción, materiales de acabado, baldosa cerámica, porcelanato, mosaico, baldosa de vinilo, baldosa de cuarzo vinilo, baldosa SPC, baldosa LVT, laminado clase 32, laminado clase 33, laminado clase 34, tabla de parquet de roble, tabla de parquet de fresno, tabla de parquet de nogal, moqueta de oficina, moqueta doméstica, linóleo comercial, linóleo doméstico"
+			}
 		}
 	}
 }
