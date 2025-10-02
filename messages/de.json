@@ -1163,7 +1163,60 @@
 					"title": "Baumaterialien-Rechner",
 					"content": "Online-Baumaterialien-Rechner hilft bei der Berechnung der Menge von Farbe, Spachtelmasse, Grundierung, Fliesenkleber und anderen Materialien für Renovierungen. Berücksichtigt Raummaße, Verbrauch, Anzahl der Schichten und Reserve."
 				},
-				"seo": "Baumaterialien-Rechner, Farbberechnung, Spachtelmasse-Berechnung, Grundierungsrechner, Fliesenkleber, Farbverbrauch, Baumaterialien, Renovierungsrechner, Wandfarbe, Wandspachtelmasse, Wandgrundierung, Fliesenkleber-Berechnung, Materialverbrauch, Bauwesen online"
+				"calculation": {
+					"title": "Wie Baumaterialien berechnet werden",
+					"content": "Die Berechnung von Baumaterialien umfasst mehrere Schritte für genaue Ergebnisse je nach Materialtyp.",
+					"steps": {
+						"area": "Berechnung der Gesamtfläche von Wänden oder Boden",
+						"openings": "Abzug der Fläche von Türen und Fenstern",
+						"useful": "Bestimmung der nutzbaren Fläche für die Behandlung",
+						"consumption": "Berechnung des Materialverbrauchs pro Quadratmeter",
+						"layers": "Berücksichtigung der Anzahl der Auftragsschichten",
+						"reserve": "Hinzufügung von Reserve für Anpassung und Verluste"
+					}
+				},
+				"materials": {
+					"title": "Arten von Baumaterialien",
+					"content": "Der Rechner unterstützt die Berechnung verschiedener Baumaterialien unter Berücksichtigung ihrer Besonderheiten.",
+					"paint": {
+						"title": "Farbberechnung",
+						"content": "Berechnung der Farbmenge für Wände unter Berücksichtigung des Oberflächentyps, der Anzahl der Schichten und des Verbrauchs. Geeignet für wasserbasierte, ölbasierte, Acrylfarben."
+					},
+					"putty": {
+						"title": "Spachtelmasse-Berechnung",
+						"content": "Berechnung der Spachtelmasse-Menge zum Nivellieren von Wänden vor dem Malen oder Tapezieren. Berücksichtigt Grund- und Feinspachtelmasse."
+					},
+					"primer": {
+						"title": "Grundierungsberechnung",
+						"content": "Berechnung der Grundierungsmenge zur Oberflächenvorbereitung. Umfasst Acryl-, Alkyd-, tiefenwirksame Grundierung."
+					},
+					"tileGlue": {
+						"title": "Fliesenkleber-Berechnung",
+						"content": "Berechnung der Fliesenkleber-Menge für Keramikfliesen, Feinsteinzeug, Mosaik-Verlegung auf Böden und Wänden."
+					}
+				},
+				"tips": {
+					"title": "Tipps zur Baumaterialien-Berechnung",
+					"content": "Befolgen Sie unsere Empfehlungen für genaue Materialberechnungen.",
+					"measurement": "Messen Sie alle Raummaße sorgfältig",
+					"surface": "Berücksichtigen Sie Oberflächentyp und -zustand",
+					"consumption": "Überprüfen Sie den Verbrauch auf der Materialverpackung",
+					"layers": "Bestimmen Sie die erforderliche Anzahl der Schichten",
+					"reserve": "Fügen Sie 10-15% Reserve für Verluste und Anpassung hinzu",
+					"weather": "Berücksichtigen Sie Wetterbedingungen bei der Arbeit",
+					"technique": "Wählen Sie die richtige Auftragstechnik"
+				},
+				"benefits": {
+					"title": "Vorteile des Rechners",
+					"content": "Die Verwendung des Baumaterialien-Rechners bietet viele Vorteile bei der Renovierungsplanung.",
+					"accuracy": "Genaue Materialmengenberechnung",
+					"savings": "Sparen beim Kauf zusätzlicher Materialien",
+					"planning": "Richtige Renovierungsbudgetplanung",
+					"convenience": "Bequeme und schnelle Berechnung",
+					"universal": "Unterstützung für verschiedene Materialtypen",
+					"professional": "Professioneller Ansatz bei Berechnungen"
+				},
+				"seo": "Baumaterialien-Rechner, Farbberechnung, Spachtelmasse-Berechnung, Grundierungsrechner, Fliesenkleber, Farbverbrauch, Baumaterialien, Renovierungsrechner, Wandfarbe, Wandspachtelmasse, Wandgrundierung, Fliesenkleber-Berechnung, Materialverbrauch, Bauwesen online, wasserbasierte Farbe, Acrylfarbe, ölbasierte Farbe, Grundspachtelmasse, Feinspachtelmasse, Acrylgrundierung, Alkydgrundierung, Keramikfliesen, Feinsteinzeug, Mosaik, Farbverbrauch pro m2, Spachtelmasse-Verbrauch pro m2, Grundierungsverbrauch pro m2, Fliesenkleber-Verbrauch pro m2, Renovierungsrechner, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsmaterialien"
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import MaterialsCalculator from '@/components/calculators/materials-calculator';
+import SEOContent from '@/components/seo-content';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
@@ -20,6 +21,7 @@ export default function PaintPage() {
 				]}
 			/>
 			<MaterialsCalculator />
+			<SEOContent namespace='calculators.materials' />
 		</div>
 	);
 }

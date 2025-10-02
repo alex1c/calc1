@@ -1163,7 +1163,60 @@
 					"title": "Calculadora de Materiales de Construcción",
 					"content": "La calculadora online de materiales de construcción ayuda a calcular la cantidad de pintura, masilla, imprimación, adhesivo para baldosas y otros materiales para renovación. Tiene en cuenta las dimensiones de la habitación, consumo, número de capas y reserva."
 				},
-				"seo": "calculadora de materiales de construcción, cálculo de pintura, cálculo de masilla, calculadora de imprimación, adhesivo para baldosas, consumo de pintura, materiales de construcción, calculadora de renovación, pintura para paredes, masilla para paredes, imprimación para paredes, cálculo de adhesivo para baldosas, consumo de materiales, construcción online"
+				"calculation": {
+					"title": "Cómo se calculan los materiales de construcción",
+					"content": "El cálculo de materiales de construcción incluye varios pasos para obtener resultados precisos según el tipo de material.",
+					"steps": {
+						"area": "Cálculo del área total de paredes o suelo de la habitación",
+						"openings": "Sustracción del área de puertas y ventanas",
+						"useful": "Determinación del área útil para tratamiento",
+						"consumption": "Cálculo del consumo de material por metro cuadrado",
+						"layers": "Consideración del número de capas de aplicación",
+						"reserve": "Adición de reserva para ajuste y pérdidas"
+					}
+				},
+				"materials": {
+					"title": "Tipos de materiales de construcción",
+					"content": "La calculadora soporta el cálculo de varios materiales de construcción considerando sus especificidades.",
+					"paint": {
+						"title": "Cálculo de pintura",
+						"content": "Calcular cantidad de pintura para paredes considerando tipo de superficie, número de capas y tasa de consumo. Adecuado para pintura al agua, al aceite, acrílica."
+					},
+					"putty": {
+						"title": "Cálculo de masilla",
+						"content": "Calcular cantidad de masilla para nivelar paredes antes de pintar o empapelar. Incluye masilla base y de acabado."
+					},
+					"primer": {
+						"title": "Cálculo de imprimación",
+						"content": "Calcular cantidad de imprimación para preparación de superficie. Incluye imprimación acrílica, alquídica, de penetración profunda."
+					},
+					"tileGlue": {
+						"title": "Cálculo de adhesivo para baldosas",
+						"content": "Calcular cantidad de adhesivo para baldosas para instalación de cerámica, porcelanato, mosaico en suelos y paredes."
+					}
+				},
+				"tips": {
+					"title": "Consejos para cálculo de materiales de construcción",
+					"content": "Siga nuestras recomendaciones para cálculos precisos de materiales.",
+					"measurement": "Mida cuidadosamente todas las dimensiones de la habitación",
+					"surface": "Considere el tipo y estado de la superficie",
+					"consumption": "Verifique la tasa de consumo en el empaque del material",
+					"layers": "Determine el número requerido de capas",
+					"reserve": "Agregue 10-15% de reserva para pérdidas y ajuste",
+					"weather": "Considere las condiciones climáticas durante el trabajo",
+					"technique": "Elija la técnica de aplicación correcta"
+				},
+				"benefits": {
+					"title": "Beneficios de la calculadora",
+					"content": "Usar la calculadora de materiales de construcción proporciona muchas ventajas para la planificación de renovaciones.",
+					"accuracy": "Cálculo preciso de cantidad de materiales",
+					"savings": "Ahorro en compra de materiales extra",
+					"planning": "Planificación correcta del presupuesto de renovación",
+					"convenience": "Cálculo conveniente y rápido",
+					"universal": "Soporte para varios tipos de materiales",
+					"professional": "Enfoque profesional en los cálculos"
+				},
+				"seo": "calculadora de materiales de construcción, cálculo de pintura, cálculo de masilla, calculadora de imprimación, adhesivo para baldosas, consumo de pintura, materiales de construcción, calculadora de renovación, pintura para paredes, masilla para paredes, imprimación para paredes, cálculo de adhesivo para baldosas, consumo de materiales, construcción online, pintura al agua, pintura acrílica, pintura al aceite, masilla base, masilla de acabado, imprimación acrílica, imprimación alquídica, baldosa cerámica, porcelanato, mosaico, consumo de pintura por m2, consumo de masilla por m2, consumo de imprimación por m2, consumo de adhesivo para baldosas por m2, calculadora de renovación, planificación de renovación, presupuesto de renovación, trabajos de construcción, materiales de acabado"
 			}
 		}
 	}

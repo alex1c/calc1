@@ -1425,7 +1425,60 @@
 					"title": "Building Materials Calculator",
 					"content": "Online building materials calculator helps calculate the amount of paint, putty, primer, tile adhesive and other materials for renovation. Takes into account room dimensions, consumption, number of layers and reserve."
 				},
-				"seo": "building materials calculator, paint calculation, putty calculation, primer calculator, tile adhesive, paint consumption, construction materials, renovation calculator, wall paint, wall putty, wall primer, tile adhesive calculation, material consumption, construction online"
+				"calculation": {
+					"title": "How Building Materials Are Calculated",
+					"content": "Building materials calculation includes several steps to get accurate results depending on material type.",
+					"steps": {
+						"area": "Calculate total wall or floor area of the room",
+						"openings": "Subtract doors and windows area",
+						"useful": "Determine useful area for treatment",
+						"consumption": "Calculate material consumption per square meter",
+						"layers": "Account for number of application layers",
+						"reserve": "Add reserve for fitting and losses"
+					}
+				},
+				"materials": {
+					"title": "Types of Building Materials",
+					"content": "Calculator supports calculation of various building materials considering their specifics.",
+					"paint": {
+						"title": "Paint Calculation",
+						"content": "Calculate paint quantity for walls considering surface type, number of layers and consumption rate. Suitable for water-based, oil-based, acrylic paint."
+					},
+					"putty": {
+						"title": "Putty Calculation",
+						"content": "Calculate putty quantity for wall leveling before painting or wallpapering. Includes base and finish putty."
+					},
+					"primer": {
+						"title": "Primer Calculation",
+						"content": "Calculate primer quantity for surface preparation. Includes acrylic, alkyd, deep-penetrating primer."
+					},
+					"tileGlue": {
+						"title": "Tile Adhesive Calculation",
+						"content": "Calculate tile adhesive quantity for ceramic tile, porcelain stoneware, mosaic installation on floors and walls."
+					}
+				},
+				"tips": {
+					"title": "Building Materials Calculation Tips",
+					"content": "Follow our recommendations for accurate material calculations.",
+					"measurement": "Carefully measure all room dimensions",
+					"surface": "Consider surface type and condition",
+					"consumption": "Check consumption rate on material packaging",
+					"layers": "Determine required number of layers",
+					"reserve": "Add 10-15% reserve for losses and fitting",
+					"weather": "Consider weather conditions during work",
+					"technique": "Choose proper application technique"
+				},
+				"benefits": {
+					"title": "Calculator Benefits",
+					"content": "Using building materials calculator provides many advantages for renovation planning.",
+					"accuracy": "Accurate material quantity calculation",
+					"savings": "Save on buying extra materials",
+					"planning": "Proper renovation budget planning",
+					"convenience": "Convenient and fast calculation",
+					"universal": "Support for various material types",
+					"professional": "Professional approach to calculations"
+				},
+				"seo": "building materials calculator, paint calculation, putty calculation, primer calculator, tile adhesive, paint consumption, construction materials, renovation calculator, wall paint, wall putty, wall primer, tile adhesive calculation, material consumption, construction online, water-based paint, acrylic paint, oil-based paint, base putty, finish putty, acrylic primer, alkyd primer, ceramic tile, porcelain stoneware, mosaic, paint consumption per m2, putty consumption per m2, primer consumption per m2, tile adhesive consumption per m2, renovation calculator, renovation planning, renovation budget, construction work, finishing materials"
 			}
 		}
 	}

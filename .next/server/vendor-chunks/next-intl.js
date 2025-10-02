@@ -131,16 +131,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(rsc)/./node_modules/next-intl/dist/esm/react-server/useLocale.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/next-intl/dist/esm/react-server/useLocale.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ r)\n/* harmony export */ });\n/* harmony import */ var _useConfig_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./useConfig.js */ \"(rsc)/./node_modules/next-intl/dist/esm/react-server/useConfig.js\");\n\nfunction r() {\n    for(var r = arguments.length, o = new Array(r), a = 0; a < r; a++)o[a] = arguments[a];\n    return (0,_useConfig_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"useLocale\").locale;\n}\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC1pbnRsL2Rpc3QvZXNtL3JlYWN0LXNlcnZlci91c2VMb2NhbGUuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBOEI7QUFBQSxTQUFTQztJQUFJLElBQUksSUFBSUEsSUFBRUMsVUFBVUMsTUFBTSxFQUFDQyxJQUFFLElBQUlDLE1BQU1KLElBQUdLLElBQUUsR0FBRUEsSUFBRUwsR0FBRUssSUFBSUYsQ0FBQyxDQUFDRSxFQUFFLEdBQUNKLFNBQVMsQ0FBQ0ksRUFBRTtJQUFDLE9BQU9OLHlEQUFDQSxDQUFDLGFBQWFPLE1BQU07QUFBQTtBQUFzQiIsInNvdXJjZXMiOlsid2VicGFjazovL2NhbGMxLy4vbm9kZV9tb2R1bGVzL25leHQtaW50bC9kaXN0L2VzbS9yZWFjdC1zZXJ2ZXIvdXNlTG9jYWxlLmpzPzg3MzMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGUgZnJvbVwiLi91c2VDb25maWcuanNcIjtmdW5jdGlvbiByKCl7Zm9yKHZhciByPWFyZ3VtZW50cy5sZW5ndGgsbz1uZXcgQXJyYXkociksYT0wO2E8cjthKyspb1thXT1hcmd1bWVudHNbYV07cmV0dXJuIGUoXCJ1c2VMb2NhbGVcIikubG9jYWxlfWV4cG9ydHtyIGFzIGRlZmF1bHR9O1xuIl0sIm5hbWVzIjpbImUiLCJyIiwiYXJndW1lbnRzIiwibGVuZ3RoIiwibyIsIkFycmF5IiwiYSIsImxvY2FsZSIsImRlZmF1bHQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next-intl/dist/esm/react-server/useLocale.js\n");
-
-/***/ }),
-
 /***/ "(rsc)/./node_modules/next-intl/dist/esm/react-server/useTranslations.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/next-intl/dist/esm/react-server/useTranslations.js ***!
