@@ -1031,6 +1031,140 @@
 				},
 				"seo": "Autoabschreibung, Abschreibungsrechner, Restwert Auto, Wertminderung, lineare Abschreibung, degressive Methode, Wertverlust, Autobewertung"
 			}
+		},
+		"wallpaper": {
+			"title": "Tapetenrechner",
+			"description": "Berechnung der Anzahl Tapetenrollen für einen Raum",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"roomDimensions": "Raumabmessungen",
+				"roomLength": "Raumlänge (m)",
+				"roomWidth": "Raumbreite (m)",
+				"wallHeight": "Wandhöhe (m)",
+				"rollDimensions": "Rollenabmessungen",
+				"doors": "Türen",
+				"windows": "Fenster",
+				"addDoor": "Tür hinzufügen",
+				"addWindow": "Fenster hinzufügen",
+				"width": "Breite (m)",
+				"height": "Höhe (m)",
+				"reservePercentage": "Tapetenreserve",
+				"calculate": "Menge berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"rollsNeeded": "Benötigte Rollen",
+				"rolls": "Rollen",
+				"rollsDescription": "Anzahl Rollen zum Tapezieren",
+				"detailedResults": "Detaillierte Ergebnisse",
+				"parameter": "Parameter",
+				"value": "Wert",
+				"totalWallArea": "Gesamte Wandfläche",
+				"openingsArea": "Öffnungsfläche",
+				"usefulWallArea": "Nutzbare Wandfläche",
+				"rollArea": "Einzelrollenfläche",
+				"reserve": "Reserve",
+				"recommendation": "Empfehlung",
+				"recommendationText": "Wir empfehlen {recommended} Rollen für Musteranpassung und zukünftige Reparaturen",
+				"placeholder": "Parameter für Berechnung eingeben"
+			},
+			"seo": {
+				"title": "Online Tapetenrechner",
+				"overview": {
+					"title": "Über Tapetenrechner",
+					"content": "Online Tapetenrechner hilft schnell zu berechnen, wie viele Tapetenrollen für Raumtapete benötigt werden. Berechnungen berücksichtigen Wände, Fenster, Türen und Reserve. Ergebnisse werden in einer praktischen Tabelle für Renovierungsplanung präsentiert."
+				},
+				"calculation": {
+					"title": "Wie Tapetenmenge berechnet wird",
+					"content": "Tapetenmengenberechnung umfasst mehrere Schritte für genaue Ergebnisse.",
+					"steps": {
+						"area": "Gesamte Raumwandfläche berechnen",
+						"openings": "Türen- und Fensterfläche abziehen",
+						"useful": "Nutzbare Fläche zum Tapezieren bestimmen",
+						"rolls": "Anzahl Rollen berechnen",
+						"reserve": "Reserve für Musteranpassung hinzufügen"
+					}
+				},
+				"tips": {
+					"title": "Tapetenberechnungstipps",
+					"content": "Folgen Sie unseren Empfehlungen für genaue Ergebnisse.",
+					"measurement": "Messen Sie alle Raumabmessungen sorgfältig",
+					"pattern": "Berücksichtigen Sie Musterwiederholung bei Berechnung",
+					"reserve": "Fügen Sie immer 10-15% Reserve hinzu",
+					"quality": "Kaufen Sie Tapeten mit kleiner Reserve"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Tapetenrechner hilft Ihnen, Zeit und Geld bei Renovierungsplanung zu sparen.",
+					"accuracy": "Genaue Tapetenmengenberechnung",
+					"savings": "Sparen beim Kauf zusätzlicher Rollen",
+					"planning": "Richtige Renovierungsplanung",
+					"convenience": "Bequeme und schnelle Berechnung"
+				},
+				"seo": "Tapetenrechner, Tapetenberechnung, Anzahl Rollen, Raumtapete, Renovierung, Tapete, Wandfläche, Tapetenreserve"
+			}
+		},
+		"materials": {
+			"title": "Baumaterialien-Rechner",
+			"description": "Universelle Berechnung für Farbe, Spachtelmasse, Grundierung und Fliesenkleber",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"materialType": "Materialtyp",
+				"roomLength": "Raumlänge",
+				"roomWidth": "Raumbreite",
+				"wallHeight": "Wandhöhe",
+				"floorArea": "Bodenfläche",
+				"doorsWindowsArea": "Türen und Fenster Fläche",
+				"layers": "Anzahl Schichten",
+				"consumptionRate": "Verbrauchsrate",
+				"reservePercentage": "Reserve",
+				"packageSize": "Packungsgröße",
+				"tileSize": "Fliesengröße",
+				"groutWidth": "Fugenbreite",
+				"calculate": "Berechnen",
+				"reset": "Zurücksetzen"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"parameter": "Parameter",
+				"value": "Wert",
+				"totalWallArea": "Gesamte Wandfläche",
+				"floorArea": "Bodenfläche",
+				"doorsWindowsArea": "Türen und Fenster Fläche",
+				"usefulArea": "Nutzfläche",
+				"layers": "Anzahl Schichten",
+				"consumptionPerLayer": "Verbrauch pro Schicht",
+				"totalMaterial": "Gesamtmaterial",
+				"packageSize": "Packungsgröße",
+				"packagesNeeded": "Benötigte Packungen",
+				"pieces": "Stk.",
+				"tips": {
+					"title": "Nützliche Tipps",
+					"surface": "Berücksichtigen Sie, dass die Oberflächentextur den Verbrauch beeinflusst",
+					"weather": "Bei heißem Wetter kann der Verbrauch steigen",
+					"technique": "Die Anwendungstechnik beeinflusst den Materialverbrauch",
+					"waste": "Kaufen Sie immer Material mit 10-15% Reserve"
+				}
+			},
+			"errors": {
+				"title": "Eingabefehler"
+			},
+			"seo": {
+				"title": "Baumaterialien-Rechner - Farbe, Spachtelmasse, Grundierung | Rechner #1",
+				"overview": {
+					"title": "Baumaterialien-Rechner",
+					"content": "Online-Baumaterialien-Rechner hilft bei der Berechnung der Menge von Farbe, Spachtelmasse, Grundierung, Fliesenkleber und anderen Materialien für Renovierungen. Berücksichtigt Raummaße, Verbrauch, Anzahl der Schichten und Reserve."
+				},
+				"seo": "Baumaterialien-Rechner, Farbberechnung, Spachtelmasse-Berechnung, Grundierungsrechner, Fliesenkleber, Farbverbrauch, Baumaterialien, Renovierungsrechner, Wandfarbe, Wandspachtelmasse, Wandgrundierung, Fliesenkleber-Berechnung, Materialverbrauch, Bauwesen online"
+			}
 		}
 	}
 }

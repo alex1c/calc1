@@ -1031,6 +1031,140 @@
 				},
 				"seo": "depreciación de auto, calculadora de depreciación, valor residual auto, disminución de valor, depreciación lineal, método decreciente, pérdida de valor, valoración de auto"
 			}
+		},
+		"wallpaper": {
+			"title": "Calculadora de Papel Tapiz",
+			"description": "Calcular la cantidad de rollos de papel tapiz necesarios para una habitación",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"roomDimensions": "Dimensiones de la Habitación",
+				"roomLength": "Longitud de la Habitación (m)",
+				"roomWidth": "Ancho de la Habitación (m)",
+				"wallHeight": "Altura de las Paredes (m)",
+				"rollDimensions": "Dimensiones del Rollo",
+				"doors": "Puertas",
+				"windows": "Ventanas",
+				"addDoor": "Agregar Puerta",
+				"addWindow": "Agregar Ventana",
+				"width": "Ancho (m)",
+				"height": "Alto (m)",
+				"reservePercentage": "Reserva de Papel Tapiz",
+				"calculate": "Calcular Cantidad",
+				"errors": {
+					"title": "Errores de Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"rollsNeeded": "Rollos Necesarios",
+				"rolls": "rollos",
+				"rollsDescription": "Cantidad de rollos para empapelar",
+				"detailedResults": "Resultados Detallados",
+				"parameter": "Parámetro",
+				"value": "Valor",
+				"totalWallArea": "Área Total de Paredes",
+				"openingsArea": "Área de Aberturas",
+				"usefulWallArea": "Área Útil de Paredes",
+				"rollArea": "Área de un Rollo",
+				"reserve": "Reserva",
+				"recommendation": "Recomendación",
+				"recommendationText": "Recomendamos tomar {recommended} rollos para ajuste de patrón y reparaciones futuras",
+				"placeholder": "Ingrese parámetros para calcular"
+			},
+			"seo": {
+				"title": "Calculadora de Papel Tapiz Online",
+				"overview": {
+					"title": "Acerca de la Calculadora de Papel Tapiz",
+					"content": "La calculadora online de papel tapiz ayuda a calcular rápidamente cuántos rollos de papel tapiz se necesitan para empapelar una habitación. Los cálculos consideran paredes, ventanas, puertas y reserva. Los resultados se presentan en una tabla conveniente para planificación de renovación."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula la Cantidad de Papel Tapiz",
+					"content": "El cálculo de cantidad de papel tapiz incluye varios pasos para obtener resultados precisos.",
+					"steps": {
+						"area": "Calcular área total de paredes de la habitación",
+						"openings": "Restar área de puertas y ventanas",
+						"useful": "Determinar área útil para empapelar",
+						"rolls": "Calcular número de rollos",
+						"reserve": "Agregar reserva para ajuste de patrón"
+					}
+				},
+				"tips": {
+					"title": "Consejos para Cálculo de Papel Tapiz",
+					"content": "Siga nuestras recomendaciones para resultados precisos.",
+					"measurement": "Mida cuidadosamente todas las dimensiones de la habitación",
+					"pattern": "Considere la repetición del patrón al calcular",
+					"reserve": "Siempre agregue 10-15% de reserva",
+					"quality": "Compre papel tapiz con pequeña reserva"
+				},
+				"advantages": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora de papel tapiz te ayuda a ahorrar tiempo y dinero al planificar renovaciones.",
+					"accuracy": "Cálculo preciso de cantidad de papel tapiz",
+					"savings": "Ahorro en compra de rollos extra",
+					"planning": "Planificación correcta de renovación",
+					"convenience": "Cálculo conveniente y rápido"
+				},
+				"seo": "calculadora de papel tapiz, cálculo de papel tapiz, cantidad de rollos, empapelado de habitación, renovación, papel tapiz, área de paredes, reserva de papel tapiz"
+			}
+		},
+		"materials": {
+			"title": "Calculadora de Materiales de Construcción",
+			"description": "Cálculo universal para pintura, masilla, imprimación y adhesivo para baldosas",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"materialType": "Tipo de Material",
+				"roomLength": "Longitud de la Habitación",
+				"roomWidth": "Ancho de la Habitación",
+				"wallHeight": "Altura de las Paredes",
+				"floorArea": "Área del Suelo",
+				"doorsWindowsArea": "Área de Puertas y Ventanas",
+				"layers": "Número de Capas",
+				"consumptionRate": "Tasa de Consumo",
+				"reservePercentage": "Reserva",
+				"packageSize": "Tamaño del Paquete",
+				"tileSize": "Tamaño de la Baldosa",
+				"groutWidth": "Ancho de la Junta",
+				"calculate": "Calcular",
+				"reset": "Restablecer"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"parameter": "Parámetro",
+				"value": "Valor",
+				"totalWallArea": "Área Total de Paredes",
+				"floorArea": "Área del Suelo",
+				"doorsWindowsArea": "Área de Puertas y Ventanas",
+				"usefulArea": "Área Útil",
+				"layers": "Número de Capas",
+				"consumptionPerLayer": "Consumo por Capa",
+				"totalMaterial": "Material Total",
+				"packageSize": "Tamaño del Paquete",
+				"packagesNeeded": "Paquetes Necesarios",
+				"pieces": "uds.",
+				"tips": {
+					"title": "Consejos Útiles",
+					"surface": "Tenga en cuenta que la textura de la superficie afecta el consumo",
+					"weather": "En clima caluroso, el consumo puede aumentar",
+					"technique": "La técnica de aplicación afecta el consumo de material",
+					"waste": "Siempre compre material con 10-15% de reserva"
+				}
+			},
+			"errors": {
+				"title": "Errores de Entrada"
+			},
+			"seo": {
+				"title": "Calculadora de Materiales de Construcción - Pintura, Masilla, Imprimación | Calculadora #1",
+				"overview": {
+					"title": "Calculadora de Materiales de Construcción",
+					"content": "La calculadora online de materiales de construcción ayuda a calcular la cantidad de pintura, masilla, imprimación, adhesivo para baldosas y otros materiales para renovación. Tiene en cuenta las dimensiones de la habitación, consumo, número de capas y reserva."
+				},
+				"seo": "calculadora de materiales de construcción, cálculo de pintura, cálculo de masilla, calculadora de imprimación, adhesivo para baldosas, consumo de pintura, materiales de construcción, calculadora de renovación, pintura para paredes, masilla para paredes, imprimación para paredes, cálculo de adhesivo para baldosas, consumo de materiales, construcción online"
+			}
 		}
 	}
 }

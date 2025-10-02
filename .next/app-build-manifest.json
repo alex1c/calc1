@@ -6,90 +6,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/[locale]/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/layout.js"
-    ],
-    "/[locale]/finance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/finance/page.js"
-    ],
-    "/[locale]/calc/auto-loan/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/auto-loan/page.js"
-    ],
     "/[locale]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/page.js"
     ],
-    "/[locale]/calc/mortgage/page": [
+    "/[locale]/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/mortgage/page.js"
+      "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/math/page": [
+    "/[locale]/construction/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/math/page.js"
+      "static/chunks/app/[locale]/construction/page.js"
     ],
-    "/[locale]/auto/page": [
+    "/[locale]/calc/wallpaper/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/auto/page.js"
+      "static/chunks/app/[locale]/calc/wallpaper/page.js"
     ],
-    "/[locale]/calc/car-loan/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/car-loan/page.js"
-    ],
-    "/[locale]/calc/osago/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/osago/page.js"
-    ],
-    "/[locale]/calc/kasko/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/kasko/page.js"
-    ],
-    "/[locale]/calc/fuel-consumption/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/fuel-consumption/page.js"
-    ],
-    "/[locale]/calc/vehicle-tax/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/vehicle-tax/page.js"
-    ],
-    "/[locale]/calc/leasing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/leasing/page.js"
-    ],
-    "/[locale]/calc/customs/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/customs/page.js"
-    ],
-    "/[locale]/calc/traffic-fines/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/traffic-fines/page.js"
-    ],
-    "/[locale]/calc/car-ownership/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/car-ownership/page.js"
-    ],
-    "/[locale]/calc/car-depreciation/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/calc/car-depreciation/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }

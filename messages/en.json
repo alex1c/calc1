@@ -1293,6 +1293,140 @@
 				},
 				"seo": "car depreciation, depreciation calculator, residual car value, value decrease, linear depreciation, declining method, value loss, car valuation"
 			}
+		},
+		"wallpaper": {
+			"title": "Wallpaper Calculator",
+			"description": "Calculate the number of wallpaper rolls needed for a room",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"roomDimensions": "Room Dimensions",
+				"roomLength": "Room Length (m)",
+				"roomWidth": "Room Width (m)",
+				"wallHeight": "Wall Height (m)",
+				"rollDimensions": "Roll Dimensions",
+				"doors": "Doors",
+				"windows": "Windows",
+				"addDoor": "Add Door",
+				"addWindow": "Add Window",
+				"width": "Width (m)",
+				"height": "Height (m)",
+				"reservePercentage": "Wallpaper Reserve",
+				"calculate": "Calculate Quantity",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"rollsNeeded": "Rolls Needed",
+				"rolls": "rolls",
+				"rollsDescription": "Number of rolls for wallpapering",
+				"detailedResults": "Detailed Results",
+				"parameter": "Parameter",
+				"value": "Value",
+				"totalWallArea": "Total Wall Area",
+				"openingsArea": "Openings Area",
+				"usefulWallArea": "Useful Wall Area",
+				"rollArea": "Single Roll Area",
+				"reserve": "Reserve",
+				"recommendation": "Recommendation",
+				"recommendationText": "We recommend taking {recommended} rolls for pattern matching and future repairs",
+				"placeholder": "Enter parameters to calculate"
+			},
+			"seo": {
+				"title": "Online Wallpaper Calculator",
+				"overview": {
+					"title": "About Wallpaper Calculator",
+					"content": "Online wallpaper calculator helps quickly calculate how many wallpaper rolls are needed for room wallpapering. Calculations consider walls, windows, doors and reserve. Results are presented in a convenient table for renovation planning."
+				},
+				"calculation": {
+					"title": "How Wallpaper Quantity is Calculated",
+					"content": "Wallpaper quantity calculation includes several steps to get accurate results.",
+					"steps": {
+						"area": "Calculate total room wall area",
+						"openings": "Subtract doors and windows area",
+						"useful": "Determine useful area for wallpapering",
+						"rolls": "Calculate number of rolls",
+						"reserve": "Add reserve for pattern matching"
+					}
+				},
+				"tips": {
+					"title": "Wallpaper Calculation Tips",
+					"content": "Follow our recommendations for accurate results.",
+					"measurement": "Carefully measure all room dimensions",
+					"pattern": "Consider pattern repeat when calculating",
+					"reserve": "Always add 10-15% reserve",
+					"quality": "Buy wallpapers with small reserve"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Our wallpaper calculator helps you save time and money when planning renovations.",
+					"accuracy": "Accurate wallpaper quantity calculation",
+					"savings": "Save on buying extra rolls",
+					"planning": "Proper renovation planning",
+					"convenience": "Convenient and fast calculation"
+				},
+				"seo": "wallpaper calculator, wallpaper calculation, number of rolls, room wallpapering, renovation, wallpaper, wall area, wallpaper reserve"
+			}
+		},
+		"materials": {
+			"title": "Building Materials Calculator",
+			"description": "Universal calculation for paint, putty, primer and tile adhesive",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"materialType": "Material Type",
+				"roomLength": "Room Length",
+				"roomWidth": "Room Width",
+				"wallHeight": "Wall Height",
+				"floorArea": "Floor Area",
+				"doorsWindowsArea": "Doors and Windows Area",
+				"layers": "Number of Layers",
+				"consumptionRate": "Consumption Rate",
+				"reservePercentage": "Reserve",
+				"packageSize": "Package Size",
+				"tileSize": "Tile Size",
+				"groutWidth": "Grout Width",
+				"calculate": "Calculate",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"parameter": "Parameter",
+				"value": "Value",
+				"totalWallArea": "Total Wall Area",
+				"floorArea": "Floor Area",
+				"doorsWindowsArea": "Doors and Windows Area",
+				"usefulArea": "Useful Area",
+				"layers": "Number of Layers",
+				"consumptionPerLayer": "Consumption per Layer",
+				"totalMaterial": "Total Material",
+				"packageSize": "Package Size",
+				"packagesNeeded": "Packages Needed",
+				"pieces": "pcs.",
+				"tips": {
+					"title": "Useful Tips",
+					"surface": "Consider that surface texture affects consumption",
+					"weather": "In hot weather, consumption may increase",
+					"technique": "Application technique affects material consumption",
+					"waste": "Always buy material with 10-15% reserve"
+				}
+			},
+			"errors": {
+				"title": "Input Errors"
+			},
+			"seo": {
+				"title": "Building Materials Calculator - Paint, Putty, Primer | Calculator #1",
+				"overview": {
+					"title": "Building Materials Calculator",
+					"content": "Online building materials calculator helps calculate the amount of paint, putty, primer, tile adhesive and other materials for renovation. Takes into account room dimensions, consumption, number of layers and reserve."
+				},
+				"seo": "building materials calculator, paint calculation, putty calculation, primer calculator, tile adhesive, paint consumption, construction materials, renovation calculator, wall paint, wall putty, wall primer, tile adhesive calculation, material consumption, construction online"
+			}
 		}
 	}
 }

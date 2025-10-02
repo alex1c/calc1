@@ -1,21 +1,21 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Wrench, Paintbrush, Square, Home } from 'lucide-react';
+import { Wrench, Paintbrush, Square, Home, Package } from 'lucide-react';
 
-const calculators = [
+const getCalculators = (t: any) => [
 	{
 		id: 'wallpaper',
-		title: 'Wallpaper Calculator',
-		description: 'Calculate how much wallpaper you need for your walls',
+		title: t('calculators.wallpaper.title'),
+		description: t('calculators.wallpaper.description'),
 		icon: Paintbrush,
 		href: '/calc/wallpaper',
 	},
 	{
 		id: 'paint',
-		title: 'Paint Calculator',
-		description: 'Estimate paint quantity needed for your project',
-		icon: Paintbrush,
+		title: t('calculators.materials.title'),
+		description: t('calculators.materials.description'),
+		icon: Package,
 		href: '/calc/paint',
 	},
 	{
@@ -55,7 +55,7 @@ export default function ConstructionPage() {
 
 				{/* Calculators Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{calculators.map((calculator) => (
+					{getCalculators(t).map((calculator) => (
 						<Link
 							key={calculator.id}
 							href={`/${locale}/calc/${calculator.id}`}
