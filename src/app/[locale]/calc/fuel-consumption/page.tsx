@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import FuelCalculator from '@/components/calculators/fuel-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'Fuel Consumption Calculator | Калькулятор #1',
-	description:
-		'Calculate fuel consumption, distance you can travel with given fuel, or fuel needed for a specific distance.',
-	keywords:
-		'калькулятор расхода топлива, расчёт топлива, расход топлива, сколько проехать, сколько топлива нужно, экономия топлива',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators['fuel-consumption'][key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function FuelConsumptionPage() {
 	const t = useTranslations();

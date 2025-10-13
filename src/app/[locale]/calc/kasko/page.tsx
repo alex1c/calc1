@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import KaskoCalculator from '@/components/calculators/kasko-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'KASKO Calculator | Калькулятор #1',
-	description:
-		'Calculate KASKO comprehensive auto insurance cost based on car value, driver age, experience, region and other factors.',
-	keywords:
-		'калькулятор КАСКО, расчёт КАСКО, стоимость КАСКО, страхование КАСКО, полное КАСКО, автострахование',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators.kasko[key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function KaskoPage() {
 	const t = useTranslations();

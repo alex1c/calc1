@@ -19,18 +19,18 @@ export default function MathPage() {
 		},
 		{
 			id: 'percentage',
-			title: 'Percentage Calculator',
-			description:
-				'Calculate percentages, discounts, and percentage changes',
+			title: t('math_percent.title'),
+			description: t('math_percent.description'),
 			icon: Percent,
-			href: '/calc/percentage',
+			href: '/math/percent',
 		},
 		{
 			id: 'geometry',
 			title: 'Geometry Calculator',
 			description: 'Calculate area, perimeter, volume of various shapes',
 			icon: Square,
-			href: '/calc/geometry',
+			href: '/math/geometry',
+			disabled: true,
 		},
 		{
 			id: 'trigonometry',
@@ -38,7 +38,8 @@ export default function MathPage() {
 			description:
 				'Calculate sine, cosine, tangent and other trigonometric functions',
 			icon: Pi,
-			href: '/calc/trigonometry',
+			href: '/math/trigonometry',
+			disabled: true,
 		},
 	];
 
@@ -59,23 +60,59 @@ export default function MathPage() {
 
 				{/* Calculators Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{calculators.map((calculator) => (
-						<Link
-							key={calculator.id}
-							href={`/${locale}${calculator.href}`}
-							className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
-						>
-							<div className='flex items-center mb-4'>
-								<calculator.icon className='h-8 w-8 text-blue-600 mr-3' />
-								<h3 className='text-xl font-semibold text-gray-900'>
-									{calculator.title}
-								</h3>
-							</div>
-							<p className='text-gray-600'>
-								{calculator.description}
-							</p>
-						</Link>
-					))}
+					{calculators.map((calculator) => {
+						const isDisabled = calculator.disabled;
+						const CardComponent = isDisabled ? 'div' : Link;
+
+						return (
+							<CardComponent
+								key={calculator.id}
+								{...(isDisabled
+									? {}
+									: { href: `/${locale}${calculator.href}` })}
+								className={`rounded-lg border p-6 transition-all duration-200 ${
+									isDisabled
+										? 'bg-gray-100 border-gray-200 cursor-not-allowed opacity-60'
+										: 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-md cursor-pointer'
+								}`}
+							>
+								<div className='flex items-center mb-4'>
+									<calculator.icon
+										className={`h-8 w-8 mr-3 ${
+											isDisabled
+												? 'text-gray-400'
+												: 'text-blue-600'
+										}`}
+									/>
+									<h3
+										className={`text-xl font-semibold ${
+											isDisabled
+												? 'text-gray-500'
+												: 'text-gray-900'
+										}`}
+									>
+										{calculator.title}
+									</h3>
+								</div>
+								<p
+									className={`${
+										isDisabled
+											? 'text-gray-400'
+											: 'text-gray-600'
+									}`}
+								>
+									{calculator.description}
+								</p>
+								{isDisabled && (
+									<div className='mt-3'>
+										<span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-600'>
+											Coming Soon
+										</span>
+									</div>
+								)}
+							</CardComponent>
+						);
+					})}
 				</div>
 			</main>
 		</div>

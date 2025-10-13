@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import MortgageCalculator from '@/components/calculators/mortgage-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'Mortgage Calculator | Калькулятор #1',
-	description:
-		'Calculate monthly mortgage payments, total interest, and create detailed payment schedules for home loans and real estate financing.',
-	keywords:
-		'ипотечный калькулятор, расчёт ипотеки, ежемесячный платёж по ипотеке, ипотечный кредит',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators.mortgage[key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function MortgagePage() {
 	const t = useTranslations();

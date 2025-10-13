@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import PaperWeightCalculator from '@/components/calculators/paper-weight-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'Paper Weight Calculator | Calc1',
-	description:
-		'Calculate paper weight by density and number of sheets. A4, A3, A5, Letter formats supported.',
-	keywords:
-		'калькулятор листов а4, расчёт веса бумаги по плотности калькулятор, расчёт веса бумаги, вес бумаги калькулятор',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators['paper-weight'][key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function PaperWeightPage() {
 	return (

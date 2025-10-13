@@ -259,6 +259,733 @@
 					"consult": "Consult with financial experts"
 				}
 			}
+		},
+		"mortgage": {
+			"title": "Mortgage Calculator",
+			"description": "Calculate monthly mortgage payments, total interest, and create detailed payment schedules for home loans and real estate financing",
+			"seo": "mortgage calculator, mortgage calculation, monthly mortgage payment, mortgage loan, down payment, mortgage overpayment, mortgage payment schedule, government mortgage programs",
+			"form": {
+				"title": "Mortgage Parameters",
+				"homeValue": "Home Value ($)",
+				"downPayment": "Down Payment ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter mortgage parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Mortgage Calculator: Calculate Home Loan Payments and Schedule",
+				"overview": {
+					"title": "What is a Mortgage",
+					"content": "A mortgage is a loan secured by real estate property, typically used to purchase a home. The property serves as collateral for the loan."
+				},
+				"types": {
+					"title": "Types of Mortgages",
+					"content": "There are several types of mortgages available:",
+					"fixed": "Fixed-Rate Mortgages - interest rate remains constant",
+					"adjustable": "Adjustable-Rate Mortgages - interest rate can change",
+					"fha": "FHA Loans - government-backed loans with lower down payments"
+				},
+				"advantages": {
+					"title": "Advantages of Mortgages",
+					"content": "Mortgages offer several benefits:",
+					"homeOwnership": "Enables home ownership",
+					"taxBenefits": "Potential tax benefits",
+					"equityBuilding": "Builds equity over time",
+					"stability": "Provides housing stability"
+				},
+				"tips": {
+					"title": "Mortgage Tips",
+					"content": "To get the best mortgage terms:",
+					"compare": "Compare rates from multiple lenders",
+					"downPayment": "Save for a larger down payment",
+					"creditScore": "Improve your credit score",
+					"preApproval": "Get pre-approved before house hunting"
+				}
+			}
+		},
+		"auto-loan": {
+			"title": "Auto Loan Calculator",
+			"description": "Calculate monthly auto loan payments, total payments and create detailed payment schedules for car purchase",
+			"seo": "auto loan calculator, auto loan calculation, monthly auto loan payment, auto loan, car down payment, auto loan overpayment, auto loan payment schedule, car insurance",
+			"form": {
+				"title": "Auto Loan Parameters",
+				"carValue": "Car Value ($)",
+				"downPayment": "Down Payment ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter auto loan parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Auto Loan Calculator: Calculate Car Loan Payments and Schedule",
+				"overview": {
+					"title": "What is an Auto Loan",
+					"content": "An auto loan is a secured loan specifically designed for purchasing a vehicle. The car serves as collateral, which typically results in lower interest rates compared to unsecured loans."
+				},
+				"types": {
+					"title": "Types of Auto Loans",
+					"content": "There are several types of auto loans available:",
+					"new": "New Car Loans - typically offer the lowest rates for brand new vehicles",
+					"used": "Used Car Loans - higher rates but more flexible terms",
+					"refinance": "Auto Loan Refinancing - to get better terms on existing loans"
+				},
+				"advantages": {
+					"title": "Advantages of Auto Loans",
+					"content": "Auto loans offer several benefits:",
+					"lowerRates": "Lower interest rates due to collateral",
+					"flexibleTerms": "Flexible repayment terms",
+					"quickApproval": "Quick approval process",
+					"taxBenefits": "Potential tax benefits for business use"
+				},
+				"tips": {
+					"title": "Auto Loan Tips",
+					"content": "To get the best auto loan terms:",
+					"compare": "Compare rates from multiple lenders",
+					"downPayment": "Make a larger down payment to reduce monthly payments",
+					"creditScore": "Improve your credit score before applying",
+					"negotiate": "Negotiate the car price before discussing financing"
+				}
+			}
+		},
+		"consumer-loan": {
+			"title": "Consumer Loan Calculator",
+			"description": "Calculate monthly consumer loan payments",
+			"seo": "consumer loan calculator, consumer loan, personal loan",
+			"form": {
+				"title": "Consumer Loan Parameters",
+				"loanAmount": "Loan Amount ($)",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"additionalPayment": "Additional Monthly Payment ($)",
+				"paymentType": "Payment Scheme",
+				"paymentTypes": {
+					"annuity": "Annuity Payments (Equal)",
+					"differentiated": "Differentiated Payments (Decreasing)"
+				},
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter consumer loan parameters and click 'Calculate'",
+				"summary": "Summary",
+				"monthlyPayment": "Monthly Payment",
+				"totalPayments": "Total Payments",
+				"totalInterest": "Total Interest",
+				"effectiveTerm": "Effective Term",
+				"months": "months",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Payment Schedule",
+				"table": {
+					"month": "Month",
+					"payment": "Payment",
+					"interest": "Interest",
+					"principal": "Principal",
+					"balance": "Balance",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Consumer Loan Calculator: Calculate Personal Loan Payments",
+				"overview": {
+					"title": "What is a Consumer Loan",
+					"content": "A consumer loan is an unsecured personal loan that can be used for various personal expenses such as home improvements, debt consolidation, or major purchases."
+				},
+				"types": {
+					"title": "Types of Consumer Loans",
+					"content": "Consumer loans come in various forms:",
+					"personal": "Personal Loans - for general personal expenses",
+					"debtConsolidation": "Debt Consolidation Loans - to combine multiple debts",
+					"homeImprovement": "Home Improvement Loans - for renovation projects"
+				},
+				"advantages": {
+					"title": "Advantages of Consumer Loans",
+					"content": "Consumer loans offer several benefits:",
+					"noCollateral": "No collateral required",
+					"flexibleUse": "Flexible use of funds",
+					"quickApproval": "Quick approval process",
+					"fixedRates": "Fixed interest rates"
+				},
+				"tips": {
+					"title": "Consumer Loan Tips",
+					"content": "To get the best consumer loan terms:",
+					"compare": "Compare offers from multiple lenders",
+					"creditScore": "Improve your credit score before applying",
+					"shopAround": "Shop around for the best rates",
+					"readTerms": "Read all terms and conditions carefully"
+				}
+			}
+		},
+		"investment": {
+			"title": "Investment Calculator",
+			"description": "Calculate investment returns with compound interest and regular contributions",
+			"seo": "investment calculator, compound interest, financial planning, capital accumulation",
+			"form": {
+				"title": "Investment Parameters",
+				"currency": "Currency",
+				"amount": "Investment Amount",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"depositType": "Investment Type",
+				"depositTypes": {
+					"simple": "Without Capitalization (Simple Interest)",
+					"capitalized": "With Interest Capitalization",
+					"compound": "Compound Interest (Monthly Accrual)"
+				},
+				"capitalizationPeriod": "Capitalization Period",
+				"capitalizationPeriods": {
+					"monthly": "Monthly",
+					"quarterly": "Quarterly",
+					"yearly": "Yearly"
+				},
+				"monthlyAddition": "Monthly Addition",
+				"monthlyWithdrawal": "Monthly Withdrawal",
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter investment parameters and click 'Calculate'",
+				"summary": "Summary",
+				"totalAmount": "Total Amount",
+				"totalInterest": "Total Interest",
+				"effectiveRate": "Effective Rate",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Accrual Schedule",
+				"table": {
+					"month": "Month",
+					"amount": "Amount",
+					"interest": "Interest",
+					"total": "Total",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Investment Calculator: Calculate Returns, Capitalization and Accrual Schedule",
+				"overview": {
+					"title": "What are Investments",
+					"content": "Investments are a way of investing money with the aim of generating income. This is one of the most effective ways to grow capital for long-term financial planning."
+				},
+				"types": {
+					"title": "Types of Investments",
+					"content": "There are several main types of investments:",
+					"simple": "Investments without capitalization — interest is accrued but not added to the principal amount",
+					"capitalized": "Investments with capitalization — interest is periodically added to the principal amount",
+					"compound": "Investments with compound interest — interest is accrued on a constantly growing amount"
+				},
+				"advantages": {
+					"title": "Advantages of Investments",
+					"content": "Investments have many advantages:",
+					"safety": "High reliability with proper instrument selection",
+					"guaranteed": "Potentially high returns",
+					"liquidity": "Possibility of early exit (with loss of interest)",
+					"tax": "Tax benefits on investment income"
+				},
+				"tips": {
+					"title": "Investment Tips",
+					"content": "For successful investing:",
+					"compare": "Compare offers from different investment companies",
+					"term": "Choose the appropriate investment term",
+					"capitalization": "Consider the possibility of interest capitalization",
+					"early": "Consider the possibility of early withdrawal"
+				}
+			}
+		},
+		"savings": {
+			"title": "Savings Calculator",
+			"description": "Calculate savings growth with compound interest and regular deposits",
+			"seo": "savings calculator, compound interest, savings growth, financial planning",
+			"form": {
+				"title": "Savings Parameters",
+				"currency": "Currency",
+				"amount": "Initial Amount",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"depositType": "Savings Type",
+				"depositTypes": {
+					"simple": "Without Capitalization (Simple Interest)",
+					"capitalized": "With Interest Capitalization",
+					"compound": "Compound Interest (Monthly Accrual)"
+				},
+				"capitalizationPeriod": "Capitalization Period",
+				"capitalizationPeriods": {
+					"monthly": "Monthly",
+					"quarterly": "Quarterly",
+					"yearly": "Yearly"
+				},
+				"monthlyAddition": "Monthly Addition",
+				"monthlyWithdrawal": "Monthly Withdrawal",
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter savings parameters and click 'Calculate'",
+				"summary": "Summary",
+				"totalAmount": "Total Amount",
+				"totalInterest": "Total Interest",
+				"effectiveRate": "Effective Rate",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Accrual Schedule",
+				"table": {
+					"month": "Month",
+					"amount": "Amount",
+					"interest": "Interest",
+					"total": "Total",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Savings Calculator: Calculate Savings Growth with Compound Interest",
+				"overview": {
+					"title": "What are Savings",
+					"content": "Savings are funds set aside for future use, typically earning interest over time. This is one of the most reliable ways to build wealth for long-term financial goals."
+				},
+				"types": {
+					"title": "Types of Savings",
+					"content": "There are several types of savings accounts:",
+					"regular": "Regular Savings - basic interest-bearing accounts",
+					"highYield": "High-Yield Savings - higher interest rates",
+					"certificates": "Certificates of Deposit (CDs) - fixed-term savings"
+				},
+				"advantages": {
+					"title": "Advantages of Savings",
+					"content": "Savings offer several benefits:",
+					"safety": "High safety and deposit protection",
+					"guaranteed": "Guaranteed returns",
+					"liquidity": "Easy access to funds",
+					"taxBenefits": "Potential tax benefits"
+				},
+				"tips": {
+					"title": "Savings Tips",
+					"content": "To maximize your savings:",
+					"compare": "Compare rates from different banks",
+					"automate": "Set up automatic transfers",
+					"emergency": "Build an emergency fund first",
+					"goals": "Set specific savings goals",
+					"review": "Regularly review and adjust your savings strategy",
+					"patience": "Be patient - savings grow over time"
+				}
+			}
+		},
+		"investment": {
+			"title": "Investment Calculator",
+			"description": "Calculate investment returns with compound interest and regular contributions",
+			"seo": "investment calculator, compound interest, financial planning, capital accumulation",
+			"form": {
+				"title": "Investment Parameters",
+				"currency": "Currency",
+				"amount": "Investment Amount",
+				"termYears": "Term (Years)",
+				"termMonths": "Term (Months)",
+				"interestRate": "Interest Rate (% per year)",
+				"depositType": "Investment Type",
+				"depositTypes": {
+					"simple": "Without Capitalization (Simple Interest)",
+					"capitalized": "With Interest Capitalization",
+					"compound": "Compound Interest (Monthly Accrual)"
+				},
+				"capitalizationPeriod": "Capitalization Period",
+				"capitalizationPeriods": {
+					"monthly": "Monthly",
+					"quarterly": "Quarterly",
+					"yearly": "Yearly"
+				},
+				"monthlyAddition": "Monthly Addition",
+				"monthlyWithdrawal": "Monthly Withdrawal",
+				"calculate": "Calculate",
+				"optional": "optional",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter investment parameters and click 'Calculate'",
+				"summary": "Summary",
+				"totalAmount": "Total Amount",
+				"totalInterest": "Total Interest",
+				"effectiveRate": "Effective Rate",
+				"downloadSchedule": "Download Schedule (CSV)",
+				"scheduleTitle": "Accrual Schedule",
+				"table": {
+					"month": "Month",
+					"amount": "Amount",
+					"interest": "Interest",
+					"total": "Total",
+					"moreMonths": "more months"
+				}
+			},
+			"seo": {
+				"title": "Investment Calculator: Calculate Returns, Capitalization and Accrual Schedule",
+				"overview": {
+					"title": "What are Investments",
+					"content": "Investments are a way of investing money with the aim of generating income. This is one of the most effective ways to grow capital for long-term financial planning."
+				},
+				"types": {
+					"title": "Types of Investments",
+					"content": "There are several main types of investments:",
+					"simple": "Investments without capitalization — interest is accrued but not added to the principal amount",
+					"capitalized": "Investments with capitalization — interest is periodically added to the principal amount",
+					"compound": "Investments with compound interest — interest is accrued on a constantly growing amount"
+				},
+				"advantages": {
+					"title": "Advantages of Investments",
+					"content": "Investments have many advantages:",
+					"safety": "High reliability with proper instrument selection",
+					"guaranteed": "Potentially high returns",
+					"liquidity": "Possibility of early exit (with loss of interest)",
+					"tax": "Tax benefits on investment income"
+				},
+				"tips": {
+					"title": "Investment Tips",
+					"content": "For successful investing:",
+					"compare": "Compare offers from different investment companies",
+					"term": "Choose the appropriate investment term",
+					"capitalization": "Consider the possibility of interest capitalization",
+					"early": "Consider the possibility of early withdrawal"
+				}
+			}
+		}
+	},
+	"math_percent": {
+		"title": "Percentage Calculator",
+		"description": "Online percentage calculator to find percentages, ratios, and changes by percent. Fast and accurate tool with multilingual support.",
+		"find_percent_of_number": "Find percentage of a number",
+		"find_percent_of_number_desc": "Calculate what percentage a number represents of another number",
+		"what_percent_is": "Find what percent one number is of another",
+		"what_percent_is_desc": "Calculate the percentage ratio between two numbers",
+		"find_number_from_percent": "Find number from percent",
+		"find_number_from_percent_desc": "Calculate the original number when you know the percentage and the result",
+		"increase_or_decrease": "Increase or decrease number by percent",
+		"increase_or_decrease_desc": "Add or subtract a percentage from a number",
+		"number": "Number",
+		"percentage": "Percentage",
+		"first_number": "First number",
+		"second_number": "Second number",
+		"part_value": "Part value",
+		"operation": "Operation",
+		"calculate": "Calculate",
+		"calculating": "Calculating...",
+		"result": "Result",
+		"increase": "Increase",
+		"decrease": "Decrease",
+		"errors": {
+			"error_title": "Calculation Error",
+			"invalid_input": "Please enter valid numbers",
+			"calculation_failed": "Calculation failed. Please check your input."
+		},
+		"tips": {
+			"title": "Tips",
+			"enter_key": "Press Enter to calculate",
+			"auto_calculate": "Results update automatically as you type",
+			"negative_numbers": "Negative numbers are not supported"
+		},
+		"seo": {
+			"title": "Online Percentage Calculator - Calculate Percentages Fast",
+			"description": "Simple online percentage calculator: calculate percentage of a number, find what percent one number is of another, or increase a number by percent. Available in 4 languages.",
+			"content": {
+				"title": "About Percentage Calculator",
+				"description": "Online percentage calculator helps calculate percentage of a number, find percentage ratios, and change numbers by a given percentage. Suitable for discount calculations, taxes, profits, and other everyday tasks."
+			}
+		},
+		"results": {
+			"percent_of_number": "{percentage}% of {number} equals {result}",
+			"what_percent": "{number1} is {result}% of {number2}",
+			"number_from_percent": "If {part} is {percentage}%, then the original number is {result}",
+			"increase_by_percent": "Increasing {number} by {percentage}% gives {result}",
+			"decrease_by_percent": "Decreasing {number} by {percentage}% gives {result}"
+		}
+	},
+	"materials": {
+		"title": "Building Materials Calculator",
+		"description": "Universal calculation of paint, putty, primer and tile adhesive",
+		"breadcrumbs": {
+			"construction": "Construction"
+		},
+		"form": {
+			"materialType": "Material Type",
+			"roomLength": "Room Length",
+			"roomWidth": "Room Width",
+			"wallHeight": "Wall Height",
+			"floorArea": "Floor Area",
+			"doorsWindowsArea": "Doors and Windows Area",
+			"layers": "Number of Layers",
+			"consumptionRate": "Consumption Rate",
+			"reservePercentage": "Reserve",
+			"packageSize": "Package Size",
+			"tileSize": "Tile Size",
+			"groutWidth": "Grout Width",
+			"calculate": "Calculate",
+			"reset": "Reset"
+		},
+		"results": {
+			"title": "Calculation Results",
+			"summary": "Total Required",
+			"parameter": "Parameter",
+			"value": "Value",
+			"roomArea": "Room Area",
+			"materialType": "Material Type",
+			"consumptionRate": "Consumption Rate",
+			"totalConsumption": "Total Consumption",
+			"reserve": "Reserve",
+			"packagesNeeded": "Packages Needed",
+			"packages": "packages",
+			"liters": "liters",
+			"kilograms": "kilograms",
+			"tips": {
+				"title": "Recommendations",
+				"recommendation": "We recommend taking 1-2 additional packages for fitting and possible defects."
+			}
+		},
+		"options": {
+			"materials": {
+				"paint": "Paint",
+				"putty": "Putty",
+				"primer": "Primer",
+				"tileGlue": "Tile Adhesive"
+			},
+			"materialDescriptions": {
+				"paint": "Wall paint calculation",
+				"putty": "Wall putty calculation",
+				"primer": "Wall primer calculation",
+				"tileGlue": "Floor tile adhesive calculation"
+			}
+		},
+		"errors": {
+			"title": "Input Errors"
+		},
+		"seo": {
+			"title": "Building Materials Calculator - Paint, Putty, Primer Calculation | Calculator #1",
+			"overview": {
+				"title": "Building Materials Calculator",
+				"content": "Online building materials calculator helps calculate paint, putty, primer and tile adhesive quantities. Takes into account room dimensions, material consumption rates, number of layers and reserve for fitting and losses."
+			},
+			"calculation": {
+				"title": "How Material Quantities Are Calculated",
+				"content": "Building materials calculation includes several steps to get accurate results.",
+				"steps": {
+					"area": "Room area calculation",
+					"consumption": "Material consumption per square meter calculation",
+					"layers": "Number of application layers consideration",
+					"reserve": "Reserve addition for fitting and losses"
+				}
+			},
+			"materials": {
+				"title": "Types of Building Materials",
+				"content": "Calculator supports calculation of various types of building materials considering their specifics.",
+				"paint": {
+					"title": "Paint Calculation",
+					"content": "Wall paint quantity calculation considering surface type, number of layers and consumption rate. Suitable for water-based, oil-based, acrylic paint."
+				},
+				"putty": {
+					"title": "Putty Calculation",
+					"content": "Wall putty quantity calculation for wall leveling before painting or wallpapering. Considers starter and finish putty."
+				},
+				"primer": {
+					"title": "Primer Calculation",
+					"content": "Primer quantity calculation for surface preparation. Includes acrylic, alkyd, deep-penetrating primer."
+				},
+				"tileGlue": {
+					"title": "Tile Adhesive Calculation",
+					"content": "Tile adhesive quantity calculation for laying ceramic tiles, porcelain stoneware, mosaic on floor and walls."
+				}
+			},
+			"tips": {
+				"title": "Material Calculation Tips",
+				"content": "Follow our recommendations for accurate building materials calculation results.",
+				"measurement": "Carefully measure all room dimensions",
+				"material": "Check material consumption rates",
+				"layers": "Consider number of application layers",
+				"reserve": "Add 10-15% reserve for fitting",
+				"quality": "Consider possible defects when purchasing",
+				"surface": "Consider surface type and condition"
+			},
+			"benefits": {
+				"title": "Calculator Benefits",
+				"content": "Our building materials calculator provides several advantages:",
+				"accuracy": "Accurate material quantity calculation",
+				"convenience": "Convenient and fast calculation",
+				"universal": "Support for various material types",
+				"professional": "Professional approach to calculations"
+			}
+		}
+	},
+	"tile-laminate": {
+		"title": "Tile and Laminate Calculator",
+		"description": "Calculate tile and laminate quantity for floor",
+		"breadcrumbs": {
+			"construction": "Construction"
+		},
+		"form": {
+			"title": "Calculation Parameters",
+			"flooringType": "Flooring Type",
+			"roomDimensions": "Room Dimensions",
+			"roomLength": "Room Length",
+			"roomWidth": "Room Width",
+			"elementDimensions": "Element Dimensions",
+			"elementLength": "Element Length",
+			"elementWidth": "Element Width",
+			"packageInfo": "Package Information",
+			"packageQuantity": "Quantity in Package",
+			"piecesPerPackage": "pieces per package",
+			"reservePercentage": "Material Reserve",
+			"groutWidth": "Grout Width",
+			"calculate": "Calculate",
+			"reset": "Reset"
+		},
+		"results": {
+			"title": "Calculation Results",
+			"summary": "Total Required",
+			"parameter": "Parameter",
+			"value": "Value",
+			"roomArea": "Room Area",
+			"flooringType": "Flooring Type",
+			"elementSize": "Element Size",
+			"elementArea": "Element Area",
+			"totalElements": "Total Elements",
+			"reserve": "Reserve",
+			"packagesNeeded": "Packages Needed",
+			"packages": "packages",
+			"elements": "elements",
+			"tips": {
+				"title": "Recommendations",
+				"recommendation": "We recommend taking 1-2 additional packages for cutting and possible defects."
+			}
+		},
+		"options": {
+			"flooringTypes": {
+				"tile": "Tile",
+				"laminate": "Laminate"
+			},
+			"flooringTypeDescriptions": {
+				"tile": "Tile quantity calculation for floor",
+				"laminate": "Laminate quantity calculation"
+			}
+		},
+		"errors": {
+			"title": "Input Errors"
+		},
+		"seo": {
+			"title": "Tile and Laminate Calculator - Floor Material Calculation | Calculator #1",
+			"overview": {
+				"title": "Tile and Laminate Calculator",
+				"content": "Online tile and laminate calculator helps calculate material quantity needed for floor or wall installation. Takes into account room dimensions, tile or panel size, as well as reserve for cutting and waste."
+			},
+			"calculation": {
+				"title": "How Material Quantities Are Calculated",
+				"content": "Tile and laminate calculation includes several steps to get accurate results.",
+				"steps": {
+					"area": "Room area calculation",
+					"element": "Single element area determination",
+					"quantity": "Total element quantity calculation",
+					"packages": "Package quantity determination",
+					"reserve": "Reserve addition for cutting"
+				}
+			},
+			"materials": {
+				"title": "Types of Floor Coverings",
+				"content": "Calculator supports tile and laminate calculation considering their specifics.",
+				"tile": {
+					"title": "Tile Calculation",
+					"content": "Ceramic tile quantity calculation for floor considering tile size, grout width and cutting reserve."
+				},
+				"laminate": {
+					"title": "Laminate Calculation",
+					"content": "Laminate quantity calculation considering board size, quantity per package and cutting reserve."
+				}
+			},
+			"tips": {
+				"title": "Material Calculation Tips",
+				"content": "Follow our recommendations for accurate tile and laminate calculation results.",
+				"measurement": "Carefully measure all room dimensions",
+				"element": "Check element dimensions",
+				"package": "Clarify element quantity per package",
+				"reserve": "Add 10-15% reserve for cutting",
+				"quality": "Consider possible defects when purchasing",
+				"pattern": "For patterned coverings increase reserve to 20%"
+			},
+			"benefits": {
+				"title": "Calculator Benefits",
+				"content": "Our tile and laminate calculator provides several advantages:",
+				"accuracy": "Accurate material quantity calculation",
+				"convenience": "Convenient and fast calculation",
+				"universal": "Support for various flooring types",
+				"professional": "Professional approach to calculations"
+			}
 		}
 	}
 }

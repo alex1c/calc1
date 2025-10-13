@@ -430,6 +430,16 @@
 				}
 			}
 		},
+		"auto-loan": {
+			"title": "Calculadora de Préstamo de Auto",
+			"description": "Calcular pagos mensuales de préstamo de auto, pagos totales y crear cronogramas de pago detallados para financiamiento de vehículos",
+			"seo": "calculadora de préstamo de auto, cálculo de préstamo de auto, pago mensual de auto, financiamiento de auto, pago inicial, tasa de interés, cronograma de préstamo, seguro de vehículo"
+		},
+		"mortgage": {
+			"title": "Calculadora de Hipoteca",
+			"description": "Calcular pagos mensuales de hipoteca, interés total y crear cronogramas de pago detallados para préstamos hipotecarios y financiamiento inmobiliario",
+			"seo": "calculadora de hipoteca, cálculo de hipoteca, pago mensual de hipoteca, préstamo hipotecario, pago inicial, sobrepago de hipoteca, cronograma de pago de hipoteca, programas gubernamentales de hipoteca"
+		},
 		"car-loan": {
 			"title": "Calculadora de Préstamo de Auto",
 			"description": "Calcular pagos mensuales de préstamo de auto, pagos totales y crear cronogramas de pago detallados para financiamiento de vehículos",
@@ -1955,6 +1965,436 @@
 				},
 				"seo": "calculadora de ladrillos, cálculo de ladrillos, calculadora de bloques, bloques de gas, bloques de espuma, mampostería, pared, grosor de pared, mortero, pegamento, reserva de material, costo de construcción, ladrillo simple, ladrillo doble, ladrillo triple, dimensiones de ladrillo, dimensiones de bloque"
 			}
+		},
+		"mortgage": {
+			"title": "Calculadora de Hipoteca",
+			"description": "Calcular pagos mensuales de hipoteca, intereses totales y crear cronogramas de pagos detallados para préstamos hipotecarios y financiamiento inmobiliario",
+			"seo": "calculadora de hipoteca, cálculo de hipoteca, pago mensual de hipoteca, préstamo hipotecario, pago inicial, sobrepago de hipoteca, cronograma de pagos de hipoteca, programas gubernamentales de hipoteca",
+			"form": {
+				"title": "Parámetros de Hipoteca",
+				"homeValue": "Valor de la Casa ($)",
+				"downPayment": "Pago Inicial ($)",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"additionalPayment": "Pago Mensual Adicional ($)",
+				"paymentType": "Esquema de Pago",
+				"paymentTypes": {
+					"annuity": "Pagos Anuales (Iguales)",
+					"differentiated": "Pagos Diferenciales (Decrecientes)"
+				},
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros de hipoteca y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"monthlyPayment": "Pago Mensual",
+				"totalPayments": "Pagos Totales",
+				"totalInterest": "Intereses Totales",
+				"effectiveTerm": "Plazo Efectivo",
+				"months": "meses",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Pagos",
+				"table": {
+					"month": "Mes",
+					"payment": "Pago",
+					"interest": "Interés",
+					"principal": "Principal",
+					"balance": "Saldo",
+					"moreMonths": "meses más"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Hipoteca: Calcular Pagos de Préstamo Hipotecario y Cronograma",
+				"overview": {
+					"title": "Qué es una Hipoteca",
+					"content": "Una hipoteca es un préstamo garantizado por una propiedad inmobiliaria, típicamente usado para comprar una casa. La propiedad sirve como garantía del préstamo."
+				},
+				"types": {
+					"title": "Tipos de Hipotecas",
+					"content": "Hay varios tipos de hipotecas disponibles:",
+					"fixed": "Hipotecas de Tasa Fija - la tasa de interés permanece constante",
+					"adjustable": "Hipotecas de Tasa Ajustable - la tasa de interés puede cambiar",
+					"fha": "Préstamos FHA - préstamos respaldados por el gobierno con pagos iniciales más bajos"
+				},
+				"advantages": {
+					"title": "Ventajas de las Hipotecas",
+					"content": "Las hipotecas ofrecen varios beneficios:",
+					"homeOwnership": "Permite la propiedad de vivienda",
+					"taxBenefits": "Beneficios fiscales potenciales",
+					"equityBuilding": "Construye capital con el tiempo",
+					"stability": "Proporciona estabilidad habitacional"
+				},
+				"tips": {
+					"title": "Consejos de Hipoteca",
+					"content": "Para obtener los mejores términos de hipoteca:",
+					"compare": "Compare tasas de múltiples prestamistas",
+					"downPayment": "Ahorre para un pago inicial más grande",
+					"creditScore": "Mejore su puntaje crediticio",
+					"preApproval": "Obtenga pre-aprobación antes de buscar casa"
+				}
+			}
+		},
+		"auto-loan": {
+			"title": "Calculadora de Préstamo de Auto",
+			"description": "Calcular pagos mensuales de préstamo de auto, pagos totales y crear cronogramas de pagos detallados para compra de automóvil",
+			"seo": "calculadora de préstamo de auto, cálculo de préstamo de auto, pago mensual de préstamo de auto, préstamo de auto, pago inicial de auto, sobrepago de préstamo de auto, cronograma de pago de préstamo de auto, seguro de auto",
+			"form": {
+				"title": "Parámetros de Préstamo de Auto",
+				"carValue": "Valor del Auto ($)",
+				"downPayment": "Pago Inicial ($)",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"additionalPayment": "Pago Mensual Adicional ($)",
+				"paymentType": "Esquema de Pago",
+				"paymentTypes": {
+					"annuity": "Pagos Anuales (Iguales)",
+					"differentiated": "Pagos Diferenciales (Decrecientes)"
+				},
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros de préstamo de auto y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"monthlyPayment": "Pago Mensual",
+				"totalPayments": "Pagos Totales",
+				"totalInterest": "Intereses Totales",
+				"effectiveTerm": "Plazo Efectivo",
+				"months": "meses",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Pagos",
+				"table": {
+					"month": "Mes",
+					"payment": "Pago",
+					"interest": "Interés",
+					"principal": "Principal",
+					"balance": "Saldo",
+					"moreMonths": "meses más"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Préstamo de Auto: Calcular Pagos de Préstamo de Auto y Cronograma",
+				"overview": {
+					"title": "Qué es un Préstamo de Auto",
+					"content": "Un préstamo de auto es un préstamo garantizado específicamente diseñado para comprar un vehículo. El auto sirve como garantía, lo que típicamente resulta en tasas de interés más bajas comparado con préstamos no garantizados."
+				},
+				"types": {
+					"title": "Tipos de Préstamos de Auto",
+					"content": "Hay varios tipos de préstamos de auto disponibles:",
+					"new": "Préstamos para Autos Nuevos - típicamente ofrecen las tasas más bajas para vehículos nuevos",
+					"used": "Préstamos para Autos Usados - tasas más altas pero términos más flexibles",
+					"refinance": "Refinanciamiento de Préstamo de Auto - para obtener mejores términos en préstamos existentes"
+				},
+				"advantages": {
+					"title": "Ventajas de los Préstamos de Auto",
+					"content": "Los préstamos de auto ofrecen varios beneficios:",
+					"lowerRates": "Tasas de interés más bajas debido a la garantía",
+					"flexibleTerms": "Términos de pago flexibles",
+					"quickApproval": "Proceso de aprobación rápido",
+					"taxBenefits": "Beneficios fiscales potenciales para uso comercial"
+				},
+				"tips": {
+					"title": "Consejos de Préstamo de Auto",
+					"content": "Para obtener los mejores términos de préstamo de auto:",
+					"compare": "Compare tasas de múltiples prestamistas",
+					"downPayment": "Haga un pago inicial más grande para reducir pagos mensuales",
+					"creditScore": "Mejore su puntaje crediticio antes de aplicar",
+					"negotiate": "Negocie el precio del auto antes de discutir financiamiento"
+				}
+			}
+		},
+		"consumer-loan": {
+			"title": "Calculadora de Préstamo de Consumo",
+			"description": "Calcular pagos mensuales de préstamo de consumo",
+			"seo": "calculadora de préstamo de consumo, préstamo de consumo, préstamo personal",
+			"form": {
+				"title": "Parámetros de Préstamo de Consumo",
+				"loanAmount": "Monto del Préstamo ($)",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"additionalPayment": "Pago Mensual Adicional ($)",
+				"paymentType": "Esquema de Pago",
+				"paymentTypes": {
+					"annuity": "Pagos Anuales (Iguales)",
+					"differentiated": "Pagos Diferenciales (Decrecientes)"
+				},
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros de préstamo de consumo y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"monthlyPayment": "Pago Mensual",
+				"totalPayments": "Pagos Totales",
+				"totalInterest": "Intereses Totales",
+				"effectiveTerm": "Plazo Efectivo",
+				"months": "meses",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Pagos",
+				"table": {
+					"month": "Mes",
+					"payment": "Pago",
+					"interest": "Interés",
+					"principal": "Principal",
+					"balance": "Saldo",
+					"moreMonths": "meses más"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Préstamo de Consumo: Calcular Pagos de Préstamo Personal",
+				"overview": {
+					"title": "Qué es un Préstamo de Consumo",
+					"content": "Un préstamo de consumo es un préstamo personal no garantizado que puede ser usado para varios gastos personales como mejoras del hogar, consolidación de deudas o compras importantes."
+				},
+				"types": {
+					"title": "Tipos de Préstamos de Consumo",
+					"content": "Los préstamos de consumo vienen en varias formas:",
+					"personal": "Préstamos Personales - para gastos personales generales",
+					"debtConsolidation": "Préstamos de Consolidación de Deudas - para combinar múltiples deudas",
+					"homeImprovement": "Préstamos de Mejoras del Hogar - para proyectos de renovación"
+				},
+				"advantages": {
+					"title": "Ventajas de los Préstamos de Consumo",
+					"content": "Los préstamos de consumo ofrecen varios beneficios:",
+					"noCollateral": "No requiere garantía",
+					"flexibleUse": "Uso flexible de fondos",
+					"quickApproval": "Proceso de aprobación rápido",
+					"fixedRates": "Tasas de interés fijas"
+				},
+				"tips": {
+					"title": "Consejos de Préstamo de Consumo",
+					"content": "Para obtener los mejores términos de préstamo de consumo:",
+					"compare": "Compare ofertas de múltiples prestamistas",
+					"creditScore": "Mejore su puntaje crediticio antes de aplicar",
+					"shopAround": "Busque las mejores tasas",
+					"readTerms": "Lea todos los términos y condiciones cuidadosamente"
+				}
+			}
+		},
+		"savings": {
+			"title": "Calculadora de Ahorros",
+			"description": "Calcular crecimiento de ahorros con interés compuesto y depósitos regulares",
+			"seo": "calculadora de ahorros, interés compuesto, crecimiento de ahorros, planificación financiera",
+			"form": {
+				"title": "Parámetros de Ahorros",
+				"currency": "Moneda",
+				"amount": "Monto Inicial",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"depositType": "Tipo de Ahorro",
+				"depositTypes": {
+					"simple": "Sin Capitalización (Interés Simple)",
+					"capitalized": "Con Capitalización de Intereses",
+					"compound": "Interés Compuesto (Acumulación Mensual)"
+				},
+				"capitalizationPeriod": "Período de Capitalización",
+				"capitalizationPeriods": {
+					"monthly": "Mensualmente",
+					"quarterly": "Trimestralmente",
+					"yearly": "Anualmente"
+				},
+				"monthlyAddition": "Adición Mensual",
+				"monthlyWithdrawal": "Retiro Mensual",
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros de ahorros y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"totalAmount": "Monto Total",
+				"totalInterest": "Intereses Totales",
+				"effectiveRate": "Tasa Efectiva",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Acumulación",
+				"table": {
+					"month": "Mes",
+					"amount": "Monto",
+					"interest": "Interés",
+					"total": "Total",
+					"moreMonths": "meses más"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Ahorros: Calcular Crecimiento de Ahorros con Interés Compuesto",
+				"overview": {
+					"title": "Qué son los Ahorros",
+					"content": "Los ahorros son fondos reservados para uso futuro, típicamente ganando interés con el tiempo. Esta es una de las formas más confiables de construir riqueza para objetivos financieros a largo plazo."
+				},
+				"types": {
+					"title": "Tipos de Ahorros",
+					"content": "Hay varios tipos de cuentas de ahorros:",
+					"regular": "Ahorros Regulares - cuentas básicas que generan interés",
+					"highYield": "Ahorros de Alto Rendimiento - tasas de interés más altas",
+					"certificates": "Certificados de Depósito (CDs) - ahorros a plazo fijo"
+				},
+				"advantages": {
+					"title": "Ventajas de los Ahorros",
+					"content": "Los ahorros ofrecen varios beneficios:",
+					"safety": "Alta seguridad y protección de depósitos",
+					"guaranteed": "Rendimientos garantizados",
+					"liquidity": "Fácil acceso a fondos",
+					"taxBenefits": "Beneficios fiscales potenciales"
+				},
+				"tips": {
+					"title": "Consejos de Ahorros",
+					"content": "Para maximizar sus ahorros:",
+					"compare": "Compare tasas de diferentes bancos",
+					"automate": "Configure transferencias automáticas",
+					"emergency": "Construya un fondo de emergencia primero",
+					"goals": "Establezca objetivos de ahorro específicos",
+					"review": "Revise y ajuste regularmente su estrategia de ahorros",
+					"patience": "Sea paciente - los ahorros crecen con el tiempo"
+				}
+			}
+		},
+		"investment": {
+			"title": "Calculadora de Inversiones",
+			"description": "Calcular rendimientos de inversiones con interés compuesto y contribuciones regulares",
+			"seo": "calculadora de inversiones, interés compuesto, planificación financiera, acumulación de capital",
+			"form": {
+				"title": "Parámetros de Inversión",
+				"currency": "Moneda",
+				"amount": "Monto de Inversión",
+				"termYears": "Plazo (Años)",
+				"termMonths": "Plazo (Meses)",
+				"interestRate": "Tasa de Interés (% anual)",
+				"depositType": "Tipo de Inversión",
+				"depositTypes": {
+					"simple": "Sin Capitalización (Interés Simple)",
+					"capitalized": "Con Capitalización de Intereses",
+					"compound": "Interés Compuesto (Acumulación Mensual)"
+				},
+				"capitalizationPeriod": "Período de Capitalización",
+				"capitalizationPeriods": {
+					"monthly": "Mensualmente",
+					"quarterly": "Trimestralmente",
+					"yearly": "Anualmente"
+				},
+				"monthlyAddition": "Adición Mensual",
+				"monthlyWithdrawal": "Retiro Mensual",
+				"calculate": "Calcular",
+				"optional": "opcional",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros de inversión y haga clic en 'Calcular'",
+				"summary": "Resumen",
+				"totalAmount": "Monto Total",
+				"totalInterest": "Intereses Totales",
+				"effectiveRate": "Tasa Efectiva",
+				"downloadSchedule": "Descargar Cronograma (CSV)",
+				"scheduleTitle": "Cronograma de Acumulación",
+				"table": {
+					"month": "Mes",
+					"amount": "Monto",
+					"interest": "Interés",
+					"total": "Total",
+					"moreMonths": "meses más"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Inversiones: Calcular Rendimientos, Capitalización y Cronograma de Acumulación",
+				"overview": {
+					"title": "Qué son las Inversiones",
+					"content": "Las inversiones son una forma de invertir dinero con el objetivo de generar ingresos. Esta es una de las formas más efectivas de hacer crecer el capital para la planificación financiera a largo plazo."
+				},
+				"types": {
+					"title": "Tipos de Inversiones",
+					"content": "Hay varios tipos principales de inversiones:",
+					"simple": "Inversiones sin capitalización - el interés se acumula pero no se suma al monto principal",
+					"capitalized": "Inversiones con capitalización - el interés se suma periódicamente al monto principal",
+					"compound": "Inversiones con interés compuesto - el interés se acumula sobre un monto constantemente creciente"
+				},
+				"advantages": {
+					"title": "Ventajas de las Inversiones",
+					"content": "Las inversiones tienen muchas ventajas:",
+					"safety": "Alta confiabilidad con la selección correcta de instrumentos",
+					"guaranteed": "Rendimientos potencialmente altos",
+					"liquidity": "Posibilidad de salida temprana (con pérdida de intereses)",
+					"tax": "Beneficios fiscales en ingresos de inversión"
+				},
+				"tips": {
+					"title": "Consejos de Inversión",
+					"content": "Para una inversión exitosa:",
+					"compare": "Compare ofertas de diferentes compañías de inversión",
+					"term": "Elija el plazo de inversión apropiado",
+					"capitalization": "Considere la posibilidad de capitalización de intereses",
+					"early": "Considere la posibilidad de retiro temprano"
+				}
+			}
+		}
+	},
+	"math_percent": {
+		"title": "Calculadora de Porcentajes",
+		"description": "Calculadora de porcentajes online para encontrar porcentajes, proporciones y cambios por porcentaje. Herramienta rápida y precisa con soporte multilingüe.",
+		"find_percent_of_number": "Encontrar porcentaje de un número",
+		"find_percent_of_number_desc": "Calcular qué porcentaje representa un número de otro",
+		"what_percent_is": "Qué porcentaje es un número de otro",
+		"what_percent_is_desc": "Calcular la proporción porcentual entre dos números",
+		"find_number_from_percent": "Encontrar número a partir del porcentaje",
+		"find_number_from_percent_desc": "Calcular el número original cuando se conoce el porcentaje y el resultado",
+		"increase_or_decrease": "Aumentar o disminuir número por porcentaje",
+		"increase_or_decrease_desc": "Sumar o restar un porcentaje a un número",
+		"number": "Número",
+		"percentage": "Porcentaje",
+		"first_number": "Primer número",
+		"second_number": "Segundo número",
+		"part_value": "Valor de la parte",
+		"operation": "Operación",
+		"calculate": "Calcular",
+		"calculating": "Calculando...",
+		"result": "Resultado",
+		"increase": "Aumentar",
+		"decrease": "Disminuir",
+		"errors": {
+			"error_title": "Error de Cálculo",
+			"invalid_input": "Por favor ingrese números válidos",
+			"calculation_failed": "Error en el cálculo. Por favor verifique su entrada."
+		},
+		"tips": {
+			"title": "Consejos",
+			"enter_key": "Presione Enter para calcular",
+			"auto_calculate": "Los resultados se actualizan automáticamente al escribir",
+			"negative_numbers": "Los números negativos no son compatibles"
+		},
+		"seo": {
+			"title": "Calculadora de Porcentajes Online - Calcular Porcentajes Rápidamente",
+			"description": "Calculadora de porcentajes online simple: calcule porcentajes de números, encuentre qué porcentaje es un número de otro, o aumente un número por porcentaje. Disponible en 4 idiomas.",
+			"content": {
+				"title": "Acerca de la Calculadora de Porcentajes",
+				"description": "La calculadora de porcentajes online ayuda a calcular porcentajes de números, encontrar proporciones porcentuales y cambiar números por un porcentaje dado. Adecuada para cálculos de descuentos, impuestos, ganancias y otras tareas cotidianas."
+			}
+		},
+		"results": {
+			"percent_of_number": "{percentage}% de {number} es igual a {result}",
+			"what_percent": "{number1} es {result}% de {number2}",
+			"number_from_percent": "Si {part} es {percentage}%, entonces el número original es {result}",
+			"increase_by_percent": "Aumentar {number} en {percentage}% da {result}",
+			"decrease_by_percent": "Disminuir {number} en {percentage}% da {result}"
 		}
 	}
 }

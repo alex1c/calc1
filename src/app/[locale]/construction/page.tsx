@@ -6,43 +6,51 @@ import { Wrench, Paintbrush, Square, Home, Package } from 'lucide-react';
 const getCalculators = (t: any) => [
 	{
 		id: 'wallpaper',
-		title: t('calculators.wallpaper.title'),
-		description: t('calculators.wallpaper.description'),
+		title: t('categories.construction.calculators.wallpaper.title'),
+		description: t(
+			'categories.construction.calculators.wallpaper.description'
+		),
 		icon: Paintbrush,
 		href: '/calc/wallpaper',
 	},
 	{
 		id: 'paint',
-		title: t('calculators.materials.title'),
-		description: t('calculators.materials.description'),
+		title: t('categories.construction.calculators.materials.title'),
+		description: t(
+			'categories.construction.calculators.materials.description'
+		),
 		icon: Package,
 		href: '/calc/paint',
 	},
 	{
 		id: 'tile-laminate',
-		title: t('calculators.tile-laminate.title'),
-		description: t('calculators.tile-laminate.description'),
+		title: t('categories.construction.calculators.tile-laminate.title'),
+		description: t(
+			'categories.construction.calculators.tile-laminate.description'
+		),
 		icon: Square,
 		href: '/calc/tile-laminate',
 	},
 	{
 		id: 'concrete',
-		title: t('calculators.concrete.title'),
-		description: t('calculators.concrete.description'),
+		title: t('categories.construction.calculators.concrete.title'),
+		description: t(
+			'categories.construction.calculators.concrete.description'
+		),
 		icon: Wrench,
 		href: '/calc/concrete',
 	},
 	{
 		id: 'roofing',
-		title: t('calculators.roof.title'),
-		description: t('calculators.roof.description'),
+		title: t('categories.construction.calculators.roof.title'),
+		description: t('categories.construction.calculators.roof.description'),
 		icon: Home,
 		href: '/calc/roofing',
 	},
 	{
 		id: 'wall',
-		title: t('calculators.wall.title'),
-		description: t('calculators.wall.description'),
+		title: t('categories.construction.calculators.wall.title'),
+		description: t('categories.construction.calculators.wall.description'),
 		icon: Package,
 		href: '/calc/wall',
 	},

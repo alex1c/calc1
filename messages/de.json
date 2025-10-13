@@ -430,6 +430,16 @@
 				}
 			}
 		},
+		"auto-loan": {
+			"title": "Autokredit-Rechner",
+			"description": "Berechnen Sie monatliche Autokredit-Zahlungen, Gesamtzahlungen und erstellen Sie detaillierte Zahlungspläne für Fahrzeugfinanzierung",
+			"seo": "Autokredit-Rechner, Autokredit-Berechnung, monatliche Autozahlung, Autofinanzierung, Anzahlung, Zinssatz, Kreditschema, Fahrzeugversicherung"
+		},
+		"mortgage": {
+			"title": "Hypothekenrechner",
+			"description": "Berechnen Sie monatliche Hypothekenzahlungen, Gesamtzinsen und erstellen Sie detaillierte Zahlungspläne für Immobilienfinanzierung",
+			"seo": "Hypothekenrechner, Hypothekenberechnung, monatliche Hypothekenzahlung, Hypothekendarlehen, Anzahlung, Hypothekenüberzahlung, Hypothekenzahlungsplan, staatliche Hypothekenprogramme"
+		},
 		"car-loan": {
 			"title": "Autokredit-Rechner",
 			"description": "Berechnen Sie monatliche Autokredit-Zahlungen, Gesamtzahlungen und erstellen Sie detaillierte Zahlungspläne für Fahrzeugfinanzierung",
@@ -1955,6 +1965,436 @@
 				},
 				"seo": "Ziegelrechner, Ziegelberechnung, Blockrechner, Gasblöcke, Schaumblöcke, Mauerwerk, Wand, Wandstärke, Mörtel, Kleber, Materialreserve, Baukosten, einfacher Ziegel, doppelter Ziegel, dreifacher Ziegel, Ziegelabmessungen, Blockabmessungen"
 			}
+		},
+		"mortgage": {
+			"title": "Hypothekenrechner",
+			"description": "Monatliche Hypothekenzahlungen, Gesamtzinsen berechnen und detaillierte Zahlungspläne für Hypothekendarlehen und Immobilienfinanzierung erstellen",
+			"seo": "Hypothekenrechner, Hypothekenberechnung, monatliche Hypothekenzahlung, Hypothekendarlehen, Anzahlung, Hypothekenüberzahlung, Hypothekenzahlungsplan, staatliche Hypothekenprogramme",
+			"form": {
+				"title": "Hypothekenparameter",
+				"homeValue": "Hauswert ($)",
+				"downPayment": "Anzahlung ($)",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"additionalPayment": "Zusätzliche monatliche Zahlung ($)",
+				"paymentType": "Zahlungsschema",
+				"paymentTypes": {
+					"annuity": "Annuitätenzahlungen (Gleich)",
+					"differentiated": "Differenzierte Zahlungen (Abnehmend)"
+				},
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Hypothekenparameter ein und klicken Sie auf 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"monthlyPayment": "Monatliche Zahlung",
+				"totalPayments": "Gesamtzahlungen",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveTerm": "Effektive Laufzeit",
+				"months": "Monate",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Zahlungsplan",
+				"table": {
+					"month": "Monat",
+					"payment": "Zahlung",
+					"interest": "Zinsen",
+					"principal": "Hauptbetrag",
+					"balance": "Saldo",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Hypothekenrechner: Hypothekenzahlungen und Zahlungsplan berechnen",
+				"overview": {
+					"title": "Was ist eine Hypothek",
+					"content": "Eine Hypothek ist ein durch Immobilienbesitz gesichertes Darlehen, das typischerweise zum Kauf eines Hauses verwendet wird. Die Immobilie dient als Sicherheit für das Darlehen."
+				},
+				"types": {
+					"title": "Hypothekenarten",
+					"content": "Es gibt verschiedene Arten von Hypotheken:",
+					"fixed": "Festzinshypotheken - der Zinssatz bleibt konstant",
+					"adjustable": "Variabelzinshypotheken - der Zinssatz kann sich ändern",
+					"fha": "FHA-Darlehen - staatlich unterstützte Darlehen mit niedrigeren Anzahlungen"
+				},
+				"advantages": {
+					"title": "Hypothekenvorteile",
+					"content": "Hypotheken bieten mehrere Vorteile:",
+					"homeOwnership": "Ermöglicht Hausbesitz",
+					"taxBenefits": "Potenzielle Steuervorteile",
+					"equityBuilding": "Baut Eigenkapital über die Zeit auf",
+					"stability": "Bietet Wohnstabilität"
+				},
+				"tips": {
+					"title": "Hypothekentipps",
+					"content": "Um die besten Hypothekenbedingungen zu erhalten:",
+					"compare": "Vergleichen Sie Zinssätze von mehreren Kreditgebern",
+					"downPayment": "Sparen Sie für eine größere Anzahlung",
+					"creditScore": "Verbessern Sie Ihre Bonität",
+					"preApproval": "Lassen Sie sich vor der Haussuche vorab genehmigen"
+				}
+			}
+		},
+		"auto-loan": {
+			"title": "Autokreditrechner",
+			"description": "Monatliche Autokreditzahlungen, Gesamtzahlungen berechnen und detaillierte Zahlungspläne für Autokäufe erstellen",
+			"seo": "Autokreditrechner, Autokreditberechnung, monatliche Autokreditzahlung, Autokredit, Autokaufanzahlung, Autokreditüberzahlung, Autokreditzahlungsplan, Autoversicherung",
+			"form": {
+				"title": "Autokreditparameter",
+				"carValue": "Autowert ($)",
+				"downPayment": "Anzahlung ($)",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"additionalPayment": "Zusätzliche monatliche Zahlung ($)",
+				"paymentType": "Zahlungsschema",
+				"paymentTypes": {
+					"annuity": "Annuitätenzahlungen (Gleich)",
+					"differentiated": "Differenzierte Zahlungen (Abnehmend)"
+				},
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Autokreditparameter ein und klicken Sie auf 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"monthlyPayment": "Monatliche Zahlung",
+				"totalPayments": "Gesamtzahlungen",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveTerm": "Effektive Laufzeit",
+				"months": "Monate",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Zahlungsplan",
+				"table": {
+					"month": "Monat",
+					"payment": "Zahlung",
+					"interest": "Zinsen",
+					"principal": "Hauptbetrag",
+					"balance": "Saldo",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Autokreditrechner: Autokreditzahlungen und Zahlungsplan berechnen",
+				"overview": {
+					"title": "Was ist ein Autokredit",
+					"content": "Ein Autokredit ist ein speziell für den Kauf eines Fahrzeugs entwickeltes gesichertes Darlehen. Das Auto dient als Sicherheit, was typischerweise zu niedrigeren Zinssätzen im Vergleich zu ungesicherten Darlehen führt."
+				},
+				"types": {
+					"title": "Autokreditarten",
+					"content": "Es gibt verschiedene Arten von Autokrediten:",
+					"new": "Neuwagenkredite - bieten typischerweise die niedrigsten Zinssätze für fabrikneue Fahrzeuge",
+					"used": "Gebrauchtwagenkredite - höhere Zinssätze aber flexiblere Bedingungen",
+					"refinance": "Autokreditrefinanzierung - um bessere Bedingungen für bestehende Kredite zu erhalten"
+				},
+				"advantages": {
+					"title": "Autokreditvorteile",
+					"content": "Autokredite bieten mehrere Vorteile:",
+					"lowerRates": "Niedrigere Zinssätze aufgrund der Sicherheit",
+					"flexibleTerms": "Flexible Rückzahlungsbedingungen",
+					"quickApproval": "Schneller Genehmigungsprozess",
+					"taxBenefits": "Potenzielle Steuervorteile für gewerbliche Nutzung"
+				},
+				"tips": {
+					"title": "Autokredittipps",
+					"content": "Um die besten Autokreditbedingungen zu erhalten:",
+					"compare": "Vergleichen Sie Zinssätze von mehreren Kreditgebern",
+					"downPayment": "Machen Sie eine größere Anzahlung, um monatliche Zahlungen zu reduzieren",
+					"creditScore": "Verbessern Sie Ihre Bonität vor der Beantragung",
+					"negotiate": "Verhandeln Sie den Autopreis vor der Finanzierungsdiskussion"
+				}
+			}
+		},
+		"consumer-loan": {
+			"title": "Verbraucherkreditrechner",
+			"description": "Monatliche Verbraucherkreditzahlungen berechnen",
+			"seo": "Verbraucherkreditrechner, Verbraucherkredit, Privatkredit",
+			"form": {
+				"title": "Verbraucherkreditparameter",
+				"loanAmount": "Darlehenssumme ($)",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"additionalPayment": "Zusätzliche monatliche Zahlung ($)",
+				"paymentType": "Zahlungsschema",
+				"paymentTypes": {
+					"annuity": "Annuitätenzahlungen (Gleich)",
+					"differentiated": "Differenzierte Zahlungen (Abnehmend)"
+				},
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Verbraucherkreditparameter ein und klicken Sie auf 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"monthlyPayment": "Monatliche Zahlung",
+				"totalPayments": "Gesamtzahlungen",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveTerm": "Effektive Laufzeit",
+				"months": "Monate",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Zahlungsplan",
+				"table": {
+					"month": "Monat",
+					"payment": "Zahlung",
+					"interest": "Zinsen",
+					"principal": "Hauptbetrag",
+					"balance": "Saldo",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Verbraucherkreditrechner: Privatkreditzahlungen berechnen",
+				"overview": {
+					"title": "Was ist ein Verbraucherkredit",
+					"content": "Ein Verbraucherkredit ist ein ungesichertes Privatdarlehen, das für verschiedene persönliche Ausgaben wie Hausverbesserungen, Schuldenkonsolidierung oder größere Käufe verwendet werden kann."
+				},
+				"types": {
+					"title": "Verbraucherkreditarten",
+					"content": "Verbraucherkredite gibt es in verschiedenen Formen:",
+					"personal": "Privatkredite - für allgemeine persönliche Ausgaben",
+					"debtConsolidation": "Schuldenkonsolidierungskredite - um mehrere Schulden zu kombinieren",
+					"homeImprovement": "Hausverbesserungskredite - für Renovierungsprojekte"
+				},
+				"advantages": {
+					"title": "Verbraucherkreditvorteile",
+					"content": "Verbraucherkredite bieten mehrere Vorteile:",
+					"noCollateral": "Keine Sicherheit erforderlich",
+					"flexibleUse": "Flexible Mittelverwendung",
+					"quickApproval": "Schneller Genehmigungsprozess",
+					"fixedRates": "Feste Zinssätze"
+				},
+				"tips": {
+					"title": "Verbraucherkredittipps",
+					"content": "Um die besten Verbraucherkreditbedingungen zu erhalten:",
+					"compare": "Vergleichen Sie Angebote von mehreren Kreditgebern",
+					"creditScore": "Verbessern Sie Ihre Bonität vor der Beantragung",
+					"shopAround": "Suchen Sie nach den besten Zinssätzen",
+					"readTerms": "Lesen Sie alle Bedingungen sorgfältig durch"
+				}
+			}
+		},
+		"savings": {
+			"title": "Sparrechner",
+			"description": "Sparwachstum mit Zinseszins und regelmäßigen Einzahlungen berechnen",
+			"seo": "Sparrechner, Zinseszins, Sparwachstum, Finanzplanung",
+			"form": {
+				"title": "Sparparameter",
+				"currency": "Währung",
+				"amount": "Anfangsbetrag",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"depositType": "Spartyp",
+				"depositTypes": {
+					"simple": "Ohne Kapitalisierung (Einfache Zinsen)",
+					"capitalized": "Mit Zinskapitalisierung",
+					"compound": "Zinseszins (Monatliche Anrechnung)"
+				},
+				"capitalizationPeriod": "Kapitalisierungsperiode",
+				"capitalizationPeriods": {
+					"monthly": "Monatlich",
+					"quarterly": "Vierteljährlich",
+					"yearly": "Jährlich"
+				},
+				"monthlyAddition": "Monatliche Einzahlung",
+				"monthlyWithdrawal": "Monatliche Abhebung",
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Sparparameter ein und klicken Sie auf 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"totalAmount": "Gesamtbetrag",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveRate": "Effektiver Zinssatz",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Anrechnungsplan",
+				"table": {
+					"month": "Monat",
+					"amount": "Betrag",
+					"interest": "Zinsen",
+					"total": "Gesamt",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Sparrechner: Sparwachstum mit Zinseszins berechnen",
+				"overview": {
+					"title": "Was sind Ersparnisse",
+					"content": "Ersparnisse sind für die zukünftige Verwendung zurückgelegte Mittel, die typischerweise über die Zeit Zinsen verdienen. Dies ist eine der zuverlässigsten Möglichkeiten, Vermögen für langfristige Finanzziele aufzubauen."
+				},
+				"types": {
+					"title": "Spararten",
+					"content": "Es gibt verschiedene Arten von Sparkonten:",
+					"regular": "Reguläre Ersparnisse - grundlegende zinsbringende Konten",
+					"highYield": "Hochverzinsliche Ersparnisse - höhere Zinssätze",
+					"certificates": "Einlagenzertifikate (CDs) - festverzinsliche Ersparnisse"
+				},
+				"advantages": {
+					"title": "Sparvorteile",
+					"content": "Ersparnisse bieten mehrere Vorteile:",
+					"safety": "Hohe Sicherheit und Einlagensicherung",
+					"guaranteed": "Garantierte Renditen",
+					"liquidity": "Einfacher Zugang zu Mitteln",
+					"taxBenefits": "Potenzielle Steuervorteile"
+				},
+				"tips": {
+					"title": "Spartipps",
+					"content": "Um Ihre Ersparnisse zu maximieren:",
+					"compare": "Vergleichen Sie Zinssätze verschiedener Banken",
+					"automate": "Richten Sie automatische Überweisungen ein",
+					"emergency": "Bauen Sie zuerst einen Notfallfonds auf",
+					"goals": "Setzen Sie sich spezifische Sparziele",
+					"review": "Überprüfen und passen Sie regelmäßig Ihre Sparstrategie an",
+					"patience": "Seien Sie geduldig - Ersparnisse wachsen über die Zeit"
+				}
+			}
+		},
+		"investment": {
+			"title": "Investitionsrechner",
+			"description": "Investitionsrenditen mit Zinseszins und regelmäßigen Beiträgen berechnen",
+			"seo": "Investitionsrechner, Zinseszins, Finanzplanung, Kapitalakkumulation",
+			"form": {
+				"title": "Investitionsparameter",
+				"currency": "Währung",
+				"amount": "Investitionsbetrag",
+				"termYears": "Laufzeit (Jahre)",
+				"termMonths": "Laufzeit (Monate)",
+				"interestRate": "Zinssatz (% pro Jahr)",
+				"depositType": "Investitionstyp",
+				"depositTypes": {
+					"simple": "Ohne Kapitalisierung (Einfache Zinsen)",
+					"capitalized": "Mit Zinskapitalisierung",
+					"compound": "Zinseszins (Monatliche Anrechnung)"
+				},
+				"capitalizationPeriod": "Kapitalisierungsperiode",
+				"capitalizationPeriods": {
+					"monthly": "Monatlich",
+					"quarterly": "Vierteljährlich",
+					"yearly": "Jährlich"
+				},
+				"monthlyAddition": "Monatliche Einzahlung",
+				"monthlyWithdrawal": "Monatliche Abhebung",
+				"calculate": "Berechnen",
+				"optional": "optional",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie Investitionsparameter ein und klicken Sie auf 'Berechnen'",
+				"summary": "Zusammenfassung",
+				"totalAmount": "Gesamtbetrag",
+				"totalInterest": "Gesamtzinsen",
+				"effectiveRate": "Effektiver Zinssatz",
+				"downloadSchedule": "Zahlungsplan herunterladen (CSV)",
+				"scheduleTitle": "Anrechnungsplan",
+				"table": {
+					"month": "Monat",
+					"amount": "Betrag",
+					"interest": "Zinsen",
+					"total": "Gesamt",
+					"moreMonths": "weitere Monate"
+				}
+			},
+			"seo": {
+				"title": "Investitionsrechner: Renditen, Kapitalisierung und Anrechnungsplan berechnen",
+				"overview": {
+					"title": "Was sind Investitionen",
+					"content": "Investitionen sind eine Möglichkeit, Geld mit dem Ziel der Einkommensgenerierung anzulegen. Dies ist eine der effektivsten Möglichkeiten, Kapital für langfristige Finanzplanung zu vermehren."
+				},
+				"types": {
+					"title": "Investitionsarten",
+					"content": "Es gibt mehrere Hauptarten von Investitionen:",
+					"simple": "Investitionen ohne Kapitalisierung - Zinsen werden angerechnet, aber nicht zum Hauptbetrag hinzugefügt",
+					"capitalized": "Investitionen mit Kapitalisierung - Zinsen werden periodisch zum Hauptbetrag hinzugefügt",
+					"compound": "Investitionen mit Zinseszins - Zinsen werden auf einen ständig wachsenden Betrag angerechnet"
+				},
+				"advantages": {
+					"title": "Investitionsvorteile",
+					"content": "Investitionen haben viele Vorteile:",
+					"safety": "Hohe Zuverlässigkeit bei richtiger Instrumentenauswahl",
+					"guaranteed": "Potentiell hohe Renditen",
+					"liquidity": "Möglichkeit des vorzeitigen Ausstiegs (mit Zinsverlust)",
+					"tax": "Steuervorteile bei Investitionseinkommen"
+				},
+				"tips": {
+					"title": "Investitionstipps",
+					"content": "Für erfolgreiche Investitionen:",
+					"compare": "Vergleichen Sie Angebote verschiedener Investmentgesellschaften",
+					"term": "Wählen Sie die passende Investitionslaufzeit",
+					"capitalization": "Berücksichtigen Sie die Möglichkeit der Zinskapitalisierung",
+					"early": "Berücksichtigen Sie die Möglichkeit der vorzeitigen Abhebung"
+				}
+			}
+		}
+	},
+	"math_percent": {
+		"title": "Prozentrechner",
+		"description": "Online-Prozentrechner zur Berechnung von Prozentsätzen, Verhältnissen und Änderungen in Prozent. Schnelles und präzises Tool mit mehrsprachiger Unterstützung.",
+		"find_percent_of_number": "Prozentsatz einer Zahl finden",
+		"find_percent_of_number_desc": "Berechnen, welcher Prozentsatz eine Zahl von einer anderen darstellt",
+		"what_percent_is": "Welcher Prozentsatz ist eine Zahl von einer anderen",
+		"what_percent_is_desc": "Berechnen des Prozentsatzes zwischen zwei Zahlen",
+		"find_number_from_percent": "Zahl aus Prozentsatz finden",
+		"find_number_from_percent_desc": "Berechnen der ursprünglichen Zahl, wenn Prozentsatz und Ergebnis bekannt sind",
+		"increase_or_decrease": "Zahl um Prozentsatz erhöhen oder verringern",
+		"increase_or_decrease_desc": "Prozentsatz zu einer Zahl hinzufügen oder davon abziehen",
+		"number": "Zahl",
+		"percentage": "Prozentsatz",
+		"first_number": "Erste Zahl",
+		"second_number": "Zweite Zahl",
+		"part_value": "Teilwert",
+		"operation": "Operation",
+		"calculate": "Berechnen",
+		"calculating": "Berechne...",
+		"result": "Ergebnis",
+		"increase": "Erhöhen",
+		"decrease": "Verringern",
+		"errors": {
+			"error_title": "Berechnungsfehler",
+			"invalid_input": "Bitte geben Sie gültige Zahlen ein",
+			"calculation_failed": "Berechnung fehlgeschlagen. Bitte überprüfen Sie Ihre Eingabe."
+		},
+		"tips": {
+			"title": "Tipps",
+			"enter_key": "Enter drücken zum Berechnen",
+			"auto_calculate": "Ergebnisse werden automatisch beim Tippen aktualisiert",
+			"negative_numbers": "Negative Zahlen werden nicht unterstützt"
+		},
+		"seo": {
+			"title": "Online-Prozentrechner - Prozentsätze schnell berechnen",
+			"description": "Einfacher Online-Prozentrechner: Berechnen Sie Prozentsätze von Zahlen, finden Sie heraus, welcher Prozentsatz eine Zahl von einer anderen ist, oder erhöhen Sie eine Zahl um einen Prozentsatz. Verfügbar in 4 Sprachen.",
+			"content": {
+				"title": "Über den Prozentrechner",
+				"description": "Der Online-Prozentrechner hilft beim Berechnen von Prozentsätzen von Zahlen, beim Finden von Prozentsatzverhältnissen und beim Ändern von Zahlen um einen bestimmten Prozentsatz. Geeignet für Rabattberechnungen, Steuern, Gewinne und andere alltägliche Aufgaben."
+			}
+		},
+		"results": {
+			"percent_of_number": "{percentage}% von {number} entspricht {result}",
+			"what_percent": "{number1} ist {result}% von {number2}",
+			"number_from_percent": "Wenn {part} {percentage}% entspricht, dann ist die ursprüngliche Zahl {result}",
+			"increase_by_percent": "Erhöhung von {number} um {percentage}% ergibt {result}",
+			"decrease_by_percent": "Verringerung von {number} um {percentage}% ergibt {result}"
 		}
 	}
 }

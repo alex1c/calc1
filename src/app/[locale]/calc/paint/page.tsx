@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
 export default function PaintPage() {
-	const t = useTranslations('calculators.materials');
+	const t = useTranslations('materials');
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -33,7 +33,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators.materials.seo[key];
+	const t = (key: string) => messages.materials.seo[key];
 
 	return {
 		title: t('title'),

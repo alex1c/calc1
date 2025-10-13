@@ -22,7 +22,7 @@ import {
 } from '@/lib/calculators/deposit';
 
 export default function DepositCalculator() {
-	const t = useTranslations('calculators.deposit');
+	const t = useTranslations('calculators.investment');
 
 	const [formData, setFormData] = useState<Partial<DepositInput>>({
 		amount: 0,
@@ -601,65 +601,164 @@ export default function DepositCalculator() {
 				</div>
 			)}
 
-			{/* SEO Content */}
-			<div className='mt-12 bg-gray-50 rounded-lg p-8'>
-				<div className='max-w-4xl mx-auto'>
-					<h2 className='text-2xl font-bold text-gray-900 mb-6'>
-						{t('seo.title')}
-					</h2>
+			{/* SEO Content - only show if seo.title exists */}
+			{(() => {
+				try {
+					t('seo.title');
+					return (
+						<div className='mt-12 bg-gray-50 rounded-lg p-8'>
+							<div className='max-w-4xl mx-auto'>
+								<h2 className='text-2xl font-bold text-gray-900 mb-6'>
+									{t('seo.title')}
+								</h2>
 
-					<div className='prose prose-lg max-w-none text-gray-700 space-y-6'>
-						<div>
-							<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-								{t('seo.overview.title')}
-							</h3>
-							<p className='mb-4'>{t('seo.overview.content')}</p>
-						</div>
+								<div className='prose prose-lg max-w-none text-gray-700 space-y-6'>
+									{(() => {
+										try {
+											t('seo.overview.title');
+											return (
+												<div>
+													<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+														{t(
+															'seo.overview.title'
+														)}
+													</h3>
+													<p className='mb-4'>
+														{t(
+															'seo.overview.content'
+														)}
+													</p>
+												</div>
+											);
+										} catch {
+											return null;
+										}
+									})()}
 
-						<div>
-							<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-								{t('seo.types.title')}
-							</h3>
-							<p className='mb-4'>{t('seo.types.content')}</p>
-							<ul className='list-disc list-inside space-y-2 ml-4'>
-								<li>{t('seo.types.simple')}</li>
-								<li>{t('seo.types.capitalized')}</li>
-								<li>{t('seo.types.compound')}</li>
-							</ul>
-						</div>
+									{(() => {
+										try {
+											t('seo.types.title');
+											return (
+												<div>
+													<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+														{t('seo.types.title')}
+													</h3>
+													<p className='mb-4'>
+														{t('seo.types.content')}
+													</p>
+													<ul className='list-disc list-inside space-y-2 ml-4'>
+														<li>
+															{t(
+																'seo.types.simple'
+															)}
+														</li>
+														<li>
+															{t(
+																'seo.types.capitalized'
+															)}
+														</li>
+														<li>
+															{t(
+																'seo.types.compound'
+															)}
+														</li>
+													</ul>
+												</div>
+											);
+										} catch {
+											return null;
+										}
+									})()}
 
-						<div>
-							<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-								{t('seo.advantages.title')}
-							</h3>
-							<p className='mb-4'>
-								{t('seo.advantages.content')}
-							</p>
-							<ul className='list-disc list-inside space-y-2 ml-4'>
-								<li>{t('seo.advantages.safety')}</li>
-								<li>{t('seo.advantages.guaranteed')}</li>
-								<li>{t('seo.advantages.liquidity')}</li>
-								<li>{t('seo.advantages.tax')}</li>
-							</ul>
-						</div>
+									{(() => {
+										try {
+											t('seo.advantages.title');
+											return (
+												<div>
+													<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+														{t(
+															'seo.advantages.title'
+														)}
+													</h3>
+													<p className='mb-4'>
+														{t(
+															'seo.advantages.content'
+														)}
+													</p>
+													<ul className='list-disc list-inside space-y-2 ml-4'>
+														<li>
+															{t(
+																'seo.advantages.safety'
+															)}
+														</li>
+														<li>
+															{t(
+																'seo.advantages.guaranteed'
+															)}
+														</li>
+														<li>
+															{t(
+																'seo.advantages.liquidity'
+															)}
+														</li>
+														<li>
+															{t(
+																'seo.advantages.tax'
+															)}
+														</li>
+													</ul>
+												</div>
+											);
+										} catch {
+											return null;
+										}
+									})()}
 
-						<div className='bg-blue-50 p-6 rounded-lg border border-blue-200'>
-							<h3 className='text-xl font-semibold text-blue-900 mb-3'>
-								{t('seo.tips.title')}
-							</h3>
-							<p className='text-blue-800 mb-4'>
-								{t('seo.tips.content')}
-							</p>
-							<ul className='list-disc list-inside space-y-2 ml-4 text-blue-800'>
-								<li>{t('seo.tips.compare')}</li>
-								<li>{t('seo.tips.term')}</li>
-								<li>{t('seo.tips.capitalization')}</li>
-								<li>{t('seo.tips.early')}</li>
-							</ul>
+									{(() => {
+										try {
+											t('seo.tips.title');
+											return (
+												<div className='bg-blue-50 p-6 rounded-lg border border-blue-200'>
+													<h3 className='text-xl font-semibold text-blue-900 mb-3'>
+														{t('seo.tips.title')}
+													</h3>
+													<p className='text-blue-800 mb-4'>
+														{t('seo.tips.content')}
+													</p>
+													<ul className='list-disc list-inside space-y-2 ml-4 text-blue-800'>
+														<li>
+															{t(
+																'seo.tips.compare'
+															)}
+														</li>
+														<li>
+															{t('seo.tips.term')}
+														</li>
+														<li>
+															{t(
+																'seo.tips.capitalization'
+															)}
+														</li>
+														<li>
+															{t(
+																'seo.tips.early'
+															)}
+														</li>
+													</ul>
+												</div>
+											);
+										} catch {
+											return null;
+										}
+									})()}
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+					);
+				} catch {
+					return null;
+				}
+			})()}
 		</div>
 	);
 }

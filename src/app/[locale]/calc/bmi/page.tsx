@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import BMICalculator from '@/components/calculators/bmi-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'BMI Calculator | Calc1',
-	description:
-		'Calculate your Body Mass Index (BMI) to assess your weight status and health.',
-	keywords:
-		'BMI calculator, body mass index, normal weight, health calculator',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators.bmi[key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function BMIPage() {
 	const t = useTranslations();

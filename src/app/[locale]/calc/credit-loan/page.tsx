@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import CreditCalculator from '@/components/calculators/credit-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'Credit Loan Calculator | Калькулятор #1',
-	description:
-		'Calculate monthly loan payments, total interest, and create detailed payment schedules for mortgages, auto loans, and personal loans.',
-	keywords:
-		'кредитный калькулятор, ипотечный калькулятор, автокредит калькулятор, расчёт кредита',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators['credit-loan'][key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function CreditLoanPage() {
 	const t = useTranslations();

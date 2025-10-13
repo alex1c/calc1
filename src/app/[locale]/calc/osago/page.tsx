@@ -4,13 +4,21 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import OsagoCalculator from '@/components/calculators/osago-calculator';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-	title: 'OSAGO Calculator | Калькулятор #1',
-	description:
-		'Calculate OSAGO insurance cost based on region, engine power, driver age and experience, and other factors.',
-	keywords:
-		'калькулятор ОСАГО, расчёт ОСАГО, стоимость ОСАГО, страхование ОСАГО, КБМ, коэффициент бонус-малус',
-};
+export async function generateMetadata({
+	params: { locale },
+}: {
+	params: { locale: string };
+}): Promise<Metadata> {
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators.osago[key];
+
+	return {
+		title: t('title'),
+		description: t('description'),
+		keywords: t('seo'),
+	};
+}
 
 export default function OsagoPage() {
 	const t = useTranslations();
