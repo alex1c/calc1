@@ -14,6 +14,7 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+	const t = useTranslations();
 	const locale = useLocale();
 
 	return (

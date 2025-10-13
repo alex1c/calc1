@@ -37,6 +37,7 @@ export const metadata: Metadata = {
  */
 export default function BasicMathPage() {
 	const t = useTranslations('math_basic');
+	const tCommon = useTranslations();
 	const locale = useLocale();
 
 	return (
@@ -81,7 +82,7 @@ export default function BasicMathPage() {
 			<Breadcrumbs
 				items={[
 					{
-						label: t('categories.math.title'),
+						label: tCommon('categories.math.title'),
 						href: '/math',
 					},
 					{ label: t('title') },
