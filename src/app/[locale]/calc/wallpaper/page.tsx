@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import WallpaperCalculator from '@/components/calculators/wallpaper-calculator';
+import WallpaperSEO from '@/components/seo/wallpaper-seo';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
@@ -20,6 +21,7 @@ export default function WallpaperPage() {
 				]}
 			/>
 			<WallpaperCalculator />
+			<WallpaperSEO />
 		</div>
 	);
 }

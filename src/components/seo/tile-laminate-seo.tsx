@@ -2,12 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 
-interface SEOContentProps {
-	namespace: string;
-}
-
-export default function SEOContent({ namespace }: SEOContentProps) {
-	const t = useTranslations(namespace);
+export default function TileLaminateSEO() {
+	const t = useTranslations('calculators.tile-laminate');
 
 	return (
 		<div className='max-w-4xl mx-auto px-4 py-8'>
@@ -19,6 +15,34 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 				<p className='text-gray-700 leading-relaxed'>
 					{t('seo.overview.content')}
 				</p>
+			</div>
+
+			{/* Materials Types */}
+			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
+				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
+					{t('seo.materials.title')}
+				</h2>
+				<p className='text-gray-700 mb-6'>
+					{t('seo.materials.content')}
+				</p>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					<div className='border border-gray-200 rounded-lg p-4'>
+						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
+							{t('seo.materials.tile.title')}
+						</h3>
+						<p className='text-gray-700 text-sm'>
+							{t('seo.materials.tile.content')}
+						</p>
+					</div>
+					<div className='border border-gray-200 rounded-lg p-4'>
+						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
+							{t('seo.materials.laminate.title')}
+						</h3>
+						<p className='text-gray-700 text-sm'>
+							{t('seo.materials.laminate.content')}
+						</p>
+					</div>
+				</div>
 			</div>
 
 			{/* Calculation Steps */}
@@ -44,7 +68,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								2
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.thickness')}
+								{t('seo.calculation.steps.element')}
 							</p>
 						</div>
 						<div className='flex items-start'>
@@ -52,7 +76,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								3
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.material')}
+								{t('seo.calculation.steps.quantity')}
 							</p>
 						</div>
 					</div>
@@ -70,74 +94,14 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 								5
 							</span>
 							<p className='text-gray-700'>
-								{t('seo.calculation.steps.mortar')}
+								{t('seo.calculation.steps.packages')}
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			{/* Materials */}
-			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
-				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					{t('seo.materials.title')}
-				</h2>
-				<p className='text-gray-700 mb-6'>
-					{t('seo.materials.content')}
-				</p>
-				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-					<div className='border border-gray-200 rounded-lg p-4'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.materials.bricks.title')}
-						</h3>
-						<p className='text-gray-700 text-sm'>
-							{t('seo.materials.bricks.content')}
-						</p>
-					</div>
-					<div className='border border-gray-200 rounded-lg p-4'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.materials.blocks.title')}
-						</h3>
-						<p className='text-gray-700 text-sm'>
-							{t('seo.materials.blocks.content')}
-						</p>
-					</div>
-				</div>
-			</div>
-
-			{/* Wall Thickness */}
-			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
-				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					{t('seo.thickness.title')}
-				</h2>
-				<p className='text-gray-700 mb-6'>
-					{t('seo.thickness.content')}
-				</p>
-				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-					<div className='border border-gray-200 rounded-lg p-4'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.thickness.half')}
-						</h3>
-					</div>
-					<div className='border border-gray-200 rounded-lg p-4'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.thickness.single')}
-						</h3>
-					</div>
-					<div className='border border-gray-200 rounded-lg p-4'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.thickness.double')}
-						</h3>
-					</div>
-					<div className='border border-gray-200 rounded-lg p-4'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-							{t('seo.thickness.triple')}
-						</h3>
-					</div>
-				</div>
-			</div>
-
-			{/* Tips */}
+			{/* Tips Section */}
 			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
 					{t('seo.tips.title')}
@@ -148,19 +112,19 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.dimensions')}
+								{t('seo.tips.measurement')}
 							</span>
 						</li>
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.thickness')}
+								{t('seo.tips.pattern')}
 							</span>
 						</li>
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.joints')}
+								{t('seo.tips.quality')}
 							</span>
 						</li>
 					</ul>
@@ -174,14 +138,20 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						<li className='flex items-start'>
 							<span className='text-green-500 mr-2'>✓</span>
 							<span className='text-gray-700'>
-								{t('seo.tips.price')}
+								{t('seo.tips.element')}
+							</span>
+						</li>
+						<li className='flex items-start'>
+							<span className='text-green-500 mr-2'>✓</span>
+							<span className='text-gray-700'>
+								{t('seo.tips.package')}
 							</span>
 						</li>
 					</ul>
 				</div>
 			</div>
 
-			{/* Benefits */}
+			{/* Benefits Section */}
 			<div className='bg-white rounded-lg shadow-lg p-6'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
 					{t('seo.benefits.title')}
@@ -199,7 +169,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-green-100 text-green-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
 							💰
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
@@ -207,7 +177,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-purple-100 text-purple-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
 							📋
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
@@ -215,16 +185,16 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-yellow-100 text-yellow-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
-							⚡
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+							♻️
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
 							{t('seo.benefits.waste')}
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-red-100 text-red-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
-							🔧
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+							⏱️
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
 							{t('seo.benefits.time')}

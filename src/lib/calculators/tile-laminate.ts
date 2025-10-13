@@ -212,7 +212,7 @@ export function validateTileLaminateInput(
 /**
  * Get flooring type options
  */
-export function getFlooringTypeOptions(): Array<{
+export function getFlooringTypeOptions(t?: (key: string) => string): Array<{
 	value: string;
 	label: string;
 	description: string;
@@ -220,8 +220,10 @@ export function getFlooringTypeOptions(): Array<{
 }> {
 	return Object.entries(FLOORING_TYPES).map(([key, config]) => ({
 		value: key,
-		label: config.name,
-		description: config.description,
+		label: t ? t(`options.flooringTypes.${key}`) : config.name,
+		description: t
+			? t(`options.flooringTypeDescriptions.${key}`)
+			: config.description,
 		hasGrout: config.hasGrout,
 	}));
 }

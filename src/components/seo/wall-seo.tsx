@@ -2,12 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 
-interface SEOContentProps {
-	namespace: string;
-}
-
-export default function SEOContent({ namespace }: SEOContentProps) {
-	const t = useTranslations(namespace);
+export default function WallSEO() {
+	const t = useTranslations('calculators.wall');
 
 	return (
 		<div className='max-w-4xl mx-auto px-4 py-8'>
@@ -77,7 +73,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 				</div>
 			</div>
 
-			{/* Materials */}
+			{/* Materials Section */}
 			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
 					{t('seo.materials.title')}
@@ -105,7 +101,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 				</div>
 			</div>
 
-			{/* Wall Thickness */}
+			{/* Wall Thickness Section */}
 			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
 					{t('seo.thickness.title')}
@@ -137,7 +133,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 				</div>
 			</div>
 
-			{/* Tips */}
+			{/* Tips Section */}
 			<div className='bg-white rounded-lg shadow-lg p-6 mb-8'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
 					{t('seo.tips.title')}
@@ -181,7 +177,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 				</div>
 			</div>
 
-			{/* Benefits */}
+			{/* Benefits Section */}
 			<div className='bg-white rounded-lg shadow-lg p-6'>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
 					{t('seo.benefits.title')}
@@ -199,7 +195,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-green-100 text-green-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
 							💰
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
@@ -207,7 +203,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-purple-100 text-purple-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
 							📋
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
@@ -215,16 +211,16 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-yellow-100 text-yellow-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
-							⚡
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+							♻️
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
 							{t('seo.benefits.waste')}
 						</h3>
 					</div>
 					<div className='text-center'>
-						<div className='bg-red-100 text-red-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
-							🔧
+						<div className='bg-blue-100 text-blue-800 text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3'>
+							⏱️
 						</div>
 						<h3 className='font-semibold text-gray-900 mb-2'>
 							{t('seo.benefits.time')}
@@ -235,3 +231,7 @@ export default function SEOContent({ namespace }: SEOContentProps) {
 		</div>
 	);
 }
+
+
+
+

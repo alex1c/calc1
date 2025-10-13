@@ -39,6 +39,14 @@ const getCalculators = () => [
 		icon: Home,
 		href: '/calc/roofing',
 	},
+	{
+		id: 'wall',
+		title: 'Калькулятор кирпича и блоков',
+		description:
+			'Расчёт количества кирпичей, газоблоков и пеноблоков для стены',
+		icon: Package,
+		href: '/calc/wall',
+	},
 ];
 
 export default function ConstructionPage() {

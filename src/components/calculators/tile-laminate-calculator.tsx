@@ -26,7 +26,7 @@ export default function TileLaminateCalculator() {
 	const [result, setResult] = useState<TileLaminateResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
 
-	const flooringOptions = getFlooringTypeOptions();
+	const flooringOptions = getFlooringTypeOptions(t);
 
 	const handleInputChange = (
 		field: keyof TileLaminateInput,

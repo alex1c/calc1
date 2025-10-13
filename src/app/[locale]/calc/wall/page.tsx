@@ -1,12 +1,12 @@
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
-import MaterialsCalculator from '@/components/calculators/materials-calculator';
-import MaterialsSEO from '@/components/seo/materials-seo';
+import WallCalculator from '@/components/calculators/wall-calculator';
+import WallSEO from '@/components/seo/wall-seo';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
-export default function PaintPage() {
-	const t = useTranslations('calculators.materials');
+export default function WallPage() {
+	const t = useTranslations('calculators.wall');
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -20,8 +20,8 @@ export default function PaintPage() {
 					{ label: t('title') },
 				]}
 			/>
-			<MaterialsCalculator />
-			<MaterialsSEO />
+			<WallCalculator />
+			<WallSEO />
 		</div>
 	);
 }
@@ -33,7 +33,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators.materials.seo[key];
+	const t = (key: string) => messages.calculators.wall.seo[key];
 
 	return {
 		title: t('title'),

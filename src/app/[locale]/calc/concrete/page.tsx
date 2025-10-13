@@ -1,7 +1,7 @@
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import ConcreteCalculator from '@/components/calculators/concrete-calculator';
-import SEOContent from '@/components/seo-content';
+import ConcreteSEO from '@/components/seo/concrete-seo';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
@@ -21,7 +21,7 @@ export default function ConcretePage() {
 				]}
 			/>
 			<ConcreteCalculator />
-			<SEOContent namespace='calculators.concrete' />
+			<ConcreteSEO />
 		</div>
 	);
 }

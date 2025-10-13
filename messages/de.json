@@ -1216,6 +1216,20 @@
 					"universal": "Unterstützung für verschiedene Materialtypen",
 					"professional": "Professioneller Ansatz bei Berechnungen"
 				},
+				"options": {
+					"materials": {
+						"paint": "Farbe",
+						"putty": "Spachtelmasse",
+						"primer": "Grundierung",
+						"tileGlue": "Fliesenkleber"
+					},
+					"materialDescriptions": {
+						"paint": "Farbmenge für Wände berechnen",
+						"putty": "Spachtelmasse-Menge für Wände berechnen",
+						"primer": "Grundierungsmenge für Wände berechnen",
+						"tileGlue": "Fliesenkleber-Menge für Boden berechnen"
+					}
+				},
 				"seo": "Baumaterialien-Rechner, Farbberechnung, Spachtelmasse-Berechnung, Grundierungsrechner, Fliesenkleber, Farbverbrauch, Baumaterialien, Renovierungsrechner, Wandfarbe, Wandspachtelmasse, Wandgrundierung, Fliesenkleber-Berechnung, Materialverbrauch, Bauwesen online, wasserbasierte Farbe, Acrylfarbe, ölbasierte Farbe, Grundspachtelmasse, Feinspachtelmasse, Acrylgrundierung, Alkydgrundierung, Keramikfliesen, Feinsteinzeug, Mosaik, Farbverbrauch pro m2, Spachtelmasse-Verbrauch pro m2, Grundierungsverbrauch pro m2, Fliesenkleber-Verbrauch pro m2, Renovierungsrechner, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsmaterialien"
 			}
 		},
@@ -1371,6 +1385,16 @@
 				"tips": {
 					"title": "Empfehlungen",
 					"recommendation": "Wir empfehlen, zusätzlich 1-2 Verpackungen für Zuschnitt und mögliche Defekte zu nehmen."
+				}
+			},
+			"options": {
+				"flooringTypes": {
+					"tile": "Fliesen",
+					"laminate": "Laminat"
+				},
+				"flooringTypeDescriptions": {
+					"tile": "Fliesenmenge für Boden berechnen",
+					"laminate": "Laminatmenge berechnen"
 				}
 			},
 			"errors": {
@@ -1539,6 +1563,247 @@
 					"time": "Zeitersparnis bei Berechnungen"
 				},
 				"seo": "Betonrechner, Betonberechnung, Betonzusammensetzung, Zementberechnung, Sandberechnung, Kiesberechnung, Wasser für Beton, Betongüte, M100 Beton, M150 Beton, M200 Beton, M250 Beton, M300 Beton, M400 Beton, Betonverhältnisse, Wasser-Zement-Verhältnis, Betonmischung, Fundament Beton, Wand Beton, Boden Beton, Bau Beton, Betonarbeiten, Betonkomponenten, Betonmischung, Betonmörtel, Baumaterialien, Betonkonstruktionen, monolithischer Beton, Stahlbeton, Betonblöcke, Betonplatten"
+			}
+		},
+		"roof": {
+			"title": "Dachrechner",
+			"description": "Berechnung der Dachfläche, Dachmaterialien und Gewicht",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"units": "Maßeinheiten",
+				"houseDimensions": "Hausabmessungen",
+				"houseLength": "Hauslänge",
+				"houseWidth": "Hausbreite",
+				"roofType": "Dachtyp",
+				"selectRoofType": "Dachtyp auswählen",
+				"roofParameters": "Dachparameter",
+				"roofAngle": "Dachneigung",
+				"overhang": "Überstand",
+				"overhangNote": "Überstandslänge um den Umfang",
+				"material": "Dachmaterial",
+				"selectMaterial": "Material auswählen",
+				"materialDimensions": "Materialabmessungen",
+				"materialLength": "Blech-/Plattenlänge",
+				"materialWidth": "Blech-/Plattenbreite",
+				"reservePercentage": "Materialreserve",
+				"calculate": "Berechnen",
+				"reset": "Zurücksetzen"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"summary": "Gesamt",
+				"roofType": "Dachtyp",
+				"material": "Material",
+				"houseDimensions": "Hausabmessungen",
+				"roofAngle": "Dachneigung",
+				"areas": "Flächen",
+				"roofArea": "Dachfläche",
+				"effectiveArea": "Effektive Fläche",
+				"overhangArea": "Überstandsfläche",
+				"materialRequirements": "Materialanforderungen",
+				"materialCount": "Anzahl Bleche/Platten",
+				"materialArea": "Blech-/Plattenfläche",
+				"totalMaterialArea": "Gesamte Materialfläche",
+				"reserveArea": "Reserve",
+				"weight": "Gewicht",
+				"materialWeight": "Materialgewicht",
+				"totalWeight": "Gesamtgewicht",
+				"recommendations": "Empfehlungen",
+				"recommendedCount": "Empfohlene Menge",
+				"sheets": "Bleche/Platten",
+				"recommendationNote": "Empfohlen, 1-2 zusätzliche Bleche/Platten für Zuschnitt und mögliche Defekte zu nehmen"
+			},
+			"errors": {
+				"title": "Eingabefehler"
+			},
+			"seo": {
+				"title": "Dachrechner - Dachfläche und Materialberechnung | Rechner #1",
+				"overview": {
+					"title": "Online-Dachrechner",
+					"content": "Online-Dachrechner hilft bei der Berechnung der Dachfläche, Anzahl der Metallziegel-, Wellblech- oder Weichziegelplatten und berücksichtigt Materialreserve. Geeignet für Sattel-, Giebel- und Walmdächer."
+				},
+				"calculation": {
+					"title": "Wie die Dachfläche berechnet wird",
+					"content": "Dachflächenberechnung umfasst mehrere Schritte für ein genaues Ergebnis.",
+					"steps": {
+						"volume": "Bestimmung der Hausabmessungen",
+						"grade": "Auswahl des Dachtyps",
+						"proportions": "Berechnung der Dachneigung",
+						"water": "Bestimmung der Hangfläche",
+						"verification": "Berücksichtigung von Überständen und Reserve"
+					}
+				},
+				"roofTypes": {
+					"title": "Dachtypen",
+					"content": "Rechner unterstützt Berechnung verschiedener Dachtypen unter Berücksichtigung ihrer Eigenschaften.",
+					"single": {
+						"title": "Satteldach",
+						"content": "Dach mit einem Hang, geeignet für Nebengebäude und moderne Häuser."
+					},
+					"gable": {
+						"title": "Giebeldach",
+						"content": "Klassisches Dach mit zwei Hängen, häufigster Typ."
+					},
+					"hip": {
+						"title": "Walmdach",
+						"content": "Dach mit vier Hängen, bietet besseren Windschutz."
+					},
+					"mansard": {
+						"title": "Mansarddach",
+						"content": "Dach mit gebrochenen Hängen, ermöglicht Nutzung des Dachraums."
+					}
+				},
+				"materials": {
+					"title": "Dachmaterialien",
+					"content": "Rechner unterstützt Berechnung verschiedener Dachmaterialien.",
+					"metalTile": {
+						"title": "Metallziegel",
+						"content": "Metallziegel mit Polymerbeschichtung, langlebig und leicht."
+					},
+					"corrugated": {
+						"title": "Wellblech",
+						"content": "Profilblech aus verzinktem Stahl, wirtschaftliche Option."
+					},
+					"softTile": {
+						"title": "Weichziegel",
+						"content": "Bitumenziegel in Rollen, flexibel und geräuscharm."
+					}
+				},
+				"tips": {
+					"title": "Dachberechnungstipps",
+					"content": "Für genaue Ergebnisse befolgen Sie unsere Empfehlungen bei der Dachberechnung.",
+					"volume": "Messen Sie die Hausabmessungen sorgfältig",
+					"grade": "Wählen Sie den richtigen Dachtyp",
+					"proportions": "Berücksichtigen Sie die Dachneigung",
+					"water": "Vergessen Sie nicht die Überstände",
+					"quality": "Verwenden Sie qualitativ hochwertige Materialien",
+					"mixing": "Planen Sie Materialreserve"
+				},
+				"benefits": {
+					"title": "Rechnervorteile",
+					"content": "Die Verwendung des Dachrechners bietet viele Vorteile bei der Bauplanung.",
+					"accuracy": "Genaue Dachflächenberechnung",
+					"cost": "Ersparnisse bei Materialien",
+					"planning": "Richtige Einkaufsplanung",
+					"quality": "Gewährleistung der Dachqualität",
+					"waste": "Minimierung von Materialabfällen",
+					"time": "Zeitersparnis bei Berechnungen"
+				},
+				"seo": "Dachrechner, Dachberechnung, Dachfläche, Metallziegel, Wellblech, Weichziegel, Satteldach, Giebeldach, Walmdach, Mansarddach, Dachneigung, Dachüberstände, Dachmaterialien, Dachmaterialberechnung, Anzahl Bleche, Dachgewicht, Materialreserve, Dachbau, Dachreparatur, Dacharbeiten, Hausdach, geneigtes Dach, Flachdach, Dachbedeckung, Dachabdichtung, Dachdämmung, Dachbelüftung"
+			}
+		},
+		"wall": {
+			"title": "Ziegel- und Blockrechner",
+			"description": "Berechnung der Anzahl von Ziegeln, Gasblöcken und Schaumblöcken für Wände",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Wandparameter",
+				"units": "Maßeinheiten",
+				"wallDimensions": "Wandabmessungen",
+				"wallLength": "Wandlänge",
+				"wallHeight": "Wandhöhe",
+				"wallThickness": "Wandstärke",
+				"materialType": "Materialtyp",
+				"selectMaterial": "Material auswählen",
+				"materialDimensions": "Materialabmessungen",
+				"materialLength": "Länge",
+				"materialWidth": "Breite",
+				"materialHeight": "Höhe",
+				"jointThickness": "Fugenstärke",
+				"reservePercentage": "Materialreserve",
+				"pricePerUnit": "Preis pro Stück",
+				"optional": "optional",
+				"calculate": "Berechnen",
+				"reset": "Zurücksetzen"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"summary": "Zusammenfassung",
+				"wallDimensions": "Wandabmessungen",
+				"wallThickness": "Wandstärke",
+				"bricks": "Ziegel",
+				"material": "Material",
+				"materialDimensions": "Materialabmessungen",
+				"areasAndVolumes": "Flächen und Volumen",
+				"wallArea": "Wandfläche",
+				"wallVolume": "Wandvolumen",
+				"materialVolume": "Materialvolumen",
+				"materialQuantities": "Materialmengen",
+				"materialCount": "Menge ohne Reserve",
+				"materialCountWithReserve": "Menge mit Reserve",
+				"reserveCount": "Reserve",
+				"pieces": "Stk",
+				"mortarGlue": "Mörtel/Kleber",
+				"mortarVolume": "Mörtelvolumen",
+				"mortarVolumeLiters": "Mörtelvolumen in Litern",
+				"cost": "Kosten",
+				"totalCost": "Gesamtkosten",
+				"costPerSquareMeter": "Kosten pro m²"
+			},
+			"errors": {
+				"title": "Eingabefehler"
+			},
+			"seo": {
+				"title": "Ziegel- und Blockrechner online - Wandmaterialberechnung",
+				"overview": {
+					"title": "Online Ziegel- und Blockrechner",
+					"content": "Online Ziegel- und Blockrechner für Wände hilft bei der Berechnung der Anzahl von Ziegeln, Gasblöcken oder Schaumblöcken für das Mauerwerk. Der Service berücksichtigt Wandstärke, Materialabmessungen, Reserveprozentsatz und ermöglicht auch die Berechnung von Kosten und Volumen von Mörtel oder Kleber."
+				},
+				"calculation": {
+					"title": "Wie man Ziegel und Blöcke berechnet",
+					"content": "Die Berechnung von Ziegeln und Blöcken umfasst die Bestimmung der Wandfläche, Materialmengen und Mörtelvolumen.",
+					"steps": {
+						"area": "Bestimmung der Wandfläche",
+						"thickness": "Berechnung der Wandstärke in Ziegeln/Blöcken",
+						"material": "Berechnung der Materialeinheiten",
+						"reserve": "Hinzufügung der Materialreserve",
+						"mortar": "Berechnung des Mörtel- oder Klebervolumens"
+					}
+				},
+				"materials": {
+					"title": "Materialtypen",
+					"content": "Der Rechner unterstützt verschiedene Arten von Ziegeln und Blöcken:",
+					"bricks": {
+						"title": "Ziegel",
+						"content": "Einfache, doppelte und dreifache Ziegel verschiedener Größen"
+					},
+					"blocks": {
+						"title": "Blöcke",
+						"content": "Gasblöcke und Schaumblöcke für schnelles Bauen"
+					}
+				},
+				"thickness": {
+					"title": "Wandstärke",
+					"content": "Der Rechner unterstützt verschiedene Wandstärken:",
+					"half": "Halber Ziegel (0.5)",
+					"single": "Ein Ziegel (1)",
+					"double": "Eineinhalb Ziegel (1.5)",
+					"triple": "Zwei Ziegel (2)"
+				},
+				"tips": {
+					"title": "Berechnungstipps",
+					"content": "Für eine genaue Ziegel- und Blockberechnung beachten Sie:",
+					"dimensions": "Genaue Wand- und Materialabmessungen",
+					"thickness": "Korrekte Wandstärke",
+					"joints": "Mörtelfugenstärke",
+					"reserve": "Materialreserve für Zuschnitt",
+					"price": "Materialkosten für Budgetplanung"
+				},
+				"benefits": {
+					"title": "Rechnervorteile",
+					"content": "Unser Rechner hilft Ihnen:",
+					"accuracy": "Genaue Materialmengenberechnung",
+					"cost": "Baukostenschätzung",
+					"planning": "Materialbeschaffungsplanung",
+					"waste": "Abfallminimierung",
+					"time": "Zeitersparnis bei Berechnungen"
+				},
+				"seo": "Ziegelrechner, Ziegelberechnung, Blockrechner, Gasblöcke, Schaumblöcke, Mauerwerk, Wand, Wandstärke, Mörtel, Kleber, Materialreserve, Baukosten, einfacher Ziegel, doppelter Ziegel, dreifacher Ziegel, Ziegelabmessungen, Blockabmessungen"
 			}
 		}
 	}

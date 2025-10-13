@@ -1478,6 +1478,20 @@
 					"universal": "Support for various material types",
 					"professional": "Professional approach to calculations"
 				},
+				"options": {
+					"materials": {
+						"paint": "Paint",
+						"putty": "Putty",
+						"primer": "Primer",
+						"tileGlue": "Tile Adhesive"
+					},
+					"materialDescriptions": {
+						"paint": "Calculate paint quantity for walls",
+						"putty": "Calculate putty quantity for walls",
+						"primer": "Calculate primer quantity for walls",
+						"tileGlue": "Calculate tile adhesive quantity for floor"
+					}
+				},
 				"seo": "building materials calculator, paint calculation, putty calculation, primer calculator, tile adhesive, paint consumption, construction materials, renovation calculator, wall paint, wall putty, wall primer, tile adhesive calculation, material consumption, construction online, water-based paint, acrylic paint, oil-based paint, base putty, finish putty, acrylic primer, alkyd primer, ceramic tile, porcelain stoneware, mosaic, paint consumption per m2, putty consumption per m2, primer consumption per m2, tile adhesive consumption per m2, renovation calculator, renovation planning, renovation budget, construction work, finishing materials"
 			}
 		},
@@ -1633,6 +1647,16 @@
 				"tips": {
 					"title": "Recommendations",
 					"recommendation": "We recommend taking an additional 1-2 packages for cutting and possible defects."
+				}
+			},
+			"options": {
+				"flooringTypes": {
+					"tile": "Tile",
+					"laminate": "Laminate"
+				},
+				"flooringTypeDescriptions": {
+					"tile": "Calculate tile quantity for floor",
+					"laminate": "Calculate laminate quantity"
 				}
 			},
 			"errors": {
@@ -1801,6 +1825,247 @@
 					"time": "Time savings on calculations"
 				},
 				"seo": "concrete calculator, concrete calculation, concrete composition, cement calculation, sand calculation, gravel calculation, water for concrete, concrete grade, M100 concrete, M150 concrete, M200 concrete, M250 concrete, M300 concrete, M400 concrete, concrete proportions, water-cement ratio, concrete mix, foundation concrete, wall concrete, floor concrete, construction concrete, concrete work, concrete components, concrete mixing, concrete mortar, construction materials, concrete structures, monolithic concrete, reinforced concrete, concrete blocks, concrete slabs"
+			}
+		},
+		"roof": {
+			"title": "Roof Calculator",
+			"description": "Calculate roof area, roofing materials quantity and weight",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"units": "Units of Measurement",
+				"houseDimensions": "House Dimensions",
+				"houseLength": "House Length",
+				"houseWidth": "House Width",
+				"roofType": "Roof Type",
+				"selectRoofType": "Select Roof Type",
+				"roofParameters": "Roof Parameters",
+				"roofAngle": "Roof Angle",
+				"overhang": "Overhang",
+				"overhangNote": "Overhang length around perimeter",
+				"material": "Roofing Material",
+				"selectMaterial": "Select Material",
+				"materialDimensions": "Material Dimensions",
+				"materialLength": "Sheet Length",
+				"materialWidth": "Sheet Width",
+				"reservePercentage": "Material Reserve",
+				"calculate": "Calculate",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"summary": "Total",
+				"roofType": "Roof Type",
+				"material": "Material",
+				"houseDimensions": "House Dimensions",
+				"roofAngle": "Roof Angle",
+				"areas": "Areas",
+				"roofArea": "Roof Area",
+				"effectiveArea": "Effective Area",
+				"overhangArea": "Overhang Area",
+				"materialRequirements": "Material Requirements",
+				"materialCount": "Number of Sheets",
+				"materialArea": "Sheet Area",
+				"totalMaterialArea": "Total Material Area",
+				"reserveArea": "Reserve",
+				"weight": "Weight",
+				"materialWeight": "Material Weight",
+				"totalWeight": "Total Weight",
+				"recommendations": "Recommendations",
+				"recommendedCount": "Recommended Quantity",
+				"sheets": "sheets",
+				"recommendationNote": "Recommended to take 1-2 additional sheets for cutting and possible defects"
+			},
+			"errors": {
+				"title": "Input Errors"
+			},
+			"seo": {
+				"title": "Roof Calculator - Roof Area and Materials Calculation | Calculator #1",
+				"overview": {
+					"title": "Online Roof Calculator",
+					"content": "Online roof calculator helps calculate roof area, number of metal tile, corrugated sheet or soft tile sheets, and account for material reserve. Suitable for single-pitch, gable and hip roofs."
+				},
+				"calculation": {
+					"title": "How roof area is calculated",
+					"content": "Roof area calculation includes several steps to get an accurate result.",
+					"steps": {
+						"volume": "Determining house dimensions",
+						"grade": "Selecting roof type",
+						"proportions": "Calculating roof angle",
+						"water": "Determining slope area",
+						"verification": "Accounting for overhangs and reserve"
+					}
+				},
+				"roofTypes": {
+					"title": "Roof Types",
+					"content": "Calculator supports calculation of various roof types considering their features.",
+					"single": {
+						"title": "Single-pitch Roof",
+						"content": "Roof with one slope, suitable for utility buildings and modern houses."
+					},
+					"gable": {
+						"title": "Gable Roof",
+						"content": "Classic roof with two slopes, most common type."
+					},
+					"hip": {
+						"title": "Hip Roof",
+						"content": "Roof with four slopes, provides better wind protection."
+					},
+					"mansard": {
+						"title": "Mansard Roof",
+						"content": "Roof with broken slopes, allows using attic space."
+					}
+				},
+				"materials": {
+					"title": "Roofing Materials",
+					"content": "Calculator supports calculation of various roofing materials.",
+					"metalTile": {
+						"title": "Metal Tile",
+						"content": "Metal tile with polymer coating, durable and lightweight."
+					},
+					"corrugated": {
+						"title": "Corrugated Sheet",
+						"content": "Profiled sheet from galvanized steel, economical option."
+					},
+					"softTile": {
+						"title": "Soft Tile",
+						"content": "Bitumen tile in rolls, flexible and quiet."
+					}
+				},
+				"tips": {
+					"title": "Roof calculation tips",
+					"content": "For accurate results, follow our recommendations when calculating roof.",
+					"volume": "Carefully measure house dimensions",
+					"grade": "Choose correct roof type",
+					"proportions": "Consider roof slope angle",
+					"water": "Don't forget about overhangs",
+					"quality": "Use quality materials",
+					"mixing": "Plan material reserve"
+				},
+				"benefits": {
+					"title": "Calculator benefits",
+					"content": "Using roof calculator provides many benefits when planning construction.",
+					"accuracy": "Accurate roof area calculation",
+					"cost": "Savings on materials",
+					"planning": "Proper purchase planning",
+					"quality": "Ensuring roof quality",
+					"waste": "Minimizing material waste",
+					"time": "Time savings on calculations"
+				},
+				"seo": "roof calculator, roof calculation, roof area, metal tile, corrugated sheet, soft tile, single-pitch roof, gable roof, hip roof, mansard roof, roof angle, roof overhangs, roofing materials, roofing materials calculation, number of sheets, roof weight, material reserve, roof construction, roof repair, roofing work, house roof, pitched roof, flat roof, roofing covering, roof waterproofing, roof insulation, roof ventilation"
+			}
+		},
+		"wall": {
+			"title": "Brick and Block Calculator",
+			"description": "Calculate the quantity of bricks, gas blocks and foam blocks for walls",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Wall Parameters",
+				"units": "Units of Measurement",
+				"wallDimensions": "Wall Dimensions",
+				"wallLength": "Wall Length",
+				"wallHeight": "Wall Height",
+				"wallThickness": "Wall Thickness",
+				"materialType": "Material Type",
+				"selectMaterial": "Select Material",
+				"materialDimensions": "Material Dimensions",
+				"materialLength": "Length",
+				"materialWidth": "Width",
+				"materialHeight": "Height",
+				"jointThickness": "Joint Thickness",
+				"reservePercentage": "Material Reserve",
+				"pricePerUnit": "Price per Unit",
+				"optional": "optional",
+				"calculate": "Calculate",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"summary": "Summary",
+				"wallDimensions": "Wall Dimensions",
+				"wallThickness": "Wall Thickness",
+				"bricks": "bricks",
+				"material": "Material",
+				"materialDimensions": "Material Dimensions",
+				"areasAndVolumes": "Areas and Volumes",
+				"wallArea": "Wall Area",
+				"wallVolume": "Wall Volume",
+				"materialVolume": "Material Volume",
+				"materialQuantities": "Material Quantities",
+				"materialCount": "Quantity without Reserve",
+				"materialCountWithReserve": "Quantity with Reserve",
+				"reserveCount": "Reserve",
+				"pieces": "pcs",
+				"mortarGlue": "Mortar/Glue",
+				"mortarVolume": "Mortar Volume",
+				"mortarVolumeLiters": "Mortar Volume in Liters",
+				"cost": "Cost",
+				"totalCost": "Total Cost",
+				"costPerSquareMeter": "Cost per m²"
+			},
+			"errors": {
+				"title": "Input Errors"
+			},
+			"seo": {
+				"title": "Brick and Block Calculator Online - Wall Material Calculation",
+				"overview": {
+					"title": "Online Brick and Block Calculator",
+					"content": "Online brick and block calculator for walls will help calculate the quantity of bricks, gas blocks or foam blocks for masonry. The service takes into account wall thickness, material dimensions, reserve percentage, and also allows calculating cost and volume of mortar or glue."
+				},
+				"calculation": {
+					"title": "How to Calculate Bricks and Blocks",
+					"content": "Brick and block calculation includes determining wall area, material quantities and mortar volume.",
+					"steps": {
+						"area": "Determining wall area",
+						"thickness": "Calculating wall thickness in bricks/blocks",
+						"material": "Calculating material unit quantities",
+						"reserve": "Adding material reserve",
+						"mortar": "Calculating mortar or glue volume"
+					}
+				},
+				"materials": {
+					"title": "Material Types",
+					"content": "The calculator supports various types of bricks and blocks:",
+					"bricks": {
+						"title": "Bricks",
+						"content": "Single, double and triple bricks of various sizes"
+					},
+					"blocks": {
+						"title": "Blocks",
+						"content": "Gas blocks and foam blocks for fast construction"
+					}
+				},
+				"thickness": {
+					"title": "Wall Thickness",
+					"content": "The calculator supports various wall thicknesses:",
+					"half": "Half brick (0.5)",
+					"single": "One brick (1)",
+					"double": "One and a half bricks (1.5)",
+					"triple": "Two bricks (2)"
+				},
+				"tips": {
+					"title": "Calculation Tips",
+					"content": "For accurate brick and block calculation consider:",
+					"dimensions": "Accurate wall and material dimensions",
+					"thickness": "Correct wall thickness",
+					"joints": "Mortar joint thickness",
+					"reserve": "Material reserve for cutting",
+					"price": "Material costs for budget planning"
+				},
+				"benefits": {
+					"title": "Calculator Benefits",
+					"content": "Our calculator will help you:",
+					"accuracy": "Accurate material quantity calculation",
+					"cost": "Construction cost estimation",
+					"planning": "Material procurement planning",
+					"waste": "Waste minimization",
+					"time": "Time saving on calculations"
+				},
+				"seo": "brick calculator, brick calculation, block calculator, gas blocks, foam blocks, masonry, wall, wall thickness, mortar, glue, material reserve, construction cost, single brick, double brick, triple brick, brick dimensions, block dimensions"
 			}
 		}
 	}

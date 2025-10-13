@@ -335,15 +335,17 @@ export function validateMaterialInput(
 }
 
 // Get material options
-export function getMaterialOptions(): Array<{
+export function getMaterialOptions(t?: (key: string) => string): Array<{
 	value: string;
 	label: string;
 	description: string;
 }> {
 	return Object.entries(MATERIALS).map(([key, config]) => ({
 		value: key,
-		label: config.name,
-		description: config.description,
+		label: t ? t(`options.materials.${key}`) : config.name,
+		description: t
+			? t(`options.materialDescriptions.${key}`)
+			: config.description,
 	}));
 }
 

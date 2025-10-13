@@ -1,7 +1,7 @@
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import TileLaminateCalculator from '@/components/calculators/tile-laminate-calculator';
-import SEOContent from '@/components/seo-content';
+import TileLaminateSEO from '@/components/seo/tile-laminate-seo';
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
@@ -21,7 +21,7 @@ export default function TileLaminatePage() {
 				]}
 			/>
 			<TileLaminateCalculator />
-			<SEOContent namespace='calculators.tile-laminate' />
+			<TileLaminateSEO />
 		</div>
 	);
 }

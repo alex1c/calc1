@@ -1216,6 +1216,20 @@
 					"universal": "Soporte para varios tipos de materiales",
 					"professional": "Enfoque profesional en los cálculos"
 				},
+				"options": {
+					"materials": {
+						"paint": "Pintura",
+						"putty": "Masilla",
+						"primer": "Imprimación",
+						"tileGlue": "Adhesivo para Baldosas"
+					},
+					"materialDescriptions": {
+						"paint": "Calcular cantidad de pintura para paredes",
+						"putty": "Calcular cantidad de masilla para paredes",
+						"primer": "Calcular cantidad de imprimación para paredes",
+						"tileGlue": "Calcular cantidad de adhesivo para suelo"
+					}
+				},
 				"seo": "calculadora de materiales de construcción, cálculo de pintura, cálculo de masilla, calculadora de imprimación, adhesivo para baldosas, consumo de pintura, materiales de construcción, calculadora de renovación, pintura para paredes, masilla para paredes, imprimación para paredes, cálculo de adhesivo para baldosas, consumo de materiales, construcción online, pintura al agua, pintura acrílica, pintura al aceite, masilla base, masilla de acabado, imprimación acrílica, imprimación alquídica, baldosa cerámica, porcelanato, mosaico, consumo de pintura por m2, consumo de masilla por m2, consumo de imprimación por m2, consumo de adhesivo para baldosas por m2, calculadora de renovación, planificación de renovación, presupuesto de renovación, trabajos de construcción, materiales de acabado"
 			}
 		},
@@ -1371,6 +1385,16 @@
 				"tips": {
 					"title": "Recomendaciones",
 					"recommendation": "Recomendamos tomar 1-2 paquetes adicionales para cortes y posibles defectos."
+				}
+			},
+			"options": {
+				"flooringTypes": {
+					"tile": "Baldosas",
+					"laminate": "Laminado"
+				},
+				"flooringTypeDescriptions": {
+					"tile": "Calcular cantidad de baldosas para suelo",
+					"laminate": "Calcular cantidad de laminado"
 				}
 			},
 			"errors": {
@@ -1539,6 +1563,247 @@
 					"time": "Ahorro de tiempo en cálculos"
 				},
 				"seo": "calculadora de hormigón, cálculo de hormigón, composición de hormigón, cálculo de cemento, cálculo de arena, cálculo de grava, agua para hormigón, grado de hormigón, hormigón M100, hormigón M150, hormigón M200, hormigón M250, hormigón M300, hormigón M400, proporciones de hormigón, relación agua-cemento, mezcla de hormigón, cimiento hormigón, pared hormigón, suelo hormigón, construcción hormigón, trabajos de hormigón, componentes de hormigón, mezclado de hormigón, mortero de hormigón, materiales de construcción, estructuras de hormigón, hormigón monolítico, hormigón armado, bloques de hormigón, losas de hormigón"
+			}
+		},
+		"roof": {
+			"title": "Calculadora de Tejado",
+			"description": "Cálculo del área del tejado, materiales de techado y peso",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"units": "Unidades de Medida",
+				"houseDimensions": "Dimensiones de la Casa",
+				"houseLength": "Longitud de la Casa",
+				"houseWidth": "Ancho de la Casa",
+				"roofType": "Tipo de Tejado",
+				"selectRoofType": "Seleccionar Tipo de Tejado",
+				"roofParameters": "Parámetros del Tejado",
+				"roofAngle": "Ángulo del Tejado",
+				"overhang": "Voladizo",
+				"overhangNote": "Longitud del voladizo alrededor del perímetro",
+				"material": "Material de Techado",
+				"selectMaterial": "Seleccionar Material",
+				"materialDimensions": "Dimensiones del Material",
+				"materialLength": "Longitud de la Lámina",
+				"materialWidth": "Ancho de la Lámina",
+				"reservePercentage": "Reserva de Material",
+				"calculate": "Calcular",
+				"reset": "Restablecer"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"summary": "Total",
+				"roofType": "Tipo de Tejado",
+				"material": "Material",
+				"houseDimensions": "Dimensiones de la Casa",
+				"roofAngle": "Ángulo del Tejado",
+				"areas": "Áreas",
+				"roofArea": "Área del Tejado",
+				"effectiveArea": "Área Efectiva",
+				"overhangArea": "Área del Voladizo",
+				"materialRequirements": "Requisitos del Material",
+				"materialCount": "Número de Láminas",
+				"materialArea": "Área de la Lámina",
+				"totalMaterialArea": "Área Total del Material",
+				"reserveArea": "Reserva",
+				"weight": "Peso",
+				"materialWeight": "Peso del Material",
+				"totalWeight": "Peso Total",
+				"recommendations": "Recomendaciones",
+				"recommendedCount": "Cantidad Recomendada",
+				"sheets": "láminas",
+				"recommendationNote": "Recomendado tomar 1-2 láminas adicionales para corte y posibles defectos"
+			},
+			"errors": {
+				"title": "Errores de Entrada"
+			},
+			"seo": {
+				"title": "Calculadora de Tejado - Cálculo de Área del Tejado y Materiales | Calculadora #1",
+				"overview": {
+					"title": "Calculadora de Tejado Online",
+					"content": "Calculadora de tejado online ayuda a calcular el área del tejado, número de láminas de teja metálica, chapa corrugada o teja blanda, y tener en cuenta la reserva de material. Adecuada para tejados de una pendiente, a dos aguas y de cuatro aguas."
+				},
+				"calculation": {
+					"title": "Cómo se calcula el área del tejado",
+					"content": "El cálculo del área del tejado incluye varios pasos para obtener un resultado preciso.",
+					"steps": {
+						"volume": "Determinación de las dimensiones de la casa",
+						"grade": "Selección del tipo de tejado",
+						"proportions": "Cálculo del ángulo del tejado",
+						"water": "Determinación del área de pendiente",
+						"verification": "Consideración de voladizos y reserva"
+					}
+				},
+				"roofTypes": {
+					"title": "Tipos de Tejados",
+					"content": "La calculadora soporta el cálculo de varios tipos de tejados considerando sus características.",
+					"single": {
+						"title": "Tejado de Una Pendiente",
+						"content": "Tejado con una pendiente, adecuado para edificios auxiliares y casas modernas."
+					},
+					"gable": {
+						"title": "Tejado a Dos Aguas",
+						"content": "Tejado clásico con dos pendientes, tipo más común."
+					},
+					"hip": {
+						"title": "Tejado de Cuatro Aguas",
+						"content": "Tejado con cuatro pendientes, proporciona mejor protección contra el viento."
+					},
+					"mansard": {
+						"title": "Tejado Mansarda",
+						"content": "Tejado con pendientes rotas, permite usar el espacio del ático."
+					}
+				},
+				"materials": {
+					"title": "Materiales de Techado",
+					"content": "La calculadora soporta el cálculo de varios materiales de techado.",
+					"metalTile": {
+						"title": "Teja Metálica",
+						"content": "Teja metálica con recubrimiento polimérico, duradera y ligera."
+					},
+					"corrugated": {
+						"title": "Chapa Corrugada",
+						"content": "Lámina perfilada de acero galvanizado, opción económica."
+					},
+					"softTile": {
+						"title": "Teja Blanda",
+						"content": "Teja de betún en rollos, flexible y silenciosa."
+					}
+				},
+				"tips": {
+					"title": "Consejos para el cálculo del tejado",
+					"content": "Para obtener resultados precisos, siga nuestras recomendaciones al calcular el tejado.",
+					"volume": "Mida cuidadosamente las dimensiones de la casa",
+					"grade": "Elija el tipo de tejado correcto",
+					"proportions": "Considere el ángulo de pendiente del tejado",
+					"water": "No olvide los voladizos",
+					"quality": "Use materiales de calidad",
+					"mixing": "Planifique la reserva de material"
+				},
+				"benefits": {
+					"title": "Ventajas de la calculadora",
+					"content": "Usar la calculadora de tejado proporciona muchas ventajas al planificar la construcción.",
+					"accuracy": "Cálculo preciso del área del tejado",
+					"cost": "Ahorro en materiales",
+					"planning": "Planificación correcta de compras",
+					"quality": "Garantía de calidad del tejado",
+					"waste": "Minimización de desperdicios de materiales",
+					"time": "Ahorro de tiempo en cálculos"
+				},
+				"seo": "calculadora de tejado, cálculo de tejado, área del tejado, teja metálica, chapa corrugada, teja blanda, tejado de una pendiente, tejado a dos aguas, tejado de cuatro aguas, tejado mansarda, ángulo del tejado, voladizos del tejado, materiales de techado, cálculo de materiales de techado, número de láminas, peso del tejado, reserva de material, construcción del tejado, reparación del tejado, trabajos de techado, tejado de la casa, tejado inclinado, tejado plano, cubierta del tejado, impermeabilización del tejado, aislamiento del tejado, ventilación del tejado"
+			}
+		},
+		"wall": {
+			"title": "Calculadora de Ladrillos y Bloques",
+			"description": "Calcular la cantidad de ladrillos, bloques de gas y bloques de espuma para paredes",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Parámetros de Pared",
+				"units": "Unidades de Medida",
+				"wallDimensions": "Dimensiones de la Pared",
+				"wallLength": "Longitud de la Pared",
+				"wallHeight": "Altura de la Pared",
+				"wallThickness": "Grosor de la Pared",
+				"materialType": "Tipo de Material",
+				"selectMaterial": "Seleccionar Material",
+				"materialDimensions": "Dimensiones del Material",
+				"materialLength": "Longitud",
+				"materialWidth": "Ancho",
+				"materialHeight": "Altura",
+				"jointThickness": "Grosor de la Junta",
+				"reservePercentage": "Reserva de Material",
+				"pricePerUnit": "Precio por Unidad",
+				"optional": "opcional",
+				"calculate": "Calcular",
+				"reset": "Reiniciar"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"summary": "Resumen",
+				"wallDimensions": "Dimensiones de la Pared",
+				"wallThickness": "Grosor de la Pared",
+				"bricks": "ladrillos",
+				"material": "Material",
+				"materialDimensions": "Dimensiones del Material",
+				"areasAndVolumes": "Áreas y Volúmenes",
+				"wallArea": "Área de la Pared",
+				"wallVolume": "Volumen de la Pared",
+				"materialVolume": "Volumen del Material",
+				"materialQuantities": "Cantidades de Material",
+				"materialCount": "Cantidad sin Reserva",
+				"materialCountWithReserve": "Cantidad con Reserva",
+				"reserveCount": "Reserva",
+				"pieces": "pcs",
+				"mortarGlue": "Mortero/Pegamento",
+				"mortarVolume": "Volumen de Mortero",
+				"mortarVolumeLiters": "Volumen de Mortero en Litros",
+				"cost": "Costo",
+				"totalCost": "Costo Total",
+				"costPerSquareMeter": "Costo por m²"
+			},
+			"errors": {
+				"title": "Errores de Entrada"
+			},
+			"seo": {
+				"title": "Calculadora de Ladrillos y Bloques Online - Cálculo de Materiales de Pared",
+				"overview": {
+					"title": "Calculadora Online de Ladrillos y Bloques",
+					"content": "La calculadora online de ladrillos y bloques para paredes ayudará a calcular la cantidad de ladrillos, bloques de gas o bloques de espuma para mampostería. El servicio tiene en cuenta el grosor de la pared, las dimensiones del material, el porcentaje de reserva, y también permite calcular el costo y volumen de mortero o pegamento."
+				},
+				"calculation": {
+					"title": "Cómo Calcular Ladrillos y Bloques",
+					"content": "El cálculo de ladrillos y bloques incluye determinar el área de la pared, las cantidades de material y el volumen de mortero.",
+					"steps": {
+						"area": "Determinación del área de la pared",
+						"thickness": "Cálculo del grosor de la pared en ladrillos/bloques",
+						"material": "Cálculo de las cantidades de unidades de material",
+						"reserve": "Adición de reserva de material",
+						"mortar": "Cálculo del volumen de mortero o pegamento"
+					}
+				},
+				"materials": {
+					"title": "Tipos de Materiales",
+					"content": "La calculadora soporta varios tipos de ladrillos y bloques:",
+					"bricks": {
+						"title": "Ladrillos",
+						"content": "Ladrillos simples, dobles y triples de varios tamaños"
+					},
+					"blocks": {
+						"title": "Bloques",
+						"content": "Bloques de gas y bloques de espuma para construcción rápida"
+					}
+				},
+				"thickness": {
+					"title": "Grosor de la Pared",
+					"content": "La calculadora soporta varios grosores de pared:",
+					"half": "Medio ladrillo (0.5)",
+					"single": "Un ladrillo (1)",
+					"double": "Ladrillo y medio (1.5)",
+					"triple": "Dos ladrillos (2)"
+				},
+				"tips": {
+					"title": "Consejos de Cálculo",
+					"content": "Para un cálculo preciso de ladrillos y bloques considere:",
+					"dimensions": "Dimensiones precisas de pared y material",
+					"thickness": "Grosor correcto de la pared",
+					"joints": "Grosor de las juntas de mortero",
+					"reserve": "Reserva de material para corte",
+					"price": "Costos de material para planificación presupuestaria"
+				},
+				"benefits": {
+					"title": "Beneficios de la Calculadora",
+					"content": "Nuestra calculadora le ayudará a:",
+					"accuracy": "Cálculo preciso de cantidades de material",
+					"cost": "Estimación de costos de construcción",
+					"planning": "Planificación de adquisición de materiales",
+					"waste": "Minimización de desperdicios",
+					"time": "Ahorro de tiempo en cálculos"
+				},
+				"seo": "calculadora de ladrillos, cálculo de ladrillos, calculadora de bloques, bloques de gas, bloques de espuma, mampostería, pared, grosor de pared, mortero, pegamento, reserva de material, costo de construcción, ladrillo simple, ladrillo doble, ladrillo triple, dimensiones de ladrillo, dimensiones de bloque"
 			}
 		}
 	}

@@ -107,7 +107,7 @@ export default function MaterialsCalculator() {
 	};
 
 	// Get material options
-	const materialOptions = getMaterialOptions();
+	const materialOptions = getMaterialOptions(t);
 	const currentMaterial = MATERIALS[materialType];
 
 	return (
