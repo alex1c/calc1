@@ -33,7 +33,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages['tile-laminate'].seo[key];
+	const t = (key: string) => messages.calculators['tile-laminate'].seo[key];
 
 	return {
 		title: t('title'),

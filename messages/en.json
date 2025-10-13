@@ -1642,234 +1642,234 @@
       }
     },
     "wallpaper": {
-      "title": "Калькулятор количества обоев",
-      "description": "Расчёт количества рулонов обоев для оклейки комнаты",
+      "title": "Wallpaper Calculator",
+      "description": "Calculate wallpaper roll quantity for room",
       "breadcrumbs": {
-        "construction": "Строительство"
+        "construction": "Construction"
       },
       "form": {
-        "title": "Параметры расчёта",
-        "roomDimensions": "Размеры комнаты",
-        "roomLength": "Длина комнаты (м)",
-        "roomWidth": "Ширина комнаты (м)",
-        "wallHeight": "Высота стен (м)",
-        "rollDimensions": "Размеры рулона",
-        "doors": "Двери",
-        "windows": "Окна",
-        "addDoor": "Добавить дверь",
-        "addWindow": "Добавить окно",
-        "width": "Ширина (м)",
-        "height": "Высота (м)",
-        "reservePercentage": "Запас обоев",
-        "calculate": "Рассчитать количество",
+        "title": "Calculation Parameters",
+        "roomDimensions": "Room Dimensions",
+        "roomLength": "Room Length (m)",
+        "roomWidth": "Room Width (m)",
+        "wallHeight": "Wall Height (m)",
+        "rollDimensions": "Roll Dimensions",
+        "doors": "Doors",
+        "windows": "Windows",
+        "addDoor": "Add Door",
+        "addWindow": "Add Window",
+        "width": "Width (m)",
+        "height": "Height (m)",
+        "reservePercentage": "Wallpaper Reserve",
+        "calculate": "Calculate Quantity",
         "errors": {
-          "title": "Ошибки в данных"
+          "title": "Data Errors"
         }
       },
       "results": {
-        "title": "Результаты расчёта",
-        "rollsNeeded": "Необходимо рулонов",
-        "rolls": "рулонов",
-        "rollsDescription": "Количество рулонов для оклейки",
-        "detailedResults": "Детальные результаты",
-        "parameter": "Параметр",
-        "value": "Значение",
-        "totalWallArea": "Общая площадь стен",
-        "openingsArea": "Площадь проёмов",
-        "usefulWallArea": "Полезная площадь стен",
-        "rollArea": "Площадь одного рулона",
-        "reserve": "Запас",
-        "recommendation": "Рекомендация",
-        "recommendationText": "Рекомендуем взять {recommended} рулонов для подгонки рисунка и ремонта в будущем",
-        "placeholder": "Введите параметры для расчёта"
+        "title": "Calculation Results",
+        "rollsNeeded": "Rolls Needed",
+        "rolls": "rolls",
+        "rollsDescription": "Number of rolls for wallpapering",
+        "detailedResults": "Detailed Results",
+        "parameter": "Parameter",
+        "value": "Value",
+        "totalWallArea": "Total Wall Area",
+        "openingsArea": "Openings Area",
+        "usefulWallArea": "Useful Wall Area",
+        "rollArea": "One Roll Area",
+        "reserve": "Reserve",
+        "recommendation": "Recommendation",
+        "recommendationText": "We recommend taking {recommended} rolls for pattern matching and future repairs",
+        "placeholder": "Enter parameters for calculation"
       },
       "options": {
         "rollSizes": {
           "standard": {
-            "label": "0.53 × 10.05 м",
-            "description": "Стандартный размер (европейский)"
+            "label": "0.53 × 10.05 m",
+            "description": "Standard size (European)"
           },
           "wide": {
-            "label": "0.7 × 10.05 м",
-            "description": "Широкий рулон"
+            "label": "0.7 × 10.05 m",
+            "description": "Wide roll"
           },
           "veryWide": {
-            "label": "1.06 × 10.05 м",
-            "description": "Очень широкий рулон"
+            "label": "1.06 × 10.05 m",
+            "description": "Very wide roll"
           },
           "long": {
-            "label": "0.53 × 15.0 м",
-            "description": "Длинный рулон"
+            "label": "0.53 × 15.0 m",
+            "description": "Long roll"
           },
           "wideLong": {
-            "label": "0.7 × 15.0 м",
-            "description": "Широкий длинный рулон"
+            "label": "0.7 × 15.0 m",
+            "description": "Wide long roll"
           }
         },
         "reservePercentages": {
-          "minimal": "Минимальный запас",
-          "standard": "Стандартный запас",
-          "increased": "Увеличенный запас",
-          "large": "Большой запас"
+          "minimal": "Minimal reserve",
+          "standard": "Standard reserve",
+          "increased": "Increased reserve",
+          "large": "Large reserve"
         }
       },
       "seo": {
-        "title": "Калькулятор обоев онлайн",
+        "title": "Wallpaper Calculator Online",
         "overview": {
-          "title": "О калькуляторе обоев",
-          "content": "Калькулятор обоев онлайн поможет быстро рассчитать, сколько рулонов обоев потребуется для оклейки комнаты. В расчётах учитываются стены, окна, двери и запас. Результат представлен в удобной таблице для планирования ремонта."
+          "title": "About Wallpaper Calculator",
+          "content": "Online wallpaper calculator will help quickly calculate how many wallpaper rolls are needed for room wallpapering. Calculations take into account walls, windows, doors and reserve. The result is presented in a convenient table for renovation planning."
         },
         "calculation": {
-          "title": "Как рассчитывается количество обоев",
-          "content": "Расчёт количества обоев включает несколько этапов для получения точного результата.",
+          "title": "How Wallpaper Quantity is Calculated",
+          "content": "Wallpaper quantity calculation includes several steps to get accurate results.",
           "steps": {
-            "area": "Расчёт общей площади стен комнаты",
-            "openings": "Вычитание площади дверей и окон",
-            "useful": "Определение полезной площади для оклейки",
-            "rolls": "Расчёт количества рулонов",
-            "reserve": "Добавление запаса на подгонку рисунка"
+            "area": "Calculation of total room wall area",
+            "openings": "Subtraction of doors and windows area",
+            "useful": "Determining useful area for wallpapering",
+            "rolls": "Calculation of roll quantity",
+            "reserve": "Adding reserve for pattern matching"
           }
         },
         "tips": {
-          "title": "Советы по расчёту обоев",
-          "content": "Для получения точного результата следуйте нашим рекомендациям.",
-          "measurement": "Тщательно измерьте все размеры комнаты",
-          "pattern": "Учитывайте раппорт рисунка при расчёте",
-          "reserve": "Всегда добавляйте запас 10-15%",
-          "quality": "Покупайте обои с небольшим запасом"
+          "title": "Wallpaper Calculation Tips",
+          "content": "For accurate results follow our recommendations.",
+          "measurement": "Carefully measure all room dimensions",
+          "pattern": "Consider pattern repeat when calculating",
+          "reserve": "Always add 10-15% reserve",
+          "quality": "Buy wallpaper with small reserve"
         },
         "advantages": {
-          "title": "Преимущества калькулятора",
-          "content": "Наш калькулятор обоев поможет вам сэкономить время и деньги при планировании ремонта.",
-          "accuracy": "Точный расчёт количества обоев",
-          "savings": "Экономия на покупке лишних рулонов",
-          "planning": "Правильное планирование ремонта",
-          "convenience": "Удобный и быстрый расчёт"
+          "title": "Calculator Benefits",
+          "content": "Our wallpaper calculator will help you save time and money when planning renovation.",
+          "accuracy": "Accurate wallpaper quantity calculation",
+          "savings": "Savings on buying extra rolls",
+          "planning": "Proper renovation planning",
+          "convenience": "Convenient and fast calculation"
         },
-        "seo": "калькулятор обоев, расчёт обоев, количество рулонов, оклейка комнаты, ремонт, обои, площадь стен, запас обоев"
+        "seo": "wallpaper calculator, wallpaper calculation, roll quantity, room wallpapering, renovation, wallpaper, wall area, wallpaper reserve"
       }
     },
     "materials": {
-      "title": "Калькулятор строительных материалов",
-      "description": "Универсальный расчёт краски, шпатлёвки, грунтовки и плиточного клея",
+      "title": "Building Materials Calculator",
+      "description": "Universal calculation of paint, putty, primer and tile adhesive",
       "breadcrumbs": {
-        "construction": "Строительство"
+        "construction": "Construction"
       },
       "form": {
-        "materialType": "Тип материала",
-        "roomLength": "Длина комнаты",
-        "roomWidth": "Ширина комнаты",
-        "wallHeight": "Высота стен",
-        "floorArea": "Площадь пола",
-        "doorsWindowsArea": "Площадь дверей и окон",
-        "layers": "Количество слоёв",
-        "consumptionRate": "Норма расхода",
-        "reservePercentage": "Запас",
-        "packageSize": "Размер упаковки",
-        "tileSize": "Размер плитки",
-        "groutWidth": "Ширина шва",
-        "calculate": "Рассчитать",
-        "reset": "Сбросить"
+        "materialType": "Material Type",
+        "roomLength": "Room Length",
+        "roomWidth": "Room Width",
+        "wallHeight": "Wall Height",
+        "floorArea": "Floor Area",
+        "doorsWindowsArea": "Doors and Windows Area",
+        "layers": "Number of Layers",
+        "consumptionRate": "Consumption Rate",
+        "reservePercentage": "Reserve",
+        "packageSize": "Package Size",
+        "tileSize": "Tile Size",
+        "groutWidth": "Grout Width",
+        "calculate": "Calculate",
+        "reset": "Reset"
       },
       "results": {
-        "title": "Результаты расчёта",
-        "parameter": "Параметр",
-        "value": "Значение",
-        "totalWallArea": "Общая площадь стен",
-        "floorArea": "Площадь пола",
-        "doorsWindowsArea": "Площадь дверей и окон",
-        "usefulArea": "Полезная площадь",
-        "layers": "Количество слоёв",
-        "consumptionPerLayer": "Расход на 1 слой",
-        "totalMaterial": "Итого материала",
-        "packageSize": "Упаковка",
-        "packagesNeeded": "Нужно упаковок",
-        "pieces": "шт.",
+        "title": "Calculation Results",
+        "parameter": "Parameter",
+        "value": "Value",
+        "totalWallArea": "Total Wall Area",
+        "floorArea": "Floor Area",
+        "doorsWindowsArea": "Doors and Windows Area",
+        "usefulArea": "Useful Area",
+        "layers": "Number of Layers",
+        "consumptionPerLayer": "Consumption per Layer",
+        "totalMaterial": "Total Material",
+        "packageSize": "Package",
+        "packagesNeeded": "Packages Needed",
+        "pieces": "pcs",
         "tips": {
-          "title": "Полезные советы",
-          "surface": "Учтите, что фактура поверхности влияет на расход",
-          "weather": "При работе в жаркую погоду расход может увеличиться",
-          "technique": "Техника нанесения влияет на расход материала",
-          "waste": "Всегда покупайте материал с запасом 10-15%"
+          "title": "Useful Tips",
+          "surface": "Consider that surface texture affects consumption",
+          "weather": "In hot weather consumption may increase",
+          "technique": "Application technique affects material consumption",
+          "waste": "Always buy material with 10-15% reserve"
         }
       },
       "errors": {
-        "title": "Ошибки ввода"
+        "title": "Input Errors"
       },
       "seo": {
-        "title": "Калькулятор строительных материалов - Краска, шпатлёвка, грунтовка | Калькулятор #1",
+        "title": "Building Materials Calculator - Paint, Putty, Primer | Calculator #1",
         "overview": {
-          "title": "Калькулятор строительных материалов",
-          "content": "Онлайн калькулятор строительных материалов поможет рассчитать количество краски, шпатлёвки, грунтовки, плиточного клея и других материалов для ремонта. Учитываются размеры помещения, расход, количество слоёв и запас."
+          "title": "Building Materials Calculator",
+          "content": "Online building materials calculator will help calculate the quantity of paint, putty, primer, tile adhesive and other materials for renovation. Takes into account room dimensions, consumption, number of layers and reserve."
         },
         "calculation": {
-          "title": "Как рассчитывается количество строительных материалов",
-          "content": "Расчёт строительных материалов включает несколько этапов для получения точного результата в зависимости от типа материала.",
+          "title": "How Building Materials Quantity is Calculated",
+          "content": "Building materials calculation includes several steps to get accurate results depending on material type.",
           "steps": {
-            "area": "Расчёт общей площади стен или пола помещения",
-            "openings": "Вычитание площади дверей и окон",
-            "useful": "Определение полезной площади для обработки",
-            "consumption": "Расчёт расхода материала на квадратный метр",
-            "layers": "Учёт количества слоёв нанесения",
-            "reserve": "Добавление запаса на подгонку и потери"
+            "area": "Calculation of total wall or floor area",
+            "openings": "Subtraction of doors and windows area",
+            "useful": "Determining useful area for treatment",
+            "consumption": "Material consumption calculation per square meter",
+            "layers": "Number of application layers consideration",
+            "reserve": "Reserve addition for fitting and losses"
           }
         },
         "materials": {
-          "title": "Типы строительных материалов",
-          "content": "Калькулятор поддерживает расчёт различных типов строительных материалов с учётом их специфики.",
+          "title": "Types of Building Materials",
+          "content": "Calculator supports calculation of various types of building materials considering their specifics.",
           "paint": {
-            "title": "Расчёт краски",
-            "content": "Расчёт количества краски для стен с учётом типа поверхности, количества слоёв и нормы расхода. Подходит для водоэмульсионной, масляной, акриловой краски."
+            "title": "Paint Calculation",
+            "content": "Wall paint quantity calculation considering surface type, number of layers and consumption rate. Suitable for water-based, oil-based, acrylic paint."
           },
           "putty": {
-            "title": "Расчёт шпатлёвки",
-            "content": "Расчёт количества шпатлёвки для выравнивания стен перед покраской или поклейкой обоев. Учитывает стартовую и финишную шпатлёвку."
+            "title": "Putty Calculation",
+            "content": "Putty quantity calculation for wall leveling before painting or wallpapering. Considers base and finish putty."
           },
           "primer": {
-            "title": "Расчёт грунтовки",
-            "content": "Расчёт количества грунтовки для подготовки поверхности. Включает акриловую, алкидную, глубокопроникающую грунтовку."
+            "title": "Primer Calculation",
+            "content": "Primer quantity calculation for surface preparation. Includes acrylic, alkyd, deep-penetrating primer."
           },
           "tileGlue": {
-            "title": "Расчёт плиточного клея",
-            "content": "Расчёт количества плиточного клея для укладки керамической плитки, керамогранита, мозаики на пол и стены."
+            "title": "Tile Adhesive Calculation",
+            "content": "Tile adhesive quantity calculation for laying ceramic tiles, porcelain tiles, mosaics on floor and walls."
           }
         },
         "tips": {
-          "title": "Советы по расчёту строительных материалов",
-          "content": "Для получения точного результата следуйте нашим рекомендациям при расчёте материалов.",
-          "measurement": "Тщательно измерьте все размеры помещения",
-          "surface": "Учитывайте тип и состояние поверхности",
-          "consumption": "Проверьте норму расхода на упаковке материала",
-          "layers": "Определите необходимое количество слоёв",
-          "reserve": "Добавьте 10-15% запаса на потери и подгонку",
-          "weather": "Учитывайте погодные условия при работе",
-          "technique": "Выберите правильную технику нанесения"
+          "title": "Building Materials Calculation Tips",
+          "content": "For accurate results follow our recommendations when calculating materials.",
+          "measurement": "Carefully measure all room dimensions",
+          "surface": "Consider surface type and condition",
+          "consumption": "Check consumption rate on material package",
+          "layers": "Determine required number of layers",
+          "reserve": "Add 10-15% reserve for losses and fitting",
+          "weather": "Consider weather conditions when working",
+          "technique": "Choose correct application technique"
         },
         "benefits": {
-          "title": "Преимущества использования калькулятора",
-          "content": "Использование калькулятора строительных материалов даёт множество преимуществ при планировании ремонта.",
-          "accuracy": "Точный расчёт количества материалов",
-          "savings": "Экономия на покупке лишних материалов",
-          "planning": "Правильное планирование бюджета ремонта",
-          "convenience": "Удобный и быстрый расчёт",
-          "universal": "Поддержка различных типов материалов",
-          "professional": "Профессиональный подход к расчётам"
+          "title": "Calculator Benefits",
+          "content": "Using building materials calculator provides many benefits when planning renovation.",
+          "accuracy": "Accurate material quantity calculation",
+          "savings": "Savings on buying extra materials",
+          "planning": "Proper renovation budget planning",
+          "convenience": "Convenient and fast calculation",
+          "universal": "Support for various material types",
+          "professional": "Professional approach to calculations"
         },
         "options": {
           "materials": {
-            "paint": "Краска",
-            "putty": "Шпатлёвка",
-            "primer": "Грунтовка",
-            "tileGlue": "Плиточный клей"
+            "paint": "Paint",
+            "putty": "Putty",
+            "primer": "Primer",
+            "tileGlue": "Tile Adhesive"
           },
           "materialDescriptions": {
-            "paint": "Расчёт количества краски для стен",
-            "putty": "Расчёт количества шпатлёвки для стен",
-            "primer": "Расчёт количества грунтовки для стен",
-            "tileGlue": "Расчёт количества плиточного клея для пола"
+            "paint": "Wall paint quantity calculation",
+            "putty": "Wall putty quantity calculation",
+            "primer": "Wall primer quantity calculation",
+            "tileGlue": "Floor tile adhesive quantity calculation"
           }
         },
-        "seo": "калькулятор строительных материалов, расчёт краски, шпатлёвка расчёт, грунтовка калькулятор, плиточный клей, расход краски, строительные материалы, ремонт калькулятор, краска для стен, шпатлёвка стен, грунтовка стен, плиточный клей расчёт, расход материалов, строительство онлайн, водоэмульсионная краска, акриловая краска, масляная краска, стартовая шпатлёвка, финишная шпатлёвка, акриловая грунтовка, алкидная грунтовка, керамическая плитка, керамогранит, мозаика, расход краски на м2, расход шпатлёвки на м2, расход грунтовки на м2, расход плиточного клея на м2, калькулятор ремонта, планирование ремонта, бюджет ремонта, строительные работы, отделочные материалы"
+        "seo": "building materials calculator, paint calculation, putty calculation, primer calculator, tile adhesive, paint consumption, building materials, renovation calculator, wall paint, wall putty, wall primer, tile adhesive calculation, material consumption, online construction, water-based paint, acrylic paint, oil-based paint, base putty, finish putty, acrylic primer, alkyd primer, ceramic tiles, porcelain tiles, mosaic, paint consumption per m2, putty consumption per m2, primer consumption per m2, tile adhesive consumption per m2, renovation calculator, renovation planning, renovation budget, construction work, finishing materials"
       }
     },
     "tile-laminate": {
@@ -2093,142 +2093,198 @@
       }
     },
     "wall": {
-      "title": "Калькулятор кирпича и блоков",
-      "description": "Расчёт количества кирпичей, газоблоков и пеноблоков для стены",
+      "title": "Brick and Block Calculator",
+      "description": "Calculate quantity of bricks, gas blocks and foam blocks for wall",
       "breadcrumbs": {
-        "construction": "Строительство"
+        "construction": "Construction"
       },
       "form": {
-        "title": "Параметры стены",
-        "units": "Единицы измерения",
-        "wallDimensions": "Размеры стены",
-        "wallLength": "Длина стены",
-        "wallHeight": "Высота стены",
-        "wallThickness": "Толщина стены",
-        "materialType": "Тип материала",
-        "selectMaterial": "Выберите материал",
-        "materialDimensions": "Размеры материала",
-        "materialLength": "Длина",
-        "materialWidth": "Ширина",
-        "materialHeight": "Высота",
-        "jointThickness": "Толщина шва",
-        "reservePercentage": "Запас материала",
-        "pricePerUnit": "Цена за штуку",
-        "optional": "необязательно",
-        "calculate": "Рассчитать",
-        "reset": "Сбросить"
+        "title": "Wall Parameters",
+        "units": "Units of Measurement",
+        "wallDimensions": "Wall Dimensions",
+        "wallLength": "Wall Length",
+        "wallHeight": "Wall Height",
+        "wallThickness": "Wall Thickness",
+        "materialType": "Material Type",
+        "selectMaterial": "Select Material",
+        "materialDimensions": "Material Dimensions",
+        "materialLength": "Length",
+        "materialWidth": "Width",
+        "materialHeight": "Height",
+        "jointThickness": "Joint Thickness",
+        "reservePercentage": "Material Reserve",
+        "pricePerUnit": "Price per Unit",
+        "optional": "optional",
+        "calculate": "Calculate",
+        "reset": "Reset"
       },
       "results": {
-        "title": "Результаты расчёта",
-        "summary": "Сводка",
-        "wallDimensions": "Размеры стены",
-        "wallThickness": "Толщина стены",
-        "bricks": "кирпичей",
-        "material": "Материал",
-        "materialDimensions": "Размеры материала",
-        "areasAndVolumes": "Площади и объёмы",
-        "wallArea": "Площадь стены",
-        "wallVolume": "Объём стены",
-        "materialVolume": "Объём материала",
-        "materialQuantities": "Количество материала",
-        "materialCount": "Количество без запаса",
-        "materialCountWithReserve": "Количество с запасом",
-        "reserveCount": "Запас",
-        "pieces": "шт",
-        "mortarGlue": "Раствор/клей",
-        "mortarVolume": "Объём раствора",
-        "mortarVolumeLiters": "Объём раствора в литрах",
-        "cost": "Стоимость",
-        "totalCost": "Общая стоимость",
-        "costPerSquareMeter": "Стоимость за м²"
+        "title": "Calculation Results",
+        "summary": "Summary",
+        "wallDimensions": "Wall Dimensions",
+        "wallThickness": "Wall Thickness",
+        "bricks": "bricks",
+        "material": "Material",
+        "materialDimensions": "Material Dimensions",
+        "areasAndVolumes": "Areas and Volumes",
+        "wallArea": "Wall Area",
+        "wallVolume": "Wall Volume",
+        "materialVolume": "Material Volume",
+        "materialQuantities": "Material Quantities",
+        "materialCount": "Count without Reserve",
+        "materialCountWithReserve": "Count with Reserve",
+        "reserveCount": "Reserve",
+        "pieces": "pcs",
+        "mortarGlue": "Mortar/Glue",
+        "mortarVolume": "Mortar Volume",
+        "mortarVolumeLiters": "Mortar Volume in Liters",
+        "cost": "Cost",
+        "totalCost": "Total Cost",
+        "costPerSquareMeter": "Cost per m²"
       },
       "options": {
         "materials": {
-          "single-brick": "Кирпич одинарный",
-          "double-brick": "Кирпич полуторный",
-          "triple-brick": "Кирпич двойной",
-          "gas-block": "Газоблок",
-          "foam-block": "Пеноблок"
+          "single-brick": "Single Brick",
+          "double-brick": "Double Brick",
+          "triple-brick": "Triple Brick",
+          "gas-block": "Gas Block",
+          "foam-block": "Foam Block"
         },
         "materialDescriptions": {
-          "single-brick": "Стандартный одинарный кирпич",
-          "double-brick": "Полуторный кирпич увеличенной высоты",
-          "triple-brick": "Двойной кирпич увеличенной высоты",
-          "gas-block": "Газобетонный блок",
-          "foam-block": "Пенобетонный блок"
+          "single-brick": "Standard single brick",
+          "double-brick": "Double brick with increased height",
+          "triple-brick": "Triple brick with increased height",
+          "gas-block": "Aerated concrete block",
+          "foam-block": "Foam concrete block"
         },
         "thickness": {
-          "half": "0.5 кирпича",
-          "single": "1 кирпич",
-          "onehalf": "1.5 кирпича",
-          "double": "2 кирпича"
+          "half": "0.5 brick",
+          "single": "1 brick",
+          "onehalf": "1.5 bricks",
+          "double": "2 bricks"
         },
         "thicknessDescriptions": {
-          "half": "В полкирпича",
-          "single": "В кирпич",
-          "onehalf": "В полтора кирпича",
-          "double": "В два кирпича"
+          "half": "Half brick thick",
+          "single": "One brick thick",
+          "onehalf": "One and a half bricks thick",
+          "double": "Two bricks thick"
         }
       },
       "errors": {
-        "title": "Ошибки ввода"
+        "title": "Input Errors"
       },
       "seo": {
-        "title": "Калькулятор кирпича и блоков онлайн - расчёт материалов для стены",
+        "title": "Brick and Block Calculator Online - Wall Material Calculation",
         "overview": {
-          "title": "Онлайн калькулятор кирпича и блоков",
-          "content": "Онлайн калькулятор кирпича и блоков для стены поможет рассчитать количество кирпичей, газоблоков или пеноблоков для кладки. Сервис учитывает толщину стены, размеры материалов, процент запаса, а также позволяет рассчитать стоимость и объём раствора или клея."
+          "title": "Online Brick and Block Calculator",
+          "content": "Online brick and block calculator for walls will help calculate the quantity of bricks, gas blocks or foam blocks for masonry. The service takes into account wall thickness, material dimensions, reserve percentage, and also allows calculating the cost and volume of mortar or glue."
         },
         "calculation": {
-          "title": "Как рассчитать кирпич и блоки",
-          "content": "Расчёт кирпича и блоков включает определение площади стены, количества материалов и объёма раствора.",
+          "title": "How to Calculate Bricks and Blocks",
+          "content": "Brick and block calculation includes determining wall area, material quantities and mortar volume.",
           "steps": {
-            "area": "Определение площади стены",
-            "thickness": "Расчёт толщины стены в кирпичах/блоках",
-            "material": "Расчёт количества единиц материала",
-            "reserve": "Добавление запаса материала",
-            "mortar": "Расчёт объёма раствора или клея"
+            "area": "Determining wall area",
+            "thickness": "Calculating wall thickness in bricks/blocks",
+            "material": "Calculating material unit quantity",
+            "reserve": "Adding material reserve",
+            "mortar": "Calculating mortar or glue volume"
           }
         },
         "materials": {
-          "title": "Типы материалов",
-          "content": "Калькулятор поддерживает различные типы кирпичей и блоков:",
+          "title": "Material Types",
+          "content": "Calculator supports various types of bricks and blocks:",
           "bricks": {
-            "title": "Кирпичи",
-            "content": "Одинарный, полуторный и двойной кирпич различных размеров"
+            "title": "Bricks",
+            "content": "Single, double and triple bricks of various sizes"
           },
           "blocks": {
-            "title": "Блоки",
-            "content": "Газоблоки и пеноблоки для быстрого строительства"
+            "title": "Blocks",
+            "content": "Gas blocks and foam blocks for fast construction"
           }
         },
         "thickness": {
-          "title": "Толщина стены",
-          "content": "Калькулятор поддерживает различные толщины стен:",
-          "half": "В полкирпича (0.5)",
-          "single": "В кирпич (1)",
-          "double": "В полтора кирпича (1.5)",
-          "triple": "В два кирпича (2)"
+          "title": "Wall Thickness",
+          "content": "Calculator supports various wall thicknesses:",
+          "half": "Half brick thick (0.5)",
+          "single": "One brick thick (1)",
+          "double": "One and a half bricks thick (1.5)",
+          "triple": "Two bricks thick (2)"
         },
         "tips": {
-          "title": "Советы по расчёту",
-          "content": "Для точного расчёта кирпича и блоков учитывайте:",
-          "dimensions": "Точные размеры стены и материала",
-          "thickness": "Правильную толщину стены",
-          "joints": "Толщину швов раствора",
-          "reserve": "Запас материала на подрезку",
-          "price": "Стоимость материалов для бюджета"
+          "title": "Calculation Tips",
+          "content": "For accurate brick and block calculation consider:",
+          "dimensions": "Exact wall and material dimensions",
+          "thickness": "Correct wall thickness",
+          "joints": "Mortar joint thickness",
+          "reserve": "Material reserve for cutting",
+          "price": "Material costs for budget"
         },
         "benefits": {
-          "title": "Преимущества калькулятора",
-          "content": "Наш калькулятор поможет вам:",
-          "accuracy": "Точный расчёт количества материалов",
-          "cost": "Оценка стоимости строительства",
-          "planning": "Планирование закупки материалов",
-          "waste": "Минимизация отходов",
-          "time": "Экономия времени на расчёты"
+          "title": "Calculator Benefits",
+          "content": "Our calculator will help you:",
+          "accuracy": "Accurate material quantity calculation",
+          "cost": "Construction cost estimation",
+          "planning": "Material purchase planning",
+          "waste": "Waste minimization",
+          "time": "Time saving on calculations"
         },
-        "seo": "калькулятор кирпича, расчёт кирпича, калькулятор блоков, газоблоки, пеноблоки, кладка, стена, толщина стены, раствор, клей, запас материала, стоимость строительства, одинарный кирпич, полуторный кирпич, двойной кирпич, размеры кирпича, размеры блоков"
+        "seo": {
+          "title": "Brick and Block Calculator Online - Wall Material Calculation",
+          "overview": {
+            "title": "Online Brick and Block Calculator",
+            "content": "Online brick and block calculator for walls will help calculate the quantity of bricks, gas blocks or foam blocks for masonry. The service takes into account wall thickness, material dimensions, reserve percentage, and also allows calculating the cost and volume of mortar or glue."
+          },
+          "calculation": {
+            "title": "How to Calculate Bricks and Blocks",
+            "content": "Brick and block calculation includes determining wall area, material quantities and mortar volume.",
+            "steps": {
+              "area": "Determining wall area",
+              "thickness": "Calculating wall thickness in bricks/blocks",
+              "material": "Calculating material unit quantity",
+              "reserve": "Adding material reserve",
+              "mortar": "Calculating mortar or glue volume"
+            }
+          },
+          "materials": {
+            "title": "Material Types",
+            "content": "Calculator supports various types of bricks and blocks:",
+            "bricks": {
+              "title": "Bricks",
+              "content": "Single, double and triple bricks of various sizes"
+            },
+            "blocks": {
+              "title": "Blocks",
+              "content": "Gas blocks and foam blocks for fast construction"
+            }
+          },
+          "thickness": {
+            "title": "Wall Thickness",
+            "content": "Calculator supports various wall thicknesses:",
+            "half": "Half brick thick (0.5)",
+            "single": "One brick thick (1)",
+            "double": "One and a half bricks thick (1.5)",
+            "triple": "Two bricks thick (2)"
+          },
+          "tips": {
+            "title": "Calculation Tips",
+            "content": "For accurate brick and block calculation consider:",
+            "dimensions": "Exact wall and material dimensions",
+            "thickness": "Correct wall thickness",
+            "joints": "Mortar joint thickness",
+            "reserve": "Material reserve for cutting",
+            "price": "Material costs for budget"
+          },
+          "benefits": {
+            "title": "Calculator Benefits",
+            "content": "Our calculator will help you:",
+            "accuracy": "Accurate material quantity calculation",
+            "cost": "Construction cost estimation",
+            "planning": "Material purchase planning",
+            "waste": "Waste minimization",
+            "time": "Time saving on calculations"
+          },
+          "seo": "brick calculator, brick calculation, block calculator, gas blocks, foam blocks, masonry, wall, wall thickness, mortar, glue, material reserve, construction cost, single brick, double brick, triple brick, brick dimensions, block dimensions"
+        }
       }
     }
   },
