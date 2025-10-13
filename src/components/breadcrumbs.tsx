@@ -27,7 +27,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 							className='text-gray-500 hover:text-gray-700 transition-colors flex items-center'
 						>
 							<Home className='h-4 w-4 mr-1' />
-							Home
+							{t('breadcrumbs.home')}
 						</Link>
 					</li>
 

@@ -3,42 +3,44 @@ import Header from '@/components/header';
 import Link from 'next/link';
 import { Calculator, Percent, Square, Pi } from 'lucide-react';
 
-const calculators = [
-	{
-		id: 'basic-math',
-		title: 'Basic Math Calculator',
-		description:
-			'Perform basic arithmetic operations with advanced functions',
-		icon: Calculator,
-		href: '/calc/basic-math',
-	},
-	{
-		id: 'percentage',
-		title: 'Percentage Calculator',
-		description: 'Calculate percentages, discounts, and percentage changes',
-		icon: Percent,
-		href: '/calc/percentage',
-	},
-	{
-		id: 'geometry',
-		title: 'Geometry Calculator',
-		description: 'Calculate area, perimeter, volume of various shapes',
-		icon: Square,
-		href: '/calc/geometry',
-	},
-	{
-		id: 'trigonometry',
-		title: 'Trigonometry Calculator',
-		description:
-			'Calculate sine, cosine, tangent and other trigonometric functions',
-		icon: Pi,
-		href: '/calc/trigonometry',
-	},
-];
+// Note: Calculators array is now defined inside the component to access translations
 
 export default function MathPage() {
 	const t = useTranslations();
 	const locale = useLocale();
+
+	const calculators = [
+		{
+			id: 'basic',
+			title: t('math_basic.title'),
+			description: t('math_basic.description'),
+			icon: Calculator,
+			href: '/math/basic',
+		},
+		{
+			id: 'percentage',
+			title: 'Percentage Calculator',
+			description:
+				'Calculate percentages, discounts, and percentage changes',
+			icon: Percent,
+			href: '/calc/percentage',
+		},
+		{
+			id: 'geometry',
+			title: 'Geometry Calculator',
+			description: 'Calculate area, perimeter, volume of various shapes',
+			icon: Square,
+			href: '/calc/geometry',
+		},
+		{
+			id: 'trigonometry',
+			title: 'Trigonometry Calculator',
+			description:
+				'Calculate sine, cosine, tangent and other trigonometric functions',
+			icon: Pi,
+			href: '/calc/trigonometry',
+		},
+	];
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -60,7 +62,7 @@ export default function MathPage() {
 					{calculators.map((calculator) => (
 						<Link
 							key={calculator.id}
-							href={`/${locale}/calc/${calculator.id}`}
+							href={`/${locale}${calculator.href}`}
 							className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 						>
 							<div className='flex items-center mb-4'>

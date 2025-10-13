@@ -41,6 +41,37 @@
 		"converter": "Konverter",
 		"fun": "Spaß"
 	},
+	"math_basic": {
+		"title": "Grundrechner",
+		"description": "Online-Rechner für Addition, Subtraktion, Multiplikation und Division.",
+		"number1": "Erste Zahl",
+		"number2": "Zweite Zahl",
+		"operation": "Operation",
+		"calculate": "Berechnen",
+		"result": "Ergebnis",
+		"error_div_zero": "Division durch Null ist nicht erlaubt",
+		"seo_title": "Online-Grundrechner",
+		"seo_description": "Führen Sie grundlegende mathematische Operationen einfach in Ihrem Browser aus. Unterstützt Englisch, Deutsch, Spanisch und Russisch.",
+		"operations": {
+			"add": "Addition (+)",
+			"subtract": "Subtraktion (−)",
+			"multiply": "Multiplikation (×)",
+			"divide": "Division (÷)"
+		},
+		"seo_content": {
+			"title": "Über den Grundrechner",
+			"content": "Der Online-Grundrechner hilft Ihnen schnell grundlegende arithmetische Operationen durchzuführen: Addition, Subtraktion, Multiplikation und Division. Praktisch für Studenten, Buchhalter und alle, die direkt im Browser rechnen müssen. Verfügbar auf Englisch, Deutsch, Spanisch und Russisch."
+		},
+		"features": {
+			"title": "Rechner-Funktionen",
+			"keyboard_support": "Tastatureingabe-Unterstützung",
+			"enter_key": "Enter-Taste für schnelle Berechnung",
+			"auto_formatting": "Automatische Ergebnisformatierung",
+			"division_protection": "Schutz vor Division durch Null",
+			"multi_language": "Mehrsprachige Benutzeroberfläche",
+			"mobile_responsive": "Mobile-responsive Design"
+		}
+	},
 	"categories": {
 		"finance": {
 			"title": "Finanzrechner",

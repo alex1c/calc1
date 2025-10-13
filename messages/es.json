@@ -41,6 +41,37 @@
 		"converter": "Convertidor",
 		"fun": "Diversión"
 	},
+	"math_basic": {
+		"title": "Calculadora Básica",
+		"description": "Calculadora en línea para suma, resta, multiplicación y división.",
+		"number1": "Primer número",
+		"number2": "Segundo número",
+		"operation": "Operación",
+		"calculate": "Calcular",
+		"result": "Resultado",
+		"error_div_zero": "La división por cero no está permitida",
+		"seo_title": "Calculadora Básica en Línea",
+		"seo_description": "Realice operaciones matemáticas básicas fácilmente en su navegador. Compatible con inglés, alemán, español y ruso.",
+		"operations": {
+			"add": "Suma (+)",
+			"subtract": "Resta (−)",
+			"multiply": "Multiplicación (×)",
+			"divide": "División (÷)"
+		},
+		"seo_content": {
+			"title": "Sobre la Calculadora Básica",
+			"content": "La calculadora básica en línea le ayuda a realizar rápidamente operaciones aritméticas básicas: suma, resta, multiplicación y división. Conveniente para estudiantes, contadores y cualquiera que necesite calcular directamente en el navegador. Disponible en inglés, alemán, español y ruso."
+		},
+		"features": {
+			"title": "Características de la Calculadora",
+			"keyboard_support": "Soporte de entrada por teclado",
+			"enter_key": "Tecla Enter para cálculo rápido",
+			"auto_formatting": "Formateo automático de resultados",
+			"division_protection": "Protección contra división por cero",
+			"multi_language": "Interfaz multiidioma",
+			"mobile_responsive": "Diseño responsivo para móviles"
+		}
+	},
 	"categories": {
 		"finance": {
 			"title": "Calculadoras Financieras",
