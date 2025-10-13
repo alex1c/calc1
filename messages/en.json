@@ -1,991 +1,2502 @@
 {
-	"common": {
-		"search": "Search",
-		"language": "Language",
-		"categories": "Categories",
-		"calculators": "Calculators",
-		"calculate": "Calculate",
-		"result": "Result",
-		"clear": "Clear",
-		"favorites": "Favorites"
-	},
-	"brand": {
-		"name": "Calculator #1",
-		"slogan": "One site. All calculators."
-	},
-	"breadcrumbs": {
-		"home": "Home",
-		"categories": {
-			"finance": "Finance",
-			"math": "Math",
-			"life": "Life",
-			"auto": "Auto",
-			"construction": "Construction",
-			"time": "Time",
-			"health": "Health",
-			"science": "Science",
-			"converter": "Converters",
-			"fun": "Fun"
-		}
-	},
-	"navigation": {
-		"home": "Home",
-		"finance": "Finance",
-		"math": "Math",
-		"life": "Life",
-		"construction": "Construction",
-		"auto": "Auto",
-		"time": "Time",
-		"health": "Health",
-		"science": "Science",
-		"converter": "Converter",
-		"fun": "Fun"
-	},
-	"categories": {
-		"finance": {
-			"title": "Financial Calculators",
-			"description": "Loans, deposits, mortgages, taxes and investments"
-		},
-		"math": {
-			"title": "Mathematical Calculators",
-			"description": "Basic operations, fractions, percentages, geometry"
-		},
-		"life": {
-			"title": "Life Calculators",
-			"description": "Calories, BMI, pregnancy, health"
-		},
-		"construction": {
-			"title": "Construction Calculators",
-			"subtitle": "Wallpaper, paint, concrete, roofing",
-			"description": "Wallpaper, paint, concrete, roofing",
-			"calculators": {
-				"wallpaper": {
-					"title": "Wallpaper Calculator",
-					"description": "Calculate wallpaper quantity for room"
-				},
-				"materials": {
-					"title": "Building Materials Calculator",
-					"description": "Calculate paint, putty, primer and tile adhesive"
-				},
-				"tile-laminate": {
-					"title": "Tile and Laminate Calculator",
-					"description": "Calculate tile and laminate quantity for floor"
-				},
-				"concrete": {
-					"title": "Concrete Calculator",
-					"description": "Calculate cement, sand, gravel and water for concrete preparation"
-				},
-				"roof": {
-					"title": "Roof Calculator",
-					"description": "Calculate roofing materials and cost"
-				},
-				"wall": {
-					"title": "Brick and Block Calculator",
-					"description": "Calculate brick, gas block and foam block quantity for wall"
-				}
-			}
-		},
-		"auto": {
-			"title": "Auto Calculators",
-			"description": "Fuel consumption, taxes, leasing, insurance"
-		},
-		"time": {
-			"title": "Time and Date",
-			"description": "Date differences, age, timers"
-		},
-		"health": {
-			"title": "Health and Medical",
-			"description": "BMI, heart rate, blood pressure, vitamins"
-		},
-		"science": {
-			"title": "Education and Science",
-			"description": "Physics, chemistry, geometry, statistics"
-		},
-		"converter": {
-			"title": "Online Converters",
-			"description": "Length, weight, temperature, speed"
-		},
-		"fun": {
-			"title": "Entertainment and Hobbies",
-			"description": "Compatibility, generators, games"
-		}
-	},
-	"math_basic": {
-		"title": "Basic Math Calculator",
-		"description": "Perform basic arithmetic operations online: addition, subtraction, multiplication and division.",
-		"number1": "First number",
-		"number2": "Second number",
-		"operation": "Operation",
-		"calculate": "Calculate",
-		"result": "Result",
-		"error_div_zero": "Division by zero is not allowed",
-		"seo_title": "Online Basic Math Calculator",
-		"seo_description": "Perform basic math operations easily in your browser. Supports English, German, Spanish, and Russian.",
-		"operations": {
-			"add": "Addition (+)",
-			"subtract": "Subtraction (−)",
-			"multiply": "Multiplication (×)",
-			"divide": "Division (÷)"
-		},
-		"seo_content": {
-			"title": "About Basic Math Calculator",
-			"content": "Online basic math calculator helps you quickly perform basic arithmetic operations: addition, subtraction, multiplication and division. Convenient for students, accountants and anyone who needs to calculate directly in the browser. Available in English, German, Spanish and Russian languages."
-		},
-		"features": {
-			"title": "Calculator Features",
-			"keyboard_support": "Keyboard input support",
-			"enter_key": "Enter key for quick calculation",
-			"auto_formatting": "Automatic result formatting",
-			"division_protection": "Division by zero protection",
-			"multi_language": "Multi-language interface",
-			"mobile_responsive": "Mobile-responsive design"
-		}
-	},
-	"calculators": {
-		"paper-weight": {
-			"title": "Paper Weight Calculator",
-			"description": "Calculate paper weight by density and number of sheets",
-			"seo": "A4 sheets calculator, paper weight calculation by density, paper weight calculator"
-		},
-		"bmi": {
-			"title": "Body Mass Index",
-			"description": "Calculate BMI for weight assessment",
-			"seo": "BMI calculator, body mass index, normal weight"
-		},
-		"credit-loan": {
-			"title": "Credit Loan Calculator",
-			"description": "Calculate monthly loan payments, total interest, and create detailed payment schedules for any loan or credit",
-			"seo": "credit calculator, loan calculation, monthly payment, mortgage calculator, auto loan calculator",
-			"form": {
-				"title": "Loan Parameters",
-				"loanType": "Loan Type",
-				"loanTypes": {
-					"mortgage": "Mortgage",
-					"auto": "Auto Loan",
-					"personal": "Personal Loan"
-				},
-				"loanAmount": "Loan Amount ($)",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"downPayment": "Down Payment ($)",
-				"additionalPayment": "Additional Monthly Payment ($)",
-				"paymentType": "Payment Scheme",
-				"paymentTypes": {
-					"annuity": "Annuity Payments (Equal)",
-					"differentiated": "Differentiated Payments (Decreasing)"
-				},
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter loan parameters and click 'Calculate'",
-				"summary": "Summary",
-				"monthlyPayment": "Monthly Payment",
-				"totalPayments": "Total Payments",
-				"totalInterest": "Total Interest",
-				"effectiveTerm": "Effective Term",
-				"months": "months",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Payment Schedule",
-				"table": {
-					"month": "Month",
-					"payment": "Payment",
-					"interest": "Interest",
-					"principal": "Principal",
-					"balance": "Balance",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Everything About Loans: Types, Rates, and Payment Methods",
-				"types": {
-					"title": "Types of Loans",
-					"content": "In the modern banking system, there are many types of loans, each designed to solve specific financial needs:",
-					"mortgage": "Mortgage Loan",
-					"mortgageDesc": "long-term loan for real estate purchase secured by the property being purchased",
-					"auto": "Auto Loan",
-					"autoDesc": "loan for car purchase with the vehicle serving as collateral",
-					"personal": "Personal Loan",
-					"personalDesc": "unsecured loan for any personal needs without collateral requirements",
-					"business": "Business Loan",
-					"businessDesc": "loan for business development and working capital needs",
-					"refinancing": "Refinancing",
-					"refinancingDesc": "loan restructuring to improve terms on existing debt"
-				},
-				"rates": {
-					"title": "Types of Interest Rates",
-					"content": "Interest rate is a key loan parameter that determines the cost of borrowed funds:",
-					"fixed": "Fixed Rate",
-					"fixedDesc": "remains unchanged throughout the loan term, ensuring payment predictability",
-					"variable": "Variable Rate",
-					"variableDesc": "changes based on central bank rates and market conditions",
-					"mixed": "Mixed Rate",
-					"mixedDesc": "fixed for initial period, then converts to variable"
-				},
-				"payment": {
-					"title": "Loan Repayment Schemes",
-					"content": "The choice of repayment scheme affects monthly payment amounts and total interest paid:",
-					"annuity": {
-						"title": "Annuity Payments",
-						"desc": "equal monthly payments throughout the loan term",
-						"advantages": "Advantages: budget stability, easy expense planning"
-					},
-					"differentiated": {
-						"title": "Differentiated Payments",
-						"desc": "decreasing payments with fixed principal portion",
-						"advantages": "Advantages: lower total interest, faster principal repayment"
-					}
-				},
-				"factors": {
-					"title": "Factors Affecting Loan Terms",
-					"content": "Banks consider multiple factors when determining interest rates and loan conditions:",
-					"creditHistory": "Credit history and borrower rating",
-					"income": "Income level and employment stability",
-					"downPayment": "Down payment amount",
-					"term": "Loan term",
-					"collateral": "Collateral availability"
-				},
-				"tips": {
-					"title": "Useful Loan Tips",
-					"content": "To get the most favorable loan terms, it's recommended to:",
-					"compare": "Compare offers from multiple banks",
-					"early": "Consider early repayment options",
-					"insurance": "Evaluate insurance necessity",
-					"consult": "Consult with financial experts"
-				}
-			}
-		},
-		"mortgage": {
-			"title": "Mortgage Calculator",
-			"description": "Calculate monthly mortgage payments, total interest, and create detailed payment schedules for home loans and real estate financing",
-			"seo": "mortgage calculator, mortgage calculation, monthly mortgage payment, mortgage loan, down payment, mortgage overpayment, mortgage payment schedule, government mortgage programs",
-			"form": {
-				"title": "Mortgage Parameters",
-				"homeValue": "Home Value ($)",
-				"downPayment": "Down Payment ($)",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"additionalPayment": "Additional Monthly Payment ($)",
-				"paymentType": "Payment Scheme",
-				"paymentTypes": {
-					"annuity": "Annuity Payments (Equal)",
-					"differentiated": "Differentiated Payments (Decreasing)"
-				},
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter mortgage parameters and click 'Calculate'",
-				"summary": "Summary",
-				"monthlyPayment": "Monthly Payment",
-				"totalPayments": "Total Payments",
-				"totalInterest": "Total Interest",
-				"effectiveTerm": "Effective Term",
-				"months": "months",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Payment Schedule",
-				"table": {
-					"month": "Month",
-					"payment": "Payment",
-					"interest": "Interest",
-					"principal": "Principal",
-					"balance": "Balance",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Mortgage Calculator: Calculate Home Loan Payments and Schedule",
-				"overview": {
-					"title": "What is a Mortgage",
-					"content": "A mortgage is a loan secured by real estate property, typically used to purchase a home. The property serves as collateral for the loan."
-				},
-				"types": {
-					"title": "Types of Mortgages",
-					"content": "There are several types of mortgages available:",
-					"fixed": "Fixed-Rate Mortgages - interest rate remains constant",
-					"adjustable": "Adjustable-Rate Mortgages - interest rate can change",
-					"fha": "FHA Loans - government-backed loans with lower down payments"
-				},
-				"advantages": {
-					"title": "Advantages of Mortgages",
-					"content": "Mortgages offer several benefits:",
-					"homeOwnership": "Enables home ownership",
-					"taxBenefits": "Potential tax benefits",
-					"equityBuilding": "Builds equity over time",
-					"stability": "Provides housing stability"
-				},
-				"tips": {
-					"title": "Mortgage Tips",
-					"content": "To get the best mortgage terms:",
-					"compare": "Compare rates from multiple lenders",
-					"downPayment": "Save for a larger down payment",
-					"creditScore": "Improve your credit score",
-					"preApproval": "Get pre-approved before house hunting"
-				}
-			}
-		},
-		"auto-loan": {
-			"title": "Auto Loan Calculator",
-			"description": "Calculate monthly auto loan payments, total payments and create detailed payment schedules for car purchase",
-			"seo": "auto loan calculator, auto loan calculation, monthly auto loan payment, auto loan, car down payment, auto loan overpayment, auto loan payment schedule, car insurance",
-			"form": {
-				"title": "Auto Loan Parameters",
-				"carValue": "Car Value ($)",
-				"downPayment": "Down Payment ($)",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"additionalPayment": "Additional Monthly Payment ($)",
-				"paymentType": "Payment Scheme",
-				"paymentTypes": {
-					"annuity": "Annuity Payments (Equal)",
-					"differentiated": "Differentiated Payments (Decreasing)"
-				},
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter auto loan parameters and click 'Calculate'",
-				"summary": "Summary",
-				"monthlyPayment": "Monthly Payment",
-				"totalPayments": "Total Payments",
-				"totalInterest": "Total Interest",
-				"effectiveTerm": "Effective Term",
-				"months": "months",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Payment Schedule",
-				"table": {
-					"month": "Month",
-					"payment": "Payment",
-					"interest": "Interest",
-					"principal": "Principal",
-					"balance": "Balance",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Auto Loan Calculator: Calculate Car Loan Payments and Schedule",
-				"overview": {
-					"title": "What is an Auto Loan",
-					"content": "An auto loan is a secured loan specifically designed for purchasing a vehicle. The car serves as collateral, which typically results in lower interest rates compared to unsecured loans."
-				},
-				"types": {
-					"title": "Types of Auto Loans",
-					"content": "There are several types of auto loans available:",
-					"new": "New Car Loans - typically offer the lowest rates for brand new vehicles",
-					"used": "Used Car Loans - higher rates but more flexible terms",
-					"refinance": "Auto Loan Refinancing - to get better terms on existing loans"
-				},
-				"advantages": {
-					"title": "Advantages of Auto Loans",
-					"content": "Auto loans offer several benefits:",
-					"lowerRates": "Lower interest rates due to collateral",
-					"flexibleTerms": "Flexible repayment terms",
-					"quickApproval": "Quick approval process",
-					"taxBenefits": "Potential tax benefits for business use"
-				},
-				"tips": {
-					"title": "Auto Loan Tips",
-					"content": "To get the best auto loan terms:",
-					"compare": "Compare rates from multiple lenders",
-					"downPayment": "Make a larger down payment to reduce monthly payments",
-					"creditScore": "Improve your credit score before applying",
-					"negotiate": "Negotiate the car price before discussing financing"
-				}
-			}
-		},
-		"consumer-loan": {
-			"title": "Consumer Loan Calculator",
-			"description": "Calculate monthly consumer loan payments",
-			"seo": "consumer loan calculator, consumer loan, personal loan",
-			"form": {
-				"title": "Consumer Loan Parameters",
-				"loanAmount": "Loan Amount ($)",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"additionalPayment": "Additional Monthly Payment ($)",
-				"paymentType": "Payment Scheme",
-				"paymentTypes": {
-					"annuity": "Annuity Payments (Equal)",
-					"differentiated": "Differentiated Payments (Decreasing)"
-				},
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter consumer loan parameters and click 'Calculate'",
-				"summary": "Summary",
-				"monthlyPayment": "Monthly Payment",
-				"totalPayments": "Total Payments",
-				"totalInterest": "Total Interest",
-				"effectiveTerm": "Effective Term",
-				"months": "months",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Payment Schedule",
-				"table": {
-					"month": "Month",
-					"payment": "Payment",
-					"interest": "Interest",
-					"principal": "Principal",
-					"balance": "Balance",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Consumer Loan Calculator: Calculate Personal Loan Payments",
-				"overview": {
-					"title": "What is a Consumer Loan",
-					"content": "A consumer loan is an unsecured personal loan that can be used for various personal expenses such as home improvements, debt consolidation, or major purchases."
-				},
-				"types": {
-					"title": "Types of Consumer Loans",
-					"content": "Consumer loans come in various forms:",
-					"personal": "Personal Loans - for general personal expenses",
-					"debtConsolidation": "Debt Consolidation Loans - to combine multiple debts",
-					"homeImprovement": "Home Improvement Loans - for renovation projects"
-				},
-				"advantages": {
-					"title": "Advantages of Consumer Loans",
-					"content": "Consumer loans offer several benefits:",
-					"noCollateral": "No collateral required",
-					"flexibleUse": "Flexible use of funds",
-					"quickApproval": "Quick approval process",
-					"fixedRates": "Fixed interest rates"
-				},
-				"tips": {
-					"title": "Consumer Loan Tips",
-					"content": "To get the best consumer loan terms:",
-					"compare": "Compare offers from multiple lenders",
-					"creditScore": "Improve your credit score before applying",
-					"shopAround": "Shop around for the best rates",
-					"readTerms": "Read all terms and conditions carefully"
-				}
-			}
-		},
-		"investment": {
-			"title": "Investment Calculator",
-			"description": "Calculate investment returns with compound interest and regular contributions",
-			"seo": "investment calculator, compound interest, financial planning, capital accumulation",
-			"form": {
-				"title": "Investment Parameters",
-				"currency": "Currency",
-				"amount": "Investment Amount",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"depositType": "Investment Type",
-				"depositTypes": {
-					"simple": "Without Capitalization (Simple Interest)",
-					"capitalized": "With Interest Capitalization",
-					"compound": "Compound Interest (Monthly Accrual)"
-				},
-				"capitalizationPeriod": "Capitalization Period",
-				"capitalizationPeriods": {
-					"monthly": "Monthly",
-					"quarterly": "Quarterly",
-					"yearly": "Yearly"
-				},
-				"monthlyAddition": "Monthly Addition",
-				"monthlyWithdrawal": "Monthly Withdrawal",
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter investment parameters and click 'Calculate'",
-				"summary": "Summary",
-				"totalAmount": "Total Amount",
-				"totalInterest": "Total Interest",
-				"effectiveRate": "Effective Rate",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Accrual Schedule",
-				"table": {
-					"month": "Month",
-					"amount": "Amount",
-					"interest": "Interest",
-					"total": "Total",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Investment Calculator: Calculate Returns, Capitalization and Accrual Schedule",
-				"overview": {
-					"title": "What are Investments",
-					"content": "Investments are a way of investing money with the aim of generating income. This is one of the most effective ways to grow capital for long-term financial planning."
-				},
-				"types": {
-					"title": "Types of Investments",
-					"content": "There are several main types of investments:",
-					"simple": "Investments without capitalization — interest is accrued but not added to the principal amount",
-					"capitalized": "Investments with capitalization — interest is periodically added to the principal amount",
-					"compound": "Investments with compound interest — interest is accrued on a constantly growing amount"
-				},
-				"advantages": {
-					"title": "Advantages of Investments",
-					"content": "Investments have many advantages:",
-					"safety": "High reliability with proper instrument selection",
-					"guaranteed": "Potentially high returns",
-					"liquidity": "Possibility of early exit (with loss of interest)",
-					"tax": "Tax benefits on investment income"
-				},
-				"tips": {
-					"title": "Investment Tips",
-					"content": "For successful investing:",
-					"compare": "Compare offers from different investment companies",
-					"term": "Choose the appropriate investment term",
-					"capitalization": "Consider the possibility of interest capitalization",
-					"early": "Consider the possibility of early withdrawal"
-				}
-			}
-		},
-		"savings": {
-			"title": "Savings Calculator",
-			"description": "Calculate savings growth with compound interest and regular deposits",
-			"seo": "savings calculator, compound interest, savings growth, financial planning",
-			"form": {
-				"title": "Savings Parameters",
-				"currency": "Currency",
-				"amount": "Initial Amount",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"depositType": "Savings Type",
-				"depositTypes": {
-					"simple": "Without Capitalization (Simple Interest)",
-					"capitalized": "With Interest Capitalization",
-					"compound": "Compound Interest (Monthly Accrual)"
-				},
-				"capitalizationPeriod": "Capitalization Period",
-				"capitalizationPeriods": {
-					"monthly": "Monthly",
-					"quarterly": "Quarterly",
-					"yearly": "Yearly"
-				},
-				"monthlyAddition": "Monthly Addition",
-				"monthlyWithdrawal": "Monthly Withdrawal",
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter savings parameters and click 'Calculate'",
-				"summary": "Summary",
-				"totalAmount": "Total Amount",
-				"totalInterest": "Total Interest",
-				"effectiveRate": "Effective Rate",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Accrual Schedule",
-				"table": {
-					"month": "Month",
-					"amount": "Amount",
-					"interest": "Interest",
-					"total": "Total",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Savings Calculator: Calculate Savings Growth with Compound Interest",
-				"overview": {
-					"title": "What are Savings",
-					"content": "Savings are funds set aside for future use, typically earning interest over time. This is one of the most reliable ways to build wealth for long-term financial goals."
-				},
-				"types": {
-					"title": "Types of Savings",
-					"content": "There are several types of savings accounts:",
-					"regular": "Regular Savings - basic interest-bearing accounts",
-					"highYield": "High-Yield Savings - higher interest rates",
-					"certificates": "Certificates of Deposit (CDs) - fixed-term savings"
-				},
-				"advantages": {
-					"title": "Advantages of Savings",
-					"content": "Savings offer several benefits:",
-					"safety": "High safety and deposit protection",
-					"guaranteed": "Guaranteed returns",
-					"liquidity": "Easy access to funds",
-					"taxBenefits": "Potential tax benefits"
-				},
-				"tips": {
-					"title": "Savings Tips",
-					"content": "To maximize your savings:",
-					"compare": "Compare rates from different banks",
-					"automate": "Set up automatic transfers",
-					"emergency": "Build an emergency fund first",
-					"goals": "Set specific savings goals",
-					"review": "Regularly review and adjust your savings strategy",
-					"patience": "Be patient - savings grow over time"
-				}
-			}
-		},
-		"investment": {
-			"title": "Investment Calculator",
-			"description": "Calculate investment returns with compound interest and regular contributions",
-			"seo": "investment calculator, compound interest, financial planning, capital accumulation",
-			"form": {
-				"title": "Investment Parameters",
-				"currency": "Currency",
-				"amount": "Investment Amount",
-				"termYears": "Term (Years)",
-				"termMonths": "Term (Months)",
-				"interestRate": "Interest Rate (% per year)",
-				"depositType": "Investment Type",
-				"depositTypes": {
-					"simple": "Without Capitalization (Simple Interest)",
-					"capitalized": "With Interest Capitalization",
-					"compound": "Compound Interest (Monthly Accrual)"
-				},
-				"capitalizationPeriod": "Capitalization Period",
-				"capitalizationPeriods": {
-					"monthly": "Monthly",
-					"quarterly": "Quarterly",
-					"yearly": "Yearly"
-				},
-				"monthlyAddition": "Monthly Addition",
-				"monthlyWithdrawal": "Monthly Withdrawal",
-				"calculate": "Calculate",
-				"optional": "optional",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"placeholder": "Enter investment parameters and click 'Calculate'",
-				"summary": "Summary",
-				"totalAmount": "Total Amount",
-				"totalInterest": "Total Interest",
-				"effectiveRate": "Effective Rate",
-				"downloadSchedule": "Download Schedule (CSV)",
-				"scheduleTitle": "Accrual Schedule",
-				"table": {
-					"month": "Month",
-					"amount": "Amount",
-					"interest": "Interest",
-					"total": "Total",
-					"moreMonths": "more months"
-				}
-			},
-			"seo": {
-				"title": "Investment Calculator: Calculate Returns, Capitalization and Accrual Schedule",
-				"overview": {
-					"title": "What are Investments",
-					"content": "Investments are a way of investing money with the aim of generating income. This is one of the most effective ways to grow capital for long-term financial planning."
-				},
-				"types": {
-					"title": "Types of Investments",
-					"content": "There are several main types of investments:",
-					"simple": "Investments without capitalization — interest is accrued but not added to the principal amount",
-					"capitalized": "Investments with capitalization — interest is periodically added to the principal amount",
-					"compound": "Investments with compound interest — interest is accrued on a constantly growing amount"
-				},
-				"advantages": {
-					"title": "Advantages of Investments",
-					"content": "Investments have many advantages:",
-					"safety": "High reliability with proper instrument selection",
-					"guaranteed": "Potentially high returns",
-					"liquidity": "Possibility of early exit (with loss of interest)",
-					"tax": "Tax benefits on investment income"
-				},
-				"tips": {
-					"title": "Investment Tips",
-					"content": "For successful investing:",
-					"compare": "Compare offers from different investment companies",
-					"term": "Choose the appropriate investment term",
-					"capitalization": "Consider the possibility of interest capitalization",
-					"early": "Consider the possibility of early withdrawal"
-				}
-			}
-		}
-	},
-	"math_percent": {
-		"title": "Percentage Calculator",
-		"description": "Online percentage calculator to find percentages, ratios, and changes by percent. Fast and accurate tool with multilingual support.",
-		"find_percent_of_number": "Find percentage of a number",
-		"find_percent_of_number_desc": "Calculate what percentage a number represents of another number",
-		"what_percent_is": "Find what percent one number is of another",
-		"what_percent_is_desc": "Calculate the percentage ratio between two numbers",
-		"find_number_from_percent": "Find number from percent",
-		"find_number_from_percent_desc": "Calculate the original number when you know the percentage and the result",
-		"increase_or_decrease": "Increase or decrease number by percent",
-		"increase_or_decrease_desc": "Add or subtract a percentage from a number",
-		"number": "Number",
-		"percentage": "Percentage",
-		"first_number": "First number",
-		"second_number": "Second number",
-		"part_value": "Part value",
-		"operation": "Operation",
-		"calculate": "Calculate",
-		"calculating": "Calculating...",
-		"result": "Result",
-		"increase": "Increase",
-		"decrease": "Decrease",
-		"errors": {
-			"error_title": "Calculation Error",
-			"invalid_input": "Please enter valid numbers",
-			"calculation_failed": "Calculation failed. Please check your input."
-		},
-		"tips": {
-			"title": "Tips",
-			"enter_key": "Press Enter to calculate",
-			"auto_calculate": "Results update automatically as you type",
-			"negative_numbers": "Negative numbers are not supported"
-		},
-		"seo": {
-			"title": "Online Percentage Calculator - Calculate Percentages Fast",
-			"description": "Simple online percentage calculator: calculate percentage of a number, find what percent one number is of another, or increase a number by percent. Available in 4 languages.",
-			"content": {
-				"title": "About Percentage Calculator",
-				"description": "Online percentage calculator helps calculate percentage of a number, find percentage ratios, and change numbers by a given percentage. Suitable for discount calculations, taxes, profits, and other everyday tasks."
-			}
-		},
-		"results": {
-			"percent_of_number": "{percentage}% of {number} equals {result}",
-			"what_percent": "{number1} is {result}% of {number2}",
-			"number_from_percent": "If {part} is {percentage}%, then the original number is {result}",
-			"increase_by_percent": "Increasing {number} by {percentage}% gives {result}",
-			"decrease_by_percent": "Decreasing {number} by {percentage}% gives {result}"
-		}
-	},
-	"materials": {
-		"title": "Building Materials Calculator",
-		"description": "Universal calculation of paint, putty, primer and tile adhesive",
-		"breadcrumbs": {
-			"construction": "Construction"
-		},
-		"form": {
-			"materialType": "Material Type",
-			"roomLength": "Room Length",
-			"roomWidth": "Room Width",
-			"wallHeight": "Wall Height",
-			"floorArea": "Floor Area",
-			"doorsWindowsArea": "Doors and Windows Area",
-			"layers": "Number of Layers",
-			"consumptionRate": "Consumption Rate",
-			"reservePercentage": "Reserve",
-			"packageSize": "Package Size",
-			"tileSize": "Tile Size",
-			"groutWidth": "Grout Width",
-			"calculate": "Calculate",
-			"reset": "Reset"
-		},
-		"results": {
-			"title": "Calculation Results",
-			"summary": "Total Required",
-			"parameter": "Parameter",
-			"value": "Value",
-			"roomArea": "Room Area",
-			"materialType": "Material Type",
-			"consumptionRate": "Consumption Rate",
-			"totalConsumption": "Total Consumption",
-			"reserve": "Reserve",
-			"packagesNeeded": "Packages Needed",
-			"packages": "packages",
-			"liters": "liters",
-			"kilograms": "kilograms",
-			"tips": {
-				"title": "Recommendations",
-				"recommendation": "We recommend taking 1-2 additional packages for fitting and possible defects."
-			}
-		},
-		"options": {
-			"materials": {
-				"paint": "Paint",
-				"putty": "Putty",
-				"primer": "Primer",
-				"tileGlue": "Tile Adhesive"
-			},
-			"materialDescriptions": {
-				"paint": "Wall paint calculation",
-				"putty": "Wall putty calculation",
-				"primer": "Wall primer calculation",
-				"tileGlue": "Floor tile adhesive calculation"
-			}
-		},
-		"errors": {
-			"title": "Input Errors"
-		},
-		"seo": {
-			"title": "Building Materials Calculator - Paint, Putty, Primer Calculation | Calculator #1",
-			"overview": {
-				"title": "Building Materials Calculator",
-				"content": "Online building materials calculator helps calculate paint, putty, primer and tile adhesive quantities. Takes into account room dimensions, material consumption rates, number of layers and reserve for fitting and losses."
-			},
-			"calculation": {
-				"title": "How Material Quantities Are Calculated",
-				"content": "Building materials calculation includes several steps to get accurate results.",
-				"steps": {
-					"area": "Room area calculation",
-					"consumption": "Material consumption per square meter calculation",
-					"layers": "Number of application layers consideration",
-					"reserve": "Reserve addition for fitting and losses"
-				}
-			},
-			"materials": {
-				"title": "Types of Building Materials",
-				"content": "Calculator supports calculation of various types of building materials considering their specifics.",
-				"paint": {
-					"title": "Paint Calculation",
-					"content": "Wall paint quantity calculation considering surface type, number of layers and consumption rate. Suitable for water-based, oil-based, acrylic paint."
-				},
-				"putty": {
-					"title": "Putty Calculation",
-					"content": "Wall putty quantity calculation for wall leveling before painting or wallpapering. Considers starter and finish putty."
-				},
-				"primer": {
-					"title": "Primer Calculation",
-					"content": "Primer quantity calculation for surface preparation. Includes acrylic, alkyd, deep-penetrating primer."
-				},
-				"tileGlue": {
-					"title": "Tile Adhesive Calculation",
-					"content": "Tile adhesive quantity calculation for laying ceramic tiles, porcelain stoneware, mosaic on floor and walls."
-				}
-			},
-			"tips": {
-				"title": "Material Calculation Tips",
-				"content": "Follow our recommendations for accurate building materials calculation results.",
-				"measurement": "Carefully measure all room dimensions",
-				"material": "Check material consumption rates",
-				"layers": "Consider number of application layers",
-				"reserve": "Add 10-15% reserve for fitting",
-				"quality": "Consider possible defects when purchasing",
-				"surface": "Consider surface type and condition"
-			},
-			"benefits": {
-				"title": "Calculator Benefits",
-				"content": "Our building materials calculator provides several advantages:",
-				"accuracy": "Accurate material quantity calculation",
-				"convenience": "Convenient and fast calculation",
-				"universal": "Support for various material types",
-				"professional": "Professional approach to calculations"
-			}
-		}
-	},
-	"tile-laminate": {
-		"title": "Tile and Laminate Calculator",
-		"description": "Calculate tile and laminate quantity for floor",
-		"breadcrumbs": {
-			"construction": "Construction"
-		},
-		"form": {
-			"title": "Calculation Parameters",
-			"flooringType": "Flooring Type",
-			"roomDimensions": "Room Dimensions",
-			"roomLength": "Room Length",
-			"roomWidth": "Room Width",
-			"elementDimensions": "Element Dimensions",
-			"elementLength": "Element Length",
-			"elementWidth": "Element Width",
-			"packageInfo": "Package Information",
-			"packageQuantity": "Quantity in Package",
-			"piecesPerPackage": "pieces per package",
-			"reservePercentage": "Material Reserve",
-			"groutWidth": "Grout Width",
-			"calculate": "Calculate",
-			"reset": "Reset"
-		},
-		"results": {
-			"title": "Calculation Results",
-			"summary": "Total Required",
-			"parameter": "Parameter",
-			"value": "Value",
-			"roomArea": "Room Area",
-			"flooringType": "Flooring Type",
-			"elementSize": "Element Size",
-			"elementArea": "Element Area",
-			"totalElements": "Total Elements",
-			"reserve": "Reserve",
-			"packagesNeeded": "Packages Needed",
-			"packages": "packages",
-			"elements": "elements",
-			"tips": {
-				"title": "Recommendations",
-				"recommendation": "We recommend taking 1-2 additional packages for cutting and possible defects."
-			}
-		},
-		"options": {
-			"flooringTypes": {
-				"tile": "Tile",
-				"laminate": "Laminate"
-			},
-			"flooringTypeDescriptions": {
-				"tile": "Tile quantity calculation for floor",
-				"laminate": "Laminate quantity calculation"
-			}
-		},
-		"errors": {
-			"title": "Input Errors"
-		},
-		"seo": {
-			"title": "Tile and Laminate Calculator - Floor Material Calculation | Calculator #1",
-			"overview": {
-				"title": "Tile and Laminate Calculator",
-				"content": "Online tile and laminate calculator helps calculate material quantity needed for floor or wall installation. Takes into account room dimensions, tile or panel size, as well as reserve for cutting and waste."
-			},
-			"calculation": {
-				"title": "How Material Quantities Are Calculated",
-				"content": "Tile and laminate calculation includes several steps to get accurate results.",
-				"steps": {
-					"area": "Room area calculation",
-					"element": "Single element area determination",
-					"quantity": "Total element quantity calculation",
-					"packages": "Package quantity determination",
-					"reserve": "Reserve addition for cutting"
-				}
-			},
-			"materials": {
-				"title": "Types of Floor Coverings",
-				"content": "Calculator supports tile and laminate calculation considering their specifics.",
-				"tile": {
-					"title": "Tile Calculation",
-					"content": "Ceramic tile quantity calculation for floor considering tile size, grout width and cutting reserve."
-				},
-				"laminate": {
-					"title": "Laminate Calculation",
-					"content": "Laminate quantity calculation considering board size, quantity per package and cutting reserve."
-				}
-			},
-			"tips": {
-				"title": "Material Calculation Tips",
-				"content": "Follow our recommendations for accurate tile and laminate calculation results.",
-				"measurement": "Carefully measure all room dimensions",
-				"element": "Check element dimensions",
-				"package": "Clarify element quantity per package",
-				"reserve": "Add 10-15% reserve for cutting",
-				"quality": "Consider possible defects when purchasing",
-				"pattern": "For patterned coverings increase reserve to 20%"
-			},
-			"benefits": {
-				"title": "Calculator Benefits",
-				"content": "Our tile and laminate calculator provides several advantages:",
-				"accuracy": "Accurate material quantity calculation",
-				"convenience": "Convenient and fast calculation",
-				"universal": "Support for various flooring types",
-				"professional": "Professional approach to calculations"
-			}
-		}
-	}
+  "common": {
+    "search": "Search",
+    "language": "Language",
+    "categories": "Categories",
+    "calculators": "Calculators",
+    "calculate": "Calculate",
+    "result": "Result",
+    "clear": "Clear",
+    "favorites": "Favorites"
+  },
+  "brand": {
+    "name": "Calculator #1",
+    "slogan": "One site. All calculators."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "categories": {
+      "finance": "Finance",
+      "math": "Math",
+      "life": "Life",
+      "auto": "Auto",
+      "construction": "Construction",
+      "time": "Time",
+      "health": "Health",
+      "science": "Science",
+      "converter": "Converters",
+      "fun": "Fun"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "finance": "Finance",
+    "math": "Math",
+    "life": "Life",
+    "construction": "Construction",
+    "auto": "Auto",
+    "time": "Time",
+    "health": "Health",
+    "science": "Science",
+    "converter": "Converter",
+    "fun": "Fun"
+  },
+  "categories": {
+    "finance": {
+      "title": "Financial Calculators",
+      "description": "Loans, deposits, mortgages, taxes and investments"
+    },
+    "math": {
+      "title": "Mathematical Calculators",
+      "description": "Basic operations, fractions, percentages, geometry"
+    },
+    "life": {
+      "title": "Life Calculators",
+      "description": "Calories, BMI, pregnancy, health"
+    },
+    "construction": {
+      "title": "Construction Calculators",
+      "subtitle": "Wallpaper, paint, concrete, roofing",
+      "description": "Wallpaper, paint, concrete, roofing",
+      "calculators": {
+        "wallpaper": {
+          "title": "Wallpaper Calculator",
+          "description": "Calculate wallpaper quantity for room"
+        },
+        "materials": {
+          "title": "Building Materials Calculator",
+          "description": "Calculate paint, putty, primer and tile adhesive"
+        },
+        "tile-laminate": {
+          "title": "Tile and Laminate Calculator",
+          "description": "Calculate tile and laminate quantity for floor"
+        },
+        "concrete": {
+          "title": "Concrete Calculator",
+          "description": "Calculate cement, sand, gravel and water for concrete preparation"
+        },
+        "roof": {
+          "title": "Roof Calculator",
+          "description": "Calculate roofing materials and cost"
+        },
+        "wall": {
+          "title": "Brick and Block Calculator",
+          "description": "Calculate brick, gas block and foam block quantity for wall"
+        }
+      }
+    },
+    "auto": {
+      "title": "Auto Calculators",
+      "description": "Fuel consumption, taxes, leasing, insurance"
+    },
+    "time": {
+      "title": "Time and Date",
+      "description": "Date differences, age, timers"
+    },
+    "health": {
+      "title": "Health and Medical",
+      "description": "BMI, heart rate, blood pressure, vitamins"
+    },
+    "science": {
+      "title": "Education and Science",
+      "description": "Physics, chemistry, geometry, statistics"
+    },
+    "converter": {
+      "title": "Online Converters",
+      "description": "Length, weight, temperature, speed"
+    },
+    "fun": {
+      "title": "Entertainment and Hobbies",
+      "description": "Compatibility, generators, games"
+    }
+  },
+  "math_basic": {
+    "title": "Basic Math Calculator",
+    "description": "Perform basic arithmetic operations online: addition, subtraction, multiplication and division.",
+    "number1": "First number",
+    "number2": "Second number",
+    "operation": "Operation",
+    "calculate": "Calculate",
+    "result": "Result",
+    "error_div_zero": "Division by zero is not allowed",
+    "seo_title": "Online Basic Math Calculator",
+    "seo_description": "Perform basic math operations easily in your browser. Supports English, German, Spanish, and Russian.",
+    "operations": {
+      "add": "Addition (+)",
+      "subtract": "Subtraction (−)",
+      "multiply": "Multiplication (×)",
+      "divide": "Division (÷)"
+    },
+    "seo_content": {
+      "title": "About Basic Math Calculator",
+      "content": "Online basic math calculator helps you quickly perform basic arithmetic operations: addition, subtraction, multiplication and division. Convenient for students, accountants and anyone who needs to calculate directly in the browser. Available in English, German, Spanish and Russian languages."
+    },
+    "features": {
+      "title": "Calculator Features",
+      "keyboard_support": "Keyboard input support",
+      "enter_key": "Enter key for quick calculation",
+      "auto_formatting": "Automatic result formatting",
+      "division_protection": "Division by zero protection",
+      "multi_language": "Multi-language interface",
+      "mobile_responsive": "Mobile-responsive design"
+    }
+  },
+  "calculators": {
+    "paper-weight": {
+      "title": "Paper Weight Calculator",
+      "description": "Calculate paper weight by density and number of sheets",
+      "seo": "A4 sheets calculator, paper weight calculation by density, paper weight calculator"
+    },
+    "bmi": {
+      "title": "Body Mass Index",
+      "description": "Calculate BMI for weight assessment",
+      "seo": "BMI calculator, body mass index, normal weight"
+    },
+    "credit-loan": {
+      "title": "Credit Loan Calculator",
+      "description": "Calculate monthly loan payments, total interest, and create detailed payment schedules for any loan or credit",
+      "seo": {
+        "title": "Everything About Loans: Types, Rates, and Payment Methods",
+        "types": {
+          "title": "Types of Loans",
+          "content": "In the modern banking system, there are many types of loans, each designed to solve specific financial needs:",
+          "mortgage": "Mortgage Loan",
+          "mortgageDesc": "long-term loan for real estate purchase secured by the property being purchased",
+          "auto": "Auto Loan",
+          "autoDesc": "loan for car purchase with the vehicle serving as collateral",
+          "personal": "Personal Loan",
+          "personalDesc": "unsecured loan for any personal needs without collateral requirements",
+          "business": "Business Loan",
+          "businessDesc": "loan for business development and working capital needs",
+          "refinancing": "Refinancing",
+          "refinancingDesc": "loan restructuring to improve terms on existing debt"
+        },
+        "rates": {
+          "title": "Types of Interest Rates",
+          "content": "Interest rate is a key loan parameter that determines the cost of borrowed funds:",
+          "fixed": "Fixed Rate",
+          "fixedDesc": "remains unchanged throughout the loan term, ensuring payment predictability",
+          "variable": "Variable Rate",
+          "variableDesc": "changes based on central bank rates and market conditions",
+          "mixed": "Mixed Rate",
+          "mixedDesc": "fixed for initial period, then converts to variable"
+        },
+        "payment": {
+          "title": "Loan Repayment Schemes",
+          "content": "The choice of repayment scheme affects monthly payment amounts and total interest paid:",
+          "annuity": {
+            "title": "Annuity Payments",
+            "desc": "equal monthly payments throughout the loan term",
+            "advantages": "Advantages: budget stability, easy expense planning"
+          },
+          "differentiated": {
+            "title": "Differentiated Payments",
+            "desc": "decreasing payments with fixed principal portion",
+            "advantages": "Advantages: lower total interest, faster principal repayment"
+          }
+        },
+        "factors": {
+          "title": "Factors Affecting Loan Terms",
+          "content": "Banks consider multiple factors when determining interest rates and loan conditions:",
+          "creditHistory": "Credit history and borrower rating",
+          "income": "Income level and employment stability",
+          "downPayment": "Down payment amount",
+          "term": "Loan term",
+          "collateral": "Collateral availability"
+        },
+        "tips": {
+          "title": "Useful Loan Tips",
+          "content": "To get the most favorable loan terms, it's recommended to:",
+          "compare": "Compare offers from multiple banks",
+          "early": "Consider early repayment options",
+          "insurance": "Evaluate insurance necessity",
+          "consult": "Consult with financial experts"
+        }
+      },
+      "form": {
+        "title": "Loan Parameters",
+        "loanType": "Loan Type",
+        "loanTypes": {
+          "mortgage": "Mortgage",
+          "auto": "Auto Loan",
+          "personal": "Personal Loan"
+        },
+        "loanAmount": "Loan Amount ($)",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "interestRate": "Interest Rate (% per year)",
+        "downPayment": "Down Payment ($)",
+        "additionalPayment": "Additional Monthly Payment ($)",
+        "paymentType": "Payment Scheme",
+        "paymentTypes": {
+          "annuity": "Annuity Payments (Equal)",
+          "differentiated": "Differentiated Payments (Decreasing)"
+        },
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        }
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter loan parameters and click 'Calculate'",
+        "summary": "Summary",
+        "monthlyPayment": "Monthly Payment",
+        "totalPayments": "Total Payments",
+        "totalInterest": "Total Interest",
+        "effectiveTerm": "Effective Term",
+        "months": "months",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Payment Schedule",
+        "table": {
+          "month": "Month",
+          "payment": "Payment",
+          "interest": "Interest",
+          "principal": "Principal",
+          "balance": "Balance",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "mortgage": {
+      "title": "Mortgage Calculator",
+      "description": "Calculate monthly mortgage payments, total interest, and create detailed payment schedules for home loans and real estate financing",
+      "seo": {
+        "title": "Mortgage Calculator: Calculate Home Loan Payments and Schedule",
+        "overview": {
+          "title": "What is a Mortgage",
+          "content": "A mortgage is a loan secured by real estate property, typically used to purchase a home. The property serves as collateral for the loan."
+        },
+        "types": {
+          "title": "Types of Mortgages",
+          "content": "There are several types of mortgages available:",
+          "fixed": "Fixed-Rate Mortgages - interest rate remains constant",
+          "adjustable": "Adjustable-Rate Mortgages - interest rate can change",
+          "fha": "FHA Loans - government-backed loans with lower down payments"
+        },
+        "advantages": {
+          "title": "Advantages of Mortgages",
+          "content": "Mortgages offer several benefits:",
+          "homeOwnership": "Enables home ownership",
+          "taxBenefits": "Potential tax benefits",
+          "equityBuilding": "Builds equity over time",
+          "stability": "Provides housing stability",
+          "longTerm": "Долгосрочное финансирование до 30 лет",
+          "lowRate": "Сравнительно низкие процентные ставки",
+          "propertyOwnership": "Возможность стать владельцем недвижимости"
+        },
+        "tips": {
+          "title": "Mortgage Tips",
+          "content": "To get the best mortgage terms:",
+          "compare": "Compare rates from multiple lenders",
+          "downPayment": "Save for a larger down payment",
+          "creditScore": "Improve your credit score",
+          "preApproval": "Get pre-approved before house hunting",
+          "early": "Рассматривайте досрочное погашение",
+          "insurance": "Оценивайте необходимость страхования",
+          "consult": "Консультируйтесь с ипотечными брокерами"
+        },
+        "requirements": {
+          "title": "Требования к заёмщику",
+          "content": "Для получения ипотечного кредита необходимо соответствовать определённым требованиям:",
+          "income": "Стабильный доход, подтверждённый справками",
+          "creditHistory": "Положительная кредитная история",
+          "downPayment": "Первоначальный взнос от 10-20%",
+          "insurance": "Страхование недвижимости и жизни",
+          "documents": "Полный пакет документов"
+        },
+        "programs": {
+          "title": "Государственные программы",
+          "content": "В России действуют различные программы поддержки ипотечного кредитования:",
+          "government": {
+            "title": "Господдержка",
+            "desc": "Субсидирование процентной ставки для молодых семей и многодетных"
+          },
+          "commercial": {
+            "title": "Коммерческая ипотека",
+            "desc": "Стандартные условия банков с рыночными ставками"
+          }
+        }
+      },
+      "form": {
+        "title": "Mortgage Parameters",
+        "homeValue": "Home Value ($)",
+        "downPayment": "Down Payment ($)",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "interestRate": "Interest Rate (% per year)",
+        "additionalPayment": "Additional Monthly Payment ($)",
+        "paymentType": "Payment Scheme",
+        "paymentTypes": {
+          "annuity": "Annuity Payments (Equal)",
+          "differentiated": "Differentiated Payments (Decreasing)"
+        },
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        },
+        "propertyValue": "Стоимость недвижимости (₽)"
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter mortgage parameters and click 'Calculate'",
+        "summary": "Summary",
+        "monthlyPayment": "Monthly Payment",
+        "totalPayments": "Total Payments",
+        "totalInterest": "Total Interest",
+        "effectiveTerm": "Effective Term",
+        "months": "months",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Payment Schedule",
+        "table": {
+          "month": "Month",
+          "payment": "Payment",
+          "interest": "Interest",
+          "principal": "Principal",
+          "balance": "Balance",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "auto-loan": {
+      "title": "Auto Loan Calculator",
+      "description": "Calculate monthly auto loan payments, total payments and create detailed payment schedules for car purchase",
+      "seo": {
+        "title": "Auto Loan Calculator: Calculate Car Loan Payments and Schedule",
+        "overview": {
+          "title": "What is an Auto Loan",
+          "content": "An auto loan is a secured loan specifically designed for purchasing a vehicle. The car serves as collateral, which typically results in lower interest rates compared to unsecured loans."
+        },
+        "types": {
+          "title": "Types of Auto Loans",
+          "content": "There are several types of auto loans available:",
+          "new": "New Car Loans - typically offer the lowest rates for brand new vehicles",
+          "used": "Used Car Loans - higher rates but more flexible terms",
+          "refinance": "Auto Loan Refinancing - to get better terms on existing loans"
+        },
+        "advantages": {
+          "title": "Advantages of Auto Loans",
+          "content": "Auto loans offer several benefits:",
+          "lowerRates": "Lower interest rates due to collateral",
+          "flexibleTerms": "Flexible repayment terms",
+          "quickApproval": "Quick approval process",
+          "taxBenefits": "Potential tax benefits for business use",
+          "lowRates": "Сравнительно низкие процентные ставки",
+          "earlyRepayment": "Возможность досрочного погашения"
+        },
+        "tips": {
+          "title": "Auto Loan Tips",
+          "content": "To get the best auto loan terms:",
+          "compare": "Compare rates from multiple lenders",
+          "downPayment": "Make a larger down payment to reduce monthly payments",
+          "creditScore": "Improve your credit score before applying",
+          "negotiate": "Negotiate the car price before discussing financing",
+          "insurance": "Рассматривайте страхование автомобиля",
+          "early": "Рассматривайте досрочное погашение",
+          "consult": "Консультируйтесь с автосалонами"
+        },
+        "requirements": {
+          "title": "Требования к заёмщику",
+          "content": "Для получения автокредита необходимо соответствовать определённым требованиям:",
+          "age": "Возраст от 21 до 65 лет",
+          "income": "Стабильный доход, подтверждённый справками",
+          "creditHistory": "Положительная кредитная история",
+          "documents": "Полный пакет документов"
+        },
+        "programs": {
+          "title": "Программы автокредитования",
+          "content": "Банки предлагают различные программы автокредитования:",
+          "newCar": {
+            "title": "Кредит на новый автомобиль",
+            "desc": "Специальные условия для покупки новых автомобилей"
+          },
+          "usedCar": {
+            "title": "Кредит на подержанный автомобиль",
+            "desc": "Условия для покупки автомобилей с пробегом"
+          }
+        }
+      },
+      "form": {
+        "title": "Auto Loan Parameters",
+        "carValue": "Car Value ($)",
+        "downPayment": "Down Payment ($)",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "interestRate": "Interest Rate (% per year)",
+        "additionalPayment": "Additional Monthly Payment ($)",
+        "paymentType": "Payment Scheme",
+        "paymentTypes": {
+          "annuity": "Annuity Payments (Equal)",
+          "differentiated": "Differentiated Payments (Decreasing)"
+        },
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        }
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter auto loan parameters and click 'Calculate'",
+        "summary": "Summary",
+        "monthlyPayment": "Monthly Payment",
+        "totalPayments": "Total Payments",
+        "totalInterest": "Total Interest",
+        "effectiveTerm": "Effective Term",
+        "months": "months",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Payment Schedule",
+        "table": {
+          "month": "Month",
+          "payment": "Payment",
+          "interest": "Interest",
+          "principal": "Principal",
+          "balance": "Balance",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "consumer-loan": {
+      "title": "Consumer Loan Calculator",
+      "description": "Calculate monthly consumer loan payments",
+      "seo": {
+        "title": "Consumer Loan Calculator: Calculate Personal Loan Payments",
+        "overview": {
+          "title": "What is a Consumer Loan",
+          "content": "A consumer loan is an unsecured personal loan that can be used for various personal expenses such as home improvements, debt consolidation, or major purchases."
+        },
+        "types": {
+          "title": "Types of Consumer Loans",
+          "content": "Consumer loans come in various forms:",
+          "personal": "Personal Loans - for general personal expenses",
+          "debtConsolidation": "Debt Consolidation Loans - to combine multiple debts",
+          "homeImprovement": "Home Improvement Loans - for renovation projects",
+          "refinancing": {
+            "title": "Рефинансирование",
+            "desc": "Объединение нескольких кредитов в один с более выгодными условиями"
+          },
+          "emergency": {
+            "title": "Экстренный кредит",
+            "desc": "Быстрое получение денежных средств на неотложные нужды"
+          }
+        },
+        "advantages": {
+          "title": "Advantages of Consumer Loans",
+          "content": "Consumer loans offer several benefits:",
+          "noCollateral": "No collateral required",
+          "flexibleUse": "Flexible use of funds",
+          "quickApproval": "Quick approval process",
+          "fixedRates": "Fixed interest rates",
+          "flexibleTerms": "Гибкие условия погашения",
+          "earlyRepayment": "Возможность досрочного погашения"
+        },
+        "tips": {
+          "title": "Consumer Loan Tips",
+          "content": "To get the best consumer loan terms:",
+          "compare": "Compare offers from multiple lenders",
+          "creditScore": "Improve your credit score before applying",
+          "shopAround": "Shop around for the best rates",
+          "readTerms": "Read all terms and conditions carefully",
+          "early": "Рассматривайте досрочное погашение",
+          "consult": "Консультируйтесь с финансовыми экспертами"
+        },
+        "requirements": {
+          "title": "Требования к заёмщику",
+          "content": "Для получения потребительского кредита необходимо соответствовать определённым требованиям:",
+          "age": "Возраст от 18 до 70 лет",
+          "income": "Стабильный доход, подтверждённый справками",
+          "creditHistory": "Положительная кредитная история",
+          "documents": "Минимальный пакет документов"
+        }
+      },
+      "form": {
+        "title": "Consumer Loan Parameters",
+        "loanAmount": "Loan Amount ($)",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "interestRate": "Interest Rate (% per year)",
+        "additionalPayment": "Additional Monthly Payment ($)",
+        "paymentType": "Payment Scheme",
+        "paymentTypes": {
+          "annuity": "Annuity Payments (Equal)",
+          "differentiated": "Differentiated Payments (Decreasing)"
+        },
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        },
+        "downPayment": "Первоначальный взнос (₽)"
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter consumer loan parameters and click 'Calculate'",
+        "summary": "Summary",
+        "monthlyPayment": "Monthly Payment",
+        "totalPayments": "Total Payments",
+        "totalInterest": "Total Interest",
+        "effectiveTerm": "Effective Term",
+        "months": "months",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Payment Schedule",
+        "table": {
+          "month": "Month",
+          "payment": "Payment",
+          "interest": "Interest",
+          "principal": "Principal",
+          "balance": "Balance",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "investment": {
+      "title": "Investment Calculator",
+      "description": "Calculate investment returns with compound interest and regular contributions",
+      "seo": {
+        "title": "Investment Calculator: Calculate Returns, Capitalization and Accrual Schedule",
+        "overview": {
+          "title": "What are Investments",
+          "content": "Investments are a way of investing money with the aim of generating income. This is one of the most effective ways to grow capital for long-term financial planning."
+        },
+        "types": {
+          "title": "Types of Investments",
+          "content": "There are several main types of investments:",
+          "simple": "Investments without capitalization — interest is accrued but not added to the principal amount",
+          "capitalized": "Investments with capitalization — interest is periodically added to the principal amount",
+          "compound": "Investments with compound interest — interest is accrued on a constantly growing amount"
+        },
+        "advantages": {
+          "title": "Advantages of Investments",
+          "content": "Investments have many advantages:",
+          "safety": "High reliability with proper instrument selection",
+          "guaranteed": "Potentially high returns",
+          "liquidity": "Possibility of early exit (with loss of interest)",
+          "tax": "Tax benefits on investment income"
+        },
+        "tips": {
+          "title": "Investment Tips",
+          "content": "For successful investing:",
+          "compare": "Compare offers from different investment companies",
+          "term": "Choose the appropriate investment term",
+          "capitalization": "Consider the possibility of interest capitalization",
+          "early": "Consider the possibility of early withdrawal"
+        }
+      },
+      "form": {
+        "title": "Investment Parameters",
+        "currency": "Currency",
+        "amount": "Investment Amount",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "interestRate": "Interest Rate (% per year)",
+        "depositType": "Investment Type",
+        "depositTypes": {
+          "simple": "Without Capitalization (Simple Interest)",
+          "capitalized": "With Interest Capitalization",
+          "compound": "Compound Interest (Monthly Accrual)"
+        },
+        "capitalizationPeriod": "Capitalization Period",
+        "capitalizationPeriods": {
+          "monthly": "Monthly",
+          "quarterly": "Quarterly",
+          "yearly": "Yearly"
+        },
+        "monthlyAddition": "Monthly Addition",
+        "monthlyWithdrawal": "Monthly Withdrawal",
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        }
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter investment parameters and click 'Calculate'",
+        "summary": "Summary",
+        "totalAmount": "Total Amount",
+        "totalInterest": "Total Interest",
+        "effectiveRate": "Effective Rate",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Accrual Schedule",
+        "table": {
+          "month": "Month",
+          "amount": "Amount",
+          "interest": "Interest",
+          "total": "Total",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "savings": {
+      "title": "Savings Calculator",
+      "description": "Calculate savings growth with compound interest and regular deposits",
+      "seo": {
+        "title": "Savings Calculator: Calculate Savings Growth with Compound Interest",
+        "overview": {
+          "title": "What are Savings",
+          "content": "Savings are funds set aside for future use, typically earning interest over time. This is one of the most reliable ways to build wealth for long-term financial goals."
+        },
+        "types": {
+          "title": "Types of Savings",
+          "content": "There are several types of savings accounts:",
+          "regular": "Regular Savings - basic interest-bearing accounts",
+          "highYield": "High-Yield Savings - higher interest rates",
+          "certificates": "Certificates of Deposit (CDs) - fixed-term savings"
+        },
+        "advantages": {
+          "title": "Advantages of Using the Savings Calculator",
+          "content": "The savings calculator offers many benefits for financial planning:",
+          "goalSetting": "Accurate planning of financial goals and timelines for achieving them",
+          "compoundInterest": "Calculation of compound interest effect for maximum returns",
+          "flexibility": "Flexibility in choosing savings and investment strategies",
+          "discipline": "Development of financial discipline and savings habits",
+          "safety": "High safety and deposit protection",
+          "guaranteed": "Guaranteed returns",
+          "liquidity": "Easy access to funds",
+          "taxBenefits": "Potential tax benefits"
+        },
+        "strategies": {
+          "title": "Savings and Investment Strategies",
+          "content": "Effective savings strategies include:",
+          "automation": "Automation of savings through bank deposits and investment accounts",
+          "investment": "Investment in stocks, bonds, mutual funds and other financial instruments",
+          "budgeting": "Personal budget planning and expense control",
+          "emergency": "Creating an emergency fund for unforeseen situations"
+        },
+        "tips": {
+          "title": "Tips for Effective Saving",
+          "content": "For successful saving and investing:",
+          "start": "Start with small amounts and gradually increase contributions",
+          "consistency": "Be consistent with monthly savings",
+          "review": "Regularly review your financial goals and strategies",
+          "patience": "Be patient - savings require time",
+          "compare": "Compare rates from different banks",
+          "automate": "Set up automatic transfers",
+          "emergency": "Build an emergency fund first",
+          "goals": "Set specific savings goals"
+        }
+      },
+      "form": {
+        "title": "Savings Parameters",
+        "targetAmount": "Target Amount ($)",
+        "initialAmount": "Initial Amount ($)",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "monthlyContribution": "Monthly Contribution ($)",
+        "interestRate": "Interest Rate (% per year)",
+        "interestType": "Interest Type",
+        "interestTypes": {
+          "none": "No Interest",
+          "simple": "Simple Interest",
+          "compound": "Compound Interest"
+        },
+        "currency": "Currency",
+        "amount": "Initial Amount",
+        "depositType": "Savings Type",
+        "depositTypes": {
+          "simple": "Without Capitalization (Simple Interest)",
+          "capitalized": "With Interest Capitalization",
+          "compound": "Compound Interest (Monthly Accrual)"
+        },
+        "capitalizationPeriod": "Capitalization Period",
+        "capitalizationPeriods": {
+          "monthly": "Monthly",
+          "quarterly": "Quarterly",
+          "yearly": "Yearly"
+        },
+        "monthlyAddition": "Monthly Addition",
+        "monthlyWithdrawal": "Monthly Withdrawal",
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        }
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter savings parameters and click 'Calculate'",
+        "summary": "Summary",
+        "finalAmount": "Final Amount",
+        "totalContributions": "Total Contributions",
+        "totalInterest": "Total Interest",
+        "monthlyContribution": "Monthly Contribution",
+        "achievementMessage": "Goal achieved in {month} month",
+        "notAchievable": "Goal not achievable with current parameters",
+        "totalAmount": "Total Amount",
+        "effectiveRate": "Effective Rate",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Savings Schedule",
+        "table": {
+          "month": "Month",
+          "startAmount": "Start",
+          "contribution": "Contribution",
+          "interest": "Interest",
+          "endAmount": "End",
+          "amount": "Amount",
+          "total": "Total",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "deposit": {
+      "title": "Deposit Calculator",
+      "description": "Calculate bank deposit returns with capitalization, additions and withdrawals",
+      "seo": {
+        "title": "Deposit Calculator: Calculate Bank Deposit Returns, Capitalization and Accrual Schedule",
+        "overview": {
+          "title": "What is a Bank Deposit",
+          "content": "A bank deposit is a way to preserve and grow money by placing it in a bank at a certain interest rate. This is one of the most reliable and popular investment methods for individuals."
+        },
+        "types": {
+          "title": "Types of Bank Deposits",
+          "content": "There are several main types of bank deposits:",
+          "simple": "Deposits without capitalization - interest is accrued but not added to the principal amount",
+          "capitalized": "Deposits with capitalization - interest is periodically added to the principal amount",
+          "compound": "Deposits with compound interest - interest is accrued on a constantly growing amount"
+        },
+        "advantages": {
+          "title": "Advantages of Bank Deposits",
+          "content": "Bank deposits have many advantages:",
+          "safety": "High reliability and deposit protection",
+          "guaranteed": "Guaranteed returns",
+          "liquidity": "Possibility of early withdrawal (with loss of interest)",
+          "tax": "Tax benefits on interest"
+        },
+        "tips": {
+          "title": "Deposit Selection Tips",
+          "content": "To get maximum benefit from a bank deposit:",
+          "compare": "Compare conditions at different banks",
+          "term": "Choose the optimal deposit term",
+          "capitalization": "Consider deposits with interest capitalization",
+          "early": "Consider the possibility of early withdrawal"
+        }
+      },
+      "form": {
+        "title": "Deposit Parameters",
+        "currency": "Currency",
+        "amount": "Deposit Amount",
+        "termYears": "Term (Years)",
+        "termMonths": "Term (Months)",
+        "interestRate": "Interest Rate (% per year)",
+        "depositType": "Deposit Type",
+        "depositTypes": {
+          "simple": "Without Capitalization (Simple Interest)",
+          "capitalized": "With Interest Capitalization",
+          "compound": "Compound Interest (Monthly Accrual)"
+        },
+        "capitalizationPeriod": "Capitalization Period",
+        "capitalizationPeriods": {
+          "monthly": "Monthly",
+          "quarterly": "Quarterly",
+          "yearly": "Yearly"
+        },
+        "monthlyAddition": "Monthly Addition",
+        "monthlyWithdrawal": "Monthly Withdrawal",
+        "calculate": "Calculate",
+        "optional": "optional",
+        "errors": {
+          "title": "Data Errors"
+        }
+      },
+      "results": {
+        "title": "Calculation Results",
+        "placeholder": "Enter deposit parameters and click 'Calculate'",
+        "summary": "Summary",
+        "finalAmount": "Final Amount",
+        "totalInterest": "Accrued Interest",
+        "effectiveRate": "Effective Rate",
+        "term": "Deposit Term",
+        "months": "months",
+        "downloadSchedule": "Download Schedule (CSV)",
+        "scheduleTitle": "Interest Accrual Schedule",
+        "table": {
+          "month": "Month",
+          "startAmount": "Amount at Start",
+          "interestEarned": "Interest Earned",
+          "addition": "Addition",
+          "withdrawal": "Withdrawal",
+          "endAmount": "Amount at End",
+          "moreMonths": "more months"
+        }
+      }
+    },
+    "roof": {
+      "title": "Roofing Calculator",
+      "description": "Calculate roof area, roofing materials quantity and weight",
+      "breadcrumbs": {
+        "construction": "Construction"
+      },
+      "form": {
+        "title": "Calculation Parameters",
+        "units": "Units of Measurement",
+        "houseDimensions": "House Dimensions",
+        "houseLength": "House Length",
+        "houseWidth": "House Width",
+        "roofType": "Roof Type",
+        "selectRoofType": "Select Roof Type",
+        "roofParameters": "Roof Parameters",
+        "roofAngle": "Roof Slope Angle",
+        "overhang": "Overhang",
+        "overhangNote": "Overhang length around perimeter",
+        "material": "Roofing Material",
+        "selectMaterial": "Select Material",
+        "materialDimensions": "Material Dimensions",
+        "materialLength": "Sheet Length",
+        "materialWidth": "Sheet Width",
+        "reservePercentage": "Material Reserve",
+        "calculate": "Calculate",
+        "reset": "Reset"
+      },
+      "results": {
+        "title": "Calculation Results",
+        "summary": "Summary",
+        "roofType": "Roof Type",
+        "material": "Material",
+        "houseDimensions": "House Dimensions",
+        "roofAngle": "Slope Angle",
+        "areas": "Areas",
+        "roofArea": "Roof Area",
+        "effectiveArea": "Effective Area",
+        "overhangArea": "Overhang Area",
+        "materialRequirements": "Material Requirements",
+        "materialCount": "Number of Sheets",
+        "materialArea": "Sheet Area",
+        "totalMaterialArea": "Total Material Area",
+        "reserveArea": "Reserve",
+        "weight": "Weight",
+        "materialWeight": "Material Weight",
+        "totalWeight": "Total Weight",
+        "recommendations": "Recommendations",
+        "recommendedCount": "Recommended Quantity",
+        "sheets": "sheets",
+        "recommendationNote": "It is recommended to take an additional 1-2 sheets for trimming and possible defects"
+      },
+      "options": {
+        "roofTypes": {
+          "single": "Shed Roof",
+          "gable": "Gable Roof",
+          "hip": "Hip Roof",
+          "mansard": "Mansard Roof"
+        },
+        "roofTypeDescriptions": {
+          "single": "Roof with one slope",
+          "gable": "Roof with two slopes",
+          "hip": "Roof with four slopes",
+          "mansard": "Roof with broken slopes"
+        },
+        "materials": {
+          "metal-tile": "Metal Tile",
+          "corrugated": "Corrugated Sheet",
+          "soft-tile": "Soft Tile"
+        },
+        "materialDescriptions": {
+          "metal-tile": "Metal tile with polymer coating",
+          "corrugated": "Profiled sheet of galvanized steel",
+          "soft-tile": "Bitumen tile in rolls"
+        }
+      },
+      "errors": {
+        "title": "Input Errors"
+      },
+      "seo": {
+        "title": "Roofing Calculator - Calculate Roof Area and Materials | Calculator #1",
+        "overview": {
+          "title": "Online Roofing Calculator",
+          "content": "Online roofing calculator will help calculate roof area, number of metal tile sheets, corrugated sheets or soft tiles, and account for material reserve. Suitable for shed, gable and hip roofs."
+        },
+        "calculation": {
+          "title": "How Roof Area is Calculated",
+          "content": "Roof area calculation includes several stages to get accurate result.",
+          "steps": {
+            "volume": "Determining house dimensions",
+            "grade": "Choosing roof type",
+            "proportions": "Calculating slope angle",
+            "water": "Determining slope area",
+            "verification": "Accounting for overhangs and reserve"
+          }
+        },
+        "roofTypes": {
+          "title": "Roof Types",
+          "content": "Calculator supports calculation of various roof types with consideration of their features.",
+          "single": {
+            "title": "Shed Roof",
+            "content": "Roof with one slope, suitable for outbuildings and modern houses."
+          },
+          "gable": {
+            "title": "Gable Roof",
+            "content": "Classic roof with two slopes, most common type."
+          },
+          "hip": {
+            "title": "Hip Roof",
+            "content": "Roof with four slopes, provides better wind protection."
+          },
+          "mansard": {
+            "title": "Mansard Roof",
+            "content": "Roof with broken slopes, allows using attic space."
+          }
+        },
+        "materials": {
+          "title": "Roofing Materials",
+          "content": "Calculator supports calculation of various roofing materials.",
+          "metalTile": {
+            "title": "Metal Tile",
+            "content": "Metal tile with polymer coating, durable and lightweight."
+          },
+          "corrugated": {
+            "title": "Corrugated Sheet",
+            "content": "Profiled sheet of galvanized steel, economical option."
+          },
+          "softTile": {
+            "title": "Soft Tile",
+            "content": "Bitumen tile in rolls, flexible and noiseless."
+          }
+        },
+        "tips": {
+          "title": "Roofing Calculation Tips",
+          "content": "For accurate result follow our recommendations when calculating roofing.",
+          "volume": "Carefully measure house dimensions",
+          "grade": "Choose correct roof type",
+          "proportions": "Account for slope angle",
+          "water": "Don't forget about overhangs",
+          "quality": "Use quality materials",
+          "mixing": "Plan material reserve"
+        },
+        "benefits": {
+          "title": "Calculator Benefits",
+          "content": "Using roofing calculator provides many benefits when planning construction.",
+          "accuracy": "Accurate roof area calculation",
+          "cost": "Saving money on materials",
+          "planning": "Proper purchase planning",
+          "quality": "Ensuring roof quality",
+          "waste": "Minimizing material waste",
+          "time": "Saving time on calculations"
+        },
+        "seo": "roofing calculator, roof area calculation, metal tile, corrugated sheet, soft tile, roof slope, overhang, material reserve, construction cost, shed roof, gable roof, hip roof, mansard roof, roofing materials"
+      }
+    },
+    "car-loan": {
+      "title": "Калькулятор автокредита",
+      "description": "Рассчитать ежемесячные платежи по автокредиту, общую сумму выплат и создать детальный график платежей для покупки автомобиля",
+      "seo": {
+        "title": "Калькулятор автокредита: расчёт платежей, ставок и условий автомобильного кредитования",
+        "overview": {
+          "title": "Калькулятор автокредита для расчёта автомобильного кредита",
+          "content": "Калькулятор автокредита — это профессиональный инструмент для расчёта автомобильного кредита, ежемесячных платежей, общей суммы выплат и переплаты. С помощью нашего калькулятора вы сможете рассчитать оптимальные условия автокредита, сравнить различные предложения банков и выбрать наиболее выгодный вариант финансирования покупки автомобиля."
+        },
+        "advantages": {
+          "title": "Преимущества использования калькулятора автокредита",
+          "content": "Калькулятор автокредита предоставляет множество преимуществ для планирования покупки автомобиля:",
+          "quickApproval": "Быстрое одобрение и получение средств на покупку автомобиля",
+          "lowRates": "Конкурентные процентные ставки и выгодные условия кредитования",
+          "flexibleTerms": "Гибкие сроки кредитования от 1 до 7 лет",
+          "earlyRepayment": "Возможность досрочного погашения без штрафов"
+        },
+        "requirements": {
+          "title": "Требования для получения автокредита",
+          "content": "Для получения автокредита необходимо соответствовать следующим требованиям:",
+          "age": "Возраст от 18 до 65 лет на момент погашения кредита",
+          "income": "Подтверждённый доход не менее 15 000 рублей в месяц",
+          "creditHistory": "Положительная кредитная история и отсутствие просрочек",
+          "documents": "Полный пакет документов: паспорт, справка о доходах, водительские права"
+        },
+        "programs": {
+          "title": "Программы автокредитования",
+          "content": "Банки предлагают различные программы автокредитования:",
+          "newCar": {
+            "title": "Кредит на новый автомобиль",
+            "desc": "Специальные условия для покупки новых автомобилей с минимальными ставками"
+          },
+          "usedCar": {
+            "title": "Кредит на подержанный автомобиль",
+            "desc": "Финансирование покупки автомобилей с пробегом с гибкими условиями"
+          }
+        },
+        "tips": {
+          "title": "Советы по выбору автокредита",
+          "content": "Для выбора оптимального автокредита:",
+          "compare": "Сравнивайте предложения разных банков и условия кредитования",
+          "insurance": "Учитывайте стоимость страхования КАСКО и ОСАГО",
+          "early": "Рассмотрите возможность досрочного погашения для экономии",
+          "consult": "Консультируйтесь с финансовыми специалистами"
+        }
+      },
+      "form": {
+        "title": "Параметры автокредита",
+        "carValue": "Стоимость автомобиля (₽)",
+        "downPayment": "Первоначальный взнос (₽)",
+        "termYears": "Срок в годах",
+        "termMonths": "Срок в месяцах",
+        "interestRate": "Процентная ставка (% годовых)",
+        "additionalPayment": "Дополнительный платёж (₽)",
+        "optional": "опционально",
+        "paymentType": "Схема погашения",
+        "paymentTypes": {
+          "annuity": "Аннуитетные платежи (равные)",
+          "differentiated": "Дифференцированные платежи (уменьшающиеся)"
+        },
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки ввода"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "summary": "Итоги",
+        "monthlyPayment": "Ежемесячный платёж",
+        "totalPayments": "Общая сумма выплат",
+        "totalInterest": "Переплата",
+        "effectiveTerm": "Эффективный срок",
+        "months": "месяцев",
+        "downloadSchedule": "Скачать график (CSV)",
+        "scheduleTitle": "График платежей",
+        "placeholder": "Введите параметры и нажмите 'Рассчитать'",
+        "table": {
+          "month": "Месяц",
+          "payment": "Платёж",
+          "interest": "Проценты",
+          "principal": "Основной долг",
+          "balance": "Остаток",
+          "moreMonths": "дополнительных месяцев"
+        }
+      }
+    },
+    "osago": {
+      "title": "Калькулятор ОСАГО",
+      "description": "Рассчитать стоимость полиса ОСАГО с учётом региона, мощности двигателя, возраста водителя и других факторов",
+      "seo": {
+        "title": "Калькулятор ОСАГО: расчёт стоимости полиса обязательного страхования",
+        "overview": {
+          "title": "Калькулятор ОСАГО для расчёта стоимости полиса",
+          "content": "Калькулятор ОСАГО — это профессиональный инструмент для расчёта стоимости полиса обязательного страхования автогражданской ответственности. С помощью нашего калькулятора вы сможете рассчитать точную стоимость ОСАГО с учётом всех коэффициентов: территории, возраста и стажа водителя, мощности двигателя, количества водителей и коэффициента бонус-малус."
+        },
+        "coefficients": {
+          "title": "Коэффициенты расчёта ОСАГО",
+          "content": "Стоимость ОСАГО рассчитывается по формуле: Базовый тариф × КТ × КБМ × КВС × КМ × КО",
+          "territory": "КТ (коэффициент территории): Москва = 2.0, СПб = 1.8, другие регионы = 1.0",
+          "ageExperience": "КВС (возраст-стаж): возраст < 22 и стаж < 3 лет = 1.8, иначе = 1.0",
+          "power": "КМ (мощность): до 70 л.с. = 0.6, 70-100 л.с. = 1.0, 101-120 л.с. = 1.1, 121-150 л.с. = 1.2, >150 л.с. = 1.4",
+          "drivers": "КО (ограничение): один водитель = 1.0, несколько = 1.2, неограниченное = 1.8",
+          "bonusMalus": "КБМ (бонус-малус): от 0.5 до 2.45 в зависимости от истории вождения"
+        },
+        "advantages": {
+          "title": "Преимущества использования калькулятора ОСАГО",
+          "content": "Калькулятор ОСАГО предоставляет множество преимуществ для планирования страхования:",
+          "quick": "Быстрый расчёт стоимости полиса за несколько минут",
+          "accurate": "Точный расчёт с учётом всех актуальных коэффициентов",
+          "comparison": "Возможность сравнения стоимости в разных страховых компаниях",
+          "savings": "Экономия времени и денег при выборе оптимального полиса"
+        },
+        "tips": {
+          "title": "Советы по выбору ОСАГО",
+          "content": "Для выбора оптимального полиса ОСАГО:",
+          "compare": "Сравнивайте предложения разных страховых компаний",
+          "bonusMalus": "Поддерживайте хороший коэффициент бонус-малус безаварийным вождением",
+          "early": "Продлевайте полис заранее для сохранения скидок",
+          "documents": "Подготавливайте все необходимые документы заранее"
+        }
+      },
+      "form": {
+        "title": "Параметры расчёта ОСАГО",
+        "region": "Регион",
+        "selectRegion": "Выберите регион",
+        "enginePower": "Мощность двигателя (л.с.)",
+        "driverAge": "Возраст водителя (лет)",
+        "drivingExperience": "Стаж вождения (лет)",
+        "driversCount": "Количество водителей",
+        "bonusMalus": "Коэффициент бонус-малус (КБМ)",
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки ввода"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "totalCost": "Стоимость ОСАГО",
+        "details": "Детали расчёта",
+        "baseRate": "Базовый тариф",
+        "territoryCoeff": "Коэффициент территории (КТ)",
+        "ageExperienceCoeff": "Коэффициент возраст-стаж (КВС)",
+        "powerCoeff": "Коэффициент мощности (КМ)",
+        "driversCoeff": "Коэффициент ограничения (КО)",
+        "bonusMalusCoeff": "Коэффициент бонус-малус (КБМ)",
+        "placeholder": "Введите параметры и нажмите 'Рассчитать'"
+      }
+    },
+    "kasko": {
+      "title": "Калькулятор КАСКО",
+      "description": "Рассчитать стоимость полиса КАСКО с учётом стоимости автомобиля, возраста водителя, региона и других факторов",
+      "seo": {
+        "title": "Калькулятор КАСКО: расчёт стоимости полного автострахования",
+        "overview": {
+          "title": "Калькулятор КАСКО для расчёта стоимости полиса",
+          "content": "Калькулятор КАСКО — это профессиональный инструмент для расчёта стоимости полиса полного автострахования. С помощью нашего калькулятора вы сможете рассчитать точную стоимость КАСКО с учётом всех коэффициентов: стоимости автомобиля, возраста и стажа водителя, региона, наличия противоугонной системы и франшизы."
+        },
+        "coefficients": {
+          "title": "Коэффициенты расчёта КАСКО",
+          "content": "Стоимость КАСКО рассчитывается по формуле: (Стоимость автомобиля × Базовая ставка) × Крегион × Квозраст × Кстаж × Ксигнализация × Кфраншиза",
+          "region": "Крегион: Москва = 1.2, СПб = 1.1, другие регионы = 1.0",
+          "age": "Квозраст: до 22 лет = 1.5, 22-30 лет = 1.2, старше 30 лет = 1.0",
+          "experience": "Кстаж: до 3 лет = 1.3, 3-10 лет = 1.1, более 10 лет = 1.0",
+          "alarm": "Ксигнализация: есть сигнализация = 0.9, нет = 1.0",
+          "franchise": "Кфраншиза: без франшизы = 1.0, 10 000 руб. = 0.9, 20 000 руб. = 0.8"
+        },
+        "advantages": {
+          "title": "Преимущества использования калькулятора КАСКО",
+          "content": "Калькулятор КАСКО предоставляет множество преимуществ для планирования автострахования:",
+          "comprehensive": "Полное покрытие ущерба от любых рисков",
+          "quick": "Быстрый расчёт стоимости полиса за несколько минут",
+          "accurate": "Точный расчёт с учётом всех актуальных коэффициентов",
+          "comparison": "Возможность сравнения стоимости в разных страховых компаниях"
+        },
+        "tips": {
+          "title": "Советы по выбору КАСКО",
+          "content": "Для выбора оптимального полиса КАСКО:",
+          "compare": "Сравнивайте предложения разных страховых компаний",
+          "alarm": "Установите противоугонную систему для снижения стоимости",
+          "franchise": "Рассмотрите франшизу для снижения стоимости полиса",
+          "documents": "Подготавливайте все необходимые документы заранее"
+        }
+      },
+      "form": {
+        "title": "Параметры расчёта КАСКО",
+        "carValue": "Стоимость автомобиля (₽)",
+        "carYear": "Год выпуска",
+        "driverAge": "Возраст водителя (лет)",
+        "drivingExperience": "Стаж вождения (лет)",
+        "region": "Регион",
+        "selectRegion": "Выберите регион",
+        "hasAlarmSystem": "Наличие противоугонной системы",
+        "franchise": "Франшиза",
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки ввода"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "totalCost": "Стоимость КАСКО",
+        "details": "Детали расчёта",
+        "baseRate": "Базовая ставка",
+        "regionCoeff": "Коэффициент региона",
+        "ageCoeff": "Коэффициент возраста",
+        "experienceCoeff": "Коэффициент стажа",
+        "alarmCoeff": "Коэффициент сигнализации",
+        "franchiseCoeff": "Коэффициент франшизы",
+        "placeholder": "Введите параметры и нажмите 'Рассчитать'"
+      }
+    },
+    "fuel-consumption": {
+      "title": "Калькулятор расхода топлива",
+      "description": "Рассчитать, сколько километров можно проехать на заданном объёме топлива или сколько топлива нужно для поездки",
+      "seo": {
+        "title": "Калькулятор расхода топлива: расчёт дистанции и потребления топлива",
+        "overview": {
+          "title": "Калькулятор расхода топлива для планирования поездок",
+          "content": "Онлайн калькулятор расхода топлива поможет рассчитать, сколько километров вы сможете проехать на заданном объёме топлива, или сколько литров топлива потребуется для поездки на нужное расстояние при известном расходе автомобиля."
+        },
+        "features": {
+          "title": "Возможности калькулятора",
+          "content": "Наш калькулятор расхода топлива предоставляет два режима расчёта:",
+          "distance": "Расчёт дистанции по количеству топлива и расходу",
+          "fuel": "Расчёт необходимого количества топлива для поездки",
+          "planning": "Планирование поездок и маршрутов",
+          "economy": "Контроль экономии топлива"
+        },
+        "advantages": {
+          "title": "Преимущества использования калькулятора",
+          "content": "Калькулятор расхода топлива предоставляет множество преимуществ:",
+          "quick": "Быстрый расчёт за несколько секунд",
+          "accurate": "Точные расчёты на основе реальных данных",
+          "planning": "Планирование поездок и бюджета на топливо",
+          "savings": "Экономия денег на топливе"
+        },
+        "tips": {
+          "title": "Советы по экономии топлива",
+          "content": "Для снижения расхода топлива:",
+          "measure": "Регулярно измеряйте расход топлива вашего автомобиля",
+          "driving": "Соблюдайте экономичный стиль вождения",
+          "maintenance": "Следите за техническим состоянием автомобиля",
+          "planning": "Планируйте маршруты заранее для избежания пробок"
+        }
+      },
+      "form": {
+        "title": "Параметры расчёта",
+        "mode": "Режим расчёта",
+        "modes": {
+          "distance": "Рассчитать дистанцию",
+          "distanceDesc": "Сколько можно проехать",
+          "fuel": "Рассчитать топливо",
+          "fuelDesc": "Сколько нужно топлива"
+        },
+        "consumption": "Расход топлива (л/100 км)",
+        "fuelAmount": "Количество топлива в баке (л)",
+        "distance": "Желаемая дистанция (км)",
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки ввода"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "result": "Результат",
+        "km": "км",
+        "liters": "л",
+        "distanceResult": "Вы сможете проехать",
+        "fuelResult": "Для поездки потребуется",
+        "details": "Детали расчёта",
+        "consumption": "Расход топлива",
+        "fuelAmount": "Количество топлива",
+        "distance": "Дистанция",
+        "calculatedDistance": "Рассчитанная дистанция",
+        "calculatedFuel": "Рассчитанное топливо",
+        "placeholder": "Введите параметры и нажмите 'Рассчитать'"
+      }
+    },
+    "vehicle-tax": {
+      "title": "Калькулятор транспортного налога",
+      "description": "Рассчитать транспортный налог в зависимости от мощности двигателя, региона и срока владения",
+      "seo": {
+        "title": "Калькулятор транспортного налога: расчёт налога на автомобиль",
+        "overview": {
+          "title": "Калькулятор транспортного налога для автомобилистов",
+          "content": "Онлайн калькулятор транспортного налога поможет рассчитать, сколько нужно платить за автомобиль в зависимости от мощности двигателя, региона регистрации и срока владения. Узнайте налоговую нагрузку быстро и удобно."
+        },
+        "calculation": {
+          "title": "Как рассчитывается транспортный налог",
+          "content": "Транспортный налог рассчитывается по формуле:",
+          "enginePower": "Мощность двигателя в лошадиных силах",
+          "region": "Региональная ставка налога (₽/л.с.)",
+          "ownership": "Срок владения автомобилем в году",
+          "formula": "Налог = Мощность × Ставка × (Месяцы владения / 12)"
+        },
+        "advantages": {
+          "title": "Преимущества использования калькулятора",
+          "content": "Калькулятор транспортного налога предоставляет множество преимуществ:",
+          "quick": "Быстрый расчёт за несколько секунд",
+          "accurate": "Точные расчёты с актуальными ставками",
+          "planning": "Планирование налоговых расходов",
+          "regions": "Учёт региональных особенностей налогообложения"
+        },
+        "tips": {
+          "title": "Советы по транспортному налогу",
+          "content": "Для правильного расчёта и уплаты транспортного налога:",
+          "deadline": "Следите за сроками уплаты налога (до 1 декабря)",
+          "payment": "Проверяйте правильность расчёта в налоговой инспекции",
+          "ownership": "Учитывайте только период фактического владения",
+          "consultation": "При сомнениях обращайтесь к налоговым консультантам"
+        }
+      },
+      "form": {
+        "title": "Параметры расчёта",
+        "enginePower": "Мощность двигателя (л.с.)",
+        "region": "Регион",
+        "selectRegion": "Выберите регион",
+        "ownershipMonths": "Срок владения",
+        "months": "месяцев",
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки ввода"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "taxAmount": "Транспортный налог",
+        "taxDescription": "Ваш транспортный налог составит",
+        "details": "Детали расчёта",
+        "enginePower": "Мощность двигателя",
+        "hp": "л.с.",
+        "taxRate": "Ставка налога",
+        "rubPerHp": "₽/л.с.",
+        "ownershipPeriod": "Срок владения",
+        "ownershipCoefficient": "Коэффициент владения",
+        "placeholder": "Введите параметры и нажмите 'Рассчитать'"
+      }
+    },
+    "leasing": {
+      "title": "Калькулятор автолизинга",
+      "description": "Расчёт ежемесячных платежей и общей стоимости лизинга автомобиля",
+      "breadcrumbs": {
+        "auto": "Авто"
+      },
+      "form": {
+        "title": "Параметры лизинга",
+        "carValue": "Стоимость автомобиля (₽)",
+        "downPayment": "Первоначальный взнос",
+        "leaseTerm": "Срок лизинга (мес)",
+        "interestRate": "Ставка удорожания (%)",
+        "buyoutValue": "Выкупная стоимость",
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки в данных"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "monthlyPayment": "Ежемесячный платёж",
+        "monthlyPaymentDescription": "Сумма к уплате каждый месяц",
+        "totalPayments": "Общая сумма платежей",
+        "totalCost": "Общая стоимость",
+        "overpayment": "Переплата",
+        "financingAmount": "Сумма финансирования",
+        "downPaymentAmount": "Первоначальный взнос",
+        "buyoutAmount": "Выкупная стоимость",
+        "details": "Детали расчёта",
+        "placeholder": "Введите данные для расчёта"
+      },
+      "seo": {
+        "title": "Калькулятор автолизинга онлайн",
+        "overview": {
+          "title": "О калькуляторе автолизинга",
+          "content": "Онлайн калькулятор автолизинга поможет рассчитать ежемесячные платежи, переплату и общую сумму выплат по договору лизинга. Удобный инструмент для оценки выгодности лизинга автомобиля."
+        },
+        "calculation": {
+          "title": "Как рассчитывается лизинг",
+          "content": "Лизинг рассчитывается по формуле аннуитетных платежей с учётом первоначального взноса, срока договора, ставки удорожания и выкупной стоимости.",
+          "financing": "Сумма финансирования = Стоимость авто - Первоначальный взнос - Выкупная стоимость",
+          "payment": "Ежемесячный платёж рассчитывается по формуле аннуитета",
+          "total": "Общая сумма = Ежемесячный платёж × Срок + Первоначальный взнос + Выкупная стоимость",
+          "overpayment": "Переплата = Общая сумма - Стоимость автомобиля"
+        },
+        "advantages": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор автолизинга поможет вам принять обоснованное решение о выгодности лизинга автомобиля.",
+          "quick": "Быстрый расчёт за несколько секунд",
+          "accurate": "Точные расчёты по актуальным формулам",
+          "comparison": "Сравнение с покупкой в кредит",
+          "planning": "Планирование бюджета на автомобиль"
+        },
+        "tips": {
+          "title": "Советы по лизингу",
+          "content": "При выборе лизинга учитывайте все параметры договора и сравнивайте с альтернативными вариантами финансирования.",
+          "downPayment": "Больший первоначальный взнос снижает ежемесячные платежи",
+          "interestRate": "Сравнивайте ставки удорожания у разных лизинговых компаний",
+          "term": "Более длительный срок увеличивает общую переплату",
+          "buyout": "Выкупная стоимость влияет на размер финансирования"
+        },
+        "seo": "автолизинг, калькулятор лизинга, лизинг автомобиля, расчёт лизинга, ежемесячные платежи, переплата по лизингу, выкупная стоимость, первоначальный взнос, ставка удорожания, лизинговые платежи, финансирование авто, лизинг vs кредит"
+      }
+    },
+    "customs": {
+      "title": "Калькулятор растаможки автомобиля",
+      "description": "Расчёт таможенных платежей при ввозе автомобиля из-за границы",
+      "breadcrumbs": {
+        "auto": "Авто"
+      },
+      "form": {
+        "title": "Параметры автомобиля",
+        "carValue": "Стоимость автомобиля (€)",
+        "engineVolume": "Объём двигателя (см³)",
+        "fuelType": "Тип топлива",
+        "carAge": "Возраст автомобиля (лет)",
+        "enginePower": "Мощность двигателя (л.с.)",
+        "calculate": "Рассчитать",
+        "errors": {
+          "title": "Ошибки в данных"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "total": "Общая сумма",
+        "totalDescription": "Итоговая стоимость растаможки",
+        "carValue": "Стоимость авто в рублях",
+        "duty": "Таможенная пошлина",
+        "excise": "Акциз",
+        "vat": "НДС (20%)",
+        "recyclingFee": "Утилизационный сбор",
+        "details": "Детали расчёта",
+        "placeholder": "Введите данные для расчёта"
+      },
+      "seo": {
+        "title": "Калькулятор растаможки автомобиля онлайн",
+        "overview": {
+          "title": "О калькуляторе растаможки",
+          "content": "Онлайн калькулятор растаможки автомобиля поможет рассчитать примерные таможенные платежи при ввозе машины из-за границы: пошлину, акциз, НДС и утилизационный сбор. Полезный инструмент для оценки стоимости ввоза авто."
+        },
+        "calculation": {
+          "title": "Как рассчитывается растаможка",
+          "content": "Растаможка автомобиля включает несколько видов платежей, которые рассчитываются по установленным тарифам и ставкам.",
+          "duty": "Таможенная пошлина: максимум из 10% от стоимости или фиксированного тарифа по объёму двигателя",
+          "excise": "Акциз: зависит от возраста автомобиля и объёма двигателя",
+          "vat": "НДС: 20% от суммы (стоимость + пошлина + акциз)",
+          "recycling": "Утилизационный сбор: фиксированная сумма 3400 ₽"
+        },
+        "advantages": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор растаможки поможет вам заранее оценить стоимость ввоза автомобиля и спланировать бюджет.",
+          "quick": "Быстрый расчёт за несколько секунд",
+          "accurate": "Точные расчёты по актуальным тарифам",
+          "planning": "Планирование бюджета на ввоз авто",
+          "comparison": "Сравнение стоимости разных автомобилей"
+        },
+        "tips": {
+          "title": "Советы по растаможке",
+          "content": "При ввозе автомобиля учитывайте все факторы, влияющие на размер таможенных платежей.",
+          "age": "Молодые автомобили (до 3 лет) имеют более высокие ставки акциза",
+          "volume": "Объём двигателя напрямую влияет на размер пошлины и акциза",
+          "documentation": "Подготовьте все необходимые документы заранее",
+          "consultation": "При сомнениях обратитесь к таможенному брокеру"
+        },
+        "seo": "растаможка автомобиля, калькулятор растаможки, таможенные платежи, ввоз авто, таможенная пошлина, акциз, НДС, утилизационный сбор, ввоз автомобиля, таможенное оформление, растаможка авто, стоимость ввоза"
+      }
+    },
+    "traffic-fines": {
+      "title": "Калькулятор штрафов ГИБДД",
+      "description": "Расчёт штрафов за нарушения ПДД с учётом скидки при досрочной оплате",
+      "breadcrumbs": {
+        "auto": "Авто"
+      },
+      "form": {
+        "title": "Выберите нарушения",
+        "selectViolations": "Нарушения ПДД",
+        "calculate": "Рассчитать штраф",
+        "errors": {
+          "title": "Ошибки в данных"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "totalFine": "Общий штраф",
+        "totalFineDescription": "Сумма всех штрафов",
+        "discountTitle": "Скидка при досрочной оплате",
+        "discountAmount": "Размер скидки",
+        "discountedFine": "К оплате со скидкой",
+        "discountNote": "При оплате в течение 20 дней действует скидка 25%",
+        "selectedViolations": "Выбранные нарушения",
+        "placeholder": "Выберите нарушения для расчёта"
+      },
+      "seo": {
+        "title": "Калькулятор штрафов ГИБДД онлайн",
+        "overview": {
+          "title": "О калькуляторе штрафов ГИБДД",
+          "content": "Онлайн калькулятор штрафов ГИБДД поможет быстро рассчитать размер штрафа за самые распространённые нарушения: превышение скорости, парковку, проезд на красный, выезд на встречную полосу и другие. Учитывается скидка 25% при оплате в первые 20 дней."
+        },
+        "calculation": {
+          "title": "Как рассчитываются штрафы",
+          "content": "Штрафы ГИБДД рассчитываются согласно КоАП РФ с учётом типа нарушения и возможности получения скидки.",
+          "speed": "Превышение скорости: от 500 до 5000 рублей в зависимости от превышения",
+          "safety": "Нарушения безопасности: ремень безопасности, телефон, свет - от 500 до 1500 рублей",
+          "traffic": "Нарушения ПДД: проезд на красный, выезд на встречную - от 1000 до 5000 рублей",
+          "parking": "Нарушения парковки: от 1500 до 5000 рублей в зависимости от места"
+        },
+        "advantages": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор штрафов поможет вам быстро оценить размер штрафов и спланировать бюджет.",
+          "quick": "Быстрый расчёт за несколько секунд",
+          "accurate": "Точные расчёты по актуальным штрафам",
+          "discount": "Учёт скидки при досрочной оплате",
+          "comprehensive": "Полный список нарушений ПДД"
+        },
+        "tips": {
+          "title": "Советы по штрафам ГИБДД",
+          "content": "При получении штрафа важно знать свои права и возможности для снижения размера платежа.",
+          "payment": "Оплачивайте штрафы в течение 20 дней для получения скидки 25%",
+          "avoidance": "Соблюдайте ПДД для избежания штрафов",
+          "documentation": "Сохраняйте документы об оплате штрафов",
+          "consultation": "При спорных ситуациях обращайтесь к юристу"
+        },
+        "seo": "штрафы ГИБДД, калькулятор штрафов, нарушения ПДД, превышение скорости, штраф за парковку, проезд на красный, выезд на встречную, скидка на штраф, оплата штрафов, КоАП РФ"
+      }
+    },
+    "car-ownership": {
+      "title": "Калькулятор стоимости владения авто",
+      "description": "Расчёт полной стоимости владения автомобилем с учётом всех расходов",
+      "breadcrumbs": {
+        "auto": "Авто"
+      },
+      "form": {
+        "title": "Параметры автомобиля",
+        "carPrice": "Стоимость автомобиля (₽)",
+        "ownershipYears": "Срок владения (лет)",
+        "annualMileage": "Пробег в год (км)",
+        "fuelConsumption": "Расход топлива (л/100км)",
+        "selectConsumption": "Выберите расход топлива",
+        "fuelPrice": "Цена топлива (₽/л)",
+        "osagoCost": "Стоимость ОСАГО (₽/год)",
+        "kaskoCost": "Стоимость КАСКО (₽/год)",
+        "optional": "опционально",
+        "vehicleTax": "Транспортный налог (₽/год)",
+        "maintenanceCost": "ТО и ремонт (₽/год)",
+        "depreciationRate": "Амортизация (% в год)",
+        "selectDepreciation": "Выберите амортизацию",
+        "calculate": "Рассчитать стоимость владения",
+        "errors": {
+          "title": "Ошибки в данных"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "totalOwnershipCost": "Общая стоимость владения",
+        "totalOwnershipDescription": "За весь срок владения",
+        "costPerKm": "Стоимость 1 км",
+        "costPerKmDescription": "Средняя стоимость километра",
+        "annualCosts": "Годовые расходы",
+        "fuel": "Топливо",
+        "insurance": "Страховки",
+        "tax": "Налоги",
+        "maintenance": "ТО и ремонт",
+        "depreciation": "Амортизация",
+        "costBreakdown": "Разбивка расходов",
+        "placeholder": "Введите параметры для расчёта"
+      },
+      "seo": {
+        "title": "Калькулятор стоимости владения автомобилем онлайн",
+        "overview": {
+          "title": "О калькуляторе стоимости владения",
+          "content": "Онлайн калькулятор стоимости владения автомобилем помогает оценить все расходы на топливо, страховки, налоги, обслуживание и амортизацию. Узнайте, во сколько реально обходится ваш автомобиль за год и за весь срок эксплуатации."
+        },
+        "calculation": {
+          "title": "Как рассчитывается стоимость владения",
+          "content": "Стоимость владения автомобилем включает все расходы, связанные с эксплуатацией транспортного средства.",
+          "fuel": "Топливо: расход × пробег × цена за литр",
+          "insurance": "Страховки: ОСАГО + КАСКО (опционально)",
+          "tax": "Налоги: транспортный налог",
+          "maintenance": "ТО и ремонт: регулярное обслуживание",
+          "depreciation": "Амортизация: потеря стоимости автомобиля"
+        },
+        "advantages": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор поможет вам точно оценить реальную стоимость владения автомобилем.",
+          "comprehensive": "Учёт всех видов расходов",
+          "accurate": "Точные расчёты на основе ваших данных",
+          "planning": "Планирование бюджета на автомобиль",
+          "comparison": "Сравнение разных моделей автомобилей"
+        },
+        "tips": {
+          "title": "Советы по снижению стоимости владения",
+          "content": "Существует несколько способов снизить общую стоимость владения автомобилем.",
+          "fuel": "Выбирайте экономичные модели для снижения расходов на топливо",
+          "insurance": "Сравнивайте тарифы страховых компаний",
+          "maintenance": "Регулярное ТО предотвращает дорогостоящие поломки",
+          "depreciation": "Покупайте автомобили с низкой амортизацией"
+        },
+        "seo": "стоимость владения автомобилем, калькулятор владения авто, расходы на автомобиль, стоимость эксплуатации, топливо, страховка, налоги, ТО, амортизация, стоимость километра"
+      }
+    },
+    "car-depreciation": {
+      "title": "Калькулятор амортизации автомобиля",
+      "description": "Расчёт снижения стоимости автомобиля по годам владения",
+      "breadcrumbs": {
+        "auto": "Авто"
+      },
+      "form": {
+        "title": "Параметры расчёта",
+        "initialValue": "Первоначальная стоимость (₽)",
+        "ownershipYears": "Срок владения (лет)",
+        "depreciationMethod": "Метод амортизации",
+        "depreciationRate": "Процент амортизации в год",
+        "selectRate": "Выберите процент амортизации",
+        "annualMileage": "Пробег в год (км)",
+        "optional": "опционально",
+        "calculate": "Рассчитать амортизацию",
+        "errors": {
+          "title": "Ошибки в данных"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "finalValue": "Остаточная стоимость",
+        "finalValueDescription": "Стоимость автомобиля через указанный срок",
+        "totalDepreciation": "Общая амортизация",
+        "depreciationPercentage": "Процент амортизации",
+        "insights": "Анализ амортизации",
+        "yearlyBreakdown": "Разбивка по годам",
+        "year": "Год",
+        "beginningValue": "Начальная стоимость",
+        "depreciation": "Амортизация",
+        "endingValue": "Конечная стоимость",
+        "percentage": "Процент",
+        "placeholder": "Введите параметры для расчёта"
+      },
+      "seo": {
+        "title": "Калькулятор амортизации автомобиля онлайн",
+        "overview": {
+          "title": "О калькуляторе амортизации",
+          "content": "Онлайн калькулятор амортизации автомобиля поможет рассчитать, как снижается стоимость авто по годам владения, выбрать метод расчёта амортизации и спланировать будущие расходы. Удобный инструмент для оценки остаточной стоимости машины."
+        },
+        "methods": {
+          "title": "Методы расчёта амортизации",
+          "content": "Существует несколько методов расчёта амортизации автомобиля, каждый из которых имеет свои особенности.",
+          "linear": "Линейный метод: равномерное снижение стоимости каждый год",
+          "declining": "Убывающий метод: процент от остаточной стоимости каждый год",
+          "factors": "Факторы влияния: возраст, пробег, состояние, рыночная ситуация"
+        },
+        "advantages": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор амортизации поможет вам принять обоснованные решения о покупке и продаже автомобиля.",
+          "planning": "Планирование финансовых расходов",
+          "comparison": "Сравнение разных моделей автомобилей",
+          "insights": "Получение аналитических выводов",
+          "financial": "Финансовое планирование"
+        },
+        "tips": {
+          "title": "Советы по снижению амортизации",
+          "content": "Существует несколько способов минимизировать потерю стоимости автомобиля.",
+          "maintenance": "Регулярное техническое обслуживание",
+          "mileage": "Контроль пробега и стиля вождения",
+          "market": "Учёт рыночной ситуации при покупке",
+          "timing": "Правильный выбор времени для продажи"
+        },
+        "seo": "амортизация автомобиля, калькулятор амортизации, остаточная стоимость авто, снижение стоимости, линейная амортизация, убывающий метод, потеря стоимости, оценка автомобиля"
+      }
+    },
+    "wallpaper": {
+      "title": "Калькулятор количества обоев",
+      "description": "Расчёт количества рулонов обоев для оклейки комнаты",
+      "breadcrumbs": {
+        "construction": "Строительство"
+      },
+      "form": {
+        "title": "Параметры расчёта",
+        "roomDimensions": "Размеры комнаты",
+        "roomLength": "Длина комнаты (м)",
+        "roomWidth": "Ширина комнаты (м)",
+        "wallHeight": "Высота стен (м)",
+        "rollDimensions": "Размеры рулона",
+        "doors": "Двери",
+        "windows": "Окна",
+        "addDoor": "Добавить дверь",
+        "addWindow": "Добавить окно",
+        "width": "Ширина (м)",
+        "height": "Высота (м)",
+        "reservePercentage": "Запас обоев",
+        "calculate": "Рассчитать количество",
+        "errors": {
+          "title": "Ошибки в данных"
+        }
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "rollsNeeded": "Необходимо рулонов",
+        "rolls": "рулонов",
+        "rollsDescription": "Количество рулонов для оклейки",
+        "detailedResults": "Детальные результаты",
+        "parameter": "Параметр",
+        "value": "Значение",
+        "totalWallArea": "Общая площадь стен",
+        "openingsArea": "Площадь проёмов",
+        "usefulWallArea": "Полезная площадь стен",
+        "rollArea": "Площадь одного рулона",
+        "reserve": "Запас",
+        "recommendation": "Рекомендация",
+        "recommendationText": "Рекомендуем взять {recommended} рулонов для подгонки рисунка и ремонта в будущем",
+        "placeholder": "Введите параметры для расчёта"
+      },
+      "options": {
+        "rollSizes": {
+          "standard": {
+            "label": "0.53 × 10.05 м",
+            "description": "Стандартный размер (европейский)"
+          },
+          "wide": {
+            "label": "0.7 × 10.05 м",
+            "description": "Широкий рулон"
+          },
+          "veryWide": {
+            "label": "1.06 × 10.05 м",
+            "description": "Очень широкий рулон"
+          },
+          "long": {
+            "label": "0.53 × 15.0 м",
+            "description": "Длинный рулон"
+          },
+          "wideLong": {
+            "label": "0.7 × 15.0 м",
+            "description": "Широкий длинный рулон"
+          }
+        },
+        "reservePercentages": {
+          "minimal": "Минимальный запас",
+          "standard": "Стандартный запас",
+          "increased": "Увеличенный запас",
+          "large": "Большой запас"
+        }
+      },
+      "seo": {
+        "title": "Калькулятор обоев онлайн",
+        "overview": {
+          "title": "О калькуляторе обоев",
+          "content": "Калькулятор обоев онлайн поможет быстро рассчитать, сколько рулонов обоев потребуется для оклейки комнаты. В расчётах учитываются стены, окна, двери и запас. Результат представлен в удобной таблице для планирования ремонта."
+        },
+        "calculation": {
+          "title": "Как рассчитывается количество обоев",
+          "content": "Расчёт количества обоев включает несколько этапов для получения точного результата.",
+          "steps": {
+            "area": "Расчёт общей площади стен комнаты",
+            "openings": "Вычитание площади дверей и окон",
+            "useful": "Определение полезной площади для оклейки",
+            "rolls": "Расчёт количества рулонов",
+            "reserve": "Добавление запаса на подгонку рисунка"
+          }
+        },
+        "tips": {
+          "title": "Советы по расчёту обоев",
+          "content": "Для получения точного результата следуйте нашим рекомендациям.",
+          "measurement": "Тщательно измерьте все размеры комнаты",
+          "pattern": "Учитывайте раппорт рисунка при расчёте",
+          "reserve": "Всегда добавляйте запас 10-15%",
+          "quality": "Покупайте обои с небольшим запасом"
+        },
+        "advantages": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор обоев поможет вам сэкономить время и деньги при планировании ремонта.",
+          "accuracy": "Точный расчёт количества обоев",
+          "savings": "Экономия на покупке лишних рулонов",
+          "planning": "Правильное планирование ремонта",
+          "convenience": "Удобный и быстрый расчёт"
+        },
+        "seo": "калькулятор обоев, расчёт обоев, количество рулонов, оклейка комнаты, ремонт, обои, площадь стен, запас обоев"
+      }
+    },
+    "materials": {
+      "title": "Калькулятор строительных материалов",
+      "description": "Универсальный расчёт краски, шпатлёвки, грунтовки и плиточного клея",
+      "breadcrumbs": {
+        "construction": "Строительство"
+      },
+      "form": {
+        "materialType": "Тип материала",
+        "roomLength": "Длина комнаты",
+        "roomWidth": "Ширина комнаты",
+        "wallHeight": "Высота стен",
+        "floorArea": "Площадь пола",
+        "doorsWindowsArea": "Площадь дверей и окон",
+        "layers": "Количество слоёв",
+        "consumptionRate": "Норма расхода",
+        "reservePercentage": "Запас",
+        "packageSize": "Размер упаковки",
+        "tileSize": "Размер плитки",
+        "groutWidth": "Ширина шва",
+        "calculate": "Рассчитать",
+        "reset": "Сбросить"
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "parameter": "Параметр",
+        "value": "Значение",
+        "totalWallArea": "Общая площадь стен",
+        "floorArea": "Площадь пола",
+        "doorsWindowsArea": "Площадь дверей и окон",
+        "usefulArea": "Полезная площадь",
+        "layers": "Количество слоёв",
+        "consumptionPerLayer": "Расход на 1 слой",
+        "totalMaterial": "Итого материала",
+        "packageSize": "Упаковка",
+        "packagesNeeded": "Нужно упаковок",
+        "pieces": "шт.",
+        "tips": {
+          "title": "Полезные советы",
+          "surface": "Учтите, что фактура поверхности влияет на расход",
+          "weather": "При работе в жаркую погоду расход может увеличиться",
+          "technique": "Техника нанесения влияет на расход материала",
+          "waste": "Всегда покупайте материал с запасом 10-15%"
+        }
+      },
+      "errors": {
+        "title": "Ошибки ввода"
+      },
+      "seo": {
+        "title": "Калькулятор строительных материалов - Краска, шпатлёвка, грунтовка | Калькулятор #1",
+        "overview": {
+          "title": "Калькулятор строительных материалов",
+          "content": "Онлайн калькулятор строительных материалов поможет рассчитать количество краски, шпатлёвки, грунтовки, плиточного клея и других материалов для ремонта. Учитываются размеры помещения, расход, количество слоёв и запас."
+        },
+        "calculation": {
+          "title": "Как рассчитывается количество строительных материалов",
+          "content": "Расчёт строительных материалов включает несколько этапов для получения точного результата в зависимости от типа материала.",
+          "steps": {
+            "area": "Расчёт общей площади стен или пола помещения",
+            "openings": "Вычитание площади дверей и окон",
+            "useful": "Определение полезной площади для обработки",
+            "consumption": "Расчёт расхода материала на квадратный метр",
+            "layers": "Учёт количества слоёв нанесения",
+            "reserve": "Добавление запаса на подгонку и потери"
+          }
+        },
+        "materials": {
+          "title": "Типы строительных материалов",
+          "content": "Калькулятор поддерживает расчёт различных типов строительных материалов с учётом их специфики.",
+          "paint": {
+            "title": "Расчёт краски",
+            "content": "Расчёт количества краски для стен с учётом типа поверхности, количества слоёв и нормы расхода. Подходит для водоэмульсионной, масляной, акриловой краски."
+          },
+          "putty": {
+            "title": "Расчёт шпатлёвки",
+            "content": "Расчёт количества шпатлёвки для выравнивания стен перед покраской или поклейкой обоев. Учитывает стартовую и финишную шпатлёвку."
+          },
+          "primer": {
+            "title": "Расчёт грунтовки",
+            "content": "Расчёт количества грунтовки для подготовки поверхности. Включает акриловую, алкидную, глубокопроникающую грунтовку."
+          },
+          "tileGlue": {
+            "title": "Расчёт плиточного клея",
+            "content": "Расчёт количества плиточного клея для укладки керамической плитки, керамогранита, мозаики на пол и стены."
+          }
+        },
+        "tips": {
+          "title": "Советы по расчёту строительных материалов",
+          "content": "Для получения точного результата следуйте нашим рекомендациям при расчёте материалов.",
+          "measurement": "Тщательно измерьте все размеры помещения",
+          "surface": "Учитывайте тип и состояние поверхности",
+          "consumption": "Проверьте норму расхода на упаковке материала",
+          "layers": "Определите необходимое количество слоёв",
+          "reserve": "Добавьте 10-15% запаса на потери и подгонку",
+          "weather": "Учитывайте погодные условия при работе",
+          "technique": "Выберите правильную технику нанесения"
+        },
+        "benefits": {
+          "title": "Преимущества использования калькулятора",
+          "content": "Использование калькулятора строительных материалов даёт множество преимуществ при планировании ремонта.",
+          "accuracy": "Точный расчёт количества материалов",
+          "savings": "Экономия на покупке лишних материалов",
+          "planning": "Правильное планирование бюджета ремонта",
+          "convenience": "Удобный и быстрый расчёт",
+          "universal": "Поддержка различных типов материалов",
+          "professional": "Профессиональный подход к расчётам"
+        },
+        "options": {
+          "materials": {
+            "paint": "Краска",
+            "putty": "Шпатлёвка",
+            "primer": "Грунтовка",
+            "tileGlue": "Плиточный клей"
+          },
+          "materialDescriptions": {
+            "paint": "Расчёт количества краски для стен",
+            "putty": "Расчёт количества шпатлёвки для стен",
+            "primer": "Расчёт количества грунтовки для стен",
+            "tileGlue": "Расчёт количества плиточного клея для пола"
+          }
+        },
+        "seo": "калькулятор строительных материалов, расчёт краски, шпатлёвка расчёт, грунтовка калькулятор, плиточный клей, расход краски, строительные материалы, ремонт калькулятор, краска для стен, шпатлёвка стен, грунтовка стен, плиточный клей расчёт, расход материалов, строительство онлайн, водоэмульсионная краска, акриловая краска, масляная краска, стартовая шпатлёвка, финишная шпатлёвка, акриловая грунтовка, алкидная грунтовка, керамическая плитка, керамогранит, мозаика, расход краски на м2, расход шпатлёвки на м2, расход грунтовки на м2, расход плиточного клея на м2, калькулятор ремонта, планирование ремонта, бюджет ремонта, строительные работы, отделочные материалы"
+      }
+    },
+    "tile-laminate": {
+      "title": "Калькулятор плитки и ламината",
+      "description": "Расчёт количества плитки и ламината для пола",
+      "breadcrumbs": {
+        "construction": "Строительство"
+      },
+      "form": {
+        "title": "Параметры расчёта",
+        "flooringType": "Тип покрытия",
+        "roomDimensions": "Размеры комнаты",
+        "roomLength": "Длина комнаты",
+        "roomWidth": "Ширина комнаты",
+        "elementDimensions": "Размеры элемента",
+        "elementLength": "Длина элемента",
+        "elementWidth": "Ширина элемента",
+        "packageInfo": "Информация об упаковке",
+        "packageQuantity": "Количество в упаковке",
+        "piecesPerPackage": "штук в упаковке",
+        "reservePercentage": "Запас материала",
+        "groutWidth": "Ширина шва",
+        "calculate": "Рассчитать",
+        "reset": "Сбросить"
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "summary": "Итого нужно",
+        "parameter": "Параметр",
+        "value": "Значение",
+        "roomArea": "Площадь комнаты",
+        "flooringType": "Тип покрытия",
+        "elementSize": "Размер элемента",
+        "elementArea": "Площадь элемента",
+        "totalElements": "Количество элементов",
+        "reserve": "Запас",
+        "packagesNeeded": "Нужно упаковок",
+        "packages": "упаковок",
+        "elements": "элементов",
+        "tips": {
+          "title": "Рекомендации",
+          "recommendation": "Рекомендуем брать дополнительно 1–2 упаковки для подрезки и возможного брака."
+        }
+      },
+      "options": {
+        "flooringTypes": {
+          "tile": "Плитка",
+          "laminate": "Ламинат"
+        },
+        "flooringTypeDescriptions": {
+          "tile": "Расчёт количества плитки для пола",
+          "laminate": "Расчёт количества ламината"
+        }
+      },
+      "errors": {
+        "title": "Ошибки ввода"
+      },
+      "seo": {
+        "title": "Калькулятор плитки и ламината - Расчёт материалов для пола | Калькулятор #1",
+        "overview": {
+          "title": "Калькулятор плитки и ламината",
+          "content": "Онлайн калькулятор плитки и ламината поможет рассчитать, сколько нужно материала для укладки пола или стен. Учитываются размеры помещения, плитки или панели, а также запас на подрезку и отходы."
+        },
+        "calculation": {
+          "title": "Как рассчитывается количество материалов",
+          "content": "Расчёт плитки и ламината включает несколько этапов для получения точного результата.",
+          "steps": {
+            "area": "Расчёт площади помещения",
+            "element": "Определение площади одного элемента",
+            "quantity": "Расчёт общего количества элементов",
+            "packages": "Определение количества упаковок",
+            "reserve": "Добавление запаса на подрезку"
+          }
+        },
+        "materials": {
+          "title": "Типы напольных покрытий",
+          "content": "Калькулятор поддерживает расчёт плитки и ламината с учётом их специфики.",
+          "tile": {
+            "title": "Расчёт плитки",
+            "content": "Расчёт количества керамической плитки для пола с учётом размера плитки, ширины шва и запаса на подрезку."
+          },
+          "laminate": {
+            "title": "Расчёт ламината",
+            "content": "Расчёт количества ламината с учётом размера доски, количества в упаковке и запаса на подрезку."
+          }
+        },
+        "tips": {
+          "title": "Советы по расчёту материалов",
+          "content": "Для получения точного результата следуйте нашим рекомендациям при расчёте плитки и ламината.",
+          "measurement": "Тщательно измерьте все размеры помещения",
+          "element": "Проверьте размеры элементов покрытия",
+          "package": "Уточните количество элементов в упаковке",
+          "reserve": "Добавьте 10-15% запаса на подрезку",
+          "quality": "Учитывайте возможный брак при покупке",
+          "pattern": "Для покрытий с рисунком увеличьте запас до 20%"
+        },
+        "benefits": {
+          "title": "Преимущества калькулятора",
+          "content": "Использование калькулятора плитки и ламината даёт множество преимуществ при планировании ремонта.",
+          "accuracy": "Точный расчёт количества материала",
+          "cost": "Экономия средств на покупке материалов",
+          "planning": "Правильное планирование закупок",
+          "waste": "Минимизация отходов материала",
+          "time": "Экономия времени на расчётах"
+        },
+        "seo": "калькулятор плитки, калькулятор ламината, расчёт плитки, расчёт ламината, плитка для пола, ламинат для пола, количество плитки, количество ламината, площадь покрытия, запас материала, подрезка плитки, подрезка ламината, ремонт пола, отделка пола, напольные материалы, строительные материалы, ремонт квартиры, планирование ремонта, бюджет ремонта, строительные работы, отделочные работы, керамическая плитка, керамогранит, мозаика, виниловая плитка, кварцвиниловая плитка, SPC плитка, LVT плитка, ламинат 32 класса, ламинат 33 класса, ламинат 34 класса, паркетная доска дуб, паркетная доска ясень, паркетная доска орех"
+      }
+    },
+    "concrete": {
+      "title": "Калькулятор бетона",
+      "description": "Расчёт количества цемента, песка, щебня и воды для приготовления бетона",
+      "breadcrumbs": {
+        "construction": "Строительство"
+      },
+      "form": {
+        "title": "Параметры расчёта",
+        "volume": "Объём бетона",
+        "volumeAmount": "Количество",
+        "volumeUnit": "Единица измерения",
+        "grade": "Марка бетона",
+        "selectGrade": "Выберите марку",
+        "proportions": "Пропорции смеси",
+        "cement": "Цемент",
+        "sand": "Песок",
+        "gravel": "Щебень",
+        "proportionsNote": "Пропорции цемент : песок : щебень",
+        "waterCementRatio": "Водоцементное соотношение",
+        "waterCementRatioNote": "Отношение воды к цементу (обычно 0.4-0.7)",
+        "outputUnits": "Единицы измерения результата",
+        "water": "Вода",
+        "calculate": "Рассчитать",
+        "reset": "Сбросить"
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "summary": "Итого",
+        "volume": "Объём",
+        "grade": "Марка",
+        "material": "Материал",
+        "amount": "Количество",
+        "unit": "Единица",
+        "cement": "Цемент",
+        "sand": "Песок",
+        "gravel": "Щебень",
+        "water": "Вода",
+        "cementBags": "Мешки цемента",
+        "bags50kg": "мешков по 50 кг",
+        "proportions": "Пропорции",
+        "proportionsText": "Цемент : Песок : Щебень = {cement} : {sand} : {gravel}",
+        "waterCementRatio": "В/Ц соотношение"
+      },
+      "errors": {
+        "title": "Ошибки ввода"
+      },
+      "seo": {
+        "title": "Калькулятор бетона - Расчёт компонентов бетонной смеси | Калькулятор #1",
+        "overview": {
+          "title": "Калькулятор бетона онлайн",
+          "content": "Калькулятор бетона онлайн: точный расчет цемента, песка, щебня и воды для приготовления раствора нужной марки. Подходит для расчета бетонной смеси при строительстве фундамента, стен и других конструкций."
+        },
+        "calculation": {
+          "title": "Как рассчитывается состав бетона",
+          "content": "Расчёт состава бетона включает несколько этапов для получения точного результата.",
+          "steps": {
+            "volume": "Определение объёма бетона",
+            "grade": "Выбор марки бетона",
+            "proportions": "Расчёт пропорций компонентов",
+            "water": "Определение количества воды",
+            "verification": "Проверка водоцементного соотношения"
+          }
+        },
+        "grades": {
+          "title": "Марки бетона",
+          "content": "Калькулятор поддерживает расчёт различных марок бетона с учётом их характеристик.",
+          "M100": {
+            "title": "Бетон М100",
+            "content": "Бетон для ненагруженных конструкций, подпорных стен, фундаментов под лёгкие здания."
+          },
+          "M150": {
+            "title": "Бетон М150",
+            "content": "Бетон для малонагруженных конструкций, стяжек, отмосток, тротуаров."
+          },
+          "M200": {
+            "title": "Бетон М200",
+            "content": "Бетон для фундаментов, стен, перекрытий в малоэтажном строительстве."
+          },
+          "M250": {
+            "title": "Бетон М250",
+            "content": "Бетон для нагруженных конструкций, колонн, балок, плит перекрытий."
+          },
+          "M300": {
+            "title": "Бетон М300",
+            "content": "Бетон для высоконагруженных конструкций, мостов, эстакад, промышленных зданий."
+          },
+          "M400": {
+            "title": "Бетон М400",
+            "content": "Бетон для особо ответственных конструкций, гидротехнических сооружений."
+          }
+        },
+        "tips": {
+          "title": "Советы по расчёту бетона",
+          "content": "Для получения точного результата следуйте нашим рекомендациям при расчёте бетона.",
+          "volume": "Тщательно измерьте объём бетонируемой конструкции",
+          "grade": "Выберите марку бетона в соответствии с нагрузками",
+          "proportions": "Проверьте пропорции компонентов",
+          "water": "Контролируйте водоцементное соотношение",
+          "quality": "Используйте качественные компоненты",
+          "mixing": "Соблюдайте технологию замешивания"
+        },
+        "benefits": {
+          "title": "Преимущества калькулятора",
+          "content": "Использование калькулятора бетона даёт множество преимуществ при планировании строительства.",
+          "accuracy": "Точный расчёт количества компонентов",
+          "cost": "Экономия средств на материалах",
+          "planning": "Правильное планирование закупок",
+          "quality": "Обеспечение качества бетона",
+          "waste": "Минимизация отходов материалов",
+          "time": "Экономия времени на расчётах"
+        },
+        "seo": "калькулятор бетона, расчёт бетона, состав бетона, цемент расчёт, песок расчёт, щебень расчёт, вода для бетона, марка бетона, бетон М100, бетон М150, бетон М200, бетон М250, бетон М300, бетон М400, пропорции бетона, водоцементное соотношение, бетонная смесь, фундамент бетон, стены бетон, перекрытия бетон, строительство бетон, бетонные работы, компоненты бетона, замес бетона, бетонный раствор, строительные материалы, бетонные конструкции, монолитный бетон, железобетон, бетонные блоки, бетонные плиты"
+      }
+    },
+    "wall": {
+      "title": "Калькулятор кирпича и блоков",
+      "description": "Расчёт количества кирпичей, газоблоков и пеноблоков для стены",
+      "breadcrumbs": {
+        "construction": "Строительство"
+      },
+      "form": {
+        "title": "Параметры стены",
+        "units": "Единицы измерения",
+        "wallDimensions": "Размеры стены",
+        "wallLength": "Длина стены",
+        "wallHeight": "Высота стены",
+        "wallThickness": "Толщина стены",
+        "materialType": "Тип материала",
+        "selectMaterial": "Выберите материал",
+        "materialDimensions": "Размеры материала",
+        "materialLength": "Длина",
+        "materialWidth": "Ширина",
+        "materialHeight": "Высота",
+        "jointThickness": "Толщина шва",
+        "reservePercentage": "Запас материала",
+        "pricePerUnit": "Цена за штуку",
+        "optional": "необязательно",
+        "calculate": "Рассчитать",
+        "reset": "Сбросить"
+      },
+      "results": {
+        "title": "Результаты расчёта",
+        "summary": "Сводка",
+        "wallDimensions": "Размеры стены",
+        "wallThickness": "Толщина стены",
+        "bricks": "кирпичей",
+        "material": "Материал",
+        "materialDimensions": "Размеры материала",
+        "areasAndVolumes": "Площади и объёмы",
+        "wallArea": "Площадь стены",
+        "wallVolume": "Объём стены",
+        "materialVolume": "Объём материала",
+        "materialQuantities": "Количество материала",
+        "materialCount": "Количество без запаса",
+        "materialCountWithReserve": "Количество с запасом",
+        "reserveCount": "Запас",
+        "pieces": "шт",
+        "mortarGlue": "Раствор/клей",
+        "mortarVolume": "Объём раствора",
+        "mortarVolumeLiters": "Объём раствора в литрах",
+        "cost": "Стоимость",
+        "totalCost": "Общая стоимость",
+        "costPerSquareMeter": "Стоимость за м²"
+      },
+      "options": {
+        "materials": {
+          "single-brick": "Кирпич одинарный",
+          "double-brick": "Кирпич полуторный",
+          "triple-brick": "Кирпич двойной",
+          "gas-block": "Газоблок",
+          "foam-block": "Пеноблок"
+        },
+        "materialDescriptions": {
+          "single-brick": "Стандартный одинарный кирпич",
+          "double-brick": "Полуторный кирпич увеличенной высоты",
+          "triple-brick": "Двойной кирпич увеличенной высоты",
+          "gas-block": "Газобетонный блок",
+          "foam-block": "Пенобетонный блок"
+        },
+        "thickness": {
+          "half": "0.5 кирпича",
+          "single": "1 кирпич",
+          "onehalf": "1.5 кирпича",
+          "double": "2 кирпича"
+        },
+        "thicknessDescriptions": {
+          "half": "В полкирпича",
+          "single": "В кирпич",
+          "onehalf": "В полтора кирпича",
+          "double": "В два кирпича"
+        }
+      },
+      "errors": {
+        "title": "Ошибки ввода"
+      },
+      "seo": {
+        "title": "Калькулятор кирпича и блоков онлайн - расчёт материалов для стены",
+        "overview": {
+          "title": "Онлайн калькулятор кирпича и блоков",
+          "content": "Онлайн калькулятор кирпича и блоков для стены поможет рассчитать количество кирпичей, газоблоков или пеноблоков для кладки. Сервис учитывает толщину стены, размеры материалов, процент запаса, а также позволяет рассчитать стоимость и объём раствора или клея."
+        },
+        "calculation": {
+          "title": "Как рассчитать кирпич и блоки",
+          "content": "Расчёт кирпича и блоков включает определение площади стены, количества материалов и объёма раствора.",
+          "steps": {
+            "area": "Определение площади стены",
+            "thickness": "Расчёт толщины стены в кирпичах/блоках",
+            "material": "Расчёт количества единиц материала",
+            "reserve": "Добавление запаса материала",
+            "mortar": "Расчёт объёма раствора или клея"
+          }
+        },
+        "materials": {
+          "title": "Типы материалов",
+          "content": "Калькулятор поддерживает различные типы кирпичей и блоков:",
+          "bricks": {
+            "title": "Кирпичи",
+            "content": "Одинарный, полуторный и двойной кирпич различных размеров"
+          },
+          "blocks": {
+            "title": "Блоки",
+            "content": "Газоблоки и пеноблоки для быстрого строительства"
+          }
+        },
+        "thickness": {
+          "title": "Толщина стены",
+          "content": "Калькулятор поддерживает различные толщины стен:",
+          "half": "В полкирпича (0.5)",
+          "single": "В кирпич (1)",
+          "double": "В полтора кирпича (1.5)",
+          "triple": "В два кирпича (2)"
+        },
+        "tips": {
+          "title": "Советы по расчёту",
+          "content": "Для точного расчёта кирпича и блоков учитывайте:",
+          "dimensions": "Точные размеры стены и материала",
+          "thickness": "Правильную толщину стены",
+          "joints": "Толщину швов раствора",
+          "reserve": "Запас материала на подрезку",
+          "price": "Стоимость материалов для бюджета"
+        },
+        "benefits": {
+          "title": "Преимущества калькулятора",
+          "content": "Наш калькулятор поможет вам:",
+          "accuracy": "Точный расчёт количества материалов",
+          "cost": "Оценка стоимости строительства",
+          "planning": "Планирование закупки материалов",
+          "waste": "Минимизация отходов",
+          "time": "Экономия времени на расчёты"
+        },
+        "seo": "калькулятор кирпича, расчёт кирпича, калькулятор блоков, газоблоки, пеноблоки, кладка, стена, толщина стены, раствор, клей, запас материала, стоимость строительства, одинарный кирпич, полуторный кирпич, двойной кирпич, размеры кирпича, размеры блоков"
+      }
+    }
+  },
+  "math_percent": {
+    "title": "Percentage Calculator",
+    "description": "Online percentage calculator to find percentages, ratios, and changes by percent. Fast and accurate tool with multilingual support.",
+    "find_percent_of_number": "Find percentage of a number",
+    "find_percent_of_number_desc": "Calculate what percentage a number represents of another number",
+    "what_percent_is": "Find what percent one number is of another",
+    "what_percent_is_desc": "Calculate the percentage ratio between two numbers",
+    "find_number_from_percent": "Find number from percent",
+    "find_number_from_percent_desc": "Calculate the original number when you know the percentage and the result",
+    "increase_or_decrease": "Increase or decrease number by percent",
+    "increase_or_decrease_desc": "Add or subtract a percentage from a number",
+    "number": "Number",
+    "percentage": "Percentage",
+    "first_number": "First number",
+    "second_number": "Second number",
+    "part_value": "Part value",
+    "operation": "Operation",
+    "calculate": "Calculate",
+    "calculating": "Calculating...",
+    "result": "Result",
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "errors": {
+      "error_title": "Calculation Error",
+      "invalid_input": "Please enter valid numbers",
+      "calculation_failed": "Calculation failed. Please check your input."
+    },
+    "tips": {
+      "title": "Tips",
+      "enter_key": "Press Enter to calculate",
+      "auto_calculate": "Results update automatically as you type",
+      "negative_numbers": "Negative numbers are not supported"
+    },
+    "seo": {
+      "title": "Online Percentage Calculator - Calculate Percentages Fast",
+      "description": "Simple online percentage calculator: calculate percentage of a number, find what percent one number is of another, or increase a number by percent. Available in 4 languages.",
+      "content": {
+        "title": "About Percentage Calculator",
+        "description": "Online percentage calculator helps calculate percentage of a number, find percentage ratios, and change numbers by a given percentage. Suitable for discount calculations, taxes, profits, and other everyday tasks."
+      }
+    },
+    "results": {
+      "percent_of_number": "{percentage}% of {number} equals {result}",
+      "what_percent": "{number1} is {result}% of {number2}",
+      "number_from_percent": "If {part} is {percentage}%, then the original number is {result}",
+      "increase_by_percent": "Increasing {number} by {percentage}% gives {result}",
+      "decrease_by_percent": "Decreasing {number} by {percentage}% gives {result}"
+    }
+  },
+  "materials": {
+    "title": "Building Materials Calculator",
+    "description": "Universal calculation of paint, putty, primer and tile adhesive",
+    "breadcrumbs": {
+      "construction": "Construction"
+    },
+    "form": {
+      "materialType": "Material Type",
+      "roomLength": "Room Length",
+      "roomWidth": "Room Width",
+      "wallHeight": "Wall Height",
+      "floorArea": "Floor Area",
+      "doorsWindowsArea": "Doors and Windows Area",
+      "layers": "Number of Layers",
+      "consumptionRate": "Consumption Rate",
+      "reservePercentage": "Reserve",
+      "packageSize": "Package Size",
+      "tileSize": "Tile Size",
+      "groutWidth": "Grout Width",
+      "calculate": "Calculate",
+      "reset": "Reset"
+    },
+    "results": {
+      "title": "Calculation Results",
+      "summary": "Total Required",
+      "parameter": "Parameter",
+      "value": "Value",
+      "roomArea": "Room Area",
+      "materialType": "Material Type",
+      "consumptionRate": "Consumption Rate",
+      "totalConsumption": "Total Consumption",
+      "reserve": "Reserve",
+      "packagesNeeded": "Packages Needed",
+      "packages": "packages",
+      "liters": "liters",
+      "kilograms": "kilograms",
+      "tips": {
+        "title": "Recommendations",
+        "recommendation": "We recommend taking 1-2 additional packages for fitting and possible defects."
+      }
+    },
+    "options": {
+      "materials": {
+        "paint": "Paint",
+        "putty": "Putty",
+        "primer": "Primer",
+        "tileGlue": "Tile Adhesive"
+      },
+      "materialDescriptions": {
+        "paint": "Wall paint calculation",
+        "putty": "Wall putty calculation",
+        "primer": "Wall primer calculation",
+        "tileGlue": "Floor tile adhesive calculation"
+      }
+    },
+    "errors": {
+      "title": "Input Errors"
+    },
+    "seo": {
+      "title": "Building Materials Calculator - Paint, Putty, Primer Calculation | Calculator #1",
+      "overview": {
+        "title": "Building Materials Calculator",
+        "content": "Online building materials calculator helps calculate paint, putty, primer and tile adhesive quantities. Takes into account room dimensions, material consumption rates, number of layers and reserve for fitting and losses."
+      },
+      "calculation": {
+        "title": "How Material Quantities Are Calculated",
+        "content": "Building materials calculation includes several steps to get accurate results.",
+        "steps": {
+          "area": "Room area calculation",
+          "consumption": "Material consumption per square meter calculation",
+          "layers": "Number of application layers consideration",
+          "reserve": "Reserve addition for fitting and losses"
+        }
+      },
+      "materials": {
+        "title": "Types of Building Materials",
+        "content": "Calculator supports calculation of various types of building materials considering their specifics.",
+        "paint": {
+          "title": "Paint Calculation",
+          "content": "Wall paint quantity calculation considering surface type, number of layers and consumption rate. Suitable for water-based, oil-based, acrylic paint."
+        },
+        "putty": {
+          "title": "Putty Calculation",
+          "content": "Wall putty quantity calculation for wall leveling before painting or wallpapering. Considers starter and finish putty."
+        },
+        "primer": {
+          "title": "Primer Calculation",
+          "content": "Primer quantity calculation for surface preparation. Includes acrylic, alkyd, deep-penetrating primer."
+        },
+        "tileGlue": {
+          "title": "Tile Adhesive Calculation",
+          "content": "Tile adhesive quantity calculation for laying ceramic tiles, porcelain stoneware, mosaic on floor and walls."
+        }
+      },
+      "tips": {
+        "title": "Material Calculation Tips",
+        "content": "Follow our recommendations for accurate building materials calculation results.",
+        "measurement": "Carefully measure all room dimensions",
+        "material": "Check material consumption rates",
+        "layers": "Consider number of application layers",
+        "reserve": "Add 10-15% reserve for fitting",
+        "quality": "Consider possible defects when purchasing",
+        "surface": "Consider surface type and condition"
+      },
+      "benefits": {
+        "title": "Calculator Benefits",
+        "content": "Our building materials calculator provides several advantages:",
+        "accuracy": "Accurate material quantity calculation",
+        "convenience": "Convenient and fast calculation",
+        "universal": "Support for various material types",
+        "professional": "Professional approach to calculations"
+      }
+    }
+  },
+  "tile-laminate": {
+    "title": "Tile and Laminate Calculator",
+    "description": "Calculate tile and laminate quantity for floor",
+    "breadcrumbs": {
+      "construction": "Construction"
+    },
+    "form": {
+      "title": "Calculation Parameters",
+      "flooringType": "Flooring Type",
+      "roomDimensions": "Room Dimensions",
+      "roomLength": "Room Length",
+      "roomWidth": "Room Width",
+      "elementDimensions": "Element Dimensions",
+      "elementLength": "Element Length",
+      "elementWidth": "Element Width",
+      "packageInfo": "Package Information",
+      "packageQuantity": "Quantity in Package",
+      "piecesPerPackage": "pieces per package",
+      "reservePercentage": "Material Reserve",
+      "groutWidth": "Grout Width",
+      "calculate": "Calculate",
+      "reset": "Reset"
+    },
+    "results": {
+      "title": "Calculation Results",
+      "summary": "Total Required",
+      "parameter": "Parameter",
+      "value": "Value",
+      "roomArea": "Room Area",
+      "flooringType": "Flooring Type",
+      "elementSize": "Element Size",
+      "elementArea": "Element Area",
+      "totalElements": "Total Elements",
+      "reserve": "Reserve",
+      "packagesNeeded": "Packages Needed",
+      "packages": "packages",
+      "elements": "elements",
+      "tips": {
+        "title": "Recommendations",
+        "recommendation": "We recommend taking 1-2 additional packages for cutting and possible defects."
+      }
+    },
+    "options": {
+      "flooringTypes": {
+        "tile": "Tile",
+        "laminate": "Laminate"
+      },
+      "flooringTypeDescriptions": {
+        "tile": "Tile quantity calculation for floor",
+        "laminate": "Laminate quantity calculation"
+      }
+    },
+    "errors": {
+      "title": "Input Errors"
+    },
+    "seo": {
+      "title": "Tile and Laminate Calculator - Floor Material Calculation | Calculator #1",
+      "overview": {
+        "title": "Tile and Laminate Calculator",
+        "content": "Online tile and laminate calculator helps calculate material quantity needed for floor or wall installation. Takes into account room dimensions, tile or panel size, as well as reserve for cutting and waste."
+      },
+      "calculation": {
+        "title": "How Material Quantities Are Calculated",
+        "content": "Tile and laminate calculation includes several steps to get accurate results.",
+        "steps": {
+          "area": "Room area calculation",
+          "element": "Single element area determination",
+          "quantity": "Total element quantity calculation",
+          "packages": "Package quantity determination",
+          "reserve": "Reserve addition for cutting"
+        }
+      },
+      "materials": {
+        "title": "Types of Floor Coverings",
+        "content": "Calculator supports tile and laminate calculation considering their specifics.",
+        "tile": {
+          "title": "Tile Calculation",
+          "content": "Ceramic tile quantity calculation for floor considering tile size, grout width and cutting reserve."
+        },
+        "laminate": {
+          "title": "Laminate Calculation",
+          "content": "Laminate quantity calculation considering board size, quantity per package and cutting reserve."
+        }
+      },
+      "tips": {
+        "title": "Material Calculation Tips",
+        "content": "Follow our recommendations for accurate tile and laminate calculation results.",
+        "measurement": "Carefully measure all room dimensions",
+        "element": "Check element dimensions",
+        "package": "Clarify element quantity per package",
+        "reserve": "Add 10-15% reserve for cutting",
+        "quality": "Consider possible defects when purchasing",
+        "pattern": "For patterned coverings increase reserve to 20%"
+      },
+      "benefits": {
+        "title": "Calculator Benefits",
+        "content": "Our tile and laminate calculator provides several advantages:",
+        "accuracy": "Accurate material quantity calculation",
+        "convenience": "Convenient and fast calculation",
+        "universal": "Support for various flooring types",
+        "professional": "Professional approach to calculations"
+      }
+    }
+  }
 }
