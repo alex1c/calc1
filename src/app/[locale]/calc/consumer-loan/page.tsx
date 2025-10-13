@@ -1,15 +1,22 @@
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import ConsumerLoanCalculator from '@/components/calculators/consumer-loan-calculator';
 
 export default function ConsumerLoanPage() {
+	const t = useTranslations();
+	const locale = useLocale();
+
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: 'Финансы', href: '/finance' },
-					{ label: 'Калькулятор потребительского кредита' },
+					{
+						label: t('categories.finance.title'),
+						href: `/${locale}/finance`,
+					},
+					{ label: t('calculators.consumer-loan.title') },
 				]}
 			/>
 			<ConsumerLoanCalculator />

@@ -416,7 +416,9 @@ export function getRoofTypeOptions(t?: (key: string) => string): Array<{
 	return Object.entries(ROOF_TYPES).map(([key, type]) => ({
 		value: key,
 		label: t ? t(`options.roofTypes.${key}`) : type.name,
-		description: t ? t(`options.roofTypeDescriptions.${key}`) : type.description,
+		description: t
+			? t(`options.roofTypeDescriptions.${key}`)
+			: type.description,
 		coefficient: type.coefficient,
 	}));
 }
@@ -436,7 +438,9 @@ export function getRoofMaterialOptions(t?: (key: string) => string): Array<{
 	return Object.entries(ROOF_MATERIALS).map(([key, material]) => ({
 		value: key,
 		label: t ? t(`options.materials.${key}`) : material.name,
-		description: t ? t(`options.materialDescriptions.${key}`) : material.description,
+		description: t
+			? t(`options.materialDescriptions.${key}`)
+			: material.description,
 		width: material.width,
 		maxLength: material.maxLength,
 		weightPerM2: material.weightPerM2,

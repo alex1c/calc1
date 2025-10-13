@@ -230,7 +230,7 @@ export function formatWallpaperNumber(value: number): string {
 	}).format(value);
 }
 
-export function getStandardRollSizes(): Array<{
+export function getStandardRollSizes(t?: (key: string) => string): Array<{
 	width: number;
 	length: number;
 	label: string;
@@ -240,46 +240,82 @@ export function getStandardRollSizes(): Array<{
 		{
 			width: 0.53,
 			length: 10.05,
-			label: '0.53 × 10.05 м',
-			description: 'Стандартный размер (европейский)',
+			label: t ? t('options.rollSizes.standard.label') : '0.53 × 10.05 м',
+			description: t
+				? t('options.rollSizes.standard.description')
+				: 'Стандартный размер (европейский)',
 		},
 		{
 			width: 0.7,
 			length: 10.05,
-			label: '0.7 × 10.05 м',
-			description: 'Широкий рулон',
+			label: t ? t('options.rollSizes.wide.label') : '0.7 × 10.05 м',
+			description: t
+				? t('options.rollSizes.wide.description')
+				: 'Широкий рулон',
 		},
 		{
 			width: 1.06,
 			length: 10.05,
-			label: '1.06 × 10.05 м',
-			description: 'Очень широкий рулон',
+			label: t ? t('options.rollSizes.veryWide.label') : '1.06 × 10.05 м',
+			description: t
+				? t('options.rollSizes.veryWide.description')
+				: 'Очень широкий рулон',
 		},
 		{
 			width: 0.53,
 			length: 15.0,
-			label: '0.53 × 15.0 м',
-			description: 'Длинный рулон',
+			label: t ? t('options.rollSizes.long.label') : '0.53 × 15.0 м',
+			description: t
+				? t('options.rollSizes.long.description')
+				: 'Длинный рулон',
 		},
 		{
 			width: 0.7,
 			length: 15.0,
-			label: '0.7 × 15.0 м',
-			description: 'Широкий длинный рулон',
+			label: t ? t('options.rollSizes.wideLong.label') : '0.7 × 15.0 м',
+			description: t
+				? t('options.rollSizes.wideLong.description')
+				: 'Широкий длинный рулон',
 		},
 	];
 }
 
-export function getStandardReservePercentages(): Array<{
+export function getStandardReservePercentages(
+	t?: (key: string) => string
+): Array<{
 	value: number;
 	label: string;
 	description: string;
 }> {
 	return [
-		{ value: 5, label: '5%', description: 'Минимальный запас' },
-		{ value: 10, label: '10%', description: 'Стандартный запас' },
-		{ value: 15, label: '15%', description: 'Увеличенный запас' },
-		{ value: 20, label: '20%', description: 'Большой запас' },
+		{
+			value: 5,
+			label: '5%',
+			description: t
+				? t('options.reservePercentages.minimal')
+				: 'Минимальный запас',
+		},
+		{
+			value: 10,
+			label: '10%',
+			description: t
+				? t('options.reservePercentages.standard')
+				: 'Стандартный запас',
+		},
+		{
+			value: 15,
+			label: '15%',
+			description: t
+				? t('options.reservePercentages.increased')
+				: 'Увеличенный запас',
+		},
+		{
+			value: 20,
+			label: '20%',
+			description: t
+				? t('options.reservePercentages.large')
+				: 'Большой запас',
+		},
 	];
 }
 

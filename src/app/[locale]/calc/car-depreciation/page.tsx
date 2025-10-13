@@ -2,17 +2,18 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import CarDepreciationCalculator from '@/components/calculators/car-depreciation-calculator';
 import { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function CarDepreciationPage() {
 	const t = useTranslations('calculators.car-depreciation');
+	const locale = useLocale();
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: t('breadcrumbs.auto'), href: '/auto' },
+					{ label: t('breadcrumbs.auto'), href: `/${locale}/auto` },
 					{ label: t('title') },
 				]}
 			/>

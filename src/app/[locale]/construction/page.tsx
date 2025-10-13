@@ -1,55 +1,56 @@
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
 import { Wrench, Paintbrush, Square, Home, Package } from 'lucide-react';
 
-const getCalculators = () => [
+const getCalculators = (t: any) => [
 	{
 		id: 'wallpaper',
-		title: 'Калькулятор обоев',
-		description: 'Расчёт количества обоев для комнаты',
+		title: t('calculators.wallpaper.title'),
+		description: t('calculators.wallpaper.description'),
 		icon: Paintbrush,
 		href: '/calc/wallpaper',
 	},
 	{
 		id: 'paint',
-		title: 'Калькулятор материалов',
-		description: 'Расчёт краски, шпатлёвки, грунтовки и плиточного клея',
+		title: t('calculators.materials.title'),
+		description: t('calculators.materials.description'),
 		icon: Package,
 		href: '/calc/paint',
 	},
 	{
 		id: 'tile-laminate',
-		title: 'Калькулятор плитки и ламината',
-		description: 'Расчёт количества плитки и ламината для пола',
+		title: t('calculators.tile-laminate.title'),
+		description: t('calculators.tile-laminate.description'),
 		icon: Square,
 		href: '/calc/tile-laminate',
 	},
 	{
 		id: 'concrete',
-		title: 'Калькулятор бетона',
-		description:
-			'Расчёт количества цемента, песка, щебня и воды для приготовления бетона',
+		title: t('calculators.concrete.title'),
+		description: t('calculators.concrete.description'),
 		icon: Wrench,
 		href: '/calc/concrete',
 	},
 	{
 		id: 'roofing',
-		title: 'Калькулятор кровли',
-		description: 'Расчёт кровельных материалов и стоимости',
+		title: t('calculators.roof.title'),
+		description: t('calculators.roof.description'),
 		icon: Home,
 		href: '/calc/roofing',
 	},
 	{
 		id: 'wall',
-		title: 'Калькулятор кирпича и блоков',
-		description:
-			'Расчёт количества кирпичей, газоблоков и пеноблоков для стены',
+		title: t('calculators.wall.title'),
+		description: t('calculators.wall.description'),
 		icon: Package,
 		href: '/calc/wall',
 	},
 ];
 
 export default function ConstructionPage() {
+	const t = useTranslations();
+	const locale = useLocale();
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
@@ -58,21 +59,21 @@ export default function ConstructionPage() {
 				{/* Header Section */}
 				<div className='mb-8'>
 					<h1 className='text-3xl font-bold text-gray-900 mb-4'>
-						Строительные калькуляторы
+						{t('categories.construction.title')}
 					</h1>
 					<p className='text-lg text-gray-600'>
-						Обои, краска, бетон, кровля
+						{t('categories.construction.description')}
 					</p>
 				</div>
 
 				{/* Calculators Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{getCalculators().map((calculator) => {
+					{getCalculators(t).map((calculator) => {
 						const IconComponent = calculator.icon;
 						return (
 							<Link
 								key={calculator.id}
-								href={`/ru/calc/${calculator.id}`}
+								href={`/${locale}/calc/${calculator.id}`}
 								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 							>
 								<div className='flex items-center mb-4'>

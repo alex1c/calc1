@@ -285,7 +285,7 @@ export function validateConcreteInput(input: Partial<ConcreteInput>): string[] {
 /**
  * Get concrete grade options
  */
-export function getConcreteGradeOptions(): Array<{
+export function getConcreteGradeOptions(t?: (key: string) => string): Array<{
 	value: string;
 	label: string;
 	description: string;
@@ -296,8 +296,8 @@ export function getConcreteGradeOptions(): Array<{
 }> {
 	return Object.entries(CONCRETE_GRADES).map(([key, grade]) => ({
 		value: key,
-		label: grade.name,
-		description: grade.description,
+		label: t ? t(`seo.grades.${key}.title`) : grade.name,
+		description: t ? t(`seo.grades.${key}.content`) : grade.description,
 		cement: grade.cement,
 		sand: grade.sand,
 		gravel: grade.gravel,

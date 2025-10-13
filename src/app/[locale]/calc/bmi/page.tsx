@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import BMICalculator from '@/components/calculators/bmi-calculator';
@@ -13,13 +13,19 @@ export const metadata: Metadata = {
 };
 
 export default function BMIPage() {
+	const t = useTranslations();
+	const locale = useLocale();
+
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: 'Здоровье', href: '/health' },
-					{ label: 'Калькулятор ИМТ' },
+					{
+						label: t('categories.health.title'),
+						href: `/${locale}/health`,
+					},
+					{ label: t('calculators.bmi.title') },
 				]}
 			/>
 			<BMICalculator />

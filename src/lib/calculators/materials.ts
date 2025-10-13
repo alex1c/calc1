@@ -342,9 +342,9 @@ export function getMaterialOptions(t?: (key: string) => string): Array<{
 }> {
 	return Object.entries(MATERIALS).map(([key, config]) => ({
 		value: key,
-		label: t ? t(`options.materials.${key}`) : config.name,
+		label: t ? t(`seo.options.materials.${key}`) : config.name,
 		description: t
-			? t(`options.materialDescriptions.${key}`)
+			? t(`seo.options.materialDescriptions.${key}`)
 			: config.description,
 	}));
 }

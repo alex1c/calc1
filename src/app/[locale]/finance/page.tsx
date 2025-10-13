@@ -1,3 +1,4 @@
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
 import {
@@ -9,59 +10,54 @@ import {
 	Home,
 } from 'lucide-react';
 
-const getCalculators = () => [
+const getCalculators = (t: any) => [
 	{
 		id: 'credit-loan',
-		title: 'Кредитный калькулятор',
-		description:
-			'Рассчитать ежемесячные платежи, общую сумму выплат и создать детальный график платежей для любого кредита',
+		title: t('calculators.credit-loan.title'),
+		description: t('calculators.credit-loan.description'),
 		icon: CreditCard,
 		href: '/calc/credit-loan',
 	},
 	{
 		id: 'mortgage',
-		title: 'Ипотечный калькулятор',
-		description:
-			'Рассчитать ежемесячные платежи по ипотеке, общую сумму выплат и создать детальный график платежей для покупки недвижимости',
+		title: t('calculators.mortgage.title'),
+		description: t('calculators.mortgage.description'),
 		icon: Home,
 		href: '/calc/mortgage',
 	},
 	{
 		id: 'auto-loan',
-		title: 'Калькулятор автокредита',
-		description:
-			'Рассчитать ежемесячные платежи по автокредиту, общую сумму выплат и создать детальный график платежей для покупки автомобиля',
+		title: t('calculators.auto-loan.title'),
+		description: t('calculators.auto-loan.description'),
 		icon: Car,
 		href: '/calc/auto-loan',
 	},
 	{
 		id: 'consumer-loan',
-		title: 'Калькулятор потребительского кредита',
-		description:
-			'Рассчитать ежемесячные платежи по потребительскому кредиту, общую сумму выплат и создать детальный график платежей',
+		title: t('calculators.consumer-loan.title'),
+		description: t('calculators.consumer-loan.description'),
 		icon: Calculator,
 		href: '/calc/consumer-loan',
 	},
 	{
 		id: 'investment',
-		title: 'Калькулятор вкладов',
-		description:
-			'Рассчитать доходность банковского вклада с учётом капитализации, пополнений и снятий',
+		title: t('calculators.investment.title'),
+		description: t('calculators.investment.description'),
 		icon: TrendingUp,
 		href: '/calc/investment',
 	},
 	{
 		id: 'savings',
-		title: 'Калькулятор накоплений',
-		description:
-			'Рассчитать накопления с учётом процентов, пополнений и целей',
+		title: t('calculators.savings.title'),
+		description: t('calculators.savings.description'),
 		icon: PiggyBank,
 		href: '/calc/savings',
 	},
 ];
 
 export default function FinancePage() {
-	const calculators = getCalculators();
+	const t = useTranslations();
+	const locale = useLocale();
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -71,21 +67,21 @@ export default function FinancePage() {
 				{/* Header Section */}
 				<div className='mb-8'>
 					<h1 className='text-3xl font-bold text-gray-900 mb-4'>
-						Финансовые калькуляторы
+						{t('categories.finance.title')}
 					</h1>
 					<p className='text-lg text-gray-600'>
-						Кредиты, вклады, ипотека, налоги и инвестиции
+						{t('categories.finance.description')}
 					</p>
 				</div>
 
 				{/* Calculators Grid */}
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{calculators.map((calculator) => {
+					{getCalculators(t).map((calculator) => {
 						const IconComponent = calculator.icon;
 						return (
 							<Link
 								key={calculator.id}
-								href={`/ru/calc/${calculator.id}`}
+								href={`/${locale}/calc/${calculator.id}`}
 								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 							>
 								<div className='flex items-center mb-4'>

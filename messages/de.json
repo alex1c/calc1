@@ -56,7 +56,34 @@
 		},
 		"construction": {
 			"title": "Baurechner",
-			"description": "Tapeten, Farbe, Beton, Dach"
+			"subtitle": "Tapeten, Farbe, Beton, Dach",
+			"description": "Tapeten, Farbe, Beton, Dach",
+			"calculators": {
+				"wallpaper": {
+					"title": "Tapetenrechner",
+					"description": "Berechnung der Tapetenmenge für den Raum"
+				},
+				"materials": {
+					"title": "Baumaterialrechner",
+					"description": "Berechnung von Farbe, Spachtel, Grundierung und Fliesenkleber"
+				},
+				"tile-laminate": {
+					"title": "Fliesen- und Laminatrechner",
+					"description": "Berechnung der Fliesen- und Laminatmenge für den Boden"
+				},
+				"concrete": {
+					"title": "Betonrechner",
+					"description": "Berechnung von Zement, Sand, Kies und Wasser für die Betonherstellung"
+				},
+				"roof": {
+					"title": "Dachrechner",
+					"description": "Berechnung von Dachmaterialien und Kosten"
+				},
+				"wall": {
+					"title": "Ziegel- und Blockrechner",
+					"description": "Berechnung der Ziegel-, Gasblock- und Schaumblockmenge für die Wand"
+				}
+			}
 		},
 		"auto": {
 			"title": "Auto-Rechner",
@@ -284,6 +311,16 @@
 					"early": "Berücksichtigen Sie vorzeitige Abhebungsoptionen"
 				}
 			}
+		},
+		"investment": {
+			"title": "Investitionsrechner",
+			"description": "Berechnen Sie Anlagerenditen mit Zinseszins und regelmäßigen Beiträgen",
+			"seo": "Investitionsrechner, Zinseszins, Finanzplanung, Vermögensaufbau"
+		},
+		"consumer-loan": {
+			"title": "Verbraucherkreditrechner",
+			"description": "Berechnen Sie monatliche Zahlungen für Privatkredite und Verbraucherkredite",
+			"seo": "Verbraucherkreditrechner, Privatkredit, Verbraucherkredit"
 		},
 		"savings": {
 			"title": "Sparrechner",
@@ -1074,6 +1111,36 @@
 				"recommendationText": "Wir empfehlen {recommended} Rollen für Musteranpassung und zukünftige Reparaturen",
 				"placeholder": "Parameter für Berechnung eingeben"
 			},
+			"options": {
+				"rollSizes": {
+					"standard": {
+						"label": "0.53 × 10.05 m",
+						"description": "Standardgröße (europäisch)"
+					},
+					"wide": {
+						"label": "0.7 × 10.05 m",
+						"description": "Breite Rolle"
+					},
+					"veryWide": {
+						"label": "1.06 × 10.05 m",
+						"description": "Sehr breite Rolle"
+					},
+					"long": {
+						"label": "0.53 × 15.0 m",
+						"description": "Lange Rolle"
+					},
+					"wideLong": {
+						"label": "0.7 × 15.0 m",
+						"description": "Breite lange Rolle"
+					}
+				},
+				"reservePercentages": {
+					"minimal": "Minimale Reserve",
+					"standard": "Standardreserve",
+					"increased": "Erhöhte Reserve",
+					"large": "Große Reserve"
+				}
+			},
 			"seo": {
 				"title": "Online Tapetenrechner",
 				"overview": {
@@ -1616,6 +1683,30 @@
 				"sheets": "Bleche/Platten",
 				"recommendationNote": "Empfohlen, 1-2 zusätzliche Bleche/Platten für Zuschnitt und mögliche Defekte zu nehmen"
 			},
+			"options": {
+				"roofTypes": {
+					"single": "Satteldach",
+					"gable": "Giebeldach", 
+					"hip": "Walmdach",
+					"mansard": "Mansarddach"
+				},
+				"roofTypeDescriptions": {
+					"single": "Dach mit einer Neigung",
+					"gable": "Dach mit zwei Neigungen",
+					"hip": "Dach mit vier Neigungen", 
+					"mansard": "Dach mit gebrochenen Neigungen"
+				},
+				"materials": {
+					"metal-tile": "Metallziegel",
+					"corrugated": "Wellblech",
+					"soft-tile": "Weiche Ziegel"
+				},
+				"materialDescriptions": {
+					"metal-tile": "Metallziegel mit Polymerbeschichtung",
+					"corrugated": "Profilblech aus verzinktem Stahl",
+					"soft-tile": "Bitumenziegel in Rollen"
+				}
+			},
 			"errors": {
 				"title": "Eingabefehler"
 			},
@@ -1744,6 +1835,34 @@
 				"cost": "Kosten",
 				"totalCost": "Gesamtkosten",
 				"costPerSquareMeter": "Kosten pro m²"
+			},
+			"options": {
+				"materials": {
+					"single-brick": "Einfachziegel",
+					"double-brick": "Doppelziegel",
+					"triple-brick": "Dreifachziegel",
+					"gas-block": "Gasblock",
+					"foam-block": "Schaumblock"
+				},
+				"materialDescriptions": {
+					"single-brick": "Standard-Einfachziegel",
+					"double-brick": "Doppelziegel mit erhöhter Höhe",
+					"triple-brick": "Dreifachziegel mit erhöhter Höhe",
+					"gas-block": "Gasbetonblock",
+					"foam-block": "Schaumbetonblock"
+				},
+				"thickness": {
+					"half": "0.5 Ziegel",
+					"single": "1 Ziegel",
+					"onehalf": "1.5 Ziegel",
+					"double": "2 Ziegel"
+				},
+				"thicknessDescriptions": {
+					"half": "Halber Ziegel",
+					"single": "Ein Ziegel",
+					"onehalf": "Eineinhalb Ziegel",
+					"double": "Zwei Ziegel"
+				}
 			},
 			"errors": {
 				"title": "Eingabefehler"

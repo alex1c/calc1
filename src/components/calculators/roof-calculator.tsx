@@ -37,8 +37,8 @@ export default function RoofCalculator() {
 	const [result, setResult] = useState<RoofResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
 
-	const roofTypeOptions = getRoofTypeOptions();
-	const materialOptions = getRoofMaterialOptions();
+	const roofTypeOptions = getRoofTypeOptions(t);
+	const materialOptions = getRoofMaterialOptions(t);
 
 	// Update material dimensions when material or units change
 	useEffect(() => {

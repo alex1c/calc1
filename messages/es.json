@@ -56,7 +56,34 @@
 		},
 		"construction": {
 			"title": "Calculadoras de Construcción",
-			"description": "Papel tapiz, pintura, hormigón, techado"
+			"subtitle": "Papel tapiz, pintura, hormigón, techado",
+			"description": "Papel tapiz, pintura, hormigón, techado",
+			"calculators": {
+				"wallpaper": {
+					"title": "Calculadora de Papel Tapiz",
+					"description": "Calcular cantidad de papel tapiz para habitación"
+				},
+				"materials": {
+					"title": "Calculadora de Materiales de Construcción",
+					"description": "Calcular pintura, masilla, imprimación y adhesivo para baldosas"
+				},
+				"tile-laminate": {
+					"title": "Calculadora de Baldosas y Laminado",
+					"description": "Calcular cantidad de baldosas y laminado para suelo"
+				},
+				"concrete": {
+					"title": "Calculadora de Hormigón",
+					"description": "Calcular cemento, arena, grava y agua para preparación de hormigón"
+				},
+				"roof": {
+					"title": "Calculadora de Tejado",
+					"description": "Calcular materiales de techado y costo"
+				},
+				"wall": {
+					"title": "Calculadora de Ladrillos y Bloques",
+					"description": "Calcular cantidad de ladrillos, bloques de gas y bloques de espuma para pared"
+				}
+			}
 		},
 		"auto": {
 			"title": "Calculadoras de Auto",
@@ -284,6 +311,16 @@
 					"early": "Tenga en cuenta las opciones de retiro anticipado"
 				}
 			}
+		},
+		"investment": {
+			"title": "Calculadora de Inversiones",
+			"description": "Calcular rendimientos de inversión con interés compuesto y contribuciones regulares",
+			"seo": "calculadora de inversiones, interés compuesto, planificación financiera, creación de riqueza"
+		},
+		"consumer-loan": {
+			"title": "Calculadora de Préstamo al Consumo",
+			"description": "Calcular pagos mensuales para préstamos personales y crédito al consumo",
+			"seo": "calculadora de préstamo al consumo, préstamo personal, crédito al consumo"
 		},
 		"savings": {
 			"title": "Calculadora de Ahorros",
@@ -1074,6 +1111,36 @@
 				"recommendationText": "Recomendamos tomar {recommended} rollos para ajuste de patrón y reparaciones futuras",
 				"placeholder": "Ingrese parámetros para calcular"
 			},
+			"options": {
+				"rollSizes": {
+					"standard": {
+						"label": "0.53 × 10.05 m",
+						"description": "Tamaño estándar (europeo)"
+					},
+					"wide": {
+						"label": "0.7 × 10.05 m",
+						"description": "Rollo ancho"
+					},
+					"veryWide": {
+						"label": "1.06 × 10.05 m",
+						"description": "Rollo muy ancho"
+					},
+					"long": {
+						"label": "0.53 × 15.0 m",
+						"description": "Rollo largo"
+					},
+					"wideLong": {
+						"label": "0.7 × 15.0 m",
+						"description": "Rollo ancho largo"
+					}
+				},
+				"reservePercentages": {
+					"minimal": "Reserva mínima",
+					"standard": "Reserva estándar",
+					"increased": "Reserva aumentada",
+					"large": "Reserva grande"
+				}
+			},
 			"seo": {
 				"title": "Calculadora de Papel Tapiz Online",
 				"overview": {
@@ -1616,6 +1683,30 @@
 				"sheets": "láminas",
 				"recommendationNote": "Recomendado tomar 1-2 láminas adicionales para corte y posibles defectos"
 			},
+			"options": {
+				"roofTypes": {
+					"single": "Una Pendiente",
+					"gable": "Dos Aguas", 
+					"hip": "Cuatro Aguas",
+					"mansard": "Mansarda"
+				},
+				"roofTypeDescriptions": {
+					"single": "Tejado con una pendiente",
+					"gable": "Tejado con dos pendientes",
+					"hip": "Tejado con cuatro pendientes", 
+					"mansard": "Tejado con pendientes rotas"
+				},
+				"materials": {
+					"metal-tile": "Teja Metálica",
+					"corrugated": "Chapa Corrugada",
+					"soft-tile": "Teja Blanda"
+				},
+				"materialDescriptions": {
+					"metal-tile": "Teja metálica con recubrimiento polimérico",
+					"corrugated": "Lámina perfilada de acero galvanizado",
+					"soft-tile": "Teja de betún en rollos"
+				}
+			},
 			"errors": {
 				"title": "Errores de Entrada"
 			},
@@ -1744,6 +1835,34 @@
 				"cost": "Costo",
 				"totalCost": "Costo Total",
 				"costPerSquareMeter": "Costo por m²"
+			},
+			"options": {
+				"materials": {
+					"single-brick": "Ladrillo Simple",
+					"double-brick": "Ladrillo Doble",
+					"triple-brick": "Ladrillo Triple",
+					"gas-block": "Bloque de Gas",
+					"foam-block": "Bloque de Espuma"
+				},
+				"materialDescriptions": {
+					"single-brick": "Ladrillo simple estándar",
+					"double-brick": "Ladrillo doble con altura aumentada",
+					"triple-brick": "Ladrillo triple con altura aumentada",
+					"gas-block": "Bloque de hormigón celular",
+					"foam-block": "Bloque de hormigón de espuma"
+				},
+				"thickness": {
+					"half": "0.5 ladrillo",
+					"single": "1 ladrillo",
+					"onehalf": "1.5 ladrillos",
+					"double": "2 ladrillos"
+				},
+				"thicknessDescriptions": {
+					"half": "Medio ladrillo",
+					"single": "Un ladrillo",
+					"onehalf": "Ladrillo y medio",
+					"double": "Dos ladrillos"
+				}
 			},
 			"errors": {
 				"title": "Errores de Entrada"

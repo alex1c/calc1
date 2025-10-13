@@ -396,7 +396,9 @@ export function getWallMaterialOptions(t?: (key: string) => string): Array<{
 	return Object.entries(WALL_MATERIALS).map(([key, material]) => ({
 		value: key,
 		label: t ? t(`options.materials.${key}`) : material.name,
-		description: t ? t(`options.materialDescriptions.${key}`) : material.description,
+		description: t
+			? t(`options.materialDescriptions.${key}`)
+			: material.description,
 		length: material.length,
 		width: material.width,
 		height: material.height,
@@ -427,16 +429,40 @@ export function getDefaultMaterialDimensions(materialType: string): {
 /**
  * Get wall thickness options
  */
-export function getWallThicknessOptions(): Array<{
+export function getWallThicknessOptions(t?: (key: string) => string): Array<{
 	value: number;
 	label: string;
 	description: string;
 }> {
 	return [
-		{ value: 0.5, label: '0.5 кирпича', description: 'В полкирпича' },
-		{ value: 1, label: '1 кирпич', description: 'В кирпич' },
-		{ value: 1.5, label: '1.5 кирпича', description: 'В полтора кирпича' },
-		{ value: 2, label: '2 кирпича', description: 'В два кирпича' },
+		{
+			value: 0.5,
+			label: t ? t('options.thickness.half') : '0.5 кирпича',
+			description: t
+				? t('options.thicknessDescriptions.half')
+				: 'В полкирпича',
+		},
+		{
+			value: 1,
+			label: t ? t('options.thickness.single') : '1 кирпич',
+			description: t
+				? t('options.thicknessDescriptions.single')
+				: 'В кирпич',
+		},
+		{
+			value: 1.5,
+			label: t ? t('options.thickness.onehalf') : '1.5 кирпича',
+			description: t
+				? t('options.thicknessDescriptions.onehalf')
+				: 'В полтора кирпича',
+		},
+		{
+			value: 2,
+			label: t ? t('options.thickness.double') : '2 кирпича',
+			description: t
+				? t('options.thicknessDescriptions.double')
+				: 'В два кирпича',
+		},
 	];
 }
 

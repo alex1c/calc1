@@ -38,7 +38,7 @@ export default function ConcreteCalculator() {
 	const [result, setResult] = useState<ConcreteResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
 
-	const gradeOptions = getConcreteGradeOptions();
+	const gradeOptions = getConcreteGradeOptions(t);
 
 	// Update proportions when grade changes
 	useEffect(() => {

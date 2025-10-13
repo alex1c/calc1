@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import MortgageCalculator from '@/components/calculators/mortgage-calculator';
@@ -13,13 +13,19 @@ export const metadata: Metadata = {
 };
 
 export default function MortgagePage() {
+	const t = useTranslations();
+	const locale = useLocale();
+
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: 'Финансы', href: '/finance' },
-					{ label: 'Ипотечный калькулятор' },
+					{
+						label: t('categories.finance.title'),
+						href: `/${locale}/finance`,
+					},
+					{ label: t('calculators.mortgage.title') },
 				]}
 			/>
 			<MortgageCalculator />

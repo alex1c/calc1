@@ -1,3 +1,4 @@
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import KaskoCalculator from '@/components/calculators/kasko-calculator';
@@ -12,13 +13,19 @@ export const metadata: Metadata = {
 };
 
 export default function KaskoPage() {
+	const t = useTranslations();
+	const locale = useLocale();
+
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: 'Авто', href: '/auto' },
-					{ label: 'Калькулятор КАСКО' },
+					{
+						label: t('categories.auto.title'),
+						href: `/${locale}/auto`,
+					},
+					{ label: t('calculators.kasko.title') },
 				]}
 			/>
 			<KaskoCalculator />

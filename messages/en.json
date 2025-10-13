@@ -56,7 +56,34 @@
 		},
 		"construction": {
 			"title": "Construction Calculators",
-			"description": "Wallpaper, paint, concrete, roofing"
+			"subtitle": "Wallpaper, paint, concrete, roofing",
+			"description": "Wallpaper, paint, concrete, roofing",
+			"calculators": {
+				"wallpaper": {
+					"title": "Wallpaper Calculator",
+					"description": "Calculate wallpaper quantity for room"
+				},
+				"materials": {
+					"title": "Building Materials Calculator",
+					"description": "Calculate paint, putty, primer and tile adhesive"
+				},
+				"tile-laminate": {
+					"title": "Tile and Laminate Calculator",
+					"description": "Calculate tile and laminate quantity for floor"
+				},
+				"concrete": {
+					"title": "Concrete Calculator",
+					"description": "Calculate cement, sand, gravel and water for concrete preparation"
+				},
+				"roof": {
+					"title": "Roof Calculator",
+					"description": "Calculate roofing materials and cost"
+				},
+				"wall": {
+					"title": "Brick and Block Calculator",
+					"description": "Calculate brick, gas block and foam block quantity for wall"
+				}
+			}
 		},
 		"auto": {
 			"title": "Auto Calculators",
@@ -372,6 +399,16 @@
 					"early": "Consider early withdrawal options"
 				}
 			}
+		},
+		"investment": {
+			"title": "Investment Calculator",
+			"description": "Calculate investment returns with compound interest and regular contributions",
+			"seo": "investment calculator, compound interest, financial planning, wealth building"
+		},
+		"consumer-loan": {
+			"title": "Consumer Loan Calculator",
+			"description": "Calculate monthly payments for personal loans and consumer credit",
+			"seo": "consumer loan calculator, personal loan, consumer credit"
 		},
 		"auto-loan": {
 			"title": "Auto Loan Calculator",
@@ -1336,6 +1373,36 @@
 				"recommendationText": "We recommend taking {recommended} rolls for pattern matching and future repairs",
 				"placeholder": "Enter parameters to calculate"
 			},
+			"options": {
+				"rollSizes": {
+					"standard": {
+						"label": "0.53 × 10.05 m",
+						"description": "Standard size (European)"
+					},
+					"wide": {
+						"label": "0.7 × 10.05 m",
+						"description": "Wide roll"
+					},
+					"veryWide": {
+						"label": "1.06 × 10.05 m",
+						"description": "Very wide roll"
+					},
+					"long": {
+						"label": "0.53 × 15.0 m",
+						"description": "Long roll"
+					},
+					"wideLong": {
+						"label": "0.7 × 15.0 m",
+						"description": "Wide long roll"
+					}
+				},
+				"reservePercentages": {
+					"minimal": "Minimal reserve",
+					"standard": "Standard reserve",
+					"increased": "Increased reserve",
+					"large": "Large reserve"
+				}
+			},
 			"seo": {
 				"title": "Online Wallpaper Calculator",
 				"overview": {
@@ -1878,6 +1945,30 @@
 				"sheets": "sheets",
 				"recommendationNote": "Recommended to take 1-2 additional sheets for cutting and possible defects"
 			},
+			"options": {
+				"roofTypes": {
+					"single": "Single-pitch",
+					"gable": "Gable", 
+					"hip": "Hip",
+					"mansard": "Mansard"
+				},
+				"roofTypeDescriptions": {
+					"single": "Roof with one slope",
+					"gable": "Roof with two slopes",
+					"hip": "Roof with four slopes", 
+					"mansard": "Roof with broken slopes"
+				},
+				"materials": {
+					"metal-tile": "Metal Tile",
+					"corrugated": "Corrugated Sheet",
+					"soft-tile": "Soft Tile"
+				},
+				"materialDescriptions": {
+					"metal-tile": "Metal tile with polymer coating",
+					"corrugated": "Profiled sheet from galvanized steel",
+					"soft-tile": "Bitumen tile in rolls"
+				}
+			},
 			"errors": {
 				"title": "Input Errors"
 			},
@@ -2006,6 +2097,34 @@
 				"cost": "Cost",
 				"totalCost": "Total Cost",
 				"costPerSquareMeter": "Cost per m²"
+			},
+			"options": {
+				"materials": {
+					"single-brick": "Single Brick",
+					"double-brick": "Double Brick",
+					"triple-brick": "Triple Brick",
+					"gas-block": "Gas Block",
+					"foam-block": "Foam Block"
+				},
+				"materialDescriptions": {
+					"single-brick": "Standard single brick",
+					"double-brick": "Double brick with increased height",
+					"triple-brick": "Triple brick with increased height",
+					"gas-block": "Gas concrete block",
+					"foam-block": "Foam concrete block"
+				},
+				"thickness": {
+					"half": "0.5 brick",
+					"single": "1 brick",
+					"onehalf": "1.5 bricks",
+					"double": "2 bricks"
+				},
+				"thicknessDescriptions": {
+					"half": "Half brick",
+					"single": "One brick",
+					"onehalf": "One and a half bricks",
+					"double": "Two bricks"
+				}
 			},
 			"errors": {
 				"title": "Input Errors"

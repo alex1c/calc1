@@ -49,8 +49,8 @@ export default function WallpaperCalculator() {
 	const [errors, setErrors] = useState<string[]>([]);
 	const [isCalculated, setIsCalculated] = useState(false);
 
-	const standardRollSizes = getStandardRollSizes();
-	const standardReservePercentages = getStandardReservePercentages();
+	const standardRollSizes = getStandardRollSizes(t);
+	const standardReservePercentages = getStandardReservePercentages(t);
 
 	const handleInputChange = (
 		field: keyof WallpaperInput,

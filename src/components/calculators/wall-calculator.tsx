@@ -39,8 +39,8 @@ export default function WallCalculator() {
 	const [result, setResult] = useState<WallResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
 
-	const materialOptions = getWallMaterialOptions();
-	const thicknessOptions = getWallThicknessOptions();
+	const materialOptions = getWallMaterialOptions(t);
+	const thicknessOptions = getWallThicknessOptions(t);
 
 	// Update material dimensions when material changes
 	useEffect(() => {
@@ -550,7 +550,3 @@ export default function WallCalculator() {
 		</div>
 	);
 }
-
-
-
-
