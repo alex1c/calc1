@@ -12,7 +12,7 @@ import {
 } from '@/lib/calculators/tile-laminate';
 
 export default function TileLaminateCalculator() {
-	const t = useTranslations('tile-laminate');
+	const t = useTranslations('calculators.tile-laminate');
 	const [input, setInput] = useState<Partial<TileLaminateInput>>({
 		roomLength: 0,
 		roomWidth: 0,

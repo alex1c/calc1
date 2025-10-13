@@ -14,7 +14,7 @@ import {
 } from '@/lib/calculators/materials';
 
 export default function MaterialsCalculator() {
-	const t = useTranslations('materials');
+	const t = useTranslations('calculators.materials');
 	const [materialType, setMaterialType] = useState('paint');
 	const [result, setResult] = useState<MaterialResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
