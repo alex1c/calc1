@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Calculator, Percent, Square, Pi } from 'lucide-react';
+import { Calculator, Percent, Square, Pi, Circle } from 'lucide-react';
 
 // Note: Calculators array is now defined inside the component to access translations
 
@@ -25,12 +25,11 @@ export default function MathPage() {
 			href: '/math/percent',
 		},
 		{
-			id: 'geometry',
-			title: 'Geometry Calculator',
-			description: 'Calculate area, perimeter, volume of various shapes',
-			icon: Square,
-			href: '/math/geometry',
-			disabled: true,
+			id: 'area',
+			title: t('calculators.area.title'),
+			description: t('calculators.area.description'),
+			icon: Circle,
+			href: '/math/area',
 		},
 		{
 			id: 'trigonometry',

@@ -142,6 +142,120 @@
 		}
 	},
 	"calculators": {
+		"area": {
+			"title": "Calculadora de Área",
+			"description": "Calcule el área de círculo, cuadrado o triángulo en línea. Calculadora simple y precisa con fórmulas.",
+			"breadcrumbs": {
+				"category": "Matemáticas"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"selectFigure": "Seleccionar Figura",
+				"figureTypes": {
+					"circle": "Círculo",
+					"square": "Cuadrado",
+					"triangle": "Triángulo"
+				},
+				"radius": "Radio (r)",
+				"side": "Lado (a)",
+				"base": "Base (a)",
+				"height": "Altura (h)",
+				"errors": {
+					"title": "Errores en Datos",
+					"required": "El campo es obligatorio",
+					"positive": "El valor debe ser positivo"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"area": "Área",
+				"formula": "Fórmula",
+				"circleFormula": "S = π × r²",
+				"squareFormula": "S = a²",
+				"triangleFormula": "S = ½ × a × h",
+				"parametersUsed": "Parámetros utilizados",
+				"radius": "Radio",
+				"side": "Lado",
+				"base": "Base",
+				"height": "Altura",
+				"calculationError": "Error de cálculo"
+			},
+			"seo": {
+				"title": "Calculadora de Área Online - Círculo, Cuadrado, Triángulo",
+				"form": {
+					"figureTypes": {
+						"circle": "Círculo",
+						"square": "Cuadrado",
+						"triangle": "Triángulo"
+					}
+				},
+				"overview": {
+					"title": "Sobre la Calculadora de Área",
+					"content": "Calculadora en línea para calcular el área de formas geométricas básicas: círculo, cuadrado y triángulo. Herramienta fácil de usar con cálculo automático usando fórmulas. Adecuada para estudiantes, ingenieros y cualquiera que necesite calcular rápidamente el área de una forma.",
+					"additionalContent": "Nuestra calculadora de área soporta tres formas geométricas fundamentales que se usan comúnmente en matemáticas, ingeniería y cálculos cotidianos. Ya seas un estudiante aprendiendo geometría, un ingeniero trabajando en proyectos de construcción, o simplemente necesites calcular el área de una habitación, esta herramienta proporciona resultados precisos al instante."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Área",
+					"content": "El área del círculo se calcula usando la fórmula S = π × r², donde r es el radio. El área del cuadrado se calcula como S = a², donde a es la longitud del lado. El área del triángulo se calcula usando la fórmula S = ½ × a × h, donde a es la base y h es la altura.",
+					"circleDescription": "Donde r es el radio del círculo",
+					"squareDescription": "Donde a es la longitud de un lado",
+					"triangleDescription": "Donde a es la base y h es la altura"
+				},
+				"advantages": {
+					"title": "Ventajas de la Calculadora",
+					"content": "Cálculos rápidos y precisos, soporte para formas geométricas básicas, interfaz intuitiva, aplicación automática de fórmulas matemáticas, resultados con precisión hasta 2 decimales.",
+					"items": [
+						"Cálculos instantáneos con alta precisión",
+						"Soporte para múltiples formas geométricas",
+						"Interfaz amigable con retroalimentación visual",
+						"Diseño responsivo para todos los dispositivos",
+						"Soporte multiidioma (ruso, inglés, español, alemán)",
+						"No requiere registro o instalación de software",
+						"Uso gratuito sin limitaciones"
+					]
+				},
+				"tips": {
+					"title": "Consejos de Uso",
+					"content": "Asegúrese de que todos los valores sean positivos. Para círculo ingrese radio, para cuadrado - longitud del lado, para triángulo - base y altura. El resultado se muestra en unidades cuadradas de medida.",
+					"importantNotes": "Notas Importantes:",
+					"notes": [
+						"Siempre use las mismas unidades para todas las mediciones",
+						"Para círculos, mida desde el centro hasta el borde para el radio",
+						"Para triángulos, la altura debe ser perpendicular a la base",
+						"Los resultados se muestran en unidades cuadradas de su entrada",
+						"Use notación decimal para cálculos precisos"
+					]
+				},
+				"examples": {
+					"title": "Ejemplos de Cálculo",
+					"circleExample": "Ejemplo de Círculo",
+					"squareExample": "Ejemplo de Cuadrado",
+					"triangleExample": "Ejemplo de Triángulo",
+					"given": "Dado",
+					"calculation": "Cálculo",
+					"circleDescription": "El área de un círculo con radio 5 unidades es aproximadamente 78.54 unidades cuadradas.",
+					"squareDescription": "El área de un cuadrado con lado 7 unidades es 49 unidades cuadradas.",
+					"triangleDescription": "El área de un triángulo con base 8 unidades y altura 6 unidades es 24 unidades cuadradas."
+				},
+				"applications": {
+					"title": "Aplicaciones Comunes",
+					"construction": "Construcción y Arquitectura",
+					"education": "Educación y Aprendizaje",
+					"constructionItems": [
+						"Cálculo del área del piso para materiales de suelo",
+						"Determinación de cobertura de pintura para paredes",
+						"Planificación de áreas de jardín y paisaje",
+						"Estimación de cantidades de materiales"
+					],
+					"educationItems": [
+						"Tareas de geometría",
+						"Comprensión de conceptos matemáticos",
+						"Verificación de cálculos manuales",
+						"Aprendizaje de fórmulas de área"
+					]
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",

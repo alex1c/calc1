@@ -142,6 +142,120 @@
 		}
 	},
 	"calculators": {
+		"area": {
+			"title": "Area Calculator",
+			"description": "Calculate the area of circle, square or triangle online. Simple and accurate calculator with formulas.",
+			"breadcrumbs": {
+				"category": "Math"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"selectFigure": "Select Figure",
+				"figureTypes": {
+					"circle": "Circle",
+					"square": "Square",
+					"triangle": "Triangle"
+				},
+				"radius": "Radius (r)",
+				"side": "Side (a)",
+				"base": "Base (a)",
+				"height": "Height (h)",
+				"errors": {
+					"title": "Data Errors",
+					"required": "Field is required",
+					"positive": "Value must be positive"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"area": "Area",
+				"formula": "Formula",
+				"circleFormula": "S = π × r²",
+				"squareFormula": "S = a²",
+				"triangleFormula": "S = ½ × a × h",
+				"parametersUsed": "Parameters used",
+				"radius": "Radius",
+				"side": "Side",
+				"base": "Base",
+				"height": "Height",
+				"calculationError": "Calculation error"
+			},
+			"seo": {
+				"title": "Online Area Calculator - Circle, Square, Triangle",
+				"form": {
+					"figureTypes": {
+						"circle": "Circle",
+						"square": "Square",
+						"triangle": "Triangle"
+					}
+				},
+				"overview": {
+					"title": "About Area Calculator",
+					"content": "Online calculator for calculating the area of basic geometric shapes: circle, square and triangle. Easy-to-use tool with automatic calculation using formulas. Suitable for students, engineers and anyone who needs to quickly calculate the area of a shape.",
+					"additionalContent": "Our area calculator supports three fundamental geometric shapes that are commonly used in mathematics, engineering, and everyday calculations. Whether you're a student learning geometry, an engineer working on construction projects, or simply need to calculate the area of a room, this tool provides accurate results instantly."
+				},
+				"calculation": {
+					"title": "How Area is Calculated",
+					"content": "Circle area is calculated using the formula S = π × r², where r is the radius. Square area is calculated as S = a², where a is the side length. Triangle area is calculated using the formula S = ½ × a × h, where a is the base and h is the height.",
+					"circleDescription": "Where r is the radius of the circle",
+					"squareDescription": "Where a is the length of one side",
+					"triangleDescription": "Where a is base and h is height"
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Fast and accurate calculations, support for basic geometric shapes, intuitive interface, automatic application of mathematical formulas, results with precision up to 2 decimal places.",
+					"items": [
+						"Instant calculations with high precision",
+						"Support for multiple geometric shapes",
+						"User-friendly interface with visual feedback",
+						"Mobile-responsive design for all devices",
+						"Multi-language support (Russian, English, Spanish, German)",
+						"No registration or software installation required",
+						"Free to use with no limitations"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Make sure all values are positive. For circle enter radius, for square - side length, for triangle - base and height. Result is displayed in square units of measurement.",
+					"importantNotes": "Important Notes:",
+					"notes": [
+						"Always use the same units for all measurements",
+						"For circles, measure from center to edge for radius",
+						"For triangles, height must be perpendicular to the base",
+						"Results are displayed in square units of your input",
+						"Use decimal notation for precise calculations"
+					]
+				},
+				"examples": {
+					"title": "Calculation Examples",
+					"circleExample": "Circle Example",
+					"squareExample": "Square Example",
+					"triangleExample": "Triangle Example",
+					"given": "Given",
+					"calculation": "Calculation",
+					"circleDescription": "The area of a circle with radius 5 units is approximately 78.54 square units.",
+					"squareDescription": "The area of a square with side length 7 units is 49 square units.",
+					"triangleDescription": "The area of a triangle with base 8 units and height 6 units is 24 square units."
+				},
+				"applications": {
+					"title": "Common Applications",
+					"construction": "Construction & Architecture",
+					"education": "Education & Learning",
+					"constructionItems": [
+						"Calculating floor area for flooring materials",
+						"Determining paint coverage for walls",
+						"Planning garden and landscape areas",
+						"Estimating material quantities"
+					],
+					"educationItems": [
+						"Geometry homework and assignments",
+						"Understanding mathematical concepts",
+						"Verifying manual calculations",
+						"Learning area formulas"
+					]
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",

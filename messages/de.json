@@ -142,6 +142,120 @@
 		}
 	},
 	"calculators": {
+		"area": {
+			"title": "Flächenrechner",
+			"description": "Berechnen Sie die Fläche von Kreis, Quadrat oder Dreieck online. Einfacher und präziser Rechner mit Formeln.",
+			"breadcrumbs": {
+				"category": "Mathematik"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"selectFigure": "Figur auswählen",
+				"figureTypes": {
+					"circle": "Kreis",
+					"square": "Quadrat",
+					"triangle": "Dreieck"
+				},
+				"radius": "Radius (r)",
+				"side": "Seite (a)",
+				"base": "Grundseite (a)",
+				"height": "Höhe (h)",
+				"errors": {
+					"title": "Datenfehler",
+					"required": "Feld ist erforderlich",
+					"positive": "Wert muss positiv sein"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"area": "Fläche",
+				"formula": "Formel",
+				"circleFormula": "S = π × r²",
+				"squareFormula": "S = a²",
+				"triangleFormula": "S = ½ × a × h",
+				"parametersUsed": "Verwendete Parameter",
+				"radius": "Radius",
+				"side": "Seite",
+				"base": "Grundseite",
+				"height": "Höhe",
+				"calculationError": "Berechnungsfehler"
+			},
+			"seo": {
+				"title": "Online-Flächenrechner - Kreis, Quadrat, Dreieck",
+				"form": {
+					"figureTypes": {
+						"circle": "Kreis",
+						"square": "Quadrat",
+						"triangle": "Dreieck"
+					}
+				},
+				"overview": {
+					"title": "Über den Flächenrechner",
+					"content": "Online-Rechner zur Berechnung der Fläche grundlegender geometrischer Formen: Kreis, Quadrat und Dreieck. Einfach zu bedienendes Tool mit automatischer Berechnung mithilfe von Formeln. Geeignet für Studenten, Ingenieure und alle, die schnell die Fläche einer Form berechnen müssen.",
+					"additionalContent": "Unser Flächenrechner unterstützt drei grundlegende geometrische Formen, die häufig in Mathematik, Ingenieurwesen und alltäglichen Berechnungen verwendet werden. Ob Sie ein Student sind, der Geometrie lernt, ein Ingenieur, der an Bauprojekten arbeitet, oder einfach nur die Fläche eines Raums berechnen müssen, dieses Tool liefert sofort genaue Ergebnisse."
+				},
+				"calculation": {
+					"title": "Wie die Fläche berechnet wird",
+					"content": "Die Kreisfläche wird mit der Formel S = π × r² berechnet, wobei r der Radius ist. Die Quadratfläche wird als S = a² berechnet, wobei a die Seitenlänge ist. Die Dreiecksfläche wird mit der Formel S = ½ × a × h berechnet, wobei a die Grundseite und h die Höhe ist.",
+					"circleDescription": "Wobei r der Radius des Kreises ist",
+					"squareDescription": "Wobei a die Länge einer Seite ist",
+					"triangleDescription": "Wobei a die Grundseite und h die Höhe ist"
+				},
+				"advantages": {
+					"title": "Rechnervorteile",
+					"content": "Schnelle und präzise Berechnungen, Unterstützung für grundlegende geometrische Formen, intuitive Benutzeroberfläche, automatische Anwendung mathematischer Formeln, Ergebnisse mit Genauigkeit bis zu 2 Dezimalstellen.",
+					"items": [
+						"Sofortige Berechnungen mit hoher Präzision",
+						"Unterstützung für mehrere geometrische Formen",
+						"Benutzerfreundliche Oberfläche mit visueller Rückmeldung",
+						"Mobile-responsive Design für alle Geräte",
+						"Mehrsprachige Unterstützung (Russisch, Englisch, Spanisch, Deutsch)",
+						"Keine Registrierung oder Softwareinstallation erforderlich",
+						"Kostenlose Nutzung ohne Einschränkungen"
+					]
+				},
+				"tips": {
+					"title": "Nutzungstipps",
+					"content": "Stellen Sie sicher, dass alle Werte positiv sind. Für Kreis geben Sie den Radius ein, für Quadrat - die Seitenlänge, für Dreieck - Grundseite und Höhe. Das Ergebnis wird in quadratischen Maßeinheiten angezeigt.",
+					"importantNotes": "Wichtige Hinweise:",
+					"notes": [
+						"Verwenden Sie immer die gleichen Einheiten für alle Messungen",
+						"Für Kreise messen Sie vom Zentrum zum Rand für den Radius",
+						"Für Dreiecke muss die Höhe senkrecht zur Grundseite stehen",
+						"Ergebnisse werden in quadratischen Einheiten Ihrer Eingabe angezeigt",
+						"Verwenden Sie Dezimalnotation für präzise Berechnungen"
+					]
+				},
+				"examples": {
+					"title": "Berechnungsbeispiele",
+					"circleExample": "Kreis-Beispiel",
+					"squareExample": "Quadrat-Beispiel",
+					"triangleExample": "Dreieck-Beispiel",
+					"given": "Gegeben",
+					"calculation": "Berechnung",
+					"circleDescription": "Die Fläche eines Kreises mit Radius 5 Einheiten beträgt etwa 78,54 Quadrateinheiten.",
+					"squareDescription": "Die Fläche eines Quadrats mit Seitenlänge 7 Einheiten beträgt 49 Quadrateinheiten.",
+					"triangleDescription": "Die Fläche eines Dreiecks mit Grundseite 8 Einheiten und Höhe 6 Einheiten beträgt 24 Quadrateinheiten."
+				},
+				"applications": {
+					"title": "Häufige Anwendungen",
+					"construction": "Bauwesen und Architektur",
+					"education": "Bildung und Lernen",
+					"constructionItems": [
+						"Berechnung der Bodenfläche für Bodenbeläge",
+						"Bestimmung der Farbabdeckung für Wände",
+						"Planung von Garten- und Landschaftsflächen",
+						"Schätzung von Materialmengen"
+					],
+					"educationItems": [
+						"Geometrie-Hausaufgaben und -Aufgaben",
+						"Verständnis mathematischer Konzepte",
+						"Überprüfung manueller Berechnungen",
+						"Lernen von Flächenformeln"
+					]
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",
