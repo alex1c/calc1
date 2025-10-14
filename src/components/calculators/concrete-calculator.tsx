@@ -92,7 +92,7 @@ export default function ConcreteCalculator() {
 			setResult(calculationResult);
 			setErrors([]);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([t('errors.calculation')]);
 			setResult(null);
 		}
 	};
@@ -179,8 +179,12 @@ export default function ConcreteCalculator() {
 										}
 										className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 									>
-										<option value='m3'>м³</option>
-										<option value='liters'>л</option>
+										<option value='m3'>
+											{t('form.units.m3')}
+										</option>
+										<option value='liters'>
+											{t('form.units.liters')}
+										</option>
 									</select>
 								</div>
 							</div>
@@ -323,8 +327,12 @@ export default function ConcreteCalculator() {
 										}
 										className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 									>
-										<option value='kg'>кг</option>
-										<option value='tons'>т</option>
+										<option value='kg'>
+											{t('form.units.kg')}
+										</option>
+										<option value='tons'>
+											{t('form.units.tons')}
+										</option>
 									</select>
 								</div>
 								<div>
@@ -341,8 +349,12 @@ export default function ConcreteCalculator() {
 										}
 										className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 									>
-										<option value='kg'>кг</option>
-										<option value='tons'>т</option>
+										<option value='kg'>
+											{t('form.units.kg')}
+										</option>
+										<option value='tons'>
+											{t('form.units.tons')}
+										</option>
 									</select>
 								</div>
 								<div>
@@ -361,8 +373,12 @@ export default function ConcreteCalculator() {
 										}
 										className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 									>
-										<option value='kg'>кг</option>
-										<option value='tons'>т</option>
+										<option value='kg'>
+											{t('form.units.kg')}
+										</option>
+										<option value='tons'>
+											{t('form.units.tons')}
+										</option>
 									</select>
 								</div>
 								<div>
@@ -381,8 +397,12 @@ export default function ConcreteCalculator() {
 										}
 										className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 									>
-										<option value='liters'>л</option>
-										<option value='m3'>м³</option>
+										<option value='liters'>
+											{t('form.units.liters')}
+										</option>
+										<option value='m3'>
+											{t('form.units.m3')}
+										</option>
 									</select>
 								</div>
 							</div>

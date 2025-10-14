@@ -1442,6 +1442,26 @@
 				"calculate": "Abschreibung berechnen",
 				"errors": {
 					"title": "Datenfehler"
+				},
+				"depreciationMethods": {
+					"linear": "Linear",
+					"linearDescription": "Gleichmäßige Wertminderung jedes Jahr",
+					"declining": "Degressiv",
+					"decliningDescription": "Prozentsatz des Restwerts jedes Jahr"
+				},
+				"depreciationRates": {
+					"rate5": "5% pro Jahr",
+					"rate5Description": "Neue Autos (0-2 Jahre)",
+					"rate10": "10% pro Jahr",
+					"rate10Description": "Mittleres Alter (3-5 Jahre)",
+					"rate15": "15% pro Jahr",
+					"rate15Description": "Alte Autos (6+ Jahre)",
+					"rate20": "20% pro Jahr",
+					"rate20Description": "Hohe Abschreibung",
+					"rate25": "25% pro Jahr",
+					"rate25Description": "Sehr hohe Abschreibung",
+					"rate30": "30% pro Jahr",
+					"rate30Description": "Extreme Abschreibung"
 				}
 			},
 			"results": {
@@ -1607,17 +1627,17 @@
 			},
 			"form": {
 				"materialType": "Materialtyp",
-				"roomLength": "Raumlänge",
-				"roomWidth": "Raumbreite",
-				"wallHeight": "Wandhöhe",
-				"floorArea": "Bodenfläche",
-				"doorsWindowsArea": "Türen und Fenster Fläche",
-				"layers": "Anzahl Schichten",
+				"roomLength": "Raumlänge (m)",
+				"roomWidth": "Raumbreite (m)",
+				"wallHeight": "Wandhöhe (m)",
+				"floorArea": "Bodenfläche (m²)",
+				"doorsWindowsArea": "Tür- und Fensterfläche (m²)",
+				"layers": "Anzahl der Schichten",
 				"consumptionRate": "Verbrauchsrate",
-				"reservePercentage": "Reserve",
+				"reservePercentage": "Reserve (%)",
 				"packageSize": "Packungsgröße",
-				"tileSize": "Fliesengröße",
-				"groutWidth": "Fugenbreite",
+				"tileSize": "Fliesengröße (m²)",
+				"groutWidth": "Fugenbreite (mm)",
 				"calculate": "Berechnen",
 				"reset": "Zurücksetzen"
 			},
@@ -1627,20 +1647,20 @@
 				"value": "Wert",
 				"totalWallArea": "Gesamte Wandfläche",
 				"floorArea": "Bodenfläche",
-				"doorsWindowsArea": "Türen und Fenster Fläche",
+				"doorsWindowsArea": "Tür- und Fensterfläche",
 				"usefulArea": "Nutzfläche",
-				"layers": "Anzahl Schichten",
+				"layers": "Anzahl der Schichten",
 				"consumptionPerLayer": "Verbrauch pro Schicht",
 				"totalMaterial": "Gesamtmaterial",
 				"packageSize": "Packungsgröße",
 				"packagesNeeded": "Benötigte Packungen",
-				"pieces": "Stk.",
+				"pieces": "Stück",
 				"tips": {
 					"title": "Nützliche Tipps",
-					"surface": "Berücksichtigen Sie, dass die Oberflächentextur den Verbrauch beeinflusst",
-					"weather": "Bei heißem Wetter kann der Verbrauch steigen",
-					"technique": "Die Anwendungstechnik beeinflusst den Materialverbrauch",
-					"waste": "Kaufen Sie immer Material mit 10-15% Reserve"
+					"surface": "Bereiten Sie die Oberfläche vor der Materialanwendung vor",
+					"weather": "Berücksichtigen Sie die Wetterbedingungen bei der Arbeit",
+					"technique": "Befolgen Sie die richtige Anwendungstechnik",
+					"waste": "Fügen Sie 10-15% Reserve für Abfälle hinzu"
 				}
 			},
 			"errors": {
@@ -1656,12 +1676,12 @@
 					"title": "Wie Baumaterialien berechnet werden",
 					"content": "Die Berechnung von Baumaterialien umfasst mehrere Schritte für genaue Ergebnisse je nach Materialtyp.",
 					"steps": {
-						"area": "Berechnung der Gesamtfläche von Wänden oder Boden",
-						"openings": "Abzug der Fläche von Türen und Fenstern",
+						"area": "Messen Sie die Wandfläche des Raums",
+						"openings": "Subtrahieren Sie Tür- und Fensterfläche",
 						"useful": "Bestimmung der nutzbaren Fläche für die Behandlung",
-						"consumption": "Berechnung des Materialverbrauchs pro Quadratmeter",
-						"layers": "Berücksichtigung der Anzahl der Auftragsschichten",
-						"reserve": "Hinzufügung von Reserve für Anpassung und Verluste"
+						"consumption": "Multiplizieren Sie mit Materialverbrauchsrate",
+						"layers": "Multiplizieren Sie mit Anzahl der Schichten",
+						"reserve": "Fügen Sie 10-15% Reserve hinzu"
 					}
 				},
 				"materials": {
@@ -1687,36 +1707,38 @@
 				"tips": {
 					"title": "Tipps zur Baumaterialien-Berechnung",
 					"content": "Befolgen Sie unsere Empfehlungen für genaue Materialberechnungen.",
-					"measurement": "Messen Sie alle Raummaße sorgfältig",
-					"surface": "Berücksichtigen Sie Oberflächentyp und -zustand",
-					"consumption": "Überprüfen Sie den Verbrauch auf der Materialverpackung",
+					"measurement": "Messen Sie alle Raumdimensionen genau",
+					"surface": "Bereiten Sie die Oberfläche vor der Anwendung vor",
+					"consumption": "Berücksichtigen Sie Oberflächentyp und Material",
 					"layers": "Bestimmen Sie die erforderliche Anzahl der Schichten",
-					"reserve": "Fügen Sie 10-15% Reserve für Verluste und Anpassung hinzu",
-					"weather": "Berücksichtigen Sie Wetterbedingungen bei der Arbeit",
-					"technique": "Wählen Sie die richtige Auftragstechnik"
+					"reserve": "Fügen Sie Reserve für Abfälle und Anpassungen hinzu",
+					"weather": "Berücksichtigen Sie Wetterbedingungen",
+					"technique": "Befolgen Sie die richtige Anwendungstechnik"
 				},
 				"benefits": {
 					"title": "Vorteile des Rechners",
 					"content": "Die Verwendung des Baumaterialien-Rechners bietet viele Vorteile bei der Renovierungsplanung.",
-					"accuracy": "Genaue Materialmengenberechnung",
-					"savings": "Sparen beim Kauf zusätzlicher Materialien",
-					"planning": "Richtige Renovierungsbudgetplanung",
-					"convenience": "Bequeme und schnelle Berechnung",
-					"universal": "Unterstützung für verschiedene Materialtypen",
-					"professional": "Professioneller Ansatz bei Berechnungen"
+					"accuracy": "Berechnungsgenauigkeit",
+					"savings": "Kosteneinsparungen",
+					"planning": "Einkaufsplanung",
+					"convenience": "Benutzerfreundlichkeit",
+					"universal": "Vielseitigkeit",
+					"professional": "Professioneller Ansatz"
 				},
 				"options": {
 					"materials": {
 						"paint": "Farbe",
 						"putty": "Spachtelmasse",
 						"primer": "Grundierung",
-						"tileGlue": "Fliesenkleber"
+						"tileGlue": "Fliesenkleber",
+						"wallpaper": "Tapete"
 					},
 					"materialDescriptions": {
 						"paint": "Farbmenge für Wände berechnen",
-						"putty": "Spachtelmasse-Menge für Wände berechnen",
-						"primer": "Grundierungsmenge für Wände berechnen",
-						"tileGlue": "Fliesenkleber-Menge für Boden berechnen"
+						"putty": "Spachtelmasse für Wände berechnen",
+						"primer": "Grundierung für Wände berechnen",
+						"tileGlue": "Fliesenkleber-Menge berechnen",
+						"wallpaper": "Tapetenmenge für Wände berechnen"
 					}
 				},
 				"seo": "Baumaterialien-Rechner, Farbberechnung, Spachtelmasse-Berechnung, Grundierungsrechner, Fliesenkleber, Farbverbrauch, Baumaterialien, Renovierungsrechner, Wandfarbe, Wandspachtelmasse, Wandgrundierung, Fliesenkleber-Berechnung, Materialverbrauch, Bauwesen online, wasserbasierte Farbe, Acrylfarbe, ölbasierte Farbe, Grundspachtelmasse, Feinspachtelmasse, Acrylgrundierung, Alkydgrundierung, Keramikfliesen, Feinsteinzeug, Mosaik, Farbverbrauch pro m2, Spachtelmasse-Verbrauch pro m2, Grundierungsverbrauch pro m2, Fliesenkleber-Verbrauch pro m2, Renovierungsrechner, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsmaterialien"
@@ -1932,17 +1954,17 @@
 					"title": "Rechnervorteile",
 					"content": "Die Verwendung des Fliesen- und Laminatrechners bietet viele Vorteile bei der Renovierungsplanung.",
 					"accuracy": "Genaue Materialmengenberechnung",
-					"cost": "Ersparnisse beim Materialkauf",
-					"planning": "Richtige Einkaufsplanung",
-					"waste": "Minimierung von Materialabfällen",
-					"time": "Zeitersparnis bei Berechnungen"
+					"cost": "Kosteneinsparungen",
+					"planning": "Einkaufsplanung",
+					"waste": "Abfallminimierung",
+					"time": "Zeitersparnis"
 				},
 				"seo": "Fliesenrechner, Laminatrechner, Fliesenberechnung, Laminatberechnung, Bodenfliesen, Bodenlaminat, Fliesenmenge, Laminatmenge, Bodenbelagsfläche, Materialreserve, Fliesenzuschnitt, Laminatzuschnitt, Bodenrenovierung, Bodenveredelung, Bodenbelagsmaterialien, Baumaterialien, Wohnungsrenovierung, Renovierungsplanung, Renovierungsbudget, Bauarbeiten, Veredelungsarbeiten, Keramikfliesen, Feinsteinzeug, Mosaik, Vinylfliesen, Quarzvinylfliesen, SPC-Fliesen, LVT-Fliesen, Laminat Klasse 32, Laminat Klasse 33, Laminat Klasse 34, Eichenparkettbrett, Eschenparkettbrett, Nussbaumparkettbrett"
 			}
 		},
 		"concrete": {
 			"title": "Betonrechner",
-			"description": "Berechnung von Zement, Sand, Kies und Wasser für Betonmischung",
+			"description": "Berechnen Sie Zement-, Sand-, Kies- und Wassermengen für Betonherstellung",
 			"breadcrumbs": {
 				"construction": "Bauwesen"
 			},
@@ -1953,17 +1975,23 @@
 				"volumeUnit": "Maßeinheit",
 				"grade": "Betongüte",
 				"selectGrade": "Güte auswählen",
-				"proportions": "Mischungsverhältnisse",
+				"proportions": "Mischverhältnisse",
 				"cement": "Zement",
 				"sand": "Sand",
 				"gravel": "Kies",
 				"proportionsNote": "Verhältnisse Zement : Sand : Kies",
 				"waterCementRatio": "Wasser-Zement-Verhältnis",
-				"waterCementRatioNote": "Wasser zu Zement Verhältnis (üblicherweise 0,4-0,7)",
+				"waterCementRatioNote": "Wasser zu Zement Verhältnis (üblicherweise 0.4-0.7)",
 				"outputUnits": "Ausgabeeinheiten",
 				"water": "Wasser",
 				"calculate": "Berechnen",
-				"reset": "Zurücksetzen"
+				"reset": "Zurücksetzen",
+				"units": {
+					"m3": "m³",
+					"liters": "L",
+					"kg": "kg",
+					"tons": "Tonnen"
+				}
 			},
 			"results": {
 				"title": "Berechnungsergebnisse",
@@ -1984,7 +2012,8 @@
 				"waterCementRatio": "W/Z-Verhältnis"
 			},
 			"errors": {
-				"title": "Eingabefehler"
+				"title": "Eingabefehler",
+				"calculation": "Berechnungsfehler. Bitte überprüfen Sie Ihre Eingabedaten."
 			},
 			"seo": {
 				"title": "Betonrechner - Betonmischungskomponentenberechnung | Rechner #1",
@@ -2042,16 +2071,31 @@
 					"mixing": "Befolgen Sie die Mischungstechnologie"
 				},
 				"benefits": {
-					"title": "Rechnervorteile",
-					"content": "Die Verwendung des Betonrechners bietet viele Vorteile bei der Bauplanung.",
-					"accuracy": "Genaue Komponentenmengenberechnung",
-					"cost": "Ersparnisse bei Materialien",
-					"planning": "Richtige Einkaufsplanung",
-					"quality": "Gewährleistung der Betonqualität",
-					"waste": "Minimierung von Materialabfällen",
-					"time": "Zeitersparnis bei Berechnungen"
+					"title": "Vorteile der Verwendung des Betonrechners",
+					"content": "Die Verwendung unseres Betonrechners bietet zahlreiche Vorteile für Bauprojekte:",
+					"accuracy": "Hohe Genauigkeit",
+					"cost": "Kosteneinsparungen",
+					"planning": "Einkaufsplanung",
+					"waste": "Abfallminimierung",
+					"time": "Zeitersparnis"
 				},
 				"seo": "Betonrechner, Betonberechnung, Betonzusammensetzung, Zementberechnung, Sandberechnung, Kiesberechnung, Wasser für Beton, Betongüte, M100 Beton, M150 Beton, M200 Beton, M250 Beton, M300 Beton, M400 Beton, Betonverhältnisse, Wasser-Zement-Verhältnis, Betonmischung, Fundament Beton, Wand Beton, Boden Beton, Bau Beton, Betonarbeiten, Betonkomponenten, Betonmischung, Betonmörtel, Baumaterialien, Betonkonstruktionen, monolithischer Beton, Stahlbeton, Betonblöcke, Betonplatten"
+			},
+			"options": {
+				"grades": {
+					"M100": "M100",
+					"M150": "M150",
+					"M200": "M200",
+					"M250": "M250",
+					"M300": "M300",
+					"M400": "M400"
+				},
+				"units": {
+					"m3": "m³",
+					"liters": "L",
+					"kg": "kg",
+					"tons": "Tonnen"
+				}
 			}
 		},
 		"roof": {
@@ -2512,6 +2556,71 @@
 				"accurate": "Präzise Berechnungen mit aktuellen Formeln",
 				"comparison": "Vergleich mit Kreditkauf"
 			}
+		}
+	},
+	"fuel": {
+		"title": "Kraftstoffverbrauch-Rechner",
+		"description": "Berechnen Sie Kraftstoffverbrauch, Reisedistanz und Kraftstoffkosten für die Reiseplanung",
+		"seo": {
+			"title": "Kraftstoffverbrauch-Rechner: Berechnen Sie Distanz und Kosten",
+			"overview": {
+				"title": "Kraftstoffverbrauch-Rechner",
+				"content": "Der Kraftstoffverbrauch-Rechner ist ein professionelles Tool zur Berechnung von Kraftstoffverbrauch, Reisedistanz und Kosten. Mit unserem Rechner können Sie berechnen, wie viel Kraftstoff Sie für eine Reise benötigen, welche Distanz Sie mit verfügbarem Kraftstoff zurücklegen können und Ihre Kraftstoffkosten planen."
+			},
+			"modes": {
+				"title": "Berechnungsmodi",
+				"content": "Unser Kraftstoffverbrauch-Rechner bietet zwei Berechnungsmodi:",
+				"distance": "Distanzberechnung nach Kraftstoffmenge und Verbrauch",
+				"fuel": "Berechnung der benötigten Kraftstoffmenge für die Reise"
+			},
+			"advantages": {
+				"title": "Rechner-Vorteile",
+				"content": "Der Kraftstoffverbrauch-Rechner bietet viele Vorteile für die Reiseplanung:",
+				"quick": "Schnelle Berechnung in Sekunden",
+				"accurate": "Präzise Berechnungen basierend auf realen Daten",
+				"planning": "Reise- und Kraftstoffbudget-Planung",
+				"savings": "Geld sparen beim Kraftstoff"
+			},
+			"tips": {
+				"title": "Kraftstoffspar-Tipps",
+				"content": "Um den Kraftstoffverbrauch zu reduzieren:",
+				"measure": "Messen Sie regelmäßig den Kraftstoffverbrauch Ihres Autos",
+				"driving": "Folgen Sie einem sparsamen Fahrstil",
+				"maintenance": "Halten Sie Ihr Auto in gutem technischen Zustand",
+				"planning": "Planen Sie Routen im Voraus, um Staus zu vermeiden"
+			}
+		},
+		"form": {
+			"title": "Berechnungsparameter",
+			"mode": "Berechnungsmodus",
+			"modes": {
+				"distance": "Distanz berechnen",
+				"distanceDesc": "Wie weit Sie fahren können",
+				"fuel": "Kraftstoff berechnen",
+				"fuelDesc": "Wie viel Kraftstoff Sie benötigen"
+			},
+			"consumption": "Kraftstoffverbrauch (L/100 km)",
+			"fuelAmount": "Kraftstoffmenge im Tank (L)",
+			"distance": "Gewünschte Distanz (km)",
+			"calculate": "Berechnen",
+			"errors": {
+				"title": "Eingabefehler"
+			}
+		},
+		"results": {
+			"title": "Berechnungsergebnisse",
+			"result": "Ergebnis",
+			"km": "km",
+			"liters": "L",
+			"distanceResult": "Sie können fahren",
+			"fuelResult": "Für die Reise benötigen Sie",
+			"details": "Berechnungsdetails",
+			"consumption": "Kraftstoffverbrauch",
+			"fuelAmount": "Kraftstoffmenge",
+			"distance": "Distanz",
+			"calculatedDistance": "Berechnete Distanz",
+			"calculatedFuel": "Berechneter Kraftstoff",
+			"placeholder": "Geben Sie Parameter ein und klicken Sie auf 'Berechnen'"
 		}
 	}
 }

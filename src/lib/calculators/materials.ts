@@ -55,7 +55,7 @@ export interface MaterialConfig {
 export const MATERIALS: Record<string, MaterialConfig> = {
 	paint: {
 		name: 'Краска',
-		unit: 'л',
+		unit: 'L',
 		inputs: [
 			'roomLength',
 			'roomWidth',
@@ -73,7 +73,7 @@ export const MATERIALS: Record<string, MaterialConfig> = {
 	},
 	putty: {
 		name: 'Шпатлёвка',
-		unit: 'кг',
+		unit: 'kg',
 		inputs: [
 			'roomLength',
 			'roomWidth',
@@ -91,7 +91,7 @@ export const MATERIALS: Record<string, MaterialConfig> = {
 	},
 	primer: {
 		name: 'Грунтовка',
-		unit: 'л',
+		unit: 'L',
 		inputs: [
 			'roomLength',
 			'roomWidth',
@@ -108,7 +108,7 @@ export const MATERIALS: Record<string, MaterialConfig> = {
 	},
 	tileGlue: {
 		name: 'Плиточный клей',
-		unit: 'кг',
+		unit: 'kg',
 		inputs: [
 			'floorArea',
 			'doorsWindowsArea',
@@ -158,7 +158,7 @@ function calculatePaint(input: MaterialInput): MaterialResult {
 		packageSize,
 		packagesNeeded,
 		materialType: 'paint',
-		unit: 'л',
+		unit: 'L',
 	};
 }
 
@@ -193,7 +193,7 @@ function calculatePutty(input: MaterialInput): MaterialResult {
 		packageSize,
 		packagesNeeded,
 		materialType: 'putty',
-		unit: 'кг',
+		unit: 'kg',
 	};
 }
 
@@ -226,7 +226,7 @@ function calculatePrimer(input: MaterialInput): MaterialResult {
 		packageSize,
 		packagesNeeded,
 		materialType: 'primer',
-		unit: 'л',
+		unit: 'L',
 	};
 }
 
@@ -263,7 +263,7 @@ function calculateTileGlue(input: MaterialInput): MaterialResult {
 		packageSize,
 		packagesNeeded,
 		materialType: 'tileGlue',
-		unit: 'кг',
+		unit: 'kg',
 	};
 }
 

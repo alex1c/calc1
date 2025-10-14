@@ -1442,6 +1442,26 @@
 				"calculate": "Calcular Depreciación",
 				"errors": {
 					"title": "Errores de Datos"
+				},
+				"depreciationMethods": {
+					"linear": "Lineal",
+					"linearDescription": "Disminución uniforme del valor cada año",
+					"declining": "Decreciente",
+					"decliningDescription": "Porcentaje del valor residual cada año"
+				},
+				"depreciationRates": {
+					"rate5": "5% por año",
+					"rate5Description": "Coches nuevos (0-2 años)",
+					"rate10": "10% por año",
+					"rate10Description": "Edad media (3-5 años)",
+					"rate15": "15% por año",
+					"rate15Description": "Coches viejos (6+ años)",
+					"rate20": "20% por año",
+					"rate20Description": "Alta depreciación",
+					"rate25": "25% por año",
+					"rate25Description": "Muy alta depreciación",
+					"rate30": "30% por año",
+					"rate30Description": "Depreciación extrema"
 				}
 			},
 			"results": {
@@ -1607,17 +1627,17 @@
 			},
 			"form": {
 				"materialType": "Tipo de Material",
-				"roomLength": "Longitud de la Habitación",
-				"roomWidth": "Ancho de la Habitación",
-				"wallHeight": "Altura de las Paredes",
-				"floorArea": "Área del Suelo",
-				"doorsWindowsArea": "Área de Puertas y Ventanas",
+				"roomLength": "Longitud de la Habitación (m)",
+				"roomWidth": "Ancho de la Habitación (m)",
+				"wallHeight": "Altura de las Paredes (m)",
+				"floorArea": "Área del Piso (m²)",
+				"doorsWindowsArea": "Área de Puertas y Ventanas (m²)",
 				"layers": "Número de Capas",
 				"consumptionRate": "Tasa de Consumo",
-				"reservePercentage": "Reserva",
+				"reservePercentage": "Reserva (%)",
 				"packageSize": "Tamaño del Paquete",
-				"tileSize": "Tamaño de la Baldosa",
-				"groutWidth": "Ancho de la Junta",
+				"tileSize": "Tamaño del Azulejo (m²)",
+				"groutWidth": "Ancho de la Lechada (mm)",
 				"calculate": "Calcular",
 				"reset": "Restablecer"
 			},
@@ -1626,7 +1646,7 @@
 				"parameter": "Parámetro",
 				"value": "Valor",
 				"totalWallArea": "Área Total de Paredes",
-				"floorArea": "Área del Suelo",
+				"floorArea": "Área del Piso",
 				"doorsWindowsArea": "Área de Puertas y Ventanas",
 				"usefulArea": "Área Útil",
 				"layers": "Número de Capas",
@@ -1634,13 +1654,13 @@
 				"totalMaterial": "Material Total",
 				"packageSize": "Tamaño del Paquete",
 				"packagesNeeded": "Paquetes Necesarios",
-				"pieces": "uds.",
+				"pieces": "piezas",
 				"tips": {
 					"title": "Consejos Útiles",
-					"surface": "Tenga en cuenta que la textura de la superficie afecta el consumo",
-					"weather": "En clima caluroso, el consumo puede aumentar",
-					"technique": "La técnica de aplicación afecta el consumo de material",
-					"waste": "Siempre compre material con 10-15% de reserva"
+					"surface": "Prepare la superficie antes de aplicar el material",
+					"weather": "Considere las condiciones climáticas al trabajar",
+					"technique": "Siga la técnica de aplicación correcta",
+					"waste": "Agregue 10-15% de reserva para desperdicios"
 				}
 			},
 			"errors": {
@@ -1656,12 +1676,12 @@
 					"title": "Cómo se calculan los materiales de construcción",
 					"content": "El cálculo de materiales de construcción incluye varios pasos para obtener resultados precisos según el tipo de material.",
 					"steps": {
-						"area": "Cálculo del área total de paredes o suelo de la habitación",
-						"openings": "Sustracción del área de puertas y ventanas",
+						"area": "Mida el área de las paredes de la habitación",
+						"openings": "Reste el área de puertas y ventanas",
 						"useful": "Determinación del área útil para tratamiento",
-						"consumption": "Cálculo del consumo de material por metro cuadrado",
-						"layers": "Consideración del número de capas de aplicación",
-						"reserve": "Adición de reserva para ajuste y pérdidas"
+						"consumption": "Multiplique por la tasa de consumo del material",
+						"layers": "Multiplique por el número de capas",
+						"reserve": "Agregue 10-15% de reserva"
 					}
 				},
 				"materials": {
@@ -1687,36 +1707,38 @@
 				"tips": {
 					"title": "Consejos para cálculo de materiales de construcción",
 					"content": "Siga nuestras recomendaciones para cálculos precisos de materiales.",
-					"measurement": "Mida cuidadosamente todas las dimensiones de la habitación",
-					"surface": "Considere el tipo y estado de la superficie",
-					"consumption": "Verifique la tasa de consumo en el empaque del material",
+					"measurement": "Mida con precisión todas las dimensiones de la habitación",
+					"surface": "Prepare la superficie antes de la aplicación",
+					"consumption": "Considere el tipo de superficie y material",
 					"layers": "Determine el número requerido de capas",
-					"reserve": "Agregue 10-15% de reserva para pérdidas y ajuste",
-					"weather": "Considere las condiciones climáticas durante el trabajo",
-					"technique": "Elija la técnica de aplicación correcta"
+					"reserve": "Agregue reserva para desperdicios y ajustes",
+					"weather": "Considere las condiciones climáticas",
+					"technique": "Siga la técnica de aplicación correcta"
 				},
 				"benefits": {
 					"title": "Beneficios de la calculadora",
 					"content": "Usar la calculadora de materiales de construcción proporciona muchas ventajas para la planificación de renovaciones.",
-					"accuracy": "Cálculo preciso de cantidad de materiales",
-					"savings": "Ahorro en compra de materiales extra",
-					"planning": "Planificación correcta del presupuesto de renovación",
-					"convenience": "Cálculo conveniente y rápido",
-					"universal": "Soporte para varios tipos de materiales",
-					"professional": "Enfoque profesional en los cálculos"
+					"accuracy": "Precisión de Cálculo",
+					"savings": "Ahorro de Costos",
+					"planning": "Planificación de Compras",
+					"convenience": "Facilidad de Uso",
+					"universal": "Versatilidad",
+					"professional": "Enfoque Profesional"
 				},
 				"options": {
 					"materials": {
 						"paint": "Pintura",
 						"putty": "Masilla",
 						"primer": "Imprimación",
-						"tileGlue": "Adhesivo para Baldosas"
+						"tileGlue": "Pegamento para Azulejos",
+						"wallpaper": "Papel Tapiz"
 					},
 					"materialDescriptions": {
 						"paint": "Calcular cantidad de pintura para paredes",
 						"putty": "Calcular cantidad de masilla para paredes",
 						"primer": "Calcular cantidad de imprimación para paredes",
-						"tileGlue": "Calcular cantidad de adhesivo para suelo"
+						"tileGlue": "Calcular cantidad de pegamento para azulejos",
+						"wallpaper": "Calcular cantidad de papel tapiz para paredes"
 					}
 				},
 				"seo": "calculadora de materiales de construcción, cálculo de pintura, cálculo de masilla, calculadora de imprimación, adhesivo para baldosas, consumo de pintura, materiales de construcción, calculadora de renovación, pintura para paredes, masilla para paredes, imprimación para paredes, cálculo de adhesivo para baldosas, consumo de materiales, construcción online, pintura al agua, pintura acrílica, pintura al aceite, masilla base, masilla de acabado, imprimación acrílica, imprimación alquídica, baldosa cerámica, porcelanato, mosaico, consumo de pintura por m2, consumo de masilla por m2, consumo de imprimación por m2, consumo de adhesivo para baldosas por m2, calculadora de renovación, planificación de renovación, presupuesto de renovación, trabajos de construcción, materiales de acabado"
@@ -1932,17 +1954,17 @@
 					"title": "Ventajas de la calculadora",
 					"content": "Usar la calculadora de baldosas y laminado proporciona muchas ventajas al planificar renovaciones.",
 					"accuracy": "Cálculo preciso de la cantidad de material",
-					"cost": "Ahorro en la compra de material",
-					"planning": "Planificación correcta de compras",
-					"waste": "Minimización de desperdicios de material",
-					"time": "Ahorro de tiempo en cálculos"
+					"cost": "Ahorro de Costos",
+					"planning": "Planificación de Compras",
+					"waste": "Minimización de Desperdicios",
+					"time": "Ahorro de Tiempo"
 				},
 				"seo": "calculadora de baldosas, calculadora de laminado, cálculo de baldosas, cálculo de laminado, baldosas para suelo, laminado para suelo, cantidad de baldosas, cantidad de laminado, área de suelo, reserva de material, corte de baldosas, corte de laminado, renovación de suelo, acabado de suelo, materiales de suelo, materiales de construcción, renovación de apartamento, planificación de renovación, presupuesto de renovación, trabajos de construcción, trabajos de acabado, baldosa cerámica, porcelanato, mosaico, baldosa de vinilo, baldosa de cuarzo vinilo, baldosa SPC, baldosa LVT, laminado clase 32, laminado clase 33, laminado clase 34, tabla de parquet de roble, tabla de parquet de fresno, tabla de parquet de nogal"
 			}
 		},
 		"concrete": {
 			"title": "Calculadora de Hormigón",
-			"description": "Cálculo de cemento, arena, grava y agua para mezcla de hormigón",
+			"description": "Calcular cantidades de cemento, arena, grava y agua para preparación de hormigón",
 			"breadcrumbs": {
 				"construction": "Construcción"
 			},
@@ -1952,7 +1974,7 @@
 				"volumeAmount": "Cantidad",
 				"volumeUnit": "Unidad de Medida",
 				"grade": "Grado de Hormigón",
-				"selectGrade": "Seleccionar Grado",
+				"selectGrade": "Seleccionar grado",
 				"proportions": "Proporciones de Mezcla",
 				"cement": "Cemento",
 				"sand": "Arena",
@@ -1963,7 +1985,13 @@
 				"outputUnits": "Unidades de Salida",
 				"water": "Agua",
 				"calculate": "Calcular",
-				"reset": "Restablecer"
+				"reset": "Restablecer",
+				"units": {
+					"m3": "m³",
+					"liters": "L",
+					"kg": "kg",
+					"tons": "toneladas"
+				}
 			},
 			"results": {
 				"title": "Resultados del Cálculo",
@@ -1977,14 +2005,15 @@
 				"sand": "Arena",
 				"gravel": "Grava",
 				"water": "Agua",
-				"cementBags": "Sacos de Cemento",
-				"bags50kg": "sacos de 50kg",
+				"cementBags": "Bolsas de Cemento",
+				"bags50kg": "bolsas de 50kg",
 				"proportions": "Proporciones",
 				"proportionsText": "Cemento : Arena : Grava = {cement} : {sand} : {gravel}",
 				"waterCementRatio": "Relación A/C"
 			},
 			"errors": {
-				"title": "Errores de Entrada"
+				"title": "Errores de Entrada",
+				"calculation": "Error de cálculo. Por favor, compruebe sus datos de entrada."
 			},
 			"seo": {
 				"title": "Calculadora de Hormigón - Cálculo de Componentes de Mezcla de Hormigón | Calculadora #1",
@@ -2042,16 +2071,31 @@
 					"mixing": "Siga la tecnología de mezclado"
 				},
 				"benefits": {
-					"title": "Ventajas de la calculadora",
-					"content": "Usar la calculadora de hormigón proporciona muchas ventajas al planificar la construcción.",
-					"accuracy": "Cálculo preciso de cantidades de componentes",
-					"cost": "Ahorro en materiales",
-					"planning": "Planificación correcta de compras",
-					"quality": "Garantía de calidad del hormigón",
-					"waste": "Minimización de desperdicios de materiales",
-					"time": "Ahorro de tiempo en cálculos"
+					"title": "Beneficios de usar la calculadora de hormigón",
+					"content": "Usar nuestra calculadora de hormigón proporciona numerosas ventajas para proyectos de construcción:",
+					"accuracy": "Alta Precisión",
+					"cost": "Ahorro de Costos",
+					"planning": "Planificación de Compras",
+					"waste": "Minimización de Residuos",
+					"time": "Ahorro de Tiempo"
 				},
 				"seo": "calculadora de hormigón, cálculo de hormigón, composición de hormigón, cálculo de cemento, cálculo de arena, cálculo de grava, agua para hormigón, grado de hormigón, hormigón M100, hormigón M150, hormigón M200, hormigón M250, hormigón M300, hormigón M400, proporciones de hormigón, relación agua-cemento, mezcla de hormigón, cimiento hormigón, pared hormigón, suelo hormigón, construcción hormigón, trabajos de hormigón, componentes de hormigón, mezclado de hormigón, mortero de hormigón, materiales de construcción, estructuras de hormigón, hormigón monolítico, hormigón armado, bloques de hormigón, losas de hormigón"
+			},
+			"options": {
+				"grades": {
+					"M100": "M100",
+					"M150": "M150",
+					"M200": "M200",
+					"M250": "M250",
+					"M300": "M300",
+					"M400": "M400"
+				},
+				"units": {
+					"m3": "m³",
+					"liters": "L",
+					"kg": "kg",
+					"tons": "toneladas"
+				}
 			}
 		},
 		"roof": {
@@ -2512,6 +2556,71 @@
 				"accurate": "Cálculos precisos usando fórmulas actuales",
 				"comparison": "Comparación con compra a crédito"
 			}
+		}
+	},
+	"fuel": {
+		"title": "Calculadora de Consumo de Combustible",
+		"description": "Calcula el consumo de combustible, distancia de viaje y costos de combustible para planificar viajes",
+		"seo": {
+			"title": "Calculadora de Consumo de Combustible: Calcula Distancia y Costos",
+			"overview": {
+				"title": "Calculadora de Consumo de Combustible",
+				"content": "La calculadora de consumo de combustible es una herramienta profesional para calcular el consumo de combustible, distancia de viaje y costos. Con nuestra calculadora puedes calcular cuánto combustible necesitas para un viaje, qué distancia puedes cubrir con el combustible disponible y planificar tus costos de combustible."
+			},
+			"modes": {
+				"title": "Modos de Cálculo",
+				"content": "Nuestra calculadora de consumo de combustible proporciona dos modos de cálculo:",
+				"distance": "Cálculo de distancia por cantidad de combustible y consumo",
+				"fuel": "Cálculo de la cantidad de combustible requerida para el viaje"
+			},
+			"advantages": {
+				"title": "Beneficios de la Calculadora",
+				"content": "La calculadora de consumo de combustible proporciona muchos beneficios para la planificación de viajes:",
+				"quick": "Cálculo rápido en segundos",
+				"accurate": "Cálculos precisos basados en datos reales",
+				"planning": "Planificación de viajes y presupuesto de combustible",
+				"savings": "Ahorro de dinero en combustible"
+			},
+			"tips": {
+				"title": "Consejos de Economía de Combustible",
+				"content": "Para reducir el consumo de combustible:",
+				"measure": "Mide regularmente el consumo de combustible de tu coche",
+				"driving": "Sigue un estilo de conducción económico",
+				"maintenance": "Mantén tu coche en buen estado técnico",
+				"planning": "Planifica rutas con anticipación para evitar atascos"
+			}
+		},
+		"form": {
+			"title": "Parámetros de Cálculo",
+			"mode": "Modo de Cálculo",
+			"modes": {
+				"distance": "Calcular Distancia",
+				"distanceDesc": "Qué tan lejos puedes conducir",
+				"fuel": "Calcular Combustible",
+				"fuelDesc": "Cuánto combustible necesitas"
+			},
+			"consumption": "Consumo de Combustible (L/100 km)",
+			"fuelAmount": "Cantidad de Combustible en el Tanque (L)",
+			"distance": "Distancia Deseada (km)",
+			"calculate": "Calcular",
+			"errors": {
+				"title": "Errores de Entrada"
+			}
+		},
+		"results": {
+			"title": "Resultados del Cálculo",
+			"result": "Resultado",
+			"km": "km",
+			"liters": "L",
+			"distanceResult": "Puedes conducir",
+			"fuelResult": "Para el viaje necesitas",
+			"details": "Detalles del Cálculo",
+			"consumption": "Consumo de Combustible",
+			"fuelAmount": "Cantidad de Combustible",
+			"distance": "Distancia",
+			"calculatedDistance": "Distancia Calculada",
+			"calculatedFuel": "Combustible Calculado",
+			"placeholder": "Ingresa los parámetros y haz clic en 'Calcular'"
 		}
 	}
 }

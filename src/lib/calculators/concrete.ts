@@ -219,20 +219,20 @@ export function calculateConcrete(input: ConcreteInput): ConcreteResult {
 		grade: gradeData.name,
 		cement: {
 			amount: Math.round(cementAmount * 100) / 100,
-			unit: outputUnits.cement === 'tons' ? 'т' : 'кг',
+			unit: outputUnits.cement === 'tons' ? 'tons' : 'kg',
 			bags: cementBags,
 		},
 		sand: {
 			amount: Math.round(sandAmount * 100) / 100,
-			unit: outputUnits.sand === 'tons' ? 'т' : 'кг',
+			unit: outputUnits.sand === 'tons' ? 'tons' : 'kg',
 		},
 		gravel: {
 			amount: Math.round(gravelAmount * 100) / 100,
-			unit: outputUnits.gravel === 'tons' ? 'т' : 'кг',
+			unit: outputUnits.gravel === 'tons' ? 'tons' : 'kg',
 		},
 		water: {
 			amount: Math.round(waterAmount * 100) / 100,
-			unit: outputUnits.water === 'm3' ? 'м³' : 'л',
+			unit: outputUnits.water === 'm3' ? 'm³' : 'L',
 		},
 		proportions: {
 			cement: cementProportion,

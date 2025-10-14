@@ -17,9 +17,6 @@ import {
 	validateCarDepreciationInput,
 	formatDepreciationCurrency,
 	formatDepreciationNumber,
-	getDepreciationMethods,
-	getDepreciationRates,
-	getDepreciationInsights,
 	type CarDepreciationInput,
 	type CarDepreciationResult,
 	type DepreciationMethod,
@@ -40,8 +37,53 @@ export default function CarDepreciationCalculator() {
 	const [errors, setErrors] = useState<string[]>([]);
 	const [isCalculated, setIsCalculated] = useState(false);
 
-	const depreciationMethods = getDepreciationMethods();
-	const depreciationRates = getDepreciationRates();
+	// Create depreciation methods options from translations
+	const depreciationMethods = [
+		{
+			value: 'linear',
+			label: t('form.depreciationMethods.linear'),
+			description: t('form.depreciationMethods.linearDescription'),
+		},
+		{
+			value: 'declining',
+			label: t('form.depreciationMethods.declining'),
+			description: t('form.depreciationMethods.decliningDescription'),
+		},
+	];
+
+	// Create depreciation rates options from translations
+	const depreciationRates = [
+		{
+			value: 5,
+			label: t('form.depreciationRates.rate5'),
+			description: t('form.depreciationRates.rate5Description'),
+		},
+		{
+			value: 10,
+			label: t('form.depreciationRates.rate10'),
+			description: t('form.depreciationRates.rate10Description'),
+		},
+		{
+			value: 15,
+			label: t('form.depreciationRates.rate15'),
+			description: t('form.depreciationRates.rate15Description'),
+		},
+		{
+			value: 20,
+			label: t('form.depreciationRates.rate20'),
+			description: t('form.depreciationRates.rate20Description'),
+		},
+		{
+			value: 25,
+			label: t('form.depreciationRates.rate25'),
+			description: t('form.depreciationRates.rate25Description'),
+		},
+		{
+			value: 30,
+			label: t('form.depreciationRates.rate30'),
+			description: t('form.depreciationRates.rate30Description'),
+		},
+	];
 
 	const handleInputChange = (
 		field: keyof CarDepreciationInput,

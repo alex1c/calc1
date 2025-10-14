@@ -33,7 +33,7 @@ export default function FuelConsumptionPage() {
 						label: t('categories.auto.title'),
 						href: '/auto',
 					},
-					{ label: t('calculators.fuel.title') },
+					{ label: t('fuel.title') },
 				]}
 			/>
 			<FuelCalculator />

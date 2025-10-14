@@ -980,22 +980,18 @@
 			"title": "Auto Loan Calculator",
 			"description": "Calculate monthly auto loan payments, total payments, and create detailed payment schedule for car purchase",
 			"seo": {
-				"title": "Auto Loan Calculator: Calculate Payments, Rates and Car Loan Terms",
+				"title": "Auto Loan Calculator: расчёт платежей, ставок и условий автомобильного кредитования",
 				"overview": {
-					"title": "Auto Loan Calculator for Car Loan Calculation",
-					"content": "Auto Loan Calculator is a professional tool for calculating car loans, monthly payments, total payments and overpayment. With our calculator you can calculate optimal car loan terms, compare different bank offers and choose the most profitable financing option for car purchase."
+					"title": "Auto Loan Calculator для расчёта автомобильного кредита",
+					"content": "Auto Loan Calculator — это профессиональный инструмент для расчёта автомобильного кредита, ежемесячных платежей, общей суммы выплат и переплаты. С помощью нашего калькулятора вы сможете рассчитать оптимальные условия автокредита, сравнить различные предложения банков и выбрать наиболее выгодный вариант финансирования покупки автомобиля."
 				},
 				"advantages": {
 					"title": "Benefits of using Auto Loan Calculator",
-					"content": "Auto loan calculator provides many benefits for car purchase planning:",
+					"content": "Auto Loan Calculator предоставляет множество преимуществ для планирования покупки автомобиля:",
 					"quickApproval": "Quick approval and access to funds for car purchase",
 					"lowRates": "Competitive interest rates and favorable loan terms",
 					"flexibleTerms": "Flexible loan terms from 1 to 7 years",
-					"earlyRepayment": "Possibility of early repayment без штрафов",
-					"quick": "Quick calculation in seconds",
-					"accurate": "Accurate calculations based on real data",
-					"planning": "Car purchase and loan budget planning",
-					"savings": "Money savings on car financing"
+					"earlyRepayment": "Possibility of early repayment без штрафов"
 				},
 				"requirements": {
 					"title": "Requirements for obtaining auto loan",
@@ -1018,25 +1014,21 @@
 					}
 				},
 				"tips": {
-					"title": "Car Loan Tips",
-					"content": "To get the best car loan terms:",
+					"title": "Tips for choosing auto loan",
+					"content": "To choose the optimal auto loan:",
 					"compare": "Compare offers from different banks and loan terms",
 					"insurance": "Consider the cost of comprehensive and liability insurance",
 					"early": "Consider early repayment for savings",
-					"consult": "Consult with financial specialists",
-					"credit": "Check and improve your credit score",
-					"comparison": "Compare offers from different banks",
-					"downPayment": "Consider making a larger down payment",
-					"term": "Choose the optimal loan term"
+					"consult": "Consult with financial specialists"
 				}
 			},
 			"form": {
-				"title": "Calculation Parameters",
+				"title": "Auto Loan Parameters",
 				"carValue": "Car Value ($)",
 				"downPayment": "Down Payment ($)",
 				"termYears": "Term in Years",
 				"termMonths": "Term in Months",
-				"interestRate": "Interest Rate (%)",
+				"interestRate": "Interest Rate (% per year)",
 				"additionalPayment": "Additional Payment ($)",
 				"optional": "optional",
 				"paymentType": "Payment Scheme",
@@ -1047,10 +1039,7 @@
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
-				},
-				"carPrice": "Car Price ($)",
-				"loanAmount": "Loan Amount ($)",
-				"loanTerm": "Loan Term (months)"
+				}
 			},
 			"results": {
 				"title": "Calculation Results",
@@ -1062,7 +1051,7 @@
 				"months": "months",
 				"downloadSchedule": "Download Schedule (CSV)",
 				"scheduleTitle": "Payment Schedule",
-				"placeholder": "Enter parameters and click 'Calculate'",
+				"placeholder": "Введите параметры и нажмите 'Calculate'",
 				"table": {
 					"month": "Month",
 					"payment": "Payment",
@@ -1070,10 +1059,7 @@
 					"principal": "Principal",
 					"balance": "Balance",
 					"moreMonths": "дополнительных months"
-				},
-				"totalPayment": "Total Payment",
-				"effectiveRate": "Effective Rate",
-				"details": "Payment Details"
+				}
 			}
 		},
 		"osago": {
@@ -1142,64 +1128,51 @@
 			"title": "KASKO Calculator",
 			"description": "Calculate KASKO policy cost considering car value, driver age, region and other factors",
 			"seo": {
-				"title": "KASKO Calculator: Calculate Full Auto Insurance Cost",
+				"title": "KASKO Calculator: расчёт стоимости полного автострахования",
 				"overview": {
-					"title": "KASKO Calculator for Policy Cost Calculation",
-					"content": "KASKO Calculator is a professional tool for calculating full auto insurance policy cost. With our calculator you can calculate the exact KASKO cost taking into account all coefficients: car value, driver age and experience, region, anti-theft system presence and deductible."
+					"title": "KASKO Calculator для расчёта стоимости полиса",
+					"content": "KASKO Calculator — это профессиональный инструмент для расчёта стоимости полиса полного автострахования. С помощью нашего калькулятора вы сможете рассчитать точную стоимость КАСКО с учётом всех коэффициентов: стоимости автомобиля, возраста и стажа водителя, региона, наличия противоугонной системы и франшизы."
 				},
 				"coefficients": {
 					"title": "KASKO Calculation Coefficients",
-					"content": "KASKO cost calculation takes into account various coefficients:",
-					"region": "Regional coefficient",
+					"content": "KASKO cost is calculated by formula: (Car Value × Base Rate) × Kregion × Kage × Kexperience × Kalarm × Kdeductible",
+					"region": "Kregion: Moscow = 1.2, St. Petersburg = 1.1, other regions = 1.0",
 					"age": "Kage: under 22 years = 1.5, 22-30 years = 1.2, over 30 years = 1.0",
 					"experience": "Kexperience: under 3 years = 1.3, 3-10 years = 1.1, over 10 years = 1.0",
 					"alarm": "Kalarm: has alarm = 0.9, no alarm = 1.0",
-					"franchise": "Kdeductible: no deductible = 1.0, $100 = 0.9, $200 = 0.8",
-					"carValue": "Car value coefficient",
-					"driverAge": "Driver age and experience coefficient",
-					"antiTheft": "Anti-theft system coefficient",
-					"deductible": "Deductible coefficient"
+					"franchise": "Kdeductible: no deductible = 1.0, $100 = 0.9, $200 = 0.8"
 				},
 				"advantages": {
 					"title": "Benefits of using KASKO Calculator",
-					"content": "KASKO calculator provides many benefits for insurance planning:",
-					"comprehensive": "Comprehensive coverage for any damage risks",
-					"quick": "Quick calculation in seconds",
-					"accurate": "Accurate calculations based on real data",
-					"comparison": "Ability to compare costs at different insurance companies",
-					"planning": "Insurance budget planning",
-					"savings": "Money savings on insurance"
+					"content": "KASKO Calculator предоставляет множество преимуществ для планирования автострахования:",
+					"comprehensive": "Полное покрытие ущерба от любых рисков",
+					"quick": "Quick policy cost calculation in minutes",
+					"accurate": "Accurate calculation considering all current coefficients",
+					"comparison": "Ability to compare costs at different insurance companies"
 				},
 				"tips": {
-					"title": "KASKO Insurance Tips",
-					"content": "To get the best KASKO insurance terms:",
+					"title": "Tips for choosing KASKO",
+					"content": "To choose optimal KASKO policy:",
 					"compare": "Compare offers from different insurance companies",
-					"alarm": "Install anti-theft system to reduce cost",
-					"franchise": "Consider deductible to reduce policy cost",
-					"documents": "Prepare all necessary documents in advance",
-					"antiTheft": "Install certified anti-theft system",
-					"deductible": "Consider choosing a deductible",
-					"comparison": "Compare offers from different insurers",
-					"driver": "Add experienced drivers to the policy"
+					"alarm": "Установите противоугонную систему для снижения стоимости",
+					"franchise": "Рассмотрите франшизу для снижения стоимости полиса",
+					"documents": "Prepare all necessary documents in advance"
 				}
 			},
 			"form": {
-				"title": "Calculation Parameters",
+				"title": "KASKO Calculation Parameters",
 				"carValue": "Car Value ($)",
-				"carYear": "Car Year",
-				"driverAge": "Driver Age",
+				"carYear": "Год выпуска",
+				"driverAge": "Driver Age (years)",
 				"drivingExperience": "Driving Experience (years)",
 				"region": "Region",
 				"selectRegion": "Select Region",
-				"hasAlarmSystem": "Anti-theft System",
+				"hasAlarmSystem": "Наличие противоугонной системы",
 				"franchise": "Deductible",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
-				},
-				"driverExperience": "Driver Experience (years)",
-				"antiTheft": "Anti-theft System",
-				"deductible": "Deductible ($)"
+				}
 			},
 			"results": {
 				"title": "Calculation Results",
@@ -1211,9 +1184,7 @@
 				"experienceCoeff": "Коэффициент стажа",
 				"alarmCoeff": "Коэффициент сигнализации",
 				"franchiseCoeff": "Коэффициент франшизы",
-				"placeholder": "Enter parameters and click 'Calculate'",
-				"premium": "Insurance Premium",
-				"coefficients": "Applied Coefficients"
+				"placeholder": "Введите параметры и нажмите 'Calculate'"
 			}
 		},
 		"fuel-consumption": {
@@ -1284,61 +1255,54 @@
 			}
 		},
 		"vehicle-tax": {
-			"title": "Vehicle Tax Calculator",
-			"description": "Calculate vehicle tax based on engine power, region and ownership period",
+			"title": "Калькулятор транспортного налога",
+			"description": "Calculate транспортный налог в зависимости от мощности двигателя, региона и срока владения",
 			"seo": {
-				"title": "Vehicle Tax Calculator: Calculate Car Tax",
+				"title": "Калькулятор транспортного налога: расчёт налога на автомобиль",
 				"overview": {
-					"title": "Vehicle Tax Calculator for Car Owners",
-					"content": "Online vehicle tax calculator helps calculate how much you need to pay for your car based on engine power, registration region and ownership period. Find out your tax burden quickly and conveniently."
+					"title": "Калькулятор транспортного налога для автомобилистов",
+					"content": "Онлайн калькулятор транспортного налога поможет рассчитать, сколько нужно платить за автомобиль в зависимости от мощности двигателя, региона регистрации и срока владения. Узнайте налоговую нагрузку быстро и удобно."
 				},
 				"calculation": {
-					"title": "How Vehicle Tax is Calculated",
-					"content": "Vehicle tax calculation takes into account several factors:",
-					"enginePower": "Engine power in horsepower",
-					"region": "Registration region with different tax rates",
-					"ownership": "Ownership period (full year or partial)",
-					"formula": "Tax = Power × Rate × (Ownership Months / 12)",
-					"rate": "Tax rate per horsepower set by region"
+					"title": "Как рассчитывается транспортный налог",
+					"content": "Транспортный налог рассчитывается по формуле:",
+					"enginePower": "Мощность двигателя в лошадиных силах",
+					"region": "Regionальная ставка налога (₽/л.с.)",
+					"ownership": "Срок владения автомобилем в году",
+					"formula": "Налог = Мощность × Ставка × (Monthы владения / 12)"
 				},
 				"advantages": {
-					"title": "Benefits of using Vehicle Tax Calculator",
-					"content": "Vehicle tax calculator provides many benefits for tax planning:",
+					"title": "Преимущества использования калькулятора",
+					"content": "Калькулятор транспортного налога предоставляет множество преимуществ:",
 					"quick": "Quick calculation in seconds",
-					"accurate": "Accurate calculations based on current rates",
-					"planning": "Tax budget planning",
-					"regions": "Accounting for regional tax features",
-					"savings": "Time savings on tax calculations"
+					"accurate": "Точные расчёты с актуальными ставками",
+					"planning": "Планирование налоговых расходов",
+					"regions": "Учёт региональных особенностей налогообложения"
 				},
 				"tips": {
-					"title": "Vehicle Tax Tips",
-					"content": "To optimize your vehicle tax:",
-					"deadline": "Watch tax payment deadlines (until December 1st)",
-					"payment": "Pay taxes on time to avoid penalties",
-					"ownership": "Plan ownership period for tax optimization",
-					"consultation": "When in doubt, consult tax advisors",
-					"engine": "Consider engine power when buying a car",
-					"region": "Check tax rates in different regions"
+					"title": "Советы по транспортному налогу",
+					"content": "Для правильного расчёта и уплаты транспортного налога:",
+					"deadline": "Следите за сроками уплаты налога (до 1 декабря)",
+					"payment": "Проверяйте правильность расчёта в налоговой инспекции",
+					"ownership": "Учитывайте только период фактического владения",
+					"consultation": "При сомнениях обращайтесь к налоговым консультантам"
 				}
 			},
 			"form": {
-				"title": "Calculation Parameters",
+				"title": "Параметры расчёта",
 				"enginePower": "Engine Power (hp)",
 				"region": "Region",
 				"selectRegion": "Select Region",
-				"ownershipMonths": "Ownership Period",
-				"months": "Months",
+				"ownershipMonths": "Срок владения",
+				"months": "months",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
-				},
-				"ownershipPeriod": "Ownership Period",
-				"fullYear": "Full Year",
-				"partialYear": "Partial Year"
+				}
 			},
 			"results": {
 				"title": "Calculation Results",
-				"taxAmount": "Tax Amount",
+				"taxAmount": "Транспортный налог",
 				"taxDescription": "Ваш транспортный налог составит",
 				"details": "Calculation Details",
 				"enginePower": "Мощность двигателя",
@@ -1347,17 +1311,14 @@
 				"rubPerHp": "₽/л.с.",
 				"ownershipPeriod": "Срок владения",
 				"ownershipCoefficient": "Коэффициент владения",
-				"placeholder": "Enter parameters and click 'Calculate'",
-				"ratePerHp": "Rate per HP",
-				"totalHp": "Total HP",
-				"ownershipMonths": "Ownership Months"
+				"placeholder": "Введите параметры и нажмите 'Calculate'"
 			}
 		},
 		"leasing": {
 			"title": "Auto Leasing Calculator",
 			"description": "Calculate monthly payments and total cost of auto leasing",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"auto": "Авто"
 			},
 			"form": {
 				"title": "Leasing Parameters",
@@ -1385,7 +1346,7 @@
 				"placeholder": "Enter data for calculation"
 			},
 			"seo": {
-				"title": "Auto Leasing Calculator Online",
+				"title": "Auto Leasing Calculator онлайн",
 				"overview": {
 					"title": "About Auto Leasing Calculator",
 					"content": "Online auto leasing calculator helps calculate monthly payments, overpayment and total payments under leasing agreement. Convenient tool for evaluating auto leasing profitability."
@@ -1393,9 +1354,9 @@
 				"calculation": {
 					"title": "How Leasing is Calculated",
 					"content": "Leasing is calculated using annuity payment formula considering down payment, contract term, interest rate and buyout value.",
-					"financing": "Financing Amount = Car Value - Down Payment - Buyout Value",
+					"financing": "Financing Amount = Стоимость авто - Down Payment - Buyout Value",
 					"payment": "Monthly Payment is calculated using annuity formula",
-					"total": "Total Amount = Monthly Payment × Term + Down Payment + Buyout Value",
+					"total": "Общая сумма = Monthly Payment × Срок + Down Payment + Buyout Value",
 					"overpayment": "Total Interest = Total Amount - Car Value"
 				},
 				"advantages": {
@@ -1403,20 +1364,18 @@
 					"content": "Our auto leasing calculator helps you make an informed decision about auto leasing profitability.",
 					"quick": "Quick calculation in seconds",
 					"accurate": "Accurate calculations using current formulas",
-					"comparison": "Ability to compare different leasing options",
-					"planning": "Financial planning and budgeting"
+					"comparison": "Comparison with credit purchase",
+					"planning": "Планирование бюджета на автомобиль"
 				},
 				"tips": {
-					"title": "Leasing Tips",
-					"content": "To get the best leasing terms:",
-					"downPayment": "Consider making a larger down payment",
-					"interestRate": "Compare interest rates from different leasing companies",
-					"term": "Choose the optimal lease term",
-					"buyout": "Negotiate buyout value in advance",
-					"compare": "Compare offers from different leasing companies",
-					"consultation": "Consult with leasing specialists"
+					"title": "Советы по лизингу",
+					"content": "При выборе лизинга учитывайте все параметры договора и сравнивайте с альтернативными вариантами финансирования.",
+					"downPayment": "Больший первоначальный взнос снижает ежемесячные платежи",
+					"interestRate": "Сравнивайте ставки удорожания у разных лизинговых компаний",
+					"term": "Более длительный срок увеличивает общую переплату",
+					"buyout": "Buyout Value влияет на размер финансирования"
 				},
-				"seo": "auto leasing, leasing calculator, car leasing, leasing calculation, monthly payments, leasing overpayment, buyout value, down payment, interest rate, leasing payments, auto financing, leasing vs loan"
+				"seo": "автолизинг, калькулятор лизинга, лизинг автомобиля, расчёт лизинга, ежемесячные платежи, переплата по лизингу, выкупная стоимость, первоначальный взнос, ставка удорожания, лизинговые платежи, финансирование авто, лизинг vs кредит"
 			}
 		},
 		"customs": {
@@ -1487,236 +1446,203 @@
 			}
 		},
 		"traffic-fines": {
-			"title": "Traffic Fines Calculator",
-			"description": "Calculate traffic fines for traffic violations with early payment discount",
+			"title": "Калькулятор штрафов ГИБДД",
+			"description": "Расчёт штрафов за нарушения ПДД с учётом скидки при досрочной оплате",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"auto": "Авто"
 			},
 			"form": {
-				"title": "Select Violations",
-				"selectViolations": "Traffic Violations",
-				"calculate": "Calculate Fine",
-				"errors": {
-					"title": "Input Errors"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"totalFine": "Total Fine",
-				"totalFineDescription": "Total amount of all fines",
-				"discountTitle": "Early Payment Discount",
-				"discountAmount": "Discount Amount",
-				"discountedFine": "Amount to Pay with Discount",
-				"discountNote": "25% discount applies when paying within 20 days",
-				"selectedViolations": "Selected Violations",
-				"placeholder": "Select violations and click 'Calculate'",
-				"discount": "Early Payment Discount",
-				"finalAmount": "Final Amount",
-				"details": "Fine Details"
-			},
-			"seo": {
-				"title": "Traffic Fines Calculator: Calculate Traffic Violation Fines",
-				"overview": {
-					"title": "Traffic Fines Calculator for Drivers",
-					"content": "Online traffic fines calculator helps calculate fines for traffic violations with consideration of early payment discount. Find out the exact amount of fine for various traffic violations quickly and conveniently."
-				},
-				"calculation": {
-					"title": "How Traffic Fines are Calculated",
-					"content": "Traffic fines calculation takes into account several factors:",
-					"speed": "Speed violations: from $5 to $50 depending on excess speed",
-					"safety": "Safety violations: seatbelt, phone, lights - from $5 to $15",
-					"traffic": "Traffic violations: red light, wrong lane - from $10 to $50",
-					"parking": "Parking violations: from $15 to $50 depending on location",
-					"violation": "Type of traffic violation",
-					"amount": "Base fine amount for violation",
-					"discount": "Early payment discount (up to 50%)",
-					"deadline": "Payment deadline (20 days from violation date)"
-				},
-				"advantages": {
-					"title": "Benefits of using Traffic Fines Calculator",
-					"content": "Traffic fines calculator provides many benefits for drivers:",
-					"quick": "Quick calculation in seconds",
-					"accurate": "Accurate calculations based on current rates",
-					"discount": "Early payment discount consideration",
-					"comprehensive": "Complete list of traffic violations",
-					"planning": "Fine budget planning",
-					"savings": "Money savings with early payment discount"
-				},
-				"tips": {
-					"title": "Traffic Fines Tips",
-					"content": "To minimize traffic fines:",
-					"payment": "Pay fines within 20 days to get 25% discount",
-					"avoidance": "Follow traffic rules to avoid fines",
-					"documentation": "Keep payment receipts for fines",
-					"consultation": "Consult a lawyer in disputed situations",
-					"early": "Pay fines within 20 days for 50% discount",
-					"avoid": "Follow traffic rules to avoid violations",
-					"check": "Regularly check for unpaid fines",
-					"appeal": "Appeal unjust fines if necessary"
-				},
-				"seo": "traffic fines, fines calculator, traffic violations, speeding fines, parking fines, red light violation, wrong lane, fine discount, fine payment, traffic law"
-			}
-		},
-		"car-ownership": {
-			"title": "Car Ownership Cost Calculator",
-			"description": "Calculate total car ownership costs including fuel, insurance, taxes, maintenance and depreciation",
-			"breadcrumbs": {
-				"auto": "Auto"
-			},
-			"form": {
-				"title": "Car Parameters",
-				"carPrice": "Car Value ($)",
-				"ownershipYears": "Ownership Period (years)",
-				"annualMileage": "Annual Mileage (km)",
-				"fuelConsumption": "Fuel Consumption (l/100km)",
-				"selectConsumption": "Select fuel consumption",
-				"fuelPrice": "Fuel Price ($/l)",
-				"osagoCost": "OSAGO Cost ($/year)",
-				"kaskoCost": "KASKO Cost ($/year)",
-				"optional": "optional",
-				"vehicleTax": "Vehicle Tax ($/year)",
-				"maintenanceCost": "Maintenance & Repairs ($/year)",
-				"depreciationRate": "Depreciation (% per year)",
-				"selectDepreciation": "Select depreciation rate",
-				"calculate": "Calculate Ownership Cost",
+				"title": "Выберите нарушения",
+				"selectViolations": "Нарушения ПДД",
+				"calculate": "Calculate штраф",
 				"errors": {
 					"title": "Data Errors"
 				}
 			},
 			"results": {
 				"title": "Calculation Results",
-				"totalOwnershipCost": "Total Ownership Cost",
-				"totalOwnershipDescription": "For the entire ownership period",
-				"costPerKm": "Cost per 1 km",
-				"costPerKmDescription": "Average cost per kilometer",
-				"annualCosts": "Annual Costs",
-				"fuel": "Fuel",
-				"insurance": "Insurance",
-				"tax": "Taxes",
-				"maintenance": "Maintenance & Repairs",
-				"depreciation": "Depreciation",
-				"costBreakdown": "Cost Breakdown",
-				"placeholder": "Enter parameters to calculate"
+				"totalFine": "Общий штраф",
+				"totalFineDescription": "Сумма всех штрафов",
+				"discountTitle": "Скидка при досрочной оплате",
+				"discountAmount": "Размер скидки",
+				"discountedFine": "К оплате со скидкой",
+				"discountNote": "При оплате в течение 20 дней действует скидка 25%",
+				"selectedViolations": "Выбранные нарушения",
+				"placeholder": "Выберите нарушения для расчёта"
 			},
 			"seo": {
-				"title": "Car Ownership Cost Calculator Online",
+				"title": "Калькулятор штрафов ГИБДД онлайн",
 				"overview": {
-					"title": "About Car Ownership Cost Calculator",
-					"content": "Online car ownership cost calculator helps estimate all expenses for fuel, insurance, taxes, maintenance and depreciation. Find out how much your car really costs per year and for the entire ownership period."
+					"title": "О калькуляторе штрафов ГИБДД",
+					"content": "Онлайн калькулятор штрафов ГИБДД поможет быстро рассчитать размер штрафа за самые распространённые нарушения: превышение скорости, парковку, проезд на красный, выезд на встречную полосу и другие. Учитывается скидка 25% при оплате в первые 20 дней."
 				},
 				"calculation": {
-					"title": "How Car Ownership Cost is Calculated",
-					"content": "Car ownership cost includes all expenses related to vehicle operation.",
-					"fuel": "Fuel costs: calculated based on annual mileage and fuel consumption",
-					"insurance": "Insurance costs: OSAGO (mandatory) and KASKO (optional)",
-					"tax": "Vehicle tax: annual tax based on engine power",
-					"maintenance": "Maintenance costs: regular service and repairs",
-					"depreciation": "Depreciation: loss of car value over time"
-				},
-				"advantages": {
-					"title": "Benefits of Car Ownership Cost Calculator",
-					"content": "Car ownership cost calculator provides comprehensive cost analysis:",
-					"comprehensive": "Comprehensive cost analysis including all expenses",
-					"accurate": "Accurate calculations based on current rates",
-					"planning": "Financial planning and budget management",
-					"comparison": "Comparison of different car models and options"
-				},
-				"tips": {
-					"title": "Car Ownership Cost Tips",
-					"content": "To reduce car ownership costs:",
-					"fuel": "Choose fuel-efficient vehicles and drive economically",
-					"insurance": "Compare insurance rates and choose optimal coverage",
-					"maintenance": "Follow maintenance schedule to avoid major repairs",
-					"depreciation": "Consider depreciation when choosing a car model"
-				},
-				"seo": "car ownership cost, car cost calculator, vehicle expenses, car maintenance cost, car insurance cost, car depreciation, fuel cost, car tax, total cost of ownership, TCO"
-			}
-		},
-		"car-depreciation": {
-			"title": "Car Depreciation Calculator",
-			"description": "Calculate car value depreciation over ownership years",
-			"breadcrumbs": {
-				"auto": "Auto"
-			},
-			"form": {
-				"title": "Calculation Parameters",
-				"initialValue": "Initial Value ($)",
-				"ownershipYears": "Ownership Period (years)",
-				"depreciationMethod": "Depreciation Method",
-				"depreciationRate": "Depreciation Rate (% per year)",
-				"selectRate": "Select depreciation rate",
-				"annualMileage": "Annual Mileage (km)",
-				"optional": "optional",
-				"calculate": "Calculate Depreciation",
-				"errors": {
-					"title": "Data Errors"
-				},
-				"depreciationMethods": {
-					"linear": "Linear",
-					"linearDescription": "Uniform value decrease each year",
-					"declining": "Declining",
-					"decliningDescription": "Percentage of residual value each year"
-				},
-				"depreciationRates": {
-					"rate5": "5% per year",
-					"rate5Description": "New cars (0-2 years)",
-					"rate10": "10% per year",
-					"rate10Description": "Medium age (3-5 years)",
-					"rate15": "15% per year",
-					"rate15Description": "Old cars (6+ years)",
-					"rate20": "20% per year",
-					"rate20Description": "High depreciation",
-					"rate25": "25% per year",
-					"rate25Description": "Very high depreciation",
-					"rate30": "30% per year",
-					"rate30Description": "Extreme depreciation"
-				}
-			},
-			"results": {
-				"title": "Calculation Results",
-				"finalValue": "Final Value",
-				"finalValueDescription": "Car value after specified period",
-				"totalDepreciation": "Total Depreciation",
-				"depreciationPercentage": "Depreciation Percentage",
-				"insights": "Depreciation Analysis",
-				"yearlyBreakdown": "Yearly Breakdown",
-				"year": "Year",
-				"beginningValue": "Beginning Value",
-				"depreciation": "Depreciation",
-				"endingValue": "Ending Value",
-				"percentage": "Percentage",
-				"placeholder": "Enter parameters to calculate"
-			},
-			"seo": {
-				"title": "Car Depreciation Calculator Online",
-				"overview": {
-					"title": "About Car Depreciation Calculator",
-					"content": "Online car depreciation calculator helps calculate how car value decreases over ownership years, choose depreciation calculation method and plan future expenses. Convenient tool for estimating car residual value."
-				},
-				"methods": {
-					"title": "Car Depreciation Calculation Methods",
-					"content": "There are several methods for calculating car depreciation, each with its own characteristics.",
-					"linear": "Linear method: uniform value decrease each year",
-					"declining": "Declining method: percentage of residual value each year",
-					"factors": "Influencing factors: age, mileage, condition, market situation"
+					"title": "Как рассчитываются штрафы",
+					"content": "Штрафы ГИБДД рассчитываются согласно КоАП РФ с учётом типа нарушения и возможности получения скидки.",
+					"speed": "Превышение скорости: от 500 до 5000 рублей в зависимости от превышения",
+					"safety": "Нарушения безопасности: ремень безопасности, телефон, свет - от 500 до 1500 рублей",
+					"traffic": "Нарушения ПДД: проезд на красный, выезд на встречную - от 1000 до 5000 рублей",
+					"parking": "Нарушения парковки: от 1500 до 5000 рублей в зависимости от места"
 				},
 				"advantages": {
 					"title": "Calculator Benefits",
-					"content": "Our depreciation calculator helps you make informed decisions about car buying and selling.",
-					"planning": "Financial expense planning",
-					"comparison": "Comparison of different car models",
-					"insights": "Getting analytical insights",
-					"financial": "Financial planning"
+					"content": "Наш калькулятор штрафов поможет вам быстро оценить размер штрафов и спланировать бюджет.",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Точные расчёты по актуальным штрафам",
+					"discount": "Учёт скидки при досрочной оплате",
+					"comprehensive": "Полный список нарушений ПДД"
 				},
 				"tips": {
-					"title": "Tips to Reduce Depreciation",
-					"content": "There are several ways to minimize car value loss.",
-					"maintenance": "Regular maintenance",
-					"mileage": "Mileage and driving style control",
-					"market": "Consider market situation when buying",
-					"timing": "Right timing for selling"
+					"title": "Советы по штрафам ГИБДД",
+					"content": "При получении штрафа важно знать свои права и возможности для снижения размера платежа.",
+					"payment": "Оплачивайте штрафы в течение 20 дней для получения скидки 25%",
+					"avoidance": "Соблюдайте ПДД для избежания штрафов",
+					"documentation": "Сохраняйте документы об оплате штрафов",
+					"consultation": "При спорных ситуациях обращайтесь к юристу"
 				},
-				"seo": "car depreciation, depreciation calculator, car residual value, value decrease, linear depreciation, declining method, value loss, car valuation"
+				"seo": "штрафы ГИБДД, калькулятор штрафов, нарушения ПДД, превышение скорости, штраф за парковку, проезд на красный, выезд на встречную, скидка на штраф, оплата штрафов, КоАП РФ"
+			}
+		},
+		"car-ownership": {
+			"title": "Калькулятор стоимости владения авто",
+			"description": "Расчёт полной стоимости владения автомобилем с учётом всех расходов",
+			"breadcrumbs": {
+				"auto": "Авто"
+			},
+			"form": {
+				"title": "Параметры автомобиля",
+				"carPrice": "Car Value ($)",
+				"ownershipYears": "Срок владения (лет)",
+				"annualMileage": "Пробег в год (км)",
+				"fuelConsumption": "Расход топлива (л/100км)",
+				"selectConsumption": "Выберите расход топлива",
+				"fuelPrice": "Цена топлива (₽/л)",
+				"osagoCost": "Стоимость ОСАГО (₽/год)",
+				"kaskoCost": "Стоимость КАСКО (₽/год)",
+				"optional": "optional",
+				"vehicleTax": "Транспортный налог (₽/год)",
+				"maintenanceCost": "ТО и ремонт (₽/год)",
+				"depreciationRate": "Амортизация (% в год)",
+				"selectDepreciation": "Выберите амортизацию",
+				"calculate": "Calculate стоимость владения",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"totalOwnershipCost": "Total Cost владения",
+				"totalOwnershipDescription": "За весь срок владения",
+				"costPerKm": "Стоимость 1 км",
+				"costPerKmDescription": "Средняя стоимость километра",
+				"annualCosts": "Годовые расходы",
+				"fuel": "Топливо",
+				"insurance": "Страховки",
+				"tax": "Налоги",
+				"maintenance": "ТО и ремонт",
+				"depreciation": "Амортизация",
+				"costBreakdown": "Разбивка расходов",
+				"placeholder": "Введите параметры для расчёта"
+			},
+			"seo": {
+				"title": "Калькулятор стоимости владения автомобилем онлайн",
+				"overview": {
+					"title": "О калькуляторе стоимости владения",
+					"content": "Онлайн калькулятор стоимости владения автомобилем помогает оценить все расходы на топливо, страховки, налоги, обслуживание и амортизацию. Узнайте, во сколько реально обходится ваш автомобиль за год и за весь срок эксплуатации."
+				},
+				"calculation": {
+					"title": "Как рассчитывается стоимость владения",
+					"content": "Стоимость владения автомобилем включает все расходы, связанные с эксплуатацией транспортного средства.",
+					"fuel": "Топливо: расход × пробег × цена за литр",
+					"insurance": "Страховки: ОСАГО + КАСКО (optional)",
+					"tax": "Налоги: транспортный налог",
+					"maintenance": "ТО и ремонт: регулярное обслуживание",
+					"depreciation": "Амортизация: потеря стоимости автомобиля"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Наш калькулятор поможет вам точно оценить реальную стоимость владения автомобилем.",
+					"comprehensive": "Учёт всех видов расходов",
+					"accurate": "Точные расчёты на основе ваших данных",
+					"planning": "Планирование бюджета на автомобиль",
+					"comparison": "Сравнение разных моделей автомобилей"
+				},
+				"tips": {
+					"title": "Советы по снижению стоимости владения",
+					"content": "Существует несколько способов снизить общую стоимость владения автомобилем.",
+					"fuel": "Выбирайте экономичные модели для снижения расходов на топливо",
+					"insurance": "Сравнивайте тарифы страховых компаний",
+					"maintenance": "Регулярное ТО предотвращает дорогостоящие поломки",
+					"depreciation": "Покупайте автомобили с низкой амортизацией"
+				},
+				"seo": "стоимость владения автомобилем, калькулятор владения авто, расходы на автомобиль, стоимость эксплуатации, топливо, страховка, налоги, ТО, амортизация, стоимость километра"
+			}
+		},
+		"car-depreciation": {
+			"title": "Калькулятор амортизации автомобиля",
+			"description": "Расчёт снижения стоимости автомобиля по годам владения",
+			"breadcrumbs": {
+				"auto": "Авто"
+			},
+			"form": {
+				"title": "Параметры расчёта",
+				"initialValue": "Первоначальная стоимость (₽)",
+				"ownershipYears": "Срок владения (лет)",
+				"depreciationMethod": "Метод амортизации",
+				"depreciationRate": "Процент амортизации в год",
+				"selectRate": "Выберите процент амортизации",
+				"annualMileage": "Пробег в год (км)",
+				"optional": "optional",
+				"calculate": "Calculate амортизацию",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"finalValue": "Остаточная стоимость",
+				"finalValueDescription": "Стоимость автомобиля через указанный срок",
+				"totalDepreciation": "Общая амортизация",
+				"depreciationPercentage": "Процент амортизации",
+				"insights": "Анализ амортизации",
+				"yearlyBreakdown": "Разбивка по годам",
+				"year": "Год",
+				"beginningValue": "Начальная стоимость",
+				"depreciation": "Амортизация",
+				"endingValue": "Конечная стоимость",
+				"percentage": "Процент",
+				"placeholder": "Введите параметры для расчёта"
+			},
+			"seo": {
+				"title": "Калькулятор амортизации автомобиля онлайн",
+				"overview": {
+					"title": "О калькуляторе амортизации",
+					"content": "Онлайн калькулятор амортизации автомобиля поможет рассчитать, как снижается стоимость авто по годам владения, выбрать метод расчёта амортизации и спланировать будущие расходы. Удобный инструмент для оценки остаточной стоимости машины."
+				},
+				"methods": {
+					"title": "Методы расчёта амортизации",
+					"content": "Существует несколько методов расчёта амортизации автомобиля, каждый из которых имеет свои особенности.",
+					"linear": "Линейный метод: равномерное снижение стоимости каждый год",
+					"declining": "Убывающий метод: процент от остаточной стоимости каждый год",
+					"factors": "Факторы влияния: возраст, пробег, состояние, рыночная ситуация"
+				},
+				"advantages": {
+					"title": "Calculator Benefits",
+					"content": "Наш калькулятор амортизации поможет вам принять обоснованные решения о покупке и продаже автомобиля.",
+					"planning": "Планирование финансовых расходов",
+					"comparison": "Сравнение разных моделей автомобилей",
+					"insights": "Получение аналитических выводов",
+					"financial": "Финансовое планирование"
+				},
+				"tips": {
+					"title": "Советы по снижению амортизации",
+					"content": "Существует несколько способов минимизировать потерю стоимости автомобиля.",
+					"maintenance": "Регулярное техническое обслуживание",
+					"mileage": "Контроль пробега и стиля вождения",
+					"market": "Учёт рыночной ситуации при покупке",
+					"timing": "Правильный выбор времени для продажи"
+				},
+				"seo": "амортизация автомобиля, калькулятор амортизации, остаточная стоимость авто, снижение стоимости, линейная амортизация, убывающий метод, потеря стоимости, оценка автомобиля"
 			}
 		},
 		"wallpaper": {
@@ -1835,17 +1761,17 @@
 			},
 			"form": {
 				"materialType": "Material Type",
-				"roomLength": "Room Length (m)",
-				"roomWidth": "Room Width (m)",
-				"wallHeight": "Wall Height (m)",
-				"floorArea": "Floor Area (m²)",
-				"doorsWindowsArea": "Doors and Windows Area (m²)",
+				"roomLength": "Room Length",
+				"roomWidth": "Room Width",
+				"wallHeight": "Wall Height",
+				"floorArea": "Floor Area",
+				"doorsWindowsArea": "Doors and Windows Area",
 				"layers": "Number of Layers",
 				"consumptionRate": "Consumption Rate",
-				"reservePercentage": "Reserve (%)",
+				"reservePercentage": "Reserve",
 				"packageSize": "Package Size",
-				"tileSize": "Tile Size (m²)",
-				"groutWidth": "Grout Width (mm)",
+				"tileSize": "Tile Size",
+				"groutWidth": "Grout Width",
 				"calculate": "Calculate",
 				"reset": "Reset"
 			},
@@ -1865,21 +1791,8 @@
 				"kilograms": "kilograms",
 				"tips": {
 					"title": "Recommendations",
-					"recommendation": "We recommend taking 1-2 additional packages for fitting and possible defects.",
-					"surface": "Prepare the surface before applying the material",
-					"weather": "Consider weather conditions when working",
-					"technique": "Follow proper application technique",
-					"waste": "Add 10-15% reserve for waste"
-				},
-				"totalWallArea": "Total Wall Area",
-				"floorArea": "Floor Area",
-				"doorsWindowsArea": "Doors and Windows Area",
-				"usefulArea": "Useful Area",
-				"layers": "Number of Layers",
-				"consumptionPerLayer": "Consumption per Layer",
-				"totalMaterial": "Total Material",
-				"packageSize": "Package Size",
-				"pieces": "pieces"
+					"recommendation": "We recommend taking 1-2 additional packages for fitting and possible defects."
+				}
 			},
 			"options": {
 				"materials": {
@@ -1908,11 +1821,10 @@
 					"title": "How Material Quantities Are Calculated",
 					"content": "Building materials calculation includes several steps to get accurate results.",
 					"steps": {
-						"area": "Measure the wall area of the room",
-						"consumption": "Multiply by material consumption rate",
-						"layers": "Multiply by number of layers",
-						"reserve": "Add 10-15% reserve",
-						"openings": "Subtract doors and windows area"
+						"area": "Room area calculation",
+						"consumption": "Material consumption per square meter calculation",
+						"layers": "Number of application layers consideration",
+						"reserve": "Reserve addition for fitting and losses"
 					}
 				},
 				"materials": {
@@ -1938,41 +1850,20 @@
 				"tips": {
 					"title": "Material Calculation Tips",
 					"content": "Follow our recommendations for accurate building materials calculation results.",
-					"measurement": "Accurately measure all room dimensions",
+					"measurement": "Carefully measure all room dimensions",
 					"material": "Check material consumption rates",
 					"layers": "Consider number of application layers",
-					"reserve": "Add reserve for waste and fitting",
+					"reserve": "Add 10-15% reserve for fitting",
 					"quality": "Consider possible defects when purchasing",
-					"surface": "Prepare the surface before application",
-					"consumption": "Consider surface type and material",
-					"weather": "Consider weather conditions",
-					"technique": "Follow proper application technique"
+					"surface": "Consider surface type and condition"
 				},
 				"benefits": {
 					"title": "Calculator Benefits",
 					"content": "Our building materials calculator provides several advantages:",
-					"accuracy": "Calculation Accuracy",
-					"convenience": "Ease of Use",
-					"universal": "Versatility",
-					"professional": "Professional Approach",
-					"savings": "Cost Savings",
-					"planning": "Purchase Planning"
-				},
-				"options": {
-					"materials": {
-						"paint": "Paint",
-						"putty": "Putty",
-						"primer": "Primer",
-						"tileGlue": "Tile Glue",
-						"wallpaper": "Wallpaper"
-					},
-					"materialDescriptions": {
-						"paint": "Calculate paint quantity for walls",
-						"putty": "Calculate putty quantity for walls",
-						"primer": "Calculate primer quantity for walls",
-						"tileGlue": "Calculate tile glue quantity",
-						"wallpaper": "Calculate wallpaper quantity for walls"
-					}
+					"accuracy": "Accurate material quantity calculation",
+					"convenience": "Convenient and fast calculation",
+					"universal": "Support for various material types",
+					"professional": "Professional approach to calculations"
 				}
 			}
 		},
@@ -2076,147 +1967,122 @@
 					"accuracy": "Accurate material quantity calculation",
 					"convenience": "Convenient and fast calculation",
 					"universal": "Support for various flooring types",
-					"professional": "Professional approach to calculations",
-					"cost": "Cost Savings",
-					"planning": "Purchase Planning",
-					"waste": "Waste Minimization",
-					"time": "Time Savings"
+					"professional": "Professional approach to calculations"
 				}
 			}
 		},
 		"concrete": {
-			"title": "Concrete Calculator",
-			"description": "Calculate cement, sand, gravel and water quantities for concrete preparation",
+			"title": "Калькулятор бетона",
+			"description": "Расчёт количества цемента, песка, щебня и воды для приготовления бетона",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"construction": "Строительство"
 			},
 			"form": {
-				"title": "Calculation Parameters",
-				"volume": "Concrete Volume",
-				"volumeAmount": "Amount",
-				"volumeUnit": "Unit of Measurement",
-				"grade": "Concrete Grade",
-				"selectGrade": "Select grade",
-				"proportions": "Mix Proportions",
-				"cement": "Cement",
-				"sand": "Sand",
-				"gravel": "Gravel",
-				"proportionsNote": "Proportions cement : sand : gravel",
-				"waterCementRatio": "Water-Cement Ratio",
-				"waterCementRatioNote": "Water to cement ratio (usually 0.4-0.7)",
-				"outputUnits": "Output Units",
-				"water": "Water",
+				"title": "Параметры расчёта",
+				"volume": "Объём бетона",
+				"volumeAmount": "Количество",
+				"volumeUnit": "Единица измерения",
+				"grade": "Марка бетона",
+				"selectGrade": "Выберите марку",
+				"proportions": "Пропорции смеси",
+				"cement": "Цемент",
+				"sand": "Песок",
+				"gravel": "Щебень",
+				"proportionsNote": "Пропорции цемент : песок : щебень",
+				"waterCementRatio": "Водоцементное соотношение",
+				"waterCementRatioNote": "Отношение воды к цементу (обычно 0.4-0.7)",
+				"outputUnits": "Единицы измерения результата",
+				"water": "Вода",
 				"calculate": "Calculate",
-				"reset": "Reset",
-				"units": {
-					"m3": "m³",
-					"liters": "L",
-					"kg": "kg",
-					"tons": "tons"
-				}
+				"reset": "Сбросить"
 			},
 			"results": {
 				"title": "Calculation Results",
-				"summary": "Total",
-				"volume": "Volume",
-				"grade": "Grade",
-				"material": "Material",
-				"amount": "Amount",
-				"unit": "Unit",
-				"cement": "Cement",
-				"sand": "Sand",
-				"gravel": "Gravel",
-				"water": "Water",
-				"cementBags": "Cement Bags",
-				"bags50kg": "50kg bags",
-				"proportions": "Proportions",
-				"proportionsText": "Cement : Sand : Gravel = {cement} : {sand} : {gravel}",
-				"waterCementRatio": "W/C Ratio"
+				"summary": "Итого",
+				"volume": "Объём",
+				"grade": "Марка",
+				"material": "Материал",
+				"amount": "Количество",
+				"unit": "Единица",
+				"cement": "Цемент",
+				"sand": "Песок",
+				"gravel": "Щебень",
+				"water": "Вода",
+				"cementBags": "Мешки цемента",
+				"bags50kg": "мешков по 50 кг",
+				"proportions": "Пропорции",
+				"proportionsText": "Цемент : Песок : Щебень = {cement} : {sand} : {gravel}",
+				"waterCementRatio": "В/Ц соотношение"
 			},
 			"errors": {
-				"title": "Input Errors",
-				"calculation": "Calculation error. Please check your input data."
+				"title": "Input Errors"
 			},
 			"seo": {
-				"title": "Concrete Calculator - Calculate Concrete Mix Components | Calculator #1",
+				"title": "Калькулятор бетона - Расчёт компонентов бетонной смеси | Калькулятор #1",
 				"overview": {
-					"title": "Online Concrete Calculator",
-					"content": "Online concrete calculator: accurate calculation of cement, sand, gravel and water for preparing concrete mix of the required grade. Suitable for calculating concrete mix for foundation, walls and other structures."
+					"title": "Калькулятор бетона онлайн",
+					"content": "Калькулятор бетона онлайн: точный расчет цемента, песка, щебня и воды для приготовления раствора нужной марки. Подходит для расчета бетонной смеси при строительстве фундамента, стен и других конструкций."
 				},
 				"calculation": {
-					"title": "How Concrete Mix is Calculated",
-					"content": "Concrete mix calculation includes several steps to obtain an accurate result.",
+					"title": "Как рассчитывается состав бетона",
+					"content": "Расчёт состава бетона включает несколько этапов для получения точного результата.",
 					"steps": {
-						"volume": "Determining concrete volume",
-						"grade": "Selecting concrete grade",
-						"proportions": "Calculating component proportions",
-						"water": "Determining water amount",
-						"verification": "Checking water-cement ratio"
+						"volume": "Определение объёма бетона",
+						"grade": "Выбор марки бетона",
+						"proportions": "Расчёт пропорций компонентов",
+						"water": "Определение количества воды",
+						"verification": "Проверка водоцементного соотношения"
 					}
 				},
 				"grades": {
-					"title": "Concrete Grades",
-					"content": "The calculator supports calculation of various concrete grades with their characteristics.",
+					"title": "Марки бетона",
+					"content": "Калькулятор поддерживает расчёт различных марок бетона с учётом их характеристик.",
 					"M100": {
-						"title": "Concrete M100",
-						"content": "Concrete for non-load-bearing structures, retaining walls, foundations for light buildings."
+						"title": "Бетон М100",
+						"content": "Бетон для ненагруженных конструкций, подпорных стен, фундаментов под лёгкие здания."
 					},
 					"M150": {
-						"title": "Concrete M150",
-						"content": "Concrete for lightly loaded structures, screeds, blind areas, sidewalks."
+						"title": "Бетон М150",
+						"content": "Бетон для малонагруженных конструкций, стяжек, отмосток, тротуаров."
 					},
 					"M200": {
-						"title": "Concrete M200",
-						"content": "Concrete for foundations, walls, floors in low-rise construction."
+						"title": "Бетон М200",
+						"content": "Бетон для фундаментов, стен, перекрытий в малоэтажном строительстве."
 					},
 					"M250": {
-						"title": "Concrete M250",
-						"content": "Concrete for loaded structures, columns, beams, floor slabs."
+						"title": "Бетон М250",
+						"content": "Бетон для нагруженных конструкций, колонн, балок, плит перекрытий."
 					},
 					"M300": {
-						"title": "Concrete M300",
-						"content": "Concrete for heavily loaded structures, bridges, overpasses, industrial buildings."
+						"title": "Бетон М300",
+						"content": "Бетон для высоконагруженных конструкций, мостов, эстакад, промышленных зданий."
 					},
 					"M400": {
-						"title": "Concrete M400",
-						"content": "Concrete for critical structures, hydraulic structures."
+						"title": "Бетон М400",
+						"content": "Бетон для особо ответственных конструкций, гидротехнических сооружений."
 					}
 				},
 				"tips": {
-					"title": "Concrete Calculation Tips",
-					"content": "Follow our recommendations for accurate concrete calculation.",
-					"volume": "Carefully measure the volume of the structure to be concreted",
-					"grade": "Select concrete grade according to loads",
-					"proportions": "Check component proportions",
-					"water": "Control water-cement ratio",
-					"quality": "Use quality components",
-					"mixing": "Follow mixing technology"
+					"title": "Советы по расчёту бетона",
+					"content": "Для получения точного результата следуйте нашим рекомендациям при расчёте бетона.",
+					"volume": "Тщательно измерьте объём бетонируемой конструкции",
+					"grade": "Выберите марку бетона в соответствии с нагрузками",
+					"proportions": "Проверьте пропорции компонентов",
+					"water": "Контролируйте водоцементное соотношение",
+					"quality": "Используйте качественные компоненты",
+					"mixing": "Соблюдайте технологию замешивания"
 				},
 				"benefits": {
-					"title": "Benefits of Using Concrete Calculator",
-					"content": "Using our concrete calculator provides numerous advantages for construction projects:",
-					"accuracy": "High Accuracy",
-					"cost": "Cost Savings",
-					"planning": "Purchase Planning",
-					"waste": "Waste Minimization",
-					"time": "Time Savings"
-				}
-			},
-			"options": {
-				"grades": {
-					"M100": "M100",
-					"M150": "M150",
-					"M200": "M200",
-					"M250": "M250",
-					"M300": "M300",
-					"M400": "M400"
+					"title": "Calculator Benefits",
+					"content": "Использование калькулятора бетона даёт множество преимуществ при планировании строительства.",
+					"accuracy": "Точный расчёт количества компонентов",
+					"cost": "Экономия средств на материалах",
+					"planning": "Правильное планирование закупок",
+					"quality": "Обеспечение качества бетона",
+					"waste": "Минимизация отходов материалов",
+					"time": "Экономия времени на расчётах"
 				},
-				"units": {
-					"m3": "m³",
-					"liters": "L",
-					"kg": "kg",
-					"tons": "tons"
-				}
+				"seo": "калькулятор бетона, расчёт бетона, состав бетона, цемент расчёт, песок расчёт, щебень расчёт, вода для бетона, марка бетона, бетон М100, бетон М150, бетон М200, бетон М250, бетон М300, бетон М400, пропорции бетона, водоцементное соотношение, бетонная смесь, фундамент бетон, стены бетон, перекрытия бетон, строительство бетон, бетонные работы, компоненты бетона, замес бетона, бетонный раствор, строительные материалы, бетонные конструкции, монолитный бетон, железобетон, бетонные блоки, бетонные плиты"
 			}
 		},
 		"wall": {

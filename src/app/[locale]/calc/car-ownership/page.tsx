@@ -29,7 +29,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages['car-ownership'].seo[key];
+	const t = (key: string) => messages.calculators['car-ownership'].seo[key];
 
 	return {
 		title: t('title'),

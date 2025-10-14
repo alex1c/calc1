@@ -1225,66 +1225,70 @@
 			}
 		},
 		"customs": {
-			"title": "Calculadora de Despacho Aduanero de Autos",
-			"description": "Cálculo de aranceles aduaneros al importar un auto del extranjero",
+			"title": "Calculadora de Aranceles Aduaneros",
+			"description": "Calcular aranceles aduaneros y tasas para importación de autos",
 			"breadcrumbs": {
 				"auto": "Auto"
 			},
 			"form": {
-				"title": "Parámetros del Vehículo",
-				"carValue": "Valor del Vehículo (€)",
-				"engineVolume": "Cilindrada (cm³)",
+				"title": "Parámetros de Cálculo",
+				"carValue": "Valor del Auto (€)",
+				"engineVolume": "Volumen del Motor (L)",
 				"fuelType": "Tipo de Combustible",
-				"carAge": "Edad del Vehículo (años)",
-				"enginePower": "Potencia del Motor (HP)",
+				"carAge": "Edad del Auto (años)",
+				"enginePower": "Potencia del Motor (hp)",
 				"calculate": "Calcular",
 				"errors": {
-					"title": "Errores de Datos"
+					"title": "Errores en los Datos"
+				},
+				"fuelTypes": {
+					"gasoline": "Gasolina",
+					"diesel": "Diésel",
+					"electric": "Eléctrico"
 				}
 			},
 			"results": {
 				"title": "Resultados del Cálculo",
-				"total": "Monto Total",
-				"totalDescription": "Costo total del despacho aduanero",
-				"carValue": "Valor del auto en rublos",
-				"duty": "Arancel Aduanero",
-				"excise": "Impuesto al Consumo",
-				"vat": "IVA (20%)",
-				"recyclingFee": "Tasa de Reciclaje",
+				"total": "Costo Total",
+				"totalDescription": "Monto final a pagar",
 				"details": "Detalles del Cálculo",
-				"placeholder": "Ingrese datos para calcular"
+				"carValue": "Valor del Auto",
+				"duty": "Arancel Aduanero",
+				"excise": "Impuesto de Consumo",
+				"vat": "IVA",
+				"recyclingFee": "Tasa de Reciclaje",
+				"placeholder": "Ingrese datos para el cálculo"
 			},
 			"seo": {
-				"title": "Calculadora de Despacho Aduanero de Autos Online",
+				"title": "Calculadora de Aranceles Aduaneros Online",
 				"overview": {
-					"title": "Acerca de la Calculadora de Despacho Aduanero",
-					"content": "La calculadora online de despacho aduanero de autos ayuda a calcular pagos aduaneros aproximados al importar un auto del extranjero: arancel, impuesto al consumo, IVA y tasa de reciclaje. Herramienta útil para estimar costos de importación de autos."
+					"title": "Sobre la Calculadora de Aranceles Aduaneros",
+					"content": "La calculadora de aranceles aduaneros online ayuda a calcular aranceles y tasas para importación de autos. Herramienta conveniente para estimar costos de despacho aduanero."
 				},
 				"calculation": {
-					"title": "Cómo se Calcula el Despacho Aduanero",
-					"content": "El despacho aduanero de autos incluye varios tipos de pagos calculados según tarifas y tasas establecidas.",
-					"duty": "Arancel aduanero: máximo del 10% del valor o tarifa fija por cilindrada",
-					"excise": "Impuesto al consumo: depende de la edad del auto y cilindrada",
-					"vat": "IVA: 20% de la suma (valor + arancel + impuesto al consumo)",
-					"recycling": "Tasa de reciclaje: monto fijo 3400 ₽"
+					"title": "Cómo se Calculan los Aranceles Aduaneros",
+					"content": "Los aranceles aduaneros se calculan basándose en el valor del auto, volumen del motor y edad del auto según las tarifas vigentes.",
+					"duty": "El arancel se calcula por tasas dependiendo del volumen del motor",
+					"excise": "El impuesto de consumo se cobra en autos con potencia superior a 90 hp",
+					"vat": "El IVA se calcula de: valor + arancel + impuesto de consumo",
+					"recycling": "La tasa de reciclaje depende del tipo y edad del auto"
 				},
 				"advantages": {
 					"title": "Beneficios de la Calculadora",
-					"content": "Nuestra calculadora de despacho aduanero te ayuda a estimar costos de importación de autos por adelantado y planificar tu presupuesto.",
+					"content": "Nuestra calculadora de aranceles aduaneros le ayuda a estimar los costos de despacho aduanero de autos.",
 					"quick": "Cálculo rápido en segundos",
 					"accurate": "Cálculos precisos usando tarifas actuales",
-					"planning": "Planificación de presupuesto para importación de autos",
-					"comparison": "Comparación de costos de diferentes autos"
+					"planning": "Ayuda en la planificación del presupuesto",
+					"comparison": "Comparación con compra doméstica"
 				},
 				"tips": {
-					"title": "Consejos de Despacho Aduanero",
-					"content": "Al importar un auto, considera todos los factores que afectan los montos de pagos aduaneros.",
-					"age": "Autos jóvenes (menos de 3 años) tienen tasas de impuesto al consumo más altas",
-					"volume": "La cilindrada afecta directamente los montos de arancel e impuesto al consumo",
-					"documentation": "Prepara todos los documentos necesarios con anticipación",
-					"consultation": "En caso de dudas, consulta a un agente aduanero"
-				},
-				"seo": "despacho aduanero de autos, calculadora de despacho aduanero, pagos aduaneros, importación de autos, arancel aduanero, impuesto al consumo, IVA, tasa de reciclaje, importación de autos, despacho aduanero, costos de importación de autos"
+					"title": "Consejos Útiles",
+					"content": "Al calcular aranceles aduaneros, considere los siguientes factores:",
+					"age": "La edad del auto afecta el monto del arancel",
+					"volume": "El volumen del motor determina la tasa del arancel",
+					"documentation": "Prepare todos los documentos necesarios",
+					"consultation": "Consulte a especialistas si tiene dudas"
+				}
 			}
 		},
 		"traffic-fines": {
@@ -2342,6 +2346,69 @@
 				},
 				"seo": "calculadora de ladrillos, cálculo de ladrillos, calculadora de bloques, bloques de gas, bloques de espuma, mampostería, pared, grosor de pared, mortero, pegamento, reserva de material, costo de construcción, ladrillo simple, ladrillo doble, ladrillo triple, dimensiones de ladrillo, dimensiones de bloque"
 			}
+		},
+		"fuel": {
+			"title": "Calculadora de Consumo de Combustible",
+			"description": "Calcular el consumo de combustible, distancia de viaje y costos de combustible para planificación de viajes",
+			"seo": {
+				"title": "Calculadora de Consumo de Combustible: Calcular Distancia y Costos",
+				"overview": {
+					"title": "Calculadora de Consumo de Combustible",
+					"content": "La calculadora de consumo de combustible es una herramienta profesional para calcular el consumo de combustible, distancia de viaje y costos. Con nuestra calculadora puedes calcular cuánto combustible necesitas para un viaje, qué distancia puedes recorrer con el combustible disponible y planificar tus gastos de combustible."
+				},
+				"modes": {
+					"title": "Modos de Cálculo",
+					"content": "Nuestra calculadora de consumo de combustible proporciona dos modos de cálculo:",
+					"distance": "Cálculo de distancia basado en cantidad de combustible y consumo",
+					"fuel": "Cálculo de requisitos de combustible para un viaje",
+					"planning": "Planificación de viajes y rutas",
+					"economy": "Monitoreo de ahorro de combustible"
+				},
+				"advantages": {
+					"title": "Beneficios de Usar la Calculadora",
+					"content": "La calculadora de consumo de combustible ofrece muchos beneficios:",
+					"accurate": "Cálculos precisos basados en datos reales",
+					"planning": "Planificación eficiente de viajes",
+					"savings": "Ahorro en costos de combustible",
+					"environmental": "Reducción del impacto ambiental"
+				},
+				"tips": {
+					"title": "Consejos para Reducir el Consumo",
+					"content": "Para reducir el consumo de combustible:",
+					"driving": "Conduce de manera eficiente y suave",
+					"maintenance": "Mantén tu vehículo en buen estado",
+					"route": "Planifica rutas eficientes",
+					"load": "Reduce el peso innecesario del vehículo"
+				}
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"mode": "Modo de Cálculo",
+				"modes": {
+					"distance": "Calcular Distancia",
+					"distanceDesc": "Qué tan lejos puede viajar",
+					"fuel": "Calcular Combustible",
+					"fuelDesc": "Cuánto combustible necesita"
+				},
+				"consumption": "Consumo de Combustible (L/100 km)",
+				"fuelAmount": "Cantidad de Combustible en Tanque (L)",
+				"distance": "Distancia Deseada (km)",
+				"fuelPrice": "Precio del Combustible (€/L)",
+				"calculate": "Calcular",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"placeholder": "Ingrese los parámetros y haga clic en 'Calcular'",
+				"distance": "Distancia Posible",
+				"fuelNeeded": "Combustible Necesario",
+				"totalCost": "Costo Total",
+				"km": "km",
+				"liters": "litros",
+				"euros": "€"
+			}
 		}
 	},
 	"math_percent": {
@@ -2391,6 +2458,60 @@
 			"number_from_percent": "Si {part} es {percentage}%, entonces el número original es {result}",
 			"increase_by_percent": "Aumentar {number} en {percentage}% da {result}",
 			"decrease_by_percent": "Disminuir {number} en {percentage}% da {result}"
+		}
+	},
+	"leasing": {
+		"title": "Calculadora de Arrendamiento de Autos",
+		"description": "Calcular pagos mensuales y costo total del arrendamiento de autos",
+		"breadcrumbs": {
+			"auto": "Auto"
+		},
+		"form": {
+			"title": "Parámetros de Arrendamiento",
+			"carValue": "Valor del Auto (€)",
+			"downPayment": "Pago Inicial",
+			"leaseTerm": "Plazo de Arrendamiento (meses)",
+			"interestRate": "Tasa de Interés (%)",
+			"buyoutValue": "Valor de Compra",
+			"calculate": "Calcular",
+			"errors": {
+				"title": "Errores en los Datos"
+			}
+		},
+		"results": {
+			"title": "Resultados del Cálculo",
+			"monthlyPayment": "Pago Mensual",
+			"monthlyPaymentDescription": "Cantidad a pagar cada mes",
+			"totalPayments": "Total de Pagos",
+			"totalCost": "Costo Total",
+			"overpayment": "Interés Total",
+			"financingAmount": "Monto de Financiamiento",
+			"downPaymentAmount": "Pago Inicial",
+			"buyoutAmount": "Valor de Compra",
+			"details": "Detalles del Cálculo",
+			"placeholder": "Ingrese datos para el cálculo"
+		},
+		"seo": {
+			"title": "Calculadora de Arrendamiento de Autos Online",
+			"overview": {
+				"title": "Sobre la Calculadora de Arrendamiento",
+				"content": "La calculadora de arrendamiento de autos online ayuda a calcular pagos mensuales, sobrepago y total de pagos bajo contrato de arrendamiento. Herramienta conveniente para evaluar la rentabilidad del arrendamiento de autos."
+			},
+			"calculation": {
+				"title": "Cómo se Calcula el Arrendamiento",
+				"content": "El arrendamiento se calcula usando la fórmula de pagos de anualidad considerando pago inicial, plazo del contrato, tasa de interés y valor de compra.",
+				"financing": "Monto de Financiamiento = Valor del Auto - Pago Inicial - Valor de Compra",
+				"payment": "Pago Mensual se calcula usando la fórmula de anualidad",
+				"total": "Monto Total = Pago Mensual × Plazo + Pago Inicial + Valor de Compra",
+				"overpayment": "Interés Total = Monto Total - Valor del Auto"
+			},
+			"advantages": {
+				"title": "Beneficios de la Calculadora",
+				"content": "Nuestra calculadora de arrendamiento de autos le ayuda a tomar una decisión informada sobre la rentabilidad del arrendamiento de autos.",
+				"quick": "Cálculo rápido en segundos",
+				"accurate": "Cálculos precisos usando fórmulas actuales",
+				"comparison": "Comparación con compra a crédito"
+			}
 		}
 	}
 }

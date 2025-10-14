@@ -980,18 +980,22 @@
 			"title": "Auto Loan Calculator",
 			"description": "Calculate monthly auto loan payments, total payments, and create detailed payment schedule for car purchase",
 			"seo": {
-				"title": "Auto Loan Calculator: расчёт платежей, ставок и условий автомобильного кредитования",
+				"title": "Auto Loan Calculator: Calculate Payments, Rates and Car Loan Terms",
 				"overview": {
-					"title": "Auto Loan Calculator для расчёта автомобильного кредита",
-					"content": "Auto Loan Calculator — это профессиональный инструмент для расчёта автомобильного кредита, ежемесячных платежей, общей суммы выплат и переплаты. С помощью нашего калькулятора вы сможете рассчитать оптимальные условия автокредита, сравнить различные предложения банков и выбрать наиболее выгодный вариант финансирования покупки автомобиля."
+					"title": "Auto Loan Calculator for Car Loan Calculation",
+					"content": "Auto Loan Calculator is a professional tool for calculating car loans, monthly payments, total payments and overpayment. With our calculator you can calculate optimal car loan terms, compare different bank offers and choose the most profitable financing option for car purchase."
 				},
 				"advantages": {
 					"title": "Benefits of using Auto Loan Calculator",
-					"content": "Auto Loan Calculator предоставляет множество преимуществ для планирования покупки автомобиля:",
+					"content": "Auto loan calculator provides many benefits for car purchase planning:",
 					"quickApproval": "Quick approval and access to funds for car purchase",
 					"lowRates": "Competitive interest rates and favorable loan terms",
 					"flexibleTerms": "Flexible loan terms from 1 to 7 years",
-					"earlyRepayment": "Possibility of early repayment без штрафов"
+					"earlyRepayment": "Possibility of early repayment без штрафов",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Accurate calculations based on real data",
+					"planning": "Car purchase and loan budget planning",
+					"savings": "Money savings on car financing"
 				},
 				"requirements": {
 					"title": "Requirements for obtaining auto loan",
@@ -1014,21 +1018,25 @@
 					}
 				},
 				"tips": {
-					"title": "Tips for choosing auto loan",
-					"content": "To choose the optimal auto loan:",
+					"title": "Car Loan Tips",
+					"content": "To get the best car loan terms:",
 					"compare": "Compare offers from different banks and loan terms",
 					"insurance": "Consider the cost of comprehensive and liability insurance",
 					"early": "Consider early repayment for savings",
-					"consult": "Consult with financial specialists"
+					"consult": "Consult with financial specialists",
+					"credit": "Check and improve your credit score",
+					"comparison": "Compare offers from different banks",
+					"downPayment": "Consider making a larger down payment",
+					"term": "Choose the optimal loan term"
 				}
 			},
 			"form": {
-				"title": "Auto Loan Parameters",
+				"title": "Calculation Parameters",
 				"carValue": "Car Value ($)",
 				"downPayment": "Down Payment ($)",
 				"termYears": "Term in Years",
 				"termMonths": "Term in Months",
-				"interestRate": "Interest Rate (% per year)",
+				"interestRate": "Interest Rate (%)",
 				"additionalPayment": "Additional Payment ($)",
 				"optional": "optional",
 				"paymentType": "Payment Scheme",
@@ -1039,7 +1047,10 @@
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
-				}
+				},
+				"carPrice": "Car Price ($)",
+				"loanAmount": "Loan Amount ($)",
+				"loanTerm": "Loan Term (months)"
 			},
 			"results": {
 				"title": "Calculation Results",
@@ -1051,7 +1062,7 @@
 				"months": "months",
 				"downloadSchedule": "Download Schedule (CSV)",
 				"scheduleTitle": "Payment Schedule",
-				"placeholder": "Введите параметры и нажмите 'Calculate'",
+				"placeholder": "Enter parameters and click 'Calculate'",
 				"table": {
 					"month": "Month",
 					"payment": "Payment",
@@ -1059,7 +1070,10 @@
 					"principal": "Principal",
 					"balance": "Balance",
 					"moreMonths": "дополнительных months"
-				}
+				},
+				"totalPayment": "Total Payment",
+				"effectiveRate": "Effective Rate",
+				"details": "Payment Details"
 			}
 		},
 		"osago": {
@@ -1128,51 +1142,64 @@
 			"title": "KASKO Calculator",
 			"description": "Calculate KASKO policy cost considering car value, driver age, region and other factors",
 			"seo": {
-				"title": "KASKO Calculator: расчёт стоимости полного автострахования",
+				"title": "KASKO Calculator: Calculate Full Auto Insurance Cost",
 				"overview": {
-					"title": "KASKO Calculator для расчёта стоимости полиса",
-					"content": "KASKO Calculator — это профессиональный инструмент для расчёта стоимости полиса полного автострахования. С помощью нашего калькулятора вы сможете рассчитать точную стоимость КАСКО с учётом всех коэффициентов: стоимости автомобиля, возраста и стажа водителя, региона, наличия противоугонной системы и франшизы."
+					"title": "KASKO Calculator for Policy Cost Calculation",
+					"content": "KASKO Calculator is a professional tool for calculating full auto insurance policy cost. With our calculator you can calculate the exact KASKO cost taking into account all coefficients: car value, driver age and experience, region, anti-theft system presence and deductible."
 				},
 				"coefficients": {
 					"title": "KASKO Calculation Coefficients",
-					"content": "KASKO cost is calculated by formula: (Car Value × Base Rate) × Kregion × Kage × Kexperience × Kalarm × Kdeductible",
-					"region": "Kregion: Moscow = 1.2, St. Petersburg = 1.1, other regions = 1.0",
+					"content": "KASKO cost calculation takes into account various coefficients:",
+					"region": "Regional coefficient",
 					"age": "Kage: under 22 years = 1.5, 22-30 years = 1.2, over 30 years = 1.0",
 					"experience": "Kexperience: under 3 years = 1.3, 3-10 years = 1.1, over 10 years = 1.0",
 					"alarm": "Kalarm: has alarm = 0.9, no alarm = 1.0",
-					"franchise": "Kdeductible: no deductible = 1.0, $100 = 0.9, $200 = 0.8"
+					"franchise": "Kdeductible: no deductible = 1.0, $100 = 0.9, $200 = 0.8",
+					"carValue": "Car value coefficient",
+					"driverAge": "Driver age and experience coefficient",
+					"antiTheft": "Anti-theft system coefficient",
+					"deductible": "Deductible coefficient"
 				},
 				"advantages": {
 					"title": "Benefits of using KASKO Calculator",
-					"content": "KASKO Calculator предоставляет множество преимуществ для планирования автострахования:",
-					"comprehensive": "Полное покрытие ущерба от любых рисков",
-					"quick": "Quick policy cost calculation in minutes",
-					"accurate": "Accurate calculation considering all current coefficients",
-					"comparison": "Ability to compare costs at different insurance companies"
+					"content": "KASKO calculator provides many benefits for insurance planning:",
+					"comprehensive": "Comprehensive coverage for any damage risks",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Accurate calculations based on real data",
+					"comparison": "Ability to compare costs at different insurance companies",
+					"planning": "Insurance budget planning",
+					"savings": "Money savings on insurance"
 				},
 				"tips": {
-					"title": "Tips for choosing KASKO",
-					"content": "To choose optimal KASKO policy:",
+					"title": "KASKO Insurance Tips",
+					"content": "To get the best KASKO insurance terms:",
 					"compare": "Compare offers from different insurance companies",
-					"alarm": "Установите противоугонную систему для снижения стоимости",
-					"franchise": "Рассмотрите франшизу для снижения стоимости полиса",
-					"documents": "Prepare all necessary documents in advance"
+					"alarm": "Install anti-theft system to reduce cost",
+					"franchise": "Consider deductible to reduce policy cost",
+					"documents": "Prepare all necessary documents in advance",
+					"antiTheft": "Install certified anti-theft system",
+					"deductible": "Consider choosing a deductible",
+					"comparison": "Compare offers from different insurers",
+					"driver": "Add experienced drivers to the policy"
 				}
 			},
 			"form": {
-				"title": "KASKO Calculation Parameters",
+				"title": "Calculation Parameters",
 				"carValue": "Car Value ($)",
-				"carYear": "Год выпуска",
-				"driverAge": "Driver Age (years)",
+				"carYear": "Car Year",
+				"driverAge": "Driver Age",
 				"drivingExperience": "Driving Experience (years)",
 				"region": "Region",
 				"selectRegion": "Select Region",
-				"hasAlarmSystem": "Наличие противоугонной системы",
+				"hasAlarmSystem": "Anti-theft System",
 				"franchise": "Deductible",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
-				}
+				},
+				"driverExperience": "Driver Experience (years)",
+				"antiTheft": "Anti-theft System",
+				"deductible": "Deductible ($)"
 			},
 			"results": {
 				"title": "Calculation Results",
@@ -1184,55 +1211,57 @@
 				"experienceCoeff": "Коэффициент стажа",
 				"alarmCoeff": "Коэффициент сигнализации",
 				"franchiseCoeff": "Коэффициент франшизы",
-				"placeholder": "Введите параметры и нажмите 'Calculate'"
+				"placeholder": "Enter parameters and click 'Calculate'",
+				"premium": "Insurance Premium",
+				"coefficients": "Applied Coefficients"
 			}
 		},
 		"fuel-consumption": {
-			"title": "Калькулятор расхода топлива",
-			"description": "Calculate, сколько километров можно проехать на заданном объёме топлива или сколько топлива нужно для поездки",
+			"title": "Fuel Consumption Calculator",
+			"description": "Calculate how many kilometers you can drive on a given amount of fuel or how much fuel you need for a trip",
 			"seo": {
-				"title": "Калькулятор расхода топлива: расчёт дистанции и потребления топлива",
+				"title": "Fuel Consumption Calculator: Distance and Fuel Consumption Calculation",
 				"overview": {
-					"title": "Калькулятор расхода топлива для планирования поездок",
-					"content": "Онлайн калькулятор расхода топлива поможет рассчитать, сколько километров вы сможете проехать на заданном объёме топлива, или сколько литров топлива потребуется для поездки на нужное расстояние при известном расходе автомобиля."
+					"title": "Fuel Consumption Calculator for Trip Planning",
+					"content": "Online fuel consumption calculator helps calculate how many kilometers you can drive on a given amount of fuel, or how many liters of fuel you need for a trip at a known car consumption."
 				},
 				"features": {
-					"title": "Возможности калькулятора",
-					"content": "Наш калькулятор расхода топлива предоставляет два режима расчёта:",
-					"distance": "Расчёт дистанции по количеству топлива и расходу",
-					"fuel": "Расчёт необходимого количества топлива для поездки",
-					"planning": "Планирование поездок и маршрутов",
-					"economy": "Контроль экономии топлива"
+					"title": "Calculator Features",
+					"content": "Our fuel consumption calculator provides two calculation modes:",
+					"distance": "Distance calculation by fuel amount and consumption",
+					"fuel": "Calculation of required fuel amount for trip",
+					"planning": "Trip and route planning",
+					"economy": "Fuel economy control"
 				},
 				"advantages": {
-					"title": "Преимущества использования калькулятора",
-					"content": "Калькулятор расхода топлива предоставляет множество преимуществ:",
+					"title": "Benefits of Using the Calculator",
+					"content": "Fuel consumption calculator provides many benefits:",
 					"quick": "Quick calculation in seconds",
-					"accurate": "Точные расчёты на основе реальных данных",
-					"planning": "Планирование поездок и бюджета на топливо",
-					"savings": "Экономия денег на топливе"
+					"accurate": "Accurate calculations based on real data",
+					"planning": "Trip and fuel budget planning",
+					"savings": "Money savings on fuel"
 				},
 				"tips": {
-					"title": "Советы по экономии топлива",
-					"content": "Для снижения расхода топлива:",
-					"measure": "Регулярно измеряйте расход топлива вашего автомобиля",
-					"driving": "Соблюдайте экономичный стиль вождения",
-					"maintenance": "Следите за техническим состоянием автомобиля",
-					"planning": "Планируйте маршруты заранее для избежания пробок"
+					"title": "Fuel Economy Tips",
+					"content": "To reduce fuel consumption:",
+					"measure": "Regularly measure your car's fuel consumption",
+					"driving": "Follow economical driving style",
+					"maintenance": "Keep your car in good technical condition",
+					"planning": "Plan routes in advance to avoid traffic jams"
 				}
 			},
 			"form": {
-				"title": "Параметры расчёта",
-				"mode": "Режим расчёта",
+				"title": "Calculation Parameters",
+				"mode": "Calculation Mode",
 				"modes": {
-					"distance": "Calculate дистанцию",
-					"distanceDesc": "Сколько можно проехать",
-					"fuel": "Calculate топливо",
-					"fuelDesc": "Сколько нужно топлива"
+					"distance": "Calculate Distance",
+					"distanceDesc": "How far you can drive",
+					"fuel": "Calculate Fuel",
+					"fuelDesc": "How much fuel you need"
 				},
-				"consumption": "Расход топлива (л/100 км)",
-				"fuelAmount": "Количество топлива в баке (л)",
-				"distance": "Желаемая дистанция (км)",
+				"consumption": "Fuel Consumption (L/100 km)",
+				"fuelAmount": "Fuel Amount in Tank (L)",
+				"distance": "Desired Distance (km)",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
@@ -1240,69 +1269,76 @@
 			},
 			"results": {
 				"title": "Calculation Results",
-				"result": "Результат",
-				"km": "км",
-				"liters": "л",
-				"distanceResult": "Вы сможете проехать",
-				"fuelResult": "Для поездки потребуется",
+				"result": "Result",
+				"km": "km",
+				"liters": "L",
+				"distanceResult": "You can drive",
+				"fuelResult": "For the trip you need",
 				"details": "Calculation Details",
-				"consumption": "Расход топлива",
-				"fuelAmount": "Количество топлива",
-				"distance": "Дистанция",
-				"calculatedDistance": "Рассчитанная дистанция",
-				"calculatedFuel": "Рассчитанное топливо",
-				"placeholder": "Введите параметры и нажмите 'Calculate'"
+				"consumption": "Fuel Consumption",
+				"fuelAmount": "Fuel Amount",
+				"distance": "Distance",
+				"calculatedDistance": "Calculated Distance",
+				"calculatedFuel": "Calculated Fuel",
+				"placeholder": "Enter parameters and click 'Calculate'"
 			}
 		},
 		"vehicle-tax": {
-			"title": "Калькулятор транспортного налога",
-			"description": "Calculate транспортный налог в зависимости от мощности двигателя, региона и срока владения",
+			"title": "Vehicle Tax Calculator",
+			"description": "Calculate vehicle tax based on engine power, region and ownership period",
 			"seo": {
-				"title": "Калькулятор транспортного налога: расчёт налога на автомобиль",
+				"title": "Vehicle Tax Calculator: Calculate Car Tax",
 				"overview": {
-					"title": "Калькулятор транспортного налога для автомобилистов",
-					"content": "Онлайн калькулятор транспортного налога поможет рассчитать, сколько нужно платить за автомобиль в зависимости от мощности двигателя, региона регистрации и срока владения. Узнайте налоговую нагрузку быстро и удобно."
+					"title": "Vehicle Tax Calculator for Car Owners",
+					"content": "Online vehicle tax calculator helps calculate how much you need to pay for your car based on engine power, registration region and ownership period. Find out your tax burden quickly and conveniently."
 				},
 				"calculation": {
-					"title": "Как рассчитывается транспортный налог",
-					"content": "Транспортный налог рассчитывается по формуле:",
-					"enginePower": "Мощность двигателя в лошадиных силах",
-					"region": "Regionальная ставка налога (₽/л.с.)",
-					"ownership": "Срок владения автомобилем в году",
-					"formula": "Налог = Мощность × Ставка × (Monthы владения / 12)"
+					"title": "How Vehicle Tax is Calculated",
+					"content": "Vehicle tax calculation takes into account several factors:",
+					"enginePower": "Engine power in horsepower",
+					"region": "Registration region with different tax rates",
+					"ownership": "Ownership period (full year or partial)",
+					"formula": "Tax = Power × Rate × (Ownership Months / 12)",
+					"rate": "Tax rate per horsepower set by region"
 				},
 				"advantages": {
-					"title": "Преимущества использования калькулятора",
-					"content": "Калькулятор транспортного налога предоставляет множество преимуществ:",
+					"title": "Benefits of using Vehicle Tax Calculator",
+					"content": "Vehicle tax calculator provides many benefits for tax planning:",
 					"quick": "Quick calculation in seconds",
-					"accurate": "Точные расчёты с актуальными ставками",
-					"planning": "Планирование налоговых расходов",
-					"regions": "Учёт региональных особенностей налогообложения"
+					"accurate": "Accurate calculations based on current rates",
+					"planning": "Tax budget planning",
+					"regions": "Accounting for regional tax features",
+					"savings": "Time savings on tax calculations"
 				},
 				"tips": {
-					"title": "Советы по транспортному налогу",
-					"content": "Для правильного расчёта и уплаты транспортного налога:",
-					"deadline": "Следите за сроками уплаты налога (до 1 декабря)",
-					"payment": "Проверяйте правильность расчёта в налоговой инспекции",
-					"ownership": "Учитывайте только период фактического владения",
-					"consultation": "При сомнениях обращайтесь к налоговым консультантам"
+					"title": "Vehicle Tax Tips",
+					"content": "To optimize your vehicle tax:",
+					"deadline": "Watch tax payment deadlines (until December 1st)",
+					"payment": "Pay taxes on time to avoid penalties",
+					"ownership": "Plan ownership period for tax optimization",
+					"consultation": "When in doubt, consult tax advisors",
+					"engine": "Consider engine power when buying a car",
+					"region": "Check tax rates in different regions"
 				}
 			},
 			"form": {
-				"title": "Параметры расчёта",
+				"title": "Calculation Parameters",
 				"enginePower": "Engine Power (hp)",
 				"region": "Region",
 				"selectRegion": "Select Region",
-				"ownershipMonths": "Срок владения",
-				"months": "months",
+				"ownershipMonths": "Ownership Period",
+				"months": "Months",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Input Errors"
-				}
+				},
+				"ownershipPeriod": "Ownership Period",
+				"fullYear": "Full Year",
+				"partialYear": "Partial Year"
 			},
 			"results": {
 				"title": "Calculation Results",
-				"taxAmount": "Транспортный налог",
+				"taxAmount": "Tax Amount",
 				"taxDescription": "Ваш транспортный налог составит",
 				"details": "Calculation Details",
 				"enginePower": "Мощность двигателя",
@@ -1311,7 +1347,10 @@
 				"rubPerHp": "₽/л.с.",
 				"ownershipPeriod": "Срок владения",
 				"ownershipCoefficient": "Коэффициент владения",
-				"placeholder": "Введите параметры и нажмите 'Calculate'"
+				"placeholder": "Enter parameters and click 'Calculate'",
+				"ratePerHp": "Rate per HP",
+				"totalHp": "Total HP",
+				"ownershipMonths": "Ownership Months"
 			}
 		},
 		"leasing": {
@@ -1379,66 +1418,70 @@
 			}
 		},
 		"customs": {
-			"title": "Калькулятор растаможки автомобиля",
-			"description": "Расчёт таможенных платежей при ввозе автомобиля из-за границы",
+			"title": "Customs Duty Calculator",
+			"description": "Calculate customs duties and fees for car import",
 			"breadcrumbs": {
-				"auto": "Авто"
+				"auto": "Auto"
 			},
 			"form": {
-				"title": "Параметры автомобиля",
-				"carValue": "Стоимость автомобиля (€)",
-				"engineVolume": "Объём двигателя (см³)",
-				"fuelType": "Тип топлива",
-				"carAge": "Возраст автомобиля (лет)",
+				"title": "Calculation Parameters",
+				"carValue": "Car Value ($)",
+				"engineVolume": "Engine Volume (L)",
+				"fuelType": "Fuel Type",
+				"carAge": "Car Age (years)",
 				"enginePower": "Engine Power (hp)",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Data Errors"
+				},
+				"fuelTypes": {
+					"gasoline": "Gasoline",
+					"diesel": "Diesel",
+					"electric": "Electric"
 				}
 			},
 			"results": {
 				"title": "Calculation Results",
-				"total": "Общая сумма",
-				"totalDescription": "Итоговая стоимость растаможки",
-				"carValue": "Стоимость авто в рублях",
-				"duty": "Таможенная пошлина",
-				"excise": "Акциз",
-				"vat": "НДС (20%)",
-				"recyclingFee": "Утилизационный сбор",
+				"total": "Total Cost",
+				"totalDescription": "Final amount to pay",
 				"details": "Calculation Details",
+				"carValue": "Car Value",
+				"duty": "Customs Duty",
+				"excise": "Excise Tax",
+				"vat": "VAT",
+				"recyclingFee": "Recycling Fee",
 				"placeholder": "Enter data for calculation"
 			},
 			"seo": {
-				"title": "Калькулятор растаможки автомобиля онлайн",
+				"title": "Online Customs Duty Calculator",
 				"overview": {
-					"title": "О калькуляторе растаможки",
-					"content": "Онлайн калькулятор растаможки автомобиля поможет рассчитать примерные таможенные платежи при ввозе машины из-за границы: пошлину, акциз, НДС и утилизационный сбор. Полезный инструмент для оценки стоимости ввоза авто."
+					"title": "About Customs Duty Calculator",
+					"content": "Online customs duty calculator helps calculate duties and fees for car import. Convenient tool for estimating customs clearance costs."
 				},
 				"calculation": {
-					"title": "Как рассчитывается растаможка",
-					"content": "Растаможка автомобиля включает несколько видов платежей, которые рассчитываются по установленным тарифам и ставкам.",
-					"duty": "Таможенная пошлина: максимум из 10% от стоимости или фиксированного тарифа по объёму двигателя",
-					"excise": "Акциз: зависит от возраста автомобиля и объёма двигателя",
-					"vat": "НДС: 20% от суммы (стоимость + пошлина + акциз)",
-					"recycling": "Утилизационный сбор: фиксированная сумма 3400 ₽"
+					"title": "How Customs Duties are Calculated",
+					"content": "Customs duties are calculated based on car value, engine volume and car age according to current tariffs.",
+					"duty": "Duty is calculated by rates depending on engine volume",
+					"excise": "Excise tax is charged on cars with power over 90 hp",
+					"vat": "VAT is calculated from: value + duty + excise",
+					"recycling": "Recycling fee depends on car type and age"
 				},
 				"advantages": {
 					"title": "Calculator Benefits",
-					"content": "Наш калькулятор растаможки поможет вам заранее оценить стоимость ввоза автомобиля и спланировать бюджет.",
+					"content": "Our customs duty calculator helps you estimate car customs clearance costs.",
 					"quick": "Quick calculation in seconds",
-					"accurate": "Точные расчёты по актуальным тарифам",
-					"planning": "Планирование бюджета на ввоз авто",
-					"comparison": "Сравнение стоимости разных автомобилей"
+					"accurate": "Accurate calculations using current tariffs",
+					"planning": "Help in budget planning",
+					"comparison": "Comparison with domestic purchase"
 				},
 				"tips": {
-					"title": "Советы по растаможке",
-					"content": "При ввозе автомобиля учитывайте все факторы, влияющие на размер таможенных платежей.",
-					"age": "Молодые автомобили (до 3 лет) имеют более высокие ставки акциза",
-					"volume": "Объём двигателя напрямую влияет на размер пошлины и акциза",
-					"documentation": "Подготовьте все необходимые документы заранее",
-					"consultation": "При сомнениях обратитесь к таможенному брокеру"
-				},
-				"seo": "растаможка автомобиля, калькулятор растаможки, таможенные платежи, ввоз авто, таможенная пошлина, акциз, НДС, утилизационный сбор, ввоз автомобиля, таможенное оформление, растаможка авто, стоимость ввоза"
+					"title": "Useful Tips",
+					"content": "When calculating customs duties, consider the following factors:",
+					"age": "Car age affects duty amount",
+					"volume": "Engine volume determines duty rate",
+					"documentation": "Prepare all necessary documents",
+					"consultation": "Consult specialists if in doubt"
+				}
 			}
 		},
 		"traffic-fines": {
@@ -2324,6 +2367,125 @@
 			"number_from_percent": "If {part} is {percentage}%, then the original number is {result}",
 			"increase_by_percent": "Increasing {number} by {percentage}% gives {result}",
 			"decrease_by_percent": "Decreasing {number} by {percentage}% gives {result}"
+		}
+	},
+	"leasing": {
+		"title": "Auto Leasing Calculator",
+		"description": "Calculate monthly payments and total cost of auto leasing",
+		"breadcrumbs": {
+			"auto": "Auto"
+		},
+		"form": {
+			"title": "Leasing Parameters",
+			"carValue": "Car Value ($)",
+			"downPayment": "Down Payment",
+			"leaseTerm": "Lease Term (months)",
+			"interestRate": "Interest Rate (%)",
+			"buyoutValue": "Buyout Value",
+			"calculate": "Calculate",
+			"errors": {
+				"title": "Data Errors"
+			}
+		},
+		"results": {
+			"title": "Calculation Results",
+			"monthlyPayment": "Monthly Payment",
+			"monthlyPaymentDescription": "Amount to pay each month",
+			"totalPayments": "Total Payments",
+			"totalCost": "Total Cost",
+			"overpayment": "Total Interest",
+			"financingAmount": "Financing Amount",
+			"downPaymentAmount": "Down Payment",
+			"buyoutAmount": "Buyout Value",
+			"details": "Calculation Details",
+			"placeholder": "Enter data for calculation"
+		},
+		"seo": {
+			"title": "Online Auto Leasing Calculator",
+			"overview": {
+				"title": "About Auto Leasing Calculator",
+				"content": "Online auto leasing calculator helps calculate monthly payments, overpayment and total payments under leasing agreement. Convenient tool for evaluating auto leasing profitability."
+			},
+			"calculation": {
+				"title": "How Leasing is Calculated",
+				"content": "Leasing is calculated using annuity payment formula considering down payment, contract term, interest rate and buyout value.",
+				"financing": "Financing Amount = Car Value - Down Payment - Buyout Value",
+				"payment": "Monthly Payment is calculated using annuity formula",
+				"total": "Total Amount = Monthly Payment × Term + Down Payment + Buyout Value",
+				"overpayment": "Total Interest = Total Amount - Car Value"
+			},
+			"advantages": {
+				"title": "Calculator Benefits",
+				"content": "Our auto leasing calculator helps you make an informed decision about auto leasing profitability.",
+				"quick": "Quick calculation in seconds",
+				"accurate": "Accurate calculations using current formulas",
+				"comparison": "Comparison with credit purchase"
+			}
+		}
+	},
+	"fuel": {
+		"title": "Fuel Consumption Calculator",
+		"description": "Calculate fuel consumption, travel distance and fuel costs for trip planning",
+		"seo": {
+			"title": "Fuel Consumption Calculator: Calculate Distance and Costs",
+			"overview": {
+				"title": "Fuel Consumption Calculator",
+				"content": "Fuel consumption calculator is a professional tool for calculating fuel consumption, travel distance and costs. With our calculator you can calculate how much fuel you need for a trip, what distance you can cover with available fuel and plan your fuel costs."
+			},
+			"modes": {
+				"title": "Calculation Modes",
+				"content": "Our fuel consumption calculator provides two calculation modes:",
+				"distance": "Distance calculation by fuel amount and consumption",
+				"fuel": "Calculation of required fuel amount for trip"
+			},
+			"advantages": {
+				"title": "Calculator Benefits",
+				"content": "Fuel consumption calculator provides many benefits for trip planning:",
+				"quick": "Quick calculation in seconds",
+				"accurate": "Accurate calculations based on real data",
+				"planning": "Trip and fuel budget planning",
+				"savings": "Money savings on fuel"
+			},
+			"tips": {
+				"title": "Fuel Economy Tips",
+				"content": "To reduce fuel consumption:",
+				"measure": "Regularly measure your car's fuel consumption",
+				"driving": "Follow economical driving style",
+				"maintenance": "Keep your car in good technical condition",
+				"planning": "Plan routes in advance to avoid traffic jams"
+			}
+		},
+		"form": {
+			"title": "Calculation Parameters",
+			"mode": "Calculation Mode",
+			"modes": {
+				"distance": "Calculate Distance",
+				"distanceDesc": "How far you can drive",
+				"fuel": "Calculate Fuel",
+				"fuelDesc": "How much fuel you need"
+			},
+			"consumption": "Fuel Consumption (L/100 km)",
+			"fuelAmount": "Fuel Amount in Tank (L)",
+			"distance": "Desired Distance (km)",
+			"calculate": "Calculate",
+			"errors": {
+				"title": "Input Errors"
+			}
+		},
+		"results": {
+			"title": "Calculation Results",
+			"result": "Result",
+			"km": "km",
+			"liters": "L",
+			"distanceResult": "You can drive",
+			"fuelResult": "For the trip you need",
+			"details": "Calculation Details",
+			"consumption": "Fuel Consumption",
+			"fuelAmount": "Fuel Amount",
+			"distance": "Distance",
+			"calculatedDistance": "Calculated Distance",
+			"calculatedFuel": "Calculated Fuel",
+			"placeholder": "Enter parameters and click 'Calculate'"
 		}
 	}
 }

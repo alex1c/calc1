@@ -1225,66 +1225,70 @@
 			}
 		},
 		"customs": {
-			"title": "Auto-Zollabfertigung-Rechner",
-			"description": "Berechnung der Zollgebühren beim Autokauf aus dem Ausland",
+			"title": "Zollrechner",
+			"description": "Zollgebühren und Abgaben für Autoimport berechnen",
 			"breadcrumbs": {
 				"auto": "Auto"
 			},
 			"form": {
-				"title": "Fahrzeugparameter",
-				"carValue": "Fahrzeugwert (€)",
-				"engineVolume": "Hubraum (cm³)",
+				"title": "Berechnungsparameter",
+				"carValue": "Auto Wert (€)",
+				"engineVolume": "Motorvolumen (L)",
 				"fuelType": "Kraftstoffart",
-				"carAge": "Fahrzeugalter (Jahre)",
+				"carAge": "Auto Alter (Jahre)",
 				"enginePower": "Motorleistung (PS)",
 				"calculate": "Berechnen",
 				"errors": {
 					"title": "Datenfehler"
+				},
+				"fuelTypes": {
+					"gasoline": "Benzin",
+					"diesel": "Diesel",
+					"electric": "Elektrisch"
 				}
 			},
 			"results": {
 				"title": "Berechnungsergebnisse",
-				"total": "Gesamtbetrag",
-				"totalDescription": "Gesamtkosten der Zollabfertigung",
-				"carValue": "Fahrzeugwert in Rubel",
+				"total": "Gesamtkosten",
+				"totalDescription": "Endbetrag zu zahlen",
+				"details": "Berechnungsdetails",
+				"carValue": "Auto Wert",
 				"duty": "Zollgebühr",
 				"excise": "Verbrauchsteuer",
-				"vat": "MwSt (20%)",
+				"vat": "MwSt",
 				"recyclingFee": "Recyclinggebühr",
-				"details": "Berechnungsdetails",
 				"placeholder": "Daten für Berechnung eingeben"
 			},
 			"seo": {
-				"title": "Auto-Zollabfertigung-Rechner Online",
+				"title": "Online Zollrechner",
 				"overview": {
-					"title": "Über Zollabfertigung-Rechner",
-					"content": "Online Auto-Zollabfertigung-Rechner hilft bei der Berechnung ungefährer Zollzahlungen beim Autokauf aus dem Ausland: Zollgebühr, Verbrauchsteuer, MwSt und Recyclinggebühr. Nützliches Tool zur Schätzung der Autokosten."
+					"title": "Über den Zollrechner",
+					"content": "Der Online Zollrechner hilft bei der Berechnung von Zollgebühren und Abgaben für Autoimport. Praktisches Tool zur Schätzung der Zollabfertigungskosten."
 				},
 				"calculation": {
-					"title": "Wie Zollabfertigung berechnet wird",
-					"content": "Auto-Zollabfertigung umfasst mehrere Zahlungsarten, die nach festgelegten Tarifen und Sätzen berechnet werden.",
-					"duty": "Zollgebühr: Maximum aus 10% des Wertes oder festem Tarif nach Hubraum",
-					"excise": "Verbrauchsteuer: abhängig vom Fahrzeugalter und Hubraum",
-					"vat": "MwSt: 20% der Summe (Wert + Zoll + Verbrauchsteuer)",
-					"recycling": "Recyclinggebühr: fester Betrag 3400 ₽"
+					"title": "Wie Zollgebühren Berechnet Werden",
+					"content": "Zollgebühren werden basierend auf Auto-Wert, Motorvolumen und Auto-Alter nach aktuellen Tarifen berechnet.",
+					"duty": "Zollgebühr wird nach Sätzen abhängig vom Motorvolumen berechnet",
+					"excise": "Verbrauchsteuer wird bei Autos mit über 90 PS erhoben",
+					"vat": "MwSt wird berechnet von: Wert + Zollgebühr + Verbrauchsteuer",
+					"recycling": "Recyclinggebühr hängt von Auto-Typ und Alter ab"
 				},
 				"advantages": {
-					"title": "Rechner-Vorteile",
-					"content": "Unser Zollabfertigung-Rechner hilft bei der Vorabschätzung der Autokosten und Budgetplanung.",
+					"title": "Rechner Vorteile",
+					"content": "Unser Zollrechner hilft Ihnen, die Zollabfertigungskosten für Autos zu schätzen.",
 					"quick": "Schnelle Berechnung in Sekunden",
 					"accurate": "Präzise Berechnungen mit aktuellen Tarifen",
-					"planning": "Auto-Import-Budgetplanung",
-					"comparison": "Vergleich der Kosten verschiedener Autos"
+					"planning": "Hilfe bei der Budgetplanung",
+					"comparison": "Vergleich mit Inlandskauf"
 				},
 				"tips": {
-					"title": "Zollabfertigung-Tipps",
-					"content": "Beim Autokauf aus dem Ausland alle Faktoren berücksichtigen, die die Zollzahlungen beeinflussen.",
-					"age": "Junge Autos (unter 3 Jahre) haben höhere Verbrauchsteuersätze",
-					"volume": "Hubraum beeinflusst direkt Zoll- und Verbrauchsteuerbeträge",
-					"documentation": "Alle notwendigen Dokumente im Voraus vorbereiten",
-					"consultation": "Bei Zweifeln einen Zollmakler konsultieren"
-				},
-				"seo": "Auto-Zollabfertigung, Zoll-Rechner, Zollzahlungen, Auto-Import, Zollgebühr, Verbrauchsteuer, MwSt, Recyclinggebühr, Auto-Import, Zollabfertigung, Auto-Importkosten"
+					"title": "Nützliche Tipps",
+					"content": "Bei der Berechnung von Zollgebühren beachten Sie folgende Faktoren:",
+					"age": "Auto-Alter beeinflusst Zollgebührenhöhe",
+					"volume": "Motorvolumen bestimmt Zollgebührensatz",
+					"documentation": "Bereiten Sie alle notwendigen Dokumente vor",
+					"consultation": "Konsultieren Sie bei Zweifeln Spezialisten"
+				}
 			}
 		},
 		"traffic-fines": {
@@ -2342,6 +2346,69 @@
 				},
 				"seo": "Ziegelrechner, Ziegelberechnung, Blockrechner, Gasblöcke, Schaumblöcke, Mauerwerk, Wand, Wandstärke, Mörtel, Kleber, Materialreserve, Baukosten, einfacher Ziegel, doppelter Ziegel, dreifacher Ziegel, Ziegelabmessungen, Blockabmessungen"
 			}
+		},
+		"fuel": {
+			"title": "Kraftstoffverbrauch Rechner",
+			"description": "Kraftstoffverbrauch, Reisedistanz und Kraftstoffkosten für Reiseplanung berechnen",
+			"seo": {
+				"title": "Kraftstoffverbrauch Rechner: Distanz und Kosten berechnen",
+				"overview": {
+					"title": "Kraftstoffverbrauch Rechner",
+					"content": "Der Kraftstoffverbrauch Rechner ist ein professionelles Tool zur Berechnung von Kraftstoffverbrauch, Reisedistanz und Kosten. Mit unserem Rechner können Sie berechnen, wie viel Kraftstoff Sie für eine Reise benötigen, welche Distanz Sie mit dem verfügbaren Kraftstoff zurücklegen können und Ihre Kraftstoffkosten planen."
+				},
+				"modes": {
+					"title": "Berechnungsmodi",
+					"content": "Unser Kraftstoffverbrauch Rechner bietet zwei Berechnungsmodi:",
+					"distance": "Distanzberechnung basierend auf Kraftstoffmenge und Verbrauch",
+					"fuel": "Berechnung des Kraftstoffbedarfs für eine Reise",
+					"planning": "Reise- und Routenplanung",
+					"economy": "Kraftstoffeinsparung überwachen"
+				},
+				"advantages": {
+					"title": "Vorteile der Verwendung des Rechners",
+					"content": "Der Kraftstoffverbrauch Rechner bietet viele Vorteile:",
+					"accurate": "Präzise Berechnungen basierend auf realen Daten",
+					"planning": "Effiziente Reiseplanung",
+					"savings": "Einsparungen bei Kraftstoffkosten",
+					"environmental": "Reduzierung der Umweltauswirkungen"
+				},
+				"tips": {
+					"title": "Tipps zur Verbrauchsreduzierung",
+					"content": "Um den Kraftstoffverbrauch zu reduzieren:",
+					"driving": "Fahren Sie effizient und sanft",
+					"maintenance": "Halten Sie Ihr Fahrzeug in gutem Zustand",
+					"route": "Planen Sie effiziente Routen",
+					"load": "Reduzieren Sie unnötiges Fahrzeuggewicht"
+				}
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"mode": "Berechnungsmodus",
+				"modes": {
+					"distance": "Distanz berechnen",
+					"distanceDesc": "Wie weit Sie fahren können",
+					"fuel": "Kraftstoff berechnen",
+					"fuelDesc": "Wie viel Kraftstoff Sie benötigen"
+				},
+				"consumption": "Kraftstoffverbrauch (L/100 km)",
+				"fuelAmount": "Kraftstoffmenge im Tank (L)",
+				"distance": "Gewünschte Distanz (km)",
+				"fuelPrice": "Kraftstoffpreis (€/L)",
+				"calculate": "Berechnen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"placeholder": "Geben Sie die Parameter ein und klicken Sie auf 'Berechnen'",
+				"distance": "Mögliche Distanz",
+				"fuelNeeded": "Benötigter Kraftstoff",
+				"totalCost": "Gesamtkosten",
+				"km": "km",
+				"liters": "Liter",
+				"euros": "€"
+			}
 		}
 	},
 	"math_percent": {
@@ -2391,6 +2458,60 @@
 			"number_from_percent": "Wenn {part} {percentage}% entspricht, dann ist die ursprüngliche Zahl {result}",
 			"increase_by_percent": "Erhöhung von {number} um {percentage}% ergibt {result}",
 			"decrease_by_percent": "Verringerung von {number} um {percentage}% ergibt {result}"
+		}
+	},
+	"leasing": {
+		"title": "Auto Leasing Rechner",
+		"description": "Monatliche Zahlungen und Gesamtkosten des Auto Leasings berechnen",
+		"breadcrumbs": {
+			"auto": "Auto"
+		},
+		"form": {
+			"title": "Leasing Parameter",
+			"carValue": "Auto Wert (€)",
+			"downPayment": "Anzahlung",
+			"leaseTerm": "Leasing Laufzeit (Monate)",
+			"interestRate": "Zinssatz (%)",
+			"buyoutValue": "Kaufpreis",
+			"calculate": "Berechnen",
+			"errors": {
+				"title": "Datenfehler"
+			}
+		},
+		"results": {
+			"title": "Berechnungsergebnisse",
+			"monthlyPayment": "Monatliche Zahlung",
+			"monthlyPaymentDescription": "Zu zahlender Betrag jeden Monat",
+			"totalPayments": "Gesamtzahlungen",
+			"totalCost": "Gesamtkosten",
+			"overpayment": "Gesamtzinsen",
+			"financingAmount": "Finanzierungsbetrag",
+			"downPaymentAmount": "Anzahlung",
+			"buyoutAmount": "Kaufpreis",
+			"details": "Berechnungsdetails",
+			"placeholder": "Daten für Berechnung eingeben"
+		},
+		"seo": {
+			"title": "Online Auto Leasing Rechner",
+			"overview": {
+				"title": "Über den Auto Leasing Rechner",
+				"content": "Der Online Auto Leasing Rechner hilft bei der Berechnung monatlicher Zahlungen, Überzahlung und Gesamtzahlungen unter Leasingvertrag. Praktisches Tool zur Bewertung der Rentabilität des Auto Leasings."
+			},
+			"calculation": {
+				"title": "Wie Leasing Berechnet Wird",
+				"content": "Leasing wird mit der Annuitätenformel berechnet unter Berücksichtigung von Anzahlung, Vertragslaufzeit, Zinssatz und Kaufpreis.",
+				"financing": "Finanzierungsbetrag = Auto Wert - Anzahlung - Kaufpreis",
+				"payment": "Monatliche Zahlung wird mit der Annuitätenformel berechnet",
+				"total": "Gesamtbetrag = Monatliche Zahlung × Laufzeit + Anzahlung + Kaufpreis",
+				"overpayment": "Gesamtzinsen = Gesamtbetrag - Auto Wert"
+			},
+			"advantages": {
+				"title": "Rechner Vorteile",
+				"content": "Unser Auto Leasing Rechner hilft Ihnen, eine fundierte Entscheidung über die Rentabilität des Auto Leasings zu treffen.",
+				"quick": "Schnelle Berechnung in Sekunden",
+				"accurate": "Präzise Berechnungen mit aktuellen Formeln",
+				"comparison": "Vergleich mit Kreditkauf"
+			}
 		}
 	}
 }
