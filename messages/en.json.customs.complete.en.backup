@@ -1388,29 +1388,18 @@
 				"title": "Calculation Parameters",
 				"carValue": "Car Value ($)",
 				"engineVolume": "Engine Volume (L)",
-				"fuelType": "Fuel Type",
 				"carAge": "Car Age (years)",
-				"enginePower": "Engine Power (hp)",
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Data Errors"
-				},
-				"fuelTypes": {
-					"gasoline": "Gasoline",
-					"diesel": "Diesel",
-					"electric": "Electric"
 				}
 			},
 			"results": {
 				"title": "Calculation Results",
-				"total": "Total Cost",
-				"totalDescription": "Final amount to pay",
+				"customsDuty": "Customs Duty",
+				"customsFee": "Customs Fee",
+				"totalCost": "Total Cost",
 				"details": "Calculation Details",
-				"carValue": "Car Value",
-				"duty": "Customs Duty",
-				"excise": "Excise Tax",
-				"vat": "VAT",
-				"recyclingFee": "Recycling Fee",
 				"placeholder": "Enter data for calculation"
 			},
 			"seo": {
@@ -1423,25 +1412,15 @@
 					"title": "How Customs Duties are Calculated",
 					"content": "Customs duties are calculated based on car value, engine volume and car age according to current tariffs.",
 					"duty": "Duty is calculated by rates depending on engine volume",
-					"excise": "Excise tax is charged on cars with power over 90 hp",
-					"vat": "VAT is calculated from: value + duty + excise",
-					"recycling": "Recycling fee depends on car type and age"
+					"fee": "Customs fee is a fixed amount",
+					"total": "Total Cost = Duty + Fee"
 				},
 				"advantages": {
 					"title": "Calculator Benefits",
 					"content": "Our customs duty calculator helps you estimate car customs clearance costs.",
 					"quick": "Quick calculation in seconds",
 					"accurate": "Accurate calculations using current tariffs",
-					"planning": "Help in budget planning",
 					"comparison": "Comparison with domestic purchase"
-				},
-				"tips": {
-					"title": "Useful Tips",
-					"content": "When calculating customs duties, consider the following factors:",
-					"age": "Car age affects duty amount",
-					"volume": "Engine volume determines duty rate",
-					"documentation": "Prepare all necessary documents",
-					"consultation": "Consult specialists if in doubt"
 				}
 			}
 		},

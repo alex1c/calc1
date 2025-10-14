@@ -7,7 +7,6 @@ import {
 	calculateCustoms,
 	validateCustomsInput,
 	formatCustomsCurrency,
-	getFuelTypeOptions,
 	type CustomsInput,
 	type CustomsResult,
 } from '@/lib/calculators/customs';
@@ -27,7 +26,11 @@ export default function CustomsCalculator() {
 	const [errors, setErrors] = useState<string[]>([]);
 	const [isCalculated, setIsCalculated] = useState(false);
 
-	const fuelTypeOptions = getFuelTypeOptions();
+	const fuelTypeOptions = [
+		{ value: 'gasoline', label: t('form.fuelTypes.gasoline') },
+		{ value: 'diesel', label: t('form.fuelTypes.diesel') },
+		{ value: 'electric', label: t('form.fuelTypes.electric') },
+	];
 
 	const handleInputChange = (
 		field: keyof CustomsInput,

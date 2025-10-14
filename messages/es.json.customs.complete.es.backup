@@ -1234,29 +1234,18 @@
 				"title": "Parámetros de Cálculo",
 				"carValue": "Valor del Auto (€)",
 				"engineVolume": "Volumen del Motor (L)",
-				"fuelType": "Tipo de Combustible",
 				"carAge": "Edad del Auto (años)",
-				"enginePower": "Potencia del Motor (hp)",
 				"calculate": "Calcular",
 				"errors": {
 					"title": "Errores en los Datos"
-				},
-				"fuelTypes": {
-					"gasoline": "Gasolina",
-					"diesel": "Diésel",
-					"electric": "Eléctrico"
 				}
 			},
 			"results": {
 				"title": "Resultados del Cálculo",
-				"total": "Costo Total",
-				"totalDescription": "Monto final a pagar",
+				"customsDuty": "Arancel Aduanero",
+				"customsFee": "Tasa Aduanera",
+				"totalCost": "Costo Total",
 				"details": "Detalles del Cálculo",
-				"carValue": "Valor del Auto",
-				"duty": "Arancel Aduanero",
-				"excise": "Impuesto de Consumo",
-				"vat": "IVA",
-				"recyclingFee": "Tasa de Reciclaje",
 				"placeholder": "Ingrese datos para el cálculo"
 			},
 			"seo": {
@@ -1269,25 +1258,15 @@
 					"title": "Cómo se Calculan los Aranceles Aduaneros",
 					"content": "Los aranceles aduaneros se calculan basándose en el valor del auto, volumen del motor y edad del auto según las tarifas vigentes.",
 					"duty": "El arancel se calcula por tasas dependiendo del volumen del motor",
-					"excise": "El impuesto de consumo se cobra en autos con potencia superior a 90 hp",
-					"vat": "El IVA se calcula de: valor + arancel + impuesto de consumo",
-					"recycling": "La tasa de reciclaje depende del tipo y edad del auto"
+					"fee": "La tasa aduanera es un monto fijo",
+					"total": "Costo Total = Arancel + Tasa"
 				},
 				"advantages": {
 					"title": "Beneficios de la Calculadora",
 					"content": "Nuestra calculadora de aranceles aduaneros le ayuda a estimar los costos de despacho aduanero de autos.",
 					"quick": "Cálculo rápido en segundos",
 					"accurate": "Cálculos precisos usando tarifas actuales",
-					"planning": "Ayuda en la planificación del presupuesto",
 					"comparison": "Comparación con compra doméstica"
-				},
-				"tips": {
-					"title": "Consejos Útiles",
-					"content": "Al calcular aranceles aduaneros, considere los siguientes factores:",
-					"age": "La edad del auto afecta el monto del arancel",
-					"volume": "El volumen del motor determina la tasa del arancel",
-					"documentation": "Prepare todos los documentos necesarios",
-					"consultation": "Consulte a especialistas si tiene dudas"
 				}
 			}
 		},

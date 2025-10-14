@@ -1394,11 +1394,6 @@
 				"calculate": "Calculate",
 				"errors": {
 					"title": "Data Errors"
-				},
-				"fuelTypes": {
-					"gasoline": "Gasoline",
-					"diesel": "Diesel",
-					"electric": "Electric"
 				}
 			},
 			"results": {

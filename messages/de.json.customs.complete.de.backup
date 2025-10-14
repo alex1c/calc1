@@ -1234,29 +1234,18 @@
 				"title": "Berechnungsparameter",
 				"carValue": "Auto Wert (€)",
 				"engineVolume": "Motorvolumen (L)",
-				"fuelType": "Kraftstoffart",
 				"carAge": "Auto Alter (Jahre)",
-				"enginePower": "Motorleistung (PS)",
 				"calculate": "Berechnen",
 				"errors": {
 					"title": "Datenfehler"
-				},
-				"fuelTypes": {
-					"gasoline": "Benzin",
-					"diesel": "Diesel",
-					"electric": "Elektrisch"
 				}
 			},
 			"results": {
 				"title": "Berechnungsergebnisse",
-				"total": "Gesamtkosten",
-				"totalDescription": "Endbetrag zu zahlen",
+				"customsDuty": "Zollgebühr",
+				"customsFee": "Zollabgabe",
+				"totalCost": "Gesamtkosten",
 				"details": "Berechnungsdetails",
-				"carValue": "Auto Wert",
-				"duty": "Zollgebühr",
-				"excise": "Verbrauchsteuer",
-				"vat": "MwSt",
-				"recyclingFee": "Recyclinggebühr",
 				"placeholder": "Daten für Berechnung eingeben"
 			},
 			"seo": {
@@ -1269,25 +1258,15 @@
 					"title": "Wie Zollgebühren Berechnet Werden",
 					"content": "Zollgebühren werden basierend auf Auto-Wert, Motorvolumen und Auto-Alter nach aktuellen Tarifen berechnet.",
 					"duty": "Zollgebühr wird nach Sätzen abhängig vom Motorvolumen berechnet",
-					"excise": "Verbrauchsteuer wird bei Autos mit über 90 PS erhoben",
-					"vat": "MwSt wird berechnet von: Wert + Zollgebühr + Verbrauchsteuer",
-					"recycling": "Recyclinggebühr hängt von Auto-Typ und Alter ab"
+					"fee": "Zollabgabe ist ein fester Betrag",
+					"total": "Gesamtkosten = Zollgebühr + Abgabe"
 				},
 				"advantages": {
 					"title": "Rechner Vorteile",
 					"content": "Unser Zollrechner hilft Ihnen, die Zollabfertigungskosten für Autos zu schätzen.",
 					"quick": "Schnelle Berechnung in Sekunden",
 					"accurate": "Präzise Berechnungen mit aktuellen Tarifen",
-					"planning": "Hilfe bei der Budgetplanung",
 					"comparison": "Vergleich mit Inlandskauf"
-				},
-				"tips": {
-					"title": "Nützliche Tipps",
-					"content": "Bei der Berechnung von Zollgebühren beachten Sie folgende Faktoren:",
-					"age": "Auto-Alter beeinflusst Zollgebührenhöhe",
-					"volume": "Motorvolumen bestimmt Zollgebührensatz",
-					"documentation": "Bereiten Sie alle notwendigen Dokumente vor",
-					"consultation": "Konsultieren Sie bei Zweifeln Spezialisten"
 				}
 			}
 		},

@@ -1094,11 +1094,6 @@
 				"calculate": "Рассчитать",
 				"errors": {
 					"title": "Ошибки в данных"
-				},
-				"fuelTypes": {
-					"gasoline": "Бензин",
-					"diesel": "Дизель",
-					"electric": "Электрический"
 				}
 			},
 			"results": {

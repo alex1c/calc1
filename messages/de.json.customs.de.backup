@@ -1225,70 +1225,66 @@
 			}
 		},
 		"customs": {
-			"title": "Zollrechner",
-			"description": "Zollgebühren und Abgaben für Autoimport berechnen",
+			"title": "Auto-Zollabfertigung-Rechner",
+			"description": "Berechnung der Zollgebühren beim Autokauf aus dem Ausland",
 			"breadcrumbs": {
 				"auto": "Auto"
 			},
 			"form": {
-				"title": "Berechnungsparameter",
-				"carValue": "Auto Wert (€)",
-				"engineVolume": "Motorvolumen (L)",
+				"title": "Fahrzeugparameter",
+				"carValue": "Fahrzeugwert (€)",
+				"engineVolume": "Hubraum (cm³)",
 				"fuelType": "Kraftstoffart",
-				"carAge": "Auto Alter (Jahre)",
+				"carAge": "Fahrzeugalter (Jahre)",
 				"enginePower": "Motorleistung (PS)",
 				"calculate": "Berechnen",
 				"errors": {
 					"title": "Datenfehler"
-				},
-				"fuelTypes": {
-					"gasoline": "Benzin",
-					"diesel": "Diesel",
-					"electric": "Elektrisch"
 				}
 			},
 			"results": {
 				"title": "Berechnungsergebnisse",
-				"total": "Gesamtkosten",
-				"totalDescription": "Endbetrag zu zahlen",
-				"details": "Berechnungsdetails",
-				"carValue": "Auto Wert",
+				"total": "Gesamtbetrag",
+				"totalDescription": "Gesamtkosten der Zollabfertigung",
+				"carValue": "Fahrzeugwert in Rubel",
 				"duty": "Zollgebühr",
 				"excise": "Verbrauchsteuer",
-				"vat": "MwSt",
+				"vat": "MwSt (20%)",
 				"recyclingFee": "Recyclinggebühr",
+				"details": "Berechnungsdetails",
 				"placeholder": "Daten für Berechnung eingeben"
 			},
 			"seo": {
-				"title": "Online Zollrechner",
+				"title": "Auto-Zollabfertigung-Rechner Online",
 				"overview": {
-					"title": "Über den Zollrechner",
-					"content": "Der Online Zollrechner hilft bei der Berechnung von Zollgebühren und Abgaben für Autoimport. Praktisches Tool zur Schätzung der Zollabfertigungskosten."
+					"title": "Über Zollabfertigung-Rechner",
+					"content": "Online Auto-Zollabfertigung-Rechner hilft bei der Berechnung ungefährer Zollzahlungen beim Autokauf aus dem Ausland: Zollgebühr, Verbrauchsteuer, MwSt und Recyclinggebühr. Nützliches Tool zur Schätzung der Autokosten."
 				},
 				"calculation": {
-					"title": "Wie Zollgebühren Berechnet Werden",
-					"content": "Zollgebühren werden basierend auf Auto-Wert, Motorvolumen und Auto-Alter nach aktuellen Tarifen berechnet.",
-					"duty": "Zollgebühr wird nach Sätzen abhängig vom Motorvolumen berechnet",
-					"excise": "Verbrauchsteuer wird bei Autos mit über 90 PS erhoben",
-					"vat": "MwSt wird berechnet von: Wert + Zollgebühr + Verbrauchsteuer",
-					"recycling": "Recyclinggebühr hängt von Auto-Typ und Alter ab"
+					"title": "Wie Zollabfertigung berechnet wird",
+					"content": "Auto-Zollabfertigung umfasst mehrere Zahlungsarten, die nach festgelegten Tarifen und Sätzen berechnet werden.",
+					"duty": "Zollgebühr: Maximum aus 10% des Wertes oder festem Tarif nach Hubraum",
+					"excise": "Verbrauchsteuer: abhängig vom Fahrzeugalter und Hubraum",
+					"vat": "MwSt: 20% der Summe (Wert + Zoll + Verbrauchsteuer)",
+					"recycling": "Recyclinggebühr: fester Betrag 3400 ₽"
 				},
 				"advantages": {
-					"title": "Rechner Vorteile",
-					"content": "Unser Zollrechner hilft Ihnen, die Zollabfertigungskosten für Autos zu schätzen.",
+					"title": "Rechner-Vorteile",
+					"content": "Unser Zollabfertigung-Rechner hilft bei der Vorabschätzung der Autokosten und Budgetplanung.",
 					"quick": "Schnelle Berechnung in Sekunden",
 					"accurate": "Präzise Berechnungen mit aktuellen Tarifen",
-					"planning": "Hilfe bei der Budgetplanung",
-					"comparison": "Vergleich mit Inlandskauf"
+					"planning": "Auto-Import-Budgetplanung",
+					"comparison": "Vergleich der Kosten verschiedener Autos"
 				},
 				"tips": {
-					"title": "Nützliche Tipps",
-					"content": "Bei der Berechnung von Zollgebühren beachten Sie folgende Faktoren:",
-					"age": "Auto-Alter beeinflusst Zollgebührenhöhe",
-					"volume": "Motorvolumen bestimmt Zollgebührensatz",
-					"documentation": "Bereiten Sie alle notwendigen Dokumente vor",
-					"consultation": "Konsultieren Sie bei Zweifeln Spezialisten"
-				}
+					"title": "Zollabfertigung-Tipps",
+					"content": "Beim Autokauf aus dem Ausland alle Faktoren berücksichtigen, die die Zollzahlungen beeinflussen.",
+					"age": "Junge Autos (unter 3 Jahre) haben höhere Verbrauchsteuersätze",
+					"volume": "Hubraum beeinflusst direkt Zoll- und Verbrauchsteuerbeträge",
+					"documentation": "Alle notwendigen Dokumente im Voraus vorbereiten",
+					"consultation": "Bei Zweifeln einen Zollmakler konsultieren"
+				},
+				"seo": "Auto-Zollabfertigung, Zoll-Rechner, Zollzahlungen, Auto-Import, Zollgebühr, Verbrauchsteuer, MwSt, Recyclinggebühr, Auto-Import, Zollabfertigung, Auto-Importkosten"
 			}
 		},
 		"traffic-fines": {
