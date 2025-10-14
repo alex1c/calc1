@@ -256,6 +256,123 @@
 				}
 			}
 		},
+		"volume": {
+			"title": "Calculadora de Volumen",
+			"description": "Calcula el volumen de esfera, cubo o cilindro en línea. Calculadora simple y precisa con fórmulas.",
+			"breadcrumbs": {
+				"category": "Matemáticas"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"selectShape": "Seleccionar Forma",
+				"shapeTypes": {
+					"sphere": "Esfera",
+					"cube": "Cubo",
+					"cylinder": "Cilindro"
+				},
+				"radius": "Radio (r)",
+				"side": "Lado (a)",
+				"height": "Altura (h)",
+				"errors": {
+					"title": "Errores en Datos",
+					"required": "El campo es obligatorio",
+					"positive": "El valor debe ser positivo"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"volume": "Volumen",
+				"formula": "Fórmula",
+				"sphereFormula": "V = (4/3) × π × r³",
+				"cubeFormula": "V = a³",
+				"cylinderFormula": "V = π × r² × h",
+				"parametersUsed": "Parámetros utilizados",
+				"radius": "Radio",
+				"side": "Lado",
+				"height": "Altura",
+				"calculationError": "Error de cálculo"
+			},
+			"seo": {
+				"title": "Calculadora de Volumen Online - Esfera, Cubo, Cilindro",
+				"form": {
+					"shapeTypes": {
+						"sphere": "Esfera",
+						"cube": "Cubo",
+						"cylinder": "Cilindro"
+					}
+				},
+				"overview": {
+					"title": "Sobre la Calculadora de Volumen",
+					"content": "Calculadora en línea para calcular el volumen de formas geométricas básicas: esfera, cubo y cilindro. Herramienta fácil de usar con cálculo automático usando fórmulas. Adecuada para estudiantes, ingenieros y cualquiera que necesite calcular rápidamente el volumen de una forma.",
+					"additionalContent": "Nuestra calculadora de volumen soporta tres formas geométricas fundamentales que se usan comúnmente en matemáticas, ingeniería y cálculos cotidianos. Ya seas un estudiante aprendiendo geometría, un ingeniero trabajando en proyectos de construcción, o simplemente necesites calcular el volumen de una habitación, esta herramienta proporciona resultados precisos al instante."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Volumen",
+					"content": "El volumen de la esfera se calcula usando la fórmula V = (4/3) × π × r³, donde r es el radio. El volumen del cubo se calcula como V = a³, donde a es la longitud del lado. El volumen del cilindro se calcula usando la fórmula V = π × r² × h, donde r es el radio de la base y h es la altura.",
+					"sphereDescription": "Donde r es el radio de la esfera",
+					"cubeDescription": "Donde a es la longitud de un lado",
+					"cylinderDescription": "Donde r es el radio de la base y h es la altura"
+				},
+				"advantages": {
+					"title": "Ventajas de la Calculadora",
+					"content": "Cálculos rápidos y precisos, soporte para formas geométricas básicas, interfaz intuitiva, aplicación automática de fórmulas matemáticas, resultados con precisión hasta 2 decimales.",
+					"items": [
+						"Cálculos instantáneos con alta precisión",
+						"Soporte para múltiples formas geométricas",
+						"Interfaz amigable con retroalimentación visual",
+						"Diseño responsivo para todos los dispositivos",
+						"Soporte multiidioma (ruso, inglés, español, alemán)",
+						"No requiere registro o instalación de software",
+						"Uso gratuito sin limitaciones"
+					]
+				},
+				"tips": {
+					"title": "Consejos de Uso",
+					"content": "Asegúrese de que todos los valores sean positivos. Para esfera ingrese radio, para cubo - longitud del lado, para cilindro - radio de la base y altura. El resultado se muestra en unidades cúbicas de medida.",
+					"importantNotes": "Notas Importantes:",
+					"notes": [
+						"Siempre use las mismas unidades para todas las mediciones",
+						"Para esfera, mida desde el centro hasta la superficie para el radio",
+						"Para cilindro, la altura debe ser perpendicular a la base",
+						"Los resultados se muestran en unidades cúbicas de su entrada",
+						"Use notación decimal para cálculos precisos"
+					]
+				},
+				"examples": {
+					"title": "Ejemplos de Cálculo",
+					"sphereExample": "Ejemplo de Esfera",
+					"cubeExample": "Ejemplo de Cubo",
+					"cylinderExample": "Ejemplo de Cilindro",
+					"given": "Dado",
+					"calculation": "Cálculo",
+					"sphereDescription": "El volumen de una esfera con radio 5 unidades es aproximadamente 523.60 unidades cúbicas.",
+					"cubeDescription": "El volumen de un cubo con lado 4 unidades es 64 unidades cúbicas.",
+					"cylinderDescription": "El volumen de un cilindro con radio 3 unidades y altura 8 unidades es aproximadamente 226.19 unidades cúbicas."
+				},
+				"applications": {
+					"title": "Aplicaciones Comunes",
+					"construction": "Construcción y Arquitectura",
+					"education": "Educación y Aprendizaje",
+					"constructionItems": [
+						"Cálculo del volumen de concreto para cimientos",
+						"Determinación de volúmenes de tanques y contenedores",
+						"Planificación de volúmenes de materiales de construcción",
+						"Estimación de volúmenes de habitaciones"
+					],
+					"educationItems": [
+						"Tareas de geometría",
+						"Comprensión de conceptos matemáticos",
+						"Verificación de cálculos manuales",
+						"Aprendizaje de fórmulas de volumen"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Calculadora de Volumen Online",
+					"content": "Nuestra calculadora de volumen online proporciona cálculos rápidos y precisos para esfera, cubo y cilindro. Interfaz simple y resultados instantáneos la convierten en una herramienta ideal para estudiantes, ingenieros y cualquiera que necesite cálculos precisos de volumen.",
+					"multilingual": "Nuestra calculadora de volumen online está disponible en ruso, inglés, español y alemán."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",

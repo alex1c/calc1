@@ -256,6 +256,123 @@
 				}
 			}
 		},
+		"volume": {
+			"title": "Volumenrechner",
+			"description": "Berechnen Sie das Volumen von Kugel, Würfel oder Zylinder online. Einfacher und präziser Rechner mit Formeln.",
+			"breadcrumbs": {
+				"category": "Mathematik"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"selectShape": "Form auswählen",
+				"shapeTypes": {
+					"sphere": "Kugel",
+					"cube": "Würfel",
+					"cylinder": "Zylinder"
+				},
+				"radius": "Radius (r)",
+				"side": "Seite (a)",
+				"height": "Höhe (h)",
+				"errors": {
+					"title": "Datenfehler",
+					"required": "Feld ist erforderlich",
+					"positive": "Wert muss positiv sein"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"volume": "Volumen",
+				"formula": "Formel",
+				"sphereFormula": "V = (4/3) × π × r³",
+				"cubeFormula": "V = a³",
+				"cylinderFormula": "V = π × r² × h",
+				"parametersUsed": "Verwendete Parameter",
+				"radius": "Radius",
+				"side": "Seite",
+				"height": "Höhe",
+				"calculationError": "Berechnungsfehler"
+			},
+			"seo": {
+				"title": "Online-Volumenrechner - Kugel, Würfel, Zylinder",
+				"form": {
+					"shapeTypes": {
+						"sphere": "Kugel",
+						"cube": "Würfel",
+						"cylinder": "Zylinder"
+					}
+				},
+				"overview": {
+					"title": "Über den Volumenrechner",
+					"content": "Online-Rechner zur Berechnung des Volumens grundlegender geometrischer Formen: Kugel, Würfel und Zylinder. Einfach zu bedienendes Tool mit automatischer Berechnung mithilfe von Formeln. Geeignet für Studenten, Ingenieure und alle, die schnell das Volumen einer Form berechnen müssen.",
+					"additionalContent": "Unser Volumenrechner unterstützt drei grundlegende geometrische Formen, die häufig in Mathematik, Ingenieurwesen und alltäglichen Berechnungen verwendet werden. Ob Sie ein Student sind, der Geometrie lernt, ein Ingenieur, der an Bauprojekten arbeitet, oder einfach nur das Volumen eines Raums berechnen müssen, dieses Tool liefert sofort genaue Ergebnisse."
+				},
+				"calculation": {
+					"title": "Wie das Volumen berechnet wird",
+					"content": "Das Kugelvolumen wird mit der Formel V = (4/3) × π × r³ berechnet, wobei r der Radius ist. Das Würfelvolumen wird als V = a³ berechnet, wobei a die Seitenlänge ist. Das Zylindervolumen wird mit der Formel V = π × r² × h berechnet, wobei r der Grundradius und h die Höhe ist.",
+					"sphereDescription": "Wobei r der Radius der Kugel ist",
+					"cubeDescription": "Wobei a die Länge einer Seite ist",
+					"cylinderDescription": "Wobei r der Grundradius und h die Höhe ist"
+				},
+				"advantages": {
+					"title": "Rechnervorteile",
+					"content": "Schnelle und präzise Berechnungen, Unterstützung für grundlegende geometrische Formen, intuitive Benutzeroberfläche, automatische Anwendung mathematischer Formeln, Ergebnisse mit Genauigkeit bis zu 2 Dezimalstellen.",
+					"items": [
+						"Sofortige Berechnungen mit hoher Präzision",
+						"Unterstützung für mehrere geometrische Formen",
+						"Benutzerfreundliche Oberfläche mit visueller Rückmeldung",
+						"Mobile-responsive Design für alle Geräte",
+						"Mehrsprachige Unterstützung (Russisch, Englisch, Spanisch, Deutsch)",
+						"Keine Registrierung oder Softwareinstallation erforderlich",
+						"Kostenlose Nutzung ohne Einschränkungen"
+					]
+				},
+				"tips": {
+					"title": "Nutzungstipps",
+					"content": "Stellen Sie sicher, dass alle Werte positiv sind. Für Kugel geben Sie den Radius ein, für Würfel - die Seitenlänge, für Zylinder - Grundradius und Höhe. Das Ergebnis wird in kubischen Maßeinheiten angezeigt.",
+					"importantNotes": "Wichtige Hinweise:",
+					"notes": [
+						"Verwenden Sie immer die gleichen Einheiten für alle Messungen",
+						"Für Kugel messen Sie vom Zentrum zur Oberfläche für den Radius",
+						"Für Zylinder muss die Höhe senkrecht zur Grundfläche stehen",
+						"Ergebnisse werden in kubischen Einheiten Ihrer Eingabe angezeigt",
+						"Verwenden Sie Dezimalnotation für präzise Berechnungen"
+					]
+				},
+				"examples": {
+					"title": "Berechnungsbeispiele",
+					"sphereExample": "Kugel-Beispiel",
+					"cubeExample": "Würfel-Beispiel",
+					"cylinderExample": "Zylinder-Beispiel",
+					"given": "Gegeben",
+					"calculation": "Berechnung",
+					"sphereDescription": "Das Volumen einer Kugel mit Radius 5 Einheiten beträgt etwa 523,60 Kubikeinheiten.",
+					"cubeDescription": "Das Volumen eines Würfels mit Seitenlänge 4 Einheiten beträgt 64 Kubikeinheiten.",
+					"cylinderDescription": "Das Volumen eines Zylinders mit Radius 3 Einheiten und Höhe 8 Einheiten beträgt etwa 226,19 Kubikeinheiten."
+				},
+				"applications": {
+					"title": "Häufige Anwendungen",
+					"construction": "Bauwesen und Architektur",
+					"education": "Bildung und Lernen",
+					"constructionItems": [
+						"Berechnung des Betonvolumens für Fundamente",
+						"Bestimmung von Tank- und Behältervolumen",
+						"Planung von Bauvolumen",
+						"Schätzung von Raumvolumen"
+					],
+					"educationItems": [
+						"Geometrie-Hausaufgaben und -Aufgaben",
+						"Verständnis mathematischer Konzepte",
+						"Überprüfung manueller Berechnungen",
+						"Lernen von Volumenformeln"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Volumenrechner",
+					"content": "Unser Online-Volumenrechner bietet schnelle und präzise Berechnungen für Kugel, Würfel und Zylinder. Einfache Benutzeroberfläche und sofortige Ergebnisse machen ihn zu einem idealen Tool für Studenten, Ingenieure und alle, die präzise Volumenberechnungen benötigen.",
+					"multilingual": "Unser Online-Volumenrechner ist auf Russisch, Englisch, Spanisch und Deutsch verfügbar."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",

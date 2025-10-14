@@ -15,7 +15,7 @@ alwaysApply: true
 <meta name="description">
 
 Сниппет для поисковиков с FAQ structured data (JSON-LD):
-Убедитесь, что разметка соответствует стандартам Schema.org и правилам поисковых систем. 
+Убедитесь, что разметка соответствует стандартам Schema.org Google structured data и правилам поисковых систем. 
 
 
 

@@ -256,6 +256,123 @@
 				}
 			}
 		},
+		"volume": {
+			"title": "Volume Calculator",
+			"description": "Calculate the volume of sphere, cube, or cylinder online. Simple and accurate calculator with formulas.",
+			"breadcrumbs": {
+				"category": "Mathematics"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"selectShape": "Select Shape",
+				"shapeTypes": {
+					"sphere": "Sphere",
+					"cube": "Cube",
+					"cylinder": "Cylinder"
+				},
+				"radius": "Radius (r)",
+				"side": "Side (a)",
+				"height": "Height (h)",
+				"errors": {
+					"title": "Data Errors",
+					"required": "Field is required",
+					"positive": "Value must be positive"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"volume": "Volume",
+				"formula": "Formula",
+				"sphereFormula": "V = (4/3) × π × r³",
+				"cubeFormula": "V = a³",
+				"cylinderFormula": "V = π × r² × h",
+				"parametersUsed": "Parameters used",
+				"radius": "Radius",
+				"side": "Side",
+				"height": "Height",
+				"calculationError": "Calculation error"
+			},
+			"seo": {
+				"title": "Online Volume Calculator - Sphere, Cube, Cylinder",
+				"form": {
+					"shapeTypes": {
+						"sphere": "Sphere",
+						"cube": "Cube",
+						"cylinder": "Cylinder"
+					}
+				},
+				"overview": {
+					"title": "About Volume Calculator",
+					"content": "Online calculator for calculating the volume of basic geometric shapes: sphere, cube and cylinder. Easy-to-use tool with automatic calculation using formulas. Suitable for students, engineers and anyone who needs to quickly calculate the volume of a shape.",
+					"additionalContent": "Our volume calculator supports three fundamental geometric shapes that are commonly used in mathematics, engineering, and everyday calculations. Whether you're a student learning geometry, an engineer working on construction projects, or simply need to calculate the volume of a room, this tool provides accurate results instantly."
+				},
+				"calculation": {
+					"title": "How Volume is Calculated",
+					"content": "Sphere volume is calculated using the formula V = (4/3) × π × r³, where r is the radius. Cube volume is calculated as V = a³, where a is the side length. Cylinder volume is calculated using the formula V = π × r² × h, where r is the base radius and h is the height.",
+					"sphereDescription": "Where r is the radius of the sphere",
+					"cubeDescription": "Where a is the length of one side",
+					"cylinderDescription": "Where r is the base radius and h is the height"
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Fast and accurate calculations, support for basic geometric shapes, intuitive interface, automatic application of mathematical formulas, results with precision up to 2 decimal places.",
+					"items": [
+						"Instant calculations with high precision",
+						"Support for multiple geometric shapes",
+						"User-friendly interface with visual feedback",
+						"Mobile-responsive design for all devices",
+						"Multi-language support (Russian, English, Spanish, German)",
+						"No registration or software installation required",
+						"Free to use with no limitations"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Make sure all values are positive. For sphere enter radius, for cube - side length, for cylinder - base radius and height. Result is displayed in cubic units of measurement.",
+					"importantNotes": "Important Notes:",
+					"notes": [
+						"Always use the same units for all measurements",
+						"For sphere, measure from center to surface for radius",
+						"For cylinder, height must be perpendicular to the base",
+						"Results are displayed in cubic units of your input",
+						"Use decimal notation for precise calculations"
+					]
+				},
+				"examples": {
+					"title": "Calculation Examples",
+					"sphereExample": "Sphere Example",
+					"cubeExample": "Cube Example",
+					"cylinderExample": "Cylinder Example",
+					"given": "Given",
+					"calculation": "Calculation",
+					"sphereDescription": "The volume of a sphere with radius 5 units is approximately 523.60 cubic units.",
+					"cubeDescription": "The volume of a cube with side length 4 units is 64 cubic units.",
+					"cylinderDescription": "The volume of a cylinder with radius 3 units and height 8 units is approximately 226.19 cubic units."
+				},
+				"applications": {
+					"title": "Common Applications",
+					"construction": "Construction & Architecture",
+					"education": "Education & Learning",
+					"constructionItems": [
+						"Calculating concrete volume for foundations",
+						"Determining tank and container volumes",
+						"Planning construction material volumes",
+						"Estimating room volumes"
+					],
+					"educationItems": [
+						"Geometry homework and assignments",
+						"Understanding mathematical concepts",
+						"Verifying manual calculations",
+						"Learning volume formulas"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Volume Calculator",
+					"content": "Our online volume calculator provides fast and accurate calculations for sphere, cube and cylinder. Simple interface and instant results make it an ideal tool for students, engineers and anyone who needs precise volume calculations.",
+					"multilingual": "Our online volume calculator is available in Russian, English, Spanish and German languages."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",
