@@ -878,6 +878,132 @@
 				}
 			}
 		},
+		"calories": {
+			"title": "Kalorienrechner",
+			"description": "Berechnen Sie Ihren täglichen Kalorienbedarf oder die Kalorien von Lebensmitteln",
+			"breadcrumbs": {
+				"category": "Leben"
+			},
+			"tabs": {
+				"dailyNeeds": "Täglicher Bedarf",
+				"foodCalories": "Lebensmittelkalorien"
+			},
+			"bmr": {
+				"title": "Berechnung des täglichen Kalorienbedarfs",
+				"gender": "Geschlecht",
+				"male": "Mann",
+				"female": "Frau",
+				"age": "Alter",
+				"weight": "Gewicht (kg)",
+				"height": "Größe (cm)",
+				"activity": "Aktivitätslevel",
+				"activityLevels": {
+					"minimal": "Minimal (sitzender Lebensstil)",
+					"light": "Leichte Aktivität (1-3 mal pro Woche)",
+					"moderate": "Moderate Aktivität (3-5 mal pro Woche)",
+					"high": "Hohe Aktivität (6-7 mal pro Woche)",
+					"extreme": "Extreme Aktivität (Profisport)"
+				},
+				"reset": "Zurücksetzen",
+				"results": {
+					"title": "Berechnungsergebnisse",
+					"weightLoss": "Zum Abnehmen",
+					"weightMaintenance": "Zum Halten",
+					"weightGain": "Zum Zunehmen",
+					"caloriesPerDay": "kcal/Tag",
+					"bmr": "Grundumsatz (BMR)",
+					"tdee": "Gesamter täglicher Energieverbrauch (TDEE)"
+				}
+			},
+			"food": {
+				"title": "Lebensmittelkalorien",
+				"search": "Produkt suchen",
+				"searchPlaceholder": "Produktname eingeben...",
+				"selected": "Ausgewähltes Produkt",
+				"weight": "Gewicht (g)",
+				"kcalPer100g": "kcal pro 100g",
+				"reset": "Zurücksetzen",
+				"results": {
+					"title": "Berechnungsergebnisse",
+					"calories": "Kalorien",
+					"protein": "Protein",
+					"fat": "Fett",
+					"carbs": "Kohlenhydrate",
+					"per100g": "Pro 100g"
+				}
+			},
+			"seo": {
+				"title": "Kalorienrechner Online - Täglicher Bedarf und Lebensmittelkalorien | Calc1.ru",
+				"description": "Kostenloser Online-Kalorienrechner für täglichen Bedarf und Lebensmittelkalorien. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+				"breadcrumbs": {
+					"home": "Startseite",
+					"life": "Leben"
+				},
+				"overview": {
+					"title": "Online-Kalorienrechner",
+					"content": "Unser Rechner hilft dabei, den täglichen Kalorienbedarf basierend auf Ihren Parametern und Aktivitätslevel zu berechnen sowie den Kaloriengehalt verschiedener Lebensmittel zu ermitteln."
+				},
+				"bmr": {
+					"title": "Berechnung des täglichen Kalorienbedarfs",
+					"content": "Der Rechner verwendet die Harris-Benedict-Formel zur Berechnung des Grundumsatzes (BMR) und des gesamten täglichen Energieverbrauchs (TDEE).",
+					"features": [
+						"Harris-Benedict-Formel (überarbeitet)",
+						"Berücksichtigt Geschlecht, Alter, Gewicht und Größe",
+						"5 Stufen körperlicher Aktivität",
+						"Empfehlungen für Gewichtsverlust, -erhaltung und -zunahme"
+					]
+				},
+				"foodCalories": {
+					"title": "Lebensmittelkalorien",
+					"content": "Datenbank mit Kaloriengehalt und Zusammensetzung beliebter Lebensmittel. Suche nach Namen und Kalorienberechnung für jede Menge.",
+					"features": [
+						"Datenbank mit 50+ beliebten Produkten",
+						"Suche nach Produktname",
+						"Berechnung von Kalorien, Protein, Fett und Kohlenhydraten",
+						"Möglichkeit, jede Menge in Gramm anzugeben"
+					]
+				},
+				"applications": {
+					"title": "Rechner-Anwendungen",
+					"content": "Der Kalorienrechner ist in verschiedenen Situationen nützlich:",
+					"items": [
+						"Planung einer Diät zum Abnehmen",
+						"Gesundes Gewicht halten",
+						"Muskelmasse aufbauen",
+						"Sportnahrung planen",
+						"Diätkalorien kontrollieren",
+						"Produktzusammensetzung analysieren",
+						"Menüs erstellen",
+						"Bildungszwecke"
+					]
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Online-Kalorienrechner bietet präzise Berechnungen mit einer benutzerfreundlichen Oberfläche.",
+					"items": [
+						"Präzise Berechnungen mit Harris-Benedict-Formel",
+						"Zwei Modi: täglicher Bedarf und Lebensmittelkalorien",
+						"Datenbank beliebter Produkte",
+						"Unterstützung für 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+						"Responsive Design für alle Geräte",
+						"Völlig kostenlos ohne Registrierung",
+						"Sofortige Ergebnisse"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Kalorienrechner",
+					"content": "Online-Kalorienrechner auf Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Berechnen Sie täglichen Kalorienbedarf und Lebensmittelkalorien kostenlos!"
+				},
+				"faq": {
+					"question1": "Wie berechnet man den täglichen Kalorienbedarf?",
+					"answer1": "Geben Sie Ihr Geschlecht, Alter, Gewicht, Größe und körperliches Aktivitätslevel ein. Der Rechner berechnet automatisch den Grundumsatz (BMR) und den gesamten täglichen Energieverbrauch (TDEE) mit Empfehlungen für verschiedene Ziele.",
+					"question2": "Welche Formel wird für die Berechnung verwendet?",
+					"answer2": "Die überarbeitete Harris-Benedict-Formel wird verwendet: für Männer BMR = 88.36 + (13.4 × Gewicht) + (4.8 × Größe) − (5.7 × Alter), für Frauen BMR = 447.6 + (9.2 × Gewicht) + (3.1 × Größe) − (4.3 × Alter).",
+					"question3": "Wie findet man den Kaloriengehalt eines Produkts heraus?",
+					"answer3": "Geben Sie den Produktnamen in das Suchfeld ein, wählen Sie ihn aus der Liste aus und geben Sie die Menge in Gramm an. Der Rechner zeigt Kalorien, Protein, Fett und Kohlenhydrate für die angegebene Menge an."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",

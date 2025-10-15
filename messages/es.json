@@ -878,6 +878,132 @@
 				}
 			}
 		},
+		"calories": {
+			"title": "Calculadora de Calorías",
+			"description": "Calcula tus necesidades calóricas o las calorías de los alimentos",
+			"breadcrumbs": {
+				"category": "Vida"
+			},
+			"tabs": {
+				"dailyNeeds": "Necesidades Diarias",
+				"foodCalories": "Calorías de Alimentos"
+			},
+			"bmr": {
+				"title": "Cálculo de Necesidades Calóricas Diarias",
+				"gender": "Género",
+				"male": "Hombre",
+				"female": "Mujer",
+				"age": "Edad",
+				"weight": "Peso (kg)",
+				"height": "Altura (cm)",
+				"activity": "Nivel de actividad",
+				"activityLevels": {
+					"minimal": "Mínimo (estilo de vida sedentario)",
+					"light": "Actividad ligera (1-3 veces por semana)",
+					"moderate": "Actividad moderada (3-5 veces por semana)",
+					"high": "Alta actividad (6-7 veces por semana)",
+					"extreme": "Actividad extrema (deportes profesionales)"
+				},
+				"reset": "Restablecer",
+				"results": {
+					"title": "Resultados del Cálculo",
+					"weightLoss": "Para perder peso",
+					"weightMaintenance": "Para mantener",
+					"weightGain": "Para ganar peso",
+					"caloriesPerDay": "kcal/día",
+					"bmr": "Tasa Metabólica Basal (BMR)",
+					"tdee": "Gasto Energético Diario Total (TDEE)"
+				}
+			},
+			"food": {
+				"title": "Calorías de Alimentos",
+				"search": "Buscar alimento",
+				"searchPlaceholder": "Ingresa el nombre del alimento...",
+				"selected": "Alimento seleccionado",
+				"weight": "Peso (g)",
+				"kcalPer100g": "kcal por 100g",
+				"reset": "Restablecer",
+				"results": {
+					"title": "Resultados del Cálculo",
+					"calories": "Calorías",
+					"protein": "Proteínas",
+					"fat": "Grasas",
+					"carbs": "Carbohidratos",
+					"per100g": "Por 100g"
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Calorías Online - Necesidades Diarias y Calorías de Alimentos | Calc1.ru",
+				"description": "Calculadora de calorías gratuita para necesidades diarias y calorías de alimentos. Soporte para ruso, inglés, español y alemán.",
+				"breadcrumbs": {
+					"home": "Inicio",
+					"life": "Vida"
+				},
+				"overview": {
+					"title": "Calculadora de Calorías Online",
+					"content": "Nuestra calculadora ayuda a calcular las necesidades calóricas diarias basadas en tus parámetros y nivel de actividad, así como conocer el contenido calórico de varios productos alimenticios."
+				},
+				"bmr": {
+					"title": "Cálculo de Necesidades Calóricas Diarias",
+					"content": "La calculadora usa la fórmula Harris-Benedict para calcular la Tasa Metabólica Basal (BMR) y el Gasto Energético Diario Total (TDEE).",
+					"features": [
+						"Fórmula Harris-Benedict (revisada)",
+						"Tiene en cuenta género, edad, peso y altura",
+						"5 niveles de actividad física",
+						"Recomendaciones para pérdida, mantenimiento y ganancia de peso"
+					]
+				},
+				"foodCalories": {
+					"title": "Calorías de Alimentos",
+					"content": "Base de datos con contenido calórico y composición de productos alimenticios populares. Búsqueda por nombre y cálculo de calorías para cualquier cantidad.",
+					"features": [
+						"Base de datos de 50+ productos populares",
+						"Búsqueda por nombre del producto",
+						"Calcular calorías, proteínas, grasas y carbohidratos",
+						"Posibilidad de especificar cualquier cantidad en gramos"
+					]
+				},
+				"applications": {
+					"title": "Aplicaciones de la Calculadora",
+					"content": "La calculadora de calorías es útil en varias situaciones:",
+					"items": [
+						"Planificación de dieta para pérdida de peso",
+						"Mantener un peso saludable",
+						"Construir masa muscular",
+						"Planificación de nutrición deportiva",
+						"Controlar calorías de la dieta",
+						"Analizar composición de productos",
+						"Crear menús",
+						"Propósitos educativos"
+					]
+				},
+				"advantages": {
+					"title": "Ventajas de la Calculadora",
+					"content": "Nuestra calculadora de calorías online proporciona cálculos precisos con una interfaz conveniente.",
+					"items": [
+						"Cálculos precisos usando la fórmula Harris-Benedict",
+						"Dos modos: necesidades diarias y calorías de alimentos",
+						"Base de datos de productos populares",
+						"Soporte para 4 idiomas: ruso, inglés, español, alemán",
+						"Diseño responsivo para todos los dispositivos",
+						"Completamente gratuito sin registro",
+						"Resultados instantáneos"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Calculadora de Calorías Online",
+					"content": "Calculadora de calorías online en Calc1.ru soporta ruso, inglés, español y alemán. ¡Calcula necesidades calóricas diarias y calorías de alimentos gratis!"
+				},
+				"faq": {
+					"question1": "¿Cómo calcular las necesidades calóricas diarias?",
+					"answer1": "Ingresa tu género, edad, peso, altura y nivel de actividad física. La calculadora calculará automáticamente la Tasa Metabólica Basal (BMR) y el Gasto Energético Diario Total (TDEE) con recomendaciones para diferentes objetivos.",
+					"question2": "¿Qué fórmula se usa para el cálculo?",
+					"answer2": "Se usa la fórmula Harris-Benedict revisada: para hombres BMR = 88.36 + (13.4 × peso) + (4.8 × altura) − (5.7 × edad), para mujeres BMR = 447.6 + (9.2 × peso) + (3.1 × altura) − (4.3 × edad).",
+					"question3": "¿Cómo saber el contenido calórico de un producto?",
+					"answer3": "Ingresa el nombre del producto en el campo de búsqueda, selecciónalo de la lista y especifica la cantidad en gramos. La calculadora mostrará calorías, proteínas, grasas y carbohidratos para la cantidad especificada."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",

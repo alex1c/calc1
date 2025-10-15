@@ -983,6 +983,132 @@
 				}
 			}
 		},
+		"calories": {
+			"title": "Calorie Calculator",
+			"description": "Calculate your daily calorie needs or the calories in food",
+			"breadcrumbs": {
+				"category": "Life"
+			},
+			"tabs": {
+				"dailyNeeds": "Daily Needs",
+				"foodCalories": "Food Calories"
+			},
+			"bmr": {
+				"title": "Daily Calorie Needs Calculation",
+				"gender": "Gender",
+				"male": "Male",
+				"female": "Female",
+				"age": "Age",
+				"weight": "Weight (kg)",
+				"height": "Height (cm)",
+				"activity": "Activity level",
+				"activityLevels": {
+					"minimal": "Minimal (sedentary lifestyle)",
+					"light": "Light activity (1-3 times per week)",
+					"moderate": "Moderate activity (3-5 times per week)",
+					"high": "High activity (6-7 times per week)",
+					"extreme": "Extreme activity (professional sports)"
+				},
+				"reset": "Reset",
+				"results": {
+					"title": "Calculation Results",
+					"weightLoss": "For weight loss",
+					"weightMaintenance": "For maintenance",
+					"weightGain": "For weight gain",
+					"caloriesPerDay": "kcal/day",
+					"bmr": "Basal Metabolic Rate (BMR)",
+					"tdee": "Total Daily Energy Expenditure (TDEE)"
+				}
+			},
+			"food": {
+				"title": "Food Calories",
+				"search": "Product search",
+				"searchPlaceholder": "Enter product name...",
+				"selected": "Selected product",
+				"weight": "Weight (g)",
+				"kcalPer100g": "kcal per 100g",
+				"reset": "Reset",
+				"results": {
+					"title": "Calculation Results",
+					"calories": "Calories",
+					"protein": "Protein",
+					"fat": "Fat",
+					"carbs": "Carbs",
+					"per100g": "Per 100g"
+				}
+			},
+			"seo": {
+				"title": "Calorie Calculator Online - Daily Needs and Food Calories | Calc1.ru",
+				"description": "Free online calorie calculator for daily needs and food calories. Support for Russian, English, Spanish and German languages.",
+				"breadcrumbs": {
+					"home": "Home",
+					"life": "Life"
+				},
+				"overview": {
+					"title": "Online Calorie Calculator",
+					"content": "Our calculator helps calculate daily calorie needs based on your parameters and activity level, as well as find out the calorie content of various food products."
+				},
+				"bmr": {
+					"title": "Daily Calorie Needs Calculation",
+					"content": "The calculator uses the Harris-Benedict formula to calculate Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE).",
+					"features": [
+						"Harris-Benedict formula (revised)",
+						"Takes into account gender, age, weight and height",
+						"5 levels of physical activity",
+						"Recommendations for weight loss, maintenance and weight gain"
+					]
+				},
+				"foodCalories": {
+					"title": "Food Calories",
+					"content": "Database with calorie content and composition of popular food products. Search by name and calculate calories for any amount.",
+					"features": [
+						"Database of 50+ popular products",
+						"Search by product name",
+						"Calculate calories, protein, fat and carbs",
+						"Ability to specify any amount in grams"
+					]
+				},
+				"applications": {
+					"title": "Calculator Applications",
+					"content": "The calorie calculator is useful in various situations:",
+					"items": [
+						"Planning a weight loss diet",
+						"Maintaining a healthy weight",
+						"Building muscle mass",
+						"Planning sports nutrition",
+						"Controlling diet calories",
+						"Analyzing product composition",
+						"Creating menus",
+						"Educational purposes"
+					]
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Our online calorie calculator provides accurate calculations with a convenient interface.",
+					"items": [
+						"Accurate calculations using Harris-Benedict formula",
+						"Two modes: daily needs and food calories",
+						"Database of popular products",
+						"Support for 4 languages: Russian, English, Spanish, German",
+						"Responsive design for all devices",
+						"Completely free without registration",
+						"Instant results"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Calorie Calculator",
+					"content": "Online calorie calculator on Calc1.ru supports Russian, English, Spanish and German languages. Calculate daily calorie needs and food calories for free!"
+				},
+				"faq": {
+					"question1": "How to calculate daily calorie needs?",
+					"answer1": "Enter your gender, age, weight, height and physical activity level. The calculator will automatically calculate Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE) with recommendations for different goals.",
+					"question2": "What formula is used for calculation?",
+					"answer2": "The revised Harris-Benedict formula is used: for men BMR = 88.36 + (13.4 × weight) + (4.8 × height) − (5.7 × age), for women BMR = 447.6 + (9.2 × weight) + (3.1 × height) − (4.3 × age).",
+					"question3": "How to find out the calorie content of a product?",
+					"answer3": "Enter the product name in the search field, select it from the list and specify the amount in grams. The calculator will show calories, protein, fat and carbs for the specified amount."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",

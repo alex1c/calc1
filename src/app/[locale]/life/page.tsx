@@ -16,7 +16,7 @@ const calculators = [
 		title: 'Calorie Calculator',
 		description: 'Calculate daily calorie needs for weight management',
 		icon: Utensils,
-		href: '/calc/calories',
+		href: '/life/calories',
 	},
 	{
 		id: 'pregnancy',
@@ -58,7 +58,7 @@ export default function LifePage() {
 					{calculators.map((calculator) => (
 						<Link
 							key={calculator.id}
-							href={`/${locale}/calc/${calculator.id}`}
+							href={`/${locale}${calculator.href}`}
 							className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 						>
 							<div className='flex items-center mb-4'>

@@ -1,0 +1,554 @@
+{
+  "apple": {
+    "name": {
+      "ru": "Яблоко",
+      "en": "Apple",
+      "es": "Manzana",
+      "de": "Apfel"
+    },
+    "kcal": 52,
+    "protein": 0.3,
+    "fat": 0.2,
+    "carbs": 14
+  },
+  "banana": {
+    "name": {
+      "ru": "Банан",
+      "en": "Banana",
+      "es": "Plátano",
+      "de": "Banane"
+    },
+    "kcal": 89,
+    "protein": 1.1,
+    "fat": 0.3,
+    "carbs": 23
+  },
+  "orange": {
+    "name": {
+      "ru": "Апельсин",
+      "en": "Orange",
+      "es": "Naranja",
+      "de": "Orange"
+    },
+    "kcal": 47,
+    "protein": 0.9,
+    "fat": 0.1,
+    "carbs": 12
+  },
+  "chicken_breast": {
+    "name": {
+      "ru": "Куриная грудка",
+      "en": "Chicken breast",
+      "es": "Pechuga de pollo",
+      "de": "Hähnchenbrust"
+    },
+    "kcal": 165,
+    "protein": 31,
+    "fat": 3.6,
+    "carbs": 0
+  },
+  "beef": {
+    "name": {
+      "ru": "Говядина",
+      "en": "Beef",
+      "es": "Carne de res",
+      "de": "Rindfleisch"
+    },
+    "kcal": 250,
+    "protein": 26,
+    "fat": 15,
+    "carbs": 0
+  },
+  "pork": {
+    "name": {
+      "ru": "Свинина",
+      "en": "Pork",
+      "es": "Cerdo",
+      "de": "Schweinefleisch"
+    },
+    "kcal": 263,
+    "protein": 27,
+    "fat": 16,
+    "carbs": 0
+  },
+  "fish_salmon": {
+    "name": {
+      "ru": "Лосось",
+      "en": "Salmon",
+      "es": "Salmón",
+      "de": "Lachs"
+    },
+    "kcal": 208,
+    "protein": 25,
+    "fat": 12,
+    "carbs": 0
+  },
+  "fish_cod": {
+    "name": {
+      "ru": "Треска",
+      "en": "Cod",
+      "es": "Bacalao",
+      "de": "Kabeljau"
+    },
+    "kcal": 82,
+    "protein": 18,
+    "fat": 0.7,
+    "carbs": 0
+  },
+  "egg": {
+    "name": {
+      "ru": "Яйцо",
+      "en": "Egg",
+      "es": "Huevo",
+      "de": "Ei"
+    },
+    "kcal": 155,
+    "protein": 13,
+    "fat": 11,
+    "carbs": 1.1
+  },
+  "milk": {
+    "name": {
+      "ru": "Молоко",
+      "en": "Milk",
+      "es": "Leche",
+      "de": "Milch"
+    },
+    "kcal": 42,
+    "protein": 3.4,
+    "fat": 1,
+    "carbs": 5
+  },
+  "cheese": {
+    "name": {
+      "ru": "Сыр",
+      "en": "Cheese",
+      "es": "Queso",
+      "de": "Käse"
+    },
+    "kcal": 356,
+    "protein": 25,
+    "fat": 27,
+    "carbs": 2
+  },
+  "yogurt": {
+    "name": {
+      "ru": "Йогурт",
+      "en": "Yogurt",
+      "es": "Yogur",
+      "de": "Joghurt"
+    },
+    "kcal": 59,
+    "protein": 10,
+    "fat": 0.4,
+    "carbs": 3.6
+  },
+  "rice": {
+    "name": {
+      "ru": "Рис",
+      "en": "Rice",
+      "es": "Arroz",
+      "de": "Reis"
+    },
+    "kcal": 130,
+    "protein": 2.7,
+    "fat": 0.3,
+    "carbs": 28
+  },
+  "pasta": {
+    "name": {
+      "ru": "Макароны",
+      "en": "Pasta",
+      "es": "Pasta",
+      "de": "Pasta"
+    },
+    "kcal": 131,
+    "protein": 5,
+    "fat": 1.1,
+    "carbs": 25
+  },
+  "bread": {
+    "name": {
+      "ru": "Хлеб",
+      "en": "Bread",
+      "es": "Pan",
+      "de": "Brot"
+    },
+    "kcal": 265,
+    "protein": 9,
+    "fat": 3.2,
+    "carbs": 49
+  },
+  "potato": {
+    "name": {
+      "ru": "Картофель",
+      "en": "Potato",
+      "es": "Patata",
+      "de": "Kartoffel"
+    },
+    "kcal": 77,
+    "protein": 2,
+    "fat": 0.1,
+    "carbs": 17
+  },
+  "carrot": {
+    "name": {
+      "ru": "Морковь",
+      "en": "Carrot",
+      "es": "Zanahoria",
+      "de": "Karotte"
+    },
+    "kcal": 41,
+    "protein": 0.9,
+    "fat": 0.2,
+    "carbs": 10
+  },
+  "tomato": {
+    "name": {
+      "ru": "Помидор",
+      "en": "Tomato",
+      "es": "Tomate",
+      "de": "Tomate"
+    },
+    "kcal": 18,
+    "protein": 0.9,
+    "fat": 0.2,
+    "carbs": 3.9
+  },
+  "cucumber": {
+    "name": {
+      "ru": "Огурец",
+      "en": "Cucumber",
+      "es": "Pepino",
+      "de": "Gurke"
+    },
+    "kcal": 16,
+    "protein": 0.7,
+    "fat": 0.1,
+    "carbs": 4
+  },
+  "onion": {
+    "name": {
+      "ru": "Лук",
+      "en": "Onion",
+      "es": "Cebolla",
+      "de": "Zwiebel"
+    },
+    "kcal": 40,
+    "protein": 1.1,
+    "fat": 0.1,
+    "carbs": 9.3
+  },
+  "broccoli": {
+    "name": {
+      "ru": "Брокколи",
+      "en": "Broccoli",
+      "es": "Brócoli",
+      "de": "Brokkoli"
+    },
+    "kcal": 34,
+    "protein": 2.8,
+    "fat": 0.4,
+    "carbs": 7
+  },
+  "spinach": {
+    "name": {
+      "ru": "Шпинат",
+      "en": "Spinach",
+      "es": "Espinaca",
+      "de": "Spinat"
+    },
+    "kcal": 23,
+    "protein": 2.9,
+    "fat": 0.4,
+    "carbs": 3.6
+  },
+  "avocado": {
+    "name": {
+      "ru": "Авокадо",
+      "en": "Avocado",
+      "es": "Aguacate",
+      "de": "Avocado"
+    },
+    "kcal": 160,
+    "protein": 2,
+    "fat": 15,
+    "carbs": 9
+  },
+  "olive_oil": {
+    "name": {
+      "ru": "Оливковое масло",
+      "en": "Olive oil",
+      "es": "Aceite de oliva",
+      "de": "Olivenöl"
+    },
+    "kcal": 884,
+    "protein": 0,
+    "fat": 100,
+    "carbs": 0
+  },
+  "butter": {
+    "name": {
+      "ru": "Сливочное масло",
+      "en": "Butter",
+      "es": "Mantequilla",
+      "de": "Butter"
+    },
+    "kcal": 717,
+    "protein": 0.9,
+    "fat": 81,
+    "carbs": 0.1
+  },
+  "almonds": {
+    "name": {
+      "ru": "Миндаль",
+      "en": "Almonds",
+      "es": "Almendras",
+      "de": "Mandel"
+    },
+    "kcal": 579,
+    "protein": 21,
+    "fat": 50,
+    "carbs": 22
+  },
+  "walnuts": {
+    "name": {
+      "ru": "Грецкие орехи",
+      "en": "Walnuts",
+      "es": "Nueces",
+      "de": "Walnüsse"
+    },
+    "kcal": 654,
+    "protein": 15,
+    "fat": 65,
+    "carbs": 14
+  },
+  "peanuts": {
+    "name": {
+      "ru": "Арахис",
+      "en": "Peanuts",
+      "es": "Cacahuetes",
+      "de": "Erdnüsse"
+    },
+    "kcal": 567,
+    "protein": 26,
+    "fat": 49,
+    "carbs": 16
+  },
+  "honey": {
+    "name": {
+      "ru": "Мед",
+      "en": "Honey",
+      "es": "Miel",
+      "de": "Honig"
+    },
+    "kcal": 304,
+    "protein": 0.3,
+    "fat": 0,
+    "carbs": 82
+  },
+  "sugar": {
+    "name": {
+      "ru": "Сахар",
+      "en": "Sugar",
+      "es": "Azúcar",
+      "de": "Zucker"
+    },
+    "kcal": 387,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 100
+  },
+  "chocolate": {
+    "name": {
+      "ru": "Шоколад",
+      "en": "Chocolate",
+      "es": "Chocolate",
+      "de": "Schokolade"
+    },
+    "kcal": 546,
+    "protein": 7.8,
+    "fat": 31,
+    "carbs": 54
+  },
+  "ice_cream": {
+    "name": {
+      "ru": "Мороженое",
+      "en": "Ice cream",
+      "es": "Helado",
+      "de": "Eis"
+    },
+    "kcal": 207,
+    "protein": 3.5,
+    "fat": 11,
+    "carbs": 24
+  },
+  "pizza": {
+    "name": {
+      "ru": "Пицца",
+      "en": "Pizza",
+      "es": "Pizza",
+      "de": "Pizza"
+    },
+    "kcal": 266,
+    "protein": 11,
+    "fat": 10,
+    "carbs": 33
+  },
+  "burger": {
+    "name": {
+      "ru": "Бургер",
+      "en": "Burger",
+      "es": "Hamburguesa",
+      "de": "Burger"
+    },
+    "kcal": 295,
+    "protein": 17,
+    "fat": 12,
+    "carbs": 30
+  },
+  "french_fries": {
+    "name": {
+      "ru": "Картофель фри",
+      "en": "French fries",
+      "es": "Papas fritas",
+      "de": "Pommes frites"
+    },
+    "kcal": 365,
+    "protein": 4,
+    "fat": 17,
+    "carbs": 48
+  },
+  "coca_cola": {
+    "name": {
+      "ru": "Кока-кола",
+      "en": "Coca-Cola",
+      "es": "Coca-Cola",
+      "de": "Coca-Cola"
+    },
+    "kcal": 42,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 10.6
+  },
+  "coffee": {
+    "name": {
+      "ru": "Кофе",
+      "en": "Coffee",
+      "es": "Café",
+      "de": "Kaffee"
+    },
+    "kcal": 2,
+    "protein": 0.3,
+    "fat": 0,
+    "carbs": 0.2
+  },
+  "tea": {
+    "name": {
+      "ru": "Чай",
+      "en": "Tea",
+      "es": "Té",
+      "de": "Tee"
+    },
+    "kcal": 1,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0.3
+  },
+  "beer": {
+    "name": {
+      "ru": "Пиво",
+      "en": "Beer",
+      "es": "Cerveza",
+      "de": "Bier"
+    },
+    "kcal": 43,
+    "protein": 0.5,
+    "fat": 0,
+    "carbs": 3.6
+  },
+  "wine": {
+    "name": {
+      "ru": "Вино",
+      "en": "Wine",
+      "es": "Vino",
+      "de": "Wein"
+    },
+    "kcal": 83,
+    "protein": 0.1,
+    "fat": 0,
+    "carbs": 2.6
+  },
+  "water": {
+    "name": {
+      "ru": "Вода",
+      "en": "Water",
+      "es": "Agua",
+      "de": "Wasser"
+    },
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0
+  },
+  "coconut": {
+    "name": {
+      "ru": "Кокос",
+      "en": "Coconut",
+      "es": "Coco",
+      "de": "Kokosnuss"
+    },
+    "kcal": 354,
+    "protein": 3.3,
+    "fat": 33,
+    "carbs": 15
+  },
+  "strawberry": {
+    "name": {
+      "ru": "Клубника",
+      "en": "Strawberry",
+      "es": "Fresa",
+      "de": "Erdbeere"
+    },
+    "kcal": 32,
+    "protein": 0.7,
+    "fat": 0.3,
+    "carbs": 7.7
+  },
+  "grape": {
+    "name": {
+      "ru": "Виноград",
+      "en": "Grape",
+      "es": "Uva",
+      "de": "Traube"
+    },
+    "kcal": 67,
+    "protein": 0.6,
+    "fat": 0.2,
+    "carbs": 17
+  },
+  "lemon": {
+    "name": {
+      "ru": "Лимон",
+      "en": "Lemon",
+      "es": "Limón",
+      "de": "Zitrone"
+    },
+    "kcal": 29,
+    "protein": 1.1,
+    "fat": 0.3,
+    "carbs": 9
+  },
+  "kiwi": {
+    "name": {
+      "ru": "Киви",
+      "en": "Kiwi",
+      "es": "Kiwi",
+      "de": "Kiwi"
+    },
+    "kcal": 61,
+    "protein": 1.1,
+    "fat": 0.5,
+    "carbs": 15
+  }
+}
