@@ -1004,15 +1004,147 @@
 				}
 			}
 		},
+		"bmi": {
+			"title": "Body-Mass-Index (BMI) Rechner",
+			"description": "Online BMI-Rechner zur Bestimmung Ihres Body-Mass-Index und um zu verstehen, ob Ihr Gewicht normal ist",
+			"breadcrumbs": {
+				"category": "Leben"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"gender": "Geschlecht",
+				"male": "Mann",
+				"female": "Frau",
+				"height": "Größe (cm)",
+				"weight": "Gewicht (kg)",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"bmiValue": "Ihr Body-Mass-Index",
+				"bmiUnit": "kg/m²",
+				"category": "Kategorie",
+				"normalWeightRange": "Normalgewicht-Bereich",
+				"weightUnit": "kg",
+				"bmiScale": "BMI-Skala",
+				"interpretation": "Interpretation",
+				"categories": {
+					"underweight": "Untergewicht",
+					"normal": "Normal",
+					"overweight": "Übergewicht",
+					"obese1": "Adipositas Grad I",
+					"obese2": "Adipositas Grad II",
+					"obese3": "Adipositas Grad III"
+				},
+				"descriptions": {
+					"underweight": "Untergewicht",
+					"normal": "Normalgewicht",
+					"overweight": "Übergewicht",
+					"obese1": "Adipositas ersten Grades",
+					"obese2": "Adipositas zweiten Grades",
+					"obese3": "Adipositas dritten Grades"
+				},
+				"interpretations": {
+					"underweight": "Ihr BMI deutet auf Untergewicht hin. Erwägen Sie eine Beratung durch einen Gesundheitsdienstleister für Anleitung zur gesunden Gewichtszunahme.",
+					"normal": "Ihr BMI liegt im normalen Bereich. Dies ist mit guten Gesundheitsergebnissen verbunden.",
+					"overweight": "Ihr BMI deutet auf Übergewicht hin. Erwägen Sie Lebensstiländerungen, um ein gesünderes Gewicht zu erreichen.",
+					"obese1": "Ihr BMI deutet auf Adipositas Grad I hin. Erwägen Sie eine Beratung durch einen Gesundheitsdienstleister für Gewichtsmanagementstrategien.",
+					"obese2": "Ihr BMI deutet auf Adipositas Grad II hin. Es wird empfohlen, einen Gesundheitsdienstleister für umfassendes Gewichtsmanagement zu konsultieren.",
+					"obese3": "Ihr BMI deutet auf Adipositas Grad III hin. Es wird dringend empfohlen, einen Gesundheitsdienstleister für medizinische Überwachung zu konsultieren."
+				}
+			},
+			"seo": {
+				"title": "Body-Mass-Index (BMI) Rechner Online",
+				"description": "Schneller Online-BMI-Rechner zur Berechnung des Body-Mass-Index. Finden Sie heraus, ob Ihr Gewicht normal ist. Geeignet für Männer und Frauen.",
+				"keywords": "bmi, body mass index, rechner, gewicht, gesundheit, normalgewicht",
+				"breadcrumbs": {
+					"life": "Leben"
+				},
+				"overview": {
+					"title": "Über den BMI-Rechner",
+					"content": "Der Body-Mass-Index (BMI) ist ein Maß, das hilft zu beurteilen, ob das Gewicht einer Person für ihre Größe angemessen ist. Unser Online-BMI-Rechner ermöglicht es Ihnen, schnell und genau Ihren Body-Mass-Index zu bestimmen und zu verstehen, ob Ihr Gewicht innerhalb normaler Grenzen liegt."
+				},
+				"calculation": {
+					"title": "Wie der BMI berechnet wird",
+					"content": "Der BMI wird mit einer einfachen Formel berechnet, die Ihre Größe und Ihr Gewicht berücksichtigt:",
+					"steps": [
+						"Messen Sie Ihre Größe in Zentimetern",
+						"Wiegen Sie sich und notieren Sie Ihr Gewicht in Kilogramm",
+						"Geben Sie die Daten in den Rechner ein",
+						"Erhalten Sie das Ergebnis mit Gewichtskategorie"
+					]
+				},
+				"categories": {
+					"title": "BMI-Kategorien",
+					"content": "Die Weltgesundheitsorganisation (WHO) hat folgende BMI-Kategorien definiert:",
+					"underweight": {
+						"title": "Untergewicht",
+						"description": "Beratung durch einen Arzt wird empfohlen"
+					},
+					"normal": {
+						"title": "Normal",
+						"description": "Optimales Gewicht für die Gesundheit"
+					},
+					"overweight": {
+						"title": "Übergewicht",
+						"description": "Gewichtsabnahme wird empfohlen"
+					},
+					"obesity": {
+						"title": "Adipositas",
+						"description": "Medizinische Überwachung erforderlich"
+					}
+				},
+				"healthImplications": {
+					"title": "Gesundheitsauswirkungen des BMI",
+					"content": "Der BMI ist ein wichtiger Indikator zur Bewertung von Gesundheitsrisiken:",
+					"items": [
+						"Normaler BMI (18.5-24.9) ist mit den geringsten Gesundheitsrisiken verbunden",
+						"Übergewicht erhöht das Risiko für Herz-Kreislauf-Erkrankungen",
+						"Adipositas erhöht das Risiko für Diabetes, Bluthochdruck und andere Erkrankungen",
+						"Untergewicht kann sich auch negativ auf die Gesundheit auswirken"
+					]
+				},
+				"limitations": {
+					"title": "BMI-Beschränkungen",
+					"content": "Es ist wichtig, die Beschränkungen des BMI als Indikator zu verstehen:",
+					"items": [
+						"Der BMI berücksichtigt nicht die Muskelmasse und Körperzusammensetzung",
+						"Bei Sportlern kann der BMI aufgrund entwickelter Muskulatur erhöht sein",
+						"Bei älteren Menschen kann der BMI weniger genau sein",
+						"Der BMI berücksichtigt nicht die Fettverteilung im Körper"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online BMI-Rechner",
+					"content": "Unser kostenloser Online-BMI-Rechner hilft Ihnen, schnell Ihren Body-Mass-Index zu bestimmen. Geben Sie einfach Ihre Größe und Ihr Gewicht ein und erhalten Sie ein genaues Ergebnis mit Gesundheitsempfehlungen."
+				},
+				"faq": {
+					"whatIsBMI": {
+						"question": "Was ist der BMI?",
+						"answer": "Der BMI (Body-Mass-Index) ist ein Maß, das als Verhältnis von Gewicht zum Quadrat der Größe berechnet wird. Er hilft zu beurteilen, ob das Gewicht einer Person innerhalb normaler Grenzen liegt."
+					},
+					"howToCalculate": {
+						"question": "Wie berechnet man den BMI?",
+						"answer": "Der BMI wird mit der Formel berechnet: Gewicht in Kilogramm geteilt durch das Quadrat der Größe in Metern. Zum Beispiel bei einem Gewicht von 70 kg und einer Größe von 175 cm: BMI = 70 / (1.75)² = 22.9"
+					},
+					"normalRange": {
+						"question": "Was ist der normale BMI-Bereich?",
+						"answer": "Der normale BMI-Bereich liegt bei 18.5-24.9. Werte unter 18.5 deuten auf Untergewicht hin, und über 25 auf Übergewicht oder Adipositas."
+					},
+					"limitations": {
+						"question": "Was sind die Beschränkungen des BMI?",
+						"answer": "Der BMI berücksichtigt nicht die Muskelmasse, Alter, Geschlecht und Fettverteilung. Bei Sportlern und älteren Menschen kann der BMI ein weniger genauer Indikator sein."
+					}
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",
 			"seo": "A4-Blätter-Rechner, Papiergewichtsberechnung nach Dichte, Papiergewichtsrechner"
-		},
-		"bmi": {
-			"title": "Body-Mass-Index",
-			"description": "BMI zur Gewichtsbewertung berechnen",
-			"seo": "BMI-Rechner, Body-Mass-Index, Normalgewicht"
 		},
 		"credit-loan": {
 			"title": "Kreditrechner",

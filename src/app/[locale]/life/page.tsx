@@ -9,7 +9,7 @@ const calculators = [
 		title: 'BMI Calculator',
 		description: 'Calculate Body Mass Index to assess your weight status',
 		icon: Heart,
-		href: '/calc/bmi',
+		href: '/life/bmi',
 	},
 	{
 		id: 'calories',

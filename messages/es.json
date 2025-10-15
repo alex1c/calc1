@@ -1004,15 +1004,147 @@
 				}
 			}
 		},
+		"bmi": {
+			"title": "Calculadora de Índice de Masa Corporal (IMC)",
+			"description": "Calculadora IMC online para determinar tu índice de masa corporal y entender si tu peso es normal",
+			"breadcrumbs": {
+				"category": "Vida"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"gender": "Género",
+				"male": "Hombre",
+				"female": "Mujer",
+				"height": "Altura (cm)",
+				"weight": "Peso (kg)",
+				"reset": "Restablecer",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"bmiValue": "Tu Índice de Masa Corporal",
+				"bmiUnit": "kg/m²",
+				"category": "Categoría",
+				"normalWeightRange": "Rango de peso normal",
+				"weightUnit": "kg",
+				"bmiScale": "Escala IMC",
+				"interpretation": "Interpretación",
+				"categories": {
+					"underweight": "Bajo peso",
+					"normal": "Normal",
+					"overweight": "Sobrepeso",
+					"obese1": "Obesidad Grado I",
+					"obese2": "Obesidad Grado II",
+					"obese3": "Obesidad Grado III"
+				},
+				"descriptions": {
+					"underweight": "Peso insuficiente",
+					"normal": "Peso normal",
+					"overweight": "Sobrepeso",
+					"obese1": "Obesidad de primer grado",
+					"obese2": "Obesidad de segundo grado",
+					"obese3": "Obesidad de tercer grado"
+				},
+				"interpretations": {
+					"underweight": "Tu IMC indica que tienes bajo peso. Considera consultar con un profesional de la salud para orientación sobre el aumento de peso saludable.",
+					"normal": "Tu IMC está dentro del rango normal. Esto se asocia con buenos resultados de salud.",
+					"overweight": "Tu IMC indica que tienes sobrepeso. Considera cambios en el estilo de vida para lograr un peso más saludable.",
+					"obese1": "Tu IMC indica obesidad de grado I. Considera consultar con un profesional de la salud para estrategias de manejo del peso.",
+					"obese2": "Tu IMC indica obesidad de grado II. Se recomienda consultar con un profesional de la salud para un manejo integral del peso.",
+					"obese3": "Tu IMC indica obesidad de grado III. Se recomienda encarecidamente consultar con un profesional de la salud para supervisión médica."
+				}
+			},
+			"seo": {
+				"title": "Calculadora de Índice de Masa Corporal (IMC) Online",
+				"description": "Calculadora IMC online rápida para calcular el índice de masa corporal. Descubre si tu peso es normal. Adecuada para hombres y mujeres.",
+				"keywords": "imc, índice masa corporal, calculadora, peso, salud, peso normal",
+				"breadcrumbs": {
+					"life": "Vida"
+				},
+				"overview": {
+					"title": "Sobre la Calculadora IMC",
+					"content": "El Índice de Masa Corporal (IMC) es una medida que ayuda a evaluar si el peso de una persona es apropiado para su altura. Nuestra calculadora IMC online te permite determinar rápida y precisamente tu índice de masa corporal y entender si tu peso está dentro de los límites normales."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el IMC",
+					"content": "El IMC se calcula usando una fórmula simple que tiene en cuenta tu altura y peso:",
+					"steps": [
+						"Mide tu altura en centímetros",
+						"Pésate y registra tu peso en kilogramos",
+						"Ingresa los datos en la calculadora",
+						"Obtén el resultado con la categoría de peso"
+					]
+				},
+				"categories": {
+					"title": "Categorías IMC",
+					"content": "La Organización Mundial de la Salud (OMS) ha definido las siguientes categorías de IMC:",
+					"underweight": {
+						"title": "Bajo peso",
+						"description": "Se recomienda consulta médica"
+					},
+					"normal": {
+						"title": "Normal",
+						"description": "Peso óptimo para la salud"
+					},
+					"overweight": {
+						"title": "Sobrepeso",
+						"description": "Se recomienda pérdida de peso"
+					},
+					"obesity": {
+						"title": "Obesidad",
+						"description": "Se requiere supervisión médica"
+					}
+				},
+				"healthImplications": {
+					"title": "Implicaciones de Salud del IMC",
+					"content": "El IMC es un indicador importante para evaluar riesgos de salud:",
+					"items": [
+						"IMC normal (18.5-24.9) se asocia con los menores riesgos de salud",
+						"El sobrepeso aumenta el riesgo de enfermedades cardiovasculares",
+						"La obesidad aumenta el riesgo de diabetes, hipertensión y otras enfermedades",
+						"El bajo peso también puede afectar negativamente la salud"
+					]
+				},
+				"limitations": {
+					"title": "Limitaciones del IMC",
+					"content": "Es importante entender las limitaciones del IMC como indicador:",
+					"items": [
+						"El IMC no tiene en cuenta la masa muscular y composición corporal",
+						"En atletas, el IMC puede estar elevado debido a musculatura desarrollada",
+						"En personas mayores, el IMC puede ser menos preciso",
+						"El IMC no tiene en cuenta la distribución de grasa en el cuerpo"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Calculadora IMC Online",
+					"content": "Nuestra calculadora IMC online gratuita te ayudará a determinar rápidamente tu índice de masa corporal. Simplemente ingresa tu altura y peso, y obtén un resultado preciso con recomendaciones de salud."
+				},
+				"faq": {
+					"whatIsBMI": {
+						"question": "¿Qué es el IMC?",
+						"answer": "El IMC (Índice de Masa Corporal) es una medida calculada como la relación entre el peso y el cuadrado de la altura. Ayuda a evaluar si el peso de una persona está dentro de los límites normales."
+					},
+					"howToCalculate": {
+						"question": "¿Cómo calcular el IMC?",
+						"answer": "El IMC se calcula usando la fórmula: peso en kilogramos dividido por el cuadrado de la altura en metros. Por ejemplo, con un peso de 70 kg y altura de 175 cm: IMC = 70 / (1.75)² = 22.9"
+					},
+					"normalRange": {
+						"question": "¿Cuál es el rango normal de IMC?",
+						"answer": "El rango normal de IMC es 18.5-24.9. Valores por debajo de 18.5 indican bajo peso, y por encima de 25 indican sobrepeso u obesidad."
+					},
+					"limitations": {
+						"question": "¿Cuáles son las limitaciones del IMC?",
+						"answer": "El IMC no tiene en cuenta la masa muscular, edad, género y distribución de grasa. En atletas y personas mayores, el IMC puede ser un indicador menos preciso."
+					}
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",
 			"seo": "Calculadora de hojas A4, cálculo de peso de papel por densidad, calculadora de peso de papel"
-		},
-		"bmi": {
-			"title": "Índice de Masa Corporal",
-			"description": "Calcular IMC para evaluación de peso",
-			"seo": "Calculadora de IMC, índice de masa corporal, peso normal"
 		},
 		"credit-loan": {
 			"title": "Calculadora de Crédito",

@@ -1109,15 +1109,147 @@
 				}
 			}
 		},
+		"bmi": {
+			"title": "Body Mass Index (BMI) Calculator",
+			"description": "Online BMI calculator to determine your body mass index and understand if your weight is normal",
+			"breadcrumbs": {
+				"category": "Life"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"gender": "Gender",
+				"male": "Male",
+				"female": "Female",
+				"height": "Height (cm)",
+				"weight": "Weight (kg)",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"bmiValue": "Your Body Mass Index",
+				"bmiUnit": "kg/m²",
+				"category": "Category",
+				"normalWeightRange": "Normal weight range",
+				"weightUnit": "kg",
+				"bmiScale": "BMI Scale",
+				"interpretation": "Interpretation",
+				"categories": {
+					"underweight": "Underweight",
+					"normal": "Normal",
+					"overweight": "Overweight",
+					"obese1": "Obesity Class I",
+					"obese2": "Obesity Class II",
+					"obese3": "Obesity Class III"
+				},
+				"descriptions": {
+					"underweight": "Underweight",
+					"normal": "Normal weight",
+					"overweight": "Overweight",
+					"obese1": "Class I obesity",
+					"obese2": "Class II obesity",
+					"obese3": "Class III obesity"
+				},
+				"interpretations": {
+					"underweight": "Your BMI indicates you are underweight. Consider consulting a healthcare provider for guidance on healthy weight gain.",
+					"normal": "Your BMI is within the normal range. This is associated with good health outcomes.",
+					"overweight": "Your BMI indicates you are overweight. Consider lifestyle changes to achieve a healthier weight.",
+					"obese1": "Your BMI indicates Class I obesity. Consider consulting a healthcare provider for weight management strategies.",
+					"obese2": "Your BMI indicates Class II obesity. It's recommended to consult a healthcare provider for comprehensive weight management.",
+					"obese3": "Your BMI indicates Class III obesity. It's strongly recommended to consult a healthcare provider for medical supervision."
+				}
+			},
+			"seo": {
+				"title": "Body Mass Index (BMI) Calculator Online",
+				"description": "Quick online BMI calculator for calculating body mass index. Find out if your weight is normal. Suitable for men and women.",
+				"keywords": "bmi, body mass index, calculator, weight, health, normal weight",
+				"breadcrumbs": {
+					"life": "Life"
+				},
+				"overview": {
+					"title": "About BMI Calculator",
+					"content": "Body Mass Index (BMI) is a measure that helps assess whether a person's weight is appropriate for their height. Our online BMI calculator allows you to quickly and accurately determine your body mass index and understand if your weight is within normal limits."
+				},
+				"calculation": {
+					"title": "How BMI is Calculated",
+					"content": "BMI is calculated using a simple formula that takes into account your height and weight:",
+					"steps": [
+						"Measure your height in centimeters",
+						"Weigh yourself and record your weight in kilograms",
+						"Enter the data into the calculator",
+						"Get the result with weight category"
+					]
+				},
+				"categories": {
+					"title": "BMI Categories",
+					"content": "The World Health Organization (WHO) has defined the following BMI categories:",
+					"underweight": {
+						"title": "Underweight",
+						"description": "Consultation with a doctor is recommended"
+					},
+					"normal": {
+						"title": "Normal",
+						"description": "Optimal weight for health"
+					},
+					"overweight": {
+						"title": "Overweight",
+						"description": "Weight loss is recommended"
+					},
+					"obesity": {
+						"title": "Obesity",
+						"description": "Medical supervision required"
+					}
+				},
+				"healthImplications": {
+					"title": "Health Implications of BMI",
+					"content": "BMI is an important indicator for assessing health risks:",
+					"items": [
+						"Normal BMI (18.5-24.9) is associated with the lowest health risks",
+						"Overweight increases the risk of cardiovascular disease",
+						"Obesity increases the risk of diabetes, hypertension and other diseases",
+						"Underweight can also negatively affect health"
+					]
+				},
+				"limitations": {
+					"title": "BMI Limitations",
+					"content": "It's important to understand the limitations of BMI as an indicator:",
+					"items": [
+						"BMI does not account for muscle mass and body composition",
+						"In athletes, BMI may be elevated due to developed musculature",
+						"In elderly people, BMI may be less accurate",
+						"BMI does not account for fat distribution in the body"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online BMI Calculator",
+					"content": "Our free online BMI calculator will help you quickly determine your body mass index. Simply enter your height and weight, and get an accurate result with health recommendations."
+				},
+				"faq": {
+					"whatIsBMI": {
+						"question": "What is BMI?",
+						"answer": "BMI (Body Mass Index) is a measure calculated as the ratio of weight to the square of height. It helps assess whether a person's weight is within normal limits."
+					},
+					"howToCalculate": {
+						"question": "How to calculate BMI?",
+						"answer": "BMI is calculated using the formula: weight in kilograms divided by the square of height in meters. For example, with a weight of 70 kg and height of 175 cm: BMI = 70 / (1.75)² = 22.9"
+					},
+					"normalRange": {
+						"question": "What is the normal BMI range?",
+						"answer": "The normal BMI range is 18.5-24.9. Values below 18.5 indicate underweight, and above 25 indicate overweight or obesity."
+					},
+					"limitations": {
+						"question": "What are the limitations of BMI?",
+						"answer": "BMI does not account for muscle mass, age, gender, and fat distribution. In athletes and elderly people, BMI may be a less accurate indicator."
+					}
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",
 			"seo": "A4 sheets calculator, paper weight calculation by density, paper weight calculator"
-		},
-		"bmi": {
-			"title": "Body Mass Index",
-			"description": "Calculate BMI for weight assessment",
-			"seo": "BMI calculator, body mass index, normal weight"
 		},
 		"credit-loan": {
 			"title": "Credit Loan Calculator",
