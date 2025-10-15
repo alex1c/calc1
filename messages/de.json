@@ -501,6 +501,111 @@
 				}
 			}
 		},
+		"equations": {
+			"title": "Gleichungslöser-Rechner",
+			"description": "Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit Schritt-für-Schritt-Erklärungen",
+			"breadcrumbs": {
+				"category": "Mathematik"
+			},
+			"form": {
+				"title": "Gleichung eingeben",
+				"mode": "Eingabemodus",
+				"modes": {
+					"parse": "Gleichung eingeben",
+					"manual": "Koeffizienten eingeben"
+				},
+				"enterEquation": "Gleichung eingeben",
+				"examples": "Beispiele",
+				"equationType": "Gleichungstyp",
+				"equationTypes": {
+					"linear": "Linear (ax + b = 0)",
+					"quadratic": "Quadratisch (ax² + bx + c = 0)"
+				},
+				"linearFormat": "Format",
+				"quadraticFormat": "Format",
+				"coefficientA": "Koeffizient A",
+				"coefficientB": "Koeffizient B",
+				"coefficientC": "Koeffizient C",
+				"calculate": "Lösen",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Lösungsergebnis",
+				"types": {
+					"linear": "Lineare Gleichung",
+					"quadratic": "Quadratische Gleichung",
+					"unsupported": "Nicht unterstützter Gleichungstyp"
+				},
+				"oneSolution": "Eine Lösung",
+				"twoSolutions": "Zwei Lösungen",
+				"noSolution": "Keine Lösungen",
+				"complexRoots": "Die Gleichung hat komplexe Wurzeln (keine reellen Lösungen)",
+				"steps": "Schritt-für-Schritt-Lösung",
+				"discriminant": "Diskriminante"
+			},
+			"seo": {
+				"title": "Online-Gleichungslöser-Rechner - Lineare und Quadratische Gleichungen | Calc1.ru",
+				"description": "Kostenloser Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit detaillierten Schritt-für-Schritt-Erklärungen. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+				"breadcrumbs": {
+					"home": "Startseite",
+					"math": "Mathematik"
+				},
+				"overview": {
+					"title": "Online-Gleichungslöser-Rechner",
+					"content": "Unser Rechner ermöglicht es, lineare und quadratische Gleichungen online mit detaillierten Schritt-für-Schritt-Erklärungen zu lösen. Geben Sie einfach die Gleichung oder Koeffizienten ein, und der Rechner findet sofort die Lösung. Perfekt für Studenten, Schüler und alle, die Mathematik studieren."
+				},
+				"linearEquations": {
+					"title": "Wie man lineare Gleichungen löst",
+					"content": "Eine lineare Gleichung hat die Form ax + b = 0, wobei a und b bekannte Zahlen sind und x die Unbekannte. Zum Lösen muss man x ausdrücken.",
+					"formula": "ax + b = 0  →  x = -b/a",
+					"example": "Beispiel: 2x + 5 = 15  →  2x = 10  →  x = 5"
+				},
+				"quadraticEquations": {
+					"title": "Wie man quadratische Gleichungen löst",
+					"content": "Eine quadratische Gleichung hat die Form ax² + bx + c = 0. Sie wird mit der Diskriminante gelöst: D = b² - 4ac. Die Anzahl der Wurzeln hängt vom Wert der Diskriminante ab.",
+					"formula": "x = (-b ± √D) / (2a)",
+					"discriminant": "D = b² - 4ac",
+					"twoRoots": "Zwei Wurzeln",
+					"oneRoot": "Eine Wurzel",
+					"noRoots": "Keine reellen Wurzeln"
+				},
+				"roots": {
+					"title": "Was sind Gleichungswurzeln",
+					"content": "Gleichungswurzeln sind Werte der Variablen, die die Gleichung zu einer wahren numerischen Gleichheit machen. Je nach Gleichungstyp kann es verschiedene Anzahlen von Wurzeln geben.",
+					"real": "Reelle Wurzeln — gewöhnliche Zahlen auf der Zahlengeraden",
+					"complex": "Komplexe Wurzeln — erscheinen, wenn die Diskriminante negativ ist",
+					"repeated": "Wiederholte Wurzeln — wenn die Diskriminante gleich null ist"
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Online-Gleichungsrechner bietet schnelle und präzise Lösungen mit detaillierten Erklärungen jedes Schritts.",
+					"items": [
+						"Sofortige Lösung beliebiger linearer und quadratischer Gleichungen",
+						"Detaillierte Schritt-für-Schritt-Lösungserklärung",
+						"Bestimmung der Anzahl von Wurzeln und Diskriminante",
+						"Unterstützung für 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+						"Zwei Eingabemodi: Text und Koeffizienteneingabe",
+						"Völlig kostenlos ohne Registrierung",
+						"Responsive Design für alle Geräte"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Gleichungsrechner",
+					"content": "Der Online-Gleichungslöser-Rechner auf Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Lösen Sie lineare und quadratische Gleichungen mit detaillierten Erklärungen kostenlos!"
+				},
+				"faq": {
+					"question1": "Wie löst man eine Gleichung online?",
+					"answer1": "Geben Sie die Gleichung im Format '2x + 5 = 15' oder 'x² + 2x + 1 = 0' ein und klicken Sie auf die Schaltfläche 'Lösen'. Der Rechner bestimmt automatisch den Gleichungstyp und bietet eine Lösung mit Schritt-für-Schritt-Erklärung.",
+					"question2": "Wie findet man die Wurzeln einer quadratischen Gleichung?",
+					"answer2": "Für eine quadratische Gleichung ax² + bx + c = 0 wird zuerst die Diskriminante D = b² - 4ac berechnet. Wenn D > 0, hat die Gleichung zwei Wurzeln, wenn D = 0 — eine Wurzel, wenn D < 0 — keine reellen Wurzeln.",
+					"question3": "Wie versteht man, wie viele Lösungen eine Gleichung hat?",
+					"answer3": "Eine lineare Gleichung hat eine Lösung (wenn a ≠ 0). Eine quadratische Gleichung kann 0, 1 oder 2 Lösungen haben, abhängig von der Diskriminante. Der Rechner bestimmt automatisch die Anzahl der Lösungen."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",
@@ -2980,6 +3085,111 @@
 			"calculatedDistance": "Berechnete Distanz",
 			"calculatedFuel": "Berechneter Kraftstoff",
 			"placeholder": "Geben Sie Parameter ein und klicken Sie auf 'Berechnen'"
+		}
+	},
+	"equations": {
+		"title": "Gleichungslöser Rechner",
+		"description": "Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit Schritt-für-Schritt-Erklärung",
+		"breadcrumbs": {
+			"category": "Mathematik"
+		},
+		"form": {
+			"title": "Gleichung Eingeben",
+			"mode": "Eingabemodus",
+			"modes": {
+				"parse": "Gleichung Eingeben",
+				"manual": "Koeffizienten Eingeben"
+			},
+			"enterEquation": "Gleichung eingeben",
+			"examples": "Beispiele",
+			"equationType": "Gleichungstyp",
+			"equationTypes": {
+				"linear": "Linear (ax + b = 0)",
+				"quadratic": "Quadratisch (ax² + bx + c = 0)"
+			},
+			"linearFormat": "Format",
+			"quadraticFormat": "Format",
+			"coefficientA": "Koeffizient A",
+			"coefficientB": "Koeffizient B",
+			"coefficientC": "Koeffizient C",
+			"calculate": "Lösen",
+			"reset": "Zurücksetzen",
+			"errors": {
+				"title": "Datenfehler"
+			}
+		},
+		"results": {
+			"title": "Lösungsergebnis",
+			"types": {
+				"linear": "Lineare Gleichung",
+				"quadratic": "Quadratische Gleichung",
+				"unsupported": "Nicht unterstützter Gleichungstyp"
+			},
+			"oneSolution": "Eine Lösung",
+			"twoSolutions": "Zwei Lösungen",
+			"noSolution": "Keine Lösungen",
+			"complexRoots": "Die Gleichung hat komplexe Wurzeln (keine reellen Lösungen)",
+			"steps": "Schritt-für-Schritt-Lösung",
+			"discriminant": "Diskriminante"
+		},
+		"seo": {
+			"title": "Gleichungslöser Rechner Online - Lineare und Quadratische Gleichungen | Calc1.ru",
+			"description": "Kostenloser Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit detaillierten Schritt-für-Schritt-Erklärungen. Unterstützt Russisch, Englisch, Spanisch und Deutsch.",
+			"breadcrumbs": {
+				"home": "Startseite",
+				"math": "Mathematik"
+			},
+			"overview": {
+				"title": "Online Gleichungslöser Rechner",
+				"content": "Unser Rechner ermöglicht es Ihnen, lineare und quadratische Gleichungen online mit detaillierten Schritt-für-Schritt-Erklärungen zu lösen. Geben Sie einfach die Gleichung oder die Koeffizienten ein, und der Rechner findet sofort die Lösung. Perfekt für Studenten, Schüler und alle, die Mathematik studieren."
+			},
+			"linearEquations": {
+				"title": "Wie löst man lineare Gleichungen",
+				"content": "Eine lineare Gleichung hat die Form ax + b = 0, wobei a und b bekannte Zahlen sind und x die unbekannte Variable ist. Um zu lösen, müssen Sie x ausdrücken.",
+				"formula": "ax + b = 0  →  x = -b/a",
+				"example": "Beispiel: 2x + 5 = 15  →  2x = 10  →  x = 5"
+			},
+			"quadraticEquations": {
+				"title": "Wie löst man quadratische Gleichungen",
+				"content": "Eine quadratische Gleichung hat die Form ax² + bx + c = 0. Sie wird mit der Diskriminante gelöst: D = b² - 4ac. Die Anzahl der Wurzeln hängt vom Wert der Diskriminante ab.",
+				"formula": "x = (-b ± √D) / (2a)",
+				"discriminant": "D = b² - 4ac",
+				"twoRoots": "Zwei Wurzeln",
+				"oneRoot": "Eine Wurzel",
+				"noRoots": "Keine reellen Wurzeln"
+			},
+			"roots": {
+				"title": "Was sind Gleichungswurzeln",
+				"content": "Gleichungswurzeln sind Werte der Variablen, die die Gleichung zu einer wahren numerischen Gleichheit machen. Je nach Typ der Gleichung kann es unterschiedlich viele Wurzeln geben.",
+				"real": "Reelle Wurzeln — reguläre Zahlen auf der Zahlengeraden",
+				"complex": "Komplexe Wurzeln — erscheinen, wenn die Diskriminante negativ ist",
+				"repeated": "Wiederholte Wurzeln — wenn die Diskriminante gleich Null ist"
+			},
+			"advantages": {
+				"title": "Vorteile des Rechners",
+				"content": "Unser Online-Gleichungsrechner bietet schnelle und genaue Lösungen mit detaillierten Erklärungen zu jedem Schritt.",
+				"items": [
+					"Sofortige Lösung jeder linearen und quadratischen Gleichung",
+					"Detaillierte Schritt-für-Schritt-Lösungserklärung",
+					"Bestimmung der Anzahl der Wurzeln und Diskriminante",
+					"Unterstützung für 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+					"Zwei Eingabemodi: Text und Koeffizienten",
+					"Völlig kostenlos ohne Registrierung",
+					"Responsives Design für alle Geräte"
+				]
+			},
+			"onlineCalculator": {
+				"title": "Online Gleichungsrechner",
+				"content": "Der Online-Gleichungslöser-Rechner auf Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Lösen Sie lineare und quadratische Gleichungen mit detaillierten Erklärungen kostenlos!"
+			},
+			"faq": {
+				"question1": "Wie löst man eine Gleichung online?",
+				"answer1": "Geben Sie die Gleichung im Format '2x + 5 = 15' oder 'x² + 2x + 1 = 0' ein und klicken Sie auf die Schaltfläche 'Lösen'. Der Rechner bestimmt automatisch den Gleichungstyp und liefert eine Lösung mit Schritt-für-Schritt-Erklärung.",
+				"question2": "Wie findet man die Wurzeln einer quadratischen Gleichung?",
+				"answer2": "Für eine quadratische Gleichung ax² + bx + c = 0 berechnen Sie zuerst die Diskriminante D = b² - 4ac. Wenn D > 0, hat die Gleichung zwei Wurzeln, wenn D = 0 — eine Wurzel, wenn D < 0 — keine reellen Wurzeln.",
+				"question3": "Wie versteht man, wie viele Lösungen eine Gleichung hat?",
+				"answer3": "Eine lineare Gleichung hat eine Lösung (wenn a ≠ 0). Eine quadratische Gleichung kann 0, 1 oder 2 Lösungen haben, abhängig von der Diskriminante. Der Rechner bestimmt automatisch die Anzahl der Lösungen."
+			}
 		}
 	}
 }

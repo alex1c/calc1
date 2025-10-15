@@ -501,6 +501,111 @@
 				}
 			}
 		},
+		"equations": {
+			"title": "Calculadora de Resolución de Ecuaciones",
+			"description": "Calculadora online para resolver ecuaciones lineales y cuadráticas con explicaciones paso a paso",
+			"breadcrumbs": {
+				"category": "Matemáticas"
+			},
+			"form": {
+				"title": "Ingrese la Ecuación",
+				"mode": "Modo de Entrada",
+				"modes": {
+					"parse": "Ingresar Ecuación",
+					"manual": "Ingresar Coeficientes"
+				},
+				"enterEquation": "Ingrese la Ecuación",
+				"examples": "Ejemplos",
+				"equationType": "Tipo de Ecuación",
+				"equationTypes": {
+					"linear": "Lineal (ax + b = 0)",
+					"quadratic": "Cuadrática (ax² + bx + c = 0)"
+				},
+				"linearFormat": "Formato",
+				"quadraticFormat": "Formato",
+				"coefficientA": "Coeficiente A",
+				"coefficientB": "Coeficiente B",
+				"coefficientC": "Coeficiente C",
+				"calculate": "Resolver",
+				"reset": "Reiniciar",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"results": {
+				"title": "Resultado de la Solución",
+				"types": {
+					"linear": "Ecuación Lineal",
+					"quadratic": "Ecuación Cuadrática",
+					"unsupported": "Tipo de Ecuación No Soportado"
+				},
+				"oneSolution": "Una Solución",
+				"twoSolutions": "Dos Soluciones",
+				"noSolution": "Sin Soluciones",
+				"complexRoots": "La ecuación tiene raíces complejas (no hay soluciones reales)",
+				"steps": "Solución Paso a Paso",
+				"discriminant": "Discriminante"
+			},
+			"seo": {
+				"title": "Calculadora de Resolución de Ecuaciones Online - Ecuaciones Lineales y Cuadráticas | Calc1.ru",
+				"description": "Calculadora online gratuita para resolver ecuaciones lineales y cuadráticas con explicaciones detalladas paso a paso. Soporte para ruso, inglés, español y alemán.",
+				"breadcrumbs": {
+					"home": "Inicio",
+					"math": "Matemáticas"
+				},
+				"overview": {
+					"title": "Calculadora de Resolución de Ecuaciones Online",
+					"content": "Nuestra calculadora permite resolver ecuaciones lineales y cuadráticas online con explicaciones detalladas paso a paso. Simplemente ingrese la ecuación o los coeficientes, y la calculadora encontrará instantáneamente la solución. Perfecto para estudiantes, escolares y cualquiera que estudie matemáticas."
+				},
+				"linearEquations": {
+					"title": "Cómo Resolver Ecuaciones Lineales",
+					"content": "Una ecuación lineal tiene la forma ax + b = 0, donde a y b son números conocidos y x es la incógnita. Para resolver, necesitas expresar x.",
+					"formula": "ax + b = 0  →  x = -b/a",
+					"example": "Ejemplo: 2x + 5 = 15  →  2x = 10  →  x = 5"
+				},
+				"quadraticEquations": {
+					"title": "Cómo Resolver Ecuaciones Cuadráticas",
+					"content": "Una ecuación cuadrática tiene la forma ax² + bx + c = 0. Se resuelve usando el discriminante: D = b² - 4ac. El número de raíces depende del valor del discriminante.",
+					"formula": "x = (-b ± √D) / (2a)",
+					"discriminant": "D = b² - 4ac",
+					"twoRoots": "Dos Raíces",
+					"oneRoot": "Una Raíz",
+					"noRoots": "Sin Raíces Reales"
+				},
+				"roots": {
+					"title": "Qué son las Raíces de una Ecuación",
+					"content": "Las raíces de una ecuación son valores de la variable que hacen que la ecuación sea una igualdad numérica verdadera. Dependiendo del tipo de ecuación, puede haber diferentes números de raíces.",
+					"real": "Raíces reales — números ordinarios en la recta numérica",
+					"complex": "Raíces complejas — aparecen cuando el discriminante es negativo",
+					"repeated": "Raíces repetidas — cuando el discriminante es igual a cero"
+				},
+				"advantages": {
+					"title": "Ventajas de la Calculadora",
+					"content": "Nuestra calculadora de ecuaciones online proporciona soluciones rápidas y precisas con explicaciones detalladas de cada paso.",
+					"items": [
+						"Solución instantánea de cualquier ecuación lineal y cuadrática",
+						"Explicación detallada paso a paso de la solución",
+						"Determinación del número de raíces y discriminante",
+						"Soporte para 4 idiomas: ruso, inglés, español, alemán",
+						"Dos modos de entrada: texto y entrada de coeficientes",
+						"Completamente gratuito sin registro",
+						"Diseño responsivo para todos los dispositivos"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Calculadora de Ecuaciones Online",
+					"content": "La calculadora de resolución de ecuaciones online en Calc1.ru soporta ruso, inglés, español y alemán. ¡Resuelve ecuaciones lineales y cuadráticas con explicaciones detalladas gratis!"
+				},
+				"faq": {
+					"question1": "¿Cómo resolver una ecuación online?",
+					"answer1": "Ingrese la ecuación en el formato '2x + 5 = 15' o 'x² + 2x + 1 = 0' y haga clic en el botón 'Resolver'. La calculadora determinará automáticamente el tipo de ecuación y proporcionará una solución con explicación paso a paso.",
+					"question2": "¿Cómo encontrar las raíces de una ecuación cuadrática?",
+					"answer2": "Para una ecuación cuadrática ax² + bx + c = 0, primero se calcula el discriminante D = b² - 4ac. Si D > 0, la ecuación tiene dos raíces, si D = 0 — una raíz, si D < 0 — no hay raíces reales.",
+					"question3": "¿Cómo entender cuántas soluciones tiene una ecuación?",
+					"answer3": "Una ecuación lineal tiene una solución (si a ≠ 0). Una ecuación cuadrática puede tener 0, 1 o 2 soluciones dependiendo del discriminante. La calculadora determina automáticamente el número de soluciones."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",
@@ -2980,6 +3085,111 @@
 			"calculatedDistance": "Distancia Calculada",
 			"calculatedFuel": "Combustible Calculado",
 			"placeholder": "Ingresa los parámetros y haz clic en 'Calcular'"
+		}
+	},
+	"equations": {
+		"title": "Calculadora de Resolución de Ecuaciones",
+		"description": "Calculadora en línea para resolver ecuaciones lineales y cuadráticas con explicación paso a paso",
+		"breadcrumbs": {
+			"category": "Matemáticas"
+		},
+		"form": {
+			"title": "Ingresa la Ecuación",
+			"mode": "Modo de Entrada",
+			"modes": {
+				"parse": "Ingresar Ecuación",
+				"manual": "Ingresar Coeficientes"
+			},
+			"enterEquation": "Ingresa la ecuación",
+			"examples": "Ejemplos",
+			"equationType": "Tipo de Ecuación",
+			"equationTypes": {
+				"linear": "Lineal (ax + b = 0)",
+				"quadratic": "Cuadrática (ax² + bx + c = 0)"
+			},
+			"linearFormat": "Formato",
+			"quadraticFormat": "Formato",
+			"coefficientA": "Coeficiente A",
+			"coefficientB": "Coeficiente B",
+			"coefficientC": "Coeficiente C",
+			"calculate": "Resolver",
+			"reset": "Restablecer",
+			"errors": {
+				"title": "Errores en los Datos"
+			}
+		},
+		"results": {
+			"title": "Resultado de la Solución",
+			"types": {
+				"linear": "Ecuación Lineal",
+				"quadratic": "Ecuación Cuadrática",
+				"unsupported": "Tipo de Ecuación No Soportado"
+			},
+			"oneSolution": "Una Solución",
+			"twoSolutions": "Dos Soluciones",
+			"noSolution": "Sin Soluciones",
+			"complexRoots": "La ecuación tiene raíces complejas (sin soluciones reales)",
+			"steps": "Solución Paso a Paso",
+			"discriminant": "Discriminante"
+		},
+		"seo": {
+			"title": "Calculadora de Resolución de Ecuaciones en Línea - Ecuaciones Lineales y Cuadráticas | Calc1.ru",
+			"description": "Calculadora gratuita en línea para resolver ecuaciones lineales y cuadráticas con explicaciones detalladas paso a paso. Soporta idiomas ruso, inglés, español y alemán.",
+			"breadcrumbs": {
+				"home": "Inicio",
+				"math": "Matemáticas"
+			},
+			"overview": {
+				"title": "Calculadora de Resolución de Ecuaciones en Línea",
+				"content": "Nuestra calculadora le permite resolver ecuaciones lineales y cuadráticas en línea con explicaciones detalladas paso a paso. Simplemente ingrese la ecuación o los coeficientes, y la calculadora encontrará la solución instantáneamente. Perfecto para estudiantes, alumnos y cualquier persona que estudie matemáticas."
+			},
+			"linearEquations": {
+				"title": "Cómo Resolver Ecuaciones Lineales",
+				"content": "Una ecuación lineal tiene la forma ax + b = 0, donde a y b son números conocidos, y x es la variable desconocida. Para resolver, necesita expresar x.",
+				"formula": "ax + b = 0  →  x = -b/a",
+				"example": "Ejemplo: 2x + 5 = 15  →  2x = 10  →  x = 5"
+			},
+			"quadraticEquations": {
+				"title": "Cómo Resolver Ecuaciones Cuadráticas",
+				"content": "Una ecuación cuadrática tiene la forma ax² + bx + c = 0. Se resuelve usando el discriminante: D = b² - 4ac. El número de raíces depende del valor del discriminante.",
+				"formula": "x = (-b ± √D) / (2a)",
+				"discriminant": "D = b² - 4ac",
+				"twoRoots": "Dos Raíces",
+				"oneRoot": "Una Raíz",
+				"noRoots": "Sin Raíces Reales"
+			},
+			"roots": {
+				"title": "Qué son las Raíces de una Ecuación",
+				"content": "Las raíces de una ecuación son valores de la variable que hacen que la ecuación sea una igualdad numérica verdadera. Dependiendo del tipo de ecuación, puede haber diferentes números de raíces.",
+				"real": "Raíces reales — números regulares en la recta numérica",
+				"complex": "Raíces complejas — aparecen cuando el discriminante es negativo",
+				"repeated": "Raíces repetidas — cuando el discriminante es igual a cero"
+			},
+			"advantages": {
+				"title": "Ventajas de la Calculadora",
+				"content": "Nuestra calculadora de ecuaciones en línea proporciona soluciones rápidas y precisas con explicaciones detalladas de cada paso.",
+				"items": [
+					"Solución instantánea de cualquier ecuación lineal y cuadrática",
+					"Explicación detallada de la solución paso a paso",
+					"Determinación del número de raíces y discriminante",
+					"Soporte para 4 idiomas: ruso, inglés, español, alemán",
+					"Dos modos de entrada: texto y coeficientes",
+					"Completamente gratis sin registro",
+					"Diseño adaptable para todos los dispositivos"
+				]
+			},
+			"onlineCalculator": {
+				"title": "Calculadora de Ecuaciones en Línea",
+				"content": "La calculadora de resolución de ecuaciones en línea en Calc1.ru soporta idiomas ruso, inglés, español y alemán. ¡Resuelva ecuaciones lineales y cuadráticas con explicaciones detalladas gratis!"
+			},
+			"faq": {
+				"question1": "¿Cómo resolver una ecuación en línea?",
+				"answer1": "Ingrese la ecuación en el formato '2x + 5 = 15' o 'x² + 2x + 1 = 0' y haga clic en el botón 'Resolver'. La calculadora determinará automáticamente el tipo de ecuación y proporcionará una solución con explicación paso a paso.",
+				"question2": "¿Cómo encontrar las raíces de una ecuación cuadrática?",
+				"answer2": "Para una ecuación cuadrática ax² + bx + c = 0, primero calcule el discriminante D = b² - 4ac. Si D > 0, la ecuación tiene dos raíces, si D = 0 — una raíz, si D < 0 — sin raíces reales.",
+				"question3": "¿Cómo entender cuántas soluciones tiene una ecuación?",
+				"answer3": "Una ecuación lineal tiene una solución (si a ≠ 0). Una ecuación cuadrática puede tener 0, 1 o 2 soluciones dependiendo del discriminante. La calculadora determina automáticamente el número de soluciones."
+			}
 		}
 	}
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
@@ -9,6 +11,7 @@ import {
 	Circle,
 	Box,
 	Zap,
+	Equal,
 } from 'lucide-react';
 
 // Note: Calculators array is now defined inside the component to access translations
@@ -52,6 +55,13 @@ export default function MathPage() {
 			description: t('calculators.powerRoot.description'),
 			icon: Zap,
 			href: '/math/power-root',
+		},
+		{
+			id: 'equations',
+			title: t('calculators.equations.title'),
+			description: t('calculators.equations.description'),
+			icon: Equal,
+			href: '/math/equations',
 		},
 		{
 			id: 'trigonometry',

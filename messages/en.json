@@ -501,6 +501,216 @@
 				}
 			}
 		},
+		"equations": {
+			"title": "Equation Solver Calculator",
+			"description": "Online calculator for solving linear and quadratic equations with step-by-step explanations",
+			"breadcrumbs": {
+				"category": "Mathematics"
+			},
+			"form": {
+				"title": "Enter Equation",
+				"mode": "Input Mode",
+				"modes": {
+					"parse": "Enter Equation",
+					"manual": "Enter Coefficients"
+				},
+				"enterEquation": "Enter Equation",
+				"examples": "Examples",
+				"equationType": "Equation Type",
+				"equationTypes": {
+					"linear": "Linear (ax + b = 0)",
+					"quadratic": "Quadratic (ax² + bx + c = 0)"
+				},
+				"linearFormat": "Format",
+				"quadraticFormat": "Format",
+				"coefficientA": "Coefficient A",
+				"coefficientB": "Coefficient B",
+				"coefficientC": "Coefficient C",
+				"calculate": "Solve",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Solution Result",
+				"types": {
+					"linear": "Linear Equation",
+					"quadratic": "Quadratic Equation",
+					"unsupported": "Unsupported Equation Type"
+				},
+				"oneSolution": "One Solution",
+				"twoSolutions": "Two Solutions",
+				"noSolution": "No Solutions",
+				"complexRoots": "Equation has complex roots (no real solutions)",
+				"steps": "Step-by-step Solution",
+				"discriminant": "Discriminant"
+			},
+			"seo": {
+				"title": "Online Equation Solver Calculator - Linear and Quadratic Equations | Calc1.ru",
+				"description": "Free online calculator for solving linear and quadratic equations with detailed step-by-step explanations. Support for Russian, English, Spanish and German languages.",
+				"breadcrumbs": {
+					"home": "Home",
+					"math": "Mathematics"
+				},
+				"overview": {
+					"title": "Online Equation Solver Calculator",
+					"content": "Our calculator allows you to solve linear and quadratic equations online with detailed step-by-step explanations. Simply enter the equation or coefficients, and the calculator will instantly find the solution. Perfect for students, schoolchildren and anyone studying mathematics."
+				},
+				"linearEquations": {
+					"title": "How to Solve Linear Equations",
+					"content": "A linear equation has the form ax + b = 0, where a and b are known numbers and x is the unknown. To solve, you need to express x.",
+					"formula": "ax + b = 0  →  x = -b/a",
+					"example": "Example: 2x + 5 = 15  →  2x = 10  →  x = 5"
+				},
+				"quadraticEquations": {
+					"title": "How to Solve Quadratic Equations",
+					"content": "A quadratic equation has the form ax² + bx + c = 0. It is solved using the discriminant: D = b² - 4ac. The number of roots depends on the discriminant value.",
+					"formula": "x = (-b ± √D) / (2a)",
+					"discriminant": "D = b² - 4ac",
+					"twoRoots": "Two Roots",
+					"oneRoot": "One Root",
+					"noRoots": "No Real Roots"
+				},
+				"roots": {
+					"title": "What are Equation Roots",
+					"content": "Equation roots are values of the variable that make the equation a true numerical equality. Depending on the equation type, there can be different numbers of roots.",
+					"real": "Real roots — ordinary numbers on the number line",
+					"complex": "Complex roots — appear when the discriminant is negative",
+					"repeated": "Repeated roots — when the discriminant equals zero"
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Our online equation calculator provides fast and accurate solutions with detailed explanations of each step.",
+					"items": [
+						"Instant solution of any linear and quadratic equations",
+						"Detailed step-by-step solution explanation",
+						"Determination of number of roots and discriminant",
+						"Support for 4 languages: Russian, English, Spanish, German",
+						"Two input modes: text and coefficient input",
+						"Completely free without registration",
+						"Responsive design for all devices"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Equation Calculator",
+					"content": "Online equation solver calculator on Calc1.ru supports Russian, English, Spanish and German languages. Solve linear and quadratic equations with detailed explanations for free!"
+				},
+				"faq": {
+					"question1": "How to solve an equation online?",
+					"answer1": "Enter the equation in the format '2x + 5 = 15' or 'x² + 2x + 1 = 0' and click the 'Solve' button. The calculator will automatically determine the equation type and provide a solution with step-by-step explanation.",
+					"question2": "How to find roots of a quadratic equation?",
+					"answer2": "For a quadratic equation ax² + bx + c = 0, first calculate the discriminant D = b² - 4ac. If D > 0, the equation has two roots, if D = 0 — one root, if D < 0 — no real roots.",
+					"question3": "How to understand how many solutions an equation has?",
+					"answer3": "A linear equation has one solution (if a ≠ 0). A quadratic equation can have 0, 1, or 2 solutions depending on the discriminant. The calculator automatically determines the number of solutions."
+				}
+			}
+		},
+		"equations": {
+			"title": "Equation Solver Calculator",
+			"description": "Online calculator for solving linear and quadratic equations with step-by-step explanations",
+			"breadcrumbs": {
+				"category": "Mathematics"
+			},
+			"form": {
+				"title": "Enter Equation",
+				"mode": "Input Mode",
+				"modes": {
+					"parse": "Enter Equation",
+					"manual": "Enter Coefficients"
+				},
+				"enterEquation": "Enter Equation",
+				"examples": "Examples",
+				"equationType": "Equation Type",
+				"equationTypes": {
+					"linear": "Linear (ax + b = 0)",
+					"quadratic": "Quadratic (ax² + bx + c = 0)"
+				},
+				"linearFormat": "Format",
+				"quadraticFormat": "Format",
+				"coefficientA": "Coefficient A",
+				"coefficientB": "Coefficient B",
+				"coefficientC": "Coefficient C",
+				"calculate": "Solve",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Solution Result",
+				"types": {
+					"linear": "Linear Equation",
+					"quadratic": "Quadratic Equation",
+					"unsupported": "Unsupported Equation Type"
+				},
+				"oneSolution": "One Solution",
+				"twoSolutions": "Two Solutions",
+				"noSolution": "No Solutions",
+				"complexRoots": "Equation has complex roots (no real solutions)",
+				"steps": "Step-by-step Solution",
+				"discriminant": "Discriminant"
+			},
+			"seo": {
+				"title": "Online Equation Solver Calculator - Linear and Quadratic Equations | Calc1.ru",
+				"description": "Free online calculator for solving linear and quadratic equations with detailed step-by-step explanations. Support for Russian, English, Spanish and German languages.",
+				"breadcrumbs": {
+					"home": "Home",
+					"math": "Mathematics"
+				},
+				"overview": {
+					"title": "Online Equation Solver Calculator",
+					"content": "Our calculator allows you to solve linear and quadratic equations online with detailed step-by-step explanations. Simply enter the equation or coefficients, and the calculator will instantly find the solution. Perfect for students, schoolchildren and anyone studying mathematics."
+				},
+				"linearEquations": {
+					"title": "How to Solve Linear Equations",
+					"content": "A linear equation has the form ax + b = 0, where a and b are known numbers and x is the unknown. To solve, you need to express x.",
+					"formula": "ax + b = 0  →  x = -b/a",
+					"example": "Example: 2x + 5 = 15  →  2x = 10  →  x = 5"
+				},
+				"quadraticEquations": {
+					"title": "How to Solve Quadratic Equations",
+					"content": "A quadratic equation has the form ax² + bx + c = 0. It is solved using the discriminant: D = b² - 4ac. The number of roots depends on the discriminant value.",
+					"formula": "x = (-b ± √D) / (2a)",
+					"discriminant": "D = b² - 4ac",
+					"twoRoots": "Two Roots",
+					"oneRoot": "One Root",
+					"noRoots": "No Real Roots"
+				},
+				"roots": {
+					"title": "What are Equation Roots",
+					"content": "Equation roots are values of the variable that make the equation a true numerical equality. Depending on the equation type, there can be different numbers of roots.",
+					"real": "Real roots — ordinary numbers on the number line",
+					"complex": "Complex roots — appear when the discriminant is negative",
+					"repeated": "Repeated roots — when the discriminant equals zero"
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Our online equation calculator provides fast and accurate solutions with detailed explanations of each step.",
+					"items": [
+						"Instant solution of any linear and quadratic equations",
+						"Detailed step-by-step solution explanation",
+						"Determination of number of roots and discriminant",
+						"Support for 4 languages: Russian, English, Spanish, German",
+						"Two input modes: text and coefficient input",
+						"Completely free without registration",
+						"Responsive design for all devices"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Equation Calculator",
+					"content": "Online equation solver calculator on Calc1.ru supports Russian, English, Spanish, and German languages. Solve linear and quadratic equations with detailed explanations for free!"
+				},
+				"faq": {
+					"question1": "How to solve an equation online?",
+					"answer1": "Enter the equation in the format '2x + 5 = 15' or 'x² + 2x + 1 = 0' and click the 'Solve' button. The calculator will automatically determine the equation type and provide a solution with step-by-step explanation.",
+					"question2": "How to find the roots of a quadratic equation?",
+					"answer2": "For a quadratic equation ax² + bx + c = 0, first calculate the discriminant D = b² - 4ac. If D > 0, the equation has two roots, if D = 0 — one root, if D < 0 — no real roots.",
+					"question3": "How to understand how many solutions an equation has?",
+					"answer3": "A linear equation has one solution (if a ≠ 0). A quadratic equation can have 0, 1, or 2 solutions depending on the discriminant. The calculator automatically determines the number of solutions."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",
