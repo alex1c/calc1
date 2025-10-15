@@ -4158,6 +4158,124 @@
 				"question3": "¿Cómo entender cuántas soluciones tiene una ecuación?",
 				"answer3": "Una ecuación lineal tiene una solución (si a ≠ 0). Una ecuación cuadrática puede tener 0, 1 o 2 soluciones dependiendo del discriminante. La calculadora determina automáticamente el número de soluciones."
 			}
+		},
+		"babyGrowth": {
+			"title": "Calculadora de Crecimiento y Peso del Bebé por Edad",
+			"description": "Determine si la altura y peso de su hijo cumplen con los estándares de edad de la OMS",
+			"breadcrumbs": {
+				"category": "Vida"
+			},
+			"form": {
+				"title": "Parámetros del Niño",
+				"gender": "Género del Niño",
+				"genderMale": "Niño",
+				"genderFemale": "Niña",
+				"age": "Edad",
+				"ageMonths": "meses",
+				"ageYears": "años",
+				"height": "Altura (cm)",
+				"weight": "Peso (kg)",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"result": {
+				"overallTitle": "Evaluación General",
+				"height": "Altura",
+				"weight": "Peso",
+				"percentile": "Percentil",
+				"category": "Categoría",
+				"recommendations": "Recomendaciones"
+			},
+			"info": {
+				"title": "Acerca de la Calculadora",
+				"content": "La calculadora se basa en los estándares de crecimiento de la OMS para niños de 0-5 años. Los resultados ayudan a evaluar si el desarrollo de su hijo cumple con las normas de edad."
+			},
+			"hero": {
+				"who": "OMS",
+				"whoDesc": "Estándares OMS",
+				"accuracy": "95%",
+				"accuracyDesc": "Precisión del Cálculo",
+				"ageRange": "0-5 años",
+				"ageRangeDesc": "Rango de Edad"
+			},
+			"features": {
+				"whoStandards": "Estándares de Crecimiento OMS",
+				"percentileCalculation": "Cálculo de Percentiles",
+				"growthAssessment": "Evaluación del Crecimiento",
+				"recommendations": "Recomendaciones Personales"
+			},
+			"seo": {
+				"title": "Calculadora de Crecimiento y Peso del Bebé por Edad",
+				"description": "Calculadora en línea de crecimiento y peso del bebé basada en datos de la OMS. Determine si su hijo cumple con los estándares de altura y peso.",
+				"overview": {
+					"title": "Acerca de la Calculadora de Crecimiento del Bebé",
+					"content": "La calculadora de crecimiento y peso del bebé ayuda a los padres a evaluar si el desarrollo de su hijo cumple con los estándares de edad de la Organización Mundial de la Salud (OMS)."
+				},
+				"whoStandards": {
+					"title": "Estándares OMS",
+					"content": "La Organización Mundial de la Salud ha desarrollado estándares internacionales de crecimiento infantil basados en datos de niños sanos de diferentes países del mundo.",
+					"benefits": "Beneficios de los Estándares OMS",
+					"benefitsDescription": "Normas universales basadas en el desarrollo saludable de niños de diferentes culturas y regiones.",
+					"reliability": "Confiabilidad de los Datos",
+					"reliabilityDescription": "Los estándares se basan en estudios de miles de niños sanos y se actualizan regularmente."
+				},
+				"percentiles": {
+					"title": "Qué son los Percentiles",
+					"content": "Los percentiles muestran cómo la altura y peso de su hijo se comparan con otros niños de la misma edad y género.",
+					"table": {
+						"percentile": "Percentil",
+						"category": "Categoría",
+						"description": "Descripción",
+						"belowNormal": "Por Debajo de lo Normal",
+						"belowNormalDesc": "Posible retraso en el desarrollo",
+						"belowAverage": "Por Debajo del Promedio",
+						"belowAverageDesc": "Desviación menor",
+						"normal": "Rango Normal",
+						"normalDesc": "Indicadores normales",
+						"aboveAverage": "Por Encima del Promedio",
+						"aboveAverageDesc": "Desarrollo más rápido que los compañeros",
+						"aboveNormal": "Por Encima de lo Normal",
+						"aboveNormalDesc": "Posibles desviaciones"
+					}
+				},
+				"howToUse": {
+					"title": "Cómo Usar la Calculadora",
+					"content": "Para obtener resultados precisos, es importante medir correctamente la altura y peso de su hijo.",
+					"measurements": "Mediciones",
+					"measurementsDescription": "Mida la altura por la mañana cuando el niño esté descansado y relajado.",
+					"accuracy": "Precisión",
+					"accuracyDescription": "Pese al niño en ayunas, sin ropa o con ropa mínima."
+				},
+				"importantNotes": {
+					"title": "Notas Importantes",
+					"content": "La calculadora es solo para fines informativos y no reemplaza la consulta pediátrica.",
+					"warning": "Importante Recordar",
+					"warningContent": "Si tiene dudas sobre el desarrollo de su hijo, asegúrese de consultar a un pediatra."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"howToUse": {
+						"question": "¿Cómo saber la norma de altura del niño por edad?",
+						"answer": "Ingrese el género, edad, altura y peso del niño en la calculadora. El sistema determinará automáticamente el percentil y dará una evaluación de cumplimiento con los estándares OMS."
+					},
+					"whoStandards": {
+						"question": "¿Por qué los niños y niñas difieren en los estándares?",
+						"answer": "Los niños y niñas tienen diferentes ritmos de crecimiento y desarrollo. La OMS ha desarrollado estándares separados para cada género."
+					},
+					"percentileMeaning": {
+						"question": "¿Qué significa percentil?",
+						"answer": "El percentil muestra qué porcentaje de niños de la misma edad y género tienen indicadores de altura o peso más bajos."
+					},
+					"ageLimit": {
+						"question": "¿Se puede usar la calculadora después de 5 años?",
+						"answer": "La calculadora está diseñada para niños de 0-5 años. Para niños mayores de 5 años se usan diferentes estándares de crecimiento."
+					}
+				}
+			}
 		}
 	}
 }

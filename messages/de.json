@@ -4154,6 +4154,124 @@
 				"question3": "Wie versteht man, wie viele Lösungen eine Gleichung hat?",
 				"answer3": "Eine lineare Gleichung hat eine Lösung (wenn a ≠ 0). Eine quadratische Gleichung kann 0, 1 oder 2 Lösungen haben, abhängig von der Diskriminante. Der Rechner bestimmt automatisch die Anzahl der Lösungen."
 			}
+		},
+		"babyGrowth": {
+			"title": "Baby-Wachstums- und Gewichtsrechner nach Alter",
+			"description": "Bestimmen Sie, ob Größe und Gewicht Ihres Kindes den WHO-Altersstandards entsprechen",
+			"breadcrumbs": {
+				"category": "Leben"
+			},
+			"form": {
+				"title": "Kind-Parameter",
+				"gender": "Geschlecht des Kindes",
+				"genderMale": "Junge",
+				"genderFemale": "Mädchen",
+				"age": "Alter",
+				"ageMonths": "Monate",
+				"ageYears": "Jahre",
+				"height": "Größe (cm)",
+				"weight": "Gewicht (kg)",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"result": {
+				"overallTitle": "Gesamtbewertung",
+				"height": "Größe",
+				"weight": "Gewicht",
+				"percentile": "Perzentil",
+				"category": "Kategorie",
+				"recommendations": "Empfehlungen"
+			},
+			"info": {
+				"title": "Über den Rechner",
+				"content": "Der Rechner basiert auf WHO-Wachstumsstandards für Kinder im Alter von 0-5 Jahren. Die Ergebnisse helfen zu bewerten, ob die Entwicklung Ihres Kindes den Altersnormen entspricht."
+			},
+			"hero": {
+				"who": "WHO",
+				"whoDesc": "WHO-Standards",
+				"accuracy": "95%",
+				"accuracyDesc": "Berechnungsgenauigkeit",
+				"ageRange": "0-5 Jahre",
+				"ageRangeDesc": "Altersbereich"
+			},
+			"features": {
+				"whoStandards": "WHO-Wachstumsstandards",
+				"percentileCalculation": "Perzentil-Berechnung",
+				"growthAssessment": "Wachstumsbewertung",
+				"recommendations": "Persönliche Empfehlungen"
+			},
+			"seo": {
+				"title": "Baby-Wachstums- und Gewichtsrechner nach Alter",
+				"description": "Online-Baby-Wachstums- und Gewichtsrechner basierend auf WHO-Daten. Bestimmen Sie, ob Ihr Kind den Größen- und Gewichtsstandards entspricht.",
+				"overview": {
+					"title": "Über den Baby-Wachstumsrechner",
+					"content": "Der Baby-Wachstums- und Gewichtsrechner hilft Eltern zu bewerten, ob die Entwicklung ihres Kindes den Altersstandards der Weltgesundheitsorganisation (WHO) entspricht."
+				},
+				"whoStandards": {
+					"title": "WHO-Standards",
+					"content": "Die Weltgesundheitsorganisation hat internationale Kinderwachstumsstandards basierend auf Daten von gesunden Kindern aus verschiedenen Ländern der Welt entwickelt.",
+					"benefits": "Vorteile der WHO-Standards",
+					"benefitsDescription": "Universelle Normen basierend auf gesunder Entwicklung von Kindern aus verschiedenen Kulturen und Regionen.",
+					"reliability": "Datenzuverlässigkeit",
+					"reliabilityDescription": "Standards basieren auf Studien von Tausenden gesunder Kinder und werden regelmäßig aktualisiert."
+				},
+				"percentiles": {
+					"title": "Was sind Perzentile",
+					"content": "Perzentile zeigen, wie sich Größe und Gewicht Ihres Kindes im Vergleich zu anderen Kindern desselben Alters und Geschlechts verhalten.",
+					"table": {
+						"percentile": "Perzentil",
+						"category": "Kategorie",
+						"description": "Beschreibung",
+						"belowNormal": "Unter Normal",
+						"belowNormalDesc": "Mögliche Entwicklungsverzögerung",
+						"belowAverage": "Unter Durchschnitt",
+						"belowAverageDesc": "Geringfügige Abweichung",
+						"normal": "Normalbereich",
+						"normalDesc": "Normale Indikatoren",
+						"aboveAverage": "Über Durchschnitt",
+						"aboveAverageDesc": "Entwicklung schneller als Gleichaltrige",
+						"aboveNormal": "Über Normal",
+						"aboveNormalDesc": "Mögliche Abweichungen"
+					}
+				},
+				"howToUse": {
+					"title": "Wie man den Rechner verwendet",
+					"content": "Für genaue Ergebnisse ist es wichtig, Größe und Gewicht Ihres Kindes richtig zu messen.",
+					"measurements": "Messungen",
+					"measurementsDescription": "Messen Sie die Größe morgens, wenn das Kind ausgeruht und entspannt ist.",
+					"accuracy": "Genauigkeit",
+					"accuracyDescription": "Wiegen Sie das Kind auf nüchternen Magen, ohne Kleidung oder in minimaler Kleidung."
+				},
+				"importantNotes": {
+					"title": "Wichtige Hinweise",
+					"content": "Der Rechner dient nur zu Informationszwecken und ersetzt keine pädiatrische Beratung.",
+					"warning": "Wichtig zu beachten",
+					"warningContent": "Bei Zweifeln an der Entwicklung Ihres Kindes wenden Sie sich unbedingt an einen Kinderarzt."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"howToUse": {
+						"question": "Wie findet man die Größen-Norm des Kindes nach Alter?",
+						"answer": "Geben Sie Geschlecht, Alter, Größe und Gewicht des Kindes in den Rechner ein. Das System bestimmt automatisch das Perzentil und gibt eine Bewertung der Übereinstimmung mit WHO-Standards."
+					},
+					"whoStandards": {
+						"question": "Warum unterscheiden sich Jungen und Mädchen in den Standards?",
+						"answer": "Jungen und Mädchen haben unterschiedliche Wachstums- und Entwicklungsraten. Die WHO hat separate Standards für jedes Geschlecht entwickelt."
+					},
+					"percentileMeaning": {
+						"question": "Was bedeutet Perzentil?",
+						"answer": "Perzentil zeigt, welcher Prozentsatz der Kinder desselben Alters und Geschlechts niedrigere Größen- oder Gewichtsindikatoren hat."
+					},
+					"ageLimit": {
+						"question": "Kann der Rechner nach 5 Jahren verwendet werden?",
+						"answer": "Der Rechner ist für Kinder im Alter von 0-5 Jahren konzipiert. Für Kinder über 5 Jahre werden andere Wachstumsstandards verwendet."
+					}
+				}
+			}
 		}
 	}
 }

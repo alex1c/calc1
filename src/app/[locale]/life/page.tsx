@@ -1,7 +1,15 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Home, Heart, Baby, Utensils, PieChart, Wine } from 'lucide-react';
+import {
+	Home,
+	Heart,
+	Baby,
+	Utensils,
+	PieChart,
+	Wine,
+	TrendingUp,
+} from 'lucide-react';
 
 const getCalculators = (t: any) => [
 	{
@@ -31,6 +39,13 @@ const getCalculators = (t: any) => [
 		description: t('calculators.pregnancy.description'),
 		icon: Baby,
 		href: '/life/pregnancy',
+	},
+	{
+		id: 'baby-growth',
+		title: t('calculators.babyGrowth.title'),
+		description: t('calculators.babyGrowth.description'),
+		icon: TrendingUp,
+		href: '/life/baby-growth',
 	},
 	{
 		id: 'blood-alcohol',
