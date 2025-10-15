@@ -1,21 +1,63 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
 
-interface BreadcrumbItem {
-	label: string;
-	href?: string;
-}
-
-interface BreadcrumbsProps {
-	items: BreadcrumbItem[];
-}
-
-export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+export default function Breadcrumbs() {
 	const t = useTranslations();
 	const locale = useLocale();
+	const pathname = usePathname();
+
+	// Определяем хлебные крошки на основе пути
+	const getBreadcrumbs = () => {
+		const segments = pathname.split('/').filter(Boolean);
+		const breadcrumbs = [];
+
+		// Если только locale или пустой путь - не показываем хлебные крошки
+		if (segments.length <= 1) {
+			return [];
+		}
+
+		// Обрабатываем сегменты пути (пропускаем locale)
+		let currentPath = '';
+		segments.forEach((segment, index) => {
+			// Пропускаем locale (первый сегмент)
+			if (index === 0 && ['ru', 'en', 'de', 'es'].includes(segment)) {
+				return;
+			}
+
+			currentPath += `/${segment}`;
+
+			// Определяем название для сегмента
+			let label = segment;
+			if (segment === 'life') {
+				label = t('categories.life.title');
+			} else if (segment === 'blood-alcohol') {
+				label = t('calculators.bloodAlcohol.title');
+			} else if (segment === 'calc') {
+				label = t('categories.calculators.title');
+			}
+
+			// Последний элемент не должен быть ссылкой
+			const isLast = index === segments.length - 1;
+			breadcrumbs.push({
+				label,
+				href: isLast ? undefined : currentPath,
+			});
+		});
+
+		// Добавляем главную страницу в начало
+		breadcrumbs.unshift({
+			label: t('breadcrumbs.home'),
+			href: '/',
+		});
+
+		return breadcrumbs;
+	};
+
+	const items = getBreadcrumbs();
 
 	return (
 		<nav className='bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8'>

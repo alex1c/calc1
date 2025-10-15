@@ -1864,6 +1864,119 @@
 				}
 			}
 		},
+		"bloodAlcohol": {
+			"title": "Blood Alcohol Calculator — BAC and Elimination Time",
+			"description": "Online BAC calculator to calculate blood alcohol concentration and complete elimination time",
+			"breadcrumbs": {
+				"category": "Life"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"gender": "Gender",
+				"male": "Male",
+				"female": "Female",
+				"weight": "Body Weight",
+				"volume": "Drink Volume",
+				"strength": "Alcohol Strength",
+				"startTime": "Start Time",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"calculationError": "Calculation error"
+				}
+			},
+			"result": {
+				"title": "Calculation Result",
+				"bac": "Blood Alcohol Concentration",
+				"state": "State",
+				"eliminationTime": "Elimination Time",
+				"copy": "Copy Results",
+				"share": "Share"
+			},
+			"warning": {
+				"title": "Important Warning",
+				"content": "This calculator provides approximate calculations. Actual values may differ depending on individual body characteristics, food intake, medications, and other factors. Do not use results for driving decisions."
+			},
+			"info": {
+				"title": "About the Calculator",
+				"formula": "Calculation is based on the Widmark formula, which takes into account gender, weight, and amount of alcohol consumed.",
+				"elimination": "Alcohol elimination rate is approximately 0.15‰ per hour.",
+				"accuracy": "Results are approximate and may differ from actual values."
+			},
+			"hero": {
+				"accuracy": "95%",
+				"accuracyDesc": "Calculation accuracy",
+				"speed": "0.15‰/h",
+				"speedDesc": "Elimination rate",
+				"safety": "0.5‰",
+				"safetyDesc": "Safe limit"
+			},
+			"features": {
+				"bacCalculation": "Blood alcohol concentration calculation",
+				"eliminationTime": "Complete elimination time",
+				"stateDetection": "Intoxication state detection",
+				"safetyWarning": "Safety warnings"
+			},
+			"seo": {
+				"title": "Blood Alcohol Calculator — Calculate BAC Online",
+				"description": "Online BAC calculator to calculate blood alcohol concentration and complete elimination time. Widmark formula, BAC state table, driving safety.",
+				"keywords": "blood alcohol calculator, BAC, elimination time, Widmark formula, driving safety, blood alcohol level",
+				"overview": {
+					"title": "About BAC Calculator",
+					"content": "Blood alcohol calculator is a tool for approximate calculation of blood alcohol concentration (BAC) and its elimination time from the body. The calculator uses scientifically based Widmark formula and takes into account individual human parameters."
+				},
+				"calculation": {
+					"title": "How BAC is Calculated",
+					"content": "Calculation is based on the Widmark formula, which takes into account the amount of pure alcohol, body weight, and alcohol distribution coefficient in the body.",
+					"formula": "Widmark Formula",
+					"variables": {
+						"alcohol": "amount of pure alcohol in grams",
+						"ratio": "distribution coefficient (men: 0.7, women: 0.6)",
+						"weight": "body weight in grams"
+					}
+				},
+				"elimination": {
+					"title": "Alcohol Elimination Time",
+					"content": "Alcohol is eliminated from the body at a constant rate of approximately 0.15‰ per hour. This value may vary depending on individual characteristics.",
+					"rate": "Elimination Rate",
+					"rateDescription": "Average alcohol elimination rate is 0.15‰ per hour",
+					"factors": "Influencing Factors",
+					"factorsDescription": "Elimination rate is influenced by age, gender, weight, liver condition, and other factors"
+				},
+				"safety": {
+					"title": "Safety and Driving",
+					"content": "Driving under the influence of alcohol is extremely dangerous and prohibited by law. Even small amounts of alcohol can significantly impair reaction and coordination.",
+					"warning": "Warning",
+					"warningContent": "Never drive after consuming alcohol. Even if the calculation shows an acceptable level, your reaction may be slowed."
+				},
+				"bacTable": {
+					"title": "BAC State Table",
+					"level": "Level (‰)",
+					"state": "State",
+					"description": "Description"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"howToCalculate": {
+						"question": "How to calculate BAC?",
+						"answer": "Enter your gender, weight, volume, and strength of the consumed drink. The calculator will automatically calculate blood alcohol concentration using the Widmark formula."
+					},
+					"eliminationTime": {
+						"question": "How long until alcohol is completely eliminated?",
+						"answer": "Complete elimination time depends on BAC level. At an elimination rate of 0.15‰ per hour, alcohol is completely eliminated in 6-8 hours at 1‰ level."
+					},
+					"accuracy": {
+						"question": "Why is the calculation approximate?",
+						"answer": "Blood alcohol concentration is influenced by many factors: absorption rate, food intake, medications, health condition. The Widmark formula provides an approximate estimate."
+					},
+					"legalLimit": {
+						"question": "What is the legal driving limit?",
+						"answer": "In most countries, the legal limit is 0.5‰, in some — 0.0‰. However, even small amounts of alcohol can impair reaction."
+					}
+				}
+			}
+		},
 		"pregnancy": {
 			"title": "Pregnancy and Due Date Calculator",
 			"description": "Calculate pregnancy duration and estimated due date based on last menstrual period, conception, or IVF",

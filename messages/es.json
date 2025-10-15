@@ -1549,6 +1549,119 @@
 				}
 			}
 		},
+		"bloodAlcohol": {
+			"title": "Calculadora de Alcohol en Sangre — BAC y Tiempo de Eliminación",
+			"description": "Calculadora online de BAC para calcular la concentración de alcohol en sangre y tiempo de eliminación completa",
+			"breadcrumbs": {
+				"category": "Vida"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"gender": "Género",
+				"male": "Hombre",
+				"female": "Mujer",
+				"weight": "Peso Corporal",
+				"volume": "Volumen de Bebida",
+				"strength": "Graduación Alcohólica",
+				"startTime": "Hora de Inicio",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Reiniciar",
+				"errors": {
+					"calculationError": "Error de cálculo"
+				}
+			},
+			"result": {
+				"title": "Resultado del Cálculo",
+				"bac": "Concentración de Alcohol en Sangre",
+				"state": "Estado",
+				"eliminationTime": "Tiempo de Eliminación",
+				"copy": "Copiar Resultados",
+				"share": "Compartir"
+			},
+			"warning": {
+				"title": "Advertencia Importante",
+				"content": "Esta calculadora proporciona cálculos aproximados. Los valores reales pueden diferir dependiendo de las características individuales del cuerpo, ingesta de alimentos, medicamentos y otros factores. No use los resultados para decisiones de conducción."
+			},
+			"info": {
+				"title": "Sobre la Calculadora",
+				"formula": "El cálculo se basa en la fórmula de Widmark, que tiene en cuenta el género, peso y cantidad de alcohol consumido.",
+				"elimination": "La tasa de eliminación de alcohol es aproximadamente 0.15‰ por hora.",
+				"accuracy": "Los resultados son aproximados y pueden diferir de los valores reales."
+			},
+			"hero": {
+				"accuracy": "95%",
+				"accuracyDesc": "Precisión del cálculo",
+				"speed": "0.15‰/h",
+				"speedDesc": "Tasa de eliminación",
+				"safety": "0.5‰",
+				"safetyDesc": "Límite seguro"
+			},
+			"features": {
+				"bacCalculation": "Cálculo de concentración de alcohol en sangre",
+				"eliminationTime": "Tiempo de eliminación completa",
+				"stateDetection": "Detección de estado de intoxicación",
+				"safetyWarning": "Advertencias de seguridad"
+			},
+			"seo": {
+				"title": "Calculadora de Alcohol en Sangre — Calcular BAC Online",
+				"description": "Calculadora online de BAC para calcular la concentración de alcohol en sangre y tiempo de eliminación completa. Fórmula de Widmark, tabla de estados BAC, seguridad al conducir.",
+				"keywords": "calculadora de alcohol en sangre, BAC, tiempo de eliminación, fórmula de Widmark, seguridad al conducir, nivel de alcohol en sangre",
+				"overview": {
+					"title": "Sobre la Calculadora BAC",
+					"content": "La calculadora de alcohol en sangre es una herramienta para el cálculo aproximado de la concentración de alcohol en sangre (BAC) y su tiempo de eliminación del cuerpo. La calculadora utiliza la fórmula científicamente basada de Widmark y tiene en cuenta los parámetros individuales humanos."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el BAC",
+					"content": "El cálculo se basa en la fórmula de Widmark, que tiene en cuenta la cantidad de alcohol puro, peso corporal y coeficiente de distribución del alcohol en el cuerpo.",
+					"formula": "Fórmula de Widmark",
+					"variables": {
+						"alcohol": "cantidad de alcohol puro en gramos",
+						"ratio": "coeficiente de distribución (hombres: 0.7, mujeres: 0.6)",
+						"weight": "peso corporal en gramos"
+					}
+				},
+				"elimination": {
+					"title": "Tiempo de Eliminación del Alcohol",
+					"content": "El alcohol se elimina del cuerpo a una tasa constante de aproximadamente 0.15‰ por hora. Este valor puede variar dependiendo de las características individuales.",
+					"rate": "Tasa de Eliminación",
+					"rateDescription": "La tasa promedio de eliminación de alcohol es 0.15‰ por hora",
+					"factors": "Factores Influyentes",
+					"factorsDescription": "La tasa de eliminación está influenciada por la edad, género, peso, condición del hígado y otros factores"
+				},
+				"safety": {
+					"title": "Seguridad y Conducción",
+					"content": "Conducir bajo la influencia del alcohol es extremadamente peligroso y está prohibido por la ley. Incluso pequeñas cantidades de alcohol pueden deteriorar significativamente la reacción y coordinación.",
+					"warning": "Advertencia",
+					"warningContent": "Nunca conduzca después de consumir alcohol. Incluso si el cálculo muestra un nivel aceptable, su reacción puede estar ralentizada."
+				},
+				"bacTable": {
+					"title": "Tabla de Estados BAC",
+					"level": "Nivel (‰)",
+					"state": "Estado",
+					"description": "Descripción"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"howToCalculate": {
+						"question": "¿Cómo calcular el BAC?",
+						"answer": "Ingrese su género, peso, volumen y graduación de la bebida consumida. La calculadora calculará automáticamente la concentración de alcohol en sangre usando la fórmula de Widmark."
+					},
+					"eliminationTime": {
+						"question": "¿Cuánto tiempo hasta que el alcohol se elimine completamente?",
+						"answer": "El tiempo de eliminación completa depende del nivel de BAC. A una tasa de eliminación de 0.15‰ por hora, el alcohol se elimina completamente en 6-8 horas a nivel 1‰."
+					},
+					"accuracy": {
+						"question": "¿Por qué el cálculo es aproximado?",
+						"answer": "La concentración de alcohol en sangre está influenciada por muchos factores: tasa de absorción, ingesta de alimentos, medicamentos, condición de salud. La fórmula de Widmark proporciona una estimación aproximada."
+					},
+					"legalLimit": {
+						"question": "¿Cuál es el límite legal para conducir?",
+						"answer": "En la mayoría de países, el límite legal es 0.5‰, en algunos — 0.0‰. Sin embargo, incluso pequeñas cantidades de alcohol pueden deteriorar la reacción."
+					}
+				}
+			}
+		},
 		"pregnancy": {
 			"title": "Calculadora de Embarazo y Fecha de Parto",
 			"description": "Calcular duración del embarazo y fecha estimada de parto basada en último período menstrual, concepción o FIV",

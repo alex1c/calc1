@@ -1549,6 +1549,119 @@
 				}
 			}
 		},
+		"bloodAlcohol": {
+			"title": "Blutalkoholrechner — BAC und Eliminationszeit",
+			"description": "Online BAC-Rechner zur Berechnung der Blutalkoholkonzentration und vollständigen Eliminationszeit",
+			"breadcrumbs": {
+				"category": "Leben"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"gender": "Geschlecht",
+				"male": "Mann",
+				"female": "Frau",
+				"weight": "Körpergewicht",
+				"volume": "Getränkevolumen",
+				"strength": "Alkoholstärke",
+				"startTime": "Startzeit",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"calculationError": "Berechnungsfehler"
+				}
+			},
+			"result": {
+				"title": "Berechnungsergebnis",
+				"bac": "Blutalkoholkonzentration",
+				"state": "Zustand",
+				"eliminationTime": "Eliminationszeit",
+				"copy": "Ergebnisse kopieren",
+				"share": "Teilen"
+			},
+			"warning": {
+				"title": "Wichtige Warnung",
+				"content": "Dieser Rechner liefert ungefähre Berechnungen. Die tatsächlichen Werte können je nach individuellen Körpermerkmalen, Nahrungsaufnahme, Medikamenten und anderen Faktoren variieren. Verwenden Sie die Ergebnisse nicht für Fahrzeugentscheidungen."
+			},
+			"info": {
+				"title": "Über den Rechner",
+				"formula": "Die Berechnung basiert auf der Widmark-Formel, die Geschlecht, Gewicht und konsumierte Alkoholmenge berücksichtigt.",
+				"elimination": "Die Alkoholeliminationsrate beträgt etwa 0,15‰ pro Stunde.",
+				"accuracy": "Die Ergebnisse sind ungefähr und können von den tatsächlichen Werten abweichen."
+			},
+			"hero": {
+				"accuracy": "95%",
+				"accuracyDesc": "Berechnungsgenauigkeit",
+				"speed": "0,15‰/h",
+				"speedDesc": "Eliminationsrate",
+				"safety": "0,5‰",
+				"safetyDesc": "Sicherheitsgrenze"
+			},
+			"features": {
+				"bacCalculation": "Blutalkoholkonzentrationsberechnung",
+				"eliminationTime": "Vollständige Eliminationszeit",
+				"stateDetection": "Rauschzustandserkennung",
+				"safetyWarning": "Sicherheitswarnungen"
+			},
+			"seo": {
+				"title": "Blutalkoholrechner — BAC Online berechnen",
+				"description": "Online BAC-Rechner zur Berechnung der Blutalkoholkonzentration und vollständigen Eliminationszeit. Widmark-Formel, BAC-Zustandstabelle, Fahrsicherheit.",
+				"keywords": "Blutalkoholrechner, BAC, Eliminationszeit, Widmark-Formel, Fahrsicherheit, Blutalkoholspiegel",
+				"overview": {
+					"title": "Über den BAC-Rechner",
+					"content": "Der Blutalkoholrechner ist ein Tool zur ungefähren Berechnung der Blutalkoholkonzentration (BAC) und ihrer Eliminationszeit aus dem Körper. Der Rechner verwendet die wissenschaftlich fundierte Widmark-Formel und berücksichtigt individuelle menschliche Parameter."
+				},
+				"calculation": {
+					"title": "Wie BAC berechnet wird",
+					"content": "Die Berechnung basiert auf der Widmark-Formel, die die Menge reinen Alkohols, Körpergewicht und Alkoholverteilungskoeffizient im Körper berücksichtigt.",
+					"formula": "Widmark-Formel",
+					"variables": {
+						"alcohol": "Menge reinen Alkohols in Gramm",
+						"ratio": "Verteilungskoeffizient (Männer: 0,7, Frauen: 0,6)",
+						"weight": "Körpergewicht in Gramm"
+					}
+				},
+				"elimination": {
+					"title": "Alkoholeliminationszeit",
+					"content": "Alkohol wird mit einer konstanten Rate von etwa 0,15‰ pro Stunde aus dem Körper eliminiert. Dieser Wert kann je nach individuellen Merkmalen variieren.",
+					"rate": "Eliminationsrate",
+					"rateDescription": "Die durchschnittliche Alkoholeliminationsrate beträgt 0,15‰ pro Stunde",
+					"factors": "Einflussfaktoren",
+					"factorsDescription": "Die Eliminationsrate wird von Alter, Geschlecht, Gewicht, Leberzustand und anderen Faktoren beeinflusst"
+				},
+				"safety": {
+					"title": "Sicherheit und Fahren",
+					"content": "Das Fahren unter Alkoholeinfluss ist extrem gefährlich und gesetzlich verboten. Selbst kleine Alkoholmengen können Reaktion und Koordination erheblich beeinträchtigen.",
+					"warning": "Warnung",
+					"warningContent": "Fahren Sie niemals nach Alkoholkonsum. Auch wenn die Berechnung einen akzeptablen Wert zeigt, kann Ihre Reaktion verlangsamt sein."
+				},
+				"bacTable": {
+					"title": "BAC-Zustandstabelle",
+					"level": "Niveau (‰)",
+					"state": "Zustand",
+					"description": "Beschreibung"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"howToCalculate": {
+						"question": "Wie berechnet man BAC?",
+						"answer": "Geben Sie Ihr Geschlecht, Gewicht, Volumen und Stärke des konsumierten Getränks ein. Der Rechner berechnet automatisch die Blutalkoholkonzentration mit der Widmark-Formel."
+					},
+					"eliminationTime": {
+						"question": "Wie lange dauert es, bis Alkohol vollständig eliminiert ist?",
+						"answer": "Die vollständige Eliminationszeit hängt vom BAC-Niveau ab. Bei einer Eliminationsrate von 0,15‰ pro Stunde wird Alkohol bei 1‰-Niveau in 6-8 Stunden vollständig eliminiert."
+					},
+					"accuracy": {
+						"question": "Warum ist die Berechnung ungefähr?",
+						"answer": "Die Blutalkoholkonzentration wird von vielen Faktoren beeinflusst: Absorptionsrate, Nahrungsaufnahme, Medikamente, Gesundheitszustand. Die Widmark-Formel liefert eine ungefähre Schätzung."
+					},
+					"legalLimit": {
+						"question": "Was ist die gesetzliche Fahrgrenze?",
+						"answer": "In den meisten Ländern beträgt die gesetzliche Grenze 0,5‰, in einigen — 0,0‰. Jedoch können selbst kleine Alkoholmengen die Reaktion beeinträchtigen."
+					}
+				}
+			}
+		},
 		"pregnancy": {
 			"title": "Schwangerschafts- und Geburtsterminrechner",
 			"description": "Schwangerschaftsdauer und voraussichtlichen Geburtstermin basierend auf letzter Menstruation, Empfängnis oder IVF berechnen",
