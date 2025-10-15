@@ -606,6 +606,278 @@
 				}
 			}
 		},
+		"statistics": {
+			"title": "Statistikrechner",
+			"description": "Berechnen Sie Mittelwert, Median, Varianz und mehr online",
+			"breadcrumbs": {
+				"category": "Mathematik"
+			},
+			"form": {
+				"title": "Daten eingeben",
+				"inputLabel": "Zahlen",
+				"placeholder": "Geben Sie Zahlen durch Kommas oder Leerzeichen getrennt ein",
+				"hint": "Beispiel: 1, 2, 3, 4, 5 oder 1 2 3 4 5",
+				"calculate": "Berechnen",
+				"clear": "Löschen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"mean": "Mittelwert",
+				"median": "Median",
+				"mode": "Modus",
+				"variance": "Varianz",
+				"standardDeviation": "Standardabweichung",
+				"min": "Minimum",
+				"max": "Maximum",
+				"count": "Anzahl",
+				"sum": "Summe",
+				"noMode": "Kein Modus"
+			},
+			"seo": {
+				"title": "Statistikrechner Online - Mittelwert, Median, Varianz | Calc1.ru",
+				"description": "Kostenloser Online-Rechner für statistische Maße: Mittelwert, Median, Modus, Varianz, Standardabweichung. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+				"breadcrumbs": {
+					"home": "Startseite",
+					"math": "Mathematik"
+				},
+				"overview": {
+					"title": "Online-Statistikrechner",
+					"content": "Unser Rechner ermöglicht es Ihnen, schnell grundlegende statistische Maße zu berechnen: arithmetisches Mittel, Median, Modus, Varianz und Standardabweichung. Geben Sie einfach Zahlen durch Kommas oder Leerzeichen getrennt ein und erhalten Sie eine vollständige statistische Analyse."
+				},
+				"mean": {
+					"title": "Arithmetisches Mittel",
+					"content": "Das arithmetische Mittel ist die Summe aller Werte geteilt durch ihre Anzahl. Dies ist eines der wichtigsten Maße der zentralen Tendenz.",
+					"formula": "Mittelwert = Σx / n",
+					"exampleTitle": "Beispiel",
+					"example": "Für Zahlen 1, 2, 3, 4, 5: Mittelwert = (1+2+3+4+5)/5 = 3"
+				},
+				"median": {
+					"title": "Median",
+					"content": "Der Median ist der Wert, der eine geordnete Reihe in zwei Hälften teilt. Wenn die Anzahl der Elemente gerade ist, ist der Median das arithmetische Mittel der beiden zentralen Werte.",
+					"formula": "Median = mittlerer Wert der geordneten Reihe",
+					"exampleTitle": "Beispiel",
+					"example": "Für Zahlen 1, 2, 3, 4, 5: Median = 3. Für Zahlen 1, 2, 3, 4: Median = (2+3)/2 = 2.5"
+				},
+				"mode": {
+					"title": "Modus",
+					"content": "Der Modus ist der Wert, der in einer Datenreihe am häufigsten vorkommt. Eine Reihe kann mehrere Modi haben oder keinen Modus.",
+					"formula": "Modus = am häufigsten vorkommender Wert",
+					"exampleTitle": "Beispiel",
+					"example": "Für Zahlen 1, 2, 2, 3, 4: Modus = 2. Für Zahlen 1, 2, 3, 4: kein Modus"
+				},
+				"variance": {
+					"title": "Varianz",
+					"content": "Die Varianz zeigt, wie stark die Werte vom Mittelwert abweichen. Je größer die Varianz, desto größer ist die Streuung der Daten.",
+					"formula": "Varianz = Σ(x - Mittelwert)² / n",
+					"exampleTitle": "Beispiel",
+					"example": "Für Zahlen 1, 2, 3, 4, 5: Varianz = ((1-3)² + (2-3)² + (3-3)² + (4-3)² + (5-3)²) / 5 = 2"
+				},
+				"standardDeviation": {
+					"title": "Standardabweichung",
+					"content": "Die Standardabweichung ist die Quadratwurzel der Varianz. Sie zeigt die durchschnittliche Abweichung der Werte vom arithmetischen Mittel.",
+					"formula": "Standardabweichung = √Varianz",
+					"exampleTitle": "Beispiel",
+					"example": "Für Zahlen 1, 2, 3, 4, 5: Standardabweichung = √2 ≈ 1.41"
+				},
+				"applications": {
+					"title": "Anwendungen der Statistik",
+					"content": "Statistische Berechnungen werden in verschiedenen Bereichen weit verbreitet verwendet:",
+					"items": [
+						"Datenanalyse in Wirtschaft und Ökonomie",
+						"Wissenschaftliche Forschung und Experimente",
+						"Qualitätskontrolle von Produkten",
+						"Medizinische Forschung",
+						"Soziologische Umfragen",
+						"Finanzanalyse und Investitionen",
+						"Bildung und Pädagogik",
+						"Sportstatistiken"
+					]
+				},
+				"advantages": {
+					"title": "Rechner-Vorteile",
+					"content": "Unser Online-Statistikrechner bietet schnelle und präzise Berechnungen mit detaillierten Ergebnissen.",
+					"items": [
+						"Sofortige Berechnung aller grundlegenden statistischen Maße",
+						"Unterstützung für Eingabe von Zahlen durch Kommas oder Leerzeichen getrennt",
+						"Schöne Ergebnisanzeige mit Farbkodierung",
+						"Unterstützung für 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+						"Responsive Design für alle Geräte",
+						"Völlig kostenlos ohne Registrierung",
+						"Präzise Berechnungen mit konfigurierbarer Genauigkeit"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Statistikrechner",
+					"content": "Der Online-Statistikrechner auf Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Berechnen Sie Mittelwert, Median, Varianz und andere Maße kostenlos!"
+				},
+				"faq": {
+					"question1": "Wie berechnet man statistische Maße?",
+					"answer1": "Geben Sie Zahlen durch Kommas oder Leerzeichen getrennt in das Eingabefeld ein und klicken Sie auf die Schaltfläche 'Berechnen'. Der Rechner berechnet automatisch alle grundlegenden statistischen Maße: Mittelwert, Median, Modus, Varianz und Standardabweichung.",
+					"question2": "Was sind Varianz und Standardabweichung?",
+					"answer2": "Die Varianz zeigt die Streuung der Daten relativ zum Mittelwert. Die Standardabweichung ist die Quadratwurzel der Varianz und zeigt die durchschnittliche Abweichung der Werte vom arithmetischen Mittel.",
+					"question3": "Was ist der Unterschied zwischen Mittelwert und Median?",
+					"answer3": "Das arithmetische Mittel ist die Summe aller Werte geteilt durch ihre Anzahl. Der Median ist der Wert, der eine geordnete Reihe in zwei Hälften teilt. Der Median ist robuster gegenüber Ausreißern als der Mittelwert."
+				}
+			}
+		},
+		"converter": {
+			"title": "Einheitenumrechner",
+			"description": "Konvertieren Sie Länge, Masse, Zeit und Volumen einfach online",
+			"breadcrumbs": {
+				"category": "Mathematik"
+			},
+			"form": {
+				"title": "Einheitenumrechner",
+				"selectCategory": "Kategorie auswählen",
+				"categories": {
+					"length": "Länge",
+					"mass": "Masse",
+					"time": "Zeit",
+					"volume": "Volumen"
+				},
+				"fromUnit": "Von Einheit",
+				"toUnit": "Zu Einheit",
+				"value": "Wert",
+				"selectUnit": "Einheit auswählen",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Umrechnungsergebnis",
+				"conversionInfo": "Umrechnungsfaktor"
+			},
+			"units": {
+				"length": {
+					"m": "Meter (m)",
+					"km": "Kilometer (km)",
+					"cm": "Zentimeter (cm)",
+					"mm": "Millimeter (mm)",
+					"inch": "Zoll (in)",
+					"foot": "Fuß (ft)",
+					"yard": "Yard (yd)",
+					"mile": "Meile (mi)"
+				},
+				"mass": {
+					"kg": "Kilogramm (kg)",
+					"g": "Gramm (g)",
+					"mg": "Milligramm (mg)",
+					"tonne": "Tonne (t)",
+					"lb": "Pfund (lb)",
+					"oz": "Unze (oz)"
+				},
+				"time": {
+					"second": "Sekunde (s)",
+					"minute": "Minute (min)",
+					"hour": "Stunde (h)",
+					"day": "Tag (d)",
+					"week": "Woche (w)"
+				},
+				"volume": {
+					"l": "Liter (l)",
+					"ml": "Milliliter (ml)",
+					"m3": "Kubikmeter (m³)",
+					"cm3": "Kubikzentimeter (cm³)",
+					"gallon": "Gallone (gal)",
+					"pint": "Pinte (pt)"
+				}
+			},
+			"seo": {
+				"title": "Einheitenumrechner Online - Länge, Masse, Zeit, Volumen | Calc1.ru",
+				"description": "Kostenloser Online-Einheitenumrechner für Länge, Masse, Zeit und Volumen. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+				"breadcrumbs": {
+					"home": "Startseite",
+					"math": "Mathematik"
+				},
+				"overview": {
+					"title": "Online-Einheitenumrechner",
+					"content": "Unser Umrechner ermöglicht es Ihnen, schnell und präzise zwischen verschiedenen Maßeinheiten umzurechnen: Länge, Masse, Zeit und Volumen. Wählen Sie einfach die Kategorie, die Einheiten und geben Sie den Wert ein für sofortige Ergebnisse."
+				},
+				"length": {
+					"title": "Längen-Umrechnung",
+					"content": "Rechnen Sie zwischen metrischen und imperialen Längeneinheiten um. Alle wichtigen Einheiten von Millimetern bis Meilen werden unterstützt.",
+					"units": [
+						"Metrisches System: mm, cm, m, km",
+						"Imperiales System: Zoll, Fuß, Yards, Meilen",
+						"Präzise Umrechnungsfaktoren",
+						"Unterstützung für wissenschaftliche Berechnungen"
+					]
+				},
+				"mass": {
+					"title": "Massen-Umrechnung",
+					"content": "Rechnen Sie zwischen verschiedenen Massen- und Gewichtseinheiten um. Von Milligramm bis Tonnen, einschließlich imperialer Einheiten.",
+					"units": [
+						"Metrisches System: mg, g, kg, t",
+						"Imperiales System: Unzen, Pfund",
+						"Präzise Umrechnungsfaktoren",
+						"Unterstützung für kulinarische Messungen"
+					]
+				},
+				"time": {
+					"title": "Zeit-Umrechnung",
+					"content": "Rechnen Sie zwischen verschiedenen Zeiteinheiten um. Von Sekunden bis Wochen mit präzisen Berechnungen.",
+					"units": [
+						"Grundlegende Einheiten: Sekunden, Minuten, Stunden",
+						"Langfristig: Tage, Wochen",
+						"Präzise Zeitberechnungen",
+						"Unterstützung für Planung"
+					]
+				},
+				"volume": {
+					"title": "Volumen-Umrechnung",
+					"content": "Rechnen Sie zwischen verschiedenen Volumeneinheiten um. Von Millilitern bis Kubikmetern und imperialen Einheiten.",
+					"units": [
+						"Metrisches System: ml, l, m³, cm³",
+						"Imperiales System: Pints, Gallonen",
+						"Präzise Volumenberechnungen",
+						"Unterstützung für Flüssigkeiten und Gase"
+					]
+				},
+				"applications": {
+					"title": "Umrechner-Anwendungen",
+					"content": "Einheitenumrechner werden in verschiedenen Bereichen weit verbreitet verwendet:",
+					"items": [
+						"Wissenschaftliche Forschung und Experimente",
+						"Ingenieurberechnungen und Design",
+						"Kochen und Rezepte",
+						"Reisen und Navigation",
+						"Bildung und Lernen",
+						"Medizin und Pharmazie",
+						"Bauwesen und Architektur",
+						"Sport und Fitness"
+					]
+				},
+				"advantages": {
+					"title": "Umrechner-Vorteile",
+					"content": "Unser Online-Einheitenumrechner bietet schnelle und präzise Umrechnungen mit einer benutzerfreundlichen Oberfläche.",
+					"items": [
+						"Sofortige Echtzeit-Umrechnung",
+						"Unterstützung für 4 Einheitenkategorien",
+						"Präzise Umrechnungsfaktoren",
+						"Unterstützung für 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+						"Responsive Design für alle Geräte",
+						"Völlig kostenlos ohne Registrierung",
+						"Intuitive Benutzeroberfläche"
+					]
+				},
+				"onlineConverter": {
+					"title": "Online-Einheitenumrechner",
+					"content": "Online-Einheitenumrechner auf Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Konvertieren Sie Länge, Masse, Zeit und Volumen kostenlos!"
+				},
+				"faq": {
+					"question1": "Wie verwendet man den Einheitenumrechner?",
+					"answer1": "Wählen Sie die Einheitenkategorie (Länge, Masse, Zeit oder Volumen), dann wählen Sie die Quell- und Zieleinheiten, geben Sie den Wert ein, und das Ergebnis wird automatisch angezeigt.",
+					"question2": "Welche Maßeinheiten werden unterstützt?",
+					"answer2": "Der Umrechner unterstützt metrische und imperiale Einheiten für Länge, Masse, Zeit und Volumen. Alle wichtigen Einheiten von Millimetern bis Meilen, von Milligramm bis Tonnen.",
+					"question3": "Wie genau sind die Umrechnungsergebnisse?",
+					"answer3": "Alle Umrechnungsfaktoren basieren auf offiziellen internationalen Standards und bieten maximale Berechnungsgenauigkeit."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",

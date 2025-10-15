@@ -12,6 +12,8 @@ import {
 	Box,
 	Zap,
 	Equal,
+	BarChart3,
+	Ruler,
 } from 'lucide-react';
 
 // Note: Calculators array is now defined inside the component to access translations
@@ -62,6 +64,20 @@ export default function MathPage() {
 			description: t('calculators.equations.description'),
 			icon: Equal,
 			href: '/math/equations',
+		},
+		{
+			id: 'statistics',
+			title: t('calculators.statistics.title'),
+			description: t('calculators.statistics.description'),
+			icon: BarChart3,
+			href: '/math/statistics',
+		},
+		{
+			id: 'converter',
+			title: t('calculators.converter.title'),
+			description: t('calculators.converter.description'),
+			icon: Ruler,
+			href: '/math/converter',
 		},
 		{
 			id: 'trigonometry',

@@ -711,6 +711,278 @@
 				}
 			}
 		},
+		"statistics": {
+			"title": "Statistics Calculator",
+			"description": "Calculate mean, median, variance, and more easily online",
+			"breadcrumbs": {
+				"category": "Mathematics"
+			},
+			"form": {
+				"title": "Enter Data",
+				"inputLabel": "Numbers",
+				"placeholder": "Enter numbers separated by commas or spaces",
+				"hint": "Example: 1, 2, 3, 4, 5 or 1 2 3 4 5",
+				"calculate": "Calculate",
+				"clear": "Clear",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"mean": "Mean",
+				"median": "Median",
+				"mode": "Mode",
+				"variance": "Variance",
+				"standardDeviation": "Standard Deviation",
+				"min": "Minimum",
+				"max": "Maximum",
+				"count": "Count",
+				"sum": "Sum",
+				"noMode": "No Mode"
+			},
+			"seo": {
+				"title": "Statistics Calculator Online - Mean, Median, Variance | Calc1.ru",
+				"description": "Free online calculator for statistical measures: mean, median, mode, variance, standard deviation. Support for Russian, English, Spanish and German languages.",
+				"breadcrumbs": {
+					"home": "Home",
+					"math": "Mathematics"
+				},
+				"overview": {
+					"title": "Online Statistics Calculator",
+					"content": "Our calculator allows you to quickly calculate basic statistical measures: arithmetic mean, median, mode, variance and standard deviation. Simply enter numbers separated by commas or spaces, and get a complete statistical analysis."
+				},
+				"mean": {
+					"title": "Arithmetic Mean",
+					"content": "The arithmetic mean is the sum of all values divided by their count. This is one of the most important measures of central tendency.",
+					"formula": "Mean = Σx / n",
+					"exampleTitle": "Example",
+					"example": "For numbers 1, 2, 3, 4, 5: mean = (1+2+3+4+5)/5 = 3"
+				},
+				"median": {
+					"title": "Median",
+					"content": "The median is the value that divides an ordered series in half. If the number of elements is even, the median is the arithmetic mean of the two central values.",
+					"formula": "Median = middle value of ordered series",
+					"exampleTitle": "Example",
+					"example": "For numbers 1, 2, 3, 4, 5: median = 3. For numbers 1, 2, 3, 4: median = (2+3)/2 = 2.5"
+				},
+				"mode": {
+					"title": "Mode",
+					"content": "The mode is the value that appears most frequently in a data series. A series can have multiple modes or no mode at all.",
+					"formula": "Mode = most frequently occurring value",
+					"exampleTitle": "Example",
+					"example": "For numbers 1, 2, 2, 3, 4: mode = 2. For numbers 1, 2, 3, 4: no mode"
+				},
+				"variance": {
+					"title": "Variance",
+					"content": "Variance shows how much values deviate from the mean. The larger the variance, the greater the data spread.",
+					"formula": "Variance = Σ(x - mean)² / n",
+					"exampleTitle": "Example",
+					"example": "For numbers 1, 2, 3, 4, 5: variance = ((1-3)² + (2-3)² + (3-3)² + (4-3)² + (5-3)²) / 5 = 2"
+				},
+				"standardDeviation": {
+					"title": "Standard Deviation",
+					"content": "Standard deviation is the square root of variance. Shows the average deviation of values from the arithmetic mean.",
+					"formula": "Standard Deviation = √variance",
+					"exampleTitle": "Example",
+					"example": "For numbers 1, 2, 3, 4, 5: standard deviation = √2 ≈ 1.41"
+				},
+				"applications": {
+					"title": "Statistics Applications",
+					"content": "Statistical calculations are widely used in various fields:",
+					"items": [
+						"Data analysis in business and economics",
+						"Scientific research and experiments",
+						"Quality control of products",
+						"Medical research",
+						"Sociological surveys",
+						"Financial analysis and investments",
+						"Education and pedagogy",
+						"Sports statistics"
+					]
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Our online statistics calculator provides fast and accurate calculations with detailed results.",
+					"items": [
+						"Instant calculation of all basic statistical measures",
+						"Support for input numbers separated by commas or spaces",
+						"Beautiful result display with color coding",
+						"Support for 4 languages: Russian, English, Spanish, German",
+						"Responsive design for all devices",
+						"Completely free without registration",
+						"Accurate calculations with configurable precision"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Statistics Calculator",
+					"content": "Online statistics calculator on Calc1.ru supports Russian, English, Spanish and German languages. Calculate mean, median, variance and other measures for free!"
+				},
+				"faq": {
+					"question1": "How to calculate statistical measures?",
+					"answer1": "Enter numbers separated by commas or spaces in the input field and click the 'Calculate' button. The calculator will automatically compute all basic statistical measures: mean, median, mode, variance and standard deviation.",
+					"question2": "What are variance and standard deviation?",
+					"answer2": "Variance shows the spread of data relative to the mean value. Standard deviation is the square root of variance, showing the average deviation of values from the arithmetic mean.",
+					"question3": "What's the difference between mean and median?",
+					"answer3": "Arithmetic mean is the sum of all values divided by their count. Median is the value that divides an ordered series in half. Median is more robust to outliers than mean."
+				}
+			}
+		},
+		"converter": {
+			"title": "Unit Converter",
+			"description": "Convert length, mass, time, and volume easily online",
+			"breadcrumbs": {
+				"category": "Mathematics"
+			},
+			"form": {
+				"title": "Unit Converter",
+				"selectCategory": "Select category",
+				"categories": {
+					"length": "Length",
+					"mass": "Mass",
+					"time": "Time",
+					"volume": "Volume"
+				},
+				"fromUnit": "From unit",
+				"toUnit": "To unit",
+				"value": "Value",
+				"selectUnit": "Select unit",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"results": {
+				"title": "Conversion Result",
+				"conversionInfo": "Conversion factor"
+			},
+			"units": {
+				"length": {
+					"m": "meter (m)",
+					"km": "kilometer (km)",
+					"cm": "centimeter (cm)",
+					"mm": "millimeter (mm)",
+					"inch": "inch (in)",
+					"foot": "foot (ft)",
+					"yard": "yard (yd)",
+					"mile": "mile (mi)"
+				},
+				"mass": {
+					"kg": "kilogram (kg)",
+					"g": "gram (g)",
+					"mg": "milligram (mg)",
+					"tonne": "tonne (t)",
+					"lb": "pound (lb)",
+					"oz": "ounce (oz)"
+				},
+				"time": {
+					"second": "second (s)",
+					"minute": "minute (min)",
+					"hour": "hour (h)",
+					"day": "day (d)",
+					"week": "week (wk)"
+				},
+				"volume": {
+					"l": "liter (l)",
+					"ml": "milliliter (ml)",
+					"m3": "cubic meter (m³)",
+					"cm3": "cubic centimeter (cm³)",
+					"gallon": "gallon (gal)",
+					"pint": "pint (pt)"
+				}
+			},
+			"seo": {
+				"title": "Unit Converter Online - Length, Mass, Time, Volume | Calc1.ru",
+				"description": "Free online unit converter for length, mass, time, and volume. Support for Russian, English, Spanish and German languages.",
+				"breadcrumbs": {
+					"home": "Home",
+					"math": "Mathematics"
+				},
+				"overview": {
+					"title": "Online Unit Converter",
+					"content": "Our converter allows you to quickly and accurately convert between different units of measurement: length, mass, time, and volume. Simply select the category, units, and enter the value for instant results."
+				},
+				"length": {
+					"title": "Length Conversion",
+					"content": "Convert between metric and imperial units of length. All major units from millimeters to miles are supported.",
+					"units": [
+						"Metric system: mm, cm, m, km",
+						"Imperial system: inches, feet, yards, miles",
+						"Accurate conversion factors",
+						"Scientific calculation support"
+					]
+				},
+				"mass": {
+					"title": "Mass Conversion",
+					"content": "Convert between different units of mass and weight. From milligrams to tonnes, including imperial units.",
+					"units": [
+						"Metric system: mg, g, kg, t",
+						"Imperial system: ounces, pounds",
+						"Accurate conversion factors",
+						"Culinary measurement support"
+					]
+				},
+				"time": {
+					"title": "Time Conversion",
+					"content": "Convert between different units of time. From seconds to weeks with precise calculations.",
+					"units": [
+						"Basic units: seconds, minutes, hours",
+						"Long-term: days, weeks",
+						"Precise time calculations",
+						"Planning support"
+					]
+				},
+				"volume": {
+					"title": "Volume Conversion",
+					"content": "Convert between different units of volume. From milliliters to cubic meters and imperial units.",
+					"units": [
+						"Metric system: ml, l, m³, cm³",
+						"Imperial system: pints, gallons",
+						"Accurate volume calculations",
+						"Liquid and gas support"
+					]
+				},
+				"applications": {
+					"title": "Converter Applications",
+					"content": "Unit converters are widely used in various fields:",
+					"items": [
+						"Scientific research and experiments",
+						"Engineering calculations and design",
+						"Cooking and recipes",
+						"Travel and navigation",
+						"Education and learning",
+						"Medicine and pharmacy",
+						"Construction and architecture",
+						"Sports and fitness"
+					]
+				},
+				"advantages": {
+					"title": "Converter Advantages",
+					"content": "Our online unit converter provides fast and accurate conversions with a user-friendly interface.",
+					"items": [
+						"Instant real-time conversion",
+						"Support for 4 unit categories",
+						"Accurate conversion factors",
+						"Support for 4 languages: Russian, English, Spanish, German",
+						"Responsive design for all devices",
+						"Completely free without registration",
+						"Intuitive interface"
+					]
+				},
+				"onlineConverter": {
+					"title": "Online Unit Converter",
+					"content": "Online unit converter on Calc1.ru supports Russian, English, Spanish and German languages. Convert length, mass, time and volume for free!"
+				},
+				"faq": {
+					"question1": "How to use the unit converter?",
+					"answer1": "Select the unit category (length, mass, time, or volume), then choose the source and target units, enter the value, and the result will appear automatically.",
+					"question2": "What units of measurement are supported?",
+					"answer2": "The converter supports metric and imperial units for length, mass, time, and volume. All major units from millimeters to miles, from milligrams to tonnes.",
+					"question3": "How accurate are the conversion results?",
+					"answer3": "All conversion factors are based on official international standards and provide maximum calculation accuracy."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",
