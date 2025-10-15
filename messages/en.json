@@ -1864,6 +1864,224 @@
 				}
 			}
 		},
+		"pregnancy": {
+			"title": "Pregnancy and Due Date Calculator",
+			"description": "Calculate pregnancy duration and estimated due date based on last menstrual period, conception, or IVF",
+			"breadcrumbs": {
+				"category": "Life"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"methodTitle": "Select calculation method",
+				"methods": {
+					"lmp": {
+						"title": "By last menstrual period date",
+						"description": "Most common method"
+					},
+					"conception": {
+						"title": "By conception date",
+						"description": "If you know the exact date"
+					},
+					"ivf": {
+						"title": "By IVF date",
+						"description": "For in vitro fertilization"
+					}
+				},
+				"dateLabels": {
+					"lmp": "Last menstrual period date",
+					"conception": "Conception date",
+					"ivf": "Embryo transfer date"
+				},
+				"methodInfo": {
+					"title": "Method information",
+					"lmp": "Calculation is based on standard pregnancy duration of 40 weeks (280 days) from the first day of the last menstrual period.",
+					"conception": "Calculation is based on pregnancy duration of 38 weeks (266 days) from the conception date.",
+					"ivf": "Calculation takes into account standard pregnancy duration with addition of 2 weeks to account for pregnancy age."
+				},
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data errors",
+					"dateRequired": "Please select a date",
+					"invalidDate": "Invalid date",
+					"calculationError": "Calculation error"
+				}
+			},
+			"results": {
+				"title": "Pregnancy calculation results",
+				"dueDate": "Estimated due date",
+				"dueDateRange": "Possible delivery range",
+				"currentWeek": "Current pregnancy duration",
+				"status": "Status",
+				"trimester": "Trimester",
+				"trimester1": "First trimester",
+				"trimester2": "Second trimester",
+				"trimester3": "Third trimester",
+				"daysRemaining": "Days until birth",
+				"days": "days",
+				"untilBirth": "until birth",
+				"overdue": "pregnancy overdue",
+				"copy": "Copy results",
+				"share": "Share"
+			},
+			"result": {
+				"title": "Pregnancy Calculation Result",
+				"dueDate": "Estimated Due Date",
+				"dueDateRange": "Possible Delivery Range",
+				"currentWeek": "Current Pregnancy Duration",
+				"status": "Status",
+				"trimester": "Trimester",
+				"trimester1": "First Trimester",
+				"trimester2": "Second Trimester",
+				"trimester3": "Third Trimester",
+				"trim": "trimester",
+				"daysRemaining": "Days Until Birth",
+				"days": "days",
+				"untilBirth": "until birth",
+				"overdue": "pregnancy overdue",
+				"copy": "Copy Results",
+				"share": "Share"
+			},
+			"hero": {
+				"weeks": "weeks",
+				"days": "days",
+				"trimesters": "trimesters"
+			},
+			"features": {
+				"lmpCalculation": "Calculation by Last Menstrual Period",
+				"conceptionCalculation": "Calculation by Conception Date",
+				"ivfCalculation": "Calculation by IVF Date",
+				"trimesterInfo": "Trimester Information",
+				"dueDateRange": "Possible Delivery Date Range"
+			},
+			"seo": {
+				"title": "Pregnancy and Due Date Calculator Online - Pregnancy Duration, Trimesters",
+				"description": "Free online pregnancy calculator will help determine pregnancy duration and estimated due date based on last menstrual period, conception, or IVF. Find out your trimester and how many days are left until birth.",
+				"keywords": "pregnancy calculator, due date, pregnancy duration, trimester, pregnancy by weeks, IVF pregnancy, conception date, last menstrual period",
+				"breadcrumbs": {
+					"life": "Life"
+				},
+				"overview": {
+					"title": "About the pregnancy calculator",
+					"content": "The pregnancy calculator is a convenient tool for determining pregnancy duration and estimated due date. It will help you track pregnancy development and plan important events."
+				},
+				"calculation": {
+					"title": "How pregnancy is calculated",
+					"content": "There are several ways to determine pregnancy duration, each with its own characteristics and accuracy:",
+					"steps": [
+						"Select calculation method (by menstruation, conception, or IVF)",
+						"Enter the corresponding date",
+						"Get result with estimated due date",
+						"Find out current pregnancy duration and trimester"
+					]
+				},
+				"methods": {
+					"title": "Pregnancy calculation methods",
+					"content": "There are several ways to determine pregnancy duration, each with its own characteristics and accuracy.",
+					"lmp": {
+						"title": "By last menstrual period date",
+						"accuracy": "Accuracy: ±7 days",
+						"description": "Most common method, based on standard pregnancy duration of 40 weeks"
+					},
+					"conception": {
+						"title": "By conception date",
+						"accuracy": "Accuracy: ±5 days",
+						"description": "More accurate method if the exact conception date is known"
+					},
+					"ivf": {
+						"title": "By IVF date",
+						"accuracy": "Accuracy: ±3 days",
+						"description": "Most accurate method for in vitro fertilization cases"
+					}
+				},
+				"trimesters": {
+					"title": "Pregnancy trimesters",
+					"content": "Pregnancy is traditionally divided into three trimesters, each with its own characteristics of fetal development:",
+					"firstTrimester": {
+						"title": "First trimester",
+						"weeks": "0-12 weeks",
+						"description": "Formation of major organs and systems of the fetus"
+					},
+					"secondTrimester": {
+						"title": "Second trimester",
+						"weeks": "13-26 weeks",
+						"description": "Active growth and development of the fetus"
+					},
+					"thirdTrimester": {
+						"title": "Third trimester",
+						"weeks": "27-40 weeks",
+						"description": "Preparation for childbirth and final development"
+					}
+				},
+				"advantages": {
+					"title": "Advantages of the Pregnancy Calculator",
+					"content": "Our pregnancy calculator offers many benefits:",
+					"accuracy": "High accuracy of calculations based on medical standards",
+					"multipleMethods": "Support for multiple calculation methods (LMP, conception, IVF)",
+					"detailedInfo": "Detailed information about pregnancy progress and trimesters",
+					"userFriendly": "Simple and intuitive interface",
+					"free": "Completely free to use"
+				},
+				"timeline": {
+					"title": "Pregnancy calendar by weeks",
+					"content": "Pregnancy is divided into three trimesters, each with its own characteristics of fetal development and changes in the mother's body.",
+					"firstTrimester": {
+						"title": "First trimester",
+						"weeks": "0-12 weeks",
+						"description": "Formation of major organs and systems of the fetus"
+					},
+					"secondTrimester": {
+						"title": "Second trimester",
+						"weeks": "13-26 weeks",
+						"description": "Active growth and development of the fetus"
+					},
+					"thirdTrimester": {
+						"title": "Third trimester",
+						"weeks": "27-40 weeks",
+						"description": "Preparation for childbirth and final development"
+					}
+				},
+				"tips": {
+					"title": "Useful tips for pregnant women",
+					"content": "During pregnancy, it's important to monitor your health, eat properly, engage in moderate physical activity, and visit your doctor regularly."
+				},
+				"accuracy": {
+					"title": "Due date calculation accuracy",
+					"content": "It's important to understand that the due date is approximate. Only 5% of women give birth exactly on the estimated date.",
+					"factors": [
+						"Individual body characteristics",
+						"First or repeat pregnancy",
+						"Multiple pregnancy",
+						"Mother's health condition",
+						"Genetic factors"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online pregnancy calculator",
+					"content": "Our free pregnancy calculator will help you determine pregnancy duration and estimated due date. Simply select calculation method, enter date and get detailed information about your pregnancy."
+				},
+				"faq": {
+					"title": "Frequently asked questions",
+					"howToCalculate": {
+						"question": "How to calculate pregnancy duration?",
+						"answer": "Pregnancy duration is calculated from the first day of the last menstrual period. The standard pregnancy duration is 40 weeks or 280 days."
+					},
+					"accuracy": {
+						"question": "How accurate is the due date?",
+						"answer": "The due date is approximate. Only 5% of women give birth exactly on the estimated date. Normal births are considered to occur between 37 and 42 weeks of pregnancy."
+					},
+					"factors": {
+						"question": "What affects pregnancy duration?",
+						"answer": "Pregnancy duration can be influenced by various factors: individual characteristics, health condition, lifestyle, and genetic factors."
+					},
+					"ivf": {
+						"question": "How to calculate pregnancy duration for IVF?",
+						"answer": "For IVF pregnancies, the calculation is based on the embryo transfer date. Add 266 days (38 weeks) to the transfer date to get the estimated due date."
+					}
+				}
+			}
+		},
 		"savings": {
 			"title": "Savings Calculator",
 			"description": "Calculate savings growth with compound interest and regular deposits",

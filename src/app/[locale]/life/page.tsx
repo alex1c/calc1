@@ -27,10 +27,10 @@ const getCalculators = (t: any) => [
 	},
 	{
 		id: 'pregnancy',
-		title: 'Pregnancy Calculator',
-		description: 'Track pregnancy progress and calculate due dates',
+		title: t('calculators.pregnancy.title'),
+		description: t('calculators.pregnancy.description'),
 		icon: Baby,
-		href: '/calc/pregnancy',
+		href: '/life/pregnancy',
 	},
 	{
 		id: 'home-budget',

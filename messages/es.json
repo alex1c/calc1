@@ -1549,6 +1549,195 @@
 				}
 			}
 		},
+		"pregnancy": {
+			"title": "Calculadora de Embarazo y Fecha de Parto",
+			"description": "Calcular duración del embarazo y fecha estimada de parto basada en último período menstrual, concepción o FIV",
+			"breadcrumbs": {
+				"category": "Vida"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"methodTitle": "Seleccione método de cálculo",
+				"methods": {
+					"lmp": {
+						"title": "Por fecha del último período menstrual",
+						"description": "Método más común"
+					},
+					"conception": {
+						"title": "Por fecha de concepción",
+						"description": "Si conoce la fecha exacta"
+					},
+					"ivf": {
+						"title": "Por fecha de FIV",
+						"description": "Para fertilización in vitro"
+					}
+				},
+				"dateLabels": {
+					"lmp": "Fecha del último período menstrual",
+					"conception": "Fecha de concepción",
+					"ivf": "Fecha de transferencia del embrión"
+				},
+				"methodInfo": {
+					"title": "Información del método",
+					"lmp": "El cálculo se basa en la duración estándar del embarazo de 40 semanas (280 días) desde el primer día del último período menstrual.",
+					"conception": "El cálculo se basa en la duración del embarazo de 38 semanas (266 días) desde la fecha de concepción.",
+					"ivf": "El cálculo tiene en cuenta la duración estándar del embarazo con la adición de 2 semanas para tener en cuenta la edad del embarazo."
+				},
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"errors": {
+					"title": "Errores de datos",
+					"dateRequired": "Por favor seleccione una fecha",
+					"invalidDate": "Fecha inválida",
+					"calculationError": "Error de cálculo"
+				}
+			},
+			"results": {
+				"title": "Resultados del cálculo de embarazo",
+				"dueDate": "Fecha estimada de parto",
+				"dueDateRange": "Rango posible de parto",
+				"currentWeek": "Duración actual del embarazo",
+				"status": "Estado",
+				"trimester": "Trimestre",
+				"trimester1": "Primer trimestre",
+				"trimester2": "Segundo trimestre",
+				"trimester3": "Tercer trimestre",
+				"daysRemaining": "Días hasta el parto",
+				"days": "días",
+				"untilBirth": "hasta el parto",
+				"overdue": "embarazo vencido",
+				"copy": "Copiar resultados",
+				"share": "Compartir"
+			},
+			"result": {
+				"title": "Resultado del Cálculo de Embarazo",
+				"dueDate": "Fecha Estimada de Parto",
+				"dueDateRange": "Rango Posible de Parto",
+				"currentWeek": "Duración Actual del Embarazo",
+				"status": "Estado",
+				"trimester": "Trimestre",
+				"trimester1": "Primer Trimestre",
+				"trimester2": "Segundo Trimestre",
+				"trimester3": "Tercer Trimestre",
+				"trim": "trimestre",
+				"daysRemaining": "Días Hasta el Parto",
+				"days": "días",
+				"untilBirth": "hasta el parto",
+				"overdue": "embarazo vencido",
+				"copy": "Copiar Resultados",
+				"share": "Compartir"
+			},
+			"hero": {
+				"weeks": "semanas",
+				"days": "días",
+				"trimesters": "trimestres"
+			},
+			"features": {
+				"lmpCalculation": "Cálculo por Último Período Menstrual",
+				"conceptionCalculation": "Cálculo por Fecha de Concepción",
+				"ivfCalculation": "Cálculo por Fecha de FIV",
+				"trimesterInfo": "Información de Trimestres",
+				"dueDateRange": "Rango de Fechas Posibles de Parto"
+			},
+			"seo": {
+				"title": "Calculadora de Embarazo y Fecha de Parto: Calcular Duración del Embarazo y Fecha Estimada de Parto",
+				"description": "La calculadora de embarazo en línea ayudará a determinar la duración del embarazo y la fecha estimada de parto basada en el último período menstrual, concepción o FIV.",
+				"overview": {
+					"title": "Acerca de la Calculadora de Embarazo",
+					"content": "Nuestra calculadora de embarazo te ayuda a determinar la duración de tu embarazo y la fecha estimada de parto. Simplemente ingresa la fecha de tu último período menstrual, fecha de concepción o fecha de FIV, y obtén cálculos precisos con información detallada sobre el progreso de tu embarazo."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula la Duración del Embarazo",
+					"content": "La duración del embarazo se calcula desde el primer día del último período menstrual (UPM). El embarazo estándar dura 280 días (40 semanas). Sin embargo, solo el 5% de las mujeres dan a luz exactamente en la fecha estimada. La mayoría de los partos ocurren dentro de 2 semanas antes o después de la fecha estimada."
+				},
+				"methods": {
+					"title": "Métodos de Cálculo del Embarazo",
+					"content": "Hay varias formas de determinar la duración del embarazo, cada una con sus propias características y precisión.",
+					"lmp": {
+						"title": "Por fecha del último período menstrual",
+						"accuracy": "Precisión: ±7 días",
+						"description": "Método más común, basado en la duración estándar del embarazo de 40 semanas"
+					},
+					"conception": {
+						"title": "Por fecha de concepción",
+						"accuracy": "Precisión: ±5 días",
+						"description": "Método más preciso si se conoce la fecha exacta de concepción"
+					},
+					"ivf": {
+						"title": "Por fecha de FIV",
+						"accuracy": "Precisión: ±3 días",
+						"description": "Método más preciso para casos de fertilización in vitro"
+					}
+				},
+				"advantages": {
+					"title": "Ventajas de la Calculadora de Embarazo",
+					"content": "Nuestra calculadora de embarazo ofrece muchos beneficios:",
+					"accuracy": "Alta precisión de cálculos basados en estándares médicos",
+					"multipleMethods": "Soporte para múltiples métodos de cálculo (UPM, concepción, FIV)",
+					"detailedInfo": "Información detallada sobre el progreso del embarazo y trimestres",
+					"userFriendly": "Interfaz simple e intuitiva",
+					"free": "Completamente gratis de usar"
+				},
+				"timeline": {
+					"title": "Calendario de Embarazo por Semanas",
+					"content": "El embarazo se divide en tres trimestres, cada uno con sus propias características de desarrollo fetal y cambios en el cuerpo de la madre.",
+					"firstTrimester": {
+						"title": "Primer Trimestre",
+						"weeks": "0-12 semanas",
+						"description": "Formación de los principales órganos y sistemas del feto"
+					},
+					"secondTrimester": {
+						"title": "Segundo Trimestre",
+						"weeks": "13-26 semanas",
+						"description": "Crecimiento activo y desarrollo del feto"
+					},
+					"thirdTrimester": {
+						"title": "Tercer Trimestre",
+						"weeks": "27-40 semanas",
+						"description": "Preparación para el parto y desarrollo final"
+					}
+				},
+				"tips": {
+					"title": "Consejos Útiles para Mujeres Embarazadas",
+					"content": "Durante el embarazo, es importante monitorear tu salud, comer adecuadamente, realizar actividad física moderada y visitar regularmente a tu médico."
+				},
+				"accuracy": {
+					"title": "Precisión del Cálculo de Fecha de Parto",
+					"content": "Es importante entender que la fecha de parto es aproximada. Solo el 5% de las mujeres dan a luz exactamente en la fecha estimada.",
+					"factors": [
+						"Características individuales del cuerpo",
+						"Duración del ciclo menstrual",
+						"Fecha de concepción",
+						"Embarazo múltiple",
+						"Complicaciones médicas"
+					]
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"howToCalculate": {
+						"question": "¿Cómo calcular la duración del embarazo?",
+						"answer": "La duración del embarazo se calcula desde el primer día del último período menstrual. Agregue 280 días (40 semanas) para obtener la fecha estimada de parto."
+					},
+					"accuracy": {
+						"question": "¿Qué tan precisa es la fecha de parto?",
+						"answer": "La fecha de parto es aproximada. Solo el 5% de las mujeres dan a luz exactamente en la fecha estimada. La mayoría de los partos ocurren dentro de 2 semanas antes o después."
+					},
+					"factors": {
+						"question": "¿Qué afecta la duración del embarazo?",
+						"answer": "La duración del embarazo puede verse afectada por características individuales, duración del ciclo, fecha de concepción, embarazo múltiple y complicaciones médicas."
+					},
+					"ivf": {
+						"question": "¿Cómo calcular la duración del embarazo para FIV?",
+						"answer": "Para embarazos por FIV, el cálculo se basa en la fecha de transferencia del embrión. Agregue 266 días (38 semanas) a la fecha de transferencia para obtener la fecha estimada de parto."
+					}
+				},
+				"onlineCalculator": {
+					"title": "Calculadora de embarazo en línea",
+					"content": "Nuestra calculadora de embarazo gratuita te ayudará a determinar la duración del embarazo y la fecha estimada de parto. Simplemente selecciona el método de cálculo, ingresa la fecha y obtén información detallada sobre tu embarazo."
+				}
+			}
+		},
 		"consumer-loan": {
 			"title": "Calculadora de Préstamo de Consumo",
 			"description": "Calcular pagos mensuales de préstamo de consumo",

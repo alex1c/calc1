@@ -1549,6 +1549,191 @@
 				}
 			}
 		},
+		"pregnancy": {
+			"title": "Schwangerschafts- und Geburtsterminrechner",
+			"description": "Schwangerschaftsdauer und voraussichtlichen Geburtstermin basierend auf letzter Menstruation, Empfängnis oder IVF berechnen",
+			"breadcrumbs": {
+				"category": "Leben"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"methodTitle": "Berechnungsmethode auswählen",
+				"methods": {
+					"lmp": {
+						"title": "Nach Datum der letzten Menstruation",
+						"description": "Häufigste Methode"
+					},
+					"conception": {
+						"title": "Nach Empfängnisdatum",
+						"description": "Wenn Sie das genaue Datum kennen"
+					},
+					"ivf": {
+						"title": "Nach IVF-Datum",
+						"description": "Für In-vitro-Fertilisation"
+					}
+				},
+				"dateLabels": {
+					"lmp": "Datum der letzten Menstruation",
+					"conception": "Empfängnisdatum",
+					"ivf": "Embryotransferdatum"
+				},
+				"methodInfo": {
+					"title": "Methodeninformationen",
+					"lmp": "Die Berechnung basiert auf der Standard-Schwangerschaftsdauer von 40 Wochen (280 Tagen) ab dem ersten Tag der letzten Menstruation.",
+					"conception": "Die Berechnung basiert auf einer Schwangerschaftsdauer von 38 Wochen (266 Tagen) ab dem Empfängnisdatum.",
+					"ivf": "Die Berechnung berücksichtigt die Standard-Schwangerschaftsdauer mit der Addition von 2 Wochen zur Berücksichtigung des Schwangerschaftsalters."
+				},
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"title": "Datenfehler",
+					"dateRequired": "Bitte wählen Sie ein Datum",
+					"invalidDate": "Ungültiges Datum",
+					"calculationError": "Berechnungsfehler"
+				}
+			},
+			"results": {
+				"title": "Schwangerschaftsberechnungsergebnisse",
+				"dueDate": "Voraussichtlicher Geburtstermin",
+				"dueDateRange": "Möglicher Geburtsbereich",
+				"currentWeek": "Aktuelle Schwangerschaftsdauer",
+				"status": "Status",
+				"trimester": "Trimester",
+				"trimester1": "Erstes Trimester",
+				"trimester2": "Zweites Trimester",
+				"trimester3": "Drittes Trimester",
+				"daysRemaining": "Tage bis zur Geburt",
+				"days": "Tage",
+				"untilBirth": "bis zur Geburt",
+				"overdue": "Schwangerschaft überfällig",
+				"copy": "Ergebnisse kopieren",
+				"share": "Teilen"
+			},
+			"result": {
+				"title": "Schwangerschaftsberechnungsergebnis",
+				"dueDate": "Voraussichtlicher Geburtstermin",
+				"dueDateRange": "Möglicher Geburtsbereich",
+				"currentWeek": "Aktuelle Schwangerschaftsdauer",
+				"status": "Status",
+				"trimester": "Trimester",
+				"trimester1": "Erstes Trimester",
+				"trimester2": "Zweites Trimester",
+				"trimester3": "Drittes Trimester",
+				"trim": "Trimester",
+				"daysRemaining": "Tage bis zur Geburt",
+				"days": "Tage",
+				"untilBirth": "bis zur Geburt",
+				"overdue": "Schwangerschaft überfällig",
+				"copy": "Ergebnisse kopieren",
+				"share": "Teilen"
+			},
+			"hero": {
+				"weeks": "Wochen",
+				"days": "Tage",
+				"trimesters": "Trimester"
+			},
+			"features": {
+				"lmpCalculation": "Berechnung nach letzter Menstruation",
+				"conceptionCalculation": "Berechnung nach Empfängnisdatum",
+				"ivfCalculation": "Berechnung nach IVF-Datum",
+				"trimesterInfo": "Trimester-Informationen",
+				"dueDateRange": "Möglicher Geburtsterminbereich"
+			},
+			"seo": {
+				"title": "Schwangerschafts- und Geburtsterminrechner: Schwangerschaftsdauer und voraussichtlichen Geburtstermin berechnen",
+				"description": "Der Online-Schwangerschaftsrechner hilft dabei, die Schwangerschaftsdauer und den voraussichtlichen Geburtstermin basierend auf der letzten Menstruation, Empfängnis oder IVF zu bestimmen.",
+				"overview": {
+					"title": "Über den Schwangerschaftsrechner",
+					"content": "Unser Schwangerschaftsrechner hilft Ihnen dabei, Ihre Schwangerschaftsdauer und den voraussichtlichen Geburtstermin zu bestimmen. Geben Sie einfach das Datum Ihrer letzten Menstruation, das Empfängnisdatum oder das IVF-Datum ein und erhalten Sie genaue Berechnungen mit detaillierten Informationen über Ihren Schwangerschaftsfortschritt."
+				},
+				"calculation": {
+					"title": "Wie wird die Schwangerschaftsdauer berechnet",
+					"content": "Die Schwangerschaftsdauer wird ab dem ersten Tag der letzten Menstruation (LMP) berechnet. Die Standard-Schwangerschaft dauert 280 Tage (40 Wochen). Allerdings gebären nur 5% der Frauen genau am voraussichtlichen Termin. Die meisten Geburten erfolgen innerhalb von 2 Wochen vor oder nach dem geschätzten Datum."
+				},
+				"methods": {
+					"title": "Schwangerschaftsberechnungsmethoden",
+					"content": "Es gibt mehrere Möglichkeiten, die Schwangerschaftsdauer zu bestimmen, jede mit ihren eigenen Merkmalen und Genauigkeit.",
+					"lmp": {
+						"title": "Nach Datum der letzten Menstruation",
+						"accuracy": "Genauigkeit: ±7 Tage",
+						"description": "Häufigste Methode, basierend auf der Standard-Schwangerschaftsdauer von 40 Wochen"
+					},
+					"conception": {
+						"title": "Nach Empfängnisdatum",
+						"accuracy": "Genauigkeit: ±5 Tage",
+						"description": "Genauere Methode, wenn das genaue Empfängnisdatum bekannt ist"
+					},
+					"ivf": {
+						"title": "Nach IVF-Datum",
+						"accuracy": "Genauigkeit: ±3 Tage",
+						"description": "Genaueste Methode für In-vitro-Fertilisation-Fälle"
+					}
+				},
+				"advantages": {
+					"title": "Vorteile des Schwangerschaftsrechners",
+					"content": "Unser Schwangerschaftsrechner bietet viele Vorteile:",
+					"accuracy": "Hohe Genauigkeit der Berechnungen basierend auf medizinischen Standards",
+					"multipleMethods": "Unterstützung für mehrere Berechnungsmethoden (LMP, Empfängnis, IVF)",
+					"detailedInfo": "Detaillierte Informationen über Schwangerschaftsfortschritt und Trimester",
+					"userFriendly": "Einfache und intuitive Benutzeroberfläche",
+					"free": "Völlig kostenlos zu verwenden"
+				},
+				"timeline": {
+					"title": "Schwangerschaftskalender nach Wochen",
+					"content": "Die Schwangerschaft ist in drei Trimester unterteilt, jedes mit seinen eigenen Merkmalen der fetalen Entwicklung und Veränderungen im Körper der Mutter.",
+					"firstTrimester": {
+						"title": "Erstes Trimester",
+						"weeks": "0-12 Wochen",
+						"description": "Bildung der Hauptorgane und Systeme des Fötus"
+					},
+					"secondTrimester": {
+						"title": "Zweites Trimester",
+						"weeks": "13-26 Wochen",
+						"description": "Aktives Wachstum und Entwicklung des Fötus"
+					},
+					"thirdTrimester": {
+						"title": "Drittes Trimester",
+						"weeks": "27-40 Wochen",
+						"description": "Vorbereitung auf die Geburt und endgültige Entwicklung"
+					}
+				},
+				"tips": {
+					"title": "Nützliche Tipps für Schwangere",
+					"content": "Während der Schwangerschaft ist es wichtig, Ihre Gesundheit zu überwachen, sich richtig zu ernähren, moderate körperliche Aktivität zu betreiben und regelmäßig Ihren Arzt aufzusuchen."
+				},
+				"accuracy": {
+					"title": "Genauigkeit der Geburtsterminberechnung",
+					"content": "Es ist wichtig zu verstehen, dass der Geburtstermin ungefähr ist. Nur 5% der Frauen gebären genau am geschätzten Datum.",
+					"factors": [
+						"Individuelle Körpermerkmale",
+						"Länge des Menstruationszyklus",
+						"Empfängnisdatum",
+						"Mehrlingsschwangerschaft",
+						"Medizinische Komplikationen"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Schwangerschaftsrechner",
+					"content": "Unser kostenloser Schwangerschaftsrechner hilft Ihnen dabei, die Schwangerschaftsdauer und den voraussichtlichen Geburtstermin zu bestimmen. Wählen Sie einfach die Berechnungsmethode, geben Sie das Datum ein und erhalten Sie detaillierte Informationen über Ihre Schwangerschaft."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"howToCalculate": {
+						"question": "Wie berechnet man die Schwangerschaftsdauer?",
+						"answer": "Die Schwangerschaftsdauer wird ab dem ersten Tag der letzten Menstruation berechnet. Addieren Sie 280 Tage (40 Wochen), um den voraussichtlichen Geburtstermin zu erhalten."
+					},
+					"accuracy": {
+						"question": "Wie genau ist der Geburtstermin?",
+						"answer": "Der Geburtstermin ist ungefähr. Nur 5% der Frauen gebären genau am geschätzten Datum. Die meisten Geburten erfolgen innerhalb von 2 Wochen vor oder nach dem geschätzten Datum."
+					},
+					"factors": {
+						"question": "Was beeinflusst die Schwangerschaftsdauer?",
+						"answer": "Die Schwangerschaftsdauer kann durch individuelle Merkmale, Zykluslänge, Empfängnisdatum, Mehrlingsschwangerschaft und medizinische Komplikationen beeinflusst werden."
+					}
+				}
+			}
+		},
 		"consumer-loan": {
 			"title": "Verbraucherkreditrechner",
 			"description": "Monatliche Verbraucherkreditzahlungen berechnen",
