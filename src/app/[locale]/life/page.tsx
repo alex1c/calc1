@@ -1,22 +1,29 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Home, Heart, Baby, Utensils } from 'lucide-react';
+import { Home, Heart, Baby, Utensils, PieChart } from 'lucide-react';
 
-const calculators = [
+const getCalculators = (t: any) => [
 	{
 		id: 'bmi',
-		title: 'BMI Calculator',
-		description: 'Calculate Body Mass Index to assess your weight status',
+		title: t('calculators.bmi.title'),
+		description: t('calculators.bmi.description'),
 		icon: Heart,
 		href: '/life/bmi',
 	},
 	{
 		id: 'calories',
-		title: 'Calorie Calculator',
-		description: 'Calculate daily calorie needs for weight management',
+		title: t('calculators.calories.title'),
+		description: t('calculators.calories.description'),
 		icon: Utensils,
 		href: '/life/calories',
+	},
+	{
+		id: 'food-ration',
+		title: t('calculators.foodRation.title'),
+		description: t('calculators.foodRation.description'),
+		icon: PieChart,
+		href: '/life/food-ration',
 	},
 	{
 		id: 'pregnancy',
@@ -37,6 +44,7 @@ const calculators = [
 export default function LifePage() {
 	const t = useTranslations();
 	const locale = useLocale();
+	const calculators = getCalculators(t);
 
 	return (
 		<div className='min-h-screen bg-gray-50'>

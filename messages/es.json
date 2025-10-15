@@ -1141,6 +1141,142 @@
 				}
 			}
 		},
+		"foodRation": {
+			"title": "Calculadora de Macronutrientes",
+			"description": "Calcula tus necesidades diarias de proteínas, grasas y carbohidratos según peso, altura, género y nivel de actividad. Aprende a comer correctamente.",
+			"breadcrumbs": {
+				"category": "Vida"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"gender": "Género",
+				"male": "Hombre",
+				"female": "Mujer",
+				"age": "Edad (años)",
+				"height": "Altura (cm)",
+				"weight": "Peso (kg)",
+				"activity": "Nivel de Actividad",
+				"activityMinimal": "Mínimo (vida sedentaria)",
+				"activityLight": "Actividad ligera (1-3 veces por semana)",
+				"activityModerate": "Actividad moderada (3-5 veces por semana)",
+				"activityHigh": "Alta actividad (6-7 veces por semana)",
+				"activityExtreme": "Actividad extrema (deporte diario)",
+				"goal": "Objetivo",
+				"goalLose": "Pérdida de Peso",
+				"goalMaintain": "Mantenimiento",
+				"goalGain": "Ganancia de Peso",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"errors": {
+					"title": "Errores en los Datos"
+				}
+			},
+			"result": {
+				"title": "Tus Necesidades Diarias:",
+				"calories": "Calorías",
+				"kcal": "kcal",
+				"protein": "Proteínas",
+				"fat": "Grasas",
+				"carbs": "Carbohidratos",
+				"macroDistribution": "Distribución de Macronutrientes"
+			},
+			"seo": {
+				"title": "Calculadora de Macronutrientes - Proteínas, Grasas, Carbohidratos Online",
+				"description": "Calculadora online de macronutrientes para calcular necesidades diarias de proteínas, grasas y carbohidratos para pérdida, ganancia o mantenimiento de peso.",
+				"keywords": "calculadora macronutrientes, proteínas grasas carbohidratos, nutrición, calorías, macros, bju",
+				"overview": {
+					"title": "Sobre la Calculadora de Macronutrientes",
+					"content": "La calculadora de macronutrientes ayuda a calcular la proporción óptima de proteínas, grasas y carbohidratos para tu cuerpo. La distribución correcta de macronutrientes es la base de una nutrición saludable y el logro de tus objetivos."
+				},
+				"calculation": {
+					"title": "Cómo se Calculan los Macronutrientes",
+					"content": "El cálculo se basa en la fórmula de Harris-Benedict y tiene en cuenta tu género, edad, peso, altura y nivel de actividad:",
+					"formula": "TMB = 88.36 + (13.4 × peso) + (4.8 × altura) − (5.7 × edad) para hombres",
+					"steps": [
+						"Calcular la tasa metabólica basal (TMB) usando la fórmula de Harris-Benedict",
+						"Determinar el gasto energético total diario (GETD) considerando el nivel de actividad",
+						"Aplicar corrección según el objetivo (pérdida/mantenimiento/ganancia)",
+						"Distribuir macronutrientes: proteína 1.8g/kg, grasa 0.9g/kg, resto - carbohidratos"
+					]
+				},
+				"macronutrients": {
+					"title": "Macronutrientes y su Función",
+					"content": "Cada macronutriente cumple una función importante en el cuerpo:",
+					"protein": {
+						"title": "Proteínas",
+						"amount": "1.8g por kg de peso",
+						"description": "Material de construcción para músculos, enzimas y hormonas"
+					},
+					"fat": {
+						"title": "Grasas",
+						"amount": "0.9g por kg de peso",
+						"description": "Fuente de energía, absorción de vitaminas, salud celular"
+					},
+					"carbs": {
+						"title": "Carbohidratos",
+						"amount": "Calorías restantes",
+						"description": "Fuente principal de energía para el cerebro y músculos"
+					}
+				},
+				"activityLevels": {
+					"title": "Niveles de Actividad",
+					"content": "Elegir el nivel de actividad correcto es importante para un cálculo preciso:",
+					"levels": [
+						"Mínimo: trabajo de oficina, poco movimiento",
+						"Ligero: entrenamientos ligeros 1-3 veces por semana",
+						"Moderado: entrenamientos moderados 3-5 veces por semana",
+						"Alto: entrenamientos intensos 6-7 veces por semana",
+						"Extremo: entrenamientos intensos diarios"
+					]
+				},
+				"goals": {
+					"title": "Objetivos y Ajuste de Calorías",
+					"content": "Dependiendo del objetivo, se aplican diferentes ajustes calóricos:",
+					"lose": {
+						"title": "Pérdida de Peso",
+						"calorieDeficit": "Déficit del 15%",
+						"description": "Crea déficit calórico para pérdida de peso"
+					},
+					"maintain": {
+						"title": "Mantenimiento",
+						"calorieBalance": "Balance calórico",
+						"description": "Mantiene el peso actual"
+					},
+					"gain": {
+						"title": "Ganancia de Peso",
+						"calorieSurplus": "Superávit del 15%",
+						"description": "Crea superávit calórico para ganancia de peso"
+					}
+				},
+				"healthBenefits": {
+					"title": "Beneficios de los Macronutrientes Correctos",
+					"content": "La proporción equilibrada de macronutrientes asegura:",
+					"items": [
+						"Función óptima de todos los sistemas corporales",
+						"Mantenimiento de masa muscular durante la pérdida de peso",
+						"Niveles estables de energía durante el día",
+						"Mejor recuperación después de entrenamientos",
+						"Mantenimiento de metabolismo saludable"
+					]
+				},
+				"tips": {
+					"title": "Consejos de Nutrición",
+					"content": "Para mejores resultados, sigue estas recomendaciones:",
+					"items": [
+						"Distribuye las proteínas uniformemente durante el día",
+						"Incluye grasas saludables en cada comida",
+						"Elige carbohidratos complejos con bajo índice glucémico",
+						"Bebe suficiente agua (30-35ml por kg de peso)",
+						"Mantén un diario de alimentos para rastrear macros"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Calculadora Online de Macronutrientes",
+					"content": "Nuestra calculadora gratuita de macronutrientes ayudará a calcular la proporción óptima de proteínas, grasas y carbohidratos para tus objetivos. Simplemente ingresa tus datos y obtén recomendaciones nutricionales personalizadas."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",

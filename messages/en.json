@@ -1246,6 +1246,142 @@
 				}
 			}
 		},
+		"foodRation": {
+			"title": "Macronutrient Calculator",
+			"description": "Calculate your daily protein, fat, and carbohydrate needs based on weight, height, gender, and activity level. Learn how to eat right.",
+			"breadcrumbs": {
+				"category": "Life"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"gender": "Gender",
+				"male": "Male",
+				"female": "Female",
+				"age": "Age (years)",
+				"height": "Height (cm)",
+				"weight": "Weight (kg)",
+				"activity": "Activity Level",
+				"activityMinimal": "Minimal (sedentary lifestyle)",
+				"activityLight": "Light activity (1-3 times per week)",
+				"activityModerate": "Moderate activity (3-5 times per week)",
+				"activityHigh": "High activity (6-7 times per week)",
+				"activityExtreme": "Extreme activity (daily sports)",
+				"goal": "Goal",
+				"goalLose": "Weight Loss",
+				"goalMaintain": "Maintenance",
+				"goalGain": "Weight Gain",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"result": {
+				"title": "Your Daily Needs:",
+				"calories": "Calories",
+				"kcal": "kcal",
+				"protein": "Protein",
+				"fat": "Fat",
+				"carbs": "Carbs",
+				"macroDistribution": "Macronutrient Distribution"
+			},
+			"seo": {
+				"title": "Macronutrient Calculator - Protein, Fat, Carbohydrates Online",
+				"description": "Online macronutrient calculator to calculate daily protein, fat, and carbohydrate needs for weight loss, gain, or maintenance.",
+				"keywords": "macronutrient calculator, protein fat carbohydrates, nutrition, calories, macros, bju",
+				"overview": {
+					"title": "About Macronutrient Calculator",
+					"content": "The macronutrient calculator helps calculate the optimal ratio of proteins, fats, and carbohydrates for your body. Proper macronutrient distribution is the foundation of healthy nutrition and achieving your goals."
+				},
+				"calculation": {
+					"title": "How Macronutrients are Calculated",
+					"content": "The calculation is based on the Harris-Benedict formula and takes into account your gender, age, weight, height, and activity level:",
+					"formula": "BMR = 88.36 + (13.4 × weight) + (4.8 × height) − (5.7 × age) for men",
+					"steps": [
+						"Calculate basal metabolic rate (BMR) using Harris-Benedict formula",
+						"Determine total daily energy expenditure (TDEE) considering activity level",
+						"Apply correction based on goal (loss/maintenance/gain)",
+						"Distribute macronutrients: protein 1.8g/kg, fat 0.9g/kg, rest - carbohydrates"
+					]
+				},
+				"macronutrients": {
+					"title": "Macronutrients and Their Role",
+					"content": "Each macronutrient performs an important function in the body:",
+					"protein": {
+						"title": "Protein",
+						"amount": "1.8g per kg weight",
+						"description": "Building material for muscles, enzymes, and hormones"
+					},
+					"fat": {
+						"title": "Fat",
+						"amount": "0.9g per kg weight",
+						"description": "Energy source, vitamin absorption, cell health"
+					},
+					"carbs": {
+						"title": "Carbohydrates",
+						"amount": "Remaining calories",
+						"description": "Main energy source for brain and muscles"
+					}
+				},
+				"activityLevels": {
+					"title": "Activity Levels",
+					"content": "Choosing the right activity level is important for accurate calculation:",
+					"levels": [
+						"Minimal: office work, little movement",
+						"Light: light workouts 1-3 times per week",
+						"Moderate: moderate workouts 3-5 times per week",
+						"High: intense workouts 6-7 times per week",
+						"Extreme: daily intense workouts"
+					]
+				},
+				"goals": {
+					"title": "Goals and Calorie Adjustment",
+					"content": "Depending on the goal, different calorie adjustments are applied:",
+					"lose": {
+						"title": "Weight Loss",
+						"calorieDeficit": "15% deficit",
+						"description": "Creates calorie deficit for weight loss"
+					},
+					"maintain": {
+						"title": "Maintenance",
+						"calorieBalance": "Calorie balance",
+						"description": "Maintains current weight"
+					},
+					"gain": {
+						"title": "Weight Gain",
+						"calorieSurplus": "15% surplus",
+						"description": "Creates calorie surplus for weight gain"
+					}
+				},
+				"healthBenefits": {
+					"title": "Benefits of Proper Macronutrients",
+					"content": "Balanced macronutrient ratio ensures:",
+					"items": [
+						"Optimal functioning of all body systems",
+						"Maintaining muscle mass during weight loss",
+						"Stable energy levels throughout the day",
+						"Improved recovery after workouts",
+						"Maintaining healthy metabolism"
+					]
+				},
+				"tips": {
+					"title": "Nutrition Tips",
+					"content": "For best results, follow these recommendations:",
+					"items": [
+						"Distribute protein evenly throughout the day",
+						"Include healthy fats in every meal",
+						"Choose complex carbohydrates with low glycemic index",
+						"Drink enough water (30-35ml per kg weight)",
+						"Keep a food diary to track macros"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Macronutrient Calculator",
+					"content": "Our free macronutrient calculator will help calculate the optimal ratio of proteins, fats, and carbohydrates for your goals. Simply enter your data and get personalized nutrition recommendations."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",

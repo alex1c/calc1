@@ -1141,6 +1141,142 @@
 				}
 			}
 		},
+		"foodRation": {
+			"title": "Makronährstoff-Rechner",
+			"description": "Berechnen Sie Ihren täglichen Bedarf an Proteinen, Fetten und Kohlenhydraten basierend auf Gewicht, Größe, Geschlecht und Aktivitätsniveau. Lernen Sie, richtig zu essen.",
+			"breadcrumbs": {
+				"category": "Leben"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"gender": "Geschlecht",
+				"male": "Mann",
+				"female": "Frau",
+				"age": "Alter (Jahre)",
+				"height": "Größe (cm)",
+				"weight": "Gewicht (kg)",
+				"activity": "Aktivitätsniveau",
+				"activityMinimal": "Minimal (sitzender Lebensstil)",
+				"activityLight": "Leichte Aktivität (1-3 mal pro Woche)",
+				"activityModerate": "Moderate Aktivität (3-5 mal pro Woche)",
+				"activityHigh": "Hohe Aktivität (6-7 mal pro Woche)",
+				"activityExtreme": "Extreme Aktivität (täglicher Sport)",
+				"goal": "Ziel",
+				"goalLose": "Gewichtsverlust",
+				"goalMaintain": "Erhaltung",
+				"goalGain": "Gewichtszunahme",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"result": {
+				"title": "Ihr täglicher Bedarf:",
+				"calories": "Kalorien",
+				"kcal": "kcal",
+				"protein": "Protein",
+				"fat": "Fett",
+				"carbs": "Kohlenhydrate",
+				"macroDistribution": "Makronährstoff-Verteilung"
+			},
+			"seo": {
+				"title": "Makronährstoff-Rechner - Protein, Fett, Kohlenhydrate Online",
+				"description": "Online-Makronährstoff-Rechner zur Berechnung des täglichen Bedarfs an Proteinen, Fetten und Kohlenhydraten für Gewichtsverlust, -zunahme oder -erhaltung.",
+				"keywords": "makronährstoff rechner, protein fett kohlenhydrate, ernährung, kalorien, makros, bju",
+				"overview": {
+					"title": "Über den Makronährstoff-Rechner",
+					"content": "Der Makronährstoff-Rechner hilft dabei, das optimale Verhältnis von Proteinen, Fetten und Kohlenhydraten für Ihren Körper zu berechnen. Die richtige Verteilung von Makronährstoffen ist die Grundlage für gesunde Ernährung und das Erreichen Ihrer Ziele."
+				},
+				"calculation": {
+					"title": "Wie Makronährstoffe berechnet werden",
+					"content": "Die Berechnung basiert auf der Harris-Benedict-Formel und berücksichtigt Ihr Geschlecht, Alter, Gewicht, Größe und Aktivitätsniveau:",
+					"formula": "Grundumsatz = 88.36 + (13.4 × Gewicht) + (4.8 × Größe) − (5.7 × Alter) für Männer",
+					"steps": [
+						"Berechnung des Grundumsatzes (BMR) mit der Harris-Benedict-Formel",
+						"Bestimmung des Gesamtenergieverbrauchs (TDEE) unter Berücksichtigung des Aktivitätsniveaus",
+						"Anwendung der Korrektur je nach Ziel (Verlust/Erhaltung/Zunahme)",
+						"Verteilung der Makronährstoffe: Protein 1.8g/kg, Fett 0.9g/kg, Rest - Kohlenhydrate"
+					]
+				},
+				"macronutrients": {
+					"title": "Makronährstoffe und ihre Rolle",
+					"content": "Jeder Makronährstoff erfüllt eine wichtige Funktion im Körper:",
+					"protein": {
+						"title": "Protein",
+						"amount": "1.8g pro kg Gewicht",
+						"description": "Baumaterial für Muskeln, Enzyme und Hormone"
+					},
+					"fat": {
+						"title": "Fett",
+						"amount": "0.9g pro kg Gewicht",
+						"description": "Energiequelle, Vitaminaufnahme, Zellgesundheit"
+					},
+					"carbs": {
+						"title": "Kohlenhydrate",
+						"amount": "Verbleibende Kalorien",
+						"description": "Hauptenergiequelle für Gehirn und Muskeln"
+					}
+				},
+				"activityLevels": {
+					"title": "Aktivitätsniveaus",
+					"content": "Die Wahl des richtigen Aktivitätsniveaus ist wichtig für eine genaue Berechnung:",
+					"levels": [
+						"Minimal: Büroarbeit, wenig Bewegung",
+						"Leicht: leichte Workouts 1-3 mal pro Woche",
+						"Moderat: moderate Workouts 3-5 mal pro Woche",
+						"Hoch: intensive Workouts 6-7 mal pro Woche",
+						"Extrem: tägliche intensive Workouts"
+					]
+				},
+				"goals": {
+					"title": "Ziele und Kalorienanpassung",
+					"content": "Je nach Ziel werden verschiedene Kalorienanpassungen angewendet:",
+					"lose": {
+						"title": "Gewichtsverlust",
+						"calorieDeficit": "15% Defizit",
+						"description": "Schafft Kaloriendefizit für Gewichtsverlust"
+					},
+					"maintain": {
+						"title": "Erhaltung",
+						"calorieBalance": "Kalorienbilanz",
+						"description": "Erhält das aktuelle Gewicht"
+					},
+					"gain": {
+						"title": "Gewichtszunahme",
+						"calorieSurplus": "15% Überschuss",
+						"description": "Schafft Kalorienüberschuss für Gewichtszunahme"
+					}
+				},
+				"healthBenefits": {
+					"title": "Vorteile der richtigen Makronährstoffe",
+					"content": "Ein ausgewogenes Makronährstoff-Verhältnis gewährleistet:",
+					"items": [
+						"Optimale Funktion aller Körpersysteme",
+						"Erhaltung der Muskelmasse während des Gewichtsverlusts",
+						"Stabile Energieniveaus während des Tages",
+						"Verbesserte Erholung nach Workouts",
+						"Erhaltung eines gesunden Stoffwechsels"
+					]
+				},
+				"tips": {
+					"title": "Ernährungstipps",
+					"content": "Für beste Ergebnisse befolgen Sie diese Empfehlungen:",
+					"items": [
+						"Verteilen Sie Protein gleichmäßig über den Tag",
+						"Fügen Sie gesunde Fette zu jeder Mahlzeit hinzu",
+						"Wählen Sie komplexe Kohlenhydrate mit niedrigem glykämischen Index",
+						"Trinken Sie genug Wasser (30-35ml pro kg Gewicht)",
+						"Führen Sie ein Ernährungstagebuch zur Makroverfolgung"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Makronährstoff-Rechner",
+					"content": "Unser kostenloser Makronährstoff-Rechner hilft dabei, das optimale Verhältnis von Proteinen, Fetten und Kohlenhydraten für Ihre Ziele zu berechnen. Geben Sie einfach Ihre Daten ein und erhalten Sie personalisierte Ernährungsempfehlungen."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",
