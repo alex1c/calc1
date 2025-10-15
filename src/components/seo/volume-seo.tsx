@@ -378,11 +378,11 @@ export default function VolumeSEO() {
 									{t('applications.construction')}
 								</h3>
 								<ul className='list-disc list-inside space-y-1 text-gray-600'>
-									{t('applications.constructionItems').map(
-										(item: string, index: number) => (
+									{t
+										.raw('applications.constructionItems')
+										.map((item: string, index: number) => (
 											<li key={index}>{item}</li>
-										)
-									)}
+										))}
 								</ul>
 							</div>
 							<div>
@@ -390,11 +390,11 @@ export default function VolumeSEO() {
 									{t('applications.education')}
 								</h3>
 								<ul className='list-disc list-inside space-y-1 text-gray-600'>
-									{t('applications.educationItems').map(
-										(item: string, index: number) => (
+									{t
+										.raw('applications.educationItems')
+										.map((item: string, index: number) => (
 											<li key={index}>{item}</li>
-										)
-									)}
+										))}
 								</ul>
 							</div>
 						</div>
