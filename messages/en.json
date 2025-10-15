@@ -373,6 +373,134 @@
 				}
 			}
 		},
+		"powerRoot": {
+			"title": "Power and Root Calculator",
+			"description": "Calculate powers and extract roots of any degree online. Simple and accurate calculator with formulas.",
+			"breadcrumbs": {
+				"category": "Mathematics"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"mode": "Calculation Mode",
+				"modes": {
+					"power": "Power",
+					"root": "Root"
+				},
+				"base": "Base (a)",
+				"exponent": "Exponent (n)",
+				"number": "Number (a)",
+				"rootDegree": "Root Degree (n)",
+				"errors": {
+					"title": "Data Errors",
+					"required": "Field is required",
+					"positive": "Value must be positive"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"result": "Result",
+				"formula": "Formula",
+				"parametersUsed": "Parameters used",
+				"base": "Base",
+				"exponent": "Exponent",
+				"number": "Number",
+				"rootDegree": "Root Degree",
+				"calculationError": "Calculation error"
+			},
+			"seo": {
+				"title": "Online Power and Root Calculator - Exponentiation, Root Extraction",
+				"overview": {
+					"title": "About Power and Root Calculator",
+					"content": "Online calculator for calculating powers of numbers and extracting roots of any degree. Easy-to-use tool with automatic calculation using mathematical formulas. Suitable for students, engineers and anyone who needs to quickly calculate powers or roots of numbers.",
+					"additionalContent": "Our power and root calculator supports all basic mathematical operations with exponents and roots. Whether you're a student learning algebra, an engineer working on technical calculations, or simply need to calculate a power of a number, this tool provides accurate results instantly."
+				},
+				"powerSection": {
+					"title": "What is Power of a Number",
+					"content": "Power of a number is a mathematical operation where a number is multiplied by itself a certain number of times. Formula: aⁿ, where a is the base and n is the exponent. For example, 2³ means 2 × 2 × 2 = 8.",
+					"example1": {
+						"title": "Example 1",
+						"description": "2 cubed equals 8"
+					},
+					"example2": {
+						"title": "Example 2",
+						"description": "5 squared equals 25"
+					}
+				},
+				"rootSection": {
+					"title": "What is Root of a Number",
+					"content": "Root of a number is the inverse operation of exponentiation. The nth root of a number a is a number that, when raised to the power n, gives a. For example, √9 = 3, because 3² = 9.",
+					"example1": {
+						"title": "Square Root",
+						"description": "Square root of 9 is 3"
+					},
+					"example2": {
+						"title": "Cube Root",
+						"description": "Cube root of 8 is 2"
+					}
+				},
+				"howToUse": {
+					"title": "How to Use the Calculator",
+					"content": "Select calculation mode: power or root. Enter the required values and click 'Calculate'. The calculator will automatically apply the appropriate formula and show the result.",
+					"given": "Given",
+					"calculation": "Calculation",
+					"powerExample": {
+						"title": "Power Example",
+						"description": "2 to the power of 3 equals 8"
+					},
+					"rootExample": {
+						"title": "Root Example",
+						"description": "Cube root of 8 is 2"
+					}
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Fast and accurate calculations, support for powers and roots of any degree, intuitive interface, automatic application of mathematical formulas, results with precision up to 6 decimal places.",
+					"items": [
+						"Instant calculations with high precision",
+						"Support for powers and roots of any degree",
+						"User-friendly interface with visual feedback",
+						"Mobile-responsive design for all devices",
+						"Multi-language support (Russian, English, Spanish, German)",
+						"No registration or software installation required",
+						"Free to use with no limitations"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Make sure all values are correct. For powers, enter the base and exponent. For roots, enter the number and root degree. Results are displayed with high precision.",
+					"importantNotes": "Important Notes:",
+					"notes": [
+						"Cannot raise 0 to a negative power",
+						"Cannot take even root of negative number",
+						"Root degree cannot be 0",
+						"Results are displayed with precision up to 6 decimal places",
+						"Use decimal notation for precise calculations"
+					]
+				},
+				"applications": {
+					"title": "Common Applications",
+					"mathematics": "Mathematics and Algebra",
+					"science": "Science and Engineering",
+					"mathematicsItems": [
+						"Solving algebraic equations",
+						"Geometric calculations",
+						"Studying functions and graphs",
+						"Mathematical analysis"
+					],
+					"scienceItems": [
+						"Physical calculations",
+						"Engineering computations",
+						"Statistical analysis",
+						"Scientific research"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online Power and Root Calculator",
+					"content": "Our online power and root calculator provides fast and accurate calculations for any powers and roots. Simple interface and instant results make it an ideal tool for students, engineers and anyone who needs precise mathematical calculations.",
+					"multilingual": "Our online power and root calculator supports four languages — Russian, English, Spanish and German."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",

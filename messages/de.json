@@ -373,6 +373,134 @@
 				}
 			}
 		},
+		"powerRoot": {
+			"title": "Potenz- und Wurzelrechner",
+			"description": "Berechnen Sie Potenzen und extrahieren Sie Wurzeln beliebiger Ordnung online. Einfacher und präziser Rechner mit Formeln.",
+			"breadcrumbs": {
+				"category": "Mathematik"
+			},
+			"form": {
+				"title": "Berechnungsparameter",
+				"mode": "Berechnungsmodus",
+				"modes": {
+					"power": "Potenz",
+					"root": "Wurzel"
+				},
+				"base": "Basis (a)",
+				"exponent": "Exponent (n)",
+				"number": "Zahl (a)",
+				"rootDegree": "Wurzelgrad (n)",
+				"errors": {
+					"title": "Datenfehler",
+					"required": "Feld ist erforderlich",
+					"positive": "Wert muss positiv sein"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"result": "Ergebnis",
+				"formula": "Formel",
+				"parametersUsed": "Verwendete Parameter",
+				"base": "Basis",
+				"exponent": "Exponent",
+				"number": "Zahl",
+				"rootDegree": "Wurzelgrad",
+				"calculationError": "Berechnungsfehler"
+			},
+			"seo": {
+				"title": "Online-Potenz- und Wurzelrechner - Potenzierung, Wurzelextraktion",
+				"overview": {
+					"title": "Über den Potenz- und Wurzelrechner",
+					"content": "Online-Rechner zur Berechnung von Potenzen von Zahlen und Extraktion von Wurzeln beliebiger Ordnung. Einfach zu bedienendes Tool mit automatischer Berechnung mithilfe mathematischer Formeln. Geeignet für Studenten, Ingenieure und alle, die schnell Potenzen oder Wurzeln von Zahlen berechnen müssen.",
+					"additionalContent": "Unser Potenz- und Wurzelrechner unterstützt alle grundlegenden mathematischen Operationen mit Exponenten und Wurzeln. Ob Sie ein Student sind, der Algebra lernt, ein Ingenieur, der an technischen Berechnungen arbeitet, oder einfach nur eine Potenz einer Zahl berechnen müssen, dieses Tool liefert sofort genaue Ergebnisse."
+				},
+				"powerSection": {
+					"title": "Was ist eine Potenz einer Zahl",
+					"content": "Eine Potenz einer Zahl ist eine mathematische Operation, bei der eine Zahl eine bestimmte Anzahl von Malen mit sich selbst multipliziert wird. Formel: aⁿ, wobei a die Basis und n der Exponent ist. Zum Beispiel bedeutet 2³: 2 × 2 × 2 = 8.",
+					"example1": {
+						"title": "Beispiel 1",
+						"description": "2 hoch 3 ist gleich 8"
+					},
+					"example2": {
+						"title": "Beispiel 2",
+						"description": "5 zum Quadrat ist gleich 25"
+					}
+				},
+				"rootSection": {
+					"title": "Was ist eine Wurzel einer Zahl",
+					"content": "Eine Wurzel einer Zahl ist die Umkehroperation der Potenzierung. Die n-te Wurzel einer Zahl a ist eine Zahl, die, wenn sie zur Potenz n erhoben wird, a ergibt. Zum Beispiel √9 = 3, weil 3² = 9.",
+					"example1": {
+						"title": "Quadratwurzel",
+						"description": "Die Quadratwurzel von 9 ist 3"
+					},
+					"example2": {
+						"title": "Kubikwurzel",
+						"description": "Die Kubikwurzel von 8 ist 2"
+					}
+				},
+				"howToUse": {
+					"title": "Wie man den Rechner verwendet",
+					"content": "Wählen Sie den Berechnungsmodus: Potenz oder Wurzel. Geben Sie die erforderlichen Werte ein und klicken Sie auf 'Berechnen'. Der Rechner wendet automatisch die entsprechende Formel an und zeigt das Ergebnis.",
+					"given": "Gegeben",
+					"calculation": "Berechnung",
+					"powerExample": {
+						"title": "Potenz-Beispiel",
+						"description": "2 zur Potenz 3 ist gleich 8"
+					},
+					"rootExample": {
+						"title": "Wurzel-Beispiel",
+						"description": "Die Kubikwurzel von 8 ist 2"
+					}
+				},
+				"advantages": {
+					"title": "Rechnervorteile",
+					"content": "Schnelle und präzise Berechnungen, Unterstützung für Potenzen und Wurzeln beliebiger Ordnung, intuitive Benutzeroberfläche, automatische Anwendung mathematischer Formeln, Ergebnisse mit Genauigkeit bis zu 6 Dezimalstellen.",
+					"items": [
+						"Sofortige Berechnungen mit hoher Präzision",
+						"Unterstützung für Potenzen und Wurzeln beliebiger Ordnung",
+						"Benutzerfreundliche Oberfläche mit visueller Rückmeldung",
+						"Mobile-responsive Design für alle Geräte",
+						"Mehrsprachige Unterstützung (Russisch, Englisch, Spanisch, Deutsch)",
+						"Keine Registrierung oder Softwareinstallation erforderlich",
+						"Kostenlose Nutzung ohne Einschränkungen"
+					]
+				},
+				"tips": {
+					"title": "Nutzungstipps",
+					"content": "Stellen Sie sicher, dass alle Werte korrekt sind. Für Potenzen geben Sie die Basis und den Exponenten ein. Für Wurzeln geben Sie die Zahl und den Wurzelgrad ein. Ergebnisse werden mit hoher Präzision angezeigt.",
+					"importantNotes": "Wichtige Hinweise:",
+					"notes": [
+						"0 kann nicht zu einer negativen Potenz erhoben werden",
+						"Gerade Wurzel aus negativer Zahl kann nicht gezogen werden",
+						"Wurzelgrad kann nicht 0 sein",
+						"Ergebnisse werden mit Genauigkeit bis zu 6 Dezimalstellen angezeigt",
+						"Verwenden Sie Dezimalnotation für präzise Berechnungen"
+					]
+				},
+				"applications": {
+					"title": "Häufige Anwendungen",
+					"mathematics": "Mathematik und Algebra",
+					"science": "Wissenschaft und Ingenieurwesen",
+					"mathematicsItems": [
+						"Lösen algebraischer Gleichungen",
+						"Geometrische Berechnungen",
+						"Studieren von Funktionen und Graphen",
+						"Mathematische Analyse"
+					],
+					"scienceItems": [
+						"Physikalische Berechnungen",
+						"Ingenieurberechnungen",
+						"Statistische Analyse",
+						"Wissenschaftliche Forschung"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Online-Potenz- und Wurzelrechner",
+					"content": "Unser Online-Potenz- und Wurzelrechner bietet schnelle und präzise Berechnungen für beliebige Potenzen und Wurzeln. Einfache Benutzeroberfläche und sofortige Ergebnisse machen ihn zu einem idealen Tool für Studenten, Ingenieure und alle, die präzise mathematische Berechnungen benötigen.",
+					"multilingual": "Unser Online-Potenz- und Wurzelrechner unterstützt vier Sprachen — Russisch, Englisch, Spanisch und Deutsch."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",

@@ -1,7 +1,15 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Calculator, Percent, Square, Pi, Circle, Box } from 'lucide-react';
+import {
+	Calculator,
+	Percent,
+	Square,
+	Pi,
+	Circle,
+	Box,
+	Zap,
+} from 'lucide-react';
 
 // Note: Calculators array is now defined inside the component to access translations
 
@@ -37,6 +45,13 @@ export default function MathPage() {
 			description: t('calculators.volume.description'),
 			icon: Box,
 			href: '/math/volume',
+		},
+		{
+			id: 'powerRoot',
+			title: t('calculators.powerRoot.title'),
+			description: t('calculators.powerRoot.description'),
+			icon: Zap,
+			href: '/math/power-root',
 		},
 		{
 			id: 'trigonometry',

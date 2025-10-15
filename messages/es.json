@@ -373,6 +373,134 @@
 				}
 			}
 		},
+		"powerRoot": {
+			"title": "Calculadora de Potencias y Raíces",
+			"description": "Calcula potencias y extrae raíces de cualquier grado en línea. Calculadora simple y precisa con fórmulas.",
+			"breadcrumbs": {
+				"category": "Matemáticas"
+			},
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"mode": "Modo de Cálculo",
+				"modes": {
+					"power": "Potencia",
+					"root": "Raíz"
+				},
+				"base": "Base (a)",
+				"exponent": "Exponente (n)",
+				"number": "Número (a)",
+				"rootDegree": "Grado de Raíz (n)",
+				"errors": {
+					"title": "Errores en Datos",
+					"required": "El campo es obligatorio",
+					"positive": "El valor debe ser positivo"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"result": "Resultado",
+				"formula": "Fórmula",
+				"parametersUsed": "Parámetros utilizados",
+				"base": "Base",
+				"exponent": "Exponente",
+				"number": "Número",
+				"rootDegree": "Grado de Raíz",
+				"calculationError": "Error de cálculo"
+			},
+			"seo": {
+				"title": "Calculadora de Potencias y Raíces Online - Potenciación, Extracción de Raíces",
+				"overview": {
+					"title": "Sobre la Calculadora de Potencias y Raíces",
+					"content": "Calculadora en línea para calcular potencias de números y extraer raíces de cualquier grado. Herramienta fácil de usar con cálculo automático usando fórmulas matemáticas. Adecuada para estudiantes, ingenieros y cualquiera que necesite calcular rápidamente potencias o raíces de números.",
+					"additionalContent": "Nuestra calculadora de potencias y raíces soporta todas las operaciones matemáticas básicas con exponentes y raíces. Ya seas un estudiante aprendiendo álgebra, un ingeniero trabajando en cálculos técnicos, o simplemente necesites calcular una potencia de un número, esta herramienta proporciona resultados precisos al instante."
+				},
+				"powerSection": {
+					"title": "Qué es la Potencia de un Número",
+					"content": "La potencia de un número es una operación matemática donde un número se multiplica por sí mismo un cierto número de veces. Fórmula: aⁿ, donde a es la base y n es el exponente. Por ejemplo, 2³ significa 2 × 2 × 2 = 8.",
+					"example1": {
+						"title": "Ejemplo 1",
+						"description": "2 al cubo es igual a 8"
+					},
+					"example2": {
+						"title": "Ejemplo 2",
+						"description": "5 al cuadrado es igual a 25"
+					}
+				},
+				"rootSection": {
+					"title": "Qué es la Raíz de un Número",
+					"content": "La raíz de un número es la operación inversa de la potenciación. La raíz n-ésima de un número a es un número que, elevado a la potencia n, da a. Por ejemplo, √9 = 3, porque 3² = 9.",
+					"example1": {
+						"title": "Raíz Cuadrada",
+						"description": "La raíz cuadrada de 9 es 3"
+					},
+					"example2": {
+						"title": "Raíz Cúbica",
+						"description": "La raíz cúbica de 8 es 2"
+					}
+				},
+				"howToUse": {
+					"title": "Cómo Usar la Calculadora",
+					"content": "Selecciona el modo de cálculo: potencia o raíz. Ingresa los valores requeridos y haz clic en 'Calcular'. La calculadora aplicará automáticamente la fórmula apropiada y mostrará el resultado.",
+					"given": "Dado",
+					"calculation": "Cálculo",
+					"powerExample": {
+						"title": "Ejemplo de Potencia",
+						"description": "2 elevado a la potencia 3 es igual a 8"
+					},
+					"rootExample": {
+						"title": "Ejemplo de Raíz",
+						"description": "La raíz cúbica de 8 es 2"
+					}
+				},
+				"advantages": {
+					"title": "Ventajas de la Calculadora",
+					"content": "Cálculos rápidos y precisos, soporte para potencias y raíces de cualquier grado, interfaz intuitiva, aplicación automática de fórmulas matemáticas, resultados con precisión hasta 6 decimales.",
+					"items": [
+						"Cálculos instantáneos con alta precisión",
+						"Soporte para potencias y raíces de cualquier grado",
+						"Interfaz amigable con retroalimentación visual",
+						"Diseño responsivo para todos los dispositivos",
+						"Soporte multiidioma (ruso, inglés, español, alemán)",
+						"No requiere registro o instalación de software",
+						"Uso gratuito sin limitaciones"
+					]
+				},
+				"tips": {
+					"title": "Consejos de Uso",
+					"content": "Asegúrate de que todos los valores sean correctos. Para potencias, ingresa la base y el exponente. Para raíces, ingresa el número y el grado de la raíz. Los resultados se muestran con alta precisión.",
+					"importantNotes": "Notas Importantes:",
+					"notes": [
+						"No se puede elevar 0 a una potencia negativa",
+						"No se puede extraer raíz par de un número negativo",
+						"El grado de la raíz no puede ser 0",
+						"Los resultados se muestran con precisión hasta 6 decimales",
+						"Usa notación decimal para cálculos precisos"
+					]
+				},
+				"applications": {
+					"title": "Aplicaciones Comunes",
+					"mathematics": "Matemáticas y Álgebra",
+					"science": "Ciencia e Ingeniería",
+					"mathematicsItems": [
+						"Resolver ecuaciones algebraicas",
+						"Cálculos geométricos",
+						"Estudiar funciones y gráficos",
+						"Análisis matemático"
+					],
+					"scienceItems": [
+						"Cálculos físicos",
+						"Cálculos de ingeniería",
+						"Análisis estadístico",
+						"Investigación científica"
+					]
+				},
+				"onlineCalculator": {
+					"title": "Calculadora de Potencias y Raíces Online",
+					"content": "Nuestra calculadora de potencias y raíces online proporciona cálculos rápidos y precisos para cualquier potencia y raíz. Interfaz simple y resultados instantáneos la convierten en una herramienta ideal para estudiantes, ingenieros y cualquiera que necesite cálculos matemáticos precisos.",
+					"multilingual": "Nuestra calculadora de potencias y raíces online soporta cuatro idiomas — ruso, inglés, español y alemán."
+				}
+			}
+		},
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",
