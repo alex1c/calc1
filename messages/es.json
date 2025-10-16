@@ -99,10 +99,6 @@
 					"title": "Calculadora de Materiales de Construcción",
 					"description": "Calcular pintura, masilla, imprimación y adhesivo para baldosas"
 				},
-				"tile-laminate": {
-					"title": "Calculadora de Baldosas y Laminado",
-					"description": "Calcular cantidad de baldosas y laminado para suelo"
-				},
 				"concrete": {
 					"title": "Calculadora de Hormigón",
 					"description": "Calcular cemento, arena, grava y agua para preparación de hormigón"
@@ -550,10 +546,6 @@
 			"seo": {
 				"title": "Calculadora de Resolución de Ecuaciones Online - Ecuaciones Lineales y Cuadráticas | Calc1.ru",
 				"description": "Calculadora online gratuita para resolver ecuaciones lineales y cuadráticas con explicaciones detalladas paso a paso. Soporte para ruso, inglés, español y alemán.",
-				"breadcrumbs": {
-					"home": "Inicio",
-					"math": "Matemáticas"
-				},
 				"overview": {
 					"title": "Calculadora de Resolución de Ecuaciones Online",
 					"content": "Nuestra calculadora permite resolver ecuaciones lineales y cuadráticas online con explicaciones detalladas paso a paso. Simplemente ingrese la ecuación o los coeficientes, y la calculadora encontrará instantáneamente la solución. Perfecto para estudiantes, escolares y cualquiera que estudie matemáticas."
@@ -640,10 +632,6 @@
 			"seo": {
 				"title": "Calculadora de Estadísticas Online - Media, Mediana, Varianza | Calc1.ru",
 				"description": "Calculadora online gratuita para medidas estadísticas: media, mediana, moda, varianza, desviación estándar. Soporte para ruso, inglés, español y alemán.",
-				"breadcrumbs": {
-					"home": "Inicio",
-					"math": "Matemáticas"
-				},
 				"overview": {
 					"title": "Calculadora de Estadísticas Online",
 					"content": "Nuestra calculadora te permite calcular rápidamente medidas estadísticas básicas: media aritmética, mediana, moda, varianza y desviación estándar. Simplemente ingresa números separados por comas o espacios, y obtén un análisis estadístico completo."
@@ -790,10 +778,6 @@
 			"seo": {
 				"title": "Convertidor de Unidades Online - Longitud, Masa, Tiempo, Volumen | Calc1.ru",
 				"description": "Convertidor de unidades gratuito para longitud, masa, tiempo y volumen. Soporte para ruso, inglés, español y alemán.",
-				"breadcrumbs": {
-					"home": "Inicio",
-					"math": "Matemáticas"
-				},
 				"overview": {
 					"title": "Convertidor de Unidades Online",
 					"content": "Nuestro convertidor te permite convertir rápida y precisamente entre diferentes unidades de medida: longitud, masa, tiempo y volumen. Simplemente selecciona la categoría, las unidades e ingresa el valor para resultados instantáneos."
@@ -936,10 +920,6 @@
 			"seo": {
 				"title": "Calculadora de Calorías Online - Necesidades Diarias y Calorías de Alimentos | Calc1.ru",
 				"description": "Calculadora de calorías gratuita para necesidades diarias y calorías de alimentos. Soporte para ruso, inglés, español y alemán.",
-				"breadcrumbs": {
-					"home": "Inicio",
-					"life": "Vida"
-				},
 				"overview": {
 					"title": "Calculadora de Calorías Online",
 					"content": "Nuestra calculadora ayuda a calcular las necesidades calóricas diarias basadas en tus parámetros y nivel de actividad, así como conocer el contenido calórico de varios productos alimenticios."
@@ -1061,9 +1041,6 @@
 				"title": "Calculadora de Índice de Masa Corporal (IMC) Online",
 				"description": "Calculadora IMC online rápida para calcular el índice de masa corporal. Descubre si tu peso es normal. Adecuada para hombres y mujeres.",
 				"keywords": "imc, índice masa corporal, calculadora, peso, salud, peso normal",
-				"breadcrumbs": {
-					"life": "Vida"
-				},
 				"overview": {
 					"title": "Sobre la Calculadora IMC",
 					"content": "El Índice de Masa Corporal (IMC) es una medida que ayuda a evaluar si el peso de una persona es apropiado para su altura. Nuestra calculadora IMC online te permite determinar rápida y precisamente tu índice de masa corporal y entender si tu peso está dentro de los límites normales."
@@ -1281,11 +1258,17 @@
 		"paper-weight": {
 			"title": "Calculadora de Peso de Papel",
 			"description": "Calcular peso del papel por densidad y número de hojas",
-			"seo": "Calculadora de hojas A4, cálculo de peso de papel por densidad, calculadora de peso de papel"
+			"seo": "Calculadora de hojas A4, cálculo de peso de papel por densidad, calculadora de peso de papel",
+			"breadcrumbs": {
+				"category": "Vida"
+			}
 		},
 		"credit-loan": {
 			"title": "Calculadora de Crédito",
 			"description": "Calcular pagos mensuales de préstamos, intereses totales y crear cronogramas de pagos detallados para cualquier préstamo o crédito",
+			"breadcrumbs": {
+				"category": "Finanzas"
+			},
 			"seo": {
 				"title": "Todo sobre Préstamos: Tipos, Tasas y Métodos de Pago",
 				"types": {
@@ -1470,6 +1453,9 @@
 					"endAmount": "Cantidad Final",
 					"moreMonths": "meses adicionales"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzas"
 			}
 		},
 		"investment": {
@@ -1548,6 +1534,9 @@
 					"total": "Total",
 					"moreMonths": "meses más"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzas"
 			}
 		},
 		"bloodAlcohol": {
@@ -1943,6 +1932,9 @@
 					"balance": "Saldo",
 					"moreMonths": "meses más"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzas"
 			}
 		},
 		"savings": {
@@ -2054,6 +2046,9 @@
 					"total": "Total",
 					"moreMonths": "meses más"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzas"
 			}
 		},
 		"auto-loan": {
@@ -2152,6 +2147,9 @@
 					"balance": "Saldo",
 					"moreMonths": "meses más"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzas"
 			}
 		},
 		"mortgage": {
@@ -2253,6 +2251,9 @@
 					"balance": "Saldo",
 					"moreMonths": "meses más"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzas"
 			}
 		},
 		"car-loan": {
@@ -2339,6 +2340,9 @@
 					"balance": "Saldo",
 					"moreMonths": "meses adicionales"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"osago": {
@@ -2401,6 +2405,9 @@
 				"driversCoeff": "Coeficiente de Conductores (CC)",
 				"bonusMalusCoeff": "Coeficiente Bonus-Malus (CMB)",
 				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"kasko": {
@@ -2464,6 +2471,9 @@
 				"alarmCoeff": "Coeficiente de Alarma",
 				"franchiseCoeff": "Coeficiente de Franquicia",
 				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"fuel-consumption": {
@@ -2531,6 +2541,9 @@
 				"calculatedDistance": "Distancia Calculada",
 				"calculatedFuel": "Combustible Calculado",
 				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"vehicle-tax": {
@@ -2591,13 +2604,16 @@
 				"ownershipPeriod": "Período de Propiedad",
 				"ownershipCoefficient": "Coeficiente de Propiedad",
 				"placeholder": "Ingrese parámetros y haga clic en 'Calcular'"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"leasing": {
 			"title": "Calculadora de Leasing Automotriz",
 			"description": "Cálculo de pagos mensuales y costo total del leasing automotriz",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Parámetros de Leasing",
@@ -2661,7 +2677,7 @@
 			"title": "Calculadora de Aranceles Aduaneros",
 			"description": "Calcular aranceles aduaneros y tasas para importación de autos",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Parámetros de Cálculo",
@@ -2728,7 +2744,7 @@
 			"title": "Calculadora de Multas de Tráfico",
 			"description": "Cálculo de multas de tráfico por infracciones con descuento por pago anticipado",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Seleccionar Infracciones",
@@ -2786,7 +2802,7 @@
 			"title": "Calculadora de Costo de Posesión de Auto",
 			"description": "Cálculo del costo total de posesión de automóvil incluyendo todos los gastos",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Parámetros del Automóvil",
@@ -2861,7 +2877,7 @@
 			"title": "Calculadora de Depreciación de Auto",
 			"description": "Cálculo de depreciación del valor del auto por años de posesión",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Parámetros de Cálculo",
@@ -2948,7 +2964,7 @@
 			"title": "Calculadora de Papel Tapiz",
 			"description": "Calcular la cantidad de rollos de papel tapiz necesarios para una habitación",
 			"breadcrumbs": {
-				"construction": "Construcción"
+				"category": "Construcción"
 			},
 			"form": {
 				"title": "Parámetros de Cálculo",
@@ -3056,7 +3072,7 @@
 			"title": "Calculadora de Materiales de Construcción",
 			"description": "Cálculo universal para pintura, masilla, imprimación y adhesivo para baldosas",
 			"breadcrumbs": {
-				"construction": "Construcción"
+				"category": "Construcción"
 			},
 			"form": {
 				"materialType": "Tipo de Material",
@@ -3293,7 +3309,7 @@
 			"title": "Calculadora de Baldosas y Laminado",
 			"description": "Cálculo de cantidades de baldosas y laminado para suelos",
 			"breadcrumbs": {
-				"construction": "Construcción"
+				"category": "Construcción"
 			},
 			"form": {
 				"title": "Parámetros de Cálculo",
@@ -3399,7 +3415,7 @@
 			"title": "Calculadora de Hormigón",
 			"description": "Calcular cantidades de cemento, arena, grava y agua para preparación de hormigón",
 			"breadcrumbs": {
-				"construction": "Construcción"
+				"category": "Construcción"
 			},
 			"form": {
 				"title": "Parámetros de Cálculo",
@@ -3535,7 +3551,7 @@
 			"title": "Calculadora de Tejado",
 			"description": "Calcular área de tejado, cantidad de materiales y peso",
 			"breadcrumbs": {
-				"construction": "Construcción"
+				"category": "Construcción"
 			},
 			"form": {
 				"title": "Parámetros de Cálculo",
@@ -3689,7 +3705,7 @@
 			"title": "Calculadora de Ladrillos y Bloques",
 			"description": "Calcular la cantidad de ladrillos, bloques de gas y bloques de espuma para paredes",
 			"breadcrumbs": {
-				"construction": "Construcción"
+				"category": "Construcción"
 			},
 			"form": {
 				"title": "Parámetros de Pared",
@@ -4052,6 +4068,9 @@
 				"number_from_percent": "Si {part} es {percentage}%, entonces el número original es {result}",
 				"increase_by_percent": "Aumentar {number} en {percentage}% da {result}",
 				"decrease_by_percent": "Disminuir {number} en {percentage}% da {result}"
+			},
+			"breadcrumbs": {
+				"category": "Matemáticas"
 			}
 		}
 	},
@@ -4103,10 +4122,6 @@
 		"seo": {
 			"title": "Calculadora de Resolución de Ecuaciones en Línea - Ecuaciones Lineales y Cuadráticas | Calc1.ru",
 			"description": "Calculadora gratuita en línea para resolver ecuaciones lineales y cuadráticas con explicaciones detalladas paso a paso. Soporta idiomas ruso, inglés, español y alemán.",
-			"breadcrumbs": {
-				"home": "Inicio",
-				"math": "Matemáticas"
-			},
 			"overview": {
 				"title": "Calculadora de Resolución de Ecuaciones en Línea",
 				"content": "Nuestra calculadora le permite resolver ecuaciones lineales y cuadráticas en línea con explicaciones detalladas paso a paso. Simplemente ingrese la ecuación o los coeficientes, y la calculadora encontrará la solución instantáneamente. Perfecto para estudiantes, alumnos y cualquier persona que estudie matemáticas."

@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 
 export default function RoofingPage() {
 	const t = useTranslations('calculators.roof');
+	const tBreadcrumbs = useTranslations('breadcrumbs');
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -14,7 +15,7 @@ export default function RoofingPage() {
 			<Breadcrumbs
 				items={[
 					{
-						label: t('breadcrumbs.construction'),
+						label: tBreadcrumbs('categories.construction'),
 						href: '/construction',
 					},
 					{ label: t('title') },

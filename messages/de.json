@@ -57,7 +57,30 @@
 		},
 		"construction": {
 			"title": "Baurechner",
-			"description": "Tapeten, Farbe, Beton, Dach"
+			"subtitle": "Tapeten, Farbe, Beton, Dach",
+			"description": "Tapeten, Farbe, Beton, Dach",
+			"calculators": {
+				"wallpaper": {
+					"title": "Tapetenrechner",
+					"description": "Berechnung der Tapetenmenge für den Raum"
+				},
+				"materials": {
+					"title": "Baumaterialrechner",
+					"description": "Berechnung von Farbe, Spachtel, Grundierung und Fliesenkleber"
+				},
+				"concrete": {
+					"title": "Betonrechner",
+					"description": "Berechnung von Zement, Sand, Kies und Wasser für die Betonherstellung"
+				},
+				"roof": {
+					"title": "Dachrechner",
+					"description": "Berechnung von Dachmaterialien und Kosten"
+				},
+				"wall": {
+					"title": "Ziegel- und Blockrechner",
+					"description": "Berechnung der Ziegel-, Gasblock- und Schaumblockmenge für die Wand"
+				}
+			}
 		},
 		"auto": {
 			"title": "Auto-Rechner",
@@ -65,10 +88,10 @@
 		},
 		"time": {
 			"title": "Zeit und Datum",
-			"description": "Datumsdifferenzen, Alter, Timer"
+			"description": "Datumsunterschiede, Alter, Timer"
 		},
 		"health": {
-			"title": "Gesundheitsrechner",
+			"title": "Gesundheit und Medizin",
 			"description": "BMI, Herzfrequenz, Blutdruck, Vitamine"
 		},
 		"science": {
@@ -113,75 +136,6 @@
 			"division_protection": "Schutz vor Division durch Null",
 			"multi_language": "Mehrsprachige Benutzeroberfläche",
 			"mobile_responsive": "Mobile-responsive Design"
-		}
-	},
-	"categories": {
-		"finance": {
-			"title": "Finanzrechner",
-			"description": "Kredite, Einlagen, Hypotheken, Steuern und Investitionen"
-		},
-		"math": {
-			"title": "Mathematische Rechner",
-			"description": "Grundoperationen, Brüche, Prozente, Geometrie"
-		},
-		"life": {
-			"title": "Lebensrechner",
-			"description": "Kalorien, BMI, Schwangerschaft, Gesundheit"
-		},
-		"construction": {
-			"title": "Baurechner",
-			"subtitle": "Tapeten, Farbe, Beton, Dach",
-			"description": "Tapeten, Farbe, Beton, Dach",
-			"calculators": {
-				"wallpaper": {
-					"title": "Tapetenrechner",
-					"description": "Berechnung der Tapetenmenge für den Raum"
-				},
-				"materials": {
-					"title": "Baumaterialrechner",
-					"description": "Berechnung von Farbe, Spachtel, Grundierung und Fliesenkleber"
-				},
-				"tile-laminate": {
-					"title": "Fliesen- und Laminatrechner",
-					"description": "Berechnung der Fliesen- und Laminatmenge für den Boden"
-				},
-				"concrete": {
-					"title": "Betonrechner",
-					"description": "Berechnung von Zement, Sand, Kies und Wasser für die Betonherstellung"
-				},
-				"roof": {
-					"title": "Dachrechner",
-					"description": "Berechnung von Dachmaterialien und Kosten"
-				},
-				"wall": {
-					"title": "Ziegel- und Blockrechner",
-					"description": "Berechnung der Ziegel-, Gasblock- und Schaumblockmenge für die Wand"
-				}
-			}
-		},
-		"auto": {
-			"title": "Auto-Rechner",
-			"description": "Kraftstoffverbrauch, Steuern, Leasing, Versicherung"
-		},
-		"time": {
-			"title": "Zeit und Datum",
-			"description": "Datumsunterschiede, Alter, Timer"
-		},
-		"health": {
-			"title": "Gesundheit und Medizin",
-			"description": "BMI, Herzfrequenz, Blutdruck, Vitamine"
-		},
-		"science": {
-			"title": "Bildung und Wissenschaft",
-			"description": "Physik, Chemie, Geometrie, Statistik"
-		},
-		"converter": {
-			"title": "Online-Konverter",
-			"description": "Länge, Gewicht, Temperatur, Geschwindigkeit"
-		},
-		"fun": {
-			"title": "Unterhaltung und Hobbys",
-			"description": "Kompatibilität, Generatoren, Spiele"
 		}
 	},
 	"calculators": {
@@ -592,10 +546,6 @@
 			"seo": {
 				"title": "Online-Gleichungslöser-Rechner - Lineare und Quadratische Gleichungen | Calc1.ru",
 				"description": "Kostenloser Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit detaillierten Schritt-für-Schritt-Erklärungen. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
-				"breadcrumbs": {
-					"home": "Startseite",
-					"math": "Mathematik"
-				},
 				"overview": {
 					"title": "Online-Gleichungslöser-Rechner",
 					"content": "Unser Rechner ermöglicht es, lineare und quadratische Gleichungen online mit detaillierten Schritt-für-Schritt-Erklärungen zu lösen. Geben Sie einfach die Gleichung oder Koeffizienten ein, und der Rechner findet sofort die Lösung. Perfekt für Studenten, Schüler und alle, die Mathematik studieren."
@@ -682,10 +632,6 @@
 			"seo": {
 				"title": "Statistikrechner Online - Mittelwert, Median, Varianz | Calc1.ru",
 				"description": "Kostenloser Online-Rechner für statistische Maße: Mittelwert, Median, Modus, Varianz, Standardabweichung. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
-				"breadcrumbs": {
-					"home": "Startseite",
-					"math": "Mathematik"
-				},
 				"overview": {
 					"title": "Online-Statistikrechner",
 					"content": "Unser Rechner ermöglicht es Ihnen, schnell grundlegende statistische Maße zu berechnen: arithmetisches Mittel, Median, Modus, Varianz und Standardabweichung. Geben Sie einfach Zahlen durch Kommas oder Leerzeichen getrennt ein und erhalten Sie eine vollständige statistische Analyse."
@@ -832,10 +778,6 @@
 			"seo": {
 				"title": "Einheitenumrechner Online - Länge, Masse, Zeit, Volumen | Calc1.ru",
 				"description": "Kostenloser Online-Einheitenumrechner für Länge, Masse, Zeit und Volumen. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
-				"breadcrumbs": {
-					"home": "Startseite",
-					"math": "Mathematik"
-				},
 				"overview": {
 					"title": "Online-Einheitenumrechner",
 					"content": "Unser Umrechner ermöglicht es Ihnen, schnell und präzise zwischen verschiedenen Maßeinheiten umzurechnen: Länge, Masse, Zeit und Volumen. Wählen Sie einfach die Kategorie, die Einheiten und geben Sie den Wert ein für sofortige Ergebnisse."
@@ -978,10 +920,6 @@
 			"seo": {
 				"title": "Kalorienrechner Online - Täglicher Bedarf und Lebensmittelkalorien | Calc1.ru",
 				"description": "Kostenloser Online-Kalorienrechner für täglichen Bedarf und Lebensmittelkalorien. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
-				"breadcrumbs": {
-					"home": "Startseite",
-					"life": "Leben"
-				},
 				"overview": {
 					"title": "Online-Kalorienrechner",
 					"content": "Unser Rechner hilft dabei, den täglichen Kalorienbedarf basierend auf Ihren Parametern und Aktivitätslevel zu berechnen sowie den Kaloriengehalt verschiedener Lebensmittel zu ermitteln."
@@ -1103,9 +1041,6 @@
 				"title": "Body-Mass-Index (BMI) Rechner Online",
 				"description": "Schneller Online-BMI-Rechner zur Berechnung des Body-Mass-Index. Finden Sie heraus, ob Ihr Gewicht normal ist. Geeignet für Männer und Frauen.",
 				"keywords": "bmi, body mass index, rechner, gewicht, gesundheit, normalgewicht",
-				"breadcrumbs": {
-					"life": "Leben"
-				},
 				"overview": {
 					"title": "Über den BMI-Rechner",
 					"content": "Der Body-Mass-Index (BMI) ist ein Maß, das hilft zu beurteilen, ob das Gewicht einer Person für ihre Größe angemessen ist. Unser Online-BMI-Rechner ermöglicht es Ihnen, schnell und genau Ihren Body-Mass-Index zu bestimmen und zu verstehen, ob Ihr Gewicht innerhalb normaler Grenzen liegt."
@@ -1323,11 +1258,17 @@
 		"paper-weight": {
 			"title": "Papiergewicht-Rechner",
 			"description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",
-			"seo": "A4-Blätter-Rechner, Papiergewichtsberechnung nach Dichte, Papiergewichtsrechner"
+			"seo": "A4-Blätter-Rechner, Papiergewichtsberechnung nach Dichte, Papiergewichtsrechner",
+			"breadcrumbs": {
+				"category": "Leben"
+			}
 		},
 		"credit-loan": {
 			"title": "Kreditrechner",
 			"description": "Monatliche Kreditzahlungen, Gesamtzinsen berechnen und detaillierte Zahlungspläne für jeden Kredit erstellen",
+			"breadcrumbs": {
+				"category": "Finanzen"
+			},
 			"seo": {
 				"title": "Alles über Kredite: Arten, Zinssätze und Tilgungsmethoden",
 				"types": {
@@ -1430,6 +1371,9 @@
 					"balance": "Restschuld",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"deposit": {
@@ -1512,6 +1456,9 @@
 					"endAmount": "Endbetrag",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"investment": {
@@ -1590,6 +1537,9 @@
 					"total": "Gesamt",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"bloodAlcohol": {
@@ -1981,6 +1931,9 @@
 					"balance": "Saldo",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"savings": {
@@ -2092,6 +2045,9 @@
 					"total": "Gesamt",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"auto-loan": {
@@ -2190,6 +2146,9 @@
 					"balance": "Saldo",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"mortgage": {
@@ -2291,6 +2250,9 @@
 					"balance": "Saldo",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finanzen"
 			}
 		},
 		"car-loan": {
@@ -2377,6 +2339,9 @@
 					"balance": "Restschuld",
 					"moreMonths": "weitere Monate"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"osago": {
@@ -2439,6 +2404,9 @@
 				"driversCoeff": "Fahrerkoeffizient (FK)",
 				"bonusMalusCoeff": "Bonus-Malus-Koeffizient (BMK)",
 				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"kasko": {
@@ -2502,6 +2470,9 @@
 				"alarmCoeff": "Alarmkoeffizient",
 				"franchiseCoeff": "Franchisekoeffizient",
 				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"fuel-consumption": {
@@ -2569,6 +2540,9 @@
 				"calculatedDistance": "Berechnete Entfernung",
 				"calculatedFuel": "Berechneter Kraftstoff",
 				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"vehicle-tax": {
@@ -2629,13 +2603,16 @@
 				"ownershipPeriod": "Besitzzeitraum",
 				"ownershipCoefficient": "Besitzkoeffizient",
 				"placeholder": "Parameter eingeben und 'Berechnen' klicken"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"leasing": {
 			"title": "Auto-Leasing-Rechner",
 			"description": "Berechnung der monatlichen Zahlungen und Gesamtkosten des Auto-Leasings",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Leasing-Parameter",
@@ -2699,7 +2676,7 @@
 			"title": "Zollrechner",
 			"description": "Zollgebühren und Abgaben für Autoimport berechnen",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Berechnungsparameter",
@@ -2766,7 +2743,7 @@
 			"title": "Verkehrsstrafen-Rechner",
 			"description": "Berechnung von Verkehrsstrafen für Verkehrsverstöße mit Frühzahlungsrabatt",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Verstöße auswählen",
@@ -2824,7 +2801,7 @@
 			"title": "Autobesitz-Kosten-Rechner",
 			"description": "Berechnung der Gesamtkosten für Autobesitz inklusive aller Ausgaben",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Fahrzeugparameter",
@@ -2899,7 +2876,7 @@
 			"title": "Auto-Abschreibungsrechner",
 			"description": "Berechnung der Autowert-Abschreibung über Besitzjahre",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Berechnungsparameter",
@@ -2986,7 +2963,7 @@
 			"title": "Tapetenrechner",
 			"description": "Berechnung der Anzahl Tapetenrollen für einen Raum",
 			"breadcrumbs": {
-				"construction": "Bauwesen"
+				"category": "Bauwesen"
 			},
 			"form": {
 				"title": "Berechnungsparameter",
@@ -3094,7 +3071,7 @@
 			"title": "Baumaterialien-Rechner",
 			"description": "Universelle Berechnung für Farbe, Spachtelmasse, Grundierung und Fliesenkleber",
 			"breadcrumbs": {
-				"construction": "Bauwesen"
+				"category": "Bauwesen"
 			},
 			"form": {
 				"materialType": "Materialtyp",
@@ -3331,7 +3308,7 @@
 			"title": "Fliesen- und Laminatrechner",
 			"description": "Berechnung von Fliesen- und Laminatmengen für den Boden",
 			"breadcrumbs": {
-				"construction": "Bauwesen"
+				"category": "Bauwesen"
 			},
 			"form": {
 				"title": "Berechnungsparameter",
@@ -3437,7 +3414,7 @@
 			"title": "Betonrechner",
 			"description": "Berechnen Sie Zement-, Sand-, Kies- und Wassermengen für Betonherstellung",
 			"breadcrumbs": {
-				"construction": "Bauwesen"
+				"category": "Bauwesen"
 			},
 			"form": {
 				"title": "Berechnungsparameter",
@@ -3573,7 +3550,7 @@
 			"title": "Dachrechner",
 			"description": "Dachfläche, Materialmenge und Gewicht berechnen",
 			"breadcrumbs": {
-				"construction": "Bau"
+				"category": "Bauwesen"
 			},
 			"form": {
 				"title": "Berechnungsparameter",
@@ -3727,7 +3704,7 @@
 			"title": "Ziegel- und Blockrechner",
 			"description": "Berechnung der Anzahl von Ziegeln, Gasblöcken und Schaumblöcken für Wände",
 			"breadcrumbs": {
-				"construction": "Bauwesen"
+				"category": "Bauwesen"
 			},
 			"form": {
 				"title": "Wandparameter",
@@ -4090,6 +4067,9 @@
 				"number_from_percent": "Wenn {part} {percentage}% entspricht, dann ist die ursprüngliche Zahl {result}",
 				"increase_by_percent": "Erhöhung von {number} um {percentage}% ergibt {result}",
 				"decrease_by_percent": "Verringerung von {number} um {percentage}% ergibt {result}"
+			},
+			"breadcrumbs": {
+				"category": "Mathematik"
 			}
 		}
 	},
@@ -4141,10 +4121,6 @@
 		"seo": {
 			"title": "Gleichungslöser Rechner Online - Lineare und Quadratische Gleichungen | Calc1.ru",
 			"description": "Kostenloser Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit detaillierten Schritt-für-Schritt-Erklärungen. Unterstützt Russisch, Englisch, Spanisch und Deutsch.",
-			"breadcrumbs": {
-				"home": "Startseite",
-				"math": "Mathematik"
-			},
 			"overview": {
 				"title": "Online Gleichungslöser Rechner",
 				"content": "Unser Rechner ermöglicht es Ihnen, lineare und quadratische Gleichungen online mit detaillierten Schritt-für-Schritt-Erklärungen zu lösen. Geben Sie einfach die Gleichung oder die Koeffizienten ein, und der Rechner findet sofort die Lösung. Perfekt für Studenten, Schüler und alle, die Mathematik studieren."

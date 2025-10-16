@@ -68,10 +68,6 @@
 					"title": "Building Materials Calculator",
 					"description": "Calculate paint, putty, primer and tile adhesive"
 				},
-				"tile-laminate": {
-					"title": "Tile and Laminate Calculator",
-					"description": "Calculate tile and laminate quantity for floor"
-				},
 				"concrete": {
 					"title": "Concrete Calculator",
 					"description": "Calculate cement, sand, gravel and water for concrete preparation"
@@ -147,7 +143,7 @@
 			"title": "Area Calculator",
 			"description": "Calculate the area of circle, square or triangle online. Simple and accurate calculator with formulas.",
 			"breadcrumbs": {
-				"category": "Math"
+				"category": "Mathematics"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -550,10 +546,6 @@
 			"seo": {
 				"title": "Online Equation Solver Calculator - Linear and Quadratic Equations | Calc1.ru",
 				"description": "Free online calculator for solving linear and quadratic equations with detailed step-by-step explanations. Support for Russian, English, Spanish and German languages.",
-				"breadcrumbs": {
-					"home": "Home",
-					"math": "Mathematics"
-				},
 				"overview": {
 					"title": "Online Equation Solver Calculator",
 					"content": "Our calculator allows you to solve linear and quadratic equations online with detailed step-by-step explanations. Simply enter the equation or coefficients, and the calculator will instantly find the solution. Perfect for students, schoolchildren and anyone studying mathematics."
@@ -640,10 +632,6 @@
 			"seo": {
 				"title": "Statistics Calculator Online - Mean, Median, Variance | Calc1.ru",
 				"description": "Free online calculator for statistical measures: mean, median, mode, variance, standard deviation. Support for Russian, English, Spanish and German languages.",
-				"breadcrumbs": {
-					"home": "Home",
-					"math": "Mathematics"
-				},
 				"overview": {
 					"title": "Online Statistics Calculator",
 					"content": "Our calculator allows you to quickly calculate basic statistical measures: arithmetic mean, median, mode, variance and standard deviation. Simply enter numbers separated by commas or spaces, and get a complete statistical analysis."
@@ -790,10 +778,6 @@
 			"seo": {
 				"title": "Unit Converter Online - Length, Mass, Time, Volume | Calc1.ru",
 				"description": "Free online unit converter for length, mass, time, and volume. Support for Russian, English, Spanish and German languages.",
-				"breadcrumbs": {
-					"home": "Home",
-					"math": "Mathematics"
-				},
 				"overview": {
 					"title": "Online Unit Converter",
 					"content": "Our converter allows you to quickly and accurately convert between different units of measurement: length, mass, time, and volume. Simply select the category, units, and enter the value for instant results."
@@ -936,10 +920,6 @@
 			"seo": {
 				"title": "Calorie Calculator Online - Daily Needs and Food Calories | Calc1.ru",
 				"description": "Free online calorie calculator for daily needs and food calories. Support for Russian, English, Spanish and German languages.",
-				"breadcrumbs": {
-					"home": "Home",
-					"life": "Life"
-				},
 				"overview": {
 					"title": "Online Calorie Calculator",
 					"content": "Our calculator helps calculate daily calorie needs based on your parameters and activity level, as well as find out the calorie content of various food products."
@@ -1061,9 +1041,6 @@
 				"title": "Body Mass Index (BMI) Calculator Online",
 				"description": "Quick online BMI calculator for calculating body mass index. Find out if your weight is normal. Suitable for men and women.",
 				"keywords": "bmi, body mass index, calculator, weight, health, normal weight",
-				"breadcrumbs": {
-					"life": "Life"
-				},
 				"overview": {
 					"title": "About BMI Calculator",
 					"content": "Body Mass Index (BMI) is a measure that helps assess whether a person's weight is appropriate for their height. Our online BMI calculator allows you to quickly and accurately determine your body mass index and understand if your weight is within normal limits."
@@ -1281,11 +1258,17 @@
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",
-			"seo": "A4 sheets calculator, paper weight calculation by density, paper weight calculator"
+			"seo": "A4 sheets calculator, paper weight calculation by density, paper weight calculator",
+			"breadcrumbs": {
+				"category": "Life"
+			}
 		},
 		"credit-loan": {
 			"title": "Credit Loan Calculator",
 			"description": "Calculate monthly loan payments, total interest, and create detailed payment schedules for any loan or credit",
+			"breadcrumbs": {
+				"category": "Finance"
+			},
 			"seo": {
 				"title": "Everything About Loans: Types, Rates, and Payment Methods",
 				"types": {
@@ -1489,6 +1472,9 @@
 					"balance": "Balance",
 					"moreMonths": "more months"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finance"
 			}
 		},
 		"auto-loan": {
@@ -1587,6 +1573,9 @@
 					"balance": "Balance",
 					"moreMonths": "more months"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finance"
 			}
 		},
 		"consumer-loan": {
@@ -1680,6 +1669,9 @@
 					"balance": "Balance",
 					"moreMonths": "more months"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finance"
 			}
 		},
 		"investment": {
@@ -1758,6 +1750,9 @@
 					"total": "Total",
 					"moreMonths": "more months"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finance"
 			}
 		},
 		"bloodAlcohol": {
@@ -1968,9 +1963,6 @@
 				"title": "Pregnancy and Due Date Calculator Online - Pregnancy Duration, Trimesters",
 				"description": "Free online pregnancy calculator will help determine pregnancy duration and estimated due date based on last menstrual period, conception, or IVF. Find out your trimester and how many days are left until birth.",
 				"keywords": "pregnancy calculator, due date, pregnancy duration, trimester, pregnancy by weeks, IVF pregnancy, conception date, last menstrual period",
-				"breadcrumbs": {
-					"life": "Life"
-				},
 				"overview": {
 					"title": "About the pregnancy calculator",
 					"content": "The pregnancy calculator is a convenient tool for determining pregnancy duration and estimated due date. It will help you track pregnancy development and plan important events."
@@ -2200,6 +2192,9 @@
 					"total": "Total",
 					"moreMonths": "more months"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finance"
 			}
 		},
 		"deposit": {
@@ -2282,13 +2277,16 @@
 					"endAmount": "Amount at End",
 					"moreMonths": "more months"
 				}
+			},
+			"breadcrumbs": {
+				"category": "Finance"
 			}
 		},
 		"roof": {
 			"title": "Roofing Calculator",
 			"description": "Calculate roof area, roofing materials quantity and weight",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"category": "Construction"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -2536,6 +2534,9 @@
 				"totalPayment": "Total Payment",
 				"effectiveRate": "Effective Rate",
 				"details": "Payment Details"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"osago": {
@@ -2598,6 +2599,9 @@
 				"driversCoeff": "Коэффициент ограничения (КО)",
 				"bonusMalusCoeff": "Bonus-Malus Coefficient (КБМ)",
 				"placeholder": "Введите параметры и нажмите 'Calculate'"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"kasko": {
@@ -2676,6 +2680,9 @@
 				"placeholder": "Enter parameters and click 'Calculate'",
 				"premium": "Insurance Premium",
 				"coefficients": "Applied Coefficients"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"fuel-consumption": {
@@ -2743,6 +2750,9 @@
 				"calculatedDistance": "Calculated Distance",
 				"calculatedFuel": "Calculated Fuel",
 				"placeholder": "Enter parameters and click 'Calculate'"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"vehicle-tax": {
@@ -2813,13 +2823,16 @@
 				"ratePerHp": "Rate per HP",
 				"totalHp": "Total HP",
 				"ownershipMonths": "Ownership Months"
+			},
+			"breadcrumbs": {
+				"category": "Auto"
 			}
 		},
 		"leasing": {
 			"title": "Auto Leasing Calculator",
 			"description": "Calculate monthly payments and total cost of auto leasing",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Leasing Parameters",
@@ -2885,7 +2898,7 @@
 			"title": "Customs Duty Calculator",
 			"description": "Calculate customs duties and fees for car import",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -2952,7 +2965,7 @@
 			"title": "Traffic Fines Calculator",
 			"description": "Calculate traffic fines for traffic violations with early payment discount",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Select Violations",
@@ -3023,7 +3036,7 @@
 			"title": "Car Ownership Cost Calculator",
 			"description": "Calculate total car ownership costs including fuel, insurance, taxes, maintenance and depreciation",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Car Parameters",
@@ -3098,7 +3111,7 @@
 			"title": "Car Depreciation Calculator",
 			"description": "Calculate car value depreciation over ownership years",
 			"breadcrumbs": {
-				"auto": "Auto"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -3185,7 +3198,7 @@
 			"title": "Wallpaper Calculator",
 			"description": "Calculate wallpaper roll quantity for room",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"category": "Construction"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -3293,7 +3306,7 @@
 			"title": "Building Materials Calculator",
 			"description": "Universal calculation of paint, putty, primer and tile adhesive",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"category": "Construction"
 			},
 			"form": {
 				"materialType": "Material Type",
@@ -3442,7 +3455,7 @@
 			"title": "Tile and Laminate Calculator",
 			"description": "Calculate tile and laminate quantity for floor",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"category": "Construction"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -3550,7 +3563,7 @@
 			"title": "Concrete Calculator",
 			"description": "Calculate cement, sand, gravel and water quantities for concrete preparation",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"category": "Construction"
 			},
 			"form": {
 				"title": "Calculation Parameters",
@@ -3685,7 +3698,7 @@
 			"title": "Brick and Block Calculator",
 			"description": "Calculate quantity of bricks, gas blocks and foam blocks for wall",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"category": "Construction"
 			},
 			"form": {
 				"title": "Wall Parameters",
@@ -4041,6 +4054,9 @@
 				"number_from_percent": "If {part} is {percentage}%, then the original number is {result}",
 				"increase_by_percent": "Increasing {number} by {percentage}% gives {result}",
 				"decrease_by_percent": "Decreasing {number} by {percentage}% gives {result}"
+			},
+			"breadcrumbs": {
+				"category": "Mathematics"
 			}
 		}
 	}

@@ -361,17 +361,23 @@ export default function TileLaminateCalculator() {
 									<thead>
 										<tr className='bg-gray-50'>
 											<th className='px-4 py-2 text-left font-medium text-gray-700'>
-												{t('results.parameter')}
+												{t(
+													'tile-laminate.results.parameter'
+												)}
 											</th>
 											<th className='px-4 py-2 text-left font-medium text-gray-700'>
-												{t('results.value')}
+												{t(
+													'tile-laminate.results.value'
+												)}
 											</th>
 										</tr>
 									</thead>
 									<tbody className='divide-y divide-gray-200'>
 										<tr>
 											<td className='px-4 py-2 font-medium text-gray-900'>
-												{t('results.roomArea')}
+												{t(
+													'tile-laminate.results.roomArea'
+												)}
 											</td>
 											<td className='px-4 py-2 text-gray-700'>
 												{result.roomArea} м²
@@ -379,7 +385,9 @@ export default function TileLaminateCalculator() {
 										</tr>
 										<tr>
 											<td className='px-4 py-2 font-medium text-gray-900'>
-												{t('results.flooringType')}
+												{t(
+													'tile-laminate.results.flooringType'
+												)}
 											</td>
 											<td className='px-4 py-2 text-gray-700'>
 												{result.flooringType}
@@ -387,7 +395,9 @@ export default function TileLaminateCalculator() {
 										</tr>
 										<tr>
 											<td className='px-4 py-2 font-medium text-gray-900'>
-												{t('results.elementSize')}
+												{t(
+													'tile-laminate.results.elementSize'
+												)}
 											</td>
 											<td className='px-4 py-2 text-gray-700'>
 												{result.elementSize}
@@ -395,7 +405,9 @@ export default function TileLaminateCalculator() {
 										</tr>
 										<tr>
 											<td className='px-4 py-2 font-medium text-gray-900'>
-												{t('results.elementArea')}
+												{t(
+													'tile-laminate.results.elementArea'
+												)}
 											</td>
 											<td className='px-4 py-2 text-gray-700'>
 												{result.elementArea} м²
@@ -403,7 +415,9 @@ export default function TileLaminateCalculator() {
 										</tr>
 										<tr>
 											<td className='px-4 py-2 font-medium text-gray-900'>
-												{t('results.totalElements')}
+												{t(
+													'tile-laminate.results.totalElements'
+												)}
 											</td>
 											<td className='px-4 py-2 text-gray-700'>
 												{result.totalElements}{' '}
@@ -412,7 +426,9 @@ export default function TileLaminateCalculator() {
 										</tr>
 										<tr>
 											<td className='px-4 py-2 font-medium text-gray-900'>
-												{t('results.reserve')}
+												{t(
+													'tile-laminate.results.reserve'
+												)}
 											</td>
 											<td className='px-4 py-2 text-gray-700'>
 												{result.reservePercentage}%
@@ -420,11 +436,15 @@ export default function TileLaminateCalculator() {
 										</tr>
 										<tr className='bg-blue-50'>
 											<td className='px-4 py-2 font-semibold text-blue-900'>
-												{t('results.packagesNeeded')}
+												{t(
+													'tile-laminate.results.packagesNeeded'
+												)}
 											</td>
 											<td className='px-4 py-2 font-semibold text-blue-900'>
 												{result.packagesNeeded}{' '}
-												{t('results.packages')}
+												{t(
+													'tile-laminate.results.packages'
+												)}
 											</td>
 										</tr>
 									</tbody>
@@ -437,7 +457,9 @@ export default function TileLaminateCalculator() {
 									{t('results.tips.title')}
 								</h4>
 								<p className='text-sm text-yellow-700'>
-									{t('results.tips.recommendation')}
+									{t(
+										'tile-laminate.results.tips.recommendation'
+									)}
 								</p>
 							</div>
 						</div>
