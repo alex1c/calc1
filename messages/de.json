@@ -25,7 +25,8 @@
 			"health": "Gesundheit",
 			"science": "Wissenschaft",
 			"converter": "Konverter",
-			"fun": "Spaß"
+			"fun": "Spaß",
+			"calculators": "Alle Rechner"
 		}
 	},
 	"navigation": {
@@ -40,6 +41,48 @@
 		"science": "Wissenschaft",
 		"converter": "Konverter",
 		"fun": "Spaß"
+	},
+	"categories": {
+		"finance": {
+			"title": "Finanzrechner",
+			"description": "Kredite, Einlagen, Hypotheken, Steuern und Investitionen"
+		},
+		"math": {
+			"title": "Mathematische Rechner",
+			"description": "Grundoperationen, Brüche, Prozente, Geometrie"
+		},
+		"life": {
+			"title": "Lebensrechner",
+			"description": "Kalorien, BMI, Schwangerschaft, Gesundheit"
+		},
+		"construction": {
+			"title": "Baurechner",
+			"description": "Tapeten, Farbe, Beton, Dach"
+		},
+		"auto": {
+			"title": "Auto-Rechner",
+			"description": "Kraftstoffverbrauch, Steuern, Leasing, Versicherung"
+		},
+		"time": {
+			"title": "Zeit und Datum",
+			"description": "Datumsdifferenzen, Alter, Timer"
+		},
+		"health": {
+			"title": "Gesundheitsrechner",
+			"description": "BMI, Herzfrequenz, Blutdruck, Vitamine"
+		},
+		"science": {
+			"title": "Bildung und Wissenschaft",
+			"description": "Physik, Chemie, Geometrie, Statistik"
+		},
+		"converter": {
+			"title": "Online-Konverter",
+			"description": "Länge, Gewicht, Temperatur, Geschwindigkeit"
+		},
+		"fun": {
+			"title": "Unterhaltung und Hobbys",
+			"description": "Kompatibilität, Generatoren, Spiele"
+		}
 	},
 	"math_basic": {
 		"title": "Grundrechner",
@@ -4102,71 +4145,6 @@
 				"accurate": "Präzise Berechnungen mit aktuellen Formeln",
 				"comparison": "Vergleich mit Kreditkauf"
 			}
-		}
-	},
-	"fuel": {
-		"title": "Kraftstoffverbrauch-Rechner",
-		"description": "Berechnen Sie Kraftstoffverbrauch, Reisedistanz und Kraftstoffkosten für die Reiseplanung",
-		"seo": {
-			"title": "Kraftstoffverbrauch-Rechner: Berechnen Sie Distanz und Kosten",
-			"overview": {
-				"title": "Kraftstoffverbrauch-Rechner",
-				"content": "Der Kraftstoffverbrauch-Rechner ist ein professionelles Tool zur Berechnung von Kraftstoffverbrauch, Reisedistanz und Kosten. Mit unserem Rechner können Sie berechnen, wie viel Kraftstoff Sie für eine Reise benötigen, welche Distanz Sie mit verfügbarem Kraftstoff zurücklegen können und Ihre Kraftstoffkosten planen."
-			},
-			"modes": {
-				"title": "Berechnungsmodi",
-				"content": "Unser Kraftstoffverbrauch-Rechner bietet zwei Berechnungsmodi:",
-				"distance": "Distanzberechnung nach Kraftstoffmenge und Verbrauch",
-				"fuel": "Berechnung der benötigten Kraftstoffmenge für die Reise"
-			},
-			"advantages": {
-				"title": "Rechner-Vorteile",
-				"content": "Der Kraftstoffverbrauch-Rechner bietet viele Vorteile für die Reiseplanung:",
-				"quick": "Schnelle Berechnung in Sekunden",
-				"accurate": "Präzise Berechnungen basierend auf realen Daten",
-				"planning": "Reise- und Kraftstoffbudget-Planung",
-				"savings": "Geld sparen beim Kraftstoff"
-			},
-			"tips": {
-				"title": "Kraftstoffspar-Tipps",
-				"content": "Um den Kraftstoffverbrauch zu reduzieren:",
-				"measure": "Messen Sie regelmäßig den Kraftstoffverbrauch Ihres Autos",
-				"driving": "Folgen Sie einem sparsamen Fahrstil",
-				"maintenance": "Halten Sie Ihr Auto in gutem technischen Zustand",
-				"planning": "Planen Sie Routen im Voraus, um Staus zu vermeiden"
-			}
-		},
-		"form": {
-			"title": "Berechnungsparameter",
-			"mode": "Berechnungsmodus",
-			"modes": {
-				"distance": "Distanz berechnen",
-				"distanceDesc": "Wie weit Sie fahren können",
-				"fuel": "Kraftstoff berechnen",
-				"fuelDesc": "Wie viel Kraftstoff Sie benötigen"
-			},
-			"consumption": "Kraftstoffverbrauch (L/100 km)",
-			"fuelAmount": "Kraftstoffmenge im Tank (L)",
-			"distance": "Gewünschte Distanz (km)",
-			"calculate": "Berechnen",
-			"errors": {
-				"title": "Eingabefehler"
-			}
-		},
-		"results": {
-			"title": "Berechnungsergebnisse",
-			"result": "Ergebnis",
-			"km": "km",
-			"liters": "L",
-			"distanceResult": "Sie können fahren",
-			"fuelResult": "Für die Reise benötigen Sie",
-			"details": "Berechnungsdetails",
-			"consumption": "Kraftstoffverbrauch",
-			"fuelAmount": "Kraftstoffmenge",
-			"distance": "Distanz",
-			"calculatedDistance": "Berechnete Distanz",
-			"calculatedFuel": "Berechneter Kraftstoff",
-			"placeholder": "Geben Sie Parameter ein und klicken Sie auf 'Berechnen'"
 		}
 	},
 	"equations": {

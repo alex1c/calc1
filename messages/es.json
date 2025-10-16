@@ -25,7 +25,8 @@
 			"health": "Salud",
 			"science": "Ciencia",
 			"converter": "Convertidores",
-			"fun": "Diversión"
+			"fun": "Diversión",
+			"calculators": "Todas las Calculadoras"
 		}
 	},
 	"navigation": {
@@ -4106,71 +4107,6 @@
 				"accurate": "Cálculos precisos usando fórmulas actuales",
 				"comparison": "Comparación con compra a crédito"
 			}
-		}
-	},
-	"fuel": {
-		"title": "Calculadora de Consumo de Combustible",
-		"description": "Calcula el consumo de combustible, distancia de viaje y costos de combustible para planificar viajes",
-		"seo": {
-			"title": "Calculadora de Consumo de Combustible: Calcula Distancia y Costos",
-			"overview": {
-				"title": "Calculadora de Consumo de Combustible",
-				"content": "La calculadora de consumo de combustible es una herramienta profesional para calcular el consumo de combustible, distancia de viaje y costos. Con nuestra calculadora puedes calcular cuánto combustible necesitas para un viaje, qué distancia puedes cubrir con el combustible disponible y planificar tus costos de combustible."
-			},
-			"modes": {
-				"title": "Modos de Cálculo",
-				"content": "Nuestra calculadora de consumo de combustible proporciona dos modos de cálculo:",
-				"distance": "Cálculo de distancia por cantidad de combustible y consumo",
-				"fuel": "Cálculo de la cantidad de combustible requerida para el viaje"
-			},
-			"advantages": {
-				"title": "Beneficios de la Calculadora",
-				"content": "La calculadora de consumo de combustible proporciona muchos beneficios para la planificación de viajes:",
-				"quick": "Cálculo rápido en segundos",
-				"accurate": "Cálculos precisos basados en datos reales",
-				"planning": "Planificación de viajes y presupuesto de combustible",
-				"savings": "Ahorro de dinero en combustible"
-			},
-			"tips": {
-				"title": "Consejos de Economía de Combustible",
-				"content": "Para reducir el consumo de combustible:",
-				"measure": "Mide regularmente el consumo de combustible de tu coche",
-				"driving": "Sigue un estilo de conducción económico",
-				"maintenance": "Mantén tu coche en buen estado técnico",
-				"planning": "Planifica rutas con anticipación para evitar atascos"
-			}
-		},
-		"form": {
-			"title": "Parámetros de Cálculo",
-			"mode": "Modo de Cálculo",
-			"modes": {
-				"distance": "Calcular Distancia",
-				"distanceDesc": "Qué tan lejos puedes conducir",
-				"fuel": "Calcular Combustible",
-				"fuelDesc": "Cuánto combustible necesitas"
-			},
-			"consumption": "Consumo de Combustible (L/100 km)",
-			"fuelAmount": "Cantidad de Combustible en el Tanque (L)",
-			"distance": "Distancia Deseada (km)",
-			"calculate": "Calcular",
-			"errors": {
-				"title": "Errores de Entrada"
-			}
-		},
-		"results": {
-			"title": "Resultados del Cálculo",
-			"result": "Resultado",
-			"km": "km",
-			"liters": "L",
-			"distanceResult": "Puedes conducir",
-			"fuelResult": "Para el viaje necesitas",
-			"details": "Detalles del Cálculo",
-			"consumption": "Consumo de Combustible",
-			"fuelAmount": "Cantidad de Combustible",
-			"distance": "Distancia",
-			"calculatedDistance": "Distancia Calculada",
-			"calculatedFuel": "Combustible Calculado",
-			"placeholder": "Ingresa los parámetros y haz clic en 'Calcular'"
 		}
 	},
 	"equations": {

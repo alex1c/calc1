@@ -25,7 +25,8 @@
 			"health": "Health",
 			"science": "Science",
 			"converter": "Converters",
-			"fun": "Fun"
+			"fun": "Fun",
+			"calculators": "All Calculators"
 		}
 	},
 	"navigation": {
@@ -4200,71 +4201,6 @@
 				"accurate": "Accurate calculations using current formulas",
 				"comparison": "Comparison with credit purchase"
 			}
-		}
-	},
-	"fuel": {
-		"title": "Fuel Consumption Calculator",
-		"description": "Calculate fuel consumption, travel distance and fuel costs for trip planning",
-		"seo": {
-			"title": "Fuel Consumption Calculator: Calculate Distance and Costs",
-			"overview": {
-				"title": "Fuel Consumption Calculator",
-				"content": "Fuel consumption calculator is a professional tool for calculating fuel consumption, travel distance and costs. With our calculator you can calculate how much fuel you need for a trip, what distance you can cover with available fuel and plan your fuel costs."
-			},
-			"modes": {
-				"title": "Calculation Modes",
-				"content": "Our fuel consumption calculator provides two calculation modes:",
-				"distance": "Distance calculation by fuel amount and consumption",
-				"fuel": "Calculation of required fuel amount for trip"
-			},
-			"advantages": {
-				"title": "Calculator Benefits",
-				"content": "Fuel consumption calculator provides many benefits for trip planning:",
-				"quick": "Quick calculation in seconds",
-				"accurate": "Accurate calculations based on real data",
-				"planning": "Trip and fuel budget planning",
-				"savings": "Money savings on fuel"
-			},
-			"tips": {
-				"title": "Fuel Economy Tips",
-				"content": "To reduce fuel consumption:",
-				"measure": "Regularly measure your car's fuel consumption",
-				"driving": "Follow economical driving style",
-				"maintenance": "Keep your car in good technical condition",
-				"planning": "Plan routes in advance to avoid traffic jams"
-			}
-		},
-		"form": {
-			"title": "Calculation Parameters",
-			"mode": "Calculation Mode",
-			"modes": {
-				"distance": "Calculate Distance",
-				"distanceDesc": "How far you can drive",
-				"fuel": "Calculate Fuel",
-				"fuelDesc": "How much fuel you need"
-			},
-			"consumption": "Fuel Consumption (L/100 km)",
-			"fuelAmount": "Fuel Amount in Tank (L)",
-			"distance": "Desired Distance (km)",
-			"calculate": "Calculate",
-			"errors": {
-				"title": "Input Errors"
-			}
-		},
-		"results": {
-			"title": "Calculation Results",
-			"result": "Result",
-			"km": "km",
-			"liters": "L",
-			"distanceResult": "You can drive",
-			"fuelResult": "For the trip you need",
-			"details": "Calculation Details",
-			"consumption": "Fuel Consumption",
-			"fuelAmount": "Fuel Amount",
-			"distance": "Distance",
-			"calculatedDistance": "Calculated Distance",
-			"calculatedFuel": "Calculated Fuel",
-			"placeholder": "Enter parameters and click 'Calculate'"
 		}
 	}
 }
