@@ -13,8 +13,19 @@ export default getRequestConfig(async ({ requestLocale }) => {
 		locale = 'ru'; // Default locale
 	}
 
-	return {
-		locale,
-		messages: (await import(`../messages/${locale}.json`)).default,
-	};
+	try {
+		const messages = (await import(`../messages/${locale}.json`)).default;
+		return {
+			locale,
+			messages,
+		};
+	} catch (error) {
+		console.error(`Failed to load messages for locale ${locale}:`, error);
+		// Fallback to Russian if locale fails to load
+		const fallbackMessages = (await import(`../messages/ru.json`)).default;
+		return {
+			locale: 'ru',
+			messages: fallbackMessages,
+		};
+	}
 });

@@ -3979,6 +3979,124 @@
 					"seo": "brick calculator, brick calculation, block calculator, gas blocks, foam blocks, masonry, wall, wall thickness, mortar, glue, material reserve, construction cost, single brick, double brick, triple brick, brick dimensions, block dimensions"
 				}
 			}
+		},
+		"babyGrowth": {
+			"title": "Baby Growth and Weight Calculator by Age",
+			"description": "Determine if your child's height and weight meet WHO age standards",
+			"breadcrumbs": {
+				"category": "Life"
+			},
+			"form": {
+				"title": "Child Parameters",
+				"gender": "Child Gender",
+				"genderMale": "Boy",
+				"genderFemale": "Girl",
+				"age": "Age",
+				"ageMonths": "months",
+				"ageYears": "years",
+				"height": "Height (cm)",
+				"weight": "Weight (kg)",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"title": "Data Errors"
+				}
+			},
+			"result": {
+				"overallTitle": "Overall Assessment",
+				"height": "Height",
+				"weight": "Weight",
+				"percentile": "Percentile",
+				"category": "Category",
+				"recommendations": "Recommendations"
+			},
+			"info": {
+				"title": "About the Calculator",
+				"content": "The calculator is based on WHO growth standards for children aged 0 to 5 years. Results help evaluate whether your child's development meets age norms."
+			},
+			"hero": {
+				"who": "WHO",
+				"whoDesc": "WHO Standards",
+				"accuracy": "95%",
+				"accuracyDesc": "Calculation Accuracy",
+				"ageRange": "0-5 years",
+				"ageRangeDesc": "Age Range"
+			},
+			"features": {
+				"whoStandards": "WHO Growth Standards",
+				"percentileCalculation": "Percentile Calculation",
+				"growthAssessment": "Growth Assessment",
+				"recommendations": "Personal Recommendations"
+			},
+			"seo": {
+				"title": "Baby Growth and Weight Calculator by Age",
+				"description": "Online baby growth and weight calculator based on WHO data. Determine if your child meets height and weight standards.",
+				"overview": {
+					"title": "About the Baby Growth Calculator",
+					"content": "The baby growth and weight calculator helps parents evaluate whether their child's development meets the age standards of the World Health Organization (WHO)."
+				},
+				"whoStandards": {
+					"title": "WHO Standards",
+					"content": "The World Health Organization has developed international child growth standards based on data from healthy children from different countries around the world.",
+					"benefits": "Benefits of WHO Standards",
+					"benefitsDescription": "Universal norms based on healthy development of children from different cultures and regions.",
+					"reliability": "Data Reliability",
+					"reliabilityDescription": "Standards are based on studies of thousands of healthy children and are regularly updated."
+				},
+				"percentiles": {
+					"title": "What are Percentiles",
+					"content": "Percentiles show how your child's height and weight compare to other children of the same age and gender.",
+					"table": {
+						"percentile": "Percentile",
+						"category": "Category",
+						"description": "Description",
+						"belowNormal": "Below Normal",
+						"belowNormalDesc": "Possible developmental delay",
+						"belowAverage": "Below Average",
+						"belowAverageDesc": "Minor deviation",
+						"normal": "Within Normal Range",
+						"normalDesc": "Normal indicators",
+						"aboveAverage": "Above Average",
+						"aboveAverageDesc": "Development faster than peers",
+						"aboveNormal": "Above Normal",
+						"aboveNormalDesc": "Possible deviations"
+					}
+				},
+				"howToUse": {
+					"title": "How to Use the Calculator",
+					"content": "For accurate results, it's important to measure your child's height and weight correctly.",
+					"measurements": "Measurements",
+					"measurementsDescription": "Measure height in the morning when the child is rested and relaxed.",
+					"accuracy": "Accuracy",
+					"accuracyDescription": "Weigh the child on an empty stomach, without clothing or in minimal clothing."
+				},
+				"importantNotes": {
+					"title": "Important Notes",
+					"content": "The calculator is for informational purposes only and does not replace pediatric consultation.",
+					"warning": "Important to Remember",
+					"warningContent": "If you have any doubts about your child's development, be sure to consult a pediatrician."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"howToUse": {
+						"question": "How to know the child's growth norm by age?",
+						"answer": "Enter the child's gender, age, height and weight in the calculator. The system will automatically determine the percentile and give an assessment of compliance with WHO standards."
+					},
+					"whoStandards": {
+						"question": "Why do boys and girls differ in standards?",
+						"answer": "Boys and girls have different growth and development rates. WHO has developed separate standards for each gender."
+					},
+					"percentileMeaning": {
+						"question": "What does percentile mean?",
+						"answer": "The percentile shows what percentage of children of the same age and gender have lower height or weight indicators."
+					},
+					"ageLimit": {
+						"question": "Can the calculator be used after 5 years?",
+						"answer": "The calculator is designed for children aged 0 to 5 years. For children over 5 years old, different growth standards are used."
+					}
+				}
+			}
 		}
 	},
 	"math_percent": {
@@ -4081,124 +4199,6 @@
 				"quick": "Quick calculation in seconds",
 				"accurate": "Accurate calculations using current formulas",
 				"comparison": "Comparison with credit purchase"
-			}
-		},
-		"babyGrowth": {
-			"title": "Baby Growth and Weight Calculator by Age",
-			"description": "Determine if your child's height and weight meet WHO age standards",
-			"breadcrumbs": {
-				"category": "Life"
-			},
-			"form": {
-				"title": "Child Parameters",
-				"gender": "Child's Gender",
-				"genderMale": "Boy",
-				"genderFemale": "Girl",
-				"age": "Age",
-				"ageMonths": "months",
-				"ageYears": "years",
-				"height": "Height (cm)",
-				"weight": "Weight (kg)",
-				"calculate": "Calculate",
-				"calculating": "Calculating...",
-				"reset": "Reset",
-				"errors": {
-					"title": "Data Errors"
-				}
-			},
-			"result": {
-				"overallTitle": "Overall Assessment",
-				"height": "Height",
-				"weight": "Weight",
-				"percentile": "Percentile",
-				"category": "Category",
-				"recommendations": "Recommendations"
-			},
-			"info": {
-				"title": "About the Calculator",
-				"content": "The calculator is based on WHO growth standards for children aged 0-5 years. Results help assess whether your child's development meets age norms."
-			},
-			"hero": {
-				"who": "WHO",
-				"whoDesc": "WHO Standards",
-				"accuracy": "95%",
-				"accuracyDesc": "Calculation Accuracy",
-				"ageRange": "0-5 years",
-				"ageRangeDesc": "Age Range"
-			},
-			"features": {
-				"whoStandards": "WHO Growth Standards",
-				"percentileCalculation": "Percentile Calculation",
-				"growthAssessment": "Growth Assessment",
-				"recommendations": "Personal Recommendations"
-			},
-			"seo": {
-				"title": "Baby Growth and Weight Calculator by Age",
-				"description": "Online baby growth and weight calculator based on WHO data. Determine if your child meets height and weight standards.",
-				"overview": {
-					"title": "About the Baby Growth Calculator",
-					"content": "The baby growth and weight calculator helps parents assess whether their child's development meets the age standards of the World Health Organization (WHO)."
-				},
-				"whoStandards": {
-					"title": "WHO Standards",
-					"content": "The World Health Organization has developed international child growth standards based on data from healthy children from different countries around the world.",
-					"benefits": "Benefits of WHO Standards",
-					"benefitsDescription": "Universal norms based on healthy development of children from different cultures and regions.",
-					"reliability": "Data Reliability",
-					"reliabilityDescription": "Standards are based on studies of thousands of healthy children and are regularly updated."
-				},
-				"percentiles": {
-					"title": "What are Percentiles",
-					"content": "Percentiles show how your child's height and weight compare to other children of the same age and gender.",
-					"table": {
-						"percentile": "Percentile",
-						"category": "Category",
-						"description": "Description",
-						"belowNormal": "Below Normal",
-						"belowNormalDesc": "Possible developmental delay",
-						"belowAverage": "Below Average",
-						"belowAverageDesc": "Minor deviation",
-						"normal": "Normal Range",
-						"normalDesc": "Normal indicators",
-						"aboveAverage": "Above Average",
-						"aboveAverageDesc": "Development faster than peers",
-						"aboveNormal": "Above Normal",
-						"aboveNormalDesc": "Possible deviations"
-					}
-				},
-				"howToUse": {
-					"title": "How to Use the Calculator",
-					"content": "For accurate results, it's important to properly measure your child's height and weight.",
-					"measurements": "Measurements",
-					"measurementsDescription": "Measure height in the morning when the child is well-rested and relaxed.",
-					"accuracy": "Accuracy",
-					"accuracyDescription": "Weigh the child on an empty stomach, without clothes or in minimal clothing."
-				},
-				"importantNotes": {
-					"title": "Important Notes",
-					"content": "The calculator is for informational purposes only and does not replace pediatric consultation.",
-					"warning": "Important to Remember",
-					"warningContent": "If you have any doubts about your child's development, be sure to consult a pediatrician."
-				},
-				"faq": {
-					"title": "Frequently Asked Questions",
-					"howToUse": {
-						"question": "How to find out the child's height norm by age?",
-						"answer": "Enter the child's gender, age, height, and weight into the calculator. The system will automatically determine the percentile and provide an assessment of compliance with WHO standards."
-					},
-					"whoStandards": {
-						"question": "Why do boys and girls differ in standards?",
-						"answer": "Boys and girls have different growth and development rates. WHO has developed separate standards for each gender."
-					},
-					"percentileMeaning": {
-						"question": "What does percentile mean?",
-						"answer": "Percentile shows what percentage of children of the same age and gender have lower height or weight indicators."
-					},
-					"ageLimit": {
-						"question": "Can the calculator be used after 5 years?",
-						"answer": "The calculator is designed for children aged 0-5 years. For children over 5 years, different growth standards are used."
-					}
-				}
 			}
 		}
 	},

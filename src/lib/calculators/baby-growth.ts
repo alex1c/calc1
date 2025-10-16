@@ -396,15 +396,15 @@ export function validateBabyGrowthInput(input: BabyGrowthInput): string[] {
 	const errors: string[] = [];
 
 	if (input.ageMonths < 0 || input.ageMonths > 60) {
-		errors.push('Возраст должен быть от 0 до 60 месяцев');
+		errors.push('Age must be between 0 and 60 months');
 	}
 
 	if (input.height < 30 || input.height > 150) {
-		errors.push('Рост должен быть от 30 до 150 см');
+		errors.push('Height must be between 30 and 150 cm');
 	}
 
 	if (input.weight < 1 || input.weight > 50) {
-		errors.push('Вес должен быть от 1 до 50 кг');
+		errors.push('Weight must be between 1 and 50 kg');
 	}
 
 	return errors;

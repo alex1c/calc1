@@ -1,14 +1,14 @@
 ---
 alwaysApply: true
 ---
-Мы делаем сайт со множеством калькуляторов. При создании нового калькулятора используй единообразие с уже созданными.
-Используй единообразие в структуре проекта
-Все калькуляторы переведены на несколько языков. Используй единый подход для всего сайта для перевода.
-На страницу каждого калькулятора добавляй максимальную сео информацию. Сео блоки, заголовки, разметку. Максимум ключевых слов
-При добавлении СЕО всегда учитывай домен на котором будет расположен сайт calc1.ru
-При наличии списков не забывай переводить значения выпадающих списков на соответствующие локали
-всегда добавляй SEO-блоки
-Всегда комментируй код
+We're building a website with multiple calculators. When creating a new calculator, maintain consistency with existing ones.
+Maintain consistency in the project structure.
+All calculators are translated into multiple languages. Use a consistent approach for translation across the entire website.
+Add as much SEO information as possible to each calculator page. SEO blocks, headings, and markup. Maximize the keyword count.
+When adding SEO, always consider the domain where the calc1.ru website will be hosted.
+If you have lists, remember to translate the drop-down list values ​​to the appropriate locales.
+Always add SEO blocks.
+Always comment the code.
 
 
 <title> — с переводом.

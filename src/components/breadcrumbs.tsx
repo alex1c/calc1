@@ -36,6 +36,8 @@ export default function Breadcrumbs() {
 				label = t('categories.life.title');
 			} else if (segment === 'blood-alcohol') {
 				label = t('calculators.bloodAlcohol.title');
+			} else if (segment === 'baby-growth') {
+				label = t('calculators.babyGrowth.title');
 			} else if (segment === 'calc') {
 				label = t('categories.calculators.title');
 			}
