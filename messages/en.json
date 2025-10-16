@@ -4043,59 +4043,5 @@
 				"decrease_by_percent": "Decreasing {number} by {percentage}% gives {result}"
 			}
 		}
-	},
-	"leasing": {
-		"title": "Auto Leasing Calculator",
-		"description": "Calculate monthly payments and total cost of auto leasing",
-		"breadcrumbs": {
-			"auto": "Auto"
-		},
-		"form": {
-			"title": "Leasing Parameters",
-			"carValue": "Car Value ($)",
-			"downPayment": "Down Payment",
-			"leaseTerm": "Lease Term (months)",
-			"interestRate": "Interest Rate (%)",
-			"buyoutValue": "Buyout Value",
-			"calculate": "Calculate",
-			"errors": {
-				"title": "Data Errors"
-			}
-		},
-		"results": {
-			"title": "Calculation Results",
-			"monthlyPayment": "Monthly Payment",
-			"monthlyPaymentDescription": "Amount to pay each month",
-			"totalPayments": "Total Payments",
-			"totalCost": "Total Cost",
-			"overpayment": "Total Interest",
-			"financingAmount": "Financing Amount",
-			"downPaymentAmount": "Down Payment",
-			"buyoutAmount": "Buyout Value",
-			"details": "Calculation Details",
-			"placeholder": "Enter data for calculation"
-		},
-		"seo": {
-			"title": "Online Auto Leasing Calculator",
-			"overview": {
-				"title": "About Auto Leasing Calculator",
-				"content": "Online auto leasing calculator helps calculate monthly payments, overpayment and total payments under leasing agreement. Convenient tool for evaluating auto leasing profitability."
-			},
-			"calculation": {
-				"title": "How Leasing is Calculated",
-				"content": "Leasing is calculated using annuity payment formula considering down payment, contract term, interest rate and buyout value.",
-				"financing": "Financing Amount = Car Value - Down Payment - Buyout Value",
-				"payment": "Monthly Payment is calculated using annuity formula",
-				"total": "Total Amount = Monthly Payment × Term + Down Payment + Buyout Value",
-				"overpayment": "Total Interest = Total Amount - Car Value"
-			},
-			"advantages": {
-				"title": "Calculator Benefits",
-				"content": "Our auto leasing calculator helps you make an informed decision about auto leasing profitability.",
-				"quick": "Quick calculation in seconds",
-				"accurate": "Accurate calculations using current formulas",
-				"comparison": "Comparison with credit purchase"
-			}
-		}
 	}
 }

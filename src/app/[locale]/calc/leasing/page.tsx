@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function LeasingPage() {
-	const t = useTranslations('leasing');
+	const t = useTranslations('calculators.leasing');
 	const locale = useLocale();
 
 	return (
@@ -29,7 +29,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.leasing.seo[key];
+	const t = (key: string) => messages.calculators.leasing.seo[key];
 
 	return {
 		title: t('title'),

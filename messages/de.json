@@ -4093,60 +4093,6 @@
 			}
 		}
 	},
-	"leasing": {
-		"title": "Auto Leasing Rechner",
-		"description": "Monatliche Zahlungen und Gesamtkosten des Auto Leasings berechnen",
-		"breadcrumbs": {
-			"auto": "Auto"
-		},
-		"form": {
-			"title": "Leasing Parameter",
-			"carValue": "Auto Wert (€)",
-			"downPayment": "Anzahlung",
-			"leaseTerm": "Leasing Laufzeit (Monate)",
-			"interestRate": "Zinssatz (%)",
-			"buyoutValue": "Kaufpreis",
-			"calculate": "Berechnen",
-			"errors": {
-				"title": "Datenfehler"
-			}
-		},
-		"results": {
-			"title": "Berechnungsergebnisse",
-			"monthlyPayment": "Monatliche Zahlung",
-			"monthlyPaymentDescription": "Zu zahlender Betrag jeden Monat",
-			"totalPayments": "Gesamtzahlungen",
-			"totalCost": "Gesamtkosten",
-			"overpayment": "Gesamtzinsen",
-			"financingAmount": "Finanzierungsbetrag",
-			"downPaymentAmount": "Anzahlung",
-			"buyoutAmount": "Kaufpreis",
-			"details": "Berechnungsdetails",
-			"placeholder": "Daten für Berechnung eingeben"
-		},
-		"seo": {
-			"title": "Online Auto Leasing Rechner",
-			"overview": {
-				"title": "Über den Auto Leasing Rechner",
-				"content": "Der Online Auto Leasing Rechner hilft bei der Berechnung monatlicher Zahlungen, Überzahlung und Gesamtzahlungen unter Leasingvertrag. Praktisches Tool zur Bewertung der Rentabilität des Auto Leasings."
-			},
-			"calculation": {
-				"title": "Wie Leasing Berechnet Wird",
-				"content": "Leasing wird mit der Annuitätenformel berechnet unter Berücksichtigung von Anzahlung, Vertragslaufzeit, Zinssatz und Kaufpreis.",
-				"financing": "Finanzierungsbetrag = Auto Wert - Anzahlung - Kaufpreis",
-				"payment": "Monatliche Zahlung wird mit der Annuitätenformel berechnet",
-				"total": "Gesamtbetrag = Monatliche Zahlung × Laufzeit + Anzahlung + Kaufpreis",
-				"overpayment": "Gesamtzinsen = Gesamtbetrag - Auto Wert"
-			},
-			"advantages": {
-				"title": "Rechner Vorteile",
-				"content": "Unser Auto Leasing Rechner hilft Ihnen, eine fundierte Entscheidung über die Rentabilität des Auto Leasings zu treffen.",
-				"quick": "Schnelle Berechnung in Sekunden",
-				"accurate": "Präzise Berechnungen mit aktuellen Formeln",
-				"comparison": "Vergleich mit Kreditkauf"
-			}
-		}
-	},
 	"equations": {
 		"title": "Gleichungslöser Rechner",
 		"description": "Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit Schritt-für-Schritt-Erklärung",
