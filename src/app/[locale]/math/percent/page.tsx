@@ -55,7 +55,7 @@ export const metadata: Metadata = {
  * - Structured data for search engines
  */
 export default function PercentCalculatorPage() {
-	const t = useTranslations('math_percent');
+	const t = useTranslations('calculators.math_percent');
 	const tCommon = useTranslations();
 	const locale = useLocale();
 

@@ -37,7 +37,7 @@ interface CalculationState {
  * - Increase/decrease number by percentage
  */
 export default function PercentCalculator() {
-	const t = useTranslations('math_percent');
+	const t = useTranslations('calculators.math_percent');
 
 	// State management
 	const [activeTab, setActiveTab] =

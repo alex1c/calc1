@@ -32,8 +32,8 @@ export default function MathPage() {
 		},
 		{
 			id: 'percentage',
-			title: t('math_percent.title'),
-			description: t('math_percent.description'),
+			title: t('calculators.math_percent.title'),
+			description: t('calculators.math_percent.description'),
 			icon: Percent,
 			href: '/math/percent',
 		},

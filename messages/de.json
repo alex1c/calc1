@@ -4042,55 +4042,55 @@
 					}
 				}
 			}
-		}
-	},
-	"math_percent": {
-		"title": "Prozentrechner",
-		"description": "Online-Prozentrechner zur Berechnung von Prozentsätzen, Verhältnissen und Änderungen in Prozent. Schnelles und präzises Tool mit mehrsprachiger Unterstützung.",
-		"find_percent_of_number": "Prozentsatz einer Zahl finden",
-		"find_percent_of_number_desc": "Berechnen, welcher Prozentsatz eine Zahl von einer anderen darstellt",
-		"what_percent_is": "Welcher Prozentsatz ist eine Zahl von einer anderen",
-		"what_percent_is_desc": "Berechnen des Prozentsatzes zwischen zwei Zahlen",
-		"find_number_from_percent": "Zahl aus Prozentsatz finden",
-		"find_number_from_percent_desc": "Berechnen der ursprünglichen Zahl, wenn Prozentsatz und Ergebnis bekannt sind",
-		"increase_or_decrease": "Zahl um Prozentsatz erhöhen oder verringern",
-		"increase_or_decrease_desc": "Prozentsatz zu einer Zahl hinzufügen oder davon abziehen",
-		"number": "Zahl",
-		"percentage": "Prozentsatz",
-		"first_number": "Erste Zahl",
-		"second_number": "Zweite Zahl",
-		"part_value": "Teilwert",
-		"operation": "Operation",
-		"calculate": "Berechnen",
-		"calculating": "Berechne...",
-		"result": "Ergebnis",
-		"increase": "Erhöhen",
-		"decrease": "Verringern",
-		"errors": {
-			"error_title": "Berechnungsfehler",
-			"invalid_input": "Bitte geben Sie gültige Zahlen ein",
-			"calculation_failed": "Berechnung fehlgeschlagen. Bitte überprüfen Sie Ihre Eingabe."
 		},
-		"tips": {
-			"title": "Tipps",
-			"enter_key": "Enter drücken zum Berechnen",
-			"auto_calculate": "Ergebnisse werden automatisch beim Tippen aktualisiert",
-			"negative_numbers": "Negative Zahlen werden nicht unterstützt"
-		},
-		"seo": {
-			"title": "Online-Prozentrechner - Prozentsätze schnell berechnen",
-			"description": "Einfacher Online-Prozentrechner: Berechnen Sie Prozentsätze von Zahlen, finden Sie heraus, welcher Prozentsatz eine Zahl von einer anderen ist, oder erhöhen Sie eine Zahl um einen Prozentsatz. Verfügbar in 4 Sprachen.",
-			"content": {
-				"title": "Über den Prozentrechner",
-				"description": "Der Online-Prozentrechner hilft beim Berechnen von Prozentsätzen von Zahlen, beim Finden von Prozentsatzverhältnissen und beim Ändern von Zahlen um einen bestimmten Prozentsatz. Geeignet für Rabattberechnungen, Steuern, Gewinne und andere alltägliche Aufgaben."
+		"math_percent": {
+			"title": "Prozentrechner",
+			"description": "Online-Prozentrechner zur Berechnung von Prozentsätzen, Verhältnissen und Änderungen in Prozent. Schnelles und präzises Tool mit mehrsprachiger Unterstützung.",
+			"find_percent_of_number": "Prozentsatz einer Zahl finden",
+			"find_percent_of_number_desc": "Berechnen, welcher Prozentsatz eine Zahl von einer anderen darstellt",
+			"what_percent_is": "Welcher Prozentsatz ist eine Zahl von einer anderen",
+			"what_percent_is_desc": "Berechnen des Prozentsatzes zwischen zwei Zahlen",
+			"find_number_from_percent": "Zahl aus Prozentsatz finden",
+			"find_number_from_percent_desc": "Berechnen der ursprünglichen Zahl, wenn Prozentsatz und Ergebnis bekannt sind",
+			"increase_or_decrease": "Zahl um Prozentsatz erhöhen oder verringern",
+			"increase_or_decrease_desc": "Prozentsatz zu einer Zahl hinzufügen oder davon abziehen",
+			"number": "Zahl",
+			"percentage": "Prozentsatz",
+			"first_number": "Erste Zahl",
+			"second_number": "Zweite Zahl",
+			"part_value": "Teilwert",
+			"operation": "Operation",
+			"calculate": "Berechnen",
+			"calculating": "Berechne...",
+			"result": "Ergebnis",
+			"increase": "Erhöhen",
+			"decrease": "Verringern",
+			"errors": {
+				"error_title": "Berechnungsfehler",
+				"invalid_input": "Bitte geben Sie gültige Zahlen ein",
+				"calculation_failed": "Berechnung fehlgeschlagen. Bitte überprüfen Sie Ihre Eingabe."
+			},
+			"tips": {
+				"title": "Tipps",
+				"enter_key": "Enter drücken zum Berechnen",
+				"auto_calculate": "Ergebnisse werden automatisch beim Tippen aktualisiert",
+				"negative_numbers": "Negative Zahlen werden nicht unterstützt"
+			},
+			"seo": {
+				"title": "Online-Prozentrechner - Prozentsätze schnell berechnen",
+				"description": "Einfacher Online-Prozentrechner: Berechnen Sie Prozentsätze von Zahlen, finden Sie heraus, welcher Prozentsatz eine Zahl von einer anderen ist, oder erhöhen Sie eine Zahl um einen Prozentsatz. Verfügbar in 4 Sprachen.",
+				"content": {
+					"title": "Über den Prozentrechner",
+					"description": "Der Online-Prozentrechner hilft beim Berechnen von Prozentsätzen von Zahlen, beim Finden von Prozentsatzverhältnissen und beim Ändern von Zahlen um einen bestimmten Prozentsatz. Geeignet für Rabattberechnungen, Steuern, Gewinne und andere alltägliche Aufgaben."
+				}
+			},
+			"results": {
+				"percent_of_number": "{percentage}% von {number} entspricht {result}",
+				"what_percent": "{number1} ist {result}% von {number2}",
+				"number_from_percent": "Wenn {part} {percentage}% entspricht, dann ist die ursprüngliche Zahl {result}",
+				"increase_by_percent": "Erhöhung von {number} um {percentage}% ergibt {result}",
+				"decrease_by_percent": "Verringerung von {number} um {percentage}% ergibt {result}"
 			}
-		},
-		"results": {
-			"percent_of_number": "{percentage}% von {number} entspricht {result}",
-			"what_percent": "{number1} ist {result}% von {number2}",
-			"number_from_percent": "Wenn {part} {percentage}% entspricht, dann ist die ursprüngliche Zahl {result}",
-			"increase_by_percent": "Erhöhung von {number} um {percentage}% ergibt {result}",
-			"decrease_by_percent": "Verringerung von {number} um {percentage}% ergibt {result}"
 		}
 	},
 	"leasing": {

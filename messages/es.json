@@ -4004,55 +4004,55 @@
 					}
 				}
 			}
-		}
-	},
-	"math_percent": {
-		"title": "Calculadora de Porcentajes",
-		"description": "Calculadora de porcentajes online para encontrar porcentajes, proporciones y cambios por porcentaje. Herramienta rápida y precisa con soporte multilingüe.",
-		"find_percent_of_number": "Encontrar porcentaje de un número",
-		"find_percent_of_number_desc": "Calcular qué porcentaje representa un número de otro",
-		"what_percent_is": "Qué porcentaje es un número de otro",
-		"what_percent_is_desc": "Calcular la proporción porcentual entre dos números",
-		"find_number_from_percent": "Encontrar número a partir del porcentaje",
-		"find_number_from_percent_desc": "Calcular el número original cuando se conoce el porcentaje y el resultado",
-		"increase_or_decrease": "Aumentar o disminuir número por porcentaje",
-		"increase_or_decrease_desc": "Sumar o restar un porcentaje a un número",
-		"number": "Número",
-		"percentage": "Porcentaje",
-		"first_number": "Primer número",
-		"second_number": "Segundo número",
-		"part_value": "Valor de la parte",
-		"operation": "Operación",
-		"calculate": "Calcular",
-		"calculating": "Calculando...",
-		"result": "Resultado",
-		"increase": "Aumentar",
-		"decrease": "Disminuir",
-		"errors": {
-			"error_title": "Error de Cálculo",
-			"invalid_input": "Por favor ingrese números válidos",
-			"calculation_failed": "Error en el cálculo. Por favor verifique su entrada."
 		},
-		"tips": {
-			"title": "Consejos",
-			"enter_key": "Presione Enter para calcular",
-			"auto_calculate": "Los resultados se actualizan automáticamente al escribir",
-			"negative_numbers": "Los números negativos no son compatibles"
-		},
-		"seo": {
-			"title": "Calculadora de Porcentajes Online - Calcular Porcentajes Rápidamente",
-			"description": "Calculadora de porcentajes online simple: calcule porcentajes de números, encuentre qué porcentaje es un número de otro, o aumente un número por porcentaje. Disponible en 4 idiomas.",
-			"content": {
-				"title": "Acerca de la Calculadora de Porcentajes",
-				"description": "La calculadora de porcentajes online ayuda a calcular porcentajes de números, encontrar proporciones porcentuales y cambiar números por un porcentaje dado. Adecuada para cálculos de descuentos, impuestos, ganancias y otras tareas cotidianas."
+		"math_percent": {
+			"title": "Calculadora de Porcentajes",
+			"description": "Calculadora de porcentajes online para encontrar porcentajes, proporciones y cambios por porcentaje. Herramienta rápida y precisa con soporte multilingüe.",
+			"find_percent_of_number": "Encontrar porcentaje de un número",
+			"find_percent_of_number_desc": "Calcular qué porcentaje representa un número de otro",
+			"what_percent_is": "Qué porcentaje es un número de otro",
+			"what_percent_is_desc": "Calcular la proporción porcentual entre dos números",
+			"find_number_from_percent": "Encontrar número a partir del porcentaje",
+			"find_number_from_percent_desc": "Calcular el número original cuando se conoce el porcentaje y el resultado",
+			"increase_or_decrease": "Aumentar o disminuir número por porcentaje",
+			"increase_or_decrease_desc": "Sumar o restar un porcentaje a un número",
+			"number": "Número",
+			"percentage": "Porcentaje",
+			"first_number": "Primer número",
+			"second_number": "Segundo número",
+			"part_value": "Valor de la parte",
+			"operation": "Operación",
+			"calculate": "Calcular",
+			"calculating": "Calculando...",
+			"result": "Resultado",
+			"increase": "Aumentar",
+			"decrease": "Disminuir",
+			"errors": {
+				"error_title": "Error de Cálculo",
+				"invalid_input": "Por favor ingrese números válidos",
+				"calculation_failed": "Error en el cálculo. Por favor verifique su entrada."
+			},
+			"tips": {
+				"title": "Consejos",
+				"enter_key": "Presione Enter para calcular",
+				"auto_calculate": "Los resultados se actualizan automáticamente al escribir",
+				"negative_numbers": "Los números negativos no son compatibles"
+			},
+			"seo": {
+				"title": "Calculadora de Porcentajes Online - Calcular Porcentajes Rápidamente",
+				"description": "Calculadora de porcentajes online simple: calcule porcentajes de números, encuentre qué porcentaje es un número de otro, o aumente un número por porcentaje. Disponible en 4 idiomas.",
+				"content": {
+					"title": "Acerca de la Calculadora de Porcentajes",
+					"description": "La calculadora de porcentajes online ayuda a calcular porcentajes de números, encontrar proporciones porcentuales y cambiar números por un porcentaje dado. Adecuada para cálculos de descuentos, impuestos, ganancias y otras tareas cotidianas."
+				}
+			},
+			"results": {
+				"percent_of_number": "{percentage}% de {number} es igual a {result}",
+				"what_percent": "{number1} es {result}% de {number2}",
+				"number_from_percent": "Si {part} es {percentage}%, entonces el número original es {result}",
+				"increase_by_percent": "Aumentar {number} en {percentage}% da {result}",
+				"decrease_by_percent": "Disminuir {number} en {percentage}% da {result}"
 			}
-		},
-		"results": {
-			"percent_of_number": "{percentage}% de {number} es igual a {result}",
-			"what_percent": "{number1} es {result}% de {number2}",
-			"number_from_percent": "Si {part} es {percentage}%, entonces el número original es {result}",
-			"increase_by_percent": "Aumentar {number} en {percentage}% da {result}",
-			"decrease_by_percent": "Disminuir {number} en {percentage}% da {result}"
 		}
 	},
 	"leasing": {
