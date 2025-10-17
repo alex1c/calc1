@@ -1542,6 +1542,141 @@
 				"category": "Finanzen"
 			}
 		},
+		"bmiHealth": {
+			"title": "BMI-Rechner (Körpermassenindex)",
+			"description": "Berechnen Sie Ihren Body-Mass-Index (BMI) online. Bestimmen Sie, ob Ihr Gewicht im normalen Bereich nach WHO-Standards liegt. Schnell, genau und kostenlos.",
+			"form": {
+				"title": "Berechnungsparameter",
+				"weight": "Gewicht",
+				"weightPlaceholder": "Geben Sie Ihr Gewicht ein",
+				"height": "Größe",
+				"heightPlaceholder": "Geben Sie Ihre Größe ein",
+				"calculate": "BMI berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"weightRequired": "Bitte geben Sie Ihr Gewicht ein",
+					"heightRequired": "Bitte geben Sie Ihre Größe ein",
+					"weightRange": "Gewicht muss zwischen 20 und 300 kg liegen",
+					"heightRange": "Größe muss zwischen 100 und 250 cm liegen",
+					"calculationError": "Berechnungsfehler"
+				}
+			},
+			"results": {
+				"bmiUnit": "kg/m²",
+				"scale": "BMI-Skala",
+				"recommendation": "Empfehlung",
+				"normalRange": "Normalgewicht",
+				"normalRangeText": "Für Ihre Größe liegt das Normalgewicht zwischen {min} und {max} kg"
+			},
+			"categories": {
+				"underweight": "Untergewicht",
+				"normal": "Normal",
+				"overweight": "Übergewicht",
+				"obese1": "Adipositas Grad I",
+				"obese2": "Adipositas Grad II",
+				"obese3": "Adipositas Grad III"
+			},
+			"interpretations": {
+				"underweight": "Gewichtszunahme empfohlen",
+				"normal": "Gesundes Körpergewicht",
+				"overweight": "Mögliche Gesundheitsrisiken",
+				"obese1": "Erhöhtes Risiko",
+				"obese2": "Hohes Risiko",
+				"obese3": "Sehr hohes Risiko"
+			},
+			"recommendations": {
+				"weightGain": "Konsultieren Sie einen Arzt zur Entwicklung eines Gewichtszunahmeplans",
+				"maintain": "Halten Sie das aktuelle Gewicht mit gesunder Ernährung und körperlicher Aktivität",
+				"weightLoss": "Gewichtsabnahme unter ärztlicher Aufsicht empfohlen"
+			},
+			"table": {
+				"title": "WHO BMI-Klassifikation",
+				"category": "Kategorie",
+				"bmiRange": "BMI-Index (kg/m²)",
+				"interpretation": "Interpretation"
+			},
+			"seo": {
+				"title": "Online BMI-Rechner — Körpermassenindex berechnen",
+				"description": "Erfahren Sie Ihren Body-Mass-Index (BMI) online. Bestimmen Sie, ob Ihr Gewicht im normalen Bereich nach WHO-Formel liegt. Schnell und kostenlos.",
+				"keywords": "bmi rechner, körpermassenindex, bmi berechnen, normalgewicht, adipositas, untergewicht",
+				"overview": {
+					"title": "Über den BMI-Rechner",
+					"content": "Der Body-Mass-Index (BMI) ist ein Maß, das hilft zu beurteilen, ob das Gewicht einer Person für ihre Größe angemessen ist. Unser Rechner verwendet die Standard-WHO-Formel für genaue BMI-Berechnung und Gewichtskategorie-Bestimmung."
+				},
+				"calculation": {
+					"title": "Wie BMI berechnet wird",
+					"content": "BMI wird mit der von der Weltgesundheitsorganisation empfohlenen Formel berechnet:",
+					"step1": "Messen Sie Ihr Gewicht in Kilogramm",
+					"step2": "Messen Sie Ihre Größe in Zentimetern",
+					"step3": "Teilen Sie das Gewicht durch das Quadrat der Größe in Metern",
+					"step4": "Der resultierende Wert ist Ihr Body-Mass-Index"
+				},
+				"categories": {
+					"title": "WHO BMI-Kategorien",
+					"content": "Die Weltgesundheitsorganisation hat folgende BMI-Kategorien definiert:",
+					"normal": {
+						"title": "Normalgewicht (18.5-24.9)",
+						"description": "Optimales Gewicht für Gesundheit und Langlebigkeit"
+					},
+					"overweight": {
+						"title": "Übergewicht (25.0-29.9)",
+						"description": "Erhöhtes Risiko für Krankheitsentwicklung"
+					},
+					"obesity": {
+						"title": "Adipositas (≥30.0)",
+						"description": "Deutlich erhöhtes Gesundheitsrisiko"
+					},
+					"underweight": {
+						"title": "Untergewicht (<18.5)",
+						"description": "Mögliche Gesundheitsprobleme"
+					}
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Unser BMI-Rechner bietet viele Vorteile:",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Genaue Ergebnisse mit WHO-Formel",
+					"free": "Vollständig kostenlos ohne Registrierung",
+					"multilingual": "Unterstützung für 4 Sprachen (Deutsch, Englisch, Russisch, Spanisch)",
+					"mobile": "Responsive Design für alle Geräte"
+				},
+				"tips": {
+					"title": "Nützliche Tipps",
+					"content": "Für genaue Ergebnisse befolgen Sie diese Empfehlungen:",
+					"measurement": "Wiegen Sie sich morgens auf nüchternen Magen",
+					"consistency": "Verwenden Sie dieselbe Waage für Messungen",
+					"consultation": "Konsultieren Sie einen Arzt bei Abweichungen von der Norm",
+					"lifestyle": "Kombinieren Sie BMI-Berechnung mit Lebensstilbewertung"
+				},
+				"limitations": {
+					"title": "BMI-Beschränkungen",
+					"content": "BMI hat einige Einschränkungen und berücksichtigt nicht:",
+					"muscle": "Muskelmasse-Prozentsatz",
+					"age": "Altersbedingte Eigenschaften",
+					"gender": "Geschlechtsunterschiede in der Körperzusammensetzung",
+					"ethnicity": "Ethnische Eigenschaften"
+				},
+				"faq": {
+					"whatIsBMI": {
+						"question": "Was ist BMI?",
+						"answer": "BMI (Body-Mass-Index) ist ein Maß für Körperfett basierend auf Größe und Gewicht. Es wird verwendet, um das Risiko von Krankheiten im Zusammenhang mit Übergewicht oder Untergewicht zu bewerten."
+					},
+					"howToCalculate": {
+						"question": "Wie berechnet man BMI?",
+						"answer": "BMI wird mit der Formel berechnet: Gewicht in Kilogramm geteilt durch das Quadrat der Größe in Metern. Zum Beispiel bei einem Gewicht von 70 kg und einer Größe von 175 cm: BMI = 70 / (1.75)² = 22.9"
+					},
+					"normalRange": {
+						"question": "Welcher BMI gilt als normal?",
+						"answer": "Nach WHO-Standards liegt der normale BMI zwischen 18.5 und 24.9. Werte unter 18.5 weisen auf Untergewicht hin, während Werte über 25 auf Übergewicht oder Adipositas hinweisen."
+					},
+					"limitations": {
+						"question": "Was sind die Einschränkungen von BMI?",
+						"answer": "BMI berücksichtigt nicht den Muskulatur-Prozentsatz, Alter, Geschlecht und ethnische Eigenschaften. Bei Sportlern mit entwickelter Muskulatur kann BMI überschätzt werden, während er bei älteren Menschen unterschätzt werden kann."
+					}
+				}
+			}
+		},
 		"bloodAlcohol": {
 			"title": "Blutalkoholrechner — BAC und Eliminationszeit",
 			"description": "Online BAC-Rechner zur Berechnung der Blutalkoholkonzentration und vollständigen Eliminationszeit",

@@ -1755,6 +1755,141 @@
 				"category": "Finance"
 			}
 		},
+		"bmiHealth": {
+			"title": "Body Mass Index Calculator (BMI)",
+			"description": "Calculate your Body Mass Index (BMI) online. Determine if your weight is within the normal range according to WHO standards. Fast, accurate and free.",
+			"form": {
+				"title": "Calculation Parameters",
+				"weight": "Weight",
+				"weightPlaceholder": "Enter your weight",
+				"height": "Height",
+				"heightPlaceholder": "Enter your height",
+				"calculate": "Calculate BMI",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"weightRequired": "Please enter your weight",
+					"heightRequired": "Please enter your height",
+					"weightRange": "Weight must be between 20 and 300 kg",
+					"heightRange": "Height must be between 100 and 250 cm",
+					"calculationError": "Calculation error"
+				}
+			},
+			"results": {
+				"bmiUnit": "kg/m²",
+				"scale": "BMI Scale",
+				"recommendation": "Recommendation",
+				"normalRange": "Normal Weight",
+				"normalRangeText": "For your height, normal weight ranges from {min} to {max} kg"
+			},
+			"categories": {
+				"underweight": "Underweight",
+				"normal": "Normal",
+				"overweight": "Overweight",
+				"obese1": "Obesity Class I",
+				"obese2": "Obesity Class II",
+				"obese3": "Obesity Class III"
+			},
+			"interpretations": {
+				"underweight": "Weight gain recommended",
+				"normal": "Healthy body weight",
+				"overweight": "Possible health risks",
+				"obese1": "Increased risk",
+				"obese2": "High risk",
+				"obese3": "Very high risk"
+			},
+			"recommendations": {
+				"weightGain": "Consult a doctor to develop a weight gain plan",
+				"maintain": "Maintain current weight with healthy diet and physical activity",
+				"weightLoss": "Weight loss recommended under medical supervision"
+			},
+			"table": {
+				"title": "WHO BMI Classification",
+				"category": "Category",
+				"bmiRange": "BMI Index (kg/m²)",
+				"interpretation": "Interpretation"
+			},
+			"seo": {
+				"title": "Online BMI Calculator — Calculate Body Mass Index",
+				"description": "Find out your Body Mass Index (BMI) online. Determine if your weight is within the normal range according to WHO formula. Fast and free.",
+				"keywords": "bmi calculator, body mass index, calculate bmi, normal weight, obesity, underweight",
+				"overview": {
+					"title": "About BMI Calculator",
+					"content": "Body Mass Index (BMI) is a measure that helps assess whether a person's weight is appropriate for their height. Our calculator uses the standard WHO formula for accurate BMI calculation and weight category determination."
+				},
+				"calculation": {
+					"title": "How BMI is Calculated",
+					"content": "BMI is calculated using the formula recommended by the World Health Organization:",
+					"step1": "Measure your weight in kilograms",
+					"step2": "Measure your height in centimeters",
+					"step3": "Divide weight by the square of height in meters",
+					"step4": "The resulting value is your Body Mass Index"
+				},
+				"categories": {
+					"title": "WHO BMI Categories",
+					"content": "The World Health Organization has defined the following BMI categories:",
+					"normal": {
+						"title": "Normal Weight (18.5-24.9)",
+						"description": "Optimal weight for health and longevity"
+					},
+					"overweight": {
+						"title": "Overweight (25.0-29.9)",
+						"description": "Increased risk of developing diseases"
+					},
+					"obesity": {
+						"title": "Obesity (≥30.0)",
+						"description": "Significantly increased health risk"
+					},
+					"underweight": {
+						"title": "Underweight (<18.5)",
+						"description": "Possible health problems"
+					}
+				},
+				"advantages": {
+					"title": "Advantages of Our Calculator",
+					"content": "Our BMI calculator provides many advantages:",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Accurate results using WHO formula",
+					"free": "Completely free without registration",
+					"multilingual": "Support for 4 languages (English, Russian, Spanish, German)",
+					"mobile": "Responsive design for all devices"
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "For accurate results, follow these recommendations:",
+					"measurement": "Weigh yourself in the morning on an empty stomach",
+					"consistency": "Use the same scale for measurements",
+					"consultation": "Consult a doctor if you deviate from normal",
+					"lifestyle": "Combine BMI calculation with lifestyle assessment"
+				},
+				"limitations": {
+					"title": "BMI Limitations",
+					"content": "BMI has some limitations and does not account for:",
+					"muscle": "Muscle mass percentage",
+					"age": "Age-related characteristics",
+					"gender": "Gender differences in body composition",
+					"ethnicity": "Ethnic characteristics"
+				},
+				"faq": {
+					"whatIsBMI": {
+						"question": "What is BMI?",
+						"answer": "BMI (Body Mass Index) is a measure of body fat based on height and weight. It is used to assess the risk of diseases associated with overweight or underweight."
+					},
+					"howToCalculate": {
+						"question": "How to calculate BMI?",
+						"answer": "BMI is calculated using the formula: weight in kilograms divided by the square of height in meters. For example, with a weight of 70 kg and height of 175 cm: BMI = 70 / (1.75)² = 22.9"
+					},
+					"normalRange": {
+						"question": "What BMI is considered normal?",
+						"answer": "According to WHO standards, normal BMI ranges from 18.5 to 24.9. Values below 18.5 indicate underweight, while values above 25 indicate overweight or obesity."
+					},
+					"limitations": {
+						"question": "What are the limitations of BMI?",
+						"answer": "BMI does not account for muscle mass percentage, age, gender, and ethnic characteristics. In athletes with developed musculature, BMI may be overestimated, while in elderly people it may be underestimated."
+					}
+				}
+			}
+		},
 		"bloodAlcohol": {
 			"title": "Blood Alcohol Calculator — BAC and Elimination Time",
 			"description": "Online BAC calculator to calculate blood alcohol concentration and complete elimination time",

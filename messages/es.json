@@ -1539,6 +1539,141 @@
 				"category": "Finanzas"
 			}
 		},
+		"bmiHealth": {
+			"title": "Calculadora de Índice de Masa Corporal (IMC)",
+			"description": "Calcula tu Índice de Masa Corporal (IMC) en línea. Determina si tu peso está dentro del rango normal según los estándares de la OMS. Rápido, preciso y gratuito.",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"weight": "Peso",
+				"weightPlaceholder": "Ingresa tu peso",
+				"height": "Altura",
+				"heightPlaceholder": "Ingresa tu altura",
+				"calculate": "Calcular IMC",
+				"calculating": "Calculando...",
+				"reset": "Reiniciar",
+				"errors": {
+					"weightRequired": "Por favor ingresa tu peso",
+					"heightRequired": "Por favor ingresa tu altura",
+					"weightRange": "El peso debe estar entre 20 y 300 kg",
+					"heightRange": "La altura debe estar entre 100 y 250 cm",
+					"calculationError": "Error en el cálculo"
+				}
+			},
+			"results": {
+				"bmiUnit": "kg/m²",
+				"scale": "Escala IMC",
+				"recommendation": "Recomendación",
+				"normalRange": "Peso Normal",
+				"normalRangeText": "Para tu altura, el peso normal oscila entre {min} y {max} kg"
+			},
+			"categories": {
+				"underweight": "Bajo peso",
+				"normal": "Normal",
+				"overweight": "Sobrepeso",
+				"obese1": "Obesidad Grado I",
+				"obese2": "Obesidad Grado II",
+				"obese3": "Obesidad Grado III"
+			},
+			"interpretations": {
+				"underweight": "Se recomienda ganar peso",
+				"normal": "Peso corporal saludable",
+				"overweight": "Posibles riesgos para la salud",
+				"obese1": "Riesgo aumentado",
+				"obese2": "Alto riesgo",
+				"obese3": "Riesgo muy alto"
+			},
+			"recommendations": {
+				"weightGain": "Consulta a un médico para desarrollar un plan de aumento de peso",
+				"maintain": "Mantén el peso actual con dieta saludable y actividad física",
+				"weightLoss": "Se recomienda pérdida de peso bajo supervisión médica"
+			},
+			"table": {
+				"title": "Clasificación IMC de la OMS",
+				"category": "Categoría",
+				"bmiRange": "Índice IMC (kg/m²)",
+				"interpretation": "Interpretación"
+			},
+			"seo": {
+				"title": "Calculadora IMC Online — Calcular Índice de Masa Corporal",
+				"description": "Descubre tu Índice de Masa Corporal (IMC) en línea. Determina si tu peso está dentro del rango normal según la fórmula de la OMS. Rápido y gratuito.",
+				"keywords": "calculadora imc, índice masa corporal, calcular imc, peso normal, obesidad, bajo peso",
+				"overview": {
+					"title": "Sobre la Calculadora IMC",
+					"content": "El Índice de Masa Corporal (IMC) es una medida que ayuda a evaluar si el peso de una persona es apropiado para su altura. Nuestra calculadora utiliza la fórmula estándar de la OMS para un cálculo preciso del IMC y determinación de la categoría de peso."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el IMC",
+					"content": "El IMC se calcula usando la fórmula recomendada por la Organización Mundial de la Salud:",
+					"step1": "Mide tu peso en kilogramos",
+					"step2": "Mide tu altura en centímetros",
+					"step3": "Divide el peso por el cuadrado de la altura en metros",
+					"step4": "El valor resultante es tu Índice de Masa Corporal"
+				},
+				"categories": {
+					"title": "Categorías IMC de la OMS",
+					"content": "La Organización Mundial de la Salud ha definido las siguientes categorías de IMC:",
+					"normal": {
+						"title": "Peso Normal (18.5-24.9)",
+						"description": "Peso óptimo para la salud y longevidad"
+					},
+					"overweight": {
+						"title": "Sobrepeso (25.0-29.9)",
+						"description": "Riesgo aumentado de desarrollar enfermedades"
+					},
+					"obesity": {
+						"title": "Obesidad (≥30.0)",
+						"description": "Riesgo significativamente aumentado para la salud"
+					},
+					"underweight": {
+						"title": "Bajo Peso (<18.5)",
+						"description": "Posibles problemas de salud"
+					}
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestra Calculadora",
+					"content": "Nuestra calculadora IMC proporciona muchas ventajas:",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Resultados precisos usando la fórmula de la OMS",
+					"free": "Completamente gratuito sin registro",
+					"multilingual": "Soporte para 4 idiomas (Español, Inglés, Ruso, Alemán)",
+					"mobile": "Diseño responsivo para todos los dispositivos"
+				},
+				"tips": {
+					"title": "Consejos Útiles",
+					"content": "Para resultados precisos, sigue estas recomendaciones:",
+					"measurement": "Pésate por la mañana en ayunas",
+					"consistency": "Usa la misma báscula para las mediciones",
+					"consultation": "Consulta a un médico si te desvías de lo normal",
+					"lifestyle": "Combina el cálculo del IMC con la evaluación del estilo de vida"
+				},
+				"limitations": {
+					"title": "Limitaciones del IMC",
+					"content": "El IMC tiene algunas limitaciones y no tiene en cuenta:",
+					"muscle": "Porcentaje de masa muscular",
+					"age": "Características relacionadas con la edad",
+					"gender": "Diferencias de género en la composición corporal",
+					"ethnicity": "Características étnicas"
+				},
+				"faq": {
+					"whatIsBMI": {
+						"question": "¿Qué es el IMC?",
+						"answer": "El IMC (Índice de Masa Corporal) es una medida de grasa corporal basada en la altura y el peso. Se utiliza para evaluar el riesgo de enfermedades asociadas con sobrepeso o bajo peso."
+					},
+					"howToCalculate": {
+						"question": "¿Cómo calcular el IMC?",
+						"answer": "El IMC se calcula usando la fórmula: peso en kilogramos dividido por el cuadrado de la altura en metros. Por ejemplo, con un peso de 70 kg y altura de 175 cm: IMC = 70 / (1.75)² = 22.9"
+					},
+					"normalRange": {
+						"question": "¿Qué IMC se considera normal?",
+						"answer": "Según los estándares de la OMS, el IMC normal oscila entre 18.5 y 24.9. Los valores por debajo de 18.5 indican bajo peso, mientras que los valores por encima de 25 indican sobrepeso u obesidad."
+					},
+					"limitations": {
+						"question": "¿Cuáles son las limitaciones del IMC?",
+						"answer": "El IMC no tiene en cuenta el porcentaje de masa muscular, la edad, el género y las características étnicas. En atletas con musculatura desarrollada, el IMC puede estar sobreestimado, mientras que en personas mayores puede estar subestimado."
+					}
+				}
+			}
+		},
 		"bloodAlcohol": {
 			"title": "Calculadora de Alcohol en Sangre — BAC y Tiempo de Eliminación",
 			"description": "Calculadora online de BAC para calcular la concentración de alcohol en sangre y tiempo de eliminación completa",
