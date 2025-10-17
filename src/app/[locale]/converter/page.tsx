@@ -27,10 +27,10 @@ const calculators = [
 	},
 	{
 		id: 'speed',
-		title: 'Speed Converter',
-		description: 'Convert between km/h, mph, m/s, and other speed units',
+		title: 'calculators.speed.title',
+		description: 'calculators.speed.description',
 		icon: Shuffle,
-		href: '/calc/speed',
+		href: '/converter/speed',
 	},
 ];
 

@@ -5471,6 +5471,81 @@
 					}
 				]
 			}
+		},
+		"speed": {
+			"title": "Online-Geschwindigkeitsrechner",
+			"description": "Konvertieren Sie Geschwindigkeiten zwischen km/h, m/s und Knoten. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"kmh": "km/h",
+				"ms": "m/s",
+				"knots": "Knoten"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Geschwindigkeitsrechner — km/h, m/s, Knoten",
+				"description": "Konvertieren Sie km/h, m/s und Knoten online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Geschwindigkeitsrechner, km/h zu m/s, Knoten zu km/h, Geschwindigkeits-Einheiten-Konverter",
+				"h1": "Online-Geschwindigkeitsrechner",
+				"h2": "Umrechnung km/h, m/s, Knoten",
+				"overview": {
+					"title": "Über den Geschwindigkeitsrechner",
+					"content": "Unser Geschwindigkeitsrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Geschwindigkeitseinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: km/h, m/s und Knoten."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Geschwindigkeitseinheiten werden über die Basiseinheit - m/s - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 3 Hauptgeschwindigkeitseinheiten: Kilometer pro Stunde (km/h), Meter pro Sekunde (m/s) und Knoten (Seemeilen pro Stunde)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man km/h in m/s?",
+						"a": "Teilen Sie km/h durch 3,6, um m/s zu erhalten. Zum Beispiel: 36 km/h = 36 ÷ 3,6 = 10 m/s."
+					},
+					{
+						"q": "Wie konvertiert man Knoten in km/h?",
+						"a": "Multiplizieren Sie Knoten mit 1,852, um km/h zu erhalten. Zum Beispiel: 10 Knoten = 10 × 1,852 = 18,52 km/h."
+					},
+					{
+						"q": "Wie konvertiert man m/s in Knoten?",
+						"a": "Multiplizieren Sie m/s mit 1,94384, um Knoten zu erhalten. Zum Beispiel: 5 m/s = 5 × 1,94384 = 9,72 Knoten."
+					},
+					{
+						"q": "Was ist ein Knoten?",
+						"a": "Ein Knoten ist eine Geschwindigkeitseinheit, die einer Seemeile pro Stunde (1,852 km/h) entspricht. Wird in der Schifffahrt und Luftfahrt verwendet."
+					}
+				]
+			}
 		}
 	}
 }

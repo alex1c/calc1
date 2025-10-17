@@ -5475,6 +5475,81 @@
 					}
 				]
 			}
+		},
+		"speed": {
+			"title": "Convertidor de velocidad en línea",
+			"description": "Convierte velocidades entre km/h, m/s y nudos. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"kmh": "km/h",
+				"ms": "m/s",
+				"knots": "nudos"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de velocidad en línea — km/h, m/s, nudos",
+				"description": "Convierte velocidades entre km/h, m/s y nudos al instante. Preciso y con soporte para 4 idiomas.",
+				"keywords": "convertidor de velocidad, km/h a m/s, nudos a km/h, convertidor de unidades de velocidad",
+				"h1": "Convertidor de velocidad en línea",
+				"h2": "Convertir km/h, m/s, nudos",
+				"overview": {
+					"title": "Sobre el Convertidor de Velocidad",
+					"content": "Nuestro convertidor de velocidad te permite convertir rápida y precisamente entre diferentes unidades de medida de velocidad. Soporta todas las unidades principales: km/h, m/s y nudos."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de velocidad se convierten a través de la unidad base - m/s. Cada unidad tiene su propia fórmula de conversión, asegurando la precisión de los cálculos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 3 unidades principales de velocidad: kilómetros por hora (km/h), metros por segundo (m/s) y nudos (millas náuticas por hora)."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir km/h a m/s?",
+						"a": "Divide km/h entre 3,6 para obtener m/s. Por ejemplo: 36 km/h = 36 ÷ 3,6 = 10 m/s."
+					},
+					{
+						"q": "¿Cómo convertir nudos a km/h?",
+						"a": "Multiplica nudos por 1,852 para obtener km/h. Por ejemplo: 10 nudos = 10 × 1,852 = 18,52 km/h."
+					},
+					{
+						"q": "¿Cómo convertir m/s a nudos?",
+						"a": "Multiplica m/s por 1,94384 para obtener nudos. Por ejemplo: 5 m/s = 5 × 1,94384 = 9,72 nudos."
+					},
+					{
+						"q": "¿Qué es un nudo?",
+						"a": "Un nudo es una unidad de velocidad igual a una milla náutica por hora (1,852 km/h). Se usa en navegación marítima y aérea."
+					}
+				]
+			}
 		}
 	}
 }

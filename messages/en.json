@@ -5461,6 +5461,81 @@
 					}
 				]
 			}
+		},
+		"speed": {
+			"title": "Online Speed Converter",
+			"description": "Quickly convert speeds between km/h, m/s, and knots. Accurate and convenient converter.",
+			"value": "Enter value",
+			"fromUnit": "From unit",
+			"toUnit": "To unit",
+			"button": "Convert",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"commonConversions": "Other units",
+			"units": {
+				"kmh": "km/h",
+				"ms": "m/s",
+				"knots": "knots"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate calculations",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All calculations are based on precise conversion formulas",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Speed Converter — km/h, m/s, knots",
+				"description": "Instantly convert speeds between km/h, m/s, and knots online. Accurate speed converter with 4 languages support.",
+				"keywords": "speed converter, km/h to m/s, knots to km/h, speed unit converter",
+				"h1": "Online Speed Converter",
+				"h2": "Convert km/h, m/s, knots",
+				"overview": {
+					"title": "About Speed Converter",
+					"content": "Our speed converter allows you to quickly and accurately convert between different speed measurement units. Supports all major units: km/h, m/s, and knots."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All speed units are converted through the base unit - m/s. Each unit has its own conversion formula, ensuring calculation accuracy."
+				},
+				"units": {
+					"title": "Supported Units",
+					"content": "The converter supports 3 main speed units: kilometers per hour (km/h), meters per second (m/s), and knots (nautical miles per hour)."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to convert km/h to m/s?",
+						"a": "Divide km/h by 3.6 to get m/s. For example: 36 km/h = 36 ÷ 3.6 = 10 m/s."
+					},
+					{
+						"q": "How to convert knots to km/h?",
+						"a": "Multiply knots by 1.852 to get km/h. For example: 10 knots = 10 × 1.852 = 18.52 km/h."
+					},
+					{
+						"q": "How to convert m/s to knots?",
+						"a": "Multiply m/s by 1.94384 to get knots. For example: 5 m/s = 5 × 1.94384 = 9.72 knots."
+					},
+					{
+						"q": "What is a knot?",
+						"a": "A knot is a unit of speed equal to one nautical mile per hour (1.852 km/h). Used in maritime and aviation."
+					}
+				]
+			}
 		}
 	}
 }
