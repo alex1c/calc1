@@ -1,493 +1,349 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
-// Removed shadcn/ui imports - using standard HTML elements with Tailwind CSS
+import { motion } from 'framer-motion';
 import {
-	calculateVolume,
+	ArrowRightLeft,
+	Calculator,
+	Info,
+	RotateCcw,
+	Zap,
+	Droplets,
+} from 'lucide-react';
+import {
+	convertVolume,
 	validateVolumeInput,
-	type VolumeInput,
-	type VolumeResult,
-	type ShapeType,
+	formatVolumeValue,
+	getUnitName,
+	getCommonConversions,
+	VOLUME_UNITS,
+	VolumeInput,
+	VolumeResult,
+	VolumeUnit,
 } from '@/lib/calculators/volume';
 
-// Icons for shapes
-const SphereIcon = () => (
-	<svg
-		className='w-8 h-8 text-blue-600'
-		fill='currentColor'
-		viewBox='0 0 24 24'
-	>
-		<circle
-			cx='12'
-			cy='12'
-			r='10'
-			stroke='currentColor'
-			strokeWidth='2'
-			fill='none'
-		/>
-	</svg>
-);
-
-const CubeIcon = () => (
-	<svg
-		className='w-8 h-8 text-green-600'
-		fill='currentColor'
-		viewBox='0 0 24 24'
-	>
-		<rect
-			x='3'
-			y='3'
-			width='18'
-			height='18'
-			stroke='currentColor'
-			strokeWidth='2'
-			fill='none'
-		/>
-	</svg>
-);
-
-const CylinderIcon = () => (
-	<svg
-		className='w-8 h-8 text-purple-600'
-		fill='currentColor'
-		viewBox='0 0 24 24'
-	>
-		<ellipse
-			cx='12'
-			cy='6'
-			rx='8'
-			ry='2'
-			stroke='currentColor'
-			strokeWidth='2'
-			fill='none'
-		/>
-		<ellipse
-			cx='12'
-			cy='18'
-			rx='8'
-			ry='2'
-			stroke='currentColor'
-			strokeWidth='2'
-			fill='none'
-		/>
-		<line
-			x1='4'
-			y1='6'
-			x2='4'
-			y2='18'
-			stroke='currentColor'
-			strokeWidth='2'
-		/>
-		<line
-			x1='20'
-			y1='6'
-			x2='20'
-			y2='18'
-			stroke='currentColor'
-			strokeWidth='2'
-		/>
-	</svg>
-);
-
-const getShapeIcon = (shapeType: ShapeType) => {
-	switch (shapeType) {
-		case 'sphere':
-			return <SphereIcon />;
-		case 'cube':
-			return <CubeIcon />;
-		case 'cylinder':
-			return <CylinderIcon />;
-		default:
-			return null;
-	}
-};
-
 export default function VolumeCalculator() {
-	const t = useTranslations();
+	const t = useTranslations('calculators.volume-converter');
 	const [input, setInput] = useState<VolumeInput>({
-		shapeType: 'sphere',
-		radius: 5,
-		side: 0,
-		height: 0,
+		value: 1,
+		fromUnit: 'liters',
+		toUnit: 'gallons',
 	});
 	const [result, setResult] = useState<VolumeResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [isCalculating, setIsCalculating] = useState(false);
 
-	const handleShapeTypeChange = (shapeType: ShapeType) => {
-		setInput({
-			shapeType,
-			radius: shapeType === 'sphere' || shapeType === 'cylinder' ? 5 : 0,
-			side: shapeType === 'cube' ? 5 : 0,
-			height: shapeType === 'cylinder' ? 5 : 0,
-		});
-		setResult(null);
-		setErrors([]);
-	};
+	// Auto-calculate when input changes
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			// Only calculate if input is valid
+			if (input.value !== undefined && input.fromUnit && input.toUnit) {
+				setIsCalculating(true);
+				try {
+					const volumeResult = convertVolume(input);
+					setResult(volumeResult);
+				} catch (error) {
+					console.error('Calculation error:', error);
+					setResult(null);
+				} finally {
+					setIsCalculating(false);
+				}
+			} else {
+				setResult(null);
+			}
+		}, 300); // Debounce calculation
 
-	const handleInputChange = (field: keyof VolumeInput, value: string) => {
-		const numValue = parseFloat(value) || 0;
+		return () => clearTimeout(timer);
+	}, [input]);
+
+	const handleInputChange = (
+		field: keyof VolumeInput,
+		value: number | VolumeUnit
+	) => {
+		// Validate numeric inputs
+		if (typeof value === 'number') {
+			if (value > 1e12) return;
+		}
+
 		setInput((prev) => ({
 			...prev,
-			[field]: numValue,
+			[field]: value,
 		}));
-		setResult(null);
-		setErrors([]);
 	};
 
 	const handleCalculate = () => {
-		const validation = validateVolumeInput(input);
-		if (!validation.isValid) {
-			setErrors(validation.errors);
-			setResult(null);
-			return;
-		}
-
-		try {
-			const calculation = calculateVolume(input);
-			setResult(calculation);
-			setErrors([]);
-		} catch (error) {
-			setErrors([
-				error instanceof Error
-					? error.message
-					: t('calculators.volume.results.calculationError'),
-			]);
+		// Only calculate if input is valid
+		if (input.value !== undefined && input.fromUnit && input.toUnit) {
+			setIsCalculating(true);
+			try {
+				const volumeResult = convertVolume(input);
+				setResult(volumeResult);
+			} catch (error) {
+				console.error('Calculation error:', error);
+				setResult(null);
+			} finally {
+				setIsCalculating(false);
+			}
+		} else {
 			setResult(null);
 		}
 	};
 
-	const handleClear = () => {
+	const handleReset = () => {
 		setInput({
-			shapeType: 'sphere',
-			radius: 5,
-			side: 0,
-			height: 0,
+			value: 1,
+			fromUnit: 'liters',
+			toUnit: 'gallons',
 		});
 		setResult(null);
-		setErrors([]);
+	};
+
+	const handleSwapUnits = () => {
+		setInput((prev) => ({
+			...prev,
+			fromUnit: prev.toUnit,
+			toUnit: prev.fromUnit,
+		}));
+	};
+
+	const getCommonConversionsList = () => {
+		if (!result || input.value === undefined) return [];
+		return getCommonConversions(input.value, input.fromUnit);
 	};
 
 	return (
-		<div className='max-w-4xl mx-auto p-6'>
-			<div className='bg-white rounded-lg shadow-lg'>
-				<div className='text-center p-8'>
-					<h1 className='text-3xl font-bold text-gray-900 mb-2'>
-						{t('calculators.volume.title')}
+		<div className='max-w-4xl mx-auto'>
+			{/* Header */}
+			<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8'>
+				<div className='text-center mb-8'>
+					<div className='flex justify-center mb-4'>
+						<div className='p-4 bg-blue-100 dark:bg-blue-900 rounded-full'>
+							<Droplets className='w-12 h-12 text-blue-600 dark:text-blue-400' />
+						</div>
+					</div>
+					<h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
+						{t('title')}
 					</h1>
-					<p className='text-gray-600'>
-						{t('calculators.volume.description')}
+					<p className='text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto'>
+						{t('description')}
 					</p>
 				</div>
 
-				<div className='p-8'>
-					<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-						{/* Input Form */}
-						<div className='space-y-6'>
-							<div className='bg-gray-50 rounded-lg p-6'>
-								<div className='mb-6'>
-									<h2 className='text-xl font-semibold text-gray-900'>
-										{t('calculators.volume.form.title')}
-									</h2>
-								</div>
-								<div className='space-y-6'>
-									{/* Shape Type Selection */}
-									<div>
-										<label className='block text-sm font-medium text-gray-700 mb-3'>
-											{t(
-												'calculators.volume.form.selectShape'
-											)}
-										</label>
-										<div className='grid grid-cols-3 gap-3'>
-											{(
-												[
-													'sphere',
-													'cube',
-													'cylinder',
-												] as ShapeType[]
-											).map((shapeType) => (
-												<button
-													key={shapeType}
-													onClick={() =>
-														handleShapeTypeChange(
-															shapeType
-														)
-													}
-													className={`flex flex-col items-center p-4 h-auto rounded-lg border transition-colors ${
-														input.shapeType ===
-														shapeType
-															? 'bg-blue-600 text-white border-blue-600'
-															: 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
-													}`}
-												>
-													<div className='mb-2'>
-														{getShapeIcon(
-															shapeType
-														)}
-													</div>
-													<span className='text-sm font-medium'>
-														{t(
-															`calculators.volume.form.shapeTypes.${shapeType}`
-														)}
-													</span>
-												</button>
-											))}
+				{/* Infographic */}
+				<div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
+					<div className='text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg'>
+						<div className='text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
+							{t('infographic.precise')}
+						</div>
+						<div className='text-sm text-blue-800 dark:text-blue-200'>
+							{t('infographic.preciseDescription')}
+						</div>
+					</div>
+					<div className='text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg'>
+						<div className='text-2xl font-bold text-green-600 dark:text-green-400 mb-2'>
+							{t('infographic.fast')}
+						</div>
+						<div className='text-sm text-green-800 dark:text-green-200'>
+							{t('infographic.fastDescription')}
+						</div>
+					</div>
+					<div className='text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg'>
+						<div className='text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2'>
+							{t('infographic.multilingual')}
+						</div>
+						<div className='text-sm text-purple-800 dark:text-purple-200'>
+							{t('infographic.multilingualDescription')}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Converter Form */}
+			<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+					{/* Value Input */}
+					<div>
+						<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+							{t('value')}
+						</label>
+						<input
+							type='number'
+							value={input.value}
+							onChange={(e) =>
+								handleInputChange(
+									'value',
+									parseFloat(e.target.value) || 0
+								)
+							}
+							className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+							placeholder='1'
+							step='0.01'
+						/>
+					</div>
+
+					{/* From Unit */}
+					<div>
+						<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+							{t('fromUnit')}
+						</label>
+						<select
+							value={input.fromUnit}
+							onChange={(e) =>
+								handleInputChange(
+									'fromUnit',
+									e.target.value as VolumeUnit
+								)
+							}
+							className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+						>
+							{VOLUME_UNITS.map((unit) => (
+								<option
+									key={unit}
+									value={unit}
+								>
+									{t(`units.${unit}`)}
+								</option>
+							))}
+						</select>
+					</div>
+
+					{/* Swap Button */}
+					<div className='flex items-end'>
+						<button
+							onClick={handleSwapUnits}
+							className='w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg transition-colors flex items-center justify-center'
+						>
+							<ArrowRightLeft className='w-5 h-5' />
+						</button>
+					</div>
+
+					{/* To Unit */}
+					<div>
+						<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+							{t('toUnit')}
+						</label>
+						<select
+							value={input.toUnit}
+							onChange={(e) =>
+								handleInputChange(
+									'toUnit',
+									e.target.value as VolumeUnit
+								)
+							}
+							className='w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white'
+						>
+							{VOLUME_UNITS.map((unit) => (
+								<option
+									key={unit}
+									value={unit}
+								>
+									{t(`units.${unit}`)}
+								</option>
+							))}
+						</select>
+					</div>
+				</div>
+
+				{/* Action Buttons */}
+				<div className='flex flex-col sm:flex-row gap-4 mt-6'>
+					<button
+						onClick={handleCalculate}
+						disabled={isCalculating}
+						className='flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors'
+					>
+						{isCalculating ? (
+							<>
+								<div className='w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin' />
+								{t('calculating')}
+							</>
+						) : (
+							<>
+								<Zap className='w-4 h-4' />
+								{t('button')}
+							</>
+						)}
+					</button>
+					<button
+						onClick={handleReset}
+						className='flex items-center justify-center gap-2 px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors'
+					>
+						<RotateCcw className='w-4 h-4' />
+						{t('reset')}
+					</button>
+				</div>
+			</div>
+
+			{/* Results */}
+			{result && (
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5 }}
+					className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8'
+				>
+					<div className='text-center mb-8'>
+						<div className='flex justify-center mb-4'>
+							<Calculator className='w-8 h-8 text-blue-600' />
+						</div>
+						<h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-4'>
+							{t('result')}
+						</h2>
+					</div>
+
+					{/* Main Result */}
+					<div className='text-center mb-8'>
+						<div className='inline-flex items-center gap-4 p-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg'>
+							<span className='text-2xl font-bold text-gray-700 dark:text-gray-300'>
+								{input.value} {t(`units.${input.fromUnit}`)}
+							</span>
+							<ArrowRightLeft className='w-6 h-6 text-gray-500' />
+							<span className='text-3xl font-bold text-blue-600 dark:text-blue-400'>
+								{result.formattedValue}{' '}
+								{t(`units.${result.unit}`)}
+							</span>
+						</div>
+					</div>
+
+					{/* Common Conversions */}
+					{getCommonConversionsList().length > 0 && (
+						<div className='mb-8'>
+							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>
+								{t('commonConversions')}
+							</h3>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+								{getCommonConversionsList().map(
+									(conversion) => (
+										<div
+											key={conversion.unit}
+											className='p-4 bg-gray-50 dark:bg-gray-700 rounded-lg text-center'
+										>
+											<div className='text-lg font-bold text-gray-900 dark:text-white'>
+												{conversion.formatted}
+											</div>
+											<div className='text-sm text-gray-600 dark:text-gray-400'>
+												{t(`units.${conversion.unit}`)}
+											</div>
 										</div>
-									</div>
-
-									{/* Dynamic Input Fields */}
-									<div className='space-y-4'>
-										{input.shapeType === 'sphere' && (
-											<div>
-												<label className='block text-sm font-medium text-gray-700 mb-2'>
-													{t(
-														'calculators.volume.form.radius'
-													)}
-												</label>
-												<input
-													type='number'
-													value={input.radius || ''}
-													onChange={(e) =>
-														handleInputChange(
-															'radius',
-															e.target.value
-														)
-													}
-													step='0.01'
-													placeholder='0.00'
-													className='w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
-												/>
-											</div>
-										)}
-
-										{input.shapeType === 'cube' && (
-											<div>
-												<label className='block text-sm font-medium text-gray-700 mb-2'>
-													{t(
-														'calculators.volume.form.side'
-													)}
-												</label>
-												<input
-													type='number'
-													value={input.side || ''}
-													onChange={(e) =>
-														handleInputChange(
-															'side',
-															e.target.value
-														)
-													}
-													step='0.01'
-													placeholder='0.00'
-													className='w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
-												/>
-											</div>
-										)}
-
-										{input.shapeType === 'cylinder' && (
-											<>
-												<div>
-													<label className='block text-sm font-medium text-gray-700 mb-2'>
-														{t(
-															'calculators.volume.form.radius'
-														)}
-													</label>
-													<input
-														type='number'
-														value={
-															input.radius || ''
-														}
-														onChange={(e) =>
-															handleInputChange(
-																'radius',
-																e.target.value
-															)
-														}
-														step='0.01'
-														placeholder='0.00'
-														className='w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
-													/>
-												</div>
-												<div>
-													<label className='block text-sm font-medium text-gray-700 mb-2'>
-														{t(
-															'calculators.volume.form.height'
-														)}
-													</label>
-													<input
-														type='number'
-														value={
-															input.height || ''
-														}
-														onChange={(e) =>
-															handleInputChange(
-																'height',
-																e.target.value
-															)
-														}
-														step='0.01'
-														placeholder='0.00'
-														className='w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
-													/>
-												</div>
-											</>
-										)}
-									</div>
-
-									{/* Error Messages */}
-									<AnimatePresence>
-										{errors.length > 0 && (
-											<motion.div
-												initial={{ opacity: 0, y: -10 }}
-												animate={{ opacity: 1, y: 0 }}
-												exit={{ opacity: 0, y: -10 }}
-												className='bg-red-50 border border-red-200 rounded-md p-4'
-											>
-												<h4 className='text-sm font-medium text-red-800 mb-2'>
-													{t(
-														'calculators.volume.form.errors.title'
-													)}
-												</h4>
-												<ul className='text-sm text-red-700 space-y-1'>
-													{errors.map(
-														(error, index) => (
-															<li key={index}>
-																• {error}
-															</li>
-														)
-													)}
-												</ul>
-											</motion.div>
-										)}
-									</AnimatePresence>
-
-									{/* Action Buttons */}
-									<div className='flex gap-3'>
-										<button
-											onClick={handleCalculate}
-											className='flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors'
-										>
-											{t('common.calculate')}
-										</button>
-										<button
-											onClick={handleClear}
-											className='px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 font-semibold transition-colors'
-										>
-											{t('common.clear')}
-										</button>
-									</div>
-								</div>
+									)
+								)}
 							</div>
 						</div>
+					)}
+				</motion.div>
+			)}
 
-						{/* Results */}
-						<AnimatePresence>
-							{result && (
-								<motion.div
-									initial={{ opacity: 0, x: 20 }}
-									animate={{ opacity: 1, x: 0 }}
-									exit={{ opacity: 0, x: -20 }}
-									className='bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-200'
-								>
-									<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-										{t('calculators.volume.results.title')}
-									</h3>
-
-									<div className='space-y-4'>
-										{/* Volume Result */}
-										<div className='text-center bg-white rounded-lg p-6 shadow-sm'>
-											<div className='text-4xl font-bold text-blue-600 mb-2'>
-												{result.volume}
-											</div>
-											<div className='text-sm text-gray-600 mb-2'>
-												{t(
-													'calculators.volume.results.volume'
-												)}
-											</div>
-											<div className='text-lg font-mono text-gray-800'>
-												{result.formula}
-											</div>
-										</div>
-
-										{/* Formula Explanation */}
-										<div className='bg-white rounded-lg p-4 shadow-sm'>
-											<div className='text-sm text-gray-600 mb-2'>
-												{t(
-													'calculators.volume.results.formula'
-												)}
-												:
-											</div>
-											<div className='font-mono text-lg text-gray-800'>
-												{result.formula}
-											</div>
-										</div>
-
-										{/* Parameters Used */}
-										<div className='bg-white rounded-lg p-4 shadow-sm'>
-											<div className='text-sm text-gray-600 mb-2'>
-												{t(
-													'calculators.volume.results.parametersUsed'
-												)}
-												:
-											</div>
-											<div className='space-y-1'>
-												{result.shapeType ===
-													'sphere' && (
-													<div className='text-sm text-gray-800'>
-														{t(
-															'calculators.volume.results.radius'
-														)}
-														:{' '}
-														{
-															result.parameters
-																.radius
-														}
-													</div>
-												)}
-												{result.shapeType ===
-													'cube' && (
-													<div className='text-sm text-gray-800'>
-														{t(
-															'calculators.volume.results.side'
-														)}
-														:{' '}
-														{result.parameters.side}
-													</div>
-												)}
-												{result.shapeType ===
-													'cylinder' && (
-													<>
-														<div className='text-sm text-gray-800'>
-															{t(
-																'calculators.volume.results.radius'
-															)}
-															:{' '}
-															{
-																result
-																	.parameters
-																	.radius
-															}
-														</div>
-														<div className='text-sm text-gray-800'>
-															{t(
-																'calculators.volume.results.height'
-															)}
-															:{' '}
-															{
-																result
-																	.parameters
-																	.height
-															}
-														</div>
-													</>
-												)}
-											</div>
-										</div>
-									</div>
-								</motion.div>
-							)}
-						</AnimatePresence>
-					</div>
+			{/* Tips */}
+			<div className='bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6'>
+				<div className='flex items-center gap-2 mb-4'>
+					<Info className='w-5 h-5 text-blue-600 dark:text-blue-400' />
+					<h4 className='font-semibold text-blue-800 dark:text-blue-200'>
+						{t('tips.title')}
+					</h4>
+				</div>
+				<div className='space-y-2 text-sm text-blue-700 dark:text-blue-300'>
+					<p>{t('tips.accuracy')}</p>
+					<p>{t('tips.instant')}</p>
+					<p>{t('tips.multilingual')}</p>
 				</div>
 			</div>
 		</div>

@@ -5625,6 +5625,81 @@
 					}
 				]
 			}
+		},
+		"volume-converter": {
+			"title": "Convertidor de volumen en línea",
+			"description": "Convierte volúmenes entre litros, galones y metros cúbicos. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"liters": "litros",
+				"gallons": "galones",
+				"m3": "m³"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de volumen en línea — litros, galones, m³",
+				"description": "Convierte volúmenes entre litros, galones y metros cúbicos al instante. Preciso y con soporte para 4 idiomas.",
+				"keywords": "convertidor de volumen, litros a galones, m3 a litros, convertidor de unidades de volumen",
+				"h1": "Convertidor de volumen en línea",
+				"h2": "Convertir litros, galones, m³",
+				"overview": {
+					"title": "Sobre el Convertidor de Volumen",
+					"content": "Nuestro convertidor de volumen te permite convertir rápida y precisamente entre diferentes unidades de medida de volumen. Soporta todas las unidades principales: litros, galones y metros cúbicos."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de volumen se convierten a través de la unidad base - litro. Cada unidad tiene su propia fórmula de conversión, asegurando la precisión de los cálculos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 3 unidades principales de volumen: litros (L), galones (gal) y metros cúbicos (m³)."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir litros a galones?",
+						"a": "Divide los litros entre 3,78541 para obtener galones. Por ejemplo: 3,78541 L = 3,78541 ÷ 3,78541 = 1 galón."
+					},
+					{
+						"q": "¿Cómo convertir m³ a litros?",
+						"a": "Multiplica los metros cúbicos por 1000 para obtener litros. Por ejemplo: 1 m³ = 1 × 1000 = 1000 L."
+					},
+					{
+						"q": "¿Cómo convertir galones a m³?",
+						"a": "Multiplica galones por 3,78541, luego divide entre 1000. Por ejemplo: 1 galón = 1 × 3,78541 ÷ 1000 = 0,00378541 m³."
+					},
+					{
+						"q": "¿Qué es un galón?",
+						"a": "Un galón es una unidad de volumen igual a 3,78541 litros. Se usa en Estados Unidos y algunos otros países."
+					}
+				]
+			}
 		}
 	}
 }

@@ -1,7 +1,14 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Shuffle, Ruler, Weight, Thermometer, Activity } from 'lucide-react';
+import {
+	Shuffle,
+	Ruler,
+	Weight,
+	Thermometer,
+	Activity,
+	Droplets,
+} from 'lucide-react';
 
 const calculators = [
 	{
@@ -38,6 +45,13 @@ const calculators = [
 		description: 'calculators.pressure.description',
 		icon: Activity,
 		href: '/converter/pressure',
+	},
+	{
+		id: 'volume-converter',
+		title: 'calculators.volume-converter.title',
+		description: 'calculators.volume-converter.description',
+		icon: Droplets,
+		href: '/converter/volume',
 	},
 ];
 

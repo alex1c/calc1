@@ -5621,6 +5621,81 @@
 					}
 				]
 			}
+		},
+		"volume-converter": {
+			"title": "Online-Volumenrechner",
+			"description": "Konvertieren Sie Volumen zwischen Litern, Gallonen und Kubikmetern. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"liters": "Liter",
+				"gallons": "Gallonen",
+				"m3": "m³"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Volumenrechner — Liter, Gallonen, m³",
+				"description": "Konvertieren Sie Volumen zwischen Litern, Gallonen und Kubikmetern online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Volumenrechner, Liter zu Gallonen, m3 zu Liter, Volumen-Einheiten-Konverter",
+				"h1": "Online-Volumenrechner",
+				"h2": "Umrechnung Liter, Gallonen, m³",
+				"overview": {
+					"title": "Über den Volumenrechner",
+					"content": "Unser Volumenrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Volumeneinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Liter, Gallonen und Kubikmeter."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Volumeneinheiten werden über die Basiseinheit - Liter - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 3 Hauptvolumeneinheiten: Liter (L), Gallonen (gal) und Kubikmeter (m³)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man Liter in Gallonen?",
+						"a": "Teilen Sie Liter durch 3,78541, um Gallonen zu erhalten. Zum Beispiel: 3,78541 L = 3,78541 ÷ 3,78541 = 1 Gallone."
+					},
+					{
+						"q": "Wie konvertiert man m³ in Liter?",
+						"a": "Multiplizieren Sie Kubikmeter mit 1000, um Liter zu erhalten. Zum Beispiel: 1 m³ = 1 × 1000 = 1000 L."
+					},
+					{
+						"q": "Wie konvertiert man Gallonen in m³?",
+						"a": "Multiplizieren Sie Gallonen mit 3,78541, dann teilen Sie durch 1000. Zum Beispiel: 1 Gallone = 1 × 3,78541 ÷ 1000 = 0,00378541 m³."
+					},
+					{
+						"q": "Was ist eine Gallone?",
+						"a": "Eine Gallone ist eine Volumeneinheit, die 3,78541 Litern entspricht. Wird in den Vereinigten Staaten und einigen anderen Ländern verwendet."
+					}
+				]
+			}
 		}
 	}
 }

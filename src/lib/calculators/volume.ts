@@ -1,156 +1,283 @@
-/**
- * Volume Calculator Logic
- * Handles calculations for sphere, cube, and cylinder volumes
- */
-
-export type ShapeType = 'sphere' | 'cube' | 'cylinder';
-
 export interface VolumeInput {
-	shapeType: ShapeType;
-	radius?: number; // for sphere and cylinder
-	side?: number; // for cube
-	height?: number; // for cylinder
+	value: number;
+	fromUnit: VolumeUnit;
+	toUnit: VolumeUnit;
 }
 
 export interface VolumeResult {
-	volume: number;
-	formula: string;
-	shapeType: ShapeType;
-	parameters: {
-		radius?: number;
-		side?: number;
-		height?: number;
-	};
+	value: number;
+	unit: VolumeUnit;
+	formattedValue: string;
 }
 
-/**
- * Calculate volume based on shape type and parameters
- */
-export function calculateVolume(input: VolumeInput): VolumeResult {
-	const { shapeType } = input;
+export type VolumeUnit = 'liters' | 'gallons' | 'm3';
 
-	switch (shapeType) {
-		case 'sphere': {
-			const radius = input.radius || 0;
-			if (radius <= 0) {
-				throw new Error('Radius must be positive');
-			}
-			const volume = (4 / 3) * Math.PI * radius * radius * radius;
-			return {
-				volume: Math.round(volume * 100) / 100,
-				formula: 'V = (4/3) × π × r³',
-				shapeType: 'sphere',
-				parameters: { radius },
-			};
-		}
-
-		case 'cube': {
-			const side = input.side || 0;
-			if (side <= 0) {
-				throw new Error('Side must be positive');
-			}
-			const volume = side * side * side;
-			return {
-				volume: Math.round(volume * 100) / 100,
-				formula: 'V = a³',
-				shapeType: 'cube',
-				parameters: { side },
-			};
-		}
-
-		case 'cylinder': {
-			const radius = input.radius || 0;
-			const height = input.height || 0;
-			if (radius <= 0 || height <= 0) {
-				throw new Error('Radius and height must be positive');
-			}
-			const volume = Math.PI * radius * radius * height;
-			return {
-				volume: Math.round(volume * 100) / 100,
-				formula: 'V = π × r² × h',
-				shapeType: 'cylinder',
-				parameters: { radius, height },
-			};
-		}
-
-		default:
-			throw new Error('Invalid shape type');
-	}
-}
-
-/**
- * Validate input parameters
- */
-export function validateVolumeInput(input: VolumeInput): {
+export interface VolumeValidation {
 	isValid: boolean;
-	errors: string[];
-} {
-	const errors: string[] = [];
+	error?: string;
+}
 
-	if (!input.shapeType) {
-		errors.push('Shape type is required');
-		return { isValid: false, errors };
+export const VOLUME_UNITS: VolumeUnit[] = ['liters', 'gallons', 'm3'];
+
+export function validateVolumeInput(input: VolumeInput): VolumeValidation {
+	const { value, fromUnit, toUnit } = input;
+
+	if (value < 0) {
+		return { isValid: false, error: 'negativeValue' };
 	}
 
-	switch (input.shapeType) {
-		case 'sphere':
-			if (!input.radius || input.radius <= 0) {
-				errors.push('Radius must be positive');
-			}
-			break;
+	if (value > 1e12) {
+		return { isValid: false, error: 'valueTooLarge' };
+	}
 
-		case 'cube':
-			if (!input.side || input.side <= 0) {
-				errors.push('Side must be positive');
-			}
-			break;
+	if (!fromUnit || !toUnit) {
+		return { isValid: false, error: 'unitsRequired' };
+	}
 
-		case 'cylinder':
-			if (!input.radius || input.radius <= 0) {
-				errors.push('Radius must be positive');
-			}
-			if (!input.height || input.height <= 0) {
-				errors.push('Height must be positive');
-			}
+	if (!VOLUME_UNITS.includes(fromUnit) || !VOLUME_UNITS.includes(toUnit)) {
+		return { isValid: false, error: 'invalidUnits' };
+	}
+
+	return { isValid: true };
+}
+
+export function convertVolume(input: VolumeInput): VolumeResult {
+	const validation = validateVolumeInput(input);
+	if (!validation.isValid) {
+		throw new Error(validation.error);
+	}
+
+	const { value, fromUnit, toUnit } = input;
+
+	let result: number;
+
+	// Convert to liters first, then to target unit
+	let liters: number;
+	switch (fromUnit) {
+		case 'liters':
+			liters = value;
 			break;
+		case 'gallons':
+			liters = value * 3.78541;
+			break;
+		case 'm3':
+			liters = value * 1000;
+			break;
+		default:
+			throw new Error('Invalid from unit');
+	}
+
+	// Convert from liters to target unit
+	switch (toUnit) {
+		case 'liters':
+			result = liters;
+			break;
+		case 'gallons':
+			result = liters / 3.78541;
+			break;
+		case 'm3':
+			result = liters / 1000;
+			break;
+		default:
+			throw new Error('Invalid to unit');
 	}
 
 	return {
-		isValid: errors.length === 0,
-		errors,
+		value: result,
+		unit: toUnit,
+		formattedValue: formatVolumeValue(result, toUnit),
 	};
 }
 
-/**
- * Get required parameters for a shape type
- */
-export function getRequiredParameters(shapeType: ShapeType): string[] {
-	switch (shapeType) {
-		case 'sphere':
-			return ['radius'];
-		case 'cube':
-			return ['side'];
-		case 'cylinder':
-			return ['radius', 'height'];
+export function formatVolumeValue(value: number, unit: VolumeUnit): string {
+	// Round to appropriate decimal places based on unit
+	let decimalPlaces: number;
+
+	switch (unit) {
+		case 'liters':
+			// For liters, show fewer decimal places for large numbers
+			if (Math.abs(value) >= 1000) {
+				decimalPlaces = 0;
+			} else if (Math.abs(value) >= 1) {
+				decimalPlaces = 2;
+			} else {
+				decimalPlaces = 4;
+			}
+			break;
+		case 'gallons':
+			// For gallons, show appropriate precision
+			decimalPlaces = Math.abs(value) < 1 ? 4 : 2;
+			break;
+		case 'm3':
+			// For cubic meters, show more precision for small values
+			decimalPlaces = Math.abs(value) < 1 ? 6 : 3;
+			break;
 		default:
-			return [];
+			decimalPlaces = 2;
 	}
+
+	// Format with appropriate decimal places
+	const formatted = value.toFixed(decimalPlaces);
+	
+	// Remove trailing zeros
+	return parseFloat(formatted).toString();
 }
 
-/**
- * Format volume result for display
- */
-export function formatVolumeResult(result: VolumeResult): string {
-	const { volume, shapeType, parameters } = result;
+export function getUnitName(unit: VolumeUnit, locale: string): string {
+	const unitNames: Record<string, Record<VolumeUnit, string>> = {
+		ru: {
+			liters: 'литры',
+			gallons: 'галлоны',
+			m3: 'м³',
+		},
+		en: {
+			liters: 'liters',
+			gallons: 'gallons',
+			m3: 'm³',
+		},
+		de: {
+			liters: 'Liter',
+			gallons: 'Gallonen',
+			m3: 'm³',
+		},
+		es: {
+			liters: 'litros',
+			gallons: 'galones',
+			m3: 'm³',
+		},
+	};
 
-	switch (shapeType) {
-		case 'sphere':
-			return `V = ${volume} (r = ${parameters.radius})`;
-		case 'cube':
-			return `V = ${volume} (a = ${parameters.side})`;
-		case 'cylinder':
-			return `V = ${volume} (r = ${parameters.radius}, h = ${parameters.height})`;
-		default:
-			return `V = ${volume}`;
-	}
+	return unitNames[locale]?.[unit] || unit;
+}
+
+export function getCommonConversions(
+	value: number,
+	unit: VolumeUnit
+): Array<{
+	unit: VolumeUnit;
+	value: number;
+	formatted: string;
+}> {
+	const conversions: Array<{
+		unit: VolumeUnit;
+		value: number;
+		formatted: string;
+	}> = [];
+
+	VOLUME_UNITS.forEach((targetUnit) => {
+		if (targetUnit !== unit) {
+			const result = convertVolume({
+				value,
+				fromUnit: unit,
+				toUnit: targetUnit,
+			});
+			conversions.push({
+				unit: targetUnit,
+				value: result.value,
+				formatted: result.formattedValue,
+			});
+		}
+	});
+
+	return conversions;
+}
+
+export function getUnitDescription(unit: VolumeUnit, locale: string): string {
+	const descriptions: Record<string, Record<VolumeUnit, string>> = {
+		ru: {
+			liters: 'Литр - основная единица объёма в метрической системе',
+			gallons: 'Галлон - единица объёма, равная 3.78541 литра',
+			m3: 'Кубический метр - единица объёма в системе СИ',
+		},
+		en: {
+			liters: 'Liter - main volume unit in metric system',
+			gallons: 'Gallon - volume unit equal to 3.78541 liters',
+			m3: 'Cubic meter - volume unit in SI system',
+		},
+		de: {
+			liters: 'Liter - Hauptvolumeneinheit im metrischen System',
+			gallons: 'Gallone - Volumeneinheit gleich 3,78541 Liter',
+			m3: 'Kubikmeter - Volumeneinheit im SI-System',
+		},
+		es: {
+			liters: 'Litro - unidad principal de volumen en el sistema métrico',
+			gallons: 'Galón - unidad de volumen igual a 3,78541 litros',
+			m3: 'Metro cúbico - unidad de volumen en el sistema SI',
+		},
+	};
+
+	return descriptions[locale]?.[unit] || '';
+}
+
+export function getVolumeScale(unit: VolumeUnit): {
+	name: string;
+	typicalRange: { min: number; max: number };
+	description: string;
+} {
+	const scales = {
+		liters: {
+			name: 'Liter',
+			typicalRange: { min: 0, max: 10000 },
+			description: 'Common for liquids and containers',
+		},
+		gallons: {
+			name: 'Gallon',
+			typicalRange: { min: 0, max: 1000 },
+			description: 'Used in US and some other countries',
+		},
+		m3: {
+			name: 'Cubic meter',
+			typicalRange: { min: 0, max: 100 },
+			description: 'Scientific and large-scale applications',
+		},
+	};
+
+	return scales[unit];
+}
+
+export function getConversionFormula(fromUnit: VolumeUnit, toUnit: VolumeUnit): string {
+	const formulas: Record<string, string> = {
+		'liters-gallons': 'gallons = liters ÷ 3.78541',
+		'liters-m3': 'm³ = liters ÷ 1000',
+		'gallons-liters': 'liters = gallons × 3.78541',
+		'gallons-m3': 'm³ = gallons × 3.78541 ÷ 1000',
+		'm3-liters': 'liters = m³ × 1000',
+		'm3-gallons': 'gallons = m³ × 1000 ÷ 3.78541',
+	};
+
+	return formulas[`${fromUnit}-${toUnit}`] || '';
+}
+
+export function getStandardVolumeReferences(): {
+	name: string;
+	liters: number;
+	gallons: number;
+	m3: number;
+}[] {
+	return [
+		{
+			name: 'Standard water bottle',
+			liters: 0.5,
+			gallons: 0.132,
+			m3: 0.0005,
+		},
+		{
+			name: 'Large water bottle',
+			liters: 1.5,
+			gallons: 0.396,
+			m3: 0.0015,
+		},
+		{
+			name: 'Gasoline tank (car)',
+			liters: 50,
+			gallons: 13.2,
+			m3: 0.05,
+		},
+		{
+			name: 'Swimming pool (small)',
+			liters: 50000,
+			gallons: 13209,
+			m3: 50,
+		},
+	];
 }
