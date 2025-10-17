@@ -9,6 +9,7 @@ import {
 	Activity,
 	Droplets,
 	Battery,
+	HardDrive,
 } from 'lucide-react';
 
 const calculators = [
@@ -60,6 +61,13 @@ const calculators = [
 		description: 'calculators.energy-converter.description',
 		icon: Battery,
 		href: '/converter/energy',
+	},
+	{
+		id: 'data-converter',
+		title: 'calculators.data-converter.title',
+		description: 'calculators.data-converter.description',
+		icon: HardDrive,
+		href: '/converter/data',
 	},
 ];
 

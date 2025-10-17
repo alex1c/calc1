@@ -5761,6 +5761,83 @@
 					}
 				]
 			}
+		},
+		"data-converter": {
+			"title": "Online Data Converter",
+			"description": "Quickly convert data between bytes, kilobytes, megabytes, gigabytes, and terabytes. Accurate and convenient converter.",
+			"value": "Enter value",
+			"fromUnit": "From unit",
+			"toUnit": "To unit",
+			"button": "Convert",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"commonConversions": "Other units",
+			"units": {
+				"B": "Byte (B)",
+				"KB": "Kilobyte (KB)",
+				"MB": "Megabyte (MB)",
+				"GB": "Gigabyte (GB)",
+				"TB": "Terabyte (TB)"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate calculations",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All calculations are based on precise conversion formulas (1024-based system)",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Data Converter — Bytes, Kilobytes, Megabytes",
+				"description": "Fast and easy data converter. Convert bytes to kilobytes, megabytes, gigabytes, and terabytes instantly online.",
+				"keywords": "data converter, bytes to kilobytes, megabytes to gigabytes, data unit converter",
+				"h1": "Online Data Converter",
+				"h2": "Convert Bytes, KB, MB, GB, TB",
+				"overview": {
+					"title": "About Data Converter",
+					"content": "Our data converter allows you to quickly and accurately convert between different data measurement units. Supports all major units: bytes, kilobytes, megabytes, gigabytes, and terabytes."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All data units are converted through the base unit - byte. Uses binary system (1024-based), ensuring calculation accuracy for computer data."
+				},
+				"units": {
+					"title": "Supported Units",
+					"content": "The converter supports 5 main data units: bytes (B), kilobytes (KB), megabytes (MB), gigabytes (GB), and terabytes (TB)."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How many bytes are in a kilobyte?",
+						"a": "1 kilobyte equals 1024 bytes. This is due to the binary system used in computers."
+					},
+					{
+						"q": "How to convert gigabytes to megabytes?",
+						"a": "Multiply the number of gigabytes by 1024 to get megabytes. For example: 1 GB = 1 × 1024 = 1024 MB."
+					},
+					{
+						"q": "What's the difference between kilobyte and kibibyte?",
+						"a": "Kilobyte (KB) = 1024 bytes, kibibyte (KiB) = 1024 bytes. Our converter uses the standard computer system (1024)."
+					},
+					{
+						"q": "How many terabytes are in a petabyte?",
+						"a": "1 petabyte equals 1024 terabytes. This is the next unit of measurement after terabyte."
+					}
+				]
+			}
 		}
 	}
 }

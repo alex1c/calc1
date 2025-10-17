@@ -5771,6 +5771,83 @@
 					}
 				]
 			}
+		},
+		"data-converter": {
+			"title": "Online-Dateneinheiten-Umrechner",
+			"description": "Konvertieren Sie Daten zwischen Byte, Kilobyte, Megabyte, Gigabyte und Terabyte. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"B": "Byte (B)",
+				"KB": "Kilobyte (KB)",
+				"MB": "Megabyte (MB)",
+				"GB": "Gigabyte (GB)",
+				"TB": "Terabyte (TB)"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln (1024-basiertes System)",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Datenumrechner — Byte, Kilobyte, Megabyte",
+				"description": "Schneller Online-Umrechner für Dateneinheiten. Konvertieren Sie Byte, Kilobyte, Megabyte, Gigabyte und Terabyte einfach und genau.",
+				"keywords": "Datenumrechner, Byte zu Kilobyte, Megabyte zu Gigabyte, Dateneinheiten-Konverter",
+				"h1": "Online-Datenumrechner",
+				"h2": "Umrechnung von Byte, KB, MB, GB, TB",
+				"overview": {
+					"title": "Über den Datenumrechner",
+					"content": "Unser Datenumrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Dateneinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Byte, Kilobyte, Megabyte, Gigabyte und Terabyte."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Dateneinheiten werden über die Basiseinheit - Byte - konvertiert. Verwendet Binärsystem (1024-basiert), was die Berechnungsgenauigkeit für Computerdaten gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 5 Hauptdateneinheiten: Byte (B), Kilobyte (KB), Megabyte (MB), Gigabyte (GB) und Terabyte (TB)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie viele Byte hat ein Kilobyte?",
+						"a": "Ein Kilobyte entspricht 1024 Byte. Dies liegt am Binärsystem, das in Computern verwendet wird."
+					},
+					{
+						"q": "Wie konvertiert man Gigabyte in Megabyte?",
+						"a": "Multiplizieren Sie die Gigabyte-Anzahl mit 1024, um Megabyte zu erhalten. Zum Beispiel: 1 GB = 1 × 1024 = 1024 MB."
+					},
+					{
+						"q": "Was ist der Unterschied zwischen Kilobyte und Kibibyte?",
+						"a": "Kilobyte (KB) = 1024 Byte, Kibibyte (KiB) = 1024 Byte. Unser Rechner verwendet das Standard-Computersystem (1024)."
+					},
+					{
+						"q": "Wie viele Terabyte hat ein Petabyte?",
+						"a": "Ein Petabyte entspricht 1024 Terabyte. Dies ist die nächste Maßeinheit nach Terabyte."
+					}
+				]
+			}
 		}
 	}
 }

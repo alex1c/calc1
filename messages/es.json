@@ -5775,6 +5775,83 @@
 					}
 				]
 			}
+		},
+		"data-converter": {
+			"title": "Convertidor de datos en línea",
+			"description": "Convierte datos entre bytes, kilobytes, megabytes, gigabytes y terabytes. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"B": "Byte (B)",
+				"KB": "Kilobyte (KB)",
+				"MB": "Megabyte (MB)",
+				"GB": "Gigabyte (GB)",
+				"TB": "Terabyte (TB)"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas (sistema basado en 1024)",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de datos en línea — Bytes, Kilobytes, Megabytes",
+				"description": "Conversor rápido y preciso de datos. Convierte bytes, kilobytes, megabytes, gigabytes y terabytes al instante.",
+				"keywords": "convertidor de datos, bytes a kilobytes, megabytes a gigabytes, convertidor de unidades de datos",
+				"h1": "Convertidor de datos en línea",
+				"h2": "Convertir Bytes, KB, MB, GB, TB",
+				"overview": {
+					"title": "Sobre el Convertidor de Datos",
+					"content": "Nuestro convertidor de datos te permite convertir rápida y precisamente entre diferentes unidades de medida de datos. Soporta todas las unidades principales: bytes, kilobytes, megabytes, gigabytes y terabytes."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de datos se convierten a través de la unidad base - byte. Usa sistema binario (basado en 1024), asegurando la precisión de los cálculos para datos informáticos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 5 unidades principales de datos: bytes (B), kilobytes (KB), megabytes (MB), gigabytes (GB) y terabytes (TB)."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cuántos bytes hay en un kilobyte?",
+						"a": "1 kilobyte equivale a 1024 bytes. Esto se debe al sistema binario usado en computadoras."
+					},
+					{
+						"q": "¿Cómo convertir gigabytes a megabytes?",
+						"a": "Multiplica los gigabytes por 1024 para obtener megabytes. Por ejemplo: 1 GB = 1 × 1024 = 1024 MB."
+					},
+					{
+						"q": "¿Cuál es la diferencia entre kilobyte y kibibyte?",
+						"a": "Kilobyte (KB) = 1024 bytes, kibibyte (KiB) = 1024 bytes. Nuestro convertidor usa el sistema informático estándar (1024)."
+					},
+					{
+						"q": "¿Cuántos terabytes hay en un petabyte?",
+						"a": "1 petabyte equivale a 1024 terabytes. Esta es la siguiente unidad de medida después del terabyte."
+					}
+				]
+			}
 		}
 	}
 }
