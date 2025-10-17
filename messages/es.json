@@ -5400,6 +5400,81 @@
 					}
 				]
 			}
+		},
+		"temperature": {
+			"title": "Convertidor de temperatura en línea",
+			"description": "Convierte temperaturas entre Celsius, Fahrenheit y Kelvin. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"C": "°C",
+				"F": "°F",
+				"K": "K"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de temperatura en línea — °C, °F, K",
+				"description": "Convierte temperaturas entre Celsius, Fahrenheit y Kelvin al instante. Preciso y con soporte para 4 idiomas.",
+				"keywords": "convertidor de temperatura, celsius a fahrenheit, kelvin a celsius, convertidor de unidades de temperatura",
+				"h1": "Convertidor de temperatura en línea",
+				"h2": "Convertir °C, °F, K",
+				"overview": {
+					"title": "Sobre el Convertidor de Temperatura",
+					"content": "Nuestro convertidor de temperatura te permite convertir rápida y precisamente entre diferentes unidades de medida de temperatura. Soporta todas las unidades principales: Celsius, Fahrenheit y Kelvin."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de temperatura se convierten a través de la unidad base - Celsius. Cada unidad tiene su propia fórmula de conversión, asegurando la precisión de los cálculos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 3 unidades principales de temperatura: Celsius (°C), Fahrenheit (°F) y Kelvin (K)."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir Celsius a Fahrenheit?",
+						"a": "Usa la fórmula F = (C × 9/5) + 32. Por ejemplo: 25°C = (25 × 9/5) + 32 = 77°F."
+					},
+					{
+						"q": "¿Cómo convertir Kelvin a Celsius?",
+						"a": "Usa la fórmula C = K - 273,15. Por ejemplo: 300K = 300 - 273,15 = 26,85°C."
+					},
+					{
+						"q": "¿Cómo convertir Fahrenheit a Kelvin?",
+						"a": "Usa la fórmula K = (F - 32) × 5/9 + 273,15. Por ejemplo: 68°F = (68 - 32) × 5/9 + 273,15 = 293,15K."
+					},
+					{
+						"q": "¿Qué es el cero absoluto?",
+						"a": "El cero absoluto es 0K (-273,15°C o -459,67°F). Esta es la temperatura más baja posible."
+					}
+				]
+			}
 		}
 	}
 }

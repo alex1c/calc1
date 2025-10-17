@@ -20,10 +20,10 @@ const calculators = [
 	},
 	{
 		id: 'temperature',
-		title: 'Temperature Converter',
-		description: 'Convert between Celsius, Fahrenheit, and Kelvin',
+		title: 'calculators.temperature.title',
+		description: 'calculators.temperature.description',
 		icon: Thermometer,
-		href: '/calc/temperature',
+		href: '/converter/temperature',
 	},
 	{
 		id: 'speed',

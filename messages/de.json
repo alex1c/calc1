@@ -5396,6 +5396,81 @@
 					}
 				]
 			}
+		},
+		"temperature": {
+			"title": "Online-Temperaturrechner",
+			"description": "Konvertieren Sie Temperaturen zwischen Celsius, Fahrenheit und Kelvin. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"C": "°C",
+				"F": "°F",
+				"K": "K"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Temperaturrechner — °C, °F, K",
+				"description": "Konvertieren Sie Temperaturen zwischen Celsius, Fahrenheit und Kelvin online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Temperaturrechner, Celsius zu Fahrenheit, Kelvin zu Celsius, Temperatur-Einheiten-Konverter",
+				"h1": "Online-Temperaturrechner",
+				"h2": "Umrechnung °C, °F, K",
+				"overview": {
+					"title": "Über den Temperaturrechner",
+					"content": "Unser Temperaturrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Temperatureinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Celsius, Fahrenheit und Kelvin."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Temperatureinheiten werden über die Basiseinheit - Celsius - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 3 Haupttemperatureinheiten: Celsius (°C), Fahrenheit (°F) und Kelvin (K)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man Celsius in Fahrenheit?",
+						"a": "Verwenden Sie die Formel F = (C × 9/5) + 32. Zum Beispiel: 25°C = (25 × 9/5) + 32 = 77°F."
+					},
+					{
+						"q": "Wie konvertiert man Kelvin in Celsius?",
+						"a": "Verwenden Sie die Formel C = K - 273,15. Zum Beispiel: 300K = 300 - 273,15 = 26,85°C."
+					},
+					{
+						"q": "Wie konvertiert man Fahrenheit in Kelvin?",
+						"a": "Verwenden Sie die Formel K = (F - 32) × 5/9 + 273,15. Zum Beispiel: 68°F = (68 - 32) × 5/9 + 273,15 = 293,15K."
+					},
+					{
+						"q": "Was ist der absolute Nullpunkt?",
+						"a": "Der absolute Nullpunkt ist 0K (-273,15°C oder -459,67°F). Dies ist die niedrigste mögliche Temperatur."
+					}
+				]
+			}
 		}
 	}
 }
