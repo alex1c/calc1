@@ -5311,6 +5311,81 @@
 					}
 				]
 			}
+		},
+		"weight": {
+			"title": "Online Weight Converter",
+			"description": "Quickly convert weight units: grams, kilograms, and pounds. Accurate and convenient converter.",
+			"value": "Enter value",
+			"fromUnit": "From unit",
+			"toUnit": "To unit",
+			"button": "Convert",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"commonConversions": "Other units",
+			"units": {
+				"g": "g",
+				"kg": "kg",
+				"lb": "lb"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate calculations",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All calculations are based on precise conversion factors",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Weight Converter — g, kg, lb",
+				"description": "Instantly convert grams, kilograms, and pounds online. Accurate weight converter with 4 languages support.",
+				"keywords": "weight converter, g to kg, kg to lb, weight unit converter",
+				"h1": "Online Weight Converter",
+				"h2": "Convert g, kg, lb",
+				"overview": {
+					"title": "About Weight Converter",
+					"content": "Our weight converter allows you to quickly and accurately convert between different weight measurement units. Supports all major units: grams, kilograms, and pounds."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All weight units are converted through the base unit - gram. Each unit has its own coefficient relative to gram, ensuring calculation accuracy."
+				},
+				"units": {
+					"title": "Supported Units",
+					"content": "The converter supports 3 main weight units: grams (g), kilograms (kg), and pounds (lb)."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to convert grams to kilograms?",
+						"a": "Divide grams by 1000 to get kilograms. For example: 1500 g = 1.5 kg."
+					},
+					{
+						"q": "How to convert kilograms to pounds?",
+						"a": "1 kilogram ≈ 2.20462 pounds. Multiply kilograms by this factor. For example: 5 kg ≈ 11.02 pounds."
+					},
+					{
+						"q": "How many grams in a kilogram?",
+						"a": "There are 1000 grams in one kilogram. This is the standard metric system."
+					},
+					{
+						"q": "How to convert pounds to kilograms?",
+						"a": "1 pound ≈ 0.453592 kilograms. Multiply pounds by this factor to get kilograms."
+					}
+				]
+			}
 		}
 	}
 }

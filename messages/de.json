@@ -1371,9 +1371,6 @@
 					"balance": "Restschuld",
 					"moreMonths": "weitere Monate"
 				}
-			},
-			"breadcrumbs": {
-				"category": "Finanzen"
 			}
 		},
 		"deposit": {
@@ -5321,6 +5318,81 @@
 					{
 						"q": "Wie konvertiert man Meilen in Kilometer?",
 						"a": "1 Meile ≈ 1,60934 Kilometer. Multiplizieren Sie Meilen mit diesem Faktor, um Kilometer zu erhalten."
+					}
+				]
+			}
+		},
+		"weight": {
+			"title": "Online-Gewichtsrechner",
+			"description": "Konvertieren Sie Gewichtseinheiten: Gramm, Kilogramm und Pfund. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"g": "g",
+				"kg": "kg",
+				"lb": "lb"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsfaktoren",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Gewichtsrechner — g, kg, lb",
+				"description": "Konvertieren Sie Gramm, Kilogramm und Pfund online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Gewichtsrechner, g zu kg, kg zu lb, Gewichtseinheiten-Konverter",
+				"h1": "Online-Gewichtsrechner",
+				"h2": "Umrechnung g, kg, lb",
+				"overview": {
+					"title": "Über den Gewichtsrechner",
+					"content": "Unser Gewichtsrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Gewichtseinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Gramm, Kilogramm und Pfund."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Gewichtseinheiten werden über die Basiseinheit - Gramm - konvertiert. Jede Einheit hat ihren eigenen Koeffizienten relativ zum Gramm, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 3 Hauptgewichtseinheiten: Gramm (g), Kilogramm (kg) und Pfund (lb)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man Gramm in Kilogramm?",
+						"a": "Teilen Sie Gramm durch 1000, um Kilogramm zu erhalten. Zum Beispiel: 1500 g = 1,5 kg."
+					},
+					{
+						"q": "Wie konvertiert man Kilogramm in Pfund?",
+						"a": "1 Kilogramm ≈ 2,20462 Pfund. Multiplizieren Sie Kilogramm mit diesem Faktor. Zum Beispiel: 5 kg ≈ 11,02 Pfund."
+					},
+					{
+						"q": "Wie viele Gramm sind in einem Kilogramm?",
+						"a": "In einem Kilogramm sind 1000 Gramm. Das ist das Standard-Metrik-System."
+					},
+					{
+						"q": "Wie konvertiert man Pfund in Kilogramm?",
+						"a": "1 Pfund ≈ 0,453592 Kilogramm. Multiplizieren Sie Pfund mit diesem Faktor, um Kilogramm zu erhalten."
 					}
 				]
 			}

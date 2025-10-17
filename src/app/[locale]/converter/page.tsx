@@ -13,11 +13,10 @@ const calculators = [
 	},
 	{
 		id: 'weight',
-		title: 'Weight Converter',
-		description:
-			'Convert between kilograms, pounds, ounces, and other weight units',
+		title: 'calculators.weight.title',
+		description: 'calculators.weight.description',
 		icon: Weight,
-		href: '/calc/weight',
+		href: '/converter/weight',
 	},
 	{
 		id: 'temperature',

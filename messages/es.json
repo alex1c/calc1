@@ -5325,6 +5325,81 @@
 					}
 				]
 			}
+		},
+		"weight": {
+			"title": "Convertidor de peso en línea",
+			"description": "Convierte unidades de peso: gramos, kilogramos y libras. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"g": "g",
+				"kg": "kg",
+				"lb": "libra"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en factores de conversión precisos",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de peso en línea — g, kg, libra",
+				"description": "Convierte gramos, kilogramos y libras al instante. Preciso y con soporte para 4 idiomas.",
+				"keywords": "convertidor de peso, g a kg, kg a libra, convertidor de unidades de peso",
+				"h1": "Convertidor de peso en línea",
+				"h2": "Convertir g, kg, libra",
+				"overview": {
+					"title": "Sobre el Convertidor de Peso",
+					"content": "Nuestro convertidor de peso te permite convertir rápida y precisamente entre diferentes unidades de medida de peso. Soporta todas las unidades principales: gramos, kilogramos y libras."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de peso se convierten a través de la unidad base - gramo. Cada unidad tiene su propio coeficiente relativo al gramo, asegurando la precisión de los cálculos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 3 unidades principales de peso: gramos (g), kilogramos (kg) y libras (lb)."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir gramos a kilogramos?",
+						"a": "Divide los gramos entre 1000 para obtener kilogramos. Por ejemplo: 1500 g = 1,5 kg."
+					},
+					{
+						"q": "¿Cómo convertir kilogramos a libras?",
+						"a": "1 kilogramo ≈ 2,20462 libras. Multiplica los kilogramos por este factor. Por ejemplo: 5 kg ≈ 11,02 libras."
+					},
+					{
+						"q": "¿Cuántos gramos hay en un kilogramo?",
+						"a": "Hay 1000 gramos en un kilogramo. Este es el sistema métrico estándar."
+					},
+					{
+						"q": "¿Cómo convertir libras a kilogramos?",
+						"a": "1 libra ≈ 0,453592 kilogramos. Multiplica las libras por este factor para obtener kilogramos."
+					}
+				]
+			}
 		}
 	}
 }
