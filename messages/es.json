@@ -5941,6 +5941,157 @@
 					}
 				]
 			}
+		},
+		"ringSize": {
+			"title": "Convertidor de tallas de anillos en línea",
+			"description": "Encuentra tu talla de anillo en sistemas RU, EU, US, UK, JP, CN. Calculadora en línea para convertir tallas por diámetro o circunferencia del dedo.",
+			"breadcrumbs": {
+				"home": "Inicio",
+				"life": "Vida"
+			},
+			"form": {
+				"title": "Parámetros de conversión"
+			},
+			"measurementType": "Tipo de medición",
+			"ringSize": "Talla del anillo",
+			"innerDiameter": "Diámetro interior (mm)",
+			"selectCountry": "País",
+			"enterValue": "Ingrese valor",
+			"calculate": "Calcular",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"sizeChart": "Tabla de Tallas",
+			"measurementTypes": {
+				"size": "Talla del anillo",
+				"diameter": "Diámetro interior (mm)"
+			},
+			"countries": {
+				"RU": "🇷🇺 RU",
+				"EU": "🇪🇺 EU",
+				"US": "🇺🇸 US",
+				"UK": "🇬🇧 UK",
+				"JP": "🇯🇵 JP",
+				"CN": "🇨🇳 CN"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Tablas de tallas exactas",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"measurement": "Mide el diámetro interior del anillo con una regla o calibre",
+				"finger": "Para medir el dedo, usa una tira de papel o un medidor de anillos especial",
+				"accuracy": "Todas las tallas se basan en estándares internacionales"
+			},
+			"table": {
+				"country": "País",
+				"size": "Talla",
+				"diameter": "Diámetro",
+				"sizeRange": "Rango de Tallas",
+				"description": "Descripción",
+				"ruDescription": "Tallas de anillos rusas",
+				"euDescription": "Tallas de anillos europeas",
+				"usDescription": "Tallas de anillos americanas",
+				"ukDescription": "Tallas de anillos británicas (basadas en letras)",
+				"jpDescription": "Tallas de anillos japonesas",
+				"cnDescription": "Tallas de anillos chinas"
+			},
+			"errors": {
+				"invalidMeasurementType": "Tipo de medición inválido",
+				"invalidCountry": "País inválido",
+				"invalidValue": "Valor inválido",
+				"diameterOutOfRange": "Diámetro fuera de rango (14-24 mm)",
+				"validationError": "Error de validación",
+				"calculationError": "Error de cálculo"
+			},
+			"seo": {
+				"title": "Convertidor de tallas de anillos en línea — Tabla de tallas RU, EU, US, UK, JP, CN",
+				"description": "Encuentra tu talla de anillo en sistemas RU, EU, US, UK, JP, CN. Calculadora en línea para convertir tallas por diámetro o circunferencia del dedo.",
+				"keywords": "talla de anillo, conversión de tallas de anillos, tabla de tallas de anillos, RU EU US UK JP CN, diámetro del anillo",
+				"h1": "Convertidor de tallas de anillos en línea",
+				"h2": "Tabla de conversión de tallas RU, EU, US, UK, JP, CN",
+				"overview": {
+					"title": "Sobre el Convertidor de Tallas de Anillos",
+					"content": "Nuestro convertidor de tallas de anillos te ayudará a determinar con precisión qué talla necesitas al pedir joyas del extranjero. Simplemente ingresa tu talla o el diámetro interior del anillo, y obtendrás una tabla de conversión para sistemas RU, EU, US, UK, JP y CN."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las tallas se convierten basándose en el diámetro interior del anillo en milímetros. Cada sistema tiene sus propios estándares, pero todos están vinculados a un diámetro único, asegurando una conversión precisa entre países."
+				},
+				"measurement": {
+					"title": "Cómo Medir la Talla del Anillo",
+					"content": "Para medir la talla del anillo, puedes usar el diámetro interior de un anillo existente o medir la circunferencia de tu dedo. Todas las mediciones deben ser precisas para obtener la talla correcta.",
+					"byDiameter": {
+						"title": "Por Diámetro del Anillo",
+						"step1": "Mide el diámetro interior del anillo con una regla",
+						"step2": "Usa un calibre para precisión",
+						"step3": "Ingresa el valor en la calculadora"
+					},
+					"byFinger": {
+						"title": "Por Circunferencia del Dedo",
+						"step1": "Envuelve una tira de papel alrededor de tu dedo",
+						"step2": "Marca el punto de intersección",
+						"step3": "Mide la longitud y divide por π"
+					}
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Tablas de tallas precisas, conversión instantánea, soporte para 6 sistemas de tallas, interfaz amigable, versión móvil.",
+					"precise": {
+						"title": "Precisión",
+						"content": "Todas las tallas se basan en estándares internacionales"
+					},
+					"fast": {
+						"title": "Velocidad",
+						"content": "Conversión instantánea entre sistemas"
+					},
+					"multilingual": {
+						"title": "Multilingüe",
+						"content": "Soporte para 4 idiomas"
+					}
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo encontrar la talla del anillo por diámetro?",
+						"a": "Mide el diámetro interior del anillo con una regla o calibre — la calculadora convertirá automáticamente el valor a tallas internacionales."
+					},
+					{
+						"q": "¿Cómo convertir talla de anillo rusa a americana?",
+						"a": "Ingresa «RU» y tu talla — el servicio mostrará instantáneamente el equivalente para sistemas EU, US, UK, JP, CN."
+					},
+					{
+						"q": "¿Es la calculadora adecuada para anillos de boda?",
+						"a": "Sí, es adecuada para todos los tipos de anillos — anillos de boda, de compromiso y de uso diario."
+					},
+					{
+						"q": "¿Qué tan precisas son las tablas de tallas?",
+						"a": "Todas las tablas se basan en estándares internacionales de tallas de anillos y se actualizan regularmente para asegurar precisión."
+					}
+				],
+				"tips": {
+					"title": "Consejos Útiles",
+					"measurement": {
+						"title": "Medición",
+						"tip1": "Mide al final del día cuando los dedos están ligeramente hinchados",
+						"tip2": "Considera el ancho del anillo — los anillos anchos deben ser más grandes",
+						"tip3": "Verifica la talla en diferentes dedos"
+					},
+					"ordering": {
+						"title": "Pedido",
+						"tip1": "Siempre verifica la talla antes de pedir",
+						"tip2": "Considera las características del material del anillo",
+						"tip3": "Consulta a un joyero para mediciones precisas"
+					}
+				}
+			}
 		}
 	}
 }

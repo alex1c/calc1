@@ -5927,6 +5927,157 @@
 					}
 				]
 			}
+		},
+		"ringSize": {
+			"title": "Online Ring Size Converter",
+			"description": "Find your ring size in RU, EU, US, UK, JP, CN systems. Online calculator for converting sizes by diameter or finger circumference.",
+			"breadcrumbs": {
+				"home": "Home",
+				"life": "Life"
+			},
+			"form": {
+				"title": "Conversion Parameters"
+			},
+			"measurementType": "Measurement type",
+			"ringSize": "Ring size",
+			"innerDiameter": "Inner diameter (mm)",
+			"selectCountry": "Country",
+			"enterValue": "Enter value",
+			"calculate": "Calculate",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"sizeChart": "Size Chart",
+			"measurementTypes": {
+				"size": "Ring size",
+				"diameter": "Inner diameter (mm)"
+			},
+			"countries": {
+				"RU": "🇷🇺 RU",
+				"EU": "🇪🇺 EU",
+				"US": "🇺🇸 US",
+				"UK": "🇬🇧 UK",
+				"JP": "🇯🇵 JP",
+				"CN": "🇨🇳 CN"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate size tables",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"measurement": "Measure the inner diameter of the ring with a ruler or caliper",
+				"finger": "For finger measurement, use a paper strip or special ring sizer",
+				"accuracy": "All sizes are based on international standards"
+			},
+			"table": {
+				"country": "Country",
+				"size": "Size",
+				"diameter": "Diameter",
+				"sizeRange": "Size Range",
+				"description": "Description",
+				"ruDescription": "Russian ring sizes",
+				"euDescription": "European ring sizes",
+				"usDescription": "American ring sizes",
+				"ukDescription": "British ring sizes (letter-based)",
+				"jpDescription": "Japanese ring sizes",
+				"cnDescription": "Chinese ring sizes"
+			},
+			"errors": {
+				"invalidMeasurementType": "Invalid measurement type",
+				"invalidCountry": "Invalid country",
+				"invalidValue": "Invalid value",
+				"diameterOutOfRange": "Diameter out of range (14-24 mm)",
+				"validationError": "Validation error",
+				"calculationError": "Calculation error"
+			},
+			"seo": {
+				"title": "Online Ring Size Converter — Size Chart RU, EU, US, UK, JP, CN",
+				"description": "Find your ring size in RU, EU, US, UK, JP, CN systems. Online calculator for converting sizes by diameter or finger circumference.",
+				"keywords": "ring size, ring size conversion, ring size chart, RU EU US UK JP CN, ring diameter",
+				"h1": "Online Ring Size Converter",
+				"h2": "Ring Size Conversion Chart RU, EU, US, UK, JP, CN",
+				"overview": {
+					"title": "About Ring Size Converter",
+					"content": "Our ring size converter will help you accurately determine what size you need when ordering jewelry from abroad. Simply enter your size or the inner diameter of the ring, and you'll get a conversion table for RU, EU, US, UK, JP and CN systems."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All sizes are converted based on the inner diameter of the ring in millimeters. Each system has its own standards, but they are all tied to a single diameter, ensuring accurate conversion between countries."
+				},
+				"measurement": {
+					"title": "How to Measure Ring Size",
+					"content": "To measure ring size, you can use the inner diameter of an existing ring or measure the circumference of your finger. All measurements must be accurate to get the correct size.",
+					"byDiameter": {
+						"title": "By Ring Diameter",
+						"step1": "Measure the inner diameter of the ring with a ruler",
+						"step2": "Use calipers for accuracy",
+						"step3": "Enter the value in the calculator"
+					},
+					"byFinger": {
+						"title": "By Finger Circumference",
+						"step1": "Wrap a paper strip around your finger",
+						"step2": "Mark the intersection point",
+						"step3": "Measure the length and divide by π"
+					}
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate size tables, instant conversion, support for 6 size systems, user-friendly interface, mobile version.",
+					"precise": {
+						"title": "Precision",
+						"content": "All sizes are based on international standards"
+					},
+					"fast": {
+						"title": "Speed",
+						"content": "Instant conversion between systems"
+					},
+					"multilingual": {
+						"title": "Multilingual",
+						"content": "Support for 4 languages"
+					}
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to find ring size by diameter?",
+						"a": "Measure the inner diameter of the ring with a ruler or caliper — the calculator will automatically convert the value to international sizes."
+					},
+					{
+						"q": "How to convert Russian ring size to American?",
+						"a": "Enter «RU» and your size — the service will instantly show the equivalent for EU, US, UK, JP, CN systems."
+					},
+					{
+						"q": "Is the calculator suitable for wedding rings?",
+						"a": "Yes, it is suitable for all types of rings — wedding, engagement and everyday rings."
+					},
+					{
+						"q": "How accurate are the size tables?",
+						"a": "All tables are based on international ring size standards and are regularly updated to ensure accuracy."
+					}
+				],
+				"tips": {
+					"title": "Useful Tips",
+					"measurement": {
+						"title": "Measurement",
+						"tip1": "Measure at the end of the day when fingers are slightly swollen",
+						"tip2": "Consider ring width — wide rings should be larger",
+						"tip3": "Check size on different fingers"
+					},
+					"ordering": {
+						"title": "Ordering",
+						"tip1": "Always check size before ordering",
+						"tip2": "Consider ring material characteristics",
+						"tip3": "Consult a jeweler for accurate measurement"
+					}
+				}
+			}
 		}
 	}
 }

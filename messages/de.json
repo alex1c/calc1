@@ -5937,6 +5937,157 @@
 					}
 				]
 			}
+		},
+		"ringSize": {
+			"title": "Online-Ringgrößen-Konverter",
+			"description": "Finden Sie Ihre Ringgröße in RU, EU, US, UK, JP, CN Systemen. Online-Rechner für Größenumrechnung nach Durchmesser oder Fingerumfang.",
+			"breadcrumbs": {
+				"home": "Startseite",
+				"life": "Leben"
+			},
+			"form": {
+				"title": "Konvertierungsparameter"
+			},
+			"measurementType": "Messart",
+			"ringSize": "Ringgröße",
+			"innerDiameter": "Innendurchmesser (mm)",
+			"selectCountry": "Land",
+			"enterValue": "Wert eingeben",
+			"calculate": "Berechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"sizeChart": "Größentabelle",
+			"measurementTypes": {
+				"size": "Ringgröße",
+				"diameter": "Innendurchmesser (mm)"
+			},
+			"countries": {
+				"RU": "🇷🇺 RU",
+				"EU": "🇪🇺 EU",
+				"US": "🇺🇸 US",
+				"UK": "🇬🇧 UK",
+				"JP": "🇯🇵 JP",
+				"CN": "🇨🇳 CN"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Größentabellen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"measurement": "Messen Sie den Innendurchmesser des Rings mit einem Lineal oder Messschieber",
+				"finger": "Für Fingermessung verwenden Sie einen Papierstreifen oder speziellen Ringmesser",
+				"accuracy": "Alle Größen basieren auf internationalen Standards"
+			},
+			"table": {
+				"country": "Land",
+				"size": "Größe",
+				"diameter": "Durchmesser",
+				"sizeRange": "Größenbereich",
+				"description": "Beschreibung",
+				"ruDescription": "Russische Ringgrößen",
+				"euDescription": "Europäische Ringgrößen",
+				"usDescription": "Amerikanische Ringgrößen",
+				"ukDescription": "Britische Ringgrößen (buchstabenbasiert)",
+				"jpDescription": "Japanische Ringgrößen",
+				"cnDescription": "Chinesische Ringgrößen"
+			},
+			"errors": {
+				"invalidMeasurementType": "Ungültiger Messungstyp",
+				"invalidCountry": "Ungültiges Land",
+				"invalidValue": "Ungültiger Wert",
+				"diameterOutOfRange": "Durchmesser außerhalb des Bereichs (14-24 mm)",
+				"validationError": "Validierungsfehler",
+				"calculationError": "Berechnungsfehler"
+			},
+			"seo": {
+				"title": "Online-Ringgrößen-Konverter — Größentabelle RU, EU, US, UK, JP, CN",
+				"description": "Finden Sie Ihre Ringgröße in RU, EU, US, UK, JP, CN Systemen. Online-Rechner für Größenumrechnung nach Durchmesser oder Fingerumfang.",
+				"keywords": "Ringgröße, Ringgrößen-Umrechnung, Ringgrößen-Tabelle, RU EU US UK JP CN, Ringdurchmesser",
+				"h1": "Online-Ringgrößen-Konverter",
+				"h2": "Ringgrößen-Umrechnungstabelle RU, EU, US, UK, JP, CN",
+				"overview": {
+					"title": "Über den Ringgrößen-Konverter",
+					"content": "Unser Ringgrößen-Konverter hilft Ihnen dabei, genau zu bestimmen, welche Größe Sie beim Bestellen von Schmuck aus dem Ausland benötigen. Geben Sie einfach Ihre Größe oder den Innendurchmesser des Rings ein, und Sie erhalten eine Umrechnungstabelle für RU, EU, US, UK, JP und CN Systeme."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Größen werden basierend auf dem Innendurchmesser des Rings in Millimetern umgerechnet. Jedes System hat seine eigenen Standards, aber sie sind alle an einen einzigen Durchmesser gebunden, was eine genaue Umrechnung zwischen Ländern gewährleistet."
+				},
+				"measurement": {
+					"title": "Wie man Ringgröße misst",
+					"content": "Um die Ringgröße zu messen, können Sie den Innendurchmesser eines vorhandenen Rings verwenden oder den Umfang Ihres Fingers messen. Alle Messungen müssen genau sein, um die richtige Größe zu erhalten.",
+					"byDiameter": {
+						"title": "Nach Ringdurchmesser",
+						"step1": "Messen Sie den Innendurchmesser des Rings mit einem Lineal",
+						"step2": "Verwenden Sie einen Messschieber für Genauigkeit",
+						"step3": "Geben Sie den Wert in den Rechner ein"
+					},
+					"byFinger": {
+						"title": "Nach Fingerumfang",
+						"step1": "Wickeln Sie einen Papierstreifen um Ihren Finger",
+						"step2": "Markieren Sie den Schnittpunkt",
+						"step3": "Messen Sie die Länge und teilen Sie durch π"
+					}
+				},
+				"advantages": {
+					"title": "Vorteile unseres Konverters",
+					"content": "Genaue Größentabellen, sofortige Umrechnung, Unterstützung für 6 Größensysteme, benutzerfreundliche Oberfläche, mobile Version.",
+					"precise": {
+						"title": "Präzision",
+						"content": "Alle Größen basieren auf internationalen Standards"
+					},
+					"fast": {
+						"title": "Geschwindigkeit",
+						"content": "Sofortige Umrechnung zwischen Systemen"
+					},
+					"multilingual": {
+						"title": "Mehrsprachigkeit",
+						"content": "Unterstützung für 4 Sprachen"
+					}
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie findet man Ringgröße nach Durchmesser?",
+						"a": "Messen Sie den Innendurchmesser des Rings mit einem Lineal oder Messschieber — der Rechner konvertiert den Wert automatisch in internationale Größen."
+					},
+					{
+						"q": "Wie konvertiert man russische Ringgröße in amerikanische?",
+						"a": "Geben Sie «RU» und Ihre Größe ein — der Service zeigt sofort das Äquivalent für EU, US, UK, JP, CN Systeme."
+					},
+					{
+						"q": "Ist der Rechner für Eheringe geeignet?",
+						"a": "Ja, er ist für alle Arten von Ringen geeignet — Eheringe, Verlobungsringe und Alltagsringe."
+					},
+					{
+						"q": "Wie genau sind die Größentabellen?",
+						"a": "Alle Tabellen basieren auf internationalen Ringgrößen-Standards und werden regelmäßig aktualisiert, um Genauigkeit zu gewährleisten."
+					}
+				],
+				"tips": {
+					"title": "Nützliche Tipps",
+					"measurement": {
+						"title": "Messung",
+						"tip1": "Messen Sie am Ende des Tages, wenn die Finger leicht geschwollen sind",
+						"tip2": "Berücksichtigen Sie die Ringbreite — breite Ringe sollten größer sein",
+						"tip3": "Überprüfen Sie die Größe an verschiedenen Fingern"
+					},
+					"ordering": {
+						"title": "Bestellung",
+						"tip1": "Überprüfen Sie immer die Größe vor der Bestellung",
+						"tip2": "Berücksichtigen Sie die Eigenschaften des Ringmaterials",
+						"tip3": "Konsultieren Sie einen Juwelier für genaue Messungen"
+					}
+				}
+			}
 		}
 	}
 }

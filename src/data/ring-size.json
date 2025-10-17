@@ -1,0 +1,483 @@
+{
+  "languages": ["ru", "en", "de", "es"],
+  "labels": {
+    "ru": {
+      "title": "Онлайн-конвертер размеров колец",
+      "description": "Узнай свой размер кольца в системах RU, EU, US, UK, JP, CN. Онлайн калькулятор для перевода размеров по диаметру или окружности пальца.",
+      "measurementType": "Тип измерения",
+      "ringSize": "Размер кольца",
+      "innerDiameter": "Внутренний диаметр (мм)",
+      "selectCountry": "Страна",
+      "enterValue": "Введите значение",
+      "calculate": "Рассчитать",
+      "calculating": "Конвертация...",
+      "reset": "Сбросить",
+      "result": "Результат",
+      "sizeChart": "Таблица размеров",
+      "measurementTypes": {
+        "size": "Размер кольца",
+        "diameter": "Внутренний диаметр (мм)"
+      },
+      "countries": {
+        "RU": "🇷🇺 RU",
+        "EU": "🇪🇺 EU",
+        "US": "🇺🇸 US",
+        "UK": "🇬🇧 UK",
+        "JP": "🇯🇵 JP",
+        "CN": "🇨🇳 CN"
+      },
+      "infographic": {
+        "precise": "Точный",
+        "preciseDescription": "Точные таблицы размеров",
+        "fast": "Быстрый",
+        "fastDescription": "Мгновенная конвертация",
+        "multilingual": "Многоязычный",
+        "multilingualDescription": "4 языка"
+      },
+      "tips": {
+        "title": "💡 Полезные советы",
+        "measurement": "Измерьте внутренний диаметр кольца линейкой или штангенциркулем",
+        "finger": "Для измерения пальца используйте полоску бумаги или специальное кольцо-измеритель",
+        "accuracy": "Все размеры основаны на международных стандартах"
+      }
+    },
+    "en": {
+      "title": "Online Ring Size Converter",
+      "description": "Find your ring size in RU, EU, US, UK, JP, CN systems. Online calculator for converting sizes by diameter or finger circumference.",
+      "measurementType": "Measurement type",
+      "ringSize": "Ring size",
+      "innerDiameter": "Inner diameter (mm)",
+      "selectCountry": "Country",
+      "enterValue": "Enter value",
+      "calculate": "Calculate",
+      "calculating": "Converting...",
+      "reset": "Reset",
+      "result": "Result",
+      "sizeChart": "Size Chart",
+      "measurementTypes": {
+        "size": "Ring size",
+        "diameter": "Inner diameter (mm)"
+      },
+      "countries": {
+        "RU": "🇷🇺 RU",
+        "EU": "🇪🇺 EU",
+        "US": "🇺🇸 US",
+        "UK": "🇬🇧 UK",
+        "JP": "🇯🇵 JP",
+        "CN": "🇨🇳 CN"
+      },
+      "infographic": {
+        "precise": "Precise",
+        "preciseDescription": "Accurate size tables",
+        "fast": "Fast",
+        "fastDescription": "Instant conversion",
+        "multilingual": "Multilingual",
+        "multilingualDescription": "4 languages"
+      },
+      "tips": {
+        "title": "💡 Useful Tips",
+        "measurement": "Measure the inner diameter of the ring with a ruler or caliper",
+        "finger": "For finger measurement, use a paper strip or special ring sizer",
+        "accuracy": "All sizes are based on international standards"
+      }
+    },
+    "de": {
+      "title": "Online-Ringgrößen-Konverter",
+      "description": "Finden Sie Ihre Ringgröße in RU, EU, US, UK, JP, CN Systemen. Online-Rechner für Größenumrechnung nach Durchmesser oder Fingerumfang.",
+      "measurementType": "Messart",
+      "ringSize": "Ringgröße",
+      "innerDiameter": "Innendurchmesser (mm)",
+      "selectCountry": "Land",
+      "enterValue": "Wert eingeben",
+      "calculate": "Berechnen",
+      "calculating": "Umrechnung...",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "sizeChart": "Größentabelle",
+      "measurementTypes": {
+        "size": "Ringgröße",
+        "diameter": "Innendurchmesser (mm)"
+      },
+      "countries": {
+        "RU": "🇷🇺 RU",
+        "EU": "🇪🇺 EU",
+        "US": "🇺🇸 US",
+        "UK": "🇬🇧 UK",
+        "JP": "🇯🇵 JP",
+        "CN": "🇨🇳 CN"
+      },
+      "infographic": {
+        "precise": "Präzise",
+        "preciseDescription": "Genaue Größentabellen",
+        "fast": "Schnell",
+        "fastDescription": "Sofortige Umrechnung",
+        "multilingual": "Mehrsprachig",
+        "multilingualDescription": "4 Sprachen"
+      },
+      "tips": {
+        "title": "💡 Nützliche Tipps",
+        "measurement": "Messen Sie den Innendurchmesser des Rings mit einem Lineal oder Messschieber",
+        "finger": "Für Fingermessung verwenden Sie einen Papierstreifen oder speziellen Ringmesser",
+        "accuracy": "Alle Größen basieren auf internationalen Standards"
+      }
+    },
+    "es": {
+      "title": "Convertidor de tallas de anillos en línea",
+      "description": "Encuentra tu talla de anillo en sistemas RU, EU, US, UK, JP, CN. Calculadora en línea para convertir tallas por diámetro o circunferencia del dedo.",
+      "measurementType": "Tipo de medición",
+      "ringSize": "Talla del anillo",
+      "innerDiameter": "Diámetro interior (mm)",
+      "selectCountry": "País",
+      "enterValue": "Ingrese valor",
+      "calculate": "Calcular",
+      "calculating": "Convirtiendo...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "sizeChart": "Tabla de Tallas",
+      "measurementTypes": {
+        "size": "Talla del anillo",
+        "diameter": "Diámetro interior (mm)"
+      },
+      "countries": {
+        "RU": "🇷🇺 RU",
+        "EU": "🇪🇺 EU",
+        "US": "🇺🇸 US",
+        "UK": "🇬🇧 UK",
+        "JP": "🇯🇵 JP",
+        "CN": "🇨🇳 CN"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Tablas de tallas exactas",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Multilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos Útiles",
+        "measurement": "Mide el diámetro interior del anillo con una regla o calibre",
+        "finger": "Para medir el dedo, usa una tira de papel o un medidor de anillos especial",
+        "accuracy": "Todas las tallas se basan en estándares internacionales"
+      }
+    }
+  },
+  "ringData": {
+    "RU": [
+      {"size": 14, "diameter": 14.0},
+      {"size": 14.5, "diameter": 14.5},
+      {"size": 15, "diameter": 15.0},
+      {"size": 15.5, "diameter": 15.5},
+      {"size": 16, "diameter": 16.0},
+      {"size": 16.5, "diameter": 16.5},
+      {"size": 17, "diameter": 17.0},
+      {"size": 17.5, "diameter": 17.5},
+      {"size": 18, "diameter": 18.0},
+      {"size": 18.5, "diameter": 18.5},
+      {"size": 19, "diameter": 19.0},
+      {"size": 19.5, "diameter": 19.5},
+      {"size": 20, "diameter": 20.0},
+      {"size": 20.5, "diameter": 20.5},
+      {"size": 21, "diameter": 21.0},
+      {"size": 21.5, "diameter": 21.5},
+      {"size": 22, "diameter": 22.0},
+      {"size": 22.5, "diameter": 22.5},
+      {"size": 23, "diameter": 23.0},
+      {"size": 23.5, "diameter": 23.5},
+      {"size": 24, "diameter": 24.0}
+    ],
+    "EU": [
+      {"size": 44, "diameter": 14.0},
+      {"size": 45, "diameter": 14.5},
+      {"size": 46, "diameter": 15.0},
+      {"size": 47, "diameter": 15.5},
+      {"size": 48, "diameter": 16.0},
+      {"size": 49, "diameter": 16.5},
+      {"size": 50, "diameter": 17.0},
+      {"size": 51, "diameter": 17.5},
+      {"size": 52, "diameter": 18.0},
+      {"size": 53, "diameter": 18.5},
+      {"size": 54, "diameter": 19.0},
+      {"size": 55, "diameter": 19.5},
+      {"size": 56, "diameter": 20.0},
+      {"size": 57, "diameter": 20.5},
+      {"size": 58, "diameter": 21.0},
+      {"size": 59, "diameter": 21.5},
+      {"size": 60, "diameter": 22.0},
+      {"size": 61, "diameter": 22.5},
+      {"size": 62, "diameter": 23.0},
+      {"size": 63, "diameter": 23.5},
+      {"size": 64, "diameter": 24.0}
+    ],
+    "US": [
+      {"size": 3, "diameter": 14.0},
+      {"size": 3.25, "diameter": 14.5},
+      {"size": 3.5, "diameter": 15.0},
+      {"size": 3.75, "diameter": 15.5},
+      {"size": 4, "diameter": 16.0},
+      {"size": 4.25, "diameter": 16.5},
+      {"size": 4.5, "diameter": 17.0},
+      {"size": 4.75, "diameter": 17.5},
+      {"size": 5, "diameter": 18.0},
+      {"size": 5.25, "diameter": 18.5},
+      {"size": 5.5, "diameter": 19.0},
+      {"size": 5.75, "diameter": 19.5},
+      {"size": 6, "diameter": 20.0},
+      {"size": 6.25, "diameter": 20.5},
+      {"size": 6.5, "diameter": 21.0},
+      {"size": 6.75, "diameter": 21.5},
+      {"size": 7, "diameter": 22.0},
+      {"size": 7.25, "diameter": 22.5},
+      {"size": 7.5, "diameter": 23.0},
+      {"size": 7.75, "diameter": 23.5},
+      {"size": 8, "diameter": 24.0}
+    ],
+    "UK": [
+      {"size": "F", "diameter": 14.0},
+      {"size": "F½", "diameter": 14.5},
+      {"size": "G", "diameter": 15.0},
+      {"size": "G½", "diameter": 15.5},
+      {"size": "H", "diameter": 16.0},
+      {"size": "H½", "diameter": 16.5},
+      {"size": "I", "diameter": 17.0},
+      {"size": "I½", "diameter": 17.5},
+      {"size": "J", "diameter": 18.0},
+      {"size": "J½", "diameter": 18.5},
+      {"size": "K", "diameter": 19.0},
+      {"size": "K½", "diameter": 19.5},
+      {"size": "L", "diameter": 20.0},
+      {"size": "L½", "diameter": 20.5},
+      {"size": "M", "diameter": 21.0},
+      {"size": "M½", "diameter": 21.5},
+      {"size": "N", "diameter": 22.0},
+      {"size": "N½", "diameter": 22.5},
+      {"size": "O", "diameter": 23.0},
+      {"size": "O½", "diameter": 23.5},
+      {"size": "P", "diameter": 24.0}
+    ],
+    "JP": [
+      {"size": 1, "diameter": 14.0},
+      {"size": 2, "diameter": 14.5},
+      {"size": 3, "diameter": 15.0},
+      {"size": 4, "diameter": 15.5},
+      {"size": 5, "diameter": 16.0},
+      {"size": 6, "diameter": 16.5},
+      {"size": 7, "diameter": 17.0},
+      {"size": 8, "diameter": 17.5},
+      {"size": 9, "diameter": 18.0},
+      {"size": 10, "diameter": 18.5},
+      {"size": 11, "diameter": 19.0},
+      {"size": 12, "diameter": 19.5},
+      {"size": 13, "diameter": 20.0},
+      {"size": 14, "diameter": 20.5},
+      {"size": 15, "diameter": 21.0},
+      {"size": 16, "diameter": 21.5},
+      {"size": 17, "diameter": 22.0},
+      {"size": 18, "diameter": 22.5},
+      {"size": 19, "diameter": 23.0},
+      {"size": 20, "diameter": 23.5},
+      {"size": 21, "diameter": 24.0}
+    ],
+    "CN": [
+      {"size": 4, "diameter": 14.0},
+      {"size": 5, "diameter": 14.5},
+      {"size": 6, "diameter": 15.0},
+      {"size": 7, "diameter": 15.5},
+      {"size": 8, "diameter": 16.0},
+      {"size": 9, "diameter": 16.5},
+      {"size": 10, "diameter": 17.0},
+      {"size": 11, "diameter": 17.5},
+      {"size": 12, "diameter": 18.0},
+      {"size": 13, "diameter": 18.5},
+      {"size": 14, "diameter": 19.0},
+      {"size": 15, "diameter": 19.5},
+      {"size": 16, "diameter": 20.0},
+      {"size": 17, "diameter": 20.5},
+      {"size": 18, "diameter": 21.0},
+      {"size": 19, "diameter": 21.5},
+      {"size": 20, "diameter": 22.0},
+      {"size": 21, "diameter": 22.5},
+      {"size": 22, "diameter": 23.0},
+      {"size": 23, "diameter": 23.5},
+      {"size": 24, "diameter": 24.0}
+    ]
+  },
+  "seo": {
+    "ru": {
+      "title": "Онлайн-конвертер размеров колец — таблица соответствия RU, EU, US, UK, JP, CN",
+      "description": "Узнай свой размер кольца в системах RU, EU, US, UK, JP, CN. Онлайн калькулятор для перевода размеров по диаметру или окружности пальца.",
+      "keywords": "размер кольца, перевод размеров колец, таблица размеров колец, RU EU US UK JP CN, диаметр кольца",
+      "h1": "Онлайн-конвертер размеров колец",
+      "h2": "Таблица соответствия размеров RU, EU, US, UK, JP, CN",
+      "overview": {
+        "title": "О конвертере размеров колец",
+        "content": "Наш конвертер размеров колец поможет точно определить, какой размер вам нужен при заказе украшений за рубежом. Просто введите свой размер или внутренний диаметр кольца, и вы получите таблицу соответствия для систем RU, EU, US, UK, JP и CN."
+      },
+      "calculation": {
+        "title": "Как работает конвертация",
+        "content": "Все размеры конвертируются на основе внутреннего диаметра кольца в миллиметрах. Каждая система имеет свои стандарты, но все они привязаны к единому диаметру, что обеспечивает точность перевода между странами."
+      },
+      "measurement": {
+        "title": "Как измерить размер кольца",
+        "content": "Для измерения размера кольца можно использовать внутренний диаметр существующего кольца или измерить окружность пальца. Все измерения должны быть точными для получения правильного размера."
+      },
+      "advantages": {
+        "title": "Преимущества нашего конвертера",
+        "content": "Точные таблицы размеров, мгновенная конвертация, поддержка 6 систем размеров, удобный интерфейс, мобильная версия."
+      },
+      "faq": {
+        "title": "Часто задаваемые вопросы"
+      },
+      "faqItems": [
+        {
+          "q": "Как узнать размер кольца по диаметру?",
+          "a": "Измерьте внутренний диаметр кольца линейкой или штангенциркулем — калькулятор автоматически переведет значение в международные размеры."
+        },
+        {
+          "q": "Как перевести российский размер кольца в американский?",
+          "a": "Укажите «RU» и свой размер — сервис мгновенно покажет эквивалент для систем EU, US, UK, JP, CN."
+        },
+        {
+          "q": "Подходит ли калькулятор для обручальных колец?",
+          "a": "Да, он подходит для всех типов колец — обручальных, помолвочных и повседневных."
+        },
+        {
+          "q": "Насколько точны таблицы размеров?",
+          "a": "Все таблицы основаны на международных стандартах размеров колец и регулярно обновляются для обеспечения точности."
+        }
+      ]
+    },
+    "en": {
+      "title": "Online Ring Size Converter — Size Chart RU, EU, US, UK, JP, CN",
+      "description": "Find your ring size in RU, EU, US, UK, JP, CN systems. Online calculator for converting sizes by diameter or finger circumference.",
+      "keywords": "ring size, ring size conversion, ring size chart, RU EU US UK JP CN, ring diameter",
+      "h1": "Online Ring Size Converter",
+      "h2": "Ring Size Conversion Chart RU, EU, US, UK, JP, CN",
+      "overview": {
+        "title": "About Ring Size Converter",
+        "content": "Our ring size converter will help you accurately determine what size you need when ordering jewelry from abroad. Simply enter your size or the inner diameter of the ring, and you'll get a conversion table for RU, EU, US, UK, JP and CN systems."
+      },
+      "calculation": {
+        "title": "How Conversion Works",
+        "content": "All sizes are converted based on the inner diameter of the ring in millimeters. Each system has its own standards, but they are all tied to a single diameter, ensuring accurate conversion between countries."
+      },
+      "measurement": {
+        "title": "How to Measure Ring Size",
+        "content": "To measure ring size, you can use the inner diameter of an existing ring or measure the circumference of your finger. All measurements must be accurate to get the correct size."
+      },
+      "advantages": {
+        "title": "Advantages of Our Converter",
+        "content": "Accurate size tables, instant conversion, support for 6 size systems, user-friendly interface, mobile version."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions"
+      },
+      "faqItems": [
+        {
+          "q": "How to find ring size by diameter?",
+          "a": "Measure the inner diameter of the ring with a ruler or caliper — the calculator will automatically convert the value to international sizes."
+        },
+        {
+          "q": "How to convert Russian ring size to American?",
+          "a": "Enter «RU» and your size — the service will instantly show the equivalent for EU, US, UK, JP, CN systems."
+        },
+        {
+          "q": "Is the calculator suitable for wedding rings?",
+          "a": "Yes, it is suitable for all types of rings — wedding, engagement and everyday rings."
+        },
+        {
+          "q": "How accurate are the size tables?",
+          "a": "All tables are based on international ring size standards and are regularly updated to ensure accuracy."
+        }
+      ]
+    },
+    "de": {
+      "title": "Online-Ringgrößen-Konverter — Größentabelle RU, EU, US, UK, JP, CN",
+      "description": "Finden Sie Ihre Ringgröße in RU, EU, US, UK, JP, CN Systemen. Online-Rechner für Größenumrechnung nach Durchmesser oder Fingerumfang.",
+      "keywords": "Ringgröße, Ringgrößen-Umrechnung, Ringgrößen-Tabelle, RU EU US UK JP CN, Ringdurchmesser",
+      "h1": "Online-Ringgrößen-Konverter",
+      "h2": "Ringgrößen-Umrechnungstabelle RU, EU, US, UK, JP, CN",
+      "overview": {
+        "title": "Über den Ringgrößen-Konverter",
+        "content": "Unser Ringgrößen-Konverter hilft Ihnen dabei, genau zu bestimmen, welche Größe Sie beim Bestellen von Schmuck aus dem Ausland benötigen. Geben Sie einfach Ihre Größe oder den Innendurchmesser des Rings ein, und Sie erhalten eine Umrechnungstabelle für RU, EU, US, UK, JP und CN Systeme."
+      },
+      "calculation": {
+        "title": "Wie die Umrechnung funktioniert",
+        "content": "Alle Größen werden basierend auf dem Innendurchmesser des Rings in Millimetern umgerechnet. Jedes System hat seine eigenen Standards, aber sie sind alle an einen einzigen Durchmesser gebunden, was eine genaue Umrechnung zwischen Ländern gewährleistet."
+      },
+      "measurement": {
+        "title": "Wie man Ringgröße misst",
+        "content": "Um die Ringgröße zu messen, können Sie den Innendurchmesser eines vorhandenen Rings verwenden oder den Umfang Ihres Fingers messen. Alle Messungen müssen genau sein, um die richtige Größe zu erhalten."
+      },
+      "advantages": {
+        "title": "Vorteile unseres Konverters",
+        "content": "Genaue Größentabellen, sofortige Umrechnung, Unterstützung für 6 Größensysteme, benutzerfreundliche Oberfläche, mobile Version."
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen"
+      },
+      "faqItems": [
+        {
+          "q": "Wie findet man Ringgröße nach Durchmesser?",
+          "a": "Messen Sie den Innendurchmesser des Rings mit einem Lineal oder Messschieber — der Rechner konvertiert den Wert automatisch in internationale Größen."
+        },
+        {
+          "q": "Wie konvertiert man russische Ringgröße in amerikanische?",
+          "a": "Geben Sie «RU» und Ihre Größe ein — der Service zeigt sofort das Äquivalent für EU, US, UK, JP, CN Systeme."
+        },
+        {
+          "q": "Ist der Rechner für Eheringe geeignet?",
+          "a": "Ja, er ist für alle Arten von Ringen geeignet — Eheringe, Verlobungsringe und Alltagsringe."
+        },
+        {
+          "q": "Wie genau sind die Größentabellen?",
+          "a": "Alle Tabellen basieren auf internationalen Ringgrößen-Standards und werden regelmäßig aktualisiert, um Genauigkeit zu gewährleisten."
+        }
+      ]
+    },
+    "es": {
+      "title": "Convertidor de tallas de anillos en línea — Tabla de tallas RU, EU, US, UK, JP, CN",
+      "description": "Encuentra tu talla de anillo en sistemas RU, EU, US, UK, JP, CN. Calculadora en línea para convertir tallas por diámetro o circunferencia del dedo.",
+      "keywords": "talla de anillo, conversión de tallas de anillos, tabla de tallas de anillos, RU EU US UK JP CN, diámetro del anillo",
+      "h1": "Convertidor de tallas de anillos en línea",
+      "h2": "Tabla de conversión de tallas RU, EU, US, UK, JP, CN",
+      "overview": {
+        "title": "Sobre el Convertidor de Tallas de Anillos",
+        "content": "Nuestro convertidor de tallas de anillos te ayudará a determinar con precisión qué talla necesitas al pedir joyas del extranjero. Simplemente ingresa tu talla o el diámetro interior del anillo, y obtendrás una tabla de conversión para sistemas RU, EU, US, UK, JP y CN."
+      },
+      "calculation": {
+        "title": "Cómo Funciona la Conversión",
+        "content": "Todas las tallas se convierten basándose en el diámetro interior del anillo en milímetros. Cada sistema tiene sus propios estándares, pero todos están vinculados a un diámetro único, asegurando una conversión precisa entre países."
+      },
+      "measurement": {
+        "title": "Cómo Medir la Talla del Anillo",
+        "content": "Para medir la talla del anillo, puedes usar el diámetro interior de un anillo existente o medir la circunferencia de tu dedo. Todas las mediciones deben ser precisas para obtener la talla correcta."
+      },
+      "advantages": {
+        "title": "Ventajas de Nuestro Convertidor",
+        "content": "Tablas de tallas precisas, conversión instantánea, soporte para 6 sistemas de tallas, interfaz amigable, versión móvil."
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes"
+      },
+      "faqItems": [
+        {
+          "q": "¿Cómo encontrar la talla del anillo por diámetro?",
+          "a": "Mide el diámetro interior del anillo con una regla o calibre — la calculadora convertirá automáticamente el valor a tallas internacionales."
+        },
+        {
+          "q": "¿Cómo convertir talla de anillo rusa a americana?",
+          "a": "Ingresa «RU» y tu talla — el servicio mostrará instantáneamente el equivalente para sistemas EU, US, UK, JP, CN."
+        },
+        {
+          "q": "¿Es la calculadora adecuada para anillos de boda?",
+          "a": "Sí, es adecuada para todos los tipos de anillos — anillos de boda, de compromiso y de uso diario."
+        },
+        {
+          "q": "¿Qué tan precisas son las tablas de tallas?",
+          "a": "Todas las tablas se basan en estándares internacionales de tallas de anillos y se actualizan regularmente para asegurar precisión."
+        }
+      ]
+    }
+  }
+}

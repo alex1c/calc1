@@ -10,6 +10,7 @@ import {
 	Wine,
 	TrendingUp,
 	Shirt,
+	Circle,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -68,6 +69,13 @@ const getCalculators = (t: any) => [
 		description: t('calculators.size-converter.description'),
 		icon: Shirt,
 		href: '/life/size-converter',
+	},
+	{
+		id: 'ring-size',
+		title: t('calculators.ringSize.title'),
+		description: t('calculators.ringSize.description'),
+		icon: Circle,
+		href: '/life/ring-size',
 	},
 ];
 
