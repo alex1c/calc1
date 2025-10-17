@@ -5248,6 +5248,83 @@
 					}
 				}
 			}
+		},
+		"length": {
+			"title": "Convertidor de longitud en línea",
+			"description": "Convierte unidades de longitud: milímetros, centímetros, metros, kilómetros y millas. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"mm": "mm",
+				"cm": "cm",
+				"m": "m",
+				"km": "km",
+				"mi": "millas"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en factores de conversión precisos",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de longitud en línea — mm, cm, m, km, millas",
+				"description": "Convierte milímetros, centímetros, metros, kilómetros y millas al instante. Preciso y con soporte para 4 idiomas.",
+				"keywords": "convertidor de longitud, mm a cm, m a km, millas a km, convertidor de unidades de longitud",
+				"h1": "Convertidor de longitud en línea",
+				"h2": "Convertir mm, cm, m, km, millas",
+				"overview": {
+					"title": "Sobre el Convertidor de Longitud",
+					"content": "Nuestro convertidor de longitud te permite convertir rápida y precisamente entre diferentes unidades de medida de longitud. Soporta todas las unidades principales: milímetros, centímetros, metros, kilómetros y millas."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de longitud se convierten a través de la unidad base - metro. Cada unidad tiene su propio coeficiente relativo al metro, asegurando la precisión de los cálculos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 5 unidades principales de longitud: milímetros (mm), centímetros (cm), metros (m), kilómetros (km) y millas."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir milímetros a centímetros?",
+						"a": "Divide los milímetros entre 10 para obtener centímetros. Por ejemplo: 50 mm = 5 cm."
+					},
+					{
+						"q": "¿Cómo convertir kilómetros a millas?",
+						"a": "1 kilómetro ≈ 0,62137 millas. Multiplica kilómetros por este factor. Por ejemplo: 10 km ≈ 6,21 millas."
+					},
+					{
+						"q": "¿Cuántos metros hay en un kilómetro?",
+						"a": "Hay 1000 metros en un kilómetro. Este es el sistema métrico estándar."
+					},
+					{
+						"q": "¿Cómo convertir millas a kilómetros?",
+						"a": "1 milla ≈ 1,60934 kilómetros. Multiplica millas por este factor para obtener kilómetros."
+					}
+				]
+			}
 		}
 	}
 }

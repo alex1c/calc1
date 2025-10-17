@@ -5247,6 +5247,83 @@
 					}
 				}
 			}
+		},
+		"length": {
+			"title": "Online-Längenrechner",
+			"description": "Konvertieren Sie Längeneinheiten: Millimeter, Zentimeter, Meter, Kilometer und Meilen. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"mm": "mm",
+				"cm": "cm",
+				"m": "m",
+				"km": "km",
+				"mi": "Meilen"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsfaktoren",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Längenrechner — mm, cm, m, km, Meilen",
+				"description": "Konvertieren Sie mm, cm, m, km und Meilen online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Längenrechner, mm zu cm, m zu km, Meilen zu km, Längeneinheiten-Konverter",
+				"h1": "Online-Längenrechner",
+				"h2": "Umrechnung mm, cm, m, km, Meilen",
+				"overview": {
+					"title": "Über den Längenrechner",
+					"content": "Unser Längenrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Längeneinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Millimeter, Zentimeter, Meter, Kilometer und Meilen."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Längeneinheiten werden über die Basiseinheit - Meter - konvertiert. Jede Einheit hat ihren eigenen Koeffizienten relativ zum Meter, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 5 Hauptlängeneinheiten: Millimeter (mm), Zentimeter (cm), Meter (m), Kilometer (km) und Meilen."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man Millimeter in Zentimeter?",
+						"a": "Teilen Sie Millimeter durch 10, um Zentimeter zu erhalten. Zum Beispiel: 50 mm = 5 cm."
+					},
+					{
+						"q": "Wie konvertiert man Kilometer in Meilen?",
+						"a": "1 Kilometer ≈ 0,62137 Meilen. Multiplizieren Sie Kilometer mit diesem Faktor. Zum Beispiel: 10 km ≈ 6,21 Meilen."
+					},
+					{
+						"q": "Wie viele Meter sind in einem Kilometer?",
+						"a": "In einem Kilometer sind 1000 Meter. Das ist das Standard-Metrik-System."
+					},
+					{
+						"q": "Wie konvertiert man Meilen in Kilometer?",
+						"a": "1 Meile ≈ 1,60934 Kilometer. Multiplizieren Sie Meilen mit diesem Faktor, um Kilometer zu erhalten."
+					}
+				]
+			}
 		}
 	}
 }

@@ -5234,6 +5234,83 @@
 					}
 				}
 			}
+		},
+		"length": {
+			"title": "Online Length Converter",
+			"description": "Quickly convert length units: millimeters, centimeters, meters, kilometers, and miles. Accurate and convenient converter.",
+			"value": "Enter value",
+			"fromUnit": "From unit",
+			"toUnit": "To unit",
+			"button": "Convert",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"commonConversions": "Other units",
+			"units": {
+				"mm": "mm",
+				"cm": "cm",
+				"m": "m",
+				"km": "km",
+				"mi": "miles"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate calculations",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All calculations are based on precise conversion factors",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Length Converter — mm, cm, m, km, miles",
+				"description": "Instantly convert millimeters, centimeters, meters, kilometers, and miles online. Accurate length converter with 4 languages support.",
+				"keywords": "length converter, mm to cm, m to km, miles to km, length unit converter",
+				"h1": "Online Length Converter",
+				"h2": "Convert mm, cm, m, km, miles",
+				"overview": {
+					"title": "About Length Converter",
+					"content": "Our length converter allows you to quickly and accurately convert between different length measurement units. Supports all major units: millimeters, centimeters, meters, kilometers, and miles."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All length units are converted through the base unit - meter. Each unit has its own coefficient relative to meter, ensuring calculation accuracy."
+				},
+				"units": {
+					"title": "Supported Units",
+					"content": "The converter supports 5 main length units: millimeters (mm), centimeters (cm), meters (m), kilometers (km), and miles."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to convert millimeters to centimeters?",
+						"a": "Divide millimeters by 10 to get centimeters. For example: 50 mm = 5 cm."
+					},
+					{
+						"q": "How to convert kilometers to miles?",
+						"a": "1 kilometer ≈ 0.62137 miles. Multiply kilometers by this factor. For example: 10 km ≈ 6.21 miles."
+					},
+					{
+						"q": "How many meters in a kilometer?",
+						"a": "There are 1000 meters in one kilometer. This is the standard metric system."
+					},
+					{
+						"q": "How to convert miles to kilometers?",
+						"a": "1 mile ≈ 1.60934 kilometers. Multiply miles by this factor to get kilometers."
+					}
+				]
+			}
 		}
 	}
 }
