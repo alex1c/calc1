@@ -1677,6 +1677,168 @@
 				}
 			}
 		},
+		"heartRate": {
+			"title": "Herzfrequenz-Rechner Online",
+			"description": "Berechnen Sie Ihre Herzfrequenz (HF) und Herzfrequenzzonen. Bestimmen Sie die optimale Trainingsintensität basierend auf Alter und Fitnesslevel. Schnell, genau und kostenlos.",
+			"form": {
+				"title": "Berechnungsparameter",
+				"age": "Alter",
+				"agePlaceholder": "Geben Sie Ihr Alter ein",
+				"years": "Jahre",
+				"currentHR": "Aktuelle Herzfrequenz",
+				"currentHRPlaceholder": "Geben Sie die aktuelle Herzfrequenz ein",
+				"bpm": "bpm",
+				"currentHRHint": "Optional - zur Bestimmung der aktuellen Zone",
+				"calculate": "HF berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"ageRequired": "Bitte geben Sie Ihr Alter ein",
+					"ageRange": "Alter muss zwischen 1 und 120 Jahren liegen",
+					"heartRateRequired": "Bitte geben Sie die aktuelle Herzfrequenz ein",
+					"heartRateRange": "Herzfrequenz muss zwischen 30 und 250 bpm liegen",
+					"calculationError": "Berechnungsfehler"
+				}
+			},
+			"infographic": {
+				"formula": "220 - Alter",
+				"formulaDescription": "Maximale HF-Formel",
+				"zones": "5 Zonen",
+				"zonesDescription": "Herzfrequenz-Trainingszonen",
+				"range": "50-100%",
+				"rangeDescription": "Von maximaler HF"
+			},
+			"results": {
+				"maxHR": "Maximale Herzfrequenz",
+				"maxHRFormula": "Formel: 220 - Alter",
+				"bpm": "bpm",
+				"currentZone": "Aktuelle Zone",
+				"zones": "Herzfrequenzzonen",
+				"scale": "Herzfrequenzzonen-Skala"
+			},
+			"zones": {
+				"resting": {
+					"title": "Ruhezone",
+					"description": "Leichte Belastung, aktive Erholung",
+					"benefits": "Verbessert den Allgemeinzustand"
+				},
+				"fatBurning": {
+					"title": "Fettverbrennungszone",
+					"description": "Mittlere Intensität",
+					"benefits": "Fettverbrennung"
+				},
+				"aerobic": {
+					"title": "Aerobe Zone",
+					"description": "Ausdauertraining",
+					"benefits": "Verbessert Herz und Lunge"
+				},
+				"anaerobic": {
+					"title": "Anaerobe Zone",
+					"description": "Hohe Intensität",
+					"benefits": "Erhöht Kraft und Geschwindigkeit"
+				},
+				"maximum": {
+					"title": "Maximale Belastung",
+					"description": "Fast an der Kapazitätsgrenze",
+					"benefits": "Nur für trainierte Sportler"
+				},
+				"below": "Unter dem Normalen",
+				"above": "Über dem Maximum"
+			},
+			"table": {
+				"title": "Herzfrequenz-Trainingszonen",
+				"zone": "Zone",
+				"percentage": "% von HFmax",
+				"characteristics": "Eigenschaften",
+				"benefits": "Vorteile"
+			},
+			"seo": {
+				"title": "Online Herzfrequenz-Rechner — HF nach Alter berechnen",
+				"description": "Erfahren Sie Ihre Herzfrequenz (HF) und Herzfrequenzzonen. Berechnen Sie die optimale Trainingsintensität basierend auf Alter und Fitnesslevel. Schnell und kostenlos.",
+				"keywords": "herzfrequenz rechner, hf rechner, herzfrequenzzonen, herzfrequenz, training, cardio",
+				"overview": {
+					"title": "Über den Herzfrequenz-Rechner",
+					"content": "Die Herzfrequenz (HF) ist ein wichtiger Indikator zur Kontrolle der Trainingsintensität. Unser Rechner hilft dabei, die maximale HF und Herzfrequenzzonen für effektives Training zu bestimmen."
+				},
+				"calculation": {
+					"title": "Wie die Herzfrequenz berechnet wird",
+					"content": "Die maximale Herzfrequenz wird mit der Standardformel berechnet:",
+					"formula": "Berechnungsformel",
+					"step1": "Bestimmen Sie Ihr Alter in Jahren",
+					"step2": "Subtrahieren Sie das Alter von 220",
+					"step3": "Das Ergebnis ist Ihre maximale Herzfrequenz",
+					"step4": "Berechnen Sie Herzfrequenzzonen als Prozentsatz des Maximums"
+				},
+				"zones": {
+					"title": "Herzfrequenz-Trainingszonen",
+					"content": "Verschiedene Herzfrequenzzonen werden für verschiedene Trainingszwecke verwendet:",
+					"resting": {
+						"title": "Ruhezone (50-60%)",
+						"description": "Leichte Belastung zur Erholung"
+					},
+					"fatBurning": {
+						"title": "Fettverbrennungszone (60-70%)",
+						"description": "Optimal für Gewichtsverlust"
+					},
+					"aerobic": {
+						"title": "Aerobe Zone (70-80%)",
+						"description": "Verbessert die Ausdauer"
+					},
+					"anaerobic": {
+						"title": "Anaerobe Zone (80-90%)",
+						"description": "Entwickelt Kraft und Geschwindigkeit"
+					},
+					"maximum": {
+						"title": "Maximale Zone (90-100%)",
+						"description": "Nur für erfahrene Sportler"
+					}
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Unser Herzfrequenz-Rechner bietet viele Vorteile:",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Genaue Ergebnisse mit Standardformel",
+					"free": "Vollständig kostenlos ohne Registrierung",
+					"multilingual": "Unterstützung für 4 Sprachen (Deutsch, Englisch, Russisch, Spanisch)",
+					"mobile": "Responsive Design für alle Geräte"
+				},
+				"tips": {
+					"title": "Nützliche Tipps",
+					"content": "Für effektives Training befolgen Sie diese Empfehlungen:",
+					"measurement": "Messen Sie die Herzfrequenz morgens in Ruhe",
+					"consistency": "Trainieren Sie regelmäßig in der Zielzone",
+					"consultation": "Konsultieren Sie einen Arzt vor Trainingsbeginn",
+					"training": "Kombinieren Sie verschiedene Herzfrequenzzonen im Training"
+				},
+				"safety": {
+					"title": "Sicherheitsmaßnahmen",
+					"content": "Beim Training nach Herzfrequenz ist es wichtig, Sicherheitsmaßnahmen zu befolgen:",
+					"consultation": "Konsultieren Sie einen Arzt vor Trainingsbeginn",
+					"gradual": "Beginnen Sie mit niedriger Intensität",
+					"monitoring": "Überwachen Sie ständig Ihr Wohlbefinden",
+					"medical": "Stoppen Sie das Training bei Unwohlsein"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"whatIsHR": {
+						"question": "Was ist Herzfrequenz?",
+						"answer": "Die Herzfrequenz ist die Anzahl der Herzschläge pro Minute. Sie ist ein wichtiger Indikator zur Kontrolle der Intensität körperlicher Aktivität und zur Bewertung des Zustands des Herz-Kreislauf-Systems."
+					},
+					"howToCalculate": {
+						"question": "Wie berechnet man die maximale Herzfrequenz?",
+						"answer": "Die maximale Herzfrequenz wird mit der Formel berechnet: 220 minus Alter. Zum Beispiel beträgt für eine 30-jährige Person die maximale Herzfrequenz 190 Schläge pro Minute."
+					},
+					"trainingZones": {
+						"question": "Welche Herzfrequenzzonen für das Training verwenden?",
+						"answer": "Für Gewichtsverlust verwenden Sie die 60-70% Zone des Maximums, für Ausdauerentwicklung - 70-80%, für Kraftentwicklung - 80-90%. Anfängern wird die 50-70% Zone empfohlen."
+					},
+					"safety": {
+						"question": "Ist es sicher, nach Herzfrequenz zu trainieren?",
+						"answer": "Ja, Herzfrequenztraining ist mit dem richtigen Ansatz sicher. Es ist wichtig, einen Arzt zu konsultieren, mit niedriger Intensität zu beginnen und ständig Ihr Wohlbefinden zu überwachen."
+					}
+				}
+			}
+		},
 		"bloodAlcohol": {
 			"title": "Blutalkoholrechner — BAC und Eliminationszeit",
 			"description": "Online BAC-Rechner zur Berechnung der Blutalkoholkonzentration und vollständigen Eliminationszeit",

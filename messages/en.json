@@ -1890,6 +1890,168 @@
 				}
 			}
 		},
+		"heartRate": {
+			"title": "Heart Rate Calculator Online",
+			"description": "Calculate your heart rate (HR) and heart rate zones. Determine optimal training intensity based on age and fitness level. Fast, accurate and free.",
+			"form": {
+				"title": "Calculation Parameters",
+				"age": "Age",
+				"agePlaceholder": "Enter your age",
+				"years": "years",
+				"currentHR": "Current Heart Rate",
+				"currentHRPlaceholder": "Enter current heart rate",
+				"bpm": "bpm",
+				"currentHRHint": "Optional - to determine current zone",
+				"calculate": "Calculate HR",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"ageRequired": "Please enter your age",
+					"ageRange": "Age must be between 1 and 120 years",
+					"heartRateRequired": "Please enter current heart rate",
+					"heartRateRange": "Heart rate must be between 30 and 250 bpm",
+					"calculationError": "Calculation error"
+				}
+			},
+			"infographic": {
+				"formula": "220 - age",
+				"formulaDescription": "Maximum HR formula",
+				"zones": "5 zones",
+				"zonesDescription": "Heart rate training zones",
+				"range": "50-100%",
+				"rangeDescription": "Of maximum HR"
+			},
+			"results": {
+				"maxHR": "Maximum Heart Rate",
+				"maxHRFormula": "Formula: 220 - age",
+				"bpm": "bpm",
+				"currentZone": "Current Zone",
+				"zones": "Heart Rate Zones",
+				"scale": "Heart Rate Zones Scale"
+			},
+			"zones": {
+				"resting": {
+					"title": "Resting Zone",
+					"description": "Light load, active recovery",
+					"benefits": "Improves overall condition"
+				},
+				"fatBurning": {
+					"title": "Fat Burning Zone",
+					"description": "Moderate intensity",
+					"benefits": "Fat burning"
+				},
+				"aerobic": {
+					"title": "Aerobic Zone",
+					"description": "Endurance training",
+					"benefits": "Improves heart and lungs"
+				},
+				"anaerobic": {
+					"title": "Anaerobic Zone",
+					"description": "High intensity",
+					"benefits": "Increases strength and speed"
+				},
+				"maximum": {
+					"title": "Maximum Load",
+					"description": "Near maximum capacity",
+					"benefits": "For trained athletes only"
+				},
+				"below": "Below normal",
+				"above": "Above maximum"
+			},
+			"table": {
+				"title": "Heart Rate Training Zones",
+				"zone": "Zone",
+				"percentage": "% of HRmax",
+				"characteristics": "Characteristics",
+				"benefits": "Benefits"
+			},
+			"seo": {
+				"title": "Online Heart Rate Calculator — Calculate HR by Age",
+				"description": "Find out your heart rate (HR) and heart rate zones. Calculate optimal training intensity based on age and fitness level. Fast and free.",
+				"keywords": "heart rate calculator, hr calculator, heart rate zones, heart rate, training, cardio",
+				"overview": {
+					"title": "About Heart Rate Calculator",
+					"content": "Heart rate (HR) is an important indicator for controlling training intensity. Our calculator helps determine maximum HR and heart rate zones for effective training."
+				},
+				"calculation": {
+					"title": "How Heart Rate is Calculated",
+					"content": "Maximum heart rate is calculated using the standard formula:",
+					"formula": "Calculation Formula",
+					"step1": "Determine your age in years",
+					"step2": "Subtract age from 220",
+					"step3": "The result is your maximum heart rate",
+					"step4": "Calculate heart rate zones as percentage of maximum"
+				},
+				"zones": {
+					"title": "Heart Rate Training Zones",
+					"content": "Different heart rate zones are used for different training purposes:",
+					"resting": {
+						"title": "Resting Zone (50-60%)",
+						"description": "Light load for recovery"
+					},
+					"fatBurning": {
+						"title": "Fat Burning Zone (60-70%)",
+						"description": "Optimal for weight loss"
+					},
+					"aerobic": {
+						"title": "Aerobic Zone (70-80%)",
+						"description": "Improves endurance"
+					},
+					"anaerobic": {
+						"title": "Anaerobic Zone (80-90%)",
+						"description": "Develops strength and speed"
+					},
+					"maximum": {
+						"title": "Maximum Zone (90-100%)",
+						"description": "For experienced athletes only"
+					}
+				},
+				"advantages": {
+					"title": "Advantages of Our Calculator",
+					"content": "Our heart rate calculator provides many advantages:",
+					"quick": "Quick calculation in seconds",
+					"accurate": "Accurate results using standard formula",
+					"free": "Completely free without registration",
+					"multilingual": "Support for 4 languages (English, Russian, Spanish, German)",
+					"mobile": "Responsive design for all devices"
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "For effective training, follow these recommendations:",
+					"measurement": "Measure heart rate in the morning at rest",
+					"consistency": "Train regularly in target zone",
+					"consultation": "Consult a doctor before starting training",
+					"training": "Combine different heart rate zones in training"
+				},
+				"safety": {
+					"title": "Safety Measures",
+					"content": "When training by heart rate, it's important to follow safety measures:",
+					"consultation": "Consult a doctor before starting training",
+					"gradual": "Start with low intensity",
+					"monitoring": "Constantly monitor your well-being",
+					"medical": "Stop training if you feel unwell"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"whatIsHR": {
+						"question": "What is heart rate?",
+						"answer": "Heart rate is the number of heartbeats per minute. It's an important indicator for controlling the intensity of physical activity and assessing the state of the cardiovascular system."
+					},
+					"howToCalculate": {
+						"question": "How to calculate maximum heart rate?",
+						"answer": "Maximum heart rate is calculated using the formula: 220 minus age. For example, for a 30-year-old person, the maximum heart rate is 190 beats per minute."
+					},
+					"trainingZones": {
+						"question": "Which heart rate zones to use for training?",
+						"answer": "For weight loss, use the 60-70% zone of maximum, for endurance development - 70-80%, for strength development - 80-90%. Beginners are recommended the 50-70% zone."
+					},
+					"safety": {
+						"question": "Is it safe to train by heart rate?",
+						"answer": "Yes, heart rate training is safe with the right approach. It's important to consult a doctor, start with low intensity, and constantly monitor your well-being."
+					}
+				}
+			}
+		},
 		"bloodAlcohol": {
 			"title": "Blood Alcohol Calculator — BAC and Elimination Time",
 			"description": "Online BAC calculator to calculate blood alcohol concentration and complete elimination time",

@@ -1674,6 +1674,168 @@
 				}
 			}
 		},
+		"heartRate": {
+			"title": "Calculadora de Frecuencia Cardíaca Online",
+			"description": "Calcula tu frecuencia cardíaca (FC) y zonas de frecuencia cardíaca. Determina la intensidad óptima de entrenamiento basada en edad y nivel de condición física. Rápido, preciso y gratuito.",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"age": "Edad",
+				"agePlaceholder": "Ingresa tu edad",
+				"years": "años",
+				"currentHR": "Frecuencia Cardíaca Actual",
+				"currentHRPlaceholder": "Ingresa la frecuencia cardíaca actual",
+				"bpm": "lpm",
+				"currentHRHint": "Opcional - para determinar la zona actual",
+				"calculate": "Calcular FC",
+				"calculating": "Calculando...",
+				"reset": "Reiniciar",
+				"errors": {
+					"ageRequired": "Por favor ingresa tu edad",
+					"ageRange": "La edad debe estar entre 1 y 120 años",
+					"heartRateRequired": "Por favor ingresa la frecuencia cardíaca actual",
+					"heartRateRange": "La frecuencia cardíaca debe estar entre 30 y 250 lpm",
+					"calculationError": "Error en el cálculo"
+				}
+			},
+			"infographic": {
+				"formula": "220 - edad",
+				"formulaDescription": "Fórmula de FC máxima",
+				"zones": "5 zonas",
+				"zonesDescription": "Zonas de entrenamiento por FC",
+				"range": "50-100%",
+				"rangeDescription": "De la FC máxima"
+			},
+			"results": {
+				"maxHR": "Frecuencia Cardíaca Máxima",
+				"maxHRFormula": "Fórmula: 220 - edad",
+				"bpm": "lpm",
+				"currentZone": "Zona Actual",
+				"zones": "Zonas de Frecuencia Cardíaca",
+				"scale": "Escala de Zonas de Frecuencia Cardíaca"
+			},
+			"zones": {
+				"resting": {
+					"title": "Zona de Descanso",
+					"description": "Carga ligera, recuperación activa",
+					"benefits": "Mejora la condición general"
+				},
+				"fatBurning": {
+					"title": "Zona de Quema de Grasa",
+					"description": "Intensidad moderada",
+					"benefits": "Quema de grasas"
+				},
+				"aerobic": {
+					"title": "Zona Aeróbica",
+					"description": "Entrenamiento de resistencia",
+					"benefits": "Mejora el corazón y pulmones"
+				},
+				"anaerobic": {
+					"title": "Zona Anaeróbica",
+					"description": "Alta intensidad",
+					"benefits": "Aumenta fuerza y velocidad"
+				},
+				"maximum": {
+					"title": "Carga Máxima",
+					"description": "Casi al límite de capacidad",
+					"benefits": "Solo para atletas entrenados"
+				},
+				"below": "Por debajo de lo normal",
+				"above": "Por encima del máximo"
+			},
+			"table": {
+				"title": "Zonas de Entrenamiento por Frecuencia Cardíaca",
+				"zone": "Zona",
+				"percentage": "% de FCmax",
+				"characteristics": "Características",
+				"benefits": "Beneficios"
+			},
+			"seo": {
+				"title": "Calculadora de Frecuencia Cardíaca Online — Calcular FC por Edad",
+				"description": "Descubre tu frecuencia cardíaca (FC) y zonas de frecuencia cardíaca. Calcula la intensidad óptima de entrenamiento basada en edad y nivel de condición física. Rápido y gratuito.",
+				"keywords": "calculadora frecuencia cardíaca, calculadora fc, zonas frecuencia cardíaca, frecuencia cardíaca, entrenamiento, cardio",
+				"overview": {
+					"title": "Sobre la Calculadora de Frecuencia Cardíaca",
+					"content": "La frecuencia cardíaca (FC) es un indicador importante para controlar la intensidad del entrenamiento. Nuestra calculadora ayuda a determinar la FC máxima y las zonas de frecuencia cardíaca para un entrenamiento efectivo."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula la Frecuencia Cardíaca",
+					"content": "La frecuencia cardíaca máxima se calcula usando la fórmula estándar:",
+					"formula": "Fórmula de Cálculo",
+					"step1": "Determina tu edad en años",
+					"step2": "Resta la edad de 220",
+					"step3": "El resultado es tu frecuencia cardíaca máxima",
+					"step4": "Calcula las zonas de frecuencia cardíaca como porcentaje del máximo"
+				},
+				"zones": {
+					"title": "Zonas de Entrenamiento por Frecuencia Cardíaca",
+					"content": "Diferentes zonas de frecuencia cardíaca se usan para diferentes propósitos de entrenamiento:",
+					"resting": {
+						"title": "Zona de Descanso (50-60%)",
+						"description": "Carga ligera para recuperación"
+					},
+					"fatBurning": {
+						"title": "Zona de Quema de Grasa (60-70%)",
+						"description": "Óptima para pérdida de peso"
+					},
+					"aerobic": {
+						"title": "Zona Aeróbica (70-80%)",
+						"description": "Mejora la resistencia"
+					},
+					"anaerobic": {
+						"title": "Zona Anaeróbica (80-90%)",
+						"description": "Desarrolla fuerza y velocidad"
+					},
+					"maximum": {
+						"title": "Zona Máxima (90-100%)",
+						"description": "Solo para atletas experimentados"
+					}
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestra Calculadora",
+					"content": "Nuestra calculadora de frecuencia cardíaca proporciona muchas ventajas:",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Resultados precisos usando fórmula estándar",
+					"free": "Completamente gratuito sin registro",
+					"multilingual": "Soporte para 4 idiomas (Español, Inglés, Ruso, Alemán)",
+					"mobile": "Diseño responsivo para todos los dispositivos"
+				},
+				"tips": {
+					"title": "Consejos Útiles",
+					"content": "Para un entrenamiento efectivo, sigue estas recomendaciones:",
+					"measurement": "Mide la frecuencia cardíaca por la mañana en reposo",
+					"consistency": "Entrena regularmente en la zona objetivo",
+					"consultation": "Consulta a un médico antes de comenzar el entrenamiento",
+					"training": "Combina diferentes zonas de frecuencia cardíaca en el entrenamiento"
+				},
+				"safety": {
+					"title": "Medidas de Seguridad",
+					"content": "Al entrenar por frecuencia cardíaca, es importante seguir medidas de seguridad:",
+					"consultation": "Consulta a un médico antes de comenzar el entrenamiento",
+					"gradual": "Comienza con baja intensidad",
+					"monitoring": "Monitorea constantemente tu bienestar",
+					"medical": "Detén el entrenamiento si te sientes mal"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"whatIsHR": {
+						"question": "¿Qué es la frecuencia cardíaca?",
+						"answer": "La frecuencia cardíaca es el número de latidos del corazón por minuto. Es un indicador importante para controlar la intensidad de la actividad física y evaluar el estado del sistema cardiovascular."
+					},
+					"howToCalculate": {
+						"question": "¿Cómo calcular la frecuencia cardíaca máxima?",
+						"answer": "La frecuencia cardíaca máxima se calcula usando la fórmula: 220 menos la edad. Por ejemplo, para una persona de 30 años, la frecuencia cardíaca máxima es de 190 latidos por minuto."
+					},
+					"trainingZones": {
+						"question": "¿Qué zonas de frecuencia cardíaca usar para entrenar?",
+						"answer": "Para pérdida de peso, usa la zona 60-70% del máximo, para desarrollo de resistencia - 70-80%, para desarrollo de fuerza - 80-90%. A los principiantes se les recomienda la zona 50-70%."
+					},
+					"safety": {
+						"question": "¿Es seguro entrenar por frecuencia cardíaca?",
+						"answer": "Sí, el entrenamiento por frecuencia cardíaca es seguro con el enfoque correcto. Es importante consultar a un médico, comenzar con baja intensidad y monitorear constantemente tu bienestar."
+					}
+				}
+			}
+		},
 		"bloodAlcohol": {
 			"title": "Calculadora de Alcohol en Sangre — BAC y Tiempo de Eliminación",
 			"description": "Calculadora online de BAC para calcular la concentración de alcohol en sangre y tiempo de eliminación completa",

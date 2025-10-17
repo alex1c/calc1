@@ -13,10 +13,10 @@ const calculators = [
 	},
 	{
 		id: 'heart-rate',
-		title: 'Heart Rate Calculator',
-		description: 'Calculate target heart rate zones for exercise',
+		title: 'calculators.heartRate.title',
+		description: 'calculators.heartRate.description',
 		icon: Activity,
-		href: '/calc/heart-rate',
+		href: '/health/heart-rate',
 	},
 	{
 		id: 'blood-pressure',
