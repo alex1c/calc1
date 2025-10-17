@@ -1,0 +1,294 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { Heart, Calendar, Clock, Info, CheckCircle } from 'lucide-react';
+import { CYCLE_TYPES } from '@/lib/calculators/ovulation';
+
+/**
+ * Ovulation Calculator SEO Component
+ * Provides comprehensive information about ovulation, menstrual cycles, and fertility
+ */
+export default function OvulationSEO() {
+	const t = useTranslations('calculators.ovulation.seo');
+
+	return (
+		<div className='max-w-4xl mx-auto space-y-8'>
+			{/* Overview Section */}
+			<section className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8'>
+				<div className='flex items-center gap-3 mb-6'>
+					<div className='p-2 bg-pink-100 dark:bg-pink-900 rounded-lg'>
+						<Heart className='w-6 h-6 text-pink-600 dark:text-pink-400' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('overview.title')}
+					</h2>
+				</div>
+				<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+					{t('overview.content')}
+				</p>
+			</section>
+
+			{/* Calculation Method Section */}
+			<section className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8'>
+				<div className='flex items-center gap-3 mb-6'>
+					<div className='p-2 bg-blue-100 dark:bg-blue-900 rounded-lg'>
+						<Calendar className='w-6 h-6 text-blue-600 dark:text-blue-400' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('calculation.title')}
+					</h2>
+				</div>
+				<div className='space-y-4'>
+					<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+						{t('calculation.content')}
+					</p>
+					<div className='bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg'>
+						<div className='font-mono text-sm text-blue-800 dark:text-blue-200'>
+							{t('calculation.formula')}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Cycle Types Section */}
+			<section className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8'>
+				<div className='flex items-center gap-3 mb-6'>
+					<div className='p-2 bg-green-100 dark:bg-green-900 rounded-lg'>
+						<Clock className='w-6 h-6 text-green-600 dark:text-green-400' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('cycleTypes.title')}
+					</h2>
+				</div>
+				<p className='text-gray-600 dark:text-gray-400 mb-6 leading-relaxed'>
+					{t('cycleTypes.content')}
+				</p>
+
+				{/* Cycle Types Table */}
+				<div className='overflow-x-auto'>
+					<table className='w-full border-collapse border border-gray-300 dark:border-gray-600'>
+						<thead>
+							<tr className='bg-gray-50 dark:bg-gray-700'>
+								<th className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white'>
+									{t('table.type')}
+								</th>
+								<th className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white'>
+									{t('table.duration')}
+								</th>
+								<th className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white'>
+									{t('table.ovulationDay')}
+								</th>
+								<th className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white'>
+									{t('table.comment')}
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							{CYCLE_TYPES.map((cycleType, index) => (
+								<tr
+									key={cycleType.name}
+									className={`hover:bg-gray-50 dark:hover:bg-gray-700 ${
+										index % 2 === 0
+											? 'bg-white dark:bg-gray-800'
+											: 'bg-gray-25 dark:bg-gray-750'
+									}`}
+								>
+									<td className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300'>
+										{t(
+											`cycleTypes.${cycleType.name}.title`
+										)}
+									</td>
+									<td className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300'>
+										{cycleType.minDays}–{cycleType.maxDays}{' '}
+										{t('table.days')}
+									</td>
+									<td className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300'>
+										{cycleType.ovulationDayMin}–
+										{cycleType.ovulationDayMax}
+									</td>
+									<td className='border border-gray-300 dark:border-gray-600 px-4 py-3 text-gray-700 dark:text-gray-300'>
+										{t(
+											`cycleTypes.${cycleType.name}.description`
+										)}
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			{/* Advantages Section */}
+			<section className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8'>
+				<div className='flex items-center gap-3 mb-6'>
+					<div className='p-2 bg-yellow-100 dark:bg-yellow-900 rounded-lg'>
+						<CheckCircle className='w-6 h-6 text-yellow-600 dark:text-yellow-400' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('advantages.title')}
+					</h2>
+				</div>
+				<p className='text-gray-600 dark:text-gray-400 mb-6 leading-relaxed'>
+					{t('advantages.content')}
+				</p>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+					<div className='p-4 bg-green-50 dark:bg-green-900/20 rounded-lg'>
+						<h4 className='font-semibold text-green-800 dark:text-green-200 mb-2'>
+							{t('advantages.quick')}
+						</h4>
+						<p className='text-sm text-green-700 dark:text-green-300'>
+							{t('advantages.quickDescription')}
+						</p>
+					</div>
+					<div className='p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg'>
+						<h4 className='font-semibold text-blue-800 dark:text-blue-200 mb-2'>
+							{t('advantages.accurate')}
+						</h4>
+						<p className='text-sm text-blue-700 dark:text-blue-300'>
+							{t('advantages.accurateDescription')}
+						</p>
+					</div>
+					<div className='p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg'>
+						<h4 className='font-semibold text-purple-800 dark:text-purple-200 mb-2'>
+							{t('advantages.free')}
+						</h4>
+						<p className='text-sm text-purple-700 dark:text-purple-300'>
+							{t('advantages.freeDescription')}
+						</p>
+					</div>
+					<div className='p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg'>
+						<h4 className='font-semibold text-orange-800 dark:text-orange-200 mb-2'>
+							{t('advantages.multilingual')}
+						</h4>
+						<p className='text-sm text-orange-700 dark:text-orange-300'>
+							{t('advantages.multilingualDescription')}
+						</p>
+					</div>
+					<div className='p-4 bg-pink-50 dark:bg-pink-900/20 rounded-lg'>
+						<h4 className='font-semibold text-pink-800 dark:text-pink-200 mb-2'>
+							{t('advantages.mobile')}
+						</h4>
+						<p className='text-sm text-pink-700 dark:text-pink-300'>
+							{t('advantages.mobileDescription')}
+						</p>
+					</div>
+					<div className='p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg'>
+						<h4 className='font-semibold text-indigo-800 dark:text-indigo-200 mb-2'>
+							{t('advantages.calendar')}
+						</h4>
+						<p className='text-sm text-indigo-700 dark:text-indigo-300'>
+							{t('advantages.calendarDescription')}
+						</p>
+					</div>
+				</div>
+			</section>
+
+			{/* Tips Section */}
+			<section className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8'>
+				<div className='flex items-center gap-3 mb-6'>
+					<div className='p-2 bg-indigo-100 dark:bg-indigo-900 rounded-lg'>
+						<Info className='w-6 h-6 text-indigo-600 dark:text-indigo-400' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('tips.title')}
+					</h2>
+				</div>
+				<p className='text-gray-600 dark:text-gray-400 mb-6 leading-relaxed'>
+					{t('tips.content')}
+				</p>
+				<div className='space-y-4'>
+					<div className='flex items-start gap-3 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg'>
+						<div className='w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0'></div>
+						<div>
+							<h4 className='font-semibold text-blue-800 dark:text-blue-200 mb-1'>
+								{t('tips.tracking')}
+							</h4>
+							<p className='text-sm text-blue-700 dark:text-blue-300'>
+								{t('tips.trackingDescription')}
+							</p>
+						</div>
+					</div>
+					<div className='flex items-start gap-3 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg'>
+						<div className='w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0'></div>
+						<div>
+							<h4 className='font-semibold text-green-800 dark:text-green-200 mb-1'>
+								{t('tips.consistency')}
+							</h4>
+							<p className='text-sm text-green-700 dark:text-green-300'>
+								{t('tips.consistencyDescription')}
+							</p>
+						</div>
+					</div>
+					<div className='flex items-start gap-3 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg'>
+						<div className='w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0'></div>
+						<div>
+							<h4 className='font-semibold text-yellow-800 dark:text-yellow-200 mb-1'>
+								{t('tips.consultation')}
+							</h4>
+							<p className='text-sm text-yellow-700 dark:text-yellow-300'>
+								{t('tips.consultationDescription')}
+							</p>
+						</div>
+					</div>
+					<div className='flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg'>
+						<div className='w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0'></div>
+						<div>
+							<h4 className='font-semibold text-purple-800 dark:text-purple-200 mb-1'>
+								{t('tips.lifestyle')}
+							</h4>
+							<p className='text-sm text-purple-700 dark:text-purple-300'>
+								{t('tips.lifestyleDescription')}
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* FAQ Section */}
+			<section className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8'>
+				<div className='flex items-center gap-3 mb-6'>
+					<div className='p-2 bg-red-100 dark:bg-red-900 rounded-lg'>
+						<Info className='w-6 h-6 text-red-600 dark:text-red-400' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('faq.title')}
+					</h2>
+				</div>
+				<div className='space-y-6'>
+					<div className='border-l-4 border-pink-500 pl-4'>
+						<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
+							{t('faq.whatIsOvulation.question')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+							{t('faq.whatIsOvulation.answer')}
+						</p>
+					</div>
+					<div className='border-l-4 border-green-500 pl-4'>
+						<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
+							{t('faq.fertileDays.question')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+							{t('faq.fertileDays.answer')}
+						</p>
+					</div>
+					<div className='border-l-4 border-blue-500 pl-4'>
+						<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
+							{t('faq.cycleLength.question')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+							{t('faq.cycleLength.answer')}
+						</p>
+					</div>
+					<div className='border-l-4 border-yellow-500 pl-4'>
+						<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
+							{t('faq.accuracy.question')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+							{t('faq.accuracy.answer')}
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
+}

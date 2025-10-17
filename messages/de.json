@@ -4369,6 +4369,158 @@
 				"category": "Mathematik"
 			}
 		},
+		"ovulation": {
+			"title": "Eisprung- und Menstruationszyklus-Rechner",
+			"description": "Berechnen Sie das Eisprungdatum, fruchtbare Tage und die nächste Periode. Kostenloser Online-Zyklusrechner für Frauen.",
+			"form": {
+				"title": "Berechnungsparameter",
+				"lastPeriodDate": "Letzte Periodenstartdatum",
+				"cycleLength": "Durchschnittliche Zykluslänge",
+				"periodLength": "Periodendauer",
+				"days": "Tage",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"lastPeriodRequired": "Bitte geben Sie Ihr letztes Periodenstartdatum ein",
+					"lastPeriodFuture": "Datum kann nicht in der Zukunft liegen",
+					"cycleLengthRange": "Zykluslänge muss zwischen 15 und 45 Tagen liegen",
+					"periodLengthRange": "Periodendauer muss zwischen 1 und 10 Tagen liegen",
+					"calculationError": "Berechnungsfehler"
+				}
+			},
+			"infographic": {
+				"ovulation": "Eisprungtag",
+				"ovulationDescription": "Wahrscheinlichster Tag",
+				"fertile": "Fruchtbare Tage",
+				"fertileDescription": "Beste für Empfängnis",
+				"cycle": "Menstruationszyklus",
+				"cycleDescription": "Von Periode zu Periode"
+			},
+			"results": {
+				"ovulation": "Eisprungdatum",
+				"fertileStart": "Fruchtbare Periode Beginn",
+				"fertileEnd": "Fruchtbare Periode Ende",
+				"nextPeriod": "Nächste Periode",
+				"cycleInfo": "Zyklusinformationen",
+				"cycleLength": "Zykluslänge",
+				"periodLength": "Periodendauer",
+				"ovulationDay": "Eisprungtag"
+			},
+			"cycleTypes": {
+				"short": {
+					"title": "Kurzer Zyklus",
+					"description": "21-24 Tage Zyklus. Eisprung meist am Tag 7-10."
+				},
+				"normal": {
+					"title": "Normaler Zyklus",
+					"description": "25-30 Tage Zyklus. Eisprung meist am Tag 12-15."
+				},
+				"long": {
+					"title": "Langer Zyklus",
+					"description": "31-35 Tage Zyklus. Eisprung meist am Tag 17-21."
+				}
+			},
+			"calendar": {
+				"title": "Zykluskalender",
+				"legend": {
+					"period": "Periode",
+					"fertile": "Fruchtbare Tage",
+					"ovulation": "Eisprung",
+					"today": "Heute"
+				}
+			},
+			"tips": {
+				"title": "Wichtige Tipps",
+				"variation": "Zyklus kann um ±2 Tage variieren, besonders bei Stress oder Klimawechsel.",
+				"consultation": "Ergebnisse sind ungefähre Werte und ersetzen keine ärztliche Beratung.",
+				"tracking": "Führen Sie einen Periodenkalender für genauere Berechnungen."
+			},
+			"seo": {
+				"title": "Eisprungrechner — Fruchtbare Tage und Zyklus berechnen",
+				"description": "Berechnen Sie das Eisprungdatum, fruchtbare Tage und die nächste Periode. Kostenloser Online-Zyklusrechner für Frauen.",
+				"keywords": "eisprungrechner, menstruationszyklus, fruchtbare tage, empfängnis, eisprung, zykluskalender",
+				"overview": {
+					"title": "Über den Eisprungrechner",
+					"content": "Der Eisprungrechner hilft dabei, die optimalen Tage für die Empfängnis zu berechnen und Ihre nächste Periode vorherzusagen. Geben Sie einfach Ihr Zyklusstartdatum und die Dauer ein, um Ihren personalisierten Fruchtbarkeitskalender zu erhalten."
+				},
+				"calculation": {
+					"title": "Wie der Eisprung berechnet wird",
+					"content": "Der Eisprung tritt normalerweise 14 Tage vor dem Beginn der nächsten Periode auf. Die fruchtbare Periode umfasst 2 Tage vor dem Eisprung, Eisprungtag und 1 Tag danach.",
+					"formula": "Eisprungdatum = Letztes Periodenstartdatum + (Zykluslänge - 14) Tage"
+				},
+				"cycleTypes": {
+					"title": "Menstruationszyklus-Typen",
+					"content": "Der Menstruationszyklus kann unterschiedliche Dauer haben:",
+					"short": {
+						"title": "Kurzer Zyklus (21-24 Tage)",
+						"description": "Eisprung am Tag 7-10. Häufiger Zyklus, aber im normalen Bereich."
+					},
+					"normal": {
+						"title": "Normaler Zyklus (25-30 Tage)",
+						"description": "Eisprung am Tag 12-15. Der häufigste Zyklustyp."
+					},
+					"long": {
+						"title": "Langer Zyklus (31-35 Tage)",
+						"description": "Eisprung am Tag 17-21. Weniger häufig, aber akzeptabel."
+					}
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Unser Eisprungrechner bietet viele Vorteile:",
+					"quick": "Schnelle Berechnung",
+					"quickDescription": "Schnelle Berechnung in Sekunden",
+					"accurate": "Genaue Berechnungen",
+					"accurateDescription": "Genaue Berechnungen basierend auf medizinischen Daten",
+					"free": "Kostenlos",
+					"freeDescription": "Vollständig kostenlos ohne Registrierung",
+					"multilingual": "Mehrsprachig",
+					"multilingualDescription": "Unterstützung für 4 Sprachen (Russisch, Englisch, Spanisch, Deutsch)",
+					"mobile": "Mobile Version",
+					"mobileDescription": "Responsive Design für alle Geräte",
+					"calendar": "Visueller Kalender",
+					"calendarDescription": "Visueller Kalender mit Farbkodierung"
+				},
+				"tips": {
+					"title": "Nützliche Tipps",
+					"content": "Für eine genauere Eisprungberechnung befolgen Sie diese Empfehlungen:",
+					"tracking": "Führen Sie einen Periodenkalender",
+					"trackingDescription": "Führen Sie mindestens 3 Monate lang einen Periodenkalender",
+					"consistency": "Notieren Sie die Zyklusregelmäßigkeit",
+					"consistencyDescription": "Notieren Sie die Zyklusregelmäßigkeit",
+					"consultation": "Konsultieren Sie einen Arzt",
+					"consultationDescription": "Konsultieren Sie einen Arzt bei unregelmäßigen Zyklen",
+					"lifestyle": "Führen Sie einen gesunden Lebensstil",
+					"lifestyleDescription": "Führen Sie einen gesunden Lebensstil: richtige Ernährung, körperliche Aktivität"
+				},
+				"table": {
+					"type": "Zyklustyp",
+					"duration": "Dauer (Tage)",
+					"ovulationDay": "Eisprungtag",
+					"comment": "Kommentar",
+					"days": "Tage"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"whatIsOvulation": {
+						"question": "Was ist Eisprung?",
+						"answer": "Eisprung ist der Prozess der Freisetzung einer reifen Eizelle aus dem Eierstock. Dies geschieht etwa in der Mitte des Menstruationszyklus und ist die günstigste Zeit für die Empfängnis."
+					},
+					"fertileDays": {
+						"question": "Was sind fruchtbare Tage?",
+						"answer": "Fruchtbare Tage sind der Zeitraum, in dem die Wahrscheinlichkeit einer Empfängnis am höchsten ist. Normalerweise sind das 2-3 Tage vor dem Eisprung, Eisprungtag und 1 Tag danach."
+					},
+					"cycleLength": {
+						"question": "Wie lang ist ein normaler Menstruationszyklus?",
+						"answer": "Die normale Länge des Menstruationszyklus beträgt 21-35 Tage, durchschnittlich 28 Tage. Ein Zyklus gilt als regelmäßig, wenn seine Dauer nicht um mehr als 2-3 Tage variiert."
+					},
+					"accuracy": {
+						"question": "Wie genau sind die Rechnerergebnisse?",
+						"answer": "Der Rechner gibt ungefähre Ergebnisse basierend auf Standard-Medizindaten. Die Genauigkeit hängt von der Regelmäßigkeit Ihres Zyklus ab. Bei unregelmäßigen Zyklen wird eine ärztliche Beratung empfohlen."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blutdruck-Rechner Online",
 			"description": "Berechnen Sie den normalen Blutdruck nach Alter und bewerten Sie Ihre aktuellen Werte. Schnell, genau und kostenlos.",

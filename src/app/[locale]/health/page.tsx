@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Heart, Activity, Pill, Thermometer } from 'lucide-react';
+import { Heart, Activity, Pill, Thermometer, Calendar } from 'lucide-react';
 
 const calculators = [
 	{
@@ -24,6 +24,13 @@ const calculators = [
 		description: 'calculators.bloodPressure.description',
 		icon: Thermometer,
 		href: '/health/blood-pressure',
+	},
+	{
+		id: 'ovulation',
+		title: 'calculators.ovulation.title',
+		description: 'calculators.ovulation.description',
+		icon: Calendar,
+		href: '/health/ovulation',
 	},
 	{
 		id: 'vitamins',

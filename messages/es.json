@@ -4370,6 +4370,158 @@
 				"category": "Matemáticas"
 			}
 		},
+		"ovulation": {
+			"title": "Calculadora de Ovulación y Ciclo Menstrual",
+			"description": "Calcula la fecha de ovulación, días fértiles y próxima menstruación. Calculadora de ciclo gratuita para mujeres.",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"lastPeriodDate": "Fecha de inicio del último período",
+				"cycleLength": "Duración promedio del ciclo",
+				"periodLength": "Duración del período",
+				"days": "días",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Reiniciar",
+				"errors": {
+					"lastPeriodRequired": "Por favor ingresa la fecha de inicio de tu último período",
+					"lastPeriodFuture": "La fecha no puede ser en el futuro",
+					"cycleLengthRange": "La duración del ciclo debe estar entre 15 y 45 días",
+					"periodLengthRange": "La duración del período debe estar entre 1 y 10 días",
+					"calculationError": "Error en el cálculo"
+				}
+			},
+			"infographic": {
+				"ovulation": "Día de ovulación",
+				"ovulationDescription": "Día más probable",
+				"fertile": "Días fértiles",
+				"fertileDescription": "Mejores para concepción",
+				"cycle": "Ciclo menstrual",
+				"cycleDescription": "De período a período"
+			},
+			"results": {
+				"ovulation": "Fecha de ovulación",
+				"fertileStart": "Inicio del período fértil",
+				"fertileEnd": "Fin del período fértil",
+				"nextPeriod": "Próximo período",
+				"cycleInfo": "Información del ciclo",
+				"cycleLength": "Duración del ciclo",
+				"periodLength": "Duración del período",
+				"ovulationDay": "Día de ovulación"
+			},
+			"cycleTypes": {
+				"short": {
+					"title": "Ciclo corto",
+					"description": "Ciclo de 21-24 días. Ovulación usualmente en el día 7-10."
+				},
+				"normal": {
+					"title": "Ciclo normal",
+					"description": "Ciclo de 25-30 días. Ovulación usualmente en el día 12-15."
+				},
+				"long": {
+					"title": "Ciclo largo",
+					"description": "Ciclo de 31-35 días. Ovulación usualmente en el día 17-21."
+				}
+			},
+			"calendar": {
+				"title": "Calendario del ciclo",
+				"legend": {
+					"period": "Período",
+					"fertile": "Días fértiles",
+					"ovulation": "Ovulación",
+					"today": "Hoy"
+				}
+			},
+			"tips": {
+				"title": "Consejos importantes",
+				"variation": "El ciclo puede variar ±2 días, especialmente durante estrés o cambio climático.",
+				"consultation": "Los resultados son aproximados y no sustituyen el consejo médico.",
+				"tracking": "Mantén un calendario de períodos para cálculos más precisos."
+			},
+			"seo": {
+				"title": "Calculadora de Ovulación — Calcular Días Fértiles y Ciclo",
+				"description": "Calcula la fecha de ovulación, días fértiles y próxima menstruación. Calculadora de ciclo gratuita para mujeres.",
+				"keywords": "calculadora ovulación, ciclo menstrual, días fértiles, concepción, ovulación, calendario ciclo",
+				"overview": {
+					"title": "Sobre la Calculadora de Ovulación",
+					"content": "La calculadora de ovulación ayuda a calcular los días óptimos para la concepción y predecir tu próximo período. Simplemente ingresa la fecha de inicio de tu ciclo y duración para obtener tu calendario de fertilidad personalizado."
+				},
+				"calculation": {
+					"title": "Cómo se calcula la ovulación",
+					"content": "La ovulación usualmente ocurre 14 días antes del inicio del próximo período. El período fértil incluye 2 días antes de la ovulación, día de ovulación, y 1 día después.",
+					"formula": "Fecha de ovulación = Fecha del último período + (Duración del ciclo - 14) días"
+				},
+				"cycleTypes": {
+					"title": "Tipos de ciclo menstrual",
+					"content": "El ciclo menstrual puede tener diferentes duraciones:",
+					"short": {
+						"title": "Ciclo corto (21-24 días)",
+						"description": "Ovulación en el día 7-10. Ciclo frecuente, pero dentro del rango normal."
+					},
+					"normal": {
+						"title": "Ciclo normal (25-30 días)",
+						"description": "Ovulación en el día 12-15. El tipo de ciclo más común."
+					},
+					"long": {
+						"title": "Ciclo largo (31-35 días)",
+						"description": "Ovulación en el día 17-21. Menos común, pero aceptable."
+					}
+				},
+				"advantages": {
+					"title": "Ventajas de nuestra calculadora",
+					"content": "Nuestra calculadora de ovulación proporciona muchas ventajas:",
+					"quick": "Cálculo rápido",
+					"quickDescription": "Cálculo rápido en segundos",
+					"accurate": "Cálculos precisos",
+					"accurateDescription": "Cálculos precisos basados en datos médicos",
+					"free": "Gratuita",
+					"freeDescription": "Completamente gratuita sin registro",
+					"multilingual": "Multilingüe",
+					"multilingualDescription": "Soporte para 4 idiomas (ruso, inglés, español, alemán)",
+					"mobile": "Versión móvil",
+					"mobileDescription": "Diseño responsivo para todos los dispositivos",
+					"calendar": "Calendario visual",
+					"calendarDescription": "Calendario visual con codificación de colores"
+				},
+				"tips": {
+					"title": "Consejos útiles",
+					"content": "Para un cálculo más preciso de la ovulación, sigue estas recomendaciones:",
+					"tracking": "Mantén un calendario de períodos",
+					"trackingDescription": "Mantén un calendario de períodos por al menos 3 meses",
+					"consistency": "Anota la regularidad del ciclo",
+					"consistencyDescription": "Anota la regularidad del ciclo",
+					"consultation": "Consulta a un médico",
+					"consultationDescription": "Consulta a un médico para ciclos irregulares",
+					"lifestyle": "Lleva un estilo de vida saludable",
+					"lifestyleDescription": "Lleva un estilo de vida saludable: nutrición adecuada, actividad física"
+				},
+				"table": {
+					"type": "Tipo de ciclo",
+					"duration": "Duración (días)",
+					"ovulationDay": "Día de ovulación",
+					"comment": "Comentario",
+					"days": "días"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"whatIsOvulation": {
+						"question": "¿Qué es la ovulación?",
+						"answer": "La ovulación es el proceso de liberación de un óvulo maduro del ovario. Esto ocurre aproximadamente en la mitad del ciclo menstrual y es el momento más favorable para la concepción."
+					},
+					"fertileDays": {
+						"question": "¿Qué son los días fértiles?",
+						"answer": "Los días fértiles son el período cuando la probabilidad de concepción es más alta. Usualmente son 2-3 días antes de la ovulación, día de ovulación, y 1 día después."
+					},
+					"cycleLength": {
+						"question": "¿Cuál es la duración normal del ciclo menstrual?",
+						"answer": "La duración normal del ciclo menstrual es de 21-35 días, promedio 28 días. Un ciclo se considera regular si su duración no cambia más de 2-3 días."
+					},
+					"accuracy": {
+						"question": "¿Qué tan precisos son los resultados de la calculadora?",
+						"answer": "La calculadora da resultados aproximados basados en datos médicos estándar. La precisión depende de la regularidad de tu ciclo. Para ciclos irregulares, se recomienda consulta médica."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Calculadora de Presión Arterial Online",
 			"description": "Calcula la presión arterial normal por edad y evalúa tus valores actuales. Rápido, preciso y gratuito.",

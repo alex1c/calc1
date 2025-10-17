@@ -4356,6 +4356,158 @@
 				"category": "Mathematics"
 			}
 		},
+		"ovulation": {
+			"title": "Ovulation and Menstrual Cycle Calculator",
+			"description": "Calculate ovulation date, fertile days, and next period. Free online cycle calculator for women.",
+			"form": {
+				"title": "Calculation Parameters",
+				"lastPeriodDate": "Last period start date",
+				"cycleLength": "Average cycle length",
+				"periodLength": "Period duration",
+				"days": "days",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"lastPeriodRequired": "Please enter your last period start date",
+					"lastPeriodFuture": "Date cannot be in the future",
+					"cycleLengthRange": "Cycle length must be between 15 and 45 days",
+					"periodLengthRange": "Period duration must be between 1 and 10 days",
+					"calculationError": "Calculation error"
+				}
+			},
+			"infographic": {
+				"ovulation": "Ovulation day",
+				"ovulationDescription": "Most likely day",
+				"fertile": "Fertile days",
+				"fertileDescription": "Best for conception",
+				"cycle": "Menstrual cycle",
+				"cycleDescription": "From period to period"
+			},
+			"results": {
+				"ovulation": "Ovulation date",
+				"fertileStart": "Fertile period start",
+				"fertileEnd": "Fertile period end",
+				"nextPeriod": "Next period",
+				"cycleInfo": "Cycle information",
+				"cycleLength": "Cycle length",
+				"periodLength": "Period duration",
+				"ovulationDay": "Ovulation day"
+			},
+			"cycleTypes": {
+				"short": {
+					"title": "Short cycle",
+					"description": "21-24 day cycle. Ovulation usually on day 7-10."
+				},
+				"normal": {
+					"title": "Normal cycle",
+					"description": "25-30 day cycle. Ovulation usually on day 12-15."
+				},
+				"long": {
+					"title": "Long cycle",
+					"description": "31-35 day cycle. Ovulation usually on day 17-21."
+				}
+			},
+			"calendar": {
+				"title": "Cycle calendar",
+				"legend": {
+					"period": "Period",
+					"fertile": "Fertile days",
+					"ovulation": "Ovulation",
+					"today": "Today"
+				}
+			},
+			"tips": {
+				"title": "Important tips",
+				"variation": "Cycle can vary by ±2 days, especially during stress or climate change.",
+				"consultation": "Results are approximate and not a substitute for medical advice.",
+				"tracking": "Keep a period calendar for more accurate calculations."
+			},
+			"seo": {
+				"title": "Ovulation Calculator — Calculate Fertile Days and Cycle",
+				"description": "Calculate ovulation date, fertile days, and next period. Free online cycle calculator for women.",
+				"keywords": "ovulation calculator, menstrual cycle, fertile days, conception, ovulation, cycle calendar",
+				"overview": {
+					"title": "About Ovulation Calculator",
+					"content": "The ovulation calculator helps calculate optimal days for conception and predict your next period. Simply enter your cycle start date and duration to get your personalized fertility calendar."
+				},
+				"calculation": {
+					"title": "How ovulation is calculated",
+					"content": "Ovulation usually occurs 14 days before the start of the next period. The fertile period includes 2 days before ovulation, ovulation day, and 1 day after.",
+					"formula": "Ovulation date = Last period date + (Cycle length - 14) days"
+				},
+				"cycleTypes": {
+					"title": "Menstrual cycle types",
+					"content": "Menstrual cycle can have different durations:",
+					"short": {
+						"title": "Short cycle (21-24 days)",
+						"description": "Ovulation on day 7-10. Frequent cycle, but within normal range."
+					},
+					"normal": {
+						"title": "Normal cycle (25-30 days)",
+						"description": "Ovulation on day 12-15. The most common cycle type."
+					},
+					"long": {
+						"title": "Long cycle (31-35 days)",
+						"description": "Ovulation on day 17-21. Less common, but acceptable."
+					}
+				},
+				"advantages": {
+					"title": "Advantages of our calculator",
+					"content": "Our ovulation calculator provides many advantages:",
+					"quick": "Fast calculation",
+					"quickDescription": "Fast calculation in seconds",
+					"accurate": "Accurate calculations",
+					"accurateDescription": "Accurate calculations based on medical data",
+					"free": "Free",
+					"freeDescription": "Completely free without registration",
+					"multilingual": "Multilingual",
+					"multilingualDescription": "Support for 4 languages (Russian, English, Spanish, German)",
+					"mobile": "Mobile version",
+					"mobileDescription": "Responsive design for all devices",
+					"calendar": "Visual calendar",
+					"calendarDescription": "Visual calendar with color coding"
+				},
+				"tips": {
+					"title": "Useful tips",
+					"content": "For more accurate ovulation calculation, follow these recommendations:",
+					"tracking": "Keep a period calendar",
+					"trackingDescription": "Keep a period calendar for at least 3 months",
+					"consistency": "Note cycle regularity",
+					"consistencyDescription": "Note cycle regularity",
+					"consultation": "Consult a doctor",
+					"consultationDescription": "Consult a doctor for irregular cycles",
+					"lifestyle": "Lead a healthy lifestyle",
+					"lifestyleDescription": "Lead a healthy lifestyle: proper nutrition, physical activity"
+				},
+				"table": {
+					"type": "Cycle type",
+					"duration": "Duration (days)",
+					"ovulationDay": "Ovulation day",
+					"comment": "Comment",
+					"days": "days"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"whatIsOvulation": {
+						"question": "What is ovulation?",
+						"answer": "Ovulation is the process of releasing a mature egg from the ovary. This occurs approximately in the middle of the menstrual cycle and is the most favorable time for conception."
+					},
+					"fertileDays": {
+						"question": "What are fertile days?",
+						"answer": "Fertile days are the period when the probability of conception is highest. Usually this is 2-3 days before ovulation, ovulation day, and 1 day after."
+					},
+					"cycleLength": {
+						"question": "What is the normal menstrual cycle length?",
+						"answer": "Normal menstrual cycle length is 21-35 days, average 28 days. A cycle is considered regular if its duration does not change by more than 2-3 days."
+					},
+					"accuracy": {
+						"question": "How accurate are the calculator results?",
+						"answer": "The calculator gives approximate results based on standard medical data. Accuracy depends on the regularity of your cycle. For irregular cycles, medical consultation is recommended."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blood Pressure Calculator Online",
 			"description": "Calculate normal blood pressure by age and evaluate your current values. Fast, accurate and free.",
