@@ -34,10 +34,10 @@ const calculators = [
 	},
 	{
 		id: 'vitamins',
-		title: 'Vitamin Calculator',
-		description: 'Calculate daily vitamin and mineral requirements',
+		title: 'calculators.vitamins.title',
+		description: 'calculators.vitamins.description',
 		icon: Pill,
-		href: '/calc/vitamins',
+		href: '/health/vitamins',
 	},
 ];
 

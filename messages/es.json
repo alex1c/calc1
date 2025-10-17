@@ -4522,6 +4522,332 @@
 				}
 			}
 		},
+		"vitamins": {
+			"title": "Calculadora de Vitaminas y Minerales",
+			"description": "Calcula las necesidades diarias de vitaminas y minerales por edad, género y nivel de actividad.",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"gender": "Género",
+				"male": "Hombre",
+				"female": "Mujer",
+				"age": "Edad",
+				"agePlaceholder": "Ingrese su edad",
+				"years": "años",
+				"activityLevel": "Nivel de Actividad",
+				"activity": {
+					"low": {
+						"title": "Bajo",
+						"description": "Estilo de vida sedentario"
+					},
+					"medium": {
+						"title": "Medio",
+						"description": "Actividad moderada"
+					},
+					"high": {
+						"title": "Alto",
+						"description": "Entrenamiento activo"
+					}
+				},
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Reiniciar",
+				"errors": {
+					"genderRequired": "Seleccione género",
+					"ageRange": "La edad debe estar entre 1 y 120 años",
+					"activityRequired": "Seleccione nivel de actividad",
+					"calculationError": "Error de cálculo"
+				}
+			},
+			"infographic": {
+				"vitamins": "Vitaminas",
+				"vitaminsDescription": "13 vitaminas esenciales",
+				"minerals": "Minerales",
+				"mineralsDescription": "8 minerales importantes",
+				"personalized": "Personalización",
+				"personalizedDescription": "Por edad y actividad"
+			},
+			"results": {
+				"summary": "Resumen",
+				"gender": "Género",
+				"age": "Edad",
+				"activity": "Actividad",
+				"vitamins": "Vitaminas",
+				"minerals": "Minerales",
+				"showDetails": "Mostrar Detalles",
+				"hideDetails": "Ocultar Detalles",
+				"copyTable": "Copiar Tabla",
+				"exportPDF": "Exportar a PDF",
+				"recommendations": "Recomendaciones"
+			},
+			"table": {
+				"name": "Nombre",
+				"norm": "Norma Diaria",
+				"role": "Rol en el Cuerpo",
+				"increasedNeed": "Necesidad Aumentada"
+			},
+			"vitamins": {
+				"vitaminA": {
+					"name": "Vitamina A",
+					"description": "Vitamina liposoluble importante para la visión e inmunidad",
+					"role": {
+						"visionImmunity": "Visión, inmunidad, crecimiento celular"
+					},
+					"increasedNeed": {
+						"computerWork": "Al trabajar en computadora"
+					}
+				},
+				"vitaminC": {
+					"name": "Vitamina C",
+					"description": "Vitamina hidrosoluble, potente antioxidante",
+					"role": {
+						"immunityVessels": "Inmunidad, vasos sanguíneos, cicatrización"
+					},
+					"increasedNeed": {
+						"stressColds": "Durante estrés y resfriados"
+					}
+				},
+				"vitaminD": {
+					"name": "Vitamina D",
+					"description": "Vitamina del sol, regula calcio y fósforo",
+					"role": {
+						"bonesCalcium": "Huesos, metabolismo del calcio, inmunidad"
+					},
+					"increasedNeed": {
+						"winterSun": "Invierno, sin sol"
+					}
+				},
+				"vitaminE": {
+					"name": "Vitamina E",
+					"description": "Antioxidante, protege las células del daño",
+					"role": {
+						"antioxidantSkin": "Antioxidante, piel, reproducción"
+					},
+					"increasedNeed": {
+						"sports": "Durante actividades deportivas"
+					}
+				},
+				"vitaminB1": {
+					"name": "Vitamina B1",
+					"description": "Tiamina, importante para el sistema nervioso",
+					"role": {
+						"nervousSystem": "Sistema nervioso, energía"
+					},
+					"increasedNeed": {
+						"loads": "Durante esfuerzo físico"
+					}
+				},
+				"vitaminB2": {
+					"name": "Vitamina B2",
+					"description": "Riboflavina, participa en el metabolismo energético",
+					"role": {
+						"energyMetabolism": "Metabolismo energético, piel"
+					},
+					"increasedNeed": {
+						"sports": "Durante actividades deportivas"
+					}
+				},
+				"vitaminB3": {
+					"name": "Vitamina B3",
+					"description": "Niacina, importante para la producción de energía",
+					"role": {
+						"energyProduction": "Producción de energía, piel"
+					},
+					"increasedNeed": {
+						"highActivity": "Durante alta actividad"
+					}
+				},
+				"vitaminB6": {
+					"name": "Vitamina B6",
+					"description": "Piridoxina, participa en el metabolismo de proteínas",
+					"role": {
+						"proteinMetabolism": "Metabolismo de proteínas, sistema nervioso"
+					},
+					"increasedNeed": {
+						"proteinDiet": "En dieta proteica"
+					}
+				},
+				"vitaminB12": {
+					"name": "Vitamina B12",
+					"description": "Cobalamina, importante para la formación de sangre",
+					"role": {
+						"bloodFormation": "Formación de sangre, sistema nervioso"
+					},
+					"increasedNeed": {
+						"vegetarianism": "En vegetarianismo"
+					}
+				},
+				"folate": {
+					"name": "Ácido Fólico",
+					"description": "Importante para la división celular y desarrollo fetal",
+					"role": {
+						"cellDivision": "División celular, desarrollo fetal"
+					},
+					"increasedNeed": {
+						"pregnancy": "Durante el embarazo"
+					}
+				},
+				"calcium": {
+					"name": "Calcio",
+					"description": "Mineral principal de huesos y dientes",
+					"role": {
+						"bonesTeeth": "Huesos, dientes, músculos"
+					},
+					"increasedNeed": {
+						"pregnancy": "Durante el embarazo"
+					}
+				},
+				"magnesium": {
+					"name": "Magnesio",
+					"description": "Importante para el corazón y músculos",
+					"role": {
+						"heartMuscles": "Corazón, músculos, sistema nervioso"
+					},
+					"increasedNeed": {
+						"stress": "Durante estrés"
+					}
+				},
+				"zinc": {
+					"name": "Zinc",
+					"description": "Importante para la inmunidad y cicatrización",
+					"role": {
+						"immunity": "Inmunidad, cicatrización de heridas"
+					},
+					"increasedNeed": {
+						"activeTraining": "Durante entrenamiento activo"
+					}
+				},
+				"iron": {
+					"name": "Hierro",
+					"description": "Necesario para la formación de hemoglobina",
+					"role": {
+						"hemoglobin": "Hemoglobina, oxígeno"
+					},
+					"increasedNeed": {
+						"women": "Mujeres"
+					}
+				},
+				"potassium": {
+					"name": "Potasio",
+					"description": "Importante para el corazón y presión arterial",
+					"role": {
+						"heartPressure": "Corazón, presión arterial, músculos"
+					},
+					"increasedNeed": {
+						"sweating": "Durante sudoración"
+					}
+				},
+				"iodine": {
+					"name": "Yodo",
+					"description": "Necesario para la función tiroidea",
+					"role": {
+						"thyroid": "Glándula tiroides, metabolismo"
+					},
+					"increasedNeed": {
+						"iodineDeficiency": "Deficiencia de yodo en la región"
+					}
+				},
+				"selenium": {
+					"name": "Selenio",
+					"description": "Antioxidante, protege de los radicales libres",
+					"role": {
+						"antioxidant": "Antioxidante, inmunidad"
+					},
+					"increasedNeed": {
+						"environmentalStress": "Durante estrés ambiental"
+					}
+				},
+				"phosphorus": {
+					"name": "Fósforo",
+					"description": "Importante para huesos y metabolismo energético",
+					"role": {
+						"bonesEnergy": "Huesos, metabolismo energético"
+					},
+					"increasedNeed": {
+						"highActivity": "Durante alta actividad"
+					}
+				}
+			},
+			"recommendations": {
+				"highActivityRecommendation": "Con alta actividad, aumente el consumo de vitaminas B y minerales",
+				"womenRecommendation": "Las mujeres especialmente necesitan suficiente hierro y ácido fólico",
+				"ageRecommendation": "Después de 50 años, aumente el consumo de vitamina D y calcio",
+				"lowActivityRecommendation": "Con baja actividad, monitoree el equilibrio de vitaminas y minerales"
+			},
+			"tips": {
+				"title": "Consejos Importantes",
+				"consultation": "Consulte a un médico antes de tomar suplementos.",
+				"balancedDiet": "La nutrición equilibrada es la base para obtener vitaminas.",
+				"supplements": "Los suplementos no reemplazan la nutrición adecuada."
+			},
+			"seo": {
+				"title": "Calculadora de Vitaminas Online — Conocer Necesidades Diarias por Edad",
+				"description": "Calcula las normas de vitaminas y minerales por edad, género y actividad. Descubre qué nutrientes le faltan a tu cuerpo.",
+				"keywords": "calculadora de vitaminas, necesidades diarias de vitaminas, vitaminas por edad, minerales, suplementos vitamínicos",
+				"overview": {
+					"title": "Sobre la Calculadora de Vitaminas",
+					"content": "La calculadora de vitaminas ayuda a determinar cuántas vitaminas y minerales necesita tu cuerpo diariamente. Los datos se basan en recomendaciones de la OMS y se adaptan por edad y actividad."
+				},
+				"calculation": {
+					"title": "Cómo se Calculan las Normas",
+					"content": "Las normas de vitaminas y minerales se calculan basándose en recomendaciones de la OMS considerando género, edad y nivel de actividad física. Con alta actividad, la necesidad de algunas vitaminas aumenta 20%."
+				},
+				"vitamins": {
+					"title": "Vitaminas y su Rol",
+					"content": "Las vitaminas se dividen en hidrosolubles (B, C) y liposolubles (A, D, E, K). Cada vitamina cumple una función única en el cuerpo."
+				},
+				"minerals": {
+					"title": "Minerales y su Importancia",
+					"content": "Los minerales son necesarios para el funcionamiento normal de todos los sistemas del cuerpo. Especialmente importantes son calcio, hierro, magnesio y zinc."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestra Calculadora",
+					"content": "Nuestra calculadora de vitaminas proporciona muchas ventajas:",
+					"personalized": "Cálculo personalizado",
+					"personalizedDescription": "Considera género, edad y actividad",
+					"comprehensive": "Información completa",
+					"comprehensiveDescription": "13 vitaminas y 8 minerales",
+					"accurate": "Datos precisos",
+					"accurateDescription": "Basado en recomendaciones de la OMS",
+					"free": "Gratis",
+					"freeDescription": "Completamente gratis sin registro",
+					"multilingual": "Multilingüe",
+					"multilingualDescription": "Soporte para 4 idiomas",
+					"mobile": "Versión móvil",
+					"mobileDescription": "Diseño responsivo para todos los dispositivos"
+				},
+				"tips": {
+					"title": "Consejos Útiles",
+					"content": "Para mantener niveles óptimos de vitaminas y minerales:",
+					"diet": "Nutrición equilibrada",
+					"dietDescription": "Incluye alimentos diversos en tu dieta",
+					"supplements": "Suplementos según necesidad",
+					"supplementsDescription": "Toma suplementos solo por recomendación médica",
+					"monitoring": "Monitoreo regular",
+					"monitoringDescription": "Revisa periódicamente tus niveles de vitaminas",
+					"lifestyle": "Estilo de vida saludable",
+					"lifestyleDescription": "Actividad física y sueño adecuado"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"dailyRequirements": {
+						"question": "¿Cómo determinar las necesidades diarias de vitaminas?",
+						"answer": "Las necesidades diarias dependen de la edad, género, nivel de actividad física y estado de salud. Nuestra calculadora considera estos factores para un cálculo preciso."
+					},
+					"activityImpact": {
+						"question": "¿Cómo afecta la actividad física las necesidades de vitaminas?",
+						"answer": "Con alta actividad física, la necesidad de vitaminas B, vitamina C y algunos minerales aumenta 10-20% debido al metabolismo acelerado."
+					},
+					"supplements": {
+						"question": "¿Necesito tomar suplementos vitamínicos?",
+						"answer": "Con nutrición equilibrada, la mayoría de vitaminas se pueden obtener de los alimentos. Los suplementos son necesarios solo para deficiencia o necesidades especiales, lo que debe determinar un médico."
+					},
+					"accuracy": {
+						"question": "¿Qué tan precisos son los cálculos de la calculadora?",
+						"answer": "La calculadora se basa en recomendaciones de la OMS y considera factores principales. Sin embargo, las necesidades individuales pueden diferir, por lo que la consulta médica es importante."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Calculadora de Presión Arterial Online",
 			"description": "Calcula la presión arterial normal por edad y evalúa tus valores actuales. Rápido, preciso y gratuito.",

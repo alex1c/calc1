@@ -4521,6 +4521,332 @@
 				}
 			}
 		},
+		"vitamins": {
+			"title": "Vitamin- und Mineralstoffrechner",
+			"description": "Berechnen Sie den täglichen Bedarf an Vitaminen und Mineralstoffen nach Alter, Geschlecht und Aktivität.",
+			"form": {
+				"title": "Berechnungsparameter",
+				"gender": "Geschlecht",
+				"male": "Mann",
+				"female": "Frau",
+				"age": "Alter",
+				"agePlaceholder": "Geben Sie Ihr Alter ein",
+				"years": "Jahre",
+				"activityLevel": "Aktivitätsniveau",
+				"activity": {
+					"low": {
+						"title": "Niedrig",
+						"description": "Sitzender Lebensstil"
+					},
+					"medium": {
+						"title": "Mittel",
+						"description": "Mäßige Aktivität"
+					},
+					"high": {
+						"title": "Hoch",
+						"description": "Aktives Training"
+					}
+				},
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"genderRequired": "Geschlecht auswählen",
+					"ageRange": "Alter muss zwischen 1 und 120 Jahren liegen",
+					"activityRequired": "Aktivitätsniveau auswählen",
+					"calculationError": "Berechnungsfehler"
+				}
+			},
+			"infographic": {
+				"vitamins": "Vitamine",
+				"vitaminsDescription": "13 essentielle Vitamine",
+				"minerals": "Mineralstoffe",
+				"mineralsDescription": "8 wichtige Mineralstoffe",
+				"personalized": "Personalisierung",
+				"personalizedDescription": "Nach Alter und Aktivität"
+			},
+			"results": {
+				"summary": "Zusammenfassung",
+				"gender": "Geschlecht",
+				"age": "Alter",
+				"activity": "Aktivität",
+				"vitamins": "Vitamine",
+				"minerals": "Mineralstoffe",
+				"showDetails": "Details anzeigen",
+				"hideDetails": "Details ausblenden",
+				"copyTable": "Tabelle kopieren",
+				"exportPDF": "Als PDF exportieren",
+				"recommendations": "Empfehlungen"
+			},
+			"table": {
+				"name": "Name",
+				"norm": "Tagesbedarf",
+				"role": "Rolle im Körper",
+				"increasedNeed": "Erhöhter Bedarf"
+			},
+			"vitamins": {
+				"vitaminA": {
+					"name": "Vitamin A",
+					"description": "Fettlösliches Vitamin, wichtig für Sehkraft und Immunität",
+					"role": {
+						"visionImmunity": "Sehkraft, Immunität, Zellwachstum"
+					},
+					"increasedNeed": {
+						"computerWork": "Bei Computerarbeit"
+					}
+				},
+				"vitaminC": {
+					"name": "Vitamin C",
+					"description": "Wasserlösliches Vitamin, starkes Antioxidans",
+					"role": {
+						"immunityVessels": "Immunität, Blutgefäße, Wundheilung"
+					},
+					"increasedNeed": {
+						"stressColds": "Bei Stress und Erkältungen"
+					}
+				},
+				"vitaminD": {
+					"name": "Vitamin D",
+					"description": "Sonnenvitamin, reguliert Kalzium und Phosphor",
+					"role": {
+						"bonesCalcium": "Knochen, Kalziumstoffwechsel, Immunität"
+					},
+					"increasedNeed": {
+						"winterSun": "Winter, ohne Sonne"
+					}
+				},
+				"vitaminE": {
+					"name": "Vitamin E",
+					"description": "Antioxidans, schützt Zellen vor Schäden",
+					"role": {
+						"antioxidantSkin": "Antioxidans, Haut, Fortpflanzung"
+					},
+					"increasedNeed": {
+						"sports": "Bei Sportaktivitäten"
+					}
+				},
+				"vitaminB1": {
+					"name": "Vitamin B1",
+					"description": "Thiamin, wichtig für das Nervensystem",
+					"role": {
+						"nervousSystem": "Nervensystem, Energie"
+					},
+					"increasedNeed": {
+						"loads": "Bei körperlicher Belastung"
+					}
+				},
+				"vitaminB2": {
+					"name": "Vitamin B2",
+					"description": "Riboflavin, beteiligt am Energiestoffwechsel",
+					"role": {
+						"energyMetabolism": "Energiestoffwechsel, Haut"
+					},
+					"increasedNeed": {
+						"sports": "Bei Sportaktivitäten"
+					}
+				},
+				"vitaminB3": {
+					"name": "Vitamin B3",
+					"description": "Niacin, wichtig für die Energieproduktion",
+					"role": {
+						"energyProduction": "Energieproduktion, Haut"
+					},
+					"increasedNeed": {
+						"highActivity": "Bei hoher Aktivität"
+					}
+				},
+				"vitaminB6": {
+					"name": "Vitamin B6",
+					"description": "Pyridoxin, beteiligt am Proteinstoffwechsel",
+					"role": {
+						"proteinMetabolism": "Proteinstoffwechsel, Nervensystem"
+					},
+					"increasedNeed": {
+						"proteinDiet": "Bei Proteindiät"
+					}
+				},
+				"vitaminB12": {
+					"name": "Vitamin B12",
+					"description": "Cobalamin, wichtig für die Blutbildung",
+					"role": {
+						"bloodFormation": "Blutbildung, Nervensystem"
+					},
+					"increasedNeed": {
+						"vegetarianism": "Bei Vegetarismus"
+					}
+				},
+				"folate": {
+					"name": "Folsäure",
+					"description": "Wichtig für Zellteilung und Fetalentwicklung",
+					"role": {
+						"cellDivision": "Zellteilung, Fetalentwicklung"
+					},
+					"increasedNeed": {
+						"pregnancy": "Während der Schwangerschaft"
+					}
+				},
+				"calcium": {
+					"name": "Kalzium",
+					"description": "Hauptmineral von Knochen und Zähnen",
+					"role": {
+						"bonesTeeth": "Knochen, Zähne, Muskeln"
+					},
+					"increasedNeed": {
+						"pregnancy": "Während der Schwangerschaft"
+					}
+				},
+				"magnesium": {
+					"name": "Magnesium",
+					"description": "Wichtig für Herz und Muskeln",
+					"role": {
+						"heartMuscles": "Herz, Muskeln, Nervensystem"
+					},
+					"increasedNeed": {
+						"stress": "Bei Stress"
+					}
+				},
+				"zinc": {
+					"name": "Zink",
+					"description": "Wichtig für Immunität und Wundheilung",
+					"role": {
+						"immunity": "Immunität, Wundheilung"
+					},
+					"increasedNeed": {
+						"activeTraining": "Bei aktivem Training"
+					}
+				},
+				"iron": {
+					"name": "Eisen",
+					"description": "Notwendig für die Hämoglobinbildung",
+					"role": {
+						"hemoglobin": "Hämoglobin, Sauerstoff"
+					},
+					"increasedNeed": {
+						"women": "Frauen"
+					}
+				},
+				"potassium": {
+					"name": "Kalium",
+					"description": "Wichtig für Herz und Blutdruck",
+					"role": {
+						"heartPressure": "Herz, Blutdruck, Muskeln"
+					},
+					"increasedNeed": {
+						"sweating": "Bei Schwitzen"
+					}
+				},
+				"iodine": {
+					"name": "Jod",
+					"description": "Notwendig für die Schilddrüsenfunktion",
+					"role": {
+						"thyroid": "Schilddrüse, Stoffwechsel"
+					},
+					"increasedNeed": {
+						"iodineDeficiency": "Jodmangel in der Region"
+					}
+				},
+				"selenium": {
+					"name": "Selen",
+					"description": "Antioxidans, schützt vor freien Radikalen",
+					"role": {
+						"antioxidant": "Antioxidans, Immunität"
+					},
+					"increasedNeed": {
+						"environmentalStress": "Bei Umweltstress"
+					}
+				},
+				"phosphorus": {
+					"name": "Phosphor",
+					"description": "Wichtig für Knochen und Energiestoffwechsel",
+					"role": {
+						"bonesEnergy": "Knochen, Energiestoffwechsel"
+					},
+					"increasedNeed": {
+						"highActivity": "Bei hoher Aktivität"
+					}
+				}
+			},
+			"recommendations": {
+				"highActivityRecommendation": "Bei hoher Aktivität erhöhen Sie die Aufnahme von B-Vitaminen und Mineralstoffen",
+				"womenRecommendation": "Frauen brauchen besonders ausreichend Eisen und Folsäure",
+				"ageRecommendation": "Nach 50 Jahren erhöhen Sie die Aufnahme von Vitamin D und Kalzium",
+				"lowActivityRecommendation": "Bei niedriger Aktivität achten Sie auf das Gleichgewicht von Vitaminen und Mineralstoffen"
+			},
+			"tips": {
+				"title": "Wichtige Tipps",
+				"consultation": "Konsultieren Sie einen Arzt vor der Einnahme von Nahrungsergänzungsmitteln.",
+				"balancedDiet": "Ausgewogene Ernährung ist die Grundlage für die Aufnahme von Vitaminen.",
+				"supplements": "Nahrungsergänzungsmittel ersetzen keine vollwertige Ernährung."
+			},
+			"seo": {
+				"title": "Online Vitaminrechner — Tagesbedarf nach Alter ermitteln",
+				"description": "Berechnen Sie Vitamin- und Mineralstoffnormen nach Alter, Geschlecht und Aktivität. Finden Sie heraus, welche Nährstoffe Ihrem Körper fehlen.",
+				"keywords": "Vitaminrechner, Tagesbedarf Vitamine, Vitamine nach Alter, Mineralstoffe, Vitaminpräparate",
+				"overview": {
+					"title": "Über den Vitaminrechner",
+					"content": "Der Vitaminrechner hilft zu bestimmen, wie viele Vitamine und Mineralstoffe Ihr Körper täglich benötigt. Die Daten basieren auf WHO-Empfehlungen und sind nach Alter und Aktivität angepasst."
+				},
+				"calculation": {
+					"title": "Wie Normen berechnet werden",
+					"content": "Vitamin- und Mineralstoffnormen werden basierend auf WHO-Empfehlungen unter Berücksichtigung von Geschlecht, Alter und körperlicher Aktivität berechnet. Bei hoher Aktivität steigt der Bedarf an einigen Vitaminen um 20%."
+				},
+				"vitamins": {
+					"title": "Vitamine und ihre Rolle",
+					"content": "Vitamine werden in wasserlösliche (B, C) und fettlösliche (A, D, E, K) unterteilt. Jedes Vitamin erfüllt eine einzigartige Funktion im Körper."
+				},
+				"minerals": {
+					"title": "Mineralstoffe und ihre Bedeutung",
+					"content": "Mineralstoffe sind für das normale Funktionieren aller Körpersysteme notwendig. Besonders wichtig sind Kalzium, Eisen, Magnesium und Zink."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Unser Vitaminrechner bietet viele Vorteile:",
+					"personalized": "Personalisierte Berechnung",
+					"personalizedDescription": "Berücksichtigt Geschlecht, Alter und Aktivität",
+					"comprehensive": "Vollständige Informationen",
+					"comprehensiveDescription": "13 Vitamine und 8 Mineralstoffe",
+					"accurate": "Genaue Daten",
+					"accurateDescription": "Basierend auf WHO-Empfehlungen",
+					"free": "Kostenlos",
+					"freeDescription": "Vollständig kostenlos ohne Registrierung",
+					"multilingual": "Mehrsprachig",
+					"multilingualDescription": "Unterstützung für 4 Sprachen",
+					"mobile": "Mobile Version",
+					"mobileDescription": "Responsive Design für alle Geräte"
+				},
+				"tips": {
+					"title": "Nützliche Tipps",
+					"content": "Um optimale Vitamin- und Mineralstoffwerte zu erhalten:",
+					"diet": "Ausgewogene Ernährung",
+					"dietDescription": "Nehmen Sie vielfältige Lebensmittel in Ihre Ernährung auf",
+					"supplements": "Nahrungsergänzungsmittel nach Bedarf",
+					"supplementsDescription": "Nehmen Sie Nahrungsergänzungsmittel nur auf ärztliche Empfehlung",
+					"monitoring": "Regelmäßige Kontrolle",
+					"monitoringDescription": "Überprüfen Sie regelmäßig Ihre Vitaminwerte",
+					"lifestyle": "Gesunder Lebensstil",
+					"lifestyleDescription": "Körperliche Aktivität und ausreichender Schlaf"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"dailyRequirements": {
+						"question": "Wie bestimmt man den täglichen Vitaminbedarf?",
+						"answer": "Der tägliche Bedarf hängt von Alter, Geschlecht, körperlicher Aktivität und Gesundheitszustand ab. Unser Rechner berücksichtigt diese Faktoren für eine genaue Berechnung."
+					},
+					"activityImpact": {
+						"question": "Wie beeinflusst körperliche Aktivität den Vitaminbedarf?",
+						"answer": "Bei hoher körperlicher Aktivität steigt der Bedarf an B-Vitaminen, Vitamin C und einigen Mineralstoffen um 10-20% aufgrund des beschleunigten Stoffwechsels."
+					},
+					"supplements": {
+						"question": "Muss ich Vitaminpräparate einnehmen?",
+						"answer": "Bei ausgewogener Ernährung können die meisten Vitamine aus der Nahrung gewonnen werden. Nahrungsergänzungsmittel sind nur bei Mangel oder besonderen Bedürfnissen notwendig, was ein Arzt bestimmen sollte."
+					},
+					"accuracy": {
+						"question": "Wie genau sind die Berechnungen des Rechners?",
+						"answer": "Der Rechner basiert auf WHO-Empfehlungen und berücksichtigt Hauptfaktoren. Individuelle Bedürfnisse können jedoch abweichen, daher ist eine ärztliche Beratung wichtig."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blutdruck-Rechner Online",
 			"description": "Berechnen Sie den normalen Blutdruck nach Alter und bewerten Sie Ihre aktuellen Werte. Schnell, genau und kostenlos.",

@@ -4508,6 +4508,332 @@
 				}
 			}
 		},
+		"vitamins": {
+			"title": "Vitamin and Mineral Calculator",
+			"description": "Calculate daily vitamin and mineral requirements by age, gender, and activity level.",
+			"form": {
+				"title": "Calculation Parameters",
+				"gender": "Gender",
+				"male": "Male",
+				"female": "Female",
+				"age": "Age",
+				"agePlaceholder": "Enter your age",
+				"years": "years",
+				"activityLevel": "Activity Level",
+				"activity": {
+					"low": {
+						"title": "Low",
+						"description": "Sedentary lifestyle"
+					},
+					"medium": {
+						"title": "Medium",
+						"description": "Moderate activity"
+					},
+					"high": {
+						"title": "High",
+						"description": "Active training"
+					}
+				},
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"genderRequired": "Select gender",
+					"ageRange": "Age must be between 1 and 120 years",
+					"activityRequired": "Select activity level",
+					"calculationError": "Calculation error"
+				}
+			},
+			"infographic": {
+				"vitamins": "Vitamins",
+				"vitaminsDescription": "13 essential vitamins",
+				"minerals": "Minerals",
+				"mineralsDescription": "8 important minerals",
+				"personalized": "Personalization",
+				"personalizedDescription": "By age and activity"
+			},
+			"results": {
+				"summary": "Summary",
+				"gender": "Gender",
+				"age": "Age",
+				"activity": "Activity",
+				"vitamins": "Vitamins",
+				"minerals": "Minerals",
+				"showDetails": "Show Details",
+				"hideDetails": "Hide Details",
+				"copyTable": "Copy Table",
+				"exportPDF": "Export to PDF",
+				"recommendations": "Recommendations"
+			},
+			"table": {
+				"name": "Name",
+				"norm": "Daily Norm",
+				"role": "Role in Body",
+				"increasedNeed": "Increased Need"
+			},
+			"vitamins": {
+				"vitaminA": {
+					"name": "Vitamin A",
+					"description": "Fat-soluble vitamin important for vision and immunity",
+					"role": {
+						"visionImmunity": "Vision, immunity, cell growth"
+					},
+					"increasedNeed": {
+						"computerWork": "When working at computer"
+					}
+				},
+				"vitaminC": {
+					"name": "Vitamin C",
+					"description": "Water-soluble vitamin, powerful antioxidant",
+					"role": {
+						"immunityVessels": "Immunity, blood vessels, wound healing"
+					},
+					"increasedNeed": {
+						"stressColds": "During stress and colds"
+					}
+				},
+				"vitaminD": {
+					"name": "Vitamin D",
+					"description": "Sunshine vitamin, regulates calcium and phosphorus",
+					"role": {
+						"bonesCalcium": "Bones, calcium metabolism, immunity"
+					},
+					"increasedNeed": {
+						"winterSun": "Winter, without sun"
+					}
+				},
+				"vitaminE": {
+					"name": "Vitamin E",
+					"description": "Antioxidant, protects cells from damage",
+					"role": {
+						"antioxidantSkin": "Antioxidant, skin, reproduction"
+					},
+					"increasedNeed": {
+						"sports": "During sports activities"
+					}
+				},
+				"vitaminB1": {
+					"name": "Vitamin B1",
+					"description": "Thiamine, important for nervous system",
+					"role": {
+						"nervousSystem": "Nervous system, energy"
+					},
+					"increasedNeed": {
+						"loads": "During physical exertion"
+					}
+				},
+				"vitaminB2": {
+					"name": "Vitamin B2",
+					"description": "Riboflavin, involved in energy metabolism",
+					"role": {
+						"energyMetabolism": "Energy metabolism, skin"
+					},
+					"increasedNeed": {
+						"sports": "During sports activities"
+					}
+				},
+				"vitaminB3": {
+					"name": "Vitamin B3",
+					"description": "Niacin, important for energy production",
+					"role": {
+						"energyProduction": "Energy production, skin"
+					},
+					"increasedNeed": {
+						"highActivity": "During high activity"
+					}
+				},
+				"vitaminB6": {
+					"name": "Vitamin B6",
+					"description": "Pyridoxine, involved in protein metabolism",
+					"role": {
+						"proteinMetabolism": "Protein metabolism, nervous system"
+					},
+					"increasedNeed": {
+						"proteinDiet": "On protein diet"
+					}
+				},
+				"vitaminB12": {
+					"name": "Vitamin B12",
+					"description": "Cobalamin, important for blood formation",
+					"role": {
+						"bloodFormation": "Blood formation, nervous system"
+					},
+					"increasedNeed": {
+						"vegetarianism": "On vegetarianism"
+					}
+				},
+				"folate": {
+					"name": "Folic Acid",
+					"description": "Important for cell division and fetal development",
+					"role": {
+						"cellDivision": "Cell division, fetal development"
+					},
+					"increasedNeed": {
+						"pregnancy": "During pregnancy"
+					}
+				},
+				"calcium": {
+					"name": "Calcium",
+					"description": "Main mineral of bones and teeth",
+					"role": {
+						"bonesTeeth": "Bones, teeth, muscles"
+					},
+					"increasedNeed": {
+						"pregnancy": "During pregnancy"
+					}
+				},
+				"magnesium": {
+					"name": "Magnesium",
+					"description": "Important for heart and muscles",
+					"role": {
+						"heartMuscles": "Heart, muscles, nervous system"
+					},
+					"increasedNeed": {
+						"stress": "During stress"
+					}
+				},
+				"zinc": {
+					"name": "Zinc",
+					"description": "Important for immunity and wound healing",
+					"role": {
+						"immunity": "Immunity, wound healing"
+					},
+					"increasedNeed": {
+						"activeTraining": "During active training"
+					}
+				},
+				"iron": {
+					"name": "Iron",
+					"description": "Necessary for hemoglobin formation",
+					"role": {
+						"hemoglobin": "Hemoglobin, oxygen"
+					},
+					"increasedNeed": {
+						"women": "Women"
+					}
+				},
+				"potassium": {
+					"name": "Potassium",
+					"description": "Important for heart and blood pressure",
+					"role": {
+						"heartPressure": "Heart, blood pressure, muscles"
+					},
+					"increasedNeed": {
+						"sweating": "During sweating"
+					}
+				},
+				"iodine": {
+					"name": "Iodine",
+					"description": "Necessary for thyroid function",
+					"role": {
+						"thyroid": "Thyroid gland, metabolism"
+					},
+					"increasedNeed": {
+						"iodineDeficiency": "Iodine deficiency in region"
+					}
+				},
+				"selenium": {
+					"name": "Selenium",
+					"description": "Antioxidant, protects from free radicals",
+					"role": {
+						"antioxidant": "Antioxidant, immunity"
+					},
+					"increasedNeed": {
+						"environmentalStress": "During environmental stress"
+					}
+				},
+				"phosphorus": {
+					"name": "Phosphorus",
+					"description": "Important for bones and energy metabolism",
+					"role": {
+						"bonesEnergy": "Bones, energy metabolism"
+					},
+					"increasedNeed": {
+						"highActivity": "During high activity"
+					}
+				}
+			},
+			"recommendations": {
+				"highActivityRecommendation": "With high activity, increase intake of B vitamins and minerals",
+				"womenRecommendation": "Women especially need sufficient iron and folic acid",
+				"ageRecommendation": "After 50 years, increase vitamin D and calcium intake",
+				"lowActivityRecommendation": "With low activity, monitor vitamin and mineral balance"
+			},
+			"tips": {
+				"title": "Important Tips",
+				"consultation": "Consult a doctor before taking supplements.",
+				"balancedDiet": "Balanced nutrition is the basis for getting vitamins.",
+				"supplements": "Supplements do not replace proper nutrition."
+			},
+			"seo": {
+				"title": "Online Vitamin Calculator — Find Daily Requirements by Age",
+				"description": "Calculate vitamin and mineral norms by age, gender, and activity. Find out what nutrients your body lacks.",
+				"keywords": "vitamin calculator, daily vitamin requirements, vitamins by age, minerals, vitamin supplements",
+				"overview": {
+					"title": "About Vitamin Calculator",
+					"content": "The vitamin calculator helps determine how many vitamins and minerals your body needs daily. Data is based on WHO recommendations and adapted by age and activity."
+				},
+				"calculation": {
+					"title": "How Norms Are Calculated",
+					"content": "Vitamin and mineral norms are calculated based on WHO recommendations considering gender, age, and physical activity level. With high activity, the need for some vitamins increases by 20%."
+				},
+				"vitamins": {
+					"title": "Vitamins and Their Role",
+					"content": "Vitamins are divided into water-soluble (B, C) and fat-soluble (A, D, E, K). Each vitamin performs a unique function in the body."
+				},
+				"minerals": {
+					"title": "Minerals and Their Importance",
+					"content": "Minerals are necessary for normal functioning of all body systems. Calcium, iron, magnesium, and zinc are especially important."
+				},
+				"advantages": {
+					"title": "Advantages of Our Calculator",
+					"content": "Our vitamin calculator provides many advantages:",
+					"personalized": "Personalized calculation",
+					"personalizedDescription": "Considers gender, age, and activity",
+					"comprehensive": "Complete information",
+					"comprehensiveDescription": "13 vitamins and 8 minerals",
+					"accurate": "Accurate data",
+					"accurateDescription": "Based on WHO recommendations",
+					"free": "Free",
+					"freeDescription": "Completely free without registration",
+					"multilingual": "Multilingual",
+					"multilingualDescription": "Support for 4 languages",
+					"mobile": "Mobile version",
+					"mobileDescription": "Responsive design for all devices"
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "To maintain optimal vitamin and mineral levels:",
+					"diet": "Balanced nutrition",
+					"dietDescription": "Include diverse foods in your diet",
+					"supplements": "Supplements as needed",
+					"supplementsDescription": "Take supplements only on doctor's recommendation",
+					"monitoring": "Regular monitoring",
+					"monitoringDescription": "Periodically check vitamin levels",
+					"lifestyle": "Healthy lifestyle",
+					"lifestyleDescription": "Physical activity and adequate sleep"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"dailyRequirements": {
+						"question": "How to determine daily vitamin requirements?",
+						"answer": "Daily requirements depend on age, gender, physical activity level, and health status. Our calculator considers these factors for accurate calculation."
+					},
+					"activityImpact": {
+						"question": "How does physical activity affect vitamin needs?",
+						"answer": "With high physical activity, the need for B vitamins, vitamin C, and some minerals increases by 10-20% due to accelerated metabolism."
+					},
+					"supplements": {
+						"question": "Do I need to take vitamin supplements?",
+						"answer": "With balanced nutrition, most vitamins can be obtained from food. Supplements are only necessary for deficiency or special needs, which should be determined by a doctor."
+					},
+					"accuracy": {
+						"question": "How accurate are the calculator's calculations?",
+						"answer": "The calculator is based on WHO recommendations and considers main factors. However, individual needs may differ, so doctor consultation is important."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blood Pressure Calculator Online",
 			"description": "Calculate normal blood pressure by age and evaluate your current values. Fast, accurate and free.",
