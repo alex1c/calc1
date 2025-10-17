@@ -5686,6 +5686,81 @@
 					}
 				]
 			}
+		},
+		"energy-converter": {
+			"title": "Online Energy Converter",
+			"description": "Quickly convert energy between Joules, calories, and watt-hours. Accurate and convenient converter.",
+			"value": "Enter value",
+			"fromUnit": "From unit",
+			"toUnit": "To unit",
+			"button": "Convert",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"commonConversions": "Other units",
+			"units": {
+				"J": "J",
+				"cal": "cal",
+				"Wh": "Wh"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate calculations",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All calculations are based on precise conversion formulas",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Energy Converter — J, cal, Wh",
+				"description": "Instantly convert energy between Joules, calories, and watt-hours online. Accurate energy converter with 4 languages support.",
+				"keywords": "energy converter, joules to calories, wh to joules, energy unit converter",
+				"h1": "Online Energy Converter",
+				"h2": "Convert J, cal, Wh",
+				"overview": {
+					"title": "About Energy Converter",
+					"content": "Our energy converter allows you to quickly and accurately convert between different energy measurement units. Supports all major units: Joules, calories, and watt-hours."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All energy units are converted through the base unit - Joule. Each unit has its own conversion formula, ensuring calculation accuracy."
+				},
+				"units": {
+					"title": "Supported Units",
+					"content": "The converter supports 3 main energy units: Joules (J), calories (cal), and watt-hours (Wh)."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to convert Joules to calories?",
+						"a": "Divide Joules by 4.184 to get calories. For example: 4.184 J = 4.184 ÷ 4.184 = 1 cal."
+					},
+					{
+						"q": "How to convert Wh to Joules?",
+						"a": "Multiply Wh by 3600 to get Joules. For example: 1 Wh = 1 × 3600 = 3600 J."
+					},
+					{
+						"q": "How to convert calories to Wh?",
+						"a": "Multiply calories by 4.184, then divide by 3600. For example: 1 cal = 1 × 4.184 ÷ 3600 = 0.00116 Wh."
+					},
+					{
+						"q": "What is a watt-hour?",
+						"a": "A watt-hour is a unit of energy equal to the energy consumed by a device with a power of 1 watt for 1 hour."
+					}
+				]
+			}
 		}
 	}
 }

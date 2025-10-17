@@ -5700,6 +5700,81 @@
 					}
 				]
 			}
+		},
+		"energy-converter": {
+			"title": "Convertidor de energía en línea",
+			"description": "Convierte energía entre Joules, calorías y vatios-hora. Preciso y conveniente.",
+			"value": "Ingrese valor",
+			"fromUnit": "De unidad",
+			"toUnit": "A unidad",
+			"button": "Convertir",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"commonConversions": "Otras unidades",
+			"units": {
+				"J": "J",
+				"cal": "cal",
+				"Wh": "Wh"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculos exactos",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de energía en línea — J, cal, Wh",
+				"description": "Convierte energía entre Joules, calorías y vatios-hora al instante. Preciso y con soporte para 4 idiomas.",
+				"keywords": "convertidor de energía, joules a calorías, wh a joules, convertidor de unidades de energía",
+				"h1": "Convertidor de energía en línea",
+				"h2": "Convertir J, cal, Wh",
+				"overview": {
+					"title": "Sobre el Convertidor de Energía",
+					"content": "Nuestro convertidor de energía te permite convertir rápida y precisamente entre diferentes unidades de medida de energía. Soporta todas las unidades principales: Joules, calorías y vatios-hora."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las unidades de energía se convierten a través de la unidad base - Joule. Cada unidad tiene su propia fórmula de conversión, asegurando la precisión de los cálculos."
+				},
+				"units": {
+					"title": "Unidades Soportadas",
+					"content": "El convertidor soporta 3 unidades principales de energía: Joules (J), calorías (cal) y vatios-hora (Wh)."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir Joules a calorías?",
+						"a": "Divide los Joules entre 4,184 para obtener calorías. Por ejemplo: 4,184 J = 4,184 ÷ 4,184 = 1 cal."
+					},
+					{
+						"q": "¿Cómo convertir Wh a Joules?",
+						"a": "Multiplica los Wh por 3600 para obtener Joules. Por ejemplo: 1 Wh = 1 × 3600 = 3600 J."
+					},
+					{
+						"q": "¿Cómo convertir calorías a Wh?",
+						"a": "Multiplica calorías por 4,184, luego divide entre 3600. Por ejemplo: 1 cal = 1 × 4,184 ÷ 3600 = 0,00116 Wh."
+					},
+					{
+						"q": "¿Qué es un vatio-hora?",
+						"a": "Un vatio-hora es una unidad de energía igual a la energía consumida por un dispositivo con una potencia de 1 vatio durante 1 hora."
+					}
+				]
+			}
 		}
 	}
 }

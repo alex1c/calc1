@@ -1,0 +1,307 @@
+{
+  "languages": ["ru", "en", "de", "es"],
+  "labels": {
+    "ru": {
+      "title": "Онлайн-конвертер энергии",
+      "description": "Быстро конвертируйте энергию между Джоулями, калориями и ватт-часами. Точный и удобный конвертер.",
+      "value": "Введите значение",
+      "fromUnit": "Из единицы",
+      "toUnit": "В единицу",
+      "button": "Конвертировать",
+      "result": "Результат",
+      "commonConversions": "Другие единицы",
+      "units": {
+        "J": "Дж",
+        "cal": "кал",
+        "Wh": "Вт⋅ч"
+      },
+      "infographic": {
+        "precise": "Точный",
+        "preciseDescription": "Точные расчёты",
+        "fast": "Быстрый",
+        "fastDescription": "Мгновенная конвертация",
+        "multilingual": "Многоязычный",
+        "multilingualDescription": "4 языка"
+      },
+      "tips": {
+        "title": "💡 Полезные советы",
+        "accuracy": "Все расчёты основаны на точных формулах конвертации",
+        "instant": "Результат отображается мгновенно при изменении параметров",
+        "multilingual": "Интерфейс доступен на 4 языках"
+      }
+    },
+    "en": {
+      "title": "Online Energy Converter",
+      "description": "Quickly convert energy between Joules, calories, and watt-hours. Accurate and convenient converter.",
+      "value": "Enter value",
+      "fromUnit": "From unit",
+      "toUnit": "To unit",
+      "button": "Convert",
+      "result": "Result",
+      "commonConversions": "Other units",
+      "units": {
+        "J": "J",
+        "cal": "cal",
+        "Wh": "Wh"
+      },
+      "infographic": {
+        "precise": "Precise",
+        "preciseDescription": "Accurate calculations",
+        "fast": "Fast",
+        "fastDescription": "Instant conversion",
+        "multilingual": "Multilingual",
+        "multilingualDescription": "4 languages"
+      },
+      "tips": {
+        "title": "💡 Useful Tips",
+        "accuracy": "All calculations are based on precise conversion formulas",
+        "instant": "Results display instantly when parameters change",
+        "multilingual": "Interface available in 4 languages"
+      }
+    },
+    "de": {
+      "title": "Online-Energie-Rechner",
+      "description": "Konvertieren Sie Energie zwischen Joule, Kalorien und Wattstunden. Genau und bequem.",
+      "value": "Wert eingeben",
+      "fromUnit": "Von Einheit",
+      "toUnit": "Zu Einheit",
+      "button": "Umrechnen",
+      "result": "Ergebnis",
+      "commonConversions": "Andere Einheiten",
+      "units": {
+        "J": "J",
+        "cal": "cal",
+        "Wh": "Wh"
+      },
+      "infographic": {
+        "precise": "Präzise",
+        "preciseDescription": "Genaue Berechnungen",
+        "fast": "Schnell",
+        "fastDescription": "Sofortige Umrechnung",
+        "multilingual": "Mehrsprachig",
+        "multilingualDescription": "4 Sprachen"
+      },
+      "tips": {
+        "title": "💡 Nützliche Tipps",
+        "accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+        "instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+        "multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+      }
+    },
+    "es": {
+      "title": "Convertidor de energía en línea",
+      "description": "Convierte energía entre Joules, calorías y vatios-hora. Preciso y conveniente.",
+      "value": "Ingrese valor",
+      "fromUnit": "De unidad",
+      "toUnit": "A unidad",
+      "button": "Convertir",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "J": "J",
+        "cal": "cal",
+        "Wh": "Wh"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos exactos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Multilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos Útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas",
+        "instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      }
+    }
+  },
+  "formula": {
+    "J_to_cal": "J / 4.184",
+    "J_to_Wh": "J / 3600",
+    "cal_to_J": "cal * 4.184",
+    "cal_to_Wh": "cal * 4.184 / 3600",
+    "Wh_to_J": "Wh * 3600",
+    "Wh_to_cal": "Wh * 3600 / 4.184"
+  },
+  "seo": {
+    "ru": {
+      "title": "Онлайн-конвертер энергии — Дж, кал, Вт⋅ч",
+      "description": "Быстро конвертируйте энергию между Джоулями, калориями и ватт-часами онлайн. Точный конвертер энергии с поддержкой 4 языков.",
+      "keywords": "конвертер энергии, джоули в калории, втч в джоули, конвертер единиц энергии",
+      "h1": "Онлайн-конвертер энергии",
+      "h2": "Конвертация Дж, кал, Вт⋅ч",
+      "overview": {
+        "title": "О конвертере энергии",
+        "content": "Наш конвертер энергии позволяет быстро и точно переводить между различными единицами измерения энергии. Поддерживает все основные единицы: Джоули, калории и ватт-часы."
+      },
+      "calculation": {
+        "title": "Как работает конвертация",
+        "content": "Все единицы энергии конвертируются через базовую единицу - Джоуль. Каждая единица имеет свою формулу конвертации, что обеспечивает точность расчётов."
+      },
+      "units": {
+        "title": "Поддерживаемые единицы",
+        "content": "Конвертер поддерживает 3 основные единицы энергии: Джоули (Дж), калории (кал) и ватт-часы (Вт⋅ч)."
+      },
+      "advantages": {
+        "title": "Преимущества нашего конвертера",
+        "content": "Точные расчёты, мгновенная конвертация, поддержка 4 языков, удобный интерфейс, мобильная версия."
+      },
+      "faq": {
+        "title": "Часто задаваемые вопросы"
+      },
+      "faqItems": [
+        {
+          "q": "Как перевести Джоули в калории?",
+          "a": "Разделите Джоули на 4.184, чтобы получить калории. Например: 4.184 Дж = 4.184 ÷ 4.184 = 1 кал."
+        },
+        {
+          "q": "Как перевести Вт⋅ч в Джоули?",
+          "a": "Умножьте Вт⋅ч на 3600, чтобы получить Джоули. Например: 1 Вт⋅ч = 1 × 3600 = 3600 Дж."
+        },
+        {
+          "q": "Как перевести калории в Вт⋅ч?",
+          "a": "Умножьте калории на 4.184, затем разделите на 3600. Например: 1 кал = 1 × 4.184 ÷ 3600 = 0.00116 Вт⋅ч."
+        },
+        {
+          "q": "Что такое ватт-час?",
+          "a": "Ватт-час — это единица измерения энергии, равная энергии, потребляемой устройством мощностью 1 ватт в течение 1 часа."
+        }
+      ]
+    },
+    "en": {
+      "title": "Online Energy Converter — J, cal, Wh",
+      "description": "Instantly convert energy between Joules, calories, and watt-hours online. Accurate energy converter with 4 languages support.",
+      "keywords": "energy converter, joules to calories, wh to joules, energy unit converter",
+      "h1": "Online Energy Converter",
+      "h2": "Convert J, cal, Wh",
+      "overview": {
+        "title": "About Energy Converter",
+        "content": "Our energy converter allows you to quickly and accurately convert between different energy measurement units. Supports all major units: Joules, calories, and watt-hours."
+      },
+      "calculation": {
+        "title": "How Conversion Works",
+        "content": "All energy units are converted through the base unit - Joule. Each unit has its own conversion formula, ensuring calculation accuracy."
+      },
+      "units": {
+        "title": "Supported Units",
+        "content": "The converter supports 3 main energy units: Joules (J), calories (cal), and watt-hours (Wh)."
+      },
+      "advantages": {
+        "title": "Advantages of Our Converter",
+        "content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions"
+      },
+      "faqItems": [
+        {
+          "q": "How to convert Joules to calories?",
+          "a": "Divide Joules by 4.184 to get calories. For example: 4.184 J = 4.184 ÷ 4.184 = 1 cal."
+        },
+        {
+          "q": "How to convert Wh to Joules?",
+          "a": "Multiply Wh by 3600 to get Joules. For example: 1 Wh = 1 × 3600 = 3600 J."
+        },
+        {
+          "q": "How to convert calories to Wh?",
+          "a": "Multiply calories by 4.184, then divide by 3600. For example: 1 cal = 1 × 4.184 ÷ 3600 = 0.00116 Wh."
+        },
+        {
+          "q": "What is a watt-hour?",
+          "a": "A watt-hour is a unit of energy equal to the energy consumed by a device with a power of 1 watt for 1 hour."
+        }
+      ]
+    },
+    "de": {
+      "title": "Online-Energie-Rechner — J, cal, Wh",
+      "description": "Konvertieren Sie Energie zwischen Joule, Kalorien und Wattstunden online. Genau, mit Unterstützung für 4 Sprachen.",
+      "keywords": "Energie-Rechner, Joule zu Kalorien, Wh zu Joule, Energie-Einheiten-Konverter",
+      "h1": "Online-Energie-Rechner",
+      "h2": "Umrechnung J, cal, Wh",
+      "overview": {
+        "title": "Über den Energie-Rechner",
+        "content": "Unser Energie-Rechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Energieeinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Joule, Kalorien und Wattstunden."
+      },
+      "calculation": {
+        "title": "Wie die Umrechnung funktioniert",
+        "content": "Alle Energieeinheiten werden über die Basiseinheit - Joule - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+      },
+      "units": {
+        "title": "Unterstützte Einheiten",
+        "content": "Der Rechner unterstützt 3 Hauptenergieeinheiten: Joule (J), Kalorien (cal) und Wattstunden (Wh)."
+      },
+      "advantages": {
+        "title": "Vorteile unseres Rechners",
+        "content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen"
+      },
+      "faqItems": [
+        {
+          "q": "Wie konvertiert man Joule in Kalorien?",
+          "a": "Teilen Sie Joule durch 4,184, um Kalorien zu erhalten. Zum Beispiel: 4,184 J = 4,184 ÷ 4,184 = 1 cal."
+        },
+        {
+          "q": "Wie konvertiert man Wh in Joule?",
+          "a": "Multiplizieren Sie Wh mit 3600, um Joule zu erhalten. Zum Beispiel: 1 Wh = 1 × 3600 = 3600 J."
+        },
+        {
+          "q": "Wie konvertiert man Kalorien in Wh?",
+          "a": "Multiplizieren Sie Kalorien mit 4,184, dann teilen Sie durch 3600. Zum Beispiel: 1 cal = 1 × 4,184 ÷ 3600 = 0,00116 Wh."
+        },
+        {
+          "q": "Was ist eine Wattstunde?",
+          "a": "Eine Wattstunde ist eine Energieeinheit, die der Energie entspricht, die ein Gerät mit einer Leistung von 1 Watt für 1 Stunde verbraucht."
+        }
+      ]
+    },
+    "es": {
+      "title": "Convertidor de energía en línea — J, cal, Wh",
+      "description": "Convierte energía entre Joules, calorías y vatios-hora al instante. Preciso y con soporte para 4 idiomas.",
+      "keywords": "convertidor de energía, joules a calorías, wh a joules, convertidor de unidades de energía",
+      "h1": "Convertidor de energía en línea",
+      "h2": "Convertir J, cal, Wh",
+      "overview": {
+        "title": "Sobre el Convertidor de Energía",
+        "content": "Nuestro convertidor de energía te permite convertir rápida y precisamente entre diferentes unidades de medida de energía. Soporta todas las unidades principales: Joules, calorías y vatios-hora."
+      },
+      "calculation": {
+        "title": "Cómo Funciona la Conversión",
+        "content": "Todas las unidades de energía se convierten a través de la unidad base - Joule. Cada unidad tiene su propia fórmula de conversión, asegurando la precisión de los cálculos."
+      },
+      "units": {
+        "title": "Unidades Soportadas",
+        "content": "El convertidor soporta 3 unidades principales de energía: Joules (J), calorías (cal) y vatios-hora (Wh)."
+      },
+      "advantages": {
+        "title": "Ventajas de Nuestro Convertidor",
+        "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes"
+      },
+      "faqItems": [
+        {
+          "q": "¿Cómo convertir Joules a calorías?",
+          "a": "Divide los Joules entre 4,184 para obtener calorías. Por ejemplo: 4,184 J = 4,184 ÷ 4,184 = 1 cal."
+        },
+        {
+          "q": "¿Cómo convertir Wh a Joules?",
+          "a": "Multiplica los Wh por 3600 para obtener Joules. Por ejemplo: 1 Wh = 1 × 3600 = 3600 J."
+        },
+        {
+          "q": "¿Cómo convertir calorías a Wh?",
+          "a": "Multiplica calorías por 4,184, luego divide entre 3600. Por ejemplo: 1 cal = 1 × 4,184 ÷ 3600 = 0,00116 Wh."
+        },
+        {
+          "q": "¿Qué es un vatio-hora?",
+          "a": "Un vatio-hora es una unidad de energía igual a la energía consumida por un dispositivo con una potencia de 1 vatio durante 1 hora."
+        }
+      ]
+    }
+  }
+}

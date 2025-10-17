@@ -8,6 +8,7 @@ import {
 	Thermometer,
 	Activity,
 	Droplets,
+	Battery,
 } from 'lucide-react';
 
 const calculators = [
@@ -52,6 +53,13 @@ const calculators = [
 		description: 'calculators.volume-converter.description',
 		icon: Droplets,
 		href: '/converter/volume',
+	},
+	{
+		id: 'energy-converter',
+		title: 'calculators.energy-converter.title',
+		description: 'calculators.energy-converter.description',
+		icon: Battery,
+		href: '/converter/energy',
 	},
 ];
 

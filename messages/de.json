@@ -5696,6 +5696,81 @@
 					}
 				]
 			}
+		},
+		"energy-converter": {
+			"title": "Online-Energie-Rechner",
+			"description": "Konvertieren Sie Energie zwischen Joule, Kalorien und Wattstunden. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"J": "J",
+				"cal": "cal",
+				"Wh": "Wh"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Energie-Rechner — J, cal, Wh",
+				"description": "Konvertieren Sie Energie zwischen Joule, Kalorien und Wattstunden online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Energie-Rechner, Joule zu Kalorien, Wh zu Joule, Energie-Einheiten-Konverter",
+				"h1": "Online-Energie-Rechner",
+				"h2": "Umrechnung J, cal, Wh",
+				"overview": {
+					"title": "Über den Energie-Rechner",
+					"content": "Unser Energie-Rechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Energieeinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Joule, Kalorien und Wattstunden."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Energieeinheiten werden über die Basiseinheit - Joule - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 3 Hauptenergieeinheiten: Joule (J), Kalorien (cal) und Wattstunden (Wh)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man Joule in Kalorien?",
+						"a": "Teilen Sie Joule durch 4,184, um Kalorien zu erhalten. Zum Beispiel: 4,184 J = 4,184 ÷ 4,184 = 1 cal."
+					},
+					{
+						"q": "Wie konvertiert man Wh in Joule?",
+						"a": "Multiplizieren Sie Wh mit 3600, um Joule zu erhalten. Zum Beispiel: 1 Wh = 1 × 3600 = 3600 J."
+					},
+					{
+						"q": "Wie konvertiert man Kalorien in Wh?",
+						"a": "Multiplizieren Sie Kalorien mit 4,184, dann teilen Sie durch 3600. Zum Beispiel: 1 cal = 1 × 4,184 ÷ 3600 = 0,00116 Wh."
+					},
+					{
+						"q": "Was ist eine Wattstunde?",
+						"a": "Eine Wattstunde ist eine Energieeinheit, die der Energie entspricht, die ein Gerät mit einer Leistung von 1 Watt für 1 Stunde verbraucht."
+					}
+				]
+			}
 		}
 	}
 }
