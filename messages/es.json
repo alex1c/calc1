@@ -4848,6 +4848,143 @@
 				}
 			}
 		},
+		"stress": {
+			"title": "Calculadora de Estrés",
+			"description": "Haz el test de estrés en línea gratis. Responde 10 preguntas y descubre tu nivel de estrés con consejos útiles.",
+			"infographic": {
+				"low": "Bajo",
+				"lowDescription": "Todo bien",
+				"moderate": "Moderado",
+				"moderateDescription": "Prestar atención",
+				"high": "Alto",
+				"highDescription": "Requiere atención"
+			},
+			"progress": {
+				"question": "Pregunta",
+				"of": "de"
+			},
+			"questions": {
+				"question1": "A menudo me siento cansado incluso después de descansar.",
+				"question2": "Me cuesta concentrarme.",
+				"question3": "Me irrito por cosas pequeñas.",
+				"question4": "A menudo tengo dolores de cabeza o musculares.",
+				"question5": "Tengo problemas para dormir o me despierto con frecuencia por la noche.",
+				"question6": "Me siento ansioso o preocupado.",
+				"question7": "Mi apetito ha cambiado.",
+				"question8": "Me cuesta relajarme incluso los fines de semana.",
+				"question9": "Siento que no puedo con las tareas diarias.",
+				"question10": "A menudo me falta energía."
+			},
+			"options": {
+				"never": "Nunca (0 puntos)",
+				"rarely": "Raramente (1 punto)",
+				"often": "A menudo (2 puntos)",
+				"always": "Siempre (3 puntos)"
+			},
+			"navigation": {
+				"previous": "Anterior",
+				"next": "Siguiente",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"restart": "Hacer de nuevo"
+			},
+			"results": {
+				"title": "Resultados del Test",
+				"totalScore": "Puntuación Total",
+				"advice": "Recomendaciones"
+			},
+			"levels": {
+				"low": {
+					"title": "Nivel de Estrés Bajo",
+					"description": "Tienes un nivel de estrés bajo. Manejas bien las tareas diarias y mantienes un equilibrio saludable entre trabajo y descanso.",
+					"advice": "Continúa manteniendo un estilo de vida saludable: haz ejercicio regularmente, duerme lo suficiente y encuentra tiempo para relajarte."
+				},
+				"moderate": {
+					"title": "Nivel de Estrés Moderado",
+					"description": "Tienes un nivel de estrés moderado. Esto es normal en la vida moderna, pero vale la pena prestar atención a los métodos de manejo del estrés.",
+					"advice": "Prueba técnicas de relajación, meditación, ejercicio físico regular. Asegúrate de tener suficiente tiempo para descansar y pasatiempos."
+				},
+				"high": {
+					"title": "Nivel de Estrés Alto",
+					"description": "Tienes un nivel de estrés alto. Esto puede afectar negativamente tu salud y calidad de vida. Se recomienda tomar medidas para reducir el estrés.",
+					"advice": "Considera consultar a un especialista (psicólogo o médico). Practica técnicas de manejo del estrés, asegúrate de dormir y descansar lo suficiente."
+				}
+			},
+			"tips": {
+				"title": "Consejos Importantes",
+				"honest": "Responde todas las preguntas honestamente para obtener resultados precisos.",
+				"consultation": "Los resultados del test no reemplazan la consulta profesional.",
+				"regular": "Haz el test regularmente para rastrear cambios en los niveles de estrés."
+			},
+			"seo": {
+				"title": "Calculadora de Estrés — Test en Línea Gratis",
+				"description": "Haz el test de estrés en línea gratis. Responde 10 preguntas y descubre tu nivel de estrés con consejos útiles.",
+				"keywords": "calculadora de estrés, test de estrés, nivel de estrés, estrés online, test psicológico",
+				"overview": {
+					"title": "Sobre la Calculadora de Estrés",
+					"content": "Nuestra calculadora de estrés te ayuda a evaluar tu nivel actual de estrés y obtener recomendaciones personalizadas para reducirlo. El test está basado en métodos científicos de evaluación del estrés."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula el Nivel de Estrés",
+					"content": "El test consta de 10 preguntas, cada una puntuada de 0 a 3 puntos. La puntuación total determina el nivel de estrés: 0-10 (bajo), 11-20 (moderado), 21-30 (alto)."
+				},
+				"stressLevels": {
+					"title": "Niveles de Estrés",
+					"content": "El estrés puede ser beneficioso en pequeñas cantidades, pero el estrés crónico afecta negativamente la salud. Es importante reconocer las señales de estrés y manejarlo."
+				},
+				"management": {
+					"title": "Manejo del Estrés",
+					"content": "El manejo efectivo del estrés incluye técnicas de relajación, ejercicio físico, nutrición saludable, sueño adecuado y apoyo social."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestra Calculadora",
+					"content": "Nuestra calculadora de estrés proporciona muchas ventajas:",
+					"quick": "Test rápido",
+					"quickDescription": "Solo 10 preguntas en 5 minutos",
+					"accurate": "Resultados precisos",
+					"accurateDescription": "Basado en métodos científicos",
+					"personalized": "Recomendaciones personalizadas",
+					"personalizedDescription": "Consejos individuales para reducir el estrés",
+					"free": "Gratis",
+					"freeDescription": "Completamente gratis sin registro",
+					"multilingual": "Multilingüe",
+					"multilingualDescription": "Soporte para 4 idiomas",
+					"mobile": "Versión móvil",
+					"mobileDescription": "Diseño responsivo para todos los dispositivos"
+				},
+				"tips": {
+					"title": "Consejos Útiles",
+					"content": "Para el manejo efectivo del estrés:",
+					"relaxation": "Técnicas de relajación",
+					"relaxationDescription": "Meditación, ejercicios de respiración, yoga",
+					"exercise": "Actividad física",
+					"exerciseDescription": "El ejercicio regular reduce los niveles de estrés",
+					"sleep": "Sueño de calidad",
+					"sleepDescription": "7-9 horas de sueño por día",
+					"social": "Apoyo social",
+					"socialDescription": "Comunicación con amigos y familia"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"whatIsStress": {
+						"question": "¿Qué es el estrés?",
+						"answer": "El estrés es la respuesta del cuerpo a estímulos externos. En pequeñas cantidades puede ser beneficioso, pero el estrés crónico afecta negativamente la salud."
+					},
+					"howAccurate": {
+						"question": "¿Qué tan precisos son los resultados del test?",
+						"answer": "El test está basado en métodos científicos de evaluación del estrés y proporciona una evaluación aproximada. Para un diagnóstico preciso se recomienda consulta profesional."
+					},
+					"whenToSeekHelp": {
+						"question": "¿Cuándo debo buscar ayuda?",
+						"answer": "Si tienes un nivel de estrés alto que dura más de dos semanas, o si el estrés interfiere con tu vida diaria, se recomienda consultar a un especialista."
+					},
+					"howToReduce": {
+						"question": "¿Cómo reducir los niveles de estrés?",
+						"answer": "Los métodos efectivos incluyen técnicas de relajación, ejercicio físico, nutrición saludable, sueño adecuado, apoyo social y manejo del tiempo."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Calculadora de Presión Arterial Online",
 			"description": "Calcula la presión arterial normal por edad y evalúa tus valores actuales. Rápido, preciso y gratuito.",

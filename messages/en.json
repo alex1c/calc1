@@ -4834,6 +4834,143 @@
 				}
 			}
 		},
+		"stress": {
+			"title": "Stress Level Calculator",
+			"description": "Take a free online stress test. Answer 10 questions to find out your stress level and get helpful advice.",
+			"infographic": {
+				"low": "Low",
+				"lowDescription": "All good",
+				"moderate": "Moderate",
+				"moderateDescription": "Pay attention",
+				"high": "High",
+				"highDescription": "Needs attention"
+			},
+			"progress": {
+				"question": "Question",
+				"of": "of"
+			},
+			"questions": {
+				"question1": "I often feel tired even after rest.",
+				"question2": "I have trouble concentrating.",
+				"question3": "I get irritated over small things.",
+				"question4": "I often have headaches or muscle pain.",
+				"question5": "I have trouble falling asleep or wake up often at night.",
+				"question6": "I feel anxious or worried.",
+				"question7": "My appetite has changed.",
+				"question8": "It's hard for me to relax even on weekends.",
+				"question9": "I feel overwhelmed with daily tasks.",
+				"question10": "I often lack energy."
+			},
+			"options": {
+				"never": "Never (0 points)",
+				"rarely": "Rarely (1 point)",
+				"often": "Often (2 points)",
+				"always": "Always (3 points)"
+			},
+			"navigation": {
+				"previous": "Previous",
+				"next": "Next",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"restart": "Take Again"
+			},
+			"results": {
+				"title": "Test Results",
+				"totalScore": "Total Score",
+				"advice": "Recommendations"
+			},
+			"levels": {
+				"low": {
+					"title": "Low Stress Level",
+					"description": "You have a low stress level. You handle daily tasks well and maintain a healthy balance between work and rest.",
+					"advice": "Continue maintaining a healthy lifestyle: exercise regularly, get enough sleep, and find time for relaxation."
+				},
+				"moderate": {
+					"title": "Moderate Stress Level",
+					"description": "You have a moderate stress level. This is normal in modern life, but it's worth paying attention to stress management methods.",
+					"advice": "Try relaxation techniques, meditation, regular physical exercise. Make sure you have enough time for rest and hobbies."
+				},
+				"high": {
+					"title": "High Stress Level",
+					"description": "You have a high stress level. This can negatively affect your health and quality of life. It's recommended to take measures to reduce stress.",
+					"advice": "Consider consulting a specialist (psychologist or doctor). Practice stress management techniques, ensure adequate sleep and rest."
+				}
+			},
+			"tips": {
+				"title": "Important Tips",
+				"honest": "Answer all questions honestly for accurate results.",
+				"consultation": "Test results do not replace professional consultation.",
+				"regular": "Take the test regularly to track changes in stress levels."
+			},
+			"seo": {
+				"title": "Stress Level Calculator Online — Free Stress Test",
+				"description": "Take a free online stress test. Answer 10 questions to find out your stress level and get helpful advice.",
+				"keywords": "stress calculator, stress test, stress level, stress online, psychological test",
+				"overview": {
+					"title": "About Stress Calculator",
+					"content": "Our stress calculator helps you assess your current stress level and get personalized recommendations for reducing it. The test is based on scientific stress assessment methods."
+				},
+				"calculation": {
+					"title": "How Stress Level is Calculated",
+					"content": "The test consists of 10 questions, each scored from 0 to 3 points. The total score determines stress level: 0-10 (low), 11-20 (moderate), 21-30 (high)."
+				},
+				"stressLevels": {
+					"title": "Stress Levels",
+					"content": "Stress can be beneficial in small amounts, but chronic stress negatively affects health. It's important to recognize stress signs and manage it."
+				},
+				"management": {
+					"title": "Stress Management",
+					"content": "Effective stress management includes relaxation techniques, physical exercise, healthy nutrition, adequate sleep, and social support."
+				},
+				"advantages": {
+					"title": "Advantages of Our Calculator",
+					"content": "Our stress calculator provides many advantages:",
+					"quick": "Quick test",
+					"quickDescription": "Just 10 questions in 5 minutes",
+					"accurate": "Accurate results",
+					"accurateDescription": "Based on scientific methods",
+					"personalized": "Personalized recommendations",
+					"personalizedDescription": "Individual stress reduction advice",
+					"free": "Free",
+					"freeDescription": "Completely free without registration",
+					"multilingual": "Multilingual",
+					"multilingualDescription": "Support for 4 languages",
+					"mobile": "Mobile version",
+					"mobileDescription": "Responsive design for all devices"
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "For effective stress management:",
+					"relaxation": "Relaxation techniques",
+					"relaxationDescription": "Meditation, breathing exercises, yoga",
+					"exercise": "Physical activity",
+					"exerciseDescription": "Regular exercise reduces stress levels",
+					"sleep": "Quality sleep",
+					"sleepDescription": "7-9 hours of sleep per day",
+					"social": "Social support",
+					"socialDescription": "Communication with friends and family"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"whatIsStress": {
+						"question": "What is stress?",
+						"answer": "Stress is the body's response to external stimuli. In small amounts, it can be beneficial, but chronic stress negatively affects health."
+					},
+					"howAccurate": {
+						"question": "How accurate are the test results?",
+						"answer": "The test is based on scientific stress assessment methods and provides an approximate evaluation. For accurate diagnosis, professional consultation is recommended."
+					},
+					"whenToSeekHelp": {
+						"question": "When should I seek help?",
+						"answer": "If you have a high stress level that lasts more than two weeks, or if stress interferes with your daily life, it's recommended to consult a specialist."
+					},
+					"howToReduce": {
+						"question": "How to reduce stress levels?",
+						"answer": "Effective methods include relaxation techniques, physical exercise, healthy nutrition, adequate sleep, social support, and time management."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blood Pressure Calculator Online",
 			"description": "Calculate normal blood pressure by age and evaluate your current values. Fast, accurate and free.",

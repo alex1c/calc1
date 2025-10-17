@@ -4847,6 +4847,143 @@
 				}
 			}
 		},
+		"stress": {
+			"title": "Stress-Level-Rechner",
+			"description": "Machen Sie den kostenlosen Stresstest online. Beantworten Sie 10 Fragen und erfahren Sie Ihren Stresslevel.",
+			"infographic": {
+				"low": "Niedrig",
+				"lowDescription": "Alles in Ordnung",
+				"moderate": "Mittel",
+				"moderateDescription": "Achtung geben",
+				"high": "Hoch",
+				"highDescription": "Aufmerksamkeit erforderlich"
+			},
+			"progress": {
+				"question": "Frage",
+				"of": "von"
+			},
+			"questions": {
+				"question1": "Ich fühle mich oft müde, selbst nach dem Ausruhen.",
+				"question2": "Ich habe Schwierigkeiten, mich zu konzentrieren.",
+				"question3": "Ich ärgere mich über Kleinigkeiten.",
+				"question4": "Ich habe oft Kopfschmerzen oder Muskelschmerzen.",
+				"question5": "Ich kann schwer einschlafen oder wache nachts oft auf.",
+				"question6": "Ich fühle mich ängstlich oder besorgt.",
+				"question7": "Mein Appetit hat sich verändert.",
+				"question8": "Es fällt mir schwer, mich selbst am Wochenende zu entspannen.",
+				"question9": "Ich habe das Gefühl, den Alltag nicht zu schaffen.",
+				"question10": "Mir fehlt oft die Energie."
+			},
+			"options": {
+				"never": "Nie (0 Punkte)",
+				"rarely": "Selten (1 Punkt)",
+				"often": "Oft (2 Punkte)",
+				"always": "Immer (3 Punkte)"
+			},
+			"navigation": {
+				"previous": "Zurück",
+				"next": "Weiter",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"restart": "Erneut machen"
+			},
+			"results": {
+				"title": "Testergebnisse",
+				"totalScore": "Gesamtpunktzahl",
+				"advice": "Empfehlungen"
+			},
+			"levels": {
+				"low": {
+					"title": "Niedriger Stresslevel",
+					"description": "Sie haben einen niedrigen Stresslevel. Sie bewältigen tägliche Aufgaben gut und halten ein gesundes Gleichgewicht zwischen Arbeit und Ruhe.",
+					"advice": "Setzen Sie Ihren gesunden Lebensstil fort: treiben Sie regelmäßig Sport, schlafen Sie ausreichend und finden Sie Zeit zur Entspannung."
+				},
+				"moderate": {
+					"title": "Mittlerer Stresslevel",
+					"description": "Sie haben einen mittleren Stresslevel. Das ist im modernen Leben normal, aber es lohnt sich, auf Stressbewältigungsmethoden zu achten.",
+					"advice": "Versuchen Sie Entspannungstechniken, Meditation, regelmäßige körperliche Übungen. Stellen Sie sicher, dass Sie genug Zeit für Ruhe und Hobbys haben."
+				},
+				"high": {
+					"title": "Hoher Stresslevel",
+					"description": "Sie haben einen hohen Stresslevel. Das kann sich negativ auf Ihre Gesundheit und Lebensqualität auswirken. Es wird empfohlen, Maßnahmen zur Stressreduzierung zu ergreifen.",
+					"advice": "Erwägen Sie die Konsultation eines Spezialisten (Psychologe oder Arzt). Praktizieren Sie Stressbewältigungstechniken, sorgen Sie für ausreichenden Schlaf und Ruhe."
+				}
+			},
+			"tips": {
+				"title": "Wichtige Tipps",
+				"honest": "Beantworten Sie alle Fragen ehrlich für genaue Ergebnisse.",
+				"consultation": "Testergebnisse ersetzen keine professionelle Beratung.",
+				"regular": "Machen Sie den Test regelmäßig, um Änderungen des Stresslevels zu verfolgen."
+			},
+			"seo": {
+				"title": "Stress-Level-Rechner Online — Kostenloser Test",
+				"description": "Machen Sie den kostenlosen Stresstest online. Beantworten Sie 10 Fragen und erfahren Sie Ihren Stresslevel.",
+				"keywords": "Stressrechner, Stresstest, Stresslevel, Stress online, psychologischer Test",
+				"overview": {
+					"title": "Über den Stressrechner",
+					"content": "Unser Stressrechner hilft Ihnen, Ihr aktuelles Stresslevel zu bewerten und personalisierte Empfehlungen zur Reduzierung zu erhalten. Der Test basiert auf wissenschaftlichen Stressbewertungsmethoden."
+				},
+				"calculation": {
+					"title": "Wie das Stresslevel berechnet wird",
+					"content": "Der Test besteht aus 10 Fragen, jede wird von 0 bis 3 Punkten bewertet. Die Gesamtpunktzahl bestimmt das Stresslevel: 0-10 (niedrig), 11-20 (mittel), 21-30 (hoch)."
+				},
+				"stressLevels": {
+					"title": "Stresslevel",
+					"content": "Stress kann in kleinen Mengen nützlich sein, aber chronischer Stress wirkt sich negativ auf die Gesundheit aus. Es ist wichtig, Stresszeichen zu erkennen und zu bewältigen."
+				},
+				"management": {
+					"title": "Stressbewältigung",
+					"content": "Effektive Stressbewältigung umfasst Entspannungstechniken, körperliche Übungen, gesunde Ernährung, ausreichenden Schlaf und soziale Unterstützung."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Unser Stressrechner bietet viele Vorteile:",
+					"quick": "Schneller Test",
+					"quickDescription": "Nur 10 Fragen in 5 Minuten",
+					"accurate": "Genaue Ergebnisse",
+					"accurateDescription": "Basierend auf wissenschaftlichen Methoden",
+					"personalized": "Personalisierte Empfehlungen",
+					"personalizedDescription": "Individuelle Stressreduzierungsberatung",
+					"free": "Kostenlos",
+					"freeDescription": "Vollständig kostenlos ohne Registrierung",
+					"multilingual": "Mehrsprachig",
+					"multilingualDescription": "Unterstützung für 4 Sprachen",
+					"mobile": "Mobile Version",
+					"mobileDescription": "Responsive Design für alle Geräte"
+				},
+				"tips": {
+					"title": "Nützliche Tipps",
+					"content": "Für effektive Stressbewältigung:",
+					"relaxation": "Entspannungstechniken",
+					"relaxationDescription": "Meditation, Atemübungen, Yoga",
+					"exercise": "Körperliche Aktivität",
+					"exerciseDescription": "Regelmäßige Übungen reduzieren Stresslevel",
+					"sleep": "Qualitätsschlaf",
+					"sleepDescription": "7-9 Stunden Schlaf pro Tag",
+					"social": "Soziale Unterstützung",
+					"socialDescription": "Kommunikation mit Freunden und Familie"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"whatIsStress": {
+						"question": "Was ist Stress?",
+						"answer": "Stress ist die Reaktion des Körpers auf äußere Reize. In kleinen Mengen kann er nützlich sein, aber chronischer Stress wirkt sich negativ auf die Gesundheit aus."
+					},
+					"howAccurate": {
+						"question": "Wie genau sind die Testergebnisse?",
+						"answer": "Der Test basiert auf wissenschaftlichen Stressbewertungsmethoden und gibt eine ungefähre Einschätzung. Für eine genaue Diagnose wird eine professionelle Beratung empfohlen."
+					},
+					"whenToSeekHelp": {
+						"question": "Wann sollte ich Hilfe suchen?",
+						"answer": "Wenn Sie einen hohen Stresslevel haben, der länger als zwei Wochen anhält, oder wenn Stress Ihr tägliches Leben beeinträchtigt, wird empfohlen, einen Spezialisten zu konsultieren."
+					},
+					"howToReduce": {
+						"question": "Wie kann ich das Stresslevel reduzieren?",
+						"answer": "Effektive Methoden umfassen Entspannungstechniken, körperliche Übungen, gesunde Ernährung, ausreichenden Schlaf, soziale Unterstützung und Zeitmanagement."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blutdruck-Rechner Online",
 			"description": "Berechnen Sie den normalen Blutdruck nach Alter und bewerten Sie Ihre aktuellen Werte. Schnell, genau und kostenlos.",

@@ -1,7 +1,14 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Heart, Activity, Pill, Thermometer, Calendar } from 'lucide-react';
+import {
+	Heart,
+	Activity,
+	Pill,
+	Thermometer,
+	Calendar,
+	Brain,
+} from 'lucide-react';
 
 const calculators = [
 	{
@@ -38,6 +45,13 @@ const calculators = [
 		description: 'calculators.vitamins.description',
 		icon: Pill,
 		href: '/health/vitamins',
+	},
+	{
+		id: 'stress',
+		title: 'calculators.stress.title',
+		description: 'calculators.stress.description',
+		icon: Brain,
+		href: '/health/stress',
 	},
 ];
 
