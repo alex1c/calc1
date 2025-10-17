@@ -5838,6 +5838,95 @@
 					}
 				]
 			}
+		},
+		"size-converter": {
+			"title": "Online Clothing and Shoe Size Converter",
+			"description": "Quickly convert clothing and shoe sizes between RU, EU, US, UK, JP, CN systems. Men's, women's and children's sizes.",
+			"selectCategory": "Select clothing type",
+			"selectGender": "Select gender",
+			"selectCountry": "Country",
+			"yourSize": "Your size",
+			"showChart": "Show size chart",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"sizeChart": "Size Chart",
+			"categories": {
+				"clothing": "Clothing",
+				"jeans": "Jeans",
+				"shoes": "Shoes"
+			},
+			"genders": {
+				"male": "Male",
+				"female": "Female",
+				"child": "Child"
+			},
+			"countries": {
+				"RU": "🇷🇺 RU",
+				"EU": "🇪🇺 EU",
+				"US": "🇺🇸 US",
+				"UK": "🇬🇧 UK",
+				"JP": "🇯🇵 JP",
+				"CN": "🇨🇳 CN"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate size tables",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All tables are based on international size standards",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Clothing and Shoe Size Converter — Size Chart RU, EU, US, UK, JP, CN",
+				"description": "Convert clothing and shoe sizes online. Convenient calculator for comparing RU, EU, US, UK, JP, CN systems. Men's, women's and children's sizes.",
+				"keywords": "size conversion, size chart, shoe size, clothing size, RU EU US UK JP CN",
+				"h1": "Online Clothing and Shoe Size Converter",
+				"h2": "Size Conversion Chart RU, EU, US, UK, JP, CN",
+				"overview": {
+					"title": "About Size Converter",
+					"content": "Our size converter allows you to quickly and accurately convert clothing and shoe sizes between different international systems. Supports all major categories: clothing, jeans, shoes, bras and accessories."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All sizes are converted based on international standards. Each category has its own conversion tables, ensuring accurate translation between RU, EU, US, UK, JP, CN systems."
+				},
+				"categories": {
+					"title": "Supported Categories",
+					"content": "The converter supports 3 main categories: clothing, jeans and shoes. Men's, women's and children's sizes are available for each category."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate size tables, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to convert Russian shoe size to American?",
+						"a": "Enter your size and country «RU» — the calculator will automatically calculate equivalents in EU, US, UK, JP and CN systems."
+					},
+					{
+						"q": "Are children's sizes supported?",
+						"a": "Yes, men's, women's and children's categories are available for all types of clothing and shoes."
+					},
+					{
+						"q": "Are there separate tables for clothing and shoes?",
+						"a": "Yes, each category has its own conversion tables, including clothing, jeans and shoes."
+					},
+					{
+						"q": "How accurate are the size tables?",
+						"a": "All tables are based on international size standards and are regularly updated to ensure accuracy."
+					}
+				]
+			}
 		}
 	}
 }

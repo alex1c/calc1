@@ -5848,6 +5848,95 @@
 					}
 				]
 			}
+		},
+		"size-converter": {
+			"title": "Online-Konverter für Kleidungs- und Schuhgrößen",
+			"description": "Konvertieren Sie Kleidungs- und Schuhgrößen zwischen RU, EU, US, UK, JP, CN Systemen. Herren-, Damen- und Kindergrößen.",
+			"selectCategory": "Kleidungstyp wählen",
+			"selectGender": "Geschlecht wählen",
+			"selectCountry": "Land",
+			"yourSize": "Ihre Größe",
+			"showChart": "Größentabelle anzeigen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"sizeChart": "Größentabelle",
+			"categories": {
+				"clothing": "Kleidung",
+				"jeans": "Jeans",
+				"shoes": "Schuhe"
+			},
+			"genders": {
+				"male": "Männlich",
+				"female": "Weiblich",
+				"child": "Kind"
+			},
+			"countries": {
+				"RU": "🇷🇺 RU",
+				"EU": "🇪🇺 EU",
+				"US": "🇺🇸 US",
+				"UK": "🇬🇧 UK",
+				"JP": "🇯🇵 JP",
+				"CN": "🇨🇳 CN"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Größentabellen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Tabellen basieren auf internationalen Größennormen",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Konverter für Kleidungs- und Schuhgrößen — Größentabelle RU, EU, US, UK, JP, CN",
+				"description": "Konvertieren Sie Kleidungs- und Schuhgrößen online. Bequemer Rechner zum Vergleichen von RU, EU, US, UK, JP, CN Systemen. Herren-, Damen- und Kindergrößen.",
+				"keywords": "Größenkonvertierung, Größentabelle, Schuhgröße, Kleidungsgröße, RU EU US UK JP CN",
+				"h1": "Online-Konverter für Kleidungs- und Schuhgrößen",
+				"h2": "Größenkonvertierungstabelle RU, EU, US, UK, JP, CN",
+				"overview": {
+					"title": "Über den Größenkonverter",
+					"content": "Unser Größenkonverter ermöglicht es Ihnen, Kleidungs- und Schuhgrößen zwischen verschiedenen internationalen Systemen schnell und genau zu konvertieren. Unterstützt alle wichtigen Kategorien: Kleidung, Jeans, Schuhe, BHs und Accessoires."
+				},
+				"calculation": {
+					"title": "Wie die Konvertierung funktioniert",
+					"content": "Alle Größen werden basierend auf internationalen Standards konvertiert. Jede Kategorie hat ihre eigenen Konvertierungstabellen, was eine genaue Übersetzung zwischen RU, EU, US, UK, JP, CN Systemen gewährleistet."
+				},
+				"categories": {
+					"title": "Unterstützte Kategorien",
+					"content": "Der Konverter unterstützt 3 Hauptkategorien: Kleidung, Jeans und Schuhe. Herren-, Damen- und Kindergrößen sind für jede Kategorie verfügbar."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Konverters",
+					"content": "Genaue Größentabellen, sofortige Konvertierung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man russische Schuhgröße in amerikanische?",
+						"a": "Geben Sie Ihre Größe und Land «RU» ein — der Rechner berechnet automatisch Äquivalente in EU, US, UK, JP und CN Systemen."
+					},
+					{
+						"q": "Werden Kindergrößen unterstützt?",
+						"a": "Ja, Herren-, Damen- und Kinderkategorien sind für alle Arten von Kleidung und Schuhen verfügbar."
+					},
+					{
+						"q": "Gibt es separate Tabellen für Kleidung und Schuhe?",
+						"a": "Ja, jede Kategorie hat ihre eigenen Konvertierungstabellen, einschließlich Kleidung, Jeans und Schuhe."
+					},
+					{
+						"q": "Wie genau sind die Größentabellen?",
+						"a": "Alle Tabellen basieren auf internationalen Größennormen und werden regelmäßig aktualisiert, um Genauigkeit zu gewährleisten."
+					}
+				]
+			}
 		}
 	}
 }

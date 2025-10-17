@@ -5852,6 +5852,95 @@
 					}
 				]
 			}
+		},
+		"size-converter": {
+			"title": "Convertidor de tallas de ropa y zapatos en línea",
+			"description": "Convierte tallas de ropa y zapatos entre sistemas RU, EU, US, UK, JP, CN. Tallas masculinas, femeninas e infantiles.",
+			"selectCategory": "Selecciona tipo de prenda",
+			"selectGender": "Selecciona género",
+			"selectCountry": "País",
+			"yourSize": "Tu talla",
+			"showChart": "Mostrar tabla de tallas",
+			"calculating": "Convirtiendo...",
+			"reset": "Reiniciar",
+			"result": "Resultado",
+			"sizeChart": "Tabla de Tallas",
+			"categories": {
+				"clothing": "Ropa",
+				"jeans": "Jeans",
+				"shoes": "Zapatos"
+			},
+			"genders": {
+				"male": "Masculino",
+				"female": "Femenino",
+				"child": "Infantil"
+			},
+			"countries": {
+				"RU": "🇷🇺 RU",
+				"EU": "🇪🇺 EU",
+				"US": "🇺🇸 US",
+				"UK": "🇬🇧 UK",
+				"JP": "🇯🇵 JP",
+				"CN": "🇨🇳 CN"
+			},
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Tablas de tallas exactas",
+				"fast": "Rápido",
+				"fastDescription": "Conversión instantánea",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"tips": {
+				"title": "💡 Consejos Útiles",
+				"accuracy": "Todas las tablas se basan en estándares internacionales de tallas",
+				"instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+				"multilingual": "Interfaz disponible en 4 idiomas"
+			},
+			"seo": {
+				"title": "Convertidor de tallas de ropa y zapatos en línea — Tabla de tallas RU, EU, US, UK, JP, CN",
+				"description": "Convierte tallas de ropa y zapatos en línea. Calculadora conveniente para comparar sistemas RU, EU, US, UK, JP, CN. Tallas masculinas, femeninas e infantiles.",
+				"keywords": "conversión de tallas, tabla de tallas, talla de zapatos, talla de ropa, RU EU US UK JP CN",
+				"h1": "Convertidor de tallas de ropa y zapatos en línea",
+				"h2": "Tabla de conversión de tallas RU, EU, US, UK, JP, CN",
+				"overview": {
+					"title": "Sobre el Convertidor de Tallas",
+					"content": "Nuestro convertidor de tallas te permite convertir rápidamente y con precisión tallas de ropa y zapatos entre diferentes sistemas internacionales. Soporta todas las categorías principales: ropa, jeans, zapatos, sostenes y accesorios."
+				},
+				"calculation": {
+					"title": "Cómo Funciona la Conversión",
+					"content": "Todas las tallas se convierten basándose en estándares internacionales. Cada categoría tiene sus propias tablas de conversión, asegurando una traducción precisa entre sistemas RU, EU, US, UK, JP, CN."
+				},
+				"categories": {
+					"title": "Categorías Soportadas",
+					"content": "El convertidor soporta 3 categorías principales: ropa, jeans y zapatos. Tallas masculinas, femeninas e infantiles están disponibles para cada categoría."
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestro Convertidor",
+					"content": "Tablas de tallas precisas, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo convertir talla de zapato rusa a americana?",
+						"a": "Ingresa tu talla y país «RU» — la calculadora calculará automáticamente equivalentes en sistemas EU, US, UK, JP y CN."
+					},
+					{
+						"q": "¿Se soportan tallas infantiles?",
+						"a": "Sí, categorías masculinas, femeninas e infantiles están disponibles para todos los tipos de ropa y zapatos."
+					},
+					{
+						"q": "¿Hay tablas separadas para ropa y zapatos?",
+						"a": "Sí, cada categoría tiene sus propias tablas de conversión, incluyendo ropa, jeans y zapatos."
+					},
+					{
+						"q": "¿Qué tan precisas son las tablas de tallas?",
+						"a": "Todas las tablas se basan en estándares internacionales de tallas y se actualizan regularmente para asegurar precisión."
+					}
+				]
+			}
 		}
 	}
 }

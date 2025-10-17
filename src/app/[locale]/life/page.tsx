@@ -9,6 +9,7 @@ import {
 	PieChart,
 	Wine,
 	TrendingUp,
+	Shirt,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -60,6 +61,13 @@ const getCalculators = (t: any) => [
 		description: 'Plan and track your household expenses and savings',
 		icon: Home,
 		href: '/calc/home-budget',
+	},
+	{
+		id: 'size-converter',
+		title: t('calculators.size-converter.title'),
+		description: t('calculators.size-converter.description'),
+		icon: Shirt,
+		href: '/life/size-converter',
 	},
 ];
 
