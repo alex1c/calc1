@@ -4971,6 +4971,88 @@
 				}
 			}
 		},
+		"dose": {
+			"title": "Dosage Calculator by Weight",
+			"description": "Calculate the correct medication dosage based on body weight. Safe and accurate.",
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Weight-based calculation",
+				"safe": "Safe",
+				"safeDescription": "Overdose warnings",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"weight": "Body weight",
+			"dosage": "Dosage",
+			"frequency": "Frequency",
+			"maxDose": "Maximum daily dose (mg, optional)",
+			"calculate": "Calculate",
+			"calculating": "Calculating...",
+			"reset": "Reset",
+			"weightUnit": "kg",
+			"dosageUnit": "mg/kg",
+			"unitToggle": "Toggle units (kg ↔ lbs)",
+			"frequencyOptions": {
+				"1": "1 time per day",
+				"2": "2 times per day",
+				"3": "3 times per day",
+				"4": "4 times per day"
+			},
+			"results": {
+				"title": "Calculation Results",
+				"perIntake": "Per intake",
+				"perDay": "Per day",
+				"perIntakeDescription": "Dose per intake",
+				"perDayDescription": "Total daily dose"
+			},
+			"warning": {
+				"title": "⚠️ Warning!",
+				"exceeded": "Maximum daily dose exceeded ({maxDose} mg).",
+				"consultation": "Please consult a doctor."
+			},
+			"tips": {
+				"title": "Important Tips",
+				"consultation": "Always consult a doctor before taking medications.",
+				"accuracy": "Ensure accuracy of entered data.",
+				"children": "Use special pediatric dosages for children."
+			},
+			"seo": {
+				"title": "Dosage Calculator by Weight — Online Medicine Dose Tool",
+				"description": "Online calculator to determine dosage based on body weight. Calculate per kg or lb, get total daily dose and safety warnings.",
+				"keywords": "dosage calculator, weight-based dosing, medication dosage, mg per kg, daily dose",
+				"overview": {
+					"title": "About Dosage Calculator",
+					"content": "Our calculator helps you determine the correct medication dosage based on body weight. This is especially important for accurate drug dosing."
+				},
+				"calculation": {
+					"title": "How Dosage is Calculated",
+					"content": "Dosage is calculated using the formula: Body Weight × Dosage per kg × Number of daily doses. The result shows dose per intake and total daily dose."
+				},
+				"safety": {
+					"title": "Safety",
+					"content": "Always consult a doctor before taking any medications. The calculator is for informational purposes only and does not replace medical consultation."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Accurate calculation, support for different units of measurement, overdose warnings, multilingual interface."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"howCalculated": {
+						"question": "How is weight-based dosage calculated?",
+						"answer": "Dosage is calculated by multiplying body weight by dosage per kilogram, then by the number of daily doses."
+					},
+					"children": {
+						"question": "Can it be used for children?",
+						"answer": "Yes, but for children it's recommended to use special pediatric dosages and always consult with a pediatrician."
+					},
+					"exceeded": {
+						"question": "What to do if dose is exceeded?",
+						"answer": "If the calculated dose exceeds the maximum daily dose, always consult a doctor to adjust the treatment regimen."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blood Pressure Calculator Online",
 			"description": "Calculate normal blood pressure by age and evaluate your current values. Fast, accurate and free.",

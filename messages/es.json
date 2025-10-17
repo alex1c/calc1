@@ -4985,6 +4985,88 @@
 				}
 			}
 		},
+		"dose": {
+			"title": "Calculadora de Dosis por Peso",
+			"description": "Calcula la dosis correcta de medicamento basada en el peso corporal. Seguro y preciso.",
+			"infographic": {
+				"precise": "Preciso",
+				"preciseDescription": "Cálculo basado en peso",
+				"safe": "Seguro",
+				"safeDescription": "Advertencias de sobredosis",
+				"multilingual": "Multilingüe",
+				"multilingualDescription": "4 idiomas"
+			},
+			"weight": "Peso corporal",
+			"dosage": "Dosis",
+			"frequency": "Frecuencia",
+			"maxDose": "Dosis diaria máxima (mg, opcional)",
+			"calculate": "Calcular",
+			"calculating": "Calculando...",
+			"reset": "Reiniciar",
+			"weightUnit": "kg",
+			"dosageUnit": "mg/kg",
+			"unitToggle": "Cambiar unidades (kg ↔ lbs)",
+			"frequencyOptions": {
+				"1": "1 vez al día",
+				"2": "2 veces al día",
+				"3": "3 veces al día",
+				"4": "4 veces al día"
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"perIntake": "Por toma",
+				"perDay": "Por día",
+				"perIntakeDescription": "Dosis por toma",
+				"perDayDescription": "Dosis diaria total"
+			},
+			"warning": {
+				"title": "⚠️ ¡Advertencia!",
+				"exceeded": "Se ha superado la dosis diaria máxima ({maxDose} mg).",
+				"consultation": "Por favor consulte a un médico."
+			},
+			"tips": {
+				"title": "Consejos Importantes",
+				"consultation": "Siempre consulte a un médico antes de tomar medicamentos.",
+				"accuracy": "Asegúrese de la precisión de los datos ingresados.",
+				"children": "Use dosis pediátricas especiales para niños."
+			},
+			"seo": {
+				"title": "Calculadora de Dosis por Peso — Herramienta en Línea",
+				"description": "Calculadora en línea para calcular la dosis de medicamentos según el peso corporal. Obtén la dosis diaria total de forma segura.",
+				"keywords": "calculadora de dosis, dosificación por peso, dosis de medicamentos, mg por kg, dosis diaria",
+				"overview": {
+					"title": "Sobre la Calculadora de Dosis",
+					"content": "Nuestra calculadora te ayuda a determinar la dosis correcta de medicamento basada en el peso corporal. Esto es especialmente importante para una dosificación precisa de medicamentos."
+				},
+				"calculation": {
+					"title": "Cómo se Calcula la Dosis",
+					"content": "La dosis se calcula usando la fórmula: Peso Corporal × Dosis por kg × Número de dosis diarias. El resultado muestra la dosis por toma y la dosis diaria total."
+				},
+				"safety": {
+					"title": "Seguridad",
+					"content": "Siempre consulte a un médico antes de tomar cualquier medicamento. La calculadora es solo para fines informativos y no reemplaza la consulta médica."
+				},
+				"advantages": {
+					"title": "Ventajas",
+					"content": "Cálculo preciso, soporte para diferentes unidades de medida, advertencias de sobredosis, interfaz multilingüe."
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"howCalculated": {
+						"question": "¿Cómo se calcula la dosificación por peso?",
+						"answer": "La dosis se calcula multiplicando el peso corporal por la dosis por kilogramo, luego por el número de dosis diarias."
+					},
+					"children": {
+						"question": "¿Se puede usar para niños?",
+						"answer": "Sí, pero para niños se recomienda usar dosis pediátricas especiales y siempre consultar con un pediatra."
+					},
+					"exceeded": {
+						"question": "¿Qué hacer si se excede la dosis?",
+						"answer": "Si la dosis calculada excede la dosis diaria máxima, siempre consulte a un médico para ajustar el régimen de tratamiento."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Calculadora de Presión Arterial Online",
 			"description": "Calcula la presión arterial normal por edad y evalúa tus valores actuales. Rápido, preciso y gratuito.",

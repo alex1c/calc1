@@ -4984,6 +4984,88 @@
 				}
 			}
 		},
+		"dose": {
+			"title": "Dosierungsrechner nach Körpergewicht",
+			"description": "Berechnen Sie die richtige Medikamentendosis basierend auf dem Körpergewicht. Sicher und genau.",
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Gewichtsbasierte Berechnung",
+				"safe": "Sicher",
+				"safeDescription": "Überdosierungswarnungen",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"weight": "Körpergewicht",
+			"dosage": "Dosierung",
+			"frequency": "Häufigkeit",
+			"maxDose": "Maximale Tagesdosis (mg, optional)",
+			"calculate": "Berechnen",
+			"calculating": "Berechnung...",
+			"reset": "Zurücksetzen",
+			"weightUnit": "kg",
+			"dosageUnit": "mg/kg",
+			"unitToggle": "Einheiten umschalten (kg ↔ lbs)",
+			"frequencyOptions": {
+				"1": "1 Mal pro Tag",
+				"2": "2 Mal pro Tag",
+				"3": "3 Mal pro Tag",
+				"4": "4 Mal pro Tag"
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"perIntake": "Pro Einnahme",
+				"perDay": "Pro Tag",
+				"perIntakeDescription": "Dosis pro Einnahme",
+				"perDayDescription": "Gesamte Tagesdosis"
+			},
+			"warning": {
+				"title": "⚠️ Achtung!",
+				"exceeded": "Maximale Tagesdosis überschritten ({maxDose} mg).",
+				"consultation": "Bitte konsultieren Sie einen Arzt."
+			},
+			"tips": {
+				"title": "Wichtige Tipps",
+				"consultation": "Konsultieren Sie immer einen Arzt vor der Einnahme von Medikamenten.",
+				"accuracy": "Stellen Sie die Genauigkeit der eingegebenen Daten sicher.",
+				"children": "Verwenden Sie spezielle pädiatrische Dosierungen für Kinder."
+			},
+			"seo": {
+				"title": "Dosierungsrechner nach Gewicht — Online-Tool",
+				"description": "Online-Rechner zur Berechnung der Medikamentendosis nach Körpergewicht. Berechnen Sie Dosierungen pro kg oder Pfund sicher und genau.",
+				"keywords": "Dosierungsrechner, gewichtsbasierte Dosierung, Medikamentendosis, mg pro kg, Tagesdosis",
+				"overview": {
+					"title": "Über den Dosierungsrechner",
+					"content": "Unser Rechner hilft Ihnen, die richtige Medikamentendosis basierend auf dem Körpergewicht zu bestimmen. Dies ist besonders wichtig für eine genaue Medikamentendosierung."
+				},
+				"calculation": {
+					"title": "Wie die Dosierung berechnet wird",
+					"content": "Die Dosierung wird nach der Formel berechnet: Körpergewicht × Dosierung pro kg × Anzahl der täglichen Einnahmen. Das Ergebnis zeigt die Dosis pro Einnahme und die Gesamttagesdosis."
+				},
+				"safety": {
+					"title": "Sicherheit",
+					"content": "Konsultieren Sie immer einen Arzt vor der Einnahme von Medikamenten. Der Rechner dient nur zu Informationszwecken und ersetzt keine ärztliche Beratung."
+				},
+				"advantages": {
+					"title": "Vorteile",
+					"content": "Genaue Berechnung, Unterstützung verschiedener Maßeinheiten, Überdosierungswarnungen, mehrsprachige Benutzeroberfläche."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"howCalculated": {
+						"question": "Wie wird die gewichtsbasierte Dosierung berechnet?",
+						"answer": "Die Dosierung wird berechnet, indem das Körpergewicht mit der Dosierung pro Kilogramm multipliziert wird, dann mit der Anzahl der täglichen Einnahmen."
+					},
+					"children": {
+						"question": "Kann es für Kinder verwendet werden?",
+						"answer": "Ja, aber für Kinder wird empfohlen, spezielle pädiatrische Dosierungen zu verwenden und immer einen Kinderarzt zu konsultieren."
+					},
+					"exceeded": {
+						"question": "Was tun, wenn die Dosis überschritten wird?",
+						"answer": "Wenn die berechnete Dosis die maximale Tagesdosis überschreitet, konsultieren Sie immer einen Arzt, um das Behandlungsschema anzupassen."
+					}
+				}
+			}
+		},
 		"bloodPressure": {
 			"title": "Blutdruck-Rechner Online",
 			"description": "Berechnen Sie den normalen Blutdruck nach Alter und bewerten Sie Ihre aktuellen Werte. Schnell, genau und kostenlos.",

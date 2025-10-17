@@ -8,6 +8,7 @@ import {
 	Thermometer,
 	Calendar,
 	Brain,
+	Scale,
 } from 'lucide-react';
 
 const calculators = [
@@ -52,6 +53,13 @@ const calculators = [
 		description: 'calculators.stress.description',
 		icon: Brain,
 		href: '/health/stress',
+	},
+	{
+		id: 'dose',
+		title: 'calculators.dose.title',
+		description: 'calculators.dose.description',
+		icon: Scale,
+		href: '/health/dose',
 	},
 ];
 
