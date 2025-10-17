@@ -5546,6 +5546,81 @@
 					}
 				]
 			}
+		},
+		"pressure": {
+			"title": "Online-Druckrechner",
+			"description": "Konvertieren Sie Druckwerte zwischen Pascal, Atmosphären und Millimeter Quecksilbersäule. Genau und bequem.",
+			"value": "Wert eingeben",
+			"fromUnit": "Von Einheit",
+			"toUnit": "Zu Einheit",
+			"button": "Umrechnen",
+			"calculating": "Umrechnung...",
+			"reset": "Zurücksetzen",
+			"result": "Ergebnis",
+			"commonConversions": "Andere Einheiten",
+			"units": {
+				"Pa": "Pa",
+				"atm": "atm",
+				"mmHg": "mmHg"
+			},
+			"infographic": {
+				"precise": "Präzise",
+				"preciseDescription": "Genaue Berechnungen",
+				"fast": "Schnell",
+				"fastDescription": "Sofortige Umrechnung",
+				"multilingual": "Mehrsprachig",
+				"multilingualDescription": "4 Sprachen"
+			},
+			"tips": {
+				"title": "💡 Nützliche Tipps",
+				"accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+				"instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+				"multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+			},
+			"seo": {
+				"title": "Online-Druckrechner — Pa, atm, mmHg",
+				"description": "Konvertieren Sie Druckwerte zwischen Pascal, Atmosphären und Millimeter Quecksilbersäule online. Genau, mit Unterstützung für 4 Sprachen.",
+				"keywords": "Druckrechner, Pascal zu Atmosphären, mmHg zu Pascal, Druck-Einheiten-Konverter",
+				"h1": "Online-Druckrechner",
+				"h2": "Umrechnung Pa, atm, mmHg",
+				"overview": {
+					"title": "Über den Druckrechner",
+					"content": "Unser Druckrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Druckeinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Pascal, Atmosphären und Millimeter Quecksilbersäule."
+				},
+				"calculation": {
+					"title": "Wie die Umrechnung funktioniert",
+					"content": "Alle Druckeinheiten werden über die Basiseinheit - Pascal - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+				},
+				"units": {
+					"title": "Unterstützte Einheiten",
+					"content": "Der Rechner unterstützt 3 Hauptdruckeinheiten: Pascal (Pa), Atmosphären (atm) und Millimeter Quecksilbersäule (mmHg)."
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie konvertiert man Pascal in Atmosphären?",
+						"a": "Teilen Sie Pascal durch 101325, um Atmosphären zu erhalten. Zum Beispiel: 101325 Pa = 101325 ÷ 101325 = 1 atm."
+					},
+					{
+						"q": "Wie konvertiert man mmHg in Pascal?",
+						"a": "Multiplizieren Sie mmHg mit 133,322, um Pascal zu erhalten. Zum Beispiel: 760 mmHg = 760 × 133,322 = 101325 Pa."
+					},
+					{
+						"q": "Wie konvertiert man Atmosphären in mmHg?",
+						"a": "Multiplizieren Sie Atmosphären mit 760, um mmHg zu erhalten. Zum Beispiel: 1 atm = 1 × 760 = 760 mmHg."
+					},
+					{
+						"q": "Was ist der normale Luftdruck?",
+						"a": "Der normale Luftdruck beträgt 101325 Pa (1 atm oder 760 mmHg) auf Meereshöhe bei 0°C Temperatur."
+					}
+				]
+			}
 		}
 	}
 }

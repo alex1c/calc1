@@ -1,0 +1,307 @@
+{
+  "languages": ["ru", "en", "de", "es"],
+  "labels": {
+    "ru": {
+      "title": "Онлайн-конвертер давления",
+      "description": "Быстро конвертируйте давление между Паскалями, атмосферами и миллиметрами ртутного столба. Точный и удобный конвертер.",
+      "value": "Введите значение",
+      "fromUnit": "Из единицы",
+      "toUnit": "В единицу",
+      "button": "Конвертировать",
+      "result": "Результат",
+      "commonConversions": "Другие единицы",
+      "units": {
+        "Pa": "Па",
+        "atm": "атм",
+        "mmHg": "мм рт. ст."
+      },
+      "infographic": {
+        "precise": "Точный",
+        "preciseDescription": "Точные расчёты",
+        "fast": "Быстрый",
+        "fastDescription": "Мгновенная конвертация",
+        "multilingual": "Многоязычный",
+        "multilingualDescription": "4 языка"
+      },
+      "tips": {
+        "title": "💡 Полезные советы",
+        "accuracy": "Все расчёты основаны на точных формулах конвертации",
+        "instant": "Результат отображается мгновенно при изменении параметров",
+        "multilingual": "Интерфейс доступен на 4 языках"
+      }
+    },
+    "en": {
+      "title": "Online Pressure Converter",
+      "description": "Quickly convert pressures between Pascals, atmospheres, and millimeters of mercury. Accurate and convenient converter.",
+      "value": "Enter value",
+      "fromUnit": "From unit",
+      "toUnit": "To unit",
+      "button": "Convert",
+      "result": "Result",
+      "commonConversions": "Other units",
+      "units": {
+        "Pa": "Pa",
+        "atm": "atm",
+        "mmHg": "mmHg"
+      },
+      "infographic": {
+        "precise": "Precise",
+        "preciseDescription": "Accurate calculations",
+        "fast": "Fast",
+        "fastDescription": "Instant conversion",
+        "multilingual": "Multilingual",
+        "multilingualDescription": "4 languages"
+      },
+      "tips": {
+        "title": "💡 Useful Tips",
+        "accuracy": "All calculations are based on precise conversion formulas",
+        "instant": "Results display instantly when parameters change",
+        "multilingual": "Interface available in 4 languages"
+      }
+    },
+    "de": {
+      "title": "Online-Druckrechner",
+      "description": "Konvertieren Sie Druckwerte zwischen Pascal, Atmosphären und Millimeter Quecksilbersäule. Genau und bequem.",
+      "value": "Wert eingeben",
+      "fromUnit": "Von Einheit",
+      "toUnit": "Zu Einheit",
+      "button": "Umrechnen",
+      "result": "Ergebnis",
+      "commonConversions": "Andere Einheiten",
+      "units": {
+        "Pa": "Pa",
+        "atm": "atm",
+        "mmHg": "mmHg"
+      },
+      "infographic": {
+        "precise": "Präzise",
+        "preciseDescription": "Genaue Berechnungen",
+        "fast": "Schnell",
+        "fastDescription": "Sofortige Umrechnung",
+        "multilingual": "Mehrsprachig",
+        "multilingualDescription": "4 Sprachen"
+      },
+      "tips": {
+        "title": "💡 Nützliche Tipps",
+        "accuracy": "Alle Berechnungen basieren auf präzisen Umrechnungsformeln",
+        "instant": "Ergebnisse werden sofort angezeigt, wenn sich Parameter ändern",
+        "multilingual": "Benutzeroberfläche in 4 Sprachen verfügbar"
+      }
+    },
+    "es": {
+      "title": "Convertidor de presión en línea",
+      "description": "Convierte presiones entre Pascales, atmósferas y milímetros de mercurio. Preciso y conveniente.",
+      "value": "Ingrese valor",
+      "fromUnit": "De unidad",
+      "toUnit": "A unidad",
+      "button": "Convertir",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "Pa": "Pa",
+        "atm": "atm",
+        "mmHg": "mmHg"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos exactos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Multilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos Útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión precisas",
+        "instant": "Los resultados se muestran instantáneamente cuando cambian los parámetros",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      }
+    }
+  },
+  "formula": {
+    "Pa_to_atm": "Pa / 101325",
+    "Pa_to_mmHg": "Pa / 133.322",
+    "atm_to_Pa": "atm * 101325",
+    "atm_to_mmHg": "atm * 760",
+    "mmHg_to_Pa": "mmHg * 133.322",
+    "mmHg_to_atm": "mmHg / 760"
+  },
+  "seo": {
+    "ru": {
+      "title": "Онлайн-конвертер давления — Па, атм, мм рт. ст.",
+      "description": "Быстро конвертируйте давление между Паскалями, атмосферами и миллиметрами ртутного столба онлайн. Точный конвертер давления с поддержкой 4 языков.",
+      "keywords": "конвертер давления, паскали в атмосферы, мм рт ст в паскали, конвертер единиц давления",
+      "h1": "Онлайн-конвертер давления",
+      "h2": "Конвертация Па, атм, мм рт. ст.",
+      "overview": {
+        "title": "О конвертере давления",
+        "content": "Наш конвертер давления позволяет быстро и точно переводить между различными единицами измерения давления. Поддерживает все основные единицы: Паскали, атмосферы и миллиметры ртутного столба."
+      },
+      "calculation": {
+        "title": "Как работает конвертация",
+        "content": "Все единицы давления конвертируются через базовую единицу - Паскаль. Каждая единица имеет свою формулу конвертации, что обеспечивает точность расчётов."
+      },
+      "units": {
+        "title": "Поддерживаемые единицы",
+        "content": "Конвертер поддерживает 3 основные единицы давления: Паскали (Па), атмосферы (атм) и миллиметры ртутного столба (мм рт. ст.)."
+      },
+      "advantages": {
+        "title": "Преимущества нашего конвертера",
+        "content": "Точные расчёты, мгновенная конвертация, поддержка 4 языков, удобный интерфейс, мобильная версия."
+      },
+      "faq": {
+        "title": "Часто задаваемые вопросы"
+      },
+      "faqItems": [
+        {
+          "q": "Как перевести Паскали в атмосферы?",
+          "a": "Разделите значение в Паскалях на 101325, чтобы получить атмосферу. Например: 101325 Па = 101325 ÷ 101325 = 1 атм."
+        },
+        {
+          "q": "Как перевести мм рт. ст. в Паскали?",
+          "a": "Умножьте мм рт. ст. на 133.322, чтобы получить Паскали. Например: 760 мм рт. ст. = 760 × 133.322 = 101325 Па."
+        },
+        {
+          "q": "Как перевести атмосферы в мм рт. ст.?",
+          "a": "Умножьте атмосферы на 760, чтобы получить мм рт. ст. Например: 1 атм = 1 × 760 = 760 мм рт. ст."
+        },
+        {
+          "q": "Что такое стандартное атмосферное давление?",
+          "a": "Стандартное атмосферное давление равно 101325 Па (1 атм или 760 мм рт. ст.) на уровне моря при температуре 0°C."
+        }
+      ]
+    },
+    "en": {
+      "title": "Online Pressure Converter — Pa, atm, mmHg",
+      "description": "Instantly convert pressures between Pascals, atmospheres, and millimeters of mercury online. Accurate pressure converter with 4 languages support.",
+      "keywords": "pressure converter, pascals to atmospheres, mmHg to pascals, pressure unit converter",
+      "h1": "Online Pressure Converter",
+      "h2": "Convert Pa, atm, mmHg",
+      "overview": {
+        "title": "About Pressure Converter",
+        "content": "Our pressure converter allows you to quickly and accurately convert between different pressure measurement units. Supports all major units: Pascals, atmospheres, and millimeters of mercury."
+      },
+      "calculation": {
+        "title": "How Conversion Works",
+        "content": "All pressure units are converted through the base unit - Pascal. Each unit has its own conversion formula, ensuring calculation accuracy."
+      },
+      "units": {
+        "title": "Supported Units",
+        "content": "The converter supports 3 main pressure units: Pascals (Pa), atmospheres (atm), and millimeters of mercury (mmHg)."
+      },
+      "advantages": {
+        "title": "Advantages of Our Converter",
+        "content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions"
+      },
+      "faqItems": [
+        {
+          "q": "How to convert Pascals to atmospheres?",
+          "a": "Divide Pascals by 101325 to get atmospheres. For example: 101325 Pa = 101325 ÷ 101325 = 1 atm."
+        },
+        {
+          "q": "How to convert mmHg to Pascals?",
+          "a": "Multiply mmHg by 133.322 to get Pascals. For example: 760 mmHg = 760 × 133.322 = 101325 Pa."
+        },
+        {
+          "q": "How to convert atmospheres to mmHg?",
+          "a": "Multiply atmospheres by 760 to get mmHg. For example: 1 atm = 1 × 760 = 760 mmHg."
+        },
+        {
+          "q": "What is standard atmospheric pressure?",
+          "a": "Standard atmospheric pressure is 101325 Pa (1 atm or 760 mmHg) at sea level at 0°C temperature."
+        }
+      ]
+    },
+    "de": {
+      "title": "Online-Druckrechner — Pa, atm, mmHg",
+      "description": "Konvertieren Sie Druckwerte zwischen Pascal, Atmosphären und Millimeter Quecksilbersäule online. Genau, mit Unterstützung für 4 Sprachen.",
+      "keywords": "Druckrechner, Pascal zu Atmosphären, mmHg zu Pascal, Druck-Einheiten-Konverter",
+      "h1": "Online-Druckrechner",
+      "h2": "Umrechnung Pa, atm, mmHg",
+      "overview": {
+        "title": "Über den Druckrechner",
+        "content": "Unser Druckrechner ermöglicht es Ihnen, schnell und genau zwischen verschiedenen Druckeinheiten zu konvertieren. Unterstützt alle wichtigen Einheiten: Pascal, Atmosphären und Millimeter Quecksilbersäule."
+      },
+      "calculation": {
+        "title": "Wie die Umrechnung funktioniert",
+        "content": "Alle Druckeinheiten werden über die Basiseinheit - Pascal - konvertiert. Jede Einheit hat ihre eigene Umrechnungsformel, was die Berechnungsgenauigkeit gewährleistet."
+      },
+      "units": {
+        "title": "Unterstützte Einheiten",
+        "content": "Der Rechner unterstützt 3 Hauptdruckeinheiten: Pascal (Pa), Atmosphären (atm) und Millimeter Quecksilbersäule (mmHg)."
+      },
+      "advantages": {
+        "title": "Vorteile unseres Rechners",
+        "content": "Genaue Berechnungen, sofortige Umrechnung, 4 Sprachen Unterstützung, benutzerfreundliche Oberfläche, mobile Version."
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen"
+      },
+      "faqItems": [
+        {
+          "q": "Wie konvertiert man Pascal in Atmosphären?",
+          "a": "Teilen Sie Pascal durch 101325, um Atmosphären zu erhalten. Zum Beispiel: 101325 Pa = 101325 ÷ 101325 = 1 atm."
+        },
+        {
+          "q": "Wie konvertiert man mmHg in Pascal?",
+          "a": "Multiplizieren Sie mmHg mit 133,322, um Pascal zu erhalten. Zum Beispiel: 760 mmHg = 760 × 133,322 = 101325 Pa."
+        },
+        {
+          "q": "Wie konvertiert man Atmosphären in mmHg?",
+          "a": "Multiplizieren Sie Atmosphären mit 760, um mmHg zu erhalten. Zum Beispiel: 1 atm = 1 × 760 = 760 mmHg."
+        },
+        {
+          "q": "Was ist der normale Luftdruck?",
+          "a": "Der normale Luftdruck beträgt 101325 Pa (1 atm oder 760 mmHg) auf Meereshöhe bei 0°C Temperatur."
+        }
+      ]
+    },
+    "es": {
+      "title": "Convertidor de presión en línea — Pa, atm, mmHg",
+      "description": "Convierte presiones entre Pascales, atmósferas y milímetros de mercurio al instante. Preciso y con soporte para 4 idiomas.",
+      "keywords": "convertidor de presión, pascales a atmósferas, mmHg a pascales, convertidor de unidades de presión",
+      "h1": "Convertidor de presión en línea",
+      "h2": "Convertir Pa, atm, mmHg",
+      "overview": {
+        "title": "Sobre el Convertidor de Presión",
+        "content": "Nuestro convertidor de presión te permite convertir rápida y precisamente entre diferentes unidades de medida de presión. Soporta todas las unidades principales: Pascales, atmósferas y milímetros de mercurio."
+      },
+      "calculation": {
+        "title": "Cómo Funciona la Conversión",
+        "content": "Todas las unidades de presión se convierten a través de la unidad base - Pascal. Cada unidad tiene su propia fórmula de conversión, asegurando la precisión de los cálculos."
+      },
+      "units": {
+        "title": "Unidades Soportadas",
+        "content": "El convertidor soporta 3 unidades principales de presión: Pascales (Pa), atmósferas (atm) y milímetros de mercurio (mmHg)."
+      },
+      "advantages": {
+        "title": "Ventajas de Nuestro Convertidor",
+        "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz amigable, versión móvil."
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes"
+      },
+      "faqItems": [
+        {
+          "q": "¿Cómo convertir Pascales a atmósferas?",
+          "a": "Divide los Pascales entre 101325 para obtener atmósferas. Por ejemplo: 101325 Pa = 101325 ÷ 101325 = 1 atm."
+        },
+        {
+          "q": "¿Cómo convertir mmHg a Pascales?",
+          "a": "Multiplica mmHg por 133,322 para obtener Pascales. Por ejemplo: 760 mmHg = 760 × 133,322 = 101325 Pa."
+        },
+        {
+          "q": "¿Cómo convertir atmósferas a mmHg?",
+          "a": "Multiplica atmósferas por 760 para obtener mmHg. Por ejemplo: 1 atm = 1 × 760 = 760 mmHg."
+        },
+        {
+          "q": "¿Qué es la presión atmosférica estándar?",
+          "a": "La presión atmosférica estándar es 101325 Pa (1 atm o 760 mmHg) al nivel del mar a 0°C de temperatura."
+        }
+      ]
+    }
+  }
+}

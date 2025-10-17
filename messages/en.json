@@ -5536,6 +5536,81 @@
 					}
 				]
 			}
+		},
+		"pressure": {
+			"title": "Online Pressure Converter",
+			"description": "Quickly convert pressures between Pascals, atmospheres, and millimeters of mercury. Accurate and convenient converter.",
+			"value": "Enter value",
+			"fromUnit": "From unit",
+			"toUnit": "To unit",
+			"button": "Convert",
+			"calculating": "Converting...",
+			"reset": "Reset",
+			"result": "Result",
+			"commonConversions": "Other units",
+			"units": {
+				"Pa": "Pa",
+				"atm": "atm",
+				"mmHg": "mmHg"
+			},
+			"infographic": {
+				"precise": "Precise",
+				"preciseDescription": "Accurate calculations",
+				"fast": "Fast",
+				"fastDescription": "Instant conversion",
+				"multilingual": "Multilingual",
+				"multilingualDescription": "4 languages"
+			},
+			"tips": {
+				"title": "💡 Useful Tips",
+				"accuracy": "All calculations are based on precise conversion formulas",
+				"instant": "Results display instantly when parameters change",
+				"multilingual": "Interface available in 4 languages"
+			},
+			"seo": {
+				"title": "Online Pressure Converter — Pa, atm, mmHg",
+				"description": "Instantly convert pressures between Pascals, atmospheres, and millimeters of mercury online. Accurate pressure converter with 4 languages support.",
+				"keywords": "pressure converter, pascals to atmospheres, mmHg to pascals, pressure unit converter",
+				"h1": "Online Pressure Converter",
+				"h2": "Convert Pa, atm, mmHg",
+				"overview": {
+					"title": "About Pressure Converter",
+					"content": "Our pressure converter allows you to quickly and accurately convert between different pressure measurement units. Supports all major units: Pascals, atmospheres, and millimeters of mercury."
+				},
+				"calculation": {
+					"title": "How Conversion Works",
+					"content": "All pressure units are converted through the base unit - Pascal. Each unit has its own conversion formula, ensuring calculation accuracy."
+				},
+				"units": {
+					"title": "Supported Units",
+					"content": "The converter supports 3 main pressure units: Pascals (Pa), atmospheres (atm), and millimeters of mercury (mmHg)."
+				},
+				"advantages": {
+					"title": "Advantages of Our Converter",
+					"content": "Accurate calculations, instant conversion, 4 languages support, user-friendly interface, mobile version."
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to convert Pascals to atmospheres?",
+						"a": "Divide Pascals by 101325 to get atmospheres. For example: 101325 Pa = 101325 ÷ 101325 = 1 atm."
+					},
+					{
+						"q": "How to convert mmHg to Pascals?",
+						"a": "Multiply mmHg by 133.322 to get Pascals. For example: 760 mmHg = 760 × 133.322 = 101325 Pa."
+					},
+					{
+						"q": "How to convert atmospheres to mmHg?",
+						"a": "Multiply atmospheres by 760 to get mmHg. For example: 1 atm = 1 × 760 = 760 mmHg."
+					},
+					{
+						"q": "What is standard atmospheric pressure?",
+						"a": "Standard atmospheric pressure is 101325 Pa (1 atm or 760 mmHg) at sea level at 0°C temperature."
+					}
+				]
+			}
 		}
 	}
 }
