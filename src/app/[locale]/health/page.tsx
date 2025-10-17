@@ -20,10 +20,10 @@ const calculators = [
 	},
 	{
 		id: 'blood-pressure',
-		title: 'Blood Pressure Calculator',
-		description: 'Monitor and analyze blood pressure readings',
+		title: 'calculators.bloodPressure.title',
+		description: 'calculators.bloodPressure.description',
 		icon: Thermometer,
-		href: '/calc/blood-pressure',
+		href: '/health/blood-pressure',
 	},
 	{
 		id: 'vitamins',

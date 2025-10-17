@@ -4368,106 +4368,187 @@
 			"breadcrumbs": {
 				"category": "Mathematik"
 			}
-		}
-	},
-	"equations": {
-		"title": "Gleichungslöser Rechner",
-		"description": "Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit Schritt-für-Schritt-Erklärung",
-		"breadcrumbs": {
-			"category": "Mathematik"
 		},
-		"form": {
-			"title": "Gleichung Eingeben",
-			"mode": "Eingabemodus",
-			"modes": {
-				"parse": "Gleichung Eingeben",
-				"manual": "Koeffizienten Eingeben"
+		"bloodPressure": {
+			"title": "Blutdruck-Rechner Online",
+			"description": "Berechnen Sie den normalen Blutdruck nach Alter und bewerten Sie Ihre aktuellen Werte. Schnell, genau und kostenlos.",
+			"form": {
+				"title": "Berechnungsparameter",
+				"age": "Alter",
+				"agePlaceholder": "Geben Sie Ihr Alter ein",
+				"years": "Jahre",
+				"systolic": "Systolischer Druck",
+				"systolicPlaceholder": "Geben Sie den oberen Druck ein",
+				"diastolic": "Diastolischer Druck",
+				"diastolicPlaceholder": "Geben Sie den unteren Druck ein",
+				"mmhg": "mmHg",
+				"systolicHint": "Oberer (systolischer) Druck",
+				"diastolicHint": "Unterer (diastolischer) Druck",
+				"calculate": "Blutdruck berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"errors": {
+					"ageRequired": "Bitte geben Sie Ihr Alter ein",
+					"ageRange": "Das Alter muss zwischen 1 und 120 Jahren liegen",
+					"systolicRequired": "Bitte geben Sie den systolischen Druck ein",
+					"systolicRange": "Der systolische Druck muss zwischen 50 und 300 mmHg liegen",
+					"diastolicRequired": "Bitte geben Sie den diastolischen Druck ein",
+					"diastolicRange": "Der diastolische Druck muss zwischen 30 und 200 mmHg liegen",
+					"systolicMustBeHigher": "Der systolische Druck muss höher als der diastolische sein",
+					"calculationError": "Fehler bei der Berechnung"
+				}
 			},
-			"enterEquation": "Gleichung eingeben",
-			"examples": "Beispiele",
-			"equationType": "Gleichungstyp",
-			"equationTypes": {
-				"linear": "Linear (ax + b = 0)",
-				"quadratic": "Quadratisch (ax² + bx + c = 0)"
+			"infographic": {
+				"measurement": "120/80",
+				"measurementDescription": "Normaler Druck",
+				"categories": "6 Kategorien",
+				"categoriesDescription": "Blutdruck-Klassifikation",
+				"age": "Nach Alter",
+				"ageDescription": "Normen hängen vom Alter ab"
 			},
-			"linearFormat": "Format",
-			"quadraticFormat": "Format",
-			"coefficientA": "Koeffizient A",
-			"coefficientB": "Koeffizient B",
-			"coefficientC": "Koeffizient C",
-			"calculate": "Lösen",
-			"reset": "Zurücksetzen",
-			"errors": {
-				"title": "Datenfehler"
-			}
-		},
-		"results": {
-			"title": "Lösungsergebnis",
-			"types": {
-				"linear": "Lineare Gleichung",
-				"quadratic": "Quadratische Gleichung",
-				"unsupported": "Nicht unterstützter Gleichungstyp"
+			"results": {
+				"mmhg": "mmHg",
+				"description": "Beschreibung",
+				"recommendation": "Empfehlung",
+				"riskLevel": "Risikostufe",
+				"normalRange": "Normal für Ihr Alter",
+				"normalRangeText": "Normal: {min}-{max} / {minD}-{maxD} mmHg"
 			},
-			"oneSolution": "Eine Lösung",
-			"twoSolutions": "Zwei Lösungen",
-			"noSolution": "Keine Lösungen",
-			"complexRoots": "Die Gleichung hat komplexe Wurzeln (keine reellen Lösungen)",
-			"steps": "Schritt-für-Schritt-Lösung",
-			"discriminant": "Diskriminante"
-		},
-		"seo": {
-			"title": "Gleichungslöser Rechner Online - Lineare und Quadratische Gleichungen | Calc1.ru",
-			"description": "Kostenloser Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit detaillierten Schritt-für-Schritt-Erklärungen. Unterstützt Russisch, Englisch, Spanisch und Deutsch.",
-			"overview": {
-				"title": "Online Gleichungslöser Rechner",
-				"content": "Unser Rechner ermöglicht es Ihnen, lineare und quadratische Gleichungen online mit detaillierten Schritt-für-Schritt-Erklärungen zu lösen. Geben Sie einfach die Gleichung oder die Koeffizienten ein, und der Rechner findet sofort die Lösung. Perfekt für Studenten, Schüler und alle, die Mathematik studieren."
+			"categories": {
+				"hypotension": {
+					"title": "Hypotonie",
+					"description": "Niedriger Blutdruck"
+				},
+				"normal": {
+					"title": "Normal",
+					"description": "Normaler Blutdruck"
+				},
+				"prehypertension": {
+					"title": "Prähypertonie",
+					"description": "Erhöhter normaler Druck"
+				},
+				"hypertension1": {
+					"title": "Hypertonie Grad 1",
+					"description": "Leichte Hypertonie"
+				},
+				"hypertension2": {
+					"title": "Hypertonie Grad 2",
+					"description": "Mittelschwere Hypertonie"
+				},
+				"hypertension3": {
+					"title": "Hypertonie Grad 3",
+					"description": "Schwere Hypertonie"
+				}
 			},
-			"linearEquations": {
-				"title": "Wie löst man lineare Gleichungen",
-				"content": "Eine lineare Gleichung hat die Form ax + b = 0, wobei a und b bekannte Zahlen sind und x die unbekannte Variable ist. Um zu lösen, müssen Sie x ausdrücken.",
-				"formula": "ax + b = 0  →  x = -b/a",
-				"example": "Beispiel: 2x + 5 = 15  →  2x = 10  →  x = 5"
+			"recommendations": {
+				"hypotensionRecommendation": "Konsultieren Sie einen Arzt, erhöhen Sie die Flüssigkeits- und Salzaufnahme",
+				"normalRecommendation": "Führen Sie einen gesunden Lebensstil und kontrollieren Sie regelmäßig den Druck",
+				"prehypertensionRecommendation": "Achten Sie auf Ihre Ernährung, reduzieren Sie Salz, bewegen Sie sich mehr",
+				"hypertension1Recommendation": "Konsultieren Sie unbedingt einen Arzt, ändern Sie Ihren Lebensstil",
+				"hypertension2Recommendation": "Suchen Sie sofort einen Arzt auf, medikamentöse Behandlung erforderlich",
+				"hypertension3Recommendation": "Dringend einen Arzt aufsuchen, hohes Komplikationsrisiko"
 			},
-			"quadraticEquations": {
-				"title": "Wie löst man quadratische Gleichungen",
-				"content": "Eine quadratische Gleichung hat die Form ax² + bx + c = 0. Sie wird mit der Diskriminante gelöst: D = b² - 4ac. Die Anzahl der Wurzeln hängt vom Wert der Diskriminante ab.",
-				"formula": "x = (-b ± √D) / (2a)",
-				"discriminant": "D = b² - 4ac",
-				"twoRoots": "Zwei Wurzeln",
-				"oneRoot": "Eine Wurzel",
-				"noRoots": "Keine reellen Wurzeln"
+			"riskLevels": {
+				"low": "Niedriges Risiko",
+				"moderate": "Mittleres Risiko",
+				"high": "Hohes Risiko",
+				"veryHigh": "Sehr hohes Risiko",
+				"critical": "Kritisches Risiko"
 			},
-			"roots": {
-				"title": "Was sind Gleichungswurzeln",
-				"content": "Gleichungswurzeln sind Werte der Variablen, die die Gleichung zu einer wahren numerischen Gleichheit machen. Je nach Typ der Gleichung kann es unterschiedlich viele Wurzeln geben.",
-				"real": "Reelle Wurzeln — reguläre Zahlen auf der Zahlengeraden",
-				"complex": "Komplexe Wurzeln — erscheinen, wenn die Diskriminante negativ ist",
-				"repeated": "Wiederholte Wurzeln — wenn die Diskriminante gleich Null ist"
+			"table": {
+				"title": "Blutdruck-Normen nach Alter",
+				"age": "Alter",
+				"normal": "Normal (mmHg)",
+				"comment": "Kommentar",
+				"years": "Jahre",
+				"comments": {
+					"excellent": "Ausgezeichneter Druck",
+					"normal": "Im normalen Bereich",
+					"slightIncrease": "Leichte Erhöhung - akzeptabel",
+					"monitor": "Niveau überwachen",
+					"moderateIncrease": "Mittlere Erhöhung - typisch"
+				}
 			},
-			"advantages": {
-				"title": "Vorteile des Rechners",
-				"content": "Unser Online-Gleichungsrechner bietet schnelle und genaue Lösungen mit detaillierten Erklärungen zu jedem Schritt.",
-				"items": [
-					"Sofortige Lösung jeder linearen und quadratischen Gleichung",
-					"Detaillierte Schritt-für-Schritt-Lösungserklärung",
-					"Bestimmung der Anzahl der Wurzeln und Diskriminante",
-					"Unterstützung für 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
-					"Zwei Eingabemodi: Text und Koeffizienten",
-					"Völlig kostenlos ohne Registrierung",
-					"Responsives Design für alle Geräte"
-				]
-			},
-			"onlineCalculator": {
-				"title": "Online Gleichungsrechner",
-				"content": "Der Online-Gleichungslöser-Rechner auf Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Lösen Sie lineare und quadratische Gleichungen mit detaillierten Erklärungen kostenlos!"
-			},
-			"faq": {
-				"question1": "Wie löst man eine Gleichung online?",
-				"answer1": "Geben Sie die Gleichung im Format '2x + 5 = 15' oder 'x² + 2x + 1 = 0' ein und klicken Sie auf die Schaltfläche 'Lösen'. Der Rechner bestimmt automatisch den Gleichungstyp und liefert eine Lösung mit Schritt-für-Schritt-Erklärung.",
-				"question2": "Wie findet man die Wurzeln einer quadratischen Gleichung?",
-				"answer2": "Für eine quadratische Gleichung ax² + bx + c = 0 berechnen Sie zuerst die Diskriminante D = b² - 4ac. Wenn D > 0, hat die Gleichung zwei Wurzeln, wenn D = 0 — eine Wurzel, wenn D < 0 — keine reellen Wurzeln.",
-				"question3": "Wie versteht man, wie viele Lösungen eine Gleichung hat?",
-				"answer3": "Eine lineare Gleichung hat eine Lösung (wenn a ≠ 0). Eine quadratische Gleichung kann 0, 1 oder 2 Lösungen haben, abhängig von der Diskriminante. Der Rechner bestimmt automatisch die Anzahl der Lösungen."
+			"seo": {
+				"title": "Online Blutdruck-Rechner — Normal nach Alter, Blutdruck-Prüfung",
+				"description": "Erfahren Sie Ihren normalen Blutdruck nach Alter und prüfen Sie Ihren Blutdruck. Schnelle Berechnung, Interpretation und Gesundheitstipps.",
+				"keywords": "blutdruck rechner, blutdruck, normaler blutdruck, hypertonie, hypotonie, blutdruck nach alter",
+				"overview": {
+					"title": "Über den Blutdruck-Rechner",
+					"content": "Blutdruck ist ein wichtiger Indikator für die Gesundheit des Herz-Kreislauf-Systems. Unser Rechner hilft Ihnen, den normalen Druck nach Alter zu bestimmen und Ihre aktuellen Werte zu bewerten."
+				},
+				"categories": {
+					"title": "Blutdruck-Kategorien",
+					"content": "Blutdruck wird in folgende Kategorien eingeteilt:",
+					"hypotension": {
+						"title": "Hypotonie",
+						"description": "Systolisch < 100 oder diastolisch < 60 mmHg"
+					},
+					"normal": {
+						"title": "Normal",
+						"description": "Systolisch ≤ 130 und diastolisch ≤ 85 mmHg"
+					},
+					"prehypertension": {
+						"title": "Prähypertonie",
+						"description": "Systolisch ≤ 140 und diastolisch ≤ 90 mmHg"
+					},
+					"hypertension1": {
+						"title": "Hypertonie Grad 1",
+						"description": "Systolisch ≤ 160 und diastolisch ≤ 100 mmHg"
+					},
+					"hypertension2": {
+						"title": "Hypertonie Grad 2",
+						"description": "Systolisch ≤ 180 und diastolisch ≤ 110 mmHg"
+					},
+					"hypertension3": {
+						"title": "Hypertonie Grad 3",
+						"description": "Systolisch > 180 oder diastolisch > 110 mmHg"
+					}
+				},
+				"measurement": {
+					"title": "Wie man Blutdruck richtig misst",
+					"content": "Für genaue Ergebnisse ist es wichtig, den Blutdruck richtig zu messen:",
+					"step1": "Ruhen Sie sich 5 Minuten vor der Messung aus",
+					"step2": "Setzen Sie sich bequem hin, Rücken gerade, Füße auf dem Boden",
+					"step3": "Die Manschette sollte auf Herzhöhe sein",
+					"step4": "Messen Sie an beiden Armen, verwenden Sie den höheren Wert"
+				},
+				"advantages": {
+					"title": "Vorteile unseres Rechners",
+					"content": "Unser Blutdruck-Rechner bietet viele Vorteile:",
+					"quick": "Schnelle Berechnung in Sekunden",
+					"accurate": "Genaue Klassifikation nach internationalen Standards",
+					"free": "Vollständig kostenlos ohne Registrierung",
+					"multilingual": "Unterstützung für 4 Sprachen (Russisch, Englisch, Spanisch, Deutsch)",
+					"mobile": "Responsive Design für alle Geräte"
+				},
+				"tips": {
+					"title": "Nützliche Tipps",
+					"content": "Um einen normalen Blutdruck zu erhalten, befolgen Sie diese Empfehlungen:",
+					"measurement": "Messen Sie regelmäßig zur gleichen Zeit",
+					"consistency": "Führen Sie ein Messprotokoll",
+					"consultation": "Konsultieren Sie einen Arzt bei Abweichungen",
+					"lifestyle": "Führen Sie einen gesunden Lebensstil: richtige Ernährung, körperliche Aktivität"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen",
+					"whatIsBP": {
+						"question": "Was ist Blutdruck?",
+						"answer": "Blutdruck ist die Kraft, mit der das Blut gegen die Arterienwände drückt. Er wird in Millimeter Quecksilbersäule (mmHg) gemessen und besteht aus zwei Werten: systolisch (oberer) und diastolisch (unterer)."
+					},
+					"normalRange": {
+						"question": "Was gilt als normaler Blutdruck?",
+						"answer": "Normaler Blutdruck liegt unter 130/85 mmHg. Die Norm kann jedoch je nach Alter, Geschlecht und individuellen Eigenschaften variieren."
+					},
+					"hypertension": {
+						"question": "Was ist Hypertonie?",
+						"answer": "Hypertonie (Bluthochdruck) ist ein anhaltender Anstieg des Blutdrucks über 140/90 mmHg. Dies ist eine ernste Erkrankung, die medizinische Überwachung und Behandlung erfordert."
+					},
+					"measurement": {
+						"question": "Wie oft sollte ich Blutdruck messen?",
+						"answer": "Gesunden Menschen wird empfohlen, den Blutdruck einmal im Jahr zu messen. Bei Risikofaktoren oder Abweichungen - häufiger, nach ärztlicher Empfehlung. Bei Hypertonie - täglich zur gleichen Zeit."
+					}
+				}
 			}
 		}
 	}

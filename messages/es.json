@@ -4369,106 +4369,187 @@
 			"breadcrumbs": {
 				"category": "Matemáticas"
 			}
-		}
-	},
-	"equations": {
-		"title": "Calculadora de Resolución de Ecuaciones",
-		"description": "Calculadora en línea para resolver ecuaciones lineales y cuadráticas con explicación paso a paso",
-		"breadcrumbs": {
-			"category": "Matemáticas"
 		},
-		"form": {
-			"title": "Ingresa la Ecuación",
-			"mode": "Modo de Entrada",
-			"modes": {
-				"parse": "Ingresar Ecuación",
-				"manual": "Ingresar Coeficientes"
+		"bloodPressure": {
+			"title": "Calculadora de Presión Arterial Online",
+			"description": "Calcula la presión arterial normal por edad y evalúa tus valores actuales. Rápido, preciso y gratuito.",
+			"form": {
+				"title": "Parámetros de Cálculo",
+				"age": "Edad",
+				"agePlaceholder": "Ingresa tu edad",
+				"years": "años",
+				"systolic": "Presión Sistólica",
+				"systolicPlaceholder": "Ingresa presión superior",
+				"diastolic": "Presión Diastólica",
+				"diastolicPlaceholder": "Ingresa presión inferior",
+				"mmhg": "mmHg",
+				"systolicHint": "Presión superior (sistólica)",
+				"diastolicHint": "Presión inferior (diastólica)",
+				"calculate": "Calcular PA",
+				"calculating": "Calculando...",
+				"reset": "Reiniciar",
+				"errors": {
+					"ageRequired": "Por favor ingresa tu edad",
+					"ageRange": "La edad debe estar entre 1 y 120 años",
+					"systolicRequired": "Por favor ingresa la presión sistólica",
+					"systolicRange": "La presión sistólica debe estar entre 50 y 300 mmHg",
+					"diastolicRequired": "Por favor ingresa la presión diastólica",
+					"diastolicRange": "La presión diastólica debe estar entre 30 y 200 mmHg",
+					"systolicMustBeHigher": "La presión sistólica debe ser mayor que la diastólica",
+					"calculationError": "Error en el cálculo"
+				}
 			},
-			"enterEquation": "Ingresa la ecuación",
-			"examples": "Ejemplos",
-			"equationType": "Tipo de Ecuación",
-			"equationTypes": {
-				"linear": "Lineal (ax + b = 0)",
-				"quadratic": "Cuadrática (ax² + bx + c = 0)"
+			"infographic": {
+				"measurement": "120/80",
+				"measurementDescription": "Presión normal",
+				"categories": "6 categorías",
+				"categoriesDescription": "Clasificación de PA",
+				"age": "Por edad",
+				"ageDescription": "Las normas dependen de la edad"
 			},
-			"linearFormat": "Formato",
-			"quadraticFormat": "Formato",
-			"coefficientA": "Coeficiente A",
-			"coefficientB": "Coeficiente B",
-			"coefficientC": "Coeficiente C",
-			"calculate": "Resolver",
-			"reset": "Restablecer",
-			"errors": {
-				"title": "Errores en los Datos"
-			}
-		},
-		"results": {
-			"title": "Resultado de la Solución",
-			"types": {
-				"linear": "Ecuación Lineal",
-				"quadratic": "Ecuación Cuadrática",
-				"unsupported": "Tipo de Ecuación No Soportado"
+			"results": {
+				"mmhg": "mmHg",
+				"description": "Descripción",
+				"recommendation": "Recomendación",
+				"riskLevel": "Nivel de Riesgo",
+				"normalRange": "Normal para tu edad",
+				"normalRangeText": "Normal: {min}-{max} / {minD}-{maxD} mmHg"
 			},
-			"oneSolution": "Una Solución",
-			"twoSolutions": "Dos Soluciones",
-			"noSolution": "Sin Soluciones",
-			"complexRoots": "La ecuación tiene raíces complejas (sin soluciones reales)",
-			"steps": "Solución Paso a Paso",
-			"discriminant": "Discriminante"
-		},
-		"seo": {
-			"title": "Calculadora de Resolución de Ecuaciones en Línea - Ecuaciones Lineales y Cuadráticas | Calc1.ru",
-			"description": "Calculadora gratuita en línea para resolver ecuaciones lineales y cuadráticas con explicaciones detalladas paso a paso. Soporta idiomas ruso, inglés, español y alemán.",
-			"overview": {
-				"title": "Calculadora de Resolución de Ecuaciones en Línea",
-				"content": "Nuestra calculadora le permite resolver ecuaciones lineales y cuadráticas en línea con explicaciones detalladas paso a paso. Simplemente ingrese la ecuación o los coeficientes, y la calculadora encontrará la solución instantáneamente. Perfecto para estudiantes, alumnos y cualquier persona que estudie matemáticas."
+			"categories": {
+				"hypotension": {
+					"title": "Hipotensión",
+					"description": "Presión arterial baja"
+				},
+				"normal": {
+					"title": "Normal",
+					"description": "Presión arterial normal"
+				},
+				"prehypertension": {
+					"title": "Prehipertensión",
+					"description": "Presión normal alta"
+				},
+				"hypertension1": {
+					"title": "Hipertensión Grado 1",
+					"description": "Hipertensión leve"
+				},
+				"hypertension2": {
+					"title": "Hipertensión Grado 2",
+					"description": "Hipertensión moderada"
+				},
+				"hypertension3": {
+					"title": "Hipertensión Grado 3",
+					"description": "Hipertensión severa"
+				}
 			},
-			"linearEquations": {
-				"title": "Cómo Resolver Ecuaciones Lineales",
-				"content": "Una ecuación lineal tiene la forma ax + b = 0, donde a y b son números conocidos, y x es la variable desconocida. Para resolver, necesita expresar x.",
-				"formula": "ax + b = 0  →  x = -b/a",
-				"example": "Ejemplo: 2x + 5 = 15  →  2x = 10  →  x = 5"
+			"recommendations": {
+				"hypotensionRecommendation": "Consulta a un médico, aumenta la ingesta de líquidos y sal",
+				"normalRecommendation": "Mantén un estilo de vida saludable y controla la presión regularmente",
+				"prehypertensionRecommendation": "Cuida tu alimentación, reduce la sal, haz más ejercicio",
+				"hypertension1Recommendation": "Consulta a un médico, cambia tu estilo de vida",
+				"hypertension2Recommendation": "Ve al médico inmediatamente, se requiere medicación",
+				"hypertension3Recommendation": "Atención médica urgente, alto riesgo de complicaciones"
 			},
-			"quadraticEquations": {
-				"title": "Cómo Resolver Ecuaciones Cuadráticas",
-				"content": "Una ecuación cuadrática tiene la forma ax² + bx + c = 0. Se resuelve usando el discriminante: D = b² - 4ac. El número de raíces depende del valor del discriminante.",
-				"formula": "x = (-b ± √D) / (2a)",
-				"discriminant": "D = b² - 4ac",
-				"twoRoots": "Dos Raíces",
-				"oneRoot": "Una Raíz",
-				"noRoots": "Sin Raíces Reales"
+			"riskLevels": {
+				"low": "Riesgo bajo",
+				"moderate": "Riesgo moderado",
+				"high": "Riesgo alto",
+				"veryHigh": "Riesgo muy alto",
+				"critical": "Riesgo crítico"
 			},
-			"roots": {
-				"title": "Qué son las Raíces de una Ecuación",
-				"content": "Las raíces de una ecuación son valores de la variable que hacen que la ecuación sea una igualdad numérica verdadera. Dependiendo del tipo de ecuación, puede haber diferentes números de raíces.",
-				"real": "Raíces reales — números regulares en la recta numérica",
-				"complex": "Raíces complejas — aparecen cuando el discriminante es negativo",
-				"repeated": "Raíces repetidas — cuando el discriminante es igual a cero"
+			"table": {
+				"title": "Normas de Presión Arterial por Edad",
+				"age": "Edad",
+				"normal": "Normal (mmHg)",
+				"comment": "Comentario",
+				"years": "años",
+				"comments": {
+					"excellent": "Presión excelente",
+					"normal": "Dentro del rango normal",
+					"slightIncrease": "Aumento leve - aceptable",
+					"monitor": "Monitorear nivel",
+					"moderateIncrease": "Aumento moderado - típico"
+				}
 			},
-			"advantages": {
-				"title": "Ventajas de la Calculadora",
-				"content": "Nuestra calculadora de ecuaciones en línea proporciona soluciones rápidas y precisas con explicaciones detalladas de cada paso.",
-				"items": [
-					"Solución instantánea de cualquier ecuación lineal y cuadrática",
-					"Explicación detallada de la solución paso a paso",
-					"Determinación del número de raíces y discriminante",
-					"Soporte para 4 idiomas: ruso, inglés, español, alemán",
-					"Dos modos de entrada: texto y coeficientes",
-					"Completamente gratis sin registro",
-					"Diseño adaptable para todos los dispositivos"
-				]
-			},
-			"onlineCalculator": {
-				"title": "Calculadora de Ecuaciones en Línea",
-				"content": "La calculadora de resolución de ecuaciones en línea en Calc1.ru soporta idiomas ruso, inglés, español y alemán. ¡Resuelva ecuaciones lineales y cuadráticas con explicaciones detalladas gratis!"
-			},
-			"faq": {
-				"question1": "¿Cómo resolver una ecuación en línea?",
-				"answer1": "Ingrese la ecuación en el formato '2x + 5 = 15' o 'x² + 2x + 1 = 0' y haga clic en el botón 'Resolver'. La calculadora determinará automáticamente el tipo de ecuación y proporcionará una solución con explicación paso a paso.",
-				"question2": "¿Cómo encontrar las raíces de una ecuación cuadrática?",
-				"answer2": "Para una ecuación cuadrática ax² + bx + c = 0, primero calcule el discriminante D = b² - 4ac. Si D > 0, la ecuación tiene dos raíces, si D = 0 — una raíz, si D < 0 — sin raíces reales.",
-				"question3": "¿Cómo entender cuántas soluciones tiene una ecuación?",
-				"answer3": "Una ecuación lineal tiene una solución (si a ≠ 0). Una ecuación cuadrática puede tener 0, 1 o 2 soluciones dependiendo del discriminante. La calculadora determina automáticamente el número de soluciones."
+			"seo": {
+				"title": "Calculadora de Presión Arterial Online — Normal por Edad, Verificación de PA",
+				"description": "Descubre tu presión arterial normal por edad y verifica tu PA. Cálculo rápido, interpretación y consejos de salud.",
+				"keywords": "calculadora presión arterial, presión arterial, presión normal, hipertensión, hipotensión, presión por edad",
+				"overview": {
+					"title": "Sobre la Calculadora de Presión Arterial",
+					"content": "La presión arterial es un indicador importante de la salud cardiovascular. Nuestra calculadora te ayudará a determinar la presión normal por edad y evaluar tus lecturas actuales."
+				},
+				"categories": {
+					"title": "Categorías de Presión Arterial",
+					"content": "La presión arterial se clasifica en las siguientes categorías:",
+					"hypotension": {
+						"title": "Hipotensión",
+						"description": "Sistólica < 100 o diastólica < 60 mmHg"
+					},
+					"normal": {
+						"title": "Normal",
+						"description": "Sistólica ≤ 130 y diastólica ≤ 85 mmHg"
+					},
+					"prehypertension": {
+						"title": "Prehipertensión",
+						"description": "Sistólica ≤ 140 y diastólica ≤ 90 mmHg"
+					},
+					"hypertension1": {
+						"title": "Hipertensión Grado 1",
+						"description": "Sistólica ≤ 160 y diastólica ≤ 100 mmHg"
+					},
+					"hypertension2": {
+						"title": "Hipertensión Grado 2",
+						"description": "Sistólica ≤ 180 y diastólica ≤ 110 mmHg"
+					},
+					"hypertension3": {
+						"title": "Hipertensión Grado 3",
+						"description": "Sistólica > 180 o diastólica > 110 mmHg"
+					}
+				},
+				"measurement": {
+					"title": "Cómo Medir la Presión Arterial Correctamente",
+					"content": "Para obtener resultados precisos, es importante medir la presión arterial correctamente:",
+					"step1": "Descansa 5 minutos antes de la medición",
+					"step2": "Siéntate cómodamente, espalda recta, pies en el suelo",
+					"step3": "El brazalete debe estar a la altura del corazón",
+					"step4": "Mide en ambos brazos, usa la lectura más alta"
+				},
+				"advantages": {
+					"title": "Ventajas de Nuestra Calculadora",
+					"content": "Nuestra calculadora de presión arterial proporciona muchas ventajas:",
+					"quick": "Cálculo rápido en segundos",
+					"accurate": "Clasificación precisa según estándares internacionales",
+					"free": "Completamente gratuita sin registro",
+					"multilingual": "Soporte para 4 idiomas (ruso, inglés, español, alemán)",
+					"mobile": "Diseño responsivo para todos los dispositivos"
+				},
+				"tips": {
+					"title": "Consejos Útiles",
+					"content": "Para mantener una presión arterial normal, sigue estas recomendaciones:",
+					"measurement": "Mide la presión regularmente a la misma hora",
+					"consistency": "Mantén un diario de mediciones",
+					"consultation": "Consulta a un médico por desviaciones",
+					"lifestyle": "Lleva un estilo de vida saludable: alimentación adecuada, actividad física"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes",
+					"whatIsBP": {
+						"question": "¿Qué es la presión arterial?",
+						"answer": "La presión arterial es la fuerza con la que la sangre presiona contra las paredes de las arterias. Se mide en milímetros de mercurio (mmHg) y consta de dos valores: sistólica (superior) y diastólica (inferior)."
+					},
+					"normalRange": {
+						"question": "¿Qué se considera presión normal?",
+						"answer": "La presión arterial normal es menos de 130/85 mmHg. Sin embargo, los valores normales pueden variar según la edad, género y características individuales."
+					},
+					"hypertension": {
+						"question": "¿Qué es la hipertensión?",
+						"answer": "La hipertensión (presión arterial alta) es un aumento persistente de la presión arterial por encima de 140/90 mmHg. Es una condición seria que requiere monitoreo médico y tratamiento."
+					},
+					"measurement": {
+						"question": "¿Con qué frecuencia debo medir la presión arterial?",
+						"answer": "Se recomienda a las personas sanas medir la presión arterial una vez al año. Con factores de riesgo o desviaciones - más frecuentemente, según recomendación médica. Con hipertensión - diariamente a la misma hora."
+					}
+				}
 			}
 		}
 	}

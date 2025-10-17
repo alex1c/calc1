@@ -4355,6 +4355,188 @@
 			"breadcrumbs": {
 				"category": "Mathematics"
 			}
+		},
+		"bloodPressure": {
+			"title": "Blood Pressure Calculator Online",
+			"description": "Calculate normal blood pressure by age and evaluate your current values. Fast, accurate and free.",
+			"form": {
+				"title": "Calculation Parameters",
+				"age": "Age",
+				"agePlaceholder": "Enter your age",
+				"years": "years",
+				"systolic": "Systolic Pressure",
+				"systolicPlaceholder": "Enter upper pressure",
+				"diastolic": "Diastolic Pressure",
+				"diastolicPlaceholder": "Enter lower pressure",
+				"mmhg": "mmHg",
+				"systolicHint": "Upper (systolic) pressure",
+				"diastolicHint": "Lower (diastolic) pressure",
+				"calculate": "Calculate BP",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"ageRequired": "Please enter your age",
+					"ageRange": "Age must be between 1 and 120 years",
+					"systolicRequired": "Please enter systolic pressure",
+					"systolicRange": "Systolic pressure must be between 50 and 300 mmHg",
+					"diastolicRequired": "Please enter diastolic pressure",
+					"diastolicRange": "Diastolic pressure must be between 30 and 200 mmHg",
+					"systolicMustBeHigher": "Systolic pressure must be higher than diastolic",
+					"calculationError": "Calculation error"
+				}
+			},
+			"infographic": {
+				"measurement": "120/80",
+				"measurementDescription": "Normal pressure",
+				"categories": "6 categories",
+				"categoriesDescription": "BP classification",
+				"age": "By age",
+				"ageDescription": "Norms depend on age"
+			},
+			"results": {
+				"mmhg": "mmHg",
+				"description": "Description",
+				"recommendation": "Recommendation",
+				"riskLevel": "Risk Level",
+				"normalRange": "Normal for your age",
+				"normalRangeText": "Normal: {min}-{max} / {minD}-{maxD} mmHg"
+			},
+			"categories": {
+				"hypotension": {
+					"title": "Hypotension",
+					"description": "Low blood pressure"
+				},
+				"normal": {
+					"title": "Normal",
+					"description": "Normal blood pressure"
+				},
+				"prehypertension": {
+					"title": "Prehypertension",
+					"description": "High normal pressure"
+				},
+				"hypertension1": {
+					"title": "Hypertension Stage 1",
+					"description": "Mild hypertension"
+				},
+				"hypertension2": {
+					"title": "Hypertension Stage 2",
+					"description": "Moderate hypertension"
+				},
+				"hypertension3": {
+					"title": "Hypertension Stage 3",
+					"description": "Severe hypertension"
+				}
+			},
+			"recommendations": {
+				"hypotensionRecommendation": "Consult a doctor, increase fluid and salt intake",
+				"normalRecommendation": "Maintain a healthy lifestyle and monitor pressure regularly",
+				"prehypertensionRecommendation": "Watch your diet, reduce salt intake, exercise more",
+				"hypertension1Recommendation": "Consult a doctor, change your lifestyle",
+				"hypertension2Recommendation": "See a doctor immediately, medication required",
+				"hypertension3Recommendation": "Urgent medical attention, high risk of complications"
+			},
+			"riskLevels": {
+				"low": "Low risk",
+				"moderate": "Moderate risk",
+				"high": "High risk",
+				"veryHigh": "Very high risk",
+				"critical": "Critical risk"
+			},
+			"table": {
+				"title": "Blood Pressure Norms by Age",
+				"age": "Age",
+				"normal": "Normal (mmHg)",
+				"comment": "Comment",
+				"years": "years",
+				"comments": {
+					"excellent": "Excellent pressure",
+					"normal": "Within normal range",
+					"slightIncrease": "Slight increase - acceptable",
+					"monitor": "Monitor level",
+					"moderateIncrease": "Moderate increase - typical"
+				}
+			},
+			"seo": {
+				"title": "Online Blood Pressure Calculator — Normal by Age, BP Check",
+				"description": "Find out your normal blood pressure by age and check your BP. Fast calculation, interpretation and health advice.",
+				"keywords": "blood pressure calculator, blood pressure, normal pressure, hypertension, hypotension, pressure by age",
+				"overview": {
+					"title": "About Blood Pressure Calculator",
+					"content": "Blood pressure is an important indicator of cardiovascular health. Our calculator will help determine normal pressure by age and evaluate your current readings."
+				},
+				"categories": {
+					"title": "Blood Pressure Categories",
+					"content": "Blood pressure is classified into the following categories:",
+					"hypotension": {
+						"title": "Hypotension",
+						"description": "Systolic < 100 or diastolic < 60 mmHg"
+					},
+					"normal": {
+						"title": "Normal",
+						"description": "Systolic ≤ 130 and diastolic ≤ 85 mmHg"
+					},
+					"prehypertension": {
+						"title": "Prehypertension",
+						"description": "Systolic ≤ 140 and diastolic ≤ 90 mmHg"
+					},
+					"hypertension1": {
+						"title": "Hypertension Stage 1",
+						"description": "Systolic ≤ 160 and diastolic ≤ 100 mmHg"
+					},
+					"hypertension2": {
+						"title": "Hypertension Stage 2",
+						"description": "Systolic ≤ 180 and diastolic ≤ 110 mmHg"
+					},
+					"hypertension3": {
+						"title": "Hypertension Stage 3",
+						"description": "Systolic > 180 or diastolic > 110 mmHg"
+					}
+				},
+				"measurement": {
+					"title": "How to Measure Blood Pressure Correctly",
+					"content": "For accurate results, it's important to measure blood pressure correctly:",
+					"step1": "Rest for 5 minutes before measurement",
+					"step2": "Sit comfortably, back straight, feet on floor",
+					"step3": "Cuff should be at heart level",
+					"step4": "Measure on both arms, use the higher reading"
+				},
+				"advantages": {
+					"title": "Advantages of Our Calculator",
+					"content": "Our blood pressure calculator provides many advantages:",
+					"quick": "Fast calculation in seconds",
+					"accurate": "Accurate classification by international standards",
+					"free": "Completely free without registration",
+					"multilingual": "Support for 4 languages (Russian, English, Spanish, German)",
+					"mobile": "Responsive design for all devices"
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "To maintain normal blood pressure, follow these recommendations:",
+					"measurement": "Measure pressure regularly at the same time",
+					"consistency": "Keep a measurement diary",
+					"consultation": "Consult a doctor for deviations",
+					"lifestyle": "Lead a healthy lifestyle: proper nutrition, physical activity"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"whatIsBP": {
+						"question": "What is blood pressure?",
+						"answer": "Blood pressure is the force with which blood presses against artery walls. It's measured in millimeters of mercury (mmHg) and consists of two values: systolic (upper) and diastolic (lower)."
+					},
+					"normalRange": {
+						"question": "What is considered normal pressure?",
+						"answer": "Normal blood pressure is less than 130/85 mmHg. However, normal values can vary depending on age, gender, and individual characteristics."
+					},
+					"hypertension": {
+						"question": "What is hypertension?",
+						"answer": "Hypertension (high blood pressure) is a persistent increase in blood pressure above 140/90 mmHg. This is a serious condition requiring medical monitoring and treatment."
+					},
+					"measurement": {
+						"question": "How often should I measure blood pressure?",
+						"answer": "Healthy people are recommended to measure blood pressure once a year. With risk factors or deviations - more often, as recommended by a doctor. With hypertension - daily at the same time."
+					}
+				}
+			}
 		}
 	}
 }
