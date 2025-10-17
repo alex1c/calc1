@@ -22,6 +22,21 @@ export default async function BloodAlcoholPage({
 		namespace: 'calculators.bloodAlcohol.seo',
 	});
 
+	const tCategories = await getTranslations({
+		locale: params.locale,
+		namespace: 'categories',
+	});
+
+	const breadcrumbItems = [
+		{
+			label: tCategories('life.title'),
+			href: '/life',
+		},
+		{
+			label: t('title'),
+		},
+	];
+
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
 			<HeaderWrapper />
@@ -29,7 +44,7 @@ export default async function BloodAlcoholPage({
 			{/* Breadcrumbs */}
 			<div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>
 				<div className='max-w-4xl mx-auto px-6 py-4'>
-					<Breadcrumbs />
+					<Breadcrumbs items={breadcrumbItems} />
 				</div>
 			</div>
 
@@ -84,9 +99,9 @@ export default async function BloodAlcoholPage({
 			</section>
 
 			{/* SEO Content */}
-			{/* <section className='py-12 bg-white dark:bg-gray-800'>
+			<section className='py-12 bg-white dark:bg-gray-800'>
 				<BloodAlcoholSEO />
-			</section> */}
+			</section>
 
 			{/* JSON-LD Structured Data */}
 			<script

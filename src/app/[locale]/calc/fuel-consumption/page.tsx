@@ -30,8 +30,8 @@ export default function FuelConsumptionPage() {
 			<Breadcrumbs
 				items={[
 					{
-						label: t('breadcrumbs.categories.calculators'),
-						href: '/calc',
+						label: t('categories.auto.title'),
+						href: '/auto',
 					},
 					{ label: t('calculators.fuel-consumption.title') },
 				]}

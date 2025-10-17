@@ -121,8 +121,13 @@ export default async function BMIPage({
 	};
 
 	// Breadcrumbs items
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
 	const breadcrumbItems = [
-		{ label: tSeo('breadcrumbs.life'), href: '/life' },
+		{ label: tCategories('life.title'), href: '/life' },
 		{ label: t('title') },
 	];
 

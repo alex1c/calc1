@@ -21,6 +21,11 @@ export default async function PregnancyPage({ params: { locale } }: Props) {
 		namespace: 'calculators.pregnancy.seo',
 	});
 
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
 	// Validate locale
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
@@ -28,8 +33,8 @@ export default async function PregnancyPage({ params: { locale } }: Props) {
 
 	const breadcrumbItems = [
 		{
-			label: tSeo('breadcrumbs.life'),
-			href: `/${locale}/life`,
+			label: tCategories('life.title'),
+			href: '/life',
 		},
 		{
 			label: t('title'),

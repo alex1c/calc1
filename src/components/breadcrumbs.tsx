@@ -235,7 +235,11 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 							<ChevronRight className='h-4 w-4 text-gray-400' />
 							{item.href ? (
 								<Link
-									href={`/${locale}${item.href}`}
+									href={
+										item.href.startsWith('/')
+											? `/${locale}${item.href}`
+											: item.href
+									}
 									className='text-gray-500 hover:text-gray-700 transition-colors'
 								>
 									{item.label}

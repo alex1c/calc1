@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function LeasingPage() {
-	const t = useTranslations('calculators.leasing');
+	const t = useTranslations();
 	const locale = useLocale();
 
 	return (
@@ -13,8 +13,11 @@ export default function LeasingPage() {
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: t('breadcrumbs.auto'), href: '/auto' },
-					{ label: t('title') },
+					{
+						label: t('categories.auto.title'),
+						href: '/auto',
+					},
+					{ label: t('calculators.leasing.title') },
 				]}
 			/>
 			<LeasingCalculator />

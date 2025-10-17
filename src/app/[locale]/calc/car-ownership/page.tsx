@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function CarOwnershipPage() {
-	const t = useTranslations('calculators.car-ownership');
+	const t = useTranslations();
 	const locale = useLocale();
 
 	return (
@@ -13,8 +13,11 @@ export default function CarOwnershipPage() {
 			<Header />
 			<Breadcrumbs
 				items={[
-					{ label: t('breadcrumbs.auto'), href: '/auto' },
-					{ label: t('title') },
+					{
+						label: t('categories.auto.title'),
+						href: '/auto',
+					},
+					{ label: t('calculators.car-ownership.title') },
 				]}
 			/>
 			<CarOwnershipCalculator />
