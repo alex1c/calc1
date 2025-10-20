@@ -6144,6 +6144,235 @@
 				]
 			}
 		},
+		"heatingCost": {
+			"title": "Heizkostenrechner — Online-Berechnung",
+			"description": "Online-Rechner zur Berechnung der Heizkosten nach Systemtyp, Raumgröße und Energietarifen.",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Heizkostenrechner",
+				"description": "Berechnen Sie Heizkosten basierend auf Systemtyp und Tarifen",
+				"area": "Raumfläche (m²)",
+				"seasonDays": "Heizsaison-Dauer (Tage)",
+				"hoursPerDay": "Betriebsstunden pro Tag",
+				"temperature": "Raumtemperatur (°C)",
+				"heatingType": "Heizungstyp",
+				"efficiency": "Systemwirkungsgrad (%)",
+				"tariff": "Energietarif",
+				"tariffUnit": "€/kWh, €/m³, €/kg",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"heatingTypes": {
+					"electric": "Elektrische Heizung",
+					"gas": "Gasheizung",
+					"solid_fuel": "Festbrennstoffheizung",
+					"central": "Zentralheizung"
+				},
+				"buildingTypes": {
+					"modern_insulated": "Modernes gedämmtes Haus",
+					"average_insulation": "Haus mit durchschnittlicher Dämmung",
+					"old_uninsulated": "Altes ungedämmtes Haus",
+					"apartment": "Wohnung im Mehrfamilienhaus"
+				},
+				"buildingDescriptions": {
+					"modern_insulated": "Gut gedämmtes modernes Haus",
+					"average_insulation": "Haus mit mittlerer Dämmung",
+					"old_uninsulated": "Altes Haus ohne ordnungsgemäße Dämmung",
+					"apartment": "Wohnung im mehrstöckigen Gebäude"
+				},
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"requiredPower": "Erforderliche Leistung",
+				"dailyConsumption": "Tagesverbrauch",
+				"seasonalConsumption": "Saisonverbrauch",
+				"dailyCost": "Tageskosten",
+				"seasonalCost": "Saisonkosten",
+				"heatingType": "Heizungstyp",
+				"efficiency": "Wirkungsgrad",
+				"perDay": "pro Tag",
+				"perSeason": "pro Saison"
+			},
+			"table": {
+				"title": "Typische Heizleistung nach Gebäudetyp",
+				"buildingType": "Gebäudetyp",
+				"powerRange": "Leistung, W/m²",
+				"description": "Beschreibung"
+			},
+			"seo": {
+				"meta": {
+					"title": "Heizkostenrechner — Online-Berechnung nach Systemtyp",
+					"description": "Online-Rechner für Heizkostenberechnung. Finden Sie heraus, wie viel es kostet, Ihr Zuhause pro Monat oder Saison zu heizen, abhängig vom Systemtyp, Wirkungsgrad und Tarifen.",
+					"keywords": "Heizung, Heizungsberechnung, Heizkosten, elektrische Heizung, Gasheizung, Heizungsrechner"
+				},
+				"h1": "Heizkostenrechner — Online-Berechnung",
+				"description": "Online-Rechner zur Berechnung der Heizkosten nach Systemtyp, Raumgröße und Energietarifen.",
+				"overview": {
+					"title": "Über den Rechner",
+					"content": "Der Rechner hilft bei der Berechnung der Heizkosten basierend auf Systemtyp, Raumfläche, Saisondauer und Energietarifen."
+				},
+				"calculation": {
+					"title": "Wie wird berechnet",
+					"content": "Die Leistung wird basierend auf Fläche und Temperatur berechnet. Der Verbrauch hängt von Leistung, Betriebszeit und Systemwirkungsgrad ab. Die Kosten werden nach Energietarif berechnet."
+				},
+				"advantages": {
+					"title": "Vorteile",
+					"content": "Genaue Kostenberechnung, Berücksichtigung aller Faktoren, Vergleich von Heizungstypen, Berechnung für verschiedene Jahreszeiten."
+				},
+				"tips": {
+					"title": "Tipps",
+					"tip1": "Verwenden Sie Thermostate, um Energie zu sparen",
+					"tip2": "Hausdämmung reduziert Kosten erheblich",
+					"tip3": "Vergleichen Sie verschiedene Heizungstypen nach Kosten"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie berechnet man Heizkosten für das Zuhause?",
+						"a": "Geben Sie Fläche, Heizungstyp und Tarif ein — der Rechner berechnet Leistung, Verbrauch und Heizkosten für die Saison."
+					},
+					{
+						"q": "Was ist profitabler — elektrische oder Gasheizung?",
+						"a": "Gasheizung ist normalerweise günstiger, erfordert aber Kesselinstallation. Elektrisch ist einfacher und benötigt keinen Schornstein."
+					},
+					{
+						"q": "Wie reduziert man Heizkosten?",
+						"a": "Verwenden Sie Dämmung, intelligente Thermostate und energieeffiziente Heizgeräte."
+					}
+				]
+			}
+		},
+		"gasUsage": {
+			"title": "Gasverbrauch Rechner — Online-Berechnung",
+			"description": "Online-Rechner zur Berechnung des Gasverbrauchs und der Kosten für Heizung, Kochen oder Warmwasserbereitung.",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Gasverbrauch Rechner",
+				"description": "Berechnen Sie Erdgasverbrauch und Kosten",
+				"purpose": "Gasverwendung",
+				"area": "Raumfläche (m²)",
+				"hoursPerDay": "Betriebsstunden pro Tag",
+				"power": "Geräteleistung (kW)",
+				"efficiency": "Systemwirkungsgrad (%)",
+				"tariff": "Gastarif",
+				"tariffUnit": "€/m³",
+				"periodDays": "Zeitraum (Tage)",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"purposes": {
+					"heating": "Heizung",
+					"water_heating": "Warmwasser",
+					"cooking": "Kochen"
+				},
+				"equipmentTypes": {
+					"gas_stove": "Gasherd (4 Brenner)",
+					"gas_water_heater": "Gas-Warmwasserbereiter",
+					"gas_boiler_10_20": "Gas-Kessel 10-20 kW",
+					"gas_boiler_30_40": "Gas-Kessel 30-40 kW"
+				},
+				"equipmentDescriptions": {
+					"gas_stove": "4-Brenner-Gasherd zum Kochen",
+					"gas_water_heater": "Gas-Warmwasserbereiter für Warmwasserversorgung",
+					"gas_boiler_10_20": "Kleiner Gas-Kessel für Heizung",
+					"gas_boiler_30_40": "Großer Gas-Kessel für Heizung"
+				},
+				"errors": {
+					"title": "Datenfehler"
+				},
+				"infographic": {
+					"title": "Erdgas-Anwendungen",
+					"heating": {
+						"title": "Heizung",
+						"description": "Raumheizung mit Gas-Kesseln und Konvektoren"
+					},
+					"water": {
+						"title": "Warmwasser",
+						"description": "Wassererwärmung mit Gas-Warmwasserbereitern und Kesseln"
+					},
+					"cooking": {
+						"title": "Kochen",
+						"description": "Gasnutzung in der Küche für die Zubereitung von Speisen"
+					}
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"dailyConsumption": "Tagesverbrauch",
+				"monthlyConsumption": "Monatsverbrauch",
+				"periodConsumption": "Zeitraumverbrauch",
+				"totalEnergy": "Gesamtenergie",
+				"dailyCost": "Tageskosten",
+				"monthlyCost": "Monatskosten",
+				"periodCost": "Zeitraumkosten",
+				"consumptionPerHour": "Verbrauch pro Stunde",
+				"purpose": "Verwendung",
+				"energyConsumption": "Energieverbrauch",
+				"perDay": "pro Tag",
+				"perMonth": "pro Monat",
+				"perPeriod": "pro Zeitraum",
+				"additionalInfo": "Zusätzliche Informationen"
+			},
+			"table": {
+				"title": "Typischer Gasverbrauch nach Gerät",
+				"equipmentType": "Gerätetyp",
+				"consumptionRange": "Durchschnittsverbrauch, m³/h",
+				"description": "Beschreibung"
+			},
+			"seo": {
+				"meta": {
+					"title": "Gasverbrauch und Kostenrechner Online — Verbrauchsrechner",
+					"description": "Online-Erdgasverbrauchsrechner. Berechnen Sie, wie viel Gas Sie für Heizung, Kochen oder Warmwasser verbrauchen und erfahren Sie die ungefähren Kosten.",
+					"keywords": "Gasverbrauch, Gaskosten, Gas-Kessel, Gasrechner, Gasnutzung, Gasheizung"
+				},
+				"h1": "Gasverbrauch Rechner — Online-Berechnung",
+				"description": "Online-Rechner zur Berechnung des Gasverbrauchs und der Kosten für Heizung, Kochen oder Warmwasserbereitung.",
+				"overview": {
+					"title": "Über den Rechner",
+					"content": "Der Rechner hilft bei der Berechnung des Erdgasverbrauchs und der Kosten basierend auf Verwendung, Geräteleistung, Betriebszeit und Tarifen."
+				},
+				"calculation": {
+					"title": "Wie wird berechnet",
+					"content": "Der Gasverbrauch wird basierend auf Geräteleistung, Betriebszeit und Systemwirkungsgrad berechnet. Die Kosten werden nach Gastarif bestimmt."
+				},
+				"advantages": {
+					"title": "Vorteile",
+					"content": "Genaue Verbrauchsberechnung, Berücksichtigung aller Faktoren, Vergleich verschiedener Szenarien, Berechnung für verschiedene Zeiträume."
+				},
+				"tips": {
+					"title": "Tipps",
+					"tip1": "Warten Sie Gasgeräte regelmäßig",
+					"tip2": "Verwenden Sie Thermostate, um Gas zu sparen",
+					"tip3": "Hausdämmung reduziert Gasverbrauch für Heizung"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie berechnet man Gasverbrauch für Heizung?",
+						"a": "Geben Sie Raumfläche, Kesselleistung und Wirkungsgrad ein. Der Rechner berechnet den ungefähren Gasverbrauch pro Tag, Monat und Saison."
+					},
+					{
+						"q": "Wie viel Gas verbraucht ein 20 kW Kessel?",
+						"a": "Etwa 2 m³/h bei Volllast, abhängig von Wirkungsgrad und Temperatur."
+					},
+					{
+						"q": "Wie reduziert man Gasverbrauch?",
+						"a": "Warten Sie Geräte regelmäßig, dämmen Sie das Haus und installieren Sie Thermostate für optimale Temperaturkontrolle."
+					}
+				]
+			}
+		},
 		"floorHeating": {
 			"title": "Elektrische Fußbodenheizung — Leistungs- und Energieverbrauchsrechner",
 			"description": "Online-Rechner zur Berechnung der Leistung und des Energieverbrauchs einer elektrischen Fußbodenheizung je nach Raumgröße.",
@@ -6244,6 +6473,136 @@
 					{
 						"q": "Wie reduziert man die Stromkosten?",
 						"a": "Verwenden Sie einen Thermostat und Bodendämmung, damit das System weniger Zeit läuft."
+					}
+				]
+			}
+		},
+		"planetWeight": {
+			"title": "Gewicht auf anderen Planeten Rechner",
+			"description": "Finden Sie heraus, wie viel Sie auf Mars, Jupiter oder dem Mond wiegen würden. Unser Online-Planetengewichtsrechner hilft Ihnen, die Schwerkraft des Universums zu spüren!",
+			"breadcrumbs": {
+				"home": "Startseite",
+				"fun": "Unterhaltung",
+				"planetWeight": "Planetengewicht"
+			},
+			"form": {
+				"title": "Berechnen Sie Ihr Gewicht auf anderen Planeten",
+				"earthWeight": "Ihr Gewicht auf der Erde",
+				"unit": "Maßeinheit",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"units": {
+					"kg": "Kilogramm (kg)",
+					"lbs": "Pfund (lbs)"
+				},
+				"errors": {
+					"title": "Datenfehler",
+					"weightRequired": "Gewicht ist erforderlich",
+					"weightPositive": "Gewicht muss positiv sein",
+					"weightMax": "Gewicht darf nicht mehr als 1000 kg betragen"
+				}
+			},
+			"results": {
+				"title": "Ihr Gewicht auf anderen Planeten",
+				"planet": "Planet",
+				"weight": "Gewicht",
+				"gravity": "Schwerkraft",
+				"comparison": "Vergleich zur Erde",
+				"earthWeight": "Erdgewicht",
+				"copyResults": "Ergebnisse kopieren",
+				"shareResults": "Ergebnisse teilen",
+				"planets": {
+					"mercury": "Merkur",
+					"venus": "Venus",
+					"moon": "Mond",
+					"mars": "Mars",
+					"jupiter": "Jupiter",
+					"saturn": "Saturn",
+					"uranus": "Uranus",
+					"neptune": "Neptun",
+					"pluto": "Pluto"
+				}
+			},
+			"facts": {
+				"title": "Interessante Fakten über Planeten",
+				"mercury": "Merkur ist der kleinste Planet und hat die schwächste Schwerkraft",
+				"venus": "Venus hat eine ähnliche Größe wie die Erde, aber eine dichte Atmosphäre",
+				"moon": "Der Mond hat nur 1/6 der Erdschwerkraft",
+				"mars": "Mars ist der rote Planet und hat etwa 1/3 der Erdschwerkraft",
+				"jupiter": "Jupiter ist der größte Planet und hat die stärkste Schwerkraft",
+				"saturn": "Saturn ist bekannt für seine Ringe und hat eine geringe Dichte",
+				"uranus": "Uranus ist ein Eisriese und rotiert auf der Seite",
+				"neptune": "Neptun ist der windigste Planet im Sonnensystem",
+				"pluto": "Pluto ist ein Zwergplanet mit sehr geringer Schwerkraft"
+			},
+			"seo": {
+				"title": "Gewicht auf anderen Planeten — Online-Rechner für Weltraumgewicht",
+				"description": "Finden Sie heraus, wie viel Sie auf Mars, Jupiter oder dem Mond wiegen würden. Unser Online-Planetengewichtsrechner hilft Ihnen, die Schwerkraft des Universums zu spüren!",
+				"keywords": "Gewicht auf Planeten, Gewicht auf Mars, Gewicht auf Mond, Online-Gewichtsrechner, Planetenschwerkraft, Gewicht im Weltraum",
+				"overview": {
+					"title": "Über den Rechner",
+					"content": "Unser Rechner hilft Ihnen dabei, Ihr Gewicht auf verschiedenen Planeten des Sonnensystems zu berechnen. Geben Sie einfach Ihr Gewicht auf der Erde ein und wählen Sie die Maßeinheit — der Rechner zeigt Ihnen sofort Ihr Gewicht auf allen Planeten an."
+				},
+				"calculation": {
+					"title": "Wie wird berechnet",
+					"content": "Das Gewicht auf einem Planeten wird nach der Formel berechnet: Gewicht auf Planet = Gewicht auf Erde × (Schwerkraft des Planeten / Schwerkraft der Erde). Wir verwenden die tatsächlichen Schwerkraftkoeffizienten aller Planeten.",
+					"formula": "Gewicht auf Planet = Gewicht auf Erde × (Schwerkraft des Planeten / Schwerkraft der Erde)",
+					"example": "Beispiel: Wenn Sie 70 kg auf der Erde wiegen, wiegen Sie auf dem Mars etwa 26,4 kg (70 × 0,377)."
+				},
+				"advantages": {
+					"title": "Vorteile",
+					"content": "Genaue Berechnungen mit echten Schwerkraftdaten, Unterstützung für Kilogramm und Pfund, Interessante Fakten über jeden Planeten, Einfache und intuitive Benutzeroberfläche.",
+					"items": [
+						"Genaue Berechnungen mit echten Schwerkraftdaten aller Planeten",
+						"Unterstützung für Kilogramm und Pfund für internationale Benutzer",
+						"Interessante Fakten über jeden Planeten des Sonnensystems",
+						"Einfache und intuitive Benutzeroberfläche"
+					]
+				},
+				"tips": {
+					"title": "Tipps",
+					"tip1": "Verwenden Sie Ihr tatsächliches Gewicht für genauere Ergebnisse",
+					"tip2": "Vergleichen Sie Ihr Gewicht auf verschiedenen Planeten",
+					"tip3": "Teilen Sie die Ergebnisse mit Freunden und Familie",
+					"items": [
+						"Verwenden Sie Ihr tatsächliches Gewicht für genauere Ergebnisse",
+						"Vergleichen Sie Ihr Gewicht auf verschiedenen Planeten",
+						"Teilen Sie die Ergebnisse mit Freunden und Familie"
+					]
+				},
+				"facts": {
+					"title": "Interessante Fakten über Planeten",
+					"items": [
+						{
+							"title": "Merkur - Der kleinste Planet",
+							"content": "Merkur ist der kleinste Planet und hat die schwächste Schwerkraft im Sonnensystem."
+						},
+						{
+							"title": "Jupiter - Der größte Planet",
+							"content": "Jupiter ist der größte Planet und hat die stärkste Schwerkraft - Sie würden dort 2,5 mal schwerer sein."
+						},
+						{
+							"title": "Der Mond - Unser nächster Nachbar",
+							"content": "Der Mond hat nur 1/6 der Erdschwerkraft - Sie würden dort 6 mal leichter sein."
+						}
+					]
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Warum unterscheidet sich das Gewicht auf verschiedenen Planeten?",
+						"a": "Das Gewicht hängt von der Schwerkraft des Planeten ab. Zum Beispiel ist das Gewicht auf Mars geringer als auf der Erde, während es auf Jupiter höher ist."
+					},
+					{
+						"q": "Wie berechnet man das Gewicht auf einem anderen Planeten?",
+						"a": "Gewicht auf Planet = Gewicht auf Erde × (Schwerkraft des Planeten / Schwerkraft der Erde)."
+					},
+					{
+						"q": "Warum ist Pluto auch enthalten?",
+						"a": "Obwohl Pluto aus der Liste der Planeten ausgeschlossen wurde, bleibt er ein interessantes Beispiel mit sehr geringer Schwerkraft."
 					}
 				]
 			}

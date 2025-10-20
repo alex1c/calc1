@@ -8,6 +8,9 @@ import {
 	Home,
 	Package,
 	Thermometer,
+	Flame,
+	Zap,
+	Droplets,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -67,6 +70,27 @@ const getCalculators = (t: any) => [
 		description: t('calculators.floorHeating.description'),
 		icon: Thermometer,
 		href: '/construction/floor-heating',
+	},
+	{
+		id: 'heating-cost',
+		title: t('calculators.heatingCost.title'),
+		description: t('calculators.heatingCost.description'),
+		icon: Flame,
+		href: '/construction/heating-cost',
+	},
+	{
+		id: 'gas-usage',
+		title: t('calculators.gasUsage.title'),
+		description: t('calculators.gasUsage.description'),
+		icon: Zap,
+		href: '/construction/gas-usage',
+	},
+	{
+		id: 'water-usage',
+		title: t('calculators.waterUsage.title'),
+		description: t('calculators.waterUsage.description'),
+		icon: Droplets,
+		href: '/construction/water-usage',
 	},
 ];
 

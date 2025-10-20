@@ -6086,7 +6086,10 @@
 		"electricityCost": {
 			"title": "Electricity Cost Calculator",
 			"description": "Calculate electricity consumption and cost for home appliances.",
-			"breadcrumbs": { "home": "Home", "life": "Life" },
+			"breadcrumbs": {
+				"home": "Home",
+				"life": "Life"
+			},
 			"table": {
 				"device": "Appliance",
 				"powerW": "Power (W)",
@@ -6099,7 +6102,11 @@
 				"consumptionKWh": "Consumption (kWh)",
 				"cost": "Cost"
 			},
-			"actions": { "addDevice": "Add device", "exportCsv": "Export CSV", "remove": "Remove" },
+			"actions": {
+				"addDevice": "Add device",
+				"exportCsv": "Export CSV",
+				"remove": "Remove"
+			},
 			"results": {
 				"title": "Totals",
 				"totalConsumption": "Total consumption (kWh)",
@@ -6107,7 +6114,10 @@
 				"note": "Note",
 				"noteText": "Costs depend on local tariffs and actual usage."
 			},
-			"defaults": { "kettle": "Kettle", "device": "Device" },
+			"defaults": {
+				"kettle": "Kettle",
+				"device": "Device"
+			},
 			"infographic": {
 				"energy": "Energy",
 				"energyDescription": "kWh based on power and time",
@@ -6123,14 +6133,265 @@
 				},
 				"h1": "Electricity Cost and Power Consumption Calculator",
 				"description": "Calculate electricity consumption and cost.",
-				"overview": { "title": "About the calculator", "content": "Enter device power, hours per day, days and price per kWh to estimate consumption and total cost per device and overall." },
-				"calculation": { "title": "How it is calculated", "content": "Consumption (kWh) = Power (W) × Hours / 1000\nCost = Consumption × Price per kWh" },
-				"tips": { "title": "Tips", "tip1": "Use average daily time for continuous devices.", "tip2": "Fridges typically run 24h with duty cycles.", "tip3": "Tariffs may vary day/night." },
-				"faq": { "title": "FAQ" },
+				"overview": {
+					"title": "About the calculator",
+					"content": "Enter device power, hours per day, days and price per kWh to estimate consumption and total cost per device and overall."
+				},
+				"calculation": {
+					"title": "How it is calculated",
+					"content": "Consumption (kWh) = Power (W) × Hours / 1000\nCost = Consumption × Price per kWh"
+				},
+				"tips": {
+					"title": "Tips",
+					"tip1": "Use average daily time for continuous devices.",
+					"tip2": "Fridges typically run 24h with duty cycles.",
+					"tip3": "Tariffs may vary day/night."
+				},
+				"faq": {
+					"title": "FAQ"
+				},
 				"faqItems": [
-					{ "q": "How to calculate device consumption?", "a": "Multiply device power in watts by hours of operation and divide by 1000 to get kWh." },
-					{ "q": "How to calculate cost?", "a": "Multiply consumption in kWh by your price per kWh." },
-					{ "q": "Can I add multiple devices?", "a": "Yes, add multiple rows — totals are calculated automatically." }
+					{
+						"q": "How to calculate device consumption?",
+						"a": "Multiply device power in watts by hours of operation and divide by 1000 to get kWh."
+					},
+					{
+						"q": "How to calculate cost?",
+						"a": "Multiply consumption in kWh by your price per kWh."
+					},
+					{
+						"q": "Can I add multiple devices?",
+						"a": "Yes, add multiple rows — totals are calculated automatically."
+					}
+				]
+			}
+		},
+		"heatingCost": {
+			"title": "Heating Cost Calculator — Online Estimation",
+			"description": "Online calculator to estimate heating costs by system type, room size, and energy tariffs.",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Heating Cost Calculator",
+				"description": "Calculate heating costs based on system type and tariffs",
+				"area": "Room area (m²)",
+				"seasonDays": "Heating season duration (days)",
+				"hoursPerDay": "Hours of operation per day",
+				"temperature": "Room temperature (°C)",
+				"heatingType": "Heating type",
+				"efficiency": "System efficiency (%)",
+				"tariff": "Energy tariff",
+				"tariffUnit": "$/kWh, $/m³, $/kg",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"heatingTypes": {
+					"electric": "Electric Heating",
+					"gas": "Gas Heating",
+					"solid_fuel": "Solid Fuel Heating",
+					"central": "Central Heating"
+				},
+				"buildingTypes": {
+					"modern_insulated": "Modern Insulated House",
+					"average_insulation": "Average Insulation House",
+					"old_uninsulated": "Old Uninsulated House",
+					"apartment": "Apartment Building"
+				},
+				"buildingDescriptions": {
+					"modern_insulated": "Well-insulated modern house",
+					"average_insulation": "House with medium insulation",
+					"old_uninsulated": "Old house without proper insulation",
+					"apartment": "Apartment in multi-story building"
+				},
+				"errors": {
+					"title": "Data errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"requiredPower": "Required Power",
+				"dailyConsumption": "Daily Consumption",
+				"seasonalConsumption": "Seasonal Consumption",
+				"dailyCost": "Daily Cost",
+				"seasonalCost": "Seasonal Cost",
+				"heatingType": "Heating Type",
+				"efficiency": "Efficiency",
+				"perDay": "per day",
+				"perSeason": "per season"
+			},
+			"table": {
+				"title": "Typical Heating Power by Building Type",
+				"buildingType": "Building Type",
+				"powerRange": "Power, W/m²",
+				"description": "Description"
+			},
+			"seo": {
+				"meta": {
+					"title": "Heating Cost Calculator — Online Estimation by System Type",
+					"description": "Online calculator for heating cost estimation. Find out how much it costs to heat your home per month or season depending on system type, efficiency and tariffs.",
+					"keywords": "heating, heating calculation, heating cost, electric heating, gas heating, heating calculator"
+				},
+				"h1": "Heating Cost Calculator — Online Estimation",
+				"description": "Online calculator to estimate heating costs by system type, room size, and energy tariffs.",
+				"overview": {
+					"title": "About the Calculator",
+					"content": "The calculator helps calculate heating costs based on system type, room area, season duration and energy tariffs."
+				},
+				"calculation": {
+					"title": "How it's calculated",
+					"content": "Power is calculated based on area and temperature. Consumption depends on power, operating time and system efficiency. Cost is calculated by energy tariff."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Accurate cost calculation, consideration of all factors, comparison of heating types, calculation for different seasons."
+				},
+				"tips": {
+					"title": "Tips",
+					"tip1": "Use thermostats to save energy",
+					"tip2": "House insulation significantly reduces costs",
+					"tip3": "Compare different heating types by cost"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to calculate home heating costs?",
+						"a": "Enter area, heating type and tariff — the calculator will calculate power, consumption and heating cost for the season."
+					},
+					{
+						"q": "What's more profitable — electric or gas heating?",
+						"a": "Gas heating is usually cheaper, but requires boiler installation. Electric is simpler and doesn't require chimney."
+					},
+					{
+						"q": "How to reduce heating costs?",
+						"a": "Use insulation, smart thermostats and energy-efficient heating appliances."
+					}
+				]
+			}
+		},
+		"gasUsage": {
+			"title": "Gas Usage Calculator — Online Estimation",
+			"description": "Online calculator to estimate natural gas usage and cost for heating, cooking, or water heating.",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Gas Usage Calculator",
+				"description": "Calculate natural gas consumption and cost",
+				"purpose": "Gas purpose",
+				"area": "Room area (m²)",
+				"hoursPerDay": "Hours of operation per day",
+				"power": "Equipment power (kW)",
+				"efficiency": "System efficiency (%)",
+				"tariff": "Gas tariff",
+				"tariffUnit": "$/m³",
+				"periodDays": "Period duration (days)",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"purposes": {
+					"heating": "Heating",
+					"water_heating": "Water Heating",
+					"cooking": "Cooking"
+				},
+				"equipmentTypes": {
+					"gas_stove": "Gas Stove (4 burners)",
+					"gas_water_heater": "Gas Water Heater",
+					"gas_boiler_10_20": "Gas Boiler 10-20 kW",
+					"gas_boiler_30_40": "Gas Boiler 30-40 kW"
+				},
+				"equipmentDescriptions": {
+					"gas_stove": "4-burner gas stove for cooking",
+					"gas_water_heater": "Gas water heater for hot water supply",
+					"gas_boiler_10_20": "Small gas boiler for heating",
+					"gas_boiler_30_40": "Large gas boiler for heating"
+				},
+				"errors": {
+					"title": "Data errors"
+				},
+				"infographic": {
+					"title": "Natural Gas Applications",
+					"heating": {
+						"title": "Heating",
+						"description": "Space heating with gas boilers and convectors"
+					},
+					"water": {
+						"title": "Hot Water",
+						"description": "Water heating with gas water heaters and boilers"
+					},
+					"cooking": {
+						"title": "Cooking",
+						"description": "Using gas in the kitchen for food preparation"
+					}
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"dailyConsumption": "Daily Consumption",
+				"monthlyConsumption": "Monthly Consumption",
+				"periodConsumption": "Period Consumption",
+				"totalEnergy": "Total Energy",
+				"dailyCost": "Daily Cost",
+				"monthlyCost": "Monthly Cost",
+				"periodCost": "Period Cost",
+				"consumptionPerHour": "Consumption per Hour",
+				"purpose": "Purpose",
+				"energyConsumption": "energy consumption",
+				"perDay": "per day",
+				"perMonth": "per month",
+				"perPeriod": "per period",
+				"additionalInfo": "Additional Information"
+			},
+			"table": {
+				"title": "Typical Gas Consumption by Equipment",
+				"equipmentType": "Equipment Type",
+				"consumptionRange": "Average Consumption, m³/h",
+				"description": "Description"
+			},
+			"seo": {
+				"meta": {
+					"title": "Gas Usage and Cost Calculator Online — Consumption Calculator",
+					"description": "Online natural gas consumption calculator. Calculate how much gas you consume for heating, cooking or water heating and find out the approximate cost.",
+					"keywords": "gas consumption, gas cost, gas boiler, gas calculator, gas usage, gas heating"
+				},
+				"h1": "Gas Usage Calculator — Online Estimation",
+				"description": "Online calculator to estimate natural gas usage and cost for heating, cooking, or water heating.",
+				"overview": {
+					"title": "About the Calculator",
+					"content": "The calculator helps calculate natural gas consumption and cost based on purpose, equipment power, operating time and tariffs."
+				},
+				"calculation": {
+					"title": "How it's calculated",
+					"content": "Gas consumption is calculated based on equipment power, operating time and system efficiency. Cost is determined by gas tariff."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Accurate consumption calculation, consideration of all factors, comparison of different scenarios, calculation for various periods."
+				},
+				"tips": {
+					"title": "Tips",
+					"tip1": "Regularly maintain gas equipment",
+					"tip2": "Use thermostats to save gas",
+					"tip3": "House insulation reduces gas consumption for heating"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to calculate gas consumption for heating?",
+						"a": "Enter room area, boiler power and efficiency. The calculator will calculate approximate gas consumption per day, month and season."
+					},
+					{
+						"q": "How much gas does a 20 kW boiler consume?",
+						"a": "About 2 m³/h at full load, depending on efficiency and temperature."
+					},
+					{
+						"q": "How to reduce gas consumption?",
+						"a": "Regularly maintain equipment, insulate the house and install thermostats for optimal temperature control."
+					}
 				]
 			}
 		},
@@ -6236,6 +6497,115 @@
 						"a": "Use a thermostat and floor insulation so the system works less time."
 					}
 				]
+			}
+		},
+		"planetWeight": {
+			"title": "Weight on Other Planets Calculator",
+			"description": "Find out how much you would weigh on Mars, Jupiter, or the Moon. Our online planetary weight calculator helps you feel the gravity of the Universe!",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"planetWeight": "Planet Weight"
+			},
+			"form": {
+				"title": "Calculate Your Weight on Other Planets",
+				"earthWeight": "Your Weight on Earth",
+				"unit": "Unit of Measurement",
+				"unitTypes": {
+					"kg": "Kilograms (kg)",
+					"lb": "Pounds (lb)"
+				},
+				"calculate": "Calculate Planet Weight",
+				"errors": {
+					"positive": "Weight must be a positive number",
+					"tooHigh": "Weight seems too high. Please check your input"
+				}
+			},
+			"results": {
+				"title": "Your Weight on Different Planets",
+				"weight": "Weight",
+				"gravity": "Gravity",
+				"planets": {
+					"mercury": "Mercury",
+					"venus": "Venus",
+					"moon": "Moon",
+					"mars": "Mars",
+					"jupiter": "Jupiter",
+					"saturn": "Saturn",
+					"uranus": "Uranus",
+					"neptune": "Neptune",
+					"pluto": "Pluto"
+				},
+				"info": {
+					"title": "Interesting Fact",
+					"content": "Weight depends on the planet's gravity. On Jupiter, you would weigh 2.5 times more than on Earth, and on Pluto — almost nothing!"
+				}
+			},
+			"seo": {
+				"title": "Weight on Other Planets — Online Space Weight Calculator",
+				"description": "Find out how much you would weigh on Mars, Jupiter, or the Moon. Online planetary weight calculator helps you feel the gravity of the Universe!",
+				"keywords": "weight on planets, weight on Mars, weight on Moon, online weight calculator, planetary gravity, weight in space, gravity calculator, weight on Jupiter, weight on other planets, space calculator",
+				"overview": {
+					"title": "About the Planetary Weight Calculator",
+					"content": "The planetary weight calculator allows you to discover how much you would weigh on various planets of the Solar System and the Moon. Weight depends on the force of gravity, which differs on each planet. For example, on Mars you would weigh much less than on Earth, while on Jupiter you would weigh significantly more!"
+				},
+				"calculation": {
+					"title": "How Weight is Calculated on Another Planet",
+					"content": "Weight on another planet is calculated by multiplying your weight on Earth by that planet's gravity coefficient. Each planet has its own gravitational force, expressed as a percentage of Earth's gravity.",
+					"formula": "Planet Weight = Earth Weight × (Planet Gravity / Earth Gravity)",
+					"example": "For example, if you weigh 70 kg on Earth, on Mars (gravity 37.8%) you would weigh about 26.5 kg, and on Jupiter (gravity 236.4%) about 165.5 kg."
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"items": [
+						"Real gravity coefficients based on scientific data",
+						"Support for kilograms and pounds for user convenience",
+						"Calculation for all Solar System planets, including Pluto and the Moon",
+						"Beautiful visualization with gravity indicators"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"items": [
+						"Enter your real weight on Earth for accurate results",
+						"Choose your preferred unit of measurement: kilograms or pounds",
+						"Compare results and discover where you would be lighter or heavier"
+					]
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "Why does weight differ on different planets?",
+						"a": "Weight depends on the planet's gravitational force. For example, weight on Mars is less than on Earth because Mars' gravity is only 37.8% of Earth's, while on Jupiter weight is greater due to its powerful gravity (236.4% of Earth's)."
+					},
+					{
+						"q": "How to calculate weight on another planet?",
+						"a": "Planet weight is calculated using the formula: Planet Weight = Earth Weight × (Planet Gravity / Earth Gravity). Our calculator automatically performs this calculation for all planets."
+					},
+					{
+						"q": "Why is Pluto also included?",
+						"a": "Although Pluto was reclassified from a planet to a dwarf planet, it remains an interesting example with very low gravity (only 7.1% of Earth's), making it important for comparison."
+					}
+				],
+				"facts": {
+					"title": "Interesting Facts About Gravity",
+					"items": [
+						{
+							"title": "Jupiter — Gravity Giant",
+							"content": "On Jupiter you would weigh 2.36 times more due to its enormous mass. If you weigh 70 kg on Earth, on Jupiter it would be 165 kg!"
+						},
+						{
+							"title": "Pluto — Weightlessness",
+							"content": "On Pluto you would weigh only 7% of your Earth weight. A person weighing 70 kg on Earth would weigh only 5 kg there!"
+						},
+						{
+							"title": "Moon — Cosmic Lightness",
+							"content": "On the Moon you would weigh 6 times less than on Earth. That's why astronauts can jump so high on the lunar surface!"
+						}
+					]
+				}
 			}
 		}
 	}

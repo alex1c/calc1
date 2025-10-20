@@ -1,9 +1,23 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Smile, Heart, Dice6, Sparkles } from 'lucide-react';
+import {
+	Smile,
+	Heart,
+	Dice6,
+	Sparkles,
+	Globe,
+	Users,
+	User,
+	Shuffle,
+	Ticket,
+	Lock,
+	Dice1,
+	Coins,
+	Star,
+} from 'lucide-react';
 
-const calculators = [
+const getCalculators = (t: any) => [
 	{
 		id: 'compatibility',
 		title: 'Love Compatibility Calculator',
@@ -34,11 +48,75 @@ const calculators = [
 		icon: Smile,
 		href: '/calc/color-picker',
 	},
+	{
+		id: 'planet-weight',
+		title: t('calculators.planetWeight.title'),
+		description: t('calculators.planetWeight.description'),
+		icon: Globe,
+		href: '/fun/planet-weight',
+	},
+	{
+		id: 'love',
+		title: t('calculators.loveCompatibility.title'),
+		description: t('calculators.loveCompatibility.description'),
+		icon: Users,
+		href: '/fun/love',
+	},
+	{
+		id: 'nickname',
+		title: t('calculators.nicknameGenerator.title'),
+		description: t('calculators.nicknameGenerator.description'),
+		icon: User,
+		href: '/fun/nickname',
+	},
+	{
+		id: 'random',
+		title: t('calculators.randomNumberGenerator.title'),
+		description: t('calculators.randomNumberGenerator.description'),
+		icon: Shuffle,
+		href: '/fun/random',
+	},
+	{
+		id: 'lottery',
+		title: t('calculators.lotteryGenerator.title'),
+		description: t('calculators.lotteryGenerator.description'),
+		icon: Ticket,
+		href: '/fun/lottery',
+	},
+	{
+		id: 'password',
+		title: t('calculators.passwordGenerator.title'),
+		description: t('calculators.passwordGenerator.description'),
+		icon: Lock,
+		href: '/fun/password',
+	},
+	{
+		id: 'dice',
+		title: t('calculators.diceRoller.title'),
+		description: t('calculators.diceRoller.description'),
+		icon: Dice1,
+		href: '/fun/dice',
+	},
+	{
+		id: 'coin',
+		title: t('calculators.coinFlipper.title'),
+		description: t('calculators.coinFlipper.description'),
+		icon: Coins,
+		href: '/fun/coin',
+	},
+	{
+		id: 'zodiac',
+		title: t('calculators.zodiacCalculator.title'),
+		description: t('calculators.zodiacCalculator.description'),
+		icon: Star,
+		href: '/fun/zodiac',
+	},
 ];
 
 export default function FunPage() {
 	const t = useTranslations();
 	const locale = useLocale();
+	const calculators = getCalculators(t);
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -60,7 +138,7 @@ export default function FunPage() {
 					{calculators.map((calculator) => (
 						<Link
 							key={calculator.id}
-							href={`/${locale}/calc/${calculator.id}`}
+							href={`/${locale}${calculator.href}`}
 							className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 						>
 							<div className='flex items-center mb-4'>

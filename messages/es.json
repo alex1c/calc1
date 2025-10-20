@@ -6148,6 +6148,235 @@
 				]
 			}
 		},
+		"heatingCost": {
+			"title": "Costo de Calefacción — Calculadora en Línea",
+			"description": "Calculadora en línea para estimar el costo de la calefacción según el tipo de sistema, tamaño de la habitación y tarifas energéticas.",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Calculadora de Costo de Calefacción",
+				"description": "Calcula el costo de calefacción basado en el tipo de sistema y tarifas",
+				"area": "Área de la habitación (m²)",
+				"seasonDays": "Duración de la temporada de calefacción (días)",
+				"hoursPerDay": "Horas de funcionamiento por día",
+				"temperature": "Temperatura de la habitación (°C)",
+				"heatingType": "Tipo de calefacción",
+				"efficiency": "Eficiencia del sistema (%)",
+				"tariff": "Tarifa energética",
+				"tariffUnit": "€/kWh, €/m³, €/kg",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"heatingTypes": {
+					"electric": "Calefacción Eléctrica",
+					"gas": "Calefacción a Gas",
+					"solid_fuel": "Calefacción de Combustible Sólido",
+					"central": "Calefacción Central"
+				},
+				"buildingTypes": {
+					"modern_insulated": "Casa Moderna Aislada",
+					"average_insulation": "Casa con Aislamiento Medio",
+					"old_uninsulated": "Casa Vieja sin Aislamiento",
+					"apartment": "Edificio de Apartamentos"
+				},
+				"buildingDescriptions": {
+					"modern_insulated": "Casa moderna bien aislada",
+					"average_insulation": "Casa con aislamiento medio",
+					"old_uninsulated": "Casa vieja sin aislamiento adecuado",
+					"apartment": "Apartamento en edificio de varios pisos"
+				},
+				"errors": {
+					"title": "Errores en los datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"requiredPower": "Potencia Requerida",
+				"dailyConsumption": "Consumo Diario",
+				"seasonalConsumption": "Consumo Estacional",
+				"dailyCost": "Costo Diario",
+				"seasonalCost": "Costo Estacional",
+				"heatingType": "Tipo de Calefacción",
+				"efficiency": "Eficiencia",
+				"perDay": "por día",
+				"perSeason": "por temporada"
+			},
+			"table": {
+				"title": "Potencia Típica de Calefacción por Tipo de Edificio",
+				"buildingType": "Tipo de Edificio",
+				"powerRange": "Potencia, W/m²",
+				"description": "Descripción"
+			},
+			"seo": {
+				"meta": {
+					"title": "Costo de Calefacción — Calculadora en Línea por Tipo de Sistema",
+					"description": "Calculadora en línea para estimar el costo de la calefacción. Descubre cuánto cuesta calentar tu hogar por mes o temporada dependiendo del tipo de sistema, eficiencia y tarifas.",
+					"keywords": "calefacción, cálculo de calefacción, costo de calefacción, calefacción eléctrica, calefacción a gas, calculadora de calefacción"
+				},
+				"h1": "Costo de Calefacción — Calculadora en Línea",
+				"description": "Calculadora en línea para estimar el costo de la calefacción según el tipo de sistema, tamaño de la habitación y tarifas energéticas.",
+				"overview": {
+					"title": "Sobre la Calculadora",
+					"content": "La calculadora ayuda a calcular el costo de la calefacción basado en el tipo de sistema, área de la habitación, duración de la temporada y tarifas energéticas."
+				},
+				"calculation": {
+					"title": "Cómo se calcula",
+					"content": "La potencia se calcula basándose en el área y temperatura. El consumo depende de la potencia, tiempo de funcionamiento y eficiencia del sistema. El costo se calcula por tarifa energética."
+				},
+				"advantages": {
+					"title": "Ventajas",
+					"content": "Cálculo preciso de costos, consideración de todos los factores, comparación de tipos de calefacción, cálculo para diferentes temporadas."
+				},
+				"tips": {
+					"title": "Consejos",
+					"tip1": "Usa termostatos para ahorrar energía",
+					"tip2": "El aislamiento de la casa reduce significativamente los costos",
+					"tip3": "Compara diferentes tipos de calefacción por costo"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo calcular el costo de calefacción del hogar?",
+						"a": "Ingresa el área, tipo de calefacción y tarifa — la calculadora calculará la potencia, consumo y costo de calefacción para la temporada."
+					},
+					{
+						"q": "¿Qué es más rentable — calefacción eléctrica o a gas?",
+						"a": "La calefacción a gas suele ser más barata, pero requiere instalación de caldera. La eléctrica es más simple y no requiere chimenea."
+					},
+					{
+						"q": "¿Cómo reducir los costos de calefacción?",
+						"a": "Usa aislamiento, termostatos inteligentes y electrodomésticos de calefacción energéticamente eficientes."
+					}
+				]
+			}
+		},
+		"gasUsage": {
+			"title": "Consumo de Gas — Calculadora en Línea",
+			"description": "Calculadora en línea para estimar el consumo y costo del gas natural para calefacción, cocina o agua caliente.",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Calculadora de Consumo de Gas",
+				"description": "Calcula el consumo y costo del gas natural",
+				"purpose": "Uso del gas",
+				"area": "Área de la habitación (m²)",
+				"hoursPerDay": "Horas de funcionamiento por día",
+				"power": "Potencia del equipo (kW)",
+				"efficiency": "Eficiencia del sistema (%)",
+				"tariff": "Tarifa del gas",
+				"tariffUnit": "€/m³",
+				"periodDays": "Duración del período (días)",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"purposes": {
+					"heating": "Calefacción",
+					"water_heating": "Agua Caliente",
+					"cooking": "Cocina"
+				},
+				"equipmentTypes": {
+					"gas_stove": "Estufa de Gas (4 quemadores)",
+					"gas_water_heater": "Calentador de Agua a Gas",
+					"gas_boiler_10_20": "Caldera de Gas 10-20 kW",
+					"gas_boiler_30_40": "Caldera de Gas 30-40 kW"
+				},
+				"equipmentDescriptions": {
+					"gas_stove": "Estufa de gas de 4 quemadores para cocinar",
+					"gas_water_heater": "Calentador de agua a gas para suministro de agua caliente",
+					"gas_boiler_10_20": "Caldera de gas pequeña para calefacción",
+					"gas_boiler_30_40": "Caldera de gas grande para calefacción"
+				},
+				"errors": {
+					"title": "Errores en los datos"
+				},
+				"infographic": {
+					"title": "Aplicaciones del Gas Natural",
+					"heating": {
+						"title": "Calefacción",
+						"description": "Calefacción de espacios con calderas y convectores de gas"
+					},
+					"water": {
+						"title": "Agua Caliente",
+						"description": "Calentamiento de agua con calentadores y calderas de gas"
+					},
+					"cooking": {
+						"title": "Cocina",
+						"description": "Uso de gas en la cocina para preparación de alimentos"
+					}
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"dailyConsumption": "Consumo Diario",
+				"monthlyConsumption": "Consumo Mensual",
+				"periodConsumption": "Consumo del Período",
+				"totalEnergy": "Energía Total",
+				"dailyCost": "Costo Diario",
+				"monthlyCost": "Costo Mensual",
+				"periodCost": "Costo del Período",
+				"consumptionPerHour": "Consumo por Hora",
+				"purpose": "Uso",
+				"energyConsumption": "consumo de energía",
+				"perDay": "por día",
+				"perMonth": "por mes",
+				"perPeriod": "por período",
+				"additionalInfo": "Información Adicional"
+			},
+			"table": {
+				"title": "Consumo Típico de Gas por Equipo",
+				"equipmentType": "Tipo de Equipo",
+				"consumptionRange": "Consumo Promedio, m³/h",
+				"description": "Descripción"
+			},
+			"seo": {
+				"meta": {
+					"title": "Calculadora de Consumo y Costo de Gas Online — Calculadora de Consumo",
+					"description": "Calculadora de consumo de gas natural online. Calcula cuánto gas consumes para calefacción, cocina o agua caliente y descubre el costo aproximado.",
+					"keywords": "consumo de gas, costo de gas, caldera de gas, calculadora de gas, uso de gas, calefacción a gas"
+				},
+				"h1": "Consumo de Gas — Calculadora en Línea",
+				"description": "Calculadora en línea para estimar el consumo y costo del gas natural para calefacción, cocina o agua caliente.",
+				"overview": {
+					"title": "Sobre la Calculadora",
+					"content": "La calculadora ayuda a calcular el consumo y costo del gas natural basado en el uso, potencia del equipo, tiempo de funcionamiento y tarifas."
+				},
+				"calculation": {
+					"title": "Cómo se calcula",
+					"content": "El consumo de gas se calcula basándose en la potencia del equipo, tiempo de funcionamiento y eficiencia del sistema. El costo se determina por la tarifa del gas."
+				},
+				"advantages": {
+					"title": "Ventajas",
+					"content": "Cálculo preciso del consumo, consideración de todos los factores, comparación de diferentes escenarios, cálculo para varios períodos."
+				},
+				"tips": {
+					"title": "Consejos",
+					"tip1": "Mantén regularmente el equipo de gas",
+					"tip2": "Usa termostatos para ahorrar gas",
+					"tip3": "El aislamiento de la casa reduce el consumo de gas para calefacción"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo calcular el consumo de gas para calefacción?",
+						"a": "Ingresa el área de la habitación, potencia de la caldera y eficiencia. La calculadora calculará el consumo aproximado de gas por día, mes y temporada."
+					},
+					{
+						"q": "¿Cuánto gas consume una caldera de 20 kW?",
+						"a": "Aproximadamente 2 m³/h a plena carga, dependiendo de la eficiencia y temperatura."
+					},
+					{
+						"q": "¿Cómo reducir el consumo de gas?",
+						"a": "Mantén regularmente el equipo, aísla la casa e instala termostatos para un control óptimo de la temperatura."
+					}
+				]
+			}
+		},
 		"floorHeating": {
 			"title": "Suelo Radiante Eléctrico — Cálculo de Potencia y Consumo",
 			"description": "Calculadora en línea para estimar la potencia y consumo de un suelo radiante eléctrico según el tamaño de la habitación.",
@@ -6248,6 +6477,136 @@
 					{
 						"q": "¿Cómo reducir los costes de electricidad?",
 						"a": "Usa un termostato y aislamiento del suelo para que el sistema funcione menos tiempo."
+					}
+				]
+			}
+		},
+		"planetWeight": {
+			"title": "Calculadora de Peso en Otros Planetas",
+			"description": "Descubre cuánto pesarías en Marte, Júpiter o la Luna. ¡Nuestra calculadora online de peso planetario te ayuda a sentir la gravedad del Universo!",
+			"breadcrumbs": {
+				"home": "Inicio",
+				"fun": "Entretenimiento",
+				"planetWeight": "Peso Planetario"
+			},
+			"form": {
+				"title": "Calcula tu peso en otros planetas",
+				"earthWeight": "Tu peso en la Tierra",
+				"unit": "Unidad de medida",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"units": {
+					"kg": "Kilogramos (kg)",
+					"lbs": "Libras (lbs)"
+				},
+				"errors": {
+					"title": "Errores en los datos",
+					"weightRequired": "El peso es obligatorio",
+					"weightPositive": "El peso debe ser positivo",
+					"weightMax": "El peso no puede ser mayor a 1000 kg"
+				}
+			},
+			"results": {
+				"title": "Tu peso en otros planetas",
+				"planet": "Planeta",
+				"weight": "Peso",
+				"gravity": "Gravedad",
+				"comparison": "Comparación con la Tierra",
+				"earthWeight": "Peso en la Tierra",
+				"copyResults": "Copiar resultados",
+				"shareResults": "Compartir resultados",
+				"planets": {
+					"mercury": "Mercurio",
+					"venus": "Venus",
+					"moon": "Luna",
+					"mars": "Marte",
+					"jupiter": "Júpiter",
+					"saturn": "Saturno",
+					"uranus": "Urano",
+					"neptune": "Neptuno",
+					"pluto": "Plutón"
+				}
+			},
+			"facts": {
+				"title": "Datos interesantes sobre los planetas",
+				"mercury": "Mercurio es el planeta más pequeño y tiene la gravedad más débil",
+				"venus": "Venus tiene un tamaño similar a la Tierra, pero una atmósfera densa",
+				"moon": "La Luna tiene solo 1/6 de la gravedad de la Tierra",
+				"mars": "Marte es el planeta rojo y tiene aproximadamente 1/3 de la gravedad de la Tierra",
+				"jupiter": "Júpiter es el planeta más grande y tiene la gravedad más fuerte",
+				"saturn": "Saturno es conocido por sus anillos y tiene una densidad baja",
+				"uranus": "Urano es un gigante de hielo y rota de lado",
+				"neptune": "Neptuno es el planeta más ventoso del sistema solar",
+				"pluto": "Plutón es un planeta enano con gravedad muy baja"
+			},
+			"seo": {
+				"title": "Peso en otros planetas — Calculadora online de peso espacial",
+				"description": "Descubre cuánto pesarías en Marte, Júpiter o la Luna. ¡Nuestra calculadora online de peso planetario te ayuda a sentir la gravedad del Universo!",
+				"keywords": "peso en planetas, peso en Marte, peso en la Luna, calculadora online de peso, gravedad planetaria, peso en el espacio",
+				"overview": {
+					"title": "Sobre la calculadora",
+					"content": "Nuestra calculadora te ayuda a calcular tu peso en diferentes planetas del sistema solar. Simplemente introduce tu peso en la Tierra y elige la unidad de medida — la calculadora te mostrará inmediatamente tu peso en todos los planetas."
+				},
+				"calculation": {
+					"title": "Cómo se calcula",
+					"content": "El peso en un planeta se calcula con la fórmula: Peso en planeta = Peso en la Tierra × (Gravedad del planeta / Gravedad de la Tierra). Usamos los coeficientes de gravedad reales de todos los planetas.",
+					"formula": "Peso en planeta = Peso en la Tierra × (Gravedad del planeta / Gravedad de la Tierra)",
+					"example": "Ejemplo: Si pesas 70 kg en la Tierra, en Marte pesarías aproximadamente 26,4 kg (70 × 0,377)."
+				},
+				"advantages": {
+					"title": "Ventajas",
+					"content": "Cálculos precisos con datos reales de gravedad, soporte para kilogramos y libras, datos interesantes sobre cada planeta, interfaz simple e intuitiva.",
+					"items": [
+						"Cálculos precisos con datos reales de gravedad de todos los planetas",
+						"Soporte para kilogramos y libras para usuarios internacionales",
+						"Datos interesantes sobre cada planeta del sistema solar",
+						"Interfaz simple e intuitiva"
+					]
+				},
+				"tips": {
+					"title": "Consejos",
+					"tip1": "Usa tu peso real para resultados más precisos",
+					"tip2": "Compara tu peso en diferentes planetas",
+					"tip3": "Comparte los resultados con amigos y familia",
+					"items": [
+						"Usa tu peso real para resultados más precisos",
+						"Compara tu peso en diferentes planetas",
+						"Comparte los resultados con amigos y familia"
+					]
+				},
+				"facts": {
+					"title": "Datos interesantes sobre los planetas",
+					"items": [
+						{
+							"title": "Mercurio - El planeta más pequeño",
+							"content": "Mercurio es el planeta más pequeño y tiene la gravedad más débil del sistema solar."
+						},
+						{
+							"title": "Júpiter - El planeta más grande",
+							"content": "Júpiter es el planeta más grande y tiene la gravedad más fuerte - pesarías 2,5 veces más allí."
+						},
+						{
+							"title": "La Luna - Nuestro vecino más cercano",
+							"content": "La Luna tiene solo 1/6 de la gravedad de la Tierra - pesarías 6 veces menos allí."
+						}
+					]
+				},
+				"faq": {
+					"title": "Preguntas frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Por qué el peso es diferente en diferentes planetas?",
+						"a": "El peso depende de la fuerza de gravedad del planeta. Por ejemplo, en Marte el peso es menor que en la Tierra, mientras que en Júpiter es mayor."
+					},
+					{
+						"q": "¿Cómo calcular el peso en otro planeta?",
+						"a": "Peso en planeta = Peso en la Tierra × (Gravedad del planeta / Gravedad de la Tierra)."
+					},
+					{
+						"q": "¿Por qué Plutón también está incluido?",
+						"a": "Aunque Plutón fue excluido de la lista de planetas, sigue siendo un ejemplo interesante con gravedad muy baja."
 					}
 				]
 			}
