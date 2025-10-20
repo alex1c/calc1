@@ -11,6 +11,7 @@ import {
 	TrendingUp,
 	Shirt,
 	Circle,
+	Zap,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -76,6 +77,13 @@ const getCalculators = (t: any) => [
 		description: t('calculators.ringSize.description'),
 		icon: Circle,
 		href: '/life/ring-size',
+	},
+	{
+		id: 'electricity-cost',
+		title: t('calculators.electricityCost.title'),
+		description: t('calculators.electricityCost.description'),
+		icon: Zap,
+		href: '/life/electricity-cost',
 	},
 ];
 

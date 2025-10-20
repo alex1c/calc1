@@ -1,7 +1,14 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Wrench, Paintbrush, Square, Home, Package } from 'lucide-react';
+import {
+	Wrench,
+	Paintbrush,
+	Square,
+	Home,
+	Package,
+	Thermometer,
+} from 'lucide-react';
 
 const getCalculators = (t: any) => [
 	{
@@ -54,6 +61,13 @@ const getCalculators = (t: any) => [
 		icon: Package,
 		href: '/calc/wall',
 	},
+	{
+		id: 'floor-heating',
+		title: t('calculators.floorHeating.title'),
+		description: t('calculators.floorHeating.description'),
+		icon: Thermometer,
+		href: '/construction/floor-heating',
+	},
 ];
 
 export default function ConstructionPage() {
@@ -81,7 +95,7 @@ export default function ConstructionPage() {
 						return (
 							<Link
 								key={calculator.id}
-								href={`/${locale}/calc/${calculator.id}`}
+								href={`/${locale}${calculator.href}`}
 								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 							>
 								<div className='flex items-center mb-4'>

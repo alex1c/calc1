@@ -79,6 +79,10 @@
 				"wall": {
 					"title": "Ziegel- und Blockrechner",
 					"description": "Berechnung der Ziegel-, Gasblock- und Schaumblockmenge für die Wand"
+				},
+				"tile-laminate": {
+					"title": "Fliesen- und Laminatrechner",
+					"description": "Berechnung der Fliesen- und Laminatmenge für den Boden"
 				}
 			}
 		},
@@ -6087,6 +6091,161 @@
 						"tip3": "Konsultieren Sie einen Juwelier für genaue Messungen"
 					}
 				}
+			}
+		},
+		"electricityCost": {
+			"title": "Stromkostenrechner",
+			"description": "Berechnen Sie den Stromverbrauch und die Kosten Ihrer Haushaltsgeräte.",
+			"breadcrumbs": { "home": "Startseite", "life": "Leben" },
+			"table": {
+				"device": "Gerät",
+				"powerW": "Leistung (W)",
+				"hoursPerDay": "Stunden/Tag",
+				"days": "Tage",
+				"tariff": "Preis pro kWh",
+				"dayKWh": "Tag (kWh)",
+				"monthKWh": "Monat (kWh)",
+				"periodKWh": "Zeitraum (kWh)",
+				"consumptionKWh": "Verbrauch (kWh)",
+				"cost": "Kosten"
+			},
+			"actions": { "addDevice": "Geraet hinzufuegen", "exportCsv": "CSV exportieren", "remove": "Entfernen" },
+			"results": {
+				"title": "Summen",
+				"totalConsumption": "Gesamtverbrauch (kWh)",
+				"totalCost": "Gesamtkosten",
+				"note": "Hinweis",
+				"noteText": "Kosten hängen von lokalen Tarifen und Nutzung ab."
+			},
+			"defaults": { "kettle": "Wasserkocher", "device": "Geraet" },
+			"infographic": {
+				"energy": "Energie",
+				"energyDescription": "kWh basierend auf Leistung und Zeit",
+				"multi": "Mehrere Geraete",
+				"multiDescription": "Summierung per Tabelle",
+				"export": "Export",
+				"exportDescription": "Ergebnisse als CSV"
+			},
+			"seo": {
+				"meta": {
+					"title": "Stromkostenrechner — Energieverbrauch und Preis berechnen",
+					"description": "Berechnen Sie den Stromverbrauch und die Kosten Ihrer Haushaltsgeraete. Einfacher Online-Rechner nach Leistung und Laufzeit."
+				},
+				"h1": "Stromverbrauch und Kostenrechner",
+				"description": "Berechnen Sie Stromverbrauch und Kosten.",
+				"overview": { "title": "Ueber den Rechner", "content": "Geben Sie Leistung, Stunden pro Tag, Tage und Preis pro kWh ein — erhalten Sie Verbrauch und Kosten pro Geraet und gesamt." },
+				"calculation": { "title": "Berechnung", "content": "Verbrauch (kWh) = Leistung (W) × Stunden / 1000\\nKosten = Verbrauch × Preis pro kWh" },
+				"tips": { "title": "Tipps", "tip1": "Fuer Dauerlaeufer Durchschnittswerte nutzen.", "tip2": "Kuehlschraenke laufen 24h mit Duty-Cycle.", "tip3": "Tarife koennen Tag/Nacht variieren." },
+				"faq": { "title": "FAQ" },
+				"faqItems": [
+					{ "q": "Wie berechnet man den Verbrauch eines Geraets?", "a": "Leistung in Watt mit Betriebsstunden multiplizieren und durch 1000 teilen — ergibt kWh." },
+					{ "q": "Wie berechnet man die Kosten?", "a": "Verbrauch in kWh mit dem Preis pro kWh multiplizieren." },
+					{ "q": "Kann man mehrere Geraete hinzufuegen?", "a": "Ja, fuegen Sie mehrere Zeilen hinzu — Summen werden automatisch berechnet." }
+				]
+			}
+		},
+		"floorHeating": {
+			"title": "Elektrische Fußbodenheizung — Leistungs- und Energieverbrauchsrechner",
+			"description": "Online-Rechner zur Berechnung der Leistung und des Energieverbrauchs einer elektrischen Fußbodenheizung je nach Raumgröße.",
+			"breadcrumbs": {
+				"construction": "Bauwesen"
+			},
+			"form": {
+				"title": "Fußbodenheizungsrechner",
+				"description": "Berechnen Sie die erforderliche Leistung und den Energieverbrauch einer elektrischen Fußbodenheizung",
+				"area": "Raumfläche (m²)",
+				"roomType": "Raumtyp",
+				"insulation": "Bodendämmungstyp",
+				"temperature": "Gewünschte Temperatur (°C)",
+				"hoursPerDay": "Betriebsstunden pro Tag",
+				"electricityCost": "Stromkosten (€/kWh)",
+				"calculate": "Berechnen",
+				"calculating": "Berechnung...",
+				"reset": "Zurücksetzen",
+				"roomTypes": {
+					"bathroom": "Badezimmer",
+					"kitchen": "Küche",
+					"living": "Wohnzimmer",
+					"bedroom": "Schlafzimmer",
+					"balcony": "Balkon / Loggia"
+				},
+				"roomDescriptions": {
+					"bathroom": "Hohe Luftfeuchtigkeit, höhere Leistung erforderlich",
+					"kitchen": "Mittlere Leistungsanforderungen",
+					"living": "Komfortheizung, moderate Leistung",
+					"bedroom": "Niedrigere Leistung für Komfort",
+					"balcony": "Hohe Wärmeverluste, maximale Leistung erforderlich"
+				},
+				"insulationTypes": {
+					"good": "Gute Dämmung",
+					"average": "Durchschnittliche Dämmung",
+					"poor": "Schlechte Dämmung"
+				},
+				"errors": {
+					"title": "Datenfehler"
+				}
+			},
+			"results": {
+				"title": "Berechnungsergebnisse",
+				"recommendedPower": "Empfohlene Leistung",
+				"totalPower": "Gesamtleistung",
+				"dailyConsumption": "Tagesverbrauch",
+				"monthlyConsumption": "Monatsverbrauch",
+				"dailyCost": "Tageskosten",
+				"monthlyCost": "Monatskosten",
+				"powerRange": "Leistungsbereich",
+				"perDay": "pro Tag",
+				"perMonth": "pro Monat"
+			},
+			"table": {
+				"title": "Empfohlene Leistung nach Raumtypen",
+				"roomType": "Raumtyp",
+				"recommendedPower": "Empfohlene Leistung, W/m²",
+				"description": "Beschreibung"
+			},
+			"seo": {
+				"meta": {
+					"title": "Elektrische Fußbodenheizung — Leistungs- und Energieverbrauchsrechner Online",
+					"description": "Online-Rechner für elektrische Fußbodenheizung: Finden Sie heraus, welche Leistung und welcher Verbrauch für Ihren Raum geeignet sind. Bequem, schnell und kostenlos.",
+					"keywords": "Fußbodenheizung, elektrischer Boden, Leistungsberechnung, Energieverbrauch, Rechner"
+				},
+				"h1": "Elektrische Fußbodenheizung — Leistungs- und Energieverbrauchsrechner",
+				"description": "Online-Rechner zur Berechnung der Leistung und des Energieverbrauchs einer elektrischen Fußbodenheizung je nach Raumgröße.",
+				"overview": {
+					"title": "Über den Rechner",
+					"content": "Der Rechner hilft bei der Berechnung der erforderlichen Leistung einer elektrischen Fußbodenheizung, ihres Energieverbrauchs und der Betriebskosten. Berücksichtigt Raumtyp, Dämmqualität und Betriebsmodus."
+				},
+				"calculation": {
+					"title": "Wie wird berechnet",
+					"content": "Die Leistung wird basierend auf Raumtyp und Dämmqualität berechnet. Der Verbrauch hängt von der Gesamtleistung und der Betriebszeit ab. Die Kosten werden nach Stromtarif berechnet."
+				},
+				"advantages": {
+					"title": "Vorteile",
+					"content": "Genaue Leistungsberechnung, Berücksichtigung aller Faktoren, Betriebskostenberechnung, Empfehlungen nach Raumtypen."
+				},
+				"tips": {
+					"title": "Tipps",
+					"tip1": "Verwenden Sie einen Thermostat, um Energie zu sparen",
+					"tip2": "Qualitätsdämmung reduziert den Verbrauch",
+					"tip3": "Berücksichtigen Sie Wärmeverluste durch Fenster und Türen"
+				},
+				"faq": {
+					"title": "Häufig gestellte Fragen"
+				},
+				"faqItems": [
+					{
+						"q": "Wie berechnet man die Leistung einer Fußbodenheizung?",
+						"a": "Die Leistung wird basierend auf Raumfläche und Raumtyp berechnet. Üblicherweise werden 100–180 W/m² verwendet."
+					},
+					{
+						"q": "Wie viel verbraucht eine elektrische Fußbodenheizung pro Monat?",
+						"a": "Hängt von Leistung und Betriebszeit ab. Zum Beispiel bei 10 m² und 150 W/m² — etwa 45 kWh pro Monat."
+					},
+					{
+						"q": "Wie reduziert man die Stromkosten?",
+						"a": "Verwenden Sie einen Thermostat und Bodendämmung, damit das System weniger Zeit läuft."
+					}
+				]
 			}
 		}
 	}

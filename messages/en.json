@@ -79,6 +79,10 @@
 				"wall": {
 					"title": "Brick and Block Calculator",
 					"description": "Calculate brick, gas block and foam block quantity for wall"
+				},
+				"tile-laminate": {
+					"title": "Tile and Laminate Calculator",
+					"description": "Calculate tile and laminate quantity for floor"
 				}
 			}
 		},
@@ -6077,6 +6081,161 @@
 						"tip3": "Consult a jeweler for accurate measurement"
 					}
 				}
+			}
+		},
+		"electricityCost": {
+			"title": "Electricity Cost Calculator",
+			"description": "Calculate electricity consumption and cost for home appliances.",
+			"breadcrumbs": { "home": "Home", "life": "Life" },
+			"table": {
+				"device": "Appliance",
+				"powerW": "Power (W)",
+				"hoursPerDay": "Hours/day",
+				"days": "Days",
+				"tariff": "Price per kWh",
+				"dayKWh": "Day (kWh)",
+				"monthKWh": "Month (kWh)",
+				"periodKWh": "Period (kWh)",
+				"consumptionKWh": "Consumption (kWh)",
+				"cost": "Cost"
+			},
+			"actions": { "addDevice": "Add device", "exportCsv": "Export CSV", "remove": "Remove" },
+			"results": {
+				"title": "Totals",
+				"totalConsumption": "Total consumption (kWh)",
+				"totalCost": "Total cost",
+				"note": "Note",
+				"noteText": "Costs depend on local tariffs and actual usage."
+			},
+			"defaults": { "kettle": "Kettle", "device": "Device" },
+			"infographic": {
+				"energy": "Energy",
+				"energyDescription": "kWh based on power and time",
+				"multi": "Multiple devices",
+				"multiDescription": "Sum by table",
+				"export": "Export",
+				"exportDescription": "Export results to CSV"
+			},
+			"seo": {
+				"meta": {
+					"title": "Electricity Cost Calculator — Power Consumption and Price",
+					"description": "Calculate electricity consumption and cost for home appliances. Simple online calculator based on power and operating time."
+				},
+				"h1": "Electricity Cost and Power Consumption Calculator",
+				"description": "Calculate electricity consumption and cost.",
+				"overview": { "title": "About the calculator", "content": "Enter device power, hours per day, days and price per kWh to estimate consumption and total cost per device and overall." },
+				"calculation": { "title": "How it is calculated", "content": "Consumption (kWh) = Power (W) × Hours / 1000\nCost = Consumption × Price per kWh" },
+				"tips": { "title": "Tips", "tip1": "Use average daily time for continuous devices.", "tip2": "Fridges typically run 24h with duty cycles.", "tip3": "Tariffs may vary day/night." },
+				"faq": { "title": "FAQ" },
+				"faqItems": [
+					{ "q": "How to calculate device consumption?", "a": "Multiply device power in watts by hours of operation and divide by 1000 to get kWh." },
+					{ "q": "How to calculate cost?", "a": "Multiply consumption in kWh by your price per kWh." },
+					{ "q": "Can I add multiple devices?", "a": "Yes, add multiple rows — totals are calculated automatically." }
+				]
+			}
+		},
+		"floorHeating": {
+			"title": "Electric Underfloor Heating — Power and Energy Calculator",
+			"description": "Online calculator to estimate power and energy usage of electric underfloor heating by room size.",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"form": {
+				"title": "Underfloor Heating Calculator",
+				"description": "Calculate required power and energy consumption for electric underfloor heating",
+				"area": "Room area (m²)",
+				"roomType": "Room type",
+				"insulation": "Floor insulation type",
+				"temperature": "Desired temperature (°C)",
+				"hoursPerDay": "Hours of operation per day",
+				"electricityCost": "Electricity cost ($/kWh)",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"roomTypes": {
+					"bathroom": "Bathroom",
+					"kitchen": "Kitchen",
+					"living": "Living Room",
+					"bedroom": "Bedroom",
+					"balcony": "Balcony / Loggia"
+				},
+				"roomDescriptions": {
+					"bathroom": "High humidity, requires higher power",
+					"kitchen": "Medium power requirements",
+					"living": "Comfort heating, moderate power",
+					"bedroom": "Lower power for comfort",
+					"balcony": "High heat loss, maximum power needed"
+				},
+				"insulationTypes": {
+					"good": "Good Insulation",
+					"average": "Average Insulation",
+					"poor": "Poor Insulation"
+				},
+				"errors": {
+					"title": "Data errors"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"recommendedPower": "Recommended Power",
+				"totalPower": "Total Power",
+				"dailyConsumption": "Daily Consumption",
+				"monthlyConsumption": "Monthly Consumption",
+				"dailyCost": "Daily Cost",
+				"monthlyCost": "Monthly Cost",
+				"powerRange": "Power Range",
+				"perDay": "per day",
+				"perMonth": "per month"
+			},
+			"table": {
+				"title": "Recommended Power by Room Types",
+				"roomType": "Room Type",
+				"recommendedPower": "Recommended Power, W/m²",
+				"description": "Description"
+			},
+			"seo": {
+				"meta": {
+					"title": "Electric Underfloor Heating — Power and Energy Calculator Online",
+					"description": "Online calculator for electric underfloor heating: find out what power and consumption will suit your room. Convenient, fast and free.",
+					"keywords": "underfloor heating, electric floor, power calculation, energy consumption, calculator"
+				},
+				"h1": "Electric Underfloor Heating — Power and Energy Calculator",
+				"description": "Online calculator to estimate power and energy usage of electric underfloor heating by room size.",
+				"overview": {
+					"title": "About the Calculator",
+					"content": "The calculator helps calculate the required power of electric underfloor heating, its energy consumption and operating costs. Takes into account room type, insulation quality and operating mode."
+				},
+				"calculation": {
+					"title": "How it's calculated",
+					"content": "Power is calculated based on room type and insulation quality. Consumption depends on total power and operating time. Cost is calculated by electricity tariff."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Accurate power calculation, consideration of all factors, operating cost calculation, recommendations by room types."
+				},
+				"tips": {
+					"title": "Tips",
+					"tip1": "Use a thermostat to save energy",
+					"tip2": "Quality insulation reduces consumption",
+					"tip3": "Consider heat loss through windows and doors"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How to calculate underfloor heating power?",
+						"a": "Power is calculated based on room area and room type. Usually 100–180 W/m² is used."
+					},
+					{
+						"q": "How much does electric underfloor heating consume per month?",
+						"a": "Depends on power and operating time. For example, with 10 m² and 150 W/m² — about 45 kWh per month."
+					},
+					{
+						"q": "How to reduce electricity costs?",
+						"a": "Use a thermostat and floor insulation so the system works less time."
+					}
+				]
 			}
 		}
 	}

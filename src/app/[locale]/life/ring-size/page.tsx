@@ -73,8 +73,7 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 	}
 
 	const breadcrumbs = [
-		{ label: t('breadcrumbs.home'), href: `/${locale}` },
-		{ label: t('breadcrumbs.life'), href: `/${locale}/life` },
+		{ label: t('breadcrumbs.life'), href: '/life' },
 		{ label: t('title') },
 	];
 

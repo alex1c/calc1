@@ -110,6 +110,10 @@
 				"wall": {
 					"title": "Calculadora de Ladrillos y Bloques",
 					"description": "Calcular cantidad de ladrillos, bloques de gas y bloques de espuma para pared"
+				},
+				"tile-laminate": {
+					"title": "Calculadora de Baldosas y Laminado",
+					"description": "Calcular cantidad de baldosas y laminado para suelo"
 				}
 			}
 		},
@@ -6091,6 +6095,161 @@
 						"tip3": "Consulta a un joyero para mediciones precisas"
 					}
 				}
+			}
+		},
+		"electricityCost": {
+			"title": "Calculadora de electricidad",
+			"description": "Calcula el consumo y el coste de electricidad de tus electrodomésticos.",
+			"breadcrumbs": { "home": "Inicio", "life": "Vida" },
+			"table": {
+				"device": "Aparato",
+				"powerW": "Potencia (W)",
+				"hoursPerDay": "Horas/día",
+				"days": "Días",
+				"tariff": "Precio por kWh",
+				"dayKWh": "Día (kWh)",
+				"monthKWh": "Mes (kWh)",
+				"periodKWh": "Periodo (kWh)",
+				"consumptionKWh": "Consumo (kWh)",
+				"cost": "Coste"
+			},
+			"actions": { "addDevice": "Añadir aparato", "exportCsv": "Exportar CSV", "remove": "Eliminar" },
+			"results": {
+				"title": "Totales",
+				"totalConsumption": "Consumo total (kWh)",
+				"totalCost": "Coste total",
+				"note": "Nota",
+				"noteText": "Los costes dependen de tarifas locales y uso real."
+			},
+			"defaults": { "kettle": "Hervidor", "device": "Aparato" },
+			"infographic": {
+				"energy": "Energía",
+				"energyDescription": "kWh según potencia y tiempo",
+				"multi": "Varios aparatos",
+				"multiDescription": "Suma en la tabla",
+				"export": "Exportar",
+				"exportDescription": "Exporta resultados a CSV"
+			},
+			"seo": {
+				"meta": {
+					"title": "Calculadora de electricidad — consumo y coste energético",
+					"description": "Calcula el consumo y el coste de electricidad de tus electrodomésticos según la potencia y el tiempo de uso."
+				},
+				"h1": "Calculadora de consumo y coste de electricidad",
+				"description": "Calcula consumo y coste eléctrico.",
+				"overview": { "title": "Sobre la calculadora", "content": "Introduce potencia, horas al día, días y precio por kWh para estimar consumo y coste por aparato y total." },
+				"calculation": { "title": "Cómo se calcula", "content": "Consumo (kWh) = Potencia (W) × Horas / 1000\nCoste = Consumo × Precio por kWh" },
+				"tips": { "title": "Consejos", "tip1": "Usa horas medias para aparatos continuos.", "tip2": "Los frigoríficos funcionan 24h con ciclos.", "tip3": "Las tarifas pueden variar día/noche." },
+				"faq": { "title": "Preguntas frecuentes" },
+				"faqItems": [
+					{ "q": "¿Cómo calcular el consumo de un aparato?", "a": "Multiplica la potencia en vatios por las horas de uso y divide entre 1000 para obtener kWh." },
+					{ "q": "¿Cómo calcular el coste?", "a": "Multiplica el consumo en kWh por el precio por kWh." },
+					{ "q": "¿Se pueden añadir varios aparatos?", "a": "Sí, añade varias filas — el total se calcula automáticamente." }
+				]
+			}
+		},
+		"floorHeating": {
+			"title": "Suelo Radiante Eléctrico — Cálculo de Potencia y Consumo",
+			"description": "Calculadora en línea para estimar la potencia y consumo de un suelo radiante eléctrico según el tamaño de la habitación.",
+			"breadcrumbs": {
+				"construction": "Construcción"
+			},
+			"form": {
+				"title": "Calculadora de Suelo Radiante",
+				"description": "Calcula la potencia requerida y el consumo energético de un suelo radiante eléctrico",
+				"area": "Área de la habitación (m²)",
+				"roomType": "Tipo de habitación",
+				"insulation": "Tipo de aislamiento del suelo",
+				"temperature": "Temperatura deseada (°C)",
+				"hoursPerDay": "Horas de funcionamiento por día",
+				"electricityCost": "Coste de electricidad (€/kWh)",
+				"calculate": "Calcular",
+				"calculating": "Calculando...",
+				"reset": "Restablecer",
+				"roomTypes": {
+					"bathroom": "Baño",
+					"kitchen": "Cocina",
+					"living": "Salón",
+					"bedroom": "Dormitorio",
+					"balcony": "Balcón / Logia"
+				},
+				"roomDescriptions": {
+					"bathroom": "Alta humedad, requiere mayor potencia",
+					"kitchen": "Requisitos de potencia media",
+					"living": "Calefacción de confort, potencia moderada",
+					"bedroom": "Menor potencia para confort",
+					"balcony": "Alta pérdida de calor, máxima potencia necesaria"
+				},
+				"insulationTypes": {
+					"good": "Buen Aislamiento",
+					"average": "Aislamiento Medio",
+					"poor": "Aislamiento Pobre"
+				},
+				"errors": {
+					"title": "Errores en los datos"
+				}
+			},
+			"results": {
+				"title": "Resultados del Cálculo",
+				"recommendedPower": "Potencia Recomendada",
+				"totalPower": "Potencia Total",
+				"dailyConsumption": "Consumo Diario",
+				"monthlyConsumption": "Consumo Mensual",
+				"dailyCost": "Coste Diario",
+				"monthlyCost": "Coste Mensual",
+				"powerRange": "Rango de Potencia",
+				"perDay": "por día",
+				"perMonth": "por mes"
+			},
+			"table": {
+				"title": "Potencia Recomendada por Tipos de Habitación",
+				"roomType": "Tipo de Habitación",
+				"recommendedPower": "Potencia Recomendada, W/m²",
+				"description": "Descripción"
+			},
+			"seo": {
+				"meta": {
+					"title": "Suelo Radiante Eléctrico — Cálculo de Potencia y Consumo Online",
+					"description": "Calculadora online para suelo radiante eléctrico: descubre qué potencia y consumo se adaptarán a tu habitación. Cómodo, rápido y gratuito.",
+					"keywords": "suelo radiante, suelo eléctrico, cálculo de potencia, consumo energético, calculadora"
+				},
+				"h1": "Suelo Radiante Eléctrico — Cálculo de Potencia y Consumo",
+				"description": "Calculadora en línea para estimar la potencia y consumo de un suelo radiante eléctrico según el tamaño de la habitación.",
+				"overview": {
+					"title": "Sobre la Calculadora",
+					"content": "La calculadora ayuda a calcular la potencia requerida de un suelo radiante eléctrico, su consumo energético y costes de funcionamiento. Tiene en cuenta el tipo de habitación, calidad del aislamiento y modo de funcionamiento."
+				},
+				"calculation": {
+					"title": "Cómo se calcula",
+					"content": "La potencia se calcula basándose en el tipo de habitación y calidad del aislamiento. El consumo depende de la potencia total y tiempo de funcionamiento. El coste se calcula por tarifa eléctrica."
+				},
+				"advantages": {
+					"title": "Ventajas",
+					"content": "Cálculo preciso de potencia, consideración de todos los factores, cálculo de costes de funcionamiento, recomendaciones por tipos de habitación."
+				},
+				"tips": {
+					"title": "Consejos",
+					"tip1": "Usa un termostato para ahorrar energía",
+					"tip2": "El aislamiento de calidad reduce el consumo",
+					"tip3": "Considera las pérdidas de calor a través de ventanas y puertas"
+				},
+				"faq": {
+					"title": "Preguntas Frecuentes"
+				},
+				"faqItems": [
+					{
+						"q": "¿Cómo calcular la potencia de un suelo radiante?",
+						"a": "La potencia se calcula basándose en el área de la habitación y tipo de habitación. Normalmente se usan 100–180 W/m²."
+					},
+					{
+						"q": "¿Cuánto consume un suelo radiante eléctrico al mes?",
+						"a": "Depende de la potencia y tiempo de funcionamiento. Por ejemplo, con 10 m² y 150 W/m² — unos 45 kWh al mes."
+					},
+					{
+						"q": "¿Cómo reducir los costes de electricidad?",
+						"a": "Usa un termostato y aislamiento del suelo para que el sistema funcione menos tiempo."
+					}
+				]
 			}
 		}
 	}
