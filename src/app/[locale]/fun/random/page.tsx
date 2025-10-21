@@ -44,19 +44,21 @@ export default async function RandomNumberGeneratorPage({
 		namespace: 'calculators.randomNumberGenerator',
 	});
 
+	// Breadcrumbs items
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	const breadcrumbItems = [
+		{ label: tCategories('fun.title'), href: '/fun' },
+		{ label: t('title') },
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50'>
 			<Header />
-			<Breadcrumbs
-				items={[
-					{ label: t('breadcrumbs.home'), href: `/${locale}` },
-					{ label: t('breadcrumbs.fun'), href: `/${locale}/fun` },
-					{
-						label: t('breadcrumbs.randomNumberGenerator'),
-						href: `/${locale}/fun/random`,
-					},
-				]}
-			/>
+			<Breadcrumbs items={breadcrumbItems} />
 
 			<main className='container mx-auto px-4 py-8'>
 				{/* Header */}

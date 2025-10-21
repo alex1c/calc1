@@ -36,19 +36,21 @@ export default async function CoinFlipperPage({
 		namespace: 'calculators.coinFlipper',
 	});
 
+	// Breadcrumbs items
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	const breadcrumbItems = [
+		{ label: tCategories('fun.title'), href: '/fun' },
+		{ label: t('title') },
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50'>
 			<Header />
-			<Breadcrumbs
-				items={[
-					{ label: t('breadcrumbs.home'), href: `/${locale}` },
-					{ label: t('breadcrumbs.fun'), href: `/${locale}/fun` },
-					{
-						label: t('breadcrumbs.coinFlipper'),
-						href: `/${locale}/fun/coin`,
-					},
-				]}
-			/>
+			<Breadcrumbs items={breadcrumbItems} />
 
 			<main className='container mx-auto px-4 py-8'>
 				<div className='text-center mb-8'>

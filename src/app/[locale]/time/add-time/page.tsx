@@ -1,21 +1,19 @@
+import { getTranslations } from 'next-intl';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
-import LotteryGenerator from '@/components/calculators/lottery-generator';
-import LotteryGeneratorSEO from '@/components/seo/lottery-generator-seo';
+import AddTimeCalculator from '@/components/calculators/add-time-calculator';
+import AddTimeSEO from '@/components/seo/add-time-seo';
 
-/**
- * Generate metadata for the lottery generator page
- */
 export async function generateMetadata({
 	params: { locale },
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
-	const t = (key: string) => messages.calculators.lotteryGenerator.seo[key];
+	const t = (key: string) => {
+		const messages = require(`@/messages/${locale}.json`);
+		return messages.calculators.addTime.seo[key];
+	};
 
 	return {
 		title: t('title'),
@@ -29,18 +27,14 @@ export async function generateMetadata({
 	};
 }
 
-/**
- * Lottery Generator Page
- * Interactive generator for lottery tickets
- */
-export default async function LotteryGeneratorPage({
+export default async function AddTimePage({
 	params: { locale },
 }: {
 	params: { locale: string };
 }) {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.lotteryGenerator',
+		namespace: 'calculators.addTime',
 	});
 
 	// Breadcrumbs items
@@ -50,12 +44,12 @@ export default async function LotteryGeneratorPage({
 	});
 
 	const breadcrumbItems = [
-		{ label: tCategories('fun.title'), href: '/fun' },
+		{ label: tCategories('time.title'), href: '/time' },
 		{ label: t('title') },
 	];
 
 	return (
-		<div className='min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50'>
+		<div className='min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50'>
 			<Header />
 			<Breadcrumbs items={breadcrumbItems} />
 
@@ -70,14 +64,14 @@ export default async function LotteryGeneratorPage({
 					</p>
 				</div>
 
-				{/* Generator */}
+				{/* Calculator */}
 				<div className='max-w-4xl mx-auto'>
-					<LotteryGenerator />
+					<AddTimeCalculator />
 				</div>
 
 				{/* SEO Content */}
 				<div className='max-w-4xl mx-auto mt-16'>
-					<LotteryGeneratorSEO />
+					<AddTimeSEO />
 				</div>
 			</main>
 		</div>

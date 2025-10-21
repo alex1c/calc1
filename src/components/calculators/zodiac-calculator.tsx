@@ -169,7 +169,7 @@ export default function ZodiacCalculator() {
 		setIsCalculating(true);
 
 		// Add some delay for animation effect
-		await new Promise((resolve) => setTimeout(resolve, 1500));
+		await new Promise((resolve) => setTimeout(resolve, 300));
 
 		const date = new Date(birthDate);
 		const sign = getZodiacSign(date);
@@ -240,21 +240,28 @@ export default function ZodiacCalculator() {
 				{/* Action buttons */}
 				<div className='flex flex-col sm:flex-row gap-4 mt-6'>
 					<button
+						key='calculate-button'
 						onClick={calculateZodiac}
 						disabled={!isFormValid || isCalculating}
 						className='flex-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2'
 					>
-						{isCalculating ? (
-							<>
-								<RefreshCw className='h-5 w-5 animate-spin' />
-								{t('form.calculating')}
-							</>
-						) : (
-							<>
-								<Sparkles className='h-5 w-5' />
-								{t('form.calculate')}
-							</>
+						{isCalculating && (
+							<RefreshCw
+								key='spinner'
+								className='h-5 w-5 animate-spin'
+							/>
 						)}
+						{!isCalculating && (
+							<Sparkles
+								key='sparkles'
+								className='h-5 w-5'
+							/>
+						)}
+						<span key='button-text'>
+							{isCalculating
+								? t('form.calculating')
+								: t('form.calculate')}
+						</span>
 					</button>
 
 					<button
@@ -267,65 +274,88 @@ export default function ZodiacCalculator() {
 			</div>
 
 			{/* Results */}
-			{result && (
-				<div className='bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-200'>
-					<h3 className='text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2'>
-						<Star className='h-6 w-6 text-purple-500' />
-						{t('results.title')}
-					</h3>
+			<div
+				key='results-section'
+				className='bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-200'
+			>
+				<h3 className='text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2'>
+					<Star className='h-6 w-6 text-purple-500' />
+					{t('results.title')}
+				</h3>
 
-					<div className='text-center mb-6'>
-						<div className='inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full mb-4'>
-							<span className='text-4xl'>
-								{result.sign.symbol}
-							</span>
+				{result ? (
+					<div key='zodiac-content'>
+						<div className='text-center mb-6'>
+							<div className='inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full mb-4'>
+								<span className='text-4xl'>
+									{result.sign.symbol}
+								</span>
+							</div>
+							<h4 className='text-2xl font-bold text-gray-900 mb-2'>
+								{result.sign.name}
+							</h4>
+							<p className='text-gray-600 mb-4'>
+								{t('results.dateRange', {
+									range: result.dateRange,
+								})}
+							</p>
 						</div>
-						<h4 className='text-2xl font-bold text-gray-900 mb-2'>
-							{result.sign.name}
-						</h4>
-						<p className='text-gray-600 mb-4'>
-							{t('results.dateRange', {
-								range: result.dateRange,
-							})}
+
+						{/* Zodiac Details */}
+						<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6'>
+							<div className='bg-white rounded-lg p-4'>
+								<h5 className='font-semibold text-gray-900 mb-2'>
+									{t('results.element')}
+								</h5>
+								<p className='text-gray-600'>
+									{result.element}
+								</p>
+							</div>
+							<div className='bg-white rounded-lg p-4'>
+								<h5 className='font-semibold text-gray-900 mb-2'>
+									{t('results.quality')}
+								</h5>
+								<p className='text-gray-600'>
+									{result.quality}
+								</p>
+							</div>
+						</div>
+
+						{/* Description */}
+						<div className='bg-white rounded-lg p-4 mb-6'>
+							<h5 className='font-semibold text-gray-900 mb-2'>
+								{t('results.description')}
+							</h5>
+							<p className='text-gray-600'>
+								{result.description}
+							</p>
+						</div>
+
+						{/* Action buttons */}
+						<div className='flex flex-col sm:flex-row gap-3'>
+							<button
+								key='copy-button'
+								onClick={handleCopy}
+								className='flex-1 bg-white border border-purple-300 text-purple-700 px-4 py-2 rounded-lg font-medium hover:bg-purple-50 transition-colors duration-200 flex items-center justify-center gap-2'
+							>
+								<Copy className='h-4 w-4' />
+								{copied
+									? t('results.copied')
+									: t('results.copy')}
+							</button>
+						</div>
+					</div>
+				) : (
+					<div
+						key='placeholder-content'
+						className='text-center py-8'
+					>
+						<p className='text-gray-500 text-lg'>
+							{t('results.placeholder')}
 						</p>
 					</div>
-
-					{/* Zodiac Details */}
-					<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6'>
-						<div className='bg-white rounded-lg p-4'>
-							<h5 className='font-semibold text-gray-900 mb-2'>
-								{t('results.element')}
-							</h5>
-							<p className='text-gray-600'>{result.element}</p>
-						</div>
-						<div className='bg-white rounded-lg p-4'>
-							<h5 className='font-semibold text-gray-900 mb-2'>
-								{t('results.quality')}
-							</h5>
-							<p className='text-gray-600'>{result.quality}</p>
-						</div>
-					</div>
-
-					{/* Description */}
-					<div className='bg-white rounded-lg p-4 mb-6'>
-						<h5 className='font-semibold text-gray-900 mb-2'>
-							{t('results.description')}
-						</h5>
-						<p className='text-gray-600'>{result.description}</p>
-					</div>
-
-					{/* Action buttons */}
-					<div className='flex flex-col sm:flex-row gap-3'>
-						<button
-							onClick={handleCopy}
-							className='flex-1 bg-white border border-purple-300 text-purple-700 px-4 py-2 rounded-lg font-medium hover:bg-purple-50 transition-colors duration-200 flex items-center justify-center gap-2'
-						>
-							<Copy className='h-4 w-4' />
-							{copied ? t('results.copied') : t('results.copy')}
-						</button>
-					</div>
-				</div>
-			)}
+				)}
+			</div>
 
 			{/* Disclaimer */}
 			<div className='mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg'>

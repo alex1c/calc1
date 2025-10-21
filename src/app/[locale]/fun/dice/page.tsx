@@ -43,19 +43,21 @@ export default async function DiceRollerPage({
 		namespace: 'calculators.diceRoller',
 	});
 
+	// Breadcrumbs items
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	const breadcrumbItems = [
+		{ label: tCategories('fun.title'), href: '/fun' },
+		{ label: t('title') },
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50'>
 			<Header />
-			<Breadcrumbs
-				items={[
-					{ label: t('breadcrumbs.home'), href: `/${locale}` },
-					{ label: t('breadcrumbs.fun'), href: `/${locale}/fun` },
-					{
-						label: t('breadcrumbs.diceRoller'),
-						href: `/${locale}/fun/dice`,
-					},
-				]}
-			/>
+			<Breadcrumbs items={breadcrumbItems} />
 
 			<main className='container mx-auto px-4 py-8'>
 				{/* Header */}

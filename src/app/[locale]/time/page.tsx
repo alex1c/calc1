@@ -1,42 +1,48 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Clock, Calendar, Timer, Birthday } from 'lucide-react';
+import { Clock, Calendar, Plus, User } from 'lucide-react';
 
-const calculators = [
-	{
-		id: 'age',
-		title: 'Age Calculator',
-		description: 'Calculate your exact age in years, months, and days',
-		icon: Birthday,
-		href: '/calc/age',
-	},
-	{
-		id: 'date-difference',
-		title: 'Date Difference Calculator',
-		description: 'Calculate the difference between two dates',
-		icon: Calendar,
-		href: '/calc/date-difference',
-	},
-	{
-		id: 'time-zone',
-		title: 'Time Zone Converter',
-		description: 'Convert time between different time zones',
-		icon: Clock,
-		href: '/calc/time-zone',
-	},
-	{
-		id: 'timer',
-		title: 'Timer & Stopwatch',
-		description: 'Set timers and use stopwatch functionality',
-		icon: Timer,
-		href: '/calc/timer',
-	},
-];
+export default async function TimePage({
+	params: { locale },
+}: {
+	params: { locale: string };
+}) {
+	const t = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
 
-export default function TimePage() {
-	const t = useTranslations();
-	const locale = useLocale();
+	const tCalculators = await getTranslations({
+		locale,
+		namespace: 'calculators',
+	});
+
+	const getCalculators = () => [
+		{
+			id: 'days-between',
+			title: tCalculators('daysBetween.title'),
+			description: tCalculators('daysBetween.description'),
+			icon: Calendar,
+			href: '/time/days-between',
+		},
+		{
+			id: 'add-time',
+			title: tCalculators('addTime.title'),
+			description: tCalculators('addTime.description'),
+			icon: Plus,
+			href: '/time/add-time',
+		},
+		{
+			id: 'age',
+			title: tCalculators('age.title'),
+			description: tCalculators('age.description'),
+			icon: User,
+			href: '/time/age',
+		},
+	];
+
+	const calculators = getCalculators();
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -46,10 +52,10 @@ export default function TimePage() {
 				{/* Header Section */}
 				<div className='mb-8'>
 					<h1 className='text-3xl font-bold text-gray-900 mb-4'>
-						{t('categories.time.title')}
+						{t('time.title')}
 					</h1>
 					<p className='text-lg text-gray-600'>
-						{t('categories.time.description')}
+						{t('time.description')}
 					</p>
 				</div>
 
@@ -58,7 +64,7 @@ export default function TimePage() {
 					{calculators.map((calculator) => (
 						<Link
 							key={calculator.id}
-							href={`/${locale}/calc/${calculator.id}`}
+							href={`/${locale}${calculator.href}`}
 							className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 						>
 							<div className='flex items-center mb-4'>

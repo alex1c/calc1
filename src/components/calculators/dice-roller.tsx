@@ -44,10 +44,12 @@ export default function DiceRoller() {
 
 		setIsRolling(true);
 
-		// Add some delay for animation effect
-		await new Promise((resolve) => setTimeout(resolve, 1200));
-
+		// Roll dice immediately
 		const newResults = rollDice();
+
+		// Add a small delay for UI feedback, but not too long
+		await new Promise((resolve) => setTimeout(resolve, 300));
+
 		setResults(newResults);
 
 		// Add to history
@@ -179,35 +181,35 @@ export default function DiceRoller() {
 				{/* Roll button */}
 				<div className='mt-6'>
 					<button
+						key='roll-button'
 						onClick={handleRoll}
 						disabled={isRolling}
 						className='w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2'
 					>
-						{isRolling ? (
-							<>
-								<RefreshCw className='h-5 w-5 animate-spin' />
-								{t('form.rolling')}
-							</>
-						) : (
-							<>
-								<Dice1 className='h-5 w-5' />
-								{t('form.roll')}
-							</>
+						{isRolling && (
+							<RefreshCw key='spinner' className='h-5 w-5 animate-spin' />
 						)}
+						{!isRolling && (
+							<Dice1 key='dice-icon' className='h-5 w-5' />
+						)}
+						<span key='button-text'>
+							{isRolling ? t('form.rolling') : t('form.roll')}
+						</span>
 					</button>
 				</div>
 			</div>
 
 			{/* Results */}
-			{results.length > 0 && (
-				<div className='bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200 mb-6'>
-					<div className='flex items-center justify-between mb-4'>
-						<h3 className='text-xl font-bold text-gray-900 flex items-center gap-2'>
-							<Dice1 className='h-5 w-5 text-orange-500' />
-							{t('results.title')}
-						</h3>
+			<div key='results-section' className='bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200 mb-6'>
+				<div className='flex items-center justify-between mb-4'>
+					<h3 className='text-xl font-bold text-gray-900 flex items-center gap-2'>
+						<Dice1 className='h-5 w-5 text-orange-500' />
+						{t('results.title')}
+					</h3>
+					{results.length > 0 && (
 						<div className='flex gap-2'>
 							<button
+								key='copy-button'
 								onClick={handleCopy}
 								className='px-3 py-1 bg-white border border-orange-300 text-orange-700 rounded-lg text-sm hover:bg-orange-50 transition-colors duration-200 flex items-center gap-1'
 							>
@@ -215,40 +217,50 @@ export default function DiceRoller() {
 								{t('results.copy')}
 							</button>
 						</div>
-					</div>
-
-					<div className='flex flex-wrap justify-center gap-4 mb-4'>
-						{results.map((dice, index) => (
-							<div
-								key={dice.id}
-								className={`w-16 h-16 rounded-lg border-2 border-orange-200 flex items-center justify-center text-2xl font-bold ${getDiceColor(
-									dice.value
-								)}`}
-							>
-								{diceType <= 6
-									? getDiceEmoji(dice.value)
-									: dice.value}
-							</div>
-						))}
-					</div>
-
-					<div className='text-center'>
-						<div className='text-2xl font-bold text-gray-900 mb-2'>
-							{t('results.total')}: {total}
-						</div>
-						<div className='text-sm text-gray-600'>
-							{t('results.average')}:{' '}
-							{(total / results.length).toFixed(1)}
-						</div>
-					</div>
-
-					{copied && (
-						<div className='mt-4 text-center text-sm text-green-600'>
-							{t('results.copied')}
-						</div>
 					)}
 				</div>
-			)}
+
+				{results.length > 0 ? (
+					<div key='dice-content'>
+						<div className='flex flex-wrap justify-center gap-4 mb-4'>
+							{results.map((dice, index) => (
+								<div
+									key={dice.id}
+									className={`w-16 h-16 rounded-lg border-2 border-orange-200 flex items-center justify-center text-2xl font-bold ${getDiceColor(
+										dice.value
+									)}`}
+								>
+									{diceType <= 6
+										? getDiceEmoji(dice.value)
+										: dice.value}
+								</div>
+							))}
+						</div>
+
+						<div className='text-center'>
+							<div className='text-2xl font-bold text-gray-900 mb-2'>
+								{t('results.total')}: {total}
+							</div>
+							<div className='text-sm text-gray-600'>
+								{t('results.average')}:{' '}
+								{(total / results.length).toFixed(1)}
+							</div>
+						</div>
+
+						{copied && (
+							<div key='copied-message' className='mt-4 text-center text-sm text-green-600'>
+								{t('results.copied')}
+							</div>
+						)}
+					</div>
+				) : (
+					<div key='placeholder-content' className='text-center py-8'>
+						<p className='text-gray-500 text-lg'>
+							{t('results.placeholder')}
+						</p>
+					</div>
+				)}
+			</div>
 
 			{/* History */}
 			{history.length > 0 && (

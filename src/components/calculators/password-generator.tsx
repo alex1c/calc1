@@ -133,10 +133,12 @@ export default function PasswordGenerator() {
 
 		setIsGenerating(true);
 
-		// Add some delay for animation effect
-		await new Promise((resolve) => setTimeout(resolve, 800));
-
+		// Generate password immediately
 		const password = generatePassword();
+
+		// Add a small delay for UI feedback, but not too long
+		await new Promise((resolve) => setTimeout(resolve, 300));
+
 		setGeneratedPassword(password);
 		setIsGenerating(false);
 	};
@@ -322,21 +324,20 @@ export default function PasswordGenerator() {
 				{/* Action buttons */}
 				<div className='flex flex-col sm:flex-row gap-4 mt-6'>
 					<button
+						key='generate-button'
 						onClick={handleGenerate}
 						disabled={isGenerating}
 						className='flex-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2'
 					>
-						{isGenerating ? (
-							<>
-								<RefreshCw className='h-5 w-5 animate-spin' />
-								{t('form.generating')}
-							</>
-						) : (
-							<>
-								<Shield className='h-5 w-5' />
-								{t('form.generate')}
-							</>
+						{isGenerating && (
+							<RefreshCw key='spinner' className='h-5 w-5 animate-spin' />
 						)}
+						{!isGenerating && (
+							<Shield key='shield' className='h-5 w-5' />
+						)}
+						<span key='button-text'>
+							{isGenerating ? t('form.generating') : t('form.generate')}
+						</span>
 					</button>
 
 					<button
@@ -349,25 +350,27 @@ export default function PasswordGenerator() {
 			</div>
 
 			{/* Results */}
-			{generatedPassword && (
-				<div className='bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200'>
-					<div className='flex items-center justify-between mb-4'>
-						<h3 className='text-xl font-bold text-gray-900 flex items-center gap-2'>
-							<Lock className='h-5 w-5 text-blue-500' />
-							{t('results.title')}
-						</h3>
+			<div key='results-section' className='bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200'>
+				<div className='flex items-center justify-between mb-4'>
+					<h3 className='text-xl font-bold text-gray-900 flex items-center gap-2'>
+						<Lock className='h-5 w-5 text-blue-500' />
+						{t('results.title')}
+					</h3>
+					{generatedPassword && (
 						<div className='flex gap-2'>
 							<button
+								key='toggle-password-button'
 								onClick={() => setShowPassword(!showPassword)}
 								className='p-2 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors duration-200'
 							>
 								{showPassword ? (
-									<EyeOff className='h-4 w-4' />
+									<EyeOff key='eye-off' className='h-4 w-4' />
 								) : (
-									<Eye className='h-4 w-4' />
+									<Eye key='eye' className='h-4 w-4' />
 								)}
 							</button>
 							<button
+								key='copy-button'
 								onClick={handleCopy}
 								className='px-3 py-1 bg-white border border-blue-300 text-blue-700 rounded-lg text-sm hover:bg-blue-50 transition-colors duration-200 flex items-center gap-1'
 							>
@@ -375,89 +378,99 @@ export default function PasswordGenerator() {
 								{t('results.copy')}
 							</button>
 						</div>
-					</div>
-
-					<div className='bg-white rounded-lg p-4 border border-blue-100 mb-4'>
-						<div className='font-mono text-lg text-gray-800 break-all'>
-							{showPassword
-								? generatedPassword
-								: '•'.repeat(generatedPassword.length)}
-						</div>
-					</div>
-
-					{strength && (
-						<div className='flex items-center gap-2 mb-4'>
-							<span className='text-sm text-gray-600'>
-								{t('results.strength')}:
-							</span>
-							<span className={`font-semibold ${strength.color}`}>
-								{strength.label}
-							</span>
-							<div className='flex gap-1'>
-								{[1, 2, 3, 4].map((level) => (
-									<div
-										key={level}
-										className={`w-3 h-3 rounded-full ${
-											level <= strength.score
-												? 'bg-green-500'
-												: 'bg-gray-300'
-										}`}
-									/>
-								))}
-							</div>
-						</div>
-					)}
-
-					<div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-sm'>
-						<div className='text-center'>
-							<div className='font-semibold text-gray-900'>
-								{generatedPassword.length}
-							</div>
-							<div className='text-gray-600'>
-								{t('results.length')}
-							</div>
-						</div>
-						<div className='text-center'>
-							<div className='font-semibold text-gray-900'>
-								{new Set(generatedPassword).size}
-							</div>
-							<div className='text-gray-600'>
-								{t('results.uniqueChars')}
-							</div>
-						</div>
-						<div className='text-center'>
-							<div className='font-semibold text-gray-900'>
-								{Math.pow(
-									62,
-									generatedPassword.length
-								).toExponential(2)}
-							</div>
-							<div className='text-gray-600'>
-								{t('results.possibilities')}
-							</div>
-						</div>
-						<div className='text-center'>
-							<div className='font-semibold text-gray-900'>
-								{Math.ceil(
-									Math.log2(
-										Math.pow(62, generatedPassword.length)
-									) / 365
-								)}
-							</div>
-							<div className='text-gray-600'>
-								{t('results.entropy')}
-							</div>
-						</div>
-					</div>
-
-					{copied && (
-						<div className='mt-4 text-center text-sm text-green-600 flex items-center justify-center gap-1'>
-							<CheckCircle className='h-4 w-4' />
-							{t('results.copied')}
-						</div>
 					)}
 				</div>
-			)}
+
+				{generatedPassword ? (
+					<div key='password-content'>
+						<div className='bg-white rounded-lg p-4 border border-blue-100 mb-4'>
+							<div className='font-mono text-lg text-gray-800 break-all'>
+								{showPassword
+									? generatedPassword
+									: '•'.repeat(generatedPassword.length)}
+							</div>
+						</div>
+
+						{strength && (
+							<div key='strength-indicator' className='flex items-center gap-2 mb-4'>
+								<span className='text-sm text-gray-600'>
+									{t('results.strength')}:
+								</span>
+								<span className={`font-semibold ${strength.color}`}>
+									{strength.label}
+								</span>
+								<div className='flex gap-1'>
+									{[1, 2, 3, 4].map((level) => (
+										<div
+											key={`strength-${level}`}
+											className={`w-3 h-3 rounded-full ${
+												level <= strength.score
+													? 'bg-green-500'
+													: 'bg-gray-300'
+											}`}
+										/>
+									))}
+								</div>
+							</div>
+						)}
+
+						<div key='password-stats' className='grid grid-cols-2 md:grid-cols-4 gap-4 text-sm'>
+							<div className='text-center'>
+								<div className='font-semibold text-gray-900'>
+									{generatedPassword.length}
+								</div>
+								<div className='text-gray-600'>
+									{t('results.length')}
+								</div>
+							</div>
+							<div className='text-center'>
+								<div className='font-semibold text-gray-900'>
+									{new Set(generatedPassword).size}
+								</div>
+								<div className='text-gray-600'>
+									{t('results.uniqueChars')}
+								</div>
+							</div>
+							<div className='text-center'>
+								<div className='font-semibold text-gray-900'>
+									{Math.pow(
+										62,
+										generatedPassword.length
+									).toExponential(2)}
+								</div>
+								<div className='text-gray-600'>
+									{t('results.possibilities')}
+								</div>
+							</div>
+							<div className='text-center'>
+								<div className='font-semibold text-gray-900'>
+									{Math.ceil(
+										Math.log2(
+											Math.pow(62, generatedPassword.length)
+										) / 365
+									)}
+								</div>
+								<div className='text-gray-600'>
+									{t('results.entropy')}
+								</div>
+							</div>
+						</div>
+
+						{copied && (
+							<div key='copied-message' className='mt-4 text-center text-sm text-green-600 flex items-center justify-center gap-1'>
+								<CheckCircle className='h-4 w-4' />
+								{t('results.copied')}
+							</div>
+						)}
+					</div>
+				) : (
+					<div key='placeholder-content' className='text-center py-8'>
+						<p className='text-gray-500 text-lg'>
+							{t('results.placeholder')}
+						</p>
+					</div>
+				)}
+			</div>
 
 			{/* Security tips */}
 			<div className='mt-6 p-4 bg-green-50 border border-green-200 rounded-lg'>

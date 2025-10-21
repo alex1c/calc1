@@ -43,19 +43,21 @@ export default async function PasswordGeneratorPage({
 		namespace: 'calculators.passwordGenerator',
 	});
 
+	// Breadcrumbs items
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	const breadcrumbItems = [
+		{ label: tCategories('fun.title'), href: '/fun' },
+		{ label: t('title') },
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'>
 			<Header />
-			<Breadcrumbs
-				items={[
-					{ label: t('breadcrumbs.home'), href: `/${locale}` },
-					{ label: t('breadcrumbs.fun'), href: `/${locale}/fun` },
-					{
-						label: t('breadcrumbs.passwordGenerator'),
-						href: `/${locale}/fun/password`,
-					},
-				]}
-			/>
+			<Breadcrumbs items={breadcrumbItems} />
 
 			<main className='container mx-auto px-4 py-8'>
 				{/* Header */}

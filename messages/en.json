@@ -109,6 +109,10 @@
 		"fun": {
 			"title": "Entertainment and Hobbies",
 			"description": "Compatibility, generators, games"
+		},
+		"time": {
+			"title": "Time and Dates",
+			"description": "Time calculators, age and date tools"
 		}
 	},
 	"math_basic": {
@@ -6606,6 +6610,1308 @@
 						}
 					]
 				}
+			}
+		},
+		"loveCompatibility": {
+			"title": "Love Compatibility Calculator by Birth Date",
+			"description": "Find out how well you match! Love calculator by birth date will show compatibility percentage.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"loveCompatibility": "Love Compatibility"
+			},
+			"form": {
+				"title": "Calculate Compatibility",
+				"person1": "First Person",
+				"person2": "Second Person",
+				"datePlaceholder": "Select birth date",
+				"calculate": "Calculate Compatibility",
+				"calculating": "Calculating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Compatibility Result",
+				"copy": "Copy Result",
+				"copied": "Copied!",
+				"copyText": "Compatibility: {percentage}% - {compatibility}. {description}",
+				"placeholder": "Enter birth dates and click 'Calculate Compatibility'",
+				"levels": {
+					"perfect": "Perfect Match",
+					"excellent": "Excellent Compatibility",
+					"good": "Good Compatibility",
+					"average": "Average Compatibility",
+					"fair": "Fair Compatibility",
+					"challenging": "Challenging Match"
+				},
+				"descriptions": {
+					"perfect": "You are made for each other! Your compatibility is simply incredible.",
+					"excellent": "You have an amazing connection and great potential for a lasting relationship.",
+					"good": "You have good compatibility and can build a strong relationship together.",
+					"average": "You have moderate compatibility. With effort, you can make it work.",
+					"fair": "Your compatibility is fair. You might need to work harder on your relationship.",
+					"challenging": "You might face some challenges, but love can overcome anything!"
+				}
+			},
+			"disclaimer": "This is an entertainment tool created for fun comparison. Results are not scientific and should not be taken seriously.",
+			"seo": {
+				"title": "Love Compatibility by Birth Date — Online Love Calculator",
+				"description": "Find out how well you match! Love calculator by birth date will show compatibility percentage.",
+				"keywords": "love, compatibility, birth date, horoscope, relationships, love calculator",
+				"overview": {
+					"title": "About the Calculator",
+					"content": "Our compatibility calculator will help you find out how well you match based on birth dates. Simply enter the birth dates of two people, and the calculator will show compatibility percentage and brief description."
+				},
+				"calculation": {
+					"title": "How it's calculated",
+					"content": "Compatibility is calculated based on various factors: zodiac signs, numerological values, age difference and other parameters.",
+					"formula": "Compatibility = Elemental Compatibility + Quality Compatibility + Age Compatibility + Seasonal Compatibility + Numerological Compatibility",
+					"example": "For example, if you have compatible zodiac signs and small age difference, your compatibility will be higher."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Quick compatibility calculation, interesting results, simple use, free and no registration required.",
+					"items": [
+						"Quick and accurate compatibility calculation",
+						"Considers multiple factors for more precise results",
+						"Simple and intuitive interface",
+						"Free and no registration required"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"items": [
+						"Enter accurate birth dates for better results",
+						"Use for fun and entertainment",
+						"Don't take results too seriously"
+					]
+				},
+				"facts": {
+					"title": "Interesting Facts About Love Compatibility",
+					"items": [
+						{
+							"title": "Zodiac Signs",
+							"content": "Zodiac sign compatibility is based on elements: fire, earth, air and water."
+						},
+						{
+							"title": "Numerology",
+							"content": "Numerological values of birth dates also influence compatibility."
+						},
+						{
+							"title": "Age Compatibility",
+							"content": "A small age difference usually contributes to better compatibility."
+						}
+					]
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How is compatibility calculated?",
+						"a": "The algorithm considers birth dates and numerological principles."
+					},
+					{
+						"q": "Is this astrology or entertainment?",
+						"a": "This is an entertainment tool created for fun comparison."
+					},
+					{
+						"q": "Are the results accurate?",
+						"a": "Results are based on astrological principles but are for entertainment only."
+					},
+					{
+						"q": "Can I use it for serious decisions?",
+						"a": "No, this is an entertainment tool and should not be used for serious relationship decisions."
+					},
+					{
+						"q": "Is the calculator free?",
+						"a": "Yes, the calculator is completely free and requires no registration."
+					},
+					{
+						"q": "Can I save the results?",
+						"a": "Yes, you can copy the results to your clipboard."
+					},
+					{
+						"q": "Does it work on mobile devices?",
+						"a": "Yes, the calculator is fully adapted for mobile devices."
+					},
+					{
+						"q": "Are the results saved?",
+						"a": "No, information is not saved and is not transmitted to third parties."
+					},
+					{
+						"q": "Can I use it for children?",
+						"a": "Yes, the calculator is suitable for determining compatibility for children."
+					},
+					{
+						"q": "Is astrology scientifically proven?",
+						"a": "Astrology is an entertainment practice with no scientific basis."
+					}
+				]
+			}
+		},
+		"nicknameGenerator": {
+			"title": "Nickname Generator — Create Unique Name Online",
+			"description": "Generate cool nicknames for games, social networks and forums. Fast, free and original!",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"nicknameGenerator": "Nickname Generator"
+			},
+			"form": {
+				"title": "Generate Nickname",
+				"theme": "Theme",
+				"style": "Nickname Style",
+				"length": "Length",
+				"includeNumbers": "Include Numbers",
+				"includeSymbols": "Include Symbols",
+				"generate": "Generate Nickname",
+				"generating": "Generating...",
+				"reset": "Reset",
+				"themes": {
+					"gaming": "Gaming",
+					"fantasy": "Fantasy",
+					"tech": "Technology",
+					"cute": "Cute",
+					"professional": "Professional"
+				},
+				"styles": {
+					"cool": "Cool",
+					"edgy": "Edgy",
+					"modern": "Modern",
+					"classic": "Classic",
+					"creative": "Creative"
+				},
+				"lengths": {
+					"short": "Short (3-6 chars)",
+					"medium": "Medium (7-12 chars)",
+					"long": "Long (13+ chars)"
+				}
+			},
+			"results": {
+				"title": "Generated Nicknames",
+				"copy": "Copy",
+				"copyAll": "Copy All",
+				"download": "Download",
+				"copied": "Copied!",
+				"generateMore": "Generate More",
+				"placeholder": "Click 'Generate Nickname' to create unique nicknames"
+			},
+			"seo": {
+				"title": "Nickname Generator — Create Unique Name Online",
+				"description": "Generate cool nicknames for games, social networks and forums. Fast, free and original!",
+				"keywords": "nickname, username, pseudonym, gaming name, nickname generator",
+				"overview": {
+					"title": "About the Generator",
+					"content": "Our nickname generator creates unique and original names for games, social networks, forums and other platforms. Choose style and length to get the perfect nickname."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The generator combines words, numbers and symbols to create unique combinations. Different styles use different patterns and character sets."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Unique combinations, multiple styles, customizable length, instant generation, free use.",
+					"unique": {
+						"title": "Uniqueness",
+						"content": "Each generation creates new combinations"
+					},
+					"fast": {
+						"title": "Speed",
+						"content": "Generate nicknames instantly"
+					},
+					"free": {
+						"title": "Free",
+						"content": "No registration required"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the generator to create unique nicknames for various platforms. Remember that some platforms may have restrictions on nickname format.",
+					"tip1": "Choose appropriate style for your platform",
+					"tip2": "Check nickname availability on target platform",
+					"tip3": "Save your favorite nicknames"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Can I set nickname style?",
+				"answer1": "Yes, you can choose from gaming, social, fantasy, cool, short and creative styles.",
+				"question2": "Are nicknames unique?",
+				"answer2": "The generator creates original combinations of letters, symbols and words.",
+				"question3": "Can I generate multiple nicknames?",
+				"answer3": "Yes, you can generate as many nicknames as you need.",
+				"question4": "Are nicknames free to use?",
+				"answer4": "Yes, all generated nicknames are free to use.",
+				"question5": "Can I customize nickname length?",
+				"answer5": "Yes, you can choose short, medium or long nicknames.",
+				"question6": "Do nicknames contain special characters?",
+				"answer6": "Some styles may include numbers and symbols for uniqueness.",
+				"question7": "Can I use nicknames for commercial purposes?",
+				"answer7": "Yes, generated nicknames can be used for any purpose.",
+				"question8": "Are nicknames saved?",
+				"answer8": "No, nicknames are not saved and are generated locally.",
+				"question9": "Can I generate nicknames for different platforms?",
+				"answer9": "Yes, choose appropriate style for your target platform.",
+				"question10": "Is the generator free?",
+				"answer10": "Yes, the nickname generator is completely free."
+			}
+		},
+		"randomNumberGenerator": {
+			"title": "Random Number Generator Online",
+			"description": "Get random number or set of numbers in seconds. Simple and reliable solution!",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"randomNumberGenerator": "Random Numbers"
+			},
+			"form": {
+				"title": "Random Number Generator",
+				"minValue": "Minimum Value",
+				"maxValue": "Maximum Value",
+				"count": "Number of Values",
+				"allowDuplicates": "Allow Duplicates",
+				"sort": "Sort Results",
+				"generate": "Generate Numbers",
+				"generating": "Generating...",
+				"reset": "Reset"
+			},
+			"errors": {
+				"minGreaterThanMax": "Minimum value cannot be greater than maximum value",
+				"countTooSmall": "Count must be at least 1",
+				"countTooLarge": "Count cannot be greater than the range when duplicates are not allowed"
+			},
+			"results": {
+				"title": "Generated Numbers",
+				"copy": "Copy Numbers",
+				"download": "Download",
+				"copied": "Copied!",
+				"generateMore": "Generate More",
+				"placeholder": "Set range and click 'Generate Numbers'",
+				"summary": "Generated {count} numbers from {min} to {max}. Sum: {sum}"
+			},
+			"seo": {
+				"title": "Random Number Generator Online",
+				"description": "Get random number or set of numbers in seconds. Simple and reliable solution!",
+				"keywords": "random number, generator, online, range, random",
+				"overview": {
+					"title": "About the Generator",
+					"content": "Our random number generator creates truly random numbers within specified range. You can generate single numbers or sets of multiple numbers."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The generator uses cryptographically secure random number generation to ensure true randomness. Each number is independent of others."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "True randomness, customizable range, multiple numbers, instant generation, free use.",
+					"random": {
+						"title": "True Randomness",
+						"content": "Uses secure random number generation"
+					},
+					"flexible": {
+						"title": "Flexibility",
+						"content": "Set any range and number of values"
+					},
+					"fast": {
+						"title": "Speed",
+						"content": "Generate numbers instantly"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the generator for games, lotteries, simulations and other applications requiring random numbers.",
+					"tip1": "Set appropriate range for your needs",
+					"tip2": "Use for fair random selection",
+					"tip3": "Generate multiple numbers for variety"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Can I generate multiple numbers at once?",
+				"answer1": "Yes, you can specify the number of values to generate.",
+				"question2": "Are the numbers truly random?",
+				"answer2": "Yes, the generator uses cryptographically secure random number generation.",
+				"question3": "Can I set any range?",
+				"answer3": "Yes, you can set any minimum and maximum values.",
+				"question4": "Is the generator free?",
+				"answer4": "Yes, the random number generator is completely free.",
+				"question5": "Can I use numbers for lotteries?",
+				"answer5": "Yes, but remember this is for entertainment purposes only.",
+				"question6": "Are numbers saved?",
+				"answer6": "No, numbers are generated locally and not saved.",
+				"question7": "Can I generate negative numbers?",
+				"answer7": "Yes, set negative values in the range.",
+				"question8": "Is there a limit on number of values?",
+				"answer8": "You can generate up to 1000 numbers at once.",
+				"question9": "Can I use this for scientific purposes?",
+				"answer9": "Yes, the generator provides truly random numbers suitable for various applications.",
+				"question10": "How often can I generate numbers?",
+				"answer10": "You can generate numbers as often as you need, there are no limits."
+			}
+		},
+		"lotteryGenerator": {
+			"title": "Lottery Ticket Generator Online",
+			"description": "Automatically create random lottery ticket. Free and no registration required.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"lotteryGenerator": "Lottery"
+			},
+			"form": {
+				"title": "Lottery Ticket Generator",
+				"type": "Lottery Type",
+				"count": "Number of Tickets",
+				"generate": "Generate Tickets",
+				"generating": "Generating...",
+				"reset": "Reset"
+			},
+			"types": {
+				"6-49": "6 out of 49",
+				"5-36": "5 out of 36",
+				"7-49": "7 out of 49",
+				"6-45": "6 out of 45",
+				"5-35": "5 out of 35",
+				"6-42": "6 out of 42",
+				"7-35": "7 out of 35",
+				"6-40": "6 out of 40"
+			},
+			"errors": {
+				"invalidCount": "Number of tickets must be between 1 and 20"
+			},
+			"results": {
+				"title": "Generated Tickets",
+				"copy": "Copy Tickets",
+				"download": "Download",
+				"print": "Print Tickets",
+				"ticket": "Ticket",
+				"bonus": "Bonus",
+				"copied": "Copied!",
+				"generateMore": "Generate More",
+				"placeholder": "Select lottery type and click 'Generate Tickets'"
+			},
+			"disclaimer": "This is an entertainment tool. Generated tickets are not valid for real lotteries.",
+			"seo": {
+				"title": "Lottery Ticket Generator Online",
+				"description": "Automatically create random lottery ticket. Free and no registration required.",
+				"keywords": "lottery, ticket, number generator, luck, random",
+				"overview": {
+					"title": "About the Generator",
+					"content": "Our lottery ticket generator creates random lottery tickets for various lottery types. Choose your preferred lottery format and generate as many tickets as you need."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The generator creates random numbers within the specified range for each lottery type. Each ticket contains unique number combinations."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Multiple lottery types, random generation, printable tickets, free use, no registration.",
+					"random": {
+						"title": "True Randomness",
+						"content": "Each ticket contains truly random numbers"
+					},
+					"flexible": {
+						"title": "Flexibility",
+						"content": "Support for different lottery formats"
+					},
+					"free": {
+						"title": "Free",
+						"content": "No registration required"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the generator for entertainment and games. Remember that this is for entertainment purposes only.",
+					"tip1": "Choose appropriate lottery type",
+					"tip2": "Generate multiple tickets for variety",
+					"tip3": "Print tickets for physical games"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Is this suitable for official lotteries?",
+				"answer1": "No, this is an entertainment tool only.",
+				"question2": "Can I generate multiple tickets?",
+				"answer2": "Yes, you can generate as many tickets as you need.",
+				"question3": "Are the numbers truly random?",
+				"answer3": "Yes, the generator uses secure random number generation.",
+				"question4": "Can I print the tickets?",
+				"answer4": "Yes, you can print generated tickets.",
+				"question5": "Is the generator free?",
+				"answer5": "Yes, the lottery generator is completely free.",
+				"question6": "Are tickets saved?",
+				"answer6": "No, tickets are generated locally and not saved.",
+				"question7": "Can I use this for real lotteries?",
+				"answer7": "No, this is for entertainment purposes only.",
+				"question8": "What lottery types are supported?",
+				"answer8": "6 out of 49, 5 out of 36, 7 out of 49, 5 out of 45 and more.",
+				"question9": "Can I customize the number range?",
+				"answer9": "The range is determined by the lottery type selected.",
+				"question10": "Is this legal to use?",
+				"answer10": "Yes, this is a free entertainment tool with no legal restrictions."
+			}
+		},
+		"passwordGenerator": {
+			"title": "Password Generator Online — Create Secure Password",
+			"description": "Create unique secure password in seconds. Safe and free.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"passwordGenerator": "Password Generator"
+			},
+			"form": {
+				"title": "Password Generator",
+				"length": "Password Length",
+				"includeNumbers": "Include Numbers",
+				"includeSymbols": "Include Symbols",
+				"includeUppercase": "Include Uppercase",
+				"includeLowercase": "Include Lowercase",
+				"generate": "Generate Password",
+				"generating": "Generating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Generated Password",
+				"copy": "Copy Password",
+				"copied": "Copied!",
+				"generateMore": "Generate More",
+				"placeholder": "Configure settings and click 'Generate Password'"
+			},
+			"seo": {
+				"title": "Password Generator Online — Create Secure Password",
+				"description": "Create unique secure password in seconds. Safe and free.",
+				"keywords": "password, generator, security, online, secure",
+				"overview": {
+					"title": "About the Generator",
+					"content": "Our password generator creates secure and unique passwords based on your requirements. Configure length and character types to get the perfect password."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The generator combines selected character types to create secure passwords. Each password is unique and generated using secure random methods."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Secure generation, customizable settings, instant creation, free use, no registration.",
+					"secure": {
+						"title": "Security",
+						"content": "Uses secure random generation methods"
+					},
+					"flexible": {
+						"title": "Flexibility",
+						"content": "Customize length and character types"
+					},
+					"free": {
+						"title": "Free",
+						"content": "No registration required"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the generator to create secure passwords for your accounts. Remember to use different passwords for different services.",
+					"tip1": "Use at least 12 characters for security",
+					"tip2": "Include numbers and symbols",
+					"tip3": "Don't reuse passwords across services"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Are passwords saved?",
+				"answer1": "No, everything happens locally in the browser.",
+				"question2": "How secure are the passwords?",
+				"answer2": "Passwords are generated using cryptographically secure methods.",
+				"question3": "Can I customize password length?",
+				"answer3": "Yes, you can set any length from 4 to 128 characters.",
+				"question4": "What character types are available?",
+				"answer4": "Numbers, symbols, uppercase and lowercase letters.",
+				"question5": "Is the generator free?",
+				"answer5": "Yes, the password generator is completely free.",
+				"question6": "Can I use passwords for important accounts?",
+				"answer6": "Yes, generated passwords are secure and suitable for any use.",
+				"question7": "Are passwords unique?",
+				"answer7": "Yes, each generation creates a unique password.",
+				"question8": "Can I generate multiple passwords?",
+				"answer8": "Yes, you can generate as many passwords as you need.",
+				"question9": "Is there a limit on password length?",
+				"answer9": "Maximum length is 128 characters for security reasons.",
+				"question10": "Can I save passwords?",
+				"answer10": "No, passwords are not saved. Copy them to a secure password manager."
+			}
+		},
+		"diceRoller": {
+			"title": "Dice Online — Roll Dice Free",
+			"description": "Online dice simulator. Suitable for board games and entertainment.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"diceRoller": "Dice"
+			},
+			"form": {
+				"title": "Dice Roller",
+				"diceCount": "Number of Dice",
+				"roll": "Roll Dice",
+				"rolling": "Rolling...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Dice Results",
+				"total": "Total",
+				"rollAgain": "Roll Again",
+				"placeholder": "Click 'Roll Dice' to throw the dice"
+			},
+			"seo": {
+				"title": "Dice Online — Roll Dice Free",
+				"description": "Online dice simulator. Suitable for board games and entertainment.",
+				"keywords": "dice, dice roll, throw dice, generator, game",
+				"overview": {
+					"title": "About the Dice Roller",
+					"content": "Our dice roller simulates throwing dice for board games, RPGs and entertainment. Choose the number of dice and roll them instantly."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The dice roller uses random number generation to simulate dice throws. Each die shows a random number from 1 to 6."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Realistic simulation, multiple dice, instant results, free use, no registration.",
+					"realistic": {
+						"title": "Realistic",
+						"content": "Simulates real dice throwing"
+					},
+					"flexible": {
+						"title": "Flexibility",
+						"content": "Choose number of dice to roll"
+					},
+					"fast": {
+						"title": "Speed",
+						"content": "Instant dice rolling"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the dice roller for board games, RPGs and entertainment. Perfect for when you don't have physical dice.",
+					"tip1": "Choose appropriate number of dice",
+					"tip2": "Use for fair random selection",
+					"tip3": "Perfect for board games and RPGs"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Can I choose multiple dice?",
+				"answer1": "Yes, select the number before rolling.",
+				"question2": "Are the results truly random?",
+				"answer2": "Yes, the dice roller uses secure random number generation.",
+				"question3": "What dice types are supported?",
+				"answer3": "Standard 6-sided dice are supported.",
+				"question4": "Is the dice roller free?",
+				"answer4": "Yes, the dice roller is completely free.",
+				"question5": "Can I use this for board games?",
+				"answer5": "Yes, perfect for board games and RPGs.",
+				"question6": "Are results saved?",
+				"answer6": "No, results are not saved.",
+				"question7": "Can I roll dice multiple times?",
+				"answer7": "Yes, you can roll as many times as you need.",
+				"question8": "Is this suitable for gambling?",
+				"answer8": "This is for entertainment purposes only.",
+				"question9": "Can I customize dice faces?",
+				"answer9": "Currently only standard 6-sided dice are supported.",
+				"question10": "Is the dice roller fair?",
+				"answer10": "Yes, the dice roller uses cryptographically secure random generation."
+			}
+		},
+		"coinFlipper": {
+			"title": "Coin Flip Online",
+			"description": "Can't decide? Flip a coin online — heads or tails will decide for you!",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"coinFlipper": "Coin Flip"
+			},
+			"form": {
+				"title": "Coin Flip",
+				"flip": "Flip Coin",
+				"flipping": "Flipping...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Coin Result",
+				"heads": "Heads",
+				"tails": "Tails",
+				"flipAgain": "Flip Again",
+				"headsCount": "Heads",
+				"tailsCount": "Tails",
+				"placeholder": "Click 'Flip Coin' to toss the coin"
+			},
+			"seo": {
+				"title": "Coin Flip Online",
+				"description": "Can't decide? Flip a coin online — heads or tails will decide for you!",
+				"keywords": "heads tails, coin flip, toss coin, online",
+				"overview": {
+					"title": "About the Coin Flipper",
+					"content": "Our coin flipper simulates tossing a coin for decision making. When you can't decide, let chance help you choose."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The coin flipper uses random number generation to simulate coin tossing. Each flip has equal probability of heads or tails."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Fair decision making, instant results, free use, no registration.",
+					"fair": {
+						"title": "Fair",
+						"content": "Equal probability for heads and tails"
+					},
+					"fast": {
+						"title": "Speed",
+						"content": "Instant coin flipping"
+					},
+					"free": {
+						"title": "Free",
+						"content": "No registration required"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the coin flipper for quick decisions when you can't choose between two options.",
+					"tip1": "Use for binary decisions",
+					"tip2": "Perfect for quick choices",
+					"tip3": "Fair and unbiased results"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Can I customize the coin?",
+				"answer1": "Yes, you can choose design (classic, gold, emoji).",
+				"question2": "Are the results truly random?",
+				"answer2": "Yes, the coin flipper uses secure random number generation.",
+				"question3": "Is the coin flipper free?",
+				"answer3": "Yes, the coin flipper is completely free.",
+				"question4": "Can I flip multiple times?",
+				"answer4": "Yes, you can flip as many times as you need.",
+				"question5": "Is this suitable for gambling?",
+				"answer5": "This is for entertainment purposes only.",
+				"question6": "Are results saved?",
+				"answer6": "No, results are not saved.",
+				"question7": "Can I use this for important decisions?",
+				"answer7": "Use for fun decisions only, not important life choices.",
+				"question8": "Is the coin flipper fair?",
+				"answer8": "Yes, equal probability for heads and tails.",
+				"question9": "Can I see flip history?",
+				"answer9": "No, each flip is independent.",
+				"question10": "Is this legal to use?",
+				"answer10": "Yes, this is a free entertainment tool."
+			}
+		},
+		"zodiacCalculator": {
+			"title": "Find Your Zodiac Sign Online",
+			"description": "Find out your zodiac sign and brief character description. Free and accurate.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"zodiacCalculator": "Zodiac Sign"
+			},
+			"form": {
+				"title": "Zodiac Sign Calculator",
+				"birthDate": "Birth Date",
+				"datePlaceholder": "Select your birth date",
+				"calculate": "Find Zodiac Sign",
+				"calculating": "Calculating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Your Zodiac Sign",
+				"sign": "Zodiac Sign",
+				"dateRange": "Date Range: {range}",
+				"element": "Element",
+				"quality": "Quality",
+				"description": "Description",
+				"copy": "Copy Result",
+				"copied": "Copied!",
+				"copyText": "Zodiac Sign: {sign} {symbol}\nDate Range: {dateRange}\nElement: {element}\nQuality: {quality}\nDescription: {description}",
+				"placeholder": "Enter birth date and click 'Find Zodiac Sign'"
+			},
+			"disclaimer": "This is an entertainment tool. Zodiac signs are based on traditional astrology and should not be taken as scientific fact.",
+			"seo": {
+				"title": "Find Your Zodiac Sign Online",
+				"description": "Find out your zodiac sign and brief character description. Free and accurate.",
+				"keywords": "zodiac sign, horoscope, birth date, astrology",
+				"overview": {
+					"title": "About the Calculator",
+					"content": "Our zodiac sign calculator determines your astrological sign based on your birth date. Get your sign, date range and brief character description."
+				},
+				"calculation": {
+					"title": "How it works",
+					"content": "The calculator determines zodiac sign based on birth date. Each sign has specific date ranges and characteristics.",
+					"formula": "Zodiac sign is determined by birth date within specific date ranges",
+					"example": "For example, if you were born between March 21 and April 19, you are Aries."
+				},
+				"advantages": {
+					"title": "Advantages",
+					"content": "Accurate calculation, detailed descriptions, free use, no registration.",
+					"accurate": {
+						"title": "Accuracy",
+						"content": "Based on official zodiac date ranges"
+					},
+					"detailed": {
+						"title": "Detailed",
+						"content": "Includes sign descriptions and characteristics"
+					},
+					"free": {
+						"title": "Free",
+						"content": "No registration required"
+					}
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"content": "Use the calculator to find your zodiac sign and learn about astrological characteristics. Remember that this is for entertainment purposes.",
+					"tip1": "Enter accurate birth date",
+					"tip2": "Check date ranges for accuracy",
+					"tip3": "Use for entertainment only"
+				}
+			},
+			"faq": {
+				"title": "Frequently Asked Questions",
+				"question1": "Why can a date belong to two signs?",
+				"answer1": "Boundaries between signs sometimes change due to leap years and time zones.",
+				"question2": "Are the results accurate?",
+				"answer2": "Yes, based on official zodiac date ranges.",
+				"question3": "Is the calculator free?",
+				"answer3": "Yes, the zodiac calculator is completely free.",
+				"question4": "Can I use this for serious decisions?",
+				"answer4": "No, this is for entertainment purposes only.",
+				"question5": "Are results saved?",
+				"answer5": "No, information is not saved.",
+				"question6": "Can I use this for children?",
+				"answer6": "Yes, the calculator works for any age.",
+				"question7": "Is astrology scientifically proven?",
+				"answer7": "Astrology is an entertainment practice with no scientific basis.",
+				"question8": "Can I find signs for other people?",
+				"answer8": "Yes, enter any birth date to find the zodiac sign.",
+				"question9": "Are the descriptions accurate?",
+				"answer9": "Descriptions are based on traditional astrological interpretations.",
+				"question10": "Can I use this for horoscopes?",
+				"answer10": "This calculator only determines zodiac signs, not daily horoscopes."
+			}
+		},
+		"nameGenerator": {
+			"title": "Name Generator",
+			"description": "Generate names for babies, characters or projects. Universal online name generator.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"nameGenerator": "Name Generator"
+			},
+			"form": {
+				"title": "Generation Parameters",
+				"nameType": "Name Type",
+				"nameTypes": {
+					"baby": "👶 Baby Name",
+					"character": "🧙 Character Name",
+					"project": "🚀 Project Name",
+					"book": "📖 Book/Game Name",
+					"fantasy": "🐉 Fantasy/Sci-Fi Name"
+				},
+				"gender": "Gender",
+				"genders": {
+					"any": "Any",
+					"male": "Male",
+					"female": "Female"
+				},
+				"nameCount": "Number of Names",
+				"nameLength": "Name Length",
+				"lengths": {
+					"short": "Short",
+					"medium": "Medium",
+					"long": "Long"
+				},
+				"generate": "Generate",
+				"generating": "Generating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Generated Names",
+				"nameType": "Type",
+				"copy": "Copy All",
+				"copied": "Copied!",
+				"download": "Download",
+				"copiedMessage": "Names copied to clipboard!",
+				"placeholder": "Select parameters and click 'Generate' to create names"
+			},
+			"seo": {
+				"title": "Name Generator — Create Names for People, Projects & Characters",
+				"description": "Generate names for babies, characters, brands, or projects. A multilingual name generator for creative ideas.",
+				"keywords": "name generator, baby name, brand name, fantasy name, project name",
+				"overview": {
+					"title": "Online Name Generator",
+					"content": "Our name generator helps you create unique names for any purpose: babies, characters, projects, brands, and fictional worlds. Supports multiple languages and styles."
+				},
+				"calculation": {
+					"title": "How the Generator Works",
+					"content": "The algorithm combines popular and rare words, creating harmonious and original names in the selected category. Considers gender, length, and name style."
+				},
+				"advantages": {
+					"title": "Generator Advantages",
+					"items": [
+						"Multiple name categories",
+						"Multi-language support",
+						"Length and style customization",
+						"Fast generation",
+						"Result copying"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"items": [
+						"Choose appropriate name type",
+						"Set gender and length",
+						"Generate multiple options",
+						"Save favorite names",
+						"Use for different projects"
+					]
+				},
+				"facts": {
+					"title": "Interesting Facts",
+					"items": [
+						{
+							"title": "Name Popularity",
+							"content": "Most popular names change every 10-15 years depending on cultural trends."
+						},
+						{
+							"title": "Cultural Differences",
+							"content": "In different cultures, names have different meanings and sounds, affecting their choice."
+						},
+						{
+							"title": "Creative Process",
+							"content": "Creating names is a creative process that requires inspiration and understanding of context."
+						}
+					]
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "How does the name generator work?",
+						"a": "The algorithm combines popular and rare words, creating harmonious and original names in the selected category."
+					},
+					{
+						"q": "Can I get real names?",
+						"a": "Yes, choose 'Baby Name' type — this mode selects real names by language."
+					},
+					{
+						"q": "Does the generator work for brands?",
+						"a": "Yes, choose 'Project' mode — the algorithm creates short, catchy names with brand potential."
+					},
+					{
+						"q": "Can I customize name style?",
+						"a": "Yes, select character type and name length to get suitable options."
+					},
+					{
+						"q": "How many names can I generate?",
+						"a": "You can generate from 1 to 10 names at once, depending on your needs."
+					},
+					{
+						"q": "Does it work on mobile?",
+						"a": "Yes, the generator is fully adapted for mobile devices and tablets."
+					},
+					{
+						"q": "Can I copy results?",
+						"a": "Yes, you can copy individual names or the entire list to clipboard."
+					},
+					{
+						"q": "Is it free to use?",
+						"a": "Yes, the generator is completely free and requires no registration."
+					},
+					{
+						"q": "Are generated names saved?",
+						"a": "No, names are not saved on the server, everything happens locally in the browser."
+					},
+					{
+						"q": "Can I use for commercial projects?",
+						"a": "Yes, generated names can be freely used for any purpose."
+					}
+				]
+			}
+		},
+		"characterTraits": {
+			"title": "Character Traits Generator",
+			"description": "Create unique characters with traits, profession, and story. Online generator for writers and games.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"characterTraits": "Character Traits"
+			},
+			"form": {
+				"title": "Character Parameters",
+				"gender": "Gender",
+				"genders": {
+					"any": "Any",
+					"male": "Male",
+					"female": "Female"
+				},
+				"characterType": "Character Type",
+				"types": {
+					"realistic": "Realistic",
+					"fantasy": "Fantasy",
+					"scifi": "Sci-Fi"
+				},
+				"ageGroup": "Age Group",
+				"ages": {
+					"child": "Child",
+					"teen": "Teen",
+					"adult": "Adult",
+					"elderly": "Elderly"
+				},
+				"characterCount": "Number of Characters",
+				"generate": "Generate",
+				"generating": "Generating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Generated Characters",
+				"character": "Character",
+				"name": "Name",
+				"age": "Age",
+				"personality": "Personality",
+				"strengths": "Strengths",
+				"weaknesses": "Weaknesses",
+				"profession": "Profession",
+				"backstory": "Backstory",
+				"copy": "Copy Description",
+				"copied": "Copied!",
+				"download": "Download",
+				"copiedMessage": "Character description copied to clipboard!",
+				"placeholder": "Select parameters and click 'Generate' to create character"
+			},
+			"seo": {
+				"title": "Character Traits Generator — Create Characters for Stories and Games",
+				"description": "Generate complete characters with personality, strengths, weaknesses, occupation, and backstory. Perfect for writers and RPG creators.",
+				"keywords": "character generator, character traits, personality, story writing, RPG",
+				"overview": {
+					"title": "Online Character Generator",
+					"content": "Our character generator helps you create unique heroes with a complete set of characteristics: personality, strengths and weaknesses, profession and history. Perfect for writers, screenwriters and game designers."
+				},
+				"calculation": {
+					"title": "How the Generator Works",
+					"content": "The algorithm creates a complete character portrait, considering the selected type, gender, age and genre. Generates realistic or fantastic characteristics depending on settings."
+				},
+				"advantages": {
+					"title": "Generator Advantages",
+					"items": [
+						"Complete set of characteristics",
+						"Different character types",
+						"Age and gender customization",
+						"Realistic and fantastic options",
+						"Ready-to-use descriptions"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"items": [
+						"Choose appropriate character type",
+						"Set age and gender",
+						"Generate multiple options",
+						"Adapt to your project",
+						"Save interesting ideas"
+					]
+				},
+				"facts": {
+					"title": "Interesting Facts",
+					"items": [
+						{
+							"title": "Character Development",
+							"content": "Well-developed characters make stories more interesting and memorable."
+						},
+						{
+							"title": "Character Psychology",
+							"content": "Character strengths and weaknesses create conflicts and develop plot."
+						},
+						{
+							"title": "Creative Process",
+							"content": "Creating characters is a creative process that requires inspiration and understanding of human nature."
+						}
+					]
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "Can I use the generator for books or games?",
+						"a": "Yes, all results can be freely used for personal and commercial projects."
+					},
+					{
+						"q": "Does the generator create only appearance or also character?",
+						"a": "It creates a complete character portrait: personality, behavior, profession and brief biography."
+					},
+					{
+						"q": "Is there generation by language?",
+						"a": "Yes, choose the desired language — characters and their descriptions will be created in it."
+					},
+					{
+						"q": "Can I customize character type?",
+						"a": "Yes, select realistic, fantasy or sci-fi type to get appropriate characteristics."
+					},
+					{
+						"q": "How many characters can I generate?",
+						"a": "You can generate from 1 to 5 characters at once, depending on your needs."
+					},
+					{
+						"q": "Does it work on mobile?",
+						"a": "Yes, the generator is fully adapted for mobile devices and tablets."
+					},
+					{
+						"q": "Can I copy descriptions?",
+						"a": "Yes, you can copy character descriptions to clipboard for further use."
+					},
+					{
+						"q": "Is it free to use?",
+						"a": "Yes, the generator is completely free and requires no registration."
+					},
+					{
+						"q": "Are generated characters saved?",
+						"a": "No, characters are not saved on the server, everything happens locally in the browser."
+					},
+					{
+						"q": "Can I use for commercial projects?",
+						"a": "Yes, generated characters can be freely used for any purpose."
+					}
+				]
+			}
+		},
+		"fantasyWorld": {
+			"title": "Fantasy World Generator",
+			"description": "Create a detailed fictional world with unique name, nature, climate, culture, ruler, resources, and main conflict.",
+			"breadcrumbs": {
+				"home": "Home",
+				"fun": "Fun",
+				"fantasyWorld": "World Generator"
+			},
+			"form": {
+				"title": "Generation Parameters",
+				"worldType": "World Type",
+				"types": {
+					"fantasy": "Fantasy",
+					"scifi": "Sci-Fi",
+					"steampunk": "Steampunk",
+					"postapocalyptic": "Post-Apocalyptic"
+				},
+				"worldCount": "Number of Worlds",
+				"generate": "Generate",
+				"generating": "Generating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Generated Worlds",
+				"world": "World",
+				"climate": "Climate & Nature",
+				"culture": "Culture & Society",
+				"government": "Ruler/Power System",
+				"resources": "Resources & Magic/Technology",
+				"conflict": "Main Conflict",
+				"legend": "Interesting Fact or Legend",
+				"copy": "Copy Description",
+				"copied": "Copied!",
+				"download": "Download",
+				"copiedMessage": "World description copied to clipboard!",
+				"placeholder": "Select parameters and click 'Generate' to create a world"
+			},
+			"seo": {
+				"title": "Fantasy World Generator — Online for Writers and Games",
+				"description": "Create a detailed fictional world with unique name, nature, climate, culture, ruler, resources, and main conflict.",
+				"keywords": "world generator, fantasy world, fictional universe, worldbuilding, creative writing",
+				"overview": {
+					"title": "Online Fantasy World Generator",
+					"content": "Our world generator helps you create unique fictional universes with a complete set of characteristics: climate, culture, government, resources, and conflicts. Perfect for writers, screenwriters, and game designers."
+				},
+				"calculation": {
+					"title": "How the Generator Works",
+					"content": "The algorithm creates a cohesive world, considering the selected type and genre. Generates realistic or fantastic characteristics depending on settings."
+				},
+				"advantages": {
+					"title": "Generator Advantages",
+					"items": [
+						"Complete set of world characteristics",
+						"Different types and genres",
+						"Customizable number of worlds",
+						"Realistic and fantastic options",
+						"Ready-to-use descriptions"
+					]
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"items": [
+						"Choose the appropriate world type",
+						"Generate multiple variants",
+						"Adapt to your project",
+						"Save interesting ideas",
+						"Use for different genres"
+					]
+				},
+				"facts": {
+					"title": "Interesting Facts",
+					"items": [
+						{
+							"title": "World Creation",
+							"content": "Well-developed worlds make stories more interesting and memorable."
+						},
+						{
+							"title": "Worldbuilding",
+							"content": "World details create conflicts and develop the plot."
+						},
+						{
+							"title": "Creative Process",
+							"content": "Creating worlds is a creative process that requires inspiration and genre understanding."
+						}
+					]
+				},
+				"faq": {
+					"title": "Frequently Asked Questions"
+				},
+				"faqItems": [
+					{
+						"q": "Can I use the generator for books or games?",
+						"a": "Yes, all results can be freely used for personal and commercial projects."
+					},
+					{
+						"q": "Does the generator create only descriptions or details too?",
+						"a": "It creates a complete world description: climate, culture, government, resources, and conflicts."
+					},
+					{
+						"q": "Is there generation by genre?",
+						"a": "Yes, select the desired genre — worlds will be created in the appropriate style."
+					},
+					{
+						"q": "Can I customize the world type?",
+						"a": "Yes, choose fantasy, sci-fi, steampunk, or post-apocalyptic to get appropriate characteristics."
+					},
+					{
+						"q": "How many worlds can I generate?",
+						"a": "You can generate from 1 to 3 worlds at a time, depending on your needs."
+					},
+					{
+						"q": "Does the generator work on mobile?",
+						"a": "Yes, the generator is fully adapted for mobile devices and tablets."
+					},
+					{
+						"q": "Can I copy descriptions?",
+						"a": "Yes, you can copy world descriptions to clipboard for further use."
+					},
+					{
+						"q": "Is usage free?",
+						"a": "Yes, the generator is completely free and requires no registration."
+					},
+					{
+						"q": "Are generated worlds saved?",
+						"a": "No, worlds are not saved on the server, everything happens locally in the browser."
+					},
+					{
+						"q": "Can I use for commercial projects?",
+						"a": "Yes, generated worlds can be freely used for any purposes."
+					}
+				]
+			}
+		},
+		"daysBetween": {
+			"title": "Days Between Dates Calculator",
+			"description": "An online Days Between Dates Calculator helps you find the exact number of days, weeks, months, or years between two dates.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"daysBetween": "Days Between Dates"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"startDate": "Start Date",
+				"endDate": "End Date",
+				"today": "Today",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Result",
+				"totalDays": "Total Days",
+				"weeks": "Weeks",
+				"months": "Months",
+				"years": "Years",
+				"days": "Days",
+				"copy": "Copy Result",
+				"copied": "Copied!",
+				"placeholder": "Enter dates and click 'Calculate'"
+			},
+			"seo": {
+				"title": "Days Between Dates Calculator — Online Date Difference Tool",
+				"description": "An online Days Between Dates Calculator helps you find the exact number of days, weeks, months, or years between two dates.",
+				"keywords": "days between dates, date calculator, date difference calculator, calculate days between dates, date range calculator, time between dates, days calculator online, date interval calculator, event countdown, date difference tool"
+			}
+		},
+		"addTime": {
+			"title": "Add Time to Date Calculator",
+			"description": "This Add Time Calculator lets you quickly add days, hours, or minutes to any date and time.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"addTime": "Add Time"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"startDate": "Start Date",
+				"startTime": "Time",
+				"addDays": "Add Days",
+				"addHours": "Add Hours",
+				"addMinutes": "Add Minutes",
+				"today": "Today",
+				"now": "Now",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Result",
+				"resultDate": "Result Date",
+				"resultTime": "Time",
+				"dayOfWeek": "Day of Week",
+				"copy": "Copy Result",
+				"copied": "Copied!",
+				"placeholder": "Enter parameters and click 'Calculate'"
+			},
+			"seo": {
+				"title": "Add Time Calculator — Add Days, Hours, Minutes to Date",
+				"description": "Online Add Time Calculator to add days, hours, or minutes to a date.",
+				"keywords": "add time to date, time calculator, add days to date, add hours to date, add minutes to date, future date calculator, date time calculator, time addition calculator, schedule calculator, deadline calculator"
+			}
+		},
+		"age": {
+			"title": "Age Calculator",
+			"description": "The Age Calculator helps you find the exact age in years, months, and days from a given birth or start date.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"age": "Age"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"birthDate": "Birth Date",
+				"calculateDate": "Calculate on Date",
+				"today": "Today",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset"
+			},
+			"results": {
+				"title": "Calculation Result",
+				"age": "Age",
+				"years": "Years",
+				"months": "Months",
+				"days": "Days",
+				"totalDays": "Total Days",
+				"copy": "Copy Result",
+				"copied": "Copied!",
+				"placeholder": "Enter birth date and click 'Calculate'"
+			},
+			"seo": {
+				"title": "Age Calculator — Calculate Age in Years, Months, Days",
+				"description": "Online Age Calculator — find your exact age in years, months, and days.",
+				"keywords": "age calculator, calculate age, age in years months days, birthday calculator, age from date of birth, age calculation, age in days, age calculator online, age tool, age finder"
 			}
 		}
 	}

@@ -36,19 +36,21 @@ export default async function ZodiacCalculatorPage({
 		namespace: 'calculators.zodiacCalculator',
 	});
 
+	// Breadcrumbs items
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	const breadcrumbItems = [
+		{ label: tCategories('fun.title'), href: '/fun' },
+		{ label: t('title') },
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50'>
 			<Header />
-			<Breadcrumbs
-				items={[
-					{ label: t('breadcrumbs.home'), href: `/${locale}` },
-					{ label: t('breadcrumbs.fun'), href: `/${locale}/fun` },
-					{
-						label: t('breadcrumbs.zodiacCalculator'),
-						href: `/${locale}/fun/zodiac`,
-					},
-				]}
-			/>
+			<Breadcrumbs items={breadcrumbItems} />
 
 			<main className='container mx-auto px-4 py-8'>
 				<div className='text-center mb-8'>

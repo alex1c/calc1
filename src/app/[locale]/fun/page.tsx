@@ -2,10 +2,6 @@ import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
 import {
-	Smile,
-	Heart,
-	Dice6,
-	Sparkles,
 	Globe,
 	Users,
 	User,
@@ -15,39 +11,12 @@ import {
 	Dice1,
 	Coins,
 	Star,
+	FileText,
+	UserCheck,
+	Sparkles,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
-	{
-		id: 'compatibility',
-		title: 'Love Compatibility Calculator',
-		description:
-			'Calculate compatibility between two people based on zodiac signs',
-		icon: Heart,
-		href: '/calc/compatibility',
-	},
-	{
-		id: 'name-generator',
-		title: 'Name Generator',
-		description:
-			'Generate random names for characters, babies, or projects',
-		icon: Sparkles,
-		href: '/calc/name-generator',
-	},
-	{
-		id: 'password-generator',
-		title: 'Password Generator',
-		description: 'Generate secure passwords with customizable options',
-		icon: Dice6,
-		href: '/calc/password-generator',
-	},
-	{
-		id: 'color-picker',
-		title: 'Color Picker & Palette',
-		description: 'Generate color palettes and pick colors for design',
-		icon: Smile,
-		href: '/calc/color-picker',
-	},
 	{
 		id: 'planet-weight',
 		title: t('calculators.planetWeight.title'),
@@ -110,6 +79,27 @@ const getCalculators = (t: any) => [
 		description: t('calculators.zodiacCalculator.description'),
 		icon: Star,
 		href: '/fun/zodiac',
+	},
+	{
+		id: 'name-generator',
+		title: t('calculators.nameGenerator.title'),
+		description: t('calculators.nameGenerator.description'),
+		icon: FileText,
+		href: '/fun/name-generator',
+	},
+	{
+		id: 'character-traits',
+		title: t('calculators.characterTraits.title'),
+		description: t('calculators.characterTraits.description'),
+		icon: UserCheck,
+		href: '/fun/character-traits',
+	},
+	{
+		id: 'fantasy-world',
+		title: t('calculators.fantasyWorld.title'),
+		description: t('calculators.fantasyWorld.description'),
+		icon: Sparkles,
+		href: '/fun/fantasy-world',
 	},
 ];
 

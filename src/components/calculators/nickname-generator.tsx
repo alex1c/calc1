@@ -340,13 +340,14 @@ export default function NicknameGenerator() {
 	const handleGenerate = async () => {
 		setIsGenerating(true);
 
-		// Add some delay for animation effect
-		await new Promise((resolve) => setTimeout(resolve, 1000));
-
+		// Generate nicknames immediately
 		const newNicknames: string[] = [];
 		for (let i = 0; i < 10; i++) {
 			newNicknames.push(generateNickname());
 		}
+
+		// Add a small delay for UI feedback, but not too long
+		await new Promise((resolve) => setTimeout(resolve, 300));
 
 		setGeneratedNicknames(newNicknames);
 		setIsGenerating(false);
@@ -522,35 +523,46 @@ export default function NicknameGenerator() {
 				{/* Generate button */}
 				<div className='mt-6'>
 					<button
+						key='generate-button'
 						onClick={handleGenerate}
 						disabled={isGenerating}
 						className='w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2'
 					>
-						{isGenerating ? (
-							<>
-								<RefreshCw className='h-5 w-5 animate-spin' />
-								{t('form.generating')}
-							</>
-						) : (
-							<>
-								<Sparkles className='h-5 w-5' />
-								{t('form.generate')}
-							</>
+						{isGenerating && (
+							<RefreshCw
+								key='spinner'
+								className='h-5 w-5 animate-spin'
+							/>
 						)}
+						{!isGenerating && (
+							<Sparkles
+								key='sparkles'
+								className='h-5 w-5'
+							/>
+						)}
+						<span key='button-text'>
+							{isGenerating
+								? t('form.generating')
+								: t('form.generate')}
+						</span>
 					</button>
 				</div>
 			</div>
 
 			{/* Results */}
-			{generatedNicknames.length > 0 && (
-				<div className='bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-200'>
-					<div className='flex items-center justify-between mb-4'>
-						<h3 className='text-xl font-bold text-gray-900 flex items-center gap-2'>
-							<User className='h-5 w-5 text-purple-500' />
-							{t('results.title')}
-						</h3>
+			<div
+				key='results-section'
+				className='bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-200'
+			>
+				<div className='flex items-center justify-between mb-4'>
+					<h3 className='text-xl font-bold text-gray-900 flex items-center gap-2'>
+						<User className='h-5 w-5 text-purple-500' />
+						{t('results.title')}
+					</h3>
+					{generatedNicknames.length > 0 && (
 						<div className='flex gap-2'>
 							<button
+								key='copy-all-button'
 								onClick={handleCopyAll}
 								className='px-3 py-1 bg-white border border-purple-300 text-purple-700 rounded-lg text-sm hover:bg-purple-50 transition-colors duration-200 flex items-center gap-1'
 							>
@@ -558,6 +570,7 @@ export default function NicknameGenerator() {
 								{t('results.copyAll')}
 							</button>
 							<button
+								key='download-button'
 								onClick={handleDownload}
 								className='px-3 py-1 bg-white border border-purple-300 text-purple-700 rounded-lg text-sm hover:bg-purple-50 transition-colors duration-200 flex items-center gap-1'
 							>
@@ -565,34 +578,51 @@ export default function NicknameGenerator() {
 								{t('results.download')}
 							</button>
 						</div>
-					</div>
-
-					<div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-						{generatedNicknames.map((nickname, index) => (
-							<div
-								key={index}
-								className='bg-white rounded-lg p-3 border border-purple-100 flex items-center justify-between hover:shadow-md transition-shadow'
-							>
-								<span className='font-mono text-gray-800'>
-									{nickname}
-								</span>
-								<button
-									onClick={() => handleCopy(nickname)}
-									className='p-1 text-purple-600 hover:bg-purple-100 rounded transition-colors duration-200'
-								>
-									<Copy className='h-4 w-4' />
-								</button>
-							</div>
-						))}
-					</div>
-
-					{copied && (
-						<div className='mt-4 text-center text-sm text-green-600'>
-							{t('results.copied')}
-						</div>
 					)}
 				</div>
-			)}
+
+				{generatedNicknames.length > 0 ? (
+					<div key='nicknames-content'>
+						<div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+							{generatedNicknames.map((nickname, index) => (
+								<div
+									key={`nickname-${index}`}
+									className='bg-white rounded-lg p-3 border border-purple-100 flex items-center justify-between hover:shadow-md transition-shadow'
+								>
+									<span className='font-mono text-gray-800'>
+										{nickname}
+									</span>
+									<button
+										key={`copy-${index}`}
+										onClick={() => handleCopy(nickname)}
+										className='p-1 text-purple-600 hover:bg-purple-100 rounded transition-colors duration-200'
+									>
+										<Copy className='h-4 w-4' />
+									</button>
+								</div>
+							))}
+						</div>
+
+						{copied && (
+							<div
+								key='copied-message'
+								className='mt-4 text-center text-sm text-green-600'
+							>
+								{t('results.copied')}
+							</div>
+						)}
+					</div>
+				) : (
+					<div
+						key='placeholder-content'
+						className='text-center py-8'
+					>
+						<p className='text-gray-500 text-lg'>
+							{t('results.placeholder')}
+						</p>
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }

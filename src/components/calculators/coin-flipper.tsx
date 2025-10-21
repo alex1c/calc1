@@ -28,10 +28,7 @@ export default function CoinFlipper() {
 		setIsFlipping(true);
 		setResult(null);
 
-		// Animation duration
-		await new Promise((resolve) => setTimeout(resolve, 2000));
-
-		// Generate random result
+		// Generate random result immediately
 		const coinResult: CoinResult = Math.random() < 0.5 ? 'heads' : 'tails';
 
 		// Calculate statistics
@@ -46,6 +43,9 @@ export default function CoinFlipper() {
 				flipHistory.filter((f) => f.result === 'tails').length +
 				(coinResult === 'tails' ? 1 : 0),
 		};
+
+		// Add a small delay for UI feedback, but not too long
+		await new Promise((resolve) => setTimeout(resolve, 300));
 
 		setResult(newFlip);
 		setFlipHistory((prev) => [...prev, newFlip]);
@@ -142,103 +142,112 @@ export default function CoinFlipper() {
 				{/* Flip Button */}
 				<div className='text-center'>
 					<button
+						key='flip-button'
 						onClick={flipCoin}
 						disabled={isFlipping}
 						className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-600 hover:to-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-3 mx-auto'
 					>
-						{isFlipping ? (
-							<>
-								<RefreshCw className='h-6 w-6 animate-spin' />
-								{t('form.flipping')}
-							</>
-						) : (
-							<>
-								<Coins className='h-6 w-6' />
-								{t('form.flip')}
-							</>
+						{isFlipping && (
+							<RefreshCw key='spinner' className='h-6 w-6 animate-spin' />
 						)}
+						{!isFlipping && (
+							<Coins key='coins-icon' className='h-6 w-6' />
+						)}
+						<span key='button-text'>
+							{isFlipping ? t('form.flipping') : t('form.flip')}
+						</span>
 					</button>
 				</div>
 			</div>
 
 			{/* Results */}
-			{result && (
-				<div className='bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200'>
-					<h3 className='text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2'>
-						<Coins className='h-6 w-6 text-yellow-500' />
-						{t('results.title')}
-					</h3>
+			<div key='results-section' className='bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200'>
+				<h3 className='text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2'>
+					<Coins className='h-6 w-6 text-yellow-500' />
+					{t('results.title')}
+				</h3>
 
-					{/* Coin Display */}
-					<div className='text-center mb-6'>
-						<div
-							className={`inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br ${getCoinColor(
-								result.style
-							)} rounded-full mb-4 shadow-lg ${
-								isFlipping ? 'animate-spin' : ''
-							}`}
-						>
-							<span className='text-4xl'>
-								{getCoinIcon(result.style, result.result)}
-							</span>
+				{result ? (
+					<div key='coin-content'>
+						{/* Coin Display */}
+						<div className='text-center mb-6'>
+							<div
+								className={`inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br ${getCoinColor(
+									result.style
+								)} rounded-full mb-4 shadow-lg ${
+									isFlipping ? 'animate-spin' : ''
+								}`}
+							>
+								<span className='text-4xl'>
+									{getCoinIcon(result.style, result.result)}
+								</span>
+							</div>
+							<h4 className='text-2xl font-bold text-gray-900 mb-2'>
+								{t(`results.${result.result}`)}
+							</h4>
+							<p className='text-gray-600'>
+								{t('results.description', {
+									style: t(`styles.${result.style}`),
+								})}
+							</p>
 						</div>
-						<h4 className='text-2xl font-bold text-gray-900 mb-2'>
-							{t(`results.${result.result}`)}
-						</h4>
-						<p className='text-gray-600'>
-							{t('results.description', {
-								style: t(`styles.${result.style}`),
-							})}
+
+						{/* Statistics */}
+						<div className='grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6'>
+							<div className='bg-white rounded-lg p-4 text-center'>
+								<div className='text-2xl font-bold text-yellow-600'>
+									{result.flipCount}
+								</div>
+								<div className='text-sm text-gray-600'>
+									{t('results.totalFlips')}
+								</div>
+							</div>
+							<div className='bg-white rounded-lg p-4 text-center'>
+								<div className='text-2xl font-bold text-green-600'>
+									{result.headsCount}
+								</div>
+								<div className='text-sm text-gray-600'>
+									{t('results.headsCount')}
+								</div>
+							</div>
+							<div className='bg-white rounded-lg p-4 text-center'>
+								<div className='text-2xl font-bold text-blue-600'>
+									{result.tailsCount}
+								</div>
+								<div className='text-sm text-gray-600'>
+									{t('results.tailsCount')}
+								</div>
+							</div>
+						</div>
+
+						{/* Action buttons */}
+						<div className='flex flex-col sm:flex-row gap-3'>
+							<button
+								key='copy-button'
+								onClick={handleCopy}
+								className='flex-1 bg-white border border-yellow-300 text-yellow-700 px-4 py-2 rounded-lg font-medium hover:bg-yellow-50 transition-colors duration-200 flex items-center justify-center gap-2'
+							>
+								<Copy className='h-4 w-4' />
+								{copied ? t('results.copied') : t('results.copy')}
+							</button>
+							<button
+								key='reset-button'
+								onClick={resetHistory}
+								className='px-4 py-2 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center gap-2'
+							>
+								<RotateCcw className='h-4 w-4' />
+								{t('results.reset')}
+							</button>
+						</div>
+					</div>
+				) : (
+					<div key='placeholder-content' className='text-center py-8'>
+						<p className='text-gray-500 text-lg'>
+							{t('results.placeholder')}
 						</p>
 					</div>
-
-					{/* Statistics */}
-					<div className='grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6'>
-						<div className='bg-white rounded-lg p-4 text-center'>
-							<div className='text-2xl font-bold text-yellow-600'>
-								{result.flipCount}
-							</div>
-							<div className='text-sm text-gray-600'>
-								{t('results.totalFlips')}
-							</div>
-						</div>
-						<div className='bg-white rounded-lg p-4 text-center'>
-							<div className='text-2xl font-bold text-green-600'>
-								{result.headsCount}
-							</div>
-							<div className='text-sm text-gray-600'>
-								{t('results.heads')}
-							</div>
-						</div>
-						<div className='bg-white rounded-lg p-4 text-center'>
-							<div className='text-2xl font-bold text-blue-600'>
-								{result.tailsCount}
-							</div>
-							<div className='text-sm text-gray-600'>
-								{t('results.tails')}
-							</div>
-						</div>
-					</div>
-
-					{/* Action buttons */}
-					<div className='flex flex-col sm:flex-row gap-3'>
-						<button
-							onClick={handleCopy}
-							className='flex-1 bg-white border border-yellow-300 text-yellow-700 px-4 py-2 rounded-lg font-medium hover:bg-yellow-50 transition-colors duration-200 flex items-center justify-center gap-2'
-						>
-							<Copy className='h-4 w-4' />
-							{copied ? t('results.copied') : t('results.copy')}
-						</button>
-						<button
-							onClick={resetHistory}
-							className='px-4 py-2 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 flex items-center justify-center gap-2'
-						>
-							<RotateCcw className='h-4 w-4' />
-							{t('results.reset')}
-						</button>
-					</div>
-				</div>
-			)}
+				)}
+			</div>
 
 			{/* History */}
 			{flipHistory.length > 0 && (
