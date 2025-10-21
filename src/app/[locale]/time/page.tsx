@@ -1,48 +1,82 @@
-import { getTranslations } from 'next-intl';
+'use client';
+
+import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Link from 'next/link';
-import { Clock, Calendar, Plus, User } from 'lucide-react';
+import {
+	Clock,
+	Calendar,
+	Plus,
+	User,
+	Timer,
+	Target,
+	Globe,
+	CalendarDays,
+} from 'lucide-react';
 
-export default async function TimePage({
-	params: { locale },
-}: {
-	params: { locale: string };
-}) {
-	const t = await getTranslations({
-		locale,
-		namespace: 'categories',
-	});
+const getCalculators = (t: any) => [
+	{
+		id: 'days-between',
+		title: t('calculators.daysBetween.title'),
+		description: t('calculators.daysBetween.description'),
+		icon: Calendar,
+		href: '/time/days-between',
+	},
+	{
+		id: 'add-time',
+		title: t('calculators.addTime.title'),
+		description: t('calculators.addTime.description'),
+		icon: Plus,
+		href: '/time/add-time',
+	},
+	{
+		id: 'age',
+		title: t('calculators.age.title'),
+		description: t('calculators.age.description'),
+		icon: User,
+		href: '/time/age',
+	},
+	{
+		id: 'deadline',
+		title: t('calculators.deadline.title'),
+		description: t('calculators.deadline.description'),
+		icon: Target,
+		href: '/time/deadline',
+	},
+	{
+		id: 'calendar',
+		title: t('calculators.calendar.title'),
+		description: t('calculators.calendar.description'),
+		icon: CalendarDays,
+		href: '/time/calendar',
+	},
+	{
+		id: 'timer',
+		title: t('calculators.timer.title'),
+		description: t('calculators.timer.description'),
+		icon: Timer,
+		href: '/time/timer',
+	},
+	{
+		id: 'countdown',
+		title: t('calculators.countdown.title'),
+		description: t('calculators.countdown.description'),
+		icon: Clock,
+		href: '/time/countdown',
+	},
+	{
+		id: 'world-time',
+		title: t('calculators.worldTime.title'),
+		description: t('calculators.worldTime.description'),
+		icon: Globe,
+		href: '/time/world-time',
+	},
+];
 
-	const tCalculators = await getTranslations({
-		locale,
-		namespace: 'calculators',
-	});
-
-	const getCalculators = () => [
-		{
-			id: 'days-between',
-			title: tCalculators('daysBetween.title'),
-			description: tCalculators('daysBetween.description'),
-			icon: Calendar,
-			href: '/time/days-between',
-		},
-		{
-			id: 'add-time',
-			title: tCalculators('addTime.title'),
-			description: tCalculators('addTime.description'),
-			icon: Plus,
-			href: '/time/add-time',
-		},
-		{
-			id: 'age',
-			title: tCalculators('age.title'),
-			description: tCalculators('age.description'),
-			icon: User,
-			href: '/time/age',
-		},
-	];
-
-	const calculators = getCalculators();
+export default function TimePage() {
+	const t = useTranslations();
+	const locale = useLocale();
+	const calculators = getCalculators(t);
 
 	return (
 		<div className='min-h-screen bg-gray-50'>
@@ -52,10 +86,10 @@ export default async function TimePage({
 				{/* Header Section */}
 				<div className='mb-8'>
 					<h1 className='text-3xl font-bold text-gray-900 mb-4'>
-						{t('time.title')}
+						{t('categories.time.title')}
 					</h1>
 					<p className='text-lg text-gray-600'>
-						{t('time.description')}
+						{t('categories.time.description')}
 					</p>
 				</div>
 

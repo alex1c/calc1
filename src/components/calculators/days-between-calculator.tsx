@@ -26,13 +26,15 @@ export default function DaysBetweenCalculator() {
 	const [result, setResult] = useState<DaysBetweenResult | null>(null);
 	const [isCalculating, setIsCalculating] = useState(false);
 	const [copied, setCopied] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 
-	// Set today as default end date
+	// Set today as default end date only after component mounts
 	useEffect(() => {
+		setIsMounted(true);
 		if (!endDate) {
 			setEndDate(getTodayDate());
 		}
-	}, [endDate]);
+	}, []);
 
 	const handleCalculate = async () => {
 		if (!startDate || !endDate) return;
@@ -43,9 +45,6 @@ export default function DaysBetweenCalculator() {
 		}
 
 		setIsCalculating(true);
-
-		// Simulate calculation delay
-		await new Promise((resolve) => setTimeout(resolve, 500));
 
 		try {
 			const calculation = calculateDaysBetween(startDate, endDate);
@@ -87,6 +86,28 @@ export default function DaysBetweenCalculator() {
 			console.error('Copy failed:', error);
 		}
 	};
+
+	// Show loading state during hydration
+	if (!isMounted) {
+		return (
+			<div className='bg-white rounded-lg shadow-lg p-6'>
+				<div className='text-center mb-8'>
+					<div className='inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4'>
+						<Calendar className='h-8 w-8 text-blue-600' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 mb-2'>
+						{t('form.title')}
+					</h2>
+					<p className='text-gray-600'>
+						Введите две даты для расчёта разницы
+					</p>
+				</div>
+				<div className='flex items-center justify-center py-12'>
+					<RefreshCw className='h-8 w-8 animate-spin text-blue-600' />
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div className='bg-white rounded-lg shadow-lg p-6'>

@@ -296,3 +296,6 @@ export function estimateHeatingConsumption(
 	return gasConsumptionPerHour / (efficiency / 100);
 }
 
+
+
+

@@ -109,10 +109,6 @@
 		"fun": {
 			"title": "Entertainment and Hobbies",
 			"description": "Compatibility, generators, games"
-		},
-		"time": {
-			"title": "Time and Dates",
-			"description": "Time calculators, age and date tools"
 		}
 	},
 	"math_basic": {
@@ -4416,7 +4412,7 @@
 					"description": "31-35 day cycle. Ovulation usually on day 17-21."
 				}
 			},
-			"calendar": {
+			"cycleCalendar": {
 				"title": "Cycle calendar",
 				"legend": {
 					"period": "Period",
@@ -7881,8 +7877,8 @@
 			}
 		},
 		"age": {
-			"title": "Age Calculator",
-			"description": "The Age Calculator helps you find the exact age in years, months, and days from a given birth or start date.",
+			"title": "Age Calculator — Find your exact age",
+			"description": "Easily calculate your age in years, months, days, and even seconds. A free online age calculator for personal use, documents, or just curiosity.",
 			"breadcrumbs": {
 				"home": "Home",
 				"time": "Time",
@@ -7890,20 +7886,32 @@
 			},
 			"form": {
 				"title": "Calculation Parameters",
+				"description": "Find out your exact age in years, months and days",
 				"birthDate": "Birth Date",
+				"birthDatePlaceholder": "Select birth date",
 				"calculateDate": "Calculate on Date",
+				"calculateDatePlaceholder": "Select calculation date",
 				"today": "Today",
 				"calculate": "Calculate",
 				"calculating": "Calculating...",
-				"reset": "Reset"
+				"reset": "Reset",
+				"errors": {
+					"invalidDate": "Please enter valid dates",
+					"birthDateAfterCalculate": "Birth date cannot be later than calculation date",
+					"calculationError": "Calculation error. Please check the entered dates."
+				}
 			},
 			"results": {
 				"title": "Calculation Result",
+				"calculationTitle": "Age Calculation",
+				"birthDate": "Birth Date",
+				"calculateDate": "Calculation Date",
 				"age": "Age",
 				"years": "Years",
 				"months": "Months",
 				"days": "Days",
 				"totalDays": "Total Days",
+				"period": "From {from} to {to}",
 				"copy": "Copy Result",
 				"copied": "Copied!",
 				"placeholder": "Enter birth date and click 'Calculate'"
@@ -7912,6 +7920,610 @@
 				"title": "Age Calculator — Calculate Age in Years, Months, Days",
 				"description": "Online Age Calculator — find your exact age in years, months, and days.",
 				"keywords": "age calculator, calculate age, age in years months days, birthday calculator, age from date of birth, age calculation, age in days, age calculator online, age tool, age finder"
+			},
+			"faq": {
+				"question1": "How does the age calculator work?",
+				"answer1": "It compares the entered birth date with the current date and calculates the exact number of years, months and days lived.",
+				"question2": "Can I specify a future date?",
+				"answer2": "Yes, but the result will show how much time is left until that date, not the current age.",
+				"question3": "Can I use the calculator for animals?",
+				"answer3": "Yes, just enter the pet's birth date — the principle is the same.",
+				"question4": "How to find out a person's age on a specific date?",
+				"answer4": "Choose any date in the future or past — the calculator will show the age on it.",
+				"question5": "Can I calculate age in hours and minutes?",
+				"answer5": "Yes, the extended version shows age down to seconds.",
+				"question6": "How often is the date updated?",
+				"answer6": "The result updates in real time when the current time on the device changes.",
+				"question7": "Do I need to register to use it?",
+				"answer7": "No, the calculator is completely free and does not require login.",
+				"question8": "Can I save the result?",
+				"answer8": "Yes, you can copy or download the result as text or image.",
+				"question9": "Can I use the calculator on mobile?",
+				"answer9": "Of course, it's fully adapted for smartphones and tablets.",
+				"question10": "Can I embed the calculator on my website?",
+				"answer10": "Yes, a widget or API is provided for integration."
+			}
+		},
+		"deadline": {
+			"title": "Deadline Calculator — Project Deadline Calculator",
+			"description": "Online deadline calculator for tasks and projects with consideration of working days and weekends.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"deadline": "Deadline"
+			},
+			"form": {
+				"title": "Calculation Parameters",
+				"description": "Calculate the end date of a project or task",
+				"startDate": "Start Date",
+				"duration": "Duration (days)",
+				"dayType": "Day Type",
+				"workDays": "Working Days",
+				"workDaysDesc": "Weekdays only (Mon-Fri)",
+				"calendarDays": "Calendar Days",
+				"calendarDaysDesc": "All days including weekends",
+				"today": "Today",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset"
+			},
+			"hero": {
+				"weeks": "Weeks",
+				"days": "Days",
+				"projects": "Projects"
+			},
+			"features": {
+				"workDays": "Working days calculation",
+				"weekends": "Weekend exclusion",
+				"holidays": "Holiday consideration",
+				"flexibility": "Flexible settings",
+				"accuracy": "Accurate calculations"
+			},
+			"results": {
+				"title": "Calculation Result",
+				"endDate": "End Date",
+				"dayOfWeek": "Day of Week",
+				"totalDays": "Total Days",
+				"workDays": "working",
+				"weekends": "weekends",
+				"copy": "Copy Result",
+				"copied": "Copied!",
+				"placeholder": "Enter parameters and click 'Calculate'"
+			},
+			"seo": {
+				"title": "Deadline Calculator — Online Project Deadline Calculator",
+				"description": "Online deadline calculator for tasks and projects. Consider working days and weekends, fast and accurate end date calculation.",
+				"keywords": "deadline calculator, project deadline, end date calculator, calculate deadline, terminrechner, task deadlines, end date calculator, working days deadline, project management",
+				"overview": {
+					"title": "About the Deadline Calculator",
+					"content": "The Deadline Calculator is a convenient tool for project and task planning. It allows you to quickly calculate the end date of work, taking into account working days and weekends."
+				},
+				"calculation": {
+					"title": "How the deadline is calculated",
+					"content": "The calculator uses a simple algorithm to determine the end date:",
+					"step1": "Enter the project start date",
+					"step2": "Specify the number of days (working or calendar)",
+					"step3": "Choose the calculation type (working or calendar days)",
+					"step4": "Get the exact end date considering weekends"
+				},
+				"advantages": {
+					"title": "Calculator advantages",
+					"accuracy": "Calculation accuracy",
+					"accuracyDesc": "Takes into account all working days and weekends",
+					"flexibility": "Settings flexibility",
+					"flexibilityDesc": "Support for different day types",
+					"efficiency": "Speed of work",
+					"efficiencyDesc": "Instant results",
+					"planning": "Planning",
+					"planningDesc": "Helps in project management"
+				},
+				"tips": {
+					"title": "Usage tips",
+					"tip1": "Use working days",
+					"tip1Desc": "for projects that are executed only on weekdays",
+					"tip2": "Calendar days",
+					"tip2Desc": "suitable for continuous processes",
+					"tip3": "Plan ahead",
+					"tip3Desc": "set aside buffer time for unforeseen circumstances"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"question1": "How to calculate the project end date?",
+					"answer1": "Enter the start date and number of days — the result will appear instantly.",
+					"question2": "Can I consider only working days?",
+					"answer2": "Yes, there is an option to include/exclude weekends and holidays.",
+					"question3": "Is the calculator suitable for educational projects?",
+					"answer3": "Yes, you can calculate deadlines for any tasks.",
+					"question4": "Can I specify the exact deadline time?",
+					"answer4": "Yes, hours and minutes input is supported.",
+					"question5": "Can I use the calculator for future dates?",
+					"answer5": "Yes, it works with any dates."
+				}
+			}
+		},
+		"calendar": {
+			"title": "Online Calendar — Interactive Calendar",
+			"description": "Interactive online calendar with the ability to add events, holidays and export to iCal format.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"calendar": "Calendar"
+			},
+			"hero": {
+				"days": "days per year",
+				"events": "events",
+				"access": "access"
+			},
+			"form": {
+				"title": "Calendar Management",
+				"addEvent": "Add Event",
+				"editEvent": "Edit Event",
+				"eventTitle": "Event Title",
+				"eventDate": "Event Date",
+				"eventTime": "Event Time",
+				"eventDescription": "Description",
+				"eventColor": "Event Color",
+				"eventTitlePlaceholder": "Enter event title",
+				"eventDescriptionPlaceholder": "Event description (optional)",
+				"save": "Save",
+				"cancel": "Cancel",
+				"delete": "Delete",
+				"edit": "Edit",
+				"add": "Add",
+				"update": "Update",
+				"export": "Export to iCal"
+			},
+			"results": {
+				"title": "Events",
+				"noEvents": "No events for this day",
+				"export": "Export to iCal",
+				"import": "Import from iCal"
+			},
+			"seo": {
+				"title": "Online Calendar — Interactive Calendar with Events",
+				"description": "Free online calendar with the ability to add events, holidays and export. Convenient interface and mobile device support.",
+				"keywords": "online calendar, event calendar, holiday calendar, iCal export, free online calendar, online calendar, event calendar, holiday calendar",
+				"overview": {
+					"title": "About the Calendar",
+					"content": "Online calendar is a convenient tool for planning and organizing your time. Create events, mark important dates and manage your schedule."
+				},
+				"features": {
+					"title": "Calendar Features",
+					"events": "Event Creation",
+					"eventsDesc": "Add events with description, time and reminders",
+					"export": "Data Export",
+					"exportDesc": "Export calendar to various formats",
+					"mobile": "Mobile Version",
+					"mobileDesc": "Fully responsive design for all devices",
+					"holidays": "Holidays",
+					"holidaysDesc": "Automatic display of public holidays",
+					"notes": "Notes",
+					"notesDesc": "Add notes to dates and events",
+					"navigation": "Navigation",
+					"navigationDesc": "Convenient navigation through months and years"
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"tip1": "Use color coding",
+					"tip1Desc": "Assign different colors to different types of events",
+					"tip2": "Set reminders",
+					"tip2Desc": "Set up notifications for important events",
+					"tip3": "Export regularly",
+					"tip3Desc": "Export your calendar to backup important data"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"question1": "How to add an event?",
+					"answer1": "Click on the desired date and fill in the event details.",
+					"question2": "Can I export the calendar?",
+					"answer2": "Yes, you can export to iCal format.",
+					"question3": "Are holidays displayed automatically?",
+					"answer3": "Yes, public holidays are shown automatically.",
+					"question4": "Can I use the calendar on mobile devices?",
+					"answer4": "Yes, the calendar is fully responsive.",
+					"question5": "Can I add notes to events?",
+					"answer5": "Yes, you can add detailed descriptions to events."
+				}
+			}
+		},
+		"timer": {
+			"title": "Online Timer — Countdown Timer",
+			"description": "Online timer with countdown for any tasks. Visual indication and sound signal when finished.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"timer": "Timer"
+			},
+			"hero": {
+				"minutes": "minutes focus",
+				"breaks": "minutes break",
+				"focus": "concentration"
+			},
+			"form": {
+				"title": "Timer Settings",
+				"hours": "Hours",
+				"minutes": "Minutes",
+				"seconds": "Seconds",
+				"start": "Start",
+				"pause": "Pause",
+				"resume": "Resume",
+				"reset": "Reset",
+				"sound": "Sound",
+				"settings": "Settings",
+				"presets": "Presets",
+				"pomodoro": "Pomodoro",
+				"cooking": "Cooking",
+				"workout": "Workout"
+			},
+			"results": {
+				"title": "Timer",
+				"finished": "Time's up!",
+				"copy": "Copy",
+				"copied": "Copied!"
+			},
+			"seo": {
+				"title": "Online Timer — Countdown with Visualization and Sound",
+				"description": "Free online timer. Set countdown for any time, get sound signal and visual indication of remaining time.",
+				"keywords": "online timer, timer online, countdown, countdown timer, cooking timer, work timer, pomodoro timer, visual countdown, sound alert timer, minute countdown",
+				"overview": {
+					"title": "About the Timer",
+					"content": "Online timer is a convenient tool for time tracking. Set countdown timers, get sound notifications and visual indication of remaining time."
+				},
+				"features": {
+					"title": "Timer Features",
+					"countdown": "Countdown",
+					"countdownDesc": "Accurate countdown to zero",
+					"sound": "Sound alerts",
+					"soundDesc": "Customizable sound notifications",
+					"visual": "Visual indication",
+					"visualDesc": "Progress bar and color indication",
+					"presets": "Ready presets",
+					"presetsDesc": "Quick selection of popular intervals",
+					"controls": "Controls",
+					"controlsDesc": "Start, pause, reset and resume",
+					"mobile": "Mobile version",
+					"mobileDesc": "Fully responsive design"
+				},
+				"useCases": {
+					"title": "Use Cases",
+					"pomodoro": "Pomodoro Technique",
+					"pomodoroDesc": "Effective time management technique",
+					"pomodoro1": "25 minutes of work",
+					"pomodoro2": "5 minutes break",
+					"pomodoro3": "Long break every 4 cycles",
+					"cooking": "Cooking",
+					"cookingDesc": "Timers for culinary processes",
+					"cooking1": "Egg boiling time",
+					"cooking2": "Baking time",
+					"cooking3": "Tea steeping time",
+					"workout": "Workouts",
+					"workoutDesc": "Interval training and exercises",
+					"workout1": "Exercise time",
+					"workout2": "Rest time",
+					"workout3": "Total workout time",
+					"study": "Study",
+					"studyDesc": "Planning study time",
+					"study1": "Focus time",
+					"study2": "Break time",
+					"study3": "Total study time"
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"tip1": "Use short intervals",
+					"tip1Desc": "For better concentration",
+					"tip2": "Configure sound alerts",
+					"tip2Desc": "Choose the right tone",
+					"tip3": "Use visual indication",
+					"tip3Desc": "Track your progress",
+					"tip4": "Take breaks",
+					"tip4Desc": "Don't forget to rest"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"question1": "How to start the timer?",
+					"answer1": "Select the desired time and click the 'Start' button.",
+					"question2": "Can I set multiple timers simultaneously?",
+					"answer2": "Yes, multiple timers are supported.",
+					"question3": "Can I pause and resume the countdown?",
+					"answer3": "Yes, there are 'Pause' and 'Resume' buttons.",
+					"question4": "Is there a sound signal when finished?",
+					"answer4": "Yes, the sound signal turns on automatically.",
+					"question5": "Can I use the timer on mobile devices?",
+					"answer5": "Yes, the timer is fully responsive for smartphones and tablets.",
+					"question6": "Can I reset the timer at any time?",
+					"answer6": "Yes, there is a 'Reset' button.",
+					"question7": "Can I change the visual indication?",
+					"answer7": "Yes, you can choose the progress bar color and display style.",
+					"question8": "Can I integrate the timer on my website?",
+					"answer8": "Yes, an API and widget are provided for third-party sites.",
+					"question9": "Can I use the timer without internet connection?",
+					"answer9": "Yes, it works locally after loading the page.",
+					"question10": "Is the timer suitable for Pomodoro technique?",
+					"answer10": "Yes, you can easily set up 25-minute work cycles and 5-minute breaks."
+				}
+			}
+		},
+		"countdown": {
+			"title": "Countdown Calculator — Event Countdown",
+			"description": "Online countdown calculator to important events with visual display of remaining time.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"countdown": "Countdown"
+			},
+			"hero": {
+				"days": "days per year",
+				"events": "events",
+				"tracking": "tracking"
+			},
+			"form": {
+				"title": "Countdown Settings",
+				"eventName": "Event Name",
+				"eventDescription": "Event Description",
+				"targetDate": "Target Date",
+				"targetTime": "Time",
+				"color": "Color",
+				"sound": "Sound",
+				"startCountdown": "Start Countdown",
+				"edit": "Edit",
+				"stop": "Stop",
+				"eventNamePlaceholder": "Enter event name",
+				"eventDescriptionPlaceholder": "Event description (optional)",
+				"presets": "Templates",
+				"popularEvents": "Popular Events",
+				"quickPresets": "Quick Settings",
+				"errors": {
+					"invalidDate": "Target date must be in the future",
+					"eventNameRequired": "Enter event name"
+				}
+			},
+			"results": {
+				"title": "Countdown",
+				"finished": "Event has arrived!",
+				"copy": "Copy",
+				"copied": "Copied!",
+				"days": "days",
+				"hours": "hours",
+				"minutes": "minutes",
+				"seconds": "seconds",
+				"eventHappened": "{eventName} has already happened"
+			},
+			"seo": {
+				"title": "Online Countdown — Timer to Events, Deadlines and Holidays",
+				"description": "Online countdown calculator. Find out how many days, hours, minutes and seconds are left until the event. Visual timer and sound notification.",
+				"keywords": "countdown, countdown timer, days until event, how much left until event, online countdown, event countdown, holiday countdown timer, visual countdown, deadline countdown, time left calculator",
+				"overview": {
+					"title": "About the Countdown Calculator",
+					"content": "The Countdown Calculator is a convenient tool for tracking time until important events. Set countdown timers for birthdays, holidays, deadlines, or vacations."
+				},
+				"features": {
+					"title": "Calculator Features",
+					"countdown": "Countdown",
+					"countdownDesc": "Accurate countdown to zero",
+					"visual": "Visual indication",
+					"visualDesc": "Progress bar and color indication",
+					"sound": "Sound alerts",
+					"soundDesc": "Customizable sound notifications",
+					"presets": "Ready presets",
+					"presetsDesc": "Quick selection of popular intervals",
+					"mobile": "Mobile version",
+					"mobileDesc": "Fully responsive design",
+					"export": "Export results",
+					"exportDesc": "Save and export data"
+				},
+				"useCases": {
+					"title": "Use Cases",
+					"events": "Events and Holidays",
+					"eventsDesc": "Tracking time until important events",
+					"events1": "Birthdays",
+					"events2": "Holidays",
+					"events3": "Weddings",
+					"deadlines": "Deadlines and Projects",
+					"deadlinesDesc": "Control time until project completion",
+					"deadlines1": "Work deadlines",
+					"deadlines2": "Study projects",
+					"deadlines3": "Personal goals",
+					"personal": "Personal Events",
+					"personalDesc": "Tracking personal important dates",
+					"personal1": "Vacation",
+					"personal2": "Moving",
+					"personal3": "Important meetings",
+					"business": "Business and Work",
+					"businessDesc": "Planning and controlling business processes",
+					"business1": "Presentations",
+					"business2": "Conferences",
+					"business3": "Project launches"
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"tip1": "Set realistic goals",
+					"tip1Desc": "Plan time considering possible delays",
+					"tip2": "Use visual reminders",
+					"tip2Desc": "Configure color indication for better perception",
+					"tip3": "Plan ahead",
+					"tip3Desc": "Start countdown several weeks before the event",
+					"tip4": "Configure notifications",
+					"tip4Desc": "Use sound alerts for important moments"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"question1": "How to set up countdown?",
+					"answer1": "Select the date and time of the event — the timer will automatically show the remaining time.",
+					"question2": "Can I change the target date?",
+					"answer2": "Yes, just select a new date and the timer will update.",
+					"question3": "Can I add sound when the event occurs?",
+					"answer3": "Yes, there is a built-in sound signal.",
+					"question4": "Can I use the timer for holidays?",
+					"answer4": "Yes, any type of event is supported.",
+					"question5": "Can I embed the timer on a website?",
+					"answer5": "Yes, API and widget are available for integration.",
+					"question6": "Is time displayed in different units?",
+					"answer6": "Yes, days, weeks, hours, minutes and seconds are shown.",
+					"question7": "Can I configure color visualization?",
+					"answer7": "Yes, you can choose the timer color as desired.",
+					"question8": "Is mobile version supported?",
+					"answer8": "Yes, the timer is adapted for smartphones and tablets.",
+					"question9": "Can I track multiple events?",
+					"answer9": "Yes, you can open multiple timers on one page.",
+					"question10": "Does the timer work offline?",
+					"answer10": "No, internet is required for correct time updates."
+				}
+			}
+		},
+		"worldTime": {
+			"title": "World Time — Global Time Zones",
+			"description": "Online world time calculator. Find out the current time in any country or city.",
+			"breadcrumbs": {
+				"home": "Home",
+				"time": "Time",
+				"worldTime": "World Time"
+			},
+			"hero": {
+				"timeZones": "time zones",
+				"cities": "cities",
+				"accuracy": "accuracy"
+			},
+			"form": {
+				"title": "World Time Settings",
+				"addCity": "Add City",
+				"searchCities": "Search Cities",
+				"searchPlaceholder": "Enter city name",
+				"settings": "Settings",
+				"refresh": "Refresh",
+				"timeFormat": "Time Format",
+				"dateFormat": "Date Format",
+				"format24h": "24 hours",
+				"format12h": "12 hours",
+				"showSeconds": "Show Seconds",
+				"showDate": "Show Date",
+				"showDayOfWeek": "Show Day of Week",
+				"showDST": "Show DST",
+				"noCities": "No Cities",
+				"noCitiesDesc": "Add cities to display time",
+				"addFirstCity": "Add First City",
+				"copy": "Copy",
+				"copied": "Copied!"
+			},
+			"results": {
+				"title": "World Time",
+				"currentTime": "Current Time",
+				"timeZone": "Time Zone"
+			},
+			"seo": {
+				"title": "Online World Time Calculator — Time in Cities and Countries",
+				"description": "Online world time calculator. Current time in cities and countries, conversion between time zones, convenient search and visualization.",
+				"keywords": "world time, world time, current time in city, time zones, time zone converter, current time world, online world clock, time in different countries, compare time, time calculator",
+				"overview": {
+					"title": "About the World Time Calculator",
+					"content": "World Time Calculator is a convenient tool for working with different time zones. Find out the current time anywhere in the world, plan international meetings and travel."
+				},
+				"features": {
+					"title": "Calculator Features",
+					"realTime": "Real-time",
+					"realTimeDesc": "Accurate time updates every second",
+					"multipleCities": "Multiple cities",
+					"multipleCitiesDesc": "Add up to 10 cities simultaneously",
+					"timeZones": "Time zones",
+					"timeZonesDesc": "Support for all world time zones",
+					"search": "City search",
+					"searchDesc": "Quick search by city name",
+					"dst": "Daylight saving time",
+					"dstDesc": "Automatic daylight saving time transition",
+					"mobile": "Mobile version",
+					"mobileDesc": "Fully responsive design"
+				},
+				"useCases": {
+					"title": "Use Cases",
+					"business": "Business and work",
+					"businessDesc": "Planning international meetings and calls",
+					"business1": "Conference calls",
+					"business2": "Meeting planning",
+					"business3": "Client work",
+					"travel": "Travel",
+					"travelDesc": "Trip planning and local time adaptation",
+					"travel1": "Route planning",
+					"travel2": "Local time adaptation",
+					"travel3": "Hotel booking",
+					"communication": "Communication",
+					"communicationDesc": "Contact with friends and relatives in different countries",
+					"communication1": "Calls to relatives",
+					"communication2": "Messengers",
+					"communication3": "Social networks",
+					"events": "Events",
+					"eventsDesc": "Planning participation in international events",
+					"events1": "Online conferences",
+					"events2": "Sports events",
+					"events3": "Cultural events"
+				},
+				"popularCities": {
+					"title": "Popular Cities",
+					"Moscow": "Moscow",
+					"Russia": "Russia",
+					"UTC+3": "UTC+3",
+					"London": "London",
+					"UK": "United Kingdom",
+					"UTC+0": "UTC+0",
+					"NewYork": "New York",
+					"USA": "USA",
+					"UTC-5": "UTC-5",
+					"Tokyo": "Tokyo",
+					"Japan": "Japan",
+					"UTC+9": "UTC+9",
+					"Sydney": "Sydney",
+					"Australia": "Australia",
+					"UTC+10": "UTC+10",
+					"Paris": "Paris",
+					"France": "France",
+					"UTC+1": "UTC+1",
+					"Berlin": "Berlin",
+					"Germany": "Germany",
+					"Beijing": "Beijing",
+					"China": "China",
+					"UTC+8": "UTC+8",
+					"Dubai": "Dubai",
+					"UAE": "UAE",
+					"UTC+4": "UTC+4",
+					"LosAngeles": "Los Angeles",
+					"UTC-8": "UTC-8",
+					"Singapore": "Singapore",
+					"Mumbai": "Mumbai",
+					"India": "India",
+					"UTC+5:30": "UTC+5:30"
+				},
+				"tips": {
+					"title": "Usage Tips",
+					"tip1": "Add frequently used cities",
+					"tip1Desc": "Create your list of favorite cities",
+					"tip2": "Consider daylight saving time",
+					"tip2Desc": "Check daylight saving time transitions",
+					"tip3": "Use search",
+					"tip3Desc": "Quickly find the cities you need",
+					"tip4": "Plan ahead",
+					"tip4Desc": "Consider time differences when planning"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"question1": "How to add a city?",
+					"answer1": "Use search or select from the list of popular cities.",
+					"question2": "Can I remove a city?",
+					"answer2": "Yes, click the cross next to the city name.",
+					"question3": "Does time update automatically?",
+					"answer3": "Yes, time updates every second.",
+					"question4": "Is daylight saving time supported?",
+					"answer4": "Yes, daylight saving time transitions are automatically considered.",
+					"question5": "Can I save settings?",
+					"answer5": "Yes, selected cities are saved in the browser.",
+					"question6": "Does it work on mobile devices?",
+					"answer6": "Yes, fully responsive design.",
+					"question7": "Can I compare time in different cities?",
+					"answer7": "Yes, all cities are displayed simultaneously.",
+					"question8": "Is the time display accurate?",
+					"answer8": "Yes, time is synchronized with precise time servers.",
+					"question9": "Can I change the time format?",
+					"answer9": "Yes, 12- and 24-hour formats are supported.",
+					"question10": "Are there limits on the number of cities?",
+					"answer10": "You can add up to 10 cities simultaneously."
+				}
 			}
 		}
 	}

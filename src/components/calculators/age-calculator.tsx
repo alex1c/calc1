@@ -26,38 +26,37 @@ export default function AgeCalculator() {
 	const [result, setResult] = useState<AgeResult | null>(null);
 	const [isCalculating, setIsCalculating] = useState(false);
 	const [copied, setCopied] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 
-	// Set today as default calculate date
+	// Set today as default calculate date only after component mounts
 	useEffect(() => {
+		setIsMounted(true);
 		if (!calculateDate) {
 			setCalculateDate(getTodayDate());
 		}
-	}, [calculateDate]);
+	}, []);
 
 	const handleCalculate = async () => {
 		if (!birthDate || !calculateDate) return;
 
 		if (!isValidDate(birthDate) || !isValidDate(calculateDate)) {
-			alert('Пожалуйста, введите корректные даты');
+			alert(t('form.errors.invalidDate'));
 			return;
 		}
 
 		if (!isBirthDateValid(birthDate, calculateDate)) {
-			alert('Дата рождения не может быть позже даты расчёта');
+			alert(t('form.errors.birthDateAfterCalculate'));
 			return;
 		}
 
 		setIsCalculating(true);
-
-		// Simulate calculation delay
-		await new Promise((resolve) => setTimeout(resolve, 500));
 
 		try {
 			const calculation = calculateAge(birthDate, calculateDate);
 			setResult(calculation);
 		} catch (error) {
 			console.error('Calculation error:', error);
-			alert('Ошибка при расчёте. Проверьте введённые даты.');
+			alert(t('form.errors.calculationError'));
 		} finally {
 			setIsCalculating(false);
 		}
@@ -77,11 +76,13 @@ export default function AgeCalculator() {
 	const handleCopyResult = async () => {
 		if (!result) return;
 
-		const resultText = `Расчёт возраста:
-Дата рождения: ${result.birthDate}
-Дата расчёта: ${result.calculateDate}
-Возраст: ${result.years} лет, ${result.months} месяцев, ${result.days} дней
-Всего дней: ${result.totalDays}`;
+		const resultText = `${t('results.calculationTitle')}:
+${t('results.birthDate')}: ${result.birthDate}
+${t('results.calculateDate')}: ${result.calculateDate}
+${t('results.age')}: ${result.years} ${t('results.years')}, ${
+			result.months
+		} ${t('results.months')}, ${result.days} ${t('results.days')}
+${t('results.totalDays')}: ${result.totalDays}`;
 
 		try {
 			await navigator.clipboard.writeText(resultText);
@@ -91,6 +92,26 @@ export default function AgeCalculator() {
 			console.error('Copy failed:', error);
 		}
 	};
+
+	// Show loading state during hydration
+	if (!isMounted) {
+		return (
+			<div className='bg-white rounded-lg shadow-lg p-6'>
+				<div className='text-center mb-8'>
+					<div className='inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4'>
+						<User className='h-8 w-8 text-purple-600' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 mb-2'>
+						{t('form.title')}
+					</h2>
+					<p className='text-gray-600'>{t('form.description')}</p>
+				</div>
+				<div className='flex items-center justify-center py-12'>
+					<RefreshCw className='h-8 w-8 animate-spin text-purple-600' />
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div className='bg-white rounded-lg shadow-lg p-6'>
@@ -102,9 +123,7 @@ export default function AgeCalculator() {
 				<h2 className='text-2xl font-bold text-gray-900 mb-2'>
 					{t('form.title')}
 				</h2>
-				<p className='text-gray-600'>
-					Узнайте точный возраст в годах, месяцах и днях
-				</p>
+				<p className='text-gray-600'>{t('form.description')}</p>
 			</div>
 
 			{/* Form */}
@@ -120,7 +139,7 @@ export default function AgeCalculator() {
 							value={birthDate}
 							onChange={(e) => setBirthDate(e.target.value)}
 							className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-							placeholder='Выберите дату рождения'
+							placeholder={t('form.birthDatePlaceholder')}
 						/>
 					</div>
 				</div>
@@ -136,7 +155,7 @@ export default function AgeCalculator() {
 							value={calculateDate}
 							onChange={(e) => setCalculateDate(e.target.value)}
 							className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-							placeholder='Выберите дату для расчёта'
+							placeholder={t('form.calculateDatePlaceholder')}
 						/>
 						<button
 							onClick={handleSetToday}
@@ -184,7 +203,10 @@ export default function AgeCalculator() {
 							{t('results.title')}
 						</h3>
 						<p className='text-gray-600'>
-							С {result.birthDate} по {result.calculateDate}
+							{t('results.period', {
+								from: result.birthDate,
+								to: result.calculateDate,
+							})}
 						</p>
 					</div>
 

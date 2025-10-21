@@ -109,10 +109,6 @@
 		"fun": {
 			"title": "Unterhaltung und Hobbys",
 			"description": "Kompatibilität, Generatoren, Spiele"
-		},
-		"time": {
-			"title": "Zeit und Daten",
-			"description": "Zeitrechner, Alter und Datumstools"
 		}
 	},
   "math_basic": {
@@ -4426,7 +4422,7 @@
           "description": "31-35 Tage Zyklus. Eisprung meist am Tag 17-21."
         }
       },
-      "calendar": {
+      "cycleCalendar": {
         "title": "Zykluskalender",
         "legend": {
           "period": "Periode",
@@ -7944,8 +7940,8 @@
       }
     },
     "age": {
-      "title": "Altersrechner",
-      "description": "Der Altersrechner berechnet das genaue Alter in Jahren, Monaten und Tagen ab einem bestimmten Datum.",
+      "title": "Altersrechner — Finde dein genaues Alter heraus",
+      "description": "Berechne dein Alter in Jahren, Monaten, Tagen und Sekunden. Kostenloser Online-Altersrechner für persönliche oder berufliche Zwecke.",
       "breadcrumbs": {
         "home": "Startseite",
         "time": "Zeit",
@@ -7953,20 +7949,32 @@
       },
       "form": {
         "title": "Berechnungsparameter",
+        "description": "Finde dein genaues Alter in Jahren, Monaten und Tagen heraus",
         "birthDate": "Geburtsdatum",
+        "birthDatePlaceholder": "Geburtsdatum auswählen",
         "calculateDate": "Berechnen am Datum",
+        "calculateDatePlaceholder": "Berechnungsdatum auswählen",
         "today": "Heute",
         "calculate": "Berechnen",
         "calculating": "Berechne...",
-        "reset": "Zurücksetzen"
+        "reset": "Zurücksetzen",
+        "errors": {
+          "invalidDate": "Bitte geben Sie gültige Daten ein",
+          "birthDateAfterCalculate": "Geburtsdatum kann nicht nach dem Berechnungsdatum liegen",
+          "calculationError": "Berechnungsfehler. Bitte überprüfen Sie die eingegebenen Daten."
+        }
       },
       "results": {
         "title": "Berechnungsergebnis",
+        "calculationTitle": "Altersberechnung",
+        "birthDate": "Geburtsdatum",
+        "calculateDate": "Berechnungsdatum",
         "age": "Alter",
         "years": "Jahre",
         "months": "Monate",
         "days": "Tage",
         "totalDays": "Gesamttage",
+        "period": "Von {from} bis {to}",
         "copy": "Ergebnis kopieren",
         "copied": "Kopiert!",
         "placeholder": "Geburtsdatum eingeben und 'Berechnen' klicken"
@@ -7975,6 +7983,609 @@
         "title": "Altersrechner — Alter in Jahren, Monaten, Tagen berechnen",
         "description": "Online-Altersrechner – berechne dein genaues Alter in Jahren, Monaten und Tagen.",
         "keywords": "altersrechner, alter berechnen, alter in jahren monaten tagen, geburtstag rechner, alter vom geburtsdatum, altersberechnung, alter in tagen, altersrechner online, alter tool, alter finder"
+      },
+      "faq": {
+        "question1": "Wie funktioniert der Altersrechner?",
+        "answer1": "Er vergleicht das eingegebene Geburtsdatum mit dem aktuellen Datum und berechnet die genaue Anzahl der gelebt Jahre, Monate und Tage.",
+        "question2": "Kann ich ein zukünftiges Datum angeben?",
+        "answer2": "Ja, aber das Ergebnis zeigt, wie viel Zeit bis zu diesem Datum verbleibt, nicht das aktuelle Alter.",
+        "question3": "Kann ich den Rechner für Tiere verwenden?",
+        "answer3": "Ja, geben Sie einfach das Geburtsdatum des Haustiers ein — das Prinzip ist dasselbe.",
+        "question4": "Wie finde ich das Alter einer Person zu einem bestimmten Datum heraus?",
+        "answer4": "Wählen Sie ein beliebiges Datum in der Zukunft oder Vergangenheit — der Rechner zeigt das Alter zu diesem Zeitpunkt.",
+        "question5": "Kann ich das Alter in Stunden und Minuten berechnen?",
+        "answer5": "Ja, die erweiterte Version zeigt das Alter bis zu den Sekunden.",
+        "question6": "Wie oft wird das Datum aktualisiert?",
+        "answer6": "Das Ergebnis wird in Echtzeit aktualisiert, wenn sich die aktuelle Zeit auf dem Gerät ändert.",
+        "question7": "Muss ich mich registrieren, um es zu nutzen?",
+        "answer7": "Nein, der Rechner ist völlig kostenlos und erfordert keine Anmeldung.",
+        "question8": "Kann ich das Ergebnis speichern?",
+        "answer8": "Ja, Sie können das Ergebnis als Text oder Bild kopieren oder herunterladen.",
+        "question9": "Kann ich den Rechner auf dem Handy verwenden?",
+        "answer9": "Natürlich, er ist vollständig für Smartphones und Tablets angepasst.",
+        "question10": "Kann ich den Rechner auf meine Website einbetten?",
+        "answer10": "Ja, ein Widget oder API wird für die Integration bereitgestellt."
+      }
+    },
+    "deadline": {
+      "title": "Terminrechner — Projekt-Terminrechner",
+      "description": "Online-Terminrechner für Aufgaben und Projekte mit Berücksichtigung von Werktagen und Wochenenden.",
+      "breadcrumbs": {
+        "home": "Startseite",
+        "time": "Zeit",
+        "deadline": "Termin"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "description": "Berechnen Sie das Enddatum eines Projekts oder einer Aufgabe",
+        "startDate": "Startdatum",
+        "duration": "Dauer (Tage)",
+        "dayType": "Tagestyp",
+        "workDays": "Werktage",
+        "workDaysDesc": "Nur Werktage (Mo-Fr)",
+        "calendarDays": "Kalendertage",
+        "calendarDaysDesc": "Alle Tage einschließlich Wochenenden",
+        "today": "Heute",
+        "calculate": "Berechnen",
+        "calculating": "Berechne...",
+        "reset": "Zurücksetzen"
+      },
+      "hero": {
+        "weeks": "Wochen",
+        "days": "Tage",
+        "projects": "Projekte"
+      },
+      "features": {
+        "workDays": "Werktage-Berechnung",
+        "weekends": "Wochenend-Ausschluss",
+        "holidays": "Feiertags-Berücksichtigung",
+        "flexibility": "Flexible Einstellungen",
+        "accuracy": "Präzise Berechnungen"
+      },
+      "results": {
+        "title": "Berechnungsergebnis",
+        "endDate": "Enddatum",
+        "dayOfWeek": "Wochentag",
+        "totalDays": "Gesamttage",
+        "workDays": "Werktage",
+        "weekends": "Wochenenden",
+        "copy": "Ergebnis kopieren",
+        "copied": "Kopiert!",
+        "placeholder": "Parameter eingeben und 'Berechnen' klicken"
+      },
+      "seo": {
+        "title": "Terminrechner — Online-Projekt-Terminrechner",
+        "description": "Online-Terminrechner für Aufgaben und Projekte. Berücksichtigt Werktage und Wochenenden, schnelle und genaue Enddatum-Berechnung.",
+        "keywords": "terminrechner, projekt-termin, enddatum-rechner, termin berechnen, terminrechner, aufgaben-termine, enddatum-rechner, werktage-termin, projektmanagement",
+        "overview": {
+          "title": "Über den Terminrechner",
+          "content": "Der Terminrechner ist ein praktisches Tool für die Projekt- und Aufgabenplanung. Er ermöglicht es, schnell das Enddatum der Arbeit zu berechnen, wobei Werktage und Wochenenden berücksichtigt werden."
+        },
+        "calculation": {
+          "title": "Wie der Termin berechnet wird",
+          "content": "Der Rechner verwendet einen einfachen Algorithmus zur Bestimmung des Enddatums:",
+          "step1": "Geben Sie das Projektstartdatum ein",
+          "step2": "Geben Sie die Anzahl der Tage an (Werktage oder Kalendertage)",
+          "step3": "Wählen Sie den Berechnungstyp (Werktage oder Kalendertage)",
+          "step4": "Erhalten Sie das genaue Enddatum unter Berücksichtigung der Wochenenden"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "accuracy": "Berechnungsgenauigkeit",
+          "accuracyDesc": "Berücksichtigt alle Werktage und Wochenenden",
+          "flexibility": "Einstellungsflexibilität",
+          "flexibilityDesc": "Unterstützung für verschiedene Tagestypen",
+          "efficiency": "Arbeitsgeschwindigkeit",
+          "efficiencyDesc": "Sofortige Ergebnisse",
+          "planning": "Planung",
+          "planningDesc": "Hilft beim Projektmanagement"
+        },
+        "tips": {
+          "title": "Nutzungstipps",
+          "tip1": "Verwenden Sie Werktage",
+          "tip1Desc": "für Projekte, die nur an Werktagen ausgeführt werden",
+          "tip2": "Kalendertage",
+          "tip2Desc": "geeignet für kontinuierliche Prozesse",
+          "tip3": "Planen Sie im Voraus",
+          "tip3Desc": "legen Sie Pufferzeit für unvorhergesehene Umstände ein"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "question1": "Wie berechnet man das Projektenddatum?",
+          "answer1": "Geben Sie das Startdatum und die Anzahl der Tage ein — das Ergebnis erscheint sofort.",
+          "question2": "Kann ich nur Werktage berücksichtigen?",
+          "answer2": "Ja, es gibt eine Option zum Ein-/Ausschließen von Wochenenden und Feiertagen.",
+          "question3": "Ist der Rechner für Bildungsprojekte geeignet?",
+          "answer3": "Ja, Sie können Termine für beliebige Aufgaben berechnen.",
+          "question4": "Kann ich die genaue Terminzeit angeben?",
+          "answer4": "Ja, die Eingabe von Stunden und Minuten wird unterstützt.",
+          "question5": "Kann ich den Rechner für zukünftige Daten verwenden?",
+          "answer5": "Ja, er funktioniert mit beliebigen Daten."
+        }
+      }
+    },
+    "calendar": {
+      "title": "Online Kalender — Interaktiver Kalender",
+      "description": "Interaktiver Online-Kalender mit der Möglichkeit, Ereignisse, Feiertage hinzuzufügen und in iCal-Format zu exportieren.",
+      "breadcrumbs": {
+        "home": "Startseite",
+        "time": "Zeit",
+        "calendar": "Kalender"
+      },
+      "hero": {
+        "days": "Tage pro Jahr",
+        "events": "Ereignisse",
+        "access": "Zugang"
+      },
+      "form": {
+        "title": "Kalenderverwaltung",
+        "addEvent": "Ereignis hinzufügen",
+        "editEvent": "Ereignis bearbeiten",
+        "eventTitle": "Ereignistitel",
+        "eventDate": "Ereignisdatum",
+        "eventTime": "Ereigniszeit",
+        "eventDescription": "Beschreibung",
+        "eventColor": "Ereignisfarbe",
+        "eventTitlePlaceholder": "Ereignistitel eingeben",
+        "eventDescriptionPlaceholder": "Ereignisbeschreibung (optional)",
+        "save": "Speichern",
+        "cancel": "Abbrechen",
+        "delete": "Löschen",
+        "edit": "Bearbeiten",
+        "add": "Hinzufügen",
+        "update": "Aktualisieren",
+        "export": "Nach iCal exportieren"
+      },
+      "results": {
+        "title": "Ereignisse",
+        "noEvents": "Keine Ereignisse für diesen Tag",
+        "export": "Nach iCal exportieren",
+        "import": "Von iCal importieren"
+      },
+      "seo": {
+        "title": "Online Kalender — Interaktiver Kalender mit Ereignissen",
+        "description": "Kostenloser Online-Kalender mit der Möglichkeit, Ereignisse, Feiertage hinzuzufügen und zu exportieren. Benutzerfreundliche Oberfläche und mobile Geräteunterstützung.",
+        "keywords": "online kalender, ereigniskalender, feiertagskalender, iCal export, kostenloser online kalender, online kalender, ereigniskalender, feiertagskalender",
+        "overview": {
+          "title": "Über den Online-Kalender",
+          "content": "Der Online-Kalender ist ein praktisches Tool für die Verwaltung von Ereignissen und Terminen. Fügen Sie Ereignisse hinzu, markieren Sie Feiertage und exportieren Sie Ihren Kalender in verschiedene Formate."
+        },
+        "features": {
+          "title": "Kalender-Funktionen",
+          "events": "Ereignisverwaltung",
+          "eventsDesc": "Hinzufügen, Bearbeiten und Löschen von Ereignissen",
+          "export": "Export-Funktionen",
+          "exportDesc": "Export in iCal, CSV und anderen Formaten",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design für alle Geräte",
+          "holidays": "Feiertage",
+          "holidaysDesc": "Automatische Anzeige von Feiertagen",
+          "notes": "Notizen",
+          "notesDesc": "Hinzufügen von Notizen zu Ereignissen",
+          "navigation": "Navigation",
+          "navigationDesc": "Einfache Navigation zwischen Monaten und Jahren"
+        },
+        "tips": {
+          "title": "Nutzungstipps",
+          "tip1": "Verwenden Sie Farben für Kategorien",
+          "tip1Desc": "Weisen Sie verschiedenen Ereignistypen verschiedene Farben zu",
+          "tip2": "Exportieren Sie regelmäßig",
+          "tip2Desc": "Erstellen Sie regelmäßig Backups Ihrer Ereignisse",
+          "tip3": "Nutzen Sie die mobile Version",
+          "tip3Desc": "Der Kalender funktioniert perfekt auf Smartphones und Tablets"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "question1": "Wie füge ich ein Ereignis hinzu?",
+          "answer1": "Klicken Sie auf das Datum und füllen Sie das Formular aus.",
+          "question2": "Kann ich Ereignisse exportieren?",
+          "answer2": "Ja, Sie können in iCal, CSV und anderen Formaten exportieren.",
+          "question3": "Funktioniert der Kalender auf mobilen Geräten?",
+          "answer3": "Ja, er ist vollständig responsiv und funktioniert auf allen Geräten.",
+          "question4": "Kann ich Feiertage anzeigen?",
+          "answer4": "Ja, Feiertage werden automatisch angezeigt.",
+          "question5": "Ist der Kalender kostenlos?",
+          "answer5": "Ja, der Kalender ist vollständig kostenlos und erfordert keine Registrierung."
+        }
+      }
+    },
+    "timer": {
+      "title": "Online Timer — Countdown Timer",
+      "description": "Online Timer mit Countdown für beliebige Aufgaben. Visuelle Anzeige und Tonsignal bei Abschluss.",
+      "breadcrumbs": {
+        "home": "Startseite",
+        "time": "Zeit",
+        "timer": "Timer"
+      },
+      "hero": {
+        "minutes": "Minuten Fokus",
+        "breaks": "Minuten Pause",
+        "focus": "Konzentration"
+      },
+      "form": {
+        "title": "Timer-Einstellungen",
+        "hours": "Stunden",
+        "minutes": "Minuten",
+        "seconds": "Sekunden",
+        "start": "Start",
+        "pause": "Pause",
+        "resume": "Fortsetzen",
+        "reset": "Zurücksetzen",
+        "sound": "Ton",
+        "settings": "Einstellungen",
+        "presets": "Voreinstellungen",
+        "pomodoro": "Pomodoro",
+        "cooking": "Kochen",
+        "workout": "Training"
+      },
+      "results": {
+        "title": "Timer",
+        "finished": "Zeit abgelaufen!",
+        "copy": "Kopieren",
+        "copied": "Kopiert!"
+      },
+      "seo": {
+        "title": "Online Timer — Countdown mit Visualisierung und Ton",
+        "description": "Kostenloser Online Timer. Stelle Countdown für beliebige Zeit ein, erhalte Tonsignal und visuelle Anzeige der verbleibenden Zeit.",
+        "keywords": "online timer, timer online, countdown, countdown timer, koch timer, arbeits timer, pomodoro timer, visueller countdown, ton alarm timer, minuten countdown",
+        "overview": {
+          "title": "Über den Timer",
+          "content": "Der Online Timer ist ein praktisches Tool zur Zeitverfolgung. Stelle Countdown-Timer ein, erhalte Tonbenachrichtigungen und visuelle Anzeige der verbleibenden Zeit."
+        },
+        "features": {
+          "title": "Timer-Funktionen",
+          "countdown": "Countdown",
+          "countdownDesc": "Präziser Countdown bis null",
+          "sound": "Tonalarme",
+          "soundDesc": "Anpassbare Tonbenachrichtigungen",
+          "visual": "Visuelle Anzeige",
+          "visualDesc": "Fortschrittsbalken und Farbanzeige",
+          "presets": "Fertige Voreinstellungen",
+          "presetsDesc": "Schnelle Auswahl beliebter Intervalle",
+          "controls": "Steuerung",
+          "controlsDesc": "Start, Pause, Reset und Fortsetzen",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design"
+        },
+        "useCases": {
+          "title": "Anwendungsfälle",
+          "pomodoro": "Pomodoro-Technik",
+          "pomodoroDesc": "Effektive Zeitmanagement-Technik",
+          "pomodoro1": "25 Minuten Arbeit",
+          "pomodoro2": "5 Minuten Pause",
+          "pomodoro3": "Lange Pause alle 4 Zyklen",
+          "cooking": "Kochen",
+          "cookingDesc": "Timer für kulinarische Prozesse",
+          "cooking1": "Eierkochzeit",
+          "cooking2": "Backzeit",
+          "cooking3": "Tee-Ziehzeit",
+          "workout": "Training",
+          "workoutDesc": "Intervalltraining und Übungen",
+          "workout1": "Übungszeit",
+          "workout2": "Pausenzeit",
+          "workout3": "Gesamte Trainingszeit",
+          "study": "Studium",
+          "studyDesc": "Lern- und Konzentrationssitzungen",
+          "study1": "Lernsitzungen",
+          "study2": "Pausen zwischen Sitzungen",
+          "study3": "Gesamte Studienzeit"
+        },
+        "tips": {
+          "title": "Nutzungstipps",
+          "tip1": "Verwende realistische Intervalle",
+          "tip1Desc": "Stelle Zeiten ein, die du einhalten kannst",
+          "tip2": "Konfiguriere Tonalarme",
+          "tip2Desc": "Aktiviere Benachrichtigungen, um die Zeit nicht zu verpassen",
+          "tip3": "Nutze beliebte Voreinstellungen",
+          "tip3Desc": "Nutze vordefinierte Intervalle",
+          "tip4": "Personalisiere die Anzeige",
+          "tip4Desc": "Passe Farben und Stile nach deinen Vorlieben an"
+        },
+        "faq": {
+          "question1": "Wie starte ich den Timer?",
+          "answer1": "Wähle die gewünschte Zeit und klicke auf den 'Start' Button.",
+          "question2": "Kann ich mehrere Timer gleichzeitig einstellen?",
+          "answer2": "Ja, mehrere Timer werden unterstützt.",
+          "question3": "Kann ich den Countdown pausieren und fortsetzen?",
+          "answer3": "Ja, es gibt 'Pause' und 'Fortsetzen' Buttons.",
+          "question4": "Gibt es ein Tonsignal beim Abschluss?",
+          "answer4": "Ja, das Tonsignal wird automatisch aktiviert.",
+          "question5": "Kann ich den Timer auf mobilen Geräten verwenden?",
+          "answer5": "Ja, der Timer ist vollständig responsiv für Smartphones und Tablets.",
+          "question6": "Kann ich den Timer jederzeit zurücksetzen?",
+          "answer6": "Ja, es gibt einen 'Zurücksetzen' Button.",
+          "question7": "Kann ich die visuelle Anzeige ändern?",
+          "answer7": "Ja, du kannst die Farbe der Fortschrittsleiste und den Anzeigestil wählen.",
+          "question8": "Kann ich den Timer auf meiner Website integrieren?",
+          "answer8": "Ja, eine API und ein Widget werden für Drittanbieter-Websites bereitgestellt.",
+          "question9": "Kann ich den Timer ohne Internetverbindung verwenden?",
+          "answer9": "Ja, er funktioniert lokal nach dem Laden der Seite.",
+          "question10": "Ist der Timer für die Pomodoro-Technik geeignet?",
+          "answer10": "Ja, du kannst leicht 25-Minuten-Arbeitszyklen und 5-Minuten-Pausen einrichten."
+        }
+      }
+    },
+    "countdown": {
+      "title": "Countdown Rechner — Ereignis Countdown",
+      "description": "Online Countdown Rechner zu wichtigen Ereignissen mit visueller Anzeige der verbleibenden Zeit.",
+      "breadcrumbs": {
+        "home": "Startseite",
+        "time": "Zeit",
+        "countdown": "Countdown"
+      },
+      "hero": {
+        "days": "Tage pro Jahr",
+        "events": "Ereignisse",
+        "tracking": "Verfolgung"
+      },
+      "form": {
+        "title": "Countdown-Einstellungen",
+        "eventName": "Ereignisname",
+        "eventDescription": "Ereignisbeschreibung",
+        "targetDate": "Zieldatum",
+        "targetTime": "Zeit",
+        "color": "Farbe",
+        "sound": "Ton",
+        "startCountdown": "Countdown starten",
+        "edit": "Bearbeiten",
+        "stop": "Stoppen",
+        "eventNamePlaceholder": "Ereignisname eingeben",
+        "eventDescriptionPlaceholder": "Ereignisbeschreibung (optional)",
+        "presets": "Vorlagen",
+        "popularEvents": "Beliebte Ereignisse",
+        "quickPresets": "Schnelleinstellungen",
+        "errors": {
+          "invalidDate": "Zieldatum muss in der Zukunft liegen",
+          "eventNameRequired": "Ereignisname eingeben"
+        }
+      },
+      "results": {
+        "title": "Countdown",
+        "finished": "Ereignis ist eingetreten!",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "days": "Tage",
+        "hours": "Stunden",
+        "minutes": "Minuten",
+        "seconds": "Sekunden",
+        "eventHappened": "{eventName} ist bereits eingetreten"
+      },
+      "seo": {
+        "title": "Online Countdown — Timer zu Ereignissen, Deadlines und Feiertagen",
+        "description": "Online Countdown Rechner. Finde heraus, wie viele Tage, Stunden, Minuten und Sekunden bis zum Ereignis verbleiben. Visueller Timer und Tonbenachrichtigung.",
+        "keywords": "countdown, countdown timer, tage bis ereignis, wie viel bleibt bis ereignis, online countdown, ereignis countdown, feiertag countdown timer, visueller countdown, deadline countdown, zeit verbleibend rechner",
+        "overview": {
+          "title": "Über den Countdown Rechner",
+          "content": "Der Countdown Rechner ist ein praktisches Tool zur Verfolgung der Zeit bis zu wichtigen Ereignissen. Stelle Countdown-Timer für Geburtstage, Feiertage, Deadlines oder Urlaub ein."
+        },
+        "features": {
+          "title": "Rechner-Funktionen",
+          "countdown": "Countdown",
+          "countdownDesc": "Präziser Countdown bis null",
+          "visual": "Visuelle Anzeige",
+          "visualDesc": "Fortschrittsbalken und Farbanzeige",
+          "sound": "Tonalarme",
+          "soundDesc": "Anpassbare Tonbenachrichtigungen",
+          "presets": "Fertige Voreinstellungen",
+          "presetsDesc": "Schnelle Auswahl beliebter Intervalle",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design",
+          "export": "Ergebnisse exportieren",
+          "exportDesc": "Daten speichern und exportieren"
+        },
+        "useCases": {
+          "title": "Anwendungsfälle",
+          "events": "Ereignisse und Feiertage",
+          "eventsDesc": "Verfolgung der Zeit bis zu wichtigen Ereignissen",
+          "events1": "Geburtstage",
+          "events2": "Feiertage",
+          "events3": "Hochzeiten",
+          "deadlines": "Deadlines und Projekte",
+          "deadlinesDesc": "Kontrolle der Zeit bis zum Projektabschluss",
+          "deadlines1": "Arbeits-Deadlines",
+          "deadlines2": "Studienprojekte",
+          "deadlines3": "Persönliche Ziele",
+          "personal": "Persönliche Ereignisse",
+          "personalDesc": "Verfolgung persönlicher wichtiger Daten",
+          "personal1": "Urlaub",
+          "personal2": "Umzug",
+          "personal3": "Wichtige Meetings",
+          "business": "Geschäft und Arbeit",
+          "businessDesc": "Planung und Kontrolle von Geschäftsprozessen",
+          "business1": "Präsentationen",
+          "business2": "Konferenzen",
+          "business3": "Projektstarts"
+        },
+        "tips": {
+          "title": "Nutzungstipps",
+          "tip1": "Realistische Ziele setzen",
+          "tip1Desc": "Zeit unter Berücksichtigung möglicher Verzögerungen planen",
+          "tip2": "Visuelle Erinnerungen nutzen",
+          "tip2Desc": "Farbanzeige für bessere Wahrnehmung konfigurieren",
+          "tip3": "Im Voraus planen",
+          "tip3Desc": "Countdown mehrere Wochen vor dem Ereignis starten",
+          "tip4": "Benachrichtigungen konfigurieren",
+          "tip4Desc": "Tonalarme für wichtige Momente nutzen"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "question1": "Wie richte ich einen Countdown ein?",
+          "answer1": "Wähle Datum und Uhrzeit des Ereignisses — der Timer zeigt automatisch die verbleibende Zeit an.",
+          "question2": "Kann ich das Zieldatum ändern?",
+          "answer2": "Ja, wähle einfach ein neues Datum und der Timer wird aktualisiert.",
+          "question3": "Kann ich Ton hinzufügen, wenn das Ereignis eintritt?",
+          "answer3": "Ja, es gibt ein eingebautes Tonsignal.",
+          "question4": "Kann ich den Timer für Feiertage verwenden?",
+          "answer4": "Ja, jeder Ereignistyp wird unterstützt.",
+          "question5": "Kann ich den Timer auf einer Website einbetten?",
+          "answer5": "Ja, API und Widget sind für die Integration verfügbar.",
+          "question6": "Wird die Zeit in verschiedenen Einheiten angezeigt?",
+          "answer6": "Ja, Tage, Wochen, Stunden, Minuten und Sekunden werden angezeigt.",
+          "question7": "Kann ich die Farbvisualisierung konfigurieren?",
+          "answer7": "Ja, du kannst die Timerfarbe nach Wunsch wählen.",
+          "question8": "Wird die mobile Version unterstützt?",
+          "answer8": "Ja, der Timer ist für Smartphones und Tablets angepasst.",
+          "question9": "Kann ich mehrere Ereignisse verfolgen?",
+          "answer9": "Ja, du kannst mehrere Timer auf einer Seite öffnen.",
+          "question10": "Funktioniert der Timer offline?",
+          "answer10": "Nein, Internet ist für korrekte Zeitaktualisierungen erforderlich."
+        }
+      }
+    },
+    "worldTime": {
+      "title": "Weltzeit — Globale Zeitzonen",
+      "description": "Online Weltzeit Rechner. Finde die aktuelle Zeit in jedem Land oder jeder Stadt heraus.",
+      "breadcrumbs": {
+        "home": "Startseite",
+        "time": "Zeit",
+        "worldTime": "Weltzeit"
+      },
+      "hero": {
+        "timeZones": "Zeitzonen",
+        "cities": "Städte",
+        "accuracy": "Genauigkeit"
+      },
+      "form": {
+        "title": "Weltzeit-Einstellungen",
+        "addCity": "Stadt hinzufügen",
+        "searchCities": "Städte suchen",
+        "searchPlaceholder": "Stadtname eingeben",
+        "settings": "Einstellungen",
+        "refresh": "Aktualisieren",
+        "timeFormat": "Zeitformat",
+        "dateFormat": "Datumformat",
+        "format24h": "24 Stunden",
+        "format12h": "12 Stunden",
+        "showSeconds": "Sekunden anzeigen",
+        "showDate": "Datum anzeigen",
+        "showDayOfWeek": "Wochentag anzeigen",
+        "showDST": "DST anzeigen",
+        "noCities": "Keine Städte",
+        "noCitiesDesc": "Städte hinzufügen, um Zeit anzuzeigen",
+        "addFirstCity": "Erste Stadt hinzufügen",
+        "copy": "Kopieren",
+        "copied": "Kopiert!"
+      },
+      "results": {
+        "title": "Weltzeit",
+        "currentTime": "Aktuelle Zeit",
+        "timeZone": "Zeitzone"
+      },
+      "seo": {
+        "title": "Online Weltzeit Rechner — Zeit in Städten und Ländern",
+        "description": "Online Weltzeit Rechner. Aktuelle Zeit in Städten und Ländern, Umrechnung zwischen Zeitzonen, bequeme Suche und Visualisierung.",
+        "keywords": "weltzeit, weltzeit, aktuelle zeit in stadt, zeitzonen, zeitzone konverter, aktuelle zeit welt, online weltuhr, zeit in verschiedenen ländern, zeit vergleichen, zeit rechner",
+        "overview": {
+          "title": "Über den Weltzeit Rechner",
+          "content": "Der Weltzeit Rechner ist ein praktisches Tool für die Arbeit mit verschiedenen Zeitzonen. Finde die aktuelle Zeit überall auf der Welt, plane internationale Meetings und Reisen."
+        },
+        "features": {
+          "title": "Rechner-Funktionen",
+          "realTime": "Echtzeit",
+          "realTimeDesc": "Präzise Zeit, die sich jede Sekunde aktualisiert",
+          "multipleCities": "Mehrere Städte",
+          "multipleCitiesDesc": "Füge bis zu 10 Städte gleichzeitig hinzu",
+          "timeZones": "Zeitzonen",
+          "timeZonesDesc": "Unterstützung für alle Weltzeitzonen",
+          "search": "Städte-Suche",
+          "searchDesc": "Schnelle Suche nach Stadtname",
+          "dst": "Sommerzeit",
+          "dstDesc": "Automatischer Übergang zur Sommerzeit",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design"
+        },
+        "useCases": {
+          "title": "Anwendungsfälle",
+          "business": "Geschäft und Arbeit",
+          "businessDesc": "Planung internationaler Meetings und Anrufe",
+          "business1": "Konferenzanrufe",
+          "business2": "Meeting-Planung",
+          "business3": "Kundenarbeit",
+          "travel": "Reisen",
+          "travelDesc": "Reiseplanung und Anpassung an lokale Zeit",
+          "travel1": "Routenplanung",
+          "travel2": "Anpassung an lokale Zeit",
+          "travel3": "Hotelbuchung",
+          "communication": "Kommunikation",
+          "communicationDesc": "Kontakt mit Freunden und Verwandten in verschiedenen Ländern",
+          "communication1": "Anrufe an Verwandte",
+          "communication2": "Messenger",
+          "communication3": "Soziale Netzwerke",
+          "events": "Veranstaltungen",
+          "eventsDesc": "Planung der Teilnahme an internationalen Veranstaltungen",
+          "events1": "Online-Konferenzen",
+          "events2": "Sportveranstaltungen",
+          "events3": "Kulturelle Veranstaltungen"
+        },
+        "popularCities": {
+          "title": "Beliebte Städte",
+          "Moscow": "Moskau",
+          "Russia": "Russland",
+          "UTC+3": "UTC+3",
+          "London": "London",
+          "UK": "Vereinigtes Königreich",
+          "UTC+0": "UTC+0",
+          "NewYork": "New York",
+          "USA": "USA",
+          "UTC-5": "UTC-5",
+          "Tokyo": "Tokio",
+          "Japan": "Japan",
+          "UTC+9": "UTC+9",
+          "Sydney": "Sydney",
+          "Australia": "Australien",
+          "UTC+10": "UTC+10",
+          "Paris": "Paris",
+          "France": "Frankreich",
+          "UTC+1": "UTC+1",
+          "Berlin": "Berlin",
+          "Germany": "Deutschland",
+          "Beijing": "Peking",
+          "China": "China",
+          "UTC+8": "UTC+8",
+          "Dubai": "Dubai",
+          "UAE": "VAE",
+          "UTC+4": "UTC+4",
+          "LosAngeles": "Los Angeles",
+          "UTC-8": "UTC-8",
+          "Singapore": "Singapur",
+          "Mumbai": "Mumbai",
+          "India": "Indien",
+          "UTC+5:30": "UTC+5:30"
+        },
+        "tips": {
+          "title": "Nutzungstipps",
+          "tip1": "Füge häufig genutzte Städte hinzu",
+          "tip1Desc": "Erstelle deine Liste der Lieblingsstädte",
+          "tip2": "Berücksichtige die Sommerzeit",
+          "tip2Desc": "Überprüfe die Übergänge zur Sommerzeit",
+          "tip3": "Nutze die Suche",
+          "tip3Desc": "Finde schnell die Städte, die du brauchst",
+          "tip4": "Plane im Voraus",
+          "tip4Desc": "Berücksichtige Zeitunterschiede bei der Planung"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "question1": "Wie füge ich eine Stadt hinzu?",
+          "answer1": "Nutze die Suche oder wähle aus der Liste beliebter Städte.",
+          "question2": "Kann ich eine Stadt entfernen?",
+          "answer2": "Ja, klicke auf das Kreuz neben dem Stadtnamen.",
+          "question3": "Wird die Zeit automatisch aktualisiert?",
+          "answer3": "Ja, die Zeit wird jede Sekunde aktualisiert.",
+          "question4": "Wird die Sommerzeit unterstützt?",
+          "answer4": "Ja, Übergänge zur Sommerzeit werden automatisch berücksichtigt.",
+          "question5": "Kann ich die Einstellungen speichern?",
+          "answer5": "Ja, ausgewählte Städte werden im Browser gespeichert.",
+          "question6": "Funktioniert es auf mobilen Geräten?",
+          "answer6": "Ja, vollständig responsives Design.",
+          "question7": "Kann ich die Zeit in verschiedenen Städten vergleichen?",
+          "answer7": "Ja, alle Städte werden gleichzeitig angezeigt.",
+          "question8": "Ist die Zeitanzeige genau?",
+          "answer8": "Ja, die Zeit wird mit präzisen Zeitservern synchronisiert.",
+          "question9": "Kann ich das Zeitformat ändern?",
+          "answer9": "Ja, 12- und 24-Stunden-Formate werden unterstützt.",
+          "question10": "Gibt es Grenzen für die Anzahl der Städte?",
+          "answer10": "Du kannst bis zu 10 Städte gleichzeitig hinzufügen."
+        }
       }
     }
   }

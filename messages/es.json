@@ -140,10 +140,6 @@
 		"fun": {
 			"title": "Entretenimiento y Pasatiempos",
 			"description": "Compatibilidad, generadores, juegos"
-		},
-		"time": {
-			"title": "Tiempo y Fechas",
-			"description": "Calculadoras de tiempo, edad y fechas"
 		}
 	},
   "calculators": {
@@ -4430,7 +4426,7 @@
           "description": "Ciclo de 31-35 días. Ovulación usualmente en el día 17-21."
         }
       },
-      "calendar": {
+      "cycleCalendar": {
         "title": "Calendario del ciclo",
         "legend": {
           "period": "Período",
@@ -7872,8 +7868,8 @@
       }
     },
     "age": {
-      "title": "Calculadora de Edad",
-      "description": "El calculador de edad te permite saber la edad exacta en años, meses y días desde una fecha determinada.",
+      "title": "Calculadora de edad — Descubre tu edad exacta",
+      "description": "Calcula fácilmente tu edad en años, meses, días e incluso segundos. Una calculadora gratuita y precisa en línea.",
       "breadcrumbs": {
         "home": "Inicio",
         "time": "Tiempo",
@@ -7881,20 +7877,32 @@
       },
       "form": {
         "title": "Parámetros de Cálculo",
+        "description": "Descubre tu edad exacta en años, meses y días",
         "birthDate": "Fecha de Nacimiento",
+        "birthDatePlaceholder": "Selecciona fecha de nacimiento",
         "calculateDate": "Calcular en Fecha",
+        "calculateDatePlaceholder": "Selecciona fecha de cálculo",
         "today": "Hoy",
         "calculate": "Calcular",
         "calculating": "Calculando...",
-        "reset": "Reiniciar"
+        "reset": "Reiniciar",
+        "errors": {
+          "invalidDate": "Por favor ingresa fechas válidas",
+          "birthDateAfterCalculate": "La fecha de nacimiento no puede ser posterior a la fecha de cálculo",
+          "calculationError": "Error en el cálculo. Por favor verifica las fechas ingresadas."
+        }
       },
       "results": {
         "title": "Resultado del Cálculo",
+        "calculationTitle": "Cálculo de Edad",
+        "birthDate": "Fecha de Nacimiento",
+        "calculateDate": "Fecha de Cálculo",
         "age": "Edad",
         "years": "Años",
         "months": "Meses",
         "days": "Días",
         "totalDays": "Total de Días",
+        "period": "Desde {from} hasta {to}",
         "copy": "Copiar Resultado",
         "copied": "¡Copiado!",
         "placeholder": "Ingresa fecha de nacimiento y haz clic en 'Calcular'"
@@ -7903,6 +7911,609 @@
         "title": "Calculadora de Edad — Calcular Edad en Años, Meses, Días",
         "description": "Calculadora de edad en línea: conoce tu edad exacta en años, meses y días.",
         "keywords": "calculadora edad, calcular edad, edad en años meses días, calculadora cumpleaños, edad desde fecha nacimiento, cálculo edad, edad en días, calculadora edad online, herramienta edad, buscador edad"
+      },
+      "faq": {
+        "question1": "¿Cómo funciona la calculadora de edad?",
+        "answer1": "Compara la fecha de nacimiento ingresada con la fecha actual y calcula el número exacto de años, meses y días vividos.",
+        "question2": "¿Puedo especificar una fecha futura?",
+        "answer2": "Sí, pero el resultado mostrará cuánto tiempo queda hasta esa fecha, no la edad actual.",
+        "question3": "¿Puedo usar la calculadora para animales?",
+        "answer3": "Sí, simplemente ingresa la fecha de nacimiento de la mascota — el principio es el mismo.",
+        "question4": "¿Cómo saber la edad de una persona en una fecha específica?",
+        "answer4": "Elige cualquier fecha en el futuro o pasado — la calculadora mostrará la edad en esa fecha.",
+        "question5": "¿Puedo calcular la edad en horas y minutos?",
+        "answer5": "Sí, la versión extendida muestra la edad hasta los segundos.",
+        "question6": "¿Con qué frecuencia se actualiza la fecha?",
+        "answer6": "El resultado se actualiza en tiempo real cuando cambia la hora actual del dispositivo.",
+        "question7": "¿Necesito registrarme para usarla?",
+        "answer7": "No, la calculadora es completamente gratuita y no requiere inicio de sesión.",
+        "question8": "¿Puedo guardar el resultado?",
+        "answer8": "Sí, puedes copiar o descargar el resultado como texto o imagen.",
+        "question9": "¿Puedo usar la calculadora en móvil?",
+        "answer9": "Por supuesto, está completamente adaptada para smartphones y tablets.",
+        "question10": "¿Puedo integrar la calculadora en mi sitio web?",
+        "answer10": "Sí, se proporciona un widget o API para integración."
+      }
+    },
+    "deadline": {
+      "title": "Calculadora de Plazo — Calculadora de Plazos de Proyecto",
+      "description": "Calculadora online de plazos para tareas y proyectos con consideración de días laborables y fines de semana.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "time": "Tiempo",
+        "deadline": "Plazo"
+      },
+      "form": {
+        "title": "Parámetros de Cálculo",
+        "description": "Calcula la fecha final de un proyecto o tarea",
+        "startDate": "Fecha de Inicio",
+        "duration": "Duración (días)",
+        "dayType": "Tipo de Día",
+        "workDays": "Días Laborables",
+        "workDaysDesc": "Solo días laborables (lun-vie)",
+        "calendarDays": "Días Calendario",
+        "calendarDaysDesc": "Todos los días incluyendo fines de semana",
+        "today": "Hoy",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar"
+      },
+      "hero": {
+        "weeks": "Semanas",
+        "days": "Días",
+        "projects": "Proyectos"
+      },
+      "features": {
+        "workDays": "Cálculo de días laborables",
+        "weekends": "Exclusión de fines de semana",
+        "holidays": "Consideración de festivos",
+        "flexibility": "Configuración flexible",
+        "accuracy": "Cálculos precisos"
+      },
+      "results": {
+        "title": "Resultado del Cálculo",
+        "endDate": "Fecha Final",
+        "dayOfWeek": "Día de la Semana",
+        "totalDays": "Total de Días",
+        "workDays": "laborables",
+        "weekends": "fines de semana",
+        "copy": "Copiar Resultado",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingresa parámetros y haz clic en 'Calcular'"
+      },
+      "seo": {
+        "title": "Calculadora de Plazos — Calculadora Online de Plazos de Proyecto",
+        "description": "Calculadora online de plazos para tareas y proyectos. Considera días laborables y fines de semana, cálculo rápido y preciso de fecha final.",
+        "keywords": "calculadora de plazos, plazo de proyecto, calculadora de fecha final, calcular plazo, terminrechner, plazos de tareas, calculadora de fecha final, plazo de días laborables, gestión de proyectos",
+        "overview": {
+          "title": "Sobre la Calculadora de Plazos",
+          "content": "La Calculadora de Plazos es una herramienta conveniente para la planificación de proyectos y tareas. Permite calcular rápidamente la fecha final del trabajo, teniendo en cuenta los días laborables y fines de semana."
+        },
+        "calculation": {
+          "title": "Cómo se calcula el plazo",
+          "content": "La calculadora utiliza un algoritmo simple para determinar la fecha final:",
+          "step1": "Ingresa la fecha de inicio del proyecto",
+          "step2": "Especifica el número de días (laborables o calendario)",
+          "step3": "Elige el tipo de cálculo (días laborables o calendario)",
+          "step4": "Obtén la fecha final exacta considerando fines de semana"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "accuracy": "Precisión de cálculos",
+          "accuracyDesc": "Tiene en cuenta todos los días laborables y fines de semana",
+          "flexibility": "Flexibilidad de configuración",
+          "flexibilityDesc": "Soporte para diferentes tipos de días",
+          "efficiency": "Velocidad de trabajo",
+          "efficiencyDesc": "Resultados instantáneos",
+          "planning": "Planificación",
+          "planningDesc": "Ayuda en la gestión de proyectos"
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "tip1": "Usa días laborables",
+          "tip1Desc": "para proyectos que se ejecutan solo en días laborables",
+          "tip2": "Días calendario",
+          "tip2Desc": "adecuados para procesos continuos",
+          "tip3": "Planifica con anticipación",
+          "tip3Desc": "reserva tiempo de amortiguación para circunstancias imprevistas"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "question1": "¿Cómo calcular la fecha final del proyecto?",
+          "answer1": "Ingresa la fecha de inicio y el número de días — el resultado aparecerá instantáneamente.",
+          "question2": "¿Puedo considerar solo días laborables?",
+          "answer2": "Sí, hay una opción para incluir/excluir fines de semana y festivos.",
+          "question3": "¿Es adecuada la calculadora para proyectos educativos?",
+          "answer3": "Sí, puedes calcular plazos para cualquier tarea.",
+          "question4": "¿Puedo especificar la hora exacta del plazo?",
+          "answer4": "Sí, se admite la entrada de horas y minutos.",
+          "question5": "¿Puedo usar la calculadora para fechas futuras?",
+          "answer5": "Sí, funciona con cualquier fecha."
+        }
+      }
+    },
+    "calendar": {
+      "title": "Calendario Online — Calendario Interactivo",
+      "description": "Calendario online interactivo con la capacidad de agregar eventos, festivos y exportar al formato iCal.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "time": "Tiempo",
+        "calendar": "Calendario"
+      },
+      "hero": {
+        "days": "días por año",
+        "events": "eventos",
+        "access": "acceso"
+      },
+      "form": {
+        "title": "Gestión del Calendario",
+        "addEvent": "Agregar Evento",
+        "editEvent": "Editar Evento",
+        "eventTitle": "Título del Evento",
+        "eventDate": "Fecha del Evento",
+        "eventTime": "Hora del Evento",
+        "eventDescription": "Descripción",
+        "eventColor": "Color del Evento",
+        "eventTitlePlaceholder": "Ingresa el título del evento",
+        "eventDescriptionPlaceholder": "Descripción del evento (opcional)",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "delete": "Eliminar",
+        "edit": "Editar",
+        "add": "Agregar",
+        "update": "Actualizar",
+        "export": "Exportar a iCal"
+      },
+      "results": {
+        "title": "Eventos",
+        "noEvents": "No hay eventos para este día",
+        "export": "Exportar a iCal",
+        "import": "Importar desde iCal"
+      },
+      "seo": {
+        "title": "Calendario Online — Calendario Interactivo con Eventos",
+        "description": "Calendario online gratuito con la capacidad de agregar eventos, festivos y exportar. Interfaz conveniente y soporte para dispositivos móviles.",
+        "keywords": "calendario online, calendario eventos, calendario festivos, exportar iCal, calendario online gratis, calendario online, calendario eventos, calendario festivos",
+        "overview": {
+          "title": "Sobre el Calendario",
+          "content": "El calendario online es una herramienta conveniente para planificar y organizar tu tiempo. Crea eventos, marca fechas importantes y gestiona tu horario."
+        },
+        "features": {
+          "title": "Funciones del Calendario",
+          "events": "Creación de Eventos",
+          "eventsDesc": "Agrega eventos con descripción, hora y recordatorios",
+          "export": "Exportación de Datos",
+          "exportDesc": "Exporta el calendario a varios formatos",
+          "mobile": "Versión Móvil",
+          "mobileDesc": "Diseño completamente responsivo para todos los dispositivos",
+          "holidays": "Festivos",
+          "holidaysDesc": "Visualización automática de festivos públicos",
+          "notes": "Notas",
+          "notesDesc": "Agrega notas a fechas y eventos",
+          "navigation": "Navegación",
+          "navigationDesc": "Navegación conveniente por meses y años"
+        },
+        "tips": {
+          "title": "Consejos de Uso",
+          "tip1": "Usa codificación de colores",
+          "tip1Desc": "Asigna diferentes colores a diferentes tipos de eventos",
+          "tip2": "Configura recordatorios",
+          "tip2Desc": "Establece notificaciones para eventos importantes",
+          "tip3": "Exporta regularmente",
+          "tip3Desc": "Exporta tu calendario para respaldar datos importantes"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "question1": "¿Cómo agregar un evento?",
+          "answer1": "Haz clic en la fecha deseada y completa los detalles del evento.",
+          "question2": "¿Puedo exportar el calendario?",
+          "answer2": "Sí, puedes exportar al formato iCal.",
+          "question3": "¿Se muestran los festivos automáticamente?",
+          "answer3": "Sí, los festivos públicos se muestran automáticamente.",
+          "question4": "¿Puedo usar el calendario en dispositivos móviles?",
+          "answer4": "Sí, el calendario es completamente responsivo.",
+          "question5": "¿Puedo agregar notas a los eventos?",
+          "answer5": "Sí, puedes agregar descripciones detalladas a los eventos."
+        }
+      }
+    },
+    "timer": {
+      "title": "Temporizador Online — Cronómetro",
+      "description": "Temporizador online con cuenta regresiva para cualquier tarea. Indicación visual y señal sonora al finalizar.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "time": "Tiempo",
+        "timer": "Temporizador"
+      },
+      "hero": {
+        "minutes": "minutos de enfoque",
+        "breaks": "minutos de descanso",
+        "focus": "concentración"
+      },
+      "form": {
+        "title": "Configuración del Temporizador",
+        "hours": "Horas",
+        "minutes": "Minutos",
+        "seconds": "Segundos",
+        "start": "Iniciar",
+        "pause": "Pausa",
+        "resume": "Reanudar",
+        "reset": "Reiniciar",
+        "sound": "Sonido",
+        "settings": "Configuración",
+        "presets": "Preajustes",
+        "pomodoro": "Pomodoro",
+        "cooking": "Cocina",
+        "workout": "Entrenamiento"
+      },
+      "results": {
+        "title": "Temporizador",
+        "finished": "¡Tiempo agotado!",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "seo": {
+        "title": "Temporizador Online — Cuenta Regresiva con Visualización y Sonido",
+        "description": "Temporizador online gratuito. Establece cuenta regresiva para cualquier tiempo, recibe señal sonora e indicación visual del tiempo restante.",
+        "keywords": "temporizador online, timer online, cuenta regresiva, temporizador cuenta regresiva, temporizador cocina, temporizador trabajo, temporizador pomodoro, cuenta regresiva visual, temporizador alerta sonora, cuenta regresiva minutos",
+        "overview": {
+          "title": "Sobre el Temporizador",
+          "content": "El temporizador online es una herramienta conveniente para el seguimiento del tiempo. Establece temporizadores de cuenta regresiva, recibe notificaciones sonoras e indicación visual del tiempo restante."
+        },
+        "features": {
+          "title": "Características del Temporizador",
+          "countdown": "Cuenta Regresiva",
+          "countdownDesc": "Cuenta regresiva precisa hasta cero",
+          "sound": "Alertas Sonoras",
+          "soundDesc": "Notificaciones sonoras personalizables",
+          "visual": "Indicación Visual",
+          "visualDesc": "Barra de progreso e indicación de color",
+          "presets": "Preajustes Listos",
+          "presetsDesc": "Selección rápida de intervalos populares",
+          "controls": "Controles",
+          "controlsDesc": "Iniciar, pausar, reiniciar y reanudar",
+          "mobile": "Versión Móvil",
+          "mobileDesc": "Diseño completamente responsivo"
+        },
+        "useCases": {
+          "title": "Casos de Uso",
+          "pomodoro": "Técnica Pomodoro",
+          "pomodoroDesc": "Técnica efectiva de gestión del tiempo",
+          "pomodoro1": "25 minutos de trabajo",
+          "pomodoro2": "5 minutos de descanso",
+          "pomodoro3": "Descanso largo cada 4 ciclos",
+          "cooking": "Cocina",
+          "cookingDesc": "Temporizadores para procesos culinarios",
+          "cooking1": "Tiempo de cocción de huevos",
+          "cooking2": "Tiempo de horneado",
+          "cooking3": "Tiempo de infusión del té",
+          "workout": "Entrenamiento",
+          "workoutDesc": "Entrenamientos por intervalos y ejercicios",
+          "workout1": "Tiempo de ejercicio",
+          "workout2": "Tiempo de descanso",
+          "workout3": "Tiempo total de entrenamiento",
+          "study": "Estudio",
+          "studyDesc": "Sesiones de estudio y concentración",
+          "study1": "Sesiones de estudio",
+          "study2": "Descansos entre sesiones",
+          "study3": "Tiempo total de estudio"
+        },
+        "tips": {
+          "title": "Consejos de Uso",
+          "tip1": "Usa intervalos realistas",
+          "tip1Desc": "Establece tiempos que puedas cumplir",
+          "tip2": "Configura alertas sonoras",
+          "tip2Desc": "Activa notificaciones para no perder el tiempo",
+          "tip3": "Usa preajustes populares",
+          "tip3Desc": "Aprovecha los intervalos predefinidos",
+          "tip4": "Personaliza la visualización",
+          "tip4Desc": "Ajusta colores y estilos según tus preferencias"
+        },
+        "faq": {
+          "question1": "¿Cómo iniciar el temporizador?",
+          "answer1": "Selecciona el tiempo deseado y haz clic en el botón 'Iniciar'.",
+          "question2": "¿Puedo configurar múltiples temporizadores simultáneamente?",
+          "answer2": "Sí, se admiten múltiples temporizadores.",
+          "question3": "¿Puedo pausar y reanudar la cuenta regresiva?",
+          "answer3": "Sí, hay botones 'Pausa' y 'Reanudar'.",
+          "question4": "¿Hay una señal sonora cuando termina?",
+          "answer4": "Sí, la señal sonora se activa automáticamente.",
+          "question5": "¿Puedo usar el temporizador en dispositivos móviles?",
+          "answer5": "Sí, el temporizador es completamente responsivo para smartphones y tablets.",
+          "question6": "¿Puedo reiniciar el temporizador en cualquier momento?",
+          "answer6": "Sí, hay un botón 'Reiniciar'.",
+          "question7": "¿Puedo cambiar la indicación visual?",
+          "answer7": "Sí, puedes elegir el color de la barra de progreso y el estilo de visualización.",
+          "question8": "¿Puedo integrar el temporizador en mi sitio web?",
+          "answer8": "Sí, se proporciona una API y widget para sitios de terceros.",
+          "question9": "¿Puedo usar el temporizador sin conexión a internet?",
+          "answer9": "Sí, funciona localmente después de cargar la página.",
+          "question10": "¿Es el temporizador adecuado para la técnica Pomodoro?",
+          "answer10": "Sí, puedes configurar fácilmente ciclos de 25 minutos de trabajo y 5 minutos de descanso."
+        }
+      }
+    },
+    "countdown": {
+      "title": "Calculadora Cuenta Regresiva — Cuenta Regresiva de Eventos",
+      "description": "Calculadora online de cuenta regresiva a eventos importantes con visualización del tiempo restante.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "time": "Tiempo",
+        "countdown": "Cuenta Regresiva"
+      },
+      "hero": {
+        "days": "días por año",
+        "events": "eventos",
+        "tracking": "seguimiento"
+      },
+      "form": {
+        "title": "Configuración de Cuenta Regresiva",
+        "eventName": "Nombre del Evento",
+        "eventDescription": "Descripción del Evento",
+        "targetDate": "Fecha Objetivo",
+        "targetTime": "Hora",
+        "color": "Color",
+        "sound": "Sonido",
+        "startCountdown": "Iniciar Cuenta Regresiva",
+        "edit": "Editar",
+        "stop": "Detener",
+        "eventNamePlaceholder": "Ingresa el nombre del evento",
+        "eventDescriptionPlaceholder": "Descripción del evento (opcional)",
+        "presets": "Plantillas",
+        "popularEvents": "Eventos Populares",
+        "quickPresets": "Configuración Rápida",
+        "errors": {
+          "invalidDate": "La fecha objetivo debe ser en el futuro",
+          "eventNameRequired": "Ingresa el nombre del evento"
+        }
+      },
+      "results": {
+        "title": "Cuenta Regresiva",
+        "finished": "¡El evento ha llegado!",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "days": "días",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos",
+        "eventHappened": "{eventName} ya ha ocurrido"
+      },
+      "seo": {
+        "title": "Cuenta Regresiva Online — Temporizador a Eventos, Plazos y Festivos",
+        "description": "Calculadora online de cuenta regresiva. Descubre cuántos días, horas, minutos y segundos quedan hasta el evento. Temporizador visual y notificación sonora.",
+        "keywords": "cuenta regresiva, temporizador cuenta regresiva, días hasta evento, cuánto queda hasta evento, cuenta regresiva online, cuenta regresiva eventos, temporizador cuenta regresiva festivos, cuenta regresiva visual, cuenta regresiva plazos, calculadora tiempo restante",
+        "overview": {
+          "title": "Sobre la Calculadora de Cuenta Regresiva",
+          "content": "La Calculadora de Cuenta Regresiva es una herramienta conveniente para rastrear el tiempo hasta eventos importantes. Establece temporizadores de cuenta regresiva para cumpleaños, festivos, plazos o vacaciones."
+        },
+        "features": {
+          "title": "Características de la Calculadora",
+          "countdown": "Cuenta Regresiva",
+          "countdownDesc": "Cuenta regresiva precisa hasta cero",
+          "visual": "Indicación Visual",
+          "visualDesc": "Barra de progreso e indicación de color",
+          "sound": "Alertas Sonoras",
+          "soundDesc": "Notificaciones sonoras personalizables",
+          "presets": "Preajustes Listos",
+          "presetsDesc": "Selección rápida de intervalos populares",
+          "mobile": "Versión Móvil",
+          "mobileDesc": "Diseño completamente responsivo",
+          "export": "Exportar Resultados",
+          "exportDesc": "Guardar y exportar datos"
+        },
+        "useCases": {
+          "title": "Casos de Uso",
+          "events": "Eventos y Festivos",
+          "eventsDesc": "Rastrear tiempo hasta eventos importantes",
+          "events1": "Cumpleaños",
+          "events2": "Festivos",
+          "events3": "Bodas",
+          "deadlines": "Plazos y Proyectos",
+          "deadlinesDesc": "Controlar tiempo hasta finalización de proyectos",
+          "deadlines1": "Plazos de trabajo",
+          "deadlines2": "Proyectos de estudio",
+          "deadlines3": "Metas personales",
+          "personal": "Eventos Personales",
+          "personalDesc": "Rastrear fechas importantes personales",
+          "personal1": "Vacaciones",
+          "personal2": "Mudanza",
+          "personal3": "Reuniones importantes",
+          "business": "Negocios y Trabajo",
+          "businessDesc": "Planificar y controlar procesos de negocio",
+          "business1": "Presentaciones",
+          "business2": "Conferencias",
+          "business3": "Lanzamientos de proyectos"
+        },
+        "tips": {
+          "title": "Consejos de Uso",
+          "tip1": "Establecer metas realistas",
+          "tip1Desc": "Planificar tiempo considerando posibles retrasos",
+          "tip2": "Usar recordatorios visuales",
+          "tip2Desc": "Configurar indicación de color para mejor percepción",
+          "tip3": "Planificar con anticipación",
+          "tip3Desc": "Iniciar cuenta regresiva varias semanas antes del evento",
+          "tip4": "Configurar notificaciones",
+          "tip4Desc": "Usar alertas sonoras para momentos importantes"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "question1": "¿Cómo configurar cuenta regresiva?",
+          "answer1": "Selecciona la fecha y hora del evento — el temporizador mostrará automáticamente el tiempo restante.",
+          "question2": "¿Puedo cambiar la fecha objetivo?",
+          "answer2": "Sí, simplemente selecciona una nueva fecha y el temporizador se actualizará.",
+          "question3": "¿Puedo agregar sonido cuando ocurra el evento?",
+          "answer3": "Sí, hay una señal sonora incorporada.",
+          "question4": "¿Puedo usar el temporizador para festivos?",
+          "answer4": "Sí, cualquier tipo de evento es compatible.",
+          "question5": "¿Puedo incrustar el temporizador en un sitio web?",
+          "answer5": "Sí, API y widget están disponibles para integración.",
+          "question6": "¿Se muestra el tiempo en diferentes unidades?",
+          "answer6": "Sí, se muestran días, semanas, horas, minutos y segundos.",
+          "question7": "¿Puedo configurar visualización de color?",
+          "answer7": "Sí, puedes elegir el color del temporizador como desees.",
+          "question8": "¿Se soporta versión móvil?",
+          "answer8": "Sí, el temporizador está adaptado para smartphones y tablets.",
+          "question9": "¿Puedo rastrear múltiples eventos?",
+          "answer9": "Sí, puedes abrir múltiples temporizadores en una página.",
+          "question10": "¿Funciona el temporizador offline?",
+          "answer10": "No, se requiere internet para actualizaciones correctas de tiempo."
+        }
+      }
+    },
+    "worldTime": {
+      "title": "Hora Mundial — Zonas Horarias Globales",
+      "description": "Calculadora online de hora mundial. Descubre la hora actual en cualquier país o ciudad.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "time": "Tiempo",
+        "worldTime": "Hora Mundial"
+      },
+      "hero": {
+        "timeZones": "zonas horarias",
+        "cities": "ciudades",
+        "accuracy": "precisión"
+      },
+      "form": {
+        "title": "Configuración de Hora Mundial",
+        "addCity": "Agregar Ciudad",
+        "searchCities": "Buscar Ciudades",
+        "searchPlaceholder": "Ingresa nombre de ciudad",
+        "settings": "Configuración",
+        "refresh": "Actualizar",
+        "timeFormat": "Formato de Hora",
+        "dateFormat": "Formato de Fecha",
+        "format24h": "24 horas",
+        "format12h": "12 horas",
+        "showSeconds": "Mostrar Segundos",
+        "showDate": "Mostrar Fecha",
+        "showDayOfWeek": "Mostrar Día de Semana",
+        "showDST": "Mostrar DST",
+        "noCities": "Sin Ciudades",
+        "noCitiesDesc": "Agrega ciudades para mostrar hora",
+        "addFirstCity": "Agregar Primera Ciudad",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "results": {
+        "title": "Hora Mundial",
+        "currentTime": "Hora Actual",
+        "timeZone": "Zona Horaria"
+      },
+      "seo": {
+        "title": "Calculadora de Hora Mundial Online — Hora en Ciudades y Países",
+        "description": "Calculadora online de hora mundial. Hora actual en ciudades y países, conversión entre zonas horarias, búsqueda conveniente y visualización.",
+        "keywords": "hora mundial, hora mundial, hora actual en ciudad, zonas horarias, convertidor zona horaria, hora actual mundo, reloj mundial online, hora en diferentes países, comparar hora, calculadora hora",
+        "overview": {
+          "title": "Sobre la Calculadora de Hora Mundial",
+          "content": "La Calculadora de Hora Mundial es una herramienta conveniente para trabajar con diferentes zonas horarias. Descubre la hora actual en cualquier parte del mundo, planifica reuniones internacionales y viajes."
+        },
+        "features": {
+          "title": "Funciones de la Calculadora",
+          "realTime": "Tiempo real",
+          "realTimeDesc": "Hora precisa que se actualiza cada segundo",
+          "multipleCities": "Múltiples ciudades",
+          "multipleCitiesDesc": "Agrega hasta 10 ciudades simultáneamente",
+          "timeZones": "Zonas horarias",
+          "timeZonesDesc": "Soporte para todas las zonas horarias del mundo",
+          "search": "Búsqueda de ciudades",
+          "searchDesc": "Búsqueda rápida por nombre de ciudad",
+          "dst": "Horario de verano",
+          "dstDesc": "Transición automática al horario de verano",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño completamente responsivo"
+        },
+        "useCases": {
+          "title": "Casos de Uso",
+          "business": "Negocios y trabajo",
+          "businessDesc": "Planificación de reuniones y llamadas internacionales",
+          "business1": "Llamadas de conferencia",
+          "business2": "Planificación de reuniones",
+          "business3": "Trabajo con clientes",
+          "travel": "Viajes",
+          "travelDesc": "Planificación de viajes y adaptación al tiempo local",
+          "travel1": "Planificación de rutas",
+          "travel2": "Adaptación al tiempo local",
+          "travel3": "Reserva de hoteles",
+          "communication": "Comunicación",
+          "communicationDesc": "Contacto con amigos y familiares en diferentes países",
+          "communication1": "Llamadas a familiares",
+          "communication2": "Mensajería",
+          "communication3": "Redes sociales",
+          "events": "Eventos",
+          "eventsDesc": "Planificación de participación en eventos internacionales",
+          "events1": "Conferencias en línea",
+          "events2": "Eventos deportivos",
+          "events3": "Eventos culturales"
+        },
+        "popularCities": {
+          "title": "Ciudades Populares",
+          "Moscow": "Moscú",
+          "Russia": "Rusia",
+          "UTC+3": "UTC+3",
+          "London": "Londres",
+          "UK": "Reino Unido",
+          "UTC+0": "UTC+0",
+          "NewYork": "Nueva York",
+          "USA": "EE.UU.",
+          "UTC-5": "UTC-5",
+          "Tokyo": "Tokio",
+          "Japan": "Japón",
+          "UTC+9": "UTC+9",
+          "Sydney": "Sídney",
+          "Australia": "Australia",
+          "UTC+10": "UTC+10",
+          "Paris": "París",
+          "France": "Francia",
+          "UTC+1": "UTC+1",
+          "Berlin": "Berlín",
+          "Germany": "Alemania",
+          "Beijing": "Pekín",
+          "China": "China",
+          "UTC+8": "UTC+8",
+          "Dubai": "Dubái",
+          "UAE": "EAU",
+          "UTC+4": "UTC+4",
+          "LosAngeles": "Los Ángeles",
+          "UTC-8": "UTC-8",
+          "Singapore": "Singapur",
+          "Mumbai": "Mumbai",
+          "India": "India",
+          "UTC+5:30": "UTC+5:30"
+        },
+        "tips": {
+          "title": "Consejos de Uso",
+          "tip1": "Agrega ciudades de uso frecuente",
+          "tip1Desc": "Crea tu lista de ciudades favoritas",
+          "tip2": "Considera el horario de verano",
+          "tip2Desc": "Verifica las transiciones al horario de verano",
+          "tip3": "Usa la búsqueda",
+          "tip3Desc": "Encuentra rápidamente las ciudades que necesitas",
+          "tip4": "Planifica con anticipación",
+          "tip4Desc": "Considera las diferencias horarias al planificar"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "question1": "¿Cómo agregar una ciudad?",
+          "answer1": "Usa la búsqueda o selecciona de la lista de ciudades populares.",
+          "question2": "¿Puedo eliminar una ciudad?",
+          "answer2": "Sí, haz clic en la cruz junto al nombre de la ciudad.",
+          "question3": "¿Se actualiza la hora automáticamente?",
+          "answer3": "Sí, la hora se actualiza cada segundo.",
+          "question4": "¿Se soporta el horario de verano?",
+          "answer4": "Sí, las transiciones al horario de verano se consideran automáticamente.",
+          "question5": "¿Puedo guardar la configuración?",
+          "answer5": "Sí, las ciudades seleccionadas se guardan en el navegador.",
+          "question6": "¿Funciona en dispositivos móviles?",
+          "answer6": "Sí, diseño completamente responsivo.",
+          "question7": "¿Puedo comparar la hora en diferentes ciudades?",
+          "answer7": "Sí, todas las ciudades se muestran simultáneamente.",
+          "question8": "¿Es precisa la visualización de la hora?",
+          "answer8": "Sí, la hora se sincroniza con servidores de tiempo preciso.",
+          "question9": "¿Puedo cambiar el formato de hora?",
+          "answer9": "Sí, se soportan formatos de 12 y 24 horas.",
+          "question10": "¿Hay límites en el número de ciudades?",
+          "answer10": "Puedes agregar hasta 10 ciudades simultáneamente."
+        }
       }
     }
   }

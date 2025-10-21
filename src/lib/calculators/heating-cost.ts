@@ -271,3 +271,6 @@ export function getTariffUnit(heatingType: string): string {
 	return heatingTypeInfo ? heatingTypeInfo.unit : 'kWh';
 }
 
+
+
+

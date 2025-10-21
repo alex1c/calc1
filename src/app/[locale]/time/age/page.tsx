@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
@@ -10,19 +10,59 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	const t = (key: string) => {
-		const messages = require(`@/messages/${locale}.json`);
-		return messages.calculators.age.seo[key];
-	};
+	const t = await getTranslations({
+		locale,
+		namespace: 'calculators.age.seo',
+	});
+
+	const title = t('title');
+	const description = t('description');
+	const canonicalUrl = `https://calc1.ru/${locale}/time/age`;
 
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		alternates: {
+			canonical: canonicalUrl,
+			languages: {
+				ru: 'https://calc1.ru/ru/time/age',
+				en: 'https://calc1.ru/en/time/age',
+				es: 'https://calc1.ru/es/time/age',
+				de: 'https://calc1.ru/de/time/age',
+			},
+		},
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
+			url: canonicalUrl,
+			siteName: 'Calc1.ru',
+			locale: locale,
 			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/og-age.png',
+					width: 1200,
+					height: 630,
+					alt: title,
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: ['https://calc1.ru/og-age.png'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
 		},
 	};
 }

@@ -34,15 +34,17 @@ export default function AddTimeCalculator() {
 	const [result, setResult] = useState<AddTimeResult | null>(null);
 	const [isCalculating, setIsCalculating] = useState(false);
 	const [copied, setCopied] = useState(false);
+	const [isMounted, setIsMounted] = useState(false);
 
-	// Set current date and time as default
+	// Set current date and time as default only after component mounts
 	useEffect(() => {
+		setIsMounted(true);
 		if (!startDate || !startTime) {
 			const { date, time } = getCurrentDateTime();
 			setStartDate(date);
 			setStartTime(time);
 		}
-	}, [startDate, startTime]);
+	}, []);
 
 	const handleCalculate = async () => {
 		if (!startDate || !startTime) return;
@@ -53,9 +55,6 @@ export default function AddTimeCalculator() {
 		}
 
 		setIsCalculating(true);
-
-		// Simulate calculation delay
-		await new Promise((resolve) => setTimeout(resolve, 500));
 
 		try {
 			const calculation = addTimeToDate(
@@ -108,6 +107,28 @@ export default function AddTimeCalculator() {
 			console.error('Copy failed:', error);
 		}
 	};
+
+	// Show loading state during hydration
+	if (!isMounted) {
+		return (
+			<div className='bg-white rounded-lg shadow-lg p-6'>
+				<div className='text-center mb-8'>
+					<div className='inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4'>
+						<Plus className='h-8 w-8 text-green-600' />
+					</div>
+					<h2 className='text-2xl font-bold text-gray-900 mb-2'>
+						{t('form.title')}
+					</h2>
+					<p className='text-gray-600'>
+						Добавьте дни, часы и минуты к дате
+					</p>
+				</div>
+				<div className='flex items-center justify-center py-12'>
+					<RefreshCw className='h-8 w-8 animate-spin text-green-600' />
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div className='bg-white rounded-lg shadow-lg p-6'>

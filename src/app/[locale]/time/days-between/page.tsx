@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
@@ -10,19 +10,59 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	const t = (key: string) => {
-		const messages = require(`@/messages/${locale}.json`);
-		return messages.calculators.daysBetween.seo[key];
-	};
+	const t = await getTranslations({
+		locale,
+		namespace: 'calculators.daysBetween.seo',
+	});
+
+	const title = t('title');
+	const description = t('description');
+	const canonicalUrl = `https://calc1.ru/${locale}/time/days-between`;
 
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		alternates: {
+			canonical: canonicalUrl,
+			languages: {
+				ru: 'https://calc1.ru/ru/time/days-between',
+				en: 'https://calc1.ru/en/time/days-between',
+				es: 'https://calc1.ru/es/time/days-between',
+				de: 'https://calc1.ru/de/time/days-between',
+			},
+		},
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
+			url: canonicalUrl,
+			siteName: 'Calc1.ru',
+			locale: locale,
 			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/og-days-between.png',
+					width: 1200,
+					height: 630,
+					alt: title,
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: ['https://calc1.ru/og-days-between.png'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
 		},
 	};
 }
