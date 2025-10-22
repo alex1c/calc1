@@ -1262,9 +1262,104 @@
     "paper-weight": {
       "title": "Papiergewicht-Rechner",
       "description": "Papiergewicht nach Dichte und Anzahl der Blätter berechnen",
-      "seo": "A4-Blätter-Rechner, Papiergewichtsberechnung nach Dichte, Papiergewichtsrechner",
       "breadcrumbs": {
         "category": "Leben"
+      },
+      "hero": {
+        "grams": "g/m²",
+        "accuracy": "Genauigkeit",
+        "format": "Format"
+      },
+      "features": {
+        "densityCalculation": "Dichteberechnung",
+        "areaCalculation": "Flächenberechnung",
+        "weightEstimation": "Gewichtsschätzung",
+        "formatSupport": "Formatunterstützung",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "seo": {
+        "title": "Online Papiergewicht-Rechner - Präzise Blattgewicht-Berechnung",
+        "description": "Kostenloser Online-Rechner zur Berechnung des Papiergewichts nach Dichte, Anzahl der Blätter und Format. Unterstützung für alle Standard-Papierformate.",
+        "overview": {
+          "title": "Über den Papiergewicht-Rechner",
+          "content": "Der Online-Papiergewicht-Rechner ist ein präzises Tool zur Bestimmung des Papiergewichts nach Dichte, Anzahl der Blätter und Format. Geben Sie einfach die Papierdichte, Anzahl der Blätter und das Format ein und erhalten Sie das genaue Gewicht in Gramm oder Kilogramm."
+        },
+        "methods": {
+          "title": "Berechnungsmethoden",
+          "content": "Der Rechner verwendet mehrere Methoden für die präzise Papiergewichtsberechnung:",
+          "density": {
+            "title": "Nach Dichte",
+            "description": "Berechnung basierend auf der Papierdichte in g/m²"
+          },
+          "area": {
+            "title": "Nach Fläche",
+            "description": "Berechnung über Blattfläche und Dichte"
+          }
+        },
+        "paperTypes": {
+          "title": "Papiersorten",
+          "content": "Verschiedene Papiersorten haben unterschiedliche Dichten:",
+          "office": {
+            "title": "Büropapier",
+            "description": "Standardpapier für den Druck",
+            "weight": "80-100 g/m²"
+          },
+          "cardstock": {
+            "title": "Karton",
+            "description": "Dickes Papier für Verpackungen",
+            "weight": "200-300 g/m²"
+          },
+          "photo": {
+            "title": "Fotopapier",
+            "description": "Spezielles Papier für Fotodruck",
+            "weight": "150-250 g/m²"
+          }
+        },
+        "applications": {
+          "title": "Anwendungen",
+          "content": "Der Papiergewicht-Rechner wird in verschiedenen Bereichen verwendet:",
+          "professional": {
+            "title": "Professionelle Nutzung",
+            "printing": "Druck und Verlagswesen",
+            "packaging": "Verpackung und Etiketten",
+            "publishing": "Verlagsbranche",
+            "manufacturing": "Produktion"
+          },
+          "personal": {
+            "title": "Private Nutzung",
+            "crafts": "Basteln und Handwerk",
+            "art": "Künstlerische Gestaltung",
+            "education": "Bildung und Lernen",
+            "hobbies": "Hobbys und Interessen"
+          }
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Für genaue Ergebnisse:",
+          "measurement": "Messen Sie die Blattabmessungen genau",
+          "accuracy": "Verwenden Sie präzise Dichtewerte",
+          "calculation": "Überprüfen Sie die Berechnungskorrektur",
+          "verification": "Vergleichen Sie mit Referenzwerten"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "howToCalculate": {
+            "question": "Wie berechnet man das Papiergewicht?",
+            "answer": "Geben Sie die Papierdichte in g/m², Anzahl der Blätter ein und wählen Sie das Format. Der Rechner berechnet automatisch das Gesamtgewicht."
+          },
+          "accuracy": {
+            "question": "Wie genau ist die Berechnung?",
+            "answer": "Die Berechnung basiert auf Standardformeln und bietet eine Genauigkeit von bis zu 99% bei korrekten Eingabedaten."
+          },
+          "formats": {
+            "question": "Welche Formate werden unterstützt?",
+            "answer": "Alle Standardformate werden unterstützt: A4, A3, A5, Letter, Legal und andere."
+          },
+          "applications": {
+            "question": "Wo wird die Papiergewichtsberechnung verwendet?",
+            "answer": "Im Druck, Verpackung, Logistik, Bildung und anderen Bereichen, wo es wichtig ist, das genaue Papiergewicht zu kennen."
+          }
+        }
       }
     },
     "credit-loan": {
@@ -6176,11 +6271,186 @@
         ]
       }
     },
+    "waterUsage": {
+      "title": "Wasserverbrauch Rechner — Online-Berechnung",
+      "description": "Online-Rechner zur Berechnung des Wasserverbrauchs und der Kosten für Haus oder Wohnung.",
+      "breadcrumbs": {
+        "life": "Leben"
+      },
+      "hero": {
+        "liters": "Liter pro Tag",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "densityCalculation": "Wasserdichte-Berechnung",
+        "areaCalculation": "Oberflächenberechnung",
+        "weightEstimation": "Wassergewicht-Schätzung",
+        "formatSupport": "Format-Unterstützung",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "Wasserverbrauch Berechnung",
+        "description": "Wasserverbrauch und Kosten für Haus, Büro oder Bau berechnen",
+        "scenario": "Nutzungsszenario",
+        "residents": "Anzahl der Bewohner/Mitarbeiter",
+        "residentsPlaceholder": "Anzahl der Personen eingeben",
+        "waterPrice": "Wasserpreis (€/m³)",
+        "waterPricePlaceholder": "Preis pro Kubikmeter eingeben",
+        "hotWaterPrice": "Warmwasserpreis (€/m³)",
+        "hotWaterPricePlaceholder": "Warmwasserpreis eingeben",
+        "coldWaterPrice": "Kaltwasserpreis (€/m³)",
+        "coldWaterPricePlaceholder": "Kaltwasserpreis eingeben",
+        "losses": "Verluste und Lecks (%)",
+        "lossesPlaceholder": "Verlustprozentsatz eingeben",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "residentsRequired": "Anzahl der Bewohner eingeben",
+          "waterPriceRequired": "Wasserpreis eingeben",
+          "invalidNumber": "Gültige Zahl eingeben"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "dailyUsage": "Täglicher Verbrauch",
+        "monthlyUsage": "Monatlicher Verbrauch",
+        "yearlyUsage": "Jährlicher Verbrauch",
+        "hotWater": "Warmwasser",
+        "coldWater": "Kaltwasser",
+        "totalCost": "Gesamtkosten",
+        "costPerDay": "Kosten pro Tag",
+        "costPerMonth": "Kosten pro Monat",
+        "costPerYear": "Kosten pro Jahr",
+        "summary": "Zusammenfassung",
+        "summaryText": "Mit {residents} Bewohnern beträgt der tägliche Verbrauch {dailyUsage} Liter, und die monatlichen Kosten {monthlyCost} Euro.",
+        "copy": "Kopieren",
+        "copied": "Kopiert!"
+      },
+      "scenarios": {
+        "residential": "Wohnhaus",
+        "apartment": "Wohnung",
+        "office": "Büro",
+        "construction": "Bau",
+        "commercial": "Gewerberaum"
+      },
+      "seo": {
+        "title": "Online Wasserverbrauch Rechner — Verbrauchs- und Kostenberechnung",
+        "description": "Online Wasserverbrauch Rechner. Berechnung des Verbrauchs für Wohnungen, Häuser, Büros und Bau. Unterstützung für Warm- und Kaltwasser, Diagramme und Datenexport.",
+        "keywords": "Wasserverbrauch, Wasser Rechner, Wasserverbrauch, Sanitärberechnung, Wasserverbrauchsnormen, Wasserversorgung, Wasserverbrauchsberechnung, Bau Rechner, Wasserverbrauch",
+        "overview": {
+          "title": "Über den Wasserverbrauch Rechner",
+          "content": "Der Online-Wasserverbrauch Rechner hilft dabei zu berechnen, wie viel Wasser in Häusern, Wohnungen, Büros oder auf Baustellen verbraucht wird. Geeignet für Kostenschätzung, Sanitärplanung, Pumpenauswahl und Ressourcenoptimierung."
+        },
+        "calculation": {
+          "title": "Wie der Wasserverbrauch berechnet wird",
+          "content": "Der Rechner verwendet Standard-Wasserverbrauchsnormen für verschiedene Szenarien:",
+          "residential": "Wohngebäude: 200-300 l/Person/Tag",
+          "office": "Büros: 50-100 l/Person/Tag",
+          "construction": "Bau: 500-1000 l/Tag pro Baustelle"
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "daily": "Berechnung des täglichen, monatlichen und jährlichen Wasserverbrauchs",
+          "scenarios": "Unterstützung für Haushalts- und Bauszenarien",
+          "devices": "Eingabe der Anzahl der Bewohner, Sanitär, Geräte",
+          "losses": "Berücksichtigung von Verlusten, Lecks und Nutzungskoeffizienten",
+          "conversion": "Umrechnung von Litern in Kubikmeter und zurück",
+          "visualization": "Visualisierung des Verbrauchs in Diagrammen",
+          "responsive": "Responsive Interface für alle Geräte"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "accurate": "Präzise Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Wasserverbrauchsnormen",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Nutzungsszenarien",
+          "comprehensive": "Umfassende Analyse",
+          "comprehensiveDesc": "Berücksichtigung von Warm- und Kaltwasser, Verlusten und Lecks",
+          "export": "Datenexport",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder CSV zu speichern"
+        },
+        "tips": {
+          "title": "Wasserspartipps",
+          "content": "Sie können den Wasserverbrauch auf verschiedene Weise reduzieren:",
+          "equipment": {
+            "title": "Ausrüstung",
+            "faucets": "Installieren Sie Strahlregler an Wasserhähnen",
+            "toilets": "Verwenden Sie Spülkästen mit Spartaste",
+            "showerheads": "Installieren Sie wassersparende Duschköpfe",
+            "washing": "Verwenden Sie Waschmaschinen der Klasse A+++"
+          },
+          "habits": {
+            "title": "Gewohnheiten",
+            "timing": "Reduzieren Sie die Duschzeit",
+            "repair": "Reparieren Sie Lecks sofort",
+            "collection": "Sammeln Sie Regenwasser zum Gießen",
+            "efficient": "Verwenden Sie Geschirrspüler statt Handwäsche"
+          },
+          "construction": {
+            "title": "Bau",
+            "recycling": "Verwenden Sie recyceltes Wasser für technische Zwecke",
+            "monitoring": "Installieren Sie Wasserzähler auf der Baustelle",
+            "planning": "Planen Sie die Wasserversorgung im Voraus"
+          }
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man den Wasserverbrauch in einer Wohnung?",
+              "a": "Geben Sie die Anzahl der Bewohner und verwendeten Geräte ein — der Rechner zeigt den Gesamtverbrauch."
+            },
+            {
+              "q": "Kann ich den Wasserverbrauch für den Bau berechnen?",
+              "a": "Ja, der Rechner berücksichtigt Bauszenarien (Beton, Bewässerung, Werkzeugreinigung)."
+            },
+            {
+              "q": "In welchen Einheiten wird das Ergebnis angezeigt?",
+              "a": "In Litern und Kubikmetern, mit Umrechnungsmöglichkeit."
+            },
+            {
+              "q": "Kann ich eigene Parameter hinzufügen?",
+              "a": "Ja, Sie können nicht-standardisierte Geräte und Verbrauchsnormen angeben."
+            },
+            {
+              "q": "Wie erfahre ich den monatlichen Wasserverbrauch?",
+              "a": "Das berechnete Tagesvolumen wird mit der Anzahl der Tage im Monat multipliziert."
+            },
+            {
+              "q": "Kann ich Lecks und Verluste berücksichtigen?",
+              "a": "Ja, der Rechner fügt einen Verlustprozentsatz Ihrer Wahl hinzu."
+            },
+            {
+              "q": "Kann ich den Rechner für Büro oder Café verwenden?",
+              "a": "Ja, es gibt einen Berechnungsmodus für Gewerberäume."
+            },
+            {
+              "q": "Berücksichtigt der Rechner Warm- und Kaltwasser getrennt?",
+              "a": "Ja, Sie können das Verhältnis von Warm- und Kaltwasser festlegen."
+            },
+            {
+              "q": "Kann ich mehrere Szenarien vergleichen?",
+              "a": "Ja, Ergebnisse werden zum Vergleich gespeichert."
+            },
+            {
+              "q": "Ist der Rechner für die Sanitärplanung geeignet?",
+              "a": "Ja, er hilft dabei, den erforderlichen Verbrauch für Pumpen- und Rohrauswahl zu bestimmen."
+            },
+            {
+              "q": "Kann ich die Berechnungsergebnisse herunterladen?",
+              "a": "Ja, der Bericht kann in PDF oder CSV heruntergeladen werden."
+            }
+          ]
+        }
+      }
+    },
     "heatingCost": {
       "title": "Heizkostenrechner — Online-Berechnung",
       "description": "Online-Rechner zur Berechnung der Heizkosten nach Systemtyp, Raumgröße und Energietarifen.",
       "breadcrumbs": {
-        "construction": "Bauwesen"
+        "life": "Leben"
       },
       "form": {
         "title": "Heizkostenrechner",
@@ -6285,7 +6555,7 @@
       "title": "Gasverbrauch Rechner — Online-Berechnung",
       "description": "Online-Rechner zur Berechnung des Gasverbrauchs und der Kosten für Heizung, Kochen oder Warmwasserbereitung.",
       "breadcrumbs": {
-        "construction": "Bauwesen"
+        "life": "Leben"
       },
       "form": {
         "title": "Gasverbrauch Rechner",

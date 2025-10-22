@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
-import BMICalculator from '@/components/calculators/bmi-calculator';
+import VehicleTaxCalculator from '@/components/calculators/vehicle-tax-calculator';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -11,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators.bmi[key];
+	const t = (key: string) => messages.calculators['vehicle-tax'][key];
 
 	return {
 		title: t('title'),
@@ -20,7 +20,7 @@ export async function generateMetadata({
 	};
 }
 
-export default function BMIPage() {
+export default function VehicleTaxPage() {
 	const t = useTranslations();
 	const locale = useLocale();
 
@@ -30,13 +30,13 @@ export default function BMIPage() {
 			<Breadcrumbs
 				items={[
 					{
-						label: t('categories.health.title'),
-						href: '/health',
+						label: t('categories.finance.title'),
+						href: '/finance',
 					},
-					{ label: t('calculators.bmi.title') },
+					{ label: t('calculators.vehicle-tax.title') },
 				]}
 			/>
-			<BMICalculator />
+			<VehicleTaxCalculator />
 		</div>
 	);
 }

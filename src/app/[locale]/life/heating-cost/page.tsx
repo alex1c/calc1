@@ -3,8 +3,8 @@ import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
-import GasUsageCalculator from '@/components/calculators/gas-usage-calculator';
-import GasUsageSEO from '@/components/seo/gas-usage-seo';
+import HeatingCostCalculator from '@/components/calculators/heating-cost-calculator';
+import HeatingCostSEO from '@/components/seo/heating-cost-seo';
 
 interface Props {
 	params: { locale: string };
@@ -15,29 +15,29 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.gasUsage.seo',
+		namespace: 'calculators.heatingCost.seo',
 	});
 	return {
 		title: t('meta.title'),
 		description: t('meta.description'),
 		keywords: t('meta.keywords'),
 		alternates: {
-			canonical: 'https://calc1.ru/construction/gas-usage',
+			canonical: 'https://calc1.ru/life/heating-cost',
 			languages: {
-				ru: 'https://calc1.ru/ru/construction/gas-usage',
-				en: 'https://calc1.ru/en/construction/gas-usage',
-				de: 'https://calc1.ru/de/construction/gas-usage',
-				es: 'https://calc1.ru/es/construction/gas-usage',
+				ru: 'https://calc1.ru/ru/life/heating-cost',
+				en: 'https://calc1.ru/en/life/heating-cost',
+				de: 'https://calc1.ru/de/life/heating-cost',
+				es: 'https://calc1.ru/es/life/heating-cost',
 			},
 		},
 		openGraph: {
 			title: t('meta.title'),
 			description: t('meta.description'),
-			url: 'https://calc1.ru/construction/gas-usage',
+			url: 'https://calc1.ru/life/heating-cost',
 			siteName: 'Calc1.ru',
 			images: [
 				{
-					url: 'https://calc1.ru/images/gas-usage-og.jpg',
+					url: 'https://calc1.ru/images/heating-cost-og.jpg',
 					width: 1200,
 					height: 630,
 					alt: t('meta.title'),
@@ -50,7 +50,7 @@ export async function generateMetadata({
 			card: 'summary_large_image',
 			title: t('meta.title'),
 			description: t('meta.description'),
-			images: ['https://calc1.ru/images/gas-usage-og.jpg'],
+			images: ['https://calc1.ru/images/heating-cost-og.jpg'],
 		},
 	};
 }
@@ -60,15 +60,15 @@ export default async function Page({ params: { locale } }: Props) {
 
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.gasUsage',
+		namespace: 'calculators.heatingCost',
 	});
 	const tSeo = await getTranslations({
 		locale,
-		namespace: 'calculators.gasUsage.seo',
+		namespace: 'calculators.heatingCost.seo',
 	});
 
 	const breadcrumbs = [
-		{ label: t('breadcrumbs.construction'), href: '/construction' },
+		{ label: t('breadcrumbs.life'), href: '/life' },
 		{ label: tSeo('h1') },
 	];
 
@@ -107,15 +107,10 @@ export default async function Page({ params: { locale } }: Props) {
 							{tSeo('description')}
 						</p>
 					</div>
-					<GasUsageCalculator />
-					<GasUsageSEO />
+					<HeatingCostCalculator />
+					<HeatingCostSEO />
 				</div>
 			</div>
 		</>
 	);
 }
-
-
-
-
-

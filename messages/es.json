@@ -1262,9 +1262,104 @@
     "paper-weight": {
       "title": "Calculadora de Peso de Papel",
       "description": "Calcular peso del papel por densidad y número de hojas",
-      "seo": "Calculadora de hojas A4, cálculo de peso de papel por densidad, calculadora de peso de papel",
       "breadcrumbs": {
         "category": "Vida"
+      },
+      "hero": {
+        "grams": "g/m²",
+        "accuracy": "precisión",
+        "format": "formato"
+      },
+      "features": {
+        "densityCalculation": "Cálculo por densidad",
+        "areaCalculation": "Cálculo por área",
+        "weightEstimation": "Estimación de peso",
+        "formatSupport": "Soporte de formatos",
+        "accuracy": "Alta precisión"
+      },
+      "seo": {
+        "title": "Calculadora de Peso de Papel Online - Cálculo Preciso del Peso de Hojas",
+        "description": "Calculadora online gratuita para calcular el peso del papel por densidad, número de hojas y formato. Soporte para todos los formatos estándar de papel.",
+        "overview": {
+          "title": "Sobre la Calculadora de Peso de Papel",
+          "content": "La calculadora online de peso de papel es una herramienta precisa para determinar el peso del papel por densidad, número de hojas y formato. Simplemente ingrese la densidad del papel, número de hojas y formato, y obtenga el peso exacto en gramos o kilogramos."
+        },
+        "methods": {
+          "title": "Métodos de Cálculo",
+          "content": "La calculadora utiliza varios métodos para el cálculo preciso del peso del papel:",
+          "density": {
+            "title": "Por densidad",
+            "description": "Cálculo basado en la densidad del papel en g/m²"
+          },
+          "area": {
+            "title": "Por área",
+            "description": "Cálculo a través del área de la hoja y densidad"
+          }
+        },
+        "paperTypes": {
+          "title": "Tipos de Papel",
+          "content": "Diferentes tipos de papel tienen diferentes densidades:",
+          "office": {
+            "title": "Papel de oficina",
+            "description": "Papel estándar para impresión",
+            "weight": "80-100 g/m²"
+          },
+          "cardstock": {
+            "title": "Cartulina",
+            "description": "Papel grueso para empaque",
+            "weight": "200-300 g/m²"
+          },
+          "photo": {
+            "title": "Papel fotográfico",
+            "description": "Papel especial para impresión de fotos",
+            "weight": "150-250 g/m²"
+          }
+        },
+        "applications": {
+          "title": "Aplicaciones",
+          "content": "La calculadora de peso de papel se usa en varios campos:",
+          "professional": {
+            "title": "Uso profesional",
+            "printing": "Impresión y publicación",
+            "packaging": "Empaque y etiquetas",
+            "publishing": "Industria editorial",
+            "manufacturing": "Manufactura"
+          },
+          "personal": {
+            "title": "Uso personal",
+            "crafts": "Artesanías y manualidades",
+            "art": "Creación artística",
+            "education": "Educación y aprendizaje",
+            "hobbies": "Pasatiempos e intereses"
+          }
+        },
+        "tips": {
+          "title": "Consejos Útiles",
+          "content": "Para resultados precisos:",
+          "measurement": "Mida las dimensiones de la hoja con precisión",
+          "accuracy": "Use valores de densidad precisos",
+          "calculation": "Verifique la corrección del cálculo",
+          "verification": "Compare con valores de referencia"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "howToCalculate": {
+            "question": "¿Cómo calcular el peso del papel?",
+            "answer": "Ingrese la densidad del papel en g/m², número de hojas y seleccione el formato. La calculadora calculará automáticamente el peso total."
+          },
+          "accuracy": {
+            "question": "¿Qué tan preciso es el cálculo?",
+            "answer": "El cálculo se basa en fórmulas estándar y proporciona precisión hasta 99% con datos de entrada correctos."
+          },
+          "formats": {
+            "question": "¿Qué formatos son compatibles?",
+            "answer": "Se admiten todos los formatos estándar: A4, A3, A5, Letter, Legal y otros."
+          },
+          "applications": {
+            "question": "¿Dónde se usa el cálculo del peso del papel?",
+            "answer": "En impresión, empaque, logística, educación y otros campos donde es importante conocer el peso exacto del papel."
+          }
+        }
       }
     },
     "credit-loan": {
@@ -6180,11 +6275,186 @@
         ]
       }
     },
+    "waterUsage": {
+      "title": "Consumo de Agua — Calculadora en Línea",
+      "description": "Calculadora en línea para estimar el consumo y costo del agua en casa o apartamento.",
+      "breadcrumbs": {
+        "life": "Vida"
+      },
+      "hero": {
+        "liters": "Litros por día",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "densityCalculation": "Cálculo de densidad del agua",
+        "areaCalculation": "Cálculo de área superficial",
+        "weightEstimation": "Estimación del peso del agua",
+        "formatSupport": "Soporte de formatos",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de Consumo de Agua",
+        "description": "Calcular consumo y costo del agua para casa, oficina o construcción",
+        "scenario": "Escenario de uso",
+        "residents": "Número de residentes/empleados",
+        "residentsPlaceholder": "Ingrese número de personas",
+        "waterPrice": "Precio del agua (€/m³)",
+        "waterPricePlaceholder": "Ingrese precio por metro cúbico",
+        "hotWaterPrice": "Precio del agua caliente (€/m³)",
+        "hotWaterPricePlaceholder": "Ingrese precio del agua caliente",
+        "coldWaterPrice": "Precio del agua fría (€/m³)",
+        "coldWaterPricePlaceholder": "Ingrese precio del agua fría",
+        "losses": "Pérdidas y fugas (%)",
+        "lossesPlaceholder": "Ingrese porcentaje de pérdidas",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "errors": {
+          "residentsRequired": "Ingrese número de residentes",
+          "waterPriceRequired": "Ingrese precio del agua",
+          "invalidNumber": "Ingrese número válido"
+        }
+      },
+      "results": {
+        "title": "Resultados del Cálculo",
+        "dailyUsage": "Consumo diario",
+        "monthlyUsage": "Consumo mensual",
+        "yearlyUsage": "Consumo anual",
+        "hotWater": "Agua caliente",
+        "coldWater": "Agua fría",
+        "totalCost": "Costo total",
+        "costPerDay": "Costo por día",
+        "costPerMonth": "Costo por mes",
+        "costPerYear": "Costo por año",
+        "summary": "Resumen",
+        "summaryText": "Con {residents} residentes, el consumo diario es {dailyUsage} litros, y el costo mensual es {monthlyCost} euros.",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "scenarios": {
+        "residential": "Casa residencial",
+        "apartment": "Apartamento",
+        "office": "Oficina",
+        "construction": "Construcción",
+        "commercial": "Espacio comercial"
+      },
+      "seo": {
+        "title": "Calculadora de Consumo de Agua en Línea — Cálculo de Consumo y Costo",
+        "description": "Calculadora de consumo de agua en línea. Cálculo de consumo para apartamentos, casas, oficinas y construcción. Soporte para agua caliente y fría, gráficos y exportación de datos.",
+        "keywords": "consumo de agua, calculadora de agua, consumo de agua, cálculo de fontanería, normas de consumo de agua, suministro de agua, cálculo de consumo de agua, calculadora de construcción, consumo de agua",
+        "overview": {
+          "title": "Sobre la Calculadora de Consumo de Agua",
+          "content": "La calculadora de consumo de agua en línea ayuda a calcular cuánta agua se consume en hogares, apartamentos, oficinas o sitios de construcción. Adecuada para estimación de costos, diseño de fontanería, selección de bombas y optimización de recursos."
+        },
+        "calculation": {
+          "title": "Cómo se Calcula el Consumo de Agua",
+          "content": "La calculadora utiliza normas estándar de consumo de agua para diferentes escenarios:",
+          "residential": "Viviendas: 200-300 l/persona/día",
+          "office": "Oficinas: 50-100 l/persona/día",
+          "construction": "Construcción: 500-1000 l/día por sitio"
+        },
+        "features": {
+          "title": "Características Principales",
+          "daily": "Cálculo de consumo diario, mensual y anual de agua",
+          "scenarios": "Soporte para escenarios domésticos y de construcción",
+          "devices": "Entrada de número de residentes, fontanería, dispositivos",
+          "losses": "Contabilización de pérdidas, fugas y coeficientes de uso",
+          "conversion": "Conversión de litros a metros cúbicos y viceversa",
+          "visualization": "Visualización del consumo en gráficos",
+          "responsive": "Interfaz responsiva para todos los dispositivos"
+        },
+        "advantages": {
+          "title": "Ventajas de la Calculadora",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Utiliza normas actuales de consumo de agua",
+          "flexible": "Configuración flexible",
+          "flexibleDesc": "Soporte para varios escenarios de uso",
+          "comprehensive": "Análisis integral",
+          "comprehensiveDesc": "Contabilización de agua caliente y fría, pérdidas y fugas",
+          "export": "Exportación de datos",
+          "exportDesc": "Capacidad de guardar resultados en PDF o CSV"
+        },
+        "tips": {
+          "title": "Consejos para Ahorrar Agua",
+          "content": "Puedes reducir el consumo de agua de varias maneras:",
+          "equipment": {
+            "title": "Equipamiento",
+            "faucets": "Instala aireadores en grifos",
+            "toilets": "Usa inodoros de doble descarga",
+            "showerheads": "Instala cabezales de ducha eficientes",
+            "washing": "Usa lavadoras con clase A+++"
+          },
+          "habits": {
+            "title": "Hábitos",
+            "timing": "Reduce el tiempo de ducha",
+            "repair": "Repara fugas rápidamente",
+            "collection": "Recolecta agua de lluvia para riego",
+            "efficient": "Usa lavavajillas en lugar de lavado manual"
+          },
+          "construction": {
+            "title": "Construcción",
+            "recycling": "Usa agua reciclada para necesidades técnicas",
+            "monitoring": "Instala medidores de agua en el sitio",
+            "planning": "Planifica el suministro de agua con anticipación"
+          }
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el consumo de agua en un apartamento?",
+              "a": "Ingresa el número de residentes y electrodomésticos utilizados — la calculadora mostrará el consumo total."
+            },
+            {
+              "q": "¿Puedo calcular el consumo de agua para construcción?",
+              "a": "Sí, la calculadora tiene en cuenta escenarios de construcción (hormigón, riego, lavado de herramientas)."
+            },
+            {
+              "q": "¿En qué unidades se muestra el resultado?",
+              "a": "En litros y metros cúbicos, con capacidad de conversión."
+            },
+            {
+              "q": "¿Puedo agregar parámetros personalizados?",
+              "a": "Sí, puedes especificar dispositivos no estándar y normas de consumo."
+            },
+            {
+              "q": "¿Cómo saber el consumo mensual de agua?",
+              "a": "El volumen diario calculado se multiplica por el número de días del mes."
+            },
+            {
+              "q": "¿Puedo contabilizar fugas y pérdidas?",
+              "a": "Sí, la calculadora agrega un porcentaje de pérdidas de tu elección."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para oficina o cafetería?",
+              "a": "Sí, hay un modo de cálculo para locales comerciales."
+            },
+            {
+              "q": "¿La calculadora contabiliza agua caliente y fría por separado?",
+              "a": "Sí, puedes establecer la proporción de agua caliente y fría."
+            },
+            {
+              "q": "¿Puedo comparar múltiples escenarios?",
+              "a": "Sí, los resultados se guardan para comparación."
+            },
+            {
+              "q": "¿Es la calculadora adecuada para diseño de fontanería?",
+              "a": "Sí, ayuda a determinar el consumo requerido para selección de bombas y tuberías."
+            },
+            {
+              "q": "¿Puedo descargar los resultados del cálculo?",
+              "a": "Sí, está disponible la descarga de reportes en PDF o CSV."
+            }
+          ]
+        }
+      }
+    },
     "heatingCost": {
       "title": "Costo de Calefacción — Calculadora en Línea",
       "description": "Calculadora en línea para estimar el costo de la calefacción según el tipo de sistema, tamaño de la habitación y tarifas energéticas.",
       "breadcrumbs": {
-        "construction": "Construcción"
+        "life": "Vida"
       },
       "form": {
         "title": "Calculadora de Costo de Calefacción",
@@ -6289,7 +6559,7 @@
       "title": "Consumo de Gas — Calculadora en Línea",
       "description": "Calculadora en línea para estimar el consumo y costo del gas natural para calefacción, cocina o agua caliente.",
       "breadcrumbs": {
-        "construction": "Construcción"
+        "life": "Vida"
       },
       "form": {
         "title": "Calculadora de Consumo de Gas",

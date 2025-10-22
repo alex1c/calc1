@@ -132,7 +132,7 @@ export default function HomePage() {
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
 						<Link
-							href={`/${locale}/calc/paper-weight`}
+							href={`/${locale}/life/paper-weight`}
 							className='p-4 border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-blue-300 transition-colors cursor-pointer'
 						>
 							<h3 className='font-semibold text-gray-900 hover:text-blue-600'>
@@ -143,7 +143,7 @@ export default function HomePage() {
 							</p>
 						</Link>
 						<Link
-							href={`/${locale}/calc/bmi`}
+							href={`/${locale}/health/bmihealth`}
 							className='p-4 border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-blue-300 transition-colors cursor-pointer'
 						>
 							<h3 className='font-semibold text-gray-900 hover:text-blue-600'>

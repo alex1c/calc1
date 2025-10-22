@@ -16,42 +16,63 @@ const getCalculators = (t: any) => [
 		title: t('calculators.credit-loan.title'),
 		description: t('calculators.credit-loan.description'),
 		icon: CreditCard,
-		href: '/calc/credit-loan',
+		href: '/finance/credit-loan',
 	},
 	{
 		id: 'mortgage',
 		title: t('calculators.mortgage.title'),
 		description: t('calculators.mortgage.description'),
 		icon: Home,
-		href: '/calc/mortgage',
+		href: '/finance/mortgage',
 	},
 	{
 		id: 'auto-loan',
 		title: t('calculators.auto-loan.title'),
 		description: t('calculators.auto-loan.description'),
 		icon: Car,
-		href: '/calc/auto-loan',
+		href: '/finance/auto-loan',
 	},
 	{
 		id: 'consumer-loan',
 		title: t('calculators.consumer-loan.title'),
 		description: t('calculators.consumer-loan.description'),
 		icon: Calculator,
-		href: '/calc/consumer-loan',
+		href: '/finance/consumer-loan',
 	},
 	{
 		id: 'investment',
 		title: t('calculators.investment.title'),
 		description: t('calculators.investment.description'),
 		icon: TrendingUp,
-		href: '/calc/investment',
+		href: '/finance/investment',
 	},
 	{
 		id: 'savings',
 		title: t('calculators.savings.title'),
 		description: t('calculators.savings.description'),
 		icon: PiggyBank,
-		href: '/calc/savings',
+		href: '/finance/savings',
+	},
+	{
+		id: 'leasing',
+		title: t('calculators.leasing.title'),
+		description: t('calculators.leasing.description'),
+		icon: Car,
+		href: '/finance/leasing',
+	},
+	{
+		id: 'traffic-fines',
+		title: t('calculators.traffic-fines.title'),
+		description: t('calculators.traffic-fines.description'),
+		icon: Calculator,
+		href: '/finance/traffic-fines',
+	},
+	{
+		id: 'vehicle-tax',
+		title: t('calculators.vehicle-tax.title'),
+		description: t('calculators.vehicle-tax.description'),
+		icon: Calculator,
+		href: '/finance/vehicle-tax',
 	},
 ];
 
@@ -81,7 +102,7 @@ export default function FinancePage() {
 						return (
 							<Link
 								key={calculator.id}
-								href={`/${locale}/calc/${calculator.id}`}
+								href={`/${locale}${calculator.href}`}
 								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 							>
 								<div className='flex items-center mb-4'>

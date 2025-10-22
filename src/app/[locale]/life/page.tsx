@@ -12,6 +12,10 @@ import {
 	Shirt,
 	Circle,
 	Zap,
+	FileText,
+	Droplets,
+	Flame,
+	Thermometer,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -84,6 +88,34 @@ const getCalculators = (t: any) => [
 		description: t('calculators.electricityCost.description'),
 		icon: Zap,
 		href: '/life/electricity-cost',
+	},
+	{
+		id: 'paper-weight',
+		title: t('calculators.paper-weight.title'),
+		description: t('calculators.paper-weight.description'),
+		icon: FileText,
+		href: '/life/paper-weight',
+	},
+	{
+		id: 'water-usage',
+		title: t('calculators.waterUsage.title'),
+		description: t('calculators.waterUsage.description'),
+		icon: Droplets,
+		href: '/life/water-usage',
+	},
+	{
+		id: 'heating-cost',
+		title: t('calculators.heatingCost.title'),
+		description: t('calculators.heatingCost.description'),
+		icon: Flame,
+		href: '/life/heating-cost',
+	},
+	{
+		id: 'gas-usage',
+		title: t('calculators.gasUsage.title'),
+		description: t('calculators.gasUsage.description'),
+		icon: Thermometer,
+		href: '/life/gas-usage',
 	},
 ];
 

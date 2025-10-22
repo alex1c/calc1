@@ -8,9 +8,6 @@ import {
 	Home,
 	Package,
 	Thermometer,
-	Flame,
-	Zap,
-	Droplets,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -21,7 +18,7 @@ const getCalculators = (t: any) => [
 			'categories.construction.calculators.wallpaper.description'
 		),
 		icon: Paintbrush,
-		href: '/calc/wallpaper',
+		href: '/construction/wallpaper',
 	},
 	{
 		id: 'paint',
@@ -30,7 +27,7 @@ const getCalculators = (t: any) => [
 			'categories.construction.calculators.materials.description'
 		),
 		icon: Package,
-		href: '/calc/paint',
+		href: '/construction/paint',
 	},
 	{
 		id: 'tile-laminate',
@@ -39,7 +36,7 @@ const getCalculators = (t: any) => [
 			'categories.construction.calculators.tile-laminate.description'
 		),
 		icon: Square,
-		href: '/calc/tile-laminate',
+		href: '/construction/tile-laminate',
 	},
 	{
 		id: 'concrete',
@@ -48,21 +45,21 @@ const getCalculators = (t: any) => [
 			'categories.construction.calculators.concrete.description'
 		),
 		icon: Wrench,
-		href: '/calc/concrete',
+		href: '/construction/concrete',
 	},
 	{
 		id: 'roofing',
 		title: t('categories.construction.calculators.roof.title'),
 		description: t('categories.construction.calculators.roof.description'),
 		icon: Home,
-		href: '/calc/roofing',
+		href: '/construction/roofing',
 	},
 	{
 		id: 'wall',
 		title: t('categories.construction.calculators.wall.title'),
 		description: t('categories.construction.calculators.wall.description'),
 		icon: Package,
-		href: '/calc/wall',
+		href: '/construction/wall',
 	},
 	{
 		id: 'floor-heating',
@@ -70,27 +67,6 @@ const getCalculators = (t: any) => [
 		description: t('calculators.floorHeating.description'),
 		icon: Thermometer,
 		href: '/construction/floor-heating',
-	},
-	{
-		id: 'heating-cost',
-		title: t('calculators.heatingCost.title'),
-		description: t('calculators.heatingCost.description'),
-		icon: Flame,
-		href: '/construction/heating-cost',
-	},
-	{
-		id: 'gas-usage',
-		title: t('calculators.gasUsage.title'),
-		description: t('calculators.gasUsage.description'),
-		icon: Zap,
-		href: '/construction/gas-usage',
-	},
-	{
-		id: 'water-usage',
-		title: t('calculators.waterUsage.title'),
-		description: t('calculators.waterUsage.description'),
-		icon: Droplets,
-		href: '/construction/water-usage',
 	},
 ];
 

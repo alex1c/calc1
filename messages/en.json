@@ -1262,9 +1262,104 @@
 		"paper-weight": {
 			"title": "Paper Weight Calculator",
 			"description": "Calculate paper weight by density and number of sheets",
-			"seo": "A4 sheets calculator, paper weight calculation by density, paper weight calculator",
 			"breadcrumbs": {
 				"category": "Life"
+			},
+			"hero": {
+				"grams": "g/m²",
+				"accuracy": "accuracy",
+				"format": "format"
+			},
+			"features": {
+				"densityCalculation": "Density calculation",
+				"areaCalculation": "Area calculation",
+				"weightEstimation": "Weight estimation",
+				"formatSupport": "Format support",
+				"accuracy": "High accuracy"
+			},
+			"seo": {
+				"title": "Online Paper Weight Calculator - Accurate Sheet Weight Calculation",
+				"description": "Free online calculator for calculating paper weight by density, number of sheets and format. Support for all standard paper formats.",
+				"overview": {
+					"title": "About Paper Weight Calculator",
+					"content": "Online paper weight calculator is a precise tool for determining paper weight by density, number of sheets and format. Simply enter paper density, number of sheets and format, and get accurate weight in grams or kilograms."
+				},
+				"methods": {
+					"title": "Calculation Methods",
+					"content": "The calculator uses several methods for accurate paper weight calculation:",
+					"density": {
+						"title": "By density",
+						"description": "Calculation based on paper density in g/m²"
+					},
+					"area": {
+						"title": "By area",
+						"description": "Calculation through sheet area and density"
+					}
+				},
+				"paperTypes": {
+					"title": "Paper Types",
+					"content": "Different types of paper have different densities:",
+					"office": {
+						"title": "Office paper",
+						"description": "Standard paper for printing",
+						"weight": "80-100 g/m²"
+					},
+					"cardstock": {
+						"title": "Cardstock",
+						"description": "Thick paper for packaging",
+						"weight": "200-300 g/m²"
+					},
+					"photo": {
+						"title": "Photo paper",
+						"description": "Special paper for photo printing",
+						"weight": "150-250 g/m²"
+					}
+				},
+				"applications": {
+					"title": "Applications",
+					"content": "Paper weight calculator is used in various fields:",
+					"professional": {
+						"title": "Professional use",
+						"printing": "Printing and publishing",
+						"packaging": "Packaging and labels",
+						"publishing": "Publishing industry",
+						"manufacturing": "Manufacturing"
+					},
+					"personal": {
+						"title": "Personal use",
+						"crafts": "Crafts and DIY",
+						"art": "Artistic creation",
+						"education": "Education and learning",
+						"hobbies": "Hobbies and interests"
+					}
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "For accurate results:",
+					"measurement": "Measure sheet dimensions accurately",
+					"accuracy": "Use precise density values",
+					"calculation": "Check calculation correctness",
+					"verification": "Compare with reference values"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"howToCalculate": {
+						"question": "How to calculate paper weight?",
+						"answer": "Enter paper density in g/m², number of sheets and select format. The calculator will automatically calculate total weight."
+					},
+					"accuracy": {
+						"question": "How accurate is the calculation?",
+						"answer": "The calculation is based on standard formulas and provides accuracy up to 99% with correct input data."
+					},
+					"formats": {
+						"question": "What formats are supported?",
+						"answer": "All standard formats are supported: A4, A3, A5, Letter, Legal and others."
+					},
+					"applications": {
+						"question": "Where is paper weight calculation used?",
+						"answer": "In printing, packaging, logistics, education and other fields where it's important to know exact paper weight."
+					}
+				}
 			}
 		},
 		"credit-loan": {
@@ -6166,11 +6261,186 @@
 				]
 			}
 		},
+		"waterUsage": {
+			"title": "Water Usage Calculator — Online Estimation",
+			"description": "Online calculator to estimate water usage and cost for home or apartment.",
+			"breadcrumbs": {
+				"life": "Life"
+			},
+			"hero": {
+				"liters": "Liters per day",
+				"accuracy": "Calculation accuracy",
+				"format": "Data format"
+			},
+			"features": {
+				"densityCalculation": "Water density calculation",
+				"areaCalculation": "Surface area calculation",
+				"weightEstimation": "Water weight estimation",
+				"formatSupport": "Format support",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "Water Usage Calculation",
+				"description": "Calculate water consumption and cost for home, office or construction",
+				"scenario": "Usage scenario",
+				"residents": "Number of residents/employees",
+				"residentsPlaceholder": "Enter number of people",
+				"waterPrice": "Water price ($/m³)",
+				"waterPricePlaceholder": "Enter price per cubic meter",
+				"hotWaterPrice": "Hot water price ($/m³)",
+				"hotWaterPricePlaceholder": "Enter hot water price",
+				"coldWaterPrice": "Cold water price ($/m³)",
+				"coldWaterPricePlaceholder": "Enter cold water price",
+				"losses": "Losses and leaks (%)",
+				"lossesPlaceholder": "Enter loss percentage",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"residentsRequired": "Enter number of residents",
+					"waterPriceRequired": "Enter water price",
+					"invalidNumber": "Enter valid number"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"dailyUsage": "Daily usage",
+				"monthlyUsage": "Monthly usage",
+				"yearlyUsage": "Yearly usage",
+				"hotWater": "Hot water",
+				"coldWater": "Cold water",
+				"totalCost": "Total cost",
+				"costPerDay": "Cost per day",
+				"costPerMonth": "Cost per month",
+				"costPerYear": "Cost per year",
+				"summary": "Summary",
+				"summaryText": "With {residents} residents, daily usage is {dailyUsage} liters, and monthly cost is {monthlyCost} dollars.",
+				"copy": "Copy",
+				"copied": "Copied!"
+			},
+			"scenarios": {
+				"residential": "Residential house",
+				"apartment": "Apartment",
+				"office": "Office",
+				"construction": "Construction",
+				"commercial": "Commercial space"
+			},
+			"seo": {
+				"title": "Online Water Usage Calculator — Consumption and Cost Calculation",
+				"description": "Online water usage calculator. Calculate consumption for apartments, houses, offices and construction. Support for hot and cold water, charts and data export.",
+				"keywords": "water usage, water calculator, water consumption, plumbing calculation, water consumption norms, water supply, water consumption calculation, construction calculator, water consumption",
+				"overview": {
+					"title": "About Water Usage Calculator",
+					"content": "Online water usage calculator helps calculate how much water is consumed in homes, apartments, offices or construction sites. Suitable for cost estimation, plumbing design, pump selection and resource optimization."
+				},
+				"calculation": {
+					"title": "How Water Usage is Calculated",
+					"content": "The calculator uses standard water consumption norms for different scenarios:",
+					"residential": "Residential premises: 200-300 l/person/day",
+					"office": "Offices: 50-100 l/person/day",
+					"construction": "Construction: 500-1000 l/day per site"
+				},
+				"features": {
+					"title": "Main Features",
+					"daily": "Calculation of daily, monthly and yearly water consumption",
+					"scenarios": "Support for domestic and construction scenarios",
+					"devices": "Input of number of residents, plumbing, devices",
+					"losses": "Accounting for losses, leaks and usage coefficients",
+					"conversion": "Conversion from liters to cubic meters and back",
+					"visualization": "Visualization of consumption in charts",
+					"responsive": "Responsive interface for all devices"
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"accurate": "Accurate calculations",
+					"accurateDesc": "Uses current water consumption norms",
+					"flexible": "Flexible settings",
+					"flexibleDesc": "Support for various usage scenarios",
+					"comprehensive": "Comprehensive analysis",
+					"comprehensiveDesc": "Accounting for hot and cold water, losses and leaks",
+					"export": "Data export",
+					"exportDesc": "Ability to save results in PDF or CSV"
+				},
+				"tips": {
+					"title": "Water Saving Tips",
+					"content": "You can reduce water consumption in several ways:",
+					"equipment": {
+						"title": "Equipment",
+						"faucets": "Install aerators on faucets",
+						"toilets": "Use dual-flush toilets",
+						"showerheads": "Install water-efficient showerheads",
+						"washing": "Use washing machines with A+++ class"
+					},
+					"habits": {
+						"title": "Habits",
+						"timing": "Reduce shower time",
+						"repair": "Fix leaks promptly",
+						"collection": "Collect rainwater for watering",
+						"efficient": "Use dishwashers instead of hand washing"
+					},
+					"construction": {
+						"title": "Construction",
+						"recycling": "Use recycled water for technical needs",
+						"monitoring": "Install water meters on site",
+						"planning": "Plan water supply in advance"
+					}
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate water usage in an apartment?",
+							"a": "Enter the number of residents and used appliances — the calculator will show total consumption."
+						},
+						{
+							"q": "Can I calculate water usage for construction?",
+							"a": "Yes, the calculator takes into account construction scenarios (concrete, watering, tool washing)."
+						},
+						{
+							"q": "In what units is the result displayed?",
+							"a": "In liters and cubic meters, with conversion capability."
+						},
+						{
+							"q": "Can I add custom parameters?",
+							"a": "Yes, you can specify non-standard devices and consumption norms."
+						},
+						{
+							"q": "How to find out monthly water usage?",
+							"a": "The calculated daily volume is multiplied by the number of days in the month."
+						},
+						{
+							"q": "Can I account for leaks and losses?",
+							"a": "Yes, the calculator adds a loss percentage of your choice."
+						},
+						{
+							"q": "Can I use the calculator for office or cafe?",
+							"a": "Yes, there is a calculation mode for commercial premises."
+						},
+						{
+							"q": "Does the calculator account for hot and cold water separately?",
+							"a": "Yes, you can set the proportion of hot and cold water."
+						},
+						{
+							"q": "Can I compare multiple scenarios?",
+							"a": "Yes, results are saved for comparison."
+						},
+						{
+							"q": "Is the calculator suitable for plumbing design?",
+							"a": "Yes, it helps determine required consumption for pump and pipe selection."
+						},
+						{
+							"q": "Can I download calculation results?",
+							"a": "Yes, report download in PDF or CSV is available."
+						}
+					]
+				}
+			}
+		},
 		"heatingCost": {
 			"title": "Heating Cost Calculator — Online Estimation",
 			"description": "Online calculator to estimate heating costs by system type, room size, and energy tariffs.",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"life": "Life"
 			},
 			"form": {
 				"title": "Heating Cost Calculator",
@@ -6275,7 +6545,7 @@
 			"title": "Gas Usage Calculator — Online Estimation",
 			"description": "Online calculator to estimate natural gas usage and cost for heating, cooking, or water heating.",
 			"breadcrumbs": {
-				"construction": "Construction"
+				"life": "Life"
 			},
 			"form": {
 				"title": "Gas Usage Calculator",

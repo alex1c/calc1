@@ -11,6 +11,7 @@ import {
 	AlertTriangle,
 	Calculator,
 	TrendingDown,
+	Wrench,
 } from 'lucide-react';
 
 const getCalculators = (t: any) => [
@@ -19,28 +20,28 @@ const getCalculators = (t: any) => [
 		title: t('calculators.fuel-consumption.title'),
 		description: t('calculators.fuel-consumption.description'),
 		icon: Fuel,
-		href: '/calc/fuel-consumption',
+		href: '/auto/fuel-consumption',
 	},
 	{
 		id: 'car-loan',
 		title: t('calculators.car-loan.title'),
 		description: t('calculators.car-loan.description'),
 		icon: CreditCard,
-		href: '/calc/car-loan',
+		href: '/auto/car-loan',
 	},
 	{
 		id: 'osago',
 		title: t('calculators.osago.title'),
 		description: t('calculators.osago.description'),
 		icon: Shield,
-		href: '/calc/osago',
+		href: '/auto/osago',
 	},
 	{
 		id: 'kasko',
 		title: t('calculators.kasko.title'),
 		description: t('calculators.kasko.description'),
 		icon: Shield,
-		href: '/calc/kasko',
+		href: '/auto/kasko',
 	},
 	{
 		id: 'vehicle-tax',
@@ -61,7 +62,7 @@ const getCalculators = (t: any) => [
 		title: t('calculators.customs.title'),
 		description: t('calculators.customs.description'),
 		icon: Truck,
-		href: '/calc/customs',
+		href: '/auto/customs',
 	},
 	{
 		id: 'traffic-fines',
@@ -75,14 +76,14 @@ const getCalculators = (t: any) => [
 		title: t('calculators.car-ownership.title'),
 		description: t('calculators.car-ownership.description'),
 		icon: Calculator,
-		href: '/calc/car-ownership',
+		href: '/auto/car-ownership',
 	},
 	{
 		id: 'car-depreciation',
 		title: t('calculators.car-depreciation.title'),
 		description: t('calculators.car-depreciation.description'),
 		icon: TrendingDown,
-		href: '/calc/car-depreciation',
+		href: '/auto/car-depreciation',
 	},
 ];
 
@@ -112,7 +113,7 @@ export default function AutoPage() {
 						return (
 							<Link
 								key={calculator.id}
-								href={`/${locale}/calc/${calculator.id}`}
+								href={`/${locale}${calculator.href}`}
 								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 							>
 								<div className='flex items-center mb-4'>
