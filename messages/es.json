@@ -6450,6 +6450,1298 @@
         }
       }
     },
+    "electricityUsage": {
+      "title": "Consumo Eléctrico — Calculadora en Línea",
+      "description": "Calculadora en línea para estimar el consumo y costo de electricidad para dispositivos domésticos o de construcción.",
+      "breadcrumbs": {
+        "life": "Vida"
+      },
+      "hero": {
+        "kwh": "kWh por mes",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "powerCalculation": "Cálculo de potencia",
+        "timeCalculation": "Seguimiento de tiempo",
+        "tariffCalculation": "Cálculo de tarifas",
+        "exportSupport": "Exportación de datos",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de Consumo Eléctrico",
+        "description": "Calcular consumo y costo de electricidad para dispositivos domésticos y de construcción",
+        "deviceName": "Nombre del dispositivo",
+        "deviceNamePlaceholder": "ej.: Refrigerador",
+        "power": "Potencia (W)",
+        "powerPlaceholder": "Ingrese potencia en vatios",
+        "quantity": "Número de dispositivos",
+        "quantityPlaceholder": "Ingrese cantidad",
+        "hoursPerDay": "Horas por día",
+        "hoursPerDayPlaceholder": "Ingrese horas de funcionamiento",
+        "daysPerMonth": "Días por mes",
+        "daysPerMonthPlaceholder": "Ingrese días de funcionamiento",
+        "tariff": "Tarifa (€/kWh)",
+        "tariffPlaceholder": "Ingrese tarifa por kWh",
+        "networkType": "Tipo de red",
+        "voltage": "Voltaje (V)",
+        "voltagePlaceholder": "220 o 380",
+        "loadFactor": "Factor de carga (%)",
+        "loadFactorPlaceholder": "Ingrese factor de carga",
+        "addDevice": "Agregar dispositivo",
+        "removeDevice": "Eliminar dispositivo",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "networkTypes": {
+          "single_phase": "Red monofásica",
+          "three_phase": "Red trifásica"
+        },
+        "errors": {
+          "deviceNameRequired": "Ingrese nombre del dispositivo",
+          "powerRequired": "Ingrese potencia del dispositivo",
+          "quantityRequired": "Ingrese número de dispositivos",
+          "hoursRequired": "Ingrese horas de funcionamiento",
+          "tariffRequired": "Ingrese tarifa",
+          "invalidNumber": "Ingrese número válido",
+          "powerTooHigh": "Potencia demasiado alta",
+          "hoursTooMany": "Demasiadas horas por día"
+        }
+      },
+      "results": {
+        "title": "Resultados del Cálculo",
+        "totalPower": "Potencia total",
+        "dailyConsumption": "Consumo diario",
+        "monthlyConsumption": "Consumo mensual",
+        "yearlyConsumption": "Consumo anual",
+        "dailyCost": "Costo diario",
+        "monthlyCost": "Costo mensual",
+        "yearlyCost": "Costo anual",
+        "costPerKwh": "Costo por kWh",
+        "summary": "Resumen",
+        "summaryText": "Con potencia total de {totalPower} W, el consumo diario es {dailyConsumption} kWh, y el costo mensual es {monthlyCost} euros.",
+        "devices": "Dispositivos",
+        "power": "Potencia",
+        "consumption": "Consumo",
+        "cost": "Costo",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "export": "Exportar",
+        "exportPdf": "PDF",
+        "exportCsv": "CSV"
+      },
+      "tips": {
+        "title": "Consejos para Ahorrar Electricidad",
+        "content": "Puedes reducir el consumo de electricidad de varias maneras:",
+        "equipment": {
+          "title": "Equipamiento",
+          "led": "Usa bombillas LED en lugar de incandescentes",
+          "efficient": "Compra electrodomésticos clase A+++",
+          "smart": "Instala enchufes inteligentes y termostatos",
+          "maintenance": "Mantén el equipo regularmente"
+        },
+        "habits": {
+          "title": "Hábitos",
+          "turn_off": "Apaga dispositivos no utilizados",
+          "temperature": "Optimiza la temperatura del hogar",
+          "timing": "Usa tarifas nocturnas",
+          "unplug": "Desconecta cargadores"
+        },
+        "construction": {
+          "title": "Construcción",
+          "planning": "Planifica el suministro eléctrico con anticipación",
+          "monitoring": "Instala medidores en el sitio",
+          "efficient": "Usa herramientas energéticamente eficientes"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de Consumo Eléctrico en Línea — Cálculo de Consumo y Costo",
+        "description": "Calculadora de consumo eléctrico en línea. Calcula consumo para hogares, oficinas y construcción. Soporte para tarifas, gráficos y exportación de datos.",
+        "keywords": "consumo eléctrico, calculadora eléctrica, consumo de energía, calculadora eléctrica, cálculo kWh, consumo energético, tarifa eléctrica, consumo energético, calculadora electricidad",
+        "overview": {
+          "title": "Sobre la Calculadora de Consumo Eléctrico",
+          "content": "La calculadora de consumo eléctrico en línea ayuda a calcular cuánta electricidad consumen tus dispositivos domésticos o de construcción por día, mes o año. Perfecta para estimación de costos, planificación de tarifas y análisis de eficiencia energética."
+        },
+        "calculation": {
+          "title": "Cómo se Calcula el Consumo Eléctrico",
+          "content": "La calculadora usa la fórmula: Consumo (kWh) = Potencia (kW) × Tiempo de Funcionamiento (h) × Factor de Carga",
+          "single_phase": "Red monofásica: P = U × I × cos(φ)",
+          "three_phase": "Red trifásica: P = √3 × U × I × cos(φ)",
+          "tariff": "Costo = Consumo × Tarifa"
+        },
+        "features": {
+          "title": "Características Principales",
+          "power": "Cálculo de consumo de energía (W, kWh)",
+          "powerDesc": "Cálculo de consumo de energía en vatios y kilovatios-hora con todos los parámetros",
+          "network": "Soporte para redes monofásicas y trifásicas",
+          "networkDesc": "Soporte para redes eléctricas monofásicas y trifásicas",
+          "time": "Contabilización del tiempo de funcionamiento, cantidad de dispositivos y factor de carga",
+          "timeDesc": "Contabilización del tiempo de funcionamiento, cantidad de dispositivos y factor de carga",
+          "tariff": "Posibilidad de especificar tarifa (€, $, £ etc.)",
+          "tariffDesc": "Posibilidad de especificar tarifa en rublos, dólares, euros y otras monedas",
+          "chart": "Gráfico de distribución de consumo por dispositivos",
+          "chartDesc": "Gráfico de distribución de consumo por dispositivos para claridad",
+          "export": "Exportación de datos a PDF y CSV",
+          "exportDesc": "Exportación de datos a PDF y CSV para uso posterior",
+          "responsive": "Interfaz adaptativa multiplataforma"
+        },
+        "advantages": {
+          "title": "Ventajas de la Calculadora",
+          "content": "Nuestra calculadora de consumo eléctrico proporciona muchas ventajas para el cálculo preciso del consumo energético.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Usa fórmulas y coeficientes actuales",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Soporte para varios tipos de redes y dispositivos",
+          "comprehensive": "Análisis integral",
+          "comprehensiveDesc": "Contabilización de potencia, tiempo de funcionamiento y tarifas",
+          "export": "Exportación de datos",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o CSV"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el consumo eléctrico de dispositivos domésticos?",
+              "a": "Ingresa la potencia del dispositivo, tiempo de funcionamiento y cantidad — la calculadora mostrará el consumo."
+            },
+            {
+              "q": "¿Puedo calcular el costo de la energía?",
+              "a": "Sí, solo especifica la tarifa por 1 kWh."
+            },
+            {
+              "q": "¿Cómo convertir Vatios a kWh?",
+              "a": "1 kWh = 1000 W multiplicado por horas de funcionamiento, dividido por 1000."
+            },
+            {
+              "q": "¿Puedo agregar múltiples dispositivos?",
+              "a": "Sí, la calculadora soporta cálculo para una lista de dispositivos."
+            },
+            {
+              "q": "¿Puedo tener en cuenta la tarifa nocturna?",
+              "a": "Sí, hay campos para tarifas diurnas y nocturnas."
+            },
+            {
+              "q": "¿La calculadora tiene en cuenta la red trifásica?",
+              "a": "Sí, puedes especificar el tipo de red y voltaje."
+            },
+            {
+              "q": "¿Cómo calcular el consumo energético anual?",
+              "a": "Los resultados se recalculan automáticamente por meses y años."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para oficina o taller?",
+              "a": "Sí, hay un modo \"uso comercial\"."
+            },
+            {
+              "q": "¿Cómo saber qué dispositivos consumen más?",
+              "a": "Los resultados se muestran como un gráfico por dispositivos."
+            },
+            {
+              "q": "¿Puedo exportar el informe?",
+              "a": "Sí, los resultados se pueden guardar en formato PDF o CSV."
+            },
+            {
+              "q": "¿Puedo tener en cuenta el factor de carga?",
+              "a": "Sí, la calculadora tiene en cuenta la potencia efectiva (carga real)."
+            }
+          ]
+        }
+      }
+    },
+    "rebarCalculator": {
+      "title": "Calculadora de Armaduras — Cálculo de Refuerzo en Línea",
+      "description": "Calculadora de armaduras en línea. Cálculo rápido de cantidad, longitud y peso de barras de refuerzo para cimientos, losas, columnas y muros.",
+      "breadcrumbs": {
+        "construction": "Construcción"
+      },
+      "hero": {
+        "bars": "Barras",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "quantityCalculation": "Cálculo de cantidad de armaduras",
+        "weightCalculation": "Cálculo de peso por GOST",
+        "gridSupport": "Soporte de mallas",
+        "exportSupport": "Exportación de datos",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de armaduras",
+        "description": "Calcule la cantidad y peso necesarios de barras de refuerzo para estructuras de hormigón",
+        "structureType": "Tipo de estructura",
+        "length": "Longitud (m)",
+        "lengthPlaceholder": "Ingrese la longitud de la estructura",
+        "width": "Ancho (m)",
+        "widthPlaceholder": "Ingrese el ancho de la estructura",
+        "height": "Altura (m)",
+        "heightPlaceholder": "Ingrese la altura de la estructura",
+        "gridSpacing": "Espaciado de malla (cm)",
+        "gridSpacingPlaceholder": "Ingrese el espaciado entre barras",
+        "rebarDiameter": "Diámetro de armadura (mm)",
+        "rebarDiameterPlaceholder": "Ingrese el diámetro de las barras",
+        "layers": "Número de capas",
+        "layersPlaceholder": "Ingrese el número de capas",
+        "overlap": "Solapamiento (cm)",
+        "overlapPlaceholder": "Ingrese la longitud del solapamiento",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "structureTypes": {
+          "foundation": "Cimiento",
+          "slab": "Losa",
+          "wall": "Muro",
+          "column": "Columna"
+        },
+        "errors": {
+          "lengthRequired": "Ingrese la longitud de la estructura",
+          "widthRequired": "Ingrese el ancho de la estructura",
+          "heightRequired": "Ingrese la altura de la estructura",
+          "gridSpacingRequired": "Ingrese el espaciado de malla",
+          "diameterRequired": "Ingrese el diámetro de armadura",
+          "invalidNumber": "Ingrese un número válido",
+          "lengthTooSmall": "La longitud es muy pequeña",
+          "widthTooSmall": "El ancho es muy pequeño",
+          "heightTooSmall": "La altura es muy pequeña",
+          "gridSpacingTooSmall": "El espaciado de malla es muy pequeño",
+          "diameterTooSmall": "El diámetro es muy pequeño"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "totalLength": "Longitud total",
+        "totalWeight": "Peso total",
+        "barCount": "Número de barras",
+        "barsPerLayer": "Barras por capa",
+        "weightPerMeter": "Peso por metro",
+        "cost": "Costo",
+        "summary": "Resumen",
+        "summaryText": "Para estructura {length}×{width}×{height} m se requiere {totalLength} m de armadura con peso total {totalWeight} kg.",
+        "structure": "Estructura",
+        "dimensions": "Dimensiones",
+        "grid": "Malla",
+        "rebar": "Armadura",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "export": "Exportar",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Consejos de refuerzo",
+        "content": "El refuerzo adecuado asegura la resistencia de las estructuras de hormigón:",
+        "diameter": {
+          "title": "Selección de diámetro",
+          "foundation": "Cimiento: Ø10-16 mm",
+          "slab": "Losa: Ø8-12 mm",
+          "wall": "Muro: Ø6-10 mm",
+          "column": "Columna: Ø12-20 mm"
+        },
+        "spacing": {
+          "title": "Espaciado de malla",
+          "foundation": "Cimiento: 15-25 cm",
+          "slab": "Losa: 10-20 cm",
+          "wall": "Muro: 15-30 cm",
+          "column": "Columna: 10-15 cm"
+        },
+        "construction": {
+          "title": "Construcción",
+          "overlap": "Solapamiento de barras: 30-50 diámetros",
+          "cover": "Capa protectora: 2-5 cm",
+          "anchoring": "Anclaje: 10-15 diámetros"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de Armaduras en Línea — Cálculo de Cantidad y Peso",
+        "description": "La calculadora de armaduras en línea ayuda a calcular el consumo de armaduras, peso y cantidad de barras para estructuras de hormigón. Soporte PDF y Excel.",
+        "keywords": "calculadora de armaduras, cálculo de armaduras, armaduras en línea, calculadora de armaduras, cálculo de peso de armaduras, cantidad de armaduras, refuerzo de cimientos, consumo de armaduras, peso de armaduras por diámetro, bewehrung berechnen",
+        "overview": {
+          "title": "Sobre la calculadora de armaduras",
+          "content": "La calculadora de armaduras en línea ayuda a calcular la cantidad y peso necesarios de barras de refuerzo para estructuras de hormigón — losas, cimientos, columnas, pisos y muros. Ingrese las dimensiones de la estructura, espaciado de malla y diámetro de armadura — la herramienta calcula instantáneamente la longitud total, peso y cantidad aproximada de barras."
+        },
+        "calculation": {
+          "title": "Cómo se calculan las armaduras",
+          "content": "La calculadora usa fórmulas estándar de cálculo de armaduras:",
+          "length": "Longitud = (Tamaño de estructura / Espaciado de malla + 1) × Número de capas",
+          "weight": "Peso = Longitud × Peso por metro (por GOST)",
+          "count": "Cantidad = Longitud / Longitud de barra"
+        },
+        "features": {
+          "title": "Características principales",
+          "quantity": "Cálculo de cantidad y peso de armaduras por longitud, espaciado y diámetro",
+          "quantityDesc": "Cálculo preciso de cantidad y peso de barras de refuerzo considerando todos los parámetros",
+          "grid": "Soporte de mallas redondas y cuadradas",
+          "gridDesc": "Soporte para varios tipos de mallas de refuerzo",
+          "weight": "Determinación automática de peso por GOST",
+          "weightDesc": "Cálculo automático del peso de armaduras por estándares estatales",
+          "visualization": "Visualización del esquema de refuerzo",
+          "visualizationDesc": "Visualización clara del esquema de refuerzo de la estructura",
+          "structures": "Cálculo para cimiento, losa, muro o columna",
+          "structuresDesc": "Soporte para varios tipos de estructuras de hormigón",
+          "export": "Exportación de cálculo a PDF / Excel",
+          "exportDesc": "Posibilidad de guardar resultados en varios formatos",
+          "chart": "Gráfico interactivo de consumo de armaduras",
+          "chartDesc": "Visualización del consumo de armaduras en gráficos",
+          "units": "Soporte de unidades métricas e imperiales (mm, cm, m, pies)",
+          "unitsDesc": "Trabajo con diferentes sistemas de medición"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de armaduras proporciona muchas ventajas para el cálculo preciso del refuerzo.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Usa GOST actuales y códigos de construcción",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Soporte para varios tipos de estructuras y mallas",
+          "comprehensive": "Análisis integral",
+          "comprehensiveDesc": "Contabilización de todos los parámetros de refuerzo",
+          "export": "Exportación de datos",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o Excel"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular la cantidad de armaduras para cimientos?",
+              "a": "Ingrese las dimensiones, espaciado de malla y diámetro — la calculadora calculará la longitud total y peso."
+            },
+            {
+              "q": "¿Cómo elegir el diámetro de armadura?",
+              "a": "Para cimientos se usa Ø10–16 mm, para muros — Ø8–12 mm."
+            },
+            {
+              "q": "¿Puedo calcular el peso de armaduras?",
+              "a": "Sí, el peso se calcula automáticamente por GOST dependiendo del diámetro."
+            },
+            {
+              "q": "¿Qué es el espaciado de armaduras?",
+              "a": "Distancia entre barras en la malla — afecta la resistencia y consumo."
+            },
+            {
+              "q": "¿Es la calculadora adecuada para cimientos de zapatas?",
+              "a": "Sí, puede seleccionar el tipo de estructura y establecer sus parámetros."
+            },
+            {
+              "q": "¿Cómo convertir el peso de armaduras a metros lineales?",
+              "a": "La calculadora hace esto automáticamente, mostrando ambos valores."
+            },
+            {
+              "q": "¿Puedo especificar unidades no estándar (pies, pulgadas)?",
+              "a": "Sí, están disponibles los sistemas métrico e imperial."
+            },
+            {
+              "q": "¿La calculadora soporta exportación a Excel?",
+              "a": "Sí, hay exportación a archivos PDF y Excel."
+            },
+            {
+              "q": "¿Puedo calcular dos mallas (superior e inferior)?",
+              "a": "Sí, se proporciona refuerzo de doble capa."
+            },
+            {
+              "q": "¿Es adecuada para losas de piso?",
+              "a": "Sí, la calculadora es universal — elija \"losa\" en el tipo de estructura."
+            },
+            {
+              "q": "¿Puedo guardar los resultados?",
+              "a": "Sí, los resultados se pueden descargar o imprimir."
+            }
+          ]
+        }
+      }
+    },
+    "cableSectionCalculator": {
+      "title": "Calculadora de Sección de Cable — Cálculo de Grosor de Conductor en Línea",
+      "description": "La calculadora de sección de cable te permite determinar el grosor ideal del conductor según la potencia, la corriente y la longitud del cable.",
+      "breadcrumbs": {
+        "construction": "Construcción"
+      },
+      "hero": {
+        "cables": "Cables",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "powerCalculation": "Cálculo por potencia",
+        "currentCalculation": "Cálculo por corriente",
+        "voltageDrop": "Consideración de caída de tensión",
+        "materialSupport": "Soporte de materiales",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de sección de cable",
+        "description": "Calcula la sección óptima del conductor para instalaciones eléctricas",
+        "calculationType": "Tipo de cálculo",
+        "power": "Potencia (kW)",
+        "powerPlaceholder": "Ingrese la potencia de la carga",
+        "current": "Corriente (A)",
+        "currentPlaceholder": "Ingrese la corriente de la carga",
+        "voltage": "Tensión (V)",
+        "voltagePlaceholder": "Ingrese la tensión de la red",
+        "length": "Longitud de línea (m)",
+        "lengthPlaceholder": "Ingrese la longitud del cable",
+        "material": "Material del conductor",
+        "phaseType": "Tipo de red",
+        "powerFactor": "Factor de potencia (cosφ)",
+        "powerFactorPlaceholder": "Ingrese el factor de potencia",
+        "voltageDrop": "Caída de tensión admisible (%)",
+        "voltageDropPlaceholder": "Ingrese las pérdidas admisibles",
+        "temperature": "Temperatura ambiente (°C)",
+        "temperaturePlaceholder": "Ingrese la temperatura",
+        "installationMethod": "Método de instalación",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "calculationTypes": {
+          "power": "Por potencia",
+          "current": "Por corriente"
+        },
+        "materials": {
+          "copper": "Cobre",
+          "aluminum": "Aluminio"
+        },
+        "phaseTypes": {
+          "single": "Monofásica",
+          "three": "Trifásica"
+        },
+        "installationMethods": {
+          "open": "Instalación abierta",
+          "closed": "Instalación cerrada",
+          "underground": "Instalación subterránea"
+        },
+        "errors": {
+          "powerRequired": "Ingrese la potencia de la carga",
+          "currentRequired": "Ingrese la corriente de la carga",
+          "voltageRequired": "Ingrese la tensión de la red",
+          "lengthRequired": "Ingrese la longitud de la línea",
+          "invalidNumber": "Ingrese un número válido",
+          "powerTooSmall": "La potencia es muy pequeña",
+          "currentTooSmall": "La corriente es muy pequeña",
+          "voltageTooSmall": "La tensión es muy pequeña",
+          "lengthTooSmall": "La longitud es muy pequeña",
+          "powerFactorTooSmall": "El factor de potencia es muy pequeño",
+          "voltageDropTooSmall": "La caída de tensión es muy pequeña"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "recommendedSection": "Sección recomendada",
+        "standardSection": "Sección estándar",
+        "currentDensity": "Densidad de corriente",
+        "voltageDrop": "Caída de tensión",
+        "voltageDropPercent": "Caída de tensión (%)",
+        "resistance": "Resistencia",
+        "weight": "Peso del cable",
+        "cost": "Costo",
+        "summary": "Resumen",
+        "summaryText": "Para carga {power} kW a longitud {length} m, se recomienda cable de sección {section} mm².",
+        "cable": "Cable",
+        "specifications": "Especificaciones",
+        "installation": "Instalación",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "export": "Exportar",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Consejos de selección de cable",
+        "content": "La selección correcta de la sección del cable asegura la seguridad y confiabilidad del suministro eléctrico:",
+        "power": {
+          "title": "Cálculo por potencia",
+          "formula": "I = P / (U × cosφ)",
+          "description": "La corriente se calcula usando la fórmula de potencia"
+        },
+        "voltage": {
+          "title": "Caída de tensión",
+          "residential": "Residencial: hasta 5%",
+          "industrial": "Industrial: hasta 3%",
+          "description": "Las pérdidas admisibles dependen del tipo de objeto"
+        },
+        "materials": {
+          "title": "Materiales del conductor",
+          "copper": "Cobre: menor resistencia, mayor costo",
+          "aluminum": "Aluminio: mayor resistencia, menor costo",
+          "description": "El cobre es preferible para locales residenciales"
+        },
+        "installation": {
+          "title": "Métodos de instalación",
+          "open": "Abierta: mejor refrigeración",
+          "closed": "Cerrada: peor refrigeración",
+          "underground": "Subterránea: consideración de humedad"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de Sección de Cable en Línea — Cálculo de Grosor por Potencia y Corriente",
+        "description": "Calculadora en línea para cálculo de sección de cable por potencia, longitud de línea y corriente de carga. Selección de conductor por GOST. Cobre y aluminio.",
+        "keywords": "calculadora de sección de cable, cálculo de grosor por potencia, eléctrica en línea, calculadora de sección de cable, cálculo de corriente por potencia, selección de cable por corriente, cálculo de cable de cobre, cálculo de cable de aluminio, caída de tensión, calculadora de grosor de cable eléctrico, sección de cable, cable eléctrico, cableado de casa, instalación eléctrica, cálculos eléctricos, cable por corriente, cable por potencia, seguridad eléctrica, cable GOST, estándares de cable, normas eléctricas, diseño de cableado eléctrico, cargas eléctricas, carga de corriente, pérdidas eléctricas, factor de potencia, redes eléctricas, equipos eléctricos, sistemas eléctricos, instalaciones eléctricas",
+        "overview": {
+          "title": "Sobre la calculadora de sección de cable",
+          "content": "La calculadora de sección de cable en línea te permite determinar el grosor ideal del conductor según la potencia, la corriente y la longitud del cable. Tiene en cuenta el tipo de corriente, el material del conductor y la caída de tensión."
+        },
+        "calculation": {
+          "title": "Cómo se calcula la sección del cable",
+          "content": "La calculadora usa fórmulas estándar de cálculo de sección de cable:",
+          "power": "Por potencia: I = P / (U × cosφ)",
+          "section": "Sección: S = I / (J × k)",
+          "voltageDrop": "Pérdidas: ΔU = 2 × I × R × L / 1000"
+        },
+        "features": {
+          "title": "Características principales",
+          "power": "Cálculo por potencia (W), corriente (A) o carga (kW)",
+          "powerDesc": "Cálculo preciso de sección de cable por varios parámetros de carga",
+          "phase": "Soporte de red monofásica y trifásica",
+          "phaseDesc": "Consideración de características de sistemas eléctricos monofásicos y trifásicos",
+          "material": "Selección de material del conductor: cobre o aluminio",
+          "materialDesc": "Soporte para varios materiales de conductor considerando sus características",
+          "voltage": "Consideración de longitud de línea y caída de tensión",
+          "voltageDesc": "Cálculo automático de caída de tensión dependiendo de la longitud del cable",
+          "standard": "Selección automática de sección estándar más cercana (GOST)",
+          "standardDesc": "Selección de sección estándar de cable según GOST y estándares internacionales",
+          "protection": "Sugerencias de calificación de dispositivos de protección",
+          "protectionDesc": "Recomendaciones para selección de dispositivos de protección de cable",
+          "chart": "Gráfico interactivo de dependencia de corriente y sección",
+          "chartDesc": "Visualización de dependencia entre corriente y sección de cable",
+          "export": "Exportación de resultados a PDF y Excel",
+          "exportDesc": "Posibilidad de guardar resultados en varios formatos",
+          "units": "Soporte de unidades métricas e imperiales",
+          "unitsDesc": "Trabajo con diferentes sistemas de medición"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de sección de cable proporciona muchas ventajas para el cálculo preciso de cableado eléctrico.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Usa GOST actuales y estándares internacionales",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Soporte para varios tipos de redes y materiales",
+          "comprehensive": "Análisis integral",
+          "comprehensiveDesc": "Consideración de todos los parámetros de cableado eléctrico",
+          "export": "Exportación de datos",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o Excel"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular la sección del cable por potencia?",
+              "a": "Ingrese la potencia de la carga y la longitud de la línea — la calculadora calculará la sección óptima."
+            },
+            {
+              "q": "¿Puedo tener en cuenta la caída de tensión?",
+              "a": "Sí, la herramienta calcula automáticamente la caída de tensión y advierte si excede la norma."
+            },
+            {
+              "q": "¿Qué elegir — cobre o aluminio?",
+              "a": "El cobre tiene menor resistencia y conduce mejor la corriente, pero es más caro."
+            },
+            {
+              "q": "¿Es adecuada para sistemas trifásicos?",
+              "a": "Sí, puede seleccionar el tipo de red — monofásica o trifásica."
+            },
+            {
+              "q": "¿Puedo calcular la corriente si conozco la potencia?",
+              "a": "Sí, la calculadora calcula automáticamente la corriente usando la fórmula P = U × I × cosφ."
+            },
+            {
+              "q": "¿Qué estándares se usan?",
+              "a": "Los cálculos se realizan según GOST y estándares internacionales IEC."
+            },
+            {
+              "q": "¿Qué es cosφ?",
+              "a": "Es el factor de potencia, generalmente se toma como 0.9 para electrodomésticos."
+            },
+            {
+              "q": "¿Hay tabla de secciones estándar?",
+              "a": "Sí, la calculadora selecciona automáticamente el valor estándar más cercano."
+            },
+            {
+              "q": "¿Puedo exportar los resultados?",
+              "a": "Sí, se soporta exportación a PDF y Excel."
+            },
+            {
+              "q": "¿Se consideran la temperatura y el método de instalación?",
+              "a": "Sí, para profesionales se proporciona modo avanzado con estos parámetros."
+            },
+            {
+              "q": "¿Puedo usar para corriente continua (DC)?",
+              "a": "Sí, el cálculo es adecuado también para corriente continua."
+            },
+            {
+              "q": "¿Cómo seleccionar sección para tomas?",
+              "a": "Para tomas, generalmente se usa cable de sección 2.5 mm² (cobre) o 4 mm² (aluminio)."
+            },
+            {
+              "q": "¿Qué es la densidad de corriente?",
+              "a": "Es la relación de corriente al área de sección transversal del conductor, medida en A/mm²."
+            },
+            {
+              "q": "¿Cómo calcular sección para iluminación?",
+              "a": "Para iluminación, generalmente es suficiente cable de sección 1.5 mm² (cobre) o 2.5 mm² (aluminio)."
+            },
+            {
+              "q": "¿Qué es la carga de corriente admisible?",
+              "a": "Es la corriente máxima que puede fluir por el cable durante mucho tiempo sin sobrecalentamiento."
+            },
+            {
+              "q": "¿Cómo afecta la temperatura a la sección del cable?",
+              "a": "Cuando la temperatura sube, la carga de corriente admisible disminuye, por lo que la sección aumenta."
+            },
+            {
+              "q": "¿Qué es el coeficiente de instalación?",
+              "a": "Es el coeficiente que considera el método de instalación del cable y su refrigeración."
+            },
+            {
+              "q": "¿Cómo calcular sección para motor?",
+              "a": "Para motores se considera la corriente de arranque, que es 5-7 veces mayor que la nominal."
+            },
+            {
+              "q": "¿Qué es la selectividad de protección?",
+              "a": "Es la propiedad de los dispositivos de protección de desconectar solo la sección dañada de la red."
+            },
+            {
+              "q": "¿Cómo elegir cable para uso exterior?",
+              "a": "Para uso exterior se usan cables con aislamiento resistente a UV y temperatura."
+            },
+            {
+              "q": "¿Qué es la marcación del cable?",
+              "a": "Es la designación alfanumérica que indica el material del conductor, aislamiento y construcción del cable."
+            },
+            {
+              "q": "¿Cómo calcular sección para máquina de soldar?",
+              "a": "Para máquinas de soldar se considera la alta corriente de arranque y modo de operación a corto plazo."
+            },
+            {
+              "q": "¿Qué es la potencia reactiva?",
+              "a": "Es la potencia asociada con la creación de campos magnéticos y eléctricos en circuitos de CA."
+            },
+            {
+              "q": "¿Cómo elegir cable para instalación subterránea?",
+              "a": "Para instalación subterránea se usan cables con protección blindada y aislamiento resistente a humedad."
+            },
+            {
+              "q": "¿Qué es el coeficiente de simultaneidad?",
+              "a": "Es el coeficiente que considera la probabilidad de operación simultánea de todos los consumidores."
+            },
+            {
+              "q": "¿Cómo calcular sección para puesta a tierra?",
+              "a": "La sección del conductor de puesta a tierra debe ser al menos la mitad de la sección del conductor de fase."
+            },
+            {
+              "q": "¿Qué es el cortocircuito?",
+              "a": "Es la conexión de conductores de fase y neutro con baja resistencia, que lleva a un aumento brusco de corriente."
+            },
+            {
+              "q": "¿Cómo elegir cable para líneas de alta tensión?",
+              "a": "Para líneas de alta tensión se usan cables especiales con aislamiento reforzado y blindaje."
+            },
+            {
+              "q": "¿Qué es la resistencia eléctrica?",
+              "a": "Es la capacidad del aislamiento de soportar tensión eléctrica sin ruptura."
+            },
+            {
+              "q": "¿Cómo calcular sección para alimentación de respaldo?",
+              "a": "Para alimentación de respaldo se considera la potencia de todos los consumidores críticos."
+            },
+            {
+              "q": "¿Qué es la seguridad eléctrica?",
+              "a": "Es el conjunto de medidas dirigidas a prevenir descarga eléctrica a las personas."
+            },
+            {
+              "q": "¿Cómo elegir cable para instalación industrial?",
+              "a": "Para instalaciones industriales se consideran ambiente agresivo, vibraciones y cargas altas."
+            }
+          ]
+        }
+      }
+    },
+    "stairsCalculator": {
+      "title": "Calculadora de Escaleras — Diseño de Escaleras en Línea",
+      "description": "La calculadora de escaleras en línea calcula el ángulo, número de peldaños y longitud de subida. Herramienta perfecta para diseñar escaleras en casas, cabañas o sitios de construcción.",
+      "breadcrumbs": {
+        "construction": "Construcción"
+      },
+      "hero": {
+        "steps": "Peldaños",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "angleCalculation": "Cálculo de ángulo",
+        "stepsCalculation": "Cálculo de número de peldaños",
+        "comfortFormula": "Fórmula de escalera cómoda",
+        "visualization": "Visualización",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de escalera",
+        "description": "Calcula el ángulo, número de peldaños y longitud del tramo de la escalera",
+        "totalHeight": "Altura total de subida (mm)",
+        "totalHeightPlaceholder": "Ingrese la altura de subida",
+        "stepDepth": "Profundidad del peldaño (huella, mm)",
+        "stepDepthPlaceholder": "Ingrese la profundidad del peldaño",
+        "stepHeight": "Altura del peldaño (contrahuella, mm)",
+        "stepHeightPlaceholder": "Ingrese la altura del peldaño",
+        "stairsType": "Tipo de escalera",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "stairsTypes": {
+          "straight": "Recta",
+          "turn90": "Giro 90°",
+          "turn180": "Giro 180°"
+        },
+        "errors": {
+          "heightRequired": "Ingrese la altura de subida",
+          "depthRequired": "Ingrese la profundidad del peldaño",
+          "stepHeightRequired": "Ingrese la altura del peldaño",
+          "invalidNumber": "Ingrese un número válido",
+          "heightTooSmall": "La altura es muy pequeña",
+          "depthTooSmall": "La profundidad es muy pequeña",
+          "stepHeightTooSmall": "La altura del peldaño es muy pequeña",
+          "stepHeightTooLarge": "La altura del peldaño es muy grande",
+          "depthTooLarge": "La profundidad es muy grande"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "stepsCount": "Número de peldaños",
+        "totalLength": "Longitud total de la escalera",
+        "angle": "Ángulo de inclinación",
+        "comfortLevel": "Nivel de comodidad",
+        "comfortFormula": "Fórmula de escalera cómoda",
+        "formulaValue": "2h + b = {value} mm",
+        "recommendations": "Recomendaciones",
+        "summary": "Resumen",
+        "summaryText": "Para altura de subida {height} mm se requieren {steps} peldaños con ángulo {angle}°.",
+        "stairs": "Escalera",
+        "specifications": "Especificaciones",
+        "comfort": "Comodidad",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "export": "Exportar",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Consejos de diseño de escaleras",
+        "content": "El cálculo correcto de la escalera asegura la seguridad y comodidad de uso:",
+        "formula": {
+          "title": "Fórmula de escalera cómoda",
+          "formula": "2h + b ≈ 600–640 mm",
+          "description": "Donde h es la altura del peldaño, b es la profundidad de la huella"
+        },
+        "angle": {
+          "title": "Ángulo de inclinación",
+          "comfortable": "Cómodo: 30–40°",
+          "acceptable": "Aceptable: 20–50°",
+          "description": "El ángulo óptimo asegura la comodidad de subida"
+        },
+        "dimensions": {
+          "title": "Dimensiones de peldaños",
+          "height": "Altura: 150–200 mm",
+          "depth": "Profundidad: 250–350 mm",
+          "description": "Dimensiones estándar para escaleras cómodas"
+        },
+        "safety": {
+          "title": "Seguridad",
+          "handrail": "Los pasamanos son obligatorios",
+          "lighting": "Buena iluminación",
+          "description": "El cumplimiento de las normas de seguridad es obligatorio"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de Escaleras en Línea — Cálculo de Ángulo y Peldaños",
+        "description": "La calculadora de escaleras en línea calcula el ángulo, número de peldaños, altura y longitud del tramo. Herramienta conveniente para diseñar escaleras en casas, cabañas o sitios de construcción.",
+        "keywords": "calculadora de escaleras, cálculo de escaleras, ángulo de escalera, número de peldaños, fórmula de escalera, escaleras cómodas, proyecto de escalera, construcción de escaleras, escaleras DIY, cálculo de peldaños, ángulo de escalera, altura de peldaño, profundidad de peldaño, huella, contrahuella, longitud de escalera, diseño de escaleras, escaleras de casa, escaleras de cabaña, escaleras de oficina, escaleras de sótano, escaleras de ático, escaleras de segundo piso, escaleras de casa privada, escaleras de cabaña, escaleras de townhouse, escaleras de dúplex, escaleras de penthouse, escaleras de loft, escaleras de estudio, escaleras de apartamento",
+        "overview": {
+          "title": "Sobre la calculadora de escaleras",
+          "content": "La calculadora de escaleras en línea calcula el ángulo, número de peldaños, altura y longitud del tramo. Herramienta conveniente para diseñar escaleras en casas, cabañas o sitios de construcción. Se consideran estándares de seguridad y comodidad."
+        },
+        "calculation": {
+          "title": "Cómo se calculan las escaleras",
+          "content": "La calculadora usa fórmulas estándar de cálculo de escaleras:",
+          "steps": "Número de peldaños: n = H / h",
+          "angle": "Ángulo de inclinación: α = arctan(H / L)",
+          "comfort": "Fórmula de escalera cómoda: 2h + b ≈ 600–640 mm"
+        },
+        "features": {
+          "title": "Características principales",
+          "angle": "Cálculo de ángulo de escalera",
+          "angleDesc": "Cálculo preciso del ángulo para subida cómoda",
+          "steps": "Cálculo de número de peldaños",
+          "stepsDesc": "Cálculo automático del número óptimo de peldaños",
+          "comfort": "Fórmula de escalera cómoda",
+          "comfortDesc": "Verificación de cumplimiento con fórmula 2h + b ≈ 600–640 mm",
+          "visualization": "Visualización de escalera",
+          "visualizationDesc": "Representación gráfica de la escalera calculada",
+          "types": "Varios tipos de escaleras",
+          "typesDesc": "Soporte para escaleras rectas, giratorias y espirales",
+          "standards": "Cumplimiento de estándares",
+          "standardsDesc": "Cálculo según GOST y estándares internacionales",
+          "export": "Exportación de resultados",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o Excel",
+          "recommendations": "Recomendaciones",
+          "recommendationsDesc": "Consejos para mejorar la construcción de escaleras"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de escaleras proporciona muchas ventajas para el diseño preciso.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Usa estándares y fórmulas actuales",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Soporte para varios tipos y tamaños de escaleras",
+          "comprehensive": "Análisis integral",
+          "comprehensiveDesc": "Consideración de todos los parámetros de seguridad y comodidad",
+          "export": "Exportación de datos",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o Excel"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el número de peldaños en una escalera?",
+              "a": "Número de peldaños = Altura total de subida / Altura del peldaño."
+            },
+            {
+              "q": "¿Qué ángulo se considera cómodo para escaleras?",
+              "a": "El ángulo cómodo de escalera es de 30–40 grados."
+            },
+            {
+              "q": "¿Cómo elegir la altura y profundidad del peldaño?",
+              "a": "Use la fórmula de escalera cómoda: 2h + b ≈ 600–640 mm, donde h es altura, b es profundidad."
+            },
+            {
+              "q": "¿Qué estándares se usan para el cálculo de escaleras?",
+              "a": "Los cálculos se realizan según GOST y estándares internacionales de seguridad."
+            },
+            {
+              "q": "¿Qué es la fórmula de escalera cómoda 2h + b?",
+              "a": "Es la fórmula donde el doble de la altura del peldaño más la profundidad de la huella debe ser 600–640 mm."
+            },
+            {
+              "q": "¿Cuál es la altura mínima y máxima del peldaño permitida?",
+              "a": "La altura del peldaño debe ser de 150 a 200 mm para subida cómoda."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para escaleras exteriores?",
+              "a": "Sí, la calculadora es adecuada tanto para escaleras interiores como exteriores."
+            },
+            {
+              "q": "¿Cómo calcular escaleras giratorias de 90°?",
+              "a": "Para escaleras giratorias se considera la longitud adicional de la plataforma de giro."
+            },
+            {
+              "q": "¿Cómo calcular la longitud del tramo de escalera?",
+              "a": "Longitud del tramo = Número de peldaños × Profundidad del peldaño."
+            },
+            {
+              "q": "¿Cómo reducir el ángulo sin cambiar la altura?",
+              "a": "Aumente la profundidad de los peldaños o agregue una plataforma de giro."
+            },
+            {
+              "q": "¿Puedo usar este cálculo para escaleras de metal y concreto?",
+              "a": "Sí, los principios de cálculo son los mismos para todos los tipos de escaleras."
+            },
+            {
+              "q": "¿Qué hacer si el cálculo muestra un ángulo muy empinado?",
+              "a": "Aumente la profundidad de los peldaños o reduzca su altura para bajar el ángulo."
+            },
+            {
+              "q": "¿Cómo calcular escaleras para personas mayores?",
+              "a": "Use menor altura de peldaños (150–160 mm) y mayor profundidad (300–350 mm)."
+            },
+            {
+              "q": "¿Cuál es el ancho mínimo de escalera?",
+              "a": "El ancho mínimo de escalera en edificios residenciales es de 800 mm."
+            },
+            {
+              "q": "¿Cómo calcular escaleras de sótano?",
+              "a": "Considere el espacio limitado y use un ángulo más empinado (hasta 45°)."
+            },
+            {
+              "q": "¿Qué son los peldaños de viento?",
+              "a": "Son peldaños con ancho variable, usados en escaleras giratorias."
+            },
+            {
+              "q": "¿Cómo calcular escaleras espirales?",
+              "a": "Para escaleras espirales se usan fórmulas especiales con consideración del radio."
+            },
+            {
+              "q": "¿Cuál debe ser la altura del pasamanos?",
+              "a": "La altura del pasamanos debe ser de 900–1100 mm desde la superficie del peldaño."
+            },
+            {
+              "q": "¿Cómo calcular escaleras de ático?",
+              "a": "Considere el espacio limitado y use escaleras plegables o de escalera."
+            },
+            {
+              "q": "¿Qué es la viga en una escalera?",
+              "a": "La viga es la viga inclinada sobre la cual descansan los peldaños de la escalera."
+            },
+            {
+              "q": "¿Cómo calcular escaleras para discapacitados?",
+              "a": "Use ángulo suave (hasta 20°), peldaños anchos y pasamanos a ambos lados."
+            },
+            {
+              "q": "¿Qué profundidad de peldaño para escaleras exteriores?",
+              "a": "Para escaleras exteriores, la profundidad del peldaño debe ser de al menos 300 mm."
+            },
+            {
+              "q": "¿Cómo calcular escaleras en townhouse?",
+              "a": "Considere el espacio limitado y use soluciones compactas."
+            },
+            {
+              "q": "¿Qué es la cuerda en una escalera?",
+              "a": "La cuerda es la viga lateral de la escalera en la que se cortan los peldaños."
+            },
+            {
+              "q": "¿Cómo calcular escaleras en loft?",
+              "a": "Considere el estilo del interior y use materiales y construcciones modernas."
+            },
+            {
+              "q": "¿Qué altura de peldaño para escaleras infantiles?",
+              "a": "Para escaleras infantiles, la altura del peldaño debe ser de 120–150 mm."
+            },
+            {
+              "q": "¿Cómo calcular escaleras en penthouse?",
+              "a": "Considere las ventanas panorámicas y use construcciones ligeras."
+            },
+            {
+              "q": "¿Qué es la contrahuella?",
+              "a": "La contrahuella es la parte vertical del peldaño que determina su altura."
+            },
+            {
+              "q": "¿Cómo calcular escaleras en estudio?",
+              "a": "Use soluciones compactas y construcciones multifuncionales."
+            },
+            {
+              "q": "¿Qué profundidad de peldaño para escaleras de oficina?",
+              "a": "Para escaleras de oficina, la profundidad del peldaño debe ser de 280–320 mm."
+            },
+            {
+              "q": "¿Cómo calcular escaleras en apartamentos?",
+              "a": "Considere el espacio limitado y use soluciones modernas."
+            },
+            {
+              "q": "¿Qué es la huella?",
+              "a": "La huella es la parte horizontal del peldaño sobre la que se pisa."
+            },
+            {
+              "q": "¿Cómo calcular escaleras en dúplex?",
+              "a": "Considere la conexión entre pisos y use soluciones convenientes."
+            }
+          ]
+        }
+      }
+    },
+    "ipCalculator": {
+      "title": "Calculadora de IP y Subredes — CIDR / IPv4 / IPv6",
+      "description": "Calculadora de IP y subredes para IPv4 y IPv6. Calcula red, primer/último IP, CIDR, número de hosts, con cálculo inverso de rango a CIDR.",
+      "breadcrumbs": {
+        "it": "IT"
+      },
+      "hero": {
+        "networks": "Redes",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "ipv4Calculation": "Cálculo IPv4",
+        "ipv6Calculation": "Cálculo IPv6",
+        "cidrSupport": "Soporte CIDR",
+        "reverseCalculation": "Cálculo inverso",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de IP y subredes",
+        "description": "Calcula parámetros de red, rango de IP y número de hosts",
+        "ipAddress": "Dirección IP / CIDR",
+        "ipAddressPlaceholder": "192.168.1.0/24 o 2001:db8::/48",
+        "ipMask": "IP + máscara",
+        "ipMaskPlaceholder": "192.168.1.0 + 255.255.255.0",
+        "ipRange": "Rango de IP",
+        "ipRangePlaceholder": "192.168.1.1 - 192.168.1.254",
+        "calculationType": "Tipo de cálculo",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "calculationTypes": {
+          "cidr": "IP/CIDR",
+          "mask": "IP + máscara",
+          "range": "Rango de IP"
+        },
+        "errors": {
+          "ipRequired": "Ingrese dirección IP",
+          "invalidIp": "Dirección IP inválida",
+          "invalidCidr": "CIDR inválido",
+          "invalidMask": "Máscara inválida",
+          "invalidRange": "Rango inválido",
+          "ipv4Only": "Solo IPv4",
+          "ipv6Only": "Solo IPv6"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "ipType": "Tipo de IP",
+        "networkAddress": "Dirección de red",
+        "firstIp": "Primer IP",
+        "lastIp": "Último IP",
+        "broadcastAddress": "Dirección de broadcast",
+        "subnetMask": "Máscara de subred",
+        "cidr": "CIDR",
+        "hostsCount": "Número de hosts",
+        "hostRange": "Rango de hosts",
+        "summary": "Resumen",
+        "summaryText": "Red {network} con {hosts} hosts en rango {first} - {last}.",
+        "network": "Red",
+        "specifications": "Especificaciones",
+        "hosts": "Hosts",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "export": "Exportar",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Consejos de IP y subredes",
+        "content": "El cálculo correcto de IP y subredes asegura la configuración correcta de redes:",
+        "cidr": {
+          "title": "Notación CIDR",
+          "description": "CIDR muestra el número de bits en la máscara de subred",
+          "example": "Ejemplo: /24 significa máscara 255.255.255.0"
+        },
+        "ipv4": {
+          "title": "Direcciones IPv4",
+          "private": "Privadas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16",
+          "public": "Públicas: todas las demás",
+          "description": "IPv4 usa direcciones de 32 bits"
+        },
+        "ipv6": {
+          "title": "Direcciones IPv6",
+          "private": "Locales: fe80::/10, fc00::/7",
+          "public": "Globales: 2000::/3",
+          "description": "IPv6 usa direcciones de 128 bits"
+        },
+        "subnets": {
+          "title": "Subredes",
+          "calculation": "Cálculo: 2^(32-CIDR) - 2 hosts",
+          "description": "Considera direcciones de red y broadcast"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de IP y Subredes en Línea — CIDR / IPv4 / IPv6",
+        "description": "La calculadora de IP y subredes permite calcular red, primer/último IP, máscara, CIDR y número de hosts para IPv4 y IPv6. Soporte para cálculo inverso de rango a CIDR.",
+        "keywords": "calculadora IP, CIDR en línea, IPv4 IPv6 subred, conteo de hosts, rango IP, máscara IP, calculadora IT, calculadora de red, calculadora de subred, calculadora de dirección IP, máscara de subred, dirección broadcast, primer IP, último IP, número de hosts, calculadora de rango IP, calculadora CIDR, calculadora IPv4, calculadora IPv6, ingeniero de red, administrador de sistemas, especialista IT, administración de red, direccionamiento IP, cálculo de subred, tecnologías de red, redes de computadoras, TCP/IP, protocolos de internet",
+        "overview": {
+          "title": "Sobre la calculadora de IP y subredes",
+          "content": "Calculadora de IP y subredes en línea para IPv4 y IPv6. Calcula red, primer y último IP, CIDR y número de hosts. Soporte para cálculo inverso de rango. Se consideran todos los parámetros de direccionamiento de red.",
+          "examples": {
+            "title": "Ejemplos de uso de la calculadora",
+            "cidrExample": {
+              "title": "Cálculo de subred por CIDR",
+              "scenario": "Por ejemplo, necesitas calcular parámetros para la red 192.168.1.0/24",
+              "calculation": "La calculadora determinará: máscara de subred 255.255.255.0, número de hosts 254, primer IP 192.168.1.1, último IP 192.168.1.254, dirección broadcast 192.168.1.255",
+              "result": "La red puede contener 254 hosts con direcciones de 192.168.1.1 a 192.168.1.254"
+            },
+            "subnetExample": {
+              "title": "División en subredes",
+              "scenario": "Por ejemplo, necesitas dividir la red 10.0.0.0/16 en 4 subredes",
+              "calculation": "La calculadora creará subredes: 10.0.0.0/18, 10.0.64.0/18, 10.0.128.0/18, 10.0.192.0/18",
+              "result": "Cada subred puede contener hasta 16,382 hosts"
+            },
+            "rangeExample": {
+              "title": "Cálculo inverso de rango",
+              "scenario": "Por ejemplo, necesitas encontrar CIDR para el rango de 172.16.0.1 a 172.16.255.254",
+              "calculation": "La calculadora determinará: red 172.16.0.0/16, máscara 255.255.0.0, número de hosts 65,534",
+              "result": "El rango corresponde a la red 172.16.0.0/16"
+            },
+            "ipv6Example": {
+              "title": "Trabajo con IPv6",
+              "scenario": "Por ejemplo, necesitas calcular la subred 2001:db8::/64",
+              "calculation": "La calculadora determinará: prefijo 2001:db8::, longitud de prefijo 64, número de direcciones 2^64",
+              "result": "La subred puede contener 18,446,744,073,709,551,616 direcciones"
+            },
+            "networkExample": {
+              "title": "Determinación de parámetros de red",
+              "scenario": "Por ejemplo, necesitas determinar parámetros de red para IP 203.0.113.42/28",
+              "calculation": "La calculadora determinará: red 203.0.113.32, máscara 255.255.255.240, primer IP 203.0.113.33, último IP 203.0.113.46, broadcast 203.0.113.47",
+              "result": "La red contiene 14 hosts con direcciones de 203.0.113.33 a 203.0.113.46"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calculan IP y subredes",
+          "content": "La calculadora usa fórmulas estándar de cálculo de redes:",
+          "network": "Dirección de red: IP & máscara",
+          "hosts": "Número de hosts: 2^(32-CIDR) - 2",
+          "range": "Rango: red + 1 hasta broadcast - 1"
+        },
+        "features": {
+          "title": "Características principales",
+          "ipv4": "Cálculo de redes IPv4",
+          "ipv4Desc": "Cálculo completo de parámetros de subred IPv4",
+          "ipv6": "Cálculo de redes IPv6",
+          "ipv6Desc": "Soporte para direcciones IPv6 modernas",
+          "cidr": "Notación CIDR",
+          "cidrDesc": "Trabajo con notación CIDR para cálculo preciso",
+          "reverse": "Cálculo inverso",
+          "reverseDesc": "Determinación de CIDR por rango de IP",
+          "visualization": "Visualización",
+          "visualizationDesc": "Representación gráfica de subred",
+          "export": "Exportación de resultados",
+          "exportDesc": "Guardar resultados en PDF o Excel",
+          "validation": "Validación",
+          "validationDesc": "Validación automática de direcciones IP"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de IP proporciona muchas ventajas para cálculos de red.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Usa estándares actuales de direccionamiento de red",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Soporte para varios formatos de entrada",
+          "comprehensive": "Análisis integral",
+          "comprehensiveDesc": "Consideración de todos los parámetros de direccionamiento de red",
+          "export": "Exportación de datos",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o Excel"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular subred por IP y máscara?",
+              "a": "Dirección de red = IP & máscara, número de hosts = 2^(32-CIDR) - 2."
+            },
+            {
+              "q": "¿Qué es CIDR y cómo usarlo?",
+              "a": "CIDR muestra el número de bits en la máscara de subred, por ejemplo /24 significa 255.255.255.0."
+            },
+            {
+              "q": "¿Cómo determinar primer y último IP en red?",
+              "a": "Primer IP = dirección de red + 1, último IP = dirección broadcast - 1."
+            },
+            {
+              "q": "¿Cómo contar hosts disponibles?",
+              "a": "Número de hosts = 2^(32-CIDR) - 2 para IPv4, 2^(128-CIDR) para IPv6."
+            },
+            {
+              "q": "¿Puedo usar esta calculadora para IPv6?",
+              "a": "Sí, la calculadora soporta direcciones IPv4 e IPv6."
+            },
+            {
+              "q": "¿Cómo realizar cálculo inverso de rango a CIDR?",
+              "a": "La calculadora determina automáticamente el CIDR mínimo para el rango de IP dado."
+            },
+            {
+              "q": "¿Cómo encontrar dirección broadcast?",
+              "a": "Dirección broadcast = dirección de red + (2^(32-CIDR) - 1)."
+            },
+            {
+              "q": "¿Cómo convertir máscara de subred a CIDR?",
+              "a": "CIDR = número de unos en la máscara de subred en representación binaria."
+            },
+            {
+              "q": "¿Cómo verificar validez de dirección IP?",
+              "a": "La calculadora valida automáticamente el formato y rango de direcciones IP."
+            },
+            {
+              "q": "¿Cómo calcular subred para múltiples rangos de IP?",
+              "a": "Usa cálculo inverso para determinar CIDR común para el rango."
+            },
+            {
+              "q": "¿Es la calculadora adecuada para entrenamiento de ingenieros de red?",
+              "a": "Sí, la calculadora es excelente para aprender direccionamiento de red y subredes."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para diseño de redes locales?",
+              "a": "Sí, la calculadora ayuda a diseñar estructura óptima de subredes."
+            },
+            {
+              "q": "¿Cómo calcular subred para granja de servidores?",
+              "a": "Determina el número de servidores y elige CIDR apropiado para la subred."
+            },
+            {
+              "q": "¿Qué son las direcciones IP privadas?",
+              "a": "Direcciones privadas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 para redes internas."
+            },
+            {
+              "q": "¿Cómo calcular subred para oficina?",
+              "a": "Considera el número de dispositivos y crecimiento planificado de la red al elegir CIDR."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para IPv6?",
+              "a": "Sí, la calculadora soporta completamente direcciones IPv6 y cálculos."
+            },
+            {
+              "q": "¿Cómo calcular subred para centro de datos?",
+              "a": "Usa subredes grandes con CIDR pequeño para alojar muchos servidores."
+            },
+            {
+              "q": "¿Qué es dirección broadcast?",
+              "a": "Dirección para enviar paquetes a todos los hosts en la subred, usualmente la última dirección."
+            },
+            {
+              "q": "¿Cómo calcular subred para red doméstica?",
+              "a": "Usa 192.168.0.0/24 o 192.168.1.0/24 para red doméstica típica."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para VPN?",
+              "a": "Sí, la calculadora ayuda a configurar subredes para conexiones VPN."
+            },
+            {
+              "q": "¿Cómo calcular subred para servicios en la nube?",
+              "a": "Considera los requisitos del proveedor de nube y la escala planificada."
+            },
+            {
+              "q": "¿Qué es máscara de subred?",
+              "a": "Número de 32 bits que define qué parte de la dirección IP pertenece a la red."
+            },
+            {
+              "q": "¿Cómo calcular subred para dispositivos IoT?",
+              "a": "Usa subredes grandes para alojar muchos dispositivos IoT."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para seguridad?",
+              "a": "Sí, la configuración correcta de subredes es importante para la seguridad de red."
+            },
+            {
+              "q": "¿Cómo calcular subred para dispositivos móviles?",
+              "a": "Considera la asignación dinámica de IP y DHCP."
+            },
+            {
+              "q": "¿Qué es dirección de red?",
+              "a": "Primera dirección en la subred, usada para identificar la red misma."
+            },
+            {
+              "q": "¿Cómo calcular subred para redes industriales?",
+              "a": "Considera los requisitos de confiabilidad y aislamiento de sistemas industriales."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para IPv6?",
+              "a": "Sí, la calculadora soporta todas las funciones IPv6 modernas."
+            },
+            {
+              "q": "¿Cómo calcular subred para instituciones educativas?",
+              "a": "Planifica subredes por departamentos y tipos de dispositivos."
+            },
+            {
+              "q": "¿Qué es subred?",
+              "a": "División lógica de la red en segmentos más pequeños para gestión de tráfico."
+            },
+            {
+              "q": "¿Cómo calcular subred para bancos?",
+              "a": "Considera los requisitos de seguridad y aislamiento de sistemas financieros."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para IPv6?",
+              "a": "Sí, la calculadora es completamente compatible con estándares IPv6."
+            },
+            {
+              "q": "¿Cómo calcular subred para instituciones gubernamentales?",
+              "a": "Sigue los requisitos de seguridad de la información y estándares."
+            }
+          ]
+        }
+      }
+    },
     "heatingCost": {
       "title": "Costo de Calefacción — Calculadora en Línea",
       "description": "Calculadora en línea para estimar el costo de la calefacción según el tipo de sistema, tamaño de la habitación y tarifas energéticas.",
@@ -8916,6 +10208,243 @@
           "answer4": "Sí, la calculadora automáticamente tiene en cuenta los años bisiestos para un cálculo preciso.",
           "question5": "¿Puedo calcular la edad en días?",
           "answer5": "Sí, la calculadora muestra el número total de días desde el nacimiento."
+        }
+      }
+    },
+    "waterPipeCalculator": {
+      "title": "Calculadora de Tuberías de Agua",
+      "description": "Calcular diámetro, capacidad de flujo y parámetros hidráulicos de tuberías de agua",
+      "breadcrumbs": {
+        "category": "Construcción"
+      },
+      "hero": {
+        "pipes": "tuberías",
+        "accuracy": "precisión",
+        "format": "formato"
+      },
+      "features": {
+        "diameterCalculation": "Cálculo de diámetro de tuberías",
+        "flowCalculation": "Cálculo de capacidad de flujo",
+        "pressureCalculation": "Cálculo de presión",
+        "materialSupport": "Soporte de materiales",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "description": "Ingrese parámetros para el cálculo de tuberías de agua",
+        "calculationType": "Tipo de cálculo",
+        "calculationTypes": {
+          "diameter": "Por diámetro",
+          "flow": "Por flujo",
+          "pressure": "Por presión"
+        },
+        "diameter": "Diámetro de tubería (mm)",
+        "diameterPlaceholder": "50",
+        "flowRate": "Flujo de agua (m³/s)",
+        "flowRatePlaceholder": "0.1",
+        "velocity": "Velocidad del flujo (m/s)",
+        "velocityPlaceholder": "2.0",
+        "pressure": "Presión (bar)",
+        "pressurePlaceholder": "3.0",
+        "length": "Longitud de tubería (m)",
+        "lengthPlaceholder": "100",
+        "material": "Material de tubería",
+        "materials": {
+          "steel": "Acero",
+          "copper": "Cobre",
+          "plastic": "Plástico",
+          "castIron": "Hierro fundido"
+        },
+        "roughness": "Rugosidad (mm)",
+        "roughnessPlaceholder": "0.1",
+        "temperature": "Temperatura del agua (°C)",
+        "temperaturePlaceholder": "20",
+        "viscosity": "Viscosidad (Pa·s)",
+        "viscosityPlaceholder": "0.001",
+        "density": "Densidad (kg/m³)",
+        "densityPlaceholder": "1000",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "errors": {
+          "diameterRequired": "Ingrese el diámetro de la tubería",
+          "flowRequired": "Ingrese el flujo de agua",
+          "pressureRequired": "Ingrese la presión",
+          "lengthRequired": "Ingrese la longitud de la tubería",
+          "invalidNumber": "Número inválido"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "diameter": "Diámetro de tubería",
+        "flow": "Flujo de agua",
+        "velocity": "Velocidad de flujo",
+        "pressure": "Presión",
+        "reynolds": "Número de Reynolds",
+        "friction": "Factor de fricción",
+        "headLoss": "Pérdida de carga",
+        "copy": "Copiar",
+        "copied": "Copiado"
+      },
+      "tips": {
+        "title": "Consejos útiles",
+        "content": "Para un cálculo preciso de tuberías de agua:",
+        "diameter": "Elija el diámetro correcto para el flujo requerido",
+        "material": "Considere el material de la tubería al calcular pérdidas",
+        "pressure": "Verifique el cumplimiento de presión con estándares"
+      },
+      "seo": {
+        "title": "Calculadora de Tuberías de Agua - Cálculo de Diámetro y Capacidad de Flujo",
+        "description": "Calculadora profesional para tuberías de agua. Determine diámetro, flujo, presión y parámetros hidráulicos de tuberías.",
+        "overview": {
+          "title": "Sobre la calculadora de tuberías de agua",
+          "content": "La calculadora de tuberías de agua está diseñada para calcular parámetros hidráulicos básicos de sistemas de tuberías. La herramienta permite determinar el diámetro óptimo de tubería, capacidad de flujo, pérdidas de presión y otras características importantes para diseñar sistemas de suministro de agua.",
+          "examples": {
+            "title": "Ejemplos de uso de la calculadora",
+            "diameterExample": {
+              "title": "Cálculo de diámetro de tubería",
+              "scenario": "Por ejemplo, necesitas calcular el diámetro de tubería para suministro de agua a una casa privada. Se requiere un flujo de 0.05 m³/s (50 l/s) a velocidad de flujo 2 m/s.",
+              "calculation": "La calculadora determinará: D = √(4×0.05/π×2) = √(0.2/6.28) = √0.032 = 0.18 m = 180 mm",
+              "result": "Se recomienda tubería de diámetro 200 mm para asegurar el flujo requerido."
+            },
+            "flowExample": {
+              "title": "Cálculo de capacidad de flujo",
+              "scenario": "Por ejemplo, necesitas saber cuánta agua puede pasar una tubería existente de 150 mm de diámetro a velocidad 1.5 m/s.",
+              "calculation": "La calculadora calculará: Q = π×0.15²×1.5/4 = 0.026 m³/s = 26 l/s",
+              "result": "La tubería puede pasar 26 litros por segundo o 94 metros cúbicos por hora."
+            },
+            "pressureExample": {
+              "title": "Cálculo de pérdidas de presión",
+              "scenario": "Por ejemplo, necesitas calcular las pérdidas de presión en tubería de agua de 200 m de longitud, 100 mm de diámetro a flujo 0.02 m³/s (20 l/s).",
+              "calculation": "La calculadora determinará velocidad V = 2.55 m/s, número de Reynolds Re = 255,000, factor de fricción λ = 0.018, pérdida de presión ΔP = 0.15 bar",
+              "result": "Las pérdidas de presión serán 0.15 bar, lo cual es aceptable para la mayoría de sistemas."
+            },
+            "materialExample": {
+              "title": "Influencia del material de tubería",
+              "scenario": "Por ejemplo, comparemos las pérdidas de presión en tuberías de acero y plástico del mismo diámetro 100 mm y longitud 100 m a flujo 0.01 m³/s.",
+              "steel": "Tubería de acero: rugosidad 0.045 mm, pérdidas 0.08 bar",
+              "plastic": "Tubería de plástico: rugosidad 0.0015 mm, pérdidas 0.02 bar",
+              "result": "La tubería de plástico tiene 4 veces menores pérdidas de presión."
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calculan los parámetros de tuberías",
+          "content": "El cálculo se basa en leyes hidráulicas e incluye:",
+          "diameter": "Determinación de diámetro por flujo y velocidad",
+          "flow": "Cálculo de capacidad de flujo por diámetro",
+          "pressure": "Determinación de pérdidas de presión en tubería",
+          "methods": {
+            "title": "Métodos de cálculo",
+            "continuity": "Ecuación de continuidad: Q = A × V",
+            "bernoulli": "Ecuación de Bernoulli para balance energético",
+            "darcy": "Fórmula de Darcy-Weisbach para pérdidas de presión",
+            "reynolds": "Número de Reynolds para determinación del régimen de flujo",
+            "moody": "Diagrama de Moody para factor de fricción",
+            "hazen": "Fórmula de Hazen-Williams para cálculos rápidos"
+          },
+          "parameters": {
+            "title": "Parámetros principales",
+            "flowRate": "Flujo de agua (Q) - volumen de líquido que pasa por sección por unidad de tiempo",
+            "velocity": "Velocidad de flujo (V) - velocidad promedio del movimiento del líquido en tubería",
+            "diameter": "Diámetro de tubería (D) - diámetro interno de la tubería",
+            "length": "Longitud de tubería (L) - longitud total de la sección de tubería",
+            "pressure": "Presión (P) - presión estática en el sistema",
+            "density": "Densidad del líquido (ρ) - masa por unidad de volumen",
+            "viscosity": "Viscosidad (μ) - resistencia del líquido al flujo",
+            "roughness": "Rugosidad (ε) - altura de irregularidades de superficie interna"
+          },
+          "regimes": {
+            "title": "Regímenes de flujo",
+            "laminar": "Régimen laminar (Re < 2300) - flujo suave sin vórtices",
+            "transitional": "Régimen transicional (2300 < Re < 4000) - flujo inestable",
+            "turbulent": "Régimen turbulento (Re > 4000) - flujo vórtice con mezcla"
+          },
+          "detailed": {
+            "title": "Explicación detallada de cálculos",
+            "diameterCalculation": {
+              "title": "Cálculo de diámetro de tubería",
+              "formula": "D = √(4Q/πV)",
+              "description": "El diámetro se determina por la fórmula: D = √(4Q/πV), donde Q - flujo de agua (m³/s), V - velocidad de flujo (m/s)",
+              "example": "Ejemplo: Con flujo 0.1 m³/s y velocidad 2 m/s: D = √(4×0.1/π×2) = √(0.4/6.28) = √0.064 = 0.25 m = 250 mm"
+            },
+            "flowCalculation": {
+              "title": "Cálculo de flujo de agua",
+              "formula": "Q = A × V = πD²V/4",
+              "description": "El flujo se calcula como producto del área transversal y velocidad de flujo",
+              "example": "Ejemplo: Para tubería diámetro 200 mm a velocidad 1.5 m/s: Q = π×0.2²×1.5/4 = 0.047 m³/s = 47 l/s"
+            },
+            "pressureCalculation": {
+              "title": "Cálculo de pérdidas de presión",
+              "formula": "ΔP = λ × (L/D) × (ρV²/2)",
+              "description": "Pérdidas de presión por fórmula Darcy-Weisbach considerando factor de fricción λ",
+              "example": "Ejemplo: Para tubería longitud 100 m, diámetro 150 mm, velocidad 2 m/s: ΔP = 0.02 × (100/0.15) × (1000×2²/2) = 0.02 × 667 × 2000 = 26,680 Pa = 0.27 bar"
+            },
+            "reynoldsNumber": {
+              "title": "Número de Reynolds",
+              "formula": "Re = ρVD/μ",
+              "description": "Determina el régimen de flujo: laminar (Re < 2300) o turbulento (Re > 4000)",
+              "example": "Ejemplo: Con densidad 1000 kg/m³, velocidad 2 m/s, diámetro 0.2 m, viscosidad 0.001 Pa·s: Re = 1000×2×0.2/0.001 = 400,000 (régimen turbulento)"
+            },
+            "frictionFactor": {
+              "title": "Factor de fricción",
+              "laminar": "Para flujo laminar: λ = 64/Re",
+              "turbulent": "Para flujo turbulento: λ = 0.316/Re^0.25 (fórmula de Blasius)",
+              "example": "Ejemplo: Con Re = 100,000: λ = 0.316/100,000^0.25 = 0.316/17.78 = 0.0178"
+            }
+          }
+        },
+        "features": {
+          "title": "Características principales",
+          "diameterCalculation": "Cálculo de diámetro de tuberías",
+          "diameterCalculationDesc": "Determinación de diámetro óptimo para flujo dado",
+          "flowCalculation": "Cálculo de flujo de agua",
+          "flowCalculationDesc": "Determinación de capacidad de flujo de tubería",
+          "pressureCalculation": "Cálculo de presión",
+          "pressureCalculationDesc": "Determinación de pérdidas de presión en sistema",
+          "materialSupport": "Consideración de material de tubería",
+          "materialSupportDesc": "Cálculo considerando propiedades de diferentes materiales",
+          "accuracy": "Alta precisión",
+          "accuracyDesc": "Usando fórmulas hidráulicas probadas",
+          "export": "Exportación de resultados",
+          "exportDesc": "Guardando cálculos en formatos PDF y CSV"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de tuberías de agua proporciona muchas ventajas:",
+          "professional": "Cálculos profesionales",
+          "professionalDesc": "Uso de fórmulas hidráulicas probadas",
+          "accuracy": "Alta precisión",
+          "accuracyDesc": "Cálculos precisos considerando todos los parámetros",
+          "timeSaving": "Ahorro de tiempo",
+          "timeSavingDesc": "Cálculos rápidos sin computaciones complejas",
+          "costEffective": "Económico",
+          "costEffectiveDesc": "Optimizando tamaños de tuberías para ahorro de costos"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo elegir el diámetro de tubería para suministro de agua?",
+              "a": "El diámetro de tubería se selecciona basado en el flujo de agua requerido, velocidad de flujo permitida y pérdidas de presión. Para edificios residenciales, generalmente se usan tuberías de diámetro 15-25 mm, para instalaciones industriales - hasta 200 mm y más."
+            },
+            {
+              "q": "¿Qué factores afectan la capacidad de flujo de la tubería?",
+              "a": "La capacidad de flujo depende del diámetro de tubería, material, rugosidad de superficie interna, viscosidad del fluido, temperatura y régimen de flujo (laminar o turbulento)."
+            },
+            {
+              "q": "¿Cómo calcular las pérdidas de presión en tubería?",
+              "a": "Las pérdidas de presión se calculan usando la fórmula de Darcy-Weisbach considerando el factor de fricción, longitud de tubería, diámetro y velocidad de flujo. También se consideran las resistencias locales (accesorios, válvulas)."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre regímenes laminar y turbulento?",
+              "a": "El régimen laminar se caracteriza por flujo suave de fluido con bajas pérdidas de energía. El régimen turbulento ocurre a altas velocidades y se caracteriza por movimiento de vórtice con pérdidas de presión aumentadas."
+            },
+            {
+              "q": "¿Qué material de tubería es mejor para suministro de agua?",
+              "a": "La elección de material depende de las condiciones de operación. Las tuberías de plástico (PVC, PP) son adecuadas para agua fría, metal-plástico - para agua caliente, tuberías de cobre - para sistemas de calefacción, acero - para altas presiones."
+            }
+          ]
         }
       }
     }

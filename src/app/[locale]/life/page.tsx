@@ -117,6 +117,13 @@ const getCalculators = (t: any) => [
 		icon: Thermometer,
 		href: '/life/gas-usage',
 	},
+	{
+		id: 'electricity-usage',
+		title: t('calculators.electricityUsage.title'),
+		description: t('calculators.electricityUsage.description'),
+		icon: Zap,
+		href: '/life/electricity-usage',
+	},
 ];
 
 export default function LifePage() {

@@ -13,6 +13,7 @@ import {
 	Shuffle,
 	Smile,
 	Wrench,
+	Monitor,
 } from 'lucide-react';
 
 const categories = [
@@ -75,6 +76,12 @@ const categories = [
 		icon: Smile,
 		href: '/fun',
 		calculatorCount: 8,
+	},
+	{
+		id: 'it',
+		icon: Monitor,
+		href: '/it',
+		calculatorCount: 6,
 	},
 ];
 

@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 import Header from '@/components/header';
 import Link from 'next/link';
 import {
@@ -8,7 +8,15 @@ import {
 	Home,
 	Package,
 	Thermometer,
+	BarChart3,
+	Cable,
+	TrendingUp,
+	Droplets,
 } from 'lucide-react';
+
+interface Props {
+	params: { locale: string };
+}
 
 const getCalculators = (t: any) => [
 	{
@@ -68,11 +76,39 @@ const getCalculators = (t: any) => [
 		icon: Thermometer,
 		href: '/construction/floor-heating',
 	},
+	{
+		id: 'rebar-calculator',
+		title: t('calculators.rebarCalculator.title'),
+		description: t('calculators.rebarCalculator.description'),
+		icon: BarChart3,
+		href: '/construction/rebar-calculator',
+	},
+	{
+		id: 'cable-section',
+		title: t('calculators.cableSectionCalculator.title'),
+		description: t('calculators.cableSectionCalculator.description'),
+		icon: Cable,
+		href: '/construction/cable-section',
+	},
+	{
+		id: 'stairs',
+		title: t('calculators.stairsCalculator.title'),
+		description: t('calculators.stairsCalculator.description'),
+		icon: TrendingUp,
+		href: '/construction/stairs',
+	},
+	{
+		id: 'water-pipe',
+		title: t('calculators.waterPipeCalculator.title'),
+		description: t('calculators.waterPipeCalculator.description'),
+		icon: Droplets,
+		href: '/construction/water-pipe',
+	},
 ];
 
-export default function ConstructionPage() {
-	const t = useTranslations();
-	const locale = useLocale();
+export default async function ConstructionPage({ params: { locale } }: Props) {
+	const t = await getTranslations({ locale });
+	const currentLocale = await getLocale();
 	return (
 		<div className='min-h-screen bg-gray-50'>
 			<Header />
@@ -95,7 +131,7 @@ export default function ConstructionPage() {
 						return (
 							<Link
 								key={calculator.id}
-								href={`/${locale}${calculator.href}`}
+								href={`/${currentLocale}${calculator.href}`}
 								className='bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all duration-200'
 							>
 								<div className='flex items-center mb-4'>

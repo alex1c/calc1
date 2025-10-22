@@ -6446,6 +6446,1298 @@
         }
       }
     },
+    "electricityUsage": {
+      "title": "Stromverbrauch Rechner — Online-Berechnung",
+      "description": "Online-Rechner zur Berechnung des Stromverbrauchs und der Kosten für Haushalts- oder Baugeräte.",
+      "breadcrumbs": {
+        "life": "Leben"
+      },
+      "hero": {
+        "kwh": "kWh pro Monat",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "powerCalculation": "Leistungsberechnung",
+        "timeCalculation": "Zeiterfassung",
+        "tariffCalculation": "Tarifberechnung",
+        "exportSupport": "Datenexport",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "Stromverbrauch Berechnung",
+        "description": "Berechnen Sie Stromverbrauch und Kosten für Haushalts- und Baugeräte",
+        "deviceName": "Gerätename",
+        "deviceNamePlaceholder": "z.B.: Kühlschrank",
+        "power": "Leistung (W)",
+        "powerPlaceholder": "Geben Sie Leistung in Watt ein",
+        "quantity": "Anzahl der Geräte",
+        "quantityPlaceholder": "Geben Sie Anzahl ein",
+        "hoursPerDay": "Stunden pro Tag",
+        "hoursPerDayPlaceholder": "Geben Sie Betriebsstunden ein",
+        "daysPerMonth": "Tage pro Monat",
+        "daysPerMonthPlaceholder": "Geben Sie Betriebstage ein",
+        "tariff": "Tarif (€/kWh)",
+        "tariffPlaceholder": "Geben Sie Tarif pro kWh ein",
+        "networkType": "Netztyp",
+        "voltage": "Spannung (V)",
+        "voltagePlaceholder": "220 oder 380",
+        "loadFactor": "Lastfaktor (%)",
+        "loadFactorPlaceholder": "Geben Sie Lastfaktor ein",
+        "addDevice": "Gerät hinzufügen",
+        "removeDevice": "Gerät entfernen",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "networkTypes": {
+          "single_phase": "Einphasennetz",
+          "three_phase": "Dreiphasennetz"
+        },
+        "errors": {
+          "deviceNameRequired": "Geben Sie Gerätename ein",
+          "powerRequired": "Geben Sie Geräteleistung ein",
+          "quantityRequired": "Geben Sie Anzahl der Geräte ein",
+          "hoursRequired": "Geben Sie Betriebsstunden ein",
+          "tariffRequired": "Geben Sie Tarif ein",
+          "invalidNumber": "Geben Sie gültige Zahl ein",
+          "powerTooHigh": "Leistung zu hoch",
+          "hoursTooMany": "Zu viele Stunden pro Tag"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "totalPower": "Gesamtleistung",
+        "dailyConsumption": "Täglicher Verbrauch",
+        "monthlyConsumption": "Monatlicher Verbrauch",
+        "yearlyConsumption": "Jährlicher Verbrauch",
+        "dailyCost": "Tageskosten",
+        "monthlyCost": "Monatskosten",
+        "yearlyCost": "Jahreskosten",
+        "costPerKwh": "Kosten pro kWh",
+        "summary": "Zusammenfassung",
+        "summaryText": "Bei Gesamtleistung von {totalPower} W beträgt der tägliche Verbrauch {dailyConsumption} kWh und die monatlichen Kosten {monthlyCost} Euro.",
+        "devices": "Geräte",
+        "power": "Leistung",
+        "consumption": "Verbrauch",
+        "cost": "Kosten",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "export": "Exportieren",
+        "exportPdf": "PDF",
+        "exportCsv": "CSV"
+      },
+      "tips": {
+        "title": "Tipps zum Stromsparen",
+        "content": "Sie können den Stromverbrauch auf verschiedene Weise reduzieren:",
+        "equipment": {
+          "title": "Ausrüstung",
+          "led": "Verwenden Sie LED-Lampen statt Glühbirnen",
+          "efficient": "Kaufen Sie A+++ Geräte",
+          "smart": "Installieren Sie intelligente Steckdosen und Thermostate",
+          "maintenance": "Warten Sie Geräte regelmäßig"
+        },
+        "habits": {
+          "title": "Gewohnheiten",
+          "turn_off": "Schalten Sie ungenutzte Geräte aus",
+          "temperature": "Optimieren Sie die Raumtemperatur",
+          "timing": "Nutzen Sie Nachttarife",
+          "unplug": "Ziehen Sie Ladegeräte aus"
+        },
+        "construction": {
+          "title": "Bauwesen",
+          "planning": "Planen Sie die Stromversorgung im Voraus",
+          "monitoring": "Installieren Sie Zähler auf der Baustelle",
+          "efficient": "Verwenden Sie energieeffiziente Werkzeuge"
+        }
+      },
+      "seo": {
+        "title": "Online Stromverbrauch Rechner — Verbrauchs- und Kostenberechnung",
+        "description": "Online Stromverbrauch Rechner. Berechnen Sie Verbrauch für Häuser, Büros und Bau. Unterstützung für Tarife, Diagramme und Datenexport.",
+        "keywords": "Stromverbrauch, Stromrechner, Energieverbrauch, elektrischer Rechner, kWh Berechnung, Energieverbrauch, Stromtarif, Energieverbrauch, Stromrechner",
+        "overview": {
+          "title": "Über den Stromverbrauch Rechner",
+          "content": "Der Online Stromverbrauch Rechner hilft zu berechnen, wie viel Strom Ihre Haushalts- oder Baugeräte pro Tag, Monat oder Jahr verbrauchen. Perfekt für Kostenschätzung, Tarifplanung und Energieeffizienzanalyse."
+        },
+        "calculation": {
+          "title": "Wie Stromverbrauch berechnet wird",
+          "content": "Der Rechner verwendet die Formel: Verbrauch (kWh) = Leistung (kW) × Betriebszeit (h) × Lastfaktor",
+          "single_phase": "Einphasennetz: P = U × I × cos(φ)",
+          "three_phase": "Dreiphasennetz: P = √3 × U × I × cos(φ)",
+          "tariff": "Kosten = Verbrauch × Tarif"
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "power": "Stromverbrauchsberechnung (W, kWh)",
+          "powerDesc": "Stromverbrauchsberechnung in Watt und Kilowattstunden mit allen Parametern",
+          "network": "Unterstützung für Einphasen- und Dreiphasennetze",
+          "networkDesc": "Unterstützung für einphasige und dreiphasige Stromnetze",
+          "time": "Berücksichtigung der Betriebszeit, Geräteanzahl und Lastfaktor",
+          "timeDesc": "Berücksichtigung der Betriebszeit, Geräteanzahl und Lastfaktor",
+          "tariff": "Möglichkeit Tarif anzugeben (€, $, £ etc.)",
+          "tariffDesc": "Möglichkeit Tarif in Rubel, Dollar, Euro und anderen Währungen anzugeben",
+          "chart": "Verbrauchsverteilungsdiagramm nach Geräten",
+          "chartDesc": "Verbrauchsverteilungsdiagramm nach Geräten für Übersichtlichkeit",
+          "export": "Datenexport zu PDF und CSV",
+          "exportDesc": "Datenexport zu PDF und CSV für weitere Verwendung",
+          "responsive": "Multiplattform responsive Oberfläche"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "content": "Unser Stromverbrauch Rechner bietet viele Vorteile für die präzise Berechnung des Energieverbrauchs.",
+          "accurate": "Präzise Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Formeln und Koeffizienten",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Netztypen und Geräte",
+          "comprehensive": "Umfassende Analyse",
+          "comprehensiveDesc": "Berücksichtigung von Leistung, Betriebszeit und Tarifen",
+          "export": "Datenexport",
+          "exportDesc": "Möglichkeit Ergebnisse in PDF oder CSV zu speichern"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man den Stromverbrauch von Haushaltsgeräten?",
+              "a": "Geben Sie Geräteleistung, Betriebszeit und Anzahl ein — der Rechner zeigt den Verbrauch."
+            },
+            {
+              "q": "Kann ich die Energiekosten berechnen?",
+              "a": "Ja, geben Sie einfach den Tarif pro 1 kWh an."
+            },
+            {
+              "q": "Wie wandelt man Watt in kWh um?",
+              "a": "1 kWh = 1000 W multipliziert mit Betriebsstunden, geteilt durch 1000."
+            },
+            {
+              "q": "Kann ich mehrere Geräte hinzufügen?",
+              "a": "Ja, der Rechner unterstützt Berechnung für eine Geräteliste."
+            },
+            {
+              "q": "Kann ich Nachttarife berücksichtigen?",
+              "a": "Ja, es gibt Felder für Tag- und Nachttarife."
+            },
+            {
+              "q": "Berücksichtigt der Rechner Dreiphasennetze?",
+              "a": "Ja, Sie können Netztyp und Spannung angeben."
+            },
+            {
+              "q": "Wie berechnet man den jährlichen Energieverbrauch?",
+              "a": "Ergebnisse werden automatisch nach Monaten und Jahren umgerechnet."
+            },
+            {
+              "q": "Kann ich den Rechner für Büro oder Werkstatt verwenden?",
+              "a": "Ja, es gibt einen \"Gewerblichen Nutzung\" Modus."
+            },
+            {
+              "q": "Wie finde ich heraus, welche Geräte am meisten verbrauchen?",
+              "a": "Ergebnisse werden als Diagramm nach Geräten angezeigt."
+            },
+            {
+              "q": "Kann ich den Bericht exportieren?",
+              "a": "Ja, Ergebnisse können im PDF- oder CSV-Format gespeichert werden."
+            },
+            {
+              "q": "Kann ich den Lastfaktor berücksichtigen?",
+              "a": "Ja, der Rechner berücksichtigt die effektive Leistung (reale Last)."
+            }
+          ]
+        }
+      }
+    },
+    "rebarCalculator": {
+      "title": "Bewehrungsrechner — Online-Berechnung",
+      "description": "Online-Bewehrungsrechner. Schnelle Berechnung von Bewehrungsmenge, Länge und Gewicht für Fundamente, Platten, Säulen und Wände.",
+      "breadcrumbs": {
+        "construction": "Bauwesen"
+      },
+      "hero": {
+        "bars": "Stäbe",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "quantityCalculation": "Bewehrungsmengenberechnung",
+        "weightCalculation": "Gewichtsberechnung nach GOST",
+        "gridSupport": "Rasterunterstützung",
+        "exportSupport": "Datenexport",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "Bewehrungsberechnung",
+        "description": "Berechnen Sie die erforderliche Menge und das Gewicht der Bewehrungsstäbe für Betonstrukturen",
+        "structureType": "Strukturtyp",
+        "length": "Länge (m)",
+        "lengthPlaceholder": "Geben Sie die Strukturlänge ein",
+        "width": "Breite (m)",
+        "widthPlaceholder": "Geben Sie die Strukturbreite ein",
+        "height": "Höhe (m)",
+        "heightPlaceholder": "Geben Sie die Strukturhöhe ein",
+        "gridSpacing": "Rasterabstand (cm)",
+        "gridSpacingPlaceholder": "Geben Sie den Abstand zwischen Stäben ein",
+        "rebarDiameter": "Bewehrungsdurchmesser (mm)",
+        "rebarDiameterPlaceholder": "Geben Sie den Stabdurchmesser ein",
+        "layers": "Anzahl der Schichten",
+        "layersPlaceholder": "Geben Sie die Anzahl der Schichten ein",
+        "overlap": "Überlappung (cm)",
+        "overlapPlaceholder": "Geben Sie die Überlappungslänge ein",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "structureTypes": {
+          "foundation": "Fundament",
+          "slab": "Platte",
+          "wall": "Wand",
+          "column": "Säule"
+        },
+        "errors": {
+          "lengthRequired": "Geben Sie die Strukturlänge ein",
+          "widthRequired": "Geben Sie die Strukturbreite ein",
+          "heightRequired": "Geben Sie die Strukturhöhe ein",
+          "gridSpacingRequired": "Geben Sie den Rasterabstand ein",
+          "diameterRequired": "Geben Sie den Bewehrungsdurchmesser ein",
+          "invalidNumber": "Geben Sie eine gültige Zahl ein",
+          "lengthTooSmall": "Länge zu klein",
+          "widthTooSmall": "Breite zu klein",
+          "heightTooSmall": "Höhe zu klein",
+          "gridSpacingTooSmall": "Rasterabstand zu klein",
+          "diameterTooSmall": "Durchmesser zu klein"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "totalLength": "Gesamtlänge",
+        "totalWeight": "Gesamtgewicht",
+        "barCount": "Anzahl der Stäbe",
+        "barsPerLayer": "Stäbe pro Schicht",
+        "weightPerMeter": "Gewicht pro Meter",
+        "cost": "Kosten",
+        "summary": "Zusammenfassung",
+        "summaryText": "Für Struktur {length}×{width}×{height} m werden {totalLength} m Bewehrung mit Gesamtgewicht {totalWeight} kg benötigt.",
+        "structure": "Struktur",
+        "dimensions": "Abmessungen",
+        "grid": "Raster",
+        "rebar": "Bewehrung",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "export": "Export",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Bewehrungstipps",
+        "content": "Richtige Bewehrung gewährleistet die Festigkeit von Betonstrukturen:",
+        "diameter": {
+          "title": "Durchmesserauswahl",
+          "foundation": "Fundament: Ø10-16 mm",
+          "slab": "Platte: Ø8-12 mm",
+          "wall": "Wand: Ø6-10 mm",
+          "column": "Säule: Ø12-20 mm"
+        },
+        "spacing": {
+          "title": "Rasterabstand",
+          "foundation": "Fundament: 15-25 cm",
+          "slab": "Platte: 10-20 cm",
+          "wall": "Wand: 15-30 cm",
+          "column": "Säule: 10-15 cm"
+        },
+        "construction": {
+          "title": "Bauwesen",
+          "overlap": "Stabüberlappung: 30-50 Durchmesser",
+          "cover": "Schutzschicht: 2-5 cm",
+          "anchoring": "Verankerung: 10-15 Durchmesser"
+        }
+      },
+      "seo": {
+        "title": "Online-Bewehrungsrechner — Mengen- und Gewichtsberechnung",
+        "description": "Online-Bewehrungsrechner hilft bei der Berechnung des Bewehrungsverbrauchs, Gewichts und der Stabanzahl für Betonstrukturen. PDF- und Excel-Unterstützung.",
+        "keywords": "bewehrungsrechner, bewehrungsberechnung, online bewehrung, bewehrungsrechner, bewehrungsgewicht berechnung, bewehrungsmenge, fundamentbewehrung, bewehrungsverbrauch, bewehrungsgewicht nach durchmesser, bewehrung berechnen",
+        "overview": {
+          "title": "Über den Bewehrungsrechner",
+          "content": "Online-Bewehrungsrechner hilft bei der Berechnung der erforderlichen Menge und des Gewichts der Bewehrungsstäbe für Betonstrukturen — Platten, Fundamente, Säulen, Böden und Wände. Geben Sie Strukturabmessungen, Rasterabstand und Bewehrungsdurchmesser ein — das Tool berechnet sofort Gesamtlänge, Gewicht und ungefähre Stabanzahl."
+        },
+        "calculation": {
+          "title": "Wie Bewehrung berechnet wird",
+          "content": "Rechner verwendet Standard-Bewehrungsberechnungsformeln:",
+          "length": "Länge = (Strukturgröße / Rasterabstand + 1) × Anzahl der Schichten",
+          "weight": "Gewicht = Länge × Gewicht pro Meter (nach GOST)",
+          "count": "Anzahl = Länge / Stablänge"
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "quantity": "Bewehrungsmengen- und Gewichtsberechnung nach Länge, Abstand und Durchmesser",
+          "quantityDesc": "Präzise Berechnung von Bewehrungsmenge und Gewicht unter Berücksichtigung aller Parameter",
+          "grid": "Runde und quadratische Rasterunterstützung",
+          "gridDesc": "Unterstützung für verschiedene Arten von Bewehrungsrastern",
+          "weight": "Automatische Gewichtsbestimmung nach GOST",
+          "weightDesc": "Automatische Bewehrungsgewichtsberechnung nach staatlichen Standards",
+          "visualization": "Bewehrungsschema-Visualisierung",
+          "visualizationDesc": "Anschauliche Darstellung des Strukturbewehrungsschemas",
+          "structures": "Berechnung für Fundament, Platte, Wand oder Säule",
+          "structuresDesc": "Unterstützung für verschiedene Arten von Betonstrukturen",
+          "export": "Berechnungsexport zu PDF / Excel",
+          "exportDesc": "Möglichkeit, Ergebnisse in verschiedenen Formaten zu speichern",
+          "chart": "Interaktives Bewehrungsverbrauchsdiagramm",
+          "chartDesc": "Bewehrungsverbrauchsvisualisierung in Diagrammen",
+          "units": "Metrische und imperiale Einheitenunterstützung (mm, cm, m, Fuß)",
+          "unitsDesc": "Arbeit mit verschiedenen Messsystemen"
+        },
+        "advantages": {
+          "title": "Rechnervorteile",
+          "content": "Unser Bewehrungsrechner bietet viele Vorteile für präzise Bewehrungsberechnung.",
+          "accurate": "Präzise Berechnungen",
+          "accurateDesc": "Verwendet aktuelle GOST und Bauvorschriften",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Strukturtypen und Raster",
+          "comprehensive": "Umfassende Analyse",
+          "comprehensiveDesc": "Berücksichtigung aller Bewehrungsparameter",
+          "export": "Datenexport",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder Excel zu speichern"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man die Bewehrungsmenge für ein Fundament?",
+              "a": "Geben Sie Abmessungen, Rasterabstand und Durchmesser ein — der Rechner berechnet Gesamtlänge und Gewicht."
+            },
+            {
+              "q": "Wie wählt man den Bewehrungsdurchmesser?",
+              "a": "Für Fundamente verwendet man Ø10–16 mm, für Wände — Ø8–12 mm."
+            },
+            {
+              "q": "Kann ich das Bewehrungsgewicht berechnen?",
+              "a": "Ja, das Gewicht wird automatisch nach GOST abhängig vom Durchmesser berechnet."
+            },
+            {
+              "q": "Was ist der Bewehrungsabstand?",
+              "a": "Abstand zwischen Stäben im Raster — beeinflusst Festigkeit und Verbrauch."
+            },
+            {
+              "q": "Ist der Rechner für Streifenfundamente geeignet?",
+              "a": "Ja, Sie können den Strukturtyp auswählen und seine Parameter festlegen."
+            },
+            {
+              "q": "Wie wandelt man das Bewehrungsgewicht in laufende Meter um?",
+              "a": "Der Rechner macht dies automatisch und zeigt beide Werte an."
+            },
+            {
+              "q": "Kann ich nicht-standardisierte Einheiten (Fuß, Zoll) angeben?",
+              "a": "Ja, metrische und imperiale Systeme sind verfügbar."
+            },
+            {
+              "q": "Unterstützt der Rechner Excel-Export?",
+              "a": "Ja, es gibt Export zu PDF- und Excel-Dateien."
+            },
+            {
+              "q": "Kann ich zwei Raster (oben und unten) berechnen?",
+              "a": "Ja, Doppelschichtbewehrung ist vorgesehen."
+            },
+            {
+              "q": "Ist er für Bodenplatten geeignet?",
+              "a": "Ja, der Rechner ist universell — wählen Sie \"Platte\" im Strukturtyp."
+            },
+            {
+              "q": "Kann ich Ergebnisse speichern?",
+              "a": "Ja, Ergebnisse können heruntergeladen oder gedruckt werden."
+            }
+          ]
+        }
+      }
+    },
+    "cableSectionCalculator": {
+      "title": "Kabelquerschnitt-Rechner — Online-Drahtgrößenberechnung",
+      "description": "Der Kabelquerschnitt-Rechner hilft Ihnen, den optimalen Leiterquerschnitt anhand von Leistung, Strom und Leitungslänge zu berechnen.",
+      "breadcrumbs": {
+        "construction": "Bauwesen"
+      },
+      "hero": {
+        "cables": "Kabel",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "powerCalculation": "Leistungsberechnung",
+        "currentCalculation": "Stromberechnung",
+        "voltageDrop": "Spannungsabfall-Berücksichtigung",
+        "materialSupport": "Materialunterstützung",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "Kabelquerschnitt-Berechnung",
+        "description": "Berechnen Sie den optimalen Leiterquerschnitt für Elektroinstallationen",
+        "calculationType": "Berechnungstyp",
+        "power": "Leistung (kW)",
+        "powerPlaceholder": "Geben Sie die Lastleistung ein",
+        "current": "Strom (A)",
+        "currentPlaceholder": "Geben Sie den Laststrom ein",
+        "voltage": "Spannung (V)",
+        "voltagePlaceholder": "Geben Sie die Netzspannung ein",
+        "length": "Leitungslänge (m)",
+        "lengthPlaceholder": "Geben Sie die Kabellänge ein",
+        "material": "Leitermaterial",
+        "phaseType": "Netztyp",
+        "powerFactor": "Leistungsfaktor (cosφ)",
+        "powerFactorPlaceholder": "Geben Sie den Leistungsfaktor ein",
+        "voltageDrop": "Zulässiger Spannungsabfall (%)",
+        "voltageDropPlaceholder": "Geben Sie die zulässigen Verluste ein",
+        "temperature": "Umgebungstemperatur (°C)",
+        "temperaturePlaceholder": "Geben Sie die Temperatur ein",
+        "installationMethod": "Installationsmethode",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "calculationTypes": {
+          "power": "Nach Leistung",
+          "current": "Nach Strom"
+        },
+        "materials": {
+          "copper": "Kupfer",
+          "aluminum": "Aluminium"
+        },
+        "phaseTypes": {
+          "single": "Einphasig",
+          "three": "Dreiphasig"
+        },
+        "installationMethods": {
+          "open": "Offene Installation",
+          "closed": "Geschlossene Installation",
+          "underground": "Unterirdische Installation"
+        },
+        "errors": {
+          "powerRequired": "Geben Sie die Lastleistung ein",
+          "currentRequired": "Geben Sie den Laststrom ein",
+          "voltageRequired": "Geben Sie die Netzspannung ein",
+          "lengthRequired": "Geben Sie die Leitungslänge ein",
+          "invalidNumber": "Geben Sie eine gültige Zahl ein",
+          "powerTooSmall": "Leistung zu klein",
+          "currentTooSmall": "Strom zu klein",
+          "voltageTooSmall": "Spannung zu klein",
+          "lengthTooSmall": "Länge zu klein",
+          "powerFactorTooSmall": "Leistungsfaktor zu klein",
+          "voltageDropTooSmall": "Spannungsabfall zu klein"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "recommendedSection": "Empfohlener Querschnitt",
+        "standardSection": "Standard-Querschnitt",
+        "currentDensity": "Stromdichte",
+        "voltageDrop": "Spannungsabfall",
+        "voltageDropPercent": "Spannungsabfall (%)",
+        "resistance": "Widerstand",
+        "weight": "Kabelgewicht",
+        "cost": "Kosten",
+        "summary": "Zusammenfassung",
+        "summaryText": "Für Last {power} kW bei Länge {length} m wird Kabelquerschnitt {section} mm² empfohlen.",
+        "cable": "Kabel",
+        "specifications": "Spezifikationen",
+        "installation": "Installation",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "export": "Exportieren",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Kabelauswahl-Tipps",
+        "content": "Die richtige Kabelquerschnitt-Auswahl gewährleistet Sicherheit und Zuverlässigkeit der Stromversorgung:",
+        "power": {
+          "title": "Leistungsberechnung",
+          "formula": "I = P / (U × cosφ)",
+          "description": "Strom wird mit der Leistungsformel berechnet"
+        },
+        "voltage": {
+          "title": "Spannungsabfall",
+          "residential": "Wohngebäude: bis zu 5%",
+          "industrial": "Industrie: bis zu 3%",
+          "description": "Zulässige Verluste hängen vom Objekttyp ab"
+        },
+        "materials": {
+          "title": "Leitermaterialien",
+          "copper": "Kupfer: geringerer Widerstand, höhere Kosten",
+          "aluminum": "Aluminium: höherer Widerstand, niedrigere Kosten",
+          "description": "Kupfer ist für Wohnräume bevorzugt"
+        },
+        "installation": {
+          "title": "Installationsmethoden",
+          "open": "Offen: bessere Kühlung",
+          "closed": "Geschlossen: schlechtere Kühlung",
+          "underground": "Unterirdisch: Feuchtigkeitsberücksichtigung"
+        }
+      },
+      "seo": {
+        "title": "Online-Kabelquerschnitt-Rechner — Drahtgrößenberechnung nach Leistung und Strom",
+        "description": "Online-Rechner für Kabelquerschnitt-Berechnung nach Leistung, Leitungslänge und Stromlast. Drahtauswahl nach GOST. Kupfer und Aluminium.",
+        "keywords": "Kabelquerschnitt-Rechner, Drahtgrößenberechnung nach Leistung, Elektrik online, Kabelquerschnitt-Rechner, Stromberechnung nach Leistung, Kabelauswahl nach Strom, Kupferdraht-Berechnung, Aluminiumkabel-Berechnung, Spannungsabfall, elektrischer Drahtgrößen-Rechner, Drahtquerschnitt, elektrisches Kabel, Hausverkabelung, Elektroinstallation, elektrische Berechnungen, Kabel nach Strom, Draht nach Leistung, elektrische Sicherheit, GOST-Kabel, Kabelstandards, elektrische Normen, Elektroverkabelungsdesign, elektrische Lasten, Stromlast, elektrische Verluste, Leistungsfaktor, elektrische Netze, elektrische Ausrüstung, elektrische Systeme, elektrische Installationen",
+        "overview": {
+          "title": "Über den Kabelquerschnitt-Rechner",
+          "content": "Der Online-Kabelquerschnitt-Rechner hilft Ihnen, den optimalen Leiterquerschnitt anhand von Leistung, Strom und Leitungslänge zu berechnen. Er berücksichtigt den Leiterwerkstoff (Kupfer oder Aluminium) und den Spannungsverlust."
+        },
+        "calculation": {
+          "title": "Wie wird der Kabelquerschnitt berechnet",
+          "content": "Der Rechner verwendet Standard-Kabelquerschnitt-Berechnungsformeln:",
+          "power": "Nach Leistung: I = P / (U × cosφ)",
+          "section": "Querschnitt: S = I / (J × k)",
+          "voltageDrop": "Verluste: ΔU = 2 × I × R × L / 1000"
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "power": "Berechnung nach Leistung (W), Strom (A) oder Last (kW)",
+          "powerDesc": "Präzise Kabelquerschnitt-Berechnung nach verschiedenen Lastparametern",
+          "phase": "Einphasige und dreiphasige Netzunterstützung",
+          "phaseDesc": "Berücksichtigung von einphasigen und dreiphasigen elektrischen Systemmerkmalen",
+          "material": "Leitermaterial-Auswahl: Kupfer oder Aluminium",
+          "materialDesc": "Unterstützung für verschiedene Leitermaterialien unter Berücksichtigung ihrer Eigenschaften",
+          "voltage": "Leitungslänge und Spannungsabfall-Berücksichtigung",
+          "voltageDesc": "Automatische Spannungsabfall-Berechnung abhängig von der Kabellänge",
+          "standard": "Automatische Auswahl des nächsten Standard-Querschnitts (GOST)",
+          "standardDesc": "Standard-Kabelquerschnitt-Auswahl nach GOST und internationalen Standards",
+          "protection": "Schutzgeräte-Bewertungshinweise",
+          "protectionDesc": "Empfehlungen für Kabel-Schutzgeräte-Auswahl",
+          "chart": "Interaktives Strom- und Querschnitt-Abhängigkeitsdiagramm",
+          "chartDesc": "Visualisierung der Abhängigkeit zwischen Strom und Kabelquerschnitt",
+          "export": "Ergebnis-Export zu PDF und Excel",
+          "exportDesc": "Möglichkeit, Ergebnisse in verschiedenen Formaten zu speichern",
+          "units": "Metrische und imperiale Einheitenunterstützung",
+          "unitsDesc": "Arbeit mit verschiedenen Messsystemen"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "content": "Unser Kabelquerschnitt-Rechner bietet viele Vorteile für präzise Elektroverkabelungsberechnungen.",
+          "accurate": "Präzise Berechnungen",
+          "accurateDesc": "Verwendet aktuelle GOST und internationale Standards",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Netztypen und Materialien",
+          "comprehensive": "Umfassende Analyse",
+          "comprehensiveDesc": "Berücksichtigung aller Elektroverkabelungsparameter",
+          "export": "Datenexport",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder Excel zu speichern"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man den Kabelquerschnitt nach Leistung?",
+              "a": "Geben Sie die Lastleistung und Leitungslänge ein — der Rechner berechnet den optimalen Querschnitt."
+            },
+            {
+              "q": "Kann ich den Spannungsabfall berücksichtigen?",
+              "a": "Ja, das Tool berechnet automatisch den Spannungsabfall und warnt, wenn er die Norm überschreitet."
+            },
+            {
+              "q": "Was wählen — Kupfer oder Aluminium?",
+              "a": "Kupfer hat geringeren Widerstand und leitet Strom besser, ist aber teurer."
+            },
+            {
+              "q": "Ist es für dreiphasige Systeme geeignet?",
+              "a": "Ja, Sie können den Netztyp wählen — einphasig oder dreiphasig."
+            },
+            {
+              "q": "Kann ich den Strom berechnen, wenn die Leistung bekannt ist?",
+              "a": "Ja, der Rechner berechnet den Strom automatisch mit der Formel P = U × I × cosφ."
+            },
+            {
+              "q": "Welche Standards werden verwendet?",
+              "a": "Berechnungen werden nach GOST und internationalen IEC-Standards durchgeführt."
+            },
+            {
+              "q": "Was ist cosφ?",
+              "a": "Das ist der Leistungsfaktor, normalerweise 0.9 für Haushaltsgeräte."
+            },
+            {
+              "q": "Gibt es eine Tabelle mit Standard-Querschnitten?",
+              "a": "Ja, der Rechner wählt automatisch den nächsten Standardwert."
+            },
+            {
+              "q": "Kann ich Ergebnisse exportieren?",
+              "a": "Ja, PDF- und Excel-Export wird unterstützt."
+            },
+            {
+              "q": "Werden Temperatur und Installationsmethode berücksichtigt?",
+              "a": "Ja, für Profis ist ein erweiterter Modus mit diesen Parametern verfügbar."
+            },
+            {
+              "q": "Kann ich für Gleichstrom (DC) verwenden?",
+              "a": "Ja, die Berechnung ist auch für Gleichstrom geeignet."
+            },
+            {
+              "q": "Wie wählt man den Querschnitt für Steckdosen?",
+              "a": "Für Steckdosen wird normalerweise Kabelquerschnitt 2.5 mm² (Kupfer) oder 4 mm² (Aluminium) verwendet."
+            },
+            {
+              "q": "Was ist Stromdichte?",
+              "a": "Das ist das Verhältnis von Strom zur Leiterquerschnittsfläche, gemessen in A/mm²."
+            },
+            {
+              "q": "Wie berechnet man den Querschnitt für Beleuchtung?",
+              "a": "Für Beleuchtung reicht normalerweise Kabelquerschnitt 1.5 mm² (Kupfer) oder 2.5 mm² (Aluminium)."
+            },
+            {
+              "q": "Was ist zulässige Stromlast?",
+              "a": "Das ist der maximale Strom, der lange durch das Kabel fließen kann ohne Überhitzung."
+            },
+            {
+              "q": "Wie beeinflusst Temperatur den Kabelquerschnitt?",
+              "a": "Bei Temperaturerhöhung sinkt die zulässige Stromlast, daher steigt der Querschnitt."
+            },
+            {
+              "q": "Was ist Installationskoeffizient?",
+              "a": "Das ist der Koeffizient, der die Kabelinstallationsmethode und ihre Kühlung berücksichtigt."
+            },
+            {
+              "q": "Wie berechnet man den Querschnitt für Motor?",
+              "a": "Für Motoren wird der Anlaufstrom berücksichtigt, der 5-7 mal höher als der Nennstrom ist."
+            },
+            {
+              "q": "Was ist Schutzselektivität?",
+              "a": "Das ist die Eigenschaft von Schutzgeräten, nur den beschädigten Netzabschnitt abzuschalten."
+            },
+            {
+              "q": "Wie wählt man Kabel für Außenbereich?",
+              "a": "Für Außenbereich werden Kabel mit UV- und temperaturbeständiger Isolierung verwendet."
+            },
+            {
+              "q": "Was ist Kabelmarkierung?",
+              "a": "Das ist die alphanumerische Bezeichnung, die Leitermaterial, Isolierung und Kabelkonstruktion angibt."
+            },
+            {
+              "q": "Wie berechnet man den Querschnitt für Schweißgerät?",
+              "a": "Für Schweißgeräte wird hoher Anlaufstrom und Kurzzeitbetrieb berücksichtigt."
+            },
+            {
+              "q": "Was ist Blindleistung?",
+              "a": "Das ist die Leistung, die mit der Erzeugung magnetischer und elektrischer Felder in Wechselstromkreisen verbunden ist."
+            },
+            {
+              "q": "Wie wählt man Kabel für unterirdische Installation?",
+              "a": "Für unterirdische Installation werden Kabel mit Panzerungsschutz und feuchtigkeitsbeständiger Isolierung verwendet."
+            },
+            {
+              "q": "Was ist Gleichzeitigkeitskoeffizient?",
+              "a": "Das ist der Koeffizient, der die Wahrscheinlichkeit gleichzeitiger Betrieb aller Verbraucher berücksichtigt."
+            },
+            {
+              "q": "Wie berechnet man den Querschnitt für Erdung?",
+              "a": "Der Erdungsleiterquerschnitt sollte mindestens die Hälfte des Phasenleiterquerschnitts betragen."
+            },
+            {
+              "q": "Was ist Kurzschluss?",
+              "a": "Das ist die Verbindung von Phasen- und Neutralleitern mit niedrigem Widerstand, die zu starkem Stromanstieg führt."
+            },
+            {
+              "q": "Wie wählt man Kabel für Hochspannungsleitungen?",
+              "a": "Für Hochspannungsleitungen werden spezielle Kabel mit verstärkter Isolierung und Abschirmung verwendet."
+            },
+            {
+              "q": "Was ist elektrische Festigkeit?",
+              "a": "Das ist die Fähigkeit der Isolierung, elektrische Spannung ohne Durchschlag zu ertragen."
+            },
+            {
+              "q": "Wie berechnet man den Querschnitt für Notstromversorgung?",
+              "a": "Für Notstromversorgung wird die Leistung aller kritischen Verbraucher berücksichtigt."
+            },
+            {
+              "q": "Was ist elektrische Sicherheit?",
+              "a": "Das ist der Komplex von Maßnahmen zur Verhinderung von Elektroschocks bei Menschen."
+            },
+            {
+              "q": "Wie wählt man Kabel für Industrieanlage?",
+              "a": "Für Industrieanlagen werden aggressive Umgebung, Vibrationen und hohe Lasten berücksichtigt."
+            }
+          ]
+        }
+      }
+    },
+    "stairsCalculator": {
+      "title": "Treppenrechner — Online-Treppenentwurf",
+      "description": "Online-Treppenrechner berechnet Steigungswinkel, Stufenanzahl und Treppenlänge für Ihr Treppenprojekt. Perfektes Tool für Treppendesign in Häusern, Cottages oder Baustellen.",
+      "breadcrumbs": {
+        "construction": "Bauwesen"
+      },
+      "hero": {
+        "steps": "Stufen",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "angleCalculation": "Winkelberechnung",
+        "stepsCalculation": "Stufenanzahl-Berechnung",
+        "comfortFormula": "Komfortable Treppenformel",
+        "visualization": "Visualisierung",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "Treppenberechnung",
+        "description": "Berechnen Sie Steigungswinkel, Stufenanzahl und Treppenlänge",
+        "totalHeight": "Gesamte Steighöhe (mm)",
+        "totalHeightPlaceholder": "Geben Sie die Steighöhe ein",
+        "stepDepth": "Stufentiefe (Auftritt, mm)",
+        "stepDepthPlaceholder": "Geben Sie die Stufentiefe ein",
+        "stepHeight": "Stufenhöhe (Setzstufe, mm)",
+        "stepHeightPlaceholder": "Geben Sie die Stufenhöhe ein",
+        "stairsType": "Treppentyp",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "stairsTypes": {
+          "straight": "Gerade",
+          "turn90": "Wendel 90°",
+          "turn180": "Wendel 180°"
+        },
+        "errors": {
+          "heightRequired": "Geben Sie die Steighöhe ein",
+          "depthRequired": "Geben Sie die Stufentiefe ein",
+          "stepHeightRequired": "Geben Sie die Stufenhöhe ein",
+          "invalidNumber": "Geben Sie eine gültige Zahl ein",
+          "heightTooSmall": "Höhe zu klein",
+          "depthTooSmall": "Tiefe zu klein",
+          "stepHeightTooSmall": "Stufenhöhe zu klein",
+          "stepHeightTooLarge": "Stufenhöhe zu groß",
+          "depthTooLarge": "Tiefe zu groß"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "stepsCount": "Anzahl der Stufen",
+        "totalLength": "Gesamte Treppenlänge",
+        "angle": "Steigungswinkel",
+        "comfortLevel": "Komfortniveau",
+        "comfortFormula": "Komfortable Treppenformel",
+        "formulaValue": "2h + b = {value} mm",
+        "recommendations": "Empfehlungen",
+        "summary": "Zusammenfassung",
+        "summaryText": "Für Steighöhe {height} mm werden {steps} Stufen mit Winkel {angle}° benötigt.",
+        "stairs": "Treppe",
+        "specifications": "Spezifikationen",
+        "comfort": "Komfort",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "export": "Exportieren",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Treppendesign-Tipps",
+        "content": "Richtige Treppenberechnung gewährleistet Sicherheit und Komfort:",
+        "formula": {
+          "title": "Komfortable Treppenformel",
+          "formula": "2h + b ≈ 600–640 mm",
+          "description": "Wobei h die Stufenhöhe, b die Auftrittstiefe ist"
+        },
+        "angle": {
+          "title": "Steigungswinkel",
+          "comfortable": "Komfortabel: 30–40°",
+          "acceptable": "Akzeptabel: 20–50°",
+          "description": "Optimaler Winkel gewährleistet komfortables Steigen"
+        },
+        "dimensions": {
+          "title": "Stufenabmessungen",
+          "height": "Höhe: 150–200 mm",
+          "depth": "Tiefe: 250–350 mm",
+          "description": "Standardabmessungen für komfortable Treppen"
+        },
+        "safety": {
+          "title": "Sicherheit",
+          "handrail": "Geländer sind obligatorisch",
+          "lighting": "Gute Beleuchtung",
+          "description": "Einhaltung der Sicherheitsstandards ist obligatorisch"
+        }
+      },
+      "seo": {
+        "title": "Online-Treppenrechner — Winkel- und Stufenberechnung",
+        "description": "Online-Treppenrechner berechnet Steigungswinkel, Stufenanzahl, Höhe und Treppenlänge. Praktisches Tool für Treppendesign in Häusern, Cottages oder Baustellen.",
+        "keywords": "Treppenrechner, Treppenberechnung, Treppenwinkel, Stufenanzahl, Treppenformel, komfortable Treppen, Treppenprojekt, Treppenbau, DIY Treppen, Stufenberechnung, Treppenwinkel, Stufenhöhe, Stufentiefe, Auftritt, Setzstufe, Treppenlänge, Treppendesign, Haus Treppen, Cottage Treppen, Büro Treppen, Keller Treppen, Dachboden Treppen, zweiter Stock Treppen, Privathaus Treppen, Cottage Treppen, Townhouse Treppen, Duplex Treppen, Penthouse Treppen, Loft Treppen, Studio Treppen, Apartment Treppen",
+        "overview": {
+          "title": "Über den Treppenrechner",
+          "content": "Online-Treppenrechner berechnet Steigungswinkel, Stufenanzahl, Höhe und Treppenlänge. Praktisches Tool für Treppendesign in Häusern, Cottages oder Baustellen. Sicherheits- und Komfortstandards werden berücksichtigt."
+        },
+        "calculation": {
+          "title": "Wie werden Treppen berechnet",
+          "content": "Rechner verwendet Standard-Treppenberechnungsformeln:",
+          "steps": "Anzahl der Stufen: n = H / h",
+          "angle": "Steigungswinkel: α = arctan(H / L)",
+          "comfort": "Komfortable Treppenformel: 2h + b ≈ 600–640 mm"
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "angle": "Treppenwinkel-Berechnung",
+          "angleDesc": "Präzise Winkelberechnung für komfortables Steigen",
+          "steps": "Stufenanzahl-Berechnung",
+          "stepsDesc": "Automatische Berechnung der optimalen Stufenanzahl",
+          "comfort": "Komfortable Treppenformel",
+          "comfortDesc": "Überprüfung der Einhaltung der Formel 2h + b ≈ 600–640 mm",
+          "visualization": "Treppenvisualisierung",
+          "visualizationDesc": "Grafische Darstellung der berechneten Treppe",
+          "types": "Verschiedene Treppentypen",
+          "typesDesc": "Unterstützung für gerade, wendelnde und spiralförmige Treppen",
+          "standards": "Standards-Einhaltung",
+          "standardsDesc": "Berechnung nach GOST und internationalen Standards",
+          "export": "Ergebnis-Export",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder Excel zu speichern",
+          "recommendations": "Empfehlungen",
+          "recommendationsDesc": "Tipps zur Verbesserung der Treppenkonstruktion"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "content": "Unser Treppenrechner bietet viele Vorteile für präzises Design.",
+          "accurate": "Präzise Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Standards und Formeln",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Treppentypen und -größen",
+          "comprehensive": "Umfassende Analyse",
+          "comprehensiveDesc": "Berücksichtigung aller Sicherheits- und Komfortparameter",
+          "export": "Datenexport",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder Excel zu speichern"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man die Anzahl der Stufen in einer Treppe?",
+              "a": "Anzahl der Stufen = Gesamte Steighöhe / Stufenhöhe."
+            },
+            {
+              "q": "Welcher Winkel gilt als komfortabel für Treppen?",
+              "a": "Komfortabler Treppenwinkel beträgt 30–40 Grad."
+            },
+            {
+              "q": "Wie wählt man Stufenhöhe und -tiefe?",
+              "a": "Verwenden Sie die komfortable Treppenformel: 2h + b ≈ 600–640 mm, wobei h die Höhe, b die Tiefe ist."
+            },
+            {
+              "q": "Welche Standards werden für Treppenberechnung verwendet?",
+              "a": "Berechnungen werden nach GOST und internationalen Sicherheitsstandards durchgeführt."
+            },
+            {
+              "q": "Was ist die komfortable Treppenformel 2h + b?",
+              "a": "Das ist die Formel, bei der die doppelte Stufenhöhe plus Auftrittstiefe 600–640 mm betragen sollte."
+            },
+            {
+              "q": "Welche minimale und maximale Stufenhöhe ist erlaubt?",
+              "a": "Stufenhöhe sollte 150 bis 200 mm für komfortables Steigen betragen."
+            },
+            {
+              "q": "Kann ich den Rechner für Außentreppen verwenden?",
+              "a": "Ja, der Rechner ist für Innen- und Außentreppen geeignet."
+            },
+            {
+              "q": "Wie berechnet man 90° Wendeltreppen?",
+              "a": "Für Wendeltreppen wird die zusätzliche Länge der Wendelplattform berücksichtigt."
+            },
+            {
+              "q": "Wie berechnet man die Treppenlänge?",
+              "a": "Treppenlänge = Anzahl der Stufen × Stufentiefe."
+            },
+            {
+              "q": "Wie reduziert man den Winkel ohne Höhenänderung?",
+              "a": "Erhöhen Sie die Stufentiefe oder fügen Sie eine Wendelplattform hinzu."
+            },
+            {
+              "q": "Kann ich diese Berechnung für Metall- und Betontreppen verwenden?",
+              "a": "Ja, Berechnungsprinzipien sind für alle Treppentypen gleich."
+            },
+            {
+              "q": "Was tun, wenn die Berechnung zu steilen Winkel zeigt?",
+              "a": "Erhöhen Sie die Stufentiefe oder reduzieren Sie die Stufenhöhe, um den Winkel zu verringern."
+            },
+            {
+              "q": "Wie berechnet man Treppen für ältere Menschen?",
+              "a": "Verwenden Sie kleinere Stufenhöhe (150–160 mm) und größere Tiefe (300–350 mm)."
+            },
+            {
+              "q": "Welche minimale Treppenbreite?",
+              "a": "Minimale Treppenbreite in Wohngebäuden beträgt 800 mm."
+            },
+            {
+              "q": "Wie berechnet man Kellertreppen?",
+              "a": "Berücksichtigen Sie begrenzten Platz und verwenden Sie steileren Winkel (bis 45°)."
+            },
+            {
+              "q": "Was sind Windertritte?",
+              "a": "Das sind Stufen mit variierender Breite, die in Wendeltreppen verwendet werden."
+            },
+            {
+              "q": "Wie berechnet man Spiralttreppen?",
+              "a": "Für Spiralttreppen werden spezielle Formeln mit Radiusberücksichtigung verwendet."
+            },
+            {
+              "q": "Welche Höhe sollte das Geländer haben?",
+              "a": "Geländerhöhe sollte 900–1100 mm von der Stufenoberfläche betragen."
+            },
+            {
+              "q": "Wie berechnet man Dachboden Treppen?",
+              "a": "Berücksichtigen Sie begrenzten Platz und verwenden Sie Klapp- oder Leiterntreppen."
+            },
+            {
+              "q": "Was ist ein Treppenstrang?",
+              "a": "Treppenstrang ist der geneigte Balken, auf dem die Treppenstufen ruhen."
+            },
+            {
+              "q": "Wie berechnet man Treppen für Behinderte?",
+              "a": "Verwenden Sie sanften Winkel (bis 20°), breite Stufen und Geländer auf beiden Seiten."
+            },
+            {
+              "q": "Welche Stufentiefe für Außentreppen?",
+              "a": "Für Außentreppen sollte die Stufentiefe mindestens 300 mm betragen."
+            },
+            {
+              "q": "Wie berechnet man Treppen in Townhouse?",
+              "a": "Berücksichtigen Sie begrenzten Platz und verwenden Sie kompakte Lösungen."
+            },
+            {
+              "q": "Was ist eine Treppenwange?",
+              "a": "Treppenwange ist der seitliche Balken der Treppe, in den die Stufen eingeschnitten sind."
+            },
+            {
+              "q": "Wie berechnet man Treppen im Loft?",
+              "a": "Berücksichtigen Sie den Innenstil und verwenden Sie moderne Materialien und Konstruktionen."
+            },
+            {
+              "q": "Welche Stufenhöhe für Kindertreppen?",
+              "a": "Für Kindertreppen sollte die Stufenhöhe 120–150 mm betragen."
+            },
+            {
+              "q": "Wie berechnet man Treppen im Penthouse?",
+              "a": "Berücksichtigen Sie Panoramafenster und verwenden Sie leichte Konstruktionen."
+            },
+            {
+              "q": "Was ist eine Setzstufe?",
+              "a": "Setzstufe ist der vertikale Teil der Stufe, der ihre Höhe bestimmt."
+            },
+            {
+              "q": "Wie berechnet man Treppen im Studio?",
+              "a": "Verwenden Sie kompakte Lösungen und multifunktionale Konstruktionen."
+            },
+            {
+              "q": "Welche Stufentiefe für Bürotreppen?",
+              "a": "Für Bürotreppen sollte die Stufentiefe 280–320 mm betragen."
+            },
+            {
+              "q": "Wie berechnet man Treppen in Apartments?",
+              "a": "Berücksichtigen Sie begrenzten Platz und verwenden Sie moderne Lösungen."
+            },
+            {
+              "q": "Was ist ein Auftritt?",
+              "a": "Auftritt ist der horizontale Teil der Stufe, auf den man tritt."
+            },
+            {
+              "q": "Wie berechnet man Treppen im Duplex?",
+              "a": "Berücksichtigen Sie die Verbindung zwischen Stockwerken und verwenden Sie bequeme Lösungen."
+            }
+          ]
+        }
+      }
+    },
+    "ipCalculator": {
+      "title": "IP- und Subnetzrechner — CIDR / IPv4 / IPv6",
+      "description": "IP- und Subnetzrechner für IPv4 und IPv6. Berechne Netzwerk, erste/letzte IP, CIDR, Anzahl der Hosts. Reverse-Berechnung vom IP-Bereich zum CIDR enthalten.",
+      "breadcrumbs": {
+        "it": "IT"
+      },
+      "hero": {
+        "networks": "Netzwerke",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "ipv4Calculation": "IPv4-Berechnung",
+        "ipv6Calculation": "IPv6-Berechnung",
+        "cidrSupport": "CIDR-Unterstützung",
+        "reverseCalculation": "Reverse-Berechnung",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "IP- und Subnetzberechnung",
+        "description": "Berechnen Sie Netzwerkparameter, IP-Bereich und Anzahl der Hosts",
+        "ipAddress": "IP-Adresse / CIDR",
+        "ipAddressPlaceholder": "192.168.1.0/24 oder 2001:db8::/48",
+        "ipMask": "IP + Maske",
+        "ipMaskPlaceholder": "192.168.1.0 + 255.255.255.0",
+        "ipRange": "IP-Bereich",
+        "ipRangePlaceholder": "192.168.1.1 - 192.168.1.254",
+        "calculationType": "Berechnungstyp",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "calculationTypes": {
+          "cidr": "IP/CIDR",
+          "mask": "IP + Maske",
+          "range": "IP-Bereich"
+        },
+        "errors": {
+          "ipRequired": "IP-Adresse eingeben",
+          "invalidIp": "Ungültige IP-Adresse",
+          "invalidCidr": "Ungültiger CIDR",
+          "invalidMask": "Ungültige Maske",
+          "invalidRange": "Ungültiger Bereich",
+          "ipv4Only": "Nur IPv4",
+          "ipv6Only": "Nur IPv6"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "ipType": "IP-Typ",
+        "networkAddress": "Netzwerkadresse",
+        "firstIp": "Erste IP",
+        "lastIp": "Letzte IP",
+        "broadcastAddress": "Broadcast-Adresse",
+        "subnetMask": "Subnetzmaske",
+        "cidr": "CIDR",
+        "hostsCount": "Anzahl der Hosts",
+        "hostRange": "Host-Bereich",
+        "summary": "Zusammenfassung",
+        "summaryText": "Netzwerk {network} mit {hosts} Hosts im Bereich {first} - {last}.",
+        "network": "Netzwerk",
+        "specifications": "Spezifikationen",
+        "hosts": "Hosts",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "export": "Exportieren",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "IP- und Subnetz-Tipps",
+        "content": "Richtige IP- und Subnetzberechnung gewährleistet korrekte Netzwerkkonfiguration:",
+        "cidr": {
+          "title": "CIDR-Notation",
+          "description": "CIDR zeigt die Anzahl der Bits in der Subnetzmaske",
+          "example": "Beispiel: /24 bedeutet Maske 255.255.255.0"
+        },
+        "ipv4": {
+          "title": "IPv4-Adressen",
+          "private": "Privat: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16",
+          "public": "Öffentlich: alle anderen",
+          "description": "IPv4 verwendet 32-Bit-Adressen"
+        },
+        "ipv6": {
+          "title": "IPv6-Adressen",
+          "private": "Lokal: fe80::/10, fc00::/7",
+          "public": "Global: 2000::/3",
+          "description": "IPv6 verwendet 128-Bit-Adressen"
+        },
+        "subnets": {
+          "title": "Subnetze",
+          "calculation": "Berechnung: 2^(32-CIDR) - 2 Hosts",
+          "description": "Berücksichtigen Sie Netzwerk- und Broadcast-Adressen"
+        }
+      },
+      "seo": {
+        "title": "Online IP- und Subnetzrechner — CIDR / IPv4 / IPv6",
+        "description": "IP- und Subnetzrechner ermöglicht die Berechnung von Netzwerk, erste/letzte IP, Maske, CIDR und Anzahl der Hosts für IPv4 und IPv6. Unterstützung für Reverse-Berechnung vom Bereich zum CIDR.",
+        "keywords": "IP Rechner, CIDR online, IPv4 IPv6 Subnetz, Host-Anzahl, IP-Bereich, IP-Maske, IT Rechner, Netzwerk Rechner, Subnetz Rechner, IP-Adresse Rechner, Subnetzmaske, Broadcast-Adresse, erste IP, letzte IP, Anzahl der Hosts, IP-Bereich Rechner, CIDR Rechner, IPv4 Rechner, IPv6 Rechner, Netzwerk-Ingenieur, Systemadministrator, IT-Spezialist, Netzwerkadministration, IP-Adressierung, Subnetz-Berechnung, Netzwerktechnologien, Computernetzwerke, TCP/IP, Internet-Protokolle",
+        "overview": {
+          "title": "Über den IP- und Subnetzrechner",
+          "content": "Online IP- und Subnetzrechner für IPv4 und IPv6. Berechnen Sie Netzwerk, erste und letzte IP, CIDR und Anzahl der Hosts. Unterstützung für Reverse-Berechnung vom Bereich. Alle Netzwerkadressierungs-Parameter werden berücksichtigt.",
+          "examples": {
+            "title": "Rechner-Anwendungsbeispiele",
+            "cidrExample": {
+              "title": "Subnetz-Berechnung nach CIDR",
+              "scenario": "Zum Beispiel müssen Sie Parameter für das Netzwerk 192.168.1.0/24 berechnen",
+              "calculation": "Rechner wird bestimmen: Subnetzmaske 255.255.255.0, Host-Anzahl 254, erste IP 192.168.1.1, letzte IP 192.168.1.254, Broadcast-Adresse 192.168.1.255",
+              "result": "Netzwerk kann 254 Hosts mit Adressen von 192.168.1.1 bis 192.168.1.254 enthalten"
+            },
+            "subnetExample": {
+              "title": "Subnetz-Aufteilung",
+              "scenario": "Zum Beispiel müssen Sie das Netzwerk 10.0.0.0/16 in 4 Subnetze aufteilen",
+              "calculation": "Rechner wird Subnetze erstellen: 10.0.0.0/18, 10.0.64.0/18, 10.0.128.0/18, 10.0.192.0/18",
+              "result": "Jedes Subnetz kann bis zu 16.382 Hosts enthalten"
+            },
+            "rangeExample": {
+              "title": "Umgekehrte Bereichsberechnung",
+              "scenario": "Zum Beispiel müssen Sie CIDR für den Bereich von 172.16.0.1 bis 172.16.255.254 finden",
+              "calculation": "Rechner wird bestimmen: Netzwerk 172.16.0.0/16, Maske 255.255.0.0, Host-Anzahl 65.534",
+              "result": "Bereich entspricht dem Netzwerk 172.16.0.0/16"
+            },
+            "ipv6Example": {
+              "title": "IPv6-Arbeit",
+              "scenario": "Zum Beispiel müssen Sie das Subnetz 2001:db8::/64 berechnen",
+              "calculation": "Rechner wird bestimmen: Präfix 2001:db8::, Präfixlänge 64, Adressanzahl 2^64",
+              "result": "Subnetz kann 18.446.744.073.709.551.616 Adressen enthalten"
+            },
+            "networkExample": {
+              "title": "Netzwerkparameter-Bestimmung",
+              "scenario": "Zum Beispiel müssen Sie Netzwerkparameter für IP 203.0.113.42/28 bestimmen",
+              "calculation": "Rechner wird bestimmen: Netzwerk 203.0.113.32, Maske 255.255.255.240, erste IP 203.0.113.33, letzte IP 203.0.113.46, Broadcast 203.0.113.47",
+              "result": "Netzwerk enthält 14 Hosts mit Adressen von 203.0.113.33 bis 203.0.113.46"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie IP und Subnetze berechnet werden",
+          "content": "Rechner verwendet Standard-Netzwerkberechnungsformeln:",
+          "network": "Netzwerkadresse: IP & Maske",
+          "hosts": "Anzahl der Hosts: 2^(32-CIDR) - 2",
+          "range": "Bereich: Netzwerk + 1 bis Broadcast - 1"
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "ipv4": "IPv4-Netzwerkberechnung",
+          "ipv4Desc": "Vollständige IPv4-Subnetzparameterberechnung",
+          "ipv6": "IPv6-Netzwerkberechnung",
+          "ipv6Desc": "Unterstützung für moderne IPv6-Adressen",
+          "cidr": "CIDR-Notation",
+          "cidrDesc": "Arbeit mit CIDR-Notation für genaue Berechnung",
+          "reverse": "Reverse-Berechnung",
+          "reverseDesc": "Bestimmung von CIDR durch IP-Bereich",
+          "visualization": "Visualisierung",
+          "visualizationDesc": "Grafische Darstellung des Subnetzes",
+          "export": "Ergebnis-Export",
+          "exportDesc": "Speichern der Ergebnisse in PDF oder Excel",
+          "validation": "Validierung",
+          "validationDesc": "Automatische IP-Adressvalidierung"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "content": "Unser IP-Rechner bietet viele Vorteile für Netzwerkberechnungen.",
+          "accurate": "Genaue Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Netzwerkadressierungs-Standards",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Eingabeformate",
+          "comprehensive": "Umfassende Analyse",
+          "comprehensiveDesc": "Berücksichtigung aller Netzwerkadressierungs-Parameter",
+          "export": "Datenexport",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder Excel zu speichern"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man Subnetz nach IP und Maske?",
+              "a": "Netzwerkadresse = IP & Maske, Anzahl der Hosts = 2^(32-CIDR) - 2."
+            },
+            {
+              "q": "Was ist CIDR und wie verwendet man es?",
+              "a": "CIDR zeigt die Anzahl der Bits in der Subnetzmaske, zum Beispiel /24 bedeutet 255.255.255.0."
+            },
+            {
+              "q": "Wie bestimmt man erste und letzte IP im Netzwerk?",
+              "a": "Erste IP = Netzwerkadresse + 1, letzte IP = Broadcast-Adresse - 1."
+            },
+            {
+              "q": "Wie zählt man verfügbare Hosts?",
+              "a": "Anzahl der Hosts = 2^(32-CIDR) - 2 für IPv4, 2^(128-CIDR) für IPv6."
+            },
+            {
+              "q": "Kann ich diesen Rechner für IPv6 verwenden?",
+              "a": "Ja, der Rechner unterstützt sowohl IPv4- als auch IPv6-Adressen."
+            },
+            {
+              "q": "Wie führt man Reverse-Berechnung vom Bereich zum CIDR durch?",
+              "a": "Der Rechner bestimmt automatisch den minimalen CIDR für den gegebenen IP-Bereich."
+            },
+            {
+              "q": "Wie findet man die Broadcast-Adresse?",
+              "a": "Broadcast-Adresse = Netzwerkadresse + (2^(32-CIDR) - 1)."
+            },
+            {
+              "q": "Wie konvertiert man Subnetzmaske zu CIDR?",
+              "a": "CIDR = Anzahl der Einsen in der Subnetzmaske in binärer Darstellung."
+            },
+            {
+              "q": "Wie überprüft man die Gültigkeit der IP-Adresse?",
+              "a": "Der Rechner validiert automatisch das Format und den Bereich der IP-Adressen."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für mehrere IP-Bereiche?",
+              "a": "Verwenden Sie Reverse-Berechnung, um gemeinsamen CIDR für den Bereich zu bestimmen."
+            },
+            {
+              "q": "Ist der Rechner für die Ausbildung von Netzwerk-Ingenieuren geeignet?",
+              "a": "Ja, der Rechner ist ausgezeichnet für das Lernen von Netzwerkadressierung und Subnetzen."
+            },
+            {
+              "q": "Kann ich den Rechner für lokales Netzwerkdesign verwenden?",
+              "a": "Ja, der Rechner hilft bei der Gestaltung optimaler Subnetzstruktur."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Server-Farm?",
+              "a": "Bestimmen Sie die Anzahl der Server und wählen Sie geeigneten CIDR für das Subnetz."
+            },
+            {
+              "q": "Was sind private IP-Adressen?",
+              "a": "Private Adressen: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 für interne Netzwerke."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Büro?",
+              "a": "Berücksichtigen Sie die Anzahl der Geräte und geplantes Netzwerkwachstum bei der CIDR-Auswahl."
+            },
+            {
+              "q": "Kann ich den Rechner für IPv6 verwenden?",
+              "a": "Ja, der Rechner unterstützt vollständig IPv6-Adressen und -Berechnungen."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Rechenzentrum?",
+              "a": "Verwenden Sie große Subnetze mit kleinem CIDR für die Unterbringung vieler Server."
+            },
+            {
+              "q": "Was ist Broadcast-Adresse?",
+              "a": "Adresse zum Senden von Paketen an alle Hosts im Subnetz, normalerweise die letzte Adresse."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Heimnetzwerk?",
+              "a": "Verwenden Sie 192.168.0.0/24 oder 192.168.1.0/24 für typisches Heimnetzwerk."
+            },
+            {
+              "q": "Kann ich den Rechner für VPN verwenden?",
+              "a": "Ja, der Rechner hilft bei der Konfiguration von Subnetzen für VPN-Verbindungen."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Cloud-Services?",
+              "a": "Berücksichtigen Sie Cloud-Provider-Anforderungen und geplante Skalierung."
+            },
+            {
+              "q": "Was ist Subnetzmaske?",
+              "a": "32-Bit-Zahl, die definiert, welcher Teil der IP-Adresse zum Netzwerk gehört."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für IoT-Geräte?",
+              "a": "Verwenden Sie große Subnetze für die Unterbringung vieler IoT-Geräte."
+            },
+            {
+              "q": "Kann ich den Rechner für Sicherheit verwenden?",
+              "a": "Ja, richtige Subnetzkonfiguration ist wichtig für Netzwerksicherheit."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für mobile Geräte?",
+              "a": "Berücksichtigen Sie dynamische IP-Zuweisung und DHCP."
+            },
+            {
+              "q": "Was ist Netzwerkadresse?",
+              "a": "Erste Adresse im Subnetz, verwendet zur Identifizierung des Netzwerks selbst."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für industrielle Netzwerke?",
+              "a": "Berücksichtigen Sie Zuverlässigkeits- und Isolationsanforderungen industrieller Systeme."
+            },
+            {
+              "q": "Kann ich den Rechner für IPv6 verwenden?",
+              "a": "Ja, der Rechner unterstützt alle modernen IPv6-Funktionen."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Bildungseinrichtungen?",
+              "a": "Planen Sie Subnetze nach Abteilungen und Gerätetypen."
+            },
+            {
+              "q": "Was ist Subnetz?",
+              "a": "Logische Aufteilung des Netzwerks in kleinere Segmente für Verkehrsmanagement."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Banken?",
+              "a": "Berücksichtigen Sie Sicherheits- und Isolationsanforderungen von Finanzsystemen."
+            },
+            {
+              "q": "Kann ich den Rechner für IPv6 verwenden?",
+              "a": "Ja, der Rechner ist vollständig kompatibel mit IPv6-Standards."
+            },
+            {
+              "q": "Wie berechnet man Subnetz für Regierungsinstitutionen?",
+              "a": "Folgen Sie Informationssicherheitsanforderungen und Standards."
+            }
+          ]
+        }
+      }
+    },
     "heatingCost": {
       "title": "Heizkostenrechner — Online-Berechnung",
       "description": "Online-Rechner zur Berechnung der Heizkosten nach Systemtyp, Raumgröße und Energietarifen.",
@@ -8988,6 +10280,243 @@
           "answer4": "Ja, der Rechner berücksichtigt automatisch Schaltjahre für genaue Berechnung.",
           "question5": "Kann ich das Alter in Tagen berechnen?",
           "answer5": "Ja, der Rechner zeigt die Gesamtzahl der Tage seit der Geburt."
+        },
+        "waterPipeCalculator": {
+          "title": "Wasserrohr-Rechner",
+          "description": "Berechnung von Durchmesser, Durchflusskapazität und hydraulischen Parametern von Wasserrohren",
+          "breadcrumbs": {
+            "category": "Bauwesen"
+          },
+          "hero": {
+            "pipes": "Rohre",
+            "accuracy": "Genauigkeit",
+            "format": "Format"
+          },
+          "features": {
+            "diameterCalculation": "Rohrdurchmesser-Berechnung",
+            "flowCalculation": "Durchflusskapazität-Berechnung",
+            "pressureCalculation": "Druck-Berechnung",
+            "materialSupport": "Material-Unterstützung",
+            "accuracy": "Hohe Genauigkeit"
+          },
+          "form": {
+            "title": "Berechnungsparameter",
+            "description": "Geben Sie Parameter für die Wasserrohr-Berechnung ein",
+            "calculationType": "Berechnungstyp",
+            "calculationTypes": {
+              "diameter": "Nach Durchmesser",
+              "flow": "Nach Durchfluss",
+              "pressure": "Nach Druck"
+            },
+            "diameter": "Rohrdurchmesser (mm)",
+            "diameterPlaceholder": "50",
+            "flowRate": "Wasserdurchfluss (m³/s)",
+            "flowRatePlaceholder": "0.1",
+            "velocity": "Strömungsgeschwindigkeit (m/s)",
+            "velocityPlaceholder": "2.0",
+            "pressure": "Druck (bar)",
+            "pressurePlaceholder": "3.0",
+            "length": "Rohrlänge (m)",
+            "lengthPlaceholder": "100",
+            "material": "Rohrmaterial",
+            "materials": {
+              "steel": "Stahl",
+              "copper": "Kupfer",
+              "plastic": "Kunststoff",
+              "castIron": "Gusseisen"
+            },
+            "roughness": "Rauheit (mm)",
+            "roughnessPlaceholder": "0.1",
+            "temperature": "Wassertemperatur (°C)",
+            "temperaturePlaceholder": "20",
+            "viscosity": "Viskosität (Pa·s)",
+            "viscosityPlaceholder": "0.001",
+            "density": "Dichte (kg/m³)",
+            "densityPlaceholder": "1000",
+            "calculate": "Berechnen",
+            "calculating": "Berechnung...",
+            "reset": "Zurücksetzen",
+            "errors": {
+              "diameterRequired": "Rohrdurchmesser eingeben",
+              "flowRequired": "Wasserdurchfluss eingeben",
+              "pressureRequired": "Druck eingeben",
+              "lengthRequired": "Rohrlänge eingeben",
+              "invalidNumber": "Ungültige Zahl"
+            }
+          },
+          "results": {
+            "title": "Berechnungsergebnisse",
+            "diameter": "Rohrdurchmesser",
+            "flow": "Wasserdurchfluss",
+            "velocity": "Strömungsgeschwindigkeit",
+            "pressure": "Druck",
+            "reynolds": "Reynolds-Zahl",
+            "friction": "Reibungsfaktor",
+            "headLoss": "Druckverlust",
+            "copy": "Kopieren",
+            "copied": "Kopiert"
+          },
+          "tips": {
+            "title": "Nützliche Tipps",
+            "content": "Für eine genaue Wasserrohr-Berechnung:",
+            "diameter": "Wählen Sie den richtigen Durchmesser für den erforderlichen Durchfluss",
+            "material": "Berücksichtigen Sie das Rohrmaterial bei der Verlustberechnung",
+            "pressure": "Überprüfen Sie die Druckkonformität mit Standards"
+          },
+          "seo": {
+            "title": "Wasserrohr-Rechner - Durchmesser- und Durchflusskapazität-Berechnung",
+            "description": "Professioneller Rechner für Wasserrohr-Berechnung. Bestimmen Sie Durchmesser, Durchfluss, Druck und hydraulische Parameter von Rohrleitungen.",
+            "overview": {
+              "title": "Über den Wasserrohr-Rechner",
+              "content": "Der Wasserrohr-Rechner ist für die Berechnung grundlegender hydraulischer Parameter von Rohrleitungssystemen konzipiert. Das Tool ermöglicht es, den optimalen Rohrdurchmesser, die Durchflusskapazität, Druckverluste und andere wichtige Eigenschaften für die Planung von Wasserversorgungssystemen zu bestimmen.",
+              "examples": {
+                "title": "Rechner-Anwendungsbeispiele",
+                "diameterExample": {
+                  "title": "Rohrdurchmesser-Berechnung",
+                  "scenario": "Zum Beispiel müssen Sie den Rohrdurchmesser für Wasserversorgung zu einem Privathaus berechnen. Erforderlicher Durchfluss 0.05 m³/s (50 l/s) bei Strömungsgeschwindigkeit 2 m/s.",
+                  "calculation": "Rechner wird bestimmen: D = √(4×0.05/π×2) = √(0.2/6.28) = √0.032 = 0.18 m = 180 mm",
+                  "result": "Rohrdurchmesser 200 mm wird empfohlen, um erforderlichen Durchfluss zu gewährleisten."
+                },
+                "flowExample": {
+                  "title": "Durchflusskapazität-Berechnung",
+                  "scenario": "Zum Beispiel müssen Sie wissen, wie viel Wasser ein bestehender 150 mm Durchmesser-Rohr bei Geschwindigkeit 1.5 m/s passieren kann.",
+                  "calculation": "Rechner wird berechnen: Q = π×0.15²×1.5/4 = 0.026 m³/s = 26 l/s",
+                  "result": "Rohr kann 26 Liter pro Sekunde oder 94 Kubikmeter pro Stunde passieren."
+                },
+                "pressureExample": {
+                  "title": "Druckverlust-Berechnung",
+                  "scenario": "Zum Beispiel müssen Sie Druckverluste in 200 m langem, 100 mm Durchmesser-Wasserrohr bei Durchfluss 0.02 m³/s (20 l/s) berechnen.",
+                  "calculation": "Rechner wird Geschwindigkeit V = 2.55 m/s, Reynolds-Zahl Re = 255,000, Reibungsfaktor λ = 0.018, Druckverlust ΔP = 0.15 bar bestimmen",
+                  "result": "Druckverluste werden 0.15 bar betragen, was für die meisten Systeme akzeptabel ist."
+                },
+                "materialExample": {
+                  "title": "Rohrmaterial-Einfluss",
+                  "scenario": "Zum Beispiel vergleichen wir Druckverluste in Stahl- und Kunststoffrohren gleichen 100 mm Durchmessers und 100 m Länge bei Durchfluss 0.01 m³/s.",
+                  "steel": "Stahlrohr: Rauheit 0.045 mm, Verluste 0.08 bar",
+                  "plastic": "Kunststoffrohr: Rauheit 0.0015 mm, Verluste 0.02 bar",
+                  "result": "Kunststoffrohr hat 4-mal niedrigere Druckverluste."
+                }
+              }
+            },
+            "calculation": {
+              "title": "Wie Rohrparameter berechnet werden",
+              "content": "Die Berechnung basiert auf hydraulischen Gesetzen und umfasst:",
+              "diameter": "Bestimmung des Durchmessers nach Durchfluss und Geschwindigkeit",
+              "flow": "Berechnung der Durchflusskapazität nach Durchmesser",
+              "pressure": "Bestimmung der Druckverluste in der Rohrleitung",
+              "methods": {
+                "title": "Berechnungsmethoden",
+                "continuity": "Kontinuitätsgleichung: Q = A × V",
+                "bernoulli": "Bernoulli-Gleichung für Energiebilanz",
+                "darcy": "Darcy-Weisbach-Formel für Druckverluste",
+                "reynolds": "Reynolds-Zahl für Strömungsregime-Bestimmung",
+                "moody": "Moody-Diagramm für Reibungsfaktor",
+                "hazen": "Hazen-Williams-Formel für schnelle Berechnungen"
+              },
+              "parameters": {
+                "title": "Hauptparameter",
+                "flowRate": "Wasserdurchfluss (Q) - Volumen der Flüssigkeit, die pro Zeiteinheit durch den Querschnitt fließt",
+                "velocity": "Strömungsgeschwindigkeit (V) - durchschnittliche Geschwindigkeit der Flüssigkeitsbewegung im Rohr",
+                "diameter": "Rohrdurchmesser (D) - Innendurchmesser der Rohrleitung",
+                "length": "Rohrlänge (L) - Gesamtlänge des Rohrleitungsabschnitts",
+                "pressure": "Druck (P) - statischer Druck im System",
+                "density": "Flüssigkeitsdichte (ρ) - Masse pro Volumeneinheit",
+                "viscosity": "Viskosität (μ) - Widerstand der Flüssigkeit gegen Strömung",
+                "roughness": "Rauheit (ε) - Höhe der Unregelmäßigkeiten der Innenoberfläche"
+              },
+              "regimes": {
+                "title": "Strömungsregime",
+                "laminar": "Laminares Regime (Re < 2300) - glatte Strömung ohne Wirbel",
+                "transitional": "Übergangsregime (2300 < Re < 4000) - instabile Strömung",
+                "turbulent": "Turbulentes Regime (Re > 4000) - Wirbelströmung mit Mischung"
+              },
+              "detailed": {
+                "title": "Detaillierte Berechnungserklärung",
+                "diameterCalculation": {
+                  "title": "Rohrdurchmesser-Berechnung",
+                  "formula": "D = √(4Q/πV)",
+                  "description": "Durchmesser wird durch Formel bestimmt: D = √(4Q/πV), wobei Q - Wasserdurchfluss (m³/s), V - Strömungsgeschwindigkeit (m/s)",
+                  "example": "Beispiel: Mit Durchfluss 0.1 m³/s und Geschwindigkeit 2 m/s: D = √(4×0.1/π×2) = √(0.4/6.28) = √0.064 = 0.25 m = 250 mm"
+                },
+                "flowCalculation": {
+                  "title": "Wasserdurchfluss-Berechnung",
+                  "formula": "Q = A × V = πD²V/4",
+                  "description": "Durchfluss wird als Produkt von Querschnittsfläche und Strömungsgeschwindigkeit berechnet",
+                  "example": "Beispiel: Für Rohr Durchmesser 200 mm bei Geschwindigkeit 1.5 m/s: Q = π×0.2²×1.5/4 = 0.047 m³/s = 47 l/s"
+                },
+                "pressureCalculation": {
+                  "title": "Druckverlust-Berechnung",
+                  "formula": "ΔP = λ × (L/D) × (ρV²/2)",
+                  "description": "Druckverluste nach Darcy-Weisbach-Formel unter Berücksichtigung des Reibungsfaktors λ",
+                  "example": "Beispiel: Für Rohr Länge 100 m, Durchmesser 150 mm, Geschwindigkeit 2 m/s: ΔP = 0.02 × (100/0.15) × (1000×2²/2) = 0.02 × 667 × 2000 = 26,680 Pa = 0.27 bar"
+                },
+                "reynoldsNumber": {
+                  "title": "Reynolds-Zahl",
+                  "formula": "Re = ρVD/μ",
+                  "description": "Bestimmt Strömungsregime: laminar (Re < 2300) oder turbulent (Re > 4000)",
+                  "example": "Beispiel: Mit Dichte 1000 kg/m³, Geschwindigkeit 2 m/s, Durchmesser 0.2 m, Viskosität 0.001 Pa·s: Re = 1000×2×0.2/0.001 = 400,000 (turbulentes Regime)"
+                },
+                "frictionFactor": {
+                  "title": "Reibungsfaktor",
+                  "laminar": "Für laminare Strömung: λ = 64/Re",
+                  "turbulent": "Für turbulente Strömung: λ = 0.316/Re^0.25 (Blasius-Formel)",
+                  "example": "Beispiel: Mit Re = 100,000: λ = 0.316/100,000^0.25 = 0.316/17.78 = 0.0178"
+                }
+              }
+            },
+            "features": {
+              "title": "Hauptfunktionen",
+              "diameterCalculation": "Rohrdurchmesser-Berechnung",
+              "diameterCalculationDesc": "Bestimmung des optimalen Durchmessers für gegebenen Durchfluss",
+              "flowCalculation": "Wasserdurchfluss-Berechnung",
+              "flowCalculationDesc": "Bestimmung der Rohrleitungs-Durchflusskapazität",
+              "pressureCalculation": "Druck-Berechnung",
+              "pressureCalculationDesc": "Bestimmung der Druckverluste im System",
+              "materialSupport": "Rohrmaterial-Berücksichtigung",
+              "materialSupportDesc": "Berechnung unter Berücksichtigung der Eigenschaften verschiedener Materialien",
+              "accuracy": "Hohe Genauigkeit",
+              "accuracyDesc": "Verwendung bewährter hydraulischer Formeln",
+              "export": "Ergebnis-Export",
+              "exportDesc": "Speichern von Berechnungen in PDF- und CSV-Formaten"
+            },
+            "advantages": {
+              "title": "Rechner-Vorteile",
+              "content": "Unser Wasserrohr-Rechner bietet viele Vorteile:",
+              "professional": "Professionelle Berechnungen",
+              "professionalDesc": "Verwendung bewährter hydraulischer Formeln",
+              "accuracy": "Hohe Genauigkeit",
+              "accuracyDesc": "Genaue Berechnungen unter Berücksichtigung aller Parameter",
+              "timeSaving": "Zeitersparnis",
+              "timeSavingDesc": "Schnelle Berechnungen ohne komplexe Berechnungen",
+              "costEffective": "Kosteneffektiv",
+              "costEffectiveDesc": "Optimierung der Rohrgrößen für Kosteneinsparungen"
+            },
+            "faq": {
+              "title": "Häufig gestellte Fragen",
+              "faqItems": [
+                {
+                  "q": "Wie wählt man den Rohrdurchmesser für die Wasserversorgung?",
+                  "a": "Der Rohrdurchmesser wird basierend auf dem erforderlichen Wasserdurchfluss, der zulässigen Strömungsgeschwindigkeit und den Druckverlusten ausgewählt. Für Wohngebäude werden normalerweise Rohre mit Durchmesser 15-25 mm verwendet, für Industrieanlagen - bis zu 200 mm und mehr."
+                },
+                {
+                  "q": "Welche Faktoren beeinflussen die Durchflusskapazität des Rohrs?",
+                  "a": "Die Durchflusskapazität hängt vom Rohrdurchmesser, Material, innerer Oberflächenrauheit, Flüssigkeitsviskosität, Temperatur und Strömungsregime (laminar oder turbulent) ab."
+                },
+                {
+                  "q": "Wie berechnet man Druckverluste in der Rohrleitung?",
+                  "a": "Druckverluste werden mit der Darcy-Weisbach-Formel unter Berücksichtigung des Reibungsfaktors, Rohrlänge, Durchmesser und Strömungsgeschwindigkeit berechnet. Auch lokale Widerstände (Fittings, Armaturen) werden berücksichtigt."
+                },
+                {
+                  "q": "Was ist der Unterschied zwischen laminaren und turbulenten Regimen?",
+                  "a": "Das laminare Regime ist durch sanfte Flüssigkeitsströmung mit niedrigen Energieverlusten gekennzeichnet. Das turbulente Regime tritt bei hohen Geschwindigkeiten auf und ist durch Wirbelbewegung mit erhöhten Druckverlusten gekennzeichnet."
+                },
+                {
+                  "q": "Welches Rohrmaterial ist besser für die Wasserversorgung?",
+                  "a": "Die Materialauswahl hängt von den Betriebsbedingungen ab. Kunststoffrohre (PVC, PP) sind für kaltes Wasser geeignet, Metall-Kunststoff - für heißes Wasser, Kupferrohre - für Heizsysteme, Stahl - für hohe Drücke."
+                }
+              ]
+            }
+          }
         }
       }
     }

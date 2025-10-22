@@ -109,6 +109,10 @@
 		"fun": {
 			"title": "Entertainment and Hobbies",
 			"description": "Compatibility, generators, games"
+		},
+		"it": {
+			"title": "IT Calculators",
+			"description": "IP addresses, hashing, encoding, network calculations"
 		}
 	},
 	"math_basic": {
@@ -6436,6 +6440,1298 @@
 				}
 			}
 		},
+		"electricityUsage": {
+			"title": "Electricity Usage Calculator — Online Power Consumption",
+			"description": "Online calculator to estimate electricity usage and cost for home, office, or construction devices.",
+			"breadcrumbs": {
+				"life": "Life"
+			},
+			"hero": {
+				"kwh": "kWh per month",
+				"accuracy": "Calculation accuracy",
+				"format": "Data format"
+			},
+			"features": {
+				"powerCalculation": "Power calculation",
+				"timeCalculation": "Time tracking",
+				"tariffCalculation": "Tariff calculation",
+				"exportSupport": "Data export",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "Electricity Usage Calculation",
+				"description": "Calculate electricity consumption and cost for household and construction devices",
+				"deviceName": "Device name",
+				"deviceNamePlaceholder": "e.g.: Refrigerator",
+				"power": "Power (W)",
+				"powerPlaceholder": "Enter power in watts",
+				"quantity": "Number of devices",
+				"quantityPlaceholder": "Enter quantity",
+				"hoursPerDay": "Hours per day",
+				"hoursPerDayPlaceholder": "Enter operating hours",
+				"daysPerMonth": "Days per month",
+				"daysPerMonthPlaceholder": "Enter operating days",
+				"tariff": "Tariff ($/kWh)",
+				"tariffPlaceholder": "Enter tariff per kWh",
+				"networkType": "Network type",
+				"voltage": "Voltage (V)",
+				"voltagePlaceholder": "220 or 380",
+				"loadFactor": "Load factor (%)",
+				"loadFactorPlaceholder": "Enter load factor",
+				"addDevice": "Add device",
+				"removeDevice": "Remove device",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"networkTypes": {
+					"single_phase": "Single-phase network",
+					"three_phase": "Three-phase network"
+				},
+				"errors": {
+					"deviceNameRequired": "Enter device name",
+					"powerRequired": "Enter device power",
+					"quantityRequired": "Enter number of devices",
+					"hoursRequired": "Enter operating hours",
+					"tariffRequired": "Enter tariff",
+					"invalidNumber": "Enter valid number",
+					"powerTooHigh": "Power too high",
+					"hoursTooMany": "Too many hours per day"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"totalPower": "Total power",
+				"dailyConsumption": "Daily consumption",
+				"monthlyConsumption": "Monthly consumption",
+				"yearlyConsumption": "Yearly consumption",
+				"dailyCost": "Daily cost",
+				"monthlyCost": "Monthly cost",
+				"yearlyCost": "Yearly cost",
+				"costPerKwh": "Cost per kWh",
+				"summary": "Summary",
+				"summaryText": "With total power of {totalPower} W, daily consumption is {dailyConsumption} kWh, and monthly cost is {monthlyCost} dollars.",
+				"devices": "Devices",
+				"power": "Power",
+				"consumption": "Consumption",
+				"cost": "Cost",
+				"copy": "Copy",
+				"copied": "Copied!",
+				"export": "Export",
+				"exportPdf": "PDF",
+				"exportCsv": "CSV"
+			},
+			"tips": {
+				"title": "Electricity Saving Tips",
+				"content": "You can reduce electricity consumption in several ways:",
+				"equipment": {
+					"title": "Equipment",
+					"led": "Use LED bulbs instead of incandescent",
+					"efficient": "Buy A+++ class appliances",
+					"smart": "Install smart outlets and thermostats",
+					"maintenance": "Regularly maintain equipment"
+				},
+				"habits": {
+					"title": "Habits",
+					"turn_off": "Turn off unused devices",
+					"temperature": "Optimize home temperature",
+					"timing": "Use night tariffs",
+					"unplug": "Unplug chargers"
+				},
+				"construction": {
+					"title": "Construction",
+					"planning": "Plan power supply in advance",
+					"monitoring": "Install meters on site",
+					"efficient": "Use energy-efficient tools"
+				}
+			},
+			"seo": {
+				"title": "Online Electricity Usage Calculator — Consumption and Cost Calculation",
+				"description": "Online electricity usage calculator. Calculate consumption for homes, offices and construction. Support for tariffs, charts and data export.",
+				"keywords": "electricity usage, electricity calculator, power consumption, electrical calculator, kWh calculation, energy consumption, electricity tariff, energy consumption, electricity calculator",
+				"overview": {
+					"title": "About Electricity Usage Calculator",
+					"content": "Online electricity usage calculator helps calculate how much electricity your household or construction devices consume per day, month, or year. Perfect for cost estimation, tariff planning, and energy efficiency analysis."
+				},
+				"calculation": {
+					"title": "How Electricity Usage is Calculated",
+					"content": "Calculator uses formula: Consumption (kWh) = Power (kW) × Operating Time (h) × Load Factor",
+					"single_phase": "Single-phase network: P = U × I × cos(φ)",
+					"three_phase": "Three-phase network: P = √3 × U × I × cos(φ)",
+					"tariff": "Cost = Consumption × Tariff"
+				},
+				"features": {
+					"title": "Main Features",
+					"power": "Power consumption calculation (W, kWh)",
+					"powerDesc": "Power consumption calculation in watts and kilowatt-hours with all parameters",
+					"network": "Support for single-phase and three-phase networks",
+					"networkDesc": "Support for single-phase and three-phase electrical networks",
+					"time": "Accounting for operating time, device count and load factor",
+					"timeDesc": "Accounting for operating time, device count and load factor",
+					"tariff": "Ability to specify tariff ($, €, £ etc.)",
+					"tariffDesc": "Ability to specify tariff in rubles, dollars, euros and other currencies",
+					"chart": "Consumption distribution chart by devices",
+					"chartDesc": "Consumption distribution chart by devices for clarity",
+					"export": "Data export to PDF and CSV",
+					"exportDesc": "Data export to PDF and CSV for further use",
+					"responsive": "Multi-platform responsive interface"
+				},
+				"advantages": {
+					"title": "Calculator Advantages",
+					"content": "Our electricity usage calculator provides many advantages for accurate energy consumption calculation.",
+					"accurate": "Accurate calculations",
+					"accurateDesc": "Uses current formulas and coefficients",
+					"flexible": "Flexible settings",
+					"flexibleDesc": "Support for various network types and devices",
+					"comprehensive": "Comprehensive analysis",
+					"comprehensiveDesc": "Accounting for power, operating time and tariffs",
+					"export": "Data export",
+					"exportDesc": "Ability to save results in PDF or CSV"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate electricity usage of household devices?",
+							"a": "Enter device power, operating time and quantity — the calculator will show consumption."
+						},
+						{
+							"q": "Can I calculate energy cost?",
+							"a": "Yes, just specify the tariff per 1 kWh."
+						},
+						{
+							"q": "How to convert Watts to kWh?",
+							"a": "1 kWh = 1000 W multiplied by hours of operation, divided by 1000."
+						},
+						{
+							"q": "Can I add multiple devices?",
+							"a": "Yes, the calculator supports calculation for a list of devices."
+						},
+						{
+							"q": "Can I account for night tariff?",
+							"a": "Yes, there are fields for day and night tariffs."
+						},
+						{
+							"q": "Does the calculator account for three-phase network?",
+							"a": "Yes, you can specify network type and voltage."
+						},
+						{
+							"q": "How to calculate annual energy consumption?",
+							"a": "Results are automatically recalculated by months and years."
+						},
+						{
+							"q": "Can I use the calculator for office or workshop?",
+							"a": "Yes, there is a \"commercial use\" mode."
+						},
+						{
+							"q": "How to find out which devices consume the most?",
+							"a": "Results are displayed as a chart by devices."
+						},
+						{
+							"q": "Can I export the report?",
+							"a": "Yes, results can be saved in PDF or CSV format."
+						},
+						{
+							"q": "Can I account for load factor?",
+							"a": "Yes, the calculator accounts for effective power (real load)."
+						}
+					]
+				}
+			}
+		},
+		"rebarCalculator": {
+			"title": "Rebar Calculator — Online Reinforcement Calculation",
+			"description": "Online rebar calculator. Fast calculation of rebar quantity, length, and weight for foundation, slab, columns, and walls.",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"hero": {
+				"bars": "Bars",
+				"accuracy": "Calculation accuracy",
+				"format": "Data format"
+			},
+			"features": {
+				"quantityCalculation": "Rebar quantity calculation",
+				"weightCalculation": "Weight calculation by GOST",
+				"gridSupport": "Grid support",
+				"exportSupport": "Data export",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "Rebar calculation",
+				"description": "Calculate required quantity and weight of reinforcement bars for concrete structures",
+				"structureType": "Structure type",
+				"length": "Length (m)",
+				"lengthPlaceholder": "Enter structure length",
+				"width": "Width (m)",
+				"widthPlaceholder": "Enter structure width",
+				"height": "Height (m)",
+				"heightPlaceholder": "Enter structure height",
+				"gridSpacing": "Grid spacing (cm)",
+				"gridSpacingPlaceholder": "Enter spacing between bars",
+				"rebarDiameter": "Rebar diameter (mm)",
+				"rebarDiameterPlaceholder": "Enter bar diameter",
+				"layers": "Number of layers",
+				"layersPlaceholder": "Enter number of layers",
+				"overlap": "Overlap (cm)",
+				"overlapPlaceholder": "Enter overlap length",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"structureTypes": {
+					"foundation": "Foundation",
+					"slab": "Slab",
+					"wall": "Wall",
+					"column": "Column"
+				},
+				"errors": {
+					"lengthRequired": "Enter structure length",
+					"widthRequired": "Enter structure width",
+					"heightRequired": "Enter structure height",
+					"gridSpacingRequired": "Enter grid spacing",
+					"diameterRequired": "Enter rebar diameter",
+					"invalidNumber": "Enter a valid number",
+					"lengthTooSmall": "Length too small",
+					"widthTooSmall": "Width too small",
+					"heightTooSmall": "Height too small",
+					"gridSpacingTooSmall": "Grid spacing too small",
+					"diameterTooSmall": "Diameter too small"
+				}
+			},
+			"results": {
+				"title": "Calculation results",
+				"totalLength": "Total length",
+				"totalWeight": "Total weight",
+				"barCount": "Number of bars",
+				"barsPerLayer": "Bars per layer",
+				"weightPerMeter": "Weight per meter",
+				"cost": "Cost",
+				"summary": "Summary",
+				"summaryText": "For structure {length}×{width}×{height} m requires {totalLength} m of rebar with total weight {totalWeight} kg.",
+				"structure": "Structure",
+				"dimensions": "Dimensions",
+				"grid": "Grid",
+				"rebar": "Rebar",
+				"copy": "Copy",
+				"copied": "Copied!",
+				"export": "Export",
+				"exportPdf": "PDF",
+				"exportExcel": "Excel"
+			},
+			"tips": {
+				"title": "Reinforcement tips",
+				"content": "Proper reinforcement ensures concrete structure strength:",
+				"diameter": {
+					"title": "Diameter selection",
+					"foundation": "Foundation: Ø10-16 mm",
+					"slab": "Slab: Ø8-12 mm",
+					"wall": "Wall: Ø6-10 mm",
+					"column": "Column: Ø12-20 mm"
+				},
+				"spacing": {
+					"title": "Grid spacing",
+					"foundation": "Foundation: 15-25 cm",
+					"slab": "Slab: 10-20 cm",
+					"wall": "Wall: 15-30 cm",
+					"column": "Column: 10-15 cm"
+				},
+				"construction": {
+					"title": "Construction",
+					"overlap": "Bar overlap: 30-50 diameters",
+					"cover": "Protective layer: 2-5 cm",
+					"anchoring": "Anchoring: 10-15 diameters"
+				}
+			},
+			"seo": {
+				"title": "Online Rebar Calculator — Quantity and Weight Calculation",
+				"description": "Online rebar calculator helps calculate rebar consumption, weight and bar count for concrete structures. PDF and Excel support.",
+				"keywords": "rebar calculator, rebar calculation, online rebar, rebar calculator, rebar weight calculation, rebar quantity, foundation reinforcement, rebar consumption, rebar weight by diameter, bewehrung berechnen",
+				"overview": {
+					"title": "About rebar calculator",
+					"content": "Online rebar calculator helps calculate required quantity and weight of reinforcement bars for concrete structures — slabs, foundations, columns, floors and walls. Enter structure dimensions, grid spacing and rebar diameter — the tool instantly calculates total length, weight and approximate bar count."
+				},
+				"calculation": {
+					"title": "How rebar is calculated",
+					"content": "Calculator uses standard rebar calculation formulas:",
+					"length": "Length = (Structure size / Grid spacing + 1) × Number of layers",
+					"weight": "Weight = Length × Weight per meter (by GOST)",
+					"count": "Count = Length / Bar length"
+				},
+				"features": {
+					"title": "Main features",
+					"quantity": "Rebar quantity and weight calculation by length, spacing and diameter",
+					"quantityDesc": "Accurate calculation of rebar quantity and weight considering all parameters",
+					"grid": "Round and square grid support",
+					"gridDesc": "Support for various types of reinforcement grids",
+					"weight": "Automatic weight determination by GOST",
+					"weightDesc": "Automatic rebar weight calculation by state standards",
+					"visualization": "Reinforcement scheme visualization",
+					"visualizationDesc": "Visual display of structure reinforcement scheme",
+					"structures": "Calculation for foundation, slab, wall or column",
+					"structuresDesc": "Support for various types of concrete structures",
+					"export": "Calculation export to PDF / Excel",
+					"exportDesc": "Ability to save results in various formats",
+					"chart": "Interactive rebar consumption chart",
+					"chartDesc": "Rebar consumption visualization in charts",
+					"units": "Metric and imperial units support (mm, cm, m, feet)",
+					"unitsDesc": "Work with different measurement systems"
+				},
+				"advantages": {
+					"title": "Calculator advantages",
+					"content": "Our rebar calculator provides many advantages for accurate reinforcement calculation.",
+					"accurate": "Accurate calculations",
+					"accurateDesc": "Uses current GOST and building codes",
+					"flexible": "Flexible settings",
+					"flexibleDesc": "Support for various structure types and grids",
+					"comprehensive": "Comprehensive analysis",
+					"comprehensiveDesc": "Accounting for all reinforcement parameters",
+					"export": "Data export",
+					"exportDesc": "Ability to save results in PDF or Excel"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate rebar quantity for foundation?",
+							"a": "Enter dimensions, grid spacing and diameter — calculator will calculate total length and weight."
+						},
+						{
+							"q": "How to choose rebar diameter?",
+							"a": "For foundation use Ø10–16 mm, for walls — Ø8–12 mm."
+						},
+						{
+							"q": "Can I calculate rebar weight?",
+							"a": "Yes, weight is calculated automatically by GOST depending on diameter."
+						},
+						{
+							"q": "What is rebar spacing?",
+							"a": "Distance between bars in grid — affects strength and consumption."
+						},
+						{
+							"q": "Is calculator suitable for strip foundation?",
+							"a": "Yes, you can select structure type and set its parameters."
+						},
+						{
+							"q": "How to convert rebar weight to linear meters?",
+							"a": "Calculator does this automatically, showing both values."
+						},
+						{
+							"q": "Can I specify non-standard units (feet, inches)?",
+							"a": "Yes, metric and imperial systems are available."
+						},
+						{
+							"q": "Does calculator support Excel export?",
+							"a": "Yes, there is export to PDF and Excel files."
+						},
+						{
+							"q": "Can I calculate two grids (top and bottom)?",
+							"a": "Yes, double layer reinforcement is provided."
+						},
+						{
+							"q": "Is it suitable for floor slabs?",
+							"a": "Yes, calculator is universal — choose \"slab\" in structure type."
+						},
+						{
+							"q": "Can I save results?",
+							"a": "Yes, results can be downloaded or printed."
+						}
+					]
+				}
+			}
+		},
+		"cableSectionCalculator": {
+			"title": "Cable Cross-Section Calculator — Online Wire Size Calculation",
+			"description": "Online cable cross-section calculator helps determine the optimal wire gauge based on power, current, and line length.",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"hero": {
+				"cables": "Cables",
+				"accuracy": "Calculation accuracy",
+				"format": "Data format"
+			},
+			"features": {
+				"powerCalculation": "Power calculation",
+				"currentCalculation": "Current calculation",
+				"voltageDrop": "Voltage drop consideration",
+				"materialSupport": "Material support",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "Cable cross-section calculation",
+				"description": "Calculate optimal conductor cross-section for electrical wiring",
+				"calculationType": "Calculation type",
+				"power": "Power (kW)",
+				"powerPlaceholder": "Enter load power",
+				"current": "Current (A)",
+				"currentPlaceholder": "Enter load current",
+				"voltage": "Voltage (V)",
+				"voltagePlaceholder": "Enter network voltage",
+				"length": "Line length (m)",
+				"lengthPlaceholder": "Enter cable length",
+				"material": "Conductor material",
+				"phaseType": "Network type",
+				"powerFactor": "Power factor (cosφ)",
+				"powerFactorPlaceholder": "Enter power factor",
+				"voltageDrop": "Allowable voltage drop (%)",
+				"voltageDropPlaceholder": "Enter allowable losses",
+				"temperature": "Ambient temperature (°C)",
+				"temperaturePlaceholder": "Enter temperature",
+				"installationMethod": "Installation method",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"calculationTypes": {
+					"power": "By power",
+					"current": "By current"
+				},
+				"materials": {
+					"copper": "Copper",
+					"aluminum": "Aluminum"
+				},
+				"phaseTypes": {
+					"single": "Single-phase",
+					"three": "Three-phase"
+				},
+				"installationMethods": {
+					"open": "Open installation",
+					"closed": "Closed installation",
+					"underground": "Underground installation"
+				},
+				"errors": {
+					"powerRequired": "Enter load power",
+					"currentRequired": "Enter load current",
+					"voltageRequired": "Enter network voltage",
+					"lengthRequired": "Enter line length",
+					"invalidNumber": "Enter a valid number",
+					"powerTooSmall": "Power too small",
+					"currentTooSmall": "Current too small",
+					"voltageTooSmall": "Voltage too small",
+					"lengthTooSmall": "Length too small",
+					"powerFactorTooSmall": "Power factor too small",
+					"voltageDropTooSmall": "Voltage drop too small"
+				}
+			},
+			"results": {
+				"title": "Calculation results",
+				"recommendedSection": "Recommended cross-section",
+				"standardSection": "Standard cross-section",
+				"currentDensity": "Current density",
+				"voltageDrop": "Voltage drop",
+				"voltageDropPercent": "Voltage drop (%)",
+				"resistance": "Resistance",
+				"weight": "Cable weight",
+				"cost": "Cost",
+				"summary": "Summary",
+				"summaryText": "For load {power} kW at length {length} m, cable cross-section {section} mm² is recommended.",
+				"cable": "Cable",
+				"specifications": "Specifications",
+				"installation": "Installation",
+				"copy": "Copy",
+				"copied": "Copied!",
+				"export": "Export",
+				"exportPdf": "PDF",
+				"exportExcel": "Excel"
+			},
+			"tips": {
+				"title": "Cable selection tips",
+				"content": "Proper cable cross-section selection ensures safety and reliability of power supply:",
+				"power": {
+					"title": "Power calculation",
+					"formula": "I = P / (U × cosφ)",
+					"description": "Current is calculated using power formula"
+				},
+				"voltage": {
+					"title": "Voltage drop",
+					"residential": "Residential: up to 5%",
+					"industrial": "Industrial: up to 3%",
+					"description": "Allowable losses depend on object type"
+				},
+				"materials": {
+					"title": "Conductor materials",
+					"copper": "Copper: lower resistance, higher cost",
+					"aluminum": "Aluminum: higher resistance, lower cost",
+					"description": "Copper is preferred for residential premises"
+				},
+				"installation": {
+					"title": "Installation methods",
+					"open": "Open: better cooling",
+					"closed": "Closed: worse cooling",
+					"underground": "Underground: humidity consideration"
+				}
+			},
+			"seo": {
+				"title": "Online Cable Cross-Section Calculator — Wire Size Calculation by Power and Current",
+				"description": "Online calculator for cable cross-section calculation by power, line length and current load. Wire selection by GOST. Copper and aluminum.",
+				"keywords": "cable cross section calculator, wire size calculation by power, electrical online, cable cross section calculator, current calculation by power, cable selection by current, copper wire calculation, aluminum cable calculation, voltage drop, electrical wire size calculator, wire cross section, electrical cable, home wiring, electrical installation, electrical calculations, cable by current, wire by power, electrical safety, GOST cable, cable standards, electrical norms, electrical wiring design, electrical loads, current load, electrical losses, power factor, electrical networks, electrical equipment, electrical systems, electrical installations",
+				"overview": {
+					"title": "About cable cross-section calculator",
+					"content": "Online cable cross-section calculator helps determine the optimal wire gauge based on power, current, and line length. It's ideal for electrical wiring design in homes, offices, or workshops. The tool considers conductor material and voltage drop."
+				},
+				"calculation": {
+					"title": "How cable cross-section is calculated",
+					"content": "Calculator uses standard cable cross-section calculation formulas:",
+					"power": "By power: I = P / (U × cosφ)",
+					"section": "Cross-section: S = I / (J × k)",
+					"voltageDrop": "Losses: ΔU = 2 × I × R × L / 1000"
+				},
+				"features": {
+					"title": "Main features",
+					"power": "Calculation by power (W), current (A) or load (kW)",
+					"powerDesc": "Accurate cable cross-section calculation by various load parameters",
+					"phase": "Single-phase and three-phase network support",
+					"phaseDesc": "Accounting for single-phase and three-phase electrical system features",
+					"material": "Conductor material selection: copper or aluminum",
+					"materialDesc": "Support for various conductor materials considering their characteristics",
+					"voltage": "Line length and voltage drop consideration",
+					"voltageDesc": "Automatic voltage drop calculation depending on cable length",
+					"standard": "Automatic selection of nearest standard cross-section (GOST)",
+					"standardDesc": "Standard cable cross-section selection according to GOST and international standards",
+					"protection": "Protection device rating hints",
+					"protectionDesc": "Recommendations for cable protection device selection",
+					"chart": "Interactive current and cross-section dependency chart",
+					"chartDesc": "Visualization of dependency between current and cable cross-section",
+					"export": "Results export to PDF and Excel",
+					"exportDesc": "Ability to save results in various formats",
+					"units": "Metric and imperial units support",
+					"unitsDesc": "Work with different measurement systems"
+				},
+				"advantages": {
+					"title": "Calculator advantages",
+					"content": "Our cable cross-section calculator provides many advantages for accurate electrical wiring calculation.",
+					"accurate": "Accurate calculations",
+					"accurateDesc": "Uses current GOST and international standards",
+					"flexible": "Flexible settings",
+					"flexibleDesc": "Support for various network types and materials",
+					"comprehensive": "Comprehensive analysis",
+					"comprehensiveDesc": "Accounting for all electrical wiring parameters",
+					"export": "Data export",
+					"exportDesc": "Ability to save results in PDF or Excel"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate cable cross-section by power?",
+							"a": "Enter load power and line length — calculator will calculate optimal cross-section."
+						},
+						{
+							"q": "Can I account for voltage drop?",
+							"a": "Yes, tool automatically calculates voltage drop and warns if it exceeds norm."
+						},
+						{
+							"q": "What to choose — copper or aluminum?",
+							"a": "Copper has lower resistance and conducts current better, but is more expensive."
+						},
+						{
+							"q": "Is it suitable for three-phase systems?",
+							"a": "Yes, you can select network type — single-phase or three-phase."
+						},
+						{
+							"q": "Can I calculate current if power is known?",
+							"a": "Yes, calculator automatically calculates current using formula P = U × I × cosφ."
+						},
+						{
+							"q": "What standards are used?",
+							"a": "Calculations are performed according to GOST and international IEC standards."
+						},
+						{
+							"q": "What is cosφ?",
+							"a": "This is power factor, usually taken as 0.9 for household appliances."
+						},
+						{
+							"q": "Is there a standard cross-section table?",
+							"a": "Yes, calculator automatically selects nearest standard value."
+						},
+						{
+							"q": "Can I export results?",
+							"a": "Yes, PDF and Excel export is supported."
+						},
+						{
+							"q": "Are temperature and installation method considered?",
+							"a": "Yes, advanced mode with these parameters is provided for professionals."
+						},
+						{
+							"q": "Can I use for direct current (DC)?",
+							"a": "Yes, calculation is suitable for direct current as well."
+						},
+						{
+							"q": "How to select cross-section for outlets?",
+							"a": "For outlets, cable cross-section 2.5 mm² (copper) or 4 mm² (aluminum) is usually used."
+						},
+						{
+							"q": "What is current density?",
+							"a": "This is ratio of current to conductor cross-sectional area, measured in A/mm²."
+						},
+						{
+							"q": "How to calculate cross-section for lighting?",
+							"a": "For lighting, cable cross-section 1.5 mm² (copper) or 2.5 mm² (aluminum) is usually sufficient."
+						},
+						{
+							"q": "What is allowable current load?",
+							"a": "This is maximum current that can flow through cable for long time without overheating."
+						},
+						{
+							"q": "How does temperature affect cable cross-section?",
+							"a": "When temperature rises, allowable current load decreases, so cross-section increases."
+						},
+						{
+							"q": "What is installation coefficient?",
+							"a": "This is coefficient considering cable installation method and its cooling."
+						},
+						{
+							"q": "How to calculate cross-section for motor?",
+							"a": "For motors, starting current is considered, which is 5-7 times higher than rated."
+						},
+						{
+							"q": "What is protection selectivity?",
+							"a": "This is property of protection devices to disconnect only damaged network section."
+						},
+						{
+							"q": "How to choose cable for outdoor use?",
+							"a": "For outdoor use, cables with UV-resistant and temperature-resistant insulation are used."
+						},
+						{
+							"q": "What is cable marking?",
+							"a": "This is alphanumeric designation indicating conductor material, insulation and cable construction."
+						},
+						{
+							"q": "How to calculate cross-section for welding machine?",
+							"a": "For welding machines, high starting current and short-term operation mode are considered."
+						},
+						{
+							"q": "What is reactive power?",
+							"a": "This is power associated with creation of magnetic and electric fields in AC circuits."
+						},
+						{
+							"q": "How to choose cable for underground installation?",
+							"a": "For underground installation, cables with armor protection and moisture-resistant insulation are used."
+						},
+						{
+							"q": "What is simultaneity coefficient?",
+							"a": "This is coefficient considering probability of simultaneous operation of all consumers."
+						},
+						{
+							"q": "How to calculate cross-section for grounding?",
+							"a": "Grounding conductor cross-section should be at least half of phase conductor cross-section."
+						},
+						{
+							"q": "What is short circuit?",
+							"a": "This is connection of phase and neutral conductors with low resistance, leading to sharp current increase."
+						},
+						{
+							"q": "How to choose cable for high-voltage lines?",
+							"a": "For high-voltage lines, special cables with reinforced insulation and shielding are used."
+						},
+						{
+							"q": "What is electrical strength?",
+							"a": "This is ability of insulation to withstand electrical voltage without breakdown."
+						},
+						{
+							"q": "How to calculate cross-section for backup power?",
+							"a": "For backup power, power of all critical consumers is considered."
+						},
+						{
+							"q": "What is electrical safety?",
+							"a": "This is set of measures aimed at preventing electric shock to people."
+						},
+						{
+							"q": "How to choose cable for industrial facility?",
+							"a": "For industrial facilities, aggressive environment, vibrations and high loads are considered."
+						}
+					]
+				}
+			}
+		},
+		"stairsCalculator": {
+			"title": "Stair Calculator — Online Staircase Design",
+			"description": "Online stair calculator calculates the angle, number of steps, and rise length for your staircase project. Perfect tool for designing stairs in homes, cottages, or construction sites.",
+			"breadcrumbs": {
+				"construction": "Construction"
+			},
+			"hero": {
+				"steps": "Steps",
+				"accuracy": "Calculation accuracy",
+				"format": "Data format"
+			},
+			"features": {
+				"angleCalculation": "Angle calculation",
+				"stepsCalculation": "Steps count calculation",
+				"comfortFormula": "Comfortable stair formula",
+				"visualization": "Visualization",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "Stair calculation",
+				"description": "Calculate the angle, number of steps, and flight length of the staircase",
+				"totalHeight": "Total rise height (mm)",
+				"totalHeightPlaceholder": "Enter rise height",
+				"stepDepth": "Step depth (tread, mm)",
+				"stepDepthPlaceholder": "Enter step depth",
+				"stepHeight": "Step height (riser, mm)",
+				"stepHeightPlaceholder": "Enter step height",
+				"stairsType": "Stair type",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"stairsTypes": {
+					"straight": "Straight",
+					"turn90": "Turn 90°",
+					"turn180": "Turn 180°"
+				},
+				"errors": {
+					"heightRequired": "Enter rise height",
+					"depthRequired": "Enter step depth",
+					"stepHeightRequired": "Enter step height",
+					"invalidNumber": "Enter a valid number",
+					"heightTooSmall": "Height too small",
+					"depthTooSmall": "Depth too small",
+					"stepHeightTooSmall": "Step height too small",
+					"stepHeightTooLarge": "Step height too large",
+					"depthTooLarge": "Depth too large"
+				}
+			},
+			"results": {
+				"title": "Calculation results",
+				"stepsCount": "Number of steps",
+				"totalLength": "Total stair length",
+				"angle": "Angle of inclination",
+				"comfortLevel": "Comfort level",
+				"comfortFormula": "Comfortable stair formula",
+				"formulaValue": "2h + b = {value} mm",
+				"recommendations": "Recommendations",
+				"summary": "Summary",
+				"summaryText": "For rise height {height} mm requires {steps} steps with angle {angle}°.",
+				"stairs": "Stairs",
+				"specifications": "Specifications",
+				"comfort": "Comfort",
+				"copy": "Copy",
+				"copied": "Copied!",
+				"export": "Export",
+				"exportPdf": "PDF",
+				"exportExcel": "Excel"
+			},
+			"tips": {
+				"title": "Stair design tips",
+				"content": "Proper stair calculation ensures safety and comfort of use:",
+				"formula": {
+					"title": "Comfortable stair formula",
+					"formula": "2h + b ≈ 600–640 mm",
+					"description": "Where h is step height, b is tread depth"
+				},
+				"angle": {
+					"title": "Angle of inclination",
+					"comfortable": "Comfortable: 30–40°",
+					"acceptable": "Acceptable: 20–50°",
+					"description": "Optimal angle ensures comfortable climbing"
+				},
+				"dimensions": {
+					"title": "Step dimensions",
+					"height": "Height: 150–200 mm",
+					"depth": "Depth: 250–350 mm",
+					"description": "Standard dimensions for comfortable stairs"
+				},
+				"safety": {
+					"title": "Safety",
+					"handrail": "Handrails are mandatory",
+					"lighting": "Good lighting",
+					"description": "Safety standards compliance is mandatory"
+				}
+			},
+			"seo": {
+				"title": "Online Stair Calculator — Angle and Steps Calculation",
+				"description": "Online stair calculator calculates the angle, number of steps, height and flight length. Convenient tool for designing stairs in homes, cottages or construction sites.",
+				"keywords": "stair calculator, staircase calculation, stair angle, number of steps, stair formula, comfortable stairs, stair project, stair construction, DIY stairs, step calculation, stair angle, step height, step depth, tread, riser, stair length, stair design, home stairs, cottage stairs, office stairs, basement stairs, attic stairs, second floor stairs, private house stairs, cottage stairs, townhouse stairs, duplex stairs, penthouse stairs, loft stairs, studio stairs, apartment stairs",
+				"overview": {
+					"title": "About stair calculator",
+					"content": "Online stair calculator calculates the angle, number of steps, height and flight length. Convenient tool for designing stairs in homes, cottages or construction sites. Safety and comfort standards are considered."
+				},
+				"calculation": {
+					"title": "How stairs are calculated",
+					"content": "Calculator uses standard stair calculation formulas:",
+					"steps": "Number of steps: n = H / h",
+					"angle": "Angle of inclination: α = arctan(H / L)",
+					"comfort": "Comfortable stair formula: 2h + b ≈ 600–640 mm"
+				},
+				"features": {
+					"title": "Main features",
+					"angle": "Stair angle calculation",
+					"angleDesc": "Accurate angle calculation for comfortable climbing",
+					"steps": "Steps count calculation",
+					"stepsDesc": "Automatic calculation of optimal number of steps",
+					"comfort": "Comfortable stair formula",
+					"comfortDesc": "Checking compliance with formula 2h + b ≈ 600–640 mm",
+					"visualization": "Stair visualization",
+					"visualizationDesc": "Graphical representation of calculated stairs",
+					"types": "Various stair types",
+					"typesDesc": "Support for straight, turning and spiral stairs",
+					"standards": "Standards compliance",
+					"standardsDesc": "Calculation according to GOST and international standards",
+					"export": "Results export",
+					"exportDesc": "Ability to save results in PDF or Excel",
+					"recommendations": "Recommendations",
+					"recommendationsDesc": "Tips for improving stair construction"
+				},
+				"advantages": {
+					"title": "Calculator advantages",
+					"content": "Our stair calculator provides many advantages for accurate design.",
+					"accurate": "Accurate calculations",
+					"accurateDesc": "Uses current standards and formulas",
+					"flexible": "Flexible settings",
+					"flexibleDesc": "Support for various stair types and sizes",
+					"comprehensive": "Comprehensive analysis",
+					"comprehensiveDesc": "Accounting for all safety and comfort parameters",
+					"export": "Data export",
+					"exportDesc": "Ability to save results in PDF or Excel"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate the number of steps in a staircase?",
+							"a": "Number of steps = Total rise height / Step height."
+						},
+						{
+							"q": "What angle is considered comfortable for stairs?",
+							"a": "Comfortable stair angle is 30–40 degrees."
+						},
+						{
+							"q": "How to choose step height and depth?",
+							"a": "Use comfortable stair formula: 2h + b ≈ 600–640 mm, where h is height, b is depth."
+						},
+						{
+							"q": "What standards are used for stair calculation?",
+							"a": "Calculations are performed according to GOST and international safety standards."
+						},
+						{
+							"q": "What is comfortable stair formula 2h + b?",
+							"a": "This is formula where doubled step height plus tread depth should be 600–640 mm."
+						},
+						{
+							"q": "What is minimum and maximum step height allowed?",
+							"a": "Step height should be from 150 to 200 mm for comfortable climbing."
+						},
+						{
+							"q": "Can I use calculator for outdoor stairs?",
+							"a": "Yes, calculator is suitable for both indoor and outdoor stairs."
+						},
+						{
+							"q": "How to calculate 90° turning stairs?",
+							"a": "For turning stairs, additional length of turning platform is considered."
+						},
+						{
+							"q": "How to calculate stair flight length?",
+							"a": "Flight length = Number of steps × Step depth."
+						},
+						{
+							"q": "How to reduce angle without changing height?",
+							"a": "Increase step depth or add turning platform."
+						},
+						{
+							"q": "Can I use this calculation for metal and concrete stairs?",
+							"a": "Yes, calculation principles are the same for all stair types."
+						},
+						{
+							"q": "What to do if calculation shows too steep angle?",
+							"a": "Increase step depth or reduce step height to lower the angle."
+						},
+						{
+							"q": "How to calculate stairs for elderly people?",
+							"a": "Use smaller step height (150–160 mm) and larger depth (300–350 mm)."
+						},
+						{
+							"q": "What is minimum stair width?",
+							"a": "Minimum stair width in residential buildings is 800 mm."
+						},
+						{
+							"q": "How to calculate basement stairs?",
+							"a": "Consider limited space and use steeper angle (up to 45°)."
+						},
+						{
+							"q": "What are winder steps?",
+							"a": "These are steps with varying width, used in turning stairs."
+						},
+						{
+							"q": "How to calculate spiral stairs?",
+							"a": "For spiral stairs, special formulas with radius consideration are used."
+						},
+						{
+							"q": "What should be handrail height?",
+							"a": "Handrail height should be 900–1100 mm from step surface."
+						},
+						{
+							"q": "How to calculate attic stairs?",
+							"a": "Consider limited space and use folding or ladder stairs."
+						},
+						{
+							"q": "What is stringer in stairs?",
+							"a": "Stringer is inclined beam on which stair steps rest."
+						},
+						{
+							"q": "How to calculate stairs for disabled people?",
+							"a": "Use gentle angle (up to 20°), wide steps and handrails on both sides."
+						},
+						{
+							"q": "What step depth for outdoor stairs?",
+							"a": "For outdoor stairs, step depth should be at least 300 mm."
+						},
+						{
+							"q": "How to calculate stairs in townhouse?",
+							"a": "Consider limited space and use compact solutions."
+						},
+						{
+							"q": "What is string in stairs?",
+							"a": "String is side beam of stairs into which steps are cut."
+						},
+						{
+							"q": "How to calculate stairs in loft?",
+							"a": "Consider interior style and use modern materials and constructions."
+						},
+						{
+							"q": "What step height for children's stairs?",
+							"a": "For children's stairs, step height should be 120–150 mm."
+						},
+						{
+							"q": "How to calculate stairs in penthouse?",
+							"a": "Consider panoramic windows and use lightweight constructions."
+						},
+						{
+							"q": "What is riser?",
+							"a": "Riser is vertical part of step that determines its height."
+						},
+						{
+							"q": "How to calculate stairs in studio?",
+							"a": "Use compact solutions and multifunctional constructions."
+						},
+						{
+							"q": "What step depth for office stairs?",
+							"a": "For office stairs, step depth should be 280–320 mm."
+						},
+						{
+							"q": "How to calculate stairs in apartments?",
+							"a": "Consider limited space and use modern solutions."
+						},
+						{
+							"q": "What is tread?",
+							"a": "Tread is horizontal part of step on which you step."
+						},
+						{
+							"q": "How to calculate stairs in duplex?",
+							"a": "Consider connection between floors and use convenient solutions."
+						}
+					]
+				}
+			}
+		},
+		"ipCalculator": {
+			"title": "IP and Subnet Calculator — CIDR / IPv4 / IPv6",
+			"description": "IP and Subnet Calculator for IPv4 and IPv6. Compute network, first/last IP, CIDR, number of hosts, with reverse range-to-CIDR calculation.",
+			"breadcrumbs": {
+				"it": "IT"
+			},
+			"hero": {
+				"networks": "Networks",
+				"accuracy": "Calculation accuracy",
+				"format": "Data format"
+			},
+			"features": {
+				"ipv4Calculation": "IPv4 calculation",
+				"ipv6Calculation": "IPv6 calculation",
+				"cidrSupport": "CIDR support",
+				"reverseCalculation": "Reverse calculation",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "IP and subnet calculation",
+				"description": "Calculate network parameters, IP range and number of hosts",
+				"ipAddress": "IP address / CIDR",
+				"ipAddressPlaceholder": "192.168.1.0/24 or 2001:db8::/48",
+				"ipMask": "IP + mask",
+				"ipMaskPlaceholder": "192.168.1.0 + 255.255.255.0",
+				"ipRange": "IP range",
+				"ipRangePlaceholder": "192.168.1.1 - 192.168.1.254",
+				"calculationType": "Calculation type",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"calculationTypes": {
+					"cidr": "IP/CIDR",
+					"mask": "IP + mask",
+					"range": "IP range"
+				},
+				"errors": {
+					"ipRequired": "Enter IP address",
+					"invalidIp": "Invalid IP address",
+					"invalidCidr": "Invalid CIDR",
+					"invalidMask": "Invalid mask",
+					"invalidRange": "Invalid range",
+					"ipv4Only": "IPv4 only",
+					"ipv6Only": "IPv6 only"
+				}
+			},
+			"results": {
+				"title": "Calculation results",
+				"ipType": "IP type",
+				"networkAddress": "Network address",
+				"firstIp": "First IP",
+				"lastIp": "Last IP",
+				"broadcastAddress": "Broadcast address",
+				"subnetMask": "Subnet mask",
+				"cidr": "CIDR",
+				"hostsCount": "Number of hosts",
+				"hostRange": "Host range",
+				"summary": "Summary",
+				"summaryText": "Network {network} with {hosts} hosts in range {first} - {last}.",
+				"network": "Network",
+				"specifications": "Specifications",
+				"hosts": "Hosts",
+				"copy": "Copy",
+				"copied": "Copied!",
+				"export": "Export",
+				"exportPdf": "PDF",
+				"exportExcel": "Excel"
+			},
+			"tips": {
+				"title": "IP and subnet tips",
+				"content": "Proper IP and subnet calculation ensures correct network configuration:",
+				"cidr": {
+					"title": "CIDR notation",
+					"description": "CIDR shows the number of bits in subnet mask",
+					"example": "Example: /24 means mask 255.255.255.0"
+				},
+				"ipv4": {
+					"title": "IPv4 addresses",
+					"private": "Private: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16",
+					"public": "Public: all others",
+					"description": "IPv4 uses 32-bit addresses"
+				},
+				"ipv6": {
+					"title": "IPv6 addresses",
+					"private": "Local: fe80::/10, fc00::/7",
+					"public": "Global: 2000::/3",
+					"description": "IPv6 uses 128-bit addresses"
+				},
+				"subnets": {
+					"title": "Subnets",
+					"calculation": "Calculation: 2^(32-CIDR) - 2 hosts",
+					"description": "Consider network and broadcast addresses"
+				}
+			},
+			"seo": {
+				"title": "Online IP and Subnet Calculator — CIDR / IPv4 / IPv6",
+				"description": "IP and subnet calculator allows computing network, first/last IP, mask, CIDR and number of hosts for IPv4 and IPv6. Support for reverse range-to-CIDR calculation.",
+				"keywords": "IP calculator, CIDR online, IPv4 IPv6 subnet, host count, IP range, IP mask, IT calculator, network calculator, subnet calculator, IP address calculator, subnet mask, broadcast address, first IP, last IP, number of hosts, IP range calculator, CIDR calculator, IPv4 calculator, IPv6 calculator, network engineer, system administrator, IT specialist, network administration, IP addressing, subnet calculation, network technologies, computer networks, TCP/IP, internet protocols",
+				"overview": {
+					"title": "About IP and subnet calculator",
+					"content": "Online IP and subnet calculator for IPv4 and IPv6. Calculate network, first and last IP, CIDR and number of hosts. Support for reverse range calculation. All network addressing parameters are considered.",
+					"examples": {
+						"title": "Calculator usage examples",
+						"cidrExample": {
+							"title": "Subnet calculation by CIDR",
+							"scenario": "For example, you need to calculate parameters for network 192.168.1.0/24",
+							"calculation": "Calculator will determine: subnet mask 255.255.255.0, host count 254, first IP 192.168.1.1, last IP 192.168.1.254, broadcast address 192.168.1.255",
+							"result": "Network can contain 254 hosts with addresses from 192.168.1.1 to 192.168.1.254"
+						},
+						"subnetExample": {
+							"title": "Subnet division",
+							"scenario": "For example, you need to divide network 10.0.0.0/16 into 4 subnets",
+							"calculation": "Calculator will create subnets: 10.0.0.0/18, 10.0.64.0/18, 10.0.128.0/18, 10.0.192.0/18",
+							"result": "Each subnet can contain up to 16,382 hosts"
+						},
+						"rangeExample": {
+							"title": "Reverse range calculation",
+							"scenario": "For example, you need to find CIDR for range from 172.16.0.1 to 172.16.255.254",
+							"calculation": "Calculator will determine: network 172.16.0.0/16, mask 255.255.0.0, host count 65,534",
+							"result": "Range corresponds to network 172.16.0.0/16"
+						},
+						"ipv6Example": {
+							"title": "IPv6 work",
+							"scenario": "For example, you need to calculate subnet 2001:db8::/64",
+							"calculation": "Calculator will determine: prefix 2001:db8::, prefix length 64, address count 2^64",
+							"result": "Subnet can contain 18,446,744,073,709,551,616 addresses"
+						},
+						"networkExample": {
+							"title": "Network parameters determination",
+							"scenario": "For example, you need to determine network parameters for IP 203.0.113.42/28",
+							"calculation": "Calculator will determine: network 203.0.113.32, mask 255.255.255.240, first IP 203.0.113.33, last IP 203.0.113.46, broadcast 203.0.113.47",
+							"result": "Network contains 14 hosts with addresses from 203.0.113.33 to 203.0.113.46"
+						}
+					}
+				},
+				"calculation": {
+					"title": "How IP and subnets are calculated",
+					"content": "Calculator uses standard network calculation formulas:",
+					"network": "Network address: IP & mask",
+					"hosts": "Number of hosts: 2^(32-CIDR) - 2",
+					"range": "Range: network + 1 to broadcast - 1"
+				},
+				"features": {
+					"title": "Main features",
+					"ipv4": "IPv4 network calculation",
+					"ipv4Desc": "Complete IPv4 subnet parameter calculation",
+					"ipv6": "IPv6 network calculation",
+					"ipv6Desc": "Support for modern IPv6 addresses",
+					"cidr": "CIDR notation",
+					"cidrDesc": "Working with CIDR notation for accurate calculation",
+					"reverse": "Reverse calculation",
+					"reverseDesc": "Determining CIDR by IP range",
+					"visualization": "Visualization",
+					"visualizationDesc": "Graphical representation of subnet",
+					"export": "Results export",
+					"exportDesc": "Saving results in PDF or Excel",
+					"validation": "Validation",
+					"validationDesc": "Automatic IP address validation"
+				},
+				"advantages": {
+					"title": "Calculator advantages",
+					"content": "Our IP calculator provides many advantages for network calculations.",
+					"accurate": "Accurate calculations",
+					"accurateDesc": "Uses current network addressing standards",
+					"flexible": "Flexible settings",
+					"flexibleDesc": "Support for various input formats",
+					"comprehensive": "Comprehensive analysis",
+					"comprehensiveDesc": "Accounting for all network addressing parameters",
+					"export": "Data export",
+					"exportDesc": "Ability to save results in PDF or Excel"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate subnet by IP and mask?",
+							"a": "Network address = IP & mask, number of hosts = 2^(32-CIDR) - 2."
+						},
+						{
+							"q": "What is CIDR and how to use it?",
+							"a": "CIDR shows the number of bits in subnet mask, for example /24 means 255.255.255.0."
+						},
+						{
+							"q": "How to determine first and last IP in network?",
+							"a": "First IP = network address + 1, last IP = broadcast address - 1."
+						},
+						{
+							"q": "How to count available hosts?",
+							"a": "Number of hosts = 2^(32-CIDR) - 2 for IPv4, 2^(128-CIDR) for IPv6."
+						},
+						{
+							"q": "Can I use this calculator for IPv6?",
+							"a": "Yes, calculator supports both IPv4 and IPv6 addresses."
+						},
+						{
+							"q": "How to perform reverse calculation from range to CIDR?",
+							"a": "Calculator automatically determines minimum CIDR for given IP range."
+						},
+						{
+							"q": "How to find broadcast address?",
+							"a": "Broadcast address = network address + (2^(32-CIDR) - 1)."
+						},
+						{
+							"q": "How to convert subnet mask to CIDR?",
+							"a": "CIDR = number of ones in subnet mask in binary representation."
+						},
+						{
+							"q": "How to check IP address validity?",
+							"a": "Calculator automatically validates IP address format and range."
+						},
+						{
+							"q": "How to calculate subnet for multiple IP ranges?",
+							"a": "Use reverse calculation to determine common CIDR for range."
+						},
+						{
+							"q": "Is calculator suitable for network engineer training?",
+							"a": "Yes, calculator is excellent for learning network addressing and subnets."
+						},
+						{
+							"q": "Can I use calculator for local network design?",
+							"a": "Yes, calculator helps design optimal subnet structure."
+						},
+						{
+							"q": "How to calculate subnet for server farm?",
+							"a": "Determine number of servers and choose appropriate CIDR for subnet."
+						},
+						{
+							"q": "What are private IP addresses?",
+							"a": "Private addresses: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 for internal networks."
+						},
+						{
+							"q": "How to calculate subnet for office?",
+							"a": "Consider number of devices and planned network growth when choosing CIDR."
+						},
+						{
+							"q": "Can I use calculator for IPv6?",
+							"a": "Yes, calculator fully supports IPv6 addresses and calculations."
+						},
+						{
+							"q": "How to calculate subnet for data center?",
+							"a": "Use large subnets with small CIDR for hosting many servers."
+						},
+						{
+							"q": "What is broadcast address?",
+							"a": "Address for sending packets to all hosts in subnet, usually last address."
+						},
+						{
+							"q": "How to calculate subnet for home network?",
+							"a": "Use 192.168.0.0/24 or 192.168.1.0/24 for typical home network."
+						},
+						{
+							"q": "Can I use calculator for VPN?",
+							"a": "Yes, calculator helps configure subnets for VPN connections."
+						},
+						{
+							"q": "How to calculate subnet for cloud services?",
+							"a": "Consider cloud provider requirements and planned scale."
+						},
+						{
+							"q": "What is subnet mask?",
+							"a": "32-bit number defining which part of IP address belongs to network."
+						},
+						{
+							"q": "How to calculate subnet for IoT devices?",
+							"a": "Use large subnets for hosting many IoT devices."
+						},
+						{
+							"q": "Can I use calculator for security?",
+							"a": "Yes, proper subnet configuration is important for network security."
+						},
+						{
+							"q": "How to calculate subnet for mobile devices?",
+							"a": "Consider dynamic IP assignment and DHCP."
+						},
+						{
+							"q": "What is network address?",
+							"a": "First address in subnet, used to identify the network itself."
+						},
+						{
+							"q": "How to calculate subnet for industrial networks?",
+							"a": "Consider reliability and isolation requirements of industrial systems."
+						},
+						{
+							"q": "Can I use calculator for IPv6?",
+							"a": "Yes, calculator supports all modern IPv6 functions."
+						},
+						{
+							"q": "How to calculate subnet for educational institutions?",
+							"a": "Plan subnets by departments and device types."
+						},
+						{
+							"q": "What is subnet?",
+							"a": "Logical division of network into smaller segments for traffic management."
+						},
+						{
+							"q": "How to calculate subnet for banks?",
+							"a": "Consider security and isolation requirements of financial systems."
+						},
+						{
+							"q": "Can I use calculator for IPv6?",
+							"a": "Yes, calculator is fully compatible with IPv6 standards."
+						},
+						{
+							"q": "How to calculate subnet for government institutions?",
+							"a": "Follow information security requirements and standards."
+						}
+					]
+				}
+			}
+		},
 		"heatingCost": {
 			"title": "Heating Cost Calculator — Online Estimation",
 			"description": "Online calculator to estimate heating costs by system type, room size, and energy tariffs.",
@@ -8926,6 +10222,243 @@
 					"answer4": "Yes, the calculator automatically accounts for leap years for accurate calculation.",
 					"question5": "Can I calculate age in days?",
 					"answer5": "Yes, the calculator shows total number of days since birth."
+				}
+			}
+		},
+		"waterPipeCalculator": {
+			"title": "Water Pipe Calculator",
+			"description": "Calculate diameter, flow capacity and hydraulic parameters of water pipes",
+			"breadcrumbs": {
+				"category": "Construction"
+			},
+			"hero": {
+				"pipes": "pipes",
+				"accuracy": "accuracy",
+				"format": "format"
+			},
+			"features": {
+				"diameterCalculation": "Pipe diameter calculation",
+				"flowCalculation": "Flow capacity calculation",
+				"pressureCalculation": "Pressure calculation",
+				"materialSupport": "Material support",
+				"accuracy": "High accuracy"
+			},
+			"form": {
+				"title": "Calculation parameters",
+				"description": "Enter parameters for water pipe calculation",
+				"calculationType": "Calculation type",
+				"calculationTypes": {
+					"diameter": "By diameter",
+					"flow": "By flow",
+					"pressure": "By pressure"
+				},
+				"diameter": "Pipe diameter (mm)",
+				"diameterPlaceholder": "50",
+				"flowRate": "Water flow (m³/s)",
+				"flowRatePlaceholder": "0.1",
+				"velocity": "Flow velocity (m/s)",
+				"velocityPlaceholder": "2.0",
+				"pressure": "Pressure (bar)",
+				"pressurePlaceholder": "3.0",
+				"length": "Pipe length (m)",
+				"lengthPlaceholder": "100",
+				"material": "Pipe material",
+				"materials": {
+					"steel": "Steel",
+					"copper": "Copper",
+					"plastic": "Plastic",
+					"castIron": "Cast iron"
+				},
+				"roughness": "Roughness (mm)",
+				"roughnessPlaceholder": "0.1",
+				"temperature": "Water temperature (°C)",
+				"temperaturePlaceholder": "20",
+				"viscosity": "Viscosity (Pa·s)",
+				"viscosityPlaceholder": "0.001",
+				"density": "Density (kg/m³)",
+				"densityPlaceholder": "1000",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"diameterRequired": "Enter pipe diameter",
+					"flowRequired": "Enter water flow",
+					"pressureRequired": "Enter pressure",
+					"lengthRequired": "Enter pipe length",
+					"invalidNumber": "Invalid number"
+				}
+			},
+			"results": {
+				"title": "Calculation results",
+				"diameter": "Pipe diameter",
+				"flow": "Water flow",
+				"velocity": "Flow velocity",
+				"pressure": "Pressure",
+				"reynolds": "Reynolds number",
+				"friction": "Friction factor",
+				"headLoss": "Head loss",
+				"copy": "Copy",
+				"copied": "Copied"
+			},
+			"tips": {
+				"title": "Useful tips",
+				"content": "For accurate water pipe calculation:",
+				"diameter": "Choose the right diameter for the required flow",
+				"material": "Consider pipe material when calculating losses",
+				"pressure": "Check pressure compliance with standards"
+			},
+			"seo": {
+				"title": "Water Pipe Calculator - Diameter and Flow Capacity Calculation",
+				"description": "Professional calculator for water pipe calculation. Determine diameter, flow, pressure and hydraulic parameters of pipelines.",
+				"overview": {
+					"title": "About water pipe calculator",
+					"content": "The water pipe calculator is designed to calculate basic hydraulic parameters of pipeline systems. The tool allows you to determine the optimal pipe diameter, flow capacity, pressure losses and other important characteristics for designing water supply systems.",
+					"examples": {
+						"title": "Calculator usage examples",
+						"diameterExample": {
+							"title": "Pipe diameter calculation",
+							"scenario": "For example, you need to calculate pipe diameter for water supply to a private house. Required flow is 0.05 m³/s (50 l/s) at flow velocity 2 m/s.",
+							"calculation": "Calculator will determine: D = √(4×0.05/π×2) = √(0.2/6.28) = √0.032 = 0.18 m = 180 mm",
+							"result": "Pipe diameter 200 mm is recommended to ensure required flow."
+						},
+						"flowExample": {
+							"title": "Flow capacity calculation",
+							"scenario": "For example, you need to know how much water an existing 150 mm diameter pipe can pass at velocity 1.5 m/s.",
+							"calculation": "Calculator will calculate: Q = π×0.15²×1.5/4 = 0.026 m³/s = 26 l/s",
+							"result": "Pipe can pass 26 liters per second or 94 cubic meters per hour."
+						},
+						"pressureExample": {
+							"title": "Pressure loss calculation",
+							"scenario": "For example, you need to calculate pressure losses in 200 m long, 100 mm diameter water pipe at flow 0.02 m³/s (20 l/s).",
+							"calculation": "Calculator will determine velocity V = 2.55 m/s, Reynolds number Re = 255,000, friction factor λ = 0.018, pressure loss ΔP = 0.15 bar",
+							"result": "Pressure losses will be 0.15 bar, which is acceptable for most systems."
+						},
+						"materialExample": {
+							"title": "Pipe material influence",
+							"scenario": "For example, let's compare pressure losses in steel and plastic pipes of same 100 mm diameter and 100 m length at flow 0.01 m³/s.",
+							"steel": "Steel pipe: roughness 0.045 mm, losses 0.08 bar",
+							"plastic": "Plastic pipe: roughness 0.0015 mm, losses 0.02 bar",
+							"result": "Plastic pipe has 4 times lower pressure losses."
+						}
+					}
+				},
+				"calculation": {
+					"title": "How pipe parameters are calculated",
+					"content": "The calculation is based on hydraulic laws and includes:",
+					"diameter": "Determining diameter by flow and velocity",
+					"flow": "Calculating flow capacity by diameter",
+					"pressure": "Determining pressure losses in pipeline",
+					"methods": {
+						"title": "Calculation methods",
+						"continuity": "Continuity equation: Q = A × V",
+						"bernoulli": "Bernoulli equation for energy balance",
+						"darcy": "Darcy-Weisbach formula for pressure losses",
+						"reynolds": "Reynolds number for flow regime determination",
+						"moody": "Moody diagram for friction factor",
+						"hazen": "Hazen-Williams formula for quick calculations"
+					},
+					"parameters": {
+						"title": "Main parameters",
+						"flowRate": "Water flow (Q) - volume of liquid passing through cross-section per unit time",
+						"velocity": "Flow velocity (V) - average velocity of liquid movement in pipe",
+						"diameter": "Pipe diameter (D) - internal diameter of pipeline",
+						"length": "Pipe length (L) - total length of pipeline section",
+						"pressure": "Pressure (P) - static pressure in system",
+						"density": "Liquid density (ρ) - mass per unit volume",
+						"viscosity": "Viscosity (μ) - liquid resistance to flow",
+						"roughness": "Roughness (ε) - height of internal surface irregularities"
+					},
+					"regimes": {
+						"title": "Flow regimes",
+						"laminar": "Laminar regime (Re < 2300) - smooth flow without vortices",
+						"transitional": "Transitional regime (2300 < Re < 4000) - unstable flow",
+						"turbulent": "Turbulent regime (Re > 4000) - vortex flow with mixing"
+					},
+					"detailed": {
+						"title": "Detailed calculation explanation",
+						"diameterCalculation": {
+							"title": "Pipe diameter calculation",
+							"formula": "D = √(4Q/πV)",
+							"description": "Diameter is determined by formula: D = √(4Q/πV), where Q - water flow (m³/s), V - flow velocity (m/s)",
+							"example": "Example: With flow 0.1 m³/s and velocity 2 m/s: D = √(4×0.1/π×2) = √(0.4/6.28) = √0.064 = 0.25 m = 250 mm"
+						},
+						"flowCalculation": {
+							"title": "Water flow calculation",
+							"formula": "Q = A × V = πD²V/4",
+							"description": "Flow is calculated as product of cross-sectional area and flow velocity",
+							"example": "Example: For pipe diameter 200 mm at velocity 1.5 m/s: Q = π×0.2²×1.5/4 = 0.047 m³/s = 47 l/s"
+						},
+						"pressureCalculation": {
+							"title": "Pressure loss calculation",
+							"formula": "ΔP = λ × (L/D) × (ρV²/2)",
+							"description": "Pressure losses by Darcy-Weisbach formula considering friction factor λ",
+							"example": "Example: For pipe length 100 m, diameter 150 mm, velocity 2 m/s: ΔP = 0.02 × (100/0.15) × (1000×2²/2) = 0.02 × 667 × 2000 = 26,680 Pa = 0.27 bar"
+						},
+						"reynoldsNumber": {
+							"title": "Reynolds number",
+							"formula": "Re = ρVD/μ",
+							"description": "Determines flow regime: laminar (Re < 2300) or turbulent (Re > 4000)",
+							"example": "Example: With density 1000 kg/m³, velocity 2 m/s, diameter 0.2 m, viscosity 0.001 Pa·s: Re = 1000×2×0.2/0.001 = 400,000 (turbulent regime)"
+						},
+						"frictionFactor": {
+							"title": "Friction factor",
+							"laminar": "For laminar flow: λ = 64/Re",
+							"turbulent": "For turbulent flow: λ = 0.316/Re^0.25 (Blasius formula)",
+							"example": "Example: With Re = 100,000: λ = 0.316/100,000^0.25 = 0.316/17.78 = 0.0178"
+						}
+					}
+				},
+				"features": {
+					"title": "Main features",
+					"diameterCalculation": "Pipe diameter calculation",
+					"diameterCalculationDesc": "Determining optimal diameter for given flow",
+					"flowCalculation": "Water flow calculation",
+					"flowCalculationDesc": "Determining pipeline flow capacity",
+					"pressureCalculation": "Pressure calculation",
+					"pressureCalculationDesc": "Determining pressure losses in system",
+					"materialSupport": "Pipe material consideration",
+					"materialSupportDesc": "Calculation considering properties of different materials",
+					"accuracy": "High accuracy",
+					"accuracyDesc": "Using proven hydraulic formulas",
+					"export": "Results export",
+					"exportDesc": "Saving calculations in PDF and CSV formats"
+				},
+				"advantages": {
+					"title": "Calculator advantages",
+					"content": "Our water pipe calculator provides many advantages:",
+					"professional": "Professional calculations",
+					"professionalDesc": "Using proven hydraulic formulas",
+					"accuracy": "High accuracy",
+					"accuracyDesc": "Accurate calculations considering all parameters",
+					"timeSaving": "Time saving",
+					"timeSavingDesc": "Quick calculations without complex computations",
+					"costEffective": "Cost effective",
+					"costEffectiveDesc": "Optimizing pipe sizes for cost savings"
+				},
+				"faq": {
+					"title": "Frequently asked questions",
+					"faqItems": [
+						{
+							"q": "How to choose pipe diameter for water supply?",
+							"a": "Pipe diameter is selected based on required water flow, allowable flow velocity and pressure losses. For residential buildings, pipes with diameter 15-25 mm are usually used, for industrial facilities - up to 200 mm and more."
+						},
+						{
+							"q": "What factors affect pipe flow capacity?",
+							"a": "Flow capacity depends on pipe diameter, material, internal surface roughness, fluid viscosity, temperature and flow regime (laminar or turbulent)."
+						},
+						{
+							"q": "How to calculate pressure losses in pipeline?",
+							"a": "Pressure losses are calculated using Darcy-Weisbach formula considering friction factor, pipe length, diameter and flow velocity. Local resistances (fittings, valves) are also considered."
+						},
+						{
+							"q": "What's the difference between laminar and turbulent regimes?",
+							"a": "Laminar regime is characterized by smooth fluid flow with low energy losses. Turbulent regime occurs at high velocities and is characterized by vortex motion with increased pressure losses."
+						},
+						{
+							"q": "Which pipe material is better for water supply?",
+							"a": "Material choice depends on operating conditions. Plastic pipes (PVC, PP) are suitable for cold water, metal-plastic - for hot water, copper pipes - for heating systems, steel - for high pressures."
+						}
+					]
 				}
 			}
 		}
