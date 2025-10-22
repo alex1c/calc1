@@ -8144,7 +8144,12 @@
         "presets": "Preajustes",
         "pomodoro": "Pomodoro",
         "cooking": "Cocina",
-        "workout": "Entrenamiento"
+        "workout": "Entrenamiento",
+        "visualStyle": "Estilo Visual",
+        "circular": "Circular",
+        "linear": "Lineal",
+        "digital": "Digital",
+        "color": "Color"
       },
       "results": {
         "title": "Temporizador",
@@ -8513,6 +8518,134 @@
           "answer9": "Sí, se soportan formatos de 12 y 24 horas.",
           "question10": "¿Hay límites en el número de ciudades?",
           "answer10": "Puedes agregar hasta 10 ciudades simultáneamente."
+        }
+      }
+    },
+    "agecalc": {
+      "title": "Calculadora de Edad — Cálculo Preciso de Edad en Años, Meses y Días",
+      "description": "Calcula tu edad exacta en años, meses y días. Calculadora de edad online gratuita con soporte para años bisiestos.",
+      "form": {
+        "title": "Parámetros de Cálculo",
+        "description": "Ingresa tu fecha de nacimiento y fecha de cálculo",
+        "birthDate": "Fecha de Nacimiento",
+        "birthDatePlaceholder": "Selecciona fecha de nacimiento",
+        "calculateDate": "Fecha de Cálculo",
+        "calculateDatePlaceholder": "Selecciona fecha de cálculo",
+        "today": "Hoy",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "errors": {
+          "birthDateRequired": "Ingresa fecha de nacimiento",
+          "calculateDateRequired": "Ingresa fecha de cálculo",
+          "birthDateFuture": "La fecha de nacimiento no puede ser en el futuro",
+          "calculateDatePast": "La fecha de cálculo no puede ser anterior a la fecha de nacimiento",
+          "calculationError": "Error de cálculo"
+        }
+      },
+      "results": {
+        "title": "Resultados del Cálculo",
+        "placeholder": "Ingresa fechas para calcular la edad",
+        "age": "Edad",
+        "years": "años",
+        "months": "meses",
+        "days": "días",
+        "totalDays": "Total de Días",
+        "birthDate": "Fecha de Nacimiento",
+        "calculateDate": "Fecha de Cálculo",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "ageTypes": {
+        "baby": {
+          "title": "Edad Infantil",
+          "description": "Desde el nacimiento hasta 1 año. La edad se cuenta en meses y días."
+        },
+        "child": {
+          "title": "Niñez",
+          "description": "De 1 a 12 años. Período principal de crecimiento y desarrollo."
+        },
+        "teen": {
+          "title": "Adolescencia",
+          "description": "De 13 a 19 años. Período de pubertad."
+        },
+        "adult": {
+          "title": "Edad Adulta",
+          "description": "De 20 años en adelante. Madurez completa."
+        }
+      },
+      "tips": {
+        "title": "Consejos Importantes",
+        "leapYear": "La calculadora tiene en cuenta los años bisiestos para un cálculo preciso.",
+        "timezone": "Considera las zonas horarias al calcular la edad.",
+        "precision": "El resultado muestra la edad exacta en la fecha especificada."
+      },
+      "seo": {
+        "title": "Calculadora de Edad — Cálculo Preciso de Edad en Años, Meses y Días",
+        "description": "Calcula tu edad exacta en años, meses y días. Calculadora de edad online gratuita con soporte para años bisiestos.",
+        "keywords": "calculadora de edad, edad online, calcular edad, cuántos años tengo, edad en días, edad en meses, calculadora de edad, calculadora de edad online, calcular edad",
+        "overview": {
+          "title": "Sobre la Calculadora de Edad",
+          "content": "La calculadora de edad ayuda a calcular la edad exacta en años, meses y días. Simplemente ingresa tu fecha de nacimiento y fecha de cálculo para obtener información detallada de edad."
+        },
+        "calculation": {
+          "title": "Cómo se Calcula la Edad",
+          "content": "La edad se calcula como la diferencia entre la fecha de cálculo y la fecha de nacimiento, teniendo en cuenta los años bisiestos y diferentes longitudes de meses.",
+          "formula": "Edad = Fecha de Cálculo - Fecha de Nacimiento (considerando años bisiestos)"
+        },
+        "ageTypes": {
+          "title": "Tipos de Períodos de Edad",
+          "content": "La edad se puede dividir en varios períodos:",
+          "baby": {
+            "title": "Edad Infantil (0-1 año)",
+            "description": "La edad se cuenta en meses y días. Desarrollo rápido."
+          },
+          "child": {
+            "title": "Niñez (1-12 años)",
+            "description": "Período principal de crecimiento y desarrollo del niño."
+          },
+          "teen": {
+            "title": "Adolescencia (13-19 años)",
+            "description": "Período de pubertad y formación de la personalidad."
+          },
+          "adult": {
+            "title": "Edad Adulta (20+ años)",
+            "description": "Período de madurez completa y estabilidad."
+          }
+        },
+        "advantages": {
+          "title": "Ventajas de Nuestra Calculadora",
+          "content": "Nuestra calculadora de edad proporciona muchas ventajas:",
+          "quick": "Cálculo Rápido",
+          "quickDesc": "Resultados instantáneos en segundos",
+          "precise": "Precisión",
+          "preciseDesc": "Tiene en cuenta años bisiestos y diferentes longitudes de meses",
+          "flexible": "Flexibilidad",
+          "flexibleDesc": "Calcular edad para cualquier fecha",
+          "detailed": "Información Detallada",
+          "detailedDesc": "Edad en años, meses, días y número total de días",
+          "mobile": "Versión Móvil",
+          "mobileDesc": "Diseño completamente responsivo para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos Útiles",
+          "content": "Para un cálculo preciso de edad:",
+          "accurate": "Usa fechas de nacimiento precisas",
+          "leap": "Considera los años bisiestos",
+          "timezone": "Considera las zonas horarias cuando sea necesario"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "question1": "¿Cómo se calcula la edad?",
+          "answer1": "La edad se calcula como la diferencia entre la fecha de cálculo y la fecha de nacimiento, teniendo en cuenta los años bisiestos.",
+          "question2": "¿Por qué la edad puede diferir de lo esperado?",
+          "answer2": "La edad depende de la precisión de las fechas y la consideración de años bisiestos.",
+          "question3": "¿Puedo calcular la edad para una fecha futura?",
+          "answer3": "Sí, la calculadora funciona con cualquier fecha.",
+          "question4": "¿Se tienen en cuenta los años bisiestos?",
+          "answer4": "Sí, la calculadora automáticamente tiene en cuenta los años bisiestos para un cálculo preciso.",
+          "question5": "¿Puedo calcular la edad en días?",
+          "answer5": "Sí, la calculadora muestra el número total de días desde el nacimiento."
         }
       }
     }

@@ -57,16 +57,16 @@ export default function TimerCalculator() {
 	useEffect(() => {
 		if (timer.isRunning && !timer.isPaused) {
 			intervalRef.current = setInterval(() => {
-				setTimer(prevTimer => {
+				setTimer((prevTimer) => {
 					const updatedTimer = updateTimer(prevTimer);
-					
+
 					// Check if timer finished
 					if (updatedTimer.timeLeft === 0 && prevTimer.timeLeft > 0) {
 						if (settings.soundEnabled) {
 							playNotificationSound();
 						}
 					}
-					
+
 					return updatedTimer;
 				});
 			}, 100);
@@ -100,17 +100,28 @@ export default function TimerCalculator() {
 		setTimer(resetTimer(timer));
 	};
 
-	const handleTimeChange = (field: 'hours' | 'minutes' | 'seconds', value: number) => {
+	const handleTimeChange = (
+		field: 'hours' | 'minutes' | 'seconds',
+		value: number
+	) => {
 		const newSettings = { ...settings, [field]: value };
 		setSettings(newSettings);
-		
+
 		if (!timer.isRunning) {
-			const newTimer = createTimer(newSettings.hours, newSettings.minutes, newSettings.seconds);
+			const newTimer = createTimer(
+				newSettings.hours,
+				newSettings.minutes,
+				newSettings.seconds
+			);
 			setTimer(newTimer);
 		}
 	};
 
-	const handlePresetSelect = (hours: number, minutes: number, seconds: number) => {
+	const handlePresetSelect = (
+		hours: number,
+		minutes: number,
+		seconds: number
+	) => {
 		const newSettings = { ...settings, hours, minutes, seconds };
 		setSettings(newSettings);
 		setTimer(createTimer(hours, minutes, seconds));
@@ -118,15 +129,17 @@ export default function TimerCalculator() {
 	};
 
 	const handleSoundToggle = () => {
-		setSettings(prev => ({ ...prev, soundEnabled: !prev.soundEnabled }));
+		setSettings((prev) => ({ ...prev, soundEnabled: !prev.soundEnabled }));
 	};
 
-	const handleVisualStyleChange = (style: 'circular' | 'linear' | 'digital') => {
-		setSettings(prev => ({ ...prev, visualStyle: style }));
+	const handleVisualStyleChange = (
+		style: 'circular' | 'linear' | 'digital'
+	) => {
+		setSettings((prev) => ({ ...prev, visualStyle: style }));
 	};
 
 	const handleColorChange = (color: string) => {
-		setSettings(prev => ({ ...prev, color }));
+		setSettings((prev) => ({ ...prev, color }));
 	};
 
 	const progress = getProgressPercentage(timer);
@@ -164,16 +177,17 @@ export default function TimerCalculator() {
 				<h2 className='text-2xl font-bold text-gray-900 mb-2'>
 					{t('title')}
 				</h2>
-				<p className='text-gray-600'>
-					Обратный отсчёт для любых задач
-				</p>
+				<p className='text-gray-600'>Обратный отсчёт для любых задач</p>
 			</div>
 
 			{/* Timer Display */}
 			<div className='text-center mb-8'>
 				{settings.visualStyle === 'circular' && (
 					<div className='relative w-64 h-64 mx-auto mb-6'>
-						<svg className='w-full h-full transform -rotate-90' viewBox='0 0 100 100'>
+						<svg
+							className='w-full h-full transform -rotate-90'
+							viewBox='0 0 100 100'
+						>
 							{/* Background circle */}
 							<circle
 								cx='50'
@@ -193,13 +207,21 @@ export default function TimerCalculator() {
 								strokeWidth='8'
 								strokeLinecap='round'
 								strokeDasharray={`${2 * Math.PI * 45}`}
-								strokeDashoffset={`${2 * Math.PI * 45 * (1 - progress / 100)}`}
+								strokeDashoffset={`${
+									2 * Math.PI * 45 * (1 - progress / 100)
+								}`}
 								className='transition-all duration-100'
 							/>
 						</svg>
 						<div className='absolute inset-0 flex items-center justify-center'>
 							<div className='text-center'>
-								<div className={`text-4xl font-bold ${isFinished ? 'text-red-600' : 'text-gray-900'}`}>
+								<div
+									className={`text-4xl font-bold ${
+										isFinished
+											? 'text-red-600'
+											: 'text-gray-900'
+									}`}
+								>
 									{formatTime(timer.timeLeft)}
 								</div>
 								<div className='text-sm text-gray-500 mt-1'>
@@ -221,7 +243,11 @@ export default function TimerCalculator() {
 								}}
 							/>
 						</div>
-						<div className={`text-4xl font-bold ${isFinished ? 'text-red-600' : 'text-gray-900'}`}>
+						<div
+							className={`text-4xl font-bold ${
+								isFinished ? 'text-red-600' : 'text-gray-900'
+							}`}
+						>
 							{formatTime(timer.timeLeft)}
 						</div>
 					</div>
@@ -238,37 +264,58 @@ export default function TimerCalculator() {
 			{!timer.isRunning && (
 				<div className='flex justify-center items-center space-x-4 mb-8'>
 					<div className='flex items-center space-x-2'>
-						<label className='text-sm font-medium text-gray-700'>Часы</label>
+						<label className='text-sm font-medium text-gray-700'>
+							Часы
+						</label>
 						<input
 							type='number'
 							min='0'
 							max='23'
 							value={settings.hours}
-							onChange={(e) => handleTimeChange('hours', parseInt(e.target.value) || 0)}
+							onChange={(e) =>
+								handleTimeChange(
+									'hours',
+									parseInt(e.target.value) || 0
+								)
+							}
 							className='w-16 px-3 py-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 						/>
 					</div>
 					<span className='text-2xl font-bold text-gray-400'>:</span>
 					<div className='flex items-center space-x-2'>
-						<label className='text-sm font-medium text-gray-700'>Минуты</label>
+						<label className='text-sm font-medium text-gray-700'>
+							Минуты
+						</label>
 						<input
 							type='number'
 							min='0'
 							max='59'
 							value={settings.minutes}
-							onChange={(e) => handleTimeChange('minutes', parseInt(e.target.value) || 0)}
+							onChange={(e) =>
+								handleTimeChange(
+									'minutes',
+									parseInt(e.target.value) || 0
+								)
+							}
 							className='w-16 px-3 py-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 						/>
 					</div>
 					<span className='text-2xl font-bold text-gray-400'>:</span>
 					<div className='flex items-center space-x-2'>
-						<label className='text-sm font-medium text-gray-700'>Секунды</label>
+						<label className='text-sm font-medium text-gray-700'>
+							Секунды
+						</label>
 						<input
 							type='number'
 							min='0'
 							max='59'
 							value={settings.seconds}
-							onChange={(e) => handleTimeChange('seconds', parseInt(e.target.value) || 0)}
+							onChange={(e) =>
+								handleTimeChange(
+									'seconds',
+									parseInt(e.target.value) || 0
+								)
+							}
 							className='w-16 px-3 py-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 						/>
 					</div>
@@ -284,7 +331,7 @@ export default function TimerCalculator() {
 						className='flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors'
 					>
 						<Play className='h-5 w-5 mr-2' />
-						{t('start')}
+						{t('form.start')}
 					</button>
 				) : timer.isPaused ? (
 					<button
@@ -292,7 +339,7 @@ export default function TimerCalculator() {
 						className='flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors'
 					>
 						<Play className='h-5 w-5 mr-2' />
-						{t('resume')}
+						{t('form.resume')}
 					</button>
 				) : (
 					<button
@@ -300,7 +347,7 @@ export default function TimerCalculator() {
 						className='flex items-center px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors'
 					>
 						<Pause className='h-5 w-5 mr-2' />
-						{t('pause')}
+						{t('form.pause')}
 					</button>
 				)}
 
@@ -309,7 +356,7 @@ export default function TimerCalculator() {
 					className='flex items-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors'
 				>
 					<Square className='h-5 w-5 mr-2' />
-					{t('reset')}
+					{t('form.reset')}
 				</button>
 			</div>
 
@@ -320,14 +367,14 @@ export default function TimerCalculator() {
 					className='flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
 				>
 					<Zap className='h-4 w-4 mr-2' />
-					{t('presets')}
+					{t('form.presets')}
 				</button>
 				<button
 					onClick={() => setShowSettings(!showSettings)}
 					className='flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'
 				>
 					<Settings className='h-4 w-4 mr-2' />
-					{t('settings')}
+					{t('form.settings')}
 				</button>
 				<button
 					onClick={handleSoundToggle}
@@ -342,26 +389,34 @@ export default function TimerCalculator() {
 					) : (
 						<VolumeX className='h-4 w-4 mr-2' />
 					)}
-					{t('sound')}
+					{t('form.sound')}
 				</button>
 			</div>
 
 			{/* Presets */}
 			{showPresets && (
 				<div className='bg-gray-50 rounded-lg p-6 mb-6'>
-					<h3 className='text-lg font-semibold mb-4 text-center'>{t('presets')}</h3>
-					
+					<h3 className='text-lg font-semibold mb-4 text-center'>
+						{t('form.presets')}
+					</h3>
+
 					{/* Pomodoro Presets */}
 					<div className='mb-4'>
 						<h4 className='font-medium text-gray-700 mb-2 flex items-center'>
 							<Zap className='h-4 w-4 mr-2' />
-							{t('pomodoro')}
+							{t('form.pomodoro')}
 						</h4>
 						<div className='flex flex-wrap gap-2'>
 							{getPomodoroPresets().map((preset, index) => (
 								<button
 									key={index}
-									onClick={() => handlePresetSelect(preset.hours, preset.minutes, preset.seconds)}
+									onClick={() =>
+										handlePresetSelect(
+											preset.hours,
+											preset.minutes,
+											preset.seconds
+										)
+									}
 									className='px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm hover:bg-blue-200 transition-colors'
 								>
 									{preset.name}
@@ -374,13 +429,19 @@ export default function TimerCalculator() {
 					<div className='mb-4'>
 						<h4 className='font-medium text-gray-700 mb-2 flex items-center'>
 							<Utensils className='h-4 w-4 mr-2' />
-							{t('cooking')}
+							{t('form.cooking')}
 						</h4>
 						<div className='flex flex-wrap gap-2'>
 							{getCookingPresets().map((preset, index) => (
 								<button
 									key={index}
-									onClick={() => handlePresetSelect(preset.hours, preset.minutes, preset.seconds)}
+									onClick={() =>
+										handlePresetSelect(
+											preset.hours,
+											preset.minutes,
+											preset.seconds
+										)
+									}
 									className='px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm hover:bg-orange-200 transition-colors'
 								>
 									{preset.name}
@@ -393,13 +454,19 @@ export default function TimerCalculator() {
 					<div>
 						<h4 className='font-medium text-gray-700 mb-2 flex items-center'>
 							<Dumbbell className='h-4 w-4 mr-2' />
-							{t('workout')}
+							{t('form.workout')}
 						</h4>
 						<div className='flex flex-wrap gap-2'>
 							{getWorkoutPresets().map((preset, index) => (
 								<button
 									key={index}
-									onClick={() => handlePresetSelect(preset.hours, preset.minutes, preset.seconds)}
+									onClick={() =>
+										handlePresetSelect(
+											preset.hours,
+											preset.minutes,
+											preset.seconds
+										)
+									}
 									className='px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm hover:bg-green-200 transition-colors'
 								>
 									{preset.name}
@@ -413,32 +480,49 @@ export default function TimerCalculator() {
 			{/* Settings */}
 			{showSettings && (
 				<div className='bg-gray-50 rounded-lg p-6'>
-					<h3 className='text-lg font-semibold mb-4 text-center'>{t('settings')}</h3>
-					
+					<h3 className='text-lg font-semibold mb-4 text-center'>
+						{t('form.settings')}
+					</h3>
+
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 mb-2'>
-								{t('visualStyle')}
+								{t('form.visualStyle')}
 							</label>
 							<select
 								value={settings.visualStyle}
-								onChange={(e) => handleVisualStyleChange(e.target.value as 'circular' | 'linear' | 'digital')}
+								onChange={(e) =>
+									handleVisualStyleChange(
+										e.target.value as
+											| 'circular'
+											| 'linear'
+											| 'digital'
+									)
+								}
 								className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 							>
-								<option value='circular'>{t('circular')}</option>
-								<option value='linear'>{t('linear')}</option>
-								<option value='digital'>{t('digital')}</option>
+								<option value='circular'>
+									{t('form.circular')}
+								</option>
+								<option value='linear'>
+									{t('form.linear')}
+								</option>
+								<option value='digital'>
+									{t('form.digital')}
+								</option>
 							</select>
 						</div>
-						
+
 						<div>
 							<label className='block text-sm font-medium text-gray-700 mb-2'>
-								{t('color')}
+								{t('form.color')}
 							</label>
 							<input
 								type='color'
 								value={settings.color}
-								onChange={(e) => handleColorChange(e.target.value)}
+								onChange={(e) =>
+									handleColorChange(e.target.value)
+								}
 								className='w-full h-10 border border-gray-300 rounded-lg'
 							/>
 						</div>
@@ -451,12 +535,10 @@ export default function TimerCalculator() {
 				<div className='text-center'>
 					<div className='inline-flex items-center px-4 py-2 bg-red-100 text-red-800 rounded-full'>
 						<Clock className='h-4 w-4 mr-2' />
-						{t('finished')}
+						{t('results.finished')}
 					</div>
 				</div>
 			)}
 		</div>
 	);
 }
-
-

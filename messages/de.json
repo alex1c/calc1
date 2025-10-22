@@ -8216,7 +8216,12 @@
         "presets": "Voreinstellungen",
         "pomodoro": "Pomodoro",
         "cooking": "Kochen",
-        "workout": "Training"
+        "workout": "Training",
+        "visualStyle": "Visueller Stil",
+        "circular": "Kreisförmig",
+        "linear": "Linear",
+        "digital": "Digital",
+        "color": "Farbe"
       },
       "results": {
         "title": "Timer",
@@ -8585,6 +8590,134 @@
           "answer9": "Ja, 12- und 24-Stunden-Formate werden unterstützt.",
           "question10": "Gibt es Grenzen für die Anzahl der Städte?",
           "answer10": "Du kannst bis zu 10 Städte gleichzeitig hinzufügen."
+        }
+      }
+    },
+    "agecalc": {
+      "title": "Altersrechner — Genaue Altersberechnung in Jahren, Monaten und Tagen",
+      "description": "Berechne dein genaues Alter in Jahren, Monaten und Tagen. Kostenloser Online-Altersrechner mit Schaltjahr-Unterstützung.",
+      "form": {
+        "title": "Berechnungsparameter",
+        "description": "Gib dein Geburtsdatum und Berechnungsdatum ein",
+        "birthDate": "Geburtsdatum",
+        "birthDatePlaceholder": "Geburtsdatum auswählen",
+        "calculateDate": "Berechnungsdatum",
+        "calculateDatePlaceholder": "Berechnungsdatum auswählen",
+        "today": "Heute",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "birthDateRequired": "Geburtsdatum eingeben",
+          "calculateDateRequired": "Berechnungsdatum eingeben",
+          "birthDateFuture": "Geburtsdatum kann nicht in der Zukunft liegen",
+          "calculateDatePast": "Berechnungsdatum kann nicht vor dem Geburtsdatum liegen",
+          "calculationError": "Berechnungsfehler"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "placeholder": "Gib Daten ein, um das Alter zu berechnen",
+        "age": "Alter",
+        "years": "Jahre",
+        "months": "Monate",
+        "days": "Tage",
+        "totalDays": "Gesamttage",
+        "birthDate": "Geburtsdatum",
+        "calculateDate": "Berechnungsdatum",
+        "copy": "Kopieren",
+        "copied": "Kopiert!"
+      },
+      "ageTypes": {
+        "baby": {
+          "title": "Säuglingsalter",
+          "description": "Von der Geburt bis 1 Jahr. Alter wird in Monaten und Tagen gezählt."
+        },
+        "child": {
+          "title": "Kindheit",
+          "description": "Von 1 bis 12 Jahren. Hauptwachstums- und Entwicklungsphase."
+        },
+        "teen": {
+          "title": "Jugendalter",
+          "description": "Von 13 bis 19 Jahren. Pubertätsphase."
+        },
+        "adult": {
+          "title": "Erwachsenenalter",
+          "description": "Von 20 Jahren und älter. Vollständige Reife."
+        }
+      },
+      "tips": {
+        "title": "Wichtige Tipps",
+        "leapYear": "Der Rechner berücksichtigt Schaltjahre für genaue Berechnung.",
+        "timezone": "Berücksichtige Zeitzonen bei der Altersberechnung.",
+        "precision": "Das Ergebnis zeigt das genaue Alter zum angegebenen Datum."
+      },
+      "seo": {
+        "title": "Altersrechner — Genaue Altersberechnung in Jahren, Monaten und Tagen",
+        "description": "Berechne dein genaues Alter in Jahren, Monaten und Tagen. Kostenloser Online-Altersrechner mit Schaltjahr-Unterstützung.",
+        "keywords": "altersrechner, alter online, alter berechnen, wie alt bin ich, alter in tagen, alter in monaten, altersrechner, online altersrechner, alter berechnen",
+        "overview": {
+          "title": "Über den Altersrechner",
+          "content": "Der Altersrechner hilft dabei, das genaue Alter in Jahren, Monaten und Tagen zu berechnen. Gib einfach dein Geburtsdatum und Berechnungsdatum ein, um detaillierte Altersinformationen zu erhalten."
+        },
+        "calculation": {
+          "title": "Wie das Alter berechnet wird",
+          "content": "Das Alter wird als Differenz zwischen Berechnungsdatum und Geburtsdatum berechnet, wobei Schaltjahre und unterschiedliche Monatslängen berücksichtigt werden.",
+          "formula": "Alter = Berechnungsdatum - Geburtsdatum (unter Berücksichtigung von Schaltjahren)"
+        },
+        "ageTypes": {
+          "title": "Altersperioden-Typen",
+          "content": "Das Alter kann in mehrere Perioden unterteilt werden:",
+          "baby": {
+            "title": "Säuglingsalter (0-1 Jahr)",
+            "description": "Alter wird in Monaten und Tagen gezählt. Schnelle Entwicklung."
+          },
+          "child": {
+            "title": "Kindheit (1-12 Jahre)",
+            "description": "Hauptperiode des Wachstums und der Entwicklung des Kindes."
+          },
+          "teen": {
+            "title": "Jugendalter (13-19 Jahre)",
+            "description": "Pubertätsphase und Persönlichkeitsbildung."
+          },
+          "adult": {
+            "title": "Erwachsenenalter (20+ Jahre)",
+            "description": "Periode vollständiger Reife und Stabilität."
+          }
+        },
+        "advantages": {
+          "title": "Vorteile unseres Rechners",
+          "content": "Unser Altersrechner bietet viele Vorteile:",
+          "quick": "Schnelle Berechnung",
+          "quickDesc": "Sofortige Ergebnisse in Sekunden",
+          "precise": "Genauigkeit",
+          "preciseDesc": "Berücksichtigt Schaltjahre und unterschiedliche Monatslängen",
+          "flexible": "Flexibilität",
+          "flexibleDesc": "Alter für jedes Datum berechnen",
+          "detailed": "Detaillierte Informationen",
+          "detailedDesc": "Alter in Jahren, Monaten, Tagen und Gesamttage",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design für alle Geräte"
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Für eine genaue Altersberechnung:",
+          "accurate": "Verwende genaue Geburtsdaten",
+          "leap": "Berücksichtige Schaltjahre",
+          "timezone": "Berücksichtige Zeitzonen bei Bedarf"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "question1": "Wie wird das Alter berechnet?",
+          "answer1": "Das Alter wird als Differenz zwischen Berechnungsdatum und Geburtsdatum berechnet, wobei Schaltjahre berücksichtigt werden.",
+          "question2": "Warum kann das Alter vom Erwarteten abweichen?",
+          "answer2": "Das Alter hängt von der Datumsgenauigkeit und der Berücksichtigung von Schaltjahren ab.",
+          "question3": "Kann ich das Alter für ein zukünftiges Datum berechnen?",
+          "answer3": "Ja, der Rechner funktioniert mit beliebigen Daten.",
+          "question4": "Werden Schaltjahre berücksichtigt?",
+          "answer4": "Ja, der Rechner berücksichtigt automatisch Schaltjahre für genaue Berechnung.",
+          "question5": "Kann ich das Alter in Tagen berechnen?",
+          "answer5": "Ja, der Rechner zeigt die Gesamtzahl der Tage seit der Geburt."
         }
       }
     }

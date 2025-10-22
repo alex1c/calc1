@@ -8153,7 +8153,12 @@
 				"presets": "Presets",
 				"pomodoro": "Pomodoro",
 				"cooking": "Cooking",
-				"workout": "Workout"
+				"workout": "Workout",
+				"visualStyle": "Visual Style",
+				"circular": "Circular",
+				"linear": "Linear",
+				"digital": "Digital",
+				"color": "Color"
 			},
 			"results": {
 				"title": "Timer",
@@ -8523,6 +8528,134 @@
 					"answer9": "Yes, 12- and 24-hour formats are supported.",
 					"question10": "Are there limits on the number of cities?",
 					"answer10": "You can add up to 10 cities simultaneously."
+				}
+			}
+		},
+		"agecalc": {
+			"title": "Age Calculator — Accurate Age Calculation in Years, Months and Days",
+			"description": "Calculate your exact age in years, months and days. Free online age calculator with leap year support.",
+			"form": {
+				"title": "Calculation Parameters",
+				"description": "Enter your birth date and calculation date",
+				"birthDate": "Birth Date",
+				"birthDatePlaceholder": "Select birth date",
+				"calculateDate": "Calculation Date",
+				"calculateDatePlaceholder": "Select calculation date",
+				"today": "Today",
+				"calculate": "Calculate",
+				"calculating": "Calculating...",
+				"reset": "Reset",
+				"errors": {
+					"birthDateRequired": "Enter birth date",
+					"calculateDateRequired": "Enter calculation date",
+					"birthDateFuture": "Birth date cannot be in the future",
+					"calculateDatePast": "Calculation date cannot be earlier than birth date",
+					"calculationError": "Calculation error"
+				}
+			},
+			"results": {
+				"title": "Calculation Results",
+				"placeholder": "Enter dates to calculate age",
+				"age": "Age",
+				"years": "years",
+				"months": "months",
+				"days": "days",
+				"totalDays": "Total Days",
+				"birthDate": "Birth Date",
+				"calculateDate": "Calculation Date",
+				"copy": "Copy",
+				"copied": "Copied!"
+			},
+			"ageTypes": {
+				"baby": {
+					"title": "Infant Age",
+					"description": "From birth to 1 year. Age is counted in months and days."
+				},
+				"child": {
+					"title": "Childhood",
+					"description": "From 1 to 12 years. Main growth and development period."
+				},
+				"teen": {
+					"title": "Teenage",
+					"description": "From 13 to 19 years. Puberty period."
+				},
+				"adult": {
+					"title": "Adult Age",
+					"description": "From 20 years and older. Full maturity."
+				}
+			},
+			"tips": {
+				"title": "Important Tips",
+				"leapYear": "Calculator accounts for leap years for accurate calculation.",
+				"timezone": "Consider time zones when calculating age.",
+				"precision": "Result shows exact age on the specified date."
+			},
+			"seo": {
+				"title": "Age Calculator — Accurate Age Calculation in Years, Months and Days",
+				"description": "Calculate your exact age in years, months and days. Free online age calculator with leap year support.",
+				"keywords": "age calculator, age online, calculate age, how old am i, age in days, age in months, age calculator, online age calculator, calculate age",
+				"overview": {
+					"title": "About Age Calculator",
+					"content": "Age calculator helps calculate exact age in years, months and days. Simply enter your birth date and calculation date to get detailed age information."
+				},
+				"calculation": {
+					"title": "How Age is Calculated",
+					"content": "Age is calculated as the difference between calculation date and birth date, taking into account leap years and different month lengths.",
+					"formula": "Age = Calculation Date - Birth Date (accounting for leap years)"
+				},
+				"ageTypes": {
+					"title": "Age Period Types",
+					"content": "Age can be divided into several periods:",
+					"baby": {
+						"title": "Infant Age (0-1 year)",
+						"description": "Age is counted in months and days. Rapid development."
+					},
+					"child": {
+						"title": "Childhood (1-12 years)",
+						"description": "Main period of child growth and development."
+					},
+					"teen": {
+						"title": "Teenage (13-19 years)",
+						"description": "Puberty period and personality formation."
+					},
+					"adult": {
+						"title": "Adult Age (20+ years)",
+						"description": "Period of full maturity and stability."
+					}
+				},
+				"advantages": {
+					"title": "Our Calculator Advantages",
+					"content": "Our age calculator provides many advantages:",
+					"quick": "Quick Calculation",
+					"quickDesc": "Instant results in seconds",
+					"precise": "Accuracy",
+					"preciseDesc": "Accounts for leap years and different month lengths",
+					"flexible": "Flexibility",
+					"flexibleDesc": "Calculate age for any date",
+					"detailed": "Detailed Information",
+					"detailedDesc": "Age in years, months, days and total number of days",
+					"mobile": "Mobile Version",
+					"mobileDesc": "Fully responsive design for all devices"
+				},
+				"tips": {
+					"title": "Useful Tips",
+					"content": "For accurate age calculation:",
+					"accurate": "Use accurate birth dates",
+					"leap": "Consider leap years",
+					"timezone": "Consider time zones when necessary"
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"question1": "How is age calculated?",
+					"answer1": "Age is calculated as the difference between calculation date and birth date, taking into account leap years.",
+					"question2": "Why might age differ from expected?",
+					"answer2": "Age depends on date accuracy and leap year consideration.",
+					"question3": "Can I calculate age for a future date?",
+					"answer3": "Yes, the calculator works with any dates.",
+					"question4": "Are leap years accounted for?",
+					"answer4": "Yes, the calculator automatically accounts for leap years for accurate calculation.",
+					"question5": "Can I calculate age in days?",
+					"answer5": "Yes, the calculator shows total number of days since birth."
 				}
 			}
 		}

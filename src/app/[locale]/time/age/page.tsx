@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.age.seo',
+		namespace: 'calculators.agecalc.seo',
 	});
 
 	const title = t('title');
@@ -74,7 +74,7 @@ export default async function AgePage({
 }) {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.age',
+		namespace: 'calculators.agecalc',
 	});
 
 	// Breadcrumbs items

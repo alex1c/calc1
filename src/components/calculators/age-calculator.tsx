@@ -20,7 +20,7 @@ interface AgeResult {
 }
 
 export default function AgeCalculator() {
-	const t = useTranslations('calculators.age');
+	const t = useTranslations('calculators.agecalc');
 	const [birthDate, setBirthDate] = useState('');
 	const [calculateDate, setCalculateDate] = useState('');
 	const [result, setResult] = useState<AgeResult | null>(null);

@@ -158,9 +158,7 @@ export default function WorldTimeCalculator() {
 					<h2 className='text-2xl font-bold text-gray-900 mb-2'>
 						{t('title')}
 					</h2>
-					<p className='text-gray-600'>
-						{t('description')}
-					</p>
+					<p className='text-gray-600'>{t('description')}</p>
 				</div>
 				<div className='flex items-center justify-center py-12'>
 					<div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
@@ -179,9 +177,7 @@ export default function WorldTimeCalculator() {
 				<h2 className='text-2xl font-bold text-gray-900 mb-2'>
 					{t('title')}
 				</h2>
-				<p className='text-gray-600'>
-					{t('description')}
-				</p>
+				<p className='text-gray-600'>{t('description')}</p>
 			</div>
 
 			{/* Search and Controls */}
@@ -284,8 +280,12 @@ export default function WorldTimeCalculator() {
 								}
 								className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 							>
-								<option value='24h'>{t('form.format24h')}</option>
-								<option value='12h'>{t('form.format12h')}</option>
+								<option value='24h'>
+									{t('form.format24h')}
+								</option>
+								<option value='12h'>
+									{t('form.format12h')}
+								</option>
 							</select>
 						</div>
 
@@ -324,7 +324,7 @@ export default function WorldTimeCalculator() {
 								className='mr-2'
 							/>
 							<span className='text-sm text-gray-700'>
-								{t('showSeconds')}
+								{t('form.showSeconds')}
 							</span>
 						</label>
 
@@ -341,7 +341,7 @@ export default function WorldTimeCalculator() {
 								className='mr-2'
 							/>
 							<span className='text-sm text-gray-700'>
-								{t('showDate')}
+								{t('form.showDate')}
 							</span>
 						</label>
 
@@ -358,7 +358,7 @@ export default function WorldTimeCalculator() {
 								className='mr-2'
 							/>
 							<span className='text-sm text-gray-700'>
-								{t('showDayOfWeek')}
+								{t('form.showDayOfWeek')}
 							</span>
 						</label>
 
@@ -375,7 +375,7 @@ export default function WorldTimeCalculator() {
 								className='mr-2'
 							/>
 							<span className='text-sm text-gray-700'>
-								{t('showDST')}
+								{t('form.showDST')}
 							</span>
 						</label>
 					</div>
@@ -446,8 +446,8 @@ export default function WorldTimeCalculator() {
 							)}
 							<span className='ml-2 text-sm'>
 								{copiedCity === time.city.id
-									? t('copied')
-									: t('copy')}
+									? t('form.copied')
+									: t('form.copy')}
 							</span>
 						</button>
 					</div>
@@ -459,20 +459,20 @@ export default function WorldTimeCalculator() {
 				<div className='text-center py-12'>
 					<Globe className='h-16 w-16 text-gray-300 mx-auto mb-4' />
 					<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-						{t('noCities')}
+						{t('form.noCities')}
 					</h3>
-					<p className='text-gray-600 mb-4'>{t('noCitiesDesc')}</p>
+					<p className='text-gray-600 mb-4'>
+						{t('form.noCitiesDesc')}
+					</p>
 					<button
 						onClick={() => setShowSearch(true)}
 						className='flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors mx-auto'
 					>
 						<Plus className='h-4 w-4 mr-2' />
-						{t('addFirstCity')}
+						{t('form.addFirstCity')}
 					</button>
 				</div>
 			)}
 		</div>
 	);
 }
-
-

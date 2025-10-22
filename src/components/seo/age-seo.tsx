@@ -3,52 +3,28 @@
 import { useTranslations } from 'next-intl';
 
 export default function AgeSEO() {
-	const t = useTranslations('calculators.age');
+	const t = useTranslations('calculators.agecalc');
 
 	const faqData = [
 		{
-			q: 'Как посчитать возраст онлайн?',
-			a: 'Введите дату рождения — результат появится сразу.',
+			q: t('seo.faq.question1'),
+			a: t('seo.faq.answer1'),
 		},
 		{
-			q: 'Можно ли узнать возраст на будущее число?',
-			a: 'Да, выберите любую конечную дату.',
+			q: t('seo.faq.question2'),
+			a: t('seo.faq.answer2'),
 		},
 		{
-			q: 'Показывает ли калькулятор возраст в месяцах и днях?',
-			a: 'Да, результат включает годы, месяцы и дни.',
+			q: t('seo.faq.question3'),
+			a: t('seo.faq.answer3'),
 		},
 		{
-			q: 'Можно ли использовать для питомцев или событий?',
-			a: 'Да, калькулятор универсальный.',
+			q: t('seo.faq.question4'),
+			a: t('seo.faq.answer4'),
 		},
 		{
-			q: 'Как определить, сколько лет было на конкретную дату?',
-			a: 'Введите дату рождения и дату, на которую нужно вычислить возраст.',
-		},
-		{
-			q: 'Учитывает ли високосные годы?',
-			a: 'Да, алгоритм полностью корректен с календарём Григорианского типа.',
-		},
-		{
-			q: 'Можно ли рассчитать разницу между двумя людьми?',
-			a: 'Да, можно сравнить две даты рождения.',
-		},
-		{
-			q: 'Подходит ли калькулятор для юридических целей?',
-			a: 'Да, результат точен до дня.',
-		},
-		{
-			q: 'В каком формате вводить дату?',
-			a: 'Поддерживаются все популярные форматы, включая ISO и европейский.',
-		},
-		{
-			q: 'Можно ли использовать калькулятор офлайн?',
-			a: 'Нет, требуется подключение к интернету.',
-		},
-		{
-			q: 'Есть ли ограничение по годам?',
-			a: 'Нет, можно вводить любые годы, включая будущие.',
+			q: t('seo.faq.question5'),
+			a: t('seo.faq.answer5'),
 		},
 	];
 
@@ -57,96 +33,65 @@ export default function AgeSEO() {
 			{/* Overview */}
 			<section>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					О калькуляторе возраста
+					{t('seo.overview.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600'>
-					<p>
-						Онлайн-калькулятор возраста — это точный инструмент для
-						определения возраста в годах, месяцах и днях. Просто
-						введите дату рождения и дату, на которую нужно
-						рассчитать возраст, и получите детальную информацию о
-						прожитом времени.
-					</p>
-					<p>
-						Калькулятор учитывает високосные годы, различные месяцы
-						и корректно обрабатывает все календарные особенности.
-						Подходит для людей, питомцев, событий и любых других
-						объектов с известной датой начала.
-					</p>
+					<p>{t('seo.overview.content')}</p>
 				</div>
 			</section>
 
 			{/* How it works */}
 			<section>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					Как рассчитывается возраст
+					{t('seo.calculation.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600'>
+					<p>{t('seo.calculation.content')}</p>
 					<p>
-						Калькулятор использует точные математические алгоритмы
-						для расчёта возраста:
+						<strong>{t('seo.calculation.formula')}</strong>
 					</p>
-					<ul>
-						<li>
-							<strong>Годы:</strong> Разность между годами с
-							учётом месяцев и дней
-						</li>
-						<li>
-							<strong>Месяцы:</strong> Остаток месяцев после
-							вычитания полных лет
-						</li>
-						<li>
-							<strong>Дни:</strong> Остаток дней после вычитания
-							полных месяцев
-						</li>
-						<li>
-							<strong>Високосные годы:</strong> Автоматический
-							учёт 29 февраля
-						</li>
-					</ul>
 				</div>
 			</section>
 
 			{/* Advantages */}
 			<section>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					Преимущества нашего калькулятора
+					{t('seo.advantages.title')}
 				</h2>
+				<div className='prose prose-lg text-gray-600 mb-6'>
+					<p>{t('seo.advantages.content')}</p>
+				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
-							Точность расчётов
+							{t('seo.advantages.precise')}
 						</h3>
 						<p className='text-purple-800'>
-							Учитывает все календарные особенности, включая
-							високосные годы и разную длительность месяцев.
+							{t('seo.advantages.preciseDesc')}
 						</p>
 					</div>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							Универсальность
+							{t('seo.advantages.flexible')}
 						</h3>
 						<p className='text-blue-800'>
-							Подходит для людей, животных, событий и любых
-							объектов с известной датой начала.
+							{t('seo.advantages.flexibleDesc')}
 						</p>
 					</div>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							Детальная информация
+							{t('seo.advantages.detailed')}
 						</h3>
 						<p className='text-green-800'>
-							Показывает возраст в годах, месяцах, днях и общее
-							количество дней.
+							{t('seo.advantages.detailedDesc')}
 						</p>
 					</div>
 					<div className='bg-orange-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
-							Гибкость дат
+							{t('seo.advantages.mobile')}
 						</h3>
 						<p className='text-orange-800'>
-							Можно рассчитать возраст на любую дату, включая
-							будущие даты.
+							{t('seo.advantages.mobileDesc')}
 						</p>
 					</div>
 				</div>
@@ -155,29 +100,19 @@ export default function AgeSEO() {
 			{/* Tips */}
 			<section>
 				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					Полезные советы
+					{t('seo.tips.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600'>
+					<p>{t('seo.tips.content')}</p>
 					<ul>
 						<li>
-							<strong>Поздравления:</strong> Узнайте точный
-							возраст для персональных поздравлений
+							<strong>{t('seo.tips.accurate')}</strong>
 						</li>
 						<li>
-							<strong>Документы:</strong> Рассчитайте возраст для
-							официальных документов
+							<strong>{t('seo.tips.leap')}</strong>
 						</li>
 						<li>
-							<strong>Питомцы:</strong> Определите возраст
-							домашних животных
-						</li>
-						<li>
-							<strong>События:</strong> Рассчитайте, сколько лет
-							прошло с важного события
-						</li>
-						<li>
-							<strong>Планирование:</strong> Узнайте возраст на
-							будущую дату для планирования
+							<strong>{t('seo.tips.timezone')}</strong>
 						</li>
 					</ul>
 				</div>
@@ -186,7 +121,7 @@ export default function AgeSEO() {
 			{/* FAQ */}
 			<section>
 				<h2 className='text-2xl font-bold text-gray-900 mb-6'>
-					Часто задаваемые вопросы
+					{t('seo.faq.title')}
 				</h2>
 				<div className='space-y-4'>
 					{faqData.map((faq, index) => (
