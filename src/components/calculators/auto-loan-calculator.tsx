@@ -9,6 +9,7 @@ import {
 	CheckCircle,
 	Car,
 } from 'lucide-react';
+import PDFExport from '@/components/common/pdf-export';
 import {
 	calculateLoan,
 	validateLoanInput,
@@ -88,10 +89,95 @@ export default function AutoLoanCalculator() {
 		window.URL.revokeObjectURL(url);
 	};
 
+	const generatePDFContent = () => {
+		if (!result) return '';
+
+		// Get currency symbol based on locale
+		const getCurrencySymbol = () => {
+			const locale =
+				typeof window !== 'undefined'
+					? window.location.pathname.split('/')[1]
+					: 'ru';
+			switch (locale) {
+				case 'en':
+					return '$';
+				case 'es':
+					return '€';
+				case 'de':
+					return '€';
+				default:
+					return '₽';
+			}
+		};
+
+		const currencySymbol = getCurrencySymbol();
+
+		let content = `${t('results.summary')}\n\n`;
+		content += `${t(
+			'results.monthlyPayment'
+		)}: ${currencySymbol}${result.monthlyPayment.toFixed(2)}\n`;
+		content += `${t(
+			'results.totalPayments'
+		)}: ${currencySymbol}${result.totalPayments.toFixed(2)}\n`;
+		content += `${t(
+			'results.totalInterest'
+		)}: ${currencySymbol}${result.totalInterest.toFixed(2)}\n`;
+		content += `${t('results.effectiveTerm')}: ${result.effectiveTerm} ${t(
+			'results.months'
+		)}\n\n`;
+
+		content += `${t('results.scheduleTitle')}\n`;
+		content += `${t('results.table.month')} | ${t(
+			'results.table.payment'
+		)} | ${t('results.table.interest')} | ${t(
+			'results.table.principal'
+		)} | ${t('results.table.balance')}\n`;
+		content += `${'-'.repeat(80)}\n`;
+
+		// Add first 12 months of payment schedule
+		result.paymentSchedule.slice(0, 12).forEach((item) => {
+			content += `${item.month} | ${currencySymbol}${item.payment.toFixed(
+				2
+			)} | ${currencySymbol}${item.interest.toFixed(
+				2
+			)} | ${currencySymbol}${item.principal.toFixed(
+				2
+			)} | ${currencySymbol}${item.balance.toFixed(2)}\n`;
+		});
+
+		if (result.paymentSchedule.length > 12) {
+			content += `\n... ${result.paymentSchedule.length - 12} ${t(
+				'results.table.moreMonths'
+			)}\n`;
+		}
+
+		return content;
+	};
+
 	const formatCurrency = (amount: number) => {
-		return new Intl.NumberFormat('ru-RU', {
+		// Get locale and currency based on current language
+		const getLocaleAndCurrency = () => {
+			const locale =
+				typeof window !== 'undefined'
+					? window.location.pathname.split('/')[1]
+					: 'ru';
+			switch (locale) {
+				case 'en':
+					return { locale: 'en-US', currency: 'USD' };
+				case 'es':
+					return { locale: 'es-ES', currency: 'EUR' };
+				case 'de':
+					return { locale: 'de-DE', currency: 'EUR' };
+				default:
+					return { locale: 'ru-RU', currency: 'RUB' };
+			}
+		};
+
+		const { locale, currency } = getLocaleAndCurrency();
+
+		return new Intl.NumberFormat(locale, {
 			style: 'currency',
-			currency: 'RUB',
+			currency: currency,
 			minimumFractionDigits: 0,
 			maximumFractionDigits: 0,
 		}).format(amount);
@@ -368,14 +454,23 @@ export default function AutoLoanCalculator() {
 								</div>
 							</div>
 
-							{/* Download Button */}
-							<button
-								onClick={handleDownloadCSV}
-								className='w-full bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors flex items-center justify-center'
-							>
-								<Download className='h-4 w-4 mr-2' />
-								{t('results.downloadSchedule')}
-							</button>
+							{/* Download Buttons */}
+							<div className='space-y-3'>
+								<button
+									onClick={handleDownloadCSV}
+									className='w-full bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors flex items-center justify-center'
+								>
+									<Download className='h-4 w-4 mr-2' />
+									{t('results.downloadSchedule')}
+								</button>
+
+								<PDFExport
+									title={t('results.title')}
+									content={generatePDFContent()}
+									fileName='auto-loan-calculation'
+									className='w-full'
+								/>
+							</div>
 						</div>
 					) : (
 						<div className='text-center text-gray-500 py-8'>

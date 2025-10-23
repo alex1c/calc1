@@ -1582,12 +1582,30 @@
     },
     "mortgage": {
       "title": "Mortgage Calculator",
-      "description": "Calculate monthly mortgage payments, total interest, and create detailed payment schedules for home loans and real estate financing",
+      "description": "Calculate monthly mortgage payments, total payments and create detailed payment schedule for real estate purchase",
       "seo": {
-        "title": "Mortgage Calculator: Calculate Home Loan Payments and Schedule",
+        "title": "Mortgage Calculator: payment calculation, overpayment and mortgage repayment schedule",
         "overview": {
-          "title": "What is a Mortgage",
-          "content": "A mortgage is a loan secured by real estate property, typically used to purchase a home. The property serves as collateral for the loan."
+          "title": "Mortgage calculator for accurate mortgage calculation",
+          "content": "Mortgage calculator is a professional tool for calculating mortgage payments, overpayment and repayment schedule. With our calculator you can calculate monthly mortgage payments, total overpayment, effective interest rate and choose the optimal repayment scheme. The calculator takes into account the down payment, additional payments and various government support programs.",
+          "examples": {
+            "title": "Mortgage calculation examples",
+            "example1": {
+              "title": "Example 1: Standard mortgage",
+              "description": "Apartment worth $500,000, down payment $100,000, rate 8.5% per annum, term 20 years",
+              "calculation": "Monthly payment: $3,384, Total overpayment: $212,328, Effective rate: 8.5%"
+            },
+            "example2": {
+              "title": "Example 2: Government-supported mortgage",
+              "description": "Apartment worth $400,000, down payment $40,000, rate 6% per annum, term 15 years",
+              "calculation": "Monthly payment: $3,042, Total overpayment: $147,560, Effective rate: 6%"
+            },
+            "example3": {
+              "title": "Example 3: Early repayment",
+              "description": "Apartment worth $600,000, down payment $120,000, rate 9% per annum, term 25 years with early repayment $5,000/month",
+              "calculation": "Monthly payment: $4,000 + $5,000 early, Term reduced to 12 years, Savings: $180,000"
+            }
+          }
         },
         "types": {
           "title": "Types of Mortgages",
@@ -1597,10 +1615,10 @@
           "fha": "FHA Loans - government-backed loans with lower down payments"
         },
         "advantages": {
-          "title": "Advantages of Mortgages",
-          "content": "Mortgages offer several benefits:",
+          "title": "Mortgage lending advantages",
+          "content": "Mortgage provides many advantages for real estate acquisition:",
           "homeOwnership": "Enables home ownership",
-          "taxBenefits": "Potential tax benefits",
+          "taxBenefits": "Tax benefits and deductions",
           "equityBuilding": "Builds equity over time",
           "stability": "Provides housing stability",
           "longTerm": "Long-term financing up to 30 years",
@@ -1608,9 +1626,9 @@
           "propertyOwnership": "Opportunity to become a property owner"
         },
         "tips": {
-          "title": "Mortgage Tips",
-          "content": "To get the best mortgage terms:",
-          "compare": "Compare rates from multiple lenders",
+          "title": "Mortgage tips",
+          "content": "To get favorable mortgage lending conditions:",
+          "compare": "Compare offers from different banks",
           "downPayment": "Save for a larger down payment",
           "creditScore": "Improve your credit score",
           "preApproval": "Get pre-approved before house hunting",
@@ -1619,7 +1637,7 @@
           "consult": "Consult with mortgage brokers"
         },
         "requirements": {
-          "title": "Borrower Requirements",
+          "title": "Borrower requirements",
           "content": "To obtain a mortgage loan, you must meet certain requirements:",
           "income": "Stable income confirmed by certificates",
           "creditHistory": "Positive credit history",
@@ -1628,30 +1646,110 @@
           "documents": "Complete set of documents"
         },
         "programs": {
-          "title": "Government Programs",
-          "content": "Various mortgage support programs are available:",
+          "title": "Government programs",
+          "content": "Various mortgage lending support programs are in effect in Russia:",
           "government": {
-            "title": "Government Support",
-            "desc": "Interest rate subsidies for young families and large families"
+            "title": "Government support",
+            "desc": "Interest rate subsidization for young families and large families"
           },
           "commercial": {
-            "title": "Commercial Mortgage",
+            "title": "Commercial mortgage",
             "desc": "Standard bank conditions with market rates"
           }
+        },
+        "description": "Free online mortgage calculator for calculating monthly payments, overpayment and mortgage loan repayment schedule",
+        "calculation": {
+          "title": "How mortgage is calculated",
+          "content": "Mortgage calculation is based on mathematical formulas that take into account the loan amount, interest rate, loan term and repayment scheme.",
+          "annuity": {
+            "title": "Annuity Payments",
+            "description": "Equal monthly payments including interest and principal",
+            "formula": "Payment = Loan Amount × (Rate × (1 + Rate)^Term) / ((1 + Rate)^Term - 1)"
+          },
+          "differentiated": {
+            "title": "Differentiated Payments",
+            "description": "Decreasing payments where principal is constant and interest decreases",
+            "formula": "Principal = Loan Amount / Term, Interest = Remaining Debt × Rate / 12"
+          }
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "faqItems": [
+            {
+              "q": "How to calculate monthly mortgage payment?",
+              "a": "Monthly payment is calculated using the annuity formula: Payment = Loan Amount × (Rate × (1 + Rate)^Term) / ((1 + Rate)^Term - 1). Our calculator will automatically perform all calculations."
+            },
+            {
+              "q": "What's the difference between annuity and differentiated payments?",
+              "a": "Annuity payments are equal for the entire loan term, differentiated payments decrease over time. With annuity, interest is paid first, with differentiated - principal."
+            },
+            {
+              "q": "What down payment is needed for a mortgage?",
+              "a": "Minimum down payment is 10-20% of the property value. With government support, it can be reduced to 5-10%."
+            },
+            {
+              "q": "Can I repay the mortgage early?",
+              "a": "Yes, early repayment is allowed without penalties. You can repay partially or in full, which significantly reduces overpayment."
+            },
+            {
+              "q": "What documents are needed for a mortgage?",
+              "a": "Passport, income certificate, property documents, employment certificate, bank statement of account status."
+            },
+            {
+              "q": "How to reduce mortgage interest rate?",
+              "a": "You can participate in government programs, get insurance, increase down payment, improve credit history."
+            },
+            {
+              "q": "What is mortgage insurance?",
+              "a": "Mandatory property and borrower life insurance that protects the bank and borrower from risks."
+            },
+            {
+              "q": "Can I get a mortgage without a down payment?",
+              "a": "Yes, there are programs with zero down payment, but the interest rate will be higher."
+            },
+            {
+              "q": "How to calculate mortgage overpayment?",
+              "a": "Overpayment = Total payments - Loan amount. Our calculator will show the exact overpayment and effective rate."
+            },
+            {
+              "q": "What is mortgage refinancing?",
+              "a": "Re-crediting in another bank on more favorable terms to reduce interest rate or monthly payment."
+            },
+            {
+              "q": "What government mortgage programs are available?",
+              "a": "Family mortgage, IT specialist mortgage, rural mortgage, young family mortgage with government support."
+            },
+            {
+              "q": "How to choose the optimal mortgage term?",
+              "a": "Short term - less overpayment, but higher monthly payment. Long term - lower payment, but more overpayment."
+            },
+            {
+              "q": "Can I get a mortgage for secondary housing?",
+              "a": "Yes, most banks issue mortgages for both new construction and secondary housing with minor differences in conditions."
+            },
+            {
+              "q": "What is a mortgage broker?",
+              "a": "A specialist who helps choose the optimal mortgage program, collect documents and arrange a loan."
+            },
+            {
+              "q": "How to check credit history for a mortgage?",
+              "a": "Get a credit report from credit bureau, check for delays and correct errors before applying for a mortgage."
+            }
+          ]
         }
       },
       "form": {
         "title": "Mortgage Parameters",
         "homeValue": "Home Value ($)",
         "downPayment": "Down Payment ($)",
-        "termYears": "Term (Years)",
-        "termMonths": "Term (Months)",
-        "interestRate": "Interest Rate (% per year)",
+        "termYears": "Term (years)",
+        "termMonths": "Term (months)",
+        "interestRate": "Interest Rate (% per annum)",
         "additionalPayment": "Additional Monthly Payment ($)",
         "paymentType": "Payment Scheme",
         "paymentTypes": {
-          "annuity": "Annuity Payments (Equal)",
-          "differentiated": "Differentiated Payments (Decreasing)"
+          "annuity": "Annuity Payments (equal)",
+          "differentiated": "Differentiated Payments (decreasing)"
         },
         "calculate": "Calculate",
         "optional": "optional",
@@ -1666,7 +1764,7 @@
         "summary": "Summary",
         "monthlyPayment": "Monthly Payment",
         "totalPayments": "Total Payments",
-        "totalInterest": "Total Interest",
+        "totalInterest": "Overpayment",
         "effectiveTerm": "Effective Term",
         "months": "months",
         "downloadSchedule": "Download Schedule (CSV)",
@@ -1677,21 +1775,49 @@
           "interest": "Interest",
           "principal": "Principal",
           "balance": "Balance",
-          "moreMonths": "more months"
+          "moreMonths": "additional months"
         }
       },
       "breadcrumbs": {
         "category": "Finance"
+      },
+      "hero": {
+        "features": {
+          "accuracy": "Accuracy",
+          "accuracyDesc": "100% accurate calculations",
+          "schedule": "Schedule",
+          "scheduleDesc": "Detailed payment schedule",
+          "comparison": "Comparison",
+          "comparisonDesc": "Payment scheme comparison"
+        }
       }
     },
     "auto-loan": {
       "title": "Auto Loan Calculator",
-      "description": "Calculate monthly auto loan payments, total payments and create detailed payment schedules for car purchase",
+      "description": "Calculate monthly auto loan payments, total payments and create detailed payment schedule for car purchase",
       "seo": {
-        "title": "Auto Loan Calculator: Calculate Car Loan Payments and Schedule",
+        "title": "Auto Loan Calculator: payment calculation, overpayment and auto loan repayment schedule",
         "overview": {
-          "title": "What is an Auto Loan",
-          "content": "An auto loan is a secured loan specifically designed for purchasing a vehicle. The car serves as collateral, which typically results in lower interest rates compared to unsecured loans."
+          "title": "Auto loan calculator for accurate auto loan calculation",
+          "content": "Auto loan calculator is a professional tool for calculating auto loan payments, overpayment and repayment schedule. With our calculator you can calculate monthly auto loan payments, total overpayment, effective interest rate and choose the optimal repayment scheme. The calculator takes into account the down payment, additional payments and various auto loan support programs.",
+          "examples": {
+            "title": "Auto loan calculation examples",
+            "example1": {
+              "title": "Example 1: Standard auto loan",
+              "description": "Car worth $50,000, down payment $10,000, rate 12% per annum, term 5 years",
+              "calculation": "Monthly payment: $888, Total overpayment: $13,280, Effective rate: 12%"
+            },
+            "example2": {
+              "title": "Example 2: Government-supported auto loan",
+              "description": "Car worth $60,000, down payment $6,000, rate 8% per annum, term 7 years",
+              "calculation": "Monthly payment: $847, Total overpayment: $17,148, Effective rate: 8%"
+            },
+            "example3": {
+              "title": "Example 3: Early repayment",
+              "description": "Car worth $80,000, down payment $16,000, rate 15% per annum, term 6 years with early repayment $500/month",
+              "calculation": "Monthly payment: $1,400 + $500 early, Term reduced to 3 years, Savings: $20,000"
+            }
+          }
         },
         "types": {
           "title": "Types of Auto Loans",
@@ -1701,19 +1827,19 @@
           "refinance": "Auto Loan Refinancing - to get better terms on existing loans"
         },
         "advantages": {
-          "title": "Advantages of Auto Loans",
-          "content": "Auto loans offer several benefits:",
+          "title": "Auto loan advantages",
+          "content": "Auto loan provides many advantages for car acquisition:",
           "lowerRates": "Lower interest rates due to collateral",
           "flexibleTerms": "Flexible repayment terms",
-          "quickApproval": "Quick approval process",
+          "quickApproval": "Quick application approval",
           "taxBenefits": "Potential tax benefits for business use",
           "lowRates": "Relatively low interest rates",
-          "earlyRepayment": "Possibility of early repayment"
+          "earlyRepayment": "Early repayment possibility"
         },
         "tips": {
-          "title": "Auto Loan Tips",
-          "content": "To get the best auto loan terms:",
-          "compare": "Compare rates from multiple lenders",
+          "title": "Auto loan tips",
+          "content": "To get favorable auto loan conditions:",
+          "compare": "Compare offers from different banks",
           "downPayment": "Make a larger down payment to reduce monthly payments",
           "creditScore": "Improve your credit score before applying",
           "negotiate": "Negotiate the car price before discussing financing",
@@ -1722,7 +1848,7 @@
           "consult": "Consult with car dealerships"
         },
         "requirements": {
-          "title": "Borrower Requirements",
+          "title": "Borrower requirements",
           "content": "To obtain an auto loan, you must meet certain requirements:",
           "age": "Age from 21 to 65 years",
           "income": "Stable income confirmed by certificates",
@@ -1730,30 +1856,110 @@
           "documents": "Complete set of documents"
         },
         "programs": {
-          "title": "Auto Loan Programs",
+          "title": "Auto loan programs",
           "content": "Banks offer various auto loan programs:",
           "newCar": {
-            "title": "New Car Loan",
+            "title": "New car loan",
             "desc": "Special conditions for purchasing new cars"
           },
           "usedCar": {
-            "title": "Used Car Loan",
-            "desc": "Conditions for purchasing used cars"
+            "title": "Used car loan",
+            "desc": "Conditions for purchasing cars with mileage"
           }
+        },
+        "description": "Free online auto loan calculator for calculating monthly payments, overpayment and auto loan repayment schedule",
+        "calculation": {
+          "title": "How auto loan is calculated",
+          "content": "Auto loan calculation is based on mathematical formulas that take into account the loan amount, interest rate, loan term and repayment scheme.",
+          "annuity": {
+            "title": "Annuity Payments",
+            "description": "Equal monthly payments including interest and principal",
+            "formula": "Payment = Loan Amount × (Rate × (1 + Rate)^Term) / ((1 + Rate)^Term - 1)"
+          },
+          "differentiated": {
+            "title": "Differentiated Payments",
+            "description": "Decreasing payments where principal is constant and interest decreases",
+            "formula": "Principal = Loan Amount / Term, Interest = Remaining Debt × Rate / 12"
+          }
+        },
+        "faq": {
+          "title": "Frequently Asked Questions",
+          "faqItems": [
+            {
+              "q": "How to calculate monthly auto loan payment?",
+              "a": "Monthly payment is calculated using the annuity formula: Payment = Loan Amount × (Rate × (1 + Rate)^Term) / ((1 + Rate)^Term - 1). Our calculator will automatically perform all calculations."
+            },
+            {
+              "q": "What's the difference between annuity and differentiated payments?",
+              "a": "Annuity payments are equal for the entire loan term, differentiated payments decrease over time. With annuity, interest is paid first, with differentiated - principal."
+            },
+            {
+              "q": "What down payment is needed for an auto loan?",
+              "a": "Minimum down payment is 10-20% of the car value. With government support, it can be reduced to 5-10%."
+            },
+            {
+              "q": "Can I repay the auto loan early?",
+              "a": "Yes, early repayment is allowed without penalties. You can repay partially or in full, which significantly reduces overpayment."
+            },
+            {
+              "q": "What documents are needed for an auto loan?",
+              "a": "Passport, income certificate, car documents, employment certificate, bank statement of account status."
+            },
+            {
+              "q": "How to reduce auto loan interest rate?",
+              "a": "You can participate in government programs, get insurance, increase down payment, improve credit history."
+            },
+            {
+              "q": "What is auto loan insurance?",
+              "a": "Mandatory car and borrower life insurance that protects the bank and borrower from risks."
+            },
+            {
+              "q": "Can I get an auto loan without a down payment?",
+              "a": "Yes, there are programs with zero down payment, but the interest rate will be higher."
+            },
+            {
+              "q": "How to calculate auto loan overpayment?",
+              "a": "Overpayment = Total payments - Loan amount. Our calculator will show the exact overpayment and effective rate."
+            },
+            {
+              "q": "What is auto loan refinancing?",
+              "a": "Re-crediting in another bank on more favorable terms to reduce interest rate or monthly payment."
+            },
+            {
+              "q": "What government auto loan programs are available?",
+              "a": "Family car, preferential auto loan, programs for young families with government support."
+            },
+            {
+              "q": "How to choose the optimal auto loan term?",
+              "a": "Short term - less overpayment, but higher monthly payment. Long term - lower payment, but more overpayment."
+            },
+            {
+              "q": "Can I get an auto loan for a used car?",
+              "a": "Yes, most banks issue auto loans for both new and used cars with minor differences in conditions."
+            },
+            {
+              "q": "What is an auto loan broker?",
+              "a": "A specialist who helps choose the optimal auto loan program, collect documents and arrange a loan."
+            },
+            {
+              "q": "How to check credit history for an auto loan?",
+              "a": "Get a credit report from credit bureau, check for delays and correct errors before applying for an auto loan."
+            }
+          ]
         }
       },
       "form": {
         "title": "Auto Loan Parameters",
         "carValue": "Car Value ($)",
         "downPayment": "Down Payment ($)",
-        "termYears": "Term (Years)",
-        "termMonths": "Term (Months)",
-        "interestRate": "Interest Rate (% per year)",
+        "termYears": "Term (years)",
+        "termMonths": "Term (months)",
+        "interestRate": "Interest Rate (% per annum)",
         "additionalPayment": "Additional Monthly Payment ($)",
         "paymentType": "Payment Scheme",
         "paymentTypes": {
-          "annuity": "Annuity Payments (Equal)",
-          "differentiated": "Differentiated Payments (Decreasing)"
+          "annuity": "Annuity Payments (equal)",
+          "differentiated": "Differentiated Payments (decreasing)"
         },
         "calculate": "Calculate",
         "optional": "optional",
@@ -1767,7 +1973,7 @@
         "summary": "Summary",
         "monthlyPayment": "Monthly Payment",
         "totalPayments": "Total Payments",
-        "totalInterest": "Total Interest",
+        "totalInterest": "Overpayment",
         "effectiveTerm": "Effective Term",
         "months": "months",
         "downloadSchedule": "Download Schedule (CSV)",
@@ -1778,11 +1984,21 @@
           "interest": "Interest",
           "principal": "Principal",
           "balance": "Balance",
-          "moreMonths": "more months"
+          "moreMonths": "additional months"
         }
       },
       "breadcrumbs": {
         "category": "Finance"
+      },
+      "hero": {
+        "features": {
+          "accuracy": "Accuracy",
+          "accuracyDesc": "100% accurate calculations",
+          "schedule": "Schedule",
+          "scheduleDesc": "Detailed payment schedule",
+          "comparison": "Comparison",
+          "comparisonDesc": "Payment scheme comparison"
+        }
       }
     },
     "consumer-loan": {

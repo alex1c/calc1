@@ -1935,6 +1935,401 @@
           }
         ]
       }
+    },
+    "mortgage": {
+      "title": "Calculadora de Hipoteca",
+      "description": "Calcular pagos mensuales de hipoteca, pagos totales y crear cronograma detallado de pagos para compra de bienes raíces",
+      "breadcrumbs": {
+        "category": "Finanzas"
+      },
+      "hero": {
+        "features": {
+          "accuracy": "Precisión",
+          "accuracyDesc": "100% cálculos precisos",
+          "schedule": "Cronograma",
+          "scheduleDesc": "Cronograma detallado de pagos",
+          "comparison": "Comparación",
+          "comparisonDesc": "Comparación de esquemas de pago"
+        }
+      },
+      "form": {
+        "title": "Parámetros de Hipoteca",
+        "propertyValue": "Valor de la Propiedad (€)",
+        "downPayment": "Pago Inicial (€)",
+        "termYears": "Plazo (años)",
+        "termMonths": "Plazo (meses)",
+        "interestRate": "Tasa de Interés (% anual)",
+        "additionalPayment": "Pago Mensual Adicional (€)",
+        "paymentType": "Esquema de Pago",
+        "paymentTypes": {
+          "annuity": "Pagos de Anualidad (iguales)",
+          "differentiated": "Pagos Diferenciados (decrecientes)"
+        },
+        "calculate": "Calcular",
+        "optional": "opcional",
+        "errors": {
+          "title": "Errores en Datos"
+        }
+      },
+      "results": {
+        "title": "Resultados del Cálculo",
+        "placeholder": "Ingrese parámetros de hipoteca y haga clic en 'Calcular'",
+        "summary": "Resumen",
+        "monthlyPayment": "Pago Mensual",
+        "totalPayments": "Pagos Totales",
+        "totalInterest": "Sobrepago",
+        "effectiveTerm": "Plazo Efectivo",
+        "months": "meses",
+        "downloadSchedule": "Descargar Cronograma (CSV)",
+        "scheduleTitle": "Cronograma de Pagos",
+        "table": {
+          "month": "Mes",
+          "payment": "Pago",
+          "interest": "Interés",
+          "principal": "Principal",
+          "balance": "Saldo",
+          "moreMonths": "meses adicionales"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de Hipoteca: cálculo de pagos, sobrepago y cronograma de pago de hipoteca",
+        "description": "Calculadora de hipoteca online gratuita para calcular pagos mensuales, sobrepago y cronograma de pago de préstamo hipotecario",
+        "overview": {
+          "title": "Calculadora de hipoteca para cálculo preciso de hipoteca",
+          "content": "La calculadora de hipoteca es una herramienta profesional para calcular pagos hipotecarios, sobrepago y cronograma de pago. Con nuestra calculadora puede calcular pagos mensuales de hipoteca, sobrepago total, tasa de interés efectiva y elegir el esquema de pago óptimo. La calculadora tiene en cuenta el pago inicial, pagos adicionales y varios programas de apoyo gubernamental.",
+          "examples": {
+            "title": "Ejemplos de cálculo de hipoteca",
+            "example1": {
+              "title": "Ejemplo 1: Hipoteca estándar",
+              "description": "Apartamento valorado en €500,000, pago inicial €100,000, tasa 8.5% anual, plazo 20 años",
+              "calculation": "Pago mensual: €3,384, Sobrepago total: €212,328, Tasa efectiva: 8.5%"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Hipoteca con apoyo gubernamental",
+              "description": "Apartamento valorado en €400,000, pago inicial €40,000, tasa 6% anual, plazo 15 años",
+              "calculation": "Pago mensual: €3,042, Sobrepago total: €147,560, Tasa efectiva: 6%"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Pago anticipado",
+              "description": "Apartamento valorado en €600,000, pago inicial €120,000, tasa 9% anual, plazo 25 años con pago anticipado €5,000/mes",
+              "calculation": "Pago mensual: €4,000 + €5,000 anticipado, Plazo reducido a 12 años, Ahorro: €180,000"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calcula la hipoteca",
+          "content": "El cálculo de hipoteca se basa en fórmulas matemáticas que tienen en cuenta el monto del préstamo, tasa de interés, plazo del préstamo y esquema de pago.",
+          "annuity": {
+            "title": "Pagos de Anualidad",
+            "description": "Pagos mensuales iguales que incluyen interés y principal",
+            "formula": "Pago = Monto del Préstamo × (Tasa × (1 + Tasa)^Plazo) / ((1 + Tasa)^Plazo - 1)"
+          },
+          "differentiated": {
+            "title": "Pagos Diferenciados",
+            "description": "Pagos decrecientes donde el principal es constante y el interés disminuye",
+            "formula": "Principal = Monto del Préstamo / Plazo, Interés = Deuda Restante × Tasa / 12"
+          }
+        },
+        "advantages": {
+          "title": "Ventajas del préstamo hipotecario",
+          "content": "La hipoteca proporciona muchas ventajas para la adquisición de bienes raíces:",
+          "longTerm": "Financiamiento a largo plazo hasta 30 años",
+          "lowRate": "Tasas de interés relativamente bajas",
+          "taxBenefits": "Beneficios fiscales y deducciones",
+          "propertyOwnership": "Oportunidad de ser propietario de bienes raíces"
+        },
+        "requirements": {
+          "title": "Requisitos del prestatario",
+          "content": "Para obtener un préstamo hipotecario, debe cumplir ciertos requisitos:",
+          "income": "Ingresos estables confirmados por certificados",
+          "creditHistory": "Historial crediticio positivo",
+          "downPayment": "Pago inicial del 10-20%",
+          "insurance": "Seguro de propiedad y vida",
+          "documents": "Conjunto completo de documentos"
+        },
+        "programs": {
+          "title": "Programas gubernamentales",
+          "content": "Varios programas de apoyo al préstamo hipotecario están en vigor en Rusia:",
+          "government": {
+            "title": "Apoyo gubernamental",
+            "desc": "Subsidio de tasa de interés para familias jóvenes y familias numerosas"
+          },
+          "commercial": {
+            "title": "Hipoteca comercial",
+            "desc": "Condiciones bancarias estándar con tasas de mercado"
+          }
+        },
+        "tips": {
+          "title": "Consejos sobre hipoteca",
+          "content": "Para obtener condiciones favorables de préstamo hipotecario:",
+          "compare": "Compare ofertas de diferentes bancos",
+          "early": "Considere el pago anticipado",
+          "insurance": "Evalúe la necesidad de seguro",
+          "consult": "Consulte con corredores hipotecarios"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el pago mensual de hipoteca?",
+              "a": "El pago mensual se calcula usando la fórmula de anualidad: Pago = Monto del Préstamo × (Tasa × (1 + Tasa)^Plazo) / ((1 + Tasa)^Plazo - 1). Nuestra calculadora realizará automáticamente todos los cálculos."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre pagos de anualidad y diferenciados?",
+              "a": "Los pagos de anualidad son iguales durante todo el plazo del préstamo, los pagos diferenciados disminuyen con el tiempo. Con anualidad, primero se pagan intereses, con diferenciados - principal."
+            },
+            {
+              "q": "¿Qué pago inicial se necesita para una hipoteca?",
+              "a": "El pago inicial mínimo es del 10-20% del valor de la propiedad. Con apoyo gubernamental puede reducirse al 5-10%."
+            },
+            {
+              "q": "¿Puedo pagar la hipoteca anticipadamente?",
+              "a": "Sí, el pago anticipado está permitido sin penalizaciones. Puede pagar parcial o totalmente, lo que reduce significativamente el sobrepago."
+            },
+            {
+              "q": "¿Qué documentos se necesitan para una hipoteca?",
+              "a": "Pasaporte, certificado de ingresos, documentos de propiedad, certificado de empleo, extracto bancario del estado de cuentas."
+            },
+            {
+              "q": "¿Cómo reducir la tasa de interés de la hipoteca?",
+              "a": "Puede participar en programas gubernamentales, obtener seguro, aumentar el pago inicial, mejorar el historial crediticio."
+            },
+            {
+              "q": "¿Qué es el seguro hipotecario?",
+              "a": "Seguro obligatorio de propiedad y vida del prestatario que protege al banco y prestatario de riesgos."
+            },
+            {
+              "q": "¿Puedo obtener una hipoteca sin pago inicial?",
+              "a": "Sí, existen programas con pago inicial cero, pero la tasa de interés será más alta."
+            },
+            {
+              "q": "¿Cómo calcular el sobrepago de la hipoteca?",
+              "a": "Sobrepago = Pagos totales - Monto del préstamo. Nuestra calculadora mostrará el sobrepago exacto y la tasa efectiva."
+            },
+            {
+              "q": "¿Qué es la refinanciación hipotecaria?",
+              "a": "Re-préstamo en otro banco en condiciones más favorables para reducir la tasa de interés o pago mensual."
+            },
+            {
+              "q": "¿Qué programas gubernamentales de hipoteca están disponibles?",
+              "a": "Hipoteca familiar, hipoteca para especialistas en TI, hipoteca rural, hipoteca para familias jóvenes con apoyo gubernamental."
+            },
+            {
+              "q": "¿Cómo elegir el plazo óptimo de hipoteca?",
+              "a": "Plazo corto - menos sobrepago, pero pago mensual más alto. Plazo largo - pago más bajo, pero más sobrepago."
+            },
+            {
+              "q": "¿Puedo obtener una hipoteca para vivienda secundaria?",
+              "a": "Sí, la mayoría de bancos emiten hipotecas tanto para construcción nueva como vivienda secundaria con pequeñas diferencias en condiciones."
+            },
+            {
+              "q": "¿Qué es un corredor hipotecario?",
+              "a": "Especialista que ayuda a elegir el programa hipotecario óptimo, recopilar documentos y tramitar un préstamo."
+            },
+            {
+              "q": "¿Cómo verificar el historial crediticio para una hipoteca?",
+              "a": "Obtener un informe crediticio de la oficina de crédito, verificar retrasos y corregir errores antes de solicitar una hipoteca."
+            }
+          ]
+        }
+      }
+    },
+    "auto-loan": {
+      "title": "Calculadora de Préstamo de Auto",
+      "description": "Calcular pagos mensuales de préstamo de auto, pagos totales y crear cronograma detallado de pagos para compra de automóvil",
+      "breadcrumbs": {
+        "category": "Finanzas"
+      },
+      "hero": {
+        "features": {
+          "accuracy": "Precisión",
+          "accuracyDesc": "100% cálculos precisos",
+          "schedule": "Cronograma",
+          "scheduleDesc": "Cronograma detallado de pagos",
+          "comparison": "Comparación",
+          "comparisonDesc": "Comparación de esquemas de pago"
+        }
+      },
+      "form": {
+        "title": "Parámetros de Préstamo de Auto",
+        "carValue": "Valor del Auto (€)",
+        "downPayment": "Pago Inicial (€)",
+        "termYears": "Plazo (años)",
+        "termMonths": "Plazo (meses)",
+        "interestRate": "Tasa de Interés (% anual)",
+        "additionalPayment": "Pago Mensual Adicional (€)",
+        "paymentType": "Esquema de Pago",
+        "paymentTypes": {
+          "annuity": "Pagos de Anualidad (iguales)",
+          "differentiated": "Pagos Diferenciados (decrecientes)"
+        },
+        "calculate": "Calcular",
+        "optional": "opcional",
+        "errors": {
+          "title": "Errores en Datos"
+        }
+      },
+      "results": {
+        "title": "Resultados del Cálculo",
+        "placeholder": "Ingrese parámetros de préstamo de auto y haga clic en 'Calcular'",
+        "summary": "Resumen",
+        "monthlyPayment": "Pago Mensual",
+        "totalPayments": "Pagos Totales",
+        "totalInterest": "Sobrepago",
+        "effectiveTerm": "Plazo Efectivo",
+        "months": "meses",
+        "downloadSchedule": "Descargar Cronograma (CSV)",
+        "scheduleTitle": "Cronograma de Pagos",
+        "table": {
+          "month": "Mes",
+          "payment": "Pago",
+          "interest": "Interés",
+          "principal": "Principal",
+          "balance": "Saldo",
+          "moreMonths": "meses adicionales"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de Préstamo de Auto: cálculo de pagos, sobrepago y cronograma de pago de préstamo de auto",
+        "description": "Calculadora de préstamo de auto online gratuita para calcular pagos mensuales, sobrepago y cronograma de pago de préstamo de auto",
+        "overview": {
+          "title": "Calculadora de préstamo de auto para cálculo preciso de préstamo de auto",
+          "content": "La calculadora de préstamo de auto es una herramienta profesional para calcular pagos de préstamo de auto, sobrepago y cronograma de pago. Con nuestra calculadora puede calcular pagos mensuales de préstamo de auto, sobrepago total, tasa de interés efectiva y elegir el esquema de pago óptimo. La calculadora tiene en cuenta el pago inicial, pagos adicionales y varios programas de apoyo de préstamo de auto.",
+          "examples": {
+            "title": "Ejemplos de cálculo de préstamo de auto",
+            "example1": {
+              "title": "Ejemplo 1: Préstamo de auto estándar",
+              "description": "Auto valorado en €50,000, pago inicial €10,000, tasa 12% anual, plazo 5 años",
+              "calculation": "Pago mensual: €888, Sobrepago total: €13,280, Tasa efectiva: 12%"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Préstamo de auto con apoyo gubernamental",
+              "description": "Auto valorado en €60,000, pago inicial €6,000, tasa 8% anual, plazo 7 años",
+              "calculation": "Pago mensual: €847, Sobrepago total: €17,148, Tasa efectiva: 8%"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Pago anticipado",
+              "description": "Auto valorado en €80,000, pago inicial €16,000, tasa 15% anual, plazo 6 años con pago anticipado €500/mes",
+              "calculation": "Pago mensual: €1,400 + €500 anticipado, Plazo reducido a 3 años, Ahorro: €20,000"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calcula el préstamo de auto",
+          "content": "El cálculo de préstamo de auto se basa en fórmulas matemáticas que tienen en cuenta el monto del préstamo, tasa de interés, plazo del préstamo y esquema de pago.",
+          "annuity": {
+            "title": "Pagos de Anualidad",
+            "description": "Pagos mensuales iguales que incluyen interés y principal",
+            "formula": "Pago = Monto del Préstamo × (Tasa × (1 + Tasa)^Plazo) / ((1 + Tasa)^Plazo - 1)"
+          },
+          "differentiated": {
+            "title": "Pagos Diferenciados",
+            "description": "Pagos decrecientes donde el principal es constante y el interés disminuye",
+            "formula": "Principal = Monto del Préstamo / Plazo, Interés = Deuda Restante × Tasa / 12"
+          }
+        },
+        "advantages": {
+          "title": "Ventajas del préstamo de auto",
+          "content": "El préstamo de auto proporciona muchas ventajas para la adquisición de automóviles:",
+          "quickApproval": "Aprobación rápida de solicitud",
+          "lowRates": "Tasas de interés relativamente bajas",
+          "flexibleTerms": "Términos de pago flexibles",
+          "earlyRepayment": "Posibilidad de pago anticipado"
+        },
+        "requirements": {
+          "title": "Requisitos del prestatario",
+          "content": "Para obtener un préstamo de auto, debe cumplir ciertos requisitos:",
+          "age": "Edad de 21 a 65 años",
+          "income": "Ingresos estables confirmados por certificados",
+          "creditHistory": "Historial crediticio positivo",
+          "documents": "Conjunto completo de documentos"
+        },
+        "programs": {
+          "title": "Programas de préstamo de auto",
+          "content": "Los bancos ofrecen varios programas de préstamo de auto:",
+          "newCar": {
+            "title": "Préstamo para auto nuevo",
+            "desc": "Condiciones especiales para comprar autos nuevos"
+          },
+          "usedCar": {
+            "title": "Préstamo para auto usado",
+            "desc": "Condiciones para comprar autos con kilometraje"
+          }
+        },
+        "tips": {
+          "title": "Consejos sobre préstamo de auto",
+          "content": "Para obtener condiciones favorables de préstamo de auto:",
+          "compare": "Compare ofertas de diferentes bancos",
+          "insurance": "Considere el seguro del auto",
+          "early": "Considere el pago anticipado",
+          "consult": "Consulte con concesionarios de autos"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el pago mensual de préstamo de auto?",
+              "a": "El pago mensual se calcula usando la fórmula de anualidad: Pago = Monto del Préstamo × (Tasa × (1 + Tasa)^Plazo) / ((1 + Tasa)^Plazo - 1). Nuestra calculadora realizará automáticamente todos los cálculos."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre pagos de anualidad y diferenciados?",
+              "a": "Los pagos de anualidad son iguales durante todo el plazo del préstamo, los pagos diferenciados disminuyen con el tiempo. Con anualidad, primero se pagan intereses, con diferenciados - principal."
+            },
+            {
+              "q": "¿Qué pago inicial se necesita para un préstamo de auto?",
+              "a": "El pago inicial mínimo es del 10-20% del valor del auto. Con apoyo gubernamental puede reducirse al 5-10%."
+            },
+            {
+              "q": "¿Puedo pagar el préstamo de auto anticipadamente?",
+              "a": "Sí, el pago anticipado está permitido sin penalizaciones. Puede pagar parcial o totalmente, lo que reduce significativamente el sobrepago."
+            },
+            {
+              "q": "¿Qué documentos se necesitan para un préstamo de auto?",
+              "a": "Pasaporte, certificado de ingresos, documentos del auto, certificado de empleo, extracto bancario del estado de cuentas."
+            },
+            {
+              "q": "¿Cómo reducir la tasa de interés del préstamo de auto?",
+              "a": "Puede participar en programas gubernamentales, obtener seguro, aumentar el pago inicial, mejorar el historial crediticio."
+            },
+            {
+              "q": "¿Qué es el seguro de préstamo de auto?",
+              "a": "Seguro obligatorio del auto y vida del prestatario que protege al banco y prestatario de riesgos."
+            },
+            {
+              "q": "¿Puedo obtener un préstamo de auto sin pago inicial?",
+              "a": "Sí, existen programas con pago inicial cero, pero la tasa de interés será más alta."
+            },
+            {
+              "q": "¿Cómo calcular el sobrepago del préstamo de auto?",
+              "a": "Sobrepago = Pagos totales - Monto del préstamo. Nuestra calculadora mostrará el sobrepago exacto y la tasa efectiva."
+            },
+            {
+              "q": "¿Qué es la refinanciación de préstamo de auto?",
+              "a": "Re-préstamo en otro banco en condiciones más favorables para reducir la tasa de interés o pago mensual."
+            },
+            {
+              "q": "¿Qué programas gubernamentales de préstamo de auto están disponibles?",
+              "a": "Auto familiar, préstamo de auto preferencial, programas para familias jóvenes con apoyo gubernamental."
+            },
+            {
+              "q": "¿Cómo elegir el plazo óptimo de préstamo de auto?",
+              "a": "Plazo corto - menos sobrepago, pero pago mensual más alto. Plazo largo - pago más bajo, pero más sobrepago."
+            },
+            {
+              "q": "¿Puedo obtener un préstamo de auto para auto usado?",
+              "a": "Sí, la mayoría de bancos emiten préstamos de auto tanto para autos nuevos como usados con pequeñas diferencias en condiciones."
+            },
+            {
+              "q": "¿Qué es un corredor de préstamo de auto?",
+              "a": "Especialista que ayuda a elegir el programa de préstamo de auto óptimo, recopilar documentos y tramitar un préstamo."
+            },
+            {
+              "q": "¿Cómo verificar el historial crediticio para un préstamo de auto?",
+              "a": "Obtener un informe crediticio de la oficina de crédito, verificar retrasos y corregir errores antes de solicitar un préstamo de auto."
+            }
+          ]
+        }
+      }
     }
   },
   "deposit": {

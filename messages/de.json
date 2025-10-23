@@ -1935,6 +1935,401 @@
           }
         ]
       }
+    },
+    "mortgage": {
+      "title": "Hypothekenrechner",
+      "description": "Monatliche Hypothekenzahlungen berechnen, Gesamtzahlungen und detaillierten Zahlungsplan für Immobilienkauf erstellen",
+      "breadcrumbs": {
+        "category": "Finanzen"
+      },
+      "hero": {
+        "features": {
+          "accuracy": "Genauigkeit",
+          "accuracyDesc": "100% genaue Berechnungen",
+          "schedule": "Zeitplan",
+          "scheduleDesc": "Detaillierter Zahlungsplan",
+          "comparison": "Vergleich",
+          "comparisonDesc": "Zahlungsschema-Vergleich"
+        }
+      },
+      "form": {
+        "title": "Hypothekenparameter",
+        "propertyValue": "Immobilienwert (€)",
+        "downPayment": "Anzahlung (€)",
+        "termYears": "Laufzeit (Jahre)",
+        "termMonths": "Laufzeit (Monate)",
+        "interestRate": "Zinssatz (% pro Jahr)",
+        "additionalPayment": "Zusätzliche monatliche Zahlung (€)",
+        "paymentType": "Zahlungsschema",
+        "paymentTypes": {
+          "annuity": "Annuitätenzahlungen (gleich)",
+          "differentiated": "Differenzierte Zahlungen (abnehmend)"
+        },
+        "calculate": "Berechnen",
+        "optional": "optional",
+        "errors": {
+          "title": "Datenfehler"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "placeholder": "Hypothekenparameter eingeben und 'Berechnen' klicken",
+        "summary": "Zusammenfassung",
+        "monthlyPayment": "Monatliche Zahlung",
+        "totalPayments": "Gesamtzahlungen",
+        "totalInterest": "Überzahlung",
+        "effectiveTerm": "Effektive Laufzeit",
+        "months": "Monate",
+        "downloadSchedule": "Zeitplan herunterladen (CSV)",
+        "scheduleTitle": "Zahlungsplan",
+        "table": {
+          "month": "Monat",
+          "payment": "Zahlung",
+          "interest": "Zinsen",
+          "principal": "Hauptbetrag",
+          "balance": "Saldo",
+          "moreMonths": "weitere Monate"
+        }
+      },
+      "seo": {
+        "title": "Hypothekenrechner: Zahlungsberechnung, Überzahlung und Hypothekenrückzahlungsplan",
+        "description": "Kostenloser Online-Hypothekenrechner zur Berechnung monatlicher Zahlungen, Überzahlung und Hypothekenrückzahlungsplan",
+        "overview": {
+          "title": "Hypothekenrechner für genaue Hypothekenberechnung",
+          "content": "Hypothekenrechner ist ein professionelles Tool zur Berechnung von Hypothekenzahlungen, Überzahlung und Rückzahlungsplan. Mit unserem Rechner können Sie monatliche Hypothekenzahlungen, Gesamtüberzahlung, effektiven Zinssatz berechnen und das optimale Rückzahlungsschema wählen. Der Rechner berücksichtigt Anzahlung, zusätzliche Zahlungen und verschiedene staatliche Unterstützungsprogramme.",
+          "examples": {
+            "title": "Hypothekenberechnungsbeispiele",
+            "example1": {
+              "title": "Beispiel 1: Standardhypothek",
+              "description": "Wohnung im Wert von €500.000, Anzahlung €100.000, Zinssatz 8,5% pro Jahr, Laufzeit 20 Jahre",
+              "calculation": "Monatliche Zahlung: €3.384, Gesamtüberzahlung: €212.328, Effektiver Zinssatz: 8,5%"
+            },
+            "example2": {
+              "title": "Beispiel 2: Staatsunterstützte Hypothek",
+              "description": "Wohnung im Wert von €400.000, Anzahlung €40.000, Zinssatz 6% pro Jahr, Laufzeit 15 Jahre",
+              "calculation": "Monatliche Zahlung: €3.042, Gesamtüberzahlung: €147.560, Effektiver Zinssatz: 6%"
+            },
+            "example3": {
+              "title": "Beispiel 3: Vorzeitige Rückzahlung",
+              "description": "Wohnung im Wert von €600.000, Anzahlung €120.000, Zinssatz 9% pro Jahr, Laufzeit 25 Jahre mit vorzeitiger Rückzahlung €5.000/Monat",
+              "calculation": "Monatliche Zahlung: €4.000 + €5.000 vorzeitig, Laufzeit auf 12 Jahre reduziert, Einsparung: €180.000"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie Hypotheken berechnet werden",
+          "content": "Hypothekenberechnung basiert auf mathematischen Formeln, die Darlehensbetrag, Zinssatz, Darlehenslaufzeit und Rückzahlungsschema berücksichtigen.",
+          "annuity": {
+            "title": "Annuitätenzahlungen",
+            "description": "Gleiche monatliche Zahlungen einschließlich Zinsen und Hauptbetrag",
+            "formula": "Zahlung = Darlehensbetrag × (Zinssatz × (1 + Zinssatz)^Laufzeit) / ((1 + Zinssatz)^Laufzeit - 1)"
+          },
+          "differentiated": {
+            "title": "Differenzierte Zahlungen",
+            "description": "Abnehmende Zahlungen, bei denen der Hauptbetrag konstant ist und die Zinsen abnehmen",
+            "formula": "Hauptbetrag = Darlehensbetrag / Laufzeit, Zinsen = Verbleibende Schuld × Zinssatz / 12"
+          }
+        },
+        "advantages": {
+          "title": "Vorteile der Hypothekenvergabe",
+          "content": "Hypotheken bieten viele Vorteile für den Immobilienkauf:",
+          "longTerm": "Langfristige Finanzierung bis zu 30 Jahren",
+          "lowRate": "Relativ niedrige Zinssätze",
+          "taxBenefits": "Steuervorteile und Abzüge",
+          "propertyOwnership": "Möglichkeit, Immobilienbesitzer zu werden"
+        },
+        "requirements": {
+          "title": "Kreditnehmeranforderungen",
+          "content": "Um ein Hypothekendarlehen zu erhalten, müssen bestimmte Anforderungen erfüllt werden:",
+          "income": "Stabiles Einkommen durch Zertifikate bestätigt",
+          "creditHistory": "Positive Kreditgeschichte",
+          "downPayment": "Anzahlung von 10-20%",
+          "insurance": "Immobilien- und Lebensversicherung",
+          "documents": "Vollständiger Dokumentensatz"
+        },
+        "programs": {
+          "title": "Staatliche Programme",
+          "content": "Verschiedene Hypothekenunterstützungsprogramme sind in Russland in Kraft:",
+          "government": {
+            "title": "Staatsunterstützung",
+            "desc": "Zinssatzsubventionierung für junge Familien und kinderreiche Familien"
+          },
+          "commercial": {
+            "title": "Kommerzielle Hypothek",
+            "desc": "Standard-Bankbedingungen mit Marktzinssätzen"
+          }
+        },
+        "tips": {
+          "title": "Hypotheken-Tipps",
+          "content": "Um günstige Hypothekenbedingungen zu erhalten:",
+          "compare": "Vergleichen Sie Angebote verschiedener Banken",
+          "early": "Betrachten Sie vorzeitige Rückzahlung",
+          "insurance": "Bewerten Sie die Notwendigkeit von Versicherungen",
+          "consult": "Konsultieren Sie Hypothekenmakler"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man monatliche Hypothekenzahlungen?",
+              "a": "Monatliche Zahlung wird mit der Annuitätsformel berechnet: Zahlung = Darlehensbetrag × (Zinssatz × (1 + Zinssatz)^Laufzeit) / ((1 + Zinssatz)^Laufzeit - 1). Unser Rechner führt automatisch alle Berechnungen durch."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen Annuitäten- und differenzierten Zahlungen?",
+              "a": "Annuitätenzahlungen sind für die gesamte Darlehenslaufzeit gleich, differenzierte Zahlungen nehmen mit der Zeit ab. Bei Annuität werden zuerst Zinsen gezahlt, bei differenzierten - Hauptbetrag."
+            },
+            {
+              "q": "Welche Anzahlung wird für eine Hypothek benötigt?",
+              "a": "Mindestanzahlung beträgt 10-20% des Immobilienwerts. Mit Staatsunterstützung kann sie auf 5-10% reduziert werden."
+            },
+            {
+              "q": "Kann ich die Hypothek vorzeitig zurückzahlen?",
+              "a": "Ja, vorzeitige Rückzahlung ist ohne Strafen erlaubt. Sie können teilweise oder vollständig zurückzahlen, was die Überzahlung erheblich reduziert."
+            },
+            {
+              "q": "Welche Dokumente werden für eine Hypothek benötigt?",
+              "a": "Reisepass, Einkommensbescheinigung, Immobiliendokumente, Arbeitsbescheinigung, Bankauszug über Kontostand."
+            },
+            {
+              "q": "Wie kann man den Hypothekenzinssatz senken?",
+              "a": "Sie können an staatlichen Programmen teilnehmen, Versicherung abschließen, Anzahlung erhöhen, Kreditgeschichte verbessern."
+            },
+            {
+              "q": "Was ist Hypothekenversicherung?",
+              "a": "Pflichtversicherung von Immobilie und Kreditnehmerleben, die Bank und Kreditnehmer vor Risiken schützt."
+            },
+            {
+              "q": "Kann ich eine Hypothek ohne Anzahlung erhalten?",
+              "a": "Ja, es gibt Programme mit Null-Anzahlung, aber der Zinssatz wird höher sein."
+            },
+            {
+              "q": "Wie berechnet man Hypothekenüberzahlung?",
+              "a": "Überzahlung = Gesamtzahlungen - Darlehensbetrag. Unser Rechner zeigt genaue Überzahlung und effektiven Zinssatz."
+            },
+            {
+              "q": "Was ist Hypothekenrefinanzierung?",
+              "a": "Umschuldung in einer anderen Bank zu günstigeren Bedingungen zur Senkung des Zinssatzes oder monatlichen Zahlung."
+            },
+            {
+              "q": "Welche staatlichen Hypothekenprogramme gibt es?",
+              "a": "Familienhypothek, IT-Spezialisten-Hypothek, ländliche Hypothek, junge Familien-Hypothek mit Staatsunterstützung."
+            },
+            {
+              "q": "Wie wählt man die optimale Hypothekenlaufzeit?",
+              "a": "Kurze Laufzeit - weniger Überzahlung, aber höhere monatliche Zahlung. Lange Laufzeit - niedrigere Zahlung, aber mehr Überzahlung."
+            },
+            {
+              "q": "Kann ich eine Hypothek für Gebrauchtimmobilien erhalten?",
+              "a": "Ja, die meisten Banken vergeben Hypotheken sowohl für Neubauten als auch Gebrauchtimmobilien mit geringen Unterschieden in den Bedingungen."
+            },
+            {
+              "q": "Was ist ein Hypothekenmakler?",
+              "a": "Spezialist, der bei der Auswahl des optimalen Hypothekenprogramms, Dokumentensammlung und Darlehensabwicklung hilft."
+            },
+            {
+              "q": "Wie überprüft man die Kreditgeschichte für eine Hypothek?",
+              "a": "Kreditbericht von Kreditbüro erhalten, auf Verzögerungen prüfen und Fehler vor Hypothekenantrag korrigieren."
+            }
+          ]
+        }
+      }
+    },
+    "auto-loan": {
+      "title": "Autokreditrechner",
+      "description": "Monatliche Autokreditzahlungen berechnen, Gesamtzahlungen und detaillierten Zahlungsplan für Autokauf erstellen",
+      "breadcrumbs": {
+        "category": "Finanzen"
+      },
+      "hero": {
+        "features": {
+          "accuracy": "Genauigkeit",
+          "accuracyDesc": "100% genaue Berechnungen",
+          "schedule": "Zeitplan",
+          "scheduleDesc": "Detaillierter Zahlungsplan",
+          "comparison": "Vergleich",
+          "comparisonDesc": "Zahlungsschema-Vergleich"
+        }
+      },
+      "form": {
+        "title": "Autokreditparameter",
+        "carValue": "Autowert (€)",
+        "downPayment": "Anzahlung (€)",
+        "termYears": "Laufzeit (Jahre)",
+        "termMonths": "Laufzeit (Monate)",
+        "interestRate": "Zinssatz (% pro Jahr)",
+        "additionalPayment": "Zusätzliche monatliche Zahlung (€)",
+        "paymentType": "Zahlungsschema",
+        "paymentTypes": {
+          "annuity": "Annuitätenzahlungen (gleich)",
+          "differentiated": "Differenzierte Zahlungen (abnehmend)"
+        },
+        "calculate": "Berechnen",
+        "optional": "optional",
+        "errors": {
+          "title": "Datenfehler"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "placeholder": "Autokreditparameter eingeben und 'Berechnen' klicken",
+        "summary": "Zusammenfassung",
+        "monthlyPayment": "Monatliche Zahlung",
+        "totalPayments": "Gesamtzahlungen",
+        "totalInterest": "Überzahlung",
+        "effectiveTerm": "Effektive Laufzeit",
+        "months": "Monate",
+        "downloadSchedule": "Zeitplan herunterladen (CSV)",
+        "scheduleTitle": "Zahlungsplan",
+        "table": {
+          "month": "Monat",
+          "payment": "Zahlung",
+          "interest": "Zinsen",
+          "principal": "Hauptbetrag",
+          "balance": "Saldo",
+          "moreMonths": "weitere Monate"
+        }
+      },
+      "seo": {
+        "title": "Autokreditrechner: Zahlungsberechnung, Überzahlung und Autokreditrückzahlungsplan",
+        "description": "Kostenloser Online-Autokreditrechner zur Berechnung monatlicher Zahlungen, Überzahlung und Autokreditrückzahlungsplan",
+        "overview": {
+          "title": "Autokreditrechner für genaue Autokreditberechnung",
+          "content": "Autokreditrechner ist ein professionelles Tool zur Berechnung von Autokreditzahlungen, Überzahlung und Rückzahlungsplan. Mit unserem Rechner können Sie monatliche Autokreditzahlungen, Gesamtüberzahlung, effektiven Zinssatz berechnen und das optimale Rückzahlungsschema wählen. Der Rechner berücksichtigt Anzahlung, zusätzliche Zahlungen und verschiedene Autokreditunterstützungsprogramme.",
+          "examples": {
+            "title": "Autokreditberechnungsbeispiele",
+            "example1": {
+              "title": "Beispiel 1: Standard-Autokredit",
+              "description": "Auto im Wert von €50.000, Anzahlung €10.000, Zinssatz 12% pro Jahr, Laufzeit 5 Jahre",
+              "calculation": "Monatliche Zahlung: €888, Gesamtüberzahlung: €13.280, Effektiver Zinssatz: 12%"
+            },
+            "example2": {
+              "title": "Beispiel 2: Staatsunterstützter Autokredit",
+              "description": "Auto im Wert von €60.000, Anzahlung €6.000, Zinssatz 8% pro Jahr, Laufzeit 7 Jahre",
+              "calculation": "Monatliche Zahlung: €847, Gesamtüberzahlung: €17.148, Effektiver Zinssatz: 8%"
+            },
+            "example3": {
+              "title": "Beispiel 3: Vorzeitige Rückzahlung",
+              "description": "Auto im Wert von €80.000, Anzahlung €16.000, Zinssatz 15% pro Jahr, Laufzeit 6 Jahre mit vorzeitiger Rückzahlung €500/Monat",
+              "calculation": "Monatliche Zahlung: €1.400 + €500 vorzeitig, Laufzeit auf 3 Jahre reduziert, Einsparung: €20.000"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie Autokredite berechnet werden",
+          "content": "Autokreditberechnung basiert auf mathematischen Formeln, die Darlehensbetrag, Zinssatz, Darlehenslaufzeit und Rückzahlungsschema berücksichtigen.",
+          "annuity": {
+            "title": "Annuitätenzahlungen",
+            "description": "Gleiche monatliche Zahlungen einschließlich Zinsen und Hauptbetrag",
+            "formula": "Zahlung = Darlehensbetrag × (Zinssatz × (1 + Zinssatz)^Laufzeit) / ((1 + Zinssatz)^Laufzeit - 1)"
+          },
+          "differentiated": {
+            "title": "Differenzierte Zahlungen",
+            "description": "Abnehmende Zahlungen, bei denen der Hauptbetrag konstant ist und die Zinsen abnehmen",
+            "formula": "Hauptbetrag = Darlehensbetrag / Laufzeit, Zinsen = Verbleibende Schuld × Zinssatz / 12"
+          }
+        },
+        "advantages": {
+          "title": "Vorteile des Autokredits",
+          "content": "Autokredit bietet viele Vorteile für den Autokauf:",
+          "quickApproval": "Schnelle Antragsgenehmigung",
+          "lowRates": "Relativ niedrige Zinssätze",
+          "flexibleTerms": "Flexible Rückzahlungsbedingungen",
+          "earlyRepayment": "Möglichkeit der vorzeitigen Rückzahlung"
+        },
+        "requirements": {
+          "title": "Kreditnehmeranforderungen",
+          "content": "Um einen Autokredit zu erhalten, müssen bestimmte Anforderungen erfüllt werden:",
+          "age": "Alter von 21 bis 65 Jahren",
+          "income": "Stabiles Einkommen durch Zertifikate bestätigt",
+          "creditHistory": "Positive Kreditgeschichte",
+          "documents": "Vollständiger Dokumentensatz"
+        },
+        "programs": {
+          "title": "Autokreditprogramme",
+          "content": "Banken bieten verschiedene Autokreditprogramme an:",
+          "newCar": {
+            "title": "Kredit für neues Auto",
+            "desc": "Spezielle Bedingungen für den Kauf neuer Autos"
+          },
+          "usedCar": {
+            "title": "Kredit für gebrauchtes Auto",
+            "desc": "Bedingungen für den Kauf von Autos mit Laufleistung"
+          }
+        },
+        "tips": {
+          "title": "Autokredit-Tipps",
+          "content": "Um günstige Autokreditbedingungen zu erhalten:",
+          "compare": "Vergleichen Sie Angebote verschiedener Banken",
+          "insurance": "Betrachten Sie Autoversicherung",
+          "early": "Betrachten Sie vorzeitige Rückzahlung",
+          "consult": "Konsultieren Sie Autohändler"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man monatliche Autokreditzahlungen?",
+              "a": "Monatliche Zahlung wird mit der Annuitätsformel berechnet: Zahlung = Darlehensbetrag × (Zinssatz × (1 + Zinssatz)^Laufzeit) / ((1 + Zinssatz)^Laufzeit - 1). Unser Rechner führt automatisch alle Berechnungen durch."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen Annuitäten- und differenzierten Zahlungen?",
+              "a": "Annuitätenzahlungen sind für die gesamte Darlehenslaufzeit gleich, differenzierte Zahlungen nehmen mit der Zeit ab. Bei Annuität werden zuerst Zinsen gezahlt, bei differenzierten - Hauptbetrag."
+            },
+            {
+              "q": "Welche Anzahlung wird für einen Autokredit benötigt?",
+              "a": "Mindestanzahlung beträgt 10-20% des Autowerts. Mit Staatsunterstützung kann sie auf 5-10% reduziert werden."
+            },
+            {
+              "q": "Kann ich den Autokredit vorzeitig zurückzahlen?",
+              "a": "Ja, vorzeitige Rückzahlung ist ohne Strafen erlaubt. Sie können teilweise oder vollständig zurückzahlen, was die Überzahlung erheblich reduziert."
+            },
+            {
+              "q": "Welche Dokumente werden für einen Autokredit benötigt?",
+              "a": "Reisepass, Einkommensbescheinigung, Autodokumente, Arbeitsbescheinigung, Bankauszug über Kontostand."
+            },
+            {
+              "q": "Wie kann man den Autokreditzinssatz senken?",
+              "a": "Sie können an staatlichen Programmen teilnehmen, Versicherung abschließen, Anzahlung erhöhen, Kreditgeschichte verbessern."
+            },
+            {
+              "q": "Was ist Autokreditversicherung?",
+              "a": "Pflichtversicherung von Auto und Kreditnehmerleben, die Bank und Kreditnehmer vor Risiken schützt."
+            },
+            {
+              "q": "Kann ich einen Autokredit ohne Anzahlung erhalten?",
+              "a": "Ja, es gibt Programme mit Null-Anzahlung, aber der Zinssatz wird höher sein."
+            },
+            {
+              "q": "Wie berechnet man Autokreditüberzahlung?",
+              "a": "Überzahlung = Gesamtzahlungen - Darlehensbetrag. Unser Rechner zeigt genaue Überzahlung und effektiven Zinssatz."
+            },
+            {
+              "q": "Was ist Autokreditrefinanzierung?",
+              "a": "Umschuldung in einer anderen Bank zu günstigeren Bedingungen zur Senkung des Zinssatzes oder monatlichen Zahlung."
+            },
+            {
+              "q": "Welche staatlichen Autokreditprogramme gibt es?",
+              "a": "Familiensauto, Vorzugsautokredit, Programme für junge Familien mit Staatsunterstützung."
+            },
+            {
+              "q": "Wie wählt man die optimale Autokreditlaufzeit?",
+              "a": "Kurze Laufzeit - weniger Überzahlung, aber höhere monatliche Zahlung. Lange Laufzeit - niedrigere Zahlung, aber mehr Überzahlung."
+            },
+            {
+              "q": "Kann ich einen Autokredit für ein gebrauchtes Auto erhalten?",
+              "a": "Ja, die meisten Banken vergeben Autokredite sowohl für neue als auch gebrauchte Autos mit geringen Unterschieden in den Bedingungen."
+            },
+            {
+              "q": "Was ist ein Autokreditmakler?",
+              "a": "Spezialist, der bei der Auswahl des optimalen Autokreditprogramms, Dokumentensammlung und Darlehensabwicklung hilft."
+            },
+            {
+              "q": "Wie überprüft man die Kreditgeschichte für einen Autokredit?",
+              "a": "Kreditbericht von Kreditbüro erhalten, auf Verzögerungen prüfen und Fehler vor Autokreditantrag korrigieren."
+            }
+          ]
+        }
+      }
     }
   },
   "deposit": {
