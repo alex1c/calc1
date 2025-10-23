@@ -13,7 +13,7 @@ interface Props {
 export default async function TaxCalculatorPage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.taxCalculator',
+		namespace: 'calculators.tax-calculator',
 	});
 	const tCategory = await getTranslations({
 		locale,

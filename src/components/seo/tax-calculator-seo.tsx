@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export default function TaxCalculatorSEO() {
-	const t = useTranslations('calculators.taxCalculator.seo');
+	const t = useTranslations('calculators.tax-calculator');
 
 	return (
 		<div className='space-y-12'>
@@ -201,13 +201,67 @@ export default function TaxCalculatorSEO() {
 				<div className='flex items-center mb-6'>
 					<Calculator className='w-8 h-8 text-green-600 mr-3' />
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						{t('faq.title')}
+						{t('seo.faq.title')}
 					</h2>
 				</div>
 				<div className='space-y-6'>
-					{t
-						.raw('seo.faq.faqItems')
-						.map((item: any, index: number) => (
+					{(() => {
+						const seo = t.raw('seo');
+						console.log('seo:', seo);
+						console.log('seo type:', typeof seo);
+
+						const faq = t.raw('seo.faq');
+						console.log('faq:', faq);
+						console.log('faq type:', typeof faq);
+
+						const faqItems = t.raw('seo.faq.faqItems');
+						console.log('faqItems:', faqItems);
+						console.log('faqItems type:', typeof faqItems);
+						console.log(
+							'faqItems is array:',
+							Array.isArray(faqItems)
+						);
+						console.log(
+							'Full path:',
+							'calculators.tax-calculator.seo.faq.faqItems'
+						);
+
+						// Try to get faqItems directly from seo object
+						if (typeof seo === 'object' && seo !== null) {
+							console.log('seo object keys:', Object.keys(seo));
+							if (seo.faq && seo.faq.faqItems) {
+								console.log(
+									'Found faqItems in seo object:',
+									seo.faq.faqItems
+								);
+								return seo.faq.faqItems.map(
+									(item: any, index: number) => (
+										<div
+											key={index}
+											className='border-b border-gray-200 dark:border-gray-700 pb-4'
+										>
+											<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
+												{item.q}
+											</h3>
+											<p className='text-gray-600 dark:text-gray-400'>
+												{item.a}
+											</p>
+										</div>
+									)
+								);
+							}
+						}
+
+						if (!Array.isArray(faqItems)) {
+							return (
+								<div>
+									FAQ items not found or not an array. Type:{' '}
+									{typeof faqItems}, Value: {String(faqItems)}
+								</div>
+							);
+						}
+
+						return faqItems.map((item: any, index: number) => (
 							<div
 								key={index}
 								className='border-b border-gray-200 dark:border-gray-700 pb-4'
@@ -219,7 +273,8 @@ export default function TaxCalculatorSEO() {
 									{item.a}
 								</p>
 							</div>
-						))}
+						));
+					})()}
 				</div>
 			</section>
 		</div>

@@ -83,8 +83,8 @@ export default function FinancePage() {
 		},
 		{
 			id: 'tax-calculator',
-			title: t('calculators.taxCalculator.title'),
-			description: t('calculators.taxCalculator.description'),
+			title: t('calculators.tax-calculator.title'),
+			description: t('calculators.tax-calculator.description'),
 			icon: Receipt,
 			href: '/finance/tax-calculator',
 		},

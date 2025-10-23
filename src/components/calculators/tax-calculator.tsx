@@ -17,7 +17,7 @@ import {
 import PDFExport from '@/components/common/pdf-export';
 
 export default function TaxCalculator() {
-	const t = useTranslations('calculators.taxCalculator');
+	const t = useTranslations('calculators.tax-calculator');
 
 	const [calculationType, setCalculationType] = useState<
 		'withVat' | 'withoutVat'
@@ -131,9 +131,31 @@ export default function TaxCalculator() {
 	const copyResults = async () => {
 		if (!result) return;
 
-		const text = `${t('results.netAmount')}: $${result.netAmount.toFixed(2)}
-${t('results.vatAmount')}: $${result.vatAmount.toFixed(2)}
-${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
+		// Get currency symbol based on locale
+		const getCurrencySymbol = () => {
+			const locale =
+				typeof window !== 'undefined'
+					? window.location.pathname.split('/')[1]
+					: 'ru';
+			switch (locale) {
+				case 'en':
+					return '$';
+				case 'es':
+					return '€';
+				case 'de':
+					return '€';
+				default:
+					return '₽';
+			}
+		};
+
+		const currencySymbol = getCurrencySymbol();
+
+		const text = `${t(
+			'results.netAmount'
+		)}: ${currencySymbol}${result.netAmount.toFixed(2)}
+${t('results.vatAmount')}: ${currencySymbol}${result.vatAmount.toFixed(2)}
+${t('results.totalAmount')}: ${currencySymbol}${result.finalTotal.toFixed(2)}`;
 
 		try {
 			if (navigator.clipboard && window.isSecureContext) {
@@ -167,26 +189,77 @@ ${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
 	const generatePDFContent = () => {
 		if (!result) return '';
 
-		let content = `${t('results.title')}\n\n`;
-		content += `${t('results.netAmount')}: $${result.netAmount.toFixed(
-			2
-		)}\n`;
-		content += `${t('results.vatAmount')} (${
-			result.vatRate
-		}%): $${result.vatAmount.toFixed(2)}\n`;
-		content += `${t('results.totalAmount')}: $${result.totalAmount.toFixed(
-			2
-		)}\n`;
+		// Get currency symbol and translations based on locale
+		const getLocalizedContent = () => {
+			const locale =
+				typeof window !== 'undefined'
+					? window.location.pathname.split('/')[1]
+					: 'ru';
+
+			const translations = {
+				ru: {
+					title: 'Результаты расчёта',
+					netAmount: 'Цена без НДС',
+					vatAmount: 'Сумма НДС',
+					totalAmount: 'Цена с НДС',
+					additionalTaxes: 'Дополнительные налоги',
+					finalTotal: 'Итоговая сумма',
+					currency: '₽',
+				},
+				en: {
+					title: 'Calculation Results',
+					netAmount: 'Net Amount',
+					vatAmount: 'VAT Amount',
+					totalAmount: 'Total Amount',
+					additionalTaxes: 'Additional Taxes',
+					finalTotal: 'Final Total',
+					currency: '$',
+				},
+				es: {
+					title: 'Resultados del Cálculo',
+					netAmount: 'Importe Neto',
+					vatAmount: 'Monto de IVA',
+					totalAmount: 'Importe Total',
+					additionalTaxes: 'Impuestos Adicionales',
+					finalTotal: 'Total Final',
+					currency: '€',
+				},
+				de: {
+					title: 'Berechnungsergebnisse',
+					netAmount: 'Nettobetrag',
+					vatAmount: 'MwSt-Betrag',
+					totalAmount: 'Gesamtbetrag',
+					additionalTaxes: 'Zusätzliche Steuern',
+					finalTotal: 'Endsumme',
+					currency: '€',
+				},
+			};
+
+			return translations[locale] || translations.ru;
+		};
+
+		const localized = getLocalizedContent();
+
+		let content = `${localized.title}\n\n`;
+		content += `${localized.netAmount}: ${
+			localized.currency
+		}${result.netAmount.toFixed(2)}\n`;
+		content += `${localized.vatAmount} (${result.vatRate}%): ${
+			localized.currency
+		}${result.vatAmount.toFixed(2)}\n`;
+		content += `${localized.totalAmount}: ${
+			localized.currency
+		}${result.totalAmount.toFixed(2)}\n`;
 
 		if (result.additionalTaxes > 0) {
-			content += `${t(
-				'results.additionalTaxes'
-			)}: $${result.additionalTaxes.toFixed(2)}\n`;
+			content += `${localized.additionalTaxes}: ${
+				localized.currency
+			}${result.additionalTaxes.toFixed(2)}\n`;
 		}
 
-		content += `\n${t('results.finalTotal')}: $${result.finalTotal.toFixed(
-			2
-		)}\n`;
+		content += `\n${localized.finalTotal}: ${
+			localized.currency
+		}${result.finalTotal.toFixed(2)}\n`;
 
 		return content;
 	};
@@ -416,7 +489,23 @@ ${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
 								</span>
 							</div>
 							<div className='text-2xl font-bold text-green-900'>
-								${result.netAmount.toFixed(2)}
+								{(() => {
+									const locale =
+										typeof window !== 'undefined'
+											? window.location.pathname.split(
+													'/'
+											  )[1]
+											: 'ru';
+									const currencySymbol =
+										locale === 'en'
+											? '$'
+											: locale === 'es' || locale === 'de'
+											? '€'
+											: '₽';
+									return `${currencySymbol}${result.netAmount.toFixed(
+										2
+									)}`;
+								})()}
 							</div>
 						</div>
 
@@ -428,7 +517,23 @@ ${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
 								</span>
 							</div>
 							<div className='text-2xl font-bold text-blue-900'>
-								${result.vatAmount.toFixed(2)}
+								{(() => {
+									const locale =
+										typeof window !== 'undefined'
+											? window.location.pathname.split(
+													'/'
+											  )[1]
+											: 'ru';
+									const currencySymbol =
+										locale === 'en'
+											? '$'
+											: locale === 'es' || locale === 'de'
+											? '€'
+											: '₽';
+									return `${currencySymbol}${result.vatAmount.toFixed(
+										2
+									)}`;
+								})()}
 							</div>
 						</div>
 
@@ -441,7 +546,24 @@ ${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
 									</span>
 								</div>
 								<div className='text-2xl font-bold text-orange-900'>
-									${result.additionalTaxes.toFixed(2)}
+									{(() => {
+										const locale =
+											typeof window !== 'undefined'
+												? window.location.pathname.split(
+														'/'
+												  )[1]
+												: 'ru';
+										const currencySymbol =
+											locale === 'en'
+												? '$'
+												: locale === 'es' ||
+												  locale === 'de'
+												? '€'
+												: '₽';
+										return `${currencySymbol}${result.additionalTaxes.toFixed(
+											2
+										)}`;
+									})()}
 								</div>
 							</div>
 						)}
@@ -454,7 +576,23 @@ ${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
 								</span>
 							</div>
 							<div className='text-2xl font-bold text-purple-900'>
-								${result.finalTotal.toFixed(2)}
+								{(() => {
+									const locale =
+										typeof window !== 'undefined'
+											? window.location.pathname.split(
+													'/'
+											  )[1]
+											: 'ru';
+									const currencySymbol =
+										locale === 'en'
+											? '$'
+											: locale === 'es' || locale === 'de'
+											? '€'
+											: '₽';
+									return `${currencySymbol}${result.finalTotal.toFixed(
+										2
+									)}`;
+								})()}
 							</div>
 						</div>
 					</div>
@@ -472,7 +610,7 @@ ${t('results.totalAmount')}: $${result.finalTotal.toFixed(2)}`;
 							title={t('results.title')}
 							content={generatePDFContent()}
 							fileName='tax-calculator-results'
-							className='flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors'
+							className='flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-medium'
 						/>
 					</div>
 				</div>

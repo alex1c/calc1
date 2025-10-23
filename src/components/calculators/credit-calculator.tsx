@@ -95,23 +95,34 @@ export default function CreditCalculator() {
 	const generatePDFContent = () => {
 		if (!result) return '';
 
-		const formatCurrencyForPDF = (amount: number | undefined) =>
-			amount !== undefined ? `$${amount.toFixed(2)}` : '$0.00';
+		const formatCurrencyForPDF = (amount: number | undefined) => {
+			if (amount === undefined) return '0.00';
+			
+			// Get currency symbol based on locale
+			const currencySymbol = t('form.currencySymbol') || '$';
+			return `${currencySymbol}${amount.toFixed(2)}`;
+		};
 
-		let content = `Сводка по кредиту\n\n`;
-		content += `Ежемесячный платеж: ${formatCurrencyForPDF(
+		let content = `${t('results.summary')}\n\n`;
+		content += `${t('results.monthlyPayment')}: ${formatCurrencyForPDF(
 			result.monthlyPayment
 		)}\n`;
-		content += `Общая сумма выплат: ${formatCurrencyForPDF(
+		content += `${t('results.totalPayments')}: ${formatCurrencyForPDF(
 			result.totalPayments
 		)}\n`;
-		content += `Общая сумма процентов: ${formatCurrencyForPDF(
+		content += `${t('results.totalInterest')}: ${formatCurrencyForPDF(
 			result.totalInterest
 		)}\n`;
-		content += `Эффективный срок: ${result.effectiveTerm || 0} месяцев\n\n`;
+		content += `${t('results.effectiveTerm')}: ${
+			result.effectiveTerm || 0
+		} ${t('results.months')}\n\n`;
 
-		content += `Расписание платежей\n\n`;
-		content += `Месяц\tПлатеж\tПроценты\tОсновной долг\tОстаток\n`;
+		content += `${t('results.scheduleTitle')}\n\n`;
+		content += `${t('results.table.month')}\t${t(
+			'results.table.payment'
+		)}\t${t('results.table.interest')}\t${t(
+			'results.table.principal'
+		)}\t${t('results.table.balance')}\n`;
 
 		if (result.paymentSchedule && result.paymentSchedule.length > 0) {
 			result.paymentSchedule.slice(0, 24).forEach((payment) => {

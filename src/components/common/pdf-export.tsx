@@ -69,8 +69,8 @@ export default function PDFExport({
 
 		// Create HTML content with proper Cyrillic support
 		const now = new Date();
-		const dateStr = now.toLocaleDateString('ru-RU');
-		const timeStr = now.toLocaleTimeString('ru-RU');
+		const dateStr = now.toLocaleDateString();
+		const timeStr = now.toLocaleTimeString();
 
 		tempDiv.innerHTML = `
 			<div style="text-align: center; margin-bottom: 30px;">
