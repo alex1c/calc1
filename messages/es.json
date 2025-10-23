@@ -7,7 +7,14 @@
     "calculate": "Calcular",
     "result": "Resultado",
     "clear": "Limpiar",
-    "favorites": "Favoritos"
+    "favorites": "Favoritos",
+    "pdf": {
+      "header": "calc1.ru calculadora #1 en el mundo",
+      "savePdf": "Guardar como PDF",
+      "generated": "Generado",
+      "page": "Página",
+      "of": "de"
+    }
   },
   "brand": {
     "name": "Calculadora #1",
@@ -1362,12 +1369,274 @@
         }
       }
     },
-    "credit-loan": {
-      "title": "Calculadora de Crédito",
-      "description": "Calcular pagos mensuales de préstamos, intereses totales y crear cronogramas de pagos detallados para cualquier préstamo o crédito",
+    "creditLoan": {
+      "title": "Calculadora de Crédito Online",
+      "description": "Calcular pagos mensuales, monto total y crear cronograma de pagos detallado para cualquier préstamo con precisión al centavo",
       "breadcrumbs": {
         "category": "Finanzas"
       },
+      "hero": {
+        "title": "Calculadora de Crédito Online",
+        "subtitle": "Calcular todos los parámetros del préstamo en segundos",
+        "features": {
+          "accuracy": "Precisión al centavo",
+          "schedule": "Cronograma de pagos detallado",
+          "comparison": "Comparación de tipos de pago"
+        }
+      },
+      "features": {
+        "title": "Características de la Calculadora",
+        "items": [
+          {
+            "title": "Pagos Anuales y Diferenciados",
+            "description": "Comparar dos tipos de pagos y elegir el óptimo"
+          },
+          {
+            "title": "Cronograma de Pagos Detallado",
+            "description": "Plan de pagos completo con desglose mensual"
+          },
+          {
+            "title": "Pago Anticipado",
+            "description": "Considerar pagos adicionales y su impacto en el plazo"
+          },
+          {
+            "title": "Exportar Resultados",
+            "description": "Descargar cronograma de pagos a Excel o PDF"
+          }
+        ]
+      },
+      "form": {
+        "title": "Parámetros del Préstamo",
+        "loanAmount": "Monto del Préstamo ($)",
+        "loanAmountPlaceholder": "Ingrese el monto del préstamo",
+        "termYears": "Plazo en Años",
+        "termMonths": "Plazo en Meses",
+        "interestRate": "Tasa de Interés (%)",
+        "interestRatePlaceholder": "Ingrese la tasa de interés",
+        "downPayment": "Pago Inicial ($)",
+        "downPaymentPlaceholder": "Ingrese el pago inicial",
+        "additionalPayment": "Pago Adicional ($)",
+        "additionalPaymentPlaceholder": "Ingrese el pago adicional",
+        "paymentType": "Tipo de Pago",
+        "paymentTypes": {
+          "annuity": "Anualidad",
+          "differentiated": "Diferenciado"
+        },
+        "loanType": "Tipo de Préstamo",
+        "loanTypes": {
+          "mortgage": "Hipoteca",
+          "auto": "Préstamo Automotriz",
+          "personal": "Préstamo Personal",
+          "business": "Préstamo Empresarial",
+          "refinancing": "Refinanciamiento"
+        },
+        "calculate": "Calcular",
+        "reset": "Reiniciar",
+        "optional": "opcional",
+        "errors": {
+          "title": "Errores en los Datos",
+          "loanAmount": "El monto del préstamo debe ser mayor que 0",
+          "interestRate": "La tasa de interés debe ser mayor que 0",
+          "term": "El plazo del préstamo debe ser mayor que 0"
+        }
+      },
+      "results": {
+        "title": "Resultados del Cálculo",
+        "monthlyPayment": "Pago Mensual",
+        "totalAmount": "Monto Total",
+        "totalInterest": "Interés Total",
+        "effectiveRate": "Tasa Efectiva",
+        "paymentSchedule": "Cronograma de Pagos",
+        "export": "Exportar",
+        "copy": "Copiar",
+        "savePdf": "Guardar como PDF",
+        "pdfHeader": "calc1.ru calculadora #1 en el mundo",
+        "pdfTitle": "Resultados del Cálculo de Crédito",
+        "pdfGenerated": "Generado",
+        "pdfDate": "Fecha",
+        "placeholder": "Complete el formulario y haga clic en 'Calcular' para obtener resultados"
+      },
+      "tips": {
+        "title": "Consejos Útiles",
+        "items": [
+          "Comparar pagos anuales y diferenciados",
+          "Considerar opciones de pago anticipado",
+          "Verificar todas las comisiones bancarias",
+          "Calcular múltiples escenarios"
+        ]
+      },
+      "seo": {
+        "title": "Calculadora de Crédito Online - Calcular Préstamo",
+        "description": "Calculadora de crédito gratuita para calcular pagos mensuales, monto total y cronograma de pagos. Soporte para pagos anuales y diferenciados.",
+        "keywords": "calculadora de crédito, cálculo de préstamo, pago mensual, cronograma de pagos, pago anual, pago diferenciado, pago anticipado",
+        "overview": {
+          "title": "Acerca de la Calculadora de Crédito",
+          "content": "La calculadora de crédito permite calcular todos los parámetros del préstamo: pagos mensuales, monto total, sobrepago y crear cronograma de pagos detallado. Soporta pagos anuales y diferenciados, contabilidad de pago anticipado y exportación de resultados."
+        },
+        "calculation": {
+          "title": "Cómo se Calcula el Crédito",
+          "content": "El cálculo del crédito se basa en fórmulas matemáticas para pagos anuales y diferenciados. Toma en cuenta el monto principal, tasa de interés, plazo del préstamo y pagos adicionales.",
+          "formulas": {
+            "annuity": "Pago Anual: A = P × (r × (1 + r)^n) / ((1 + r)^n - 1)",
+            "differentiated": "Pago Diferenciado: P = S / n + S × r × (1 - (k - 1) / n)"
+          },
+          "examples": {
+            "title": "Ejemplos de Cálculo",
+            "annuityExample": {
+              "title": "Ejemplo de Pago Anual",
+              "description": "Préstamo $100,000 por 5 años al 12% anual",
+              "calculation": "Pago mensual: $2,224.44",
+              "totalAmount": "Monto total: $133,466.40",
+              "overpayment": "Sobrepago: $33,466.40"
+            },
+            "differentiatedExample": {
+              "title": "Ejemplo de Pago Diferenciado",
+              "description": "Préstamo $100,000 por 5 años al 12% anual",
+              "firstPayment": "Primer pago: $2,333.33",
+              "lastPayment": "Último pago: $1,833.33",
+              "totalAmount": "Monto total: $130,000.00",
+              "overpayment": "Sobrepago: $30,000.00"
+            },
+            "earlyRepaymentExample": {
+              "title": "Ejemplo de Pago Anticipado",
+              "description": "Pago anticipado $10,000 después de 2 años",
+              "savings": "Ahorro en intereses: $3,200.00",
+              "newTerm": "Nuevo plazo: 3 años 2 meses"
+            }
+          }
+        },
+        "features": {
+          "title": "Funciones de la Calculadora",
+          "items": [
+            "Cálculo de pagos anuales y diferenciados",
+            "Cronograma de pagos mensuales detallado",
+            "Contabilidad de pago anticipado",
+            "Exportar resultados a Excel/PDF",
+            "Comparación de diferentes escenarios",
+            "Cálculo de tasa de interés efectiva"
+          ]
+        },
+        "advantages": {
+          "title": "Ventajas",
+          "items": [
+            "Precisión de cálculo al centavo",
+            "Fácil de usar",
+            "Cálculos rápidos",
+            "Análisis detallado",
+            "Exportación de resultados",
+            "Uso gratuito"
+          ]
+        },
+        "types": {
+          "title": "Tipos de Préstamos",
+          "content": "En el sistema bancario moderno existen muchos tipos de préstamos, cada uno diseñado para resolver necesidades financieras específicas:",
+          "mortgage": "Préstamo Hipotecario",
+          "mortgageDesc": "Préstamo a largo plazo para compra de bienes raíces con la propiedad adquirida como garantía",
+          "auto": "Préstamo Automotriz",
+          "autoDesc": "Préstamo para compra de automóvil con posibilidad de usar el vehículo como garantía",
+          "personal": "Préstamo Personal",
+          "personalDesc": "Préstamo sin propósito específico para necesidades personales sin proporcionar garantía",
+          "business": "Préstamo Empresarial",
+          "businessDesc": "Préstamo para desarrollo empresarial, reposición de capital de trabajo o inversiones",
+          "refinancing": "Refinanciamiento",
+          "refinancingDesc": "Préstamo para pagar deudas existentes en condiciones más favorables"
+        },
+        "rates": {
+          "title": "Tasas de Interés",
+          "content": "La tasa de interés es el costo de los fondos prestados, expresado como porcentaje anual. Existen varios tipos de tasas:",
+          "fixed": "Tasa Fija",
+          "fixedDesc": "La tasa permanece sin cambios durante todo el plazo del préstamo",
+          "variable": "Tasa Variable",
+          "variableDesc": "La tasa puede cambiar dependiendo de las condiciones del mercado",
+          "mixed": "Tasa Mixta",
+          "mixedDesc": "Tasa fija para el período inicial, luego variable"
+        },
+        "payment": {
+          "title": "Tipos de Pago",
+          "content": "Existen dos tipos principales de pago de préstamos, cada uno con sus propias características:",
+          "annuity": {
+            "title": "Pagos Anuales",
+            "desc": "Pagos mensuales iguales durante todo el plazo del préstamo",
+            "advantages": [
+              "Fácil planificación del presupuesto",
+              "Carga uniforme en el presupuesto familiar",
+              "Posibilidad de planificar gastos con precisión"
+            ]
+          },
+          "differentiated": {
+            "title": "Pagos Diferenciados",
+            "desc": "Los pagos disminuyen con el tiempo",
+            "advantages": [
+              "Menor sobrepago total",
+              "Reducción rápida de la deuda principal",
+              "Ahorro en intereses"
+            ]
+          }
+        },
+        "factors": {
+          "title": "Factores que Afectan el Crédito",
+          "content": "Muchos factores influyen en las condiciones de préstamo que el banco considera al tomar una decisión:",
+          "creditHistory": "Historial crediticio - muestra tu disciplina de pago",
+          "income": "Ingresos - confirma tu solvencia",
+          "downPayment": "Pago inicial - reduce los riesgos del banco",
+          "term": "Plazo del préstamo - afecta el tamaño del pago y el sobrepago",
+          "collateral": "Garantía - asegura el reembolso del préstamo"
+        },
+        "tips": {
+          "title": "Consejos Útiles",
+          "content": "Para obtener condiciones de préstamo favorables, sigue estas recomendaciones:",
+          "compare": "Compara ofertas de diferentes bancos",
+          "early": "Considera opciones de pago anticipado",
+          "insurance": "Evalúa la necesidad de seguro",
+          "consult": "Consulta con expertos financieros"
+        },
+        "faq": {
+          "title": "Preguntas Frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es un pago anual?",
+              "a": "El pago anual es un pago mensual igual durante todo el plazo del préstamo. Al inicio del plazo, la mayor parte del pago va a intereses, al final - al capital."
+            },
+            {
+              "q": "¿Qué es un pago diferenciado?",
+              "a": "El pago diferenciado es un pago que disminuye con el tiempo. El capital se paga en cuotas iguales, y los intereses se calculan sobre el saldo."
+            },
+            {
+              "q": "¿Qué tipo de pago es más rentable?",
+              "a": "El pago diferenciado es más rentable en términos de monto total, pero el anual es más conveniente para la planificación del presupuesto."
+            },
+            {
+              "q": "¿Cómo calcular el pago anticipado?",
+              "a": "El pago anticipado reduce el monto del capital, lo que reduce el monto de intereses en los pagos siguientes."
+            },
+            {
+              "q": "¿Qué es la tasa de interés efectiva?",
+              "a": "La tasa de interés efectiva es el costo real del préstamo incluyendo todas las comisiones y pagos."
+            },
+            {
+              "q": "¿Cómo afecta el pago inicial al préstamo?",
+              "a": "El pago inicial reduce el monto del préstamo, lo que reduce los pagos mensuales y el sobrepago total."
+            },
+            {
+              "q": "¿Se puede cambiar el tipo de pago durante el proceso?",
+              "a": "Usualmente el tipo de pago se determina al firmar el contrato y no puede cambiarse."
+            },
+            {
+              "q": "¿Cómo calcular el sobrepago del préstamo?",
+              "a": "Sobrepago = Monto total - Monto del préstamo"
+            },
+            {
+              "q": "¿Qué es un cronograma de pagos?",
+              "a": "El cronograma de pagos es un plan de pagos detallado con el monto del capital, intereses y saldo para cada mes."
+            },
+            {
+              "q": "¿Cómo exportar los resultados?",
+              "a": "Los resultados se pueden exportar a Excel o PDF para análisis posterior y almacenamiento."
+            }
+          ]
+        }
+      }
+    },
       "seo": {
         "title": "Todo sobre Préstamos: Tipos, Tasas y Métodos de Pago",
         "types": {
@@ -7432,6 +7701,253 @@
         }
       }
     },
+    "taxCalculator": {
+      "title": "Calculadora de IVA e Impuestos",
+      "description": "Calculadora online para IVA (20%, 10%, 0%) y otros impuestos. Calcula el impuesto, precio neto y costo total de productos o servicios.",
+      "breadcrumbs": {
+        "finance": "Finanzas"
+      },
+      "hero": {
+        "rates": "Tasas de IVA",
+        "ratesDesc": "20%, 10%, 0%",
+        "accuracy": "Precisión",
+        "accuracyDesc": "100% cálculos precisos",
+        "security": "Seguridad",
+        "securityDesc": "Cálculos locales"
+      },
+      "features": {
+        "vatCalculation": "Cálculo de IVA",
+        "multipleRates": "Múltiples tasas",
+        "additionalTaxes": "Impuestos adicionales",
+        "currencySupport": "Soporte de monedas",
+        "localCalculation": "Cálculo local",
+        "exportResults": "Exportar resultados"
+      },
+      "form": {
+        "title": "Cálculo de IVA e Impuestos",
+        "description": "Ingrese parámetros para el cálculo del impuesto al valor agregado",
+        "calculationType": "Tipo de cálculo",
+        "calculationTypes": {
+          "withVat": "Monto con IVA",
+          "withVatDesc": "Calcular impuesto y costo neto",
+          "withoutVat": "Monto sin IVA",
+          "withoutVatDesc": "Calcular costo con impuesto"
+        },
+        "amount": "Monto de productos / servicios",
+        "amountPlaceholder": "1000",
+        "vatRate": "Tasa de IVA",
+        "customRate": "Personalizada",
+        "customRatePlaceholder": "15",
+        "additionalTaxes": "Impuestos adicionales",
+        "additionalTaxesPlaceholder": "0",
+        "additionalTaxesDesc": "Impuestos especiales, tasas y otros impuestos",
+        "currency": "Moneda",
+        "calculate": "Calcular",
+        "calculating": "Calculando...",
+        "reset": "Reiniciar",
+        "errors": {
+          "amountRequired": "Ingrese el monto",
+          "invalidAmount": "Monto inválido",
+          "invalidVatRate": "Tasa de IVA inválida",
+          "invalidAdditionalTaxes": "Impuestos adicionales inválidos"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "netAmount": "Monto neto",
+        "vatAmount": "Monto de IVA",
+        "additionalTaxes": "Impuestos adicionales",
+        "totalAmount": "Monto total",
+        "copy": "Copiar",
+        "copied": "Copiado",
+        "download": "Descargar"
+      },
+      "tips": {
+        "title": "Consejos útiles",
+        "tip1": "Verifique las tasas de IVA actuales",
+        "tip2": "Considere los impuestos adicionales",
+        "tip3": "Guarde los resultados para reportes"
+      },
+      "seo": {
+        "title": "Calculadora de IVA e Impuestos en Línea — Cálculo del Impuesto al Valor Agregado",
+        "description": "Calculadora de IVA para calcular rápidamente el impuesto, precio neto y costo total de productos o servicios. Soporte para múltiples tasas e impuestos adicionales.",
+        "keywords": "calculadora IVA online, cálculo de impuestos, impuesto al valor agregado, calculadora de impuestos online, calculadora de impuestos, calculadora IVA, calculadora de impuestos online, cálculo IVA online, IVA 20 por ciento, IVA 10 por ciento, IVA 0 por ciento, calculadora de impuestos online, cálculos de impuestos, calculadora de impuestos, calculadora IVA gratuita, calculadora de impuestos online, cálculo IVA con monto, cálculo IVA sin IVA, calculadora IVA 2024, cálculos de impuestos, calculadora contable, calculadora financiera, cálculo de impuestos online, calculadora de tasas de impuestos, calculadora IVA Rusia, cálculos de impuestos, calculadora de pagos de impuestos, cálculo de obligaciones fiscales, contabilidad fiscal, cálculos financieros",
+        "overview": {
+          "title": "Sobre la calculadora de IVA e impuestos",
+          "content": "La calculadora de IVA está diseñada para el cálculo rápido y preciso del impuesto al valor agregado y otros impuestos. La herramienta soporta varias tasas de IVA, impuestos adicionales y funciona con diferentes monedas."
+        },
+        "calculation": {
+          "title": "Cómo se calcula el IVA",
+          "content": "El cálculo del IVA se basa en fórmulas estándar de tributación:",
+          "withVat": {
+            "title": "Cálculo con IVA",
+            "description": "Si se conoce el monto con IVA, entonces el costo neto y el impuesto se calculan usando fórmulas",
+            "formula": "Costo neto = Monto con IVA / (1 + Tasa de IVA / 100)\nIVA = Monto con IVA - Costo neto"
+          },
+          "withoutVat": {
+            "title": "Cálculo sin IVA",
+            "description": "Si se conoce el monto sin IVA, entonces el impuesto y el monto total se calculan usando fórmulas",
+            "formula": "IVA = Costo neto × Tasa de IVA / 100\nMonto total = Costo neto + IVA"
+          }
+        },
+        "features": {
+          "title": "Características principales",
+          "vatCalculation": "Cálculo de IVA",
+          "vatCalculationDesc": "Soporte para todas las tasas estándar de IVA",
+          "multipleRates": "Múltiples tasas",
+          "multipleRatesDesc": "20%, 10%, 0% y tasas personalizadas",
+          "additionalTaxes": "Impuestos adicionales",
+          "additionalTaxesDesc": "Contabilidad de impuestos especiales, tasas y otros impuestos",
+          "currencySupport": "Soporte de monedas",
+          "currencySupportDesc": "Trabajo con rublos, dólares, euros y otras monedas",
+          "localCalculation": "Cálculos locales",
+          "localCalculationDesc": "Todos los cálculos se realizan en el navegador",
+          "exportResults": "Exportar resultados",
+          "exportResultsDesc": "Guardar cálculos en PDF y Excel"
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de IVA proporciona muchas ventajas para los cálculos fiscales:",
+          "accuracy": "Cálculos precisos",
+          "accuracyDesc": "Utiliza tasas fiscales y fórmulas actuales",
+          "speed": "Velocidad",
+          "speedDesc": "Cálculos instantáneos sin espera",
+          "security": "Seguridad",
+          "securityDesc": "Los datos no se transmiten al servidor",
+          "flexibility": "Flexibilidad",
+          "flexibilityDesc": "Soporte para varios escenarios de cálculo"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es el IVA y cómo se calcula?",
+              "a": "El IVA (Impuesto al Valor Agregado) es un impuesto indirecto que se incluye en el costo de productos y servicios. Se calcula como un porcentaje del costo del producto o servicio."
+            },
+            {
+              "q": "¿Cómo calcular el impuesto del monto con IVA?",
+              "a": "Para calcular el impuesto del monto que incluye IVA, use la fórmula: IVA = Monto con IVA × Tasa de IVA / (100 + Tasa de IVA). Costo neto = Monto con IVA - IVA."
+            },
+            {
+              "q": "¿Cómo calcular el impuesto del monto sin IVA?",
+              "a": "Para calcular el IVA del monto sin impuesto, use la fórmula: IVA = Monto sin IVA × Tasa de IVA / 100. Monto total = Monto sin IVA + IVA."
+            },
+            {
+              "q": "¿Qué tasas de IVA existen?",
+              "a": "En Rusia, se aplican las siguientes tasas de IVA: 20% (tasa principal), 10% (para algunos productos), 0% (para exportaciones y algunas operaciones). También son posibles tasas preferenciales."
+            },
+            {
+              "q": "¿Puedo agregar una tasa de impuesto personalizada?",
+              "a": "Sí, la calculadora soporta tasas de IVA personalizadas. Puede ingresar cualquier tasa del 0% al 100% para casos especiales."
+            },
+            {
+              "q": "¿Puedo calcular varios impuestos simultáneamente?",
+              "a": "Sí, la calculadora le permite tener en cuenta impuestos adicionales (impuestos especiales, tasas) junto con el IVA para obtener el monto total de las obligaciones fiscales."
+            },
+            {
+              "q": "¿Cómo calcular el costo total del producto con impuestos?",
+              "a": "Costo total = Costo neto + IVA + Impuestos adicionales. La calculadora suma automáticamente todas las obligaciones fiscales."
+            },
+            {
+              "q": "¿La calculadora soporta monedas?",
+              "a": "Sí, la calculadora funciona con varias monedas: rublos (RUB), dólares (USD), euros (EUR), libras esterlinas (GBP) y otras."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para servicios?",
+              "a": "Sí, la calculadora es adecuada para calcular el IVA tanto para productos como para servicios. Los principios de cálculo son los mismos para todos los tipos de actividades."
+            },
+            {
+              "q": "¿Todos los cálculos se realizan localmente?",
+              "a": "Sí, todos los cálculos se realizan en su navegador sin transmitir datos al servidor. Esto garantiza la privacidad y seguridad de sus datos financieros."
+            },
+            {
+              "q": "¿Puedo copiar resultados para reportes?",
+              "a": "Sí, la calculadora le permite copiar los resultados del cálculo al portapapeles para su uso posterior en reportes y documentos."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para contabilidad?",
+              "a": "Sí, la calculadora es adecuada para cálculos contables, preparación de reportes fiscales y planificación de obligaciones fiscales."
+            },
+            {
+              "q": "¿Con qué frecuencia se actualizan las tasas fiscales?",
+              "a": "Las tasas fiscales se actualizan de acuerdo con los cambios en la legislación. Se recomienda verificar la relevancia de las tasas antes de los cálculos."
+            },
+            {
+              "q": "¿Puedo guardar los resultados del cálculo?",
+              "a": "Sí, la calculadora le permite exportar resultados a formato PDF o Excel para guardar y uso posterior."
+            },
+            {
+              "q": "¿La calculadora es adecuada para empresarios individuales y LLC?",
+              "a": "Sí, la calculadora es adecuada para todas las formas de negocio: empresarios individuales, LLC, JSC y otras formas organizacionales y legales."
+            },
+            {
+              "q": "¿Puedo calcular el IVA para operaciones de exportación?",
+              "a": "Sí, para operaciones de exportación se aplica una tasa de IVA del 0%. La calculadora soporta todas las tasas estándar, incluyendo cero."
+            },
+            {
+              "q": "¿Cómo contabilizar el IVA al trabajar con contrapartes?",
+              "a": "Al trabajar con contrapartes, es importante determinar correctamente la base fiscal y aplicar las tasas de IVA apropiadas dependiendo del tipo de operaciones."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para planificación presupuestaria?",
+              "a": "Sí, la calculadora ayuda a planificar los gastos fiscales e incluirlos en el presupuesto de la empresa o plan financiero personal."
+            },
+            {
+              "q": "¿Cómo verificar la corrección del cálculo del IVA?",
+              "a": "La corrección del cálculo se puede verificar usando cálculos inversos: el monto con IVA debe igualar el costo neto más el IVA calculado."
+            },
+            {
+              "q": "¿La calculadora soporta tasas preferenciales de IVA?",
+              "a": "Sí, la calculadora soporta todas las tasas de IVA, incluyendo las preferenciales. Puede ingresar cualquier tasa del 0% al 100%."
+            },
+            {
+              "q": "¿Puedo calcular el IVA para múltiples productos simultáneamente?",
+              "a": "La calculadora calcula el IVA para un artículo a la vez. Para múltiples productos, se recomienda usar la calculadora para cada producto por separado."
+            },
+            {
+              "q": "¿Cómo contabilizar el IVA al devolver productos?",
+              "a": "Al devolver productos, el IVA también está sujeto a devolución. Use la calculadora para determinar el monto del IVA a devolver."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para calcular el IVA para pago adicional?",
+              "a": "Sí, la calculadora es adecuada para calcular el IVA para pago adicional al ajustar la base fiscal o cambiar las condiciones de la transacción."
+            },
+            {
+              "q": "¿Cómo contabilizar el IVA al trabajar con anticipos?",
+              "a": "Al recibir anticipos, el IVA se calcula del monto del anticipo a la tasa apropiada. La calculadora ayudará a determinar el monto del IVA del anticipo."
+            },
+            {
+              "q": "¿Puedo calcular el IVA para servicios de alquiler?",
+              "a": "Sí, para servicios de alquiler se aplica la tasa estándar de IVA del 20%. La calculadora es adecuada para calcular el IVA para todos los tipos de operaciones de alquiler."
+            },
+            {
+              "q": "¿Cómo contabilizar el IVA al importar productos?",
+              "a": "Al importar productos, el IVA se calcula del valor aduanero del producto. La calculadora ayudará a determinar el monto del IVA a pagar en aduanas."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para calcular el IVA para contratos de agencia?",
+              "a": "Sí, para contratos de agencia, el IVA se calcula de la remuneración del agente. La calculadora es adecuada para todos los tipos de operaciones de agencia."
+            },
+            {
+              "q": "¿Cómo contabilizar el IVA al trabajar con autónomos?",
+              "a": "Los autónomos no son contribuyentes del IVA, pero al trabajar con ellos es importante determinar correctamente la base fiscal para sus propias operaciones."
+            },
+            {
+              "q": "¿Puedo calcular el IVA para trabajos de construcción?",
+              "a": "Sí, para trabajos de construcción se aplica una tasa de IVA del 20%. La calculadora es adecuada para calcular el IVA para todos los tipos de servicios de construcción."
+            },
+            {
+              "q": "¿Cómo contabilizar el IVA al trabajar con servicios electrónicos?",
+              "a": "Para servicios electrónicos, el IVA se calcula en el lugar de prestación del servicio. La calculadora ayudará a determinar el monto del IVA teniendo en cuenta las características del comercio electrónico."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para calcular el IVA para arrendamiento?",
+              "a": "Sí, para operaciones de arrendamiento, el IVA se calcula de los pagos de arrendamiento. La calculadora es adecuada para todos los tipos de operaciones de arrendamiento."
+            }
+          ]
+        }
+      }
+    },
     "ipCalculator": {
       "title": "Calculadora de IP y Subredes — CIDR / IPv4 / IPv6",
       "description": "Calculadora de IP y subredes para IPv4 y IPv6. Calcula red, primer/último IP, CIDR, número de hosts, con cálculo inverso de rango a CIDR.",
@@ -10448,5 +10964,4 @@
         }
       }
     }
-  }
 }

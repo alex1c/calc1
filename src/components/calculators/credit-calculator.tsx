@@ -10,6 +10,7 @@ import {
 	type LoanInput,
 	type LoanResult,
 } from '@/lib/calculators/loan';
+import PDFExport from '@/components/common/pdf-export';
 
 export default function CreditCalculator() {
 	const t = useTranslations('calculators.credit-loan');
@@ -89,6 +90,48 @@ export default function CreditCalculator() {
 			minimumFractionDigits: 0,
 			maximumFractionDigits: 0,
 		}).format(amount);
+	};
+
+	const generatePDFContent = () => {
+		if (!result) return '';
+
+		const formatCurrencyForPDF = (amount: number | undefined) =>
+			amount !== undefined ? `$${amount.toFixed(2)}` : '$0.00';
+
+		let content = `Сводка по кредиту\n\n`;
+		content += `Ежемесячный платеж: ${formatCurrencyForPDF(
+			result.monthlyPayment
+		)}\n`;
+		content += `Общая сумма выплат: ${formatCurrencyForPDF(
+			result.totalPayments
+		)}\n`;
+		content += `Общая сумма процентов: ${formatCurrencyForPDF(
+			result.totalInterest
+		)}\n`;
+		content += `Эффективный срок: ${result.effectiveTerm || 0} месяцев\n\n`;
+
+		content += `Расписание платежей\n\n`;
+		content += `Месяц\tПлатеж\tПроценты\tОсновной долг\tОстаток\n`;
+
+		if (result.paymentSchedule && result.paymentSchedule.length > 0) {
+			result.paymentSchedule.slice(0, 24).forEach((payment) => {
+				content += `${payment.month}\t${formatCurrencyForPDF(
+					payment.payment
+				)}\t${formatCurrencyForPDF(
+					payment.interest
+				)}\t${formatCurrencyForPDF(
+					payment.principal
+				)}\t${formatCurrencyForPDF(payment.balance)}\n`;
+			});
+		}
+
+		if (result.paymentSchedule && result.paymentSchedule.length > 24) {
+			content += `\n... ${result.paymentSchedule.length - 24} ${t(
+				'results.table.moreMonths'
+			)}`;
+		}
+
+		return content;
 	};
 
 	return (
@@ -386,14 +429,25 @@ export default function CreditCalculator() {
 								</div>
 							</div>
 
-							{/* Download Button */}
-							<button
-								onClick={handleDownloadCSV}
-								className='w-full bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors flex items-center justify-center'
-							>
-								<Download className='h-4 w-4 mr-2' />
-								{t('results.downloadSchedule')}
-							</button>
+							{/* Export Buttons */}
+							<div className='flex flex-col sm:flex-row gap-4'>
+								<button
+									onClick={handleDownloadCSV}
+									className='flex-1 bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors flex items-center justify-center'
+								>
+									<Download className='h-4 w-4 mr-2' />
+									{t('results.downloadSchedule')}
+								</button>
+
+								<div className='flex-1'>
+									<PDFExport
+										title={t('results.title')}
+										content={generatePDFContent()}
+										fileName='credit-loan-results'
+										className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors flex items-center justify-center'
+									/>
+								</div>
+							</div>
 						</div>
 					) : (
 						<div className='text-center text-gray-500 py-8'>
@@ -548,11 +602,7 @@ export default function CreditCalculator() {
 										{t('seo.payment.annuity.desc')}
 									</p>
 									<p className='text-sm text-gray-600 mt-2'>
-										<strong>
-											{t(
-												'seo.payment.annuity.advantages'
-											)}
-										</strong>
+										{t('seo.payment.annuity.advantages')}
 									</p>
 								</div>
 								<div className='bg-white p-4 rounded-lg border'>
@@ -563,11 +613,9 @@ export default function CreditCalculator() {
 										{t('seo.payment.differentiated.desc')}
 									</p>
 									<p className='text-sm text-gray-600 mt-2'>
-										<strong>
-											{t(
-												'seo.payment.differentiated.advantages'
-											)}
-										</strong>
+										{t(
+											'seo.payment.differentiated.advantages'
+										)}
 									</p>
 								</div>
 							</div>

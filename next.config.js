@@ -8,6 +8,7 @@ const nextConfig = {
 	env: {
 		_next_intl_trailing_slash: 'false',
 	},
+	trailingSlash: false,
 };
 
 module.exports = withNextIntl(nextConfig);

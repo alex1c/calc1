@@ -7,7 +7,14 @@
     "calculate": "Berechnen",
     "result": "Ergebnis",
     "clear": "Löschen",
-    "favorites": "Favoriten"
+    "favorites": "Favoriten",
+    "pdf": {
+      "header": "calc1.ru Rechner #1 in der Welt",
+      "savePdf": "Als PDF speichern",
+      "generated": "Generiert",
+      "page": "Seite",
+      "of": "von"
+    }
   },
   "brand": {
     "name": "Rechner #1",
@@ -1362,12 +1369,274 @@
         }
       }
     },
-    "credit-loan": {
-      "title": "Kreditrechner",
-      "description": "Monatliche Kreditzahlungen, Gesamtzinsen berechnen und detaillierte Zahlungspläne für jeden Kredit erstellen",
+    "creditLoan": {
+      "title": "Online Kreditrechner",
+      "description": "Monatliche Zahlungen, Gesamtbetrag berechnen und detaillierten Zahlungsplan für jeden Kredit mit Cent-Genauigkeit erstellen",
       "breadcrumbs": {
         "category": "Finanzen"
       },
+      "hero": {
+        "title": "Online Kreditrechner",
+        "subtitle": "Alle Kreditparameter in Sekunden berechnen",
+        "features": {
+          "accuracy": "Cent-Genauigkeit",
+          "schedule": "Detaillierter Zahlungsplan",
+          "comparison": "Zahlungsart-Vergleich"
+        }
+      },
+      "features": {
+        "title": "Rechner-Funktionen",
+        "items": [
+          {
+            "title": "Annuitäten- und Differenzierte Zahlungen",
+            "description": "Zwei Zahlungsarten vergleichen und die optimale wählen"
+          },
+          {
+            "title": "Detaillierter Zahlungsplan",
+            "description": "Vollständiger Zahlungsplan mit monatlicher Aufschlüsselung"
+          },
+          {
+            "title": "Vorzeitige Tilgung",
+            "description": "Zusätzliche Zahlungen und deren Auswirkung auf die Laufzeit berücksichtigen"
+          },
+          {
+            "title": "Ergebnisse Exportieren",
+            "description": "Zahlungsplan nach Excel oder PDF herunterladen"
+          }
+        ]
+      },
+      "form": {
+        "title": "Kreditparameter",
+        "loanAmount": "Kreditbetrag ($)",
+        "loanAmountPlaceholder": "Kreditbetrag eingeben",
+        "termYears": "Laufzeit in Jahren",
+        "termMonths": "Laufzeit in Monaten",
+        "interestRate": "Zinssatz (%)",
+        "interestRatePlaceholder": "Zinssatz eingeben",
+        "downPayment": "Anzahlung ($)",
+        "downPaymentPlaceholder": "Anzahlung eingeben",
+        "additionalPayment": "Zusätzliche Zahlung ($)",
+        "additionalPaymentPlaceholder": "Zusätzliche Zahlung eingeben",
+        "paymentType": "Zahlungsart",
+        "paymentTypes": {
+          "annuity": "Annuität",
+          "differentiated": "Differenziert"
+        },
+        "loanType": "Kreditart",
+        "loanTypes": {
+          "mortgage": "Hypothek",
+          "auto": "Autokredit",
+          "personal": "Ratenkredit",
+          "business": "Geschäftskredit",
+          "refinancing": "Umschuldung"
+        },
+        "calculate": "Berechnen",
+        "reset": "Zurücksetzen",
+        "optional": "optional",
+        "errors": {
+          "title": "Datenfehler",
+          "loanAmount": "Kreditbetrag muss größer als 0 sein",
+          "interestRate": "Zinssatz muss größer als 0 sein",
+          "term": "Kreditlaufzeit muss größer als 0 sein"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "monthlyPayment": "Monatliche Zahlung",
+        "totalAmount": "Gesamtbetrag",
+        "totalInterest": "Gesamtzinsen",
+        "effectiveRate": "Effektivzins",
+        "paymentSchedule": "Zahlungsplan",
+        "export": "Exportieren",
+        "copy": "Kopieren",
+        "savePdf": "Als PDF speichern",
+        "pdfHeader": "calc1.ru Rechner #1 in der Welt",
+        "pdfTitle": "Kreditberechnungsergebnisse",
+        "pdfGenerated": "Generiert",
+        "pdfDate": "Datum",
+        "placeholder": "Füllen Sie das Formular aus und klicken Sie auf 'Berechnen', um Ergebnisse zu erhalten"
+      },
+      "tips": {
+        "title": "Nützliche Tipps",
+        "items": [
+          "Annuitäten- und differenzierte Zahlungen vergleichen",
+          "Möglichkeiten der vorzeitigen Tilgung berücksichtigen",
+          "Alle Bankgebühren prüfen",
+          "Mehrere Szenarien berechnen"
+        ]
+      },
+      "seo": {
+        "title": "Online Kreditrechner - Kredit berechnen",
+        "description": "Kostenloser Kreditrechner zur Berechnung monatlicher Zahlungen, Gesamtbetrag und Zahlungsplan. Unterstützung für Annuitäten- und differenzierte Zahlungen.",
+        "keywords": "kreditrechner, kreditberechnung, monatliche zahlung, zahlungsplan, annuitätenzahlung, differenzierte zahlung, vorzeitige tilgung",
+        "overview": {
+          "title": "Über den Kreditrechner",
+          "content": "Der Kreditrechner ermöglicht die Berechnung aller Kreditparameter: monatliche Zahlungen, Gesamtbetrag, Überzahlung und Erstellung eines detaillierten Zahlungsplans. Unterstützt Annuitäten- und differenzierte Zahlungen, vorzeitige Tilgung und Ergebnis-Export."
+        },
+        "calculation": {
+          "title": "Wie Kredite berechnet werden",
+          "content": "Die Kreditberechnung basiert auf mathematischen Formeln für Annuitäten- und differenzierte Zahlungen. Berücksichtigt Kreditsumme, Zinssatz, Kreditlaufzeit und zusätzliche Zahlungen.",
+          "formulas": {
+            "annuity": "Annuitätenzahlung: A = P × (r × (1 + r)^n) / ((1 + r)^n - 1)",
+            "differentiated": "Differenzierte Zahlung: P = S / n + S × r × (1 - (k - 1) / n)"
+          },
+          "examples": {
+            "title": "Berechnungsbeispiele",
+            "annuityExample": {
+              "title": "Annuitätenzahlung Beispiel",
+              "description": "Kredit $100,000 für 5 Jahre bei 12% Jahreszins",
+              "calculation": "Monatliche Zahlung: $2,224.44",
+              "totalAmount": "Gesamtbetrag: $133,466.40",
+              "overpayment": "Überzahlung: $33,466.40"
+            },
+            "differentiatedExample": {
+              "title": "Differenzierte Zahlung Beispiel",
+              "description": "Kredit $100,000 für 5 Jahre bei 12% Jahreszins",
+              "firstPayment": "Erste Zahlung: $2,333.33",
+              "lastPayment": "Letzte Zahlung: $1,833.33",
+              "totalAmount": "Gesamtbetrag: $130,000.00",
+              "overpayment": "Überzahlung: $30,000.00"
+            },
+            "earlyRepaymentExample": {
+              "title": "Vorzeitige Tilgung Beispiel",
+              "description": "Vorzeitige Tilgung $10,000 nach 2 Jahren",
+              "savings": "Zinsersparnis: $3,200.00",
+              "newTerm": "Neue Laufzeit: 3 Jahre 2 Monate"
+            }
+          }
+        },
+        "features": {
+          "title": "Rechner-Funktionen",
+          "items": [
+            "Berechnung von Annuitäten- und differenzierten Zahlungen",
+            "Detaillierter monatlicher Zahlungsplan",
+            "Berücksichtigung vorzeitiger Tilgung",
+            "Export der Ergebnisse nach Excel/PDF",
+            "Vergleich verschiedener Szenarien",
+            "Berechnung des Effektivzinses"
+          ]
+        },
+        "advantages": {
+          "title": "Vorteile",
+          "items": [
+            "Berechnungsgenauigkeit bis zum Cent",
+            "Einfach zu bedienen",
+            "Schnelle Berechnungen",
+            "Detaillierte Analyse",
+            "Ergebnis-Export",
+            "Kostenlose Nutzung"
+          ]
+        },
+        "types": {
+          "title": "Kreditarten",
+          "content": "Im modernen Bankensystem gibt es viele Kreditarten, die jeweils für spezifische Finanzbedürfnisse konzipiert sind:",
+          "mortgage": "Hypothekendarlehen",
+          "mortgageDesc": "Langfristiges Darlehen für Immobilienkauf mit der erworbenen Immobilie als Sicherheit",
+          "auto": "Autokredit",
+          "autoDesc": "Kredit für Autokauf mit der Möglichkeit, das Fahrzeug als Sicherheit zu verwenden",
+          "personal": "Ratenkredit",
+          "personalDesc": "Zweckfreier Kredit für persönliche Bedürfnisse ohne Bereitstellung von Sicherheiten",
+          "business": "Geschäftskredit",
+          "businessDesc": "Kredit für Geschäftsentwicklung, Betriebskapital-Auffüllung oder Investitionen",
+          "refinancing": "Umschuldung",
+          "refinancingDesc": "Kredit zur Tilgung bestehender Schulden zu günstigeren Bedingungen"
+        },
+        "rates": {
+          "title": "Zinssätze",
+          "content": "Der Zinssatz ist die Kosten für geliehene Mittel, ausgedrückt als Jahresprozentsatz. Es gibt verschiedene Arten von Zinssätzen:",
+          "fixed": "Fester Zinssatz",
+          "fixedDesc": "Der Zinssatz bleibt während der gesamten Kreditlaufzeit unverändert",
+          "variable": "Variabler Zinssatz",
+          "variableDesc": "Der Zinssatz kann sich je nach Marktbedingungen ändern",
+          "mixed": "Gemischter Zinssatz",
+          "mixedDesc": "Fester Zinssatz für den Anfangszeitraum, dann variabel"
+        },
+        "payment": {
+          "title": "Zahlungsarten",
+          "content": "Es gibt zwei Hauptarten der Kredittilgung, jede mit ihren eigenen Eigenschaften:",
+          "annuity": {
+            "title": "Annuitätenzahlungen",
+            "desc": "Gleichmäßige monatliche Zahlungen für die gesamte Kreditlaufzeit",
+            "advantages": [
+              "Einfache Budgetplanung",
+              "Gleichmäßige Belastung des Familienbudgets",
+              "Möglichkeit zur genauen Ausgabenplanung"
+            ]
+          },
+          "differentiated": {
+            "title": "Differenzierte Zahlungen",
+            "desc": "Zahlungen nehmen mit der Zeit ab",
+            "advantages": [
+              "Geringere Gesamtüberzahlung",
+              "Schnelle Reduzierung der Hauptschuld",
+              "Zinsersparnis"
+            ]
+          }
+        },
+        "factors": {
+          "title": "Faktoren, die den Kredit beeinflussen",
+          "content": "Viele Faktoren beeinflussen die Kreditbedingungen, die die Bank bei ihrer Entscheidung berücksichtigt:",
+          "creditHistory": "Kredithistorie - zeigt Ihre Zahlungsdisziplin",
+          "income": "Einkommen - bestätigt Ihre Zahlungsfähigkeit",
+          "downPayment": "Anzahlung - reduziert die Bankrisiken",
+          "term": "Kreditlaufzeit - beeinflusst die Zahlungsgröße und Überzahlung",
+          "collateral": "Sicherheit - gewährleistet die Kreditrückzahlung"
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Um günstige Kreditbedingungen zu erhalten, befolgen Sie diese Empfehlungen:",
+          "compare": "Vergleichen Sie Angebote verschiedener Banken",
+          "early": "Erwägen Sie vorzeitige Tilgungsoptionen",
+          "insurance": "Bewerten Sie die Notwendigkeit einer Versicherung",
+          "consult": "Konsultieren Sie Finanzexperten"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Was ist eine Annuitätenzahlung?",
+              "a": "Eine Annuitätenzahlung ist eine gleichbleibende monatliche Zahlung für die gesamte Kreditlaufzeit. Zu Beginn der Laufzeit geht der größte Teil der Zahlung in die Zinsen, am Ende - in die Tilgung."
+            },
+            {
+              "q": "Was ist eine differenzierte Zahlung?",
+              "a": "Eine differenzierte Zahlung ist eine Zahlung, die mit der Zeit abnimmt. Die Tilgung erfolgt in gleichen Raten, und die Zinsen werden auf den Restbetrag berechnet."
+            },
+            {
+              "q": "Welche Zahlungsart ist profitabler?",
+              "a": "Die differenzierte Zahlung ist profitabler in Bezug auf den Gesamtbetrag, aber die Annuität ist bequemer für die Budgetplanung."
+            },
+            {
+              "q": "Wie berechnet man vorzeitige Tilgung?",
+              "a": "Vorzeitige Tilgung reduziert die Kreditsumme, was die Zinssumme in den folgenden Zahlungen reduziert."
+            },
+            {
+              "q": "Was ist der Effektivzins?",
+              "a": "Der Effektivzins ist die tatsächliche Kosten des Kredits einschließlich aller Gebühren und Zahlungen."
+            },
+            {
+              "q": "Wie wirkt sich die Anzahlung auf den Kredit aus?",
+              "a": "Die Anzahlung reduziert den Kreditbetrag, was die monatlichen Zahlungen und die Gesamtüberzahlung reduziert."
+            },
+            {
+              "q": "Kann die Zahlungsart während des Prozesses geändert werden?",
+              "a": "Normalerweise wird die Zahlungsart beim Abschluss des Vertrags festgelegt und kann nicht geändert werden."
+            },
+            {
+              "q": "Wie berechnet man die Kreditüberzahlung?",
+              "a": "Überzahlung = Gesamtbetrag - Kreditbetrag"
+            },
+            {
+              "q": "Was ist ein Zahlungsplan?",
+              "a": "Ein Zahlungsplan ist ein detaillierter Zahlungsplan mit Tilgungsbetrag, Zinsen und Restbetrag für jeden Monat."
+            },
+            {
+              "q": "Wie exportiert man die Ergebnisse?",
+              "a": "Die Ergebnisse können nach Excel oder PDF exportiert werden für weitere Analyse und Speicherung."
+            }
+          ]
+        }
+      }
+    },
       "seo": {
         "title": "Alles über Kredite: Arten, Zinssätze und Tilgungsmethoden",
         "types": {
@@ -7428,6 +7697,253 @@
         }
       }
     },
+    "taxCalculator": {
+      "title": "Mehrwertsteuer- und Steuerrechner",
+      "description": "Online-Rechner für Mehrwertsteuer (20%, 10%, 0%) und andere Steuern. Berechne Steuer, Nettopreis und Gesamtkosten von Waren oder Dienstleistungen.",
+      "breadcrumbs": {
+        "finance": "Finanzen"
+      },
+      "hero": {
+        "rates": "MwSt-Sätze",
+        "ratesDesc": "20%, 10%, 0%",
+        "accuracy": "Genauigkeit",
+        "accuracyDesc": "100% genaue Berechnungen",
+        "security": "Sicherheit",
+        "securityDesc": "Lokale Berechnungen"
+      },
+      "features": {
+        "vatCalculation": "MwSt-Berechnung",
+        "multipleRates": "Mehrere Sätze",
+        "additionalTaxes": "Zusätzliche Steuern",
+        "currencySupport": "Währungssupport",
+        "localCalculation": "Lokale Berechnung",
+        "exportResults": "Ergebnisse exportieren"
+      },
+      "form": {
+        "title": "MwSt- und Steuerberechnung",
+        "description": "Geben Sie Parameter für die Mehrwertsteuerberechnung ein",
+        "calculationType": "Berechnungstyp",
+        "calculationTypes": {
+          "withVat": "Betrag mit MwSt",
+          "withVatDesc": "Steuer und Nettokosten berechnen",
+          "withoutVat": "Betrag ohne MwSt",
+          "withoutVatDesc": "Kosten mit Steuer berechnen"
+        },
+        "amount": "Waren- / Dienstleistungsbetrag",
+        "amountPlaceholder": "1000",
+        "vatRate": "MwSt-Satz",
+        "customRate": "Benutzerdefiniert",
+        "customRatePlaceholder": "15",
+        "additionalTaxes": "Zusätzliche Steuern",
+        "additionalTaxesPlaceholder": "0",
+        "additionalTaxesDesc": "Verbrauchsteuer, Gebühren und andere Steuern",
+        "currency": "Währung",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "amountRequired": "Betrag eingeben",
+          "invalidAmount": "Ungültiger Betrag",
+          "invalidVatRate": "Ungültiger MwSt-Satz",
+          "invalidAdditionalTaxes": "Ungültige zusätzliche Steuern"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "netAmount": "Nettobetrag",
+        "vatAmount": "MwSt-Betrag",
+        "additionalTaxes": "Zusätzliche Steuern",
+        "totalAmount": "Gesamtbetrag",
+        "copy": "Kopieren",
+        "copied": "Kopiert",
+        "download": "Herunterladen"
+      },
+      "tips": {
+        "title": "Nützliche Tipps",
+        "tip1": "Aktuelle MwSt-Sätze prüfen",
+        "tip2": "Zusätzliche Steuern berücksichtigen",
+        "tip3": "Ergebnisse für Berichte speichern"
+      },
+      "seo": {
+        "title": "Online Mehrwertsteuer- und Steuerrechner — Mehrwertsteuerberechnung",
+        "description": "MwSt-Rechner zur schnellen Berechnung von Steuerbetrag, Nettopreis und Gesamtkosten von Waren oder Dienstleistungen. Unterstützung für mehrere Sätze und zusätzliche Steuern.",
+        "keywords": "online MwSt Rechner, Steuerberechnung, Mehrwertsteuer, Steuerrechner online, Steuerrechner, MwSt Rechner, Steuerrechner online, MwSt Berechnung online, MwSt 20 Prozent, MwSt 10 Prozent, MwSt 0 Prozent, online Steuerrechner, Steuerberechnungen, Steuerrechner, kostenloser MwSt Rechner, online Steuerrechner, MwSt Berechnung mit Betrag, MwSt Berechnung ohne MwSt, MwSt Rechner 2024, Steuerberechnungen, Buchhaltungsrechner, Finanzrechner, Steuerberechnung online, Steuersatz Rechner, MwSt Rechner Russland, Steuerberechnungen, Steuerzahlungsrechner, Steuerschuldenberechnung, Steuerbuchhaltung, Finanzberechnungen",
+        "overview": {
+          "title": "Über den MwSt- und Steuerrechner",
+          "content": "Der MwSt-Rechner ist für schnelle und genaue Berechnung der Mehrwertsteuer und anderer Steuern konzipiert. Das Tool unterstützt verschiedene MwSt-Sätze, zusätzliche Steuern und arbeitet mit verschiedenen Währungen."
+        },
+        "calculation": {
+          "title": "Wie MwSt berechnet wird",
+          "content": "Die MwSt-Berechnung basiert auf Standard-Besteuerungsformeln:",
+          "withVat": {
+            "title": "Berechnung mit MwSt",
+            "description": "Wenn der Betrag mit MwSt bekannt ist, werden Nettokosten und Steuer mit Formeln berechnet",
+            "formula": "Nettokosten = Betrag mit MwSt / (1 + MwSt-Satz / 100)\nMwSt = Betrag mit MwSt - Nettokosten"
+          },
+          "withoutVat": {
+            "title": "Berechnung ohne MwSt",
+            "description": "Wenn der Betrag ohne MwSt bekannt ist, werden Steuer und Gesamtbetrag mit Formeln berechnet",
+            "formula": "MwSt = Nettokosten × MwSt-Satz / 100\nGesamtbetrag = Nettokosten + MwSt"
+          }
+        },
+        "features": {
+          "title": "Hauptfunktionen",
+          "vatCalculation": "MwSt-Berechnung",
+          "vatCalculationDesc": "Unterstützung für alle Standard-MwSt-Sätze",
+          "multipleRates": "Mehrere Sätze",
+          "multipleRatesDesc": "20%, 10%, 0% und benutzerdefinierte Sätze",
+          "additionalTaxes": "Zusätzliche Steuern",
+          "additionalTaxesDesc": "Berücksichtigung von Verbrauchsteuer, Gebühren und anderen Steuern",
+          "currencySupport": "Währungssupport",
+          "currencySupportDesc": "Arbeit mit Rubel, Dollar, Euro und anderen Währungen",
+          "localCalculation": "Lokale Berechnungen",
+          "localCalculationDesc": "Alle Berechnungen werden im Browser durchgeführt",
+          "exportResults": "Ergebnisse exportieren",
+          "exportResultsDesc": "Speichern von Berechnungen in PDF und Excel"
+        },
+        "advantages": {
+          "title": "Rechner-Vorteile",
+          "content": "Unser MwSt-Rechner bietet viele Vorteile für Steuerberechnungen:",
+          "accuracy": "Genaue Berechnungen",
+          "accuracyDesc": "Verwendet aktuelle Steuersätze und Formeln",
+          "speed": "Geschwindigkeit",
+          "speedDesc": "Sofortige Berechnungen ohne Wartezeit",
+          "security": "Sicherheit",
+          "securityDesc": "Daten werden nicht an den Server übertragen",
+          "flexibility": "Flexibilität",
+          "flexibilityDesc": "Unterstützung für verschiedene Berechnungsszenarien"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Was ist MwSt und wie wird sie berechnet?",
+              "a": "MwSt (Mehrwertsteuer) ist eine indirekte Steuer, die in die Kosten von Waren und Dienstleistungen einbezogen wird. Sie wird als Prozentsatz der Kosten der Ware oder Dienstleistung berechnet."
+            },
+            {
+              "q": "Wie berechnet man Steuer vom Betrag mit MwSt?",
+              "a": "Um Steuer vom Betrag mit MwSt zu berechnen, verwenden Sie die Formel: MwSt = Betrag mit MwSt × MwSt-Satz / (100 + MwSt-Satz). Nettokosten = Betrag mit MwSt - MwSt."
+            },
+            {
+              "q": "Wie berechnet man Steuer vom Betrag ohne MwSt?",
+              "a": "Um MwSt vom Betrag ohne Steuer zu berechnen, verwenden Sie die Formel: MwSt = Betrag ohne MwSt × MwSt-Satz / 100. Gesamtbetrag = Betrag ohne MwSt + MwSt."
+            },
+            {
+              "q": "Welche MwSt-Sätze gibt es?",
+              "a": "In Russland gelten folgende MwSt-Sätze: 20% (Hauptsatz), 10% (für einige Waren), 0% (für Exporte und einige Operationen). Auch Vorzugssätze sind möglich."
+            },
+            {
+              "q": "Kann ich einen benutzerdefinierten Steuersatz hinzufügen?",
+              "a": "Ja, der Rechner unterstützt benutzerdefinierte MwSt-Sätze. Sie können jeden Satz von 0% bis 100% für Sonderfälle eingeben."
+            },
+            {
+              "q": "Kann ich mehrere Steuern gleichzeitig berechnen?",
+              "a": "Ja, der Rechner ermöglicht es, zusätzliche Steuern (Verbrauchsteuer, Gebühren) zusammen mit MwSt zu berücksichtigen, um den Gesamtbetrag der Steuerschulden zu erhalten."
+            },
+            {
+              "q": "Wie berechnet man die Gesamtkosten der Ware mit Steuern?",
+              "a": "Gesamtkosten = Nettokosten + MwSt + Zusätzliche Steuern. Der Rechner summiert automatisch alle Steuerschulden."
+            },
+            {
+              "q": "Unterstützt der Rechner Währungen?",
+              "a": "Ja, der Rechner arbeitet mit verschiedenen Währungen: Rubel (RUB), Dollar (USD), Euro (EUR), Pfund Sterling (GBP) und anderen."
+            },
+            {
+              "q": "Kann ich den Rechner für Dienstleistungen verwenden?",
+              "a": "Ja, der Rechner ist für die Berechnung der MwSt sowohl für Waren als auch für Dienstleistungen geeignet. Die Berechnungsprinzipien sind für alle Aktivitätstypen gleich."
+            },
+            {
+              "q": "Werden alle Berechnungen lokal durchgeführt?",
+              "a": "Ja, alle Berechnungen werden in Ihrem Browser ohne Datenübertragung an den Server durchgeführt. Dies gewährleistet Privatsphäre und Sicherheit Ihrer Finanzdaten."
+            },
+            {
+              "q": "Kann ich Ergebnisse für Berichte kopieren?",
+              "a": "Ja, der Rechner ermöglicht es, Berechnungsergebnisse in die Zwischenablage zu kopieren für die weitere Verwendung in Berichten und Dokumenten."
+            },
+            {
+              "q": "Kann ich den Rechner für Buchhaltung verwenden?",
+              "a": "Ja, der Rechner ist für Buchhaltungsberechnungen, Vorbereitung von Steuerberichten und Planung von Steuerschulden geeignet."
+            },
+            {
+              "q": "Wie oft werden Steuersätze aktualisiert?",
+              "a": "Steuersätze werden entsprechend den Änderungen in der Gesetzgebung aktualisiert. Es wird empfohlen, die Relevanz der Sätze vor Berechnungen zu überprüfen."
+            },
+            {
+              "q": "Kann ich Berechnungsergebnisse speichern?",
+              "a": "Ja, der Rechner ermöglicht es, Ergebnisse in PDF- oder Excel-Format zu exportieren für Speicherung und weitere Verwendung."
+            },
+            {
+              "q": "Ist der Rechner für Einzelunternehmer und GmbH geeignet?",
+              "a": "Ja, der Rechner ist für alle Geschäftsformen geeignet: Einzelunternehmer, GmbH, AG und andere organisatorische und rechtliche Formen."
+            },
+            {
+              "q": "Kann ich MwSt für Exportoperationen berechnen?",
+              "a": "Ja, für Exportoperationen gilt ein MwSt-Satz von 0%. Der Rechner unterstützt alle Standardsätze, einschließlich Null."
+            },
+            {
+              "q": "Wie berücksichtigt man MwSt bei der Arbeit mit Geschäftspartnern?",
+              "a": "Bei der Arbeit mit Geschäftspartnern ist es wichtig, die Steuerbasis korrekt zu bestimmen und entsprechende MwSt-Sätze je nach Art der Operationen anzuwenden."
+            },
+            {
+              "q": "Kann ich den Rechner für Budgetplanung verwenden?",
+              "a": "Ja, der Rechner hilft bei der Planung von Steuerausgaben und deren Einbeziehung in das Unternehmensbudget oder den persönlichen Finanzplan."
+            },
+            {
+              "q": "Wie überprüft man die Richtigkeit der MwSt-Berechnung?",
+              "a": "Die Richtigkeit der Berechnung kann durch Rückwärtsberechnungen überprüft werden: Der Betrag mit MwSt sollte den Nettokosten plus der berechneten MwSt entsprechen."
+            },
+            {
+              "q": "Unterstützt der Rechner Vorzugs-MwSt-Sätze?",
+              "a": "Ja, der Rechner unterstützt alle MwSt-Sätze, einschließlich Vorzugssätze. Sie können jeden Satz von 0% bis 100% eingeben."
+            },
+            {
+              "q": "Kann ich MwSt für mehrere Waren gleichzeitig berechnen?",
+              "a": "Der Rechner berechnet MwSt für einen Artikel zur Zeit. Für mehrere Waren wird empfohlen, den Rechner für jeden Artikel separat zu verwenden."
+            },
+            {
+              "q": "Wie berücksichtigt man MwSt bei Warenrückgabe?",
+              "a": "Bei Warenrückgabe ist auch MwSt rückzahlbar. Verwenden Sie den Rechner, um den MwSt-Betrag zur Rückzahlung zu bestimmen."
+            },
+            {
+              "q": "Kann ich den Rechner für MwSt-Berechnung für Nachzahlung verwenden?",
+              "a": "Ja, der Rechner ist für MwSt-Berechnung für Nachzahlung bei Anpassung der Steuerbasis oder Änderung der Transaktionsbedingungen geeignet."
+            },
+            {
+              "q": "Wie berücksichtigt man MwSt bei der Arbeit mit Vorschüssen?",
+              "a": "Bei Erhalt von Vorschüssen wird MwSt vom Vorschussbetrag zum entsprechenden Satz berechnet. Der Rechner hilft, den MwSt-Betrag vom Vorschuss zu bestimmen."
+            },
+            {
+              "q": "Kann ich MwSt für Mietdienstleistungen berechnen?",
+              "a": "Ja, für Mietdienstleistungen gilt der Standard-MwSt-Satz von 20%. Der Rechner ist für MwSt-Berechnung für alle Arten von Mietoperationen geeignet."
+            },
+            {
+              "q": "Wie berücksichtigt man MwSt beim Import von Waren?",
+              "a": "Beim Import von Waren wird MwSt vom Zollwert der Ware berechnet. Der Rechner hilft, den MwSt-Betrag zur Zahlung am Zoll zu bestimmen."
+            },
+            {
+              "q": "Kann ich den Rechner für MwSt-Berechnung für Agenturverträge verwenden?",
+              "a": "Ja, für Agenturverträge wird MwSt von der Agentenvergütung berechnet. Der Rechner ist für alle Arten von Agenturoperationen geeignet."
+            },
+            {
+              "q": "Wie berücksichtigt man MwSt bei der Arbeit mit Selbstständigen?",
+              "a": "Selbstständige sind keine MwSt-Zahler, aber bei der Arbeit mit ihnen ist es wichtig, die Steuerbasis für eigene Operationen korrekt zu bestimmen."
+            },
+            {
+              "q": "Kann ich MwSt für Bauarbeiten berechnen?",
+              "a": "Ja, für Bauarbeiten gilt ein MwSt-Satz von 20%. Der Rechner ist für MwSt-Berechnung für alle Arten von Baudienstleistungen geeignet."
+            },
+            {
+              "q": "Wie berücksichtigt man MwSt bei der Arbeit mit elektronischen Dienstleistungen?",
+              "a": "Für elektronische Dienstleistungen wird MwSt am Ort der Dienstleistungserbringung berechnet. Der Rechner hilft, den MwSt-Betrag unter Berücksichtigung der Besonderheiten des E-Commerce zu bestimmen."
+            },
+            {
+              "q": "Kann ich den Rechner für MwSt-Berechnung für Leasing verwenden?",
+              "a": "Ja, für Leasingoperationen wird MwSt von Leasingzahlungen berechnet. Der Rechner ist für alle Arten von Leasingoperationen geeignet."
+            }
+          ]
+        }
+      }
+    },
     "ipCalculator": {
       "title": "IP- und Subnetzrechner — CIDR / IPv4 / IPv6",
       "description": "IP- und Subnetzrechner für IPv4 und IPv6. Berechne Netzwerk, erste/letzte IP, CIDR, Anzahl der Hosts. Reverse-Berechnung vom IP-Bereich zum CIDR enthalten.",
@@ -10520,5 +11036,4 @@
         }
       }
     }
-  }
 }

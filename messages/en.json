@@ -1369,11 +1369,20 @@
 		"credit-loan": {
 			"title": "Credit Loan Calculator",
 			"description": "Calculate monthly loan payments, total interest, and create detailed payment schedules for any loan or credit",
+			"hero": {
+				"features": {
+					"accuracy": "High calculation accuracy",
+					"schedule": "Detailed payment schedule",
+					"comparison": "Payment scheme comparison"
+				}
+			},
 			"breadcrumbs": {
 				"category": "Finance"
 			},
 			"seo": {
 				"title": "Everything About Loans: Types, Rates, and Payment Methods",
+				"description": "Free online credit calculator for calculating monthly payments, total overpayment and repayment schedule. Annuity and differentiated payments, early repayment, CSV export.",
+				"keywords": "credit calculator, loan calculation, monthly payment, overpayment, repayment schedule, annuity payments, differentiated payments, early repayment, effective rate",
 				"types": {
 					"title": "Types of Loans",
 					"content": "In the modern banking system, there are many types of loans, each designed to solve specific financial needs:",
@@ -1428,6 +1437,93 @@
 					"early": "Consider early repayment options",
 					"insurance": "Evaluate insurance necessity",
 					"consult": "Consult with financial experts"
+				},
+				"features": {
+					"title": "Main Calculator Features",
+					"items": [
+						"Calculate monthly payments for annuity and differentiated schemes",
+						"Detailed repayment schedule with interest and principal breakdown",
+						"Account for additional payments and early repayment",
+						"Compare different loan types and conditions",
+						"Export results to CSV for further analysis",
+						"Calculate effective interest rate and total overpayment"
+					]
+				},
+				"advantages": {
+					"title": "Credit Calculator Advantages",
+					"items": [
+						"Accurate calculation of monthly payments and total overpayment",
+						"Comparison of annuity and differentiated repayment schemes",
+						"Accounting for additional payments and early repayment",
+						"Detailed payment schedule with interest and principal breakdown",
+						"Calculation of effective interest rate",
+						"Export results to CSV for further analysis"
+					]
+				},
+				"faq": {
+					"title": "Frequently Asked Questions",
+					"faqItems": [
+						{
+							"q": "How to calculate monthly loan payment?",
+							"a": "Monthly payment is calculated using the annuity formula: P = C × (r × (1 + r)^n) / ((1 + r)^n - 1), where C is loan amount, r is monthly interest rate, n is number of months."
+						},
+						{
+							"q": "What's the difference between annuity and differentiated payments?",
+							"a": "Annuity payments are equal monthly payments throughout the term. Differentiated payments are decreasing payments with fixed principal portion. Differentiated payments result in lower total overpayment."
+						},
+						{
+							"q": "How does early repayment affect the loan?",
+							"a": "Early repayment reduces total overpayment and may shorten the loan term. With annuity payments, early repayment reduces the next payment amount; with differentiated payments, it shortens the term."
+						},
+						{
+							"q": "What is effective interest rate?",
+							"a": "Effective interest rate (EIR) is the real cost of the loan including all fees and payments. It shows the true cost of borrowed funds."
+						},
+						{
+							"q": "How to choose optimal repayment scheme?",
+							"a": "Annuity payments suit stable income and budget planning needs. Differentiated payments are better when you can pay more initially and want to minimize overpayment."
+						},
+						{
+							"q": "What factors affect interest rate?",
+							"a": "Rate depends on: credit history, income level, down payment amount, loan term, collateral availability, loan type, and overall economic conditions."
+						}
+					]
+				},
+				"overview": {
+					"title": "About Credit Calculator",
+					"content": "Credit calculator is a professional tool for calculating loan payments, overpayment and repayment schedule. With our calculator you can calculate monthly payments, total overpayment, effective interest rate and choose optimal repayment scheme."
+				},
+				"calculation": {
+					"title": "How Loan Payments Are Calculated",
+					"content": "Loan payment calculation depends on the chosen repayment scheme. There are two main types: annuity and differentiated payments.",
+					"formulas": {
+						"annuity": "Annuity payments are calculated using the formula: P = C × (r × (1 + r)^n) / ((1 + r)^n - 1), where P is monthly payment, C is loan amount, r is monthly interest rate, n is number of months.",
+						"differentiated": "Differentiated payments consist of fixed principal portion and decreasing interest portion. Principal = C / n, Interest = remaining balance × r."
+					},
+					"examples": {
+						"title": "Calculation Examples",
+						"annuityExample": {
+							"title": "Annuity Payment Example",
+							"description": "Loan $1,000,000 for 5 years at 12% annual rate",
+							"calculation": "Monthly payment = $1,000,000 × (0.01 × (1 + 0.01)^60) / ((1 + 0.01)^60 - 1) = $22,244",
+							"totalAmount": "Total payments: $1,334,640",
+							"overpayment": "Overpayment: $334,640"
+						},
+						"differentiatedExample": {
+							"title": "Differentiated Payment Example",
+							"description": "Loan $1,000,000 for 5 years at 12% annual rate",
+							"firstPayment": "First payment: $16,667 + $10,000 = $26,667",
+							"lastPayment": "Last payment: $16,667 + $167 = $16,834",
+							"totalAmount": "Total payments: $1,300,000",
+							"overpayment": "Overpayment: $300,000"
+						},
+						"earlyRepaymentExample": {
+							"title": "Early Repayment Example",
+							"description": "Early repayment $200,000 after 2 years",
+							"savings": "Interest savings: $45,000",
+							"newTerm": "New term: 3 years 2 months"
+						}
+					}
 				}
 			},
 			"form": {
