@@ -11,12 +11,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators.savings[key];
+	const t = (key: string) => messages.calculators.savings.seo[key];
 
 	return {
 		title: t('title'),
-		description: t('description'),
-		keywords: t('seo'),
+		description: t('overview.content'),
+		keywords: 'savings calculator, financial goals, money saving',
 	};
 }
 

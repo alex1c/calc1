@@ -32,11 +32,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators['traffic-fines'].seo[key];
+	const calc = messages.calculators['traffic-fines'];
 
 	return {
-		title: t('title'),
-		description: t('overview.content'),
-		keywords: t('seo'),
+		title: calc.seo.title,
+		description: calc.seo.overview.content,
+		keywords: calc.seo.seo,
 	};
 }

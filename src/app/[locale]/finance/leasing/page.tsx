@@ -37,6 +37,6 @@ export async function generateMetadata({
 	return {
 		title: t('title'),
 		description: t('overview.content'),
-		keywords: t('seo'),
+		keywords: 'leasing calculator, car leasing, vehicle financing',
 	};
 }
