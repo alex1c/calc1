@@ -4,16 +4,17 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import {
 	Calculator,
-	Receipt,
-	TrendingUp,
-	Shield,
+	Plus,
+	Minus,
+	X,
+	Divide,
 	CheckCircle,
 	Lightbulb,
 	HelpCircle,
 } from 'lucide-react';
 
-export default function TaxCalculatorSEO() {
-	const t = useTranslations('calculators.tax-calculator');
+export default function BasicMathSEO() {
+	const t = useTranslations('calculators.basic');
 
 	const faqData = [
 		{
@@ -155,7 +156,7 @@ export default function TaxCalculatorSEO() {
 				</div>
 
 				{/* Examples Section */}
-				<div className='bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 mb-8'>
+				<div className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-8'>
 					<h3 className='text-2xl font-bold text-gray-900 mb-6'>
 						{t('seo.overview.examples.title')}
 					</h3>
@@ -164,7 +165,7 @@ export default function TaxCalculatorSEO() {
 					</p>
 
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-						{/* Example 1 */}
+						{/* Example 1 - Addition */}
 						<div className='bg-white rounded-lg p-4 shadow-sm'>
 							<h4 className='font-semibold text-gray-900 mb-2'>
 								{t('seo.overview.examples.example1.title')}
@@ -174,12 +175,17 @@ export default function TaxCalculatorSEO() {
 									'seo.overview.examples.example1.description'
 								)}
 							</p>
-							<p className='text-green-600 font-medium'>
+							<div className='bg-blue-50 p-3 rounded text-sm font-mono text-blue-800 mb-2'>
+								{t(
+									'seo.overview.examples.example1.calculation'
+								)}
+							</div>
+							<p className='text-blue-600 font-medium'>
 								{t('seo.overview.examples.example1.result')}
 							</p>
 						</div>
 
-						{/* Example 2 */}
+						{/* Example 2 - Subtraction */}
 						<div className='bg-white rounded-lg p-4 shadow-sm'>
 							<h4 className='font-semibold text-gray-900 mb-2'>
 								{t('seo.overview.examples.example2.title')}
@@ -189,12 +195,17 @@ export default function TaxCalculatorSEO() {
 									'seo.overview.examples.example2.description'
 								)}
 							</p>
-							<p className='text-green-600 font-medium'>
+							<div className='bg-purple-50 p-3 rounded text-sm font-mono text-purple-800 mb-2'>
+								{t(
+									'seo.overview.examples.example2.calculation'
+								)}
+							</div>
+							<p className='text-purple-600 font-medium'>
 								{t('seo.overview.examples.example2.result')}
 							</p>
 						</div>
 
-						{/* Example 3 */}
+						{/* Example 3 - Multiplication */}
 						<div className='bg-white rounded-lg p-4 shadow-sm'>
 							<h4 className='font-semibold text-gray-900 mb-2'>
 								{t('seo.overview.examples.example3.title')}
@@ -204,12 +215,17 @@ export default function TaxCalculatorSEO() {
 									'seo.overview.examples.example3.description'
 								)}
 							</p>
+							<div className='bg-green-50 p-3 rounded text-sm font-mono text-green-800 mb-2'>
+								{t(
+									'seo.overview.examples.example3.calculation'
+								)}
+							</div>
 							<p className='text-green-600 font-medium'>
 								{t('seo.overview.examples.example3.result')}
 							</p>
 						</div>
 
-						{/* Example 4 */}
+						{/* Example 4 - Division */}
 						<div className='bg-white rounded-lg p-4 shadow-sm'>
 							<h4 className='font-semibold text-gray-900 mb-2'>
 								{t('seo.overview.examples.example4.title')}
@@ -219,12 +235,17 @@ export default function TaxCalculatorSEO() {
 									'seo.overview.examples.example4.description'
 								)}
 							</p>
-							<p className='text-green-600 font-medium'>
+							<div className='bg-orange-50 p-3 rounded text-sm font-mono text-orange-800 mb-2'>
+								{t(
+									'seo.overview.examples.example4.calculation'
+								)}
+							</div>
+							<p className='text-orange-600 font-medium'>
 								{t('seo.overview.examples.example4.result')}
 							</p>
 						</div>
 
-						{/* Example 5 */}
+						{/* Example 5 - Decimal Operations */}
 						<div className='bg-white rounded-lg p-4 shadow-sm'>
 							<h4 className='font-semibold text-gray-900 mb-2'>
 								{t('seo.overview.examples.example5.title')}
@@ -234,12 +255,17 @@ export default function TaxCalculatorSEO() {
 									'seo.overview.examples.example5.description'
 								)}
 							</p>
-							<p className='text-green-600 font-medium'>
+							<div className='bg-red-50 p-3 rounded text-sm font-mono text-red-800 mb-2'>
+								{t(
+									'seo.overview.examples.example5.calculation'
+								)}
+							</div>
+							<p className='text-red-600 font-medium'>
 								{t('seo.overview.examples.example5.result')}
 							</p>
 						</div>
 
-						{/* Example 6 */}
+						{/* Example 6 - Large Numbers */}
 						<div className='bg-white rounded-lg p-4 shadow-sm'>
 							<h4 className='font-semibold text-gray-900 mb-2'>
 								{t('seo.overview.examples.example6.title')}
@@ -249,7 +275,12 @@ export default function TaxCalculatorSEO() {
 									'seo.overview.examples.example6.description'
 								)}
 							</p>
-							<p className='text-green-600 font-medium'>
+							<div className='bg-indigo-50 p-3 rounded text-sm font-mono text-indigo-800 mb-2'>
+								{t(
+									'seo.overview.examples.example6.calculation'
+								)}
+							</div>
+							<p className='text-indigo-600 font-medium'>
 								{t('seo.overview.examples.example6.result')}
 							</p>
 						</div>
@@ -269,6 +300,52 @@ export default function TaxCalculatorSEO() {
 				</h2>
 				<div className='prose prose-lg text-gray-600 max-w-none'>
 					<p>{t('seo.calculation.content')}</p>
+				</div>
+			</motion.section>
+
+			{/* Features Section */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.features.title')}
+				</h2>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					<div className='bg-blue-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
+							{t('seo.features.keyboard')}
+						</h3>
+						<p className='text-blue-800'>
+							{t('seo.features.keyboardDesc')}
+						</p>
+					</div>
+					<div className='bg-purple-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
+							{t('seo.features.mobile')}
+						</h3>
+						<p className='text-purple-800'>
+							{t('seo.features.mobileDesc')}
+						</p>
+					</div>
+					<div className='bg-green-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-green-900 mb-2'>
+							{t('seo.features.multilingual')}
+						</h3>
+						<p className='text-green-800'>
+							{t('seo.features.multilingualDesc')}
+						</p>
+					</div>
+					<div className='bg-orange-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
+							{t('seo.features.precision')}
+						</h3>
+						<p className='text-orange-800'>
+							{t('seo.features.precisionDesc')}
+						</p>
+					</div>
 				</div>
 			</motion.section>
 

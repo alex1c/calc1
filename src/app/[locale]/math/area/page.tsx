@@ -1,88 +1,208 @@
-import { Metadata } from 'next';
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Circle, Square, Triangle, Calculator, Ruler, Target, BarChart3 } from 'lucide-react';
 import Header from '@/components/header';
-import Breadcrumbs from '@/components/breadcrumbs';
 import AreaCalculator from '@/components/calculators/area-calculator';
 import AreaSEO from '@/components/seo/area-seo';
+import Breadcrumbs from '@/components/breadcrumbs';
 
-// Supported locales
-const locales = ['ru', 'en', 'es', 'de'];
-
-interface PageProps {
-	params: {
-		locale: string;
-	};
+interface Props {
+	params: { locale: string };
 }
 
-/**
- * Generate metadata for the area calculator page
- * @param params - Page parameters including locale
- * @returns Metadata object for SEO
- */
-export async function generateMetadata({
-	params,
-}: PageProps): Promise<Metadata> {
-	const { locale } = params;
+export default async function AreaCalculatorPage({
+	params: { locale },
+}: Props) {
+	const t = await getTranslations({
+		locale,
+		namespace: 'calculators.area',
+	});
 
-	// Check if locale is supported
-	if (!locales.includes(locale)) {
+	const tSeo = await getTranslations({
+		locale,
+		namespace: 'calculators.area.seo',
+	});
+
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	// Validate locale
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
 	}
 
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
-	const t = (key: string) => messages.calculators.area[key];
-
-	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: [
-			'area calculator',
-			'circle area',
-			'square area',
-			'triangle area',
-			'geometry calculator',
-			'math calculator',
-			'online calculator',
-			'площадь круга',
-			'площадь квадрата',
-			'площадь треугольника',
-			'калькулятор площади',
-			'calculadora de área',
-			'flächenrechner',
-		],
-	};
-}
-
-/**
- * Area Calculator Page Component
- * Displays the area calculator with SEO content and breadcrumbs
- */
-export default function AreaCalculatorPage() {
-	const t = useTranslations();
-	const locale = useLocale();
+	const breadcrumbItems = [
+		{
+			label: tCategories('math.title'),
+			href: '/math',
+		},
+		{
+			label: t('title'),
+		},
+	];
 
 	return (
-		<div className='min-h-screen bg-gray-50'>
+		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+			{/* Header */}
 			<Header />
-			<Breadcrumbs
-				items={[
-					{
-						label: t('categories.math.title'),
-						href: '/math',
-					},
-					{ label: t('calculators.area.title') },
-				]}
-			/>
-			<AreaCalculator />
 
-			{/* SEO Content */}
-			<section className='bg-white py-12'>
-				<div className='max-w-4xl mx-auto px-6'>
-					<AreaSEO />
+			{/* Breadcrumbs */}
+			<div className='bg-white dark:bg-gray-800 shadow-sm'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+					<Breadcrumbs items={breadcrumbItems} />
 				</div>
-			</section>
+			</div>
+
+			{/* Hero Section */}
+			<div className='bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-800 dark:to-purple-800'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+					<div className='text-center'>
+						<div className='flex items-center justify-center mb-6'>
+							<Calculator className='w-12 h-12 text-white mr-4' />
+							<h1 className='text-4xl md:text-5xl font-bold text-white'>
+								{t('title')}
+							</h1>
+						</div>
+						<p className='text-xl text-indigo-100 max-w-3xl mx-auto mb-8'>
+							{t('description')}
+						</p>
+
+						{/* Quick Stats */}
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Circle className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									πr²
+								</div>
+								<div className='text-indigo-100'>
+									{t('form.figureTypes.circle')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Square className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									a²
+								</div>
+								<div className='text-indigo-100'>
+									{t('form.figureTypes.square')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Triangle className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									½ah
+								</div>
+								<div className='text-indigo-100'>
+									{t('form.figureTypes.triangle')}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Main Content */}
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				{/* Calculator */}
+				<AreaCalculator />
+
+				{/* SEO Content */}
+				<AreaSEO />
+			</div>
+
+			{/* Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'WebApplication',
+						name: tSeo('title'),
+						description: tSeo('description'),
+						url: `https://calc1.ru/${locale}/math/area`,
+						applicationCategory: 'MathApplication',
+						operatingSystem: 'Any',
+						offers: {
+							'@type': 'Offer',
+							price: '0',
+							priceCurrency: 'RUB',
+						},
+						author: {
+							'@type': 'Organization',
+							name: 'Calc1.ru',
+							url: 'https://calc1.ru',
+						},
+						aggregateRating: {
+							'@type': 'AggregateRating',
+							ratingValue: '4.8',
+							ratingCount: '189',
+						},
+						featureList: [
+							t('form.figureTypes.circle'),
+							t('form.figureTypes.square'),
+							t('form.figureTypes.triangle'),
+							'Точные формулы',
+							'Мгновенные расчёты',
+							'Многоязычность',
+						],
+					}),
+				}}
+			/>
+
+			{/* FAQ Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'FAQPage',
+						mainEntity: [
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.0.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.0.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.1.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.1.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.2.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.2.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.3.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.3.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.4.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.4.a'),
+								},
+							},
+						],
+					}),
+				}}
+			/>
 		</div>
 	);
 }

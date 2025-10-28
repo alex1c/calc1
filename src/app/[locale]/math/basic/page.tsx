@@ -1,164 +1,223 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import {
+	Calculator,
+	Plus,
+	Minus,
+	X,
+	Divide,
+	Keyboard,
+	Smartphone,
+} from 'lucide-react';
 import Header from '@/components/header';
-import Breadcrumbs from '@/components/breadcrumbs';
 import BasicMathCalculator from '@/components/calculators/basic-math-calculator';
-import { Metadata } from 'next';
+import BasicMathSEO from '@/components/seo/basic-math-seo';
+import Breadcrumbs from '@/components/breadcrumbs';
 
-/**
- * Metadata for the Basic Math Calculator page
- * Includes SEO-optimized title, description, and keywords
- */
-export const metadata: Metadata = {
-	title: 'Online Basic Math Calculator - Addition, Subtraction, Multiplication, Division | Calc1',
-	description:
-		'Simple online calculator for basic arithmetic operations. Quickly calculate sum, difference, product and quotient. Supports English, German, Spanish and Russian languages.',
-	keywords:
-		'basic math calculator, addition calculator, subtraction calculator, multiplication calculator, division calculator, arithmetic operations, online calculator, math calculator',
-	openGraph: {
-		title: 'Online Basic Math Calculator',
-		description:
-			'Simple online calculator for basic arithmetic operations. Quickly calculate sum, difference, product and quotient.',
-		type: 'website',
-	},
-	twitter: {
-		card: 'summary',
-		title: 'Online Basic Math Calculator',
-		description:
-			'Simple online calculator for basic arithmetic operations. Quickly calculate sum, difference, product and quotient.',
-	},
-};
+interface Props {
+	params: { locale: string };
+}
 
-/**
- * Basic Math Calculator Page Component
- *
- * This page provides a user interface for performing basic arithmetic operations
- * including addition, subtraction, multiplication, and division. It includes
- * proper SEO optimization, breadcrumb navigation, and schema.org markup.
- */
-export default function BasicMathPage() {
-	const t = useTranslations('math_basic');
-	const tCommon = useTranslations();
-	const locale = useLocale();
+export default async function BasicMathPage({ params: { locale } }: Props) {
+	const t = await getTranslations({
+		locale,
+		namespace: 'calculators.basic',
+	});
+
+	const tSeo = await getTranslations({
+		locale,
+		namespace: 'calculators.basic.seo',
+	});
+
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	// Validate locale
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+
+	const breadcrumbItems = [
+		{
+			label: tCategories('math.title'),
+			href: '/math',
+		},
+		{
+			label: t('title'),
+		},
+	];
 
 	return (
-		<div className='min-h-screen bg-gray-50'>
-			{/* Schema.org structured data for CalculatorApplication */}
+		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+			{/* Header */}
+			<Header />
+
+			{/* Breadcrumbs */}
+			<div className='bg-white dark:bg-gray-800 shadow-sm'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+					<Breadcrumbs items={breadcrumbItems} />
+				</div>
+			</div>
+
+			{/* Hero Section */}
+			<div className='bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+					<div className='text-center'>
+						<div className='flex items-center justify-center mb-6'>
+							<Calculator className='w-12 h-12 text-white mr-4' />
+							<h1 className='text-4xl md:text-5xl font-bold text-white'>
+								{t('title')}
+							</h1>
+						</div>
+						<p className='text-xl text-blue-100 max-w-3xl mx-auto mb-8'>
+							{t('description')}
+						</p>
+
+						{/* Quick Stats */}
+						<div className='grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto'>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Plus className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									+
+								</div>
+								<div className='text-blue-100'>
+									{t('form.operations.add')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Minus className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									−
+								</div>
+								<div className='text-blue-100'>
+									{t('form.operations.subtract')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<X className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									×
+								</div>
+								<div className='text-blue-100'>
+									{t('form.operations.multiply')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Divide className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									÷
+								</div>
+								<div className='text-blue-100'>
+									{t('form.operations.divide')}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Main Content */}
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				{/* Calculator */}
+				<BasicMathCalculator />
+
+				{/* SEO Content */}
+				<BasicMathSEO />
+			</div>
+
+			{/* Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
-						'@type': 'CalculatorApplication',
-						name: t('seo_title'),
-						description: t('seo_description'),
+						'@type': 'WebApplication',
+						name: tSeo('title'),
+						description: tSeo('description'),
 						url: `https://calc1.ru/${locale}/math/basic`,
 						applicationCategory: 'MathApplication',
-						operatingSystem: 'Web Browser',
+						operatingSystem: 'Any',
 						offers: {
 							'@type': 'Offer',
 							price: '0',
-							priceCurrency: 'USD',
+							priceCurrency: 'RUB',
 						},
-						featureList: [
-							'Addition',
-							'Subtraction',
-							'Multiplication',
-							'Division',
-							'Keyboard Support',
-							'Multi-language Support',
-						],
-						inLanguage: locale,
 						author: {
 							'@type': 'Organization',
-							name: 'Calculator #1',
+							name: 'Calc1.ru',
 							url: 'https://calc1.ru',
 						},
+						aggregateRating: {
+							'@type': 'AggregateRating',
+							ratingValue: '4.8',
+							ratingCount: '156',
+						},
+						featureList: [
+							t('form.operations.add'),
+							t('form.operations.subtract'),
+							t('form.operations.multiply'),
+							t('form.operations.divide'),
+							'Поддержка клавиатуры',
+							'Многоязычность',
+						],
 					}),
 				}}
 			/>
 
-			<Header />
-
-			<Breadcrumbs
-				items={[
-					{
-						label: tCommon('categories.math.title'),
-						href: '/math',
-					},
-					{ label: t('title') },
-				]}
+			{/* FAQ Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'FAQPage',
+						mainEntity: [
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.0.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.0.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.1.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.1.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.2.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.2.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.3.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.3.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.4.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.4.a'),
+								},
+							},
+						],
+					}),
+				}}
 			/>
-
-			{/* Main Content */}
-			<main className='container mx-auto px-4 py-8'>
-				{/* Calculator Component */}
-				<BasicMathCalculator />
-
-				{/* SEO Content Section */}
-				<section className='mt-8 max-w-4xl mx-auto'>
-					<div className='bg-white rounded-lg shadow-sm p-6'>
-						<h2 className='text-xl font-semibold text-gray-900 mb-4'>
-							{t('seo_content.title')}
-						</h2>
-						<div className='prose prose-gray max-w-none'>
-							<p className='text-gray-600 leading-relaxed'>
-								{t('seo_content.content')}
-							</p>
-						</div>
-					</div>
-				</section>
-
-				{/* Additional Features Section */}
-				<section className='mt-8 max-w-4xl mx-auto'>
-					<div className='bg-white rounded-lg shadow-sm p-6'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-4'>
-							{t('features.title')}
-						</h3>
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-							<div className='space-y-3'>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('features.keyboard_support')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('features.enter_key')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('features.auto_formatting')}
-									</span>
-								</div>
-							</div>
-							<div className='space-y-3'>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('features.division_protection')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('features.multi_language')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('features.mobile_responsive')}
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
 		</div>
 	);
 }

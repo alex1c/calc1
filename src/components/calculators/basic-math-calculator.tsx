@@ -20,7 +20,7 @@ import {
  * Features keyboard support, input validation, and result formatting.
  */
 export default function BasicMathCalculator() {
-	const t = useTranslations('math_basic');
+	const t = useTranslations('calculators.basic');
 
 	// State for input values
 	const [number1, setNumber1] = useState<string>('');
@@ -43,7 +43,7 @@ export default function BasicMathCalculator() {
 		if (number1.trim() === '' || number2.trim() === '') {
 			setResult({
 				result: null,
-				error: 'Please enter both numbers',
+				error: t('results.placeholder'),
 				formattedResult: '',
 			});
 			setIsCalculated(true);
@@ -57,9 +57,17 @@ export default function BasicMathCalculator() {
 			operation,
 		});
 
+		// Handle division by zero error
+		if (
+			calculationResult.error &&
+			calculationResult.error.includes('division by zero')
+		) {
+			calculationResult.error = t('results.error_div_zero');
+		}
+
 		setResult(calculationResult);
 		setIsCalculated(true);
-	}, [number1, number2, operation]);
+	}, [number1, number2, operation, t]);
 
 	/**
 	 * Handles input changes for number fields
@@ -119,22 +127,22 @@ export default function BasicMathCalculator() {
 		{
 			value: 'add' as MathOperation,
 			symbol: '+',
-			label: t('operations.add'),
+			label: t('form.operations.add'),
 		},
 		{
 			value: 'subtract' as MathOperation,
 			symbol: '−',
-			label: t('operations.subtract'),
+			label: t('form.operations.subtract'),
 		},
 		{
 			value: 'multiply' as MathOperation,
 			symbol: '×',
-			label: t('operations.multiply'),
+			label: t('form.operations.multiply'),
 		},
 		{
 			value: 'divide' as MathOperation,
 			symbol: '÷',
-			label: t('operations.divide'),
+			label: t('form.operations.divide'),
 		},
 	];
 
@@ -157,7 +165,7 @@ export default function BasicMathCalculator() {
 							htmlFor='number1'
 							className='block text-sm font-medium text-gray-700 mb-2'
 						>
-							{t('number1')}
+							{t('form.number1')}
 						</label>
 						<input
 							id='number1'
@@ -176,7 +184,7 @@ export default function BasicMathCalculator() {
 							htmlFor='number2'
 							className='block text-sm font-medium text-gray-700 mb-2'
 						>
-							{t('number2')}
+							{t('form.number2')}
 						</label>
 						<input
 							id='number2'
@@ -195,7 +203,7 @@ export default function BasicMathCalculator() {
 				{/* Operation Selection */}
 				<div>
 					<label className='block text-sm font-medium text-gray-700 mb-3'>
-						{t('operation')}
+						{t('form.operation')}
 					</label>
 					<div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
 						{operations.map((op) => (
@@ -224,7 +232,7 @@ export default function BasicMathCalculator() {
 						disabled={!number1.trim() || !number2.trim()}
 						className='flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors'
 					>
-						{t('calculate')}
+						{t('form.calculate')}
 					</button>
 					<button
 						onClick={handleClear}
@@ -238,7 +246,7 @@ export default function BasicMathCalculator() {
 				{isCalculated && result && (
 					<div className='mt-6 p-6 bg-gray-50 rounded-lg'>
 						<h3 className='text-lg font-semibold text-gray-900 mb-4'>
-							{t('result')}
+							{t('results.title')}
 						</h3>
 
 						{result.error ? (

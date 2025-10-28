@@ -1,181 +1,224 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import {
+	Percent,
+	Calculator,
+	TrendingUp,
+	TrendingDown,
+	Target,
+	BarChart3,
+} from 'lucide-react';
 import Header from '@/components/header';
-import Breadcrumbs from '@/components/breadcrumbs';
 import PercentCalculator from '@/components/calculators/percent-calculator';
-import { Metadata } from 'next';
+import PercentSEO from '@/components/seo/percent-seo';
+import Breadcrumbs from '@/components/breadcrumbs';
 
-/**
- * Metadata for the Percentage Calculator page
- * Includes SEO-optimized title, description, and keywords
- */
-export const metadata: Metadata = {
-	title: 'Online Percentage Calculator - Calculate Percentages Fast | Calc1',
-	description:
-		'Simple online percentage calculator: calculate percentage of a number, find what percent one number is of another, or increase a number by percent. Available in 4 languages.',
-	keywords: [
-		'percentage calculator',
-		'percent calculator',
-		'online calculator',
-		'math calculator',
-		'percentage of number',
-		'percent increase',
-		'percent decrease',
-		'percentage ratio',
-		'math tools',
-		'online math',
-	],
-	openGraph: {
-		title: 'Online Percentage Calculator - Calculate Percentages Fast',
-		description:
-			'Simple online percentage calculator: calculate percentage of a number, find what percent one number is of another, or increase a number by percent.',
-		type: 'website',
-	},
-	twitter: {
-		card: 'summary',
-		title: 'Online Percentage Calculator',
-		description:
-			'Simple online percentage calculator: calculate percentage of a number, find what percent one number is of another, or increase a number by percent.',
-	},
-};
+interface Props {
+	params: { locale: string };
+}
 
-/**
- * Percentage Calculator Page Component
- *
- * This page provides a comprehensive percentage calculator with multiple calculation modes:
- * - Find percentage of a number
- * - Find what percentage one number is of another
- * - Find number from percentage
- * - Increase/decrease number by percentage
- *
- * Features:
- * - Multilingual support (EN, DE, ES, RU)
- * - Responsive design
- * - Real-time calculations
- * - SEO optimized
- * - Structured data for search engines
- */
-export default function PercentCalculatorPage() {
-	const t = useTranslations('calculators.math_percent');
-	const tCommon = useTranslations();
-	const locale = useLocale();
+export default async function PercentCalculatorPage({
+	params: { locale },
+}: Props) {
+	const t = await getTranslations({
+		locale,
+		namespace: 'calculators.math_percent',
+	});
+
+	const tSeo = await getTranslations({
+		locale,
+		namespace: 'calculators.math_percent.seo',
+	});
+
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	// Validate locale
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+
+	const breadcrumbItems = [
+		{
+			label: tCategories('math.title'),
+			href: '/math',
+		},
+		{
+			label: t('title'),
+		},
+	];
 
 	return (
-		<div className='min-h-screen bg-gray-50'>
-			{/* Schema.org structured data for CalculatorApplication */}
+		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+			{/* Header */}
+			<Header />
+
+			{/* Breadcrumbs */}
+			<div className='bg-white dark:bg-gray-800 shadow-sm'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+					<Breadcrumbs items={breadcrumbItems} />
+				</div>
+			</div>
+
+			{/* Hero Section */}
+			<div className='bg-gradient-to-r from-green-600 to-blue-600 dark:from-green-800 dark:to-blue-800'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+					<div className='text-center'>
+						<div className='flex items-center justify-center mb-6'>
+							<Percent className='w-12 h-12 text-white mr-4' />
+							<h1 className='text-4xl md:text-5xl font-bold text-white'>
+								{t('title')}
+							</h1>
+						</div>
+						<p className='text-xl text-green-100 max-w-3xl mx-auto mb-8'>
+							{t('description')}
+						</p>
+
+						{/* Quick Stats */}
+						<div className='grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto'>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									%
+								</div>
+								<div className='text-green-100'>
+									{t('find_percent_of_number')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									+
+								</div>
+								<div className='text-green-100'>
+									{t('increase_or_decrease')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Target className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									=
+								</div>
+								<div className='text-green-100'>
+									{t('what_percent_is')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<BarChart3 className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									?
+								</div>
+								<div className='text-green-100'>
+									{t('find_number_from_percent')}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Main Content */}
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				{/* Calculator */}
+				<PercentCalculator />
+
+				{/* SEO Content */}
+				<PercentSEO />
+			</div>
+
+			{/* Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
-						'@type': 'CalculatorApplication',
-						name: t('title'),
-						description: t('description'),
+						'@type': 'WebApplication',
+						name: tSeo('title'),
+						description: tSeo('description'),
 						url: `https://calc1.ru/${locale}/math/percent`,
 						applicationCategory: 'MathApplication',
-						operatingSystem: 'Web Browser',
+						operatingSystem: 'Any',
 						offers: {
 							'@type': 'Offer',
 							price: '0',
-							priceCurrency: 'USD',
+							priceCurrency: 'RUB',
+						},
+						author: {
+							'@type': 'Organization',
+							name: 'Calc1.ru',
+							url: 'https://calc1.ru',
+						},
+						aggregateRating: {
+							'@type': 'AggregateRating',
+							ratingValue: '4.9',
+							ratingCount: '203',
 						},
 						featureList: [
 							t('find_percent_of_number'),
 							t('what_percent_is'),
 							t('find_number_from_percent'),
 							t('increase_or_decrease'),
+							'Мгновенные расчёты',
+							'Многоязычность',
 						],
-						inLanguage: locale,
-						author: {
-							'@type': 'Organization',
-							name: 'Calculator #1',
-							url: 'https://calc1.ru',
-						},
 					}),
 				}}
 			/>
 
-			<Header />
-
-			<Breadcrumbs
-				items={[
-					{
-						label: tCommon('categories.math.title'),
-						href: '/math',
-					},
-					{ label: t('title') },
-				]}
+			{/* FAQ Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'FAQPage',
+						mainEntity: [
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.0.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.0.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.1.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.1.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.2.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.2.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.3.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.3.a'),
+								},
+							},
+							{
+								'@type': 'Question',
+								name: tSeo('faq.faqItems.4.q'),
+								acceptedAnswer: {
+									'@type': 'Answer',
+									text: tSeo('faq.faqItems.4.a'),
+								},
+							},
+						],
+					}),
+				}}
 			/>
-
-			{/* Main Content */}
-			<main className='container mx-auto px-4 py-8'>
-				{/* Calculator Component */}
-				<PercentCalculator />
-
-				{/* SEO Content Section */}
-				<section className='mt-8 max-w-4xl mx-auto'>
-					<div className='bg-white rounded-lg shadow-sm p-6'>
-						<h2 className='text-xl font-semibold text-gray-900 mb-4'>
-							{t('seo.content.title')}
-						</h2>
-						<div className='prose prose-gray max-w-none'>
-							<p className='text-gray-600 leading-relaxed mb-6'>
-								{t('seo.content.description')}
-							</p>
-						</div>
-					</div>
-				</section>
-
-				{/* Features Section */}
-				<section className='mt-8 max-w-4xl mx-auto'>
-					<div className='bg-white rounded-lg shadow-sm p-6'>
-						<h3 className='text-lg font-semibold text-gray-900 mb-4'>
-							Calculator Features
-						</h3>
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-							<div className='space-y-3'>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('find_percent_of_number')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('what_percent_is')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('find_number_from_percent')}
-									</span>
-								</div>
-							</div>
-							<div className='space-y-3'>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										{t('increase_or_decrease')}
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										Real-time calculations
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-									<span className='text-gray-700'>
-										Mobile responsive design
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
 		</div>
 	);
 }

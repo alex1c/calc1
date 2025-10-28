@@ -57,10 +57,10 @@ export default function TaxCalculator() {
 	// ]);
 
 	const vatRates = [
-		{ value: '0', label: '0%' },
-		{ value: '10', label: '10%' },
-		{ value: '20', label: '20%' },
-		{ value: 'custom', label: t('form.customRate') },
+		{ value: '0', label: t('form.vatRates.0') },
+		{ value: '10', label: t('form.vatRates.10') },
+		{ value: '20', label: t('form.vatRates.20') },
+		{ value: 'custom', label: t('form.vatRates.custom') },
 	];
 
 	// const currencies = []; // Removed currency selection
@@ -155,7 +155,7 @@ export default function TaxCalculator() {
 			'results.netAmount'
 		)}: ${currencySymbol}${result.netAmount.toFixed(2)}
 ${t('results.vatAmount')}: ${currencySymbol}${result.vatAmount.toFixed(2)}
-${t('results.totalAmount')}: ${currencySymbol}${result.finalTotal.toFixed(2)}`;
+${t('results.finalTotal')}: ${currencySymbol}${result.finalTotal.toFixed(2)}`;
 
 		try {
 			if (navigator.clipboard && window.isSecureContext) {
@@ -189,77 +189,26 @@ ${t('results.totalAmount')}: ${currencySymbol}${result.finalTotal.toFixed(2)}`;
 	const generatePDFContent = () => {
 		if (!result) return '';
 
-		// Get currency symbol and translations based on locale
-		const getLocalizedContent = () => {
-			const locale =
-				typeof window !== 'undefined'
-					? window.location.pathname.split('/')[1]
-					: 'ru';
-
-			const translations = {
-				ru: {
-					title: 'Результаты расчёта',
-					netAmount: 'Цена без НДС',
-					vatAmount: 'Сумма НДС',
-					totalAmount: 'Цена с НДС',
-					additionalTaxes: 'Дополнительные налоги',
-					finalTotal: 'Итоговая сумма',
-					currency: '₽',
-				},
-				en: {
-					title: 'Calculation Results',
-					netAmount: 'Net Amount',
-					vatAmount: 'VAT Amount',
-					totalAmount: 'Total Amount',
-					additionalTaxes: 'Additional Taxes',
-					finalTotal: 'Final Total',
-					currency: '$',
-				},
-				es: {
-					title: 'Resultados del Cálculo',
-					netAmount: 'Importe Neto',
-					vatAmount: 'Monto de IVA',
-					totalAmount: 'Importe Total',
-					additionalTaxes: 'Impuestos Adicionales',
-					finalTotal: 'Total Final',
-					currency: '€',
-				},
-				de: {
-					title: 'Berechnungsergebnisse',
-					netAmount: 'Nettobetrag',
-					vatAmount: 'MwSt-Betrag',
-					totalAmount: 'Gesamtbetrag',
-					additionalTaxes: 'Zusätzliche Steuern',
-					finalTotal: 'Endsumme',
-					currency: '€',
-				},
-			};
-
-			return translations[locale] || translations.ru;
-		};
-
-		const localized = getLocalizedContent();
-
-		let content = `${localized.title}\n\n`;
-		content += `${localized.netAmount}: ${
-			localized.currency
-		}${result.netAmount.toFixed(2)}\n`;
-		content += `${localized.vatAmount} (${result.vatRate}%): ${
-			localized.currency
-		}${result.vatAmount.toFixed(2)}\n`;
-		content += `${localized.totalAmount}: ${
-			localized.currency
-		}${result.totalAmount.toFixed(2)}\n`;
+		let content = `${t('results.title')}\n\n`;
+		content += `${t('results.netAmount')}: ₽${result.netAmount.toFixed(
+			2
+		)}\n`;
+		content += `${t('results.vatAmount')} (${
+			result.vatRate
+		}%): ₽${result.vatAmount.toFixed(2)}\n`;
+		content += `${t('results.totalAmount')}: ₽${result.totalAmount.toFixed(
+			2
+		)}\n`;
 
 		if (result.additionalTaxes > 0) {
-			content += `${localized.additionalTaxes}: ${
-				localized.currency
-			}${result.additionalTaxes.toFixed(2)}\n`;
+			content += `${t(
+				'form.additionalTaxes'
+			)}: ₽${result.additionalTaxes.toFixed(2)}\n`;
 		}
 
-		content += `\n${localized.finalTotal}: ${
-			localized.currency
-		}${result.finalTotal.toFixed(2)}\n`;
+		content += `\n${t('results.finalTotal')}: ₽${result.finalTotal.toFixed(
+			2
+		)}\n`;
 
 		return content;
 	};
@@ -542,7 +491,7 @@ ${t('results.totalAmount')}: ${currencySymbol}${result.finalTotal.toFixed(2)}`;
 								<div className='flex items-center gap-2 mb-2'>
 									<TrendingUp className='w-5 h-5 text-orange-600' />
 									<span className='font-medium text-orange-800'>
-										{t('results.additionalTaxes')}
+										{t('form.additionalTaxes')}
 									</span>
 								</div>
 								<div className='text-2xl font-bold text-orange-900'>

@@ -11910,6 +11910,21 @@
         "title": "Acerca de la calculadora de IVA",
         "content": "La calculadora del IVA es una herramienta conveniente para calcular el impuesto al valor agregado. Admite todas las principales tasas de IVA: 20%, 10%, 0% y tasas personalizadas."
       },
+      "features": {
+        "title": "Características principales",
+        "vatCalculation": "Cálculo del IVA",
+        "vatCalculationDesc": "Soporte para todas las tasas principales de IVA: 20%, 10%, 0% y tasas personalizadas",
+        "multipleRates": "Múltiples tasas",
+        "multipleRatesDesc": "Posibilidad de elegir entre tasas estándar o ingresar una tasa personalizada",
+        "additionalTaxes": "Impuestos adicionales",
+        "additionalTaxesDesc": "Contabilización de impuestos y tasas adicionales en los cálculos",
+        "currencySupport": "Soporte de monedas",
+        "currencySupportDesc": "Cálculo en varias monedas con formato adecuado",
+        "localCalculation": "Cálculos locales",
+        "localCalculationDesc": "Todos los cálculos se realizan localmente, sin enviar datos al servidor",
+        "exportResults": "Exportar resultados",
+        "exportResultsDesc": "Guardar resultados de cálculo en formatos PDF y CSV"
+      },
       "calculation": {
         "title": "¿Cómo se calcula el IVA?",
         "content": "El IVA se calcula mediante la fórmula: IVA = Importe × tipo de IVA / 100. Precio con IVA incluido = Importe + IVA.",
@@ -12031,6 +12046,82 @@
             {
               "q": "¿Qué hacer si necesitas calcular el IVA de varios artículos?",
               "a": "Para calcular el IVA para varios artículos, calcule el IVA para cada artículo por separado y luego sume todos los montos del IVA. La calculadora le permite realizar múltiples cálculos."
+            }
+          ]
+        }
+      },
+      "seo": {
+        "title": "Calculadora de IVA e impuestos online: Calcula el IVA a todas las tasas",
+        "overview": {
+          "title": "Sobre la calculadora de IVA",
+          "content": "La calculadora de IVA es una herramienta conveniente para calcular el impuesto al valor agregado. Soporta todas las tasas principales de IVA: 20%, 10%, 0% y tasas personalizadas.",
+          "examples": {
+            "title": "Ejemplos de cálculo",
+            "content": "Consideremos varios ejemplos de cálculo de IVA para diferentes situaciones:",
+            "example1": {
+              "title": "Cálculo con IVA del 20%",
+              "description": "Cantidad con IVA: €12,000",
+              "result": "IVA: €2,000, Precio sin IVA: €10,000"
+            },
+            "example2": {
+              "title": "Cálculo con IVA del 10%",
+              "description": "Cantidad con IVA: €11,000",
+              "result": "IVA: €1,000, Precio sin IVA: €10,000"
+            },
+            "example3": {
+              "title": "Cálculo sin IVA",
+              "description": "Precio sin IVA: €10,000, tasa 20%",
+              "result": "IVA: €2,000, Precio con IVA: €12,000"
+            },
+            "example4": {
+              "title": "Cálculo con impuestos adicionales",
+              "description": "Precio sin IVA: €10,000, IVA 20%, impuestos adicionales: €500",
+              "result": "IVA: €2,000, Impuestos adicionales: €500, Total: €12,500"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calcula el IVA",
+          "content": "El IVA se calcula usando la fórmula: IVA = Cantidad × Tasa de IVA / 100. Precio con IVA = Cantidad + IVA."
+        },
+        "advantages": {
+          "title": "Ventajas de la calculadora",
+          "content": "Nuestra calculadora de IVA proporciona muchas ventajas para cálculos de impuestos precisos y rápidos.",
+          "quick": "Cálculo rápido",
+          "accurate": "Resultados precisos",
+          "planning": "Planificación presupuestaria",
+          "rates": "Todas las tasas de IVA"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Recomendaciones para usar la calculadora de IVA con máxima eficiencia.",
+          "deadline": "Cumplir con los plazos de presentación",
+          "payment": "Planificar pagos con anticipación",
+          "ownership": "Mantener registros de transacciones",
+          "consultation": "Consultar con especialistas"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué tasas de IVA soporta la calculadora?",
+              "a": "La calculadora soporta tasas estándar de IVA: 20%, 10%, 0%, y también permite ingresar tasas personalizadas para casos especiales."
+            },
+            {
+              "q": "¿Cómo calcular el IVA de una cantidad con impuesto?",
+              "a": "Para calcular el IVA de una cantidad con impuesto, use la fórmula: Costo neto = Cantidad con IVA / (1 + Tasa de IVA / 100), IVA = Cantidad con IVA - Costo neto."
+            },
+            {
+              "q": "¿Cuándo se aplica la tasa de IVA del 10%?",
+              "a": "La tasa de IVA del 10% se aplica a productos alimenticios, productos infantiles, dispositivos médicos, publicaciones periódicas impresas y algunas otras categorías de productos."
+            },
+            {
+              "q": "¿Cómo verificar la corrección del cálculo de IVA?",
+              "a": "La corrección del cálculo se puede verificar mediante cálculo inverso: la cantidad con IVA debe igualar la cantidad neta más el IVA calculado. También puede usar varios métodos de cálculo para comparación."
+            },
+            {
+              "q": "¿Se puede usar la calculadora para contabilidad?",
+              "a": "Sí, la calculadora es adecuada para contabilidad, preparación de declaraciones de impuestos, cálculo de obligaciones fiscales y mantenimiento de registros fiscales."
             }
           ]
         }

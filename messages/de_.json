@@ -11910,6 +11910,21 @@
         "title": "Über den Mehrwertsteuerrechner",
         "content": "Der Mehrwertsteuerrechner ist ein komfortables Tool zur Berechnung der Mehrwertsteuer. Unterstützt alle wichtigen Mehrwertsteuersätze: 20 %, 10 %, 0 % und benutzerdefinierte Sätze."
       },
+      "features": {
+        "title": "Hauptfunktionen",
+        "vatCalculation": "Mehrwertsteuerberechnung",
+        "vatCalculationDesc": "Unterstützung für alle wichtigen Mehrwertsteuersätze: 20 %, 10 %, 0 % und benutzerdefinierte Sätze",
+        "multipleRates": "Mehrere Sätze",
+        "multipleRatesDesc": "Möglichkeit, zwischen Standardsätzen zu wählen oder einen benutzerdefinierten Satz einzugeben",
+        "additionalTaxes": "Zusätzliche Steuern",
+        "additionalTaxesDesc": "Berücksichtigung zusätzlicher Steuern und Gebühren in den Berechnungen",
+        "currencySupport": "Währungsunterstützung",
+        "currencySupportDesc": "Berechnung in verschiedenen Währungen mit ordnungsgemäßer Formatierung",
+        "localCalculation": "Lokale Berechnungen",
+        "localCalculationDesc": "Alle Berechnungen werden lokal durchgeführt, ohne Daten an den Server zu senden",
+        "exportResults": "Ergebnisse exportieren",
+        "exportResultsDesc": "Speichern der Berechnungsergebnisse in PDF- und CSV-Formaten"
+      },
       "calculation": {
         "title": "Wie wird die Mehrwertsteuer berechnet?",
         "content": "Die Mehrwertsteuer wird nach der Formel berechnet: Mehrwertsteuer = Betrag × Mehrwertsteuersatz / 100. Preis inklusive Mehrwertsteuer = Betrag + Mehrwertsteuer.",
@@ -12031,6 +12046,82 @@
             {
               "q": "Was tun, wenn Sie die Mehrwertsteuer für mehrere Artikel berechnen müssen?",
               "a": "Um die Mehrwertsteuer für mehrere Artikel zu berechnen, berechnen Sie die Mehrwertsteuer für jeden Artikel separat und addieren Sie dann alle Mehrwertsteuerbeträge. Mit dem Rechner können Sie mehrere Berechnungen durchführen."
+            }
+          ]
+        }
+      },
+      "seo": {
+        "title": "Mehrwertsteuer- und Steuerrechner online: Berechnung der Mehrwertsteuer zu allen Sätzen",
+        "overview": {
+          "title": "Über den Mehrwertsteuerrechner",
+          "content": "Der Mehrwertsteuerrechner ist ein praktisches Tool zur Berechnung der Mehrwertsteuer. Unterstützt alle Haupt-Mehrwertsteuersätze: 20%, 10%, 0% und benutzerdefinierte Sätze.",
+          "examples": {
+            "title": "Berechnungsbeispiele",
+            "content": "Betrachten wir mehrere Beispiele für die Mehrwertsteuerberechnung für verschiedene Situationen:",
+            "example1": {
+              "title": "Berechnung mit 20% Mehrwertsteuer",
+              "description": "Betrag mit Mehrwertsteuer: €12.000",
+              "result": "Mehrwertsteuer: €2.000, Preis ohne Mehrwertsteuer: €10.000"
+            },
+            "example2": {
+              "title": "Berechnung mit 10% Mehrwertsteuer",
+              "description": "Betrag mit Mehrwertsteuer: €11.000",
+              "result": "Mehrwertsteuer: €1.000, Preis ohne Mehrwertsteuer: €10.000"
+            },
+            "example3": {
+              "title": "Berechnung ohne Mehrwertsteuer",
+              "description": "Preis ohne Mehrwertsteuer: €10.000, Satz 20%",
+              "result": "Mehrwertsteuer: €2.000, Preis mit Mehrwertsteuer: €12.000"
+            },
+            "example4": {
+              "title": "Berechnung mit zusätzlichen Steuern",
+              "description": "Preis ohne Mehrwertsteuer: €10.000, Mehrwertsteuer 20%, zusätzliche Steuern: €500",
+              "result": "Mehrwertsteuer: €2.000, Zusätzliche Steuern: €500, Gesamt: €12.500"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird die Mehrwertsteuer berechnet",
+          "content": "Die Mehrwertsteuer wird nach der Formel berechnet: Mehrwertsteuer = Betrag × Mehrwertsteuersatz / 100. Preis mit Mehrwertsteuer = Betrag + Mehrwertsteuer."
+        },
+        "advantages": {
+          "title": "Rechnervorteile",
+          "content": "Unser Mehrwertsteuerrechner bietet viele Vorteile für genaue und schnelle Steuerberechnungen.",
+          "quick": "Schnelle Berechnung",
+          "accurate": "Genaue Ergebnisse",
+          "planning": "Budgetplanung",
+          "rates": "Alle Mehrwertsteuersätze"
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Empfehlungen für die Verwendung des Mehrwertsteuerrechners für maximale Effizienz.",
+          "deadline": "Einreichungsfristen einhalten",
+          "payment": "Zahlungen im Voraus planen",
+          "ownership": "Transaktionsaufzeichnungen führen",
+          "consultation": "Mit Fachleuten beraten"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Welche Mehrwertsteuersätze unterstützt der Rechner?",
+              "a": "Der Rechner unterstützt Standard-Mehrwertsteuersätze: 20%, 10%, 0% und ermöglicht auch die Eingabe benutzerdefinierter Sätze für Sonderfälle."
+            },
+            {
+              "q": "Wie berechnet man die Mehrwertsteuer von einem Betrag mit Steuer?",
+              "a": "Um die Mehrwertsteuer von einem Betrag mit Steuer zu berechnen, verwenden Sie die Formel: Nettokosten = Betrag mit Mehrwertsteuer / (1 + Mehrwertsteuersatz / 100), Mehrwertsteuer = Betrag mit Mehrwertsteuer - Nettokosten."
+            },
+            {
+              "q": "Wann wird der Mehrwertsteuersatz von 10% angewendet?",
+              "a": "Der Mehrwertsteuersatz von 10% wird auf Lebensmittel, Kinderprodukte, Medizinprodukte, periodische Druckpublikationen und einige andere Produktkategorien angewendet."
+            },
+            {
+              "q": "Wie überprüft man die Richtigkeit der Mehrwertsteuerberechnung?",
+              "a": "Die Richtigkeit der Berechnung kann durch Rückrechnung überprüft werden: Der Betrag mit Mehrwertsteuer sollte dem Nettobetrag plus der berechneten Mehrwertsteuer entsprechen. Sie können auch mehrere Berechnungsmethoden zum Vergleich verwenden."
+            },
+            {
+              "q": "Kann der Rechner für die Buchhaltung verwendet werden?",
+              "a": "Ja, der Rechner ist für die Buchhaltung, die Vorbereitung von Steuererklärungen, die Berechnung von Steuerverpflichtungen und die Führung von Steueraufzeichnungen geeignet."
             }
           ]
         }

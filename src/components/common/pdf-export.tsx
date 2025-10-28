@@ -67,10 +67,18 @@ export default function PDFExport({
 		tempDiv.style.color = 'black';
 		tempDiv.style.lineHeight = '1.6';
 
-		// Create HTML content with proper Cyrillic support
+		// Create HTML content with proper localization support
 		const now = new Date();
-		const dateStr = now.toLocaleDateString();
-		const timeStr = now.toLocaleTimeString();
+		// Use locale-aware date formatting
+		const dateStr = now.toLocaleDateString(undefined, {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		});
+		const timeStr = now.toLocaleTimeString(undefined, {
+			hour: '2-digit',
+			minute: '2-digit',
+		});
 
 		tempDiv.innerHTML = `
 			<div style="text-align: center; margin-bottom: 30px;">

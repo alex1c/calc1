@@ -47,7 +47,7 @@ export default function PaperWeightCalculator() {
 					<div className='space-y-6'>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 mb-2'>
-								Number of Sheets
+								{t('calculators.paper-weight.form.sheets')}
 							</label>
 							<input
 								type='number'
@@ -65,7 +65,7 @@ export default function PaperWeightCalculator() {
 
 						<div>
 							<label className='block text-sm font-medium text-gray-700 mb-2'>
-								Paper Density (g/m²)
+								{t('calculators.paper-weight.form.density')}
 							</label>
 							<select
 								value={input.density}
@@ -125,12 +125,15 @@ export default function PaperWeightCalculator() {
 					{result && (
 						<div className='bg-gray-50 rounded-lg p-6'>
 							<h3 className='text-lg font-semibold text-gray-900 mb-4'>
-								{t('common.result')}
+								{t('calculators.paper-weight.results.title')}
 							</h3>
 							<div className='space-y-3'>
 								<div className='flex justify-between'>
 									<span className='text-gray-600'>
-										Weight per sheet:
+										{t(
+											'calculators.paper-weight.results.weightPerSheet'
+										)}
+										:
 									</span>
 									<span className='font-semibold'>
 										{result.weightPerSheet} g
@@ -138,7 +141,10 @@ export default function PaperWeightCalculator() {
 								</div>
 								<div className='flex justify-between'>
 									<span className='text-gray-600'>
-										Total weight:
+										{t(
+											'calculators.paper-weight.results.totalWeight'
+										)}
+										:
 									</span>
 									<span className='font-semibold'>
 										{result.totalWeight} g
@@ -146,7 +152,10 @@ export default function PaperWeightCalculator() {
 								</div>
 								<div className='flex justify-between'>
 									<span className='text-gray-600'>
-										Total weight (kg):
+										{t(
+											'calculators.paper-weight.results.totalWeightKg'
+										)}
+										:
 									</span>
 									<span className='font-semibold'>
 										{result.totalWeightKg} kg
@@ -154,13 +163,25 @@ export default function PaperWeightCalculator() {
 								</div>
 								<div className='border-t pt-3'>
 									<div className='text-sm text-gray-600'>
-										<p>Format: {result.format}</p>
 										<p>
-											Dimensions:{' '}
-											{result.dimensions.width} ×{' '}
+											{t(
+												'calculators.paper-weight.results.format'
+											)}
+											: {result.format}
+										</p>
+										<p>
+											{t(
+												'calculators.paper-weight.results.dimensions'
+											)}
+											: {result.dimensions.width} ×{' '}
 											{result.dimensions.height} mm
 										</p>
-										<p>Area: {result.dimensions.area} m²</p>
+										<p>
+											{t(
+												'calculators.paper-weight.results.area'
+											)}
+											: {result.dimensions.area} m²
+										</p>
 									</div>
 								</div>
 							</div>
@@ -178,25 +199,3 @@ export default function PaperWeightCalculator() {
 		</div>
 	);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

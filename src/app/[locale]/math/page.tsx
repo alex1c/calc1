@@ -25,8 +25,8 @@ export default function MathPage() {
 	const calculators = [
 		{
 			id: 'basic',
-			title: t('math_basic.title'),
-			description: t('math_basic.description'),
+			title: t('calculators.basic.title'),
+			description: t('calculators.basic.description'),
 			icon: Calculator,
 			href: '/math/basic',
 		},
