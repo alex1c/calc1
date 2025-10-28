@@ -56,3 +56,4 @@ fixFileStructure('messages/es.json', 'es.json');
 fixFileStructure('messages/de.json', 'de.json');
 
 console.log('Готово!');
+
