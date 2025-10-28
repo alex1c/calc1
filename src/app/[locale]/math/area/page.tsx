@@ -1,6 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Circle, Square, Triangle, Calculator, Ruler, Target, BarChart3 } from 'lucide-react';
+import {
+	Circle,
+	Square,
+	Triangle,
+	Calculator,
+	Ruler,
+	Target,
+	BarChart3,
+} from 'lucide-react';
 import Header from '@/components/header';
 import AreaCalculator from '@/components/calculators/area-calculator';
 import AreaSEO from '@/components/seo/area-seo';

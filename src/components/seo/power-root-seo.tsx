@@ -1,367 +1,456 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
-/**
- * FAQ Structured Data for Power and Root Calculator
- * Provides JSON-LD structured data for search engines
- */
-const generateFAQStructuredData = (t: any) => {
-	const faqData = {
-		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		mainEntity: [
-			{
-				'@type': 'Question',
-				name: 'How to calculate power online?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: 'How to calculate root online?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: 'What is the difference between power and root?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-		],
-	};
-
-	return JSON.stringify(faqData);
-};
-
-/**
- * Calculator Structured Data
- * Provides JSON-LD structured data for the calculator application
- */
-const generateCalculatorStructuredData = (t: any) => {
-	const calculatorData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		description: t('description'),
-		url: 'https://calc1.ru/math/power-root',
-		applicationCategory: 'CalculatorApplication',
-		operatingSystem: 'Web Browser',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		featureList: [
-			t('calculation.content'),
-			'Multiple language support',
-			'Mobile responsive design',
-		],
-	};
-
-	return JSON.stringify(calculatorData);
-};
-
-/**
- * Power and Root Calculator SEO Component
- * Displays comprehensive SEO content with structured data
- */
 export default function PowerRootSEO() {
-	const t = useTranslations('calculators.powerRoot.seo');
+	const t = useTranslations('calculators.powerRoot');
+
+	const faqData = [
+		{
+			q: t('seo.faq.faqItems.0.q'),
+			a: t('seo.faq.faqItems.0.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.1.q'),
+			a: t('seo.faq.faqItems.1.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.2.q'),
+			a: t('seo.faq.faqItems.2.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.3.q'),
+			a: t('seo.faq.faqItems.3.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.4.q'),
+			a: t('seo.faq.faqItems.4.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.5.q'),
+			a: t('seo.faq.faqItems.5.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.6.q'),
+			a: t('seo.faq.faqItems.6.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.7.q'),
+			a: t('seo.faq.faqItems.7.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.8.q'),
+			a: t('seo.faq.faqItems.8.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.9.q'),
+			a: t('seo.faq.faqItems.9.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.10.q'),
+			a: t('seo.faq.faqItems.10.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.11.q'),
+			a: t('seo.faq.faqItems.11.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.12.q'),
+			a: t('seo.faq.faqItems.12.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.13.q'),
+			a: t('seo.faq.faqItems.13.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.14.q'),
+			a: t('seo.faq.faqItems.14.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.15.q'),
+			a: t('seo.faq.faqItems.15.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.16.q'),
+			a: t('seo.faq.faqItems.16.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.17.q'),
+			a: t('seo.faq.faqItems.17.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.18.q'),
+			a: t('seo.faq.faqItems.18.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.19.q'),
+			a: t('seo.faq.faqItems.19.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.20.q'),
+			a: t('seo.faq.faqItems.20.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.21.q'),
+			a: t('seo.faq.faqItems.21.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.22.q'),
+			a: t('seo.faq.faqItems.22.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.23.q'),
+			a: t('seo.faq.faqItems.23.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.24.q'),
+			a: t('seo.faq.faqItems.24.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.25.q'),
+			a: t('seo.faq.faqItems.25.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.26.q'),
+			a: t('seo.faq.faqItems.26.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.27.q'),
+			a: t('seo.faq.faqItems.27.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.28.q'),
+			a: t('seo.faq.faqItems.28.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.29.q'),
+			a: t('seo.faq.faqItems.29.a'),
+		},
+	];
 
 	return (
-		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: generateFAQStructuredData(t),
-				}}
-			/>
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: generateCalculatorStructuredData(t),
-				}}
-			/>
+		<div className='space-y-8'>
+			{/* Overview */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.overview.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 max-w-none'>
+					<p className='mb-4'>{t('seo.overview.content')}</p>
+					<p className='mb-6'>
+						{t('seo.overview.additionalContent')}
+					</p>
 
-			<div className='prose prose-lg max-w-none'>
-				{/* Overview Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('overview.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-4'>{t('overview.content')}</p>
+					{/* Calculation Examples */}
+					<div className='bg-gray-50 p-6 rounded-lg mt-6'>
+						<h3 className='text-xl font-semibold text-gray-900 mb-4'>
+							{t('seo.overview.calculationExamples.title')}
+						</h3>
 						<p className='mb-4'>
-							{t('overview.additionalContent')}
+							{t('seo.overview.calculationExamples.content')}
 						</p>
-					</div>
-				</section>
-
-				{/* What is Power Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('powerSection.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('powerSection.content')}</p>
 
 						{/* Power Examples */}
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
-							<div className='bg-blue-50 border border-blue-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-blue-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<path d='M12 2L13.09 8.26L19 7L14.74 12L19 17L13.09 15.74L12 22L10.91 15.74L5 17L9.26 12L5 7L10.91 8.26L12 2Z' />
-										</svg>
+						<div className='mb-6'>
+							<h4 className='text-lg font-semibold text-gray-900 mb-3'>
+								{t(
+									'seo.overview.calculationExamples.powerExamples.title'
+								)}
+							</h4>
+							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+								{Array.from({ length: 5 }, (_, i) => (
+									<div
+										key={i}
+										className='bg-blue-50 border border-blue-200 rounded-lg p-4'
+									>
+										<h5 className='font-semibold text-blue-900 mb-2'>
+											{t(
+												`seo.overview.calculationExamples.powerExamples.example${
+													i + 1
+												}.title`
+											)}
+										</h5>
+										<div className='text-lg font-mono text-blue-600 mb-2'>
+											{t(
+												`seo.overview.calculationExamples.powerExamples.example${
+													i + 1
+												}.calculation`
+											)}
+										</div>
+										<p className='text-sm text-blue-800'>
+											{t(
+												`seo.overview.calculationExamples.powerExamples.example${
+													i + 1
+												}.description`
+											)}
+										</p>
 									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('powerSection.example1.title')}
-									</h3>
-									<div className='text-2xl font-mono text-blue-600 mb-2'>
-										2³ = 8
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('powerSection.example1.description')}
-									</p>
-								</div>
-							</div>
-
-							<div className='bg-green-50 border border-green-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-green-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<path d='M12 2L13.09 8.26L19 7L14.74 12L19 17L13.09 15.74L12 22L10.91 15.74L5 17L9.26 12L5 7L10.91 8.26L12 2Z' />
-										</svg>
-									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('powerSection.example2.title')}
-									</h3>
-									<div className='text-2xl font-mono text-green-600 mb-2'>
-										5² = 25
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('powerSection.example2.description')}
-									</p>
-								</div>
+								))}
 							</div>
 						</div>
-					</div>
-				</section>
-
-				{/* What is Root Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('rootSection.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('rootSection.content')}</p>
 
 						{/* Root Examples */}
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
-							<div className='bg-purple-50 border border-purple-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-purple-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<path d='M3 13H5V21H3V13M7 3H9V21H7V3M11 8H13V21H11V8M15 3H17V21H15V3M19 8H21V21H19V8Z' />
-										</svg>
+						<div>
+							<h4 className='text-lg font-semibold text-gray-900 mb-3'>
+								{t(
+									'seo.overview.calculationExamples.rootExamples.title'
+								)}
+							</h4>
+							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+								{Array.from({ length: 5 }, (_, i) => (
+									<div
+										key={i}
+										className='bg-green-50 border border-green-200 rounded-lg p-4'
+									>
+										<h5 className='font-semibold text-green-900 mb-2'>
+											{t(
+												`seo.overview.calculationExamples.rootExamples.example${
+													i + 1
+												}.title`
+											)}
+										</h5>
+										<div className='text-lg font-mono text-green-600 mb-2'>
+											{t(
+												`seo.overview.calculationExamples.rootExamples.example${
+													i + 1
+												}.calculation`
+											)}
+										</div>
+										<p className='text-sm text-green-800'>
+											{t(
+												`seo.overview.calculationExamples.rootExamples.example${
+													i + 1
+												}.description`
+											)}
+										</p>
 									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('rootSection.example1.title')}
-									</h3>
-									<div className='text-2xl font-mono text-purple-600 mb-2'>
-										√9 = 3
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('rootSection.example1.description')}
-									</p>
-								</div>
-							</div>
-
-							<div className='bg-orange-50 border border-orange-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-orange-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<path d='M3 13H5V21H3V13M7 3H9V21H7V3M11 8H13V21H11V8M15 3H17V21H15V3M19 8H21V21H19V8Z' />
-										</svg>
-									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('rootSection.example2.title')}
-									</h3>
-									<div className='text-2xl font-mono text-orange-600 mb-2'>
-										∛8 = 2
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('rootSection.example2.description')}
-									</p>
-								</div>
+								))}
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</motion.section>
 
-				{/* How to Use Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('howToUse.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('howToUse.content')}</p>
+			{/* How it works */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.howToUse.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 max-w-none'>
+					<p className='mb-6'>{t('seo.howToUse.content')}</p>
 
-						{/* Usage Examples */}
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-							{/* Power Example */}
-							<div className='bg-gray-50 rounded-lg p-6'>
-								<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-									{t('howToUse.powerExample.title')}
-								</h3>
-								<p className='mb-3'>
-									<strong>{t('howToUse.given')}:</strong> 2³
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('howToUse.calculation')}:
-									</strong>{' '}
-									2 × 2 × 2 = 8
-								</p>
-								<p className='text-sm text-gray-600'>
-									{t('howToUse.powerExample.description')}
-								</p>
-							</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+						<div className='bg-blue-50 p-6 rounded-lg'>
+							<h3 className='text-xl font-semibold text-blue-900 mb-4'>
+								{t('seo.howToUse.powerExample.title')}
+							</h3>
+							<p className='mb-3'>
+								<strong>{t('seo.howToUse.given')}:</strong> 2³
+							</p>
+							<p className='mb-3'>
+								<strong>
+									{t('seo.howToUse.calculation')}:
+								</strong>{' '}
+								2 × 2 × 2 = 8
+							</p>
+							<p className='text-sm text-blue-800'>
+								{t('seo.howToUse.powerExample.description')}
+							</p>
+						</div>
 
-							{/* Root Example */}
-							<div className='bg-gray-50 rounded-lg p-6'>
-								<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-									{t('howToUse.rootExample.title')}
-								</h3>
-								<p className='mb-3'>
-									<strong>{t('howToUse.given')}:</strong> ∛8
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('howToUse.calculation')}:
-									</strong>{' '}
-									2³ = 8, поэтому ∛8 = 2
-								</p>
-								<p className='text-sm text-gray-600'>
-									{t('howToUse.rootExample.description')}
-								</p>
-							</div>
+						<div className='bg-green-50 p-6 rounded-lg'>
+							<h3 className='text-xl font-semibold text-green-900 mb-4'>
+								{t('seo.howToUse.rootExample.title')}
+							</h3>
+							<p className='mb-3'>
+								<strong>{t('seo.howToUse.given')}:</strong> ∛8
+							</p>
+							<p className='mb-3'>
+								<strong>
+									{t('seo.howToUse.calculation')}:
+								</strong>{' '}
+								2³ = 8, поэтому ∛8 = 2
+							</p>
+							<p className='text-sm text-green-800'>
+								{t('seo.howToUse.rootExample.description')}
+							</p>
 						</div>
 					</div>
-				</section>
+				</div>
+			</motion.section>
 
-				{/* Advantages Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('advantages.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('advantages.content')}</p>
-						<ul className='list-disc list-inside space-y-2 mb-6'>
+			{/* Features */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.advantages.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 mb-6 max-w-none'>
+					<p>{t('seo.advantages.content')}</p>
+				</div>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					<div className='bg-blue-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
+							{t('seo.advantages.accurate')}
+						</h3>
+						<p className='text-blue-800'>
+							{t('seo.advantages.accurateDesc')}
+						</p>
+					</div>
+					<div className='bg-green-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-green-900 mb-2'>
+							{t('seo.advantages.flexible')}
+						</h3>
+						<p className='text-green-800'>
+							{t('seo.advantages.flexibleDesc')}
+						</p>
+					</div>
+					<div className='bg-purple-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
+							{t('seo.advantages.comprehensive')}
+						</h3>
+						<p className='text-purple-800'>
+							{t('seo.advantages.comprehensiveDesc')}
+						</p>
+					</div>
+					<div className='bg-orange-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
+							{t('seo.advantages.export')}
+						</h3>
+						<p className='text-orange-800'>
+							{t('seo.advantages.exportDesc')}
+						</p>
+					</div>
+				</div>
+			</motion.section>
+
+			{/* Tips */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.tips.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 mb-6 max-w-none'>
+					<p>{t('seo.tips.content')}</p>
+				</div>
+				<div className='bg-yellow-50 border border-yellow-200 rounded-lg p-6'>
+					<h3 className='text-lg font-semibold text-yellow-800 mb-3'>
+						{t('seo.tips.importantNotes')}
+					</h3>
+					<ul className='list-disc list-inside space-y-2 text-yellow-700'>
+						{t
+							.raw('seo.tips.notes')
+							.map((note: string, index: number) => (
+								<li key={index}>{note}</li>
+							))}
+					</ul>
+				</div>
+			</motion.section>
+
+			{/* Applications */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.applications.title')}
+				</h2>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					<div>
+						<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+							{t('seo.applications.mathematics')}
+						</h3>
+						<ul className='list-disc list-inside space-y-1 text-gray-600'>
 							{t
-								.raw('advantages.items')
+								.raw('seo.applications.mathematicsItems')
 								.map((item: string, index: number) => (
 									<li key={index}>{item}</li>
 								))}
 						</ul>
 					</div>
-				</section>
+					<div>
+						<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+							{t('seo.applications.science')}
+						</h3>
+						<ul className='list-disc list-inside space-y-1 text-gray-600'>
+							{t
+								.raw('seo.applications.scienceItems')
+								.map((item: string, index: number) => (
+									<li key={index}>{item}</li>
+								))}
+						</ul>
+					</div>
+				</div>
+			</motion.section>
 
-				{/* Tips Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('tips.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('tips.content')}</p>
-						<div className='bg-yellow-50 border border-yellow-200 rounded-lg p-6'>
-							<h3 className='text-lg font-semibold text-yellow-800 mb-3'>
-								{t('tips.importantNotes')}
+			{/* FAQ */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.faq.title')}
+				</h2>
+				<div className='space-y-4'>
+					{faqData.map((faq, index) => (
+						<motion.div
+							key={index}
+							initial={{ opacity: 0, y: 10 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: index * 0.1 }}
+							className='bg-gray-50 border border-gray-200 rounded-lg p-6'
+						>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
+								{faq.q}
 							</h3>
-							<ul className='list-disc list-inside space-y-2 text-yellow-700'>
-								{t
-									.raw('tips.notes')
-									.map((note: string, index: number) => (
-										<li key={index}>{note}</li>
-									))}
-							</ul>
-						</div>
-					</div>
-				</section>
+							<p className='text-gray-600'>{faq.a}</p>
+						</motion.div>
+					))}
+				</div>
+			</motion.section>
 
-				{/* Common Applications */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('applications.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-							<div>
-								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-									{t('applications.mathematics')}
-								</h3>
-								<ul className='list-disc list-inside space-y-1 text-gray-600'>
-									{t
-										.raw('applications.mathematicsItems')
-										.map((item: string, index: number) => (
-											<li key={index}>{item}</li>
-										))}
-								</ul>
-							</div>
-							<div>
-								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-									{t('applications.science')}
-								</h3>
-								<ul className='list-disc list-inside space-y-1 text-gray-600'>
-									{t
-										.raw('applications.scienceItems')
-										.map((item: string, index: number) => (
-											<li key={index}>{item}</li>
-										))}
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				{/* Online Calculator */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('onlineCalculator.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-4'>{t('onlineCalculator.content')}</p>
-						<p className='mb-4'>
-							{t('onlineCalculator.multilingual')}
-						</p>
-					</div>
-				</section>
-			</div>
-		</>
+			{/* Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'FAQPage',
+						mainEntity: faqData.map((faq) => ({
+							'@type': 'Question',
+							name: faq.q,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: faq.a,
+							},
+						})),
+					}),
+				}}
+			/>
+		</div>
 	);
 }

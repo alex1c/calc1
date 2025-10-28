@@ -44,14 +44,14 @@ const getModeIcon = (mode: CalculationMode) => {
 };
 
 export default function PowerRootCalculator() {
-	const t = useTranslations();
+	const t = useTranslations('calculators.powerRoot');
 	const [input, setInput] = useState<PowerRootInput>({
 		mode: 'power',
 		base: 2,
 		exponent: 3,
 	});
 	const [result, setResult] = useState<PowerRootResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [error, setError] = useState<string | null>(null);
 
 	const handleModeChange = (mode: CalculationMode) => {
 		setInput((prev) => ({
@@ -59,7 +59,7 @@ export default function PowerRootCalculator() {
 			mode,
 		}));
 		setResult(null);
-		setErrors([]);
+		setError(null);
 	};
 
 	const handleInputChange = (field: keyof PowerRootInput, value: string) => {
@@ -69,13 +69,13 @@ export default function PowerRootCalculator() {
 			[field]: numValue,
 		}));
 		setResult(null);
-		setErrors([]);
+		setError(null);
 	};
 
 	const handleCalculate = () => {
 		const validation = validatePowerRootInput(input);
 		if (!validation.isValid) {
-			setErrors(validation.errors);
+			setError(validation.error || 'Invalid input');
 			setResult(null);
 			return;
 		}
@@ -83,13 +83,13 @@ export default function PowerRootCalculator() {
 		try {
 			const calculation = calculatePowerRoot(input);
 			setResult(calculation);
-			setErrors([]);
+			setError(null);
 		} catch (error) {
-			setErrors([
+			setError(
 				error instanceof Error
 					? error.message
-					: t('calculators.powerRoot.results.calculationError'),
-			]);
+					: t('calculators.powerRoot.results.calculationError')
+			);
 			setResult(null);
 		}
 	};
@@ -101,7 +101,7 @@ export default function PowerRootCalculator() {
 			exponent: 3,
 		});
 		setResult(null);
-		setErrors([]);
+		setError(null);
 	};
 
 	return (
@@ -264,7 +264,7 @@ export default function PowerRootCalculator() {
 
 									{/* Error Messages */}
 									<AnimatePresence>
-										{errors.length > 0 && (
+										{error && (
 											<motion.div
 												initial={{ opacity: 0, y: -10 }}
 												animate={{ opacity: 1, y: 0 }}
@@ -276,15 +276,9 @@ export default function PowerRootCalculator() {
 														'calculators.powerRoot.form.errors.title'
 													)}
 												</h4>
-												<ul className='text-sm text-red-700 space-y-1'>
-													{errors.map(
-														(error, index) => (
-															<li key={index}>
-																• {error}
-															</li>
-														)
-													)}
-												</ul>
+												<p className='text-sm text-red-700'>
+													• {error}
+												</p>
 											</motion.div>
 										)}
 									</AnimatePresence>

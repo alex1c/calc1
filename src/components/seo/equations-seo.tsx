@@ -18,6 +18,140 @@ export default function EquationsSEO() {
 					{t('overview.content')}
 				</p>
 			</section>
+
+			{/* Calculation Examples */}
+			<section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-8 rounded-xl">
+				<h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+					{t('overview.calculationExamples.title')}
+				</h2>
+				
+				{/* Linear Equations Examples */}
+				<div className="mb-8">
+					<h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+						{t('overview.calculationExamples.linearExamples.title')}
+					</h3>
+					<div className="grid md:grid-cols-3 gap-6">
+						<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
+								Пример 1
+							</h4>
+							<div className="space-y-2">
+								<p className="font-mono text-lg text-gray-800 dark:text-gray-200">
+									{t('overview.calculationExamples.linearExamples.example1.equation')}
+								</p>
+								<p className="text-green-600 dark:text-green-400 font-semibold">
+									Ответ: {t('overview.calculationExamples.linearExamples.example1.solution')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.linearExamples.example1.steps')}
+								</p>
+							</div>
+						</div>
+						
+						<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
+								Пример 2
+							</h4>
+							<div className="space-y-2">
+								<p className="font-mono text-lg text-gray-800 dark:text-gray-200">
+									{t('overview.calculationExamples.linearExamples.example2.equation')}
+								</p>
+								<p className="text-green-600 dark:text-green-400 font-semibold">
+									Ответ: {t('overview.calculationExamples.linearExamples.example2.solution')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.linearExamples.example2.steps')}
+								</p>
+							</div>
+						</div>
+						
+						<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-3">
+								Пример 3
+							</h4>
+							<div className="space-y-2">
+								<p className="font-mono text-lg text-gray-800 dark:text-gray-200">
+									{t('overview.calculationExamples.linearExamples.example3.equation')}
+								</p>
+								<p className="text-green-600 dark:text-green-400 font-semibold">
+									Ответ: {t('overview.calculationExamples.linearExamples.example3.solution')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.linearExamples.example3.steps')}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Quadratic Equations Examples */}
+				<div>
+					<h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+						{t('overview.calculationExamples.quadraticExamples.title')}
+					</h3>
+					<div className="grid md:grid-cols-3 gap-6">
+						<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
+								Два корня
+							</h4>
+							<div className="space-y-2">
+								<p className="font-mono text-lg text-gray-800 dark:text-gray-200">
+									{t('overview.calculationExamples.quadraticExamples.example1.equation')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.quadraticExamples.example1.discriminant')}
+								</p>
+								<p className="text-green-600 dark:text-green-400 font-semibold">
+									{t('overview.calculationExamples.quadraticExamples.example1.solutions')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.quadraticExamples.example1.steps')}
+								</p>
+							</div>
+						</div>
+						
+						<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
+								Один корень
+							</h4>
+							<div className="space-y-2">
+								<p className="font-mono text-lg text-gray-800 dark:text-gray-200">
+									{t('overview.calculationExamples.quadraticExamples.example2.equation')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.quadraticExamples.example2.discriminant')}
+								</p>
+								<p className="text-green-600 dark:text-green-400 font-semibold">
+									{t('overview.calculationExamples.quadraticExamples.example2.solutions')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.quadraticExamples.example2.steps')}
+								</p>
+							</div>
+						</div>
+						
+						<div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
+								Нет корней
+							</h4>
+							<div className="space-y-2">
+								<p className="font-mono text-lg text-gray-800 dark:text-gray-200">
+									{t('overview.calculationExamples.quadraticExamples.example3.equation')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.quadraticExamples.example3.discriminant')}
+								</p>
+								<p className="text-red-600 dark:text-red-400 font-semibold">
+									{t('overview.calculationExamples.quadraticExamples.example3.solutions')}
+								</p>
+								<p className="text-sm text-gray-600 dark:text-gray-400">
+									{t('overview.calculationExamples.quadraticExamples.example3.steps')}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			
 			{/* Linear Equations */}
 			<section>
@@ -123,6 +257,25 @@ export default function EquationsSEO() {
 							<p className="text-gray-700 dark:text-gray-300">{item}</p>
 						</div>
 					)) : null}
+				</div>
+			</section>
+
+			{/* FAQ Section */}
+			<section className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-xl">
+				<h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+					Часто задаваемые вопросы о решении уравнений
+				</h2>
+				<div className="grid md:grid-cols-2 gap-6">
+					{Array.from({ length: 30 }, (_, i) => i + 1).map((num) => (
+						<div key={num} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+							<h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-3">
+								{t(`faq.question${num}`)}
+							</h3>
+							<p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+								{t(`faq.answer${num}`)}
+							</p>
+						</div>
+					))}
 				</div>
 			</section>
 			

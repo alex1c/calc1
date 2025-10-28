@@ -31,6 +31,32 @@ export async function generateMetadata({
 	return {
 		title,
 		description,
+		keywords: [
+			'калькулятор уравнений',
+			'решение уравнений онлайн',
+			'линейные уравнения',
+			'квадратные уравнения',
+			'дискриминант',
+			'корни уравнения',
+			'математический калькулятор',
+			'решение уравнений бесплатно',
+			'онлайн калькулятор математики',
+			'формула Виета',
+			'пошаговое решение уравнений',
+			'математика онлайн',
+			'алгебра калькулятор',
+			'решение уравнений с объяснением',
+			'калькулятор для школьников',
+			'ЕГЭ математика',
+			'подготовка к экзаменам',
+			'математические расчеты',
+			'онлайн решатель уравнений',
+			'бесплатный калькулятор',
+		],
+		authors: [{ name: 'Calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		category: 'Mathematics',
 		alternates: {
 			canonical: canonicalUrl,
 			languages: {
@@ -73,6 +99,9 @@ export async function generateMetadata({
 				'max-snippet': -1,
 			},
 		},
+		verification: {
+			google: 'your-google-verification-code',
+		},
 	};
 }
 
@@ -95,36 +124,20 @@ export default async function EquationsPage({
 		namespace: 'calculators.equations.seo',
 	});
 
-	// JSON-LD structured data for FAQ
+	const canonicalUrl = `https://calc1.ru/${locale}/math/equations`;
+
+	// JSON-LD structured data for FAQ with all 30 questions
 	const faqStructuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
-		mainEntity: [
-			{
-				'@type': 'Question',
-				name: tSeo('faq.question1'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.answer1'),
-				},
+		mainEntity: Array.from({ length: 30 }, (_, i) => i + 1).map((num) => ({
+			'@type': 'Question',
+			name: tSeo(`faq.question${num}`),
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: tSeo(`faq.answer${num}`),
 			},
-			{
-				'@type': 'Question',
-				name: tSeo('faq.question2'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.answer2'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: tSeo('faq.question3'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.answer3'),
-				},
-			},
-		],
+		})),
 	};
 
 	// JSON-LD structured data for Software Application
@@ -135,6 +148,7 @@ export default async function EquationsPage({
 		description: t('description'),
 		applicationCategory: 'CalculatorApplication',
 		operatingSystem: 'Web',
+		url: canonicalUrl,
 		offers: {
 			'@type': 'Offer',
 			price: '0',
@@ -145,11 +159,69 @@ export default async function EquationsPage({
 			ratingValue: '4.8',
 			ratingCount: '256',
 		},
+		author: {
+			'@type': 'Organization',
+			name: 'Calc1.ru',
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'Calc1.ru',
+		},
+	};
+
+	// JSON-LD structured data for WebPage
+	const webPageStructuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+		name: t('title'),
+		description: t('description'),
+		url: canonicalUrl,
+		mainEntity: {
+			'@type': 'SoftwareApplication',
+			name: t('title'),
+			description: t('description'),
+		},
+		author: {
+			'@type': 'Organization',
+			name: 'Calc1.ru',
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'Calc1.ru',
+		},
+		dateModified: new Date().toISOString(),
+		inLanguage: locale,
+	};
+
+	// JSON-LD structured data for BreadcrumbList
+	const breadcrumbStructuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Главная',
+				item: `https://calc1.ru/${locale}`,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Математика',
+				item: `https://calc1.ru/${locale}/math`,
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: t('title'),
+				item: canonicalUrl,
+			},
+		],
 	};
 
 	// Breadcrumbs items
 	const breadcrumbItems = [
-		{ label: tSeo('breadcrumbs.math'), href: `/${locale}/math` },
+		{ label: tSeo('breadcrumbs.math'), href: '/math' },
 		{ label: t('title') },
 	];
 
@@ -166,6 +238,18 @@ export default async function EquationsPage({
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(softwareStructuredData),
+				}}
+			/>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(webPageStructuredData),
+				}}
+			/>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(breadcrumbStructuredData),
 				}}
 			/>
 

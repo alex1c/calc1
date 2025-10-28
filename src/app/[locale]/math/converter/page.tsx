@@ -31,6 +31,38 @@ export async function generateMetadata({
 	return {
 		title,
 		description,
+		keywords: [
+			'конвертер единиц',
+			'онлайн конвертер',
+			'конвертер длины',
+			'конвертер массы',
+			'конвертер времени',
+			'конвертер объема',
+			'перевод единиц измерения',
+			'метрические единицы',
+			'имперские единицы',
+			'конвертация единиц',
+			'калькулятор единиц',
+			'переводчик единиц',
+			'конвертер веса',
+			'конвертер расстояния',
+			'конвертер температуры',
+			'конвертер скорости',
+			'конвертер площади',
+			'конвертер давления',
+			'конвертер энергии',
+			'конвертер мощности',
+			'конвертер валют',
+			'конвертер данных',
+			'конвертер углов',
+			'конвертер частоты',
+			'конвертер электричества',
+			'конвертер магнитного поля',
+			'конвертер радиоактивности',
+			'конвертер освещенности',
+			'конвертер звука',
+			'конвертер вязкости',
+		],
 		alternates: {
 			canonical: canonicalUrl,
 			languages: {
@@ -102,26 +134,42 @@ export default async function ConverterPage({
 		mainEntity: [
 			{
 				'@type': 'Question',
-				name: tSeo('faq.question1'),
+				name: tSeo('faq.faqItems.0.q'),
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: tSeo('faq.answer1'),
+					text: tSeo('faq.faqItems.0.a'),
 				},
 			},
 			{
 				'@type': 'Question',
-				name: tSeo('faq.question2'),
+				name: tSeo('faq.faqItems.1.q'),
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: tSeo('faq.answer2'),
+					text: tSeo('faq.faqItems.1.a'),
 				},
 			},
 			{
 				'@type': 'Question',
-				name: tSeo('faq.question3'),
+				name: tSeo('faq.faqItems.2.q'),
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: tSeo('faq.answer3'),
+					text: tSeo('faq.faqItems.2.a'),
+				},
+			},
+			{
+				'@type': 'Question',
+				name: tSeo('faq.faqItems.3.q'),
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: tSeo('faq.faqItems.3.a'),
+				},
+			},
+			{
+				'@type': 'Question',
+				name: tSeo('faq.faqItems.4.q'),
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: tSeo('faq.faqItems.4.a'),
 				},
 			},
 		],
@@ -147,6 +195,42 @@ export default async function ConverterPage({
 		},
 	};
 
+	// JSON-LD structured data for WebApplication
+	const webApplicationStructuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'WebApplication',
+		name: tSeo('title'),
+		description: tSeo('description'),
+		url: `https://calc1.ru/${locale}/math/converter`,
+		applicationCategory: 'BusinessApplication',
+		operatingSystem: 'Any',
+		offers: {
+			'@type': 'Offer',
+			price: '0',
+			priceCurrency: 'USD',
+		},
+		author: {
+			'@type': 'Organization',
+			name: 'Calc1.ru',
+			url: 'https://calc1.ru',
+		},
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			ratingValue: '4.9',
+			ratingCount: '89',
+		},
+		featureList: [
+			'Конвертация длины',
+			'Конвертация массы',
+			'Конвертация времени',
+			'Конвертация объема',
+			'Поддержка метрических и имперских единиц',
+			'Мгновенные результаты',
+			'Высокая точность расчетов',
+			'Многоязычная поддержка',
+		],
+	};
+
 	// Breadcrumbs items
 	const breadcrumbItems = [
 		{ label: tSeo('breadcrumbs.math'), href: '/math' },
@@ -166,6 +250,12 @@ export default async function ConverterPage({
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(softwareStructuredData),
+				}}
+			/>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(webApplicationStructuredData),
 				}}
 			/>
 

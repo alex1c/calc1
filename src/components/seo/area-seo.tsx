@@ -1,395 +1,410 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import {
+	Circle,
+	Square,
+	Triangle,
+	Calculator,
+	Ruler,
+	Target,
+	BarChart3,
+	CheckCircle,
+	Lightbulb,
+	HelpCircle,
+} from 'lucide-react';
 
-/**
- * FAQ Structured Data for Area Calculator
- * Provides JSON-LD structured data for search engines
- */
-const generateFAQStructuredData = (t: any) => {
-	const faqData = {
-		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		mainEntity: [
-			{
-				'@type': 'Question',
-				name: 'How to calculate circle area?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: 'How to calculate square area?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: 'How to calculate triangle area?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: 'What are the area formulas?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('calculation.content'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: 'How to use area calculator?',
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('tips.content'),
-				},
-			},
-		],
-	};
-
-	return JSON.stringify(faqData);
-};
-
-/**
- * Calculator Structured Data
- * Provides JSON-LD structured data for the calculator tool
- */
-const generateCalculatorStructuredData = (t: any) => {
-	const calculatorData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		description: t('overview.content'),
-		url: 'https://calc1.ru/math/area',
-		applicationCategory: 'MathApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		featureList: [
-			t('calculation.content'),
-			'Multiple language support',
-			'Mobile responsive design',
-		],
-	};
-
-	return JSON.stringify(calculatorData);
-};
-
-/**
- * Area Calculator SEO Component
- * Displays comprehensive SEO content with structured data
- */
 export default function AreaSEO() {
-	const t = useTranslations('calculators.area.seo');
+	const t = useTranslations('calculators.area');
+
+	const faqData = [
+		{
+			q: t('seo.faq.faqItems.0.q'),
+			a: t('seo.faq.faqItems.0.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.1.q'),
+			a: t('seo.faq.faqItems.1.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.2.q'),
+			a: t('seo.faq.faqItems.2.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.3.q'),
+			a: t('seo.faq.faqItems.3.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.4.q'),
+			a: t('seo.faq.faqItems.4.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.5.q'),
+			a: t('seo.faq.faqItems.5.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.6.q'),
+			a: t('seo.faq.faqItems.6.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.7.q'),
+			a: t('seo.faq.faqItems.7.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.8.q'),
+			a: t('seo.faq.faqItems.8.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.9.q'),
+			a: t('seo.faq.faqItems.9.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.10.q'),
+			a: t('seo.faq.faqItems.10.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.11.q'),
+			a: t('seo.faq.faqItems.11.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.12.q'),
+			a: t('seo.faq.faqItems.12.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.13.q'),
+			a: t('seo.faq.faqItems.13.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.14.q'),
+			a: t('seo.faq.faqItems.14.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.15.q'),
+			a: t('seo.faq.faqItems.15.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.16.q'),
+			a: t('seo.faq.faqItems.16.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.17.q'),
+			a: t('seo.faq.faqItems.17.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.18.q'),
+			a: t('seo.faq.faqItems.18.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.19.q'),
+			a: t('seo.faq.faqItems.19.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.20.q'),
+			a: t('seo.faq.faqItems.20.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.21.q'),
+			a: t('seo.faq.faqItems.21.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.22.q'),
+			a: t('seo.faq.faqItems.22.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.23.q'),
+			a: t('seo.faq.faqItems.23.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.24.q'),
+			a: t('seo.faq.faqItems.24.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.25.q'),
+			a: t('seo.faq.faqItems.25.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.26.q'),
+			a: t('seo.faq.faqItems.26.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.27.q'),
+			a: t('seo.faq.faqItems.27.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.28.q'),
+			a: t('seo.faq.faqItems.28.a'),
+		},
+		{
+			q: t('seo.faq.faqItems.29.q'),
+			a: t('seo.faq.faqItems.29.a'),
+		},
+	];
 
 	return (
-		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: generateFAQStructuredData(t),
-				}}
-			/>
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: generateCalculatorStructuredData(t),
-				}}
-			/>
-
-			{/* SEO Content */}
-			<div className='prose prose-lg max-w-none'>
-				{/* Overview Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('overview.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-4'>{t('overview.content')}</p>
-						<p className='mb-4'>
-							{t('overview.additionalContent')}
-						</p>
-					</div>
-				</section>
-
-				{/* Calculation Methods Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('calculation.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('calculation.content')}</p>
-
-						{/* Formula Cards */}
-						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
-							{/* Circle Formula */}
-							<div className='bg-blue-50 border border-blue-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-blue-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<circle
-												cx='12'
-												cy='12'
-												r='10'
-												stroke='currentColor'
-												strokeWidth='2'
-												fill='none'
-											/>
-										</svg>
-									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('form.figureTypes.circle')}
-									</h3>
-									<div className='text-2xl font-mono text-blue-600 mb-2'>
-										S = π × r²
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('calculation.circleDescription')}
-									</p>
-								</div>
-							</div>
-
-							{/* Square Formula */}
-							<div className='bg-green-50 border border-green-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-green-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<rect
-												x='3'
-												y='3'
-												width='18'
-												height='18'
-												stroke='currentColor'
-												strokeWidth='2'
-												fill='none'
-											/>
-										</svg>
-									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('form.figureTypes.square')}
-									</h3>
-									<div className='text-2xl font-mono text-green-600 mb-2'>
-										S = a²
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('calculation.squareDescription')}
-									</p>
-								</div>
-							</div>
-
-							{/* Triangle Formula */}
-							<div className='bg-purple-50 border border-purple-200 rounded-lg p-6'>
-								<div className='text-center'>
-									<div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-										<svg
-											className='w-8 h-8 text-purple-600'
-											fill='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<path
-												d='M12 2L22 20H2L12 2Z'
-												stroke='currentColor'
-												strokeWidth='2'
-												fill='none'
-											/>
-										</svg>
-									</div>
-									<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-										{t('form.figureTypes.triangle')}
-									</h3>
-									<div className='text-2xl font-mono text-purple-600 mb-2'>
-										S = ½ × a × h
-									</div>
-									<p className='text-sm text-gray-600'>
-										{t('calculation.triangleDescription')}
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+		<div className='space-y-8'>
+			{/* Overview with Examples */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.overview.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 max-w-none mb-8'>
+					<p>{t('seo.overview.content')}</p>
+				</div>
 
 				{/* Examples Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('examples.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-							{/* Circle Example */}
-							<div className='bg-gray-50 rounded-lg p-6'>
-								<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-									{t('examples.circleExample')}
-								</h3>
-								<p className='mb-3'>
-									<strong>{t('examples.given')}:</strong>{' '}
-									Radius = 5 units
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('examples.calculation')}:
-									</strong>{' '}
-									S = π × r²
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('examples.calculation')}:
-									</strong>{' '}
-									S = π × 5² = π × 25 = 78.54 square units
-								</p>
-								<p className='text-sm text-gray-600'>
-									{t('examples.circleDescription')}
-								</p>
-							</div>
+				<div className='bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 mb-8'>
+					<h3 className='text-2xl font-bold text-gray-900 mb-6'>
+						{t('seo.overview.examples.title')}
+					</h3>
+					<p className='text-gray-700 mb-6'>
+						{t('seo.overview.examples.content')}
+					</p>
 
-							{/* Square Example */}
-							<div className='bg-gray-50 rounded-lg p-6'>
-								<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-									{t('examples.squareExample')}
-								</h3>
-								<p className='mb-3'>
-									<strong>{t('examples.given')}:</strong> Side
-									length = 7 units
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('examples.calculation')}:
-									</strong>{' '}
-									S = a²
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('examples.calculation')}:
-									</strong>{' '}
-									S = 7² = 49 square units
-								</p>
-								<p className='text-sm text-gray-600'>
-									{t('examples.squareDescription')}
-								</p>
+					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+						{/* Example 1 - Circle */}
+						<div className='bg-white rounded-lg p-4 shadow-sm'>
+							<h4 className='font-semibold text-gray-900 mb-2'>
+								{t('seo.overview.examples.example1.title')}
+							</h4>
+							<p className='text-gray-600 text-sm mb-2'>
+								{t(
+									'seo.overview.examples.example1.description'
+								)}
+							</p>
+							<div className='bg-indigo-50 p-3 rounded text-sm font-mono text-indigo-800 mb-2'>
+								{t(
+									'seo.overview.examples.example1.calculation'
+								)}
 							</div>
+							<p className='text-indigo-600 font-medium'>
+								{t('seo.overview.examples.example1.result')}
+							</p>
+						</div>
 
-							{/* Triangle Example */}
-							<div className='bg-gray-50 rounded-lg p-6'>
-								<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-									{t('examples.triangleExample')}
-								</h3>
-								<p className='mb-3'>
-									<strong>{t('examples.given')}:</strong> Base
-									= 8 units, Height = 6 units
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('examples.calculation')}:
-									</strong>{' '}
-									S = ½ × a × h
-								</p>
-								<p className='mb-3'>
-									<strong>
-										{t('examples.calculation')}:
-									</strong>{' '}
-									S = ½ × 8 × 6 = ½ × 48 = 24 square units
-								</p>
-								<p className='text-sm text-gray-600'>
-									{t('examples.triangleDescription')}
-								</p>
+						{/* Example 2 - Square */}
+						<div className='bg-white rounded-lg p-4 shadow-sm'>
+							<h4 className='font-semibold text-gray-900 mb-2'>
+								{t('seo.overview.examples.example2.title')}
+							</h4>
+							<p className='text-gray-600 text-sm mb-2'>
+								{t(
+									'seo.overview.examples.example2.description'
+								)}
+							</p>
+							<div className='bg-purple-50 p-3 rounded text-sm font-mono text-purple-800 mb-2'>
+								{t(
+									'seo.overview.examples.example2.calculation'
+								)}
 							</div>
+							<p className='text-purple-600 font-medium'>
+								{t('seo.overview.examples.example2.result')}
+							</p>
+						</div>
+
+						{/* Example 3 - Triangle */}
+						<div className='bg-white rounded-lg p-4 shadow-sm'>
+							<h4 className='font-semibold text-gray-900 mb-2'>
+								{t('seo.overview.examples.example3.title')}
+							</h4>
+							<p className='text-gray-600 text-sm mb-2'>
+								{t(
+									'seo.overview.examples.example3.description'
+								)}
+							</p>
+							<div className='bg-green-50 p-3 rounded text-sm font-mono text-green-800 mb-2'>
+								{t(
+									'seo.overview.examples.example3.calculation'
+								)}
+							</div>
+							<p className='text-green-600 font-medium'>
+								{t('seo.overview.examples.example3.result')}
+							</p>
+						</div>
+
+						{/* Example 4 - Large Circle */}
+						<div className='bg-white rounded-lg p-4 shadow-sm'>
+							<h4 className='font-semibold text-gray-900 mb-2'>
+								{t('seo.overview.examples.example4.title')}
+							</h4>
+							<p className='text-gray-600 text-sm mb-2'>
+								{t(
+									'seo.overview.examples.example4.description'
+								)}
+							</p>
+							<div className='bg-blue-50 p-3 rounded text-sm font-mono text-blue-800 mb-2'>
+								{t(
+									'seo.overview.examples.example4.calculation'
+								)}
+							</div>
+							<p className='text-blue-600 font-medium'>
+								{t('seo.overview.examples.example4.result')}
+							</p>
+						</div>
+
+						{/* Example 5 - Large Square */}
+						<div className='bg-white rounded-lg p-4 shadow-sm'>
+							<h4 className='font-semibold text-gray-900 mb-2'>
+								{t('seo.overview.examples.example5.title')}
+							</h4>
+							<p className='text-gray-600 text-sm mb-2'>
+								{t(
+									'seo.overview.examples.example5.description'
+								)}
+							</p>
+							<div className='bg-orange-50 p-3 rounded text-sm font-mono text-orange-800 mb-2'>
+								{t(
+									'seo.overview.examples.example5.calculation'
+								)}
+							</div>
+							<p className='text-orange-600 font-medium'>
+								{t('seo.overview.examples.example5.result')}
+							</p>
+						</div>
+
+						{/* Example 6 - Large Triangle */}
+						<div className='bg-white rounded-lg p-4 shadow-sm'>
+							<h4 className='font-semibold text-gray-900 mb-2'>
+								{t('seo.overview.examples.example6.title')}
+							</h4>
+							<p className='text-gray-600 text-sm mb-2'>
+								{t(
+									'seo.overview.examples.example6.description'
+								)}
+							</p>
+							<div className='bg-red-50 p-3 rounded text-sm font-mono text-red-800 mb-2'>
+								{t(
+									'seo.overview.examples.example6.calculation'
+								)}
+							</div>
+							<p className='text-red-600 font-medium'>
+								{t('seo.overview.examples.example6.result')}
+							</p>
 						</div>
 					</div>
-				</section>
+				</div>
+			</motion.section>
 
-				{/* Advantages Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('advantages.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('advantages.content')}</p>
-						<ul className='list-disc list-inside space-y-2 mb-6'>
-							{t
-								.raw('advantages.items')
-								.map((item: string, index: number) => (
-									<li key={index}>{item}</li>
-								))}
-						</ul>
+			{/* Calculation Section */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.calculation.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 max-w-none'>
+					<p>{t('seo.calculation.content')}</p>
+				</div>
+			</motion.section>
+
+			{/* Features Section */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.features.title')}
+				</h2>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					<div className='bg-indigo-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-indigo-900 mb-2'>
+							{t('seo.features.precision')}
+						</h3>
+						<p className='text-indigo-800'>
+							{t('seo.features.precisionDesc')}
+						</p>
 					</div>
-				</section>
+					<div className='bg-purple-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
+							{t('seo.features.instant')}
+						</h3>
+						<p className='text-purple-800'>
+							{t('seo.features.instantDesc')}
+						</p>
+					</div>
+					<div className='bg-green-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-green-900 mb-2'>
+							{t('seo.features.formulas')}
+						</h3>
+						<p className='text-green-800'>
+							{t('seo.features.formulasDesc')}
+						</p>
+					</div>
+					<div className='bg-blue-50 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
+							{t('seo.features.mobile')}
+						</h3>
+						<p className='text-blue-800'>
+							{t('seo.features.mobileDesc')}
+						</p>
+					</div>
+				</div>
+			</motion.section>
 
-				{/* Tips Section */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('tips.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<p className='mb-6'>{t('tips.content')}</p>
-						<div className='bg-yellow-50 border border-yellow-200 rounded-lg p-6'>
-							<h3 className='text-lg font-semibold text-yellow-800 mb-3'>
-								{t('tips.importantNotes')}
+			{/* Advantages Section */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.advantages.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 max-w-none'>
+					<p>{t('seo.advantages.content')}</p>
+				</div>
+			</motion.section>
+
+			{/* Tips Section */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.tips.title')}
+				</h2>
+				<div className='prose prose-lg text-gray-600 max-w-none'>
+					<p>{t('seo.tips.content')}</p>
+				</div>
+			</motion.section>
+
+			{/* FAQ Section */}
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white rounded-lg shadow-md p-8'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
+					{t('seo.faq.title')}
+				</h2>
+				<div className='space-y-6'>
+					{faqData.map((item, index) => (
+						<div
+							key={index}
+							className='border-b border-gray-200 pb-4'
+						>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
+								{item.q}
 							</h3>
-							<ul className='list-disc list-inside space-y-2 text-yellow-700'>
-								{t
-									.raw('tips.notes')
-									.map((note: string, index: number) => (
-										<li key={index}>{note}</li>
-									))}
-							</ul>
+							<p className='text-gray-600'>{item.a}</p>
 						</div>
-					</div>
-				</section>
-
-				{/* Common Applications */}
-				<section className='mb-12'>
-					<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-						{t('applications.title')}
-					</h2>
-					<div className='text-gray-700 leading-relaxed'>
-						<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-							<div>
-								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-									{t('applications.construction')}
-								</h3>
-								<ul className='list-disc list-inside space-y-1 text-gray-600'>
-									{t
-										.raw('applications.constructionItems')
-										.map((item: string, index: number) => (
-											<li key={index}>{item}</li>
-										))}
-								</ul>
-							</div>
-							<div>
-								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-									{t('applications.education')}
-								</h3>
-								<ul className='list-disc list-inside space-y-1 text-gray-600'>
-									{t
-										.raw('applications.educationItems')
-										.map((item: string, index: number) => (
-											<li key={index}>{item}</li>
-										))}
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</>
+					))}
+				</div>
+			</motion.section>
+		</div>
 	);
 }
