@@ -2,10 +2,10 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Home, Triangle, Package, Ruler } from 'lucide-react';
+import { Layers, Package, Ruler, Square } from 'lucide-react';
 
-export default function RoofingSEO() {
-	const t = useTranslations('calculators.roof');
+export default function PuttySEO() {
+	const t = useTranslations('calculators.putty');
 
 	const borderColors = [
 		'border-blue-500',
@@ -66,7 +66,7 @@ export default function RoofingSEO() {
 										className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600'
 									>
 										<h4 className='font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2'>
-											<Home className='w-5 h-5 text-red-600 dark:text-red-400' />
+											<Layers className='w-5 h-5 text-green-600 dark:text-green-400' />
 											{t(
 												`seo.overview.calculationExamples.example${exampleNum}.title`
 											)}
@@ -109,7 +109,7 @@ export default function RoofingSEO() {
 											</div>
 											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
-													Материал:
+													Тип:
 												</p>
 												<p className='text-xs text-purple-900 dark:text-purple-200'>
 													{t(
@@ -151,70 +151,66 @@ export default function RoofingSEO() {
 								<strong>{t('seo.calculation.area')}</strong>
 							</li>
 							<li>
-								<strong>
-									{t('seo.calculation.effective')}
-								</strong>
+								<strong>{t('seo.calculation.layers')}</strong>
 							</li>
 							<li>
-								<strong>
-									{t('seo.calculation.materials')}
-								</strong>
+								<strong>{t('seo.calculation.total')}</strong>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 
-			{/* Visual Chart: Roof Types */}
+			{/* Visual Chart: Putty Types */}
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						{t('seo.roofTypes.title')}
+						Типы шпатлёвки
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						{t('seo.roofTypes.content')}
+						Основные типы шпатлёвки и их характеристики:
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
 						{[
 							{
-								type: 'Односкатная',
-								icon: Triangle,
-								coefficient: '1.0-1.1',
-								description: 'Простая форма',
+								type: 'Стартовая шпатлёвка',
+								icon: Layers,
+								consumption: '1.2-1.5 кг/м²',
+								description: 'Для выравнивания неровностей',
 							},
 							{
-								type: 'Двускатная',
-								icon: Triangle,
-								coefficient: '1.15-1.3',
-								description: 'Стандартная форма',
+								type: 'Финишная шпатлёвка',
+								icon: Layers,
+								consumption: '0.8-1.2 кг/м²',
+								description: 'Для финального выравнивания',
 							},
 							{
-								type: 'Вальмовая',
-								icon: Triangle,
-								coefficient: '1.3-1.5',
-								description: 'Сложная форма',
+								type: 'Универсальная шпатлёвка',
+								icon: Layers,
+								consumption: '1-1.3 кг/м²',
+								description: 'Для старта и финиша',
 							},
 							{
-								type: 'Мансардная',
-								icon: Triangle,
-								coefficient: '1.4-1.6',
-								description: 'Очень сложная форма',
+								type: 'Гипсовая шпатлёвка',
+								icon: Layers,
+								consumption: '1.2-1.5 кг/м²',
+								description: 'Для сухих помещений',
 							},
 						].map((item, idx) => {
 							const Icon = item.icon;
 							return (
 								<div
 									key={idx}
-									className='bg-red-50 dark:bg-red-900/20 p-4 rounded-lg text-center border-2 border-red-200 dark:border-red-800'
+									className='bg-green-50 dark:bg-green-900/20 p-4 rounded-lg text-center border-2 border-green-200 dark:border-green-800'
 								>
-									<Icon className='w-8 h-8 text-red-600 dark:text-red-400 mx-auto mb-2' />
+									<Icon className='w-8 h-8 text-green-600 dark:text-green-400 mx-auto mb-2' />
 									<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
 										{item.type}
 									</h3>
 									<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
-										Коэфф: {item.coefficient}
+										{item.consumption}
 									</p>
 									<div className='text-xs text-gray-600 dark:text-gray-400'>
 										{item.description}
@@ -226,69 +222,62 @@ export default function RoofingSEO() {
 				</div>
 			</div>
 
-			{/* Visual Chart: Roof Materials */}
+			{/* Visual Chart: Standard Consumption Rates */}
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						{t('seo.materials.title')}
+						Нормы расхода шпатлёвки
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						{t('seo.materials.content')}
+						Расход шпатлёвки в зависимости от типа поверхности и
+						шпатлёвки:
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
 						{[
 							{
-								material: 'Металлочерепица',
-								icon: Package,
-								size: '1.18×0.35 м',
-								weight: '4-5 кг/м²',
+								surface: 'Гладкая поверхность',
+								consumption: '0.8-1 кг/м²',
+								description: 'Минимальный расход',
 							},
 							{
-								material: 'Профнастил',
-								icon: Package,
-								size: '1.0×1.2 м',
-								weight: '5-8 кг/м²',
+								surface: 'Средняя неровность',
+								consumption: '1-1.3 кг/м²',
+								description: 'Стандартный расход',
 							},
 							{
-								material: 'Мягкая кровля',
-								icon: Package,
-								size: '1.0×1.0 м',
-								weight: '12-15 кг/м²',
+								surface: 'Сильная неровность',
+								consumption: '1.3-1.8 кг/м²',
+								description: 'Увеличенный расход',
 							},
 							{
-								material: 'Ондулин',
-								icon: Package,
-								size: '2.0×0.95 м',
-								weight: '3-4 кг/м²',
+								surface: 'Потолок',
+								consumption: '1.2-1.5 кг/м²',
+								description: 'Для потолка',
 							},
 							{
-								material: 'Шифер',
-								icon: Package,
-								size: '1.75×1.13 м',
-								weight: '10-14 кг/м²',
+								surface: 'Стены',
+								consumption: '1-1.3 кг/м²',
+								description: 'Для стен',
 							},
-						].map((item, idx) => {
-							const Icon = item.icon;
-							return (
-								<div
-									key={idx}
-									className='bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg text-center border-2 border-orange-200 dark:border-orange-800'
-								>
-									<Icon className='w-8 h-8 text-orange-600 dark:text-orange-400 mx-auto mb-2' />
-									<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-										{item.material}
-									</h3>
-									<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
-										{item.size}
-									</p>
-									<div className='text-xs text-gray-600 dark:text-gray-400'>
-										{item.weight}
-									</div>
+						].map((item, idx) => (
+							<div
+								key={idx}
+								className='bg-teal-50 dark:bg-teal-900/20 p-4 rounded-lg text-center border-2 border-teal-200 dark:border-teal-800'
+							>
+								<Ruler className='w-8 h-8 text-teal-600 dark:text-teal-400 mx-auto mb-2' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{item.surface}
+								</h3>
+								<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
+									{item.consumption}
+								</p>
+								<div className='text-xs text-gray-600 dark:text-gray-400'>
+									{item.description}
 								</div>
-							);
-						})}
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
@@ -307,35 +296,35 @@ export default function RoofingSEO() {
 					<p>{t('seo.advantages.content')}</p>
 				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-					<div className='bg-red-50 dark:bg-red-900/20 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-red-900 dark:text-red-100 mb-2'>
-							{t('seo.advantages.accuracy.title')}
-						</h3>
-						<p className='text-red-800 dark:text-red-200'>
-							{t('seo.advantages.accuracy.description')}
-						</p>
-					</div>
 					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 dark:text-green-100 mb-2'>
-							{t('seo.advantages.savings.title')}
+							{t('seo.advantages.accuracy.title')}
 						</h3>
 						<p className='text-green-800 dark:text-green-200'>
-							{t('seo.advantages.savings.description')}
+							{t('seo.advantages.accuracy.description')}
 						</p>
 					</div>
 					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2'>
-							{t('seo.advantages.planning.title')}
+							{t('seo.advantages.savings.title')}
 						</h3>
 						<p className='text-blue-800 dark:text-blue-200'>
-							{t('seo.advantages.planning.description')}
+							{t('seo.advantages.savings.description')}
 						</p>
 					</div>
 					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 dark:text-purple-100 mb-2'>
-							{t('seo.advantages.convenience.title')}
+							{t('seo.advantages.planning.title')}
 						</h3>
 						<p className='text-purple-800 dark:text-purple-200'>
+							{t('seo.advantages.planning.description')}
+						</p>
+					</div>
+					<div className='bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-orange-900 dark:text-orange-100 mb-2'>
+							{t('seo.advantages.convenience.title')}
+						</h3>
+						<p className='text-orange-800 dark:text-orange-200'>
 							{t('seo.advantages.convenience.description')}
 						</p>
 					</div>
@@ -358,32 +347,32 @@ export default function RoofingSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 					<div className='bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4'>
-							{t('seo.tips.measurement.title')}
+							{t('seo.tips.preparation.title')}
 						</h3>
 						<ul className='space-y-2 text-yellow-800 dark:text-yellow-200'>
-							<li>• {t('seo.tips.measurement.dimensions')}</li>
-							<li>• {t('seo.tips.measurement.angle')}</li>
-							<li>• {t('seo.tips.measurement.overhang')}</li>
+							<li>• {t('seo.tips.preparation.surface')}</li>
+							<li>• {t('seo.tips.preparation.cleaning')}</li>
+							<li>• {t('seo.tips.preparation.primer')}</li>
 						</ul>
 					</div>
 					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4'>
-							{t('seo.tips.material.title')}
+							{t('seo.tips.application.title')}
 						</h3>
 						<ul className='space-y-2 text-blue-800 dark:text-blue-200'>
-							<li>• {t('seo.tips.material.selection')}</li>
-							<li>• {t('seo.tips.material.size')}</li>
-							<li>• {t('seo.tips.material.reserve')}</li>
+							<li>• {t('seo.tips.application.layers')}</li>
+							<li>• {t('seo.tips.application.thickness')}</li>
+							<li>• {t('seo.tips.application.drying')}</li>
 						</ul>
 					</div>
 					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 dark:text-green-100 mb-4'>
-							{t('seo.tips.installation.title')}
+							{t('seo.tips.selection.title')}
 						</h3>
 						<ul className='space-y-2 text-green-800 dark:text-green-200'>
-							<li>• {t('seo.tips.installation.preparation')}</li>
-							<li>• {t('seo.tips.installation.technique')}</li>
-							<li>• {t('seo.tips.installation.overlap')}</li>
+							<li>• {t('seo.tips.selection.type')}</li>
+							<li>• {t('seo.tips.selection.quality')}</li>
+							<li>• {t('seo.tips.selection.brand')}</li>
 						</ul>
 					</div>
 				</div>

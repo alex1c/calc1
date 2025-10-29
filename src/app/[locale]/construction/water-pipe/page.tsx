@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { Droplets, Calculator, Zap, Shield } from 'lucide-react';
 import Header from '@/components/header';
 import WaterPipeCalculator from '@/components/calculators/water-pipe-calculator';
@@ -10,15 +11,91 @@ interface Props {
 	params: { locale: string };
 }
 
+export async function generateMetadata({
+	params: { locale },
+}: Props): Promise<Metadata> {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) =>
+		messages.calculators['waterPipeCalculator'].seo[key];
+
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords,
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/construction/water-pipe`,
+			languages: {
+				ru: 'https://calc1.ru/ru/construction/water-pipe',
+				en: 'https://calc1.ru/en/construction/water-pipe',
+				es: 'https://calc1.ru/es/construction/water-pipe',
+				de: 'https://calc1.ru/de/construction/water-pipe',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/construction/water-pipe`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/water-pipe-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/water-pipe-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
+}
+
 export default async function WaterPipePage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.waterPipeCalculator',
-	});
-
-	const tSeo = await getTranslations({
-		locale,
-		namespace: 'calculators.waterPipeCalculator.seo',
 	});
 
 	const tCategories = await getTranslations({
@@ -40,6 +117,12 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 			label: t('title'),
 		},
 	];
+
+	// Get FAQ items for structured data
+	const faqRaw = t.raw('seo.faq.faqItems');
+	const faq = Array.isArray(faqRaw)
+		? (faqRaw as Array<{ q: string; a: string }>)
+		: [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -117,8 +200,8 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
+						name: t('seo.title'),
+						description: t('seo.description'),
 						url: `https://calc1.ru/${locale}/construction/water-pipe`,
 						applicationCategory: 'BusinessApplication',
 						operatingSystem: 'Any',
@@ -155,46 +238,89 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
+						mainEntity: faq.map((f) => ({
+							'@type': 'Question',
+							name: f.q,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: f.a,
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.0.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.0.a'),
-								},
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.1.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.1.a'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('construction.title'),
+								item: `https://calc1.ru/${locale}/construction`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.2.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.2.a'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/construction/water-pipe`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать диаметр водопроводной трубы',
+						description:
+							'Пошаговая инструкция по использованию калькулятора водопроводной трубы',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите расход воды',
+								text: 'Введите максимальный расход воды в литрах в минуту или секунду',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.3.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.3.a'),
-								},
+								'@type': 'HowToStep',
+								name: 'Выберите материал трубы',
+								text: 'Выберите материал трубы (ППР, металлопластик, сталь, медь)',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.4.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.4.a'),
-								},
+								'@type': 'HowToStep',
+								name: 'Укажите длину трубы',
+								text: 'Введите длину трубопровода в метрах для расчёта потерь напора',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите количество точек потребления',
+								text: 'Введите количество точек водопотребления (краны, смесители, унитазы)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите давление',
+								text: 'Укажите давление в системе водоснабжения в барах или атмосферах',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите результат',
+								text: 'Калькулятор автоматически рассчитает необходимый диаметр трубы, скорость потока и потери напора',
 							},
 						],
 					}),

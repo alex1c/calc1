@@ -73,12 +73,14 @@ export default function CableSectionCalculator() {
 			let calculatedCurrent = current;
 
 			// Calculate current from power if needed
+			// Power is in kW, convert to W for calculation
 			if (calculationType === 'power') {
+				const powerInWatts = power * 1000; // Convert kW to W
 				if (phaseType === 'single') {
-					calculatedCurrent = power / (voltage * powerFactor);
+					calculatedCurrent = powerInWatts / (voltage * powerFactor);
 				} else {
 					calculatedCurrent =
-						power / (Math.sqrt(3) * voltage * powerFactor);
+						powerInWatts / (Math.sqrt(3) * voltage * powerFactor);
 				}
 			}
 

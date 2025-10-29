@@ -21,44 +21,18 @@ export async function generateMetadata({
 		.default;
 	const t = (key: string) => messages.calculators.paint.seo[key];
 
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
+
 	return {
 		title: `${t('title')} | Calc1.ru`,
 		description: t('description'),
-		keywords: [
-			'калькулятор краски',
-			'расчёт краски',
-			'расход краски на м2',
-			'сколько краски нужно',
-			'калькулятор расхода краски',
-			'расчёт количества краски',
-			'краска для стен',
-			'водоэмульсионная краска',
-			'акриловая краска',
-			'масляная краска',
-			'латексная краска',
-			'покраска стен',
-			'расчёт краски для комнаты',
-			'расход краски на квадратный метр',
-			'норма расхода краски',
-			'калькулятор краски онлайн',
-			'расчёт краски с учётом слоёв',
-			'сколько литров краски нужно',
-			'калькулятор краски для потолка',
-			'калькулятор краски для фасада',
-			'расчёт краски для ремонта',
-			'план покраски',
-			'стоимость покраски',
-			'бюджет на покраску',
-			'выбор краски',
-			'краска для внутренних работ',
-			'краска для наружных работ',
-			'расход краски на 1 м2',
-			'покрытие краски',
-			'укрывистость краски',
-			'paint calculator',
-			'paint consumption calculator',
-			'paint quantity calculator',
-		],
+		keywords,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',

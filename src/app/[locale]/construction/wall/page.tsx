@@ -1,44 +1,366 @@
+import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+import { Square, Calculator, Package } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import WallCalculator from '@/components/calculators/wall-calculator';
 import WallSEO from '@/components/seo/wall-seo';
-import { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
 
-export default function WallPage() {
-	const t = useTranslations('calculators.wall');
-	const tBreadcrumbs = useTranslations('breadcrumbs');
+console.log(
+	'[WallPage] Module loaded - WallCalculator:',
+	typeof WallCalculator
+);
+console.log('[WallPage] Module loaded - WallSEO:', typeof WallSEO);
 
-	return (
-		<div className='min-h-screen bg-gray-50'>
-			<Header />
-			<Breadcrumbs
-				items={[
-					{
-						label: tBreadcrumbs('categories.construction'),
-						href: '/construction',
-					},
-					{ label: t('title') },
-				]}
-			/>
-			<WallCalculator />
-			<WallSEO />
-		</div>
-	);
+interface Props {
+	params: { locale: string };
 }
 
 export async function generateMetadata({
 	params: { locale },
-}: {
-	params: { locale: string };
-}): Promise<Metadata> {
+}: Props): Promise<Metadata> {
+	console.log('[WallPage] generateMetadata called with locale:', locale);
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		console.log('[WallPage] generateMetadata: invalid locale, notFound');
+		notFound();
+	}
+	console.log(
+		'[WallPage] generateMetadata: loading messages for locale:',
+		locale
+	);
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators.wall.seo[key];
+	console.log(
+		'[WallPage] generateMetadata: messages loaded, keys:',
+		Object.keys(messages.calculators || {})
+	);
+	const t = (key: string) => {
+		console.log('[WallPage] generateMetadata: translating key:', key);
+		const value = messages.calculators['wall']?.seo?.[key];
+		console.log('[WallPage] generateMetadata: translation value:', value);
+		return value;
+	};
+
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
 
 	return {
-		title: t('title'),
-		description: t('overview.content'),
-		keywords: t('seo'),
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords,
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/construction/wall`,
+			languages: {
+				ru: 'https://calc1.ru/ru/construction/wall',
+				en: 'https://calc1.ru/en/construction/wall',
+				es: 'https://calc1.ru/es/construction/wall',
+				de: 'https://calc1.ru/de/construction/wall',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/construction/wall`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/wall-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/wall-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
 	};
+}
+
+export default async function WallPage({ params: { locale } }: Props) {
+	console.log('[WallPage] WallPage called with locale:', locale);
+	const t = await getTranslations({
+		locale,
+		namespace: 'calculators.wall',
+	});
+	console.log('[WallPage] getTranslations for calculators.wall completed');
+
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+	console.log('[WallPage] getTranslations for categories completed');
+
+	// Validate locale
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		console.log('[WallPage] invalid locale, notFound');
+		notFound();
+	}
+
+	const breadcrumbItems = [
+		{
+			label: tCategories('construction.title'),
+			href: '/construction',
+		},
+		{
+			label: t('title'),
+		},
+	];
+	console.log('[WallPage] breadcrumbItems:', breadcrumbItems);
+
+	// Get FAQ items for structured data
+	console.log('[WallPage] Getting FAQ items from seo.faq.faqItems');
+	const faqRaw = t.raw('seo.faq.faqItems');
+	console.log(
+		'[WallPage] FAQ raw data:',
+		faqRaw,
+		'Type:',
+		typeof faqRaw,
+		'Is Array:',
+		Array.isArray(faqRaw)
+	);
+	const faq = Array.isArray(faqRaw)
+		? (faqRaw as Array<{ q: string; a: string }>)
+		: [];
+	console.log('[WallPage] FAQ processed:', faq.length, 'items');
+
+	return (
+		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+			{/* Header */}
+			<Header />
+
+			{/* Breadcrumbs */}
+			<div className='bg-white dark:bg-gray-800 shadow-sm'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+					<Breadcrumbs items={breadcrumbItems} />
+				</div>
+			</div>
+
+			{/* Hero Section */}
+			<div className='bg-gradient-to-r from-orange-600 to-red-600 dark:from-orange-800 dark:to-red-800'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+					<div className='text-center'>
+						<div className='flex items-center justify-center mb-6'>
+							<Package className='w-12 h-12 text-white mr-4' />
+							<h1 className='text-4xl md:text-5xl font-bold text-white'>
+								{t('title')}
+							</h1>
+						</div>
+						<p className='text-xl text-orange-100 max-w-3xl mx-auto mb-8'>
+							{t('description')}
+						</p>
+
+						{/* Quick Stats */}
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Square className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									м²
+								</div>
+								<div className='text-orange-100'>
+									{t('hero.format')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									99%
+								</div>
+								<div className='text-orange-100'>
+									{t('hero.accuracy')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Package className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									5%
+								</div>
+								<div className='text-orange-100'>
+									{t('hero.reserve')}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Main Content */}
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				{/* Calculator */}
+				<WallCalculator />
+
+				{/* SEO Content */}
+				<WallSEO />
+			</div>
+
+			{/* Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'WebApplication',
+						name: t('seo.title'),
+						description: t('seo.description'),
+						url: `https://calc1.ru/${locale}/construction/wall`,
+						applicationCategory: 'BusinessApplication',
+						operatingSystem: 'Any',
+						offers: {
+							'@type': 'Offer',
+							price: '0',
+							priceCurrency: 'USD',
+						},
+						author: {
+							'@type': 'Organization',
+							name: 'Calc1.ru',
+							url: 'https://calc1.ru',
+						},
+						aggregateRating: {
+							'@type': 'AggregateRating',
+							ratingValue: '4.9',
+							ratingCount: '89',
+						},
+						featureList: [
+							t('features.areaCalculation'),
+							t('features.volumeCalculation'),
+							t('features.materialsCalculation'),
+							t('features.mortarCalculation'),
+							t('features.accuracy'),
+						],
+					}),
+				}}
+			/>
+
+			{/* FAQ Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'FAQPage',
+						mainEntity: faq.map((f) => ({
+							'@type': 'Question',
+							name: f.q,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: f.a,
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('construction.title'),
+								item: `https://calc1.ru/${locale}/construction`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/construction/wall`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать количество кирпича и блоков',
+						description:
+							'Пошаговая инструкция по использованию калькулятора кирпича и блоков',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Измерьте стену',
+								text: 'Укажите длину, высоту и толщину стены в метрах',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите материал',
+								text: 'Выберите тип материала (кирпич одинарный, полуторный, двойной, газоблок, пеноблок)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите толщину стены',
+								text: 'Выберите толщину стены в кирпичах или блоках (0.5, 1, 1.5, 2)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите толщину шва',
+								text: 'Укажите толщину шва раствора в миллиметрах (обычно 10-15 мм)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Установите запас',
+								text: 'Укажите процент запаса материала (обычно 5-10%)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите результат',
+								text: 'Калькулятор автоматически рассчитает количество материалов, объём раствора и стоимость',
+							},
+						],
+					}),
+				}}
+			/>
+		</div>
+	);
 }

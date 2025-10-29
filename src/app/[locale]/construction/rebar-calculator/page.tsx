@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { Wrench, Calculator, Ruler, BarChart3 } from 'lucide-react';
 import Header from '@/components/header';
 import RebarCalculator from '@/components/calculators/rebar-calculator';
@@ -10,17 +11,92 @@ interface Props {
 	params: { locale: string };
 }
 
+export async function generateMetadata({
+	params: { locale },
+}: Props): Promise<Metadata> {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators['rebarCalculator'].seo[key];
+
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords,
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/construction/rebar-calculator`,
+			languages: {
+				ru: 'https://calc1.ru/ru/construction/rebar-calculator',
+				en: 'https://calc1.ru/en/construction/rebar-calculator',
+				es: 'https://calc1.ru/es/construction/rebar-calculator',
+				de: 'https://calc1.ru/de/construction/rebar-calculator',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/construction/rebar-calculator`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/rebar-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/rebar-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
+}
+
 export default async function RebarCalculatorPage({
 	params: { locale },
 }: Props) {
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.rebarCalculator',
-	});
-
-	const tSeo = await getTranslations({
-		locale,
-		namespace: 'calculators.rebarCalculator.seo',
 	});
 
 	const tCategories = await getTranslations({
@@ -42,6 +118,12 @@ export default async function RebarCalculatorPage({
 			label: t('title'),
 		},
 	];
+
+	// Get FAQ items for structured data
+	const faqRaw = t.raw('seo.faq.faqItems');
+	const faq = Array.isArray(faqRaw)
+		? (faqRaw as Array<{ q: string; a: string }>)
+		: [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -119,8 +201,8 @@ export default async function RebarCalculatorPage({
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
+						name: t('seo.title'),
+						description: t('seo.description'),
 						url: `https://calc1.ru/${locale}/construction/rebar-calculator`,
 						applicationCategory: 'BusinessApplication',
 						operatingSystem: 'Any',
@@ -157,46 +239,89 @@ export default async function RebarCalculatorPage({
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
+						mainEntity: faq.map((f) => ({
+							'@type': 'Question',
+							name: f.q,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: f.a,
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.0.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.0.a'),
-								},
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.1.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.1.a'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('construction.title'),
+								item: `https://calc1.ru/${locale}/construction`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.2.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.2.a'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/construction/rebar-calculator`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать количество арматуры',
+						description:
+							'Пошаговая инструкция по использованию калькулятора арматуры',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите тип конструкции',
+								text: 'Выберите тип конструкции (плита, фундамент, колонна, стена)',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.3.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.3.a'),
-								},
+								'@type': 'HowToStep',
+								name: 'Укажите размеры',
+								text: 'Введите длину, ширину и высоту конструкции в метрах',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.4.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.4.a'),
-								},
+								'@type': 'HowToStep',
+								name: 'Укажите шаг сетки',
+								text: 'Укажите шаг арматурной сетки в сантиметрах (обычно 10-20 см)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите диаметр арматуры',
+								text: 'Выберите диаметр арматуры (8, 10, 12, 14, 16, 18, 20 мм)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите количество слоёв',
+								text: 'Укажите количество слоёв арматуры (обычно 1-2 слоя)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите результат',
+								text: 'Калькулятор автоматически рассчитает количество стержней, общую длину и вес арматуры',
 							},
 						],
 					}),

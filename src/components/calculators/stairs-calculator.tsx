@@ -64,14 +64,15 @@ export default function StairsCalculator() {
 			// Calculate angle
 			const angle = Math.atan(stepHeight / stepDepth) * (180 / Math.PI);
 
-			// Calculate comfort formula (2R + T = 60-65 cm)
+			// Calculate comfort formula (2R + T = 600-650 mm = 60-65 cm)
+			// All values are in mm, formula result is in mm
 			const comfortFormula = 2 * stepHeight + stepDepth;
 
-			// Determine comfort level
+			// Determine comfort level (check in mm: 600-650 mm for optimal)
 			let comfortLevel = '';
-			if (comfortFormula >= 60 && comfortFormula <= 65) {
+			if (comfortFormula >= 600 && comfortFormula <= 650) {
 				comfortLevel = t('results.comfortLevel.optimal');
-			} else if (comfortFormula >= 58 && comfortFormula <= 67) {
+			} else if (comfortFormula >= 580 && comfortFormula <= 670) {
 				comfortLevel = t('results.comfortLevel.acceptable');
 			} else {
 				comfortLevel = t('results.comfortLevel.uncomfortable');
@@ -80,16 +81,18 @@ export default function StairsCalculator() {
 			// Generate recommendations
 			const recommendations = [];
 
-			if (comfortFormula < 60) {
+			if (comfortFormula < 600) {
 				recommendations.push(t('tips.formula.title'));
 			}
 			if (angle > 45) {
 				recommendations.push(t('tips.angle.title'));
 			}
-			if (stepHeight > 20) {
+			// stepHeight is in mm, normal range is 150-200 mm
+			if (stepHeight > 200) {
 				recommendations.push(t('tips.dimensions.title'));
 			}
-			if (stairsType === 'straight' && totalLength > 4) {
+			// totalLength is in mm, check in meters (4 m = 4000 mm)
+			if (stairsType === 'straight' && totalLength > 4000) {
 				recommendations.push(t('tips.safety.title'));
 			}
 
@@ -122,14 +125,14 @@ export default function StairsCalculator() {
 			const textToCopy =
 				`${t('results.title')}\n` +
 				`${t('results.stepsCount')}: ${result.stepsCount}\n` +
-				`${t('results.totalLength')}: ${result.totalLength.toFixed(
-					2
-				)} м\n` +
+				`${t('results.totalLength')}: ${(
+					result.totalLength / 1000
+				).toFixed(2)} м\n` +
 				`${t('results.angle')}: ${result.angle.toFixed(1)}°\n` +
 				`${t('results.comfortLevel')}: ${result.comfortLevel}\n` +
-				`${t(
-					'results.comfortFormula'
-				)}: ${result.comfortFormula.toFixed(1)} см`;
+				`${t('results.comfortFormula')}: ${(
+					result.comfortFormula / 10
+				).toFixed(1)} см`;
 
 			navigator.clipboard.writeText(textToCopy);
 			setCopied(true);
@@ -270,7 +273,7 @@ export default function StairsCalculator() {
 								</p>
 								<p className='text-purple-800'>
 									<strong>{t('results.totalLength')}:</strong>{' '}
-									{result.totalLength.toFixed(2)} м
+									{(result.totalLength / 1000).toFixed(2)} м
 								</p>
 								<p className='text-purple-800'>
 									<strong>{t('results.angle')}:</strong>{' '}
@@ -292,7 +295,7 @@ export default function StairsCalculator() {
 									<strong>
 										{t('results.comfortFormula')}:
 									</strong>{' '}
-									{result.comfortFormula.toFixed(1)} см
+									{(result.comfortFormula / 10).toFixed(1)} см
 								</p>
 							</div>
 						</div>
