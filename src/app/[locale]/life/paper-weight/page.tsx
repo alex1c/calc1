@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { FileText, Scale, Calculator, Ruler } from 'lucide-react';
 import Header from '@/components/header';
 import PaperWeightCalculator from '@/components/calculators/paper-weight-calculator';
@@ -10,15 +11,114 @@ interface Props {
 	params: { locale: string };
 }
 
+export async function generateMetadata({
+	params: { locale },
+}: Props): Promise<Metadata> {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators['paper-weight'].seo[key];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords: [
+			'калькулятор веса бумаги',
+			'расчет веса бумаги',
+			'вес бумаги онлайн',
+			'калькулятор веса листа бумаги',
+			'расчет веса бумаги по плотности',
+			'вес бумаги A4',
+			'вес пачки бумаги',
+			'калькулятор веса бумаги A4',
+			'расчет веса бумаги по формату',
+			'вес одного листа бумаги',
+			'калькулятор плотности бумаги',
+			'расчет веса картона',
+			'вес бумаги г/м²',
+			'калькулятор веса бумаги бесплатно',
+			'расчет веса бумаги для печати',
+			'вес бумаги A3',
+			'вес бумаги A5',
+			'вес бумаги Letter',
+			'калькулятор веса фотобумаги',
+			'расчет веса бумаги онлайн',
+			'вес бумаги по площади',
+			'калькулятор веса упаковочной бумаги',
+			'расчет веса бумаги для полиграфии',
+			'вес книжной бумаги',
+			'калькулятор веса самоклеящейся бумаги',
+			'вес бумаги для архива',
+			'расчет веса бумаги для почты',
+			'калькулятор веса бумаги формата',
+			'вес бумаги для дизайна',
+			'paper weight calculator',
+			'paper weight calculation',
+		],
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/life/paper-weight`,
+			languages: {
+				ru: 'https://calc1.ru/ru/life/paper-weight',
+				en: 'https://calc1.ru/en/life/paper-weight',
+				es: 'https://calc1.ru/es/life/paper-weight',
+				de: 'https://calc1.ru/de/life/paper-weight',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/life/paper-weight`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/paper-weight-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/paper-weight-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
+}
+
 export default async function PaperWeightPage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.paper-weight',
-	});
-
-	const tSeo = await getTranslations({
-		locale,
-		namespace: 'calculators.paper-weight.seo',
 	});
 
 	const tCategories = await getTranslations({
@@ -40,6 +140,12 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 			label: t('title'),
 		},
 	];
+
+	// Get FAQ items for structured data
+	const faqRaw = t.raw('seo.faq.faqItems');
+	const faq = Array.isArray(faqRaw)
+		? (faqRaw as Array<{ q: string; a: string }>)
+		: [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -117,8 +223,8 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
+						name: t('seo.title'),
+						description: t('seo.description'),
 						url: `https://calc1.ru/${locale}/life/paper-weight`,
 						applicationCategory: 'BusinessApplication',
 						operatingSystem: 'Any',
@@ -155,38 +261,79 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
+						mainEntity: faq.map((f) => ({
+							'@type': 'Question',
+							name: f.q,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: f.a,
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'Question',
-								name: tSeo('faq.howToCalculate.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.howToCalculate.answer'),
-								},
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.accuracy.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.accuracy.answer'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('life.title'),
+								item: `https://calc1.ru/${locale}/life`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.formats.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.formats.answer'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/life/paper-weight`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать вес бумаги',
+						description:
+							'Пошаговая инструкция по использованию калькулятора веса бумаги',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите формат бумаги',
+								text: 'Выберите формат бумаги из списка: A4, A3, A5 или Letter',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.applications.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.applications.answer'),
-								},
+								'@type': 'HowToStep',
+								name: 'Укажите плотность',
+								text: 'Выберите или введите плотность бумаги в г/м² (обычно указана на упаковке)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Введите количество листов',
+								text: 'Укажите количество листов бумаги, вес которых нужно рассчитать',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите результат',
+								text: 'Калькулятор автоматически рассчитает вес одного листа и общий вес всех листов в граммах и килограммах',
 							},
 						],
 					}),

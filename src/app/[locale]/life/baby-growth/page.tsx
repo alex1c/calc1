@@ -1,10 +1,11 @@
 import { getTranslations } from 'next-intl/server';
-import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 import { Baby, Ruler, Weight, TrendingUp } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import BabyGrowthSEO from '@/components/seo/baby-growth-seo';
+import dynamic from 'next/dynamic';
+import { Metadata } from 'next';
 
 // Dynamic import for calculator component
 const BabyGrowthCalculator = dynamic(
@@ -12,41 +13,115 @@ const BabyGrowthCalculator = dynamic(
 	{ ssr: false }
 );
 
-interface BabyGrowthPageProps {
-	params: {
-		locale: string;
-	};
+interface Props {
+	params: { locale: string };
 }
 
-// Generate metadata for SEO
-export async function generateMetadata({
-	params,
-}: BabyGrowthPageProps): Promise<Metadata> {
-	const t = await getTranslations({
-		locale: params.locale,
-		namespace: 'calculators.babyGrowth.seo',
-	});
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = params;
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators.babyGrowth.seo[key];
 
 	return {
-		title: t('title'),
+		title: `${t('title')} | Calc1.ru`,
 		description: t('description'),
-		keywords:
-			'калькулятор роста ребенка, вес ребенка по возрасту, нормы ВОЗ, процентили роста, развитие ребенка',
-		openGraph: {
-			title: t('title'),
-			description: t('description'),
-			type: 'website',
-			url: `https://calc1.ru/${params.locale}/life/baby-growth`,
+		keywords: [
+			'калькулятор роста ребенка',
+			'вес ребенка по возрасту',
+			'нормы ВОЗ рост ребенка',
+			'процентили роста ребенка',
+			'развитие ребенка',
+			'калькулятор веса ребенка',
+			'рост ребенка таблица',
+			'нормы роста детей ВОЗ',
+			'калькулятор роста и веса',
+			'процентили веса ребенка',
+			'оценка развития ребенка',
+			'нормальный рост ребенка',
+			'рост ребенка по месяцам',
+			'вес ребенка по месяцам',
+			'калькулятор физического развития',
+			'стандарты роста ВОЗ',
+			'калькулятор процентилей',
+			'оценка антропометрии',
+			'нормальный вес ребенка',
+			'таблица роста детей',
+			'калькулятор роста мальчика',
+			'калькулятор роста девочки',
+			'развитие младенца',
+			'калькулятор физического развития детей',
+			'росто-весовые показатели',
+			'антропометрические данные',
+			'детский ростометр',
+			'калькулятор процентилей роста',
+			'WHO growth calculator',
+			'child growth calculator',
+			'percentile calculator',
+			'growth chart calculator',
+		],
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
 		},
+		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
-			canonical: `https://calc1.ru/${params.locale}/life/baby-growth`,
+			canonical: `https://calc1.ru/${locale}/life/baby-growth`,
+			languages: {
+				ru: 'https://calc1.ru/ru/life/baby-growth',
+				en: 'https://calc1.ru/en/life/baby-growth',
+				es: 'https://calc1.ru/es/life/baby-growth',
+				de: 'https://calc1.ru/de/life/baby-growth',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/life/baby-growth`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/baby-growth-calculator-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/baby-growth-calculator-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
 		},
 	};
 }
 
-export default async function BabyGrowthPage({
-	params: { locale },
-}: BabyGrowthPageProps) {
+export default async function BabyGrowthPage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.babyGrowth',
@@ -57,6 +132,26 @@ export default async function BabyGrowthPage({
 		namespace: 'calculators.babyGrowth.seo',
 	});
 
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	// Validate locale
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+
+	const breadcrumbItems = [
+		{
+			label: tCategories('life.title'),
+			href: '/life',
+		},
+		{
+			label: t('title'),
+		},
+	];
+
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
 			{/* Header */}
@@ -65,7 +160,7 @@ export default async function BabyGrowthPage({
 			{/* Breadcrumbs */}
 			<div className='bg-white dark:bg-gray-800 shadow-sm'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
-					<Breadcrumbs />
+					<Breadcrumbs items={breadcrumbItems} />
 				</div>
 			</div>
 
@@ -170,38 +265,79 @@ export default async function BabyGrowthPage({
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
+						mainEntity: Array.from({ length: 30 }, (_, i) => ({
+							'@type': 'Question',
+							name: tSeo(`faq.faqItems.${i}.q`),
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: tSeo(`faq.faqItems.${i}.a`),
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'Question',
-								name: tSeo('faq.howToUse.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.howToUse.answer'),
-								},
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.whoStandards.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.whoStandards.answer'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('life.title'),
+								item: `https://calc1.ru/${locale}/life`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.percentileMeaning.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.percentileMeaning.answer'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/life/baby-growth`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать рост и вес ребенка по нормам ВОЗ',
+						description:
+							'Пошаговая инструкция по использованию калькулятора роста и веса ребенка',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите пол ребенка',
+								text: 'Укажите пол вашего ребенка (мальчик или девочка), так как нормы роста и веса различаются по полу',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.ageLimit.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.ageLimit.answer'),
-								},
+								'@type': 'HowToStep',
+								name: 'Введите возраст ребенка',
+								text: 'Укажите возраст ребенка в месяцах или годах (от 0 до 5 лет)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Введите рост и вес',
+								text: 'Введите текущий рост ребенка в сантиметрах и вес в килограммах',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите результат',
+								text: 'Калькулятор автоматически определит процентили роста и веса, покажет соответствие нормам ВОЗ и даст рекомендации',
 							},
 						],
 					}),

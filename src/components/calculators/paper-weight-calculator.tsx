@@ -188,13 +188,6 @@ export default function PaperWeightCalculator() {
 						</div>
 					)}
 				</div>
-
-				{/* SEO Text */}
-				<div className='mt-8 p-4 bg-blue-50 rounded-lg'>
-					<p className='text-sm text-blue-800'>
-						{t('calculators.paper-weight.seo')}
-					</p>
-				</div>
 			</div>
 		</div>
 	);
