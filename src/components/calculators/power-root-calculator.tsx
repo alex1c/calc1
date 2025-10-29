@@ -45,6 +45,7 @@ const getModeIcon = (mode: CalculationMode) => {
 
 export default function PowerRootCalculator() {
 	const t = useTranslations('calculators.powerRoot');
+	const tCommon = useTranslations('common');
 	const [input, setInput] = useState<PowerRootInput>({
 		mode: 'power',
 		base: 2,
@@ -88,7 +89,7 @@ export default function PowerRootCalculator() {
 			setError(
 				error instanceof Error
 					? error.message
-					: t('calculators.powerRoot.results.calculationError')
+					: t('results.calculationError')
 			);
 			setResult(null);
 		}
@@ -109,11 +110,9 @@ export default function PowerRootCalculator() {
 			<div className='bg-white rounded-lg shadow-lg'>
 				<div className='text-center p-8'>
 					<h1 className='text-3xl font-bold text-gray-900 mb-2'>
-						{t('calculators.powerRoot.title')}
+						{t('title')}
 					</h1>
-					<p className='text-gray-600'>
-						{t('calculators.powerRoot.description')}
-					</p>
+					<p className='text-gray-600'>{t('description')}</p>
 				</div>
 
 				<div className='p-8'>
@@ -123,16 +122,14 @@ export default function PowerRootCalculator() {
 							<div className='bg-gray-50 rounded-lg p-6'>
 								<div className='mb-6'>
 									<h2 className='text-xl font-semibold text-gray-900'>
-										{t('calculators.powerRoot.form.title')}
+										{t('form.title')}
 									</h2>
 								</div>
 								<div className='space-y-6'>
 									{/* Mode Selection */}
 									<div>
 										<label className='block text-sm font-medium text-gray-700 mb-3'>
-											{t(
-												'calculators.powerRoot.form.mode'
-											)}
+											{t('form.mode')}
 										</label>
 										<div className='grid grid-cols-2 gap-3'>
 											{(
@@ -157,7 +154,7 @@ export default function PowerRootCalculator() {
 													</div>
 													<span className='text-sm font-medium'>
 														{t(
-															`calculators.powerRoot.form.modes.${mode}`
+															`form.modes.${mode}`
 														)}
 													</span>
 												</button>
@@ -171,9 +168,7 @@ export default function PowerRootCalculator() {
 											<>
 												<div>
 													<label className='block text-sm font-medium text-gray-700 mb-2'>
-														{t(
-															'calculators.powerRoot.form.base'
-														)}
+														{t('form.base')}
 													</label>
 													<input
 														type='number'
@@ -191,9 +186,7 @@ export default function PowerRootCalculator() {
 												</div>
 												<div>
 													<label className='block text-sm font-medium text-gray-700 mb-2'>
-														{t(
-															'calculators.powerRoot.form.exponent'
-														)}
+														{t('form.exponent')}
 													</label>
 													<input
 														type='number'
@@ -218,9 +211,7 @@ export default function PowerRootCalculator() {
 											<>
 												<div>
 													<label className='block text-sm font-medium text-gray-700 mb-2'>
-														{t(
-															'calculators.powerRoot.form.number'
-														)}
+														{t('form.number')}
 													</label>
 													<input
 														type='number'
@@ -238,9 +229,7 @@ export default function PowerRootCalculator() {
 												</div>
 												<div>
 													<label className='block text-sm font-medium text-gray-700 mb-2'>
-														{t(
-															'calculators.powerRoot.form.rootDegree'
-														)}
+														{t('form.rootDegree')}
 													</label>
 													<input
 														type='number'
@@ -272,9 +261,7 @@ export default function PowerRootCalculator() {
 												className='bg-red-50 border border-red-200 rounded-md p-4'
 											>
 												<h4 className='text-sm font-medium text-red-800 mb-2'>
-													{t(
-														'calculators.powerRoot.form.errors.title'
-													)}
+													{t('form.errors.title')}
 												</h4>
 												<p className='text-sm text-red-700'>
 													• {error}
@@ -289,13 +276,13 @@ export default function PowerRootCalculator() {
 											onClick={handleCalculate}
 											className='flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors'
 										>
-											{t('common.calculate')}
+											{tCommon('calculate')}
 										</button>
 										<button
 											onClick={handleClear}
 											className='px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 font-semibold transition-colors'
 										>
-											{t('common.clear')}
+											{tCommon('clear')}
 										</button>
 									</div>
 								</div>
@@ -312,9 +299,7 @@ export default function PowerRootCalculator() {
 									className='bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-200'
 								>
 									<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-										{t(
-											'calculators.powerRoot.results.title'
-										)}
+										{t('results.title')}
 									</h3>
 
 									<div className='space-y-4'>
@@ -324,9 +309,7 @@ export default function PowerRootCalculator() {
 												{result.result}
 											</div>
 											<div className='text-sm text-gray-600 mb-2'>
-												{t(
-													'calculators.powerRoot.results.result'
-												)}
+												{t('results.result')}
 											</div>
 											<div className='text-lg font-mono text-gray-800'>
 												{result.formula}
@@ -336,10 +319,7 @@ export default function PowerRootCalculator() {
 										{/* Formula Explanation */}
 										<div className='bg-white rounded-lg p-4 shadow-sm'>
 											<div className='text-sm text-gray-600 mb-2'>
-												{t(
-													'calculators.powerRoot.results.formula'
-												)}
-												:
+												{t('results.formula')}:
 											</div>
 											<div className='font-mono text-lg text-gray-800'>
 												{result.formula}
@@ -349,23 +329,18 @@ export default function PowerRootCalculator() {
 										{/* Parameters Used */}
 										<div className='bg-white rounded-lg p-4 shadow-sm'>
 											<div className='text-sm text-gray-600 mb-2'>
-												{t(
-													'calculators.powerRoot.results.parametersUsed'
-												)}
-												:
+												{t('results.parametersUsed')}:
 											</div>
 											<div className='space-y-1'>
 												{result.mode === 'power' && (
 													<>
 														<div className='text-sm text-gray-800'>
-															{t(
-																'calculators.powerRoot.results.base'
-															)}
-															: {result.base}
+															{t('results.base')}:{' '}
+															{result.base}
 														</div>
 														<div className='text-sm text-gray-800'>
 															{t(
-																'calculators.powerRoot.results.exponent'
+																'results.exponent'
 															)}
 															: {result.exponent}
 														</div>
@@ -375,13 +350,13 @@ export default function PowerRootCalculator() {
 													<>
 														<div className='text-sm text-gray-800'>
 															{t(
-																'calculators.powerRoot.results.number'
+																'results.number'
 															)}
 															: {result.base}
 														</div>
 														<div className='text-sm text-gray-800'>
 															{t(
-																'calculators.powerRoot.results.rootDegree'
+																'results.rootDegree'
 															)}
 															: {result.exponent}
 														</div>

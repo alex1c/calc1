@@ -520,6 +520,11 @@
       "breadcrumbs": {
         "category": "Matemáticas"
       },
+      "hero": {
+        "types": "tipos de ecuaciones",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
+      },
       "form": {
         "title": "Introduce la ecuación",
         "mode": "Modo de entrada",
@@ -733,6 +738,11 @@
       "description": "Convierte longitud, masa, tiempo y volumen online",
       "breadcrumbs": {
         "category": "Matemáticas"
+      },
+      "hero": {
+        "units": "unidades de medida",
+        "accuracy": "Precisión del cálculo",
+        "format": "Formato de datos"
       },
       "form": {
         "title": "Convertidor de unidades",

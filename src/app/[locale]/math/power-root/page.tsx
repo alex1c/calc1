@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Calculator, Zap, Square, Cube } from 'lucide-react';
+import { Calculator, Zap, Square, Box } from 'lucide-react';
 import Header from '@/components/header';
 import PowerRootCalculator from '@/components/calculators/power-root-calculator';
 import PowerRootSEO from '@/components/seo/power-root-seo';
@@ -147,7 +147,7 @@ export default async function PowerRootPage({ params: { locale } }: Props) {
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
-								<Cube className='w-8 h-8 text-white mx-auto mb-2' />
+								<Box className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									99.9%
 								</div>

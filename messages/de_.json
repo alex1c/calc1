@@ -520,6 +520,11 @@
       "breadcrumbs": {
         "category": "Mathematik"
       },
+      "hero": {
+        "types": "Gleichungstypen",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
       "form": {
         "title": "Geben Sie die Gleichung ein",
         "mode": "Eingabemodus",
@@ -733,6 +738,11 @@
       "description": "Konvertieren Sie Länge, Masse, Zeit und Volumen online",
       "breadcrumbs": {
         "category": "Mathematik"
+      },
+      "hero": {
+        "units": "Maßeinheiten",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
       },
       "form": {
         "title": "Einheitenumrechner",

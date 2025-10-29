@@ -5,9 +5,107 @@ import Header from '@/components/header';
 import PregnancyCalculator from '@/components/calculators/pregnancy-calculator';
 import PregnancySEO from '@/components/seo/pregnancy-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import { Metadata } from 'next';
 
 interface Props {
 	params: { locale: string };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = params;
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators.pregnancy.seo[key];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords: [
+			'калькулятор беременности',
+			'дата родов',
+			'срок беременности',
+			'триместр беременности',
+			'беременность по неделям',
+			'калькулятор даты родов',
+			'предполагаемая дата родов',
+			'срок беременности онлайн',
+			'беременность калькулятор',
+			'дата зачатия',
+			'последняя менструация',
+			'ЭКО беременность',
+			'беременность после ЭКО',
+			'калькулятор беременности ЭКО',
+			'неделя беременности',
+			'дни до родов',
+			'калькулятор срока беременности',
+			'беременность триместр',
+			'календарь беременности',
+			'беременность по месяцам',
+			'pregnancy calculator',
+			'due date calculator',
+			'pregnancy week calculator',
+			'gestation calculator',
+			'EDD calculator',
+		],
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/life/pregnancy`,
+			languages: {
+				ru: 'https://calc1.ru/ru/life/pregnancy',
+				en: 'https://calc1.ru/en/life/pregnancy',
+				es: 'https://calc1.ru/es/life/pregnancy',
+				de: 'https://calc1.ru/de/life/pregnancy',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/life/pregnancy`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/pregnancy-calculator-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/pregnancy-calculator-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
 }
 
 export default async function PregnancyPage({ params: { locale } }: Props) {
@@ -155,38 +253,74 @@ export default async function PregnancyPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
+						mainEntity: Array.from({ length: 30 }, (_, i) => ({
+							'@type': 'Question',
+							name: tSeo(`faq.faqItems.${i}.q`),
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: tSeo(`faq.faqItems.${i}.a`),
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'Question',
-								name: tSeo('faq.howToCalculate.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.howToCalculate.answer'),
-								},
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.accuracy.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.accuracy.answer'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('life.title'),
+								item: `https://calc1.ru/${locale}/life`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.factors.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.factors.answer'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/life/pregnancy`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать срок беременности и дату родов',
+						description:
+							'Пошаговая инструкция по расчету срока беременности и предполагаемой даты родов',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите метод расчета',
+								text: 'Выберите один из трех методов: по дате последней менструации, по дате зачатия или по дате ЭКО',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.ivf.question'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.ivf.answer'),
-								},
+								'@type': 'HowToStep',
+								name: 'Введите дату',
+								text: 'Введите соответствующую дату в зависимости от выбранного метода',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите результат',
+								text: 'Калькулятор покажет предполагаемую дату родов, текущий срок беременности, триместр и количество дней до родов',
 							},
 						],
 					}),

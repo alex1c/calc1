@@ -4,128 +4,128 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
 export default function PowerRootSEO() {
-	const t = useTranslations('calculators.powerRoot');
+	const t = useTranslations('calculators.powerRoot.seo');
 
 	const faqData = [
 		{
-			q: t('seo.faq.faqItems.0.q'),
-			a: t('seo.faq.faqItems.0.a'),
+			q: t('faq.faqItems.0.q'),
+			a: t('faq.faqItems.0.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.1.q'),
-			a: t('seo.faq.faqItems.1.a'),
+			q: t('faq.faqItems.1.q'),
+			a: t('faq.faqItems.1.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.2.q'),
-			a: t('seo.faq.faqItems.2.a'),
+			q: t('faq.faqItems.2.q'),
+			a: t('faq.faqItems.2.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.3.q'),
-			a: t('seo.faq.faqItems.3.a'),
+			q: t('faq.faqItems.3.q'),
+			a: t('faq.faqItems.3.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.4.q'),
-			a: t('seo.faq.faqItems.4.a'),
+			q: t('faq.faqItems.4.q'),
+			a: t('faq.faqItems.4.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.5.q'),
-			a: t('seo.faq.faqItems.5.a'),
+			q: t('faq.faqItems.5.q'),
+			a: t('faq.faqItems.5.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.6.q'),
-			a: t('seo.faq.faqItems.6.a'),
+			q: t('faq.faqItems.6.q'),
+			a: t('faq.faqItems.6.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.7.q'),
-			a: t('seo.faq.faqItems.7.a'),
+			q: t('faq.faqItems.7.q'),
+			a: t('faq.faqItems.7.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.8.q'),
-			a: t('seo.faq.faqItems.8.a'),
+			q: t('faq.faqItems.8.q'),
+			a: t('faq.faqItems.8.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.9.q'),
-			a: t('seo.faq.faqItems.9.a'),
+			q: t('faq.faqItems.9.q'),
+			a: t('faq.faqItems.9.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.10.q'),
-			a: t('seo.faq.faqItems.10.a'),
+			q: t('faq.faqItems.10.q'),
+			a: t('faq.faqItems.10.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.11.q'),
-			a: t('seo.faq.faqItems.11.a'),
+			q: t('faq.faqItems.11.q'),
+			a: t('faq.faqItems.11.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.12.q'),
-			a: t('seo.faq.faqItems.12.a'),
+			q: t('faq.faqItems.12.q'),
+			a: t('faq.faqItems.12.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.13.q'),
-			a: t('seo.faq.faqItems.13.a'),
+			q: t('faq.faqItems.13.q'),
+			a: t('faq.faqItems.13.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.14.q'),
-			a: t('seo.faq.faqItems.14.a'),
+			q: t('faq.faqItems.14.q'),
+			a: t('faq.faqItems.14.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.15.q'),
-			a: t('seo.faq.faqItems.15.a'),
+			q: t('faq.faqItems.15.q'),
+			a: t('faq.faqItems.15.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.16.q'),
-			a: t('seo.faq.faqItems.16.a'),
+			q: t('faq.faqItems.16.q'),
+			a: t('faq.faqItems.16.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.17.q'),
-			a: t('seo.faq.faqItems.17.a'),
+			q: t('faq.faqItems.17.q'),
+			a: t('faq.faqItems.17.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.18.q'),
-			a: t('seo.faq.faqItems.18.a'),
+			q: t('faq.faqItems.18.q'),
+			a: t('faq.faqItems.18.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.19.q'),
-			a: t('seo.faq.faqItems.19.a'),
+			q: t('faq.faqItems.19.q'),
+			a: t('faq.faqItems.19.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.20.q'),
-			a: t('seo.faq.faqItems.20.a'),
+			q: t('faq.faqItems.20.q'),
+			a: t('faq.faqItems.20.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.21.q'),
-			a: t('seo.faq.faqItems.21.a'),
+			q: t('faq.faqItems.21.q'),
+			a: t('faq.faqItems.21.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.22.q'),
-			a: t('seo.faq.faqItems.22.a'),
+			q: t('faq.faqItems.22.q'),
+			a: t('faq.faqItems.22.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.23.q'),
-			a: t('seo.faq.faqItems.23.a'),
+			q: t('faq.faqItems.23.q'),
+			a: t('faq.faqItems.23.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.24.q'),
-			a: t('seo.faq.faqItems.24.a'),
+			q: t('faq.faqItems.24.q'),
+			a: t('faq.faqItems.24.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.25.q'),
-			a: t('seo.faq.faqItems.25.a'),
+			q: t('faq.faqItems.25.q'),
+			a: t('faq.faqItems.25.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.26.q'),
-			a: t('seo.faq.faqItems.26.a'),
+			q: t('faq.faqItems.26.q'),
+			a: t('faq.faqItems.26.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.27.q'),
-			a: t('seo.faq.faqItems.27.a'),
+			q: t('faq.faqItems.27.q'),
+			a: t('faq.faqItems.27.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.28.q'),
-			a: t('seo.faq.faqItems.28.a'),
+			q: t('faq.faqItems.28.q'),
+			a: t('faq.faqItems.28.a'),
 		},
 		{
-			q: t('seo.faq.faqItems.29.q'),
-			a: t('seo.faq.faqItems.29.a'),
+			q: t('faq.faqItems.29.q'),
+			a: t('faq.faqItems.29.a'),
 		},
 	];
 
@@ -139,28 +139,26 @@ export default function PowerRootSEO() {
 				className='bg-white rounded-lg shadow-md p-8'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-					{t('seo.overview.title')}
+					{t('overview.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600 max-w-none'>
-					<p className='mb-4'>{t('seo.overview.content')}</p>
-					<p className='mb-6'>
-						{t('seo.overview.additionalContent')}
-					</p>
+					<p className='mb-4'>{t('overview.content')}</p>
+					<p className='mb-6'>{t('overview.additionalContent')}</p>
 
 					{/* Calculation Examples */}
 					<div className='bg-gray-50 p-6 rounded-lg mt-6'>
 						<h3 className='text-xl font-semibold text-gray-900 mb-4'>
-							{t('seo.overview.calculationExamples.title')}
+							{t('overview.calculationExamples.title')}
 						</h3>
 						<p className='mb-4'>
-							{t('seo.overview.calculationExamples.content')}
+							{t('overview.calculationExamples.content')}
 						</p>
 
 						{/* Power Examples */}
 						<div className='mb-6'>
 							<h4 className='text-lg font-semibold text-gray-900 mb-3'>
 								{t(
-									'seo.overview.calculationExamples.powerExamples.title'
+									'overview.calculationExamples.powerExamples.title'
 								)}
 							</h4>
 							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -171,21 +169,21 @@ export default function PowerRootSEO() {
 									>
 										<h5 className='font-semibold text-blue-900 mb-2'>
 											{t(
-												`seo.overview.calculationExamples.powerExamples.example${
+												`overview.calculationExamples.powerExamples.example${
 													i + 1
 												}.title`
 											)}
 										</h5>
 										<div className='text-lg font-mono text-blue-600 mb-2'>
 											{t(
-												`seo.overview.calculationExamples.powerExamples.example${
+												`overview.calculationExamples.powerExamples.example${
 													i + 1
 												}.calculation`
 											)}
 										</div>
 										<p className='text-sm text-blue-800'>
 											{t(
-												`seo.overview.calculationExamples.powerExamples.example${
+												`overview.calculationExamples.powerExamples.example${
 													i + 1
 												}.description`
 											)}
@@ -199,7 +197,7 @@ export default function PowerRootSEO() {
 						<div>
 							<h4 className='text-lg font-semibold text-gray-900 mb-3'>
 								{t(
-									'seo.overview.calculationExamples.rootExamples.title'
+									'overview.calculationExamples.rootExamples.title'
 								)}
 							</h4>
 							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -210,21 +208,21 @@ export default function PowerRootSEO() {
 									>
 										<h5 className='font-semibold text-green-900 mb-2'>
 											{t(
-												`seo.overview.calculationExamples.rootExamples.example${
+												`overview.calculationExamples.rootExamples.example${
 													i + 1
 												}.title`
 											)}
 										</h5>
 										<div className='text-lg font-mono text-green-600 mb-2'>
 											{t(
-												`seo.overview.calculationExamples.rootExamples.example${
+												`overview.calculationExamples.rootExamples.example${
 													i + 1
 												}.calculation`
 											)}
 										</div>
 										<p className='text-sm text-green-800'>
 											{t(
-												`seo.overview.calculationExamples.rootExamples.example${
+												`overview.calculationExamples.rootExamples.example${
 													i + 1
 												}.description`
 											)}
@@ -245,45 +243,41 @@ export default function PowerRootSEO() {
 				className='bg-white rounded-lg shadow-md p-8'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-					{t('seo.howToUse.title')}
+					{t('howToUse.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600 max-w-none'>
-					<p className='mb-6'>{t('seo.howToUse.content')}</p>
+					<p className='mb-6'>{t('howToUse.content')}</p>
 
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 						<div className='bg-blue-50 p-6 rounded-lg'>
 							<h3 className='text-xl font-semibold text-blue-900 mb-4'>
-								{t('seo.howToUse.powerExample.title')}
+								{t('howToUse.powerExample.title')}
 							</h3>
 							<p className='mb-3'>
-								<strong>{t('seo.howToUse.given')}:</strong> 2³
+								<strong>{t('howToUse.given')}:</strong> 2³
 							</p>
 							<p className='mb-3'>
-								<strong>
-									{t('seo.howToUse.calculation')}:
-								</strong>{' '}
-								2 × 2 × 2 = 8
+								<strong>{t('howToUse.calculation')}:</strong> 2
+								× 2 × 2 = 8
 							</p>
 							<p className='text-sm text-blue-800'>
-								{t('seo.howToUse.powerExample.description')}
+								{t('howToUse.powerExample.description')}
 							</p>
 						</div>
 
 						<div className='bg-green-50 p-6 rounded-lg'>
 							<h3 className='text-xl font-semibold text-green-900 mb-4'>
-								{t('seo.howToUse.rootExample.title')}
+								{t('howToUse.rootExample.title')}
 							</h3>
 							<p className='mb-3'>
-								<strong>{t('seo.howToUse.given')}:</strong> ∛8
+								<strong>{t('howToUse.given')}:</strong> ∛8
 							</p>
 							<p className='mb-3'>
-								<strong>
-									{t('seo.howToUse.calculation')}:
-								</strong>{' '}
-								2³ = 8, поэтому ∛8 = 2
+								<strong>{t('howToUse.calculation')}:</strong> 2³
+								= 8, поэтому ∛8 = 2
 							</p>
 							<p className='text-sm text-green-800'>
-								{t('seo.howToUse.rootExample.description')}
+								{t('howToUse.rootExample.description')}
 							</p>
 						</div>
 					</div>
@@ -298,42 +292,42 @@ export default function PowerRootSEO() {
 				className='bg-white rounded-lg shadow-md p-8'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-					{t('seo.advantages.title')}
+					{t('advantages.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600 mb-6 max-w-none'>
-					<p>{t('seo.advantages.content')}</p>
+					<p>{t('advantages.content')}</p>
 				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							{t('seo.advantages.accurate')}
+							{t('advantages.accurate')}
 						</h3>
 						<p className='text-blue-800'>
-							{t('seo.advantages.accurateDesc')}
+							{t('advantages.accurateDesc')}
 						</p>
 					</div>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							{t('seo.advantages.flexible')}
+							{t('advantages.flexible')}
 						</h3>
 						<p className='text-green-800'>
-							{t('seo.advantages.flexibleDesc')}
+							{t('advantages.flexibleDesc')}
 						</p>
 					</div>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
-							{t('seo.advantages.comprehensive')}
+							{t('advantages.comprehensive')}
 						</h3>
 						<p className='text-purple-800'>
-							{t('seo.advantages.comprehensiveDesc')}
+							{t('advantages.comprehensiveDesc')}
 						</p>
 					</div>
 					<div className='bg-orange-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
-							{t('seo.advantages.export')}
+							{t('advantages.export')}
 						</h3>
 						<p className='text-orange-800'>
-							{t('seo.advantages.exportDesc')}
+							{t('advantages.exportDesc')}
 						</p>
 					</div>
 				</div>
@@ -347,18 +341,18 @@ export default function PowerRootSEO() {
 				className='bg-white rounded-lg shadow-md p-8'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-					{t('seo.tips.title')}
+					{t('tips.title')}
 				</h2>
 				<div className='prose prose-lg text-gray-600 mb-6 max-w-none'>
-					<p>{t('seo.tips.content')}</p>
+					<p>{t('tips.content')}</p>
 				</div>
 				<div className='bg-yellow-50 border border-yellow-200 rounded-lg p-6'>
 					<h3 className='text-lg font-semibold text-yellow-800 mb-3'>
-						{t('seo.tips.importantNotes')}
+						{t('tips.importantNotes')}
 					</h3>
 					<ul className='list-disc list-inside space-y-2 text-yellow-700'>
 						{t
-							.raw('seo.tips.notes')
+							.raw('tips.notes')
 							.map((note: string, index: number) => (
 								<li key={index}>{note}</li>
 							))}
@@ -374,16 +368,16 @@ export default function PowerRootSEO() {
 				className='bg-white rounded-lg shadow-md p-8'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-					{t('seo.applications.title')}
+					{t('applications.title')}
 				</h2>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div>
 						<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-							{t('seo.applications.mathematics')}
+							{t('applications.mathematics')}
 						</h3>
 						<ul className='list-disc list-inside space-y-1 text-gray-600'>
 							{t
-								.raw('seo.applications.mathematicsItems')
+								.raw('applications.mathematicsItems')
 								.map((item: string, index: number) => (
 									<li key={index}>{item}</li>
 								))}
@@ -391,11 +385,11 @@ export default function PowerRootSEO() {
 					</div>
 					<div>
 						<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-							{t('seo.applications.science')}
+							{t('applications.science')}
 						</h3>
 						<ul className='list-disc list-inside space-y-1 text-gray-600'>
 							{t
-								.raw('seo.applications.scienceItems')
+								.raw('applications.scienceItems')
 								.map((item: string, index: number) => (
 									<li key={index}>{item}</li>
 								))}
@@ -412,7 +406,7 @@ export default function PowerRootSEO() {
 				className='bg-white rounded-lg shadow-md p-8'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 mb-6'>
-					{t('seo.faq.title')}
+					{t('faq.title')}
 				</h2>
 				<div className='space-y-4'>
 					{faqData.map((faq, index) => (

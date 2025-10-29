@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { Ruler, Calculator, Zap, Shuffle } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
@@ -10,6 +12,10 @@ const ConverterCalculator = dynamic(
 	() => import('@/components/calculators/converter-calculator'),
 	{ ssr: false }
 );
+
+interface Props {
+	params: { locale: string };
+}
 
 /**
  * Generate metadata for Unit Converter page
@@ -114,9 +120,7 @@ export async function generateMetadata({
  */
 export default async function ConverterPage({
 	params: { locale },
-}: {
-	params: { locale: string };
-}) {
+}: Props) {
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.converter',
@@ -126,6 +130,16 @@ export default async function ConverterPage({
 		locale,
 		namespace: 'calculators.converter.seo',
 	});
+
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+
+	// Validate locale
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
 
 	// JSON-LD structured data for FAQ
 	const faqStructuredData = {
@@ -233,8 +247,13 @@ export default async function ConverterPage({
 
 	// Breadcrumbs items
 	const breadcrumbItems = [
-		{ label: tSeo('breadcrumbs.math'), href: '/math' },
-		{ label: t('title') },
+		{
+			label: tCategories('math.title'),
+			href: '/math',
+		},
+		{
+			label: t('title'),
+		},
 	];
 
 	return (
@@ -259,23 +278,67 @@ export default async function ConverterPage({
 				}}
 			/>
 
-			<div className='min-h-screen bg-gray-50'>
+			<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+				{/* Header */}
 				<Header />
 
-				<div className='container mx-auto px-4 py-8'>
-					{/* Breadcrumbs */}
-					<Breadcrumbs items={breadcrumbItems} />
+				{/* Breadcrumbs */}
+				<div className='bg-white dark:bg-gray-800 shadow-sm'>
+					<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+						<Breadcrumbs items={breadcrumbItems} />
+					</div>
+				</div>
 
-					{/* Page Header */}
-					<header className='mb-8'>
-						<h1 className='text-4xl font-bold text-gray-900 dark:text-white mb-4'>
-							{t('title')}
-						</h1>
-						<p className='text-xl text-gray-600 dark:text-gray-400'>
-							{t('description')}
-						</p>
-					</header>
+				{/* Hero Section */}
+				<div className='bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800'>
+					<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+						<div className='text-center'>
+							<div className='flex items-center justify-center mb-6'>
+								<Ruler className='w-12 h-12 text-white mr-4' />
+								<h1 className='text-4xl md:text-5xl font-bold text-white'>
+									{t('title')}
+								</h1>
+							</div>
+							<p className='text-xl text-blue-100 max-w-3xl mx-auto mb-8'>
+								{t('description')}
+							</p>
 
+							{/* Quick Stats */}
+							<div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+									<Ruler className='w-8 h-8 text-white mx-auto mb-2' />
+									<div className='text-2xl font-bold text-white mb-1'>
+										50+
+									</div>
+									<div className='text-blue-100'>
+										{t('hero.units')}
+									</div>
+								</div>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+									<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
+									<div className='text-2xl font-bold text-white mb-1'>
+										99%
+									</div>
+									<div className='text-blue-100'>
+										{t('hero.accuracy')}
+									</div>
+								</div>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+									<Shuffle className='w-8 h-8 text-white mx-auto mb-2' />
+									<div className='text-2xl font-bold text-white mb-1'>
+										PDF
+									</div>
+									<div className='text-blue-100'>
+										{t('hero.format')}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* Main Content */}
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 					{/* Calculator */}
 					<ConverterCalculator />
 

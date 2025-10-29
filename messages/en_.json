@@ -519,6 +519,11 @@
       "breadcrumbs": {
         "category": "Mathematics"
       },
+      "hero": {
+        "types": "equation types",
+        "accuracy": "Calculation accuracy",
+        "format": "Data format"
+      },
       "form": {
         "title": "Enter Equation",
         "mode": "Input Mode",
@@ -732,6 +737,11 @@
       "description": "Convert length, mass, time, and volume easily online",
       "breadcrumbs": {
         "category": "Mathematics"
+      },
+      "hero": {
+        "units": "units of measurement",
+        "accuracy": "Calculation accuracy",
+        "format": "Data format"
       },
       "form": {
         "title": "Unit Converter",
