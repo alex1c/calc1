@@ -12,6 +12,8 @@ import {
 	Cable,
 	TrendingUp,
 	Droplets,
+	Layers,
+	Sparkles,
 } from 'lucide-react';
 
 interface Props {
@@ -30,21 +32,45 @@ const getCalculators = (t: any) => [
 	},
 	{
 		id: 'paint',
-		title: t('categories.construction.calculators.materials.title'),
-		description: t(
-			'categories.construction.calculators.materials.description'
-		),
-		icon: Package,
+		title: t('calculators.paint.title'),
+		description: t('calculators.paint.description'),
+		icon: Paintbrush,
 		href: '/construction/paint',
 	},
 	{
-		id: 'tile-laminate',
-		title: t('categories.construction.calculators.tile-laminate.title'),
-		description: t(
-			'categories.construction.calculators.tile-laminate.description'
-		),
+		id: 'tile-glue',
+		title: t('calculators.tileGlue.title'),
+		description: t('calculators.tileGlue.description'),
 		icon: Square,
-		href: '/construction/tile-laminate',
+		href: '/construction/tile-glue',
+	},
+	{
+		id: 'putty',
+		title: t('calculators.putty.title'),
+		description: t('calculators.putty.description'),
+		icon: Layers,
+		href: '/construction/putty',
+	},
+	{
+		id: 'primer',
+		title: t('calculators.primer.title'),
+		description: t('calculators.primer.description'),
+		icon: Sparkles,
+		href: '/construction/primer',
+	},
+	{
+		id: 'tile',
+		title: t('calculators.tile.title'),
+		description: t('calculators.tile.description'),
+		icon: Square,
+		href: '/construction/tile',
+	},
+	{
+		id: 'laminate',
+		title: t('calculators.laminate.title'),
+		description: t('calculators.laminate.description'),
+		icon: Square,
+		href: '/construction/laminate',
 	},
 	{
 		id: 'concrete',

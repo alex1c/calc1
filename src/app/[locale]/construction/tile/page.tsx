@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { Home, Calculator, Package, Layers } from 'lucide-react';
+import { Square, Calculator, Package, Layers } from 'lucide-react';
 import Header from '@/components/header';
-import WallpaperCalculator from '@/components/calculators/wallpaper-calculator';
-import WallpaperSEO from '@/components/seo/wallpaper-seo';
+import TileCalculator from '@/components/calculators/tile-calculator';
+import TileSEO from '@/components/seo/tile-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 
 interface Props {
@@ -19,44 +19,43 @@ export async function generateMetadata({
 	}
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators['wallpaper'].seo[key];
+	const t = (key: string) => messages.calculators['tile'].seo[key];
 
 	return {
 		title: `${t('title')} | Calc1.ru`,
 		description: t('description'),
 		keywords: [
-			'калькулятор обоев',
-			'расчёт обоев',
-			'количество обоев',
-			'сколько рулонов обоев нужно',
-			'расчёт обоев на комнату',
-			'калькулятор обоев онлайн',
-			'обои для комнаты',
-			'обои для стен',
-			'рулоны обоев',
-			'расход обоев',
-			'запас обоев',
-			'подгонка рисунка обоев',
-			'раппорт обоев',
-			'оклейка обоев',
-			'виниловые обои',
-			'флизелиновые обои',
-			'бумажные обои',
-			'текстильные обои',
-			'гладкие обои',
-			'обои с рисунком',
-			'калькулятор обоев бесплатно',
-			'онлайн калькулятор обоев',
-			'расчёт количества обоев',
-			'обои калькулятор',
-			'калькулятор обоев на комнату',
-			'обои онлайн калькулятор',
-			'расчёт обоев для спальни',
-			'расчёт обоев для гостиной',
-			'расчёт обоев для кухни',
-			'расчёт обоев для ванной',
-			'калькулятор площади обоев',
-			'расчёт обоев с учётом окон и дверей',
+			'калькулятор плитки',
+			'расчёт плитки',
+			'количество плитки',
+			'плитка для пола',
+			'керамическая плитка',
+			'расчёт плитки на м2',
+			'калькулятор плитки онлайн',
+			'плитка для ванной',
+			'плитка для кухни',
+			'керамогранит',
+			'мозаика',
+			'калькулятор кафеля',
+			'расход плитки',
+			'сколько плитки нужно',
+			'упаковки плитки',
+			'запас плитки',
+			'подрезка плитки',
+			'расчёт напольной плитки',
+			'расчёт настенной плитки',
+			'плитка для стен',
+			'плитка для пола расчёт',
+			'калькулятор плитки бесплатно',
+			'онлайн калькулятор плитки',
+			'расчёт количества плитки',
+			'плитка калькулятор',
+			'калькулятор керамической плитки',
+			'расчёт плитки для ванной',
+			'расчёт плитки для кухни',
+			'плитка онлайн калькулятор',
+			'калькулятор напольной плитки',
+			'калькулятор настенной плитки',
 		],
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
@@ -68,24 +67,24 @@ export async function generateMetadata({
 		},
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
-			canonical: `https://calc1.ru/${locale}/construction/wallpaper`,
+			canonical: `https://calc1.ru/${locale}/construction/tile`,
 			languages: {
-				ru: 'https://calc1.ru/ru/construction/wallpaper',
-				en: 'https://calc1.ru/en/construction/wallpaper',
-				es: 'https://calc1.ru/es/construction/wallpaper',
-				de: 'https://calc1.ru/de/construction/wallpaper',
+				ru: 'https://calc1.ru/ru/construction/tile',
+				en: 'https://calc1.ru/en/construction/tile',
+				es: 'https://calc1.ru/es/construction/tile',
+				de: 'https://calc1.ru/de/construction/tile',
 			},
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
 			description: t('description'),
-			url: `https://calc1.ru/${locale}/construction/wallpaper`,
+			url: `https://calc1.ru/${locale}/construction/tile`,
 			siteName: 'Calc1.ru',
 			locale: locale,
 			type: 'website',
 			images: [
 				{
-					url: 'https://calc1.ru/images/wallpaper-og.jpg',
+					url: 'https://calc1.ru/images/tile-og.jpg',
 					width: 1200,
 					height: 630,
 					alt: t('title'),
@@ -96,7 +95,7 @@ export async function generateMetadata({
 			card: 'summary_large_image',
 			title: `${t('title')} | Calc1.ru`,
 			description: t('description'),
-			images: ['https://calc1.ru/images/wallpaper-og.jpg'],
+			images: ['https://calc1.ru/images/tile-og.jpg'],
 		},
 		robots: {
 			index: true,
@@ -116,10 +115,10 @@ export async function generateMetadata({
 	};
 }
 
-export default async function WallpaperPage({ params: { locale } }: Props) {
+export default async function TilePage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.wallpaper',
+		namespace: 'calculators.tile',
 	});
 
 	const tCategories = await getTranslations({
@@ -161,16 +160,16 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 			</div>
 
 			{/* Hero Section */}
-			<div className='bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-800 dark:to-pink-800'>
+			<div className='bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-800 dark:to-indigo-800'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 					<div className='text-center'>
 						<div className='flex items-center justify-center mb-6'>
-							<Home className='w-12 h-12 text-white mr-4' />
+							<Square className='w-12 h-12 text-white mr-4' />
 							<h1 className='text-4xl md:text-5xl font-bold text-white'>
 								{t('title')}
 							</h1>
 						</div>
-						<p className='text-xl text-purple-100 max-w-3xl mx-auto mb-8'>
+						<p className='text-xl text-blue-100 max-w-3xl mx-auto mb-8'>
 							{t('description')}
 						</p>
 
@@ -179,9 +178,9 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Package className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Рулоны
+									Упаковки
 								</div>
-								<div className='text-purple-100'>
+								<div className='text-blue-100'>
 									{t('hero.format')}
 								</div>
 							</div>
@@ -190,7 +189,7 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									99%
 								</div>
-								<div className='text-purple-100'>
+								<div className='text-blue-100'>
 									{t('hero.accuracy')}
 								</div>
 							</div>
@@ -199,7 +198,7 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									10%
 								</div>
-								<div className='text-purple-100'>
+								<div className='text-blue-100'>
 									{t('hero.reserve')}
 								</div>
 							</div>
@@ -211,10 +210,10 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* Calculator */}
-				<WallpaperCalculator />
+				<TileCalculator />
 
 				{/* SEO Content */}
-				<WallpaperSEO />
+				<TileSEO />
 			</div>
 
 			{/* Structured Data */}
@@ -226,7 +225,7 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 						'@type': 'WebApplication',
 						name: t('seo.title'),
 						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/construction/wallpaper`,
+						url: `https://calc1.ru/${locale}/construction/tile`,
 						applicationCategory: 'BusinessApplication',
 						operatingSystem: 'Any',
 						offers: {
@@ -246,8 +245,8 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 						},
 						featureList: [
 							t('features.areaCalculation'),
-							t('features.wallpaperCalculation'),
-							t('features.rollsCalculation'),
+							t('features.tileCalculation'),
+							t('features.packageCalculation'),
 							t('features.reserveCalculation'),
 							t('features.accuracy'),
 						],
@@ -298,7 +297,7 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 								'@type': 'ListItem',
 								position: 3,
 								name: t('title'),
-								item: `https://calc1.ru/${locale}/construction/wallpaper`,
+								item: `https://calc1.ru/${locale}/construction/tile`,
 							},
 						],
 					}),
@@ -312,34 +311,39 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'HowTo',
-						name: 'Как рассчитать количество обоев',
+						name: 'Как рассчитать количество плитки',
 						description:
-							'Пошаговая инструкция по использованию калькулятора обоев',
+							'Пошаговая инструкция по использованию калькулятора плитки',
 						step: [
 							{
 								'@type': 'HowToStep',
 								name: 'Измерьте комнату',
-								text: 'Укажите длину, ширину и высоту стен комнаты в метрах',
+								text: 'Укажите длину и ширину комнаты в метрах',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Добавьте окна и двери',
-								text: 'Укажите размеры всех окон и дверей в комнате',
+								name: 'Укажите размер плитки',
+								text: 'Введите длину и ширину плитки в сантиметрах',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Выберите размер рулона',
-								text: 'Выберите стандартный размер рулона обоев или укажите свой',
+								name: 'Укажите количество в упаковке',
+								text: 'Введите количество плиток в одной упаковке',
 							},
 							{
 								'@type': 'HowToStep',
 								name: 'Установите запас',
-								text: 'Укажите процент запаса материала (рекомендуется 10-15%)',
+								text: 'Укажите процент запаса материала (рекомендуется 10%)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Укажите ширину шва',
+								text: 'Введите ширину шва между плитками в миллиметрах',
 							},
 							{
 								'@type': 'HowToStep',
 								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимое количество рулонов обоев',
+								text: 'Калькулятор автоматически рассчитает необходимое количество плиток и упаковок',
 							},
 						],
 					}),

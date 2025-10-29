@@ -2,10 +2,10 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Home, Building2, Ruler, Package, Layers } from 'lucide-react';
+import { Square, Home, Building2, Package, Layers } from 'lucide-react';
 
-export default function WallpaperSEO() {
-	const t = useTranslations('calculators.wallpaper');
+export default function TileSEO() {
+	const t = useTranslations('calculators.tile');
 
 	const borderColors = [
 		'border-blue-500',
@@ -66,7 +66,7 @@ export default function WallpaperSEO() {
 										className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600'
 									>
 										<h4 className='font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2'>
-											<Home className='w-5 h-5 text-purple-600 dark:text-purple-400' />
+											<Square className='w-5 h-5 text-blue-600 dark:text-blue-400' />
 											{t(
 												`seo.overview.calculationExamples.example${exampleNum}.title`
 											)}
@@ -151,107 +151,61 @@ export default function WallpaperSEO() {
 								<strong>{t('seo.calculation.area')}</strong>
 							</li>
 							<li>
-								<strong>{t('seo.calculation.openings')}</strong>
+								<strong>{t('seo.calculation.tile')}</strong>
 							</li>
 							<li>
-								<strong>{t('seo.calculation.rolls')}</strong>
+								<strong>{t('seo.calculation.packages')}</strong>
 							</li>
 						</ul>
-					</div>
-					<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
-						<div className='space-y-3'>
-							<div className='flex items-start'>
-								<span className='bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full mr-3 mt-1'>
-									1
-								</span>
-								<p className='text-gray-700 dark:text-gray-300'>
-									{t('seo.calculation.steps.area')}
-								</p>
-							</div>
-							<div className='flex items-start'>
-								<span className='bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full mr-3 mt-1'>
-									2
-								</span>
-								<p className='text-gray-700 dark:text-gray-300'>
-									{t('seo.calculation.steps.openings')}
-								</p>
-							</div>
-							<div className='flex items-start'>
-								<span className='bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full mr-3 mt-1'>
-									3
-								</span>
-								<p className='text-gray-700 dark:text-gray-300'>
-									{t('seo.calculation.steps.useful')}
-								</p>
-							</div>
-						</div>
-						<div className='space-y-3'>
-							<div className='flex items-start'>
-								<span className='bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full mr-3 mt-1'>
-									4
-								</span>
-								<p className='text-gray-700 dark:text-gray-300'>
-									{t('seo.calculation.steps.rolls')}
-								</p>
-							</div>
-							<div className='flex items-start'>
-								<span className='bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full mr-3 mt-1'>
-									5
-								</span>
-								<p className='text-gray-700 dark:text-gray-300'>
-									{t('seo.calculation.steps.reserve')}
-								</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 
-			{/* Visual Chart: Wallpaper Types */}
+			{/* Visual Chart: Tile Types */}
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Типы обоев для стен
+						Типы плитки для пола и стен
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Популярные типы обоев и их характеристики:
+						Популярные размеры и типы плитки для разных помещений:
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
 						{[
 							{
-								type: 'Виниловые обои',
-								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Влагостойкие, моющиеся',
+								type: 'Керамическая плитка',
+								icon: Square,
+								size: '30×30, 45×45 см',
+								description: 'Для пола и стен',
 							},
 							{
-								type: 'Флизелиновые обои',
-								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Прочные, дышащие',
+								type: 'Керамогранит',
+								icon: Square,
+								size: '60×60, 80×80 см',
+								description: 'Для пола, износостойкая',
 							},
 							{
-								type: 'Бумажные обои',
-								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Экологичные, дёшевые',
+								type: 'Мозаика',
+								icon: Square,
+								size: '5×5, 10×10 см',
+								description: 'Для декора и фартуков',
 							},
 							{
-								type: 'Текстильные обои',
-								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Декоративные, дорогие',
+								type: 'Плитка для ванной',
+								icon: Home,
+								size: '20×30, 30×60 см',
+								description: 'Влагостойкая',
 							},
 						].map((item, idx) => {
 							const Icon = item.icon;
 							return (
 								<div
 									key={idx}
-									className='bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg text-center border-2 border-purple-200 dark:border-purple-800'
+									className='bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg text-center border-2 border-blue-200 dark:border-blue-800'
 								>
-									<Icon className='w-8 h-8 text-purple-600 dark:text-purple-400 mx-auto mb-2' />
+									<Icon className='w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2' />
 									<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
 										{item.type}
 									</h3>
@@ -264,65 +218,6 @@ export default function WallpaperSEO() {
 								</div>
 							);
 						})}
-					</div>
-				</div>
-			</div>
-
-			{/* Visual Chart: Standard Roll Sizes */}
-			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
-				<div className='mb-4'>
-					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Стандартные размеры рулонов обоев
-					</h2>
-				</div>
-				<div>
-					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Распространённые размеры рулонов обоев и их применение:
-					</p>
-					<div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
-						{[
-							{
-								size: '0.53×10.05 м',
-								area: '5.33 м²',
-								description: 'Стандартный',
-							},
-							{
-								size: '0.7×10.05 м',
-								area: '7.04 м²',
-								description: 'Широкий',
-							},
-							{
-								size: '1.06×10.05 м',
-								area: '10.65 м²',
-								description: 'Очень широкий',
-							},
-							{
-								size: '0.53×15.0 м',
-								area: '7.95 м²',
-								description: 'Длинный',
-							},
-							{
-								size: '0.7×15.0 м',
-								area: '10.5 м²',
-								description: 'Широкий длинный',
-							},
-						].map((item, idx) => (
-							<div
-								key={idx}
-								className='bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg text-center border-2 border-pink-200 dark:border-pink-800'
-							>
-								<Ruler className='w-8 h-8 text-pink-600 dark:text-pink-400 mx-auto mb-2' />
-								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{item.size}
-								</h3>
-								<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
-									{item.area}
-								</p>
-								<div className='text-xs text-gray-600 dark:text-gray-400'>
-									{item.description}
-								</div>
-							</div>
-						))}
 					</div>
 				</div>
 			</div>
@@ -341,25 +236,37 @@ export default function WallpaperSEO() {
 					<p>{t('seo.advantages.content')}</p>
 				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-purple-900 dark:text-purple-100 mb-2'>
-							{t('seo.advantages.accuracy')}
+					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2'>
+							{t('seo.advantages.accuracy.title')}
 						</h3>
+						<p className='text-blue-800 dark:text-blue-200'>
+							{t('seo.advantages.accuracy.description')}
+						</p>
 					</div>
 					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 dark:text-green-100 mb-2'>
-							{t('seo.advantages.savings')}
+							{t('seo.advantages.savings.title')}
 						</h3>
+						<p className='text-green-800 dark:text-green-200'>
+							{t('seo.advantages.savings.description')}
+						</p>
 					</div>
-					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2'>
-							{t('seo.advantages.planning')}
+					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-purple-900 dark:text-purple-100 mb-2'>
+							{t('seo.advantages.planning.title')}
 						</h3>
+						<p className='text-purple-800 dark:text-purple-200'>
+							{t('seo.advantages.planning.description')}
+						</p>
 					</div>
 					<div className='bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-orange-900 dark:text-orange-100 mb-2'>
-							{t('seo.advantages.convenience')}
+							{t('seo.advantages.quality.title')}
 						</h3>
+						<p className='text-orange-800 dark:text-orange-200'>
+							{t('seo.advantages.quality.description')}
+						</p>
 					</div>
 				</div>
 			</motion.section>
@@ -377,61 +284,25 @@ export default function WallpaperSEO() {
 				<div className='prose prose-lg text-gray-600 dark:text-gray-300 mb-6 max-w-none'>
 					<p>{t('seo.tips.content')}</p>
 				</div>
-				<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-6'>
-					<ul className='space-y-2'>
-						<li className='flex items-start'>
-							<span className='text-green-500 mr-2'>✓</span>
-							<span className='text-gray-700 dark:text-gray-300'>
-								{t('seo.tips.measurement')}
-							</span>
-						</li>
-						<li className='flex items-start'>
-							<span className='text-green-500 mr-2'>✓</span>
-							<span className='text-gray-700 dark:text-gray-300'>
-								{t('seo.tips.pattern')}
-							</span>
-						</li>
-					</ul>
-					<ul className='space-y-2'>
-						<li className='flex items-start'>
-							<span className='text-green-500 mr-2'>✓</span>
-							<span className='text-gray-700 dark:text-gray-300'>
-								{t('seo.tips.reserve')}
-							</span>
-						</li>
-						<li className='flex items-start'>
-							<span className='text-green-500 mr-2'>✓</span>
-							<span className='text-gray-700 dark:text-gray-300'>
-								{t('seo.tips.quality')}
-							</span>
-						</li>
-					</ul>
-				</div>
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 					<div className='bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4'>
-							{t('seo.tips.measurementDetails.title')}
+							{t('seo.tips.measurement.title')}
 						</h3>
 						<ul className='space-y-2 text-yellow-800 dark:text-yellow-200'>
-							<li>
-								• {t('seo.tips.measurementDetails.accuracy')}
-							</li>
-							<li>
-								• {t('seo.tips.measurementDetails.openings')}
-							</li>
-							<li>
-								• {t('seo.tips.measurementDetails.recheck')}
-							</li>
+							<li>• {t('seo.tips.measurement.accuracy')}</li>
+							<li>• {t('seo.tips.measurement.area')}</li>
+							<li>• {t('seo.tips.measurement.recheck')}</li>
 						</ul>
 					</div>
 					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4'>
-							{t('seo.tips.patternDetails.title')}
+							{t('seo.tips.reserve.title')}
 						</h3>
 						<ul className='space-y-2 text-blue-800 dark:text-blue-200'>
-							<li>• {t('seo.tips.patternDetails.rapport')}</li>
-							<li>• {t('seo.tips.patternDetails.matching')}</li>
-							<li>• {t('seo.tips.patternDetails.reserve')}</li>
+							<li>• {t('seo.tips.reserve.percentage')}</li>
+							<li>• {t('seo.tips.reserve.cutting')}</li>
+							<li>• {t('seo.tips.reserve.defects')}</li>
 						</ul>
 					</div>
 					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
@@ -439,9 +310,9 @@ export default function WallpaperSEO() {
 							{t('seo.tips.installation.title')}
 						</h3>
 						<ul className='space-y-2 text-green-800 dark:text-green-200'>
-							<li>• {t('seo.tips.installation.preparation')}</li>
+							<li>• {t('seo.tips.installation.pattern')}</li>
+							<li>• {t('seo.tips.installation.grout')}</li>
 							<li>• {t('seo.tips.installation.quality')}</li>
-							<li>• {t('seo.tips.installation.tools')}</li>
 						</ul>
 					</div>
 				</div>
