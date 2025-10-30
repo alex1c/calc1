@@ -1,11 +1,20 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { Car, Calculator, CreditCard, TrendingUp } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { Building2, Calculator, Package, BarChart3 } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
-import CarLoanCalculator from '@/components/calculators/car-loan-calculator';
-import CarLoanSEO from '@/components/seo/car-loan-seo';
+
+// Dynamic imports for client components
+const FoundationCalculator = dynamic(
+	() => import('@/components/calculators/foundation-calculator'),
+	{ ssr: false }
+);
+
+const FoundationSEO = dynamic(() => import('@/components/seo/foundation-seo'), {
+	ssr: false,
+});
 
 interface Props {
 	params: { locale: string };
@@ -19,7 +28,7 @@ export async function generateMetadata({
 	}
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators['car-loan'].seo[key];
+	const t = (key: string) => messages.calculators.foundation.seo[key];
 
 	const keywordsString = t('keywords') || '';
 	const keywords = keywordsString
@@ -43,24 +52,24 @@ export async function generateMetadata({
 		},
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
-			canonical: `https://calc1.ru/${locale}/auto/car-loan`,
+			canonical: `https://calc1.ru/${locale}/construction/foundation`,
 			languages: {
-				ru: 'https://calc1.ru/ru/auto/car-loan',
-				en: 'https://calc1.ru/en/auto/car-loan',
-				es: 'https://calc1.ru/es/auto/car-loan',
-				de: 'https://calc1.ru/de/auto/car-loan',
+				ru: 'https://calc1.ru/ru/construction/foundation',
+				en: 'https://calc1.ru/en/construction/foundation',
+				es: 'https://calc1.ru/es/construction/foundation',
+				de: 'https://calc1.ru/de/construction/foundation',
 			},
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
 			description: t('description'),
-			url: `https://calc1.ru/${locale}/auto/car-loan`,
+			url: `https://calc1.ru/${locale}/construction/foundation`,
 			siteName: 'Calc1.ru',
 			locale: locale,
 			type: 'website',
 			images: [
 				{
-					url: 'https://calc1.ru/images/car-loan-calculator-og.jpg',
+					url: 'https://calc1.ru/images/foundation-calculator-og.jpg',
 					width: 1200,
 					height: 630,
 					alt: t('title'),
@@ -71,7 +80,7 @@ export async function generateMetadata({
 			card: 'summary_large_image',
 			title: `${t('title')} | Calc1.ru`,
 			description: t('description'),
-			images: ['https://calc1.ru/images/car-loan-calculator-og.jpg'],
+			images: ['https://calc1.ru/images/foundation-calculator-og.jpg'],
 		},
 		robots: {
 			index: true,
@@ -91,15 +100,14 @@ export async function generateMetadata({
 	};
 }
 
-export default async function CarLoanPage({ params: { locale } }: Props) {
+export default async function FoundationPage({ params: { locale } }: Props) {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.car-loan',
-	});
-
-	const tSeo = await getTranslations({
-		locale,
-		namespace: 'calculators.car-loan.seo',
+		namespace: 'calculators.foundation',
 	});
 
 	const tCategories = await getTranslations({
@@ -107,15 +115,10 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
-	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
-		notFound();
-	}
-
 	const breadcrumbItems = [
 		{
-			label: tCategories('auto.title'),
-			href: '/auto',
+			label: tCategories('construction.title'),
+			href: '/construction',
 		},
 		{
 			label: t('title'),
@@ -123,14 +126,13 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 	];
 
 	// Get FAQ items for structured data
-	const faqRaw = tSeo.raw('faq.faqItems');
+	const faqRaw = t.raw('seo.faq.faqItems');
 	const faq = Array.isArray(faqRaw)
 		? (faqRaw as Array<{ q: string; a: string }>)
 		: [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
-			{/* Header */}
 			<Header />
 
 			{/* Breadcrumbs */}
@@ -141,41 +143,47 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 			</div>
 
 			{/* Hero Section */}
-			<div className='bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-800 dark:via-indigo-800 dark:to-purple-800'>
+			<div className='bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-800 dark:to-gray-950'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 					<div className='text-center'>
 						<div className='flex items-center justify-center mb-6'>
-							<Car className='w-12 h-12 text-white mr-4' />
+							<Building2 className='w-12 h-12 text-white mr-4' />
 							<h1 className='text-4xl md:text-5xl font-bold text-white'>
 								{t('title')}
 							</h1>
 						</div>
-						<p className='text-xl text-blue-100 max-w-3xl mx-auto mb-8'>
+						<p className='text-xl text-gray-100 max-w-3xl mx-auto mb-8'>
 							{t('description')}
 						</p>
 
 						{/* Quick Stats */}
 						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Package className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									м³
+								</div>
+								<div className='text-gray-100'>
+									{t('hero.format')}
+								</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
+									99%
+								</div>
+								<div className='text-gray-100'>
 									{t('hero.accuracy')}
 								</div>
-								<div className='text-blue-100'>100%</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
-								<CreditCard className='w-8 h-8 text-white mx-auto mb-2' />
+								<BarChart3 className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
+									3
+								</div>
+								<div className='text-gray-100'>
 									{t('hero.types')}
 								</div>
-								<div className='text-blue-100'>2 схемы</div>
-							</div>
-							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
-								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
-								<div className='text-2xl font-bold text-white mb-1'>
-									{t('hero.schedule')}
-								</div>
-								<div className='text-blue-100'>Мгновенно</div>
 							</div>
 						</div>
 					</div>
@@ -185,10 +193,10 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* Calculator */}
-				<CarLoanCalculator />
+				<FoundationCalculator />
 
 				{/* SEO Content */}
-				<CarLoanSEO />
+				<FoundationSEO />
 			</div>
 
 			{/* Structured Data */}
@@ -198,15 +206,15 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/car-loan`,
-						applicationCategory: 'FinanceApplication',
+						name: t('seo.title'),
+						description: t('seo.description'),
+						url: `https://calc1.ru/${locale}/construction/foundation`,
+						applicationCategory: 'BusinessApplication',
 						operatingSystem: 'Any',
 						offers: {
 							'@type': 'Offer',
 							price: '0',
-							priceCurrency: 'RUB',
+							priceCurrency: 'USD',
 						},
 						author: {
 							'@type': 'Organization',
@@ -215,13 +223,15 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 						},
 						aggregateRating: {
 							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '156',
+							ratingValue: '4.9',
+							ratingCount: '89',
 						},
 						featureList: [
-							t('hero.accuracy'),
-							t('hero.types'),
-							t('hero.schedule'),
+							t('features.volumeCalculation'),
+							t('features.concreteCalculation'),
+							t('features.rebarCalculation'),
+							t('features.formworkCalculation'),
+							t('features.accuracy'),
 						],
 					}),
 				}}
@@ -234,12 +244,12 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: faq.slice(0, 10).map((item) => ({
+						mainEntity: faq.map((f) => ({
 							'@type': 'Question',
-							name: item.q,
+							name: f.q,
 							acceptedAnswer: {
 								'@type': 'Answer',
-								text: item.a,
+								text: f.a,
 							},
 						})),
 					}),
@@ -263,14 +273,14 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 2,
-								name: tCategories('auto.title'),
-								item: `https://calc1.ru/${locale}/auto`,
+								name: tCategories('construction.title'),
+								item: `https://calc1.ru/${locale}/construction`,
 							},
 							{
 								'@type': 'ListItem',
 								position: 3,
 								name: t('title'),
-								item: `https://calc1.ru/${locale}/auto/car-loan`,
+								item: `https://calc1.ru/${locale}/construction/foundation`,
 							},
 						],
 					}),
@@ -284,38 +294,39 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'HowTo',
-						name: tSeo('title'),
-						description: tSeo('description'),
+						name: 'Как рассчитать материалы для фундамента',
+						description:
+							'Пошаговая инструкция по использованию калькулятора фундамента',
 						step: [
 							{
 								'@type': 'HowToStep',
-								name: 'Введите стоимость автомобиля',
-								text: 'Укажите стоимость автомобиля, который вы хотите приобрести',
+								name: 'Выберите тип фундамента',
+								text: 'Выберите тип фундамента: ленточный, плитный или столбчатый',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Укажите первоначальный взнос',
-								text: 'Введите сумму первоначального взноса (если есть)',
+								name: 'Введите размеры',
+								text: 'Укажите размеры фундамента в метрах (длина, ширина, высота)',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Выберите срок кредита',
-								text: 'Укажите срок кредитования в годах и месяцах',
+								name: 'Выберите марку бетона',
+								text: 'Выберите марку бетона (М200, М250, М300)',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Введите процентную ставку',
-								text: 'Укажите процентную ставку по кредиту (% годовых)',
+								name: 'Укажите параметры арматуры',
+								text: 'Укажите диаметр арматуры, шаг и количество слоёв',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Выберите схему погашения',
-								text: 'Выберите между аннуитетными (равными) или дифференцированными (убывающими) платежами',
+								name: 'Добавьте запас',
+								text: 'Укажите процент запаса на потери (рекомендуется 10%)',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Получите детальный график платежей и все результаты расчёта',
+								name: 'Получите результат',
+								text: 'Калькулятор автоматически рассчитает объём бетона, количество материалов и арматуры',
 							},
 						],
 					}),

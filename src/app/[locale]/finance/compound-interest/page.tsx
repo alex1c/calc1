@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { Car, Calculator, CreditCard, TrendingUp } from 'lucide-react';
+import { TrendingUp, Calculator, DollarSign, Percent } from 'lucide-react';
 import Header from '@/components/header';
+import CompoundInterestCalculator from '@/components/calculators/compound-interest-calculator';
+import CompoundInterestSEO from '@/components/seo/compound-interest-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
-import CarLoanCalculator from '@/components/calculators/car-loan-calculator';
-import CarLoanSEO from '@/components/seo/car-loan-seo';
 
 interface Props {
 	params: { locale: string };
@@ -19,7 +19,8 @@ export async function generateMetadata({
 	}
 	const messages = (await import(`../../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.calculators['car-loan'].seo[key];
+	const t = (key: string) =>
+		messages.calculators['compound-interest'].seo[key];
 
 	const keywordsString = t('keywords') || '';
 	const keywords = keywordsString
@@ -43,24 +44,24 @@ export async function generateMetadata({
 		},
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
-			canonical: `https://calc1.ru/${locale}/auto/car-loan`,
+			canonical: `https://calc1.ru/${locale}/finance/compound-interest`,
 			languages: {
-				ru: 'https://calc1.ru/ru/auto/car-loan',
-				en: 'https://calc1.ru/en/auto/car-loan',
-				es: 'https://calc1.ru/es/auto/car-loan',
-				de: 'https://calc1.ru/de/auto/car-loan',
+				ru: 'https://calc1.ru/ru/finance/compound-interest',
+				en: 'https://calc1.ru/en/finance/compound-interest',
+				es: 'https://calc1.ru/es/finance/compound-interest',
+				de: 'https://calc1.ru/de/finance/compound-interest',
 			},
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
 			description: t('description'),
-			url: `https://calc1.ru/${locale}/auto/car-loan`,
+			url: `https://calc1.ru/${locale}/finance/compound-interest`,
 			siteName: 'Calc1.ru',
 			locale: locale,
 			type: 'website',
 			images: [
 				{
-					url: 'https://calc1.ru/images/car-loan-calculator-og.jpg',
+					url: 'https://calc1.ru/images/compound-interest-calculator-og.jpg',
 					width: 1200,
 					height: 630,
 					alt: t('title'),
@@ -71,7 +72,9 @@ export async function generateMetadata({
 			card: 'summary_large_image',
 			title: `${t('title')} | Calc1.ru`,
 			description: t('description'),
-			images: ['https://calc1.ru/images/car-loan-calculator-og.jpg'],
+			images: [
+				'https://calc1.ru/images/compound-interest-calculator-og.jpg',
+			],
 		},
 		robots: {
 			index: true,
@@ -91,15 +94,17 @@ export async function generateMetadata({
 	};
 }
 
-export default async function CarLoanPage({ params: { locale } }: Props) {
+export default async function CompoundInterestPage({
+	params: { locale },
+}: Props) {
 	const t = await getTranslations({
 		locale,
-		namespace: 'calculators.car-loan',
+		namespace: 'calculators.compound-interest',
 	});
 
 	const tSeo = await getTranslations({
 		locale,
-		namespace: 'calculators.car-loan.seo',
+		namespace: 'calculators.compound-interest.seo',
 	});
 
 	const tCategories = await getTranslations({
@@ -114,8 +119,8 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 
 	const breadcrumbItems = [
 		{
-			label: tCategories('auto.title'),
-			href: '/auto',
+			label: tCategories('finance.title'),
+			href: '/finance',
 		},
 		{
 			label: t('title'),
@@ -141,41 +146,43 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 			</div>
 
 			{/* Hero Section */}
-			<div className='bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-800 dark:via-indigo-800 dark:to-purple-800'>
+			<div className='bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 dark:from-green-800 dark:via-emerald-800 dark:to-teal-800'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 					<div className='text-center'>
 						<div className='flex items-center justify-center mb-6'>
-							<Car className='w-12 h-12 text-white mr-4' />
+							<TrendingUp className='w-12 h-12 text-white mr-4' />
 							<h1 className='text-4xl md:text-5xl font-bold text-white'>
 								{t('title')}
 							</h1>
 						</div>
-						<p className='text-xl text-blue-100 max-w-3xl mx-auto mb-8'>
+						<p className='text-xl text-green-100 max-w-3xl mx-auto mb-8'>
 							{t('description')}
 						</p>
 
 						{/* Quick Stats */}
 						<div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
-								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
+								<DollarSign className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									{t('hero.format')}
+								</div>
+								<div className='text-green-100'>₽ (рубли)</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Percent className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									{t('hero.accuracy')}
 								</div>
-								<div className='text-blue-100'>100%</div>
+								<div className='text-green-100'>100%</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
-								<CreditCard className='w-8 h-8 text-white mx-auto mb-2' />
+								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									{t('hero.types')}
+									{t('hero.frequencies')}
 								</div>
-								<div className='text-blue-100'>2 схемы</div>
-							</div>
-							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
-								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
-								<div className='text-2xl font-bold text-white mb-1'>
-									{t('hero.schedule')}
+								<div className='text-green-100'>
+									6 вариантов
 								</div>
-								<div className='text-blue-100'>Мгновенно</div>
 							</div>
 						</div>
 					</div>
@@ -185,10 +192,10 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* Calculator */}
-				<CarLoanCalculator />
+				<CompoundInterestCalculator />
 
 				{/* SEO Content */}
-				<CarLoanSEO />
+				<CompoundInterestSEO />
 			</div>
 
 			{/* Structured Data */}
@@ -200,7 +207,7 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 						'@type': 'WebApplication',
 						name: tSeo('title'),
 						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/car-loan`,
+						url: `https://calc1.ru/${locale}/finance/compound-interest`,
 						applicationCategory: 'FinanceApplication',
 						operatingSystem: 'Any',
 						offers: {
@@ -215,13 +222,13 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 						},
 						aggregateRating: {
 							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '156',
+							ratingValue: '4.9',
+							ratingCount: '127',
 						},
 						featureList: [
+							t('hero.format'),
 							t('hero.accuracy'),
-							t('hero.types'),
-							t('hero.schedule'),
+							t('hero.frequencies'),
 						],
 					}),
 				}}
@@ -263,14 +270,14 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 2,
-								name: tCategories('auto.title'),
-								item: `https://calc1.ru/${locale}/auto`,
+								name: tCategories('finance.title'),
+								item: `https://calc1.ru/${locale}/finance`,
 							},
 							{
 								'@type': 'ListItem',
 								position: 3,
 								name: t('title'),
-								item: `https://calc1.ru/${locale}/auto/car-loan`,
+								item: `https://calc1.ru/${locale}/finance/compound-interest`,
 							},
 						],
 					}),
@@ -289,33 +296,23 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 						step: [
 							{
 								'@type': 'HowToStep',
-								name: 'Введите стоимость автомобиля',
-								text: 'Укажите стоимость автомобиля, который вы хотите приобрести',
+								name: 'Введите начальный капитал',
+								text: 'Введите сумму начального капитала в рублях',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Укажите первоначальный взнос',
-								text: 'Введите сумму первоначального взноса (если есть)',
+								name: 'Укажите процентную ставку',
+								text: 'Введите годовую процентную ставку',
 							},
 							{
 								'@type': 'HowToStep',
-								name: 'Выберите срок кредита',
-								text: 'Укажите срок кредитования в годах и месяцах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите процентную ставку',
-								text: 'Укажите процентную ставку по кредиту (% годовых)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите схему погашения',
-								text: 'Выберите между аннуитетными (равными) или дифференцированными (убывающими) платежами',
+								name: 'Выберите срок',
+								text: 'Укажите срок накопления в годах и месяцах',
 							},
 							{
 								'@type': 'HowToStep',
 								name: 'Нажмите рассчитать',
-								text: 'Получите детальный график платежей и все результаты расчёта',
+								text: 'Получите результат с графиком роста',
 							},
 						],
 					}),

@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { Home, Calculator, TrendingUp, Shield } from 'lucide-react';
 import Header from '@/components/header';
 import MortgageCalculator from '@/components/calculators/mortgage-calculator';
@@ -8,6 +9,86 @@ import Breadcrumbs from '@/components/breadcrumbs';
 
 interface Props {
 	params: { locale: string };
+}
+
+export async function generateMetadata({
+	params: { locale },
+}: Props): Promise<Metadata> {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const messages = (await import(`../../../../../messages/${locale}.json`))
+		.default;
+	const t = (key: string) => messages.calculators['mortgage'].seo[key];
+
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords,
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/finance/mortgage`,
+			languages: {
+				ru: 'https://calc1.ru/ru/finance/mortgage',
+				en: 'https://calc1.ru/en/finance/mortgage',
+				es: 'https://calc1.ru/es/finance/mortgage',
+				de: 'https://calc1.ru/de/finance/mortgage',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/finance/mortgage`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/mortgage-calculator-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/mortgage-calculator-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
 }
 
 export default async function MortgagePage({ params: { locale } }: Props) {

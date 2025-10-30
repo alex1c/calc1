@@ -123,6 +123,24 @@ export const MATERIALS: Record<string, MaterialConfig> = {
 		defaultPackageSize: 25, // kg
 		description: 'Расчёт количества плиточного клея',
 	},
+	plaster: {
+		name: 'Штукатурка',
+		unit: 'kg',
+		inputs: [
+			'roomLength',
+			'roomWidth',
+			'wallHeight',
+			'doorsWindowsArea',
+			'layers',
+			'consumptionRate',
+			'reservePercentage',
+			'packageSize',
+		],
+		formula: calculatePlaster,
+		defaultConsumption: 9, // kg per m² (for 10mm layer thickness, 9 kg/m² per 1mm)
+		defaultPackageSize: 30, // kg
+		description: 'Расчёт количества штукатурки для стен',
+	},
 };
 
 // Paint calculation
@@ -267,6 +285,42 @@ function calculateTileGlue(input: MaterialInput): MaterialResult {
 	};
 }
 
+// Plaster calculation (similar to putty but for plastering)
+function calculatePlaster(input: MaterialInput): MaterialResult {
+	const {
+		roomLength,
+		roomWidth,
+		wallHeight,
+		doorsWindowsArea,
+		layers,
+		consumptionRate,
+		reservePercentage,
+		packageSize,
+	} = input;
+
+	const totalWallArea = 2 * (roomLength + roomWidth) * wallHeight;
+	const usefulArea = totalWallArea - doorsWindowsArea;
+
+	// Consumption rate already accounts for layer thickness (kg/m²)
+	const consumptionPerLayer = usefulArea * consumptionRate;
+	const totalMaterial =
+		consumptionPerLayer * layers * (1 + reservePercentage / 100);
+	const packagesNeeded = Math.ceil(totalMaterial / packageSize);
+
+	return {
+		totalWallArea: Math.round(totalWallArea * 100) / 100,
+		doorsWindowsArea: Math.round(doorsWindowsArea * 100) / 100,
+		usefulArea: Math.round(usefulArea * 100) / 100,
+		layers,
+		consumptionPerLayer: Math.round(consumptionPerLayer * 100) / 100,
+		totalMaterial: Math.round(totalMaterial * 100) / 100,
+		packageSize,
+		packagesNeeded,
+		materialType: 'plaster',
+		unit: 'kg',
+	};
+}
+
 // Main calculation function
 export function calculateMaterial(
 	materialType: string,
@@ -328,6 +382,20 @@ export function validateMaterialInput(
 	if (materialType !== 'primer' && materialType !== 'tileGlue') {
 		if (!input.layers || input.layers <= 0) {
 			errors.push('Количество слоёв должно быть больше 0');
+		}
+	}
+
+	// Specific validation for plaster
+	if (materialType === 'plaster') {
+		if (input.consumptionRate && input.consumptionRate < 5) {
+			errors.push(
+				'Норма расхода штукатурки слишком низкая (минимум 5 кг/м²)'
+			);
+		}
+		if (input.consumptionRate && input.consumptionRate > 50) {
+			errors.push(
+				'Норма расхода штукатурки слишком высокая (максимум 50 кг/м²)'
+			);
 		}
 	}
 

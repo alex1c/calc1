@@ -38,44 +38,22 @@ export async function generateMetadata({
 	const description =
 		'Финансовые калькуляторы онлайн: расчёт кредитов, ипотеки, автокредитов, инвестиций, вкладов, налогов и штрафов. Бесплатные финансовые калькуляторы для планирования бюджета и принятия финансовых решений.';
 
+	const keywordsString = t('seo.keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [
+				'финансовые калькуляторы',
+				'калькулятор кредита',
+				'калькулятор ипотеки',
+		  ];
+
 	return {
 		title,
 		description,
-		keywords: [
-			'финансовые калькуляторы',
-			'калькулятор кредита',
-			'калькулятор ипотеки',
-			'калькулятор автокредита',
-			'калькулятор инвестиций',
-			'калькулятор вклада',
-			'калькулятор налогов',
-			'калькулятор штрафов',
-			'расчёт кредита онлайн',
-			'расчёт ипотеки',
-			'расчёт автокредита',
-			'расчёт процентов по кредиту',
-			'аннуитетный платёж',
-			'дифференцированный платёж',
-			'переплата по кредиту',
-			'калькулятор лизинга',
-			'калькулятор инвестиций',
-			'калькулятор вкладов',
-			'калькулятор накопительного счёта',
-			'расчёт транспортного налога',
-			'калькулятор штрафов ГИБДД',
-			'калькулятор налогов',
-			'НДФЛ калькулятор',
-			'подоходный налог',
-			'финансовое планирование',
-			'бюджетный калькулятор',
-			'планирование бюджета',
-			'loan calculator',
-			'mortgage calculator',
-			'auto loan calculator',
-			'investment calculator',
-			'tax calculator',
-			'savings calculator',
-		],
+		keywords,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',
@@ -168,6 +146,14 @@ const getCalculators = (t: any) => [
 		category: 'Кредиты',
 	},
 	{
+		id: 'loan-overpayment',
+		title: t('calculators.loan-overpayment.title'),
+		description: t('calculators.loan-overpayment.description'),
+		icon: Percent,
+		href: '/finance/loan-overpayment',
+		category: 'Кредиты',
+	},
+	{
 		id: 'leasing',
 		title: t('calculators.leasing.title'),
 		description: t('calculators.leasing.description'),
@@ -189,6 +175,14 @@ const getCalculators = (t: any) => [
 		description: t('calculators.savings.description'),
 		icon: PiggyBank,
 		href: '/finance/savings',
+		category: 'Инвестиции и сбережения',
+	},
+	{
+		id: 'compound-interest',
+		title: t('calculators.compound-interest.title'),
+		description: t('calculators.compound-interest.description'),
+		icon: TrendingUp,
+		href: '/finance/compound-interest',
 		category: 'Инвестиции и сбережения',
 	},
 	{

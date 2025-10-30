@@ -1,3 +1,110 @@
+export type DepreciationMethod = 'linear' | 'exponential';
+export type CarSegment = 'economy' | 'mid' | 'premium';
+
+export interface DepreciationInput {
+	purchasePrice: number; // RUB
+	ageYears: number; // years
+	mileageKm: number; // total km
+	segment: CarSegment;
+	method: DepreciationMethod;
+}
+
+export interface DepreciationResult {
+	purchasePrice: number;
+	currentValue: number;
+	totalDepreciation: number;
+	annualRatePercent: number;
+	ageYears: number;
+	mileageKm: number;
+}
+
+// Base annual rates by year index (1-based). After list, use the last value.
+const BASE_ANNUAL_RATES = [0.18, 0.12, 0.1, 0.08, 0.07, 0.06, 0.06];
+
+function getAnnualRateForYear(yearIndex: number): number {
+	return BASE_ANNUAL_RATES[
+		Math.min(yearIndex - 1, BASE_ANNUAL_RATES.length - 1)
+	];
+}
+
+function getSegmentAdjustment(segment: CarSegment): number {
+	if (segment === 'premium') return 0.05; // +5% to drop
+	if (segment === 'economy') return -0.02; // -2% to drop
+	return 0; // mid
+}
+
+function getMileageAdjustment(mileageKm: number, ageYears: number): number {
+	const normPerYear = 15000;
+	if (ageYears <= 0) return 0;
+	const avgPerYear = mileageKm / ageYears;
+	if (avgPerYear <= normPerYear) return 0;
+	const excessRatio = (avgPerYear - normPerYear) / normPerYear; // e.g., 0.33 for 20k vs 15k
+	return Math.min(0.1, Math.max(0.0, 0.05 + 0.05 * Math.min(1, excessRatio))); // +5..10%
+}
+
+export function validateDepreciationInput(
+	data: Partial<DepreciationInput>
+): string[] {
+	const errors: string[] = [];
+	if (!data.purchasePrice || data.purchasePrice <= 0)
+		errors.push('Укажите корректную стоимость.');
+	if (data.ageYears == null || data.ageYears < 0)
+		errors.push('Возраст должен быть неотрицательным.');
+	if (data.mileageKm == null || data.mileageKm < 0)
+		errors.push('Пробег должен быть неотрицательным.');
+	return errors;
+}
+
+export function calculateDepreciation(
+	input: DepreciationInput
+): DepreciationResult {
+	const { purchasePrice, ageYears, mileageKm, segment, method } = input;
+	const segAdj = getSegmentAdjustment(segment);
+	const milAdj = getMileageAdjustment(mileageKm, ageYears);
+
+	let value = purchasePrice;
+	let accumulatedDrop = 0;
+
+	for (let year = 1; year <= Math.max(0, Math.floor(ageYears)); year++) {
+		const base = getAnnualRateForYear(year);
+		const rate = Math.max(0, Math.min(0.95, base + segAdj + milAdj));
+		if (method === 'linear') {
+			const drop = purchasePrice * rate;
+			accumulatedDrop += drop;
+			value = Math.max(0, purchasePrice - accumulatedDrop);
+		} else {
+			value = Math.max(0, value * (1 - rate));
+		}
+	}
+
+	// Fractional year handling (simple proportional of the last year rate)
+	const fractional = ageYears - Math.floor(ageYears);
+	if (fractional > 0) {
+		const base = getAnnualRateForYear(Math.max(1, Math.floor(ageYears)));
+		const rate = Math.max(0, Math.min(0.95, base + segAdj + milAdj));
+		if (method === 'linear') {
+			const drop = purchasePrice * rate * fractional;
+			accumulatedDrop += drop;
+			value = Math.max(0, purchasePrice - accumulatedDrop);
+		} else {
+			value = Math.max(0, value * (1 - rate * fractional));
+		}
+	}
+
+	const totalDep = Math.max(0, purchasePrice - value);
+	const annualRatePercent =
+		ageYears > 0 ? ((totalDep / purchasePrice) * 100) / ageYears : 0;
+
+	return {
+		purchasePrice,
+		currentValue: Math.round(value),
+		totalDepreciation: Math.round(totalDep),
+		annualRatePercent: Math.max(0, annualRatePercent),
+		ageYears,
+		mileageKm,
+	};
+}
+
 // Car depreciation calculation logic and interfaces
 
 export type DepreciationMethod = 'linear' | 'declining';

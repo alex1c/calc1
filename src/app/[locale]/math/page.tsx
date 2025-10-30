@@ -27,27 +27,12 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	console.log('[generateMetadata] START, locale:', locale);
-
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
-		console.log('[generateMetadata] Invalid locale, calling notFound');
 		notFound();
 	}
-
-	console.log('[generateMetadata] Loading messages for locale:', locale);
 	const messages = (await import(`../../../../messages/${locale}.json`))
 		.default;
-	console.log(
-		'[generateMetadata] Messages loaded, keys:',
-		Object.keys(messages)
-	);
-
-	console.log(
-		'[generateMetadata] Getting categories.math:',
-		messages.categories?.math
-	);
 	const t = (key: string) => messages.categories['math'][key];
-	console.log('[generateMetadata] Test t("title"):', t('title'));
 
 	const title = `${t(
 		'title'
@@ -55,49 +40,22 @@ export async function generateMetadata({
 	const description =
 		'Математические калькуляторы онлайн: основные операции, проценты, площадь, объём, степени и корни, уравнения, статистика, конвертер единиц. Бесплатные математические калькуляторы для студентов, школьников и профессионалов.';
 
-	console.log('[generateMetadata] Title:', title);
-	console.log('[generateMetadata] Description:', description);
-	console.log('[generateMetadata] END - returning metadata');
+	const keywordsString = t('seo.keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [
+				'математические калькуляторы',
+				'калькулятор математика',
+				'онлайн калькулятор математика',
+		  ];
 
 	return {
 		title,
 		description,
-		keywords: [
-			'математические калькуляторы',
-			'калькулятор математика',
-			'онлайн калькулятор математика',
-			'калькулятор процентов',
-			'калькулятор площади',
-			'калькулятор объёма',
-			'калькулятор степеней',
-			'калькулятор корней',
-			'калькулятор уравнений',
-			'калькулятор статистики',
-			'конвертер единиц измерения',
-			'калькулятор дробей',
-			'калькулятор для школьников',
-			'калькулятор для студентов',
-			'математический конвертер',
-			'расчёт процентов онлайн',
-			'расчёт площади фигур',
-			'расчёт объёма тел',
-			'степень числа',
-			'корень числа',
-			'решение уравнений',
-			'статистические расчёты',
-			'конвертер длины',
-			'конвертер веса',
-			'конвертер площади',
-			'конвертер объёма',
-			'математические операции',
-			'геометрические расчёты',
-			'basic math calculator',
-			'percentage calculator',
-			'area calculator',
-			'volume calculator',
-			'power root calculator',
-			'equations calculator',
-		],
+		keywords,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',
