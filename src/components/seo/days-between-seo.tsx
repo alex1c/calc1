@@ -1,226 +1,264 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { Calendar, Clock, TrendingUp } from 'lucide-react';
 
 export default function DaysBetweenSEO() {
 	const t = useTranslations('calculators.daysBetween');
 
-	const faqData = [
-		{
-			q: 'Как посчитать количество дней между двумя датами?',
-			a: 'Введите начальную и конечную дату — результат появится автоматически.',
-		},
-		{
-			q: 'Учитывает ли калькулятор високосные годы?',
-			a: 'Да, все годы с 29 февраля учитываются корректно.',
-		},
-		{
-			q: 'Можно ли узнать количество недель между датами?',
-			a: 'Да, результат отображается и в неделях, и в днях.',
-		},
-		{
-			q: 'Как рассчитать количество месяцев?',
-			a: 'Калькулятор также показывает эквивалент в месяцах и годах.',
-		},
-		{
-			q: 'Можно ли включить текущую дату?',
-			a: 'Да, можно выбрать "сегодня" как одну из дат.',
-		},
-		{
-			q: 'Есть ли ограничение по диапазону дат?',
-			a: 'Нет, можно считать периоды даже в несколько десятков лет.',
-		},
-		{
-			q: 'Работает ли калькулятор без интернета?',
-			a: 'Нет, требуется подключение для обновления данных.',
-		},
-		{
-			q: 'Подходит ли для расчёта возраста?',
-			a: 'Да, можно использовать его для определения возраста человека.',
-		},
-		{
-			q: 'Как рассчитать дни до отпуска или праздника?',
-			a: 'Укажите сегодняшнюю дату и дату события — получите результат.',
-		},
-		{
-			q: 'Можно ли использовать разные форматы даты?',
-			a: 'Да, поддерживаются стандартные форматы (ДД.ММ.ГГГГ, YYYY-MM-DD и др.).',
-		},
-		{
-			q: 'Могу ли я сохранить результат?',
-			a: 'Да, результат можно скопировать или поделиться ссылкой.',
-		},
-	];
+	// Generate FAQ items array
+	const faqItems = Array.from({ length: 30 }, (_, i) => ({
+		q: t(`seo.faq.faqItems.${i}.q`),
+		a: t(`seo.faq.faqItems.${i}.a`),
+	}));
 
 	return (
-		<div className='space-y-8'>
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.5 }}
+			className='mt-12 space-y-10'
+		>
 			{/* Overview */}
-			<section>
-				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					О калькуляторе разницы между датами
-				</h2>
-				<div className='prose prose-lg text-gray-600'>
-					<p>
-						Онлайн-калькулятор разницы между датами — это удобный
-						инструмент для точного расчёта временных интервалов.
-						Просто введите начальную и конечную дату, и получите
-						детальную информацию о разнице в днях, неделях, месяцах
-						и годах.
-					</p>
-					<p>
-						Калькулятор учитывает високосные годы, различные месяцы
-						и корректно обрабатывает переходы между годами. Идеально
-						подходит для планирования проектов, расчёта отпусков,
-						определения сроков и многих других задач.
-					</p>
+			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
+				<div className='mb-4'>
+					<h2 className='text-3xl font-bold text-gray-900 dark:text-white'>
+						{t('seo.overview.title')}
+					</h2>
 				</div>
-			</section>
+				<div>
+					<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
+						{t('seo.overview.content')}
+					</p>
+					<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
+						{t('seo.overview.additionalContent')}
+					</p>
 
-			{/* How it works */}
-			<section>
-				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					Как рассчитывается разница между датами
-				</h2>
-				<div className='prose prose-lg text-gray-600'>
-					<p>
-						Калькулятор использует точные математические алгоритмы
-						для расчёта разницы между датами:
-					</p>
-					<ul>
-						<li>
-							<strong>Общее количество дней:</strong> Прямой
-							расчёт разности в миллисекундах
-						</li>
-						<li>
-							<strong>Недели:</strong> Деление общего количества
-							дней на 7
-						</li>
-						<li>
-							<strong>Месяцы и годы:</strong> Учёт календарных
-							особенностей каждого месяца
-						</li>
-						<li>
-							<strong>Високосные годы:</strong> Автоматическое
-							определение и учёт 29 февраля
-						</li>
-					</ul>
+					{/* Calculation Examples */}
+					<div className='mt-8'>
+						<h3 className='text-2xl font-semibold text-gray-900 dark:text-white mb-4'>
+							{t('seo.overview.calculationExamples.title')}
+						</h3>
+						<p className='text-gray-700 dark:text-gray-300 mb-6'>
+							{t('seo.overview.calculationExamples.content')}
+						</p>
+
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+							{Array.from({ length: 6 }, (_, i) => {
+								const exampleNum = i + 1;
+								return (
+									<div
+										key={i}
+										className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-600'
+									>
+										<h4 className='font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2'>
+											<Calendar className='w-5 h-5 text-blue-600 dark:text-blue-400' />
+											{t(
+												`seo.overview.calculationExamples.example${exampleNum}.title`
+											)}
+										</h4>
+										<p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
+											{t(
+												`seo.overview.calculationExamples.example${exampleNum}.description`
+											)}
+										</p>
+										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
+											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
+												Входные данные:
+											</p>
+											<code className='text-xs text-blue-800 dark:text-blue-300 font-mono break-all whitespace-pre-wrap'>
+												{t(
+													`seo.overview.calculationExamples.example${exampleNum}.input`
+												)}
+											</code>
+										</div>
+										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
+											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
+												Расчёт:
+											</p>
+											<code className='text-xs text-green-800 dark:text-green-300 font-mono break-all whitespace-pre-wrap'>
+												{t(
+													`seo.overview.calculationExamples.example${exampleNum}.calculation`
+												)}
+											</code>
+										</div>
+										<div className='grid grid-cols-2 gap-2 mb-2'>
+											<div className='bg-yellow-100 dark:bg-yellow-900/30 rounded p-2'>
+												<p className='text-xs font-semibold text-yellow-800 dark:text-yellow-300 mb-1'>
+													Результат:
+												</p>
+												<p className='text-xs text-yellow-900 dark:text-yellow-200 font-bold'>
+													{t(
+														`seo.overview.calculationExamples.example${exampleNum}.result`
+													)}
+												</p>
+											</div>
+											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
+												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
+													Тип:
+												</p>
+												<p className='text-xs text-purple-900 dark:text-purple-200'>
+													{t(
+														`seo.overview.calculationExamples.example${exampleNum}.type`
+													)}
+												</p>
+											</div>
+										</div>
+										<p className='text-xs text-gray-600 dark:text-gray-400 mt-2 pt-2 border-t border-gray-200 dark:border-gray-600'>
+											{t(
+												`seo.overview.calculationExamples.example${exampleNum}.note`
+											)}
+										</p>
+									</div>
+								);
+							})}
+						</div>
+					</div>
 				</div>
-			</section>
+			</div>
+
+			{/* Calculation Methods */}
+			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
+				<div className='mb-4'>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('seo.calculation.title')}
+					</h2>
+				</div>
+				<div>
+					<p className='text-gray-700 dark:text-gray-300 mb-4'>
+						{t('seo.calculation.content')}
+					</p>
+					<div className='bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg'>
+						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2'>
+							Формула расчёта:
+						</h3>
+						<p className='text-blue-800 dark:text-blue-200 text-sm mb-2'>
+							{t('seo.calculation.formula')}
+						</p>
+						<p className='text-blue-800 dark:text-blue-200 text-sm mb-2'>
+							{t('seo.calculation.leapYear')}
+						</p>
+						<p className='text-blue-800 dark:text-blue-200 text-sm'>
+							{t('seo.calculation.months')}
+						</p>
+					</div>
+				</div>
+			</div>
 
 			{/* Advantages */}
-			<section>
-				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					Преимущества нашего калькулятора
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+					{t('seo.advantages.title')}
 				</h2>
+				<div className='prose prose-lg text-gray-600 dark:text-gray-300 mb-6 max-w-none'>
+					<p>{t('seo.advantages.content')}</p>
+				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-					<div className='bg-blue-50 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							Точность расчётов
+					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2'>
+							{t('seo.advantages.precise')}
 						</h3>
-						<p className='text-blue-800'>
-							Учитывает все календарные особенности, включая
-							високосные годы и разную длительность месяцев.
+						<p className='text-blue-800 dark:text-blue-200'>
+							{t('seo.advantages.preciseDesc')}
 						</p>
 					</div>
-					<div className='bg-green-50 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							Простота использования
+					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-green-900 dark:text-green-100 mb-2'>
+							{t('seo.advantages.flexible')}
 						</h3>
-						<p className='text-green-800'>
-							Интуитивно понятный интерфейс — просто выберите даты
-							и получите результат.
+						<p className='text-green-800 dark:text-green-200'>
+							{t('seo.advantages.flexibleDesc')}
 						</p>
 					</div>
-					<div className='bg-purple-50 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
-							Детальная информация
+					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-purple-900 dark:text-purple-100 mb-2'>
+							{t('seo.advantages.detailed')}
 						</h3>
-						<p className='text-purple-800'>
-							Получайте разницу в днях, неделях, месяцах и годах
-							одновременно.
+						<p className='text-purple-800 dark:text-purple-200'>
+							{t('seo.advantages.detailedDesc')}
 						</p>
 					</div>
-					<div className='bg-orange-50 p-6 rounded-lg'>
-						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
-							Быстрые расчёты
+					<div className='bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg'>
+						<h3 className='text-lg font-semibold text-orange-900 dark:text-orange-100 mb-2'>
+							{t('seo.advantages.mobile')}
 						</h3>
-						<p className='text-orange-800'>
-							Мгновенные результаты без ожидания — идеально для
-							срочных задач.
+						<p className='text-orange-800 dark:text-orange-200'>
+							{t('seo.advantages.mobileDesc')}
 						</p>
 					</div>
 				</div>
-			</section>
+			</motion.section>
 
 			{/* Tips */}
-			<section>
-				<h2 className='text-2xl font-bold text-gray-900 mb-4'>
-					Полезные советы
+			<motion.section
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'
+			>
+				<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+					{t('seo.tips.title')}
 				</h2>
-				<div className='prose prose-lg text-gray-600'>
-					<ul>
-						<li>
-							<strong>Планирование отпуска:</strong> Рассчитайте
-							точное количество дней до отпуска
-						</li>
-						<li>
-							<strong>Проектные сроки:</strong> Определите
-							длительность проекта в днях и неделях
-						</li>
-						<li>
-							<strong>Праздники:</strong> Узнайте, сколько дней
-							осталось до важного события
-						</li>
-						<li>
-							<strong>Возраст:</strong> Используйте для точного
-							расчёта возраста в днях
-						</li>
-						<li>
-							<strong>Документооборот:</strong> Рассчитайте сроки
-							выполнения документов
-						</li>
-					</ul>
+				<div className='prose prose-lg text-gray-600 dark:text-gray-300 mb-6 max-w-none'>
+					<p>{t('seo.tips.content')}</p>
 				</div>
-			</section>
+				<ul className='space-y-3'>
+					<li className='flex items-start'>
+						<Clock className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+						<span className='text-gray-700 dark:text-gray-300'>
+							{t('seo.tips.accurate')}
+						</span>
+					</li>
+					<li className='flex items-start'>
+						<Clock className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+						<span className='text-gray-700 dark:text-gray-300'>
+							{t('seo.tips.leap')}
+						</span>
+					</li>
+					<li className='flex items-start'>
+						<Clock className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+						<span className='text-gray-700 dark:text-gray-300'>
+							{t('seo.tips.timezone')}
+						</span>
+					</li>
+					<li className='flex items-start'>
+						<Clock className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+						<span className='text-gray-700 dark:text-gray-300'>
+							{t('seo.tips.inclusive')}
+						</span>
+					</li>
+				</ul>
+			</motion.section>
 
 			{/* FAQ */}
-			<section>
-				<h2 className='text-2xl font-bold text-gray-900 mb-6'>
-					Часто задаваемые вопросы
-				</h2>
+			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
+				<div className='mb-4'>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
+						{t('seo.faq.title')}
+					</h2>
+				</div>
 				<div className='space-y-4'>
-					{faqData.map((faq, index) => (
+					{faqItems.map((item, idx) => (
 						<div
-							key={index}
-							className='bg-white border border-gray-200 rounded-lg p-6'
+							key={idx}
+							className='border-l-4 border-blue-500 pl-4'
 						>
-							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
-								{faq.q}
+							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+								{item.q}
 							</h3>
-							<p className='text-gray-600'>{faq.a}</p>
+							<p className='text-gray-700 dark:text-gray-300'>
+								{item.a}
+							</p>
 						</div>
 					))}
 				</div>
-			</section>
-
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'FAQPage',
-						mainEntity: faqData.map((faq) => ({
-							'@type': 'Question',
-							name: faq.q,
-							acceptedAnswer: {
-								'@type': 'Answer',
-								text: faq.a,
-							},
-						})),
-					}),
-				}}
-			/>
-		</div>
+			</div>
+		</motion.div>
 	);
 }

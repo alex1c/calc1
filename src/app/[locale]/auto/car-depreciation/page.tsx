@@ -222,7 +222,7 @@ export default async function CarDepreciationPage({
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: faq.slice(0, 10).map((item) => ({
+						mainEntity: faq.map((item) => ({
 							'@type': 'Question',
 							name: item.q,
 							acceptedAnswer: { '@type': 'Answer', text: item.a },

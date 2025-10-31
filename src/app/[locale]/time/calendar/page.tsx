@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, CalendarDays } from 'lucide-react';
+import { Metadata } from 'next';
+import { Calendar, CalendarDays, Clock, CheckCircle } from 'lucide-react';
 import Header from '@/components/header';
 import CalendarCalculator from '@/components/calculators/calendar-calculator';
 import CalendarSEO from '@/components/seo/calendar-seo';
@@ -10,15 +11,90 @@ interface Props {
 	params: { locale: string };
 }
 
+export async function generateMetadata({
+	params: { locale },
+}: Props): Promise<Metadata> {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const { loadMergedTimeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedTimeTranslations(locale);
+	const t = (key: string) => messages.calculators.calendar.seo[key];
+
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords,
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/time/calendar`,
+			languages: {
+				ru: 'https://calc1.ru/ru/time/calendar',
+				en: 'https://calc1.ru/en/time/calendar',
+				es: 'https://calc1.ru/es/time/calendar',
+				de: 'https://calc1.ru/de/time/calendar',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/time/calendar`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/calendar-online-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/calendar-online-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
+}
+
 export default async function CalendarPage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.calendar',
-	});
-
-	const tSeo = await getTranslations({
-		locale,
-		namespace: 'calculators.calendar.seo',
 	});
 
 	const tCategories = await getTranslations({
@@ -40,6 +116,12 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 			label: t('title'),
 		},
 	];
+
+	// Get FAQ items for structured data
+	const { loadMergedTimeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedTimeTranslations(locale);
+	const faqRaw = messages.calculators?.calendar?.seo?.faq?.faqItems || [];
+	const faq = Array.isArray(faqRaw) ? faqRaw : [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -117,8 +199,8 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
+						name: t('seo.title'),
+						description: t('seo.description'),
 						url: `https://calc1.ru/${locale}/time/calendar`,
 						applicationCategory: 'BusinessApplication',
 						operatingSystem: 'Any',
@@ -135,8 +217,14 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 						aggregateRating: {
 							'@type': 'AggregateRating',
 							ratingValue: '4.9',
-							ratingCount: '89',
+							ratingCount: '234',
 						},
+						featureList: [
+							t('seo.features.events'),
+							t('seo.features.export'),
+							t('seo.features.mobile'),
+							t('seo.features.holidays'),
+						],
 					}),
 				}}
 			/>
@@ -148,46 +236,84 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
+						mainEntity: faq.map((f: any) => ({
+							'@type': 'Question',
+							name: f.q,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: f.a,
+							},
+						})),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'Question',
-								name: tSeo('faq.question1'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.answer1'),
-								},
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.question2'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.answer2'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('time.title'),
+								item: `https://calc1.ru/${locale}/time`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.question3'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.answer3'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/time/calendar`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как использовать онлайн-календарь',
+						description:
+							'Пошаговая инструкция по использованию онлайн-календаря для планирования событий',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите дату',
+								text: 'Нажмите на нужную дату в календаре для создания события',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.question4'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.answer4'),
-								},
+								'@type': 'HowToStep',
+								name: 'Заполните форму события',
+								text: 'Введите название события, время, описание и выберите цвет для визуального кодирования',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.question5'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.answer5'),
-								},
+								'@type': 'HowToStep',
+								name: 'Настройте напоминания',
+								text: 'Выберите время напоминания о событии (за 15 минут, 1 час, 1 день и т.д.)',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Сохраните событие',
+								text: 'Нажмите кнопку "Сохранить", и событие появится в календаре',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Экспортируйте календарь',
+								text: 'Используйте функцию экспорта для сохранения календаря в файл (iCal, CSV) или синхронизации с другими сервисами',
 							},
 						],
 					}),

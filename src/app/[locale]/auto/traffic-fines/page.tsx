@@ -10,6 +10,89 @@ interface Props {
 	params: { locale: string };
 }
 
+export async function generateMetadata({
+	params: { locale },
+}: Props) {
+	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+		notFound();
+	}
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
+	const t = (key: string) =>
+		messages.calculators['traffic-fines'].seo[key];
+
+	const keywordsString = t('keywords') || '';
+	const keywords = keywordsString
+		? keywordsString
+				.split(',')
+				.map((k: string) => k.trim())
+				.filter(Boolean)
+		: [];
+
+	return {
+		title: `${t('title')} | Calc1.ru`,
+		description: t('description'),
+		keywords,
+		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
+		creator: 'Calc1.ru',
+		publisher: 'Calc1.ru',
+		formatDetection: {
+			email: false,
+			address: false,
+			telephone: false,
+		},
+		metadataBase: new URL('https://calc1.ru'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/auto/traffic-fines`,
+			languages: {
+				ru: 'https://calc1.ru/ru/auto/traffic-fines',
+				en: 'https://calc1.ru/en/auto/traffic-fines',
+				es: 'https://calc1.ru/es/auto/traffic-fines',
+				de: 'https://calc1.ru/de/auto/traffic-fines',
+			},
+		},
+		openGraph: {
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			url: `https://calc1.ru/${locale}/auto/traffic-fines`,
+			siteName: 'Calc1.ru',
+			locale: locale,
+			type: 'website',
+			images: [
+				{
+					url: 'https://calc1.ru/images/traffic-fines-calculator-og.jpg',
+					width: 1200,
+					height: 630,
+					alt: t('title'),
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: `${t('title')} | Calc1.ru`,
+			description: t('description'),
+			images: ['https://calc1.ru/images/traffic-fines-calculator-og.jpg'],
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			yandex: 'your-yandex-verification-code',
+		},
+	};
+}
+
 export default async function TrafficFinesPage({ params: { locale } }: Props) {
 	const t = await getTranslations({
 		locale,
@@ -153,46 +236,85 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'FAQPage',
-						mainEntity: [
-							{
+						mainEntity: (() => {
+							const faqRaw = tSeo.raw('faq.faqItems');
+							const faq = Array.isArray(faqRaw)
+								? (faqRaw as Array<{ q: string; a: string }>)
+								: [];
+							return faq.map((item) => ({
 								'@type': 'Question',
-								name: tSeo('faq.faqItems.0.q'),
+								name: item.q,
 								acceptedAnswer: {
 									'@type': 'Answer',
-									text: tSeo('faq.faqItems.0.a'),
+									text: item.a,
 								},
+							}));
+						})(),
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.1.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.1.a'),
-								},
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('auto.title'),
+								item: `https://calc1.ru/${locale}/auto`,
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.2.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.2.a'),
-								},
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/auto/traffic-fines`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'HowTo',
+						name: 'Как рассчитать штрафы ГИБДД',
+						description:
+							'Пошаговая инструкция по использованию калькулятора штрафов ГИБДД',
+						step: [
+							{
+								'@type': 'HowToStep',
+								name: 'Выберите нарушения',
+								text: 'Выберите одно или несколько нарушений ПДД из списка (превышение скорости, парковка, проезд на красный и т.д.)',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.3.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.3.a'),
-								},
+								'@type': 'HowToStep',
+								name: 'Просмотрите размер штрафа',
+								text: 'Калькулятор покажет размер штрафа за каждое нарушение согласно КоАП РФ',
 							},
 							{
-								'@type': 'Question',
-								name: tSeo('faq.faqItems.4.q'),
-								acceptedAnswer: {
-									'@type': 'Answer',
-									text: tSeo('faq.faqItems.4.a'),
-								},
+								'@type': 'HowToStep',
+								name: 'Учтите скидку при досрочной оплате',
+								text: 'При оплате в течение 20 дней действует скидка 50% на большинство штрафов',
+							},
+							{
+								'@type': 'HowToStep',
+								name: 'Получите итоговую сумму',
+								text: 'Калькулятор автоматически суммирует все штрафы и рассчитывает сумму к оплате со скидкой',
 							},
 						],
 					}),
