@@ -30,8 +30,10 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
 	const t = (key: string) => messages.calculators['car-ownership'].seo[key];
 
 	return {

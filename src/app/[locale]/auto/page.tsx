@@ -148,14 +148,14 @@ const getCalculators = (t: any) => [
 		title: t('calculators.vehicle-tax.title'),
 		description: t('calculators.vehicle-tax.description'),
 		icon: Car,
-		href: '/calc/vehicle-tax',
+		href: '/auto/vehicle-tax',
 	},
 	{
 		id: 'leasing',
 		title: t('calculators.leasing.title'),
 		description: t('calculators.leasing.description'),
 		icon: FileText,
-		href: '/calc/leasing',
+		href: '/auto/leasing',
 	},
 	{
 		id: 'customs',
@@ -169,7 +169,7 @@ const getCalculators = (t: any) => [
 		title: t('calculators.traffic-fines.title'),
 		description: t('calculators.traffic-fines.description'),
 		icon: AlertTriangle,
-		href: '/calc/traffic-fines',
+		href: '/auto/traffic-fines',
 	},
 	{
 		id: 'car-ownership',

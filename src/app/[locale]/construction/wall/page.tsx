@@ -29,8 +29,8 @@ export async function generateMetadata({
 		'[WallPage] generateMetadata: loading messages for locale:',
 		locale
 	);
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
 	console.log(
 		'[WallPage] generateMetadata: messages loaded, keys:',
 		Object.keys(messages.calculators || {})

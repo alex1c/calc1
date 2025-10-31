@@ -22,8 +22,8 @@ export async function generateMetadata({
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
 	}
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
 	const t = (key: string) => messages.calculators.electricityCost.seo[key];
 
 	return {

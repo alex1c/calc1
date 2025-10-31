@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
 	}
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedMathTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedMathTranslations(locale);
 	const t = (key: string) => messages.calculators.volume.seo[key];
 
 	return {

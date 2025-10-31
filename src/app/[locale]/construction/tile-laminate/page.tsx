@@ -32,8 +32,8 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
 	const t = (key: string) => messages.calculators['tile-laminate'].seo[key];
 
 	return {

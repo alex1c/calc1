@@ -17,10 +17,11 @@ export async function generateMetadata({
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
 	}
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
-	const t = (key: string) =>
-		messages?.calculators?.['car-depreciation']?.seo?.[key] ?? '';
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
+	const t = (key: string) => messages.calculators['car-depreciation'].seo[key];
 
 	const keywordsString = t('keywords') || '';
 	const keywords = keywordsString

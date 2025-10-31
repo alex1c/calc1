@@ -27,8 +27,10 @@ export async function generateMetadata({
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
 	}
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedFinanceTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedFinanceTranslations(locale);
 	const t = (key: string) =>
 		messages.calculators['loan-overpayment'].seo[key];
 

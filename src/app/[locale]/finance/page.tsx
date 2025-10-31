@@ -154,14 +154,6 @@ const getCalculators = (t: any) => [
 		category: 'Кредиты',
 	},
 	{
-		id: 'leasing',
-		title: t('calculators.leasing.title'),
-		description: t('calculators.leasing.description'),
-		icon: Car,
-		href: '/finance/leasing',
-		category: 'Кредиты',
-	},
-	{
 		id: 'investment',
 		title: t('calculators.investment.title'),
 		description: t('calculators.investment.description'),
@@ -191,22 +183,6 @@ const getCalculators = (t: any) => [
 		description: t('calculators.tax-calculator.description'),
 		icon: Receipt,
 		href: '/finance/tax-calculator',
-		category: 'Налоги и штрафы',
-	},
-	{
-		id: 'vehicle-tax',
-		title: t('calculators.vehicle-tax.title'),
-		description: t('calculators.vehicle-tax.description'),
-		icon: Calculator,
-		href: '/finance/vehicle-tax',
-		category: 'Налоги и штрафы',
-	},
-	{
-		id: 'traffic-fines',
-		title: t('calculators.traffic-fines.title'),
-		description: t('calculators.traffic-fines.description'),
-		icon: Calculator,
-		href: '/finance/traffic-fines',
 		category: 'Налоги и штрафы',
 	},
 ];

@@ -27,8 +27,8 @@ export async function generateMetadata({
 	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
 		notFound();
 	}
-	const messages = (await import(`../../../../../messages/${locale}.json`))
-		.default;
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
 	const t = (key: string) => messages.calculators.ventilation.seo[key];
 
 	const keywordsString = t('keywords') || '';
