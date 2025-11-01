@@ -1,10 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Calculator, Search, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import SearchModal from './search-modal';
+import { useSearchIndex } from '@/hooks/use-search-index';
 
 interface HeaderProps {
 	onSearch?: (query: string) => void;
@@ -14,8 +16,9 @@ export default function Header({ onSearch }: HeaderProps) {
 	const t = useTranslations();
 	const locale = useLocale();
 	const router = useRouter();
-	const [searchQuery, setSearchQuery] = useState('');
+	const [showSearchModal, setShowSearchModal] = useState(false);
 	const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+	const { index: searchIndex, isLoading: isIndexLoading } = useSearchIndex();
 
 	const languages = [
 		{ code: 'ru', name: 'Русский', flag: '🇷🇺' },
@@ -24,19 +27,44 @@ export default function Header({ onSearch }: HeaderProps) {
 		{ code: 'es', name: 'Español', flag: '🇪🇸' },
 	];
 
-	const handleSearch = (e: React.FormEvent) => {
-		e.preventDefault();
-		if (onSearch) {
-			onSearch(searchQuery);
-		}
-		// Navigate to search results or trigger search
-		router.push(`/${locale}/search?q=${encodeURIComponent(searchQuery)}`);
+	const handleSearchClick = () => {
+		setShowSearchModal(true);
 	};
 
-	const handleLanguageChange = (newLocale: string) => {
+	// Keyboard shortcut: Ctrl/Cmd + K to open search
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+				e.preventDefault();
+				setShowSearchModal(true);
+			}
+		};
+
+		document.addEventListener('keydown', handleKeyDown);
+		return () => document.removeEventListener('keydown', handleKeyDown);
+	}, []);
+
+	const handleLanguageChange = async (newLocale: string) => {
+		// Save locale preference to cookie
+		document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${365 * 24 * 60 * 60}; SameSite=Lax`;
+
+		// Get current path without locale
 		const currentPath = window.location.pathname;
-		const newPath = currentPath.replace(`/${locale}`, `/${newLocale}`);
-		router.push(newPath);
+		let pathWithoutLocale = currentPath;
+
+		// Remove locale prefix if present
+		for (const loc of ['ru', 'en', 'de', 'es']) {
+			if (currentPath.startsWith(`/${loc}/`) || currentPath === `/${loc}`) {
+				pathWithoutLocale = currentPath.replace(`/${loc}`, '') || '/';
+				break;
+			}
+		}
+
+		// Build new path with locale prefix (all locales now have prefix)
+		const newPath = `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+
+		// Use router.replace for smoother transition (no history entry)
+		router.replace(newPath);
 		setShowLanguageMenu(false);
 	};
 
@@ -65,25 +93,20 @@ export default function Header({ onSearch }: HeaderProps) {
 						</div>
 					</Link>
 
-					{/* Search Bar */}
+					{/* Search Button */}
 					<div className='flex-1 max-w-lg mx-8'>
-						<form
-							onSubmit={handleSearch}
-							className='relative'
+						<button
+							onClick={handleSearchClick}
+							className='w-full flex items-center pl-4 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 transition-colors text-left'
 						>
-							<div className='relative'>
-								<Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4' />
-								<input
-									type='text'
-									placeholder={t('common.search')}
-									value={searchQuery}
-									onChange={(e) =>
-										setSearchQuery(e.target.value)
-									}
-									className='w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-								/>
-							</div>
-						</form>
+							<Search className='h-4 w-4 mr-3 flex-shrink-0' />
+							<span className='flex-1 text-sm'>
+								{t('common.search') || 'Поиск калькуляторов...'}
+							</span>
+							<kbd className='hidden sm:inline-flex items-center px-2 py-1 text-xs font-semibold text-gray-500 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded'>
+								Ctrl K
+							</kbd>
+						</button>
 					</div>
 
 					{/* Language Switcher */}
@@ -131,6 +154,15 @@ export default function Header({ onSearch }: HeaderProps) {
 					</div>
 				</div>
 			</div>
+
+			{/* Search Modal */}
+			{!isIndexLoading && (
+				<SearchModal
+					isOpen={showSearchModal}
+					onClose={() => setShowSearchModal(false)}
+					searchIndex={searchIndex}
+				/>
+			)}
 		</header>
 	);
 }
