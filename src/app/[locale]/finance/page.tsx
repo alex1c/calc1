@@ -185,6 +185,22 @@ const getCalculators = (t: any) => [
 		href: '/finance/tax-calculator',
 		category: 'Налоги и штрафы',
 	},
+	{
+		id: 'alimony',
+		title: t('calculators.alimony.title'),
+		description: t('calculators.alimony.description'),
+		icon: Users,
+		href: '/finance/alimony',
+		category: 'Налоги и штрафы',
+	},
+	{
+		id: 'profit-margin',
+		title: t('calculators.profit-margin.title'),
+		description: t('calculators.profit-margin.description'),
+		icon: TrendingUp,
+		href: '/finance/profit-margin',
+		category: 'Бизнес и финансы',
+	},
 ];
 
 export default async function FinancePage({ params: { locale } }: Props) {

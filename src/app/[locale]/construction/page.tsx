@@ -23,6 +23,8 @@ import {
 	Wind,
 	Calculator,
 	CheckCircle,
+	Mountain,
+	Zap,
 } from 'lucide-react';
 
 interface Props {
@@ -274,6 +276,20 @@ const getCalculators = (t: any) => [
 		icon: Droplets,
 		href: '/construction/water-pipe',
 	},
+	{
+		id: 'gravel',
+		title: t('calculators.gravel.title'),
+		description: t('calculators.gravel.description'),
+		icon: Mountain,
+		href: '/construction/gravel',
+	},
+	{
+		id: 'electrical',
+		title: t('calculators.electrical.title'),
+		description: t('calculators.electrical.description'),
+		icon: Zap,
+		href: '/construction/electrical',
+	},
 ];
 
 export default async function ConstructionPage({ params: { locale } }: Props) {
@@ -281,7 +297,20 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 		notFound();
 	}
 
-	const t = await getTranslations({ locale });
+	// Load merged translations including construction calculators
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
+	// Create translation function that accesses merged messages
+	const t = (key: string) => {
+		const parts = key.split('.');
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
+		}
+		return value || key;
+	};
+
 	const tCategories = await getTranslations({
 		locale,
 		namespace: 'categories',
@@ -294,9 +323,7 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 		{ label: tCategories('construction.title') },
 	];
 
-	// Get SEO content if available
-	const messages = (await import(`../../../../messages/${locale}.json`))
-		.default;
+	// Get SEO content if available (use loaded messages)
 	const seoKeywords = messages.categories?.construction?.seo?.keywords || '';
 	const seoOverview = messages.categories?.construction?.seo?.overview || '';
 	const seoAdvantages =

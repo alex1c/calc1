@@ -1,9 +1,18 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Header from '@/components/header';
+import Breadcrumbs from '@/components/breadcrumbs';
 import Link from 'next/link';
-import { Network, Hash, Shield, Globe, Database, Code } from 'lucide-react';
+import {
+	Network,
+	Zap,
+	Calculator,
+	CheckCircle,
+	TrendingUp,
+	Monitor,
+	Sparkles,
+} from 'lucide-react';
 
 interface Props {
 	params: { locale: string };
@@ -17,13 +26,17 @@ export async function generateMetadata({
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
 		.default;
+	const seoData = messages.categories?.it?.seo || {};
 	const t = (key: string) => messages.categories['it'][key];
 
-	const title = `${t('title')} — Онлайн IT-калькуляторы | Calc1.ru`;
+	const title =
+		seoData.title ||
+		`${t('title')} — Онлайн IT-калькуляторы | Calc1.ru`;
 	const description =
+		seoData.description ||
 		'IT-калькуляторы онлайн: расчёт IP-адресов и подсетей, хеширование (MD5, SHA-1, SHA-256), кодирование и декодирование (Base64, URL), форматирование JSON, сетевые расчёты. Бесплатные онлайн калькуляторы для разработчиков и IT-специалистов.';
 
-	const keywordsString = t('seo.keywords') || '';
+	const keywordsString = seoData.keywords || '';
 	const keywords = keywordsString
 		? keywordsString
 				.split(',')
@@ -102,39 +115,11 @@ const getCalculators = (t: any) => [
 		href: '/it/ip-calculator',
 	},
 	{
-		id: 'hash-calculator',
-		title: 'Hash Calculator',
-		description: 'Calculate MD5, SHA-1, SHA-256 and other hash functions',
-		icon: Hash,
-		href: '/it/hash',
-	},
-	{
-		id: 'password-generator',
-		title: 'Password Generator',
-		description: 'Generate secure passwords with customizable parameters',
-		icon: Shield,
-		href: '/fun/password',
-	},
-	{
-		id: 'url-encoder',
-		title: 'URL Encoder/Decoder',
-		description: 'Encode and decode URLs and special characters',
-		icon: Globe,
-		href: '/it/url-encoder',
-	},
-	{
-		id: 'base64-encoder',
-		title: 'Base64 Encoder/Decoder',
-		description: 'Encode and decode Base64 strings',
-		icon: Code,
-		href: '/it/base64',
-	},
-	{
-		id: 'json-formatter',
-		title: 'JSON Formatter',
-		description: 'Format and validate JSON data',
-		icon: Database,
-		href: '/it/json-formatter',
+		id: 'hashrate',
+		title: t('calculators.hashrate.title'),
+		description: t('calculators.hashrate.description'),
+		icon: Zap,
+		href: '/it/hashrate',
 	},
 ];
 
@@ -143,47 +128,383 @@ export default async function ItPage({ params: { locale } }: Props) {
 		notFound();
 	}
 
-	const t = await getTranslations();
+	const t = await getTranslations({ locale });
+	const tCategories = await getTranslations({
+		locale,
+		namespace: 'categories',
+	});
+	const currentLocale = await getLocale();
+
+	const { loadMergedItTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedItTranslations(locale);
+	const tCalc = (key: string) => {
+		const parts = key.split('.');
+		if (parts[0] === 'calculators' && parts.length >= 3) {
+			const calcKey = parts[1];
+			const restKey = parts.slice(2).join('.');
+			return messages.calculators?.[calcKey]?.[restKey] || key;
+		}
+		return key;
+	};
+
+	const calculators = getCalculators(tCalc);
+	const breadcrumbItems = [
+		{ label: t('breadcrumbs.home'), href: '/' },
+		{ label: tCategories('it.title') },
+	];
+
+	// Get SEO content
+	const baseMessages = (await import(`../../../../messages/${locale}.json`))
+		.default;
+	const seoData = baseMessages.categories?.it?.seo || {};
+	const faqItems = seoData.faq?.faqItems || [];
+
+	// Prepare structured data for calculators
+	const calculatorItems = calculators.map((calc, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: calc.title,
+		description: calc.description,
+		item: `https://calc1.ru/${locale}${calc.href}`,
+	}));
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
 			<Header />
 
-			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-				{/* Header Section */}
-				<div className='mb-8'>
-					<h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
-						{t('categories.it.title')}
-					</h1>
-					<p className='text-lg text-gray-600 dark:text-gray-400'>
-						{t('categories.it.description')}
-					</p>
+			{/* Breadcrumbs */}
+			<div className='bg-white dark:bg-gray-800 shadow-sm'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
+					<Breadcrumbs items={breadcrumbItems} />
 				</div>
+			</div>
+
+			{/* Hero Section */}
+			<div className='bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-800 dark:via-indigo-800 dark:to-purple-800'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+					<div className='text-center'>
+						<div className='flex items-center justify-center mb-6'>
+							<Monitor className='w-12 h-12 text-white mr-4' />
+							<h1 className='text-4xl md:text-5xl font-bold text-white'>
+								{tCategories('it.title')}
+							</h1>
+						</div>
+						<p className='text-xl text-blue-100 max-w-3xl mx-auto mb-8'>
+							{tCategories('it.description')}
+						</p>
+
+						{/* Quick Stats */}
+						<div className='grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto'>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									{calculators.length}
+								</div>
+								<div className='text-blue-100'>Калькуляторов</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									99%
+								</div>
+								<div className='text-blue-100'>Точность</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									Мгновенно
+								</div>
+								<div className='text-blue-100'>Расчёт</div>
+							</div>
+							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
+								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
+								<div className='text-2xl font-bold text-white mb-1'>
+									Бесплатно
+								</div>
+								<div className='text-blue-100'>Использование</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Main Content */}
+			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				{/* Overview Section */}
+				{seoData.overview && (
+					<div className='mb-12'>
+						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
+								{seoData.overview.title || 'IT-калькуляторы'}
+							</h2>
+							<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
+								{seoData.overview.content}
+							</p>
+							{seoData.overview.additionalContent && (
+								<p className='text-lg text-gray-600 dark:text-gray-400 leading-relaxed'>
+									{seoData.overview.additionalContent}
+								</p>
+							)}
+						</div>
+					</div>
+				)}
+
+				{/* Advantages Section */}
+				{seoData.advantages && (
+					<div className='mb-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{seoData.advantages.title || 'Преимущества'}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{seoData.advantages.accurate || 'Точные расчёты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{seoData.advantages.accurateDesc ||
+										'Используют актуальные стандарты и формулы для максимальной точности.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<CheckCircle className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{seoData.advantages.professional ||
+										'Профессиональные инструменты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{seoData.advantages.professionalDesc ||
+										'Разработаны для использования в профессиональной IT-среде.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<Sparkles className='w-8 h-8 text-purple-600 dark:text-purple-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{seoData.advantages.comprehensive ||
+										'Полный набор функций'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{seoData.advantages.comprehensiveDesc ||
+										'Покрывают все основные потребности IT-специалистов.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<Zap className='w-8 h-8 text-yellow-600 dark:text-yellow-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{seoData.advantages.fast || 'Мгновенные результаты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{seoData.advantages.fastDesc ||
+										'Все расчёты выполняются мгновенно без задержек.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<TrendingUp className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{seoData.advantages.free || 'Бесплатно'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{seoData.advantages.freeDesc ||
+										'Полностью бесплатно, без регистрации и скрытых платежей.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<Monitor className='w-8 h-8 text-indigo-600 dark:text-indigo-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{seoData.advantages.accessible || 'Доступность'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{seoData.advantages.accessibleDesc ||
+										'Работает на всех устройствах с адаптивным интерфейсом.'}
+								</p>
+							</div>
+						</div>
+					</div>
+				)}
+
+				{/* Tips Section */}
+				{seoData.tips && (
+					<div className='mb-12'>
+						<div className='bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
+								{seoData.tips.title || 'Советы по использованию'}
+							</h2>
+							<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
+								{seoData.tips.content}
+							</p>
+							<ul className='space-y-3'>
+								<li className='flex items-start'>
+									<CheckCircle className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700 dark:text-gray-300'>
+										{seoData.tips.data}
+									</span>
+								</li>
+								<li className='flex items-start'>
+									<CheckCircle className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700 dark:text-gray-300'>
+										{seoData.tips.verification}
+									</span>
+								</li>
+								<li className='flex items-start'>
+									<CheckCircle className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700 dark:text-gray-300'>
+										{seoData.tips.regular}
+									</span>
+								</li>
+								<li className='flex items-start'>
+									<CheckCircle className='w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-0.5 flex-shrink-0' />
+									<span className='text-gray-700 dark:text-gray-300'>
+										{seoData.tips.planning}
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				)}
 
 				{/* Calculators Grid */}
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-					{getCalculators(t).map((calculator) => {
-						const IconComponent = calculator.icon;
-						return (
-							<Link
-								key={calculator.id}
-								href={`/${locale}${calculator.href}`}
-								className='bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-md transition-all duration-200'
-							>
-								<div className='flex items-center mb-4'>
-									<IconComponent className='h-8 w-8 text-blue-600 dark:text-blue-400 mr-3' />
-									<h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-										{calculator.title}
-									</h3>
-								</div>
-								<p className='text-gray-600 dark:text-gray-400'>
-									{calculator.description}
-								</p>
-							</Link>
-						);
-					})}
+				<div className='mb-12'>
+					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-8'>
+						Доступные калькуляторы
+					</h2>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+						{calculators.map((calculator) => {
+							const IconComponent = calculator.icon;
+							return (
+								<Link
+									key={calculator.id}
+									href={`/${currentLocale}${calculator.href}`}
+									className='bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-md transition-all duration-200'
+								>
+									<div className='flex items-center mb-4'>
+										<IconComponent className='h-8 w-8 text-blue-600 dark:text-blue-400 mr-3' />
+										<h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
+											{calculator.title}
+										</h3>
+									</div>
+									<p className='text-gray-600 dark:text-gray-400'>
+										{calculator.description}
+									</p>
+								</Link>
+							);
+						})}
+					</div>
 				</div>
+
+				{/* FAQ Section */}
+				{faqItems.length > 0 && (
+					<div className='mb-12'>
+						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+								{seoData.faq?.title ||
+									'Часто задаваемые вопросы об IT-калькуляторах'}
+							</h2>
+							<div className='space-y-6'>
+								{faqItems.slice(0, 10).map((faq: any, index: number) => (
+									<div
+										key={index}
+										className='border-b border-gray-200 dark:border-gray-700 pb-4 last:border-b-0'
+									>
+										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+											{faq.q}
+										</h3>
+										<p className='text-gray-600 dark:text-gray-400'>
+											{faq.a}
+										</p>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				)}
 			</main>
+
+			{/* Structured Data */}
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{
+								'@type': 'ListItem',
+								position: 1,
+								name: t('breadcrumbs.home'),
+								item: `https://calc1.ru/${locale}`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('it.title'),
+								item: `https://calc1.ru/${locale}/it`,
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* CollectionPage Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'CollectionPage',
+						name: tCategories('it.title'),
+						description: seoData.description || tCategories('it.description'),
+						url: `https://calc1.ru/${locale}/it`,
+						mainEntity: {
+							'@type': 'ItemList',
+							numberOfItems: calculators.length,
+							itemListElement: calculatorItems,
+						},
+					}),
+				}}
+			/>
+
+			{/* FAQ Structured Data */}
+			{faqItems.length > 0 && (
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							'@context': 'https://schema.org',
+							'@type': 'FAQPage',
+							mainEntity: faqItems
+								.slice(0, 30)
+								.map((faq: any) => ({
+									'@type': 'Question',
+									name: faq.q,
+									acceptedAnswer: {
+										'@type': 'Answer',
+										text: faq.a,
+									},
+								})),
+						}),
+					}}
+				/>
+			)}
+
+			{/* Organization Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'Organization',
+						name: 'Calc1.ru',
+						url: 'https://calc1.ru',
+						logo: 'https://calc1.ru/logo.png',
+						sameAs: [
+							'https://www.facebook.com/calc1ru',
+							'https://twitter.com/calc1ru',
+							'https://vk.com/calc1ru',
+						],
+					}),
+				}}
+			/>
 		</div>
 	);
 }

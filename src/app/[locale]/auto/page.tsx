@@ -193,6 +193,13 @@ const getCalculators = (t: any) => [
 		icon: TrendingDown,
 		href: '/auto/car-depreciation',
 	},
+	{
+		id: 'lpg-payback',
+		title: t('calculators.lpg-payback.title'),
+		description: t('calculators.lpg-payback.description'),
+		icon: Fuel,
+		href: '/auto/lpg-payback',
+	},
 ];
 
 export default async function AutoPage({ params: { locale } }: Props) {

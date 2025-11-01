@@ -6,91 +6,21 @@ export default function PasswordGeneratorSEO() {
 	const t = useTranslations('calculators.passwordGenerator.seo');
 
 	// Structured data for FAQ
+	const faqRaw = t.raw('faqItems');
+	const faq = Array.isArray(faqRaw)
+		? (faqRaw as Array<{ q: string; a: string }>).slice(0, 30)
+		: [];
 	const faqSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
-		mainEntity: [
-			{
-				'@type': 'Question',
-				name: t('faqItems.0.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.0.a'),
-				},
+		mainEntity: faq.map((item) => ({
+			'@type': 'Question',
+			name: item.q,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: item.a,
 			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.1.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.1.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.2.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.2.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.3.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.3.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.4.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.4.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.5.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.5.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.6.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.6.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.7.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.7.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.8.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.8.a'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: t('faqItems.9.q'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: t('faqItems.9.a'),
-				},
-			},
-		],
+		})),
 	};
 
 	return (
@@ -211,19 +141,23 @@ export default function PasswordGeneratorSEO() {
 						{t('faq.title')}
 					</h2>
 					<div className='space-y-6'>
-						{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
-							<div
-								key={index}
-								className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow'
-							>
-								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-									{t(`faqItems.${index}.q`)}
-								</h3>
-								<p className='text-gray-700'>
-									{t(`faqItems.${index}.a`)}
-								</p>
-							</div>
-						))}
+						{(() => {
+							const faqRaw = t.raw('faqItems');
+							const faq = Array.isArray(faqRaw)
+								? (faqRaw as Array<{ q: string; a: string }>)
+								: [];
+							return faq.slice(0, 30).map((item, index) => (
+								<div
+									key={index}
+									className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow'
+								>
+									<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+										{item.q}
+									</h3>
+									<p className='text-gray-700'>{item.a}</p>
+								</div>
+							));
+						})()}
 					</div>
 				</section>
 

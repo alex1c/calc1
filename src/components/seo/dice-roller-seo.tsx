@@ -107,10 +107,79 @@ export default function DiceRollerSEO() {
 					<h2 className='text-3xl font-bold text-gray-900 mb-4'>
 						{t('overview.title')}
 					</h2>
-					<p className='text-gray-700 leading-relaxed'>
+					<p className='text-gray-700 leading-relaxed mb-4'>
 						{t('overview.content')}
 					</p>
+					{t('overview.additionalContent') && (
+						<p className='text-gray-700 leading-relaxed'>
+							{t('overview.additionalContent')}
+						</p>
+					)}
 				</section>
+
+				{/* Calculation Examples */}
+				{t.raw('overview.calculationExamples') &&
+					Array.isArray(t.raw('overview.calculationExamples')) &&
+					t.raw('overview.calculationExamples').length > 0 && (
+						<section className='bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-xl shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+								Примеры расчёта
+							</h2>
+							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+								{(
+									t.raw(
+										'overview.calculationExamples'
+									) as Array<{
+										title: string;
+										description: string;
+										input: string;
+										calculation: string;
+										result: string;
+										type: string;
+									}>
+								).map((example, index) => (
+									<div
+										key={index}
+										className='bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-orange-200 dark:border-orange-800'
+									>
+										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+											{example.title}
+										</h3>
+										<p className='text-sm text-gray-600 dark:text-gray-400 mb-4'>
+											{example.description}
+										</p>
+										<div className='bg-blue-50 dark:bg-blue-900/30 rounded p-3 mb-3'>
+											<p className='text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1'>
+												Входные данные:
+											</p>
+											<code className='text-xs text-blue-900 dark:text-blue-200 font-mono break-all whitespace-pre-wrap'>
+												{example.input}
+											</code>
+										</div>
+										<div className='bg-green-50 dark:bg-green-900/30 rounded p-3 mb-3'>
+											<p className='text-xs font-semibold text-green-800 dark:text-green-300 mb-1'>
+												Расчёт:
+											</p>
+											<code className='text-xs text-green-900 dark:text-green-200 font-mono break-all whitespace-pre-wrap'>
+												{example.calculation}
+											</code>
+										</div>
+										<div className='bg-yellow-50 dark:bg-yellow-900/30 rounded p-3'>
+											<p className='text-xs font-semibold text-yellow-800 dark:text-yellow-300 mb-1'>
+												Результат:
+											</p>
+											<p className='text-xs text-yellow-900 dark:text-yellow-200 font-bold'>
+												{example.result}
+											</p>
+											<p className='text-xs text-yellow-700 dark:text-yellow-400 mt-1'>
+												Тип: {example.type}
+											</p>
+										</div>
+									</div>
+								))}
+							</div>
+						</section>
+					)}
 
 				{/* How it works */}
 				<section className='prose prose-lg max-w-none'>
@@ -226,19 +295,21 @@ export default function DiceRollerSEO() {
 						{t('faq.title')}
 					</h2>
 					<div className='space-y-6'>
-						{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
-							<div
-								key={index}
-								className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow'
-							>
-								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
-									{t(`faqItems.${index}.q`)}
-								</h3>
-								<p className='text-gray-700'>
-									{t(`faqItems.${index}.a`)}
-								</p>
-							</div>
-						))}
+						{t.raw('faqItems') &&
+							Array.isArray(t.raw('faqItems')) &&
+							(t.raw('faqItems') as Array<{ q: string; a: string }>)
+								.slice(0, 30)
+								.map((item, index) => (
+									<div
+										key={index}
+										className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow'
+									>
+										<h3 className='text-xl font-semibold text-gray-900 mb-3'>
+											{item.q}
+										</h3>
+										<p className='text-gray-700'>{item.a}</p>
+									</div>
+								))}
 					</div>
 				</section>
 
