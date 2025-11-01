@@ -28,57 +28,11 @@ export default function CharacterTraitsCalculator() {
 	const [isGenerating, setIsGenerating] = useState(false);
 	const [copied, setCopied] = useState(false);
 
-	// Debug logging
-	useEffect(() => {
-		console.log('🔍 DEBUG: Component render - state:', {
-			gender,
-			characterType,
-			ageGroup,
-			characterCount,
-			generatedCharacters: generatedCharacters.length,
-			isGenerating,
-			copied,
-		});
-	});
-
-	useEffect(() => {
-		console.log(
-			'🔍 DEBUG: Generated characters changed:',
-			generatedCharacters
-		);
-	}, [generatedCharacters]);
-
-	useEffect(() => {
-		console.log('🔍 DEBUG: Is generating changed:', isGenerating);
-	}, [isGenerating]);
-
-	useEffect(() => {
-		console.log('🔍 DEBUG: Copied changed:', copied);
-	}, [copied]);
-
 	const handleGenerate = async () => {
-		console.log('🔍 DEBUG: Generate button clicked');
-		console.log('🔍 DEBUG: handleGenerate started');
-		console.log(
-			'🔍 DEBUG: gender =',
-			gender,
-			'characterType =',
-			characterType,
-			'ageGroup =',
-			ageGroup,
-			'characterCount =',
-			characterCount
-		);
-
 		setIsGenerating(true);
-		console.log('🔍 DEBUG: Setting isGenerating to true');
 
 		// Add delay for animation
-		console.log('🔍 DEBUG: Starting delay...');
 		await new Promise((resolve) => setTimeout(resolve, 300));
-
-		console.log('🔍 DEBUG: Delay completed');
-		console.log('🔍 DEBUG: Starting character generation...');
 
 		try {
 			const characters: Character[] = [];
@@ -91,22 +45,15 @@ export default function CharacterTraitsCalculator() {
 				);
 				characters.push(character);
 			}
-			console.log('🔍 DEBUG: Characters generated:', characters);
 			setGeneratedCharacters(characters);
-			console.log('🔍 DEBUG: Setting generated characters');
 		} catch (error) {
-			console.error('🔍 DEBUG: Error generating characters:', error);
+			console.error('Error generating characters:', error);
 		}
 
 		setIsGenerating(false);
-		console.log('🔍 DEBUG: Setting isGenerating to false');
-		console.log('🔍 DEBUG: handleGenerate completed');
 	};
 
 	const handleCopy = async () => {
-		console.log('🔍 DEBUG: Copy button clicked');
-		console.log('🔍 DEBUG: handleCopy started');
-
 		const text = generatedCharacters
 			.map(
 				(char, index) =>
@@ -125,28 +72,18 @@ export default function CharacterTraitsCalculator() {
 			)
 			.join('\n');
 
-		console.log('🔍 DEBUG: Text to copy:', text);
-
 		try {
 			await navigator.clipboard.writeText(text);
-			console.log('🔍 DEBUG: Text copied to clipboard');
 			setCopied(true);
-			console.log('🔍 DEBUG: Setting copied to true');
 			setTimeout(() => {
 				setCopied(false);
-				console.log('🔍 DEBUG: Setting copied to false');
 			}, 2000);
 		} catch (error) {
-			console.error('🔍 DEBUG: Error copying text:', error);
+			console.error('Error copying text:', error);
 		}
-
-		console.log('🔍 DEBUG: handleCopy completed');
 	};
 
 	const handleDownload = () => {
-		console.log('🔍 DEBUG: Download button clicked');
-		console.log('🔍 DEBUG: handleDownload started');
-
 		const text = generatedCharacters
 			.map(
 				(char, index) =>
@@ -174,35 +111,25 @@ export default function CharacterTraitsCalculator() {
 		a.click();
 		document.body.removeChild(a);
 		URL.revokeObjectURL(url);
-
-		console.log('🔍 DEBUG: handleDownload completed');
 	};
 
 	const handleReset = () => {
-		console.log('🔍 DEBUG: Reset button clicked');
-		console.log('🔍 DEBUG: handleReset started');
-
 		setGeneratedCharacters([]);
 		setGender('any');
 		setCharacterType('realistic');
 		setAgeGroup('adult');
 		setCharacterCount(1);
 		setCopied(false);
-
-		console.log('🔍 DEBUG: handleReset completed');
 	};
 
 	// Global error handling
 	useEffect(() => {
 		const handleError = (event: ErrorEvent) => {
-			console.log('🔍 DEBUG: Global error caught:', event);
-			console.log('🔍 DEBUG: Error message:', event.message);
-			console.log('🔍 DEBUG: Error stack:', event.error?.stack);
+			console.error('Global error:', event.message, event.error);
 		};
 
 		const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-			console.log('🔍 DEBUG: Unhandled rejection caught:', event);
-			console.log('🔍 DEBUG: Rejection reason:', event.reason);
+			console.error('Unhandled rejection:', event.reason);
 		};
 
 		window.addEventListener('error', handleError);

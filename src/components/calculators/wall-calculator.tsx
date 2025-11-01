@@ -1,7 +1,5 @@
 'use client';
 
-console.log('[WallCalculator] Module file loading...');
-
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import {
@@ -23,12 +21,8 @@ import {
 	WallResult,
 } from '@/lib/calculators/wall';
 
-console.log('[WallCalculator] Imports completed');
-
 function WallCalculatorComponent() {
-	console.log('[WallCalculator] Component rendering');
 	const t = useTranslations('calculators.wall');
-	console.log('[WallCalculator] Translations loaded:', typeof t);
 	const [input, setInput] = useState<Partial<WallInput>>({
 		wallLength: 0,
 		wallHeight: 0,
@@ -557,6 +551,4 @@ function WallCalculatorComponent() {
 	);
 }
 
-console.log('[WallCalculator] Component defined, exporting...');
 export default WallCalculatorComponent;
-console.log('[WallCalculator] Export completed');

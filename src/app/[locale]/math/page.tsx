@@ -115,13 +115,6 @@ export async function generateMetadata({
 }
 
 const getCalculators = (t: any) => {
-	console.log('[getCalculators] START');
-	console.log('[getCalculators] t type:', typeof t);
-	console.log(
-		'[getCalculators] t("calculators.basic.title"):',
-		t('calculators.basic.title')
-	);
-
 	const calculators = [
 		{
 			id: 'basic',
@@ -189,76 +182,31 @@ const getCalculators = (t: any) => {
 		},
 	];
 
-	console.log(
-		'[getCalculators] Calculated calculators:',
-		calculators.map((c) => ({ id: c.id, title: c.title }))
-	);
-	console.log(
-		'[getCalculators] END - returning',
-		calculators.length,
-		'calculators'
-	);
-
 	return calculators;
 };
 
 export default async function MathPage({ params: { locale } }: Props) {
-	console.log('[MathPage] START, locale:', locale);
-
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
-		console.log('[MathPage] Invalid locale, calling notFound');
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
-	console.log('[MathPage] Getting translations...');
 	const t = await getTranslations();
-	console.log('[MathPage] t loaded, type:', typeof t);
-	console.log(
-		'[MathPage] Test t("categories.math.title"):',
-		t('categories.math.title')
-	);
-
 	const tCategories = await getTranslations({ namespace: 'categories' });
-	console.log('[MathPage] tCategories loaded, type:', typeof tCategories);
-	console.log(
-		'[MathPage] Test tCategories("math.title"):',
-		tCategories('math.title')
-	);
-
-	console.log('[MathPage] Calling getCalculators...');
 	const calculators = getCalculators(t);
-	console.log('[MathPage] Calculators received:', calculators.length);
-	console.log(
-		'[MathPage] Calculators:',
-		calculators.map((c) => ({ id: c.id, title: c.title, icon: c.icon }))
-	);
 
 	const breadcrumbItems = [
 		{ label: t('breadcrumbs.home'), href: '/' },
 		{ label: tCategories('math.title') },
 	];
-	console.log('[MathPage] BreadcrumbItems:', breadcrumbItems);
 
 	// Group calculators by category
-	console.log('[MathPage] Grouping calculators by category...');
 	const calculatorsByCategory = calculators.reduce((acc, calc) => {
-		console.log(
-			'[MathPage] Processing calculator:',
-			calc.id,
-			'category:',
-			calc.category
-		);
 		if (!acc[calc.category]) {
 			acc[calc.category] = [];
 		}
 		acc[calc.category].push(calc);
 		return acc;
 	}, {} as Record<string, typeof calculators>);
-	console.log(
-		'[MathPage] Calculators by category:',
-		Object.keys(calculatorsByCategory)
-	);
-	console.log('[MathPage] END - returning JSX');
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>

@@ -1,19 +1,12 @@
 'use client';
 
-console.log('[WallSEO] Module file loading...');
-
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Package, Square, Droplet } from 'lucide-react';
 
-console.log('[WallSEO] Imports completed');
-
 function WallSEOComponent() {
-	console.log('[WallSEO] Component rendering');
 	const t = useTranslations('calculators.wall');
-	console.log('[WallSEO] Translations t loaded:', typeof t);
 	const tSeo = useTranslations('calculators.wall.seo');
-	console.log('[WallSEO] Translations tSeo loaded:', typeof tSeo);
 
 	const borderColors = [
 		'border-blue-500',
@@ -471,6 +464,4 @@ function WallSEOComponent() {
 	);
 }
 
-console.log('[WallSEO] Component defined, exporting...');
 export default WallSEOComponent;
-console.log('[WallSEO] Export completed');

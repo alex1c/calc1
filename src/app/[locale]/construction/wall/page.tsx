@@ -7,12 +7,6 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import WallCalculator from '@/components/calculators/wall-calculator';
 import WallSEO from '@/components/seo/wall-seo';
 
-console.log(
-	'[WallPage] Module loaded - WallCalculator:',
-	typeof WallCalculator
-);
-console.log('[WallPage] Module loaded - WallSEO:', typeof WallSEO);
-
 interface Props {
 	params: { locale: string };
 }
@@ -20,26 +14,13 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	console.log('[WallPage] generateMetadata called with locale:', locale);
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
-		console.log('[WallPage] generateMetadata: invalid locale, notFound');
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
-	console.log(
-		'[WallPage] generateMetadata: loading messages for locale:',
-		locale
-	);
 	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
 	const messages = await loadMergedConstructionTranslations(locale);
-	console.log(
-		'[WallPage] generateMetadata: messages loaded, keys:',
-		Object.keys(messages.calculators || {})
-	);
 	const t = (key: string) => {
-		console.log('[WallPage] generateMetadata: translating key:', key);
-		const value = messages.calculators['wall']?.seo?.[key];
-		console.log('[WallPage] generateMetadata: translation value:', value);
-		return value;
+		return messages.calculators['wall']?.seo?.[key];
 	};
 
 	const keywordsString = t('keywords') || '';
@@ -113,22 +94,18 @@ export async function generateMetadata({
 }
 
 export default async function WallPage({ params: { locale } }: Props) {
-	console.log('[WallPage] WallPage called with locale:', locale);
 	const t = await getTranslations({
 		locale,
 		namespace: 'calculators.wall',
 	});
-	console.log('[WallPage] getTranslations for calculators.wall completed');
 
 	const tCategories = await getTranslations({
 		locale,
 		namespace: 'categories',
 	});
-	console.log('[WallPage] getTranslations for categories completed');
 
 	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
-		console.log('[WallPage] invalid locale, notFound');
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -141,23 +118,12 @@ export default async function WallPage({ params: { locale } }: Props) {
 			label: t('title'),
 		},
 	];
-	console.log('[WallPage] breadcrumbItems:', breadcrumbItems);
 
 	// Get FAQ items for structured data
-	console.log('[WallPage] Getting FAQ items from seo.faq.faqItems');
 	const faqRaw = t.raw('seo.faq.faqItems');
-	console.log(
-		'[WallPage] FAQ raw data:',
-		faqRaw,
-		'Type:',
-		typeof faqRaw,
-		'Is Array:',
-		Array.isArray(faqRaw)
-	);
 	const faq = Array.isArray(faqRaw)
 		? (faqRaw as Array<{ q: string; a: string }>)
 		: [];
-	console.log('[WallPage] FAQ processed:', faq.length, 'items');
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
