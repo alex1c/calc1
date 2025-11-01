@@ -195,6 +195,17 @@ const getCalculators = (t: any, healthMessages: any) => [
 		icon: Scale,
 		href: '/health/dose',
 	},
+	{
+		id: 'ideal-weight',
+		title:
+			healthMessages?.calculators?.['ideal-weight']?.title ||
+			t('calculators.ideal-weight.title'),
+		description:
+			healthMessages?.calculators?.['ideal-weight']?.description ||
+			t('calculators.ideal-weight.description'),
+		icon: Target,
+		href: '/health/ideal-weight',
+	},
 ];
 
 export default async function HealthPage({ params: { locale } }: Props) {

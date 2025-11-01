@@ -174,6 +174,13 @@ const getCalculators = (t: any) => [
 		icon: HardDrive,
 		href: '/converter/data',
 	},
+	{
+		id: 'angle-converter',
+		title: t('calculators.angle-converter.title'),
+		description: t('calculators.angle-converter.description'),
+		icon: Target,
+		href: '/converter/angle',
+	},
 ];
 
 export default async function ConverterPage({ params: { locale } }: Props) {

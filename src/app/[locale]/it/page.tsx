@@ -12,6 +12,7 @@ import {
 	TrendingUp,
 	Monitor,
 	Sparkles,
+	QrCode,
 } from 'lucide-react';
 
 interface Props {
@@ -120,6 +121,13 @@ const getCalculators = (t: any) => [
 		description: t('calculators.hashrate.description'),
 		icon: Zap,
 		href: '/it/hashrate',
+	},
+	{
+		id: 'qr-generator',
+		title: t('calculators.qr-generator.title'),
+		description: t('calculators.qr-generator.description'),
+		icon: QrCode,
+		href: '/it/qr-generator',
 	},
 ];
 

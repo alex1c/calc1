@@ -201,6 +201,14 @@ const getCalculators = (t: any) => [
 		href: '/finance/profit-margin',
 		category: 'Бизнес и финансы',
 	},
+	{
+		id: 'pension',
+		title: t('calculators.pension.title'),
+		description: t('calculators.pension.description'),
+		icon: Users,
+		href: '/finance/pension',
+		category: 'Инвестиции и сбережения',
+	},
 ];
 
 export default async function FinancePage({ params: { locale } }: Props) {

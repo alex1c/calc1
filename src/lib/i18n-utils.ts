@@ -25,7 +25,7 @@ function deepMerge(a: any, b: any): any {
  */
 export async function loadMergedCategoryTranslations(
 	locale: string,
-	category: 'auto' | 'finance' | 'life' | 'math' | 'construction' | 'time' | 'health' | 'converter' | 'fun' | 'it'
+	category: 'auto' | 'finance' | 'life' | 'math' | 'construction' | 'time' | 'health' | 'converter' | 'fun' | 'it' | 'science'
 ) {
 	// Load base monolith
 	const messages = (await import(`../../messages/${locale}.json`)).default;
@@ -130,5 +130,13 @@ export async function loadMergedFunTranslations(locale: string) {
  */
 export async function loadMergedItTranslations(locale: string) {
 	return loadMergedCategoryTranslations(locale, 'it');
+}
+
+/**
+ * Load merged translations for science calculators
+ * Merges base messages with science.json category translations
+ */
+export async function loadMergedScienceTranslations(locale: string) {
+	return loadMergedCategoryTranslations(locale, 'science');
 }
 
