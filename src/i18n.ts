@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
 
-const locales = ['ru', 'en', 'de', 'es'];
+const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
 
 function deepMerge(a: any, b: any) {
 	if (Array.isArray(a) || Array.isArray(b)) return b;

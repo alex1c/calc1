@@ -25,6 +25,11 @@ export default function Header({ onSearch }: HeaderProps) {
 		{ code: 'en', name: 'English', flag: '🇺🇸' },
 		{ code: 'de', name: 'Deutsch', flag: '🇩🇪' },
 		{ code: 'es', name: 'Español', flag: '🇪🇸' },
+		{ code: 'fr', name: 'Français', flag: '🇫🇷' },
+		{ code: 'it', name: 'Italiano', flag: '🇮🇹' },
+		{ code: 'pl', name: 'Polski', flag: '🇵🇱' },
+		{ code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+		{ code: 'pt-BR', name: 'Português (BR)', flag: '🇧🇷' },
 	];
 
 	const handleSearchClick = () => {
@@ -53,7 +58,7 @@ export default function Header({ onSearch }: HeaderProps) {
 		let pathWithoutLocale = currentPath;
 
 		// Remove locale prefix if present
-		for (const loc of ['ru', 'en', 'de', 'es']) {
+		for (const loc of ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR']) {
 			if (currentPath.startsWith(`/${loc}/`) || currentPath === `/${loc}`) {
 				pathWithoutLocale = currentPath.replace(`/${loc}`, '') || '/';
 				break;

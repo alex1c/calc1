@@ -3,7 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/footer';
 
-const locales = ['ru', 'en', 'de', 'es'];
+const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
 
 export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }));

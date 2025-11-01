@@ -1,5 +1,5 @@
 {
-  "languages": ["ru", "en", "de", "es"],
+  "languages": ["ru", "en", "de", "es", "fr", "it", "pl", "tr", "pt-BR"],
   "labels": {
     "ru": {
       "title": "Онлайн-конвертер скорости",

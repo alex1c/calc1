@@ -2,7 +2,7 @@ import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 
 // Supported locales
-const locales = ['ru', 'en', 'de', 'es'] as const;
+const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'] as const;
 type Locale = (typeof locales)[number];
 
 /**
@@ -36,6 +36,22 @@ function detectLocaleFromHeader(request: NextRequest): Locale {
 		'es-cl': 'es',
 		'es-pe': 'es',
 		'es-ve': 'es',
+		fr: 'fr',
+		'fr-fr': 'fr',
+		'fr-be': 'fr',
+		'fr-ch': 'fr',
+		'fr-ca': 'fr',
+		it: 'it',
+		'it-it': 'it',
+		'it-ch': 'it',
+		pl: 'pl',
+		'pl-pl': 'pl',
+		tr: 'tr',
+		'tr-tr': 'tr',
+		pt: 'pt-BR',
+		'pt-br': 'pt-BR',
+		'pt-pt': 'pt-BR',
+		'pt-ao': 'pt-BR',
 	};
 
 	// Parse Accept-Language header with quality values
