@@ -31,7 +31,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -121,7 +121,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.bmi.description'),
 		icon: Heart,
 		href: '/life/bmi',
-		category: 'Здоровье',
+		category: t('categories.life.subcategories.health'),
 	},
 	{
 		id: 'calories',
@@ -129,7 +129,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.calories.description'),
 		icon: Utensils,
 		href: '/life/calories',
-		category: 'Питание',
+		category: t('categories.life.subcategories.nutrition'),
 	},
 	{
 		id: 'food-ration',
@@ -137,7 +137,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.foodRation.description'),
 		icon: PieChart,
 		href: '/life/food-ration',
-		category: 'Питание',
+		category: t('categories.life.subcategories.nutrition'),
 	},
 	{
 		id: 'pregnancy',
@@ -145,7 +145,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.pregnancy.description'),
 		icon: Baby,
 		href: '/life/pregnancy',
-		category: 'Семья',
+		category: t('categories.life.subcategories.family'),
 	},
 	{
 		id: 'baby-growth',
@@ -153,7 +153,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.babyGrowth.description'),
 		icon: TrendingUp,
 		href: '/life/baby-growth',
-		category: 'Семья',
+		category: t('categories.life.subcategories.family'),
 	},
 	{
 		id: 'blood-alcohol',
@@ -161,7 +161,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.bloodAlcohol.description'),
 		icon: Wine,
 		href: '/life/blood-alcohol',
-		category: 'Здоровье',
+		category: t('categories.life.subcategories.health'),
 	},
 	{
 		id: 'size-converter',
@@ -169,7 +169,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.size-converter.description'),
 		icon: Shirt,
 		href: '/life/size-converter',
-		category: 'Быт',
+		category: t('categories.life.subcategories.household'),
 	},
 	{
 		id: 'ring-size',
@@ -177,7 +177,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.ringSize.description'),
 		icon: Circle,
 		href: '/life/ring-size',
-		category: 'Быт',
+		category: t('categories.life.subcategories.household'),
 	},
 	{
 		id: 'electricity-cost',
@@ -185,7 +185,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.electricityCost.description'),
 		icon: Zap,
 		href: '/life/electricity-cost',
-		category: 'Коммунальные услуги',
+		category: t('categories.life.subcategories.utilities'),
 	},
 	{
 		id: 'paper-weight',
@@ -193,7 +193,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.paper-weight.description'),
 		icon: FileText,
 		href: '/life/paper-weight',
-		category: 'Быт',
+		category: t('categories.life.subcategories.household'),
 	},
 	{
 		id: 'water-usage',
@@ -201,7 +201,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.waterUsage.description'),
 		icon: Droplets,
 		href: '/life/water-usage',
-		category: 'Коммунальные услуги',
+		category: t('categories.life.subcategories.utilities'),
 	},
 	{
 		id: 'heating-cost',
@@ -209,7 +209,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.heatingCost.description'),
 		icon: Flame,
 		href: '/life/heating-cost',
-		category: 'Коммунальные услуги',
+		category: t('categories.life.subcategories.utilities'),
 	},
 	{
 		id: 'gas-usage',
@@ -217,7 +217,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.gasUsage.description'),
 		icon: Thermometer,
 		href: '/life/gas-usage',
-		category: 'Коммунальные услуги',
+		category: t('categories.life.subcategories.utilities'),
 	},
 	{
 		id: 'electricity-usage',
@@ -225,16 +225,29 @@ const getCalculators = (t: any) => [
 		description: t('calculators.electricityUsage.description'),
 		icon: Zap,
 		href: '/life/electricity-usage',
-		category: 'Коммунальные услуги',
+		category: t('categories.life.subcategories.utilities'),
 	},
 ];
 
 export default async function LifePage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
-	const t = await getTranslations();
+	// Load merged translations including life calculators
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
+	// Create translation function that accesses merged messages
+	const t = (key: string) => {
+		const parts = key.split('.');
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
+		}
+		return value || key;
+	};
+
 	const tCategories = await getTranslations({ namespace: 'categories' });
 
 	const calculators = getCalculators(t);
@@ -285,7 +298,7 @@ export default async function LifePage({ params: { locale } }: Props) {
 									{calculators.length}
 								</div>
 								<div className='text-blue-100'>
-									Калькуляторов
+									{t('common.calculatorsCount')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -293,19 +306,19 @@ export default async function LifePage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									100%
 								</div>
-								<div className='text-blue-100'>Бесплатно</div>
+								<div className='text-blue-100'>{t('common.free')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Users className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									4
 								</div>
-								<div className='text-blue-100'>Категории</div>
+								<div className='text-blue-100'>{t('common.categories')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Онлайн
+									{t('common.online')}
 								</div>
 								<div className='text-blue-100'>24/7</div>
 							</div>
@@ -317,30 +330,33 @@ export default async function LifePage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* SEO Content Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mb-12'>
-					<div className='prose prose-lg max-w-none dark:prose-invert'>
-						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							Бытовые калькуляторы для повседневной жизни
-						</h2>
-						<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-							Наша коллекция бытовых калькуляторов поможет вам
-							решить множество повседневных задач: от планирования
-							питания и здоровья до расчёта коммунальных платежей
-							и бытовых расходов. Все калькуляторы полностью
-							бесплатные, работают онлайн без регистрации и
-							доступны 24/7.
-						</p>
-						<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-							Используйте калькуляторы для расчёта индекса массы
-							тела (ИМТ), калорийности рациона, нормы БЖУ, срока
-							беременности, роста и веса ребёнка, расхода
-							электроэнергии, воды, газа, стоимости отопления и
-							много другого. Каждый калькулятор содержит подробные
-							инструкции, примеры расчётов и советы по
-							использованию.
-						</p>
+				{messages.categories?.life?.seo?.overview && (
+					<div className='mb-12'>
+						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
+								{typeof messages.categories.life.seo.overview === 'object'
+									? messages.categories.life.seo.overview.title || tCategories('life.title')
+									: tCategories('life.title')}
+							</h2>
+							{typeof messages.categories.life.seo.overview === 'object' ? (
+								<>
+									<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
+										{messages.categories.life.seo.overview.content}
+									</p>
+									{messages.categories.life.seo.overview.additionalContent && (
+										<p className='text-lg text-gray-600 dark:text-gray-400 leading-relaxed'>
+											{messages.categories.life.seo.overview.additionalContent}
+										</p>
+									)}
+								</>
+							) : (
+								<p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed'>
+									{messages.categories.life.seo.overview}
+								</p>
+							)}
+						</div>
 					</div>
-				</div>
+				)}
 
 				{/* Calculators by Category */}
 				{Object.entries(calculatorsByCategory).map(
@@ -378,59 +394,59 @@ export default async function LifePage({ params: { locale } }: Props) {
 				)}
 
 				{/* Features Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
-					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-						Преимущества наших калькуляторов
-					</h2>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-						<div className='text-center'>
-							<div className='bg-blue-100 dark:bg-blue-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400' />
+				{messages.categories?.life?.seo?.advantages && (
+					<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{messages.categories.life.seo.advantages.title || tCategories('life.title')}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							<div className='text-center'>
+								<div className='bg-blue-100 dark:bg-blue-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.life.seo.advantages.accurate || 'Точные расчёты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.life.seo.advantages.accurateDesc || 'Все калькуляторы используют проверенные формулы и алгоритмы'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Точные расчёты
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Все калькуляторы используют проверенные формулы
-								и алгоритмы
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Sparkles className='w-8 h-8 text-green-600 dark:text-green-400' />
+							<div className='text-center'>
+								<div className='bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Sparkles className='w-8 h-8 text-green-600 dark:text-green-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.life.seo.advantages.free || 'Бесплатно'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.life.seo.advantages.freeDesc || 'Полностью бесплатный доступ ко всем калькуляторам'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Бесплатно
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Полностью бесплатный доступ ко всем
-								калькуляторам
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-purple-100 dark:bg-purple-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Zap className='w-8 h-8 text-purple-600 dark:text-purple-400' />
+							<div className='text-center'>
+								<div className='bg-purple-100 dark:bg-purple-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Zap className='w-8 h-8 text-purple-600 dark:text-purple-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.life.seo.advantages.online || 'Онлайн'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.life.seo.advantages.onlineDesc || 'Работают в браузере без установки программ'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Онлайн
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Работают в браузере без установки программ
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-orange-100 dark:bg-orange-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Users className='w-8 h-8 text-orange-600 dark:text-orange-400' />
+							<div className='text-center'>
+								<div className='bg-orange-100 dark:bg-orange-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Users className='w-8 h-8 text-orange-600 dark:text-orange-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.life.seo.advantages.forAll || 'Для всех'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.life.seo.advantages.forAllDesc || 'Простой и понятный интерфейс для каждого'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Для всех
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Простой и понятный интерфейс для каждого
-							</p>
 						</div>
 					</div>
-				</div>
+				)}
 			</main>
 
 			{/* Structured Data */}

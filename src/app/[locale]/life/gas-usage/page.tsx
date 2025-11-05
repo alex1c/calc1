@@ -14,7 +14,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -126,7 +126,7 @@ export default async function GasUsagePage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 

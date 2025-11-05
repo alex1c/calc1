@@ -204,7 +204,7 @@ export default function VehicleTaxSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							Мощность двигателя
+							{t('seo.calculation.enginePowerTitle')}
 						</h3>
 						<p className='text-blue-800'>
 							{t('seo.calculation.enginePower')}
@@ -212,7 +212,7 @@ export default function VehicleTaxSEO() {
 					</div>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							Региональная ставка
+							{t('seo.calculation.regionTitle')}
 						</h3>
 						<p className='text-green-800'>
 							{t('seo.calculation.region')}
@@ -220,7 +220,7 @@ export default function VehicleTaxSEO() {
 					</div>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
-							Срок владения
+							{t('seo.calculation.ownershipTitle')}
 						</h3>
 						<p className='text-purple-800'>
 							{t('seo.calculation.ownership')}
@@ -228,7 +228,7 @@ export default function VehicleTaxSEO() {
 					</div>
 					<div className='bg-orange-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
-							Формула расчёта
+							{t('seo.calculation.formulaTitle')}
 						</h3>
 						<p className='text-orange-800 font-mono'>
 							{t('seo.calculation.formula')}
@@ -302,19 +302,19 @@ export default function VehicleTaxSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-red-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-red-900 mb-4'>
-							Сроки уплаты
+							{t('seo.tips.deadlineTitle')}
 						</h3>
 						<p className='text-red-800'>{t('seo.tips.deadline')}</p>
 					</div>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-4'>
-							Проверка расчёта
+							{t('seo.tips.paymentTitle')}
 						</h3>
 						<p className='text-blue-800'>{t('seo.tips.payment')}</p>
 					</div>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-4'>
-							Период владения
+							{t('seo.tips.ownershipTitle')}
 						</h3>
 						<p className='text-green-800'>
 							{t('seo.tips.ownership')}
@@ -322,7 +322,7 @@ export default function VehicleTaxSEO() {
 					</div>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-4'>
-							Консультации
+							{t('seo.tips.consultationTitle')}
 						</h3>
 						<p className='text-purple-800'>
 							{t('seo.tips.consultation')}

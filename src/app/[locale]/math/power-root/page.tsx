@@ -13,7 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const { loadMergedMathTranslations } = await import('@/lib/i18n-utils');
@@ -86,7 +86,7 @@ export default async function PowerRootPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 

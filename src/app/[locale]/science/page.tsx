@@ -168,7 +168,7 @@ export default async function SciencePage({ params: { locale } }: Props) {
 				) : (
 					<div className='text-center py-12'>
 						<p className='text-gray-500 dark:text-gray-400'>
-							Калькуляторы будут добавлены в ближайшее время.
+							{t('common.calculatorsWillBeAdded') || 'Калькуляторы будут добавлены в ближайшее время.'}
 						</p>
 					</div>
 				)}

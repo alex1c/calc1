@@ -122,7 +122,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.basic.description'),
 			icon: Calculator,
 			href: '/math/basic',
-			category: 'Арифметика',
+			category: t('categories.math.subcategories.arithmetic'),
 		},
 		{
 			id: 'percentage',
@@ -130,7 +130,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.math_percent.description'),
 			icon: Percent,
 			href: '/math/percent',
-			category: 'Арифметика',
+			category: t('categories.math.subcategories.arithmetic'),
 		},
 		{
 			id: 'area',
@@ -138,7 +138,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.area.description'),
 			icon: Circle,
 			href: '/math/area',
-			category: 'Геометрия',
+			category: t('categories.math.subcategories.geometry'),
 		},
 		{
 			id: 'volume',
@@ -146,7 +146,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.volume.description'),
 			icon: Box,
 			href: '/math/volume',
-			category: 'Геометрия',
+			category: t('categories.math.subcategories.geometry'),
 		},
 		{
 			id: 'powerRoot',
@@ -154,7 +154,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.powerRoot.description'),
 			icon: Zap,
 			href: '/math/power-root',
-			category: 'Алгебра',
+			category: t('categories.math.subcategories.algebra'),
 		},
 		{
 			id: 'equations',
@@ -162,7 +162,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.equations.description'),
 			icon: Equal,
 			href: '/math/equations',
-			category: 'Алгебра',
+			category: t('categories.math.subcategories.algebra'),
 		},
 		{
 			id: 'statistics',
@@ -170,7 +170,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.statistics.description'),
 			icon: BarChart3,
 			href: '/math/statistics',
-			category: 'Статистика',
+			category: t('categories.math.subcategories.statistics'),
 		},
 		{
 			id: 'converter',
@@ -178,7 +178,7 @@ const getCalculators = (t: any) => {
 			description: t('calculators.converter.description'),
 			icon: Ruler,
 			href: '/math/converter',
-			category: 'Конвертация',
+			category: t('categories.math.subcategories.conversion'),
 		},
 	];
 
@@ -190,7 +190,20 @@ export default async function MathPage({ params: { locale } }: Props) {
 		notFound();
 	}
 
-	const t = await getTranslations();
+	// Load merged translations including math calculators
+	const { loadMergedMathTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedMathTranslations(locale);
+
+	// Create translation function that accesses merged messages
+	const t = (key: string) => {
+		const parts = key.split('.');
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
+		}
+		return value || key;
+	};
+
 	const tCategories = await getTranslations({ namespace: 'categories' });
 	const calculators = getCalculators(t);
 
@@ -241,7 +254,7 @@ export default async function MathPage({ params: { locale } }: Props) {
 									{calculators.length}
 								</div>
 								<div className='text-indigo-100'>
-									Калькуляторов
+									{t('common.calculatorsCount')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -249,19 +262,19 @@ export default async function MathPage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									100%
 								</div>
-								<div className='text-indigo-100'>Бесплатно</div>
+								<div className='text-indigo-100'>{t('common.free')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Code2 className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									4
 								</div>
-								<div className='text-indigo-100'>Разделов</div>
+								<div className='text-indigo-100'>{t('common.sections')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Онлайн
+									{t('common.online')}
 								</div>
 								<div className='text-indigo-100'>24/7</div>
 							</div>
@@ -273,36 +286,33 @@ export default async function MathPage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* SEO Content Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mb-12'>
-					<div className='prose prose-lg max-w-none dark:prose-invert'>
-						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							Математические калькуляторы для обучения и работы
-						</h2>
-						<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-							Наша коллекция математических калькуляторов
-							охватывает все основные разделы математики: от
-							простых арифметических операций до сложных
-							геометрических и алгебраических расчётов. Все
-							калькуляторы полностью бесплатные, работают онлайн
-							без регистрации и доступны 24/7.
-						</p>
-						<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-							Используйте калькуляторы для расчёта процентов,
-							площади геометрических фигур, объёма тел, степеней и
-							корней чисел, решения уравнений, статистических
-							расчётов и конвертации единиц измерения. Каждый
-							калькулятор содержит подробные инструкции, примеры
-							расчётов и пошаговые решения для лучшего понимания
-							математических операций.
-						</p>
-						<p className='text-lg text-gray-700 dark:text-gray-300'>
-							Наши калькуляторы подходят для школьников,
-							студентов, учителей и профессионалов, которым нужны
-							быстрые и точные математические расчёты. Все формулы
-							проверены и соответствуют стандартам математики.
-						</p>
+				{messages.categories?.math?.seo?.overview && (
+					<div className='mb-12'>
+						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
+								{typeof messages.categories.math.seo.overview === 'object'
+									? messages.categories.math.seo.overview.title || tCategories('math.title')
+									: tCategories('math.title')}
+							</h2>
+							{typeof messages.categories.math.seo.overview === 'object' ? (
+								<>
+									<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
+										{messages.categories.math.seo.overview.content}
+									</p>
+									{messages.categories.math.seo.overview.additionalContent && (
+										<p className='text-lg text-gray-600 dark:text-gray-400 leading-relaxed'>
+											{messages.categories.math.seo.overview.additionalContent}
+										</p>
+									)}
+								</>
+							) : (
+								<p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed'>
+									{messages.categories.math.seo.overview}
+								</p>
+							)}
+						</div>
 					</div>
-				</div>
+				)}
 
 				{/* Calculators by Category */}
 				{Object.entries(calculatorsByCategory).map(
@@ -340,93 +350,93 @@ export default async function MathPage({ params: { locale } }: Props) {
 				)}
 
 				{/* Features Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
-					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-						Преимущества наших математических калькуляторов
-					</h2>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-						<div className='text-center'>
-							<div className='bg-indigo-100 dark:bg-indigo-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Calculator className='w-8 h-8 text-indigo-600 dark:text-indigo-400' />
+				{messages.categories?.math?.seo?.advantages && (
+					<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{messages.categories.math.seo.advantages.title || tCategories('math.title')}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							<div className='text-center'>
+								<div className='bg-indigo-100 dark:bg-indigo-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Calculator className='w-8 h-8 text-indigo-600 dark:text-indigo-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.math.seo.advantages.accurate || 'Точные расчёты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.math.seo.advantages.accurateDesc || 'Все калькуляторы используют проверенные математические формулы'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Точные расчёты
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Все калькуляторы используют проверенные
-								математические формулы
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Sparkles className='w-8 h-8 text-green-600 dark:text-green-400' />
+							<div className='text-center'>
+								<div className='bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Sparkles className='w-8 h-8 text-green-600 dark:text-green-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.math.seo.advantages.free || 'Бесплатно'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.math.seo.advantages.freeDesc || 'Полностью бесплатный доступ ко всем калькуляторам'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Бесплатно
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Полностью бесплатный доступ ко всем
-								калькуляторам
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-purple-100 dark:bg-purple-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Code2 className='w-8 h-8 text-purple-600 dark:text-purple-400' />
+							<div className='text-center'>
+								<div className='bg-purple-100 dark:bg-purple-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Code2 className='w-8 h-8 text-purple-600 dark:text-purple-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.math.seo.advantages.stepByStep || 'Пошаговые решения'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.math.seo.advantages.stepByStepDesc || 'Подробные объяснения и примеры для обучения'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Пошаговые решения
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Подробные объяснения и примеры для обучения
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-orange-100 dark:bg-orange-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Users className='w-8 h-8 text-orange-600 dark:text-orange-400' />
+							<div className='text-center'>
+								<div className='bg-orange-100 dark:bg-orange-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Users className='w-8 h-8 text-orange-600 dark:text-orange-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.math.seo.advantages.forAll || 'Для всех'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.math.seo.advantages.forAllDesc || 'От школьников до профессионалов'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Для всех
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								От школьников до профессионалов
-							</p>
 						</div>
 					</div>
-				</div>
+				)}
 
 				{/* Mathematical Topics Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
-					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-						Разделы математики
-					</h2>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-						{[
-							{
-								name: 'Арифметика',
-								icon: Calculator,
-								description:
-									'Основные операции, проценты, дроби',
-								color: 'blue',
-							},
-							{
-								name: 'Геометрия',
-								icon: Circle,
-								description: 'Площадь фигур, объём тел, углы',
-								color: 'green',
-							},
-							{
-								name: 'Алгебра',
-								icon: Zap,
-								description: 'Степени, корни, уравнения',
-								color: 'purple',
-							},
-							{
-								name: 'Статистика',
-								icon: BarChart3,
-								description: 'Средние значения, дисперсия',
-								color: 'orange',
-							},
-						].map((topic) => {
+				{messages.categories?.math?.seo?.sections && (
+					<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{messages.categories.math.seo.sections.title || 'Разделы математики'}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							{[
+								{
+									name: messages.categories.math.seo.sections.arithmetic?.name || t('categories.math.subcategories.arithmetic'),
+									icon: Calculator,
+									description: messages.categories.math.seo.sections.arithmetic?.description || 'Основные операции, проценты, дроби',
+									color: 'blue',
+								},
+								{
+									name: messages.categories.math.seo.sections.geometry?.name || t('categories.math.subcategories.geometry'),
+									icon: Circle,
+									description: messages.categories.math.seo.sections.geometry?.description || 'Площадь фигур, объём тел, углы',
+									color: 'green',
+								},
+								{
+									name: messages.categories.math.seo.sections.algebra?.name || t('categories.math.subcategories.algebra'),
+									icon: Zap,
+									description: messages.categories.math.seo.sections.algebra?.description || 'Степени, корни, уравнения',
+									color: 'purple',
+								},
+								{
+									name: messages.categories.math.seo.sections.statistics?.name || t('categories.math.subcategories.statistics'),
+									icon: BarChart3,
+									description: messages.categories.math.seo.sections.statistics?.description || 'Средние значения, дисперсия',
+									color: 'orange',
+								},
+							].map((topic) => {
 							const Icon = topic.icon;
 							const colorClasses = {
 								blue: 'bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400',
@@ -459,6 +469,7 @@ export default async function MathPage({ params: { locale } }: Props) {
 						})}
 					</div>
 				</div>
+				)}
 			</main>
 
 			{/* Structured Data */}

@@ -22,7 +22,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -32,10 +32,11 @@ export async function generateMetadata({
 
 	const title =
 		seoData.title ||
-		`${t('title')} — Онлайн IT-калькуляторы | Calc1.ru`;
+		`${messages.categories?.it?.title || 'Calcolatori IT'} — Calc1.ru`;
 	const description =
 		seoData.description ||
-		'IT-калькуляторы онлайн: расчёт IP-адресов и подсетей, хеширование (MD5, SHA-1, SHA-256), кодирование и декодирование (Base64, URL), форматирование JSON, сетевые расчёты. Бесплатные онлайн калькуляторы для разработчиков и IT-специалистов.';
+		messages.categories?.it?.description ||
+		'Calcolatori IT online per sviluppatori e specialisti IT';
 
 	const keywordsString = seoData.keywords || '';
 	const keywords = keywordsString
@@ -132,7 +133,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function ItPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -143,16 +144,18 @@ export default async function ItPage({ params: { locale } }: Props) {
 	});
 	const currentLocale = await getLocale();
 
+	// Load merged translations including IT calculators
 	const { loadMergedItTranslations } = await import('@/lib/i18n-utils');
 	const messages = await loadMergedItTranslations(locale);
+
+	// Create translation function that accesses merged messages
 	const tCalc = (key: string) => {
 		const parts = key.split('.');
-		if (parts[0] === 'calculators' && parts.length >= 3) {
-			const calcKey = parts[1];
-			const restKey = parts.slice(2).join('.');
-			return messages.calculators?.[calcKey]?.[restKey] || key;
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
 		}
-		return key;
+		return value || key;
 	};
 
 	const calculators = getCalculators(tCalc);
@@ -161,10 +164,8 @@ export default async function ItPage({ params: { locale } }: Props) {
 		{ label: tCategories('it.title') },
 	];
 
-	// Get SEO content
-	const baseMessages = (await import(`../../../../messages/${locale}.json`))
-		.default;
-	const seoData = baseMessages.categories?.it?.seo || {};
+	// Get SEO content (use loaded messages)
+	const seoData = messages.categories?.it?.seo || {};
 	const faqItems = seoData.faq?.faqItems || [];
 
 	// Prepare structured data for calculators
@@ -208,28 +209,28 @@ export default async function ItPage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									{calculators.length}
 								</div>
-								<div className='text-blue-100'>Калькуляторов</div>
+								<div className='text-blue-100'>{t('common.calculatorsCount')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									99%
 								</div>
-								<div className='text-blue-100'>Точность</div>
+								<div className='text-blue-100'>{t('common.accuracy')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Мгновенно
+									{t('common.instant')}
 								</div>
-								<div className='text-blue-100'>Расчёт</div>
+								<div className='text-blue-100'>{t('common.calculation')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Бесплатно
+									{t('common.free')}
 								</div>
-								<div className='text-blue-100'>Использование</div>
+								<div className='text-blue-100'>{t('common.usage')}</div>
 							</div>
 						</div>
 					</div>
@@ -243,7 +244,7 @@ export default async function ItPage({ params: { locale } }: Props) {
 					<div className='mb-12'>
 						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
-								{seoData.overview.title || 'IT-калькуляторы'}
+								{seoData.overview.title || tCategories('it.title')}
 							</h2>
 							<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
 								{seoData.overview.content}
@@ -261,69 +262,61 @@ export default async function ItPage({ params: { locale } }: Props) {
 				{seoData.advantages && (
 					<div className='mb-12'>
 						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							{seoData.advantages.title || 'Преимущества'}
+							{seoData.advantages.title || tCategories('it.title')}
 						</h2>
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.accurate || 'Точные расчёты'}
+									{seoData.advantages.accurate || t('common.accuracy')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									{seoData.advantages.accurateDesc ||
-										'Используют актуальные стандарты и формулы для максимальной точности.'}
+									{seoData.advantages.accurateDesc || tCategories('it.description')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.professional ||
-										'Профессиональные инструменты'}
+									{seoData.advantages.professional || tCategories('it.title')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									{seoData.advantages.professionalDesc ||
-										'Разработаны для использования в профессиональной IT-среде.'}
+									{seoData.advantages.professionalDesc || tCategories('it.description')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<Sparkles className='w-8 h-8 text-purple-600 dark:text-purple-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.comprehensive ||
-										'Полный набор функций'}
+									{seoData.advantages.comprehensive || tCategories('it.title')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									{seoData.advantages.comprehensiveDesc ||
-										'Покрывают все основные потребности IT-специалистов.'}
+									{seoData.advantages.comprehensiveDesc || tCategories('it.description')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<Zap className='w-8 h-8 text-yellow-600 dark:text-yellow-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.fast || 'Мгновенные результаты'}
+									{seoData.advantages.fast || t('common.instant')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									{seoData.advantages.fastDesc ||
-										'Все расчёты выполняются мгновенно без задержек.'}
+									{seoData.advantages.fastDesc || t('common.calculation')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<TrendingUp className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.free || 'Бесплатно'}
+									{seoData.advantages.free || t('common.free')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									{seoData.advantages.freeDesc ||
-										'Полностью бесплатно, без регистрации и скрытых платежей.'}
+									{seoData.advantages.freeDesc || t('common.usage')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<Monitor className='w-8 h-8 text-indigo-600 dark:text-indigo-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.accessible || 'Доступность'}
+									{seoData.advantages.accessible || tCategories('it.title')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									{seoData.advantages.accessibleDesc ||
-										'Работает на всех устройствах с адаптивным интерфейсом.'}
+									{seoData.advantages.accessibleDesc || tCategories('it.description')}
 								</p>
 							</div>
 						</div>
@@ -335,7 +328,7 @@ export default async function ItPage({ params: { locale } }: Props) {
 					<div className='mb-12'>
 						<div className='bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg shadow-lg p-8'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
-								{seoData.tips.title || 'Советы по использованию'}
+								{seoData.tips.title || tCategories('it.title')}
 							</h2>
 							<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
 								{seoData.tips.content}
@@ -373,7 +366,7 @@ export default async function ItPage({ params: { locale } }: Props) {
 				{/* Calculators Grid */}
 				<div className='mb-12'>
 					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-8'>
-						Доступные калькуляторы
+						{t('common.availableCalculators')}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 						{calculators.map((calculator) => {
@@ -404,8 +397,7 @@ export default async function ItPage({ params: { locale } }: Props) {
 					<div className='mb-12'>
 						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-								{seoData.faq?.title ||
-									'Часто задаваемые вопросы об IT-калькуляторах'}
+								{seoData.faq?.title || tCategories('it.title')}
 							</h2>
 							<div className='space-y-6'>
 								{faqItems.slice(0, 10).map((faq: any, index: number) => (

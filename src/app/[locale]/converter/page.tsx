@@ -27,19 +27,19 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
 		.default;
-	const t = (key: string) => messages.categories['converter'][key];
 
 	const seoTitle =
 		messages.categories?.converter?.seo?.title ||
-		`${t('title')} — Онлайн конвертеры единиц измерения | Calc1.ru`;
+		`${messages.categories?.converter?.title || 'Convertitori'} — Calc1.ru`;
 	const seoDescription =
 		messages.categories?.converter?.seo?.description ||
-		'Бесплатные онлайн-конвертеры единиц измерения: длина, вес, температура, скорость, давление, объём, энергия, данные. Точные расчёты для профессионалов и повседневного использования.';
+		messages.categories?.converter?.description ||
+		'Convertitori online di unità di misura';
 
 	const keywordsString =
 		messages.categories?.converter?.seo?.keywords || '';
@@ -184,11 +184,24 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function ConverterPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
-	const t = await getTranslations({ locale });
+	// Load merged translations including converter calculators
+	const { loadMergedConverterTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConverterTranslations(locale);
+
+	// Create translation function that accesses merged messages
+	const t = (key: string) => {
+		const parts = key.split('.');
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
+		}
+		return value || key;
+	};
+
 	const tCategories = await getTranslations({
 		locale,
 		namespace: 'categories',
@@ -197,9 +210,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 
 	const calculators = getCalculators(t);
 
-	// Get SEO content
-	const messages = (await import(`../../../../messages/${locale}.json`))
-		.default;
+	// Get SEO content (use loaded messages)
 	const seoData = messages.categories?.converter?.seo || {};
 	const faqItems = seoData?.faq?.faqItems || [];
 
@@ -233,9 +244,8 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 		},
 		about: {
 			'@type': 'Thing',
-			name: 'Конвертеры единиц измерения',
-			description:
-				'Онлайн конвертеры для перевода между различными единицами измерения',
+			name: tCategories('converter.title'),
+			description: tCategories('converter.description'),
 		},
 	};
 
@@ -259,7 +269,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -364,28 +374,28 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='text-2xl font-bold text-white mb-1'>
 										{calculators.length}
 									</div>
-									<div className='text-blue-100'>Конвертеров</div>
+									<div className='text-blue-100'>{t('common.converters')}</div>
 								</div>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 									<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
 									<div className='text-2xl font-bold text-white mb-1'>
 										100%
 									</div>
-									<div className='text-blue-100'>Точность</div>
+									<div className='text-blue-100'>{t('common.accuracy')}</div>
 								</div>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 									<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 									<div className='text-2xl font-bold text-white mb-1'>
-										Мгновенно
+										{t('common.instant')}
 									</div>
-									<div className='text-blue-100'>Конвертация</div>
+									<div className='text-blue-100'>{t('common.conversion')}</div>
 								</div>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 									<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
 									<div className='text-2xl font-bold text-white mb-1'>
-										Бесплатно
+										{t('common.free')}
 									</div>
-									<div className='text-blue-100'>Использование</div>
+									<div className='text-blue-100'>{t('common.usage')}</div>
 								</div>
 							</div>
 						</div>
@@ -399,8 +409,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 						<div className='mb-12'>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
 								<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
-									{seoData.overview.title ||
-										'Онлайн-конвертеры единиц измерения'}
+									{seoData.overview.title || tCategories('converter.title')}
 								</h2>
 								<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
 									{seoData.overview.content}
@@ -418,7 +427,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 					{seoData.advantages && (
 						<div className='mb-12'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-								{seoData.advantages.title || 'Преимущества наших конвертеров'}
+								{seoData.advantages.title || tCategories('converter.title')}
 							</h2>
 							<p className='text-lg text-gray-600 dark:text-gray-400 mb-6'>
 								{seoData.advantages.content}
@@ -428,7 +437,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<CheckCircle className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.advantages.precise.title || 'Точные расчёты'}
+											{seoData.advantages.precise.title || t('common.accuracy')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.advantages.precise.content}
@@ -439,8 +448,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<Zap className='w-8 h-8 text-yellow-600 dark:text-yellow-400 mb-3' />
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.advantages.instant.title ||
-												'Мгновенная конвертация'}
+											{seoData.advantages.instant.title || t('common.instant')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.advantages.instant.content}
@@ -451,8 +459,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<Globe className='w-8 h-8 text-blue-600 dark:text-blue-400 mb-3' />
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.advantages.comprehensive.title ||
-												'Множество единиц'}
+											{seoData.advantages.comprehensive.title || tCategories('converter.title')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.advantages.comprehensive.content}
@@ -463,8 +470,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<Globe className='w-8 h-8 text-indigo-600 dark:text-indigo-400 mb-3' />
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.advantages.multilingual.title ||
-												'Многоязычный интерфейс'}
+											{seoData.advantages.multilingual.title || tCategories('converter.title')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.advantages.multilingual.content}
@@ -475,7 +481,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<Target className='w-8 h-8 text-purple-600 dark:text-purple-400 mb-3' />
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.advantages.mobile.title || 'Мобильная версия'}
+											{seoData.advantages.mobile.title || tCategories('converter.title')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.advantages.mobile.content}
@@ -486,8 +492,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<TrendingUp className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.advantages.free.title ||
-												'Бесплатно и без регистрации'}
+											{seoData.advantages.free.title || t('common.free')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.advantages.free.content}
@@ -502,7 +507,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 					{seoData.tips && (
 						<div className='mb-12'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-								{seoData.tips.title || 'Полезные советы'}
+								{seoData.tips.title || tCategories('converter.title')}
 							</h2>
 							<p className='text-lg text-gray-600 dark:text-gray-400 mb-6'>
 								{seoData.tips.content}
@@ -511,8 +516,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 								{seoData.tips.tip1 && (
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.tips.tip1.title ||
-												'Проверяйте единицы измерения'}
+											{seoData.tips.tip1.title || tCategories('converter.title')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.tips.tip1.content}
@@ -522,7 +526,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 								{seoData.tips.tip2 && (
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.tips.tip2.title || 'Используйте точные значения'}
+											{seoData.tips.tip2.title || tCategories('converter.title')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.tips.tip2.content}
@@ -532,8 +536,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 								{seoData.tips.tip3 && (
 									<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 										<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-											{seoData.tips.tip3.title ||
-												'Помните о системах измерения'}
+											{seoData.tips.tip3.title || tCategories('converter.title')}
 										</h3>
 										<p className='text-gray-600 dark:text-gray-400'>
 											{seoData.tips.tip3.content}
@@ -557,7 +560,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 					{/* Calculators Grid */}
 					<div className='mb-12'>
 						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							Все конвертеры
+							{t('common.availableCalculators')}
 						</h2>
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 							{calculators.map((calculator) => (
@@ -584,7 +587,7 @@ export default async function ConverterPage({ params: { locale } }: Props) {
 					{seoData.faq && faqItems.length > 0 && (
 						<div className='mb-12'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-								{seoData.faq.title || 'Часто задаваемые вопросы'}
+								{seoData.faq.title || tCategories('converter.title')}
 							</h2>
 							<div className='space-y-4'>
 								{faqItems.slice(0, 10).map(

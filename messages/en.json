@@ -15,6 +15,20 @@
     "language": "Language",
     "categories": "Categories",
     "calculators": "Calculators",
+    "calculatorsCount": "Calculators",
+    "free": "Free",
+    "sections": "Sections",
+    "online": "Online",
+    "accuracy": "Accuracy",
+    "instant": "Instant",
+    "calculation": "Calculation",
+    "usage": "Usage",
+    "results": "Results",
+    "speed": "Speed",
+    "conversion": "Conversion",
+    "converters": "Converters",
+    "calculatorsWillBeAdded": "Calculators will be added soon.",
+    "availableCalculators": "Available Calculators",
     "calculate": "Calculate",
     "result": "Result",
     "clear": "Clear",
@@ -315,14 +329,53 @@
     "finance": {
       "title": "Financial Calculators",
       "description": "Loans, deposits, mortgages, taxes and investments",
+      "subcategories": {
+        "loans": "Loans",
+        "investments": "Investments and Savings",
+        "taxes": "Taxes and Fines",
+        "business": "Business and Finance"
+      },
       "seo": {
         "keywords": "financial calculators, loan calculator, mortgage calculator, auto loan calculator, investment calculator, deposit calculator, tax calculator, penalty calculator, loan calculation online, mortgage calculation, auto loan calculation, loan interest calculation, annuity payment, differentiated payment, loan overpayment, leasing calculator, investment calculator, deposit calculator, savings account calculator, vehicle tax calculation, traffic fine calculator, tax calculator, income tax calculator, financial planning, budget calculator, budget planning, loan calculator, mortgage calculator, auto loan calculator, investment calculator, tax calculator, savings calculator",
-        "overview": "Financial calculators Calc1.ru are a set of online tools for accurate financial calculations: loans, mortgages, auto loans, investments, deposits, taxes and fines. All calculators use current rates and tariffs for accurate calculations."
+        "overview": "Financial calculators Calc1.ru are a set of online tools for accurate financial calculations: loans, mortgages, auto loans, investments, deposits, taxes and fines. All calculators use current rates and tariffs for accurate calculations.",
+        "advantages": {
+          "title": "Advantages of our financial calculators",
+          "accurate": "Accurate calculations",
+          "accurateDesc": "All calculators use current financial formulas",
+          "free": "Free",
+          "freeDesc": "Completely free access to all calculators",
+          "charts": "Charts and visualization",
+          "chartsDesc": "Clear charts for better understanding of results",
+          "forAll": "For everyone",
+          "forAllDesc": "From individuals to businesses"
+        },
+        "sections": {
+          "title": "Financial sections",
+          "loans": {
+            "name": "Loans",
+            "description": "Mortgage, auto loan, consumer loan, leasing"
+          },
+          "investments": {
+            "name": "Investments and Savings",
+            "description": "Investments, deposits, savings accounts"
+          },
+          "taxes": {
+            "name": "Taxes and Fines",
+            "description": "Income tax, vehicle tax, traffic fines"
+          }
+        }
       }
     },
     "math": {
       "title": "Mathematical Calculators",
       "description": "Basic operations, fractions, percentages, geometry",
+      "subcategories": {
+        "arithmetic": "Arithmetic",
+        "geometry": "Geometry",
+        "algebra": "Algebra",
+        "statistics": "Statistics",
+        "conversion": "Conversion"
+      },
       "seo": {
         "keywords": "mathematical calculators, math calculator, online math calculator, percentage calculator, area calculator, volume calculator, power calculator, root calculator, equation calculator, statistics calculator, unit converter, fraction calculator, calculator for students, calculator for school, math converter, percentage calculation online, area calculation, volume calculation, power of number, root of number, equation solving, statistical calculations, length converter, weight converter, area converter, volume converter, mathematical operations, geometric calculations, basic math calculator, percentage calculator, area calculator, volume calculator, power root calculator, equations calculator",
         "overview": "Mathematical calculators Calc1.ru are a set of online tools for performing mathematical calculations: basic operations, percentages, area, volume, powers and roots, equations, statistics, unit converter. Suitable for students, schoolchildren and professionals."
@@ -331,6 +384,13 @@
     "life": {
       "title": "Life Calculators",
       "description": "Calories, BMI, pregnancy, health",
+      "subcategories": {
+        "health": "Health",
+        "nutrition": "Nutrition",
+        "family": "Family",
+        "household": "Household",
+        "utilities": "Utilities"
+      },
       "seo": {
         "keywords": "life calculators, household calculators, BMI calculator, calorie calculator, pregnancy calculator, baby growth calculator, electricity consumption calculator, water consumption calculator, gas consumption calculator, heating cost calculator, electricity cost calculator, paper weight calculator, ring size calculator, clothing size converter, alcohol calculator, BJU calculator, home calculator, family calculator, health calculator, household calculations, calorie calculation online, BMI calculation online, electricity consumption calculation, water consumption calculation, gas consumption calculation, heating cost calculation, life calculators, household calculators, daily life calculators",
         "overview": "Life calculators Calc1.ru are a set of online tools for household calculations: BMI, calories, pregnancy, baby growth, electricity consumption, water, gas and heating. Suitable for home, family and health."

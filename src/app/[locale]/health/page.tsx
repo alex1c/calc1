@@ -26,7 +26,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -35,10 +35,11 @@ export async function generateMetadata({
 
 	const seoTitle =
 		messages.categories?.health?.seo?.title ||
-		`${t('title')} — Онлайн медицинские калькуляторы | Calc1.ru`;
+		`${messages.categories?.health?.title || 'Salute e Medicina'} — Calc1.ru`;
 	const seoDescription =
 		messages.categories?.health?.seo?.description ||
-		'Медицинские калькуляторы онлайн: расчёт ИМТ, пульса, артериального давления, овуляции, витаминов, стресса, дозировки лекарств. Бесплатные онлайн калькуляторы для контроля здоровья и медицинских расчётов.';
+		messages.categories?.health?.description ||
+		'Calcolatori medici online per il monitoraggio della salute e calcoli medici';
 
 	const keywordsString =
 		messages.categories?.health?.seo?.keywords || '';
@@ -209,7 +210,7 @@ const getCalculators = (t: any, healthMessages: any) => [
 ];
 
 export default async function HealthPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -263,9 +264,9 @@ export default async function HealthPage({ params: { locale } }: Props) {
 		},
 		about: {
 			'@type': 'Thing',
-			name: 'Медицинские калькуляторы',
+			name: messages.categories?.health?.title || tCategories('health.title'),
 			description:
-				'Онлайн калькуляторы для медицинских расчётов и контроля здоровья',
+				messages.categories?.health?.description || tCategories('health.description'),
 		},
 	};
 
@@ -285,11 +286,11 @@ export default async function HealthPage({ params: { locale } }: Props) {
 	const breadcrumbListData = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
-		itemListElement: [
+				itemListElement: [
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: t('breadcrumbs.home'),
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -401,7 +402,7 @@ export default async function HealthPage({ params: { locale } }: Props) {
 										{calculators.length}
 									</div>
 									<div className='text-pink-100'>
-										калькуляторов
+										{t('common.calculatorsCount')}
 									</div>
 								</div>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -409,22 +410,22 @@ export default async function HealthPage({ params: { locale } }: Props) {
 									<div className='text-2xl font-bold text-white mb-1'>
 										100%
 									</div>
-									<div className='text-pink-100'>точность</div>
+									<div className='text-pink-100'>{t('common.accuracy')}</div>
 								</div>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 									<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 									<div className='text-2xl font-bold text-white mb-1'>
-										Мгновенно
+										{t('common.instant')}
 									</div>
-									<div className='text-pink-100'>скорость</div>
+									<div className='text-pink-100'>{t('common.speed')}</div>
 								</div>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 									<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
 									<div className='text-2xl font-bold text-white mb-1'>
-										Бесплатно
+										{t('common.free')}
 									</div>
 									<div className='text-pink-100'>
-										использование
+										{t('common.usage')}
 									</div>
 								</div>
 							</div>
@@ -452,9 +453,9 @@ export default async function HealthPage({ params: { locale } }: Props) {
 
 					{/* Calculators Grid */}
 					<div className='mb-12'>
-						<h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-6'>
-							Доступные калькуляторы
-						</h2>
+					<h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-6'>
+						{t('common.availableCalculators')}
+					</h2>
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 							{calculators.map((calculator) => (
 								<Link

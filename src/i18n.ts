@@ -3,6 +3,31 @@ import { getRequestConfig } from 'next-intl/server';
 
 const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
 
+// Explicit imports for all locales to ensure webpack includes them in the build
+// These imports are not executed but help webpack statically analyze the module graph
+import ruMessages from '../messages/ru.json';
+import enMessages from '../messages/en.json';
+import deMessages from '../messages/de.json';
+import esMessages from '../messages/es.json';
+import frMessages from '../messages/fr.json';
+import itMessages from '../messages/it.json';
+import plMessages from '../messages/pl.json';
+import trMessages from '../messages/tr.json';
+import ptBRMessages from '../messages/pt-BR.json';
+
+// Map of locale to their message imports for runtime loading
+const localeMessageMap: Record<string, () => Promise<{ default: any }>> = {
+	ru: () => Promise.resolve({ default: ruMessages }),
+	en: () => Promise.resolve({ default: enMessages }),
+	de: () => Promise.resolve({ default: deMessages }),
+	es: () => Promise.resolve({ default: esMessages }),
+	fr: () => Promise.resolve({ default: frMessages }),
+	it: () => Promise.resolve({ default: itMessages }),
+	pl: () => Promise.resolve({ default: plMessages }),
+	tr: () => Promise.resolve({ default: trMessages }),
+	'pt-BR': () => Promise.resolve({ default: ptBRMessages }),
+};
+
 function deepMerge(a: any, b: any) {
 	if (Array.isArray(a) || Array.isArray(b)) return b;
 	if (a && typeof a === 'object' && b && typeof b === 'object') {
@@ -33,11 +58,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
 	try {
 		// 1) Базовый монолит (обратная совместимость)
-		const baseMessages = (
-			await import(`../messages/${locale}.json`).catch(() => ({
-				default: {} as any,
-			}))
-		).default;
+		// Use explicit locale map for better webpack static analysis
+		const baseMessagesLoader = localeMessageMap[locale];
+		const baseMessages = baseMessagesLoader
+			? (await baseMessagesLoader()).default
+			: (
+					await import(`../messages/${locale}.json`).catch(() => ({
+						default: {} as any,
+					}))
+				).default;
 
 		// 2) Подмешиваем калькуляторы из messages/{locale}/calculators/*.json если существуют
 		let calculatorsBundle: any = {};
@@ -81,11 +110,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
 		return { locale, messages };
 	} catch (error) {
 		console.error(`Failed to load messages for locale ${locale}:`, error);
-		const fallbackMessages = (
-			await import(`../messages/ru.json`).catch(() => ({
-				default: {} as any,
-			}))
-		).default;
+		// Use explicit import for fallback
+		const fallbackMessages = (await localeMessageMap['ru']()).default;
 		return { locale: 'ru', messages: fallbackMessages };
 	}
 });

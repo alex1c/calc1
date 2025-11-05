@@ -9,6 +9,14 @@ const nextConfig = {
 		_next_intl_trailing_slash: 'false',
 	},
 	trailingSlash: false,
+	// Ensure all translation files are included in the output file tracing
+	experimental: {
+		outputFileTracingIncludes: {
+			'/**': [
+				'./messages/**/*.json',
+			],
+		},
+	},
 };
 
 module.exports = withNextIntl(nextConfig);

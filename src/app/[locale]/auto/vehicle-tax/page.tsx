@@ -13,7 +13,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -110,7 +110,7 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -155,9 +155,9 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<MapPin className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									85
+									{t('hero.regionsCount')}
 								</div>
-								<div className='text-blue-100'>Регионов РФ</div>
+								<div className='text-blue-100'>{t('hero.regions')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
@@ -165,15 +165,15 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 									99%
 								</div>
 								<div className='text-blue-100'>
-									Точность расчёта
+									{t('hero.accuracy')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<DollarSign className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									1 дек
+									{t('hero.paymentDeadlineDate')}
 								</div>
-								<div className='text-blue-100'>Срок уплаты</div>
+								<div className='text-blue-100'>{t('hero.paymentDeadline')}</div>
 							</div>
 						</div>
 					</div>

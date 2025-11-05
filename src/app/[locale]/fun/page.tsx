@@ -29,7 +29,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -37,11 +37,10 @@ export async function generateMetadata({
 	const seoData = messages.categories?.fun?.seo || {};
 	const t = (key: string) => messages.categories['fun'][key];
 
-	const title = seoData.title || `${t(
-		'title'
-	)} — Онлайн развлекательные калькуляторы | Calc1.ru`;
+	const title = seoData.title || `${messages.categories?.fun?.title || 'Divertimento e Hobby'} — Calc1.ru`;
 	const description = seoData.description ||
-		'Развлекательные калькуляторы онлайн: генераторы паролей, никнеймов, имен, случайных чисел, калькуляторы совместимости и любви, зодиак, игры с кубиками и монетами. Бесплатные онлайн калькуляторы для развлечений и творчества.';
+		messages.categories?.fun?.description ||
+		'Calcolatori divertenti online per intrattenimento e creatività';
 
 	const keywordsString = seoData.keywords || '';
 	const keywords = keywordsString
@@ -205,11 +204,24 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function FunPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
-	const t = await getTranslations({ locale });
+	// Load merged translations including fun calculators
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
+	// Create translation function that accesses merged messages
+	const t = (key: string) => {
+		const parts = key.split('.');
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
+		}
+		return value || key;
+	};
+
 	const tCategories = await getTranslations({
 		locale,
 		namespace: 'categories',
@@ -222,9 +234,7 @@ export default async function FunPage({ params: { locale } }: Props) {
 		{ label: tCategories('fun.title') },
 	];
 
-	// Get SEO content
-	const messages = (await import(`../../../../messages/${locale}.json`))
-		.default;
+	// Get SEO content (use loaded messages)
 	const seoData = messages.categories?.fun?.seo || {};
 	const faqItems = seoData.faq?.faqItems || [];
 
@@ -344,25 +354,25 @@ export default async function FunPage({ params: { locale } }: Props) {
 								<div className='text-3xl font-bold text-white mb-1'>
 									{calculators.length}
 								</div>
-								<div className='text-purple-100 text-sm'>Калькуляторов</div>
+								<div className='text-purple-100 text-sm'>{t('common.calculatorsCount')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-3xl font-bold text-white mb-1'>
-									Мгновенно
+									{t('common.instant')}
 								</div>
-								<div className='text-purple-100 text-sm'>Результаты</div>
+								<div className='text-purple-100 text-sm'>{t('common.results')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-3xl font-bold text-white mb-1'>
-									Бесплатно
+									{t('common.free')}
 								</div>
-								<div className='text-purple-100 text-sm'>Использование</div>
+								<div className='text-purple-100 text-sm'>{t('common.usage')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Globe className='w-8 h-8 text-white mx-auto mb-2' />
-								<div className='text-3xl font-bold text-white mb-1'>Онлайн</div>
+								<div className='text-3xl font-bold text-white mb-1'>{t('common.online')}</div>
 								<div className='text-purple-100 text-sm'>24/7</div>
 							</div>
 						</div>
@@ -391,7 +401,7 @@ export default async function FunPage({ params: { locale } }: Props) {
 				{/* Calculators Grid */}
 				<section className='mb-12'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-6'>
-						Доступные калькуляторы
+						{t('common.availableCalculators')}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 						{calculators.map((calculator) => (
@@ -546,7 +556,7 @@ export default async function FunPage({ params: { locale } }: Props) {
 				{faqItems.length > 0 && (
 					<section className='mb-12'>
 						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							{seoData.faq?.title || 'Часто задаваемые вопросы'}
+							{seoData.faq?.title || tCategories('fun.title')}
 						</h2>
 						<div className='space-y-6'>
 							{faqItems.slice(0, 30).map((item: { q: string; a: string }, index: number) => (

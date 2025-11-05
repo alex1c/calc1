@@ -27,7 +27,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -119,7 +119,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.credit-loan.description'),
 		icon: CreditCard,
 		href: '/finance/credit-loan',
-		category: 'Кредиты',
+		category: t('categories.finance.subcategories.loans'),
 	},
 	{
 		id: 'mortgage',
@@ -127,7 +127,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.mortgage.description'),
 		icon: Home,
 		href: '/finance/mortgage',
-		category: 'Кредиты',
+		category: t('categories.finance.subcategories.loans'),
 	},
 	{
 		id: 'auto-loan',
@@ -135,7 +135,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.auto-loan.description'),
 		icon: Car,
 		href: '/finance/auto-loan',
-		category: 'Кредиты',
+		category: t('categories.finance.subcategories.loans'),
 	},
 	{
 		id: 'consumer-loan',
@@ -143,7 +143,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.consumer-loan.description'),
 		icon: Calculator,
 		href: '/finance/consumer-loan',
-		category: 'Кредиты',
+		category: t('categories.finance.subcategories.loans'),
 	},
 	{
 		id: 'loan-overpayment',
@@ -151,7 +151,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.loan-overpayment.description'),
 		icon: Percent,
 		href: '/finance/loan-overpayment',
-		category: 'Кредиты',
+		category: t('categories.finance.subcategories.loans'),
 	},
 	{
 		id: 'investment',
@@ -159,7 +159,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.investment.description'),
 		icon: TrendingUp,
 		href: '/finance/investment',
-		category: 'Инвестиции и сбережения',
+		category: t('categories.finance.subcategories.investments'),
 	},
 	{
 		id: 'savings',
@@ -167,7 +167,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.savings.description'),
 		icon: PiggyBank,
 		href: '/finance/savings',
-		category: 'Инвестиции и сбережения',
+		category: t('categories.finance.subcategories.investments'),
 	},
 	{
 		id: 'compound-interest',
@@ -175,7 +175,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.compound-interest.description'),
 		icon: TrendingUp,
 		href: '/finance/compound-interest',
-		category: 'Инвестиции и сбережения',
+		category: t('categories.finance.subcategories.investments'),
 	},
 	{
 		id: 'tax-calculator',
@@ -183,7 +183,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.tax-calculator.description'),
 		icon: Receipt,
 		href: '/finance/tax-calculator',
-		category: 'Налоги и штрафы',
+		category: t('categories.finance.subcategories.taxes'),
 	},
 	{
 		id: 'alimony',
@@ -191,7 +191,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.alimony.description'),
 		icon: Users,
 		href: '/finance/alimony',
-		category: 'Налоги и штрафы',
+		category: t('categories.finance.subcategories.taxes'),
 	},
 	{
 		id: 'profit-margin',
@@ -199,7 +199,7 @@ const getCalculators = (t: any) => [
 		description: t('calculators.profit-margin.description'),
 		icon: TrendingUp,
 		href: '/finance/profit-margin',
-		category: 'Бизнес и финансы',
+		category: t('categories.finance.subcategories.business'),
 	},
 	{
 		id: 'pension',
@@ -207,16 +207,29 @@ const getCalculators = (t: any) => [
 		description: t('calculators.pension.description'),
 		icon: Users,
 		href: '/finance/pension',
-		category: 'Инвестиции и сбережения',
+		category: t('categories.finance.subcategories.investments'),
 	},
 ];
 
 export default async function FinancePage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
-	const t = await getTranslations();
+	// Load merged translations including finance calculators
+	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFinanceTranslations(locale);
+
+	// Create translation function that accesses merged messages
+	const t = (key: string) => {
+		const parts = key.split('.');
+		let value: any = messages;
+		for (const part of parts) {
+			value = value?.[part];
+		}
+		return value || key;
+	};
+
 	const tCategories = await getTranslations({ namespace: 'categories' });
 
 	const calculators = getCalculators(t);
@@ -267,7 +280,7 @@ export default async function FinancePage({ params: { locale } }: Props) {
 									{calculators.length}
 								</div>
 								<div className='text-green-100'>
-									Калькуляторов
+									{t('common.calculatorsCount')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -275,19 +288,19 @@ export default async function FinancePage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									100%
 								</div>
-								<div className='text-green-100'>Бесплатно</div>
+								<div className='text-green-100'>{t('common.free')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Percent className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									3
 								</div>
-								<div className='text-green-100'>Разделов</div>
+								<div className='text-green-100'>{t('common.sections')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Онлайн
+									{t('common.online')}
 								</div>
 								<div className='text-green-100'>24/7</div>
 							</div>
@@ -299,37 +312,33 @@ export default async function FinancePage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* SEO Content Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mb-12'>
-					<div className='prose prose-lg max-w-none dark:prose-invert'>
-						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							Финансовые калькуляторы для планирования бюджета
-						</h2>
-						<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-							Наша коллекция финансовых калькуляторов поможет вам
-							принимать обоснованные финансовые решения.
-							Используйте калькуляторы для расчёта кредитов,
-							ипотеки, автокредитов, инвестиций, вкладов, налогов
-							и штрафов. Все инструменты полностью бесплатные и
-							работают онлайн без регистрации.
-						</p>
-						<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-							Рассчитайте переплату по кредиту, выберите
-							оптимальные условия ипотеки, спланируйте инвестиции
-							и оцените налоговые обязательства. Каждый
-							калькулятор содержит подробные инструкции, примеры
-							расчётов и графики для визуализации результатов.
-							Наши калькуляторы подходят как для частных лиц, так
-							и для бизнеса.
-						</p>
-						<p className='text-lg text-gray-700 dark:text-gray-300'>
-							Используйте финансовые калькуляторы для планирования
-							бюджета, сравнения предложений банков, оценки
-							инвестиционных возможностей и расчёта налоговых
-							обязательств. Все формулы проверены и соответствуют
-							актуальным финансовым стандартам.
-						</p>
+				{messages.categories?.finance?.seo?.overview && (
+					<div className='mb-12'>
+						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
+							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
+								{typeof messages.categories.finance.seo.overview === 'object'
+									? messages.categories.finance.seo.overview.title || tCategories('finance.title')
+									: tCategories('finance.title')}
+							</h2>
+							{typeof messages.categories.finance.seo.overview === 'object' ? (
+								<>
+									<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
+										{messages.categories.finance.seo.overview.content}
+									</p>
+									{messages.categories.finance.seo.overview.additionalContent && (
+										<p className='text-lg text-gray-600 dark:text-gray-400 leading-relaxed'>
+											{messages.categories.finance.seo.overview.additionalContent}
+										</p>
+									)}
+								</>
+							) : (
+								<p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed'>
+									{messages.categories.finance.seo.overview}
+								</p>
+							)}
+						</div>
 					</div>
-				</div>
+				)}
 
 				{/* Calculators by Category */}
 				{Object.entries(calculatorsByCategory).map(
@@ -367,90 +376,87 @@ export default async function FinancePage({ params: { locale } }: Props) {
 				)}
 
 				{/* Features Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
-					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-						Преимущества наших финансовых калькуляторов
-					</h2>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-						<div className='text-center'>
-							<div className='bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Calculator className='w-8 h-8 text-green-600 dark:text-green-400' />
+				{messages.categories?.finance?.seo?.advantages && (
+					<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{messages.categories.finance.seo.advantages.title || tCategories('finance.title')}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+							<div className='text-center'>
+								<div className='bg-green-100 dark:bg-green-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Calculator className='w-8 h-8 text-green-600 dark:text-green-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.finance.seo.advantages.accurate || 'Точные расчёты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.finance.seo.advantages.accurateDesc || 'Все калькуляторы используют актуальные финансовые формулы'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Точные расчёты
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Все калькуляторы используют актуальные
-								финансовые формулы
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-blue-100 dark:bg-blue-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Sparkles className='w-8 h-8 text-blue-600 dark:text-blue-400' />
+							<div className='text-center'>
+								<div className='bg-blue-100 dark:bg-blue-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Sparkles className='w-8 h-8 text-blue-600 dark:text-blue-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.finance.seo.advantages.free || 'Бесплатно'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.finance.seo.advantages.freeDesc || 'Полностью бесплатный доступ ко всем калькуляторам'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Бесплатно
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Полностью бесплатный доступ ко всем
-								калькуляторам
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-purple-100 dark:bg-purple-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<BarChart3 className='w-8 h-8 text-purple-600 dark:text-purple-400' />
+							<div className='text-center'>
+								<div className='bg-purple-100 dark:bg-purple-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<BarChart3 className='w-8 h-8 text-purple-600 dark:text-purple-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.finance.seo.advantages.charts || 'Графики и визуализация'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.finance.seo.advantages.chartsDesc || 'Наглядные графики для лучшего понимания результатов'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Графики и визуализация
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								Наглядные графики для лучшего понимания
-								результатов
-							</p>
-						</div>
-						<div className='text-center'>
-							<div className='bg-orange-100 dark:bg-orange-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
-								<Users className='w-8 h-8 text-orange-600 dark:text-orange-400' />
+							<div className='text-center'>
+								<div className='bg-orange-100 dark:bg-orange-900/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>
+									<Users className='w-8 h-8 text-orange-600 dark:text-orange-400' />
+								</div>
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.finance.seo.advantages.forAll || 'Для всех'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-300 text-sm'>
+									{messages.categories.finance.seo.advantages.forAllDesc || 'От частных лиц до бизнеса'}
+								</p>
 							</div>
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Для всех
-							</h3>
-							<p className='text-gray-600 dark:text-gray-300 text-sm'>
-								От частных лиц до бизнеса
-							</p>
 						</div>
 					</div>
-				</div>
+				)}
 
 				{/* Financial Topics Section */}
-				<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
-					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-						Разделы финансов
-					</h2>
-					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-						{[
-							{
-								name: 'Кредиты',
-								icon: CreditCard,
-								description:
-									'Ипотека, автокредит, потребительский кредит, лизинг',
-								color: 'green',
-							},
-							{
-								name: 'Инвестиции и сбережения',
-								icon: TrendingUp,
-								description:
-									'Инвестиции, вклады, накопительные счета',
-								color: 'blue',
-							},
-							{
-								name: 'Налоги и штрафы',
-								icon: Receipt,
-								description:
-									'НДФЛ, транспортный налог, штрафы ГИБДД',
-								color: 'orange',
-							},
-						].map((topic) => {
+				{messages.categories?.finance?.seo?.sections && (
+					<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 mt-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{messages.categories.finance.seo.sections.title || 'Разделы финансов'}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+							{[
+								{
+									name: messages.categories.finance.seo.sections.loans?.name || t('categories.finance.subcategories.loans'),
+									icon: CreditCard,
+									description: messages.categories.finance.seo.sections.loans?.description || 'Ипотека, автокредит, потребительский кредит, лизинг',
+									color: 'green',
+								},
+								{
+									name: messages.categories.finance.seo.sections.investments?.name || t('categories.finance.subcategories.investments'),
+									icon: TrendingUp,
+									description: messages.categories.finance.seo.sections.investments?.description || 'Инвестиции, вклады, накопительные счета',
+									color: 'blue',
+								},
+								{
+									name: messages.categories.finance.seo.sections.taxes?.name || t('categories.finance.subcategories.taxes'),
+									icon: Receipt,
+									description: messages.categories.finance.seo.sections.taxes?.description || 'НДФЛ, транспортный налог, штрафы ГИБДД',
+									color: 'orange',
+								},
+							].map((topic) => {
 							const Icon = topic.icon;
 							const colorClasses = {
 								green: 'bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400',
@@ -482,6 +488,7 @@ export default async function FinancePage({ params: { locale } }: Props) {
 						})}
 					</div>
 				</div>
+				)}
 			</main>
 
 			{/* Structured Data */}

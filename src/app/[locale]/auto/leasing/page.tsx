@@ -13,7 +13,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -110,7 +110,7 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -155,10 +155,10 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<DollarSign className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									15%
+									{t('hero.averageRatePercent')}
 								</div>
 								<div className='text-blue-100'>
-									Средняя ставка
+									{t('hero.averageRate')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -167,7 +167,7 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 									99%
 								</div>
 								<div className='text-blue-100'>
-									Точность расчёта
+									{t('hero.accuracy')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -176,7 +176,7 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 									PDF
 								</div>
 								<div className='text-blue-100'>
-									Экспорт результатов
+									{t('hero.exportResults')}
 								</div>
 							</div>
 						</div>

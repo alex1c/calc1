@@ -15,6 +15,20 @@
     "language": "Lingua",
     "categories": "Categorie",
     "calculators": "Calcolatori",
+    "calculatorsCount": "Calcolatori",
+    "free": "Gratuito",
+    "sections": "Sezioni",
+    "online": "Online",
+    "accuracy": "Precisione",
+    "instant": "Istantaneo",
+    "calculation": "Calcolo",
+    "usage": "Utilizzo",
+    "results": "Risultati",
+    "speed": "Velocità",
+    "conversion": "Conversione",
+    "converters": "Convertitori",
+    "calculatorsWillBeAdded": "I calcolatori verranno aggiunti a breve.",
+    "availableCalculators": "Calcolatori disponibili",
     "calculate": "Calcola",
     "result": "Risultato",
     "clear": "Cancella",
@@ -313,198 +327,315 @@
   },
   "categories": {
     "finance": {
-      "title": "Финансовые калькуляторы",
-      "description": "Кредиты, вклады, ипотека, налоги и инвестиции",
+      "title": "Calcolatori Finanziari",
+      "description": "Prestiti, depositi, mutui, tasse e investimenti",
+      "subcategories": {
+        "loans": "Prestiti",
+        "investments": "Investimenti e risparmi",
+        "taxes": "Tasse e multe",
+        "business": "Business e finanza"
+      },
       "seo": {
         "keywords": "финансовые калькуляторы, калькулятор кредита, калькулятор ипотеки, калькулятор автокредита, калькулятор инвестиций, калькулятор вклада, калькулятор налогов, калькулятор штрафов, расчет кредита онлайн, расчет ипотеки, расчет автокредита, расчет процентов по кредиту, аннуитетный платеж, дифференцированный платеж, переплата по кредиту, калькулятор лизинга, калькулятор инвестиций, калькулятор вкладов, калькулятор накопительного счета, расчет транспортного налога, калькулятор штрафов ГИБДД, калькулятор налогов, НДФЛ калькулятор, подоходный налог, финансовое планирование, бюджетный калькулятор, планирование бюджета, loan calculator, mortgage calculator, auto loan calculator, investment calculator, tax calculator, savings calculator",
-        "overview": "Финансовые калькуляторы Calc1.ru — это набор онлайн-инструментов для точных финансовых расчётов: кредитов, ипотеки, автокредитов, инвестиций, вкладов, налогов и штрафов. Все калькуляторы используют актуальные ставки и тарифы для точных расчётов."
+        "overview": {
+          "title": "Calcolatori Finanziari per la Pianificazione del Budget",
+          "content": "La nostra collezione di calcolatori finanziari ti aiuterà a prendere decisioni finanziarie informate. Usa i calcolatori per calcolare prestiti, mutui, prestiti auto, investimenti, depositi, tasse e multe. Tutti gli strumenti sono completamente gratuiti e funzionano online senza registrazione.",
+          "additionalContent": "Calcola la sovrapagina del prestito, scegli le condizioni ottimali del mutuo, pianifica gli investimenti e valuta gli obblighi fiscali. Ogni calcolatore contiene istruzioni dettagliate, esempi di calcolo e grafici per visualizzare i risultati. I nostri calcolatori sono adatti sia per privati che per aziende. Usa i calcolatori finanziari per la pianificazione del budget, il confronto delle offerte bancarie, la valutazione delle opportunità di investimento e il calcolo degli obblighi fiscali. Tutte le formule sono verificate e corrispondono agli standard finanziari attuali."
+        },
+        "advantages": {
+          "title": "Vantaggi dei nostri calcolatori finanziari",
+          "accurate": "Calcoli precisi",
+          "accurateDesc": "Tutti i calcolatori utilizzano formule finanziarie aggiornate",
+          "free": "Gratuito",
+          "freeDesc": "Accesso completamente gratuito a tutti i calcolatori",
+          "charts": "Grafici e visualizzazione",
+          "chartsDesc": "Grafici chiari per una migliore comprensione dei risultati",
+          "forAll": "Per tutti",
+          "forAllDesc": "Dai privati alle aziende"
+        },
+        "sections": {
+          "title": "Sezioni finanziarie",
+          "loans": {
+            "name": "Prestiti",
+            "description": "Mutuo, prestito auto, prestito al consumo, leasing"
+          },
+          "investments": {
+            "name": "Investimenti e risparmi",
+            "description": "Investimenti, depositi, conti di risparmio"
+          },
+          "taxes": {
+            "name": "Tasse e multe",
+            "description": "IRPEF, imposta di circolazione, multe della polizia stradale"
+          }
+        }
       }
     },
     "math": {
-      "title": "Математические калькуляторы",
-      "description": "Основные операции, дроби, проценты, геометрия",
+      "title": "Calcolatori Matematici",
+      "description": "Operazioni di base, frazioni, percentuali, geometria",
+      "subcategories": {
+        "arithmetic": "Aritmetica",
+        "geometry": "Geometria",
+        "algebra": "Algebra",
+        "statistics": "Statistica",
+        "conversion": "Conversione"
+      },
       "seo": {
         "keywords": "математические калькуляторы, калькулятор математика, онлайн калькулятор математика, калькулятор процентов, калькулятор площади, калькулятор объема, калькулятор степеней, калькулятор корней, калькулятор уравнений, калькулятор статистики, конвертер единиц измерения, калькулятор дробей, калькулятор для школьников, калькулятор для студентов, математический конвертер, расчет процентов онлайн, расчет площади фигур, расчет объема тел, степень числа, корень числа, решение уравнений, статистические расчеты, конвертер длины, конвертер веса, конвертер площади, конвертер объема, математические операции, геометрические расчеты, basic math calculator, percentage calculator, area calculator, volume calculator, power root calculator, equations calculator",
-        "overview": "Математические калькуляторы Calc1.ru — это набор онлайн-инструментов для выполнения математических расчётов: основные операции, проценты, площадь, объём, степени и корни, уравнения, статистика, конвертер единиц. Подходит для студентов, школьников и профессионалов."
+        "overview": {
+          "title": "Calcolatori Matematici per l'Apprendimento e il Lavoro",
+          "content": "La nostra collezione di calcolatori matematici copre tutti i settori principali della matematica: dalle semplici operazioni aritmetiche ai calcoli geometrici e algebrici complessi. Tutti i calcolatori sono completamente gratuiti, funzionano online senza registrazione e sono disponibili 24/7.",
+          "additionalContent": "Usa i calcolatori per calcolare percentuali, aree di figure geometriche, volumi di corpi, potenze e radici di numeri, risolvere equazioni, calcoli statistici e conversione di unità di misura. Ogni calcolatore contiene istruzioni dettagliate, esempi di calcolo e soluzioni passo-passo per una migliore comprensione delle operazioni matematiche. I nostri calcolatori sono adatti per studenti, insegnanti e professionisti che necessitano di calcoli matematici rapidi e precisi. Tutte le formule sono verificate e corrispondono agli standard matematici."
+        },
+        "advantages": {
+          "title": "Vantaggi dei nostri calcolatori matematici",
+          "accurate": "Calcoli precisi",
+          "accurateDesc": "Tutti i calcolatori utilizzano formule matematiche verificate",
+          "free": "Gratuito",
+          "freeDesc": "Accesso completamente gratuito a tutti i calcolatori",
+          "stepByStep": "Soluzioni passo-passo",
+          "stepByStepDesc": "Spiegazioni dettagliate ed esempi per l'apprendimento",
+          "forAll": "Per tutti",
+          "forAllDesc": "Dagli studenti ai professionisti"
+        },
+        "sections": {
+          "title": "Sezioni di matematica",
+          "arithmetic": {
+            "name": "Aritmetica",
+            "description": "Operazioni di base, percentuali, frazioni"
+          },
+          "geometry": {
+            "name": "Geometria",
+            "description": "Calcolo di aree, volumi, perimetri"
+          },
+          "algebra": {
+            "name": "Algebra",
+            "description": "Equazioni, potenze, radici"
+          },
+          "statistics": {
+            "name": "Statistica",
+            "description": "Calcoli statistici e analisi dati"
+          }
+        }
       }
     },
     "life": {
-      "title": "Бытовые калькуляторы",
-      "description": "Калории, ИМТ, беременность, здоровье",
+      "title": "Calcolatori per la Vita",
+      "description": "Calorie, BMI, gravidanza, salute",
+      "subcategories": {
+        "health": "Salute",
+        "nutrition": "Nutrizione",
+        "family": "Famiglia",
+        "household": "Casa",
+        "utilities": "Servizi pubblici"
+      },
       "seo": {
         "keywords": "бытовые калькуляторы, калькуляторы для жизни, калькулятор ИМТ, калькулятор калорий, калькулятор беременности, калькулятор роста ребенка, калькулятор расхода электроэнергии, калькулятор расхода воды, калькулятор расхода газа, калькулятор стоимости отопления, калькулятор стоимости электроэнергии, калькулятор веса бумаги, калькулятор размера кольца, конвертер размеров одежды, калькулятор промилле алкоголя, калькулятор нормы БЖУ, калькулятор для дома, калькулятор для семьи, калькулятор здоровья, бытовые расчеты, расчет калорий онлайн, расчет ИМТ онлайн, расчет расхода электроэнергии, расчет расхода воды, расчет расхода газа, расчет стоимости отопления, life calculators, household calculators, daily life calculators",
-        "overview": "Бытовые калькуляторы Calc1.ru — это набор онлайн-инструментов для бытовых расчётов: ИМТ, калорий, беременности, роста ребёнка, расхода электроэнергии, воды, газа и отопления. Подходит для дома, семьи и здоровья."
+        "overview": {
+          "title": "Calcolatori per la Vita Quotidiana",
+          "content": "La nostra collezione di calcolatori per la vita ti aiuterà a risolvere molti problemi quotidiani: dalla pianificazione dell'alimentazione e della salute al calcolo delle bollette e delle spese domestiche. Tutti i calcolatori sono completamente gratuiti, funzionano online senza registrazione e sono disponibili 24/7.",
+          "additionalContent": "Usa i calcolatori per calcolare l'indice di massa corporea (IMC), il contenuto calorico della dieta, la norma BJU, il periodo di gravidanza, l'altezza e il peso del bambino, il consumo di elettricità, acqua, gas, il costo del riscaldamento e molto altro. Ogni calcolatore contiene istruzioni dettagliate, esempi di calcolo e consigli per l'uso."
+        },
+        "advantages": {
+          "title": "Vantaggi dei nostri calcolatori",
+          "accurate": "Calcoli precisi",
+          "accurateDesc": "Tutti i calcolatori utilizzano formule e algoritmi verificati",
+          "free": "Gratuito",
+          "freeDesc": "Accesso completamente gratuito a tutti i calcolatori",
+          "online": "Online",
+          "onlineDesc": "Funzionano nel browser senza installare programmi",
+          "forAll": "Per tutti",
+          "forAllDesc": "Interfaccia semplice e intuitiva per tutti"
+        }
       }
     },
     "construction": {
-      "title": "Строительные калькуляторы",
-      "description": "Обои, краска, бетон, кровля",
-      "subtitle": "Обои, краска, бетон, кровля",
+      "title": "Calcolatori per l'Edilizia",
+      "description": "Carta da parati, vernice, cemento, coperture",
+      "subtitle": "Carta da parati, vernice, cemento, coperture",
       "seo": {
         "keywords": "строительные калькуляторы, калькуляторы для строительства, калькулятор краски, калькулятор обоев, калькулятор штукатурки, калькулятор бетона, калькулятор цемента, калькулятор фундамента, калькулятор вентиляции, калькулятор площади стен, калькулятор арматуры, калькулятор кабеля, калькулятор труб, калькулятор кровли, калькулятор плиточного клея, калькулятор шпатлёвки, калькулятор грунтовки, строительные расчёты, расчёт материалов, онлайн калькулятор строительства, калькулятор материалов для строительства, расчёт количества материалов, строительный калькулятор онлайн, калькулятор для ремонта, калькулятор строительных работ, калькулятор отделочных материалов, калькулятор кровельных материалов, калькулятор бетонных работ, калькулятор кирпича, калькулятор блоков, калькулятор трубопровода, калькулятор электропроводки, калькулятор площади поверхности, строительные инструменты онлайн",
-        "overview": "Строительные калькуляторы Calc1.ru — это комплексный набор онлайн-инструментов для точных расчётов материалов и работ при строительстве и ремонте. Все калькуляторы используют актуальные строительные нормы и стандарты, что гарантирует точность расчётов."
+        "overview": {
+          "title": "Calcolatori per l'Edilizia Calc1.ru",
+          "content": "I calcolatori per l'edilizia Calc1.ru sono un set completo di strumenti online per calcoli precisi di materiali e lavori durante la costruzione e la ristrutturazione. Tutti i calcolatori utilizzano norme e standard di costruzione attuali, garantendo la precisione dei calcoli."
+        },
+        "advantages": {
+          "title": "Vantaggi dei nostri calcolatori per l'edilizia",
+          "accurate": "Calcoli precisi",
+          "accurateDesc": "Tutti i calcolatori utilizzano norme e standard di costruzione attuali per una massima precisione nel calcolo di materiali e lavori",
+          "savings": "Risparmio",
+          "savingsDesc": "Il calcolo corretto dei materiali aiuterà a evitare pagamenti eccessivi e carenze di materiali, ottimizzando i costi di costruzione e ristrutturazione",
+          "simple": "Facilità d'uso",
+          "simpleDesc": "Interfaccia intuitiva e risultati istantanei consentono di calcolare rapidamente la quantità necessaria di materiali per il tuo progetto"
+        }
       }
     },
     "auto": {
-      "title": "Авто калькуляторы",
-      "description": "Расход топлива, налоги, лизинг, страховка",
+      "title": "Calcolatori Auto",
+      "description": "Consumo di carburante, tasse, leasing, assicurazione",
       "seo": {
-        "title": "Автомобильные калькуляторы онлайн — Расчёт всех авто расходов | Calc1.ru",
-        "description": "Бесплатные автомобильные калькуляторы онлайн: расчёт расхода топлива, автокредита, страховки (ОСАГО, КАСКО), транспортного налога, лизинга, таможенных платежей и штрафов ГИБДД. Точные расчёты для автомобилистов и автовладельцев.",
-        "keywords": "авто калькуляторы, автомобильные калькуляторы, калькулятор расхода топлива, калькулятор автокредита, калькулятор ОСАГО, калькулятор КАСКО, калькулятор транспортного налога, калькулятор лизинга, калькулятор таможни, калькулятор штрафов ГИБДД, калькулятор владения автомобилем, калькулятор амортизации автомобиля, расход топлива онлайн, расчет расхода бензина, расчет автокредита, расчет страховки авто, транспортный налог калькулятор, лизинг калькулятор онлайн, таможенные платежи калькулятор, штрафы ГИБДД онлайн, стоимость владения автомобилем, амортизация машины, калькулятор для автомобилистов, автоинструменты онлайн, расчет стоимости автокредита, расчет страховки ОСАГО, расчет страховки КАСКО, калькулятор автомобильных расходов, планирование бюджета на авто, калькулятор автокредита онлайн, калькулятор ОСАГО онлайн, калькулятор КАСКО онлайн, калькулятор транспортного налога онлайн, калькулятор лизинга онлайн, калькулятор таможни онлайн, калькулятор штрафов онлайн, авто калькулятор 2024, автомобильные калькуляторы 2024, auto calculator, car calculator, vehicle calculator, car loan calculator, auto insurance calculator",
+        "title": "Calcolatori Auto Online — Calcolo di Tutte le Spese Auto | Calc1.ru",
+        "description": "Calcolatori auto gratuiti online: calcolo consumo carburante, prestito auto, assicurazione (RC Auto, Casco), tassa veicolo, leasing, dazi doganali e multe stradali. Calcoli precisi per automobilisti e proprietari di veicoli.",
+        "keywords": "calcolatori auto, calcolatori automobilistici, calcolatore consumo carburante, calcolatore prestito auto, calcolatore RC Auto, calcolatore Casco, calcolatore tassa veicolo, calcolatore leasing, calcolatore dogana, calcolatore multe stradali, calcolatore proprietà auto, calcolatore ammortamento auto, consumo carburante online, calcolo consumo benzina, calcolo prestito auto, calcolo assicurazione auto, tassa veicolo calcolatore, leasing calcolatore online, dazi doganali calcolatore, multe stradali online, costo proprietà auto, ammortamento auto, calcolatore per automobilisti, strumenti auto online, calcolo costo prestito auto, calcolo assicurazione RC Auto, calcolo assicurazione Casco, calcolatore spese auto, pianificazione budget auto, calcolatore prestito auto online, calcolatore RC Auto online, calcolatore Casco online, calcolatore tassa veicolo online, calcolatore leasing online, calcolatore dogana online, calcolatore multe online, calcolatore auto 2024, calcolatori auto 2024, auto calculator, car calculator, vehicle calculator, car loan calculator, auto insurance calculator",
         "overview": {
-          "title": "Автомобильные калькуляторы Calc1.ru",
-          "content": "Автомобильные калькуляторы Calc1.ru — это полный набор онлайн-инструментов для точного расчёта всех расходов, связанных с владением и эксплуатацией автомобиля. Наши калькуляторы помогут вам рассчитать расход топлива, стоимость автокредита, страховые платежи (ОСАГО и КАСКО), транспортный налог, лизинговые платежи, таможенные пошлины и штрафы ГИБДД.",
-          "additionalContent": "Все калькуляторы используют актуальные тарифы, ставки и коэффициенты, утверждённые государственными органами и финансовыми учреждениями. Расчёты выполняются мгновенно и абсолютно бесплатно, без регистрации и ограничений по использованию."
+          "title": "Calcolatori Auto Calc1.ru",
+          "content": "I calcolatori auto Calc1.ru sono un set completo di strumenti online per il calcolo preciso di tutte le spese legate alla proprietà e all'uso dell'auto. I nostri calcolatori ti aiuteranno a calcolare il consumo di carburante, il costo del prestito auto, i pagamenti assicurativi (RC Auto e Casco), la tassa veicolo, i pagamenti di leasing, i dazi doganali e le multe stradali.",
+          "additionalContent": "Tutti i calcolatori utilizzano tariffe, aliquote e coefficienti attuali approvati da organi governativi e istituzioni finanziarie. I calcoli vengono eseguiti istantaneamente e completamente gratuiti, senza registrazione e limitazioni d'uso."
         },
         "advantages": {
-          "title": "Преимущества автомобильных калькуляторов",
-          "content": "Наши автомобильные калькуляторы предоставляют множество преимуществ для автомобилистов:",
-          "comprehensive": "Полный набор инструментов — все необходимые расчёты в одном месте",
-          "accurate": "Точные расчёты на основе актуальных тарифов и ставок",
-          "fast": "Мгновенные результаты без ожидания и очередей",
-          "free": "Полностью бесплатно, без скрытых платежей и ограничений",
-          "accessible": "Работает на всех устройствах: компьютерах, планшетах и смартфонах",
-          "detailed": "Детальные результаты с разбивкой по статьям расходов"
+          "title": "Vantaggi dei Calcolatori Auto",
+          "content": "I nostri calcolatori auto offrono molti vantaggi per gli automobilisti:",
+          "comprehensive": "Set completo di strumenti",
+          "comprehensiveDesc": "Tutti i calcoli necessari in un unico posto per una comoda pianificazione del budget auto",
+          "accurate": "Calcoli precisi",
+          "accurateDesc": "Basati su tariffe e aliquote attuali approvate da organi governativi e istituzioni finanziarie",
+          "fast": "Risultati istantanei",
+          "fastDesc": "Senza attese e code. Tutti i calcoli vengono eseguiti istantaneamente e in tempo reale",
+          "free": "Completamente gratuito",
+          "freeDesc": "Senza costi nascosti, senza registrazione, senza limitazioni d'uso",
+          "accessible": "Accessibilità",
+          "accessibleDesc": "Funziona su tutti i dispositivi: computer, tablet e smartphone con interfaccia adattiva",
+          "detailed": "Risultati dettagliati",
+          "detailedDesc": "Suddivisione per voci di spesa, grafici dei pagamenti e informazioni dettagliate per l'analisi"
         },
         "tips": {
-          "title": "Советы по использованию автомобильных калькуляторов",
-          "content": "Для получения максимально точных результатов следуйте этим рекомендациям:",
-          "data": "Используйте точные данные: реальный расход топлива, актуальную стоимость автомобиля, точный стаж вождения",
-          "comparison": "Сравнивайте результаты разных калькуляторов для проверки точности",
-          "regular": "Регулярно пересчитывайте расходы при изменении тарифов или условий",
-          "planning": "Используйте калькуляторы для долгосрочного планирования бюджета на автомобиль"
+          "title": "Consigli per l'Uso dei Calcolatori Auto",
+          "content": "Per ottenere risultati il più precisi possibile, segui queste raccomandazioni:",
+          "data": "Usa dati precisi: consumo reale di carburante, costo attuale dell'auto, esperienza di guida esatta",
+          "comparison": "Confronta i risultati di diversi calcolatori per verificare la precisione",
+          "regular": "Ricalcola regolarmente le spese quando cambiano le tariffe o le condizioni",
+          "planning": "Usa i calcolatori per la pianificazione a lungo termine del budget auto"
         },
         "faq": {
-          "title": "Часто задаваемые вопросы об автомобильных калькуляторах",
+          "title": "Domande frequenti sui Calcolatori Auto",
           "faqItems": [
             {
-              "q": "Какие автомобильные калькуляторы доступны на Calc1.ru?",
-              "a": "На Calc1.ru доступны калькуляторы: расхода топлива, автокредита, ОСАГО, КАСКО, транспортного налога, лизинга, таможенных пошлин, штрафов ГИБДД, стоимости владения автомобилем и амортизации. Все калькуляторы работают онлайн и абсолютно бесплатны."
+              "q": "Quali calcolatori auto sono disponibili su Calc1.ru?",
+              "a": "Su Calc1.ru sono disponibili calcolatori per: consumo carburante, prestito auto, RC Auto, Casco, tassa veicolo, leasing, dazi doganali, multe stradali, costo proprietà auto e ammortamento. Tutti i calcolatori funzionano online e sono completamente gratuiti."
             },
             {
-              "q": "Насколько точны расчёты автомобильных калькуляторов?",
-              "a": "Калькуляторы используют актуальные тарифы, ставки и формулы, утверждённые государственными органами. Точность зависит от корректности введённых данных. Для предварительной оценки и планирования калькуляторы дают достаточно точные результаты."
+              "q": "Quanto sono precisi i calcoli dei calcolatori auto?",
+              "a": "I calcolatori utilizzano tariffe, aliquote e formule attuali approvate da organi governativi. La precisione dipende dalla correttezza dei dati inseriti. Per valutazioni preliminari e pianificazione, i calcolatori forniscono risultati sufficientemente precisi."
             },
             {
-              "q": "Бесплатно ли использование автомобильных калькуляторов?",
-              "a": "Да, все автомобильные калькуляторы на Calc1.ru полностью бесплатны. Вы можете использовать их неограниченное количество раз без регистрации и скрытых платежей."
+              "q": "L'uso dei calcolatori auto è gratuito?",
+              "a": "Sì, tutti i calcolatori auto su Calc1.ru sono completamente gratuiti. Puoi usarli un numero illimitato di volte senza registrazione e costi nascosti."
             },
             {
-              "q": "Как рассчитать расход топлива на автомобиле?",
-              "a": "Используйте калькулятор расхода топлива, указав фактический расход вашего автомобиля в литрах на 100 км и объём топлива. Калькулятор покажет, сколько километров можно проехать или сколько топлива нужно для поездки."
+              "q": "Come calcolare il consumo di carburante dell'auto?",
+              "a": "Usa il calcolatore di consumo carburante, specificando il consumo reale della tua auto in litri per 100 km e il volume di carburante. Il calcolatore mostrerà quanti chilometri puoi percorrere o quanto carburante serve per il viaggio."
             },
             {
-              "q": "Как рассчитать стоимость автокредита?",
-              "a": "В калькуляторе автокредита укажите стоимость автомобиля, первоначальный взнос, срок кредита, процентную ставку и тип платежей (аннуитетные или дифференцированные). Калькулятор рассчитает ежемесячный платёж, общую сумму выплат и переплату."
+              "q": "Come calcolare il costo del prestito auto?",
+              "a": "Nel calcolatore prestito auto, specifica il costo dell'auto, l'anticipo, la durata del prestito, il tasso di interesse e il tipo di pagamento (rendita o differenziato). Il calcolatore calcolerà la rata mensile, l'importo totale dei pagamenti e il sovrapprezzo."
             },
             {
-              "q": "Как рассчитать стоимость ОСАГО?",
-              "a": "В калькуляторе ОСАГО укажите регион, мощность двигателя, возраст и стаж водителя, количество водителей и коэффициент КБМ. Калькулятор рассчитает стоимость полиса с учётом всех действующих коэффициентов."
+              "q": "Come calcolare il costo della RC Auto?",
+              "a": "Nel calcolatore RC Auto, specifica la regione, la potenza del motore, l'età e l'esperienza del guidatore, il numero di guidatori e il coefficiente KBM. Il calcolatore calcolerà il costo della polizza considerando tutti i coefficienti attuali."
             },
             {
-              "q": "Как рассчитать стоимость КАСКО?",
-              "a": "В калькуляторе КАСКО укажите стоимость автомобиля, год выпуска, возраст и стаж водителя, регион, наличие сигнализации и размер франшизы. Калькулятор рассчитает стоимость полиса полного автострахования."
+              "q": "Come calcolare il costo del Casco?",
+              "a": "Nel calcolatore Casco, specifica il costo dell'auto, l'anno di produzione, l'età e l'esperienza del guidatore, la regione, la presenza di allarme e l'importo della franchigia. Il calcolatore calcolerà il costo della polizza di assicurazione auto completa."
             },
             {
-              "q": "Как рассчитать транспортный налог?",
-              "a": "В калькуляторе транспортного налога укажите мощность двигателя в лошадиных силах и регион регистрации автомобиля. Калькулятор рассчитает сумму налога по актуальным ставкам вашего региона."
+              "q": "Come calcolare la tassa veicolo?",
+              "a": "Nel calcolatore tassa veicolo, specifica la potenza del motore in cavalli e la regione di registrazione dell'auto. Il calcolatore calcolerà l'importo della tassa secondo le aliquote attuali della tua regione."
             },
             {
-              "q": "Как рассчитать стоимость лизинга?",
-              "a": "В калькуляторе лизинга укажите стоимость автомобиля, первоначальный взнос, срок лизинга, процентную ставку и выкупную стоимость. Калькулятор рассчитает ежемесячные платежи и общую стоимость лизинга."
+              "q": "Come calcolare il costo del leasing?",
+              "a": "Nel calcolatore leasing, specifica il costo dell'auto, l'anticipo, la durata del leasing, il tasso di interesse e il costo di riscatto. Il calcolatore calcolerà le rate mensili e il costo totale del leasing."
             },
             {
-              "q": "Как рассчитать таможенные пошлины на автомобиль?",
-              "a": "В калькуляторе таможенных пошлин укажите стоимость автомобиля, объём двигателя, тип топлива, возраст автомобиля и мощность. Калькулятор рассчитает пошлину, акциз, НДС и утилизационный сбор."
+              "q": "Come calcolare i dazi doganali sull'auto?",
+              "a": "Nel calcolatore dazi doganali, specifica il costo dell'auto, la cilindrata del motore, il tipo di carburante, l'età dell'auto e la potenza. Il calcolatore calcolerà il dazio, l'accisa, l'IVA e la tassa di rottamazione."
             },
             {
-              "q": "Как рассчитать штрафы ГИБДД?",
-              "a": "В калькуляторе штрафов ГИБДД выберите нарушения правил дорожного движения. Калькулятор рассчитает размер штрафов с учётом скидки при досрочной оплате (50% в течение 20 дней)."
+              "q": "Come calcolare le multe stradali?",
+              "a": "Nel calcolatore multe stradali, seleziona le violazioni del codice stradale. Il calcolatore calcolerà l'importo delle multe considerando lo sconto per pagamento anticipato (50% entro 20 giorni)."
             },
             {
-              "q": "Как рассчитать стоимость владения автомобилем?",
-              "a": "В калькуляторе стоимости владения укажите стоимость автомобиля, срок владения, пробег, расход топлива, стоимость страховок, налогов, ТО и амортизацию. Калькулятор рассчитает общую стоимость владения и стоимость 1 км."
+              "q": "Come calcolare il costo di proprietà dell'auto?",
+              "a": "Nel calcolatore costo proprietà, specifica il costo dell'auto, il periodo di proprietà, il chilometraggio, il consumo di carburante, il costo delle assicurazioni, delle tasse, della manutenzione e dell'ammortamento. Il calcolatore calcolerà il costo totale di proprietà e il costo per 1 km."
             },
             {
-              "q": "Как рассчитать амортизацию автомобиля?",
-              "a": "В калькуляторе амортизации укажите покупную стоимость автомобиля, возраст, пробег, класс автомобиля и метод амортизации. Калькулятор рассчитает текущую стоимость и потерю стоимости за период."
+              "q": "Come calcolare l'ammortamento dell'auto?",
+              "a": "Nel calcolatore ammortamento, specifica il costo di acquisto dell'auto, l'età, il chilometraggio, la classe dell'auto e il metodo di ammortamento. Il calcolatore calcolerà il valore attuale e la perdita di valore nel periodo."
             },
             {
-              "q": "Обновляются ли тарифы в калькуляторах?",
-              "a": "Да, мы регулярно обновляем тарифы, ставки и коэффициенты в калькуляторах в соответствии с изменениями в законодательстве и актуальными рыночными данными. Однако для точного расчёта перед важными решениями рекомендуется уточнять актуальные ставки."
+              "q": "Le tariffe nei calcolatori vengono aggiornate?",
+              "a": "Sì, aggiorniamo regolarmente tariffe, aliquote e coefficienti nei calcolatori in base alle modifiche legislative e ai dati di mercato attuali. Tuttavia, per calcoli precisi prima di decisioni importanti, si raccomanda di verificare le aliquote attuali."
             },
             {
-              "q": "Можно ли сохранить результаты расчёта?",
-              "a": "Вы можете скопировать результаты расчёта или сделать скриншот страницы с результатами. Некоторые калькуляторы предоставляют возможность скачать результаты в формате CSV или PDF."
+              "q": "È possibile salvare i risultati del calcolo?",
+              "a": "Puoi copiare i risultati del calcolo o fare uno screenshot della pagina con i risultati. Alcuni calcolatori forniscono la possibilità di scaricare i risultati in formato CSV o PDF."
             },
             {
-              "q": "Работают ли калькуляторы на мобильных устройствах?",
-              "a": "Да, все калькуляторы полностью адаптированы для работы на мобильных устройствах, планшетах и смартфонах. Интерфейс автоматически подстраивается под размер экрана."
+              "q": "I calcolatori funzionano su dispositivi mobili?",
+              "a": "Sì, tutti i calcolatori sono completamente adattati per funzionare su dispositivi mobili, tablet e smartphone. L'interfaccia si adatta automaticamente alle dimensioni dello schermo."
             },
             {
-              "q": "Можно ли использовать калькуляторы для коммерческих целей?",
-              "a": "Да, калькуляторы можно использовать для коммерческих целей. Однако результаты являются ориентировочными и не заменяют консультацию со специалистами при принятии важных финансовых решений."
+              "q": "È possibile usare i calcolatori per scopi commerciali?",
+              "a": "Sì, i calcolatori possono essere usati per scopi commerciali. Tuttavia, i risultati sono indicativi e non sostituiscono la consulenza con specialisti quando si prendono decisioni finanziarie importanti."
             },
             {
-              "q": "Какой калькулятор использовать для планирования бюджета на автомобиль?",
-              "a": "Для комплексного планирования используйте калькулятор стоимости владения автомобилем, который учитывает все расходы: топливо, страховки, налоги, ТО и амортизацию. Также полезны калькуляторы автокредита и лизинга для планирования финансирования."
+              "q": "Quale calcolatore usare per pianificare il budget auto?",
+              "a": "Per una pianificazione completa, usa il calcolatore costo proprietà auto, che considera tutte le spese: carburante, assicurazioni, tasse, manutenzione e ammortamento. Sono utili anche i calcolatori prestito auto e leasing per la pianificazione del finanziamento."
             },
             {
-              "q": "Точны ли расчёты для конкретных регионов?",
-              "a": "Калькуляторы учитывают региональные коэффициенты (например, для ОСАГО и транспортного налога). Однако ставки могут отличаться у разных страховых компаний и в разных регионах, поэтому результаты являются ориентировочными."
+              "q": "I calcoli sono precisi per regioni specifiche?",
+              "a": "I calcolatori considerano coefficienti regionali (ad esempio, per RC Auto e tassa veicolo). Tuttavia, le aliquote possono differire tra diverse compagnie assicurative e in diverse regioni, quindi i risultati sono indicativi."
             },
             {
-              "q": "Как часто нужно пересчитывать расходы на автомобиль?",
-              "a": "Рекомендуется пересчитывать расходы при изменении тарифов (страховки, налоги), при изменении пробега или условий эксплуатации, а также перед принятием важных решений (покупка, продажа, страхование, кредитование)."
+              "q": "Con quale frequenza ricalcolare le spese auto?",
+              "a": "Si raccomanda di ricalcolare le spese quando cambiano le tariffe (assicurazioni, tasse), quando cambia il chilometraggio o le condizioni d'uso, e prima di prendere decisioni importanti (acquisto, vendita, assicurazione, prestito)."
             },
             {
-              "q": "Можно ли сравнить несколько вариантов?",
-              "a": "Да, вы можете открыть калькулятор в нескольких вкладках браузера и рассчитать разные варианты для сравнения. Это особенно полезно при выборе автокредита, страховки или автомобиля."
+              "q": "È possibile confrontare più opzioni?",
+              "a": "Sì, puoi aprire il calcolatore in più schede del browser e calcolare diverse opzioni per il confronto. Questo è particolarmente utile quando si sceglie un prestito auto, un'assicurazione o un'auto."
             },
             {
-              "q": "Что делать, если результаты расчёта отличаются от реальных?",
-              "a": "Различия могут возникать из-за дополнительных комиссий, индивидуальных условий договора или изменений в тарифах. Калькуляторы дают ориентировочные результаты. Для точных расчётов обращайтесь в соответствующие организации."
+              "q": "Cosa fare se i risultati del calcolo differiscono da quelli reali?",
+              "a": "Le differenze possono sorgere a causa di commissioni aggiuntive, condizioni individuali del contratto o variazioni nelle tariffe. I calcolatori forniscono risultati indicativi. Per calcoli precisi, contatta le organizzazioni pertinenti."
             },
             {
-              "q": "Есть ли калькуляторы для электромобилей?",
-              "a": "Основные калькуляторы (расход, кредит, налоги) подходят и для электромобилей. Для расчёта расхода энергии используйте калькулятор расхода топлива, указав расход в кВт⋅ч/100км вместо литров."
+              "q": "Ci sono calcolatori per veicoli elettrici?",
+              "a": "I calcolatori principali (consumo, prestito, tasse) sono adatti anche per veicoli elettrici. Per calcolare il consumo di energia, usa il calcolatore consumo carburante, specificando il consumo in kWh/100km invece di litri."
             },
             {
-              "q": "Как рассчитать экономию от досрочного погашения автокредита?",
-              "a": "В калькуляторе автокредита укажите дополнительные платежи для досрочного погашения. Калькулятор пересчитает график платежей и покажет экономию на процентах и сокращение срока кредита."
+              "q": "Come calcolare il risparmio dal rimborso anticipato del prestito auto?",
+              "a": "Nel calcolatore prestito auto, specifica i pagamenti aggiuntivi per il rimborso anticipato. Il calcolatore ricalcolerà il piano di pagamento e mostrerà il risparmio sugli interessi e la riduzione della durata del prestito."
             },
             {
-              "q": "Учитываются ли льготы в калькуляторах?",
-              "a": "Основные калькуляторы не учитывают индивидуальные льготы (например, для многодетных семей или инвалидов). Для расчёта с учётом льгот обращайтесь напрямую в соответствующие организации."
+              "q": "I calcolatori considerano i benefici?",
+              "a": "I calcolatori principali non considerano benefici individuali (ad esempio, per famiglie numerose o disabili). Per calcoli con benefici, contatta direttamente le organizzazioni pertinenti."
             },
             {
-              "q": "Можно ли рассчитать расход топлива для гибридного автомобиля?",
-              "a": "Да, используйте калькулятор расхода топлива, указав реальный расход вашего гибрида. Гибриды обычно имеют расход 4-6 л/100км в зависимости от режима эксплуатации."
+              "q": "È possibile calcolare il consumo di carburante per un'auto ibrida?",
+              "a": "Sì, usa il calcolatore consumo carburante, specificando il consumo reale del tuo ibrido. Gli ibridi di solito hanno un consumo di 4-6 l/100km a seconda del modo di utilizzo."
             },
             {
-              "q": "Как рассчитать оптимальный срок автокредита?",
-              "a": "Используйте калькулятор автокредита для расчёта разных сроков кредита. Сравните ежемесячные платежи, общую переплату и стоимость 1 км. Оптимальный срок обычно составляет 4-5 лет при балансе между платёжом и переплатой."
+              "q": "Come calcolare la durata ottimale del prestito auto?",
+              "a": "Usa il calcolatore prestito auto per calcolare diverse durate del prestito. Confronta le rate mensili, il sovrapprezzo totale e il costo per 1 km. La durata ottimale è solitamente di 4-5 anni bilanciando rata e sovrapprezzo."
             },
             {
-              "q": "Что выгоднее: автокредит или лизинг?",
-              "a": "Сравните оба варианта: используйте калькуляторы автокредита и лизинга с одинаковыми параметрами. Автокредит выгоднее при долгосрочном владении, лизинг — для бизнеса и при частой смене автомобилей."
+              "q": "Cosa è più vantaggioso: prestito auto o leasing?",
+              "a": "Confronta entrambe le opzioni: usa i calcolatori prestito auto e leasing con gli stessi parametri. Il prestito auto è più vantaggioso per la proprietà a lungo termine, il leasing per il business e quando si cambiano spesso le auto."
             },
             {
-              "q": "Как рассчитать реальную стоимость владения за год?",
-              "a": "Используйте калькулятор стоимости владения автомобилем, указав срок 1 год. Калькулятор рассчитает все годовые расходы: топливо, страховки, налоги, ТО и амортизацию."
+              "q": "Come calcolare il costo reale di proprietà per un anno?",
+              "a": "Usa il calcolatore costo proprietà auto, specificando un periodo di 1 anno. Il calcolatore calcolerà tutte le spese annuali: carburante, assicurazioni, tasse, manutenzione e ammortamento."
             },
             {
-              "q": "Учитываются ли сезонные факторы в калькуляторах?",
-              "a": "Основные калькуляторы не учитывают сезонные факторы (например, зимний расход топлива выше на 10-15%). Для точного планирования учитывайте эти факторы при вводе данных."
+              "q": "I calcolatori considerano fattori stagionali?",
+              "a": "I calcolatori principali non considerano fattori stagionali (ad esempio, il consumo invernale di carburante è più alto del 10-15%). Per una pianificazione precisa, considera questi fattori quando inserisci i dati."
             }
           ]
         }
       }
     },
     "time": {
-      "title": "Время и дата",
-      "description": "Разница дат, возраст, таймеры",
+      "title": "Tempo e Data",
+      "description": "Differenze tra date, età, timer",
       "seo": {
         "title": "Калькуляторы времени и дат онлайн — Расчёт времени, дат и возраста | Calc1.ru",
         "description": "Бесплатные калькуляторы времени и дат онлайн: разница между датами, расчёт возраста, таймеры, обратный отсчёт, календарь, мировое время, добавление времени, расчёт дедлайнов. Точные расчёты для планирования и организации времени.",
@@ -660,720 +791,720 @@
       }
     },
     "health": {
-      "title": "Здоровье и медицина",
-      "description": "ИМТ, пульс, давление, витамины",
+      "title": "Salute e Medicina",
+      "description": "BMI, frequenza cardiaca, pressione sanguigna, vitamine",
       "seo": {
-        "title": "Медицинские калькуляторы онлайн — Расчёт здоровья и медицинских показателей | Calc1.ru",
-        "description": "Бесплатные медицинские калькуляторы онлайн: расчёт ИМТ (индекс массы тела), пульса, артериального давления, овуляции, витаминов и минералов, уровня стресса, дозировки лекарств. Точные расчёты для контроля здоровья и медицинских показателей.",
-        "keywords": "медицинские калькуляторы, калькулятор здоровья, калькулятор ИМТ, индекс массы тела, калькулятор пульса, частота сердечных сокращений, пульсовые зоны, калькулятор артериального давления, нормальное давление, гипертония, гипотония, калькулятор овуляции, фертильные дни, менструальный цикл, калькулятор витаминов, суточная норма витаминов, калькулятор минералов, калькулятор стресса, уровень стресса, тест на стресс, калькулятор дозировки, расчёт дозы по весу, дозировка лекарств, медицинские расчеты онлайн, контроль здоровья, профилактика заболеваний, здоровый образ жизни, медицинские показатели, нормальные значения, калькулятор для здоровья, health calculator, BMI calculator, heart rate calculator, blood pressure calculator, ovulation calculator, vitamins calculator, stress test, dosage calculator",
+        "title": "Calcolatori Medici Online — Calcolo Salute e Indicatori Medici | Calc1.ru",
+        "description": "Calcolatori medici gratuiti online: calcolo IMC (indice di massa corporea), frequenza cardiaca, pressione arteriosa, ovulazione, vitamine e minerali, livello di stress, dosaggio farmaci. Calcoli precisi per il monitoraggio della salute e degli indicatori medici.",
+        "keywords": "calcolatori medici, calcolatore salute, calcolatore IMC, indice di massa corporea, calcolatore frequenza cardiaca, frequenza cardiaca, zone cardiache, calcolatore pressione arteriosa, pressione normale, ipertensione, ipotensione, calcolatore ovulazione, giorni fertili, ciclo mestruale, calcolatore vitamine, dose giornaliera vitamine, calcolatore minerali, calcolatore stress, livello stress, test stress, calcolatore dosaggio, calcolo dose per peso, dosaggio farmaci, calcoli medici online, monitoraggio salute, prevenzione malattie, stile di vita sano, indicatori medici, valori normali, calcolatore salute, health calculator, BMI calculator, heart rate calculator, blood pressure calculator, ovulation calculator, vitamins calculator, stress test, dosage calculator",
         "overview": {
-          "title": "Медицинские калькуляторы Calc1.ru",
-          "content": "Медицинские калькуляторы Calc1.ru — это набор профессиональных онлайн-инструментов для медицинских расчётов и контроля здоровья. Наши калькуляторы помогут вам рассчитать индекс массы тела (ИМТ), определить пульсовые зоны для тренировок, оценить артериальное давление, рассчитать дни овуляции, определить потребность в витаминах и минералах, оценить уровень стресса и рассчитать правильную дозировку лекарств.",
-          "additionalContent": "Все калькуляторы разработаны на основе рекомендаций Всемирной организации здравоохранения (ВОЗ) и международных медицинских стандартов. Они учитывают возраст, пол, физическую активность и другие индивидуальные параметры для точных и персонализированных расчётов. Калькуляторы подходят для ежедневного контроля здоровья, планирования тренировок, беременности, приёма витаминов и медикаментов."
+          "title": "Calcolatori Medici Calc1.ru",
+          "content": "I calcolatori medici Calc1.ru sono un set di strumenti online professionali per calcoli medici e monitoraggio della salute. I nostri calcolatori ti aiuteranno a calcolare l'indice di massa corporea (IMC), determinare le zone cardiache per gli allenamenti, valutare la pressione arteriosa, calcolare i giorni di ovulazione, determinare il fabbisogno di vitamine e minerali, valutare il livello di stress e calcolare il dosaggio corretto dei farmaci.",
+          "additionalContent": "Tutti i calcolatori sono sviluppati sulla base delle raccomandazioni dell'Organizzazione Mondiale della Sanità (OMS) e degli standard medici internazionali. Considerano età, sesso, attività fisica e altri parametri individuali per calcoli precisi e personalizzati. I calcolatori sono adatti per il monitoraggio quotidiano della salute, la pianificazione degli allenamenti, la gravidanza, l'assunzione di vitamine e farmaci."
         },
         "advantages": {
-          "title": "Преимущества наших медицинских калькуляторов",
-          "content": "Наши медицинские калькуляторы предоставляют множество преимуществ для контроля здоровья:",
+          "title": "Vantaggi dei nostri Calcolatori Medici",
+          "content": "I nostri calcolatori medici offrono molti vantaggi per il monitoraggio della salute:",
           "accurate": {
-            "title": "Точность расчётов",
-            "description": "Все расчёты основаны на медицинских стандартах и рекомендациях ВОЗ, что гарантирует точность результатов."
+            "title": "Precisione dei calcoli",
+            "description": "Tutti i calcoli si basano su standard medici e raccomandazioni dell'OMS, garantendo la precisione dei risultati."
           },
           "personalized": {
-            "title": "Персонализация",
-            "description": "Калькуляторы учитывают индивидуальные параметры: возраст, пол, вес, рост, уровень активности."
+            "title": "Personalizzazione",
+            "description": "I calcolatori considerano parametri individuali: età, sesso, peso, altezza, livello di attività."
           },
           "comprehensive": {
-            "title": "Полнота информации",
-            "description": "Каждый калькулятор предоставляет подробные результаты с интерпретацией и рекомендациями."
+            "title": "Completezza delle informazioni",
+            "description": "Ogni calcolatore fornisce risultati dettagliati con interpretazione e raccomandazioni."
           },
           "free": {
-            "title": "Бесплатно",
-            "description": "Все калькуляторы полностью бесплатны и доступны без регистрации в любое время."
+            "title": "Gratuito",
+            "description": "Tutti i calcolatori sono completamente gratuiti e disponibili senza registrazione in qualsiasi momento."
           },
           "mobile": {
-            "title": "Мобильная версия",
-            "description": "Адаптивный дизайн работает на всех устройствах: компьютерах, планшетах и смартфонах."
+            "title": "Versione mobile",
+            "description": "Il design adattivo funziona su tutti i dispositivi: computer, tablet e smartphone."
           },
           "professional": {
-            "title": "Профессиональные рекомендации",
-            "description": "Результаты сопровождаются медицинскими рекомендациями и советами специалистов."
+            "title": "Raccomandazioni professionali",
+            "description": "I risultati sono accompagnati da raccomandazioni mediche e consigli di specialisti."
           }
         },
         "tips": {
-          "title": "Советы по использованию медицинских калькуляторов",
-          "content": "Для получения точных результатов и эффективного контроля здоровья следуйте этим рекомендациям:",
+          "title": "Consigli per l'Uso dei Calcolatori Medici",
+          "content": "Per ottenere risultati precisi e un monitoraggio efficace della salute, segui queste raccomandazioni:",
           "regular": {
-            "title": "Регулярный контроль",
-            "description": "Используйте калькуляторы регулярно для отслеживания изменений показателей здоровья и эффективности мер по улучшению."
+            "title": "Monitoraggio regolare",
+            "description": "Usa i calcolatori regolarmente per monitorare i cambiamenti negli indicatori di salute e l'efficacia delle misure di miglioramento."
           },
           "consultation": {
-            "title": "Консультация врача",
-            "description": "Результаты калькуляторов носят информационный характер и не заменяют консультацию специалиста. При отклонениях от нормы обращайтесь к врачу."
+            "title": "Consultazione medica",
+            "description": "I risultati dei calcolatori sono a scopo informativo e non sostituiscono la consultazione di uno specialista. In caso di deviazioni dalla norma, consulta un medico."
           },
           "accuracy": {
-            "title": "Точность данных",
-            "description": "Вводите актуальные и точные данные (вес, рост, возраст) для получения достоверных результатов расчётов."
+            "title": "Precisione dei dati",
+            "description": "Inserisci dati attuali e precisi (peso, altezza, età) per ottenere risultati di calcolo affidabili."
           },
           "comprehensive": {
-            "title": "Комплексный подход",
-            "description": "Используйте несколько калькуляторов вместе для комплексной оценки состояния здоровья и получения полной картины."
+            "title": "Approccio completo",
+            "description": "Usa più calcolatori insieme per una valutazione completa dello stato di salute e ottenere un quadro completo."
           }
         },
         "faq": {
-          "title": "Часто задаваемые вопросы",
+          "title": "Domande frequenti",
           "faqItems": [
             {
-              "q": "Что такое медицинские калькуляторы?",
-              "a": "Медицинские калькуляторы — это онлайн-инструменты для расчёта различных медицинских показателей: индекса массы тела, пульса, артериального давления, овуляции, потребности в витаминах, уровня стресса, дозировки лекарств. Они помогают контролировать здоровье и получать медицинские рекомендации на основе индивидуальных параметров."
+              "q": "Cosa sono i calcolatori medici?",
+              "a": "I calcolatori medici sono strumenti online per calcolare vari indicatori medici: indice di massa corporea, frequenza cardiaca, pressione arteriosa, ovulazione, fabbisogno di vitamine, livello di stress, dosaggio farmaci. Aiutano a monitorare la salute e ottenere raccomandazioni mediche basate su parametri individuali."
             },
             {
-              "q": "Насколько точны расчёты медицинских калькуляторов?",
-              "a": "Калькуляторы основаны на рекомендациях ВОЗ и международных медицинских стандартах. Точность зависит от правильности введённых данных и индивидуальных особенностей организма. Для точной диагностики и лечения всегда консультируйтесь с врачом."
+              "q": "Quanto sono precisi i calcoli dei calcolatori medici?",
+              "a": "I calcolatori si basano sulle raccomandazioni dell'OMS e sugli standard medici internazionali. La precisione dipende dalla correttezza dei dati inseriti e dalle caratteristiche individuali dell'organismo. Per una diagnosi e un trattamento precisi, consulta sempre un medico."
             },
             {
-              "q": "Можно ли использовать калькуляторы вместо консультации врача?",
-              "a": "Нет, калькуляторы носят информационный характер и не заменяют консультацию специалиста. Они помогают контролировать здоровье, но при отклонениях от нормы или симптомах заболеваний необходимо обращаться к врачу."
+              "q": "È possibile usare i calcolatori invece della consultazione medica?",
+              "a": "No, i calcolatori sono a scopo informativo e non sostituiscono la consultazione di uno specialista. Aiutano a monitorare la salute, ma in caso di deviazioni dalla norma o sintomi di malattie, è necessario consultare un medico."
             },
             {
-              "q": "Какие медицинские калькуляторы доступны?",
-              "a": "Доступны калькуляторы: ИМТ (индекс массы тела), пульса и пульсовых зон, артериального давления, овуляции и фертильных дней, витаминов и минералов, уровня стресса, дозировки лекарств по весу. Каждый калькулятор учитывает индивидуальные параметры."
+              "q": "Quali calcolatori medici sono disponibili?",
+              "a": "Sono disponibili calcolatori per: IMC (indice di massa corporea), frequenza cardiaca e zone cardiache, pressione arteriosa, ovulazione e giorni fertili, vitamine e minerali, livello di stress, dosaggio farmaci per peso. Ogni calcolatore considera parametri individuali."
             },
             {
-              "q": "Как правильно использовать калькулятор ИМТ?",
-              "a": "Для расчёта ИМТ введите актуальный вес в килограммах и рост в сантиметрах. Учитывайте, что ИМТ не учитывает мышечную массу, поэтому для спортсменов может быть не вполне точным. Интерпретируйте результаты вместе с врачом."
+              "q": "Come usare correttamente il calcolatore IMC?",
+              "a": "Per calcolare l'IMC, inserisci il peso attuale in chilogrammi e l'altezza in centimetri. Tieni presente che l'IMC non considera la massa muscolare, quindi per gli atleti potrebbe non essere completamente preciso. Interpreta i risultati insieme a un medico."
             },
             {
-              "q": "Что такое пульсовые зоны и зачем они нужны?",
-              "a": "Пульсовые зоны — это диапазоны частоты сердечных сокращений для разных целей тренировок: зона отдыха (50-60%), жиросжигания (60-70%), аэробная (70-80%), анаэробная (80-90%), максимальная (90-100%). Они помогают оптимизировать тренировки."
+              "q": "Cosa sono le zone cardiache e a cosa servono?",
+              "a": "Le zone cardiache sono intervalli di frequenza cardiaca per diversi obiettivi di allenamento: zona di recupero (50-60%), brucia grassi (60-70%), aerobica (70-80%), anaerobica (80-90%), massima (90-100%). Aiutano a ottimizzare gli allenamenti."
             },
             {
-              "q": "Как интерпретировать результаты калькулятора давления?",
-              "a": "Калькулятор классифицирует давление по международным стандартам: нормальное (<130/85), повышенное (130-139/85-89), гипертония I степени (140-159/90-99), II степени (160-179/100-109), III степени (≥180/≥110). При отклонениях обратитесь к врачу."
+              "q": "Come interpretare i risultati del calcolatore della pressione?",
+              "a": "Il calcolatore classifica la pressione secondo standard internazionali: normale (<130/85), elevata (130-139/85-89), ipertensione di grado I (140-159/90-99), grado II (160-179/100-109), grado III (≥180/≥110). In caso di deviazioni, consulta un medico."
             },
             {
-              "q": "Как работает калькулятор овуляции?",
-              "a": "Калькулятор овуляции рассчитывает дату овуляции на основе даты последней менструации и длины цикла. Метод подходит для регулярных циклов. Для повышения точности сочетайте с тестами на овуляцию и измерением базальной температуры."
+              "q": "Come funziona il calcolatore dell'ovulazione?",
+              "a": "Il calcolatore dell'ovulazione calcola la data dell'ovulazione basandosi sulla data dell'ultima mestruazione e sulla lunghezza del ciclo. Il metodo è adatto per cicli regolari. Per aumentare la precisione, combinalo con test di ovulazione e misurazione della temperatura basale."
             },
             {
-              "q": "Как рассчитать потребность в витаминах?",
-              "a": "Калькулятор витаминов учитывает пол, возраст и уровень физической активности для определения суточной потребности в 13 витаминах и 8 минералах. При высокой активности потребность в некоторых витаминах увеличивается на 15-20%."
+              "q": "Come calcolare il fabbisogno di vitamine?",
+              "a": "Il calcolatore delle vitamine considera sesso, età e livello di attività fisica per determinare il fabbisogno giornaliero di 13 vitamine e 8 minerali. Con alta attività, il fabbisogno di alcune vitamine aumenta del 15-20%."
             },
             {
-              "q": "Что показывает тест на стресс?",
-              "a": "Тест на стресс оценивает уровень стресса по 10 вопросам с балльной системой (0-30 баллов). Результат показывает: низкий стресс (0-10), средний (11-20), высокий (21-30). При высоком уровне рекомендуется обратиться к специалисту."
+              "q": "Cosa mostra il test dello stress?",
+              "a": "Il test dello stress valuta il livello di stress con 10 domande con sistema a punti (0-30 punti). Il risultato mostra: stress basso (0-10), medio (11-20), alto (21-30). Con livello alto, si raccomanda di consultare uno specialista."
             },
             {
-              "q": "Как рассчитать дозировку лекарства?",
-              "a": "Калькулятор дозировки рассчитывает дозу по формуле: масса тела × дозировка на кг × частота приёма. Показывает разовую и суточную дозу. Важно: всегда консультируйтесь с врачом перед приёмом лекарств."
+              "q": "Come calcolare il dosaggio di un farmaco?",
+              "a": "Il calcolatore del dosaggio calcola la dose usando la formula: peso corporeo × dosaggio per kg × frequenza di assunzione. Mostra la dose singola e giornaliera. Importante: consulta sempre un medico prima di assumere farmaci."
             },
             {
-              "q": "Безопасны ли медицинские калькуляторы?",
-              "a": "Да, калькуляторы безопасны для использования. Они выполняют математические расчёты на основе медицинских формул. Однако результаты носят информационный характер и не заменяют медицинскую диагностику."
+              "q": "I calcolatori medici sono sicuri?",
+              "a": "Sì, i calcolatori sono sicuri da usare. Eseguono calcoli matematici basati su formule mediche. Tuttavia, i risultati sono a scopo informativo e non sostituiscono la diagnosi medica."
             },
             {
-              "q": "Можно ли использовать калькуляторы для детей?",
-              "a": "Некоторые калькуляторы (ИМТ, пульс, витамины, дозировка) можно использовать для детей с учётом возрастных особенностей. Для дозировки лекарств детям обязательно консультируйтесь с педиатром. Результаты интерпретируйте вместе с детским врачом."
+              "q": "È possibile usare i calcolatori per i bambini?",
+              "a": "Alcuni calcolatori (IMC, frequenza cardiaca, vitamine, dosaggio) possono essere usati per i bambini considerando le caratteristiche di età. Per il dosaggio di farmaci ai bambini, consulta sempre un pediatra. Interpreta i risultati insieme a un medico pediatrico."
             },
             {
-              "q": "Как часто нужно проверять показатели здоровья?",
-              "a": "Частота зависит от показателя: ИМТ — раз в месяц, давление — ежедневно при гипертонии, пульс — во время тренировок, витамины — при изменении образа жизни, стресс — еженедельно. При проблемах со здоровьем контролируйте показатели по рекомендации врача."
+              "q": "Con quale frequenza controllare gli indicatori di salute?",
+              "a": "La frequenza dipende dall'indicatore: IMC — una volta al mese, pressione — quotidianamente con ipertensione, frequenza cardiaca — durante gli allenamenti, vitamine — quando cambia lo stile di vita, stress — settimanalmente. Con problemi di salute, controlla gli indicatori secondo le raccomandazioni del medico."
             },
             {
-              "q": "Что делать, если результат калькулятора показывает отклонение от нормы?",
-              "a": "При отклонении от нормы: не паникуйте, результат приблизительный; проконсультируйтесь с врачом для точной диагностики; при необходимости пройдите медицинское обследование; следуйте рекомендациям специалиста."
+              "q": "Cosa fare se il risultato del calcolatore mostra una deviazione dalla norma?",
+              "a": "In caso di deviazione dalla norma: non entrare in panico, il risultato è approssimativo; consulta un medico per una diagnosi precisa; se necessario, fai un esame medico; segui le raccomandazioni dello specialista."
             },
             {
-              "q": "Учитывают ли калькуляторы хронические заболевания?",
-              "a": "Калькуляторы не учитывают хронические заболевания, приём лекарств и индивидуальные особенности метаболизма. При наличии заболеваний результаты могут требовать корректировки. Обязательно консультируйтесь с врачом."
+              "q": "I calcolatori considerano malattie croniche?",
+              "a": "I calcolatori non considerano malattie croniche, assunzione di farmaci e caratteristiche individuali del metabolismo. Con malattie esistenti, i risultati possono richiedere aggiustamenti. Consulta sempre un medico."
             },
             {
-              "q": "Можно ли использовать калькуляторы беременным?",
-              "a": "Некоторые калькуляторы (ИМТ, давление, витамины) можно использовать при беременности с учётом изменений организма. Для дозировки лекарств и витаминов при беременности обязательна консультация врача. Калькулятор овуляции не используется во время беременности."
+              "q": "È possibile usare i calcolatori durante la gravidanza?",
+              "a": "Alcuni calcolatori (IMC, pressione, vitamine) possono essere usati durante la gravidanza considerando i cambiamenti del corpo. Per il dosaggio di farmaci e vitamine durante la gravidanza, è obbligatoria la consultazione medica. Il calcolatore dell'ovulazione non si usa durante la gravidanza."
             },
             {
-              "q": "Как калькуляторы помогают в контроле здоровья?",
-              "a": "Калькуляторы помогают: отслеживать изменения показателей, получать ранние сигналы о проблемах, планировать тренировки и питание, контролировать приём лекарств и витаминов, мотивировать к здоровому образу жизни."
+              "q": "Come i calcolatori aiutano nel monitoraggio della salute?",
+              "a": "I calcolatori aiutano a: monitorare i cambiamenti negli indicatori, ottenere segnali precoci di problemi, pianificare allenamenti e alimentazione, controllare l'assunzione di farmaci e vitamine, motivare a uno stile di vita sano."
             },
             {
-              "q": "Нужно ли регистрироваться для использования калькуляторов?",
-              "a": "Нет, все калькуляторы доступны бесплатно без регистрации. Вы можете использовать их анонимно в любое время. Данные не сохраняются и не передаются третьим лицам."
+              "q": "È necessaria la registrazione per usare i calcolatori?",
+              "a": "No, tutti i calcolatori sono disponibili gratuitamente senza registrazione. Puoi usarli in modo anonimo in qualsiasi momento. I dati non vengono salvati e non vengono condivisi con terze parti."
             },
             {
-              "q": "На каких устройствах работают калькуляторы?",
-              "a": "Калькуляторы работают на всех устройствах: компьютерах (Windows, Mac, Linux), планшетах (iPad, Android), смартфонах (iPhone, Android). Адаптивный дизайн обеспечивает удобное использование на любом экране."
+              "q": "Su quali dispositivi funzionano i calcolatori?",
+              "a": "I calcolatori funzionano su tutti i dispositivi: computer (Windows, Mac, Linux), tablet (iPad, Android), smartphone (iPhone, Android). Il design adattivo garantisce un uso comodo su qualsiasi schermo."
             },
             {
-              "q": "Можно ли сохранить результаты расчётов?",
-              "a": "Результаты можно скопировать или сделать скриншот. Некоторые калькуляторы предоставляют возможность экспорта в PDF. История расчётов не сохраняется автоматически, если вы не зарегистрированы."
+              "q": "È possibile salvare i risultati dei calcoli?",
+              "a": "I risultati possono essere copiati o si può fare uno screenshot. Alcuni calcolatori forniscono la possibilità di esportare in PDF. La cronologia dei calcoli non viene salvata automaticamente se non sei registrato."
             },
             {
-              "q": "Основаны ли калькуляторы на научных данных?",
-              "a": "Да, все калькуляторы основаны на рекомендациях ВОЗ, международных медицинских стандартах и научных исследованиях. Формулы и нормативы соответствуют современным медицинским протоколам."
+              "q": "I calcolatori sono basati su dati scientifici?",
+              "a": "Sì, tutti i calcolatori sono basati sulle raccomandazioni dell'OMS, standard medici internazionali e ricerche scientifiche. Le formule e le norme corrispondono a protocolli medici moderni."
             },
             {
-              "q": "Что делать, если калькулятор показывает ошибку?",
-              "a": "При ошибке: проверьте правильность введённых данных, убедитесь, что все поля заполнены, обновите страницу, проверьте подключение к интернету. Если ошибка сохраняется, напишите в поддержку."
+              "q": "Cosa fare se il calcolatore mostra un errore?",
+              "a": "In caso di errore: verifica la correttezza dei dati inseriti, assicurati che tutti i campi siano compilati, aggiorna la pagina, verifica la connessione a internet. Se l'errore persiste, scrivi al supporto."
             },
             {
-              "q": "Можно ли использовать калькуляторы для профессиональной медицинской практики?",
-              "a": "Калькуляторы могут использоваться как вспомогательный инструмент, но не заменяют профессиональное медицинское оборудование и диагностику. Для медицинской практики используйте сертифицированные медицинские приборы."
+              "q": "È possibile usare i calcolatori per la pratica medica professionale?",
+              "a": "I calcolatori possono essere usati come strumento ausiliario, ma non sostituiscono attrezzature mediche professionali e diagnosi. Per la pratica medica, usa dispositivi medici certificati."
             },
             {
-              "q": "Как калькулятор витаминов учитывает диету?",
-              "a": "Калькулятор витаминов рассчитывает общую потребность, но не учитывает конкретную диету. Для вегетарианцев и людей с ограничениями в питании может потребоваться дополнительная консультация диетолога для корректировки норм."
+              "q": "Come il calcolatore delle vitamine considera la dieta?",
+              "a": "Il calcolatore delle vitamine calcola il fabbisogno generale, ma non considera una dieta specifica. Per vegetariani e persone con restrizioni alimentari potrebbe essere necessaria una consultazione aggiuntiva con un dietista per aggiustare le norme."
             },
             {
-              "q": "Что влияет на точность калькулятора овуляции?",
-              "a": "Точность зависит от регулярности цикла, стресса, заболеваний, приёма лекарств, изменений климата. При нерегулярном цикле используйте дополнительные методы: тесты на овуляцию, базальная температура, УЗИ."
+              "q": "Cosa influenza la precisione del calcolatore dell'ovulazione?",
+              "a": "La precisione dipende dalla regolarità del ciclo, stress, malattie, assunzione di farmaci, cambiamenti climatici. Con ciclo irregolare, usa metodi aggiuntivi: test di ovulazione, temperatura basale, ecografia."
             },
             {
-              "q": "Как интерпретировать результаты теста на стресс?",
-              "a": "Низкий уровень (0-10) — всё в порядке; средний (11-20) — стоит обратить внимание на управление стрессом; высокий (21-30) — рекомендуется обратиться к специалисту. Результаты носят ориентировочный характер."
+              "q": "Come interpretare i risultati del test dello stress?",
+              "a": "Livello basso (0-10) — tutto a posto; medio (11-20) — vale la pena prestare attenzione alla gestione dello stress; alto (21-30) — si raccomanda di consultare uno specialista. I risultati sono indicativi."
             },
             {
-              "q": "Можно ли использовать калькулятор дозировки для всех лекарств?",
-              "a": "Калькулятор подходит только для лекарств, дозируемых по массе тела (мг/кг). Многие лекарства имеют фиксированную дозировку. Всегда следуйте инструкции к препарату и назначению врача. Калькулятор не заменяет медицинскую консультацию."
+              "q": "È possibile usare il calcolatore del dosaggio per tutti i farmaci?",
+              "a": "Il calcolatore è adatto solo per farmaci dosati per peso corporeo (mg/kg). Molti farmaci hanno un dosaggio fisso. Segui sempre le istruzioni del farmaco e la prescrizione del medico. Il calcolatore non sostituisce la consultazione medica."
             },
             {
-              "q": "Как часто обновляются калькуляторы?",
-              "a": "Калькуляторы регулярно обновляются с учётом последних медицинских рекомендаций и стандартов. Формулы и нормативы соответствуют актуальным версиям протоколов ВОЗ и международным стандартам."
+              "q": "Con quale frequenza vengono aggiornati i calcolatori?",
+              "a": "I calcolatori vengono regolarmente aggiornati considerando le ultime raccomandazioni e standard medici. Le formule e le norme corrispondono alle versioni attuali dei protocolli dell'OMS e agli standard internazionali."
             },
             {
-              "q": "Как калькуляторы помогают в профилактике заболеваний?",
-              "a": "Калькуляторы помогают: контролировать показатели здоровья, выявлять отклонения на ранней стадии, мотивировать к здоровому образу жизни, планировать профилактические меры. Регулярное использование способствует раннему выявлению проблем."
+              "q": "Come i calcolatori aiutano nella prevenzione delle malattie?",
+              "a": "I calcolatori aiutano a: controllare gli indicatori di salute, identificare deviazioni in una fase precoce, motivare a uno stile di vita sano, pianificare misure preventive. L'uso regolare favorisce l'identificazione precoce dei problemi."
             }
           ]
         }
       }
     },
     "science": {
-      "title": "Учёба и наука",
-      "description": "Физика, химия, геометрия, статистика",
+      "title": "Istruzione e Scienza",
+      "description": "Fisica, chimica, geometria, statistica",
       "seo": {
         "keywords": "научные калькуляторы, калькулятор физики, калькулятор химии, калькулятор статистики, продвинутая геометрия, расчет скорости, расчет ускорения, расчет силы, расчет энергии, молярная масса, концентрация растворов, химические уравнения, среднее значение, медиана, стандартное отклонение, сложные геометрические фигуры, научные расчеты, калькулятор для учебы, science calculator, physics calculator, chemistry calculator, statistics calculator",
         "overview": "Научные калькуляторы Calc1.ru — это набор онлайн-инструментов для научных расчётов: физика, химия, геометрия, статистика. Подходит для студентов, учёных и всех, кто занимается научными расчётами."
       }
     },
     "converter": {
-      "title": "Онлайн-конвертеры",
-      "description": "Длина, вес, температура, скорость",
+      "title": "Convertitori Online",
+      "description": "Lunghezza, peso, temperatura, velocità",
       "seo": {
-        "title": "Онлайн-конвертеры единиц измерения — Перевод всех единиц | Calc1.ru",
-        "description": "Бесплатные онлайн-конвертеры единиц измерения: длина (мм, см, м, км, мили), вес (г, кг, фунты), температура (°C, °F, K), скорость (км/ч, м/с, узлы), давление (Па, атм, мм рт. ст.), объём (л, галлоны, м³), энергия (Дж, кал, Вт⋅ч), данные (байты, KB, MB, GB, TB). Точные расчёты для профессионалов и повседневного использования.",
-        "keywords": "конвертеры единиц, конвертер длины, конвертер веса, конвертер температуры, конвертер скорости, конвертер давления, конвертер объема, конвертер энергии, конвертер данных, перевод единиц измерения, конвертер метров в футы, конвертер килограммов в фунты, конвертер градусов, конвертер скорости онлайн, конвертер мм в см, конвертер см в м, конвертер км в мили, конвертер граммов в килограммы, конвертер фунтов в килограммы, конвертер цельсия в фаренгейт, конвертер фаренгейта в цельсий, конвертер кельвина, конвертер км/ч в м/с, конвертер м/с в км/ч, конвертер узлов, конвертер паскалей, конвертер атмосфер, конвертер мм рт ст, конвертер литров, конвертер галлонов, конвертер кубических метров, конвертер джоулей, конвертер калорий, конвертер ватт-часов, конвертер байтов, конвертер килобайтов, конвертер мегабайтов, конвертер гигабайтов, конвертер терабайтов, онлайн конвертер единиц, калькулятор конвертер, преобразование единиц, метрическая система, имперская система, unit converter, length converter, weight converter, temperature converter, speed converter, pressure converter, volume converter, energy converter, data converter",
+        "title": "Convertitori Online di Unità di Misura — Conversione di Tutte le Unità | Calc1.ru",
+        "description": "Convertitori online gratuiti di unità di misura: lunghezza (mm, cm, m, km, miglia), peso (g, kg, libbre), temperatura (°C, °F, K), velocità (km/h, m/s, nodi), pressione (Pa, atm, mmHg), volume (l, galloni, m³), energia (J, cal, Wh), dati (byte, KB, MB, GB, TB). Calcoli precisi per professionisti e uso quotidiano.",
+        "keywords": "convertitori unità, convertitore lunghezza, convertitore peso, convertitore temperatura, convertitore velocità, convertitore pressione, convertitore volume, convertitore energia, convertitore dati, conversione unità di misura, convertitore metri in piedi, convertitore chilogrammi in libbre, convertitore gradi, convertitore velocità online, convertitore mm in cm, convertitore cm in m, convertitore km in miglia, convertitore grammi in chilogrammi, convertitore libbre in chilogrammi, convertitore celsius in fahrenheit, convertitore fahrenheit in celsius, convertitore kelvin, convertitore km/h in m/s, convertitore m/s in km/h, convertitore nodi, convertitore pascal, convertitore atmosfere, convertitore mmHg, convertitore litri, convertitore galloni, convertitore metri cubi, convertitore joule, convertitore calorie, convertitore wattora, convertitore byte, convertitore kilobyte, convertitore megabyte, convertitore gigabyte, convertitore terabyte, convertitore unità online, calcolatore convertitore, conversione unità, sistema metrico, sistema imperiale, unit converter, length converter, weight converter, temperature converter, speed converter, pressure converter, volume converter, energy converter, data converter",
         "overview": {
-          "title": "Онлайн-конвертеры единиц измерения Calc1.ru",
-          "content": "Онлайн-конвертеры Calc1.ru — это полный набор инструментов для точной конвертации всех основных единиц измерения. Наши конвертеры позволяют мгновенно переводить между различными единицами измерения длины, веса, температуры, скорости, давления, объёма, энергии и данных.",
-          "additionalContent": "Все конвертеры используют точные международные стандарты и коэффициенты конвертации. Поддерживается метрическая, имперская и другие системы измерения. Расчёты выполняются мгновенно с точностью до 15 знаков после запятой. Все инструменты полностью бесплатны и доступны без регистрации."
+          "title": "Convertitori Online di Unità di Misura Calc1.ru",
+          "content": "I convertitori online Calc1.ru sono un set completo di strumenti per la conversione precisa di tutte le principali unità di misura. I nostri convertitori consentono di convertire istantaneamente tra diverse unità di misura di lunghezza, peso, temperatura, velocità, pressione, volume, energia e dati.",
+          "additionalContent": "Tutti i convertitori utilizzano standard internazionali precisi e coefficienti di conversione. Sono supportati sistemi di misurazione metrici, imperiali e altri. I calcoli vengono eseguiti istantaneamente con precisione fino a 15 cifre decimali. Tutti gli strumenti sono completamente gratuiti e disponibili senza registrazione."
         },
         "advantages": {
-          "title": "Преимущества наших конвертеров",
-          "content": "Наши конвертеры единиц измерения предлагают множество преимуществ для пользователей:",
+          "title": "Vantaggi dei nostri convertitori",
+          "content": "I nostri convertitori di unità di misura offrono molti vantaggi per gli utenti:",
           "precise": {
-            "title": "Точные расчёты",
-            "content": "Все конвертеры используют точные международные стандарты и коэффициенты конвертации. Расчёты основаны на официальных значениях, утверждённых метрологическими организациями."
+            "title": "Calcoli precisi",
+            "content": "Tutti i convertitori utilizzano standard internazionali precisi e coefficienti di conversione. I calcoli sono basati su valori ufficiali approvati da organizzazioni metrologiche."
           },
           "instant": {
-            "title": "Мгновенная конвертация",
-            "content": "Все конвертации выполняются мгновенно в реальном времени при вводе значений. Нет необходимости ждать обработки или загрузки результатов."
+            "title": "Conversione istantanea",
+            "content": "Tutte le conversioni vengono eseguite istantaneamente in tempo reale durante l'inserimento dei valori. Non è necessario attendere l'elaborazione o il caricamento dei risultati."
           },
           "comprehensive": {
-            "title": "Множество единиц",
-            "content": "Каждый конвертер поддерживает все основные единицы измерения в своей категории. Вы можете переводить между метрической, имперской и другими системами измерения."
+            "title": "Molte unità",
+            "content": "Ogni convertitore supporta tutte le principali unità di misura nella sua categoria. Puoi convertire tra sistemi di misurazione metrici, imperiali e altri."
           },
           "multilingual": {
-            "title": "Многоязычный интерфейс",
-            "content": "Конвертеры доступны на 4 языках: русском, английском, испанском и немецком. Интерфейс автоматически подстраивается под выбранный язык."
+            "title": "Interfaccia multilingue",
+            "content": "I convertitori sono disponibili in 4 lingue: russo, inglese, spagnolo e tedesco. L'interfaccia si adatta automaticamente alla lingua selezionata."
           },
           "mobile": {
-            "title": "Мобильная версия",
-            "content": "Все конвертеры полностью адаптированы для работы на мобильных устройствах, планшетах и смартфонах. Интерфейс оптимизирован для удобного использования на любом устройстве."
+            "title": "Versione mobile",
+            "content": "Tutti i convertitori sono completamente adattati per funzionare su dispositivi mobili, tablet e smartphone. L'interfaccia è ottimizzata per un uso confortevole su qualsiasi dispositivo."
           },
           "free": {
-            "title": "Бесплатно и без регистрации",
-            "content": "Все конвертеры полностью бесплатны и доступны без регистрации. Вы можете использовать их неограниченное количество раз без скрытых платежей или ограничений."
+            "title": "Gratuito e senza registrazione",
+            "content": "Tutti i convertitori sono completamente gratuiti e disponibili senza registrazione. Puoi usarli un numero illimitato di volte senza costi nascosti o limitazioni."
           }
         },
         "tips": {
-          "title": "Полезные советы",
-          "content": "Для максимально эффективного использования конвертеров единиц измерения:",
+          "title": "Consigli utili",
+          "content": "Per un uso massimamente efficace dei convertitori di unità di misura:",
           "tip1": {
-            "title": "Проверяйте единицы измерения",
-            "content": "Всегда проверяйте, что вы выбрали правильные единицы измерения для исходного значения и результата. Обратите внимание на метрическую и имперскую системы."
+            "title": "Verifica le unità di misura",
+            "content": "Controlla sempre di aver selezionato le unità di misura corrette per il valore originale e il risultato. Presta attenzione ai sistemi metrici e imperiali."
           },
           "tip2": {
-            "title": "Используйте точные значения",
-            "content": "Для научных и профессиональных расчётов используйте точные значения. Конвертеры поддерживают значения с точностью до 15 знаков после запятой."
+            "title": "Usa valori precisi",
+            "content": "Per calcoli scientifici e professionali, usa valori precisi. I convertitori supportano valori con precisione fino a 15 cifre decimali."
           },
           "tip3": {
-            "title": "Помните о системах измерения",
-            "content": "Разные страны используют разные системы измерения (метрическая, имперская, американская). Убедитесь, что вы используете правильную систему для вашей задачи."
+            "title": "Ricorda i sistemi di misurazione",
+            "content": "Diversi paesi utilizzano diversi sistemi di misurazione (metrico, imperiale, americano). Assicurati di utilizzare il sistema corretto per il tuo compito."
           },
           "tip4": {
-            "title": "Проверяйте результаты",
-            "content": "Для критически важных расчётов рекомендуется проверять результаты конвертации, особенно при работе с незнакомыми единицами измерения."
+            "title": "Verifica i risultati",
+            "content": "Per calcoli critici, si consiglia di verificare i risultati della conversione, specialmente quando si lavora con unità di misura non familiari."
           }
         },
         "faq": {
-          "title": "Часто задаваемые вопросы",
+          "title": "Domande frequenti",
           "faqItems": [
             {
-              "q": "Какие единицы измерения поддерживают конвертеры?",
-              "a": "Конвертеры поддерживают все основные единицы измерения в каждой категории: длина (мм, см, м, км, мили), вес (г, кг, фунты), температура (°C, °F, K), скорость (км/ч, м/с, узлы), давление (Па, атм, мм рт. ст.), объём (л, галлоны, м³), энергия (Дж, кал, Вт⋅ч), данные (байты, KB, MB, GB, TB)."
+              "q": "Quali unità di misura supportano i convertitori?",
+              "a": "I convertitori supportano tutte le principali unità di misura in ogni categoria: lunghezza (mm, cm, m, km, miglia), peso (g, kg, libbre), temperatura (°C, °F, K), velocità (km/h, m/s, nodi), pressione (Pa, atm, mmHg), volume (l, galloni, m³), energia (J, cal, Wh), dati (byte, KB, MB, GB, TB)."
             },
             {
-              "q": "Точны ли расчёты конвертеров?",
-              "a": "Да, все конвертеры используют точные международные стандарты и коэффициенты конвертации. Расчёты основаны на официальных значениях, утверждённых метрологическими организациями. Точность расчётов составляет до 15 знаков после запятой."
+              "q": "I calcoli dei convertitori sono precisi?",
+              "a": "Sì, tutti i convertitori utilizzano standard internazionali precisi e coefficienti di conversione. I calcoli sono basati su valori ufficiali approvati da organizzazioni metrologiche. La precisione dei calcoli è fino a 15 cifre decimali."
             },
             {
-              "q": "Бесплатны ли конвертеры?",
-              "a": "Да, все конвертеры единиц измерения на Calc1.ru полностью бесплатны. Вы можете использовать их неограниченное количество раз без регистрации и скрытых платежей."
+              "q": "I convertitori sono gratuiti?",
+              "a": "Sì, tutti i convertitori di unità di misura su Calc1.ru sono completamente gratuiti. Puoi usarli un numero illimitato di volte senza registrazione e costi nascosti."
             },
             {
-              "q": "Как конвертировать единицы длины?",
-              "a": "Выберите конвертер длины, введите значение в исходных единицах (например, метры) и выберите целевую единицу (например, километры). Конвертер мгновенно покажет результат."
+              "q": "Come convertire le unità di lunghezza?",
+              "a": "Seleziona il convertitore di lunghezza, inserisci il valore nelle unità originali (ad esempio, metri) e seleziona l'unità target (ad esempio, chilometri). Il convertitore mostrerà istantaneamente il risultato."
             },
             {
-              "q": "Как конвертировать единицы веса?",
-              "a": "Используйте конвертер веса, указав значение в граммах, килограммах или фунтах. Конвертер переведёт значение в выбранную вами единицу измерения."
+              "q": "Come convertire le unità di peso?",
+              "a": "Usa il convertitore di peso, specificando il valore in grammi, chilogrammi o libbre. Il convertitore convertirà il valore nell'unità di misura selezionata."
             },
             {
-              "q": "Как конвертировать температуру?",
-              "a": "В конвертере температуры введите значение в Цельсиях, Фаренгейтах или Кельвинах. Конвертер автоматически переведёт значение во все остальные шкалы."
+              "q": "Come convertire la temperatura?",
+              "a": "Nel convertitore di temperatura, inserisci il valore in Celsius, Fahrenheit o Kelvin. Il convertitore convertirà automaticamente il valore in tutte le altre scale."
             },
             {
-              "q": "Как конвертировать скорость?",
-              "a": "В конвертере скорости введите значение в км/ч, м/с или узлах. Конвертер мгновенно покажет эквивалентное значение в других единицах скорости."
+              "q": "Come convertire la velocità?",
+              "a": "Nel convertitore di velocità, inserisci il valore in km/h, m/s o nodi. Il convertitore mostrerà istantaneamente il valore equivalente in altre unità di velocità."
             },
             {
-              "q": "Как конвертировать давление?",
-              "a": "В конвертере давления укажите значение в Паскалях, атмосферах или миллиметрах ртутного столба. Конвертер переведёт значение в выбранную единицу."
+              "q": "Come convertire la pressione?",
+              "a": "Nel convertitore di pressione, specifica il valore in Pascal, atmosfere o millimetri di mercurio. Il convertitore convertirà il valore nell'unità selezionata."
             },
             {
-              "q": "Как конвертировать объём?",
-              "a": "Используйте конвертер объёма для перевода литров, галлонов и кубических метров. Введите значение в одной единице, и конвертер покажет эквивалент в других."
+              "q": "Come convertire il volume?",
+              "a": "Usa il convertitore di volume per convertire litri, galloni e metri cubi. Inserisci il valore in un'unità e il convertitore mostrerà l'equivalente in altre."
             },
             {
-              "q": "Как конвертировать энергию?",
-              "a": "В конвертере энергии введите значение в Джоулях, калориях или ватт-часах. Конвертер переведёт значение между всеми единицами измерения энергии."
+              "q": "Come convertire l'energia?",
+              "a": "Nel convertitore di energia, inserisci il valore in Joule, calorie o wattora. Il convertitore convertirà il valore tra tutte le unità di misura dell'energia."
             },
             {
-              "q": "Как конвертировать данные?",
-              "a": "В конвертере данных укажите значение в байтах, килобайтах, мегабайтах, гигабайтах или терабайтах. Конвертер использует двоичную систему (1024-базовая)."
+              "q": "Come convertire i dati?",
+              "a": "Nel convertitore di dati, specifica il valore in byte, kilobyte, megabyte, gigabyte o terabyte. Il convertitore usa il sistema binario (base 1024)."
             },
             {
-              "q": "Работают ли конвертеры на мобильных устройствах?",
-              "a": "Да, все конвертеры полностью адаптированы для работы на мобильных устройствах, планшетах и смартфонах. Интерфейс автоматически подстраивается под размер экрана."
+              "q": "I convertitori funzionano su dispositivi mobili?",
+              "a": "Sì, tutti i convertitori sono completamente adattati per funzionare su dispositivi mobili, tablet e smartphone. L'interfaccia si adatta automaticamente alle dimensioni dello schermo."
             },
             {
-              "q": "На каких языках доступны конвертеры?",
-              "a": "Конвертеры доступны на 4 языках: русском, английском, испанском и немецком. Интерфейс автоматически подстраивается под выбранный язык."
+              "q": "In quali lingue sono disponibili i convertitori?",
+              "a": "I convertitori sono disponibili in 4 lingue: russo, inglese, spagnolo e tedesco. L'interfaccia si adatta automaticamente alla lingua selezionata."
             },
             {
-              "q": "Можно ли сохранить результаты конвертации?",
-              "a": "Вы можете скопировать результаты конвертации в буфер обмена или сделать скриншот страницы с результатами. Некоторые конвертеры предоставляют возможность скачать результаты."
+              "q": "È possibile salvare i risultati della conversione?",
+              "a": "Puoi copiare i risultati della conversione negli appunti o fare uno screenshot della pagina con i risultati. Alcuni convertitori forniscono la possibilità di scaricare i risultati."
             },
             {
-              "q": "Какова точность конвертации?",
-              "a": "Все конвертеры выполняют расчёты с точностью до 15 знаков после запятой. Это обеспечивает высокую точность для научных и профессиональных расчётов."
+              "q": "Qual è la precisione della conversione?",
+              "a": "Tutti i convertitori eseguono calcoli con precisione fino a 15 cifre decimali. Questo garantisce alta precisione per calcoli scientifici e professionali."
             },
             {
-              "q": "Можно ли конвертировать несколько значений одновременно?",
-              "a": "Конвертеры обрабатывают одно значение за раз. Для конвертации нескольких значений выполните расчёт для каждого значения отдельно или откройте конвертер в нескольких вкладках браузера."
+              "q": "È possibile convertire più valori contemporaneamente?",
+              "a": "I convertitori elaborano un valore alla volta. Per convertire più valori, esegui il calcolo per ogni valore separatamente o apri il convertitore in più schede del browser."
             },
             {
-              "q": "В чём разница между метрической и имперской системой?",
-              "a": "Метрическая система основана на системе СИ (международная система единиц) и использует базовые единицы: метр, килограмм, секунда. Имперская система используется в США, Великобритании и некоторых других странах и основана на футах, фунтах и других традиционных единицах."
+              "q": "Qual è la differenza tra sistema metrico e imperiale?",
+              "a": "Il sistema metrico si basa sul sistema SI (sistema internazionale di unità) e usa unità base: metro, chilogrammo, secondo. Il sistema imperiale è usato negli USA, Regno Unito e alcuni altri paesi e si basa su piedi, libbre e altre unità tradizionali."
             },
             {
-              "q": "Почему у конвертера данных используется система 1024, а не 1000?",
-              "a": "Конвертер данных использует двоичную систему (1024-базовая), которая применяется в компьютерных системах, так как компьютеры работают в двоичной системе счисления. Это стандарт для измерения объёма данных в IT."
+              "q": "Perché il convertitore di dati usa il sistema 1024 invece di 1000?",
+              "a": "Il convertitore di dati usa il sistema binario (base 1024), che viene applicato nei sistemi informatici poiché i computer funzionano in sistema binario. Questo è lo standard per misurare il volume dei dati in IT."
             },
             {
-              "q": "Можно ли использовать конвертеры для научных расчётов?",
-              "a": "Да, конвертеры подходят для научных и профессиональных расчётов. Все коэффициенты конвертации основаны на международных стандартах и обеспечивают высокую точность."
+              "q": "È possibile usare i convertitori per calcoli scientifici?",
+              "a": "Sì, i convertitori sono adatti per calcoli scientifici e professionali. Tutti i coefficienti di conversione sono basati su standard internazionali e garantiscono alta precisione."
             },
             {
-              "q": "Как часто обновляются коэффициенты конвертации?",
-              "a": "Коэффициенты конвертации основаны на физических константах и международных стандартах, которые не изменяются. Мы регулярно проверяем и обновляем конвертеры для обеспечения максимальной точности."
+              "q": "Con quale frequenza vengono aggiornati i coefficienti di conversione?",
+              "a": "I coefficienti di conversione si basano su costanti fisiche e standard internazionali che non cambiano. Verifichiamo e aggiorniamo regolarmente i convertitori per garantire la massima precisione."
             },
             {
-              "q": "Есть ли ограничения на использование конвертеров?",
-              "a": "Нет, нет никаких ограничений на использование конвертеров. Вы можете использовать их неограниченное количество раз для любых целей, включая коммерческие."
+              "q": "Ci sono limitazioni all'uso dei convertitori?",
+              "a": "No, non ci sono limitazioni all'uso dei convertitori. Puoi usarli un numero illimitato di volte per qualsiasi scopo, incluso commerciale."
             },
             {
-              "q": "Поддерживает ли конвертер температуры абсолютный ноль?",
-              "a": "Да, конвертер температуры корректно обрабатывает все значения температуры, включая абсолютный ноль (0 K = -273.15°C = -459.67°F)."
+              "q": "Il convertitore di temperatura supporta lo zero assoluto?",
+              "a": "Sì, il convertitore di temperatura elabora correttamente tutti i valori di temperatura, incluso lo zero assoluto (0 K = -273.15°C = -459.67°F)."
             },
             {
-              "q": "Как конвертировать большие значения?",
-              "a": "Конвертеры могут работать с любыми значениями, включая очень большие числа. Максимальное значение ограничено только возможностями JavaScript, что позволяет обрабатывать числа практически любого размера."
+              "q": "Come convertire valori grandi?",
+              "a": "I convertitori possono funzionare con qualsiasi valore, inclusi numeri molto grandi. Il valore massimo è limitato solo dalle capacità di JavaScript, permettendo di elaborare numeri praticamente di qualsiasi dimensione."
             },
             {
-              "q": "Что делать, если результат конвертации кажется неправильным?",
-              "a": "Проверьте, что вы выбрали правильные единицы измерения для исходного значения и результата. Убедитесь, что вы понимаете разницу между метрической и имперской системами. Если проблема сохраняется, попробуйте пересчитать значение вручную для проверки."
+              "q": "Cosa fare se il risultato della conversione sembra errato?",
+              "a": "Verifica di aver selezionato le unità di misura corrette per il valore originale e il risultato. Assicurati di capire la differenza tra sistemi metrici e imperiali. Se il problema persiste, prova a ricalcolare il valore manualmente per verificare."
             },
             {
-              "q": "Можно ли использовать конвертеры оффлайн?",
-              "a": "Нет, конвертеры требуют подключения к интернету, так как они работают в браузере. Однако после загрузки страницы основные функции могут работать даже при медленном интернете."
+              "q": "È possibile usare i convertitori offline?",
+              "a": "No, i convertitori richiedono una connessione internet poiché funzionano nel browser. Tuttavia, dopo il caricamento della pagina, le funzioni principali possono funzionare anche con internet lento."
             },
             {
-              "q": "Есть ли конвертеры для других единиц измерения?",
-              "a": "В настоящее время доступны конвертеры для 8 основных категорий единиц измерения. Мы постоянно работаем над добавлением новых категорий и единиц измерения. Следите за обновлениями!"
+              "q": "Ci sono convertitori per altre unità di misura?",
+              "a": "Attualmente sono disponibili convertitori per 8 categorie principali di unità di misura. Lavoriamo costantemente per aggiungere nuove categorie e unità di misura. Resta aggiornato!"
             },
             {
-              "q": "Как конвертировать единицы в рецептах?",
-              "a": "Для рецептов используйте конвертер веса (для перевода граммов в фунты) и конвертер объёма (для перевода литров в галлоны или миллилитры). Это особенно полезно при использовании международных рецептов."
+              "q": "Come convertire le unità nelle ricette?",
+              "a": "Per le ricette, usa il convertitore di peso (per convertire grammi in libbre) e il convertitore di volume (per convertire litri in galloni o millilitri). Questo è particolarmente utile quando si usano ricette internazionali."
             },
             {
-              "q": "Подходит ли конвертер для образования?",
-              "a": "Да, конвертеры идеально подходят для образования. Студенты и преподаватели могут использовать их для изучения единиц измерения и выполнения учебных задач с переводами между системами измерения."
+              "q": "Il convertitore è adatto per l'educazione?",
+              "a": "Sì, i convertitori sono perfetti per l'educazione. Studenti e insegnanti possono usarli per studiare unità di misura ed eseguire compiti educativi con conversioni tra sistemi di misurazione."
             },
             {
-              "q": "Как конвертировать единицы для международных поездок?",
-              "a": "Для международных поездок используйте конвертер температуры (для перевода погоды), конвертер скорости (для перевода ограничений скорости) и конвертер длины (для перевода расстояний). Это поможет ориентироваться в странах с другими системами измерения."
+              "q": "Come convertire le unità per viaggi internazionali?",
+              "a": "Per viaggi internazionali, usa il convertitore di temperatura (per convertire il meteo), il convertitore di velocità (per convertire limiti di velocità) e il convertitore di lunghezza (per convertire distanze). Questo aiuterà a orientarsi in paesi con altri sistemi di misurazione."
             },
             {
-              "q": "Есть ли конвертеры для специализированных единиц?",
-              "a": "В настоящее время доступны конвертеры для основных единиц измерения. Для специализированных единиц (например, в медицине или науке) могут потребоваться дополнительные конвертеры, которые мы планируем добавить в будущем."
+              "q": "Ci sono convertitori per unità specializzate?",
+              "a": "Attualmente sono disponibili convertitori per unità di misura di base. Per unità specializzate (ad esempio, in medicina o scienza) potrebbero essere necessari convertitori aggiuntivi che pianifichiamo di aggiungere in futuro."
             }
           ]
         }
       }
     },
     "fun": {
-      "title": "Развлечения и хобби",
-      "description": "Совместимость, генераторы, игры",
+      "title": "Divertimento e Hobby",
+      "description": "Compatibilità, generatori, giochi",
       "seo": {
-        "title": "Развлекательные калькуляторы онлайн — Генераторы, игры и развлечения | Calc1.ru",
-        "description": "Бесплатные развлекательные калькуляторы онлайн: генераторы паролей, никнеймов, имён, случайных чисел, лотерейных билетов, калькуляторы совместимости и любви, знака зодиака, кубики онлайн, подбросить монетку, генераторы персонажей и фантастических миров. Развлечения и творчество для всех!",
-        "keywords": "развлекательные калькуляторы, генератор паролей, генератор никнеймов, генератор имен, генератор случайных чисел, лотерейный генератор, калькулятор совместимости, калькулятор любви, калькулятор зодиака, знак зодиака по дате, калькулятор веса на планетах, бросание кубика онлайн, подбросить монетку онлайн, орёл решка онлайн, генератор персонажей, генератор фантастических миров, генератор характеристик персонажа, генератор вымышленных миров, генератор имён для персонажей, развлечения онлайн, генераторы онлайн, fun calculators, password generator, random number generator, compatibility calculator, love calculator, zodiac calculator, dice roller, coin flipper, lottery generator, character generator, fantasy world generator, name generator, nickname generator, планета вес, совместимость по дате рождения, гороскоп онлайн, D&D кубики, настольные игры, ролевые игры",
+        "title": "Calcolatori Divertenti Online — Generatori, Giochi e Intrattenimento | Calc1.ru",
+        "description": "Calcolatori divertenti gratuiti online: generatori di password, nickname, nomi, numeri casuali, biglietti della lotteria, calcolatori di compatibilità e amore, segno zodiacale, dadi online, lancio della moneta, generatori di personaggi e mondi fantastici. Divertimento e creatività per tutti!",
+        "keywords": "calcolatori divertenti, generatore password, generatore nickname, generatore nomi, generatore numeri casuali, generatore lotteria, calcolatore compatibilità, calcolatore amore, calcolatore zodiaco, segno zodiacale per data, calcolatore peso pianeti, lancio dadi online, lancio moneta online, testa o croce online, generatore personaggi, generatore mondi fantastici, generatore caratteristiche personaggio, generatore mondi immaginari, generatore nomi personaggi, divertimenti online, generatori online, fun calculators, password generator, random number generator, compatibility calculator, love calculator, zodiac calculator, dice roller, coin flipper, lottery generator, character generator, fantasy world generator, name generator, nickname generator",
         "overview": {
-          "title": "О развлекательных калькуляторах",
-          "content": "Развлекательные калькуляторы Calc1.ru — это уникальный набор онлайн-инструментов для развлечений, творчества и хобби. В нашем каталоге вы найдёте 12 различных калькуляторов: от генераторов паролей и случайных чисел до калькуляторов совместимости и игровых симуляторов.",
-          "additionalContent": "Наши развлекательные калькуляторы помогут вам: создать уникальный пароль для защиты ваших аккаунтов, придумать оригинальный никнейм для игр и соцсетей, сгенерировать имя для персонажа или проекта, узнать свой знак зодиака и характеристики, рассчитать совместимость с партнёром, создать персонажей для рассказов и игр, построить фантастический мир для вашего произведения, поиграть в кубики и монетку, сгенерировать лотерейные билеты для розыгрышей, узнать свой вес на других планетах. Все калькуляторы работают полностью онлайн, не требуют регистрации и доступны бесплатно 24/7."
+          "title": "Sui Calcolatori Divertenti",
+          "content": "I calcolatori divertenti Calc1.ru sono un set unico di strumenti online per intrattenimento, creatività e hobby. Nel nostro catalogo troverai 12 calcolatori diversi: dai generatori di password e numeri casuali ai calcolatori di compatibilità e simulatori di giochi.",
+          "additionalContent": "I nostri calcolatori divertenti ti aiuteranno a: creare una password unica per proteggere i tuoi account, inventare un nickname originale per giochi e social network, generare un nome per un personaggio o progetto, scoprire il tuo segno zodiacale e le caratteristiche, calcolare la compatibilità con il partner, creare personaggi per storie e giochi, costruire un mondo fantastico per la tua opera, giocare con dadi e monete, generare biglietti della lotteria per estrazioni, scoprire il tuo peso su altri pianeti. Tutti i calcolatori funzionano completamente online, non richiedono registrazione e sono disponibili gratuitamente 24/7."
         },
         "advantages": {
-          "title": "Преимущества наших развлекательных калькуляторов",
-          "content": "Мы предлагаем широкий выбор развлекательных калькуляторов с уникальными возможностями:",
+          "title": "Vantaggi dei nostri Calcolatori Divertenti",
+          "content": "Offriamo un'ampia selezione di calcolatori divertenti con capacità uniche:",
           "free": {
-            "title": "Бесплатное использование",
-            "content": "Все калькуляторы полностью бесплатны и не требуют регистрации. Используйте их столько раз, сколько нужно без ограничений."
+            "title": "Uso gratuito",
+            "content": "Tutti i calcolatori sono completamente gratuiti e non richiedono registrazione. Usali quante volte vuoi senza limitazioni."
           },
           "instant": {
-            "title": "Мгновенные результаты",
-            "content": "Все расчёты и генерации выполняются мгновенно в реальном времени. Результаты появляются сразу после нажатия кнопки."
+            "title": "Risultati istantanei",
+            "content": "Tutti i calcoli e le generazioni vengono eseguiti istantaneamente in tempo reale. I risultati appaiono subito dopo aver premuto il pulsante."
           },
           "secure": {
-            "title": "Безопасность данных",
-            "content": "Генераторы паролей и другие инструменты работают локально в вашем браузере. Данные не передаются на сервер и не сохраняются."
+            "title": "Sicurezza dei dati",
+            "content": "I generatori di password e altri strumenti funzionano localmente nel tuo browser. I dati non vengono trasmessi al server e non vengono salvati."
           },
           "comprehensive": {
-            "title": "Широкий функционал",
-            "content": "12 различных калькуляторов покрывают все потребности в развлечениях и творчестве: от создания паролей до построения фантастических миров."
+            "title": "Ampia funzionalità",
+            "content": "12 calcolatori diversi coprono tutte le esigenze di intrattenimento e creatività: dalla creazione di password alla costruzione di mondi fantastici."
           },
           "mobile": {
-            "title": "Мобильная адаптация",
-            "content": "Все калькуляторы полностью адаптированы для работы на смартфонах и планшетах. Интерфейс оптимизирован для сенсорного управления."
+            "title": "Adattamento mobile",
+            "content": "Tutti i calcolatori sono completamente adattati per funzionare su smartphone e tablet. L'interfaccia è ottimizzata per il controllo touch."
           },
           "creative": {
-            "title": "Творческие инструменты",
-            "content": "Генераторы персонажей, имён и миров помогают писателям, гейм-дизайнерам и всем творческим людям создавать уникальный контент."
+            "title": "Strumenti creativi",
+            "content": "I generatori di personaggi, nomi e mondi aiutano scrittori, game designer e tutte le persone creative a creare contenuti unici."
           }
         },
         "tips": {
-          "title": "Советы по использованию",
-          "content": "Для максимальной эффективности использования наших развлекательных калькуляторов следуйте этим советам:",
-          "tip1": "Используйте генератор паролей для создания надёжных паролей длиной не менее 12 символов с комбинацией букв, цифр и символов.",
-          "tip2": "Генераторы имён и персонажей можно использовать для создания уникальных героев для ваших рассказов, игр или творческих проектов.",
-          "tip3": "Калькулятор совместимости и зодиак предназначены для развлечения и не являются научным методом анализа отношений.",
-          "tip4": "Игровые симуляторы (кубики, монетка) идеально подходят для настольных игр, принятия простых решений и обучения теории вероятности."
+          "title": "Consigli per l'uso",
+          "content": "Per massimizzare l'efficacia nell'uso dei nostri calcolatori divertenti, segui questi consigli:",
+          "tip1": "Usa il generatore di password per creare password sicure di almeno 12 caratteri con una combinazione di lettere, numeri e simboli.",
+          "tip2": "I generatori di nomi e personaggi possono essere usati per creare eroi unici per le tue storie, giochi o progetti creativi.",
+          "tip3": "Il calcolatore di compatibilità e lo zodiaco sono destinati all'intrattenimento e non sono un metodo scientifico di analisi delle relazioni.",
+          "tip4": "I simulatori di giochi (dadi, moneta) sono perfetti per giochi da tavolo, prendere decisioni semplici e imparare la teoria della probabilità."
         },
         "faq": {
-          "title": "Часто задаваемые вопросы",
+          "title": "Domande frequenti",
           "faqItems": [
             {
-              "q": "Что такое развлекательные калькуляторы?",
-              "a": "Развлекательные калькуляторы — это онлайн-инструменты для развлечений, творчества и хобби. Они включают генераторы паролей, имён, персонажей, случайных чисел, калькуляторы совместимости, зодиака и игровые симуляторы."
+              "q": "Cosa sono i calcolatori divertenti?",
+              "a": "I calcolatori divertenti sono strumenti online per intrattenimento, creatività e hobby. Includono generatori di password, nomi, personaggi, numeri casuali, calcolatori di compatibilità, zodiaco e simulatori di giochi."
             },
             {
-              "q": "Сколько развлекательных калькуляторов доступно?",
-              "a": "В настоящее время доступно 12 развлекательных калькуляторов: генератор паролей, генератор никнеймов, генератор имён, генератор случайных чисел, лотерейный генератор, калькулятор совместимости, калькулятор любви, калькулятор зодиака, калькулятор веса на планетах, кубики онлайн, подбросить монетку, генератор персонажей и генератор фантастических миров."
+              "q": "Quanti calcolatori divertenti sono disponibili?",
+              "a": "Attualmente sono disponibili 12 calcolatori divertenti: generatore password, generatore nickname, generatore nomi, generatore numeri casuali, generatore lotteria, calcolatore compatibilità, calcolatore amore, calcolatore zodiaco, calcolatore peso pianeti, dadi online, lancio moneta, generatore personaggi e generatore mondi fantastici."
             },
             {
-              "q": "Бесплатно ли использование развлекательных калькуляторов?",
-              "a": "Да, все развлекательные калькуляторы полностью бесплатны и не требуют регистрации. Используйте их столько раз, сколько нужно без ограничений."
+              "q": "L'uso dei calcolatori divertenti è gratuito?",
+              "a": "Sì, tutti i calcolatori divertenti sono completamente gratuiti e non richiedono registrazione. Usali quante volte vuoi senza limitazioni."
             },
             {
-              "q": "Безопасно ли использовать генератор паролей?",
-              "a": "Да, генератор паролей работает полностью локально в вашем браузере. Пароли не передаются на сервер, не сохраняются и не могут быть перехвачены третьими лицами."
+              "q": "È sicuro usare il generatore di password?",
+              "a": "Sì, il generatore di password funziona completamente localmente nel tuo browser. Le password non vengono trasmesse al server, non vengono salvate e non possono essere intercettate da terzi."
             },
             {
-              "q": "Можно ли использовать генераторы для коммерческих целей?",
-              "a": "Да, все генераторы можно использовать для любых целей, включая коммерческие. Ограничений на использование нет."
+              "q": "È possibile usare i generatori per scopi commerciali?",
+              "a": "Sì, tutti i generatori possono essere usati per qualsiasi scopo, incluso commerciale. Non ci sono limitazioni all'uso."
             },
             {
-              "q": "Работают ли калькуляторы на мобильных устройствах?",
-              "a": "Да, все развлекательные калькуляторы полностью адаптированы для работы на смартфонах и планшетах. Интерфейс оптимизирован для сенсорного управления."
+              "q": "I calcolatori funzionano su dispositivi mobili?",
+              "a": "Sì, tutti i calcolatori divertenti sono completamente adattati per funzionare su smartphone e tablet. L'interfaccia è ottimizzata per il controllo touch."
             },
             {
-              "q": "Можно ли сохранить результаты генерации?",
-              "a": "Большинство генераторов предоставляют возможность копирования результатов в буфер обмена или скачивания их в текстовом файле. Некоторые калькуляторы также поддерживают печать результатов."
+              "q": "È possibile salvare i risultati della generazione?",
+              "a": "La maggior parte dei generatori fornisce la possibilità di copiare i risultati negli appunti o scaricarli in un file di testo. Alcuni calcolatori supportano anche la stampa dei risultati."
             },
             {
-              "q": "Насколько случайны результаты генераторов?",
-              "a": "Все генераторы используют криптографически стойкие алгоритмы для создания действительно случайных результатов. Каждая генерация независима и равновероятна."
+              "q": "Quanto sono casuali i risultati dei generatori?",
+              "a": "Tutti i generatori utilizzano algoritmi crittograficamente sicuri per creare risultati veramente casuali. Ogni generazione è indipendente e equiprobabile."
             },
             {
-              "q": "Можно ли использовать калькулятор зодиака для принятия важных решений?",
-              "a": "Калькулятор зодиака предназначен для развлечения и не является научным методом. Не рекомендуется использовать его для принятия важных жизненных решений."
+              "q": "È possibile usare il calcolatore zodiaco per prendere decisioni importanti?",
+              "a": "Il calcolatore zodiaco è destinato all'intrattenimento e non è un metodo scientifico. Non è raccomandato usarlo per prendere decisioni importanti nella vita."
             },
             {
-              "q": "Подходит ли калькулятор совместимости для реальных отношений?",
-              "a": "Калькулятор совместимости — это развлекательный инструмент, основанный на астрологических принципах. Он не заменяет реальное общение и взаимопонимание в отношениях."
+              "q": "Il calcolatore di compatibilità è adatto per relazioni reali?",
+              "a": "Il calcolatore di compatibilità è uno strumento di intrattenimento basato su principi astrologici. Non sostituisce la comunicazione reale e la comprensione reciproca nelle relazioni."
             },
             {
-              "q": "Можно ли использовать генератор персонажей для книг?",
-              "a": "Да, генератор персонажей идеально подходит для создания уникальных героев для книг, рассказов, игр и других творческих проектов."
+              "q": "È possibile usare il generatore di personaggi per libri?",
+              "a": "Sì, il generatore di personaggi è perfetto per creare eroi unici per libri, storie, giochi e altri progetti creativi."
             },
             {
-              "q": "Работают ли калькуляторы офлайн?",
-              "a": "После первой загрузки страницы большинство калькуляторов могут работать в режиме офлайн, так как все вычисления выполняются локально в браузере."
+              "q": "I calcolatori funzionano offline?",
+              "a": "Dopo il primo caricamento della pagina, la maggior parte dei calcolatori può funzionare in modalità offline, poiché tutti i calcoli vengono eseguiti localmente nel browser."
             },
             {
-              "q": "Можно ли использовать кубики для настольных игр?",
-              "a": "Да, симулятор кубиков идеально подходит для настольных игр (D&D, Pathfinder, Warhammer) и поддерживает все стандартные типы кубиков (D4, D6, D8, D10, D12, D20, D100)."
+              "q": "È possibile usare i dadi per giochi da tavolo?",
+              "a": "Sì, il simulatore di dadi è perfetto per giochi da tavolo (D&D, Pathfinder, Warhammer) e supporta tutti i tipi standard di dadi (D4, D6, D8, D10, D12, D20, D100)."
             },
             {
-              "q": "Гарантирует ли лотерейный генератор выигрыш?",
-              "a": "Нет, лотерейный генератор создаёт случайные комбинации чисел. Шансы на выигрыш зависят от правил конкретной лотереи. Это развлекательный инструмент."
+              "q": "Il generatore della lotteria garantisce una vincita?",
+              "a": "No, il generatore della lotteria crea combinazioni casuali di numeri. Le possibilità di vincita dipendono dalle regole della lotteria specifica. È uno strumento di intrattenimento."
             },
             {
-              "q": "Можно ли использовать генератор имён для детей?",
-              "a": "Да, генератор имён поддерживает тип 'имя для ребёнка' с реальными популярными именами. Вы можете выбрать пол и длину имени."
+              "q": "È possibile usare il generatore di nomi per bambini?",
+              "a": "Sì, il generatore di nomi supporta il tipo 'nome per bambino' con nomi popolari reali. Puoi scegliere il genere e la lunghezza del nome."
             },
             {
-              "q": "В чём разница между генератором никнеймов и генератором имён?",
-              "a": "Генератор никнеймов создаёт короткие, звучные имена для игр и соцсетей с различными тематиками и стилями. Генератор имён создаёт полные имена для детей, персонажей, проектов, книг и игр."
+              "q": "Qual è la differenza tra generatore di nickname e generatore di nomi?",
+              "a": "Il generatore di nickname crea nomi brevi e sonori per giochi e social network con vari temi e stili. Il generatore di nomi crea nomi completi per bambini, personaggi, progetti, libri e giochi."
             },
             {
-              "q": "Можно ли создать несколько персонажей за раз?",
-              "a": "Да, генератор персонажей позволяет создать от 1 до 5 персонажей одновременно с различными характеристиками, профессиями и историями."
+              "q": "È possibile creare più personaggi alla volta?",
+              "a": "Sì, il generatore di personaggi permette di creare da 1 a 5 personaggi contemporaneamente con diverse caratteristiche, professioni e storie."
             },
             {
-              "q": "Работает ли калькулятор веса на планетах для любых единиц измерения?",
-              "a": "Калькулятор веса на планетах поддерживает килограммы и фунты. Расчёты основаны на точных значениях гравитации каждой планеты."
+              "q": "Il calcolatore del peso sui pianeti funziona per qualsiasi unità di misura?",
+              "a": "Il calcolatore del peso sui pianeti supporta chilogrammi e libbre. I calcoli sono basati su valori precisi di gravità di ogni pianeta."
             },
             {
-              "q": "Можно ли использовать генератор фантастических миров для игр?",
-              "a": "Да, генератор фантастических миров идеально подходит для создания вымышленных вселенных для игр, книг, рассказов и других творческих проектов."
+              "q": "È possibile usare il generatore di mondi fantastici per giochi?",
+              "a": "Sì, il generatore di mondi fantastici è perfetto per creare universi immaginari per giochi, libri, storie e altri progetti creativi."
             },
             {
-              "q": "Сколько миров можно создать за раз?",
-              "a": "Генератор фантастических миров позволяет создать от 1 до 3 миров одновременно с полным описанием климата, культуры, правительства, ресурсов и конфликтов."
+              "q": "Quanti mondi si possono creare alla volta?",
+              "a": "Il generatore di mondi fantastici permette di creare da 1 a 3 mondi contemporaneamente con una descrizione completa di clima, cultura, governo, risorse e conflitti."
             },
             {
-              "q": "Подходит ли генератор случайных чисел для программирования?",
-              "a": "Да, генератор случайных чисел можно использовать для тестирования алгоритмов, создания тестовых данных и других задач программирования."
+              "q": "Il generatore di numeri casuali è adatto per la programmazione?",
+              "a": "Sì, il generatore di numeri casuali può essere usato per testare algoritmi, creare dati di test e altre attività di programmazione."
             },
             {
-              "q": "Можно ли настроить параметры генераторов?",
-              "a": "Да, большинство генераторов предоставляют настройки для кастомизации результатов: длина, стиль, количество элементов, фильтры и другие параметры."
+              "q": "È possibile configurare i parametri dei generatori?",
+              "a": "Sì, la maggior parte dei generatori fornisce impostazioni per personalizzare i risultati: lunghezza, stile, numero di elementi, filtri e altri parametri."
             },
             {
-              "q": "Сохраняются ли результаты генерации между сессиями?",
-              "a": "Результаты генерации не сохраняются автоматически между сессиями. Рекомендуется копировать или скачивать результаты, если вы хотите сохранить их для дальнейшего использования."
+              "q": "I risultati della generazione vengono salvati tra le sessioni?",
+              "a": "I risultati della generazione non vengono salvati automaticamente tra le sessioni. Si raccomanda di copiare o scaricare i risultati se vuoi salvarli per un uso futuro."
             },
             {
-              "q": "Можно ли использовать генераторы для обучения?",
-              "a": "Да, многие генераторы отлично подходят для обучения: генератор случайных чисел для изучения статистики, калькулятор веса на планетах для изучения физики, игровые симуляторы для изучения теории вероятности."
+              "q": "È possibile usare i generatori per l'apprendimento?",
+              "a": "Sì, molti generatori sono ottimi per l'apprendimento: generatore di numeri casuali per studiare statistica, calcolatore del peso sui pianeti per studiare fisica, simulatori di giochi per studiare la teoria della probabilità."
             },
             {
-              "q": "Есть ли ограничения на количество генераций?",
-              "a": "Нет, нет никаких ограничений на количество генераций. Вы можете использовать калькуляторы неограниченное количество раз."
+              "q": "Ci sono limitazioni sul numero di generazioni?",
+              "a": "No, non ci sono limitazioni sul numero di generazioni. Puoi usare i calcolatori un numero illimitato di volte."
             },
             {
-              "q": "Работают ли калькуляторы в приватном режиме браузера?",
-              "a": "Да, все калькуляторы работают в любом режиме браузера, включая приватный. Все генерации происходят локально и не сохраняются."
+              "q": "I calcolatori funzionano in modalità privata del browser?",
+              "a": "Sì, tutti i calcolatori funzionano in qualsiasi modalità del browser, incluso quella privata. Tutte le generazioni avvengono localmente e non vengono salvate."
             },
             {
-              "q": "Можно ли экспортировать результаты в Excel?",
-              "a": "Некоторые калькуляторы предоставляют возможность скачать результаты в текстовом формате, который можно импортировать в Excel. Также можно скопировать результаты и вставить в Excel вручную."
+              "q": "È possibile esportare i risultati in Excel?",
+              "a": "Alcuni calcolatori forniscono la possibilità di scaricare i risultati in formato testo, che può essere importato in Excel. Puoi anche copiare i risultati e incollarli in Excel manualmente."
             },
             {
-              "q": "Как часто обновляются калькуляторы?",
-              "a": "Мы регулярно обновляем калькуляторы, добавляя новые функции, улучшая интерфейс и исправляя возможные ошибки. Следите за обновлениями!"
+              "q": "Con quale frequenza vengono aggiornati i calcolatori?",
+              "a": "Aggiorniamo regolarmente i calcolatori, aggiungendo nuove funzioni, migliorando l'interfaccia e correggendo possibili errori. Resta aggiornato!"
             },
             {
-              "q": "Можно ли предложить новый развлекательный калькулятор?",
-              "a": "Да, мы всегда открыты для предложений новых калькуляторов. Свяжитесь с нами через форму обратной связи на сайте."
+              "q": "È possibile suggerire un nuovo calcolatore divertente?",
+              "a": "Sì, siamo sempre aperti a suggerimenti per nuovi calcolatori. Contattaci tramite il modulo di feedback sul sito."
             },
             {
-              "q": "Подходят ли калькуляторы для всех возрастов?",
-              "a": "Да, развлекательные калькуляторы подходят для всех возрастов. Некоторые калькуляторы могут быть особенно интересны детям и подросткам, а другие — взрослым для творчества и развлечений."
+              "q": "I calcolatori sono adatti per tutte le età?",
+              "a": "Sì, i calcolatori divertenti sono adatti per tutte le età. Alcuni calcolatori possono essere particolarmente interessanti per bambini e adolescenti, mentre altri sono per adulti per creatività e intrattenimento."
             }
           ]
         }
       }
     },
     "it": {
-      "title": "IT-калькуляторы",
-      "description": "IP-адреса, хеширование, кодирование, сетевые расчёты",
+      "title": "Calcolatori IT",
+      "description": "Indirizzi IP, hashing, codifica, calcoli di rete",
       "seo": {
-        "title": "IT-калькуляторы онлайн — Сетевые и криптовалютные расчёты | Calc1.ru",
-        "description": "Бесплатные IT-калькуляторы онлайн: расчёт IP-адресов и подсетей (IPv4, IPv6, CIDR), калькулятор хешрейта для майнинга криптовалют, сетевые расчёты. Точные инструменты для разработчиков, системных администраторов и IT-специалистов.",
-        "keywords": "IT калькуляторы, калькулятор IP адресов, калькулятор хешрейта, майнинг калькулятор, Bitcoin майнинг, Ethereum майнинг, IP калькулятор онлайн, CIDR калькулятор, IPv4 калькулятор, IPv6 калькулятор, подсеть калькулятор, сетевые расчеты, расчет подсети, сетевые инструменты, IT инструменты онлайн, калькулятор доходности майнинга, калькулятор окупаемости майнинга, майнинг прибыльность, хешрейт калькулятор, сложность сети, награда за блок, время блока, ROI майнинг, ASIC майнинг, GPU майнинг, майнинг ферма, Bitcoin калькулятор, Ethereum калькулятор, network calculator, IP calculator, subnet calculator, CIDR calculator, hashrate calculator, mining calculator, cryptocurrency calculator, Bitcoin mining calculator, Ethereum mining calculator",
+        "title": "Calcolatori IT Online — Calcoli di Rete e Criptovalute | Calc1.ru",
+        "description": "Calcolatori IT gratuiti online: calcolo di indirizzi IP e sottoreti (IPv4, IPv6, CIDR), calcolatore hashrate per il mining di criptovalute, calcoli di rete. Strumenti precisi per sviluppatori, amministratori di sistema e specialisti IT.",
+        "keywords": "calcolatori IT, calcolatore indirizzi IP, calcolatore hashrate, calcolatore mining, mining Bitcoin, mining Ethereum, calcolatore IP online, calcolatore CIDR, calcolatore IPv4, calcolatore IPv6, calcolatore sottorete, calcoli di rete, calcolo sottorete, strumenti di rete, strumenti IT online, calcolatore redditività mining, calcolatore ROI mining, redditività mining, calcolatore hashrate, difficoltà rete, ricompensa blocco, tempo blocco, ROI mining, mining ASIC, mining GPU, mining farm, calcolatore Bitcoin, calcolatore Ethereum, network calculator, IP calculator, subnet calculator, CIDR calculator, hashrate calculator, mining calculator, cryptocurrency calculator, Bitcoin mining calculator, Ethereum mining calculator",
         "overview": {
-          "title": "IT-калькуляторы Calc1.ru",
-          "content": "IT-калькуляторы Calc1.ru — это комплексный набор онлайн-инструментов для IT-специалистов, разработчиков и системных администраторов. Наши калькуляторы помогают выполнять точные расчёты сетевых параметров, IP-адресов, подсетей, а также доходности майнинга криптовалют.",
-          "additionalContent": "Все калькуляторы используют актуальные стандарты и формулы, обеспечивая точность расчётов. Инструменты работают мгновенно, абсолютно бесплатно и без регистрации. Подходят для профессионального использования в IT-инфраструктуре, разработке и криптовалютном майнинге."
+          "title": "Calcolatori IT Calc1.ru",
+          "content": "I calcolatori IT Calc1.ru sono un set completo di strumenti online per professionisti IT, sviluppatori e amministratori di sistema. I nostri calcolatori aiutano a eseguire calcoli precisi di parametri di rete, indirizzi IP, sottoreti e redditività del mining di criptovalute.",
+          "additionalContent": "Tutti i calcolatori utilizzano standard e formule attuali, garantendo la precisione dei calcoli. Gli strumenti funzionano istantaneamente, completamente gratuiti e senza registrazione. Adatti per uso professionale in infrastrutture IT, sviluppo e mining di criptovalute."
         },
         "advantages": {
-          "title": "Преимущества IT-калькуляторов",
-          "content": "Наши IT-калькуляторы предоставляют множество преимуществ для IT-специалистов:",
-          "accurate": "Точные расчёты",
-          "accurateDesc": "Используют актуальные стандарты сетевой адресации и формулы майнинга для максимальной точности",
-          "professional": "Профессиональные инструменты",
-          "professionalDesc": "Разработаны для использования в профессиональной IT-среде и криптовалютном майнинге",
-          "comprehensive": "Полный набор функций",
-          "comprehensiveDesc": "Покрывают все основные потребности: от сетевых расчётов до анализа прибыльности майнинга",
-          "fast": "Мгновенные результаты",
-          "fastDesc": "Все расчёты выполняются мгновенно в режиме реального времени без задержек",
-          "free": "Бесплатно",
-          "freeDesc": "Полностью бесплатно, без регистрации и скрытых платежей",
-          "accessible": "Доступность",
-          "accessibleDesc": "Работает на всех устройствах с адаптивным интерфейсом для удобной работы в любое время"
+          "title": "Vantaggi dei Calcolatori IT",
+          "content": "I nostri calcolatori IT offrono molti vantaggi per gli specialisti IT:",
+          "accurate": "Calcoli precisi",
+          "accurateDesc": "Utilizzano standard attuali di indirizzamento di rete e formule di mining per massima precisione",
+          "professional": "Strumenti professionali",
+          "professionalDesc": "Progettati per l'uso in ambienti IT professionali e mining di criptovalute",
+          "comprehensive": "Set completo di funzioni",
+          "comprehensiveDesc": "Coprono tutte le esigenze di base: dai calcoli di rete all'analisi della redditività del mining",
+          "fast": "Risultati istantanei",
+          "fastDesc": "Tutti i calcoli vengono eseguiti istantaneamente in tempo reale senza ritardi",
+          "free": "Gratuito",
+          "freeDesc": "Completamente gratuito, senza registrazione e costi nascosti",
+          "accessible": "Accessibilità",
+          "accessibleDesc": "Funziona su tutti i dispositivi con interfaccia adattiva per un lavoro comodo in qualsiasi momento"
         },
         "tips": {
-          "title": "Советы по использованию IT-калькуляторов",
-          "content": "Для получения максимально точных результатов следуйте этим рекомендациям:",
-          "data": "Используйте актуальные данные: реальные параметры сети, текущую сложность блокчейна, точные характеристики оборудования",
-          "verification": "Проверяйте результаты с помощью нескольких источников для подтверждения точности",
-          "regular": "Регулярно пересчитывайте параметры при изменении конфигурации сети или условий майнинга",
-          "planning": "Используйте калькуляторы для планирования сетевой инфраструктуры и оценки инвестиций в майнинг"
+          "title": "Consigli per l'Uso dei Calcolatori IT",
+          "content": "Per ottenere risultati il più precisi possibile, segui queste raccomandazioni:",
+          "data": "Usa dati attuali: parametri di rete reali, difficoltà blockchain corrente, specifiche precise dell'attrezzatura",
+          "verification": "Verifica i risultati utilizzando più fonti per confermare la precisione",
+          "regular": "Ricalcola regolarmente i parametri quando cambiano la configurazione di rete o le condizioni di mining",
+          "planning": "Usa i calcolatori per pianificare l'infrastruttura di rete e valutare gli investimenti nel mining"
         },
         "faq": {
-          "title": "Часто задаваемые вопросы об IT-калькуляторах",
+          "title": "Domande frequenti sui Calcolatori IT",
           "faqItems": [
             {
-              "q": "Какие IT-калькуляторы доступны на Calc1.ru?",
-              "a": "На Calc1.ru доступны калькуляторы: IP-адресов и подсетей (IPv4/IPv6, CIDR), хешрейта для майнинга криптовалют (Bitcoin, Ethereum и других). Все калькуляторы работают онлайн и абсолютно бесплатны."
+              "q": "Quali calcolatori IT sono disponibili su Calc1.ru?",
+              "a": "Su Calc1.ru sono disponibili calcolatori per: indirizzi IP e sottoreti (IPv4/IPv6, CIDR), hashrate per il mining di criptovalute (Bitcoin, Ethereum e altri). Tutti i calcolatori funzionano online e sono completamente gratuiti."
             },
             {
-              "q": "Насколько точны расчёты IT-калькуляторов?",
-              "a": "Калькуляторы используют актуальные стандарты сетевой адресации (RFC) и формулы майнинга, применяемые в блокчейн-сетях. Точность зависит от корректности введённых данных. Для профессионального использования калькуляторы дают высокоточные результаты."
+              "q": "Quanto sono precisi i calcoli dei calcolatori IT?",
+              "a": "I calcolatori utilizzano standard attuali di indirizzamento di rete (RFC) e formule di mining utilizzate nelle reti blockchain. La precisione dipende dalla correttezza dei dati inseriti. Per uso professionale, i calcolatori forniscono risultati altamente precisi."
             },
             {
-              "q": "Бесплатно ли использование IT-калькуляторов?",
-              "a": "Да, все IT-калькуляторы на Calc1.ru полностью бесплатны. Вы можете использовать их неограниченное количество раз без регистрации и скрытых платежей."
+              "q": "L'uso dei calcolatori IT è gratuito?",
+              "a": "Sì, tutti i calcolatori IT su Calc1.ru sono completamente gratuiti. Puoi usarli un numero illimitato di volte senza registrazione e costi nascosti."
             },
             {
-              "q": "Как рассчитать параметры подсети по IP и CIDR?",
-              "a": "Используйте калькулятор IP-адресов, указав IP-адрес с CIDR нотацией (например, 192.168.1.0/24). Калькулятор покажет сетевой адрес, диапазон IP, маску подсети, количество хостов и другие параметры."
+              "q": "Come calcolare i parametri della sottorete tramite IP e CIDR?",
+              "a": "Usa il calcolatore di indirizzi IP, specificando l'indirizzo IP con notazione CIDR (ad esempio, 192.168.1.0/24). Il calcolatore mostrerà l'indirizzo di rete, il range di IP, la maschera di sottorete, il numero di host e altri parametri."
             },
             {
-              "q": "Как рассчитать доходность майнинга криптовалют?",
-              "a": "Используйте калькулятор хешрейта, указав хешрейт оборудования, сложность сети, награду за блок, время блока, потребление энергии и стоимость электроэнергии. Калькулятор рассчитает доходность, прибыль и окупаемость."
+              "q": "Come calcolare la redditività del mining di criptovalute?",
+              "a": "Usa il calcolatore hashrate, specificando l'hashrate dell'attrezzatura, la difficoltà della rete, la ricompensa del blocco, il tempo del blocco, il consumo energetico e il costo dell'elettricità. Il calcolatore calcolerà la redditività, il profitto e il ROI."
             },
             {
-              "q": "Как рассчитать количество хостов в подсети?",
-              "a": "В калькуляторе IP-адресов укажите CIDR нотацию или IP с маской. Калькулятор автоматически рассчитает количество доступных хостов по формуле: 2^(32-CIDR) - 2 для IPv4."
+              "q": "Come calcolare il numero di host in una sottorete?",
+              "a": "Nel calcolatore di indirizzi IP, specifica la notazione CIDR o l'IP con maschera. Il calcolatore calcolerà automaticamente il numero di host disponibili usando la formula: 2^(32-CIDR) - 2 per IPv4."
             },
             {
-              "q": "Как рассчитать окупаемость майнинг-оборудования?",
-              "a": "В калькуляторе хешрейта укажите стоимость оборудования и рассчитайте чистую прибыль. Окупаемость = Стоимость оборудования / Чистая прибыль в день. Результат покажет количество дней до окупаемости."
+              "q": "Come calcolare il ROI dell'attrezzatura di mining?",
+              "a": "Nel calcolatore hashrate, specifica il costo dell'attrezzatura e calcola il profitto netto. ROI = Costo attrezzatura / Profitto netto al giorno. Il risultato mostrerà il numero di giorni fino al ROI."
             },
             {
-              "q": "Поддерживает ли калькулятор IPv6 адреса?",
-              "a": "Да, калькулятор IP-адресов полностью поддерживает как IPv4, так и IPv6 адреса. Вы можете рассчитывать подсети для обеих версий IP-протокола."
+              "q": "Il calcolatore supporta indirizzi IPv6?",
+              "a": "Sì, il calcolatore di indirizzi IP supporta completamente sia indirizzi IPv4 che IPv6. Puoi calcolare sottoreti per entrambe le versioni del protocollo IP."
             },
             {
-              "q": "Как учитывать комиссию майнинг-пула при расчёте?",
-              "a": "В калькуляторе хешрейта укажите процент комиссии пула (обычно 1-3%). Калькулятор автоматически вычтет комиссию из дохода при расчёте чистой прибыли."
+              "q": "Come considerare la commissione del pool di mining nel calcolo?",
+              "a": "Nel calcolatore hashrate, specifica la percentuale di commissione del pool (solitamente 1-3%). Il calcolatore dedurrà automaticamente la commissione dal reddito quando calcola il profitto netto."
             },
             {
-              "q": "Как рассчитать широковещательный адрес подсети?",
-              "a": "Используйте калькулятор IP-адресов. Широковещательный адрес рассчитывается автоматически как последний адрес в диапазоне подсети и отображается в результатах."
+              "q": "Come calcolare l'indirizzo broadcast della sottorete?",
+              "a": "Usa il calcolatore di indirizzi IP. L'indirizzo broadcast viene calcolato automaticamente come ultimo indirizzo nel range della sottorete e viene visualizzato nei risultati."
             },
             {
-              "q": "Какой хешрейт нужен для прибыльного майнинга?",
-              "a": "Необходимый хешрейт зависит от сложности сети, стоимости криптовалюты и затрат на электроэнергию. Используйте калькулятор хешрейта, постепенно увеличивая хешрейт, пока майнинг не станет прибыльным."
+              "q": "Quale hashrate è necessario per il mining redditizio?",
+              "a": "L'hashrate necessario dipende dalla difficoltà della rete, dal prezzo della criptovaluta e dai costi dell'elettricità. Usa il calcolatore hashrate, aumentando gradualmente l'hashrate fino a quando il mining diventa redditizio."
             },
             {
-              "q": "Как выполнить обратный расчёт диапазона IP в CIDR?",
-              "a": "В калькуляторе IP-адресов выберите режим \"Диапазон IP\" и укажите первый и последний IP адреса. Калькулятор автоматически определит минимальный CIDR для заданного диапазона."
+              "q": "Come eseguire il calcolo inverso del range IP in CIDR?",
+              "a": "Nel calcolatore di indirizzi IP, seleziona la modalità \"Range IP\" e specifica il primo e l'ultimo indirizzo IP. Il calcolatore determinerà automaticamente il CIDR minimo per il range specificato."
             },
             {
-              "q": "Можно ли рассчитать доходность для разных криптовалют?",
-              "a": "Да, калькулятор хешрейта поддерживает различные криптовалюты: Bitcoin, Ethereum, Litecoin и другие. Можно выбрать предустановленную криптовалюту или указать параметры вручную."
+              "q": "È possibile calcolare la redditività per diverse criptovalute?",
+              "a": "Sì, il calcolatore hashrate supporta varie criptovalute: Bitcoin, Ethereum, Litecoin e altre. Puoi selezionare una criptovaluta preimpostata o specificare i parametri manualmente."
             },
             {
-              "q": "Как рассчитать маску подсети из CIDR?",
-              "a": "CIDR показывает количество единиц в маске. Например, /24 означает маску 255.255.255.0. Калькулятор IP-адресов автоматически конвертирует CIDR в маску подсети."
+              "q": "Come calcolare la maschera di sottorete da CIDR?",
+              "a": "CIDR mostra il numero di unità nella maschera. Ad esempio, /24 significa maschera 255.255.255.0. Il calcolatore di indirizzi IP converte automaticamente CIDR in maschera di sottorete."
             },
             {
-              "q": "Как учитывать изменения сложности сети при майнинге?",
-              "a": "Сложность сети постоянно меняется. Используйте актуальные данные сложности с блокчейн-эксплореров или майнинг-пулов. Калькулятор поддерживает ручной ввод сложности для точных расчётов."
+              "q": "Come considerare le variazioni della difficoltà della rete nel mining?",
+              "a": "La difficoltà della rete cambia costantemente. Usa dati aggiornati sulla difficoltà da blockchain explorer o pool di mining. Il calcolatore supporta l'inserimento manuale della difficoltà per calcoli precisi."
             },
             {
-              "q": "Что такое приватные IP адреса?",
-              "a": "Приватные IP адреса используются для внутренних сетей: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 для IPv4. Калькулятор автоматически определяет тип адреса (приватный или публичный)."
+              "q": "Cosa sono gli indirizzi IP privati?",
+              "a": "Gli indirizzi IP privati sono utilizzati per reti interne: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 per IPv4. Il calcolatore determina automaticamente il tipo di indirizzo (privato o pubblico)."
             },
             {
-              "q": "Как рассчитать время нахождения блока для майнинга?",
-              "a": "Время нахождения блока = Сложность сети / Хешрейт. Калькулятор хешрейта автоматически рассчитывает теоретическое время нахождения блока при работе в одиночку."
+              "q": "Come calcolare il tempo di trovare un blocco per il mining?",
+              "a": "Tempo di trovare un blocco = Difficoltà della rete / Hashrate. Il calcolatore hashrate calcola automaticamente il tempo teorico di trovare un blocco quando si lavora da soli."
             },
             {
-              "q": "Можно ли использовать калькулятор для проектирования локальных сетей?",
-              "a": "Да, калькулятор IP-адресов отлично подходит для проектирования локальных сетей. Вы можете рассчитывать подсети, определять диапазоны IP и планировать сетевую инфраструктуру."
+              "q": "È possibile usare il calcolatore per progettare reti locali?",
+              "a": "Sì, il calcolatore di indirizzi IP è perfetto per progettare reti locali. Puoi calcolare sottoreti, determinare range di IP e pianificare l'infrastruttura di rete."
             },
             {
-              "q": "Как рассчитать затраты на электроэнергию при майнинге?",
-              "a": "В калькуляторе хешрейта укажите потребление энергии оборудования в ваттах и стоимость электроэнергии за кВт·ч. Калькулятор автоматически рассчитает затраты на электроэнергию в день, месяц и год."
+              "q": "Come calcolare i costi dell'elettricità per il mining?",
+              "a": "Nel calcolatore hashrate, specifica il consumo energetico dell'attrezzatura in watt e il costo dell'elettricità per kWh. Il calcolatore calcolerà automaticamente i costi dell'elettricità al giorno, mese e anno."
             },
             {
-              "q": "Как разбить сеть на несколько подсетей?",
-              "a": "Используйте калькулятор IP-адресов для расчёта параметров каждой подсети. Определите необходимое количество хостов в каждой подсети и выберите соответствующий CIDR. Калькулятор покажет все параметры подсети."
+              "q": "Come dividere una rete in più sottoreti?",
+              "a": "Usa il calcolatore di indirizzi IP per calcolare i parametri di ogni sottorete. Determina il numero necessario di host in ogni sottorete e seleziona il CIDR appropriato. Il calcolatore mostrerà tutti i parametri della sottorete."
             },
             {
-              "q": "Что такое ROI в майнинге и как его рассчитать?",
-              "a": "ROI (Return on Investment) — это окупаемость инвестиций. Рассчитывается как: ROI = Стоимость оборудования / Чистая прибыль в день. Калькулятор хешрейта автоматически рассчитывает ROI на основе введённых данных."
+              "q": "Cos'è il ROI nel mining e come calcolarlo?",
+              "a": "ROI (Return on Investment) è il ritorno sull'investimento. Calcolato come: ROI = Costo attrezzatura / Profitto netto al giorno. Il calcolatore hashrate calcola automaticamente il ROI basandosi sui dati inseriti."
             },
             {
-              "q": "Как проверить корректность IP-адреса?",
-              "a": "Калькулятор IP-адресов автоматически проверяет формат и диапазон IP адресов. При вводе некорректного адреса калькулятор выведет ошибку валидации."
+              "q": "Come verificare la correttezza dell'indirizzo IP?",
+              "a": "Il calcolatore di indirizzi IP verifica automaticamente il formato e il range degli indirizzi IP. Quando si inserisce un indirizzo non corretto, il calcolatore mostrerà un errore di validazione."
             },
             {
-              "q": "Можно ли использовать калькулятор для расчёта доходности майнинг-фермы?",
-              "a": "Да, калькулятор хешрейта можно использовать для расчёта доходности майнинг-фермы. Введите суммарный хешрейт всех устройств и общее потребление энергии всей фермы."
+              "q": "È possibile usare il calcolatore per calcolare la redditività di una mining farm?",
+              "a": "Sì, il calcolatore hashrate può essere usato per calcolare la redditività di una mining farm. Inserisci l'hashrate totale di tutti i dispositivi e il consumo energetico totale dell'intera farm."
             },
             {
-              "q": "Как рассчитать первый и последний IP в подсети?",
-              "a": "Первый IP = адрес сети + 1, последний IP = широковещательный адрес - 1. Калькулятор IP-адресов автоматически рассчитывает и отображает эти адреса в результатах."
+              "q": "Come calcolare il primo e l'ultimo IP in una sottorete?",
+              "a": "Primo IP = indirizzo di rete + 1, ultimo IP = indirizzo broadcast - 1. Il calcolatore di indirizzi IP calcola e visualizza automaticamente questi indirizzi nei risultati."
             },
             {
-              "q": "Как учитывать халвинг при расчёте доходности майнинга?",
-              "a": "Халвинг уменьшает награду за блок вдвое. При расчёте доходности используйте актуальную награду за блок после халвинга. Для Bitcoin награда уменьшается каждые 210,000 блоков."
+              "q": "Come considerare l'halving nel calcolo della redditività del mining?",
+              "a": "L'halving riduce la ricompensa del blocco della metà. Nel calcolare la redditività, usa la ricompensa attuale del blocco dopo l'halving. Per Bitcoin, la ricompensa diminuisce ogni 210,000 blocchi."
             },
             {
-              "q": "Как рассчитать подсеть для серверной инфраструктуры?",
-              "a": "Определите количество серверов, которые необходимо разместить, и выберите подходящий CIDR для подсети. Калькулятор покажет, сколько хостов доступно и подходит ли подсеть для ваших нужд."
+              "q": "Come calcolare una sottorete per l'infrastruttura server?",
+              "a": "Determina il numero di server che devono essere posizionati e seleziona il CIDR appropriato per la sottorete. Il calcolatore mostrerà quanti host sono disponibili e se la sottorete è adatta alle tue esigenze."
             },
             {
-              "q": "Можно ли сравнить доходность разных алгоритмов майнинга?",
-              "a": "Да, используйте калькулятор хешрейта для каждой криптовалюты отдельно. Рассчитайте доходность для Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) и сравните результаты."
+              "q": "È possibile confrontare la redditività di diversi algoritmi di mining?",
+              "a": "Sì, usa il calcolatore hashrate per ogni criptovaluta separatamente. Calcola la redditività per Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) e confronta i risultati."
             },
             {
-              "q": "Как рассчитать оптимальную стоимость электроэнергии для прибыльного майнинга?",
-              "a": "Используйте калькулятор хешрейта, постепенно уменьшая стоимость электроэнергии, пока прибыль не станет положительной. Это покажет максимальную стоимость электроэнергии, при которой майнинг остаётся прибыльным."
+              "q": "Come calcolare il costo ottimale dell'elettricità per il mining redditizio?",
+              "a": "Usa il calcolatore hashrate, diminuendo gradualmente il costo dell'elettricità fino a quando il profitto diventa positivo. Questo mostrerà il costo massimo dell'elettricità a cui il mining rimane redditizio."
             },
             {
-              "q": "Как учитывать изменения курса криптовалюты при майнинге?",
-              "a": "Курс криптовалюты влияет на доходность в рублях. При изменении курса пересчитайте доходность в калькуляторе. Доход в рублях = Доход в криптовалюте × Текущий курс."
+              "q": "Come considerare le variazioni del tasso di cambio della criptovaluta nel mining?",
+              "a": "Il tasso di cambio della criptovaluta influisce sulla redditività in euro. Quando il tasso di cambio cambia, ricalcola la redditività nel calcolatore. Reddito in euro = Reddito in criptovaluta × Tasso di cambio attuale."
             },
             {
-              "q": "Как рассчитать подсеть для облачных сервисов?",
-              "a": "Учитывайте требования облачного провайдера и планируемый масштаб инфраструктуры. Используйте калькулятор IP-адресов для расчёта подсетей с учётом ограничений и требований облачной платформы."
+              "q": "Come calcolare una sottorete per servizi cloud?",
+              "a": "Considera i requisiti del provider cloud e la scala pianificata dell'infrastruttura. Usa il calcolatore di indirizzi IP per calcolare sottoreti tenendo conto delle limitazioni e dei requisiti della piattaforma cloud."
             }
           ]
         }

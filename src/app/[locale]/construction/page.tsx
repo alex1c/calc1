@@ -34,7 +34,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -225,8 +225,8 @@ const getCalculators = (t: any) => [
 	},
 	{
 		id: 'roofing',
-		title: t('calculators.roofing.title'),
-		description: t('calculators.roofing.description'),
+		title: t('calculators.roof.title'),
+		description: t('calculators.roof.description'),
 		icon: Home,
 		href: '/construction/roofing',
 	},
@@ -289,7 +289,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function ConstructionPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -367,7 +367,7 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 									{calculators.length}+
 								</div>
 								<div className='text-orange-100'>
-									Калькуляторов
+									{t('common.calculatorsCount')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -375,15 +375,15 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									100%
 								</div>
-								<div className='text-orange-100'>Точность</div>
+								<div className='text-orange-100'>{t('common.accuracy')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Бесплатно
+									{t('common.free')}
 								</div>
 								<div className='text-orange-100'>
-									Использование
+									{t('common.usage')}
 								</div>
 							</div>
 						</div>
@@ -394,72 +394,81 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 			{/* Main Content */}
 			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* Overview Section */}
-				{seoOverview && (
+				{messages.categories?.construction?.seo?.overview && (
 					<div className='mb-12'>
 						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 							<h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-4'>
-								О строительных калькуляторах
+								{typeof messages.categories.construction.seo.overview === 'object'
+									? messages.categories.construction.seo.overview.title || tCategories('construction.title')
+									: tCategories('construction.title')}
 							</h2>
-							<p className='text-lg text-gray-700 dark:text-gray-300 mb-4'>
-								{tCategories('construction.description')}
-							</p>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Наши строительные калькуляторы помогут точно
-								рассчитать количество материалов для
-								строительства и ремонта: краска, обои,
-								штукатурка, бетон, цемент, арматура, кабель,
-								трубы, вентиляция и многое другое. Все
-								калькуляторы используют актуальные строительные
-								нормы и стандарты для точных расчётов.
-							</p>
+							{typeof messages.categories.construction.seo.overview === 'object' ? (
+								<>
+									<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
+										{messages.categories.construction.seo.overview.content}
+									</p>
+									{messages.categories.construction.seo.overview.additionalContent && (
+										<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+											{messages.categories.construction.seo.overview.additionalContent}
+										</p>
+									)}
+								</>
+							) : (
+								<>
+									<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
+										{tCategories('construction.description')}
+									</p>
+									<p className='text-gray-600 dark:text-gray-400 leading-relaxed'>
+										{messages.categories.construction.seo.overview}
+									</p>
+								</>
+							)}
 						</div>
 					</div>
 				)}
 
 				{/* Advantages Section */}
-				<div className='mb-12'>
-					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
-							<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400 mb-3' />
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Точные расчёты
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Все калькуляторы используют актуальные
-								строительные нормы и стандарты для максимальной
-								точности расчётов материалов и работ.
-							</p>
-						</div>
-						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
-							<CheckCircle className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Экономия средств
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Правильный расчёт материалов поможет избежать
-								переплат и нехватки материалов, оптимизировать
-								затраты на строительство и ремонт.
-							</p>
-						</div>
-						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
-							<TrendingUp className='w-8 h-8 text-purple-600 dark:text-purple-400 mb-3' />
-							<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-								Простота использования
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Интуитивно понятный интерфейс и мгновенные
-								результаты позволяют быстро рассчитать
-								необходимое количество материалов для вашего
-								проекта.
-							</p>
+				{messages.categories?.construction?.seo?.advantages && (
+					<div className='mb-12'>
+						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
+							{messages.categories.construction.seo.advantages.title || tCategories('construction.title')}
+						</h2>
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.construction.seo.advantages.accurate || 'Точные расчёты'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{messages.categories.construction.seo.advantages.accurateDesc || 'Все калькуляторы используют актуальные строительные нормы и стандарты для максимальной точности расчётов материалов и работ.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<CheckCircle className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.construction.seo.advantages.savings || 'Экономия средств'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{messages.categories.construction.seo.advantages.savingsDesc || 'Правильный расчёт материалов поможет избежать переплат и нехватки материалов, оптимизировать затраты на строительство и ремонт.'}
+								</p>
+							</div>
+							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
+								<TrendingUp className='w-8 h-8 text-purple-600 dark:text-purple-400 mb-3' />
+								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+									{messages.categories.construction.seo.advantages.simple || 'Простота использования'}
+								</h3>
+								<p className='text-gray-600 dark:text-gray-400'>
+									{messages.categories.construction.seo.advantages.simpleDesc || 'Интуитивно понятный интерфейс и мгновенные результаты позволяют быстро рассчитать необходимое количество материалов для вашего проекта.'}
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				)}
 
 				{/* Calculators Grid */}
 				<div>
 					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-8'>
-						Доступные калькуляторы
+						{t('common.availableCalculators') || 'Доступные калькуляторы'}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 						{calculators.map((calculator) => {

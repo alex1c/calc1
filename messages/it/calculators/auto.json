@@ -323,6 +323,13 @@
         "costBreakdown": "Ripartizione dei costi",
         "placeholder": "Immettere i parametri per il calcolo"
       },
+      "hero": {
+        "totalCost": "Costo totale",
+        "totalCostAbbr": "TCO",
+        "accuracy": "Precisione del calcolo",
+        "costPerKm": "Costo per chilometro",
+        "costPerKmAbbr": "₽/km"
+      },
       "seo": {
         "title": "Calcolatore online dei costi di proprietà dell'auto: calcolo di tutte le spese dell'auto",
         "description": "Calcolatore gratuito dei costi di proprietà dell'auto. Calcola il costo totale di possesso di un'auto, tenendo conto di carburante, assicurazione, tasse, manutenzione e ammortamento. Scopri quanto costa la tua auto all'anno e nel corso della sua vita.",
@@ -1780,6 +1787,13 @@
         "selectedViolations": "Violazioni selezionate",
         "placeholder": "Seleziona le violazioni da calcolare"
       },
+      "hero": {
+        "discount": "Sconto al pagamento",
+        "discountPercent": "25%",
+        "accuracy": "Precisione del calcolo",
+        "discountPeriod": "Periodo di sconto",
+        "discountPeriodDays": "20 giorni"
+      },
       "seo": {
         "title": "Calcolatore penalità GIBDD online: calcolo penalità per maledetto sconto di compressione PDD",
         "description": "Calcolatore gratuito delle multe della polizia stradale per il calcolo delle multe per violazioni del codice della strada. Calcola la multa per eccesso di velocità, parcheggio, rossa e altre violazioni, tenendo conto di uno sconto del 25%.",
@@ -2051,6 +2065,12 @@
         "buyoutAmount": "Valore di riscatto",
         "details": "Dettagli di calcolo",
         "placeholder": "Immettere i dati per il calcolo"
+      },
+      "hero": {
+        "averageRate": "Tasso medio",
+        "averageRatePercent": "15%",
+        "accuracy": "Precisione del calcolo",
+        "exportResults": "Esporta risultati"
       },
       "seo": {
         "title": "Calcolatore online del leasing automobilistico: calcolo dei pagamenti, dei pagamenti in eccesso e del valore di riscatto",
@@ -2638,6 +2658,13 @@
         "ownershipCoefficient": "Tasso di proprietà",
         "placeholder": "Inserisci i parametri e fai clic su \"Calcola\""
       },
+      "hero": {
+        "regions": "Regioni",
+        "regionsCount": "85",
+        "accuracy": "Precisione del calcolo",
+        "paymentDeadline": "Scadenza pagamento",
+        "paymentDeadlineDate": "1 dic"
+      },
       "seo": {
         "title": "Calcolatore online delle tasse sui trasporti: calcolo delle tasse automobilistiche per capacità e regione",
         "description": "Calcolatore gratuito delle tasse di trasporto per calcolare la tassa automobilistica. Calcola online la tassa di trasporto in base alla potenza del motore, alla regione di immatricolazione e al periodo di proprietà.",
@@ -2731,9 +2758,13 @@
         "calculation": {
           "title": "Come viene calcolata la tassa di trasporto?",
           "content": "La tassa di trasporto viene calcolata utilizzando una formula che tiene conto della potenza del motore, dell'aliquota regionale e del periodo di proprietà.",
+          "enginePowerTitle": "Potenza del motore",
           "enginePower": "Potenza del motore in cavalli (indicata nel titolo del veicolo)",
+          "regionTitle": "Aliquota regionale",
           "region": "L'aliquota fiscale regionale è fissata dall'entità costituente della Federazione Russa (₽/cv)",
+          "ownershipTitle": "Periodo di proprietà",
           "ownership": "Periodo di possesso dell'auto all'anno (coefficiente da 0 a 1)",
+          "formulaTitle": "Formula di calcolo",
           "formula": "Tasse = Potenza × Tariffa × (Mesi di proprietà / 12)"
         },
         "advantages": {
@@ -2747,9 +2778,13 @@
         "tips": {
           "title": "Consigli sulle tasse sui trasporti",
           "content": "Per calcolare e pagare correttamente la tassa di trasporto, segui questi consigli:",
+          "deadlineTitle": "Scadenze di pagamento",
           "deadline": "Tieni traccia delle scadenze per il pagamento delle tasse (fino al 1 dicembre dell'anno successivo)",
+          "paymentTitle": "Verifica del calcolo",
           "payment": "Verificare la correttezza dei calcoli con l'ufficio delle imposte",
+          "ownershipTitle": "Periodo di proprietà",
           "ownership": "Prendi in considerazione solo il periodo di effettiva proprietà dell'auto",
+          "consultationTitle": "Consultazioni",
           "consultation": "In caso di dubbi, contatta i tuoi consulenti fiscali"
         },
         "faq": {

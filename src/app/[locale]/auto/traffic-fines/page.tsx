@@ -13,7 +13,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -110,7 +110,7 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -155,10 +155,10 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<DollarSign className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									25%
+									{t('hero.discountPercent')}
 								</div>
 								<div className='text-red-100'>
-									Скидка при оплате
+									{t('hero.discount')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -167,15 +167,15 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 									99%
 								</div>
 								<div className='text-red-100'>
-									Точность расчёта
+									{t('hero.accuracy')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Clock className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									20 дней
+									{t('hero.discountPeriodDays')}
 								</div>
-								<div className='text-red-100'>Срок скидки</div>
+								<div className='text-red-100'>{t('hero.discountPeriod')}</div>
 							</div>
 						</div>
 					</div>

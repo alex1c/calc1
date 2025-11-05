@@ -29,19 +29,18 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
 		.default;
 	const t = (key: string) => messages.categories['auto'][key];
 
-	const seoTitle = messages.categories?.auto?.seo?.title || `${t(
-		'title'
-	)} — Онлайн автомобильные калькуляторы | Calc1.ru`;
+	const seoTitle = messages.categories?.auto?.seo?.title || `${messages.categories?.auto?.title || 'Calcolatori Auto'} — Calc1.ru`;
 	const seoDescription =
 		messages.categories?.auto?.seo?.description ||
-		'Автомобильные калькуляторы онлайн: расчёт расхода топлива, автокредита, страховки (ОСАГО, КАСКО), транспортного налога, лизинга, таможенных платежей и штрафов ГИБДД. Бесплатные авто калькуляторы для водителей и автовладельцев.';
+		messages.categories?.auto?.description ||
+		'Calcolatori auto online per automobilisti e proprietari di veicoli';
 
 	const keywordsString = messages.categories?.auto?.seo?.keywords || '';
 	const keywords = keywordsString
@@ -203,7 +202,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function AutoPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'es', 'de'].includes(locale)) {
+	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
 	}
 
@@ -267,28 +266,28 @@ export default async function AutoPage({ params: { locale } }: Props) {
 								<div className='text-2xl font-bold text-white mb-1'>
 									{calculators.length}
 								</div>
-								<div className='text-blue-100'>Калькуляторов</div>
+								<div className='text-blue-100'>{t('common.calculatorsCount')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									100%
 								</div>
-								<div className='text-blue-100'>Точность</div>
+								<div className='text-blue-100'>{t('common.accuracy')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Zap className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Мгновенно
+									{t('common.instant')}
 								</div>
-								<div className='text-blue-100'>Расчёт</div>
+								<div className='text-blue-100'>{t('common.calculation')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<TrendingUp className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Бесплатно
+									{t('common.free')}
 								</div>
-								<div className='text-blue-100'>Использование</div>
+								<div className='text-blue-100'>{t('common.usage')}</div>
 							</div>
 						</div>
 					</div>
@@ -302,7 +301,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 					<div className='mb-12'>
 						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
-								{seoData.overview.title || 'Автомобильные калькуляторы'}
+								{seoData.overview.title || tCategories('auto.title')}
 							</h2>
 							<p className='text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
 								{seoData.overview.content}
@@ -320,67 +319,61 @@ export default async function AutoPage({ params: { locale } }: Props) {
 				{seoData.advantages && (
 					<div className='mb-12'>
 						<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-							{seoData.advantages.title || 'Преимущества'}
+							{seoData.advantages.title || tCategories('auto.title')}
 						</h2>
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<Calculator className='w-8 h-8 text-blue-600 dark:text-blue-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.comprehensive || 'Полный набор инструментов'}
+									{seoData.advantages.comprehensive || tCategories('auto.title')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									Все необходимые расчёты в одном месте для удобного
-									планирования бюджета на автомобиль.
+									{seoData.advantages.comprehensiveDesc || tCategories('auto.description')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-green-600 dark:text-green-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.accurate || 'Точные расчёты'}
+									{seoData.advantages.accurate || t('common.accuracy')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									На основе актуальных тарифов и ставок, утверждённых
-									государственными органами и финансовыми учреждениями.
+									{seoData.advantages.accurateDesc || tCategories('auto.description')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<Zap className='w-8 h-8 text-yellow-600 dark:text-yellow-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.fast || 'Мгновенные результаты'}
+									{seoData.advantages.fast || t('common.instant')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									Без ожидания и очередей. Все расчёты выполняются мгновенно
-									и в режиме реального времени.
+									{seoData.advantages.fastDesc || t('common.calculation')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<TrendingUp className='w-8 h-8 text-purple-600 dark:text-purple-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.free || 'Полностью бесплатно'}
+									{seoData.advantages.free || t('common.free')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									Без скрытых платежей, без регистрации, без ограничений по
-									использованию.
+									{seoData.advantages.freeDesc || t('common.usage')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<BarChart3 className='w-8 h-8 text-indigo-600 dark:text-indigo-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.accessible || 'Доступность'}
+									{seoData.advantages.accessible || tCategories('auto.title')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									Работает на всех устройствах: компьютерах, планшетах и
-									смартфонах с адаптивным интерфейсом.
+									{seoData.advantages.accessibleDesc || tCategories('auto.description')}
 								</p>
 							</div>
 							<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6'>
 								<FileText className='w-8 h-8 text-red-600 dark:text-red-400 mb-3' />
 								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{seoData.advantages.detailed || 'Детальные результаты'}
+									{seoData.advantages.detailed || tCategories('auto.title')}
 								</h3>
 								<p className='text-gray-600 dark:text-gray-400'>
-									Разбивка по статьям расходов, графики платежей и детальная
-									информация для анализа.
+									{seoData.advantages.detailedDesc || tCategories('auto.description')}
 								</p>
 							</div>
 						</div>
@@ -392,7 +385,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 					<div className='mb-12'>
 						<div className='bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg shadow-lg p-8'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-4'>
-								{seoData.tips.title || 'Советы по использованию'}
+								{seoData.tips.title || tCategories('auto.title')}
 							</h2>
 							<p className='text-lg text-gray-700 dark:text-gray-300 mb-6'>
 								{seoData.tips.content}
@@ -430,7 +423,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 				{/* Calculators Grid */}
 				<div className='mb-12'>
 					<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-8'>
-						Доступные калькуляторы
+						{t('common.availableCalculators')}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 						{calculators.map((calculator) => {
@@ -461,8 +454,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 					<div className='mb-12'>
 						<div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8'>
 							<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-								{seoData.faq?.title ||
-									'Часто задаваемые вопросы об автомобильных калькуляторах'}
+								{seoData.faq?.title || tCategories('auto.title')}
 							</h2>
 							<div className='space-y-6'>
 								{faqItems.slice(0, 10).map((faq: any, index: number) => (
