@@ -1,0 +1,371 @@
+{
+  "common": {
+    "search": "Suchen",
+    "searchPlaceholder": "Beginne mit der Eingabe des Rechnernamens...",
+    "searchResults": "Suchergebnisse",
+    "resultsFor": "Ergebnisse für",
+    "loading": "Laden...",
+    "found": "Gefunden",
+    "results": "Ergebnisse",
+    "noResults": "Nichts gefunden",
+    "tryAnotherQuery": "Versuchen Sie eine andere Abfrage oder überprüfen Sie die Rechtschreibung",
+    "noQuery": "Keine Suchanfrage",
+    "enterSearchTerm": "Geben Sie einen Suchbegriff ein, um Rechner zu finden",
+    "useCalculator": "Rechner verwenden",
+    "language": "Sprache",
+    "categories": "Kategorien",
+    "calculators": "Rechner",
+    "calculate": "Berechnen",
+    "result": "Ergebnis",
+    "clear": "Löschen",
+    "favorites": "Favoriten",
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "description": "Entschuldigung, die angeforderte Seite existiert nicht.",
+      "goHome": "Zur Startseite",
+      "suggestions": {
+        "title": "Vielleicht suchen Sie nach:",
+        "checkUrl": "Überprüfen Sie die Korrektheit der eingegebenen Adresse",
+        "useSearch": "Verwenden Sie die Rechnersuche",
+        "goToHome": "Zurück zur Startseite"
+      }
+    },
+    "pdf": {
+      "header": "calc1.ru Rechner #1 der Welt",
+      "savePdf": "Als PDF speichern",
+      "generated": "Generiert",
+      "page": "Seite",
+      "of": "von"
+    }
+  },
+  "brand": {
+    "name": "Rechner #1",
+    "slogan": "Eine Seite. Alle Rechner."
+  },
+  "breadcrumbs": {
+    "home": "Startseite",
+    "categories": {
+      "finance": "Finanzen",
+      "math": "Mathematik",
+      "life": "Leben",
+      "auto": "Auto",
+      "construction": "Bauwesen",
+      "time": "Zeit",
+      "health": "Gesundheit",
+      "science": "Wissenschaft",
+      "converter": "Umrechner",
+      "fun": "Unterhaltung",
+      "it": "IT",
+      "calculators": "Alle Rechner"
+    }
+  },
+  "navigation": {
+    "home": "Startseite",
+    "finance": "Finanzen",
+    "math": "Mathematik",
+    "life": "Leben",
+    "construction": "Bauwesen",
+    "auto": "Auto",
+    "time": "Zeit",
+    "health": "Gesundheit",
+    "science": "Wissenschaft",
+    "converter": "Umrechner",
+    "fun": "Unterhaltung",
+    "it": "IT"
+  },
+  "footer": {
+    "description": "Kostenlose Online-Rechner für alle Lebensbereiche. Finanzen, Mathematik, Bauwesen, Gesundheit und vieles mehr.",
+    "categories": "Kategorien",
+    "quickLinks": "Schnelllinks",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "share": "Teilen",
+    "shareDescription": "Teilen Sie den Rechner mit Freunden und Kollegen!",
+    "shareFacebook": "Auf Facebook teilen",
+    "shareTwitter": "Auf Twitter teilen",
+    "shareVK": "Auf VKontakte teilen",
+    "shareTelegram": "Auf Telegram teilen",
+    "shareWhatsApp": "Auf WhatsApp teilen",
+    "shareEmail": "Per E-Mail teilen",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link kopiert!",
+    "shareNative": "Teilen",
+    "rights": "Alle Rechte vorbehalten.",
+    "disclaimer": "Rechner dienen nur zu Informationszwecken. Ergebnisse können von tatsächlichen Werten abweichen.",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "siteDescription": "Kostenlose Online-Rechner für alle Lebensbereiche"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Datenschutzerklärung von Calc1.ru. Erfahren Sie, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.",
+      "lastUpdated": "Zuletzt aktualisiert: 2024",
+      "introduction": "Calc1.ru (im Folgenden — \"Website\") respektiert Ihre Privatsphäre und verpflichtet sich zum Schutz Ihrer persönlichen Daten. Diese Datenschutzerklärung beschreibt, wie wir Informationen über die Nutzer unserer Website sammeln, verwenden, speichern und schützen.",
+      "section1": {
+        "title": "1. Informationssammlung",
+        "content": "Wir können folgende Arten von Informationen sammeln:",
+        "item1": "Automatisch gesammelte Informationen: IP-Adresse, Browsertyp, Betriebssystem, Besuchszeit, von Ihnen angesehene Seiten",
+        "item2": "Von Ihnen bereitgestellte Informationen: in Rechner eingegebene Daten (werden nicht auf dem Server gespeichert)",
+        "item3": "Informationen aus Cookies und ähnlichen Technologien",
+        "item4": "Informationen von Werbepartnern (Google AdSense, Yandex.Direct)",
+        "item5": "Spracheinstellungen und Benutzereinstellungen"
+      },
+      "section2": {
+        "title": "2. Informationsverwendung",
+        "content": "Wir verwenden gesammelte Informationen für folgende Zwecke:",
+        "item1": "Bereitstellung und Verbesserung der Website-Funktionalität",
+        "item2": "Analyse der Website-Nutzung zur Optimierung",
+        "item3": "Anzeige personalisierter Werbung über Partner",
+        "item4": "Einhaltung rechtlicher Anforderungen"
+      },
+      "section3": {
+        "title": "3. Cookie-Verwendung",
+        "content": "Unsere Website verwendet Cookies, um die Benutzererfahrung zu verbessern und Werbung anzuzeigen. Für weitere Details siehe unsere ",
+        "link": "Cookie-Richtlinie",
+        "additional": ""
+      },
+      "section4": {
+        "title": "4. Werbung und Partner",
+        "content": "Unsere Website verwendet Werbedienste von Drittanbietern zur Monetarisierung:",
+        "googleTitle": "Google AdSense:",
+        "googleContent": "Google verwendet Cookies, um Werbung basierend auf Ihren Interessen anzuzeigen. Sie können Werbung auf der Google Ads-Einstellungsseite anpassen oder Cookies in den Browser-Einstellungen deaktivieren.",
+        "yandexTitle": "Yandex.Direct:",
+        "yandexContent": "Yandex verwendet Cookies, um Werbung zu personalisieren. Sie können Einstellungen im Yandex Browser oder über Yandex-Werbeeinstellungen verwalten."
+      },
+      "section5": {
+        "title": "5. Datensicherheit",
+        "content": "Wir ergreifen angemessene Maßnahmen, um Ihre Informationen vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen. Jedoch ist keine Übertragungsmethode über das Internet oder elektronische Speichermethode zu 100% sicher."
+      },
+      "section6": {
+        "title": "6. Ihre Rechte",
+        "content": "Sie haben das Recht:",
+        "item1": "Eine Kopie Ihrer persönlichen Daten anzufordern",
+        "item2": "Korrektur ungenauer Daten anzufordern",
+        "item3": "Löschung Ihrer Daten anzufordern",
+        "item4": "Der Datenverarbeitung zu Marketingzwecken zu widersprechen"
+      },
+      "section7": {
+        "title": "7. Änderungen der Datenschutzerklärung",
+        "content": "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Änderungen treten nach Veröffentlichung auf dieser Seite in Kraft."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "content": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte:",
+        "link": "Kontaktseite"
+      }
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "description": "Nutzungsbedingungen von Calc1.ru. Lesen Sie die Regeln für die Nutzung unserer Website und Rechner.",
+      "lastUpdated": "Zuletzt aktualisiert: 2024",
+      "introduction": "Willkommen bei Calc1.ru (im Folgenden — \"Website\"). Durch die Nutzung dieser Website stimmen Sie zu, diese Nutzungsbedingungen einzuhalten. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie bitte unsere Website nicht.",
+      "section1": {
+        "title": "1. Annahme der Bedingungen",
+        "content": "Durch die Nutzung von Calc1.ru bestätigen Sie, dass Sie diese Nutzungsbedingungen und unsere Datenschutzerklärung gelesen, verstanden und sich damit einverstanden erklärt haben."
+      },
+      "section2": {
+        "title": "2. Dienstnutzung",
+        "content": "Sie können unsere Rechner für private und kommerzielle Zwecke nutzen, vorausgesetzt:",
+        "item1": "Sie werden die Website nicht für illegale Zwecke nutzen",
+        "item2": "Sie werden nicht versuchen, die Website-Sicherheit zu verletzen",
+        "item3": "Sie werden Inhalte nicht ohne Quellenangabe kopieren",
+        "item4": "Sie erkennen an, dass Rechnerergebnisse nur zu Informationszwecken dienen"
+      },
+      "section3": {
+        "title": "3. Haftungsbeschränkung",
+        "content": "Rechner auf Calc1.ru werden \"wie besehen\" ohne Gewährleistung bereitgestellt. Berechnungsergebnisse dienen nur zu Informationszwecken und können von tatsächlichen Werten abweichen.",
+        "additional": "Wir haften nicht für Verluste oder Schäden, die aus der Nutzung oder der Unfähigkeit zur Nutzung unserer Rechner entstehen."
+      },
+      "section4": {
+        "title": "4. Geistiges Eigentum",
+        "content": "Alle Website-Inhalte, einschließlich Design, Text, Grafiken, Logos und Software, sind Eigentum von Calc1.ru und durch Urheberrechtsgesetze geschützt."
+      },
+      "section5": {
+        "title": "5. Verbotene Handlungen",
+        "content": "Es ist verboten:",
+        "item1": "Automatisierte Systeme zur Datensammlung von der Website zu verwenden",
+        "item2": "Viren oder Malware zu verbreiten",
+        "item3": "Zu versuchen, die Website zu hacken oder zu stören",
+        "item4": "Die Website für Spam oder Phishing zu nutzen",
+        "item5": "Inhalte ohne Erlaubnis zu kopieren und zu reproduzieren"
+      },
+      "section6": {
+        "title": "6. Änderungen der Bedingungen",
+        "content": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Änderungen treten nach Veröffentlichung auf dieser Seite in Kraft."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:",
+        "link": "Kontaktseite"
+      }
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie",
+      "description": "Cookie-Richtlinie von Calc1.ru. Erfahren Sie, wie wir Cookies verwenden und wie Sie sie verwalten können.",
+      "lastUpdated": "Zuletzt aktualisiert: 2024",
+      "introduction": "Calc1.ru verwendet Cookies und ähnliche Technologien, um die Website-Funktionalität zu verbessern, den Datenverkehr zu analysieren und personalisierte Werbung anzuzeigen. Diese Richtlinie erklärt, was Cookies sind, wie wir sie verwenden und wie Sie sie verwalten können.",
+      "section1": {
+        "title": "1. Was sind Cookies",
+        "content": "Cookies sind kleine Textdateien, die eine Website auf Ihrem Gerät (Computer, Tablet oder Mobiltelefon) speichert, wenn Sie sie besuchen. Sie ermöglichen es der Website, Ihre Aktionen und Einstellungen für einen bestimmten Zeitraum zu speichern."
+      },
+      "section2": {
+        "title": "2. Arten von Cookies, die wir verwenden",
+        "content": "Wir verwenden folgende Arten von Cookies:",
+        "item1": {
+          "title": "Notwendige Cookies: ",
+          "content": "Diese Cookies sind für das Funktionieren der Website erforderlich und können nicht deaktiviert werden. Sie umfassen das Speichern von Spracheinstellungen und anderen Benutzereinstellungen."
+        },
+        "item2": {
+          "title": "Analyse-Cookies: ",
+          "content": "Diese Cookies helfen uns zu verstehen, wie Besucher mit der Website interagieren, indem sie anonyme Statistiken sammeln."
+        },
+        "item3": {
+          "title": "Werbe-Cookies: ",
+          "content": "Diese Cookies werden von Werbepartnern (Google AdSense, Yandex.Direct) verwendet, um personalisierte Werbung anzuzeigen."
+        }
+      },
+      "section3": {
+        "title": "3. Wie wir Cookies verwenden",
+        "content": "Cookies werden verwendet für:",
+        "item1": "Speicherung von Benutzerspracheinstellungen",
+        "item2": "Analyse des Datenverkehrs und Verbesserung der Website-Funktionalität",
+        "item3": "Anzeige relevanter Werbung über Partner",
+        "item4": "Gewährleistung der Sicherheit und Betrugsprävention"
+      },
+      "section4": {
+        "title": "4. Cookies von Werbepartnern",
+        "content": "Unsere Website verwendet Werbedienste von Drittanbietern:",
+        "googleTitle": "Google AdSense:",
+        "googleContent": "Google verwendet Cookies, um Werbung basierend auf Ihren Interessen anzuzeigen. Sie können personalisierte Google-Werbung auf der Google Ads-Einstellungsseite deaktivieren.",
+        "yandexTitle": "Yandex.Direct:",
+        "yandexContent": "Yandex verwendet Cookies, um relevante Werbung anzuzeigen. Sie können Werbeeinstellungen in den Yandex-Einstellungen verwalten."
+      },
+      "section5": {
+        "title": "5. Cookie-Verwaltung",
+        "content": "Sie können Cookies auf folgende Weise verwalten:",
+        "item1": "Über Ihre Browser-Einstellungen (Sie können Cookies deaktivieren oder löschen)",
+        "item2": "Über Google- und Yandex-Werbeeinstellungen",
+        "item3": "Verwendung von Browser-Erweiterungen zur Werbeblockierung"
+      },
+      "section6": {
+        "title": "6. Änderungen der Cookie-Richtlinie",
+        "content": "Wir können diese Cookie-Richtlinie regelmäßig aktualisieren. Änderungen treten nach Veröffentlichung auf dieser Seite in Kraft."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "content": "Wenn Sie Fragen zur Cookie-Verwendung haben, kontaktieren Sie uns bitte:",
+        "link": "Kontaktseite"
+      }
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "Erfahren Sie mehr über Calc1.ru — den umfassendsten Satz kostenloser Online-Rechner für alle Lebensbereiche.",
+    "section1": {
+      "title": "Über das Projekt",
+      "content": "Calc1.ru ist eine kostenlose Online-Ressource, die eine breite Palette von Rechnern für verschiedene Lebensbereiche bietet. Unser Ziel ist es, Benutzern bequeme und genaue Tools für Berechnungen in Finanzen, Mathematik, Bauwesen, Gesundheit und vielen anderen Bereichen bereitzustellen."
+    },
+    "section2": {
+      "title": "Unsere Mission",
+      "content": "Wir bemühen uns, komplexe Berechnungen für jeden zugänglich und verständlich zu machen. Calc1.ru vereint viele Rechner an einem Ort, spart Ihre Zeit und gewährleistet Berechnungsgenauigkeit."
+    },
+    "section3": {
+      "title": "Wer wir sind",
+      "content": "Calc1.ru wurde von einem Team von Fachleuten erstellt, die die Bedeutung bequemer und zuverlässiger Tools für alltägliche Berechnungen verstehen. Wir arbeiten ständig an der Verbesserung der Funktionalität und dem Hinzufügen neuer Rechner."
+    },
+    "section4": {
+      "title": "Warum uns wählen",
+      "content": "Calc1.ru Vorteile:",
+      "item1": "Kostenloser Zugang zu allen Rechnern",
+      "item2": "Einfache und intuitive Benutzeroberfläche",
+      "item3": "Genaue Berechnungen basierend auf aktuellen Formeln und Standards",
+      "item4": "Mehrsprachiger Support",
+      "item5": "Regelmäßige Updates und Hinzufügung neuer Rechner"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Wenn Sie Fragen, Vorschläge oder Feedback haben, würden wir gerne von Ihnen hören:",
+      "link": "Kontaktieren Sie uns"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontaktieren Sie das Calc1.ru-Team. Wir sind immer bereit, Ihre Fragen zu beantworten und zu helfen.",
+    "email": {
+      "title": "E-Mail",
+      "description": "Für allgemeine Fragen, Vorschläge und Feedback:"
+    },
+    "form": {
+      "title": "Kontaktformular",
+      "description": "Füllen Sie das untenstehende Formular aus und wir werden Ihnen so schnell wie möglich antworten:",
+      "name": "Ihr Name",
+      "email": "E-Mail",
+      "message": "Ihre Nachricht",
+      "submit": "Senden",
+      "sending": "Wird gesendet..."
+    },
+    "additional": {
+      "title": "Zusätzliche Informationen",
+      "content": "Wir bemühen uns, auf alle Anfragen innerhalb von 24-48 Stunden zu antworten. Für dringende Fragen verwenden Sie bitte E-Mail."
+    }
+  },
+  "categories": {
+    "finance": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "math": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "life": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "construction": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "auto": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "time": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "health": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "science": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "converter": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "fun": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "it": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    }
+  }
+}

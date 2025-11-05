@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
 		const locale = searchParams.get('locale') || 'ru';
 
 		// Validate locale
-		const validLocales = ['ru', 'en', 'es', 'de'];
+		const validLocales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
 		if (!validLocales.includes(locale)) {
 			return NextResponse.json(
 				{ error: 'Invalid locale' },

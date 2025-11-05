@@ -32,70 +32,58 @@ export default function FuelConsumptionSEO() {
 		: [];
 
 	// Chart data for visualization - Consumption by car type
-	const consumptionByType = [
-		{
-			type: 'Малолитражка',
-			consumption: 6.5,
-			example: 'Renault Logan, Lada Granta',
-			color: 'bg-green-500',
-		},
-		{
-			type: 'Средний класс',
-			consumption: 9.2,
-			example: 'Toyota Camry, Volkswagen Passat',
-			color: 'bg-blue-500',
-		},
-		{
-			type: 'Кроссовер',
-			consumption: 11.5,
-			example: 'Hyundai Creta, Kia Sportage',
-			color: 'bg-orange-500',
-		},
-		{
-			type: 'Внедорожник',
-			consumption: 14.8,
-			example: 'Toyota Land Cruiser, Nissan Patrol',
-			color: 'bg-red-500',
-		},
-		{
-			type: 'Микроавтобус',
-			consumption: 13.2,
-			example: 'Mercedes Sprinter, Ford Transit',
-			color: 'bg-purple-500',
-		},
-	];
+	const chartsData = tSeo.raw('overview.charts');
+	const consumptionByTypeRaw = chartsData?.averageConsumptionByType?.types;
+	const consumptionByType = consumptionByTypeRaw
+		? [
+				{
+					type: consumptionByTypeRaw.economy.name,
+					consumption: consumptionByTypeRaw.economy.consumption,
+					example: consumptionByTypeRaw.economy.example,
+					color: 'bg-green-500',
+				},
+				{
+					type: consumptionByTypeRaw.midRange.name,
+					consumption: consumptionByTypeRaw.midRange.consumption,
+					example: consumptionByTypeRaw.midRange.example,
+					color: 'bg-blue-500',
+				},
+				{
+					type: consumptionByTypeRaw.crossover.name,
+					consumption: consumptionByTypeRaw.crossover.consumption,
+					example: consumptionByTypeRaw.crossover.example,
+					color: 'bg-orange-500',
+				},
+				{
+					type: consumptionByTypeRaw.suv.name,
+					consumption: consumptionByTypeRaw.suv.consumption,
+					example: consumptionByTypeRaw.suv.example,
+					color: 'bg-red-500',
+				},
+				{
+					type: consumptionByTypeRaw.minivan.name,
+					consumption: consumptionByTypeRaw.minivan.consumption,
+					example: consumptionByTypeRaw.minivan.example,
+					color: 'bg-purple-500',
+				},
+		  ]
+		: [];
 
 	// Distance comparison chart
-	const distanceComparison = [
-		{
-			fuel: '30 л',
-			distance: '352 км',
-			consumption: '8.5 л/100км',
-			color: 'bg-green-500',
-		},
-		{
-			fuel: '50 л',
-			distance: '588 км',
-			consumption: '8.5 л/100км',
-			color: 'bg-blue-500',
-		},
-		{
-			fuel: '60 л',
-			distance: '706 км',
-			consumption: '8.5 л/100км',
-			color: 'bg-orange-500',
-		},
-		{
-			fuel: '70 л',
-			distance: '824 км',
-			consumption: '8.5 л/100км',
-			color: 'bg-purple-500',
-		},
-	];
+	const distanceComparisonRaw = chartsData?.distanceComparison?.volumes;
+	const distanceComparison = distanceComparisonRaw
+		? distanceComparisonRaw.map((item: { fuel: string; distance: string }, index: number) => ({
+				fuel: item.fuel,
+				distance: item.distance,
+				consumption: chartsData.distanceComparison.consumption,
+				color: ['bg-green-500', 'bg-blue-500', 'bg-orange-500', 'bg-purple-500'][index] || 'bg-gray-500',
+		  }))
+		: [];
 
-	const maxConsumption = Math.max(
-		...consumptionByType.map((item) => item.consumption)
-	);
+	const maxConsumption =
+		consumptionByType.length > 0
+			? Math.max(...consumptionByType.map((item) => item.consumption))
+			: 15;
 	const maxDistance = 824; // Maximum distance for comparison
 
 	return (
@@ -214,7 +202,7 @@ export default function FuelConsumptionSEO() {
 						<div className='bg-gray-50 dark:bg-gray-700 p-5 rounded-lg'>
 							<h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2'>
 								<BarChart3 className='w-5 h-5 text-blue-600 dark:text-blue-400' />
-								Средний расход топлива по типам автомобилей
+								{tSeo('overview.charts.averageConsumptionByType.title')}
 							</h4>
 							<div className='space-y-3'>
 								{consumptionByType.map((item, index) => (
@@ -229,7 +217,7 @@ export default function FuelConsumptionSEO() {
 												</p>
 											</div>
 											<span className='text-sm font-medium text-gray-900 dark:text-white'>
-												{item.consumption} л/100км
+												{item.consumption} {tSeo('overview.charts.averageConsumptionByType.unit')}
 											</span>
 										</div>
 										<div className='w-full bg-gray-200 dark:bg-gray-600 rounded-full h-4'>
@@ -244,7 +232,7 @@ export default function FuelConsumptionSEO() {
 												}}
 											>
 												<span className='text-xs text-white font-medium'>
-													{item.consumption} л/100км
+													{item.consumption} {tSeo('overview.charts.averageConsumptionByType.unit')}
 												</span>
 											</div>
 										</div>
@@ -257,8 +245,7 @@ export default function FuelConsumptionSEO() {
 						<div className='bg-gray-50 dark:bg-gray-700 p-5 rounded-lg'>
 							<h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2'>
 								<Route className='w-5 h-5 text-purple-600 dark:text-purple-400' />
-								Дистанция на разных объёмах топлива (расход 8.5
-								л/100км)
+								{tSeo('overview.charts.distanceComparison.title')}
 							</h4>
 							<div className='space-y-3'>
 								{distanceComparison.map((item, index) => (
@@ -308,7 +295,7 @@ export default function FuelConsumptionSEO() {
 				</p>
 				<div className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mt-4'>
 					<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
-						Формула расчёта дистанции:
+						{tSeo('calculation.distanceFormulaLabel')}
 					</h3>
 					<div className='bg-white dark:bg-gray-600 rounded p-3 mb-3'>
 						<code className='text-sm text-blue-800 dark:text-blue-300 font-mono'>
@@ -316,7 +303,7 @@ export default function FuelConsumptionSEO() {
 						</code>
 					</div>
 					<h3 className='font-semibold text-gray-900 dark:text-white mb-2 mt-4'>
-						Формула расчёта количества топлива:
+						{tSeo('calculation.fuelFormulaLabel')}
 					</h3>
 					<div className='bg-white dark:bg-gray-600 rounded p-3'>
 						<code className='text-sm text-green-800 dark:text-green-300 font-mono'>

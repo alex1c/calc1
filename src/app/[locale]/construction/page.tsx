@@ -141,10 +141,8 @@ export async function generateMetadata({
 const getCalculators = (t: any) => [
 	{
 		id: 'wallpaper',
-		title: t('categories.construction.calculators.wallpaper.title'),
-		description: t(
-			'categories.construction.calculators.wallpaper.description'
-		),
+		title: t('calculators.wallpaper.title'),
+		description: t('calculators.wallpaper.description'),
 		icon: Paintbrush,
 		href: '/construction/wallpaper',
 	},
@@ -220,24 +218,22 @@ const getCalculators = (t: any) => [
 	},
 	{
 		id: 'concrete',
-		title: t('categories.construction.calculators.concrete.title'),
-		description: t(
-			'categories.construction.calculators.concrete.description'
-		),
+		title: t('calculators.concrete.title'),
+		description: t('calculators.concrete.description'),
 		icon: Wrench,
 		href: '/construction/concrete',
 	},
 	{
 		id: 'roofing',
-		title: t('categories.construction.calculators.roof.title'),
-		description: t('categories.construction.calculators.roof.description'),
+		title: t('calculators.roofing.title'),
+		description: t('calculators.roofing.description'),
 		icon: Home,
 		href: '/construction/roofing',
 	},
 	{
 		id: 'wall',
-		title: t('categories.construction.calculators.wall.title'),
-		description: t('categories.construction.calculators.wall.description'),
+		title: t('calculators.wall.title'),
+		description: t('calculators.wall.description'),
 		icon: Package,
 		href: '/construction/wall',
 	},

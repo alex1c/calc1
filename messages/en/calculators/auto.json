@@ -1159,6 +1159,61 @@
 					"title": "Fuel Consumption Calculator for Trip Planning",
 					"content": "Online fuel consumption calculator helps calculate how many kilometers you can drive on given fuel volume, or how many liters of fuel are needed for trip to required distance at known car consumption. Calculator accounts for real fuel consumption of your car and allows accurate trip, route and fuel budget planning.",
 					"additionalContent": "Fuel consumption is one of most important parameters in car operation. Knowing exact consumption helps plan trips, calculate travel costs and control car efficiency. Calculator works in two modes: distance calculation (how far can drive on available fuel) and fuel calculation (how much needed for trip to given distance). Both calculations are based on simple mathematical formulas accounting for car consumption in liters per 100 kilometers.",
+					"charts": {
+						"averageConsumptionByType": {
+							"title": "Average Fuel Consumption by Car Types",
+							"unit": "L/100km",
+							"types": {
+								"economy": {
+									"name": "Economy Car",
+									"example": "Renault Logan, Lada Granta",
+									"consumption": 6.5
+								},
+								"midRange": {
+									"name": "Mid-range Class",
+									"example": "Toyota Camry, Volkswagen Passat",
+									"consumption": 9.2
+								},
+								"crossover": {
+									"name": "Crossover",
+									"example": "Hyundai Creta, Kia Sportage",
+									"consumption": 11.5
+								},
+								"suv": {
+									"name": "SUV",
+									"example": "Toyota Land Cruiser, Nissan Patrol",
+									"consumption": 14.8
+								},
+								"minivan": {
+									"name": "Minivan",
+									"example": "Mercedes Sprinter, Ford Transit",
+									"consumption": 13.2
+								}
+							}
+						},
+						"distanceComparison": {
+							"title": "Distance on Different Fuel Volumes (consumption 8.5 L/100km)",
+							"consumption": "8.5 L/100km",
+							"volumes": [
+								{
+									"fuel": "30 L",
+									"distance": "352 km"
+								},
+								{
+									"fuel": "50 L",
+									"distance": "588 km"
+								},
+								{
+									"fuel": "60 L",
+									"distance": "706 km"
+								},
+								{
+									"fuel": "70 L",
+									"distance": "824 km"
+								}
+							]
+						}
+					},
 					"calculationExamples": {
 						"title": "Fuel Consumption Calculation Examples",
 						"content": "Let's consider practical calculation examples for various calculator usage scenarios:",
@@ -1221,7 +1276,9 @@
 				"calculation": {
 					"title": "How Fuel Consumption Is Calculated",
 					"content": "Fuel consumption calculation is based on simple mathematical formulas accounting for car consumption, fuel quantity and trip distance.",
+					"distanceFormulaLabel": "Distance Calculation Formula:",
 					"distanceFormula": "Distance (km) = (Fuel Quantity (L) / Consumption (L/100km)) × 100",
+					"fuelFormulaLabel": "Fuel Quantity Calculation Formula:",
 					"fuelFormula": "Fuel (L) = (Consumption (L/100km) × Distance (km)) / 100"
 				},
 				"features": {
@@ -2641,7 +2698,7 @@
 			"seo": {
 				"title": "Vehicle Tax Calculator Online: Calculate Car Tax by Power and Region",
 				"description": "Free vehicle tax calculator for calculating car tax. Calculate vehicle tax by engine power, registration region and ownership period online.",
-				"keywords": "калькулятор транспортного налога, транспортный налог калькулятор, расчет транспортного налога, транспортный налог на автомобиль, налог на автомобиль калькулятор, транспортный налог онлайн, расчет налога на авто, транспортный налог по мощности, транспортный налог по регионам, ставки транспортного налога, коэффициент владения транспортный налог, срок владения транспортный налог, транспортный налог Москва, транспортный налог СПб, транспортный налог регионы, транспортный налог легковой автомобиль, транспортный налог грузовик, транспортный налог мотоцикл, транспортный налог льготы, транспортный налог инвалиды, транспортный налог многодетные, транспортный налог продажа, транспортный налог покупка, транспортный налог частичное владение, повышающий коэффициент транспортный налог, дорогой автомобиль налог, электромобиль транспортный налог, гибрид транспортный налог, ГБО транспортный налог, транспортный налог прицеп, транспортный налог лизинг, транспортный налог угон, транспортный налог неэксплуатируемое авто, транспортный налог формула, как рассчитать транспортный налог, когда платить транспортный налог, срок уплаты транспортного налога, vehicle tax calculator, car tax calculator, транспортный налог 2024, транспортный налог 2025",
+				"keywords": "vehicle tax calculator, car tax calculator, vehicle tax calculation, vehicle tax by power, vehicle tax by region, vehicle tax rates, vehicle ownership period, vehicle tax ownership coefficient, vehicle tax Moscow, vehicle tax St. Petersburg, vehicle tax regions, passenger car tax, truck tax, motorcycle tax, vehicle tax benefits, vehicle tax disabled, vehicle tax large families, vehicle tax sale, vehicle tax purchase, partial ownership vehicle tax, luxury car tax, expensive car tax, electric vehicle tax, hybrid vehicle tax, LPG vehicle tax, trailer vehicle tax, leasing vehicle tax, stolen vehicle tax, unused vehicle tax, vehicle tax formula, how to calculate vehicle tax, when to pay vehicle tax, vehicle tax payment deadline, vehicle tax 2024, vehicle tax 2025",
 				"overview": {
 					"title": "Vehicle Tax Calculator for Calculating Car Tax",
 					"content": "Vehicle tax calculator is professional tool for calculating car tax depending on engine power, registration region and ownership period. With our calculator you can calculate exact vehicle tax amount that needs to be paid to budget. Calculator accounts for regional taxation features and car ownership coefficient during tax period.",
@@ -2939,7 +2996,7 @@
 			"seo": {
 				"title": "LPG Payback Calculator Online — Calculate LPG Equipment Payback | Calc1.ru",
 				"description": "Free online LPG payback calculator for calculating payback period of liquefied petroleum gas equipment installation. Accounts for installation cost, annual mileage, fuel consumption, gasoline and gas prices. Helps make decision about LPG installation.",
-				"keywords": "калькулятор окупаемости ГБО, расчёт окупаемости ГБО, окупаемость газобаллонного оборудования, установка ГБО окупаемость, экономия на ГБО, калькулятор ГБО онлайн, срок окупаемости ГБО, расчёт экономии ГБО, выгодно ли ставить ГБО, экономия на газе, цена установки ГБО, расход газа, ГБО окупаемость калькулятор, экономия топлива ГБО, расчёт ГБО, калькулятор газобаллонного оборудования, стоимость ГБО, экономия на бензине, ГБО выгода, сравнение бензин газ",
+				"keywords": "LPG payback calculator, LPG equipment payback calculation, LPG installation payback, LPG savings calculator, LPG payback period, LPG ROI calculator, LPG online calculator, is LPG worth it, gas savings calculator, LPG installation cost, gas consumption calculator, LPG payback period calculator, LPG fuel savings, LPG calculation, gas equipment calculator, LPG equipment cost, gasoline savings, LPG benefits, gasoline vs gas comparison, LPG conversion payback",
 				"overview": {
 					"title": "LPG Payback Calculator Online",
 					"content": "Online LPG payback calculator will help calculate payback period for liquefied petroleum gas equipment installation on car. Accounts for LPG installation cost, annual mileage, fuel consumption (gasoline and gas), fuel prices. Shows savings and payback period.",

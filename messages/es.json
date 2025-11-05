@@ -1,0 +1,371 @@
+{
+  "common": {
+    "search": "Buscar",
+    "searchPlaceholder": "Comienza a escribir el nombre de la calculadora...",
+    "searchResults": "Resultados de búsqueda",
+    "resultsFor": "Resultados para",
+    "loading": "Cargando...",
+    "found": "Encontrado",
+    "results": "resultados",
+    "noResults": "No se encontró nada",
+    "tryAnotherQuery": "Prueba otra consulta o verifica la ortografía",
+    "noQuery": "No hay consulta de búsqueda",
+    "enterSearchTerm": "Ingresa un término de búsqueda para encontrar calculadoras",
+    "useCalculator": "Usar calculadora",
+    "language": "Idioma",
+    "categories": "Categorías",
+    "calculators": "Calculadoras",
+    "calculate": "Calcular",
+    "result": "Resultado",
+    "clear": "Limpiar",
+    "favorites": "Favoritos",
+    "notFound": {
+      "title": "Página no encontrada",
+      "description": "Lo sentimos, la página solicitada no existe.",
+      "goHome": "Ir al inicio",
+      "suggestions": {
+        "title": "Quizás estabas buscando:",
+        "checkUrl": "Verifica la corrección de la dirección ingresada",
+        "useSearch": "Usa la búsqueda de calculadoras",
+        "goToHome": "Volver a la página de inicio"
+      }
+    },
+    "pdf": {
+      "header": "calc1.ru calculadora #1 en el mundo",
+      "savePdf": "Guardar en PDF",
+      "generated": "Generado",
+      "page": "Página",
+      "of": "de"
+    }
+  },
+  "brand": {
+    "name": "Calculadora #1",
+    "slogan": "Un sitio. Todas las calculadoras."
+  },
+  "breadcrumbs": {
+    "home": "Inicio",
+    "categories": {
+      "finance": "Finanzas",
+      "math": "Matemáticas",
+      "life": "Vida",
+      "auto": "Auto",
+      "construction": "Construcción",
+      "time": "Tiempo",
+      "health": "Salud",
+      "science": "Ciencia",
+      "converter": "Convertidores",
+      "fun": "Entretenimiento",
+      "it": "IT",
+      "calculators": "Todas las calculadoras"
+    }
+  },
+  "navigation": {
+    "home": "Inicio",
+    "finance": "Finanzas",
+    "math": "Matemáticas",
+    "life": "Vida",
+    "construction": "Construcción",
+    "auto": "Auto",
+    "time": "Tiempo",
+    "health": "Salud",
+    "science": "Ciencia",
+    "converter": "Convertidor",
+    "fun": "Entretenimiento",
+    "it": "IT"
+  },
+  "footer": {
+    "description": "Calculadoras online gratuitas para todas las áreas de la vida. Finanzas, matemáticas, construcción, salud y mucho más.",
+    "categories": "Categorías",
+    "quickLinks": "Enlaces rápidos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "share": "Compartir",
+    "shareDescription": "¡Comparte la calculadora con amigos y colegas!",
+    "shareFacebook": "Compartir en Facebook",
+    "shareTwitter": "Compartir en Twitter",
+    "shareVK": "Compartir en VKontakte",
+    "shareTelegram": "Compartir en Telegram",
+    "shareWhatsApp": "Compartir en WhatsApp",
+    "shareEmail": "Compartir por correo electrónico",
+    "copyLink": "Copiar enlace",
+    "linkCopied": "¡Enlace copiado!",
+    "shareNative": "Compartir",
+    "rights": "Todos los derechos reservados.",
+    "disclaimer": "Las calculadoras son solo para fines informativos. Los resultados pueden diferir de los valores reales.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "cookies": "Política de cookies",
+    "siteDescription": "Calculadoras online gratuitas para todas las áreas de la vida"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de privacidad",
+      "description": "Política de privacidad de Calc1.ru. Aprende cómo recopilamos, usamos y protegemos tus datos personales.",
+      "lastUpdated": "Última actualización: 2024",
+      "introduction": "Calc1.ru (en adelante — \"Sitio\") respeta tu privacidad y se compromete a proteger tus datos personales. Esta Política de privacidad describe cómo recopilamos, usamos, almacenamos y protegemos la información sobre los usuarios de nuestro sitio.",
+      "section1": {
+        "title": "1. Recopilación de información",
+        "content": "Podemos recopilar los siguientes tipos de información:",
+        "item1": "Información recopilada automáticamente: dirección IP, tipo de navegador, sistema operativo, hora de visita, páginas que visualizas",
+        "item2": "Información que proporcionas: datos ingresados en calculadoras (no se almacenan en el servidor)",
+        "item3": "Información de cookies y tecnologías similares",
+        "item4": "Información de socios publicitarios (Google AdSense, Yandex.Direct)",
+        "item5": "Configuración de idioma y preferencias del usuario"
+      },
+      "section2": {
+        "title": "2. Uso de información",
+        "content": "Usamos la información recopilada para los siguientes propósitos:",
+        "item1": "Proporcionar y mejorar la funcionalidad del sitio",
+        "item2": "Analizar el uso del sitio para optimización",
+        "item3": "Mostrar publicidad personalizada a través de socios",
+        "item4": "Cumplir con requisitos legales"
+      },
+      "section3": {
+        "title": "3. Uso de cookies",
+        "content": "Nuestro sitio usa cookies para mejorar la experiencia del usuario y mostrar publicidad. Para más detalles, consulta nuestra ",
+        "link": "Política de cookies",
+        "additional": ""
+      },
+      "section4": {
+        "title": "4. Publicidad y socios",
+        "content": "Nuestro sitio usa servicios de publicidad de terceros para monetización:",
+        "googleTitle": "Google AdSense:",
+        "googleContent": "Google usa cookies para mostrar publicidad basada en tus intereses. Puedes ajustar la publicidad en la página de configuración de Google Ads o desactivar las cookies en la configuración del navegador.",
+        "yandexTitle": "Yandex.Direct:",
+        "yandexContent": "Yandex usa cookies para personalizar la publicidad. Puedes gestionar la configuración en Yandex Browser o a través de las preferencias de publicidad de Yandex."
+      },
+      "section5": {
+        "title": "5. Seguridad de datos",
+        "content": "Tomamos medidas razonables para proteger tu información de acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión por internet o método de almacenamiento electrónico es 100% seguro."
+      },
+      "section6": {
+        "title": "6. Tus derechos",
+        "content": "Tienes derecho a:",
+        "item1": "Solicitar una copia de tus datos personales",
+        "item2": "Solicitar corrección de datos inexactos",
+        "item3": "Solicitar eliminación de tus datos",
+        "item4": "Optar por no procesar datos con fines de marketing"
+      },
+      "section7": {
+        "title": "7. Cambios en la política de privacidad",
+        "content": "Nos reservamos el derecho de actualizar esta Política de privacidad en cualquier momento. Los cambios entran en vigor después de la publicación en esta página."
+      },
+      "contact": {
+        "title": "Contacto",
+        "content": "Si tienes preguntas sobre esta Política de privacidad, por favor contáctanos:",
+        "link": "Página de contacto"
+      }
+    },
+    "terms": {
+      "title": "Términos de uso",
+      "description": "Términos de uso de Calc1.ru. Lee las reglas para usar nuestro sitio y calculadoras.",
+      "lastUpdated": "Última actualización: 2024",
+      "introduction": "Bienvenido a Calc1.ru (en adelante — \"Sitio\"). Al usar este sitio, aceptas cumplir con estos Términos de uso. Si no estás de acuerdo con estos términos, por favor no uses nuestro sitio.",
+      "section1": {
+        "title": "1. Aceptación de términos",
+        "content": "Al usar Calc1.ru, confirmas que has leído, entendido y aceptas cumplir con estos Términos de uso y nuestra Política de privacidad."
+      },
+      "section2": {
+        "title": "2. Uso del servicio",
+        "content": "Puedes usar nuestras calculadoras para fines personales y comerciales siempre que:",
+        "item1": "No usarás el sitio para fines ilegales",
+        "item2": "No intentarás violar la seguridad del sitio",
+        "item3": "No copiarás contenido sin citar la fuente",
+        "item4": "Reconoces que los resultados de las calculadoras son solo para fines informativos"
+      },
+      "section3": {
+        "title": "3. Limitación de responsabilidad",
+        "content": "Las calculadoras en Calc1.ru se proporcionan \"tal cual\" sin garantías. Los resultados de los cálculos son solo para fines informativos y pueden diferir de los valores reales.",
+        "additional": "No nos hacemos responsables de ninguna pérdida o daño derivado del uso o la imposibilidad de usar nuestras calculadoras."
+      },
+      "section4": {
+        "title": "4. Propiedad intelectual",
+        "content": "Todo el contenido del sitio, incluido el diseño, texto, gráficos, logotipos y software, es propiedad de Calc1.ru y está protegido por las leyes de derechos de autor."
+      },
+      "section5": {
+        "title": "5. Acciones prohibidas",
+        "content": "Está prohibido:",
+        "item1": "Usar sistemas automatizados para recopilar datos del sitio",
+        "item2": "Distribuir virus o malware",
+        "item3": "Intentar piratear o interrumpir el sitio",
+        "item4": "Usar el sitio para spam o phishing",
+        "item5": "Copiar y reproducir contenido sin permiso"
+      },
+      "section6": {
+        "title": "6. Cambios en los términos",
+        "content": "Nos reservamos el derecho de cambiar estos Términos de uso en cualquier momento. Los cambios entran en vigor después de la publicación en esta página."
+      },
+      "contact": {
+        "title": "Contacto",
+        "content": "Si tienes preguntas sobre estos Términos de uso, por favor contáctanos:",
+        "link": "Página de contacto"
+      }
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "description": "Política de cookies de Calc1.ru. Aprende cómo usamos las cookies y cómo puedes gestionarlas.",
+      "lastUpdated": "Última actualización: 2024",
+      "introduction": "Calc1.ru usa cookies y tecnologías similares para mejorar la funcionalidad del sitio, analizar el tráfico y mostrar publicidad personalizada. Esta política explica qué son las cookies, cómo las usamos y cómo puedes gestionarlas.",
+      "section1": {
+        "title": "1. Qué son las cookies",
+        "content": "Las cookies son pequeños archivos de texto que un sitio web guarda en tu dispositivo (computadora, tableta o teléfono móvil) cuando lo visitas. Permiten que el sitio recuerde tus acciones y preferencias durante un cierto período de tiempo."
+      },
+      "section2": {
+        "title": "2. Tipos de cookies que usamos",
+        "content": "Usamos los siguientes tipos de cookies:",
+        "item1": {
+          "title": "Cookies esenciales: ",
+          "content": "Estas cookies son necesarias para que el sitio funcione y no se pueden desactivar. Incluyen guardar la configuración de idioma y otras preferencias del usuario."
+        },
+        "item2": {
+          "title": "Cookies analíticas: ",
+          "content": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con el sitio recopilando estadísticas anónimas."
+        },
+        "item3": {
+          "title": "Cookies publicitarias: ",
+          "content": "Estas cookies son usadas por socios publicitarios (Google AdSense, Yandex.Direct) para mostrar publicidad personalizada."
+        }
+      },
+      "section3": {
+        "title": "3. Cómo usamos las cookies",
+        "content": "Las cookies se usan para:",
+        "item1": "Recordar la configuración de idioma del usuario",
+        "item2": "Analizar el tráfico y mejorar la funcionalidad del sitio",
+        "item3": "Mostrar publicidad relevante a través de socios",
+        "item4": "Garantizar la seguridad y prevenir fraudes"
+      },
+      "section4": {
+        "title": "4. Cookies de socios publicitarios",
+        "content": "Nuestro sitio usa servicios de publicidad de terceros:",
+        "googleTitle": "Google AdSense:",
+        "googleContent": "Google usa cookies para mostrar publicidad basada en tus intereses. Puedes desactivar la publicidad personalizada de Google en la página de configuración de Google Ads.",
+        "yandexTitle": "Yandex.Direct:",
+        "yandexContent": "Yandex usa cookies para mostrar publicidad relevante. Puedes gestionar las preferencias de publicidad en la configuración de Yandex."
+      },
+      "section5": {
+        "title": "5. Gestión de cookies",
+        "content": "Puedes gestionar las cookies de las siguientes maneras:",
+        "item1": "A través de la configuración de tu navegador (puedes desactivar o eliminar cookies)",
+        "item2": "A través de la configuración de preferencias de publicidad de Google y Yandex",
+        "item3": "Usando extensiones del navegador para bloquear publicidad"
+      },
+      "section6": {
+        "title": "6. Cambios en la política de cookies",
+        "content": "Podemos actualizar periódicamente esta Política de cookies. Los cambios entran en vigor después de la publicación en esta página."
+      },
+      "contact": {
+        "title": "Contacto",
+        "content": "Si tienes preguntas sobre el uso de cookies, por favor contáctanos:",
+        "link": "Página de contacto"
+      }
+    }
+  },
+  "about": {
+    "title": "Acerca de",
+    "description": "Aprende más sobre Calc1.ru — el conjunto más completo de calculadoras online gratuitas para todas las áreas de la vida.",
+    "section1": {
+      "title": "Acerca del proyecto",
+      "content": "Calc1.ru es un recurso online gratuito que ofrece una amplia gama de calculadoras para diversas áreas de la vida. Nuestro objetivo es proporcionar a los usuarios herramientas convenientes y precisas para cálculos en finanzas, matemáticas, construcción, salud y muchas otras áreas."
+    },
+    "section2": {
+      "title": "Nuestra misión",
+      "content": "Nos esforzamos por hacer que los cálculos complejos sean accesibles y comprensibles para todos. Calc1.ru combina muchas calculadoras en un solo lugar, ahorrando tu tiempo y garantizando la precisión de los cálculos."
+    },
+    "section3": {
+      "title": "Quiénes somos",
+      "content": "Calc1.ru fue creado por un equipo de profesionales que entienden la importancia de herramientas convenientes y confiables para cálculos cotidianos. Trabajamos constantemente en mejorar la funcionalidad y agregar nuevas calculadoras."
+    },
+    "section4": {
+      "title": "Por qué elegirnos",
+      "content": "Ventajas de Calc1.ru:",
+      "item1": "Acceso gratuito a todas las calculadoras",
+      "item2": "Interfaz simple e intuitiva",
+      "item3": "Cálculos precisos basados en fórmulas y estándares actuales",
+      "item4": "Soporte multilingüe",
+      "item5": "Actualizaciones regulares y adición de nuevas calculadoras"
+    },
+    "contact": {
+      "title": "Contacto",
+      "content": "Si tienes preguntas, sugerencias o comentarios, nos encantaría saber de ti:",
+      "link": "Contáctanos"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Contacta al equipo de Calc1.ru. Siempre estamos listos para responder tus preguntas y ayudar.",
+    "email": {
+      "title": "Correo electrónico",
+      "description": "Para preguntas generales, sugerencias y comentarios:"
+    },
+    "form": {
+      "title": "Formulario de contacto",
+      "description": "Completa el formulario a continuación y te responderemos lo antes posible:",
+      "name": "Tu nombre",
+      "email": "Correo electrónico",
+      "message": "Tu mensaje",
+      "submit": "Enviar",
+      "sending": "Enviando..."
+    },
+    "additional": {
+      "title": "Información adicional",
+      "content": "Nos esforzamos por responder a todas las solicitudes en un plazo de 24-48 horas. Para preguntas urgentes, por favor usa el correo electrónico."
+    }
+  },
+  "categories": {
+    "finance": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "math": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "life": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "construction": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "auto": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "time": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "health": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "science": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "converter": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "fun": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    },
+    "it": {
+      "title": "",
+      "description": "",
+      "seo": {}
+    }
+  }
+}

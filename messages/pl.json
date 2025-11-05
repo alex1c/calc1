@@ -1,303 +1,314 @@
 {
   "common": {
-    "search": "Поиск",
-    "searchPlaceholder": "Начните вводить название калькулятора...",
-    "searchResults": "Результаты поиска",
-    "resultsFor": "Результаты для",
-    "loading": "Загрузка...",
-    "found": "Найдено",
-    "results": "результатов",
-    "noResults": "Ничего не найдено",
-    "tryAnotherQuery": "Попробуйте другой запрос или проверьте правописание",
-    "noQuery": "Нет запроса для поиска",
-    "enterSearchTerm": "Введите поисковый запрос, чтобы найти калькуляторы",
-    "useCalculator": "Использовать калькулятор",
-    "language": "Язык",
-    "categories": "Категории",
-    "calculators": "Калькуляторы",
-    "calculate": "Рассчитать",
-    "result": "Результат",
-    "clear": "Очистить",
-    "favorites": "Избранное",
+    "search": "Szukaj",
+    "searchPlaceholder": "Zacznij wpisywać nazwę kalkulatora...",
+    "searchResults": "Wyniki wyszukiwania",
+    "resultsFor": "Wyniki dla",
+    "loading": "Ładowanie...",
+    "found": "Znaleziono",
+    "results": "wyników",
+    "noResults": "Nic nie znaleziono",
+    "tryAnotherQuery": "Spróbuj innego zapytania lub sprawdź pisownię",
+    "noQuery": "Brak zapytania wyszukiwania",
+    "enterSearchTerm": "Wprowadź termin wyszukiwania, aby znaleźć kalkulatory",
+    "useCalculator": "Użyj kalkulatora",
+    "language": "Język",
+    "categories": "Kategorie",
+    "calculators": "Kalkulatory",
+    "calculate": "Oblicz",
+    "result": "Wynik",
+    "clear": "Wyczyść",
+    "favorites": "Ulubione",
+    "notFound": {
+      "title": "Strona nie znaleziona",
+      "description": "Przepraszamy, żądana strona nie istnieje.",
+      "goHome": "Przejdź do strony głównej",
+      "suggestions": {
+        "title": "Możesz szukać:",
+        "checkUrl": "Sprawdź poprawność wprowadzonego adresu",
+        "useSearch": "Użyj wyszukiwarki kalkulatorów",
+        "goToHome": "Wróć do strony głównej"
+      }
+    },
     "pdf": {
-      "header": "calc1.ru калькулятор #1 в мире",
-      "savePdf": "Сохранить в PDF",
-      "generated": "Сгенерировано",
-      "page": "Страница",
-      "of": "из"
+      "header": "calc1.ru kalkulator #1 na świecie",
+      "savePdf": "Zapisz jako PDF",
+      "generated": "Wygenerowano",
+      "page": "Strona",
+      "of": "z"
     }
   },
   "brand": {
-    "name": "Калькулятор #1",
-    "slogan": "Один сайт. Все калькуляторы."
+    "name": "Kalkulator #1",
+    "slogan": "Jeden serwis. Wszystkie kalkulatory."
   },
   "breadcrumbs": {
-    "home": "Главная",
+    "home": "Strona główna",
     "categories": {
-      "finance": "Финансы",
-      "math": "Математика",
-      "life": "Жизнь",
-      "auto": "Авто",
-      "construction": "Строительство",
-      "time": "Время",
-      "health": "Здоровье",
-      "science": "Наука",
-      "converter": "Конвертеры",
-      "fun": "Развлечения",
+      "finance": "Finanse",
+      "math": "Matematyka",
+      "life": "Życie",
+      "auto": "Motoryzacja",
+      "construction": "Budownictwo",
+      "time": "Czas",
+      "health": "Zdrowie",
+      "science": "Nauka",
+      "converter": "Konwertery",
+      "fun": "Rozrywka",
       "it": "IT",
-      "calculators": "Все калькуляторы"
+      "calculators": "Wszystkie kalkulatory"
     }
   },
   "navigation": {
-    "home": "Главная",
-    "finance": "Финансы",
-    "math": "Математика",
-    "life": "Быт",
-    "construction": "Строительство",
-    "auto": "Авто",
-    "time": "Время",
-    "health": "Здоровье",
-    "science": "Наука",
-    "converter": "Конвертеры",
-    "fun": "Развлечения",
+    "home": "Strona główna",
+    "finance": "Finanse",
+    "math": "Matematyka",
+    "life": "Życie",
+    "construction": "Budownictwo",
+    "auto": "Motoryzacja",
+    "time": "Czas",
+    "health": "Zdrowie",
+    "science": "Nauka",
+    "converter": "Konwerter",
+    "fun": "Rozrywka",
     "it": "IT"
   },
   "footer": {
-    "description": "Бесплатные онлайн калькуляторы для всех сфер жизни. Финансы, математика, строительство, здоровье и многое другое.",
-    "categories": "Категории",
-    "quickLinks": "Быстрые ссылки",
-    "about": "О сайте",
-    "contact": "Контакты",
-    "share": "Поделиться",
-    "shareDescription": "Поделитесь калькулятором с друзьями и коллегами!",
-    "shareFacebook": "Поделиться в Facebook",
-    "shareTwitter": "Поделиться в Twitter",
-    "shareVK": "Поделиться ВКонтакте",
-    "shareTelegram": "Поделиться в Telegram",
-    "shareWhatsApp": "Поделиться в WhatsApp",
-    "shareEmail": "Поделиться по email",
-    "copyLink": "Копировать ссылку",
-    "linkCopied": "Ссылка скопирована!",
-    "shareNative": "Поделиться",
-    "rights": "Все права защищены.",
-    "disclaimer": "Калькуляторы предназначены для информационных целей. Результаты могут отличаться от фактических значений.",
-    "privacy": "Политика конфиденциальности",
-    "terms": "Условия использования",
-    "cookies": "Политика cookie",
-    "siteDescription": "Бесплатные онлайн калькуляторы для всех сфер жизни"
+    "description": "Darmowe kalkulatory online dla wszystkich obszarów życia. Finanse, matematyka, budownictwo, zdrowie i wiele więcej.",
+    "categories": "Kategorie",
+    "quickLinks": "Szybkie linki",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "share": "Udostępnij",
+    "shareDescription": "Udostępnij kalkulator znajomym i kolegom!",
+    "shareFacebook": "Udostępnij na Facebook",
+    "shareTwitter": "Udostępnij na Twitter",
+    "shareVK": "Udostępnij na VKontakte",
+    "shareTelegram": "Udostępnij na Telegram",
+    "shareWhatsApp": "Udostępnij na WhatsApp",
+    "shareEmail": "Udostępnij przez e-mail",
+    "copyLink": "Kopiuj link",
+    "linkCopied": "Link skopiowany!",
+    "shareNative": "Udostępnij",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "disclaimer": "Kalkulatory służą wyłącznie celom informacyjnym. Wyniki mogą różnić się od rzeczywistych wartości.",
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki korzystania",
+    "cookies": "Polityka plików cookie",
+    "siteDescription": "Darmowe kalkulatory online dla wszystkich obszarów życia"
   },
   "legal": {
     "privacy": {
-      "title": "Политика конфиденциальности",
-      "description": "Политика конфиденциальности Calc1.ru. Узнайте, как мы собираем, используем и защищаем ваши персональные данные.",
-      "lastUpdated": "Последнее обновление: 2024",
-      "introduction": "Calc1.ru (далее — «Сайт») уважает вашу конфиденциальность и обязуется защищать ваши персональные данные. Данная Политика конфиденциальности описывает, как мы собираем, используем, храним и защищаем информацию о пользователях нашего сайта.",
+      "title": "Polityka prywatności",
+      "description": "Polityka prywatności Calc1.ru. Dowiedz się, jak zbieramy, używamy i chronimy Twoje dane osobowe.",
+      "lastUpdated": "Ostatnia aktualizacja: 2024",
+      "introduction": "Calc1.ru (zwane dalej — \"Strona\") szanuje Twoją prywatność i zobowiązuje się chronić Twoje dane osobowe. Niniejsza Polityka prywatności opisuje, jak zbieramy, używamy, przechowujemy i chronimy informacje o użytkownikach naszej strony.",
       "section1": {
-        "title": "1. Сбор информации",
-        "content": "Мы можем собирать следующие типы информации:",
-        "item1": "Автоматически собираемая информация: IP-адрес, тип браузера, операционная система, время посещения, страницы, которые вы просматриваете",
-        "item2": "Информация, которую вы предоставляете: данные, вводимые в калькуляторы (не сохраняются на сервере)",
-        "item3": "Информация из файлов cookie и похожих технологий",
-        "item4": "Информация от партнеров по рекламе (Google AdSense, Яндекс.Директ)",
-        "item5": "Языковые настройки и предпочтения пользователя"
+        "title": "1. Zbieranie informacji",
+        "content": "Możemy zbierać następujące rodzaje informacji:",
+        "item1": "Informacje zbierane automatycznie: adres IP, typ przeglądarki, system operacyjny, czas wizyty, przeglądane strony",
+        "item2": "Informacje które podajesz: dane wprowadzane do kalkulatorów (nie są przechowywane na serwerze)",
+        "item3": "Informacje z plików cookie i podobnych technologii",
+        "item4": "Informacje od partnerów reklamowych (Google AdSense, Yandex.Direct)",
+        "item5": "Ustawienia języka i preferencje użytkownika"
       },
       "section2": {
-        "title": "2. Использование информации",
-        "content": "Мы используем собранную информацию для следующих целей:",
-        "item1": "Предоставление и улучшение функциональности сайта",
-        "item2": "Анализ использования сайта для его оптимизации",
-        "item3": "Показ персонализированной рекламы через партнеров",
-        "item4": "Соблюдение правовых требований"
+        "title": "2. Użycie informacji",
+        "content": "Używamy zebranych informacji do:",
+        "item1": "Zapewniania i poprawy funkcjonalności strony",
+        "item2": "Analizowania użycia strony w celu optymalizacji",
+        "item3": "Wyświetlania spersonalizowanej reklamy przez partnerów",
+        "item4": "Spełniania wymagań prawnych"
       },
       "section3": {
-        "title": "3. Использование файлов cookie",
-        "content": "Наш сайт использует файлы cookie для улучшения пользовательского опыта и показа рекламы. Подробнее см. в нашей ",
-        "link": "Политике использования файлов cookie",
+        "title": "3. Użycie plików cookie",
+        "content": "Nasza strona używa plików cookie do poprawy doświadczenia użytkownika i wyświetlania reklam. Więcej szczegółów w naszej ",
+        "link": "Polityce plików cookie",
         "additional": ""
       },
       "section4": {
-        "title": "4. Реклама и партнеры",
-        "content": "Наш сайт использует рекламные сервисы третьих сторон для монетизации:",
+        "title": "4. Reklama i partnerzy",
+        "content": "Nasza strona używa zewnętrznych serwisów reklamowych:",
         "googleTitle": "Google AdSense:",
-        "googleContent": "Google использует cookie для показа рекламы на основе ваших интересов. Вы можете настроить рекламу на странице настроек Google Ads или отключить cookie в настройках браузера.",
-        "yandexTitle": "Яндекс.Директ:",
-        "yandexContent": "Яндекс использует cookie для персонализации рекламы. Вы можете управлять настройками в Яндекс.Браузере или через настройки рекламных предпочтений Яндекса."
+        "googleContent": "Google używa plików cookie do wyświetlania reklam opartych na Twoich zainteresowaniach. Możesz dostosować reklamę na stronie ustawień Google Ads lub wyłączyć pliki cookie w ustawieniach przeglądarki.",
+        "yandexTitle": "Yandex.Direct:",
+        "yandexContent": "Yandex używa plików cookie do personalizacji reklam. Możesz zarządzać ustawieniami w Yandex Browser lub przez preferencje reklamowe Yandex."
       },
       "section5": {
-        "title": "5. Безопасность данных",
-        "content": "Мы принимаем разумные меры для защиты вашей информации от несанкционированного доступа, изменения, раскрытия или уничтожения. Однако ни один метод передачи через интернет или метод электронного хранения не является на 100% безопасным."
+        "title": "5. Bezpieczeństwo danych",
+        "content": "Podejmujemy rozsądne środki w celu ochrony Twoich informacji przed nieautoryzowanym dostępem, zmianą, ujawnieniem lub zniszczeniem. Jednak żadna metoda transmisji przez internet nie jest w 100% bezpieczna."
       },
       "section6": {
-        "title": "6. Ваши права",
-        "content": "Вы имеете право:",
-        "item1": "Запросить копию ваших персональных данных",
-        "item2": "Запросить исправление неточных данных",
-        "item3": "Запросить удаление ваших данных",
-        "item4": "Отказаться от обработки данных для маркетинговых целей"
+        "title": "6. Twoje prawa",
+        "content": "Masz prawo do:",
+        "item1": "Żądania kopii swoich danych osobowych",
+        "item2": "Żądania korekty nieprawidłowych danych",
+        "item3": "Żądania usunięcia swoich danych",
+        "item4": "Odmowy przetwarzania danych w celach marketingowych"
       },
       "section7": {
-        "title": "7. Изменения в политике конфиденциальности",
-        "content": "Мы оставляем за собой право обновлять данную Политику конфиденциальности в любое время. Изменения вступают в силу после публикации на этой странице."
+        "title": "7. Zmiany w polityce",
+        "content": "Zastrzegamy sobie prawo do aktualizacji tej Polityki prywatności w dowolnym momencie. Zmiany wchodzą w życie po publikacji na tej stronie."
       },
       "contact": {
-        "title": "Контакты",
-        "content": "Если у вас есть вопросы относительно данной Политики конфиденциальности, пожалуйста, свяжитесь с нами:",
-        "link": "Страница контактов"
+        "title": "Kontakt",
+        "content": "Jeśli masz pytania dotyczące tej Polityki prywatności, skontaktuj się z nami:",
+        "link": "Strona kontaktowa"
       }
     },
     "terms": {
-      "title": "Условия использования",
-      "description": "Условия использования Calc1.ru. Ознакомьтесь с правилами использования нашего сайта и калькуляторов.",
-      "lastUpdated": "Последнее обновление: 2024",
-      "introduction": "Добро пожаловать на Calc1.ru (далее — «Сайт»). Используя данный сайт, вы соглашаетесь соблюдать данные Условия использования. Если вы не согласны с этими условиями, пожалуйста, не используйте наш сайт.",
+      "title": "Warunki korzystania",
+      "description": "Warunki korzystania z Calc1.ru. Przeczytaj zasady korzystania z naszej strony i kalkulatorów.",
+      "lastUpdated": "Ostatnia aktualizacja: 2024",
+      "introduction": "Witamy na Calc1.ru (zwane dalej — \"Strona\"). Korzystając z tej strony, zgadzasz się przestrzegać tych Warunków korzystania. Jeśli nie zgadzasz się z tymi warunkami, nie używaj naszej strony.",
       "section1": {
-        "title": "1. Принятие условий",
-        "content": "Используя Calc1.ru, вы подтверждаете, что прочитали, поняли и согласились соблюдать настоящие Условия использования и нашу Политику конфиденциальности."
+        "title": "1. Akceptacja warunków",
+        "content": "Korzystając z Calc1.ru, potwierdzasz, że przeczytałeś, zrozumiałeś i zgadzasz się przestrzegać niniejszych Warunków korzystania i naszej Polityki prywatności."
       },
       "section2": {
-        "title": "2. Использование сервиса",
-        "content": "Вы можете использовать наши калькуляторы для личных и коммерческих целей при условии:",
-        "item1": "Вы не будете использовать сайт в незаконных целях",
-        "item2": "Вы не будете пытаться нарушить безопасность сайта",
-        "item3": "Вы не будете копировать контент без указания источника",
-        "item4": "Вы признаете, что результаты калькуляторов носят информационный характер"
+        "title": "2. Użycie serwisu",
+        "content": "Możesz używać naszych kalkulatorów do celów osobistych i komercyjnych pod warunkiem:",
+        "item1": "Nie będziesz używać strony do celów nielegalnych",
+        "item2": "Nie będziesz próbował naruszyć bezpieczeństwa strony",
+        "item3": "Nie będziesz kopiować treści bez podania źródła",
+        "item4": "Uznajesz, że wyniki kalkulatorów są tylko informacyjne"
       },
       "section3": {
-        "title": "3. Ограничение ответственности",
-        "content": "Калькуляторы на Calc1.ru предоставляются «как есть» без каких-либо гарантий. Результаты расчетов носят информационный характер и могут отличаться от фактических значений.",
-        "additional": "Мы не несем ответственности за любые убытки или ущерб, возникшие в результате использования или невозможности использования наших калькуляторов."
+        "title": "3. Ograniczenie odpowiedzialności",
+        "content": "Kalkulatory na Calc1.ru są dostarczane \"tak jak są\" bez żadnych gwarancji. Wyniki obliczeń są tylko informacyjne i mogą różnić się od rzeczywistych wartości.",
+        "additional": "Nie ponosimy odpowiedzialności za jakiekolwiek straty lub szkody wynikające z użytkowania lub niemożności użytkowania naszych kalkulatorów."
       },
       "section4": {
-        "title": "4. Интеллектуальная собственность",
-        "content": "Весь контент сайта, включая дизайн, текст, графику, логотипы и программное обеспечение, является собственностью Calc1.ru и защищен законами об авторском праве."
+        "title": "4. Własność intelektualna",
+        "content": "Cała zawartość strony, w tym projekt, tekst, grafika, logotypy i oprogramowanie, jest własnością Calc1.ru i chroniona prawami autorskimi."
       },
       "section5": {
-        "title": "5. Запрещенные действия",
-        "content": "Запрещается:",
-        "item1": "Использовать автоматизированные системы для сбора данных с сайта",
-        "item2": "Распространять вирусы или вредоносное ПО",
-        "item3": "Попытки взлома или нарушения работы сайта",
-        "item4": "Использование сайта для спама или фишинга",
-        "item5": "Копирование и воспроизведение контента без разрешения"
+        "title": "5. Zabronione działania",
+        "content": "Zabronione jest:",
+        "item1": "Używanie zautomatyzowanych systemów do zbierania danych ze strony",
+        "item2": "Rozpowszechnianie wirusów lub złośliwego oprogramowania",
+        "item3": "Próby włamania lub zakłócenia pracy strony",
+        "item4": "Używanie strony do spamu lub phishingu",
+        "item5": "Kopiowanie i reprodukowanie treści bez zezwolenia"
       },
       "section6": {
-        "title": "6. Изменения в условиях",
-        "content": "Мы оставляем за собой право изменять данные Условия использования в любое время. Изменения вступают в силу после публикации на этой странице."
+        "title": "6. Zmiany warunków",
+        "content": "Zastrzegamy sobie prawo do zmiany tych Warunków korzystania w dowolnym momencie. Zmiany wchodzą w życie po publikacji."
       },
       "contact": {
-        "title": "Контакты",
-        "content": "Если у вас есть вопросы относительно данных Условий использования, пожалуйста, свяжитесь с нами:",
-        "link": "Страница контактов"
+        "title": "Kontakt",
+        "content": "Jeśli masz pytania dotyczące tych Warunków korzystania, skontaktuj się z nami:",
+        "link": "Strona kontaktowa"
       }
     },
     "cookies": {
-      "title": "Политика использования файлов cookie",
-      "description": "Политика использования cookie на Calc1.ru. Узнайте, как мы используем файлы cookie и как вы можете управлять ими.",
-      "lastUpdated": "Последнее обновление: 2024",
-      "introduction": "Calc1.ru использует файлы cookie и похожие технологии для улучшения функциональности сайта, анализа трафика и показа персонализированной рекламы. Данная политика объясняет, что такое cookie, как мы их используем и как вы можете управлять ими.",
+      "title": "Polityka plików cookie",
+      "description": "Polityka plików cookie Calc1.ru. Dowiedz się, jak używamy plików cookie i jak możesz nimi zarządzać.",
+      "lastUpdated": "Ostatnia aktualizacja: 2024",
+      "introduction": "Calc1.ru używa plików cookie i podobnych technologii do poprawy funkcjonalności strony, analizowania ruchu i wyświetlania spersonalizowanej reklamy. Ta polityka wyjaśnia, czym są pliki cookie, jak je używamy i jak możesz nimi zarządzać.",
       "section1": {
-        "title": "1. Что такое файлы cookie",
-        "content": "Файлы cookie — это небольшие текстовые файлы, которые веб-сайт сохраняет на вашем устройстве (компьютере, планшете или мобильном телефоне) при его посещении. Они позволяют сайту запоминать ваши действия и предпочтения в течение определенного периода времени."
+        "title": "1. Czym są pliki cookie",
+        "content": "Pliki cookie to małe pliki tekstowe, które strona internetowa zapisuje na Twoim urządzeniu (komputerze, tablecie lub telefonie komórkowym) podczas wizyty. Pozwalają stronie zapamiętać Twoje działania i preferencje przez określony czas."
       },
       "section2": {
-        "title": "2. Типы файлов cookie, которые мы используем",
-        "content": "Мы используем следующие типы cookie:",
+        "title": "2. Rodzaje plików cookie",
+        "content": "Używamy następujących rodzajów plików cookie:",
         "item1": {
-          "title": "Необходимые cookie: ",
-          "content": "Эти cookie необходимы для работы сайта и не могут быть отключены. Они включают сохранение языковых настроек и других предпочтений пользователя."
+          "title": "Niezbędne pliki cookie: ",
+          "content": "Są niezbędne do działania strony i nie mogą być wyłączone. Obejmują zapisywanie ustawień języka i innych preferencji użytkownika."
         },
         "item2": {
-          "title": "Аналитические cookie: ",
-          "content": "Эти cookie помогают нам понять, как посетители взаимодействуют с сайтом, собирая анонимную статистику."
+          "title": "Analityczne pliki cookie: ",
+          "content": "Pomagają nam zrozumieć, jak odwiedzający wchodzą w interakcję ze stroną, zbierając anonimowe statystyki."
         },
         "item3": {
-          "title": "Рекламные cookie: ",
-          "content": "Эти cookie используются партнерами по рекламе (Google AdSense, Яндекс.Директ) для показа персонализированной рекламы."
+          "title": "Reklamowe pliki cookie: ",
+          "content": "Są używane przez partnerów reklamowych (Google AdSense, Yandex.Direct) do wyświetlania spersonalizowanej reklamy."
         }
       },
       "section3": {
-        "title": "3. Как мы используем cookie",
-        "content": "Cookie используются для:",
-        "item1": "Запоминания языковых настроек пользователя",
-        "item2": "Анализа посещаемости и улучшения функциональности сайта",
-        "item3": "Показа релевантной рекламы через партнеров",
-        "item4": "Обеспечения безопасности и предотвращения мошенничества"
+        "title": "3. Jak używamy plików cookie",
+        "content": "Pliki cookie są używane do:",
+        "item1": "Zapamiętywania ustawień języka użytkownika",
+        "item2": "Analizowania ruchu i poprawy funkcjonalności",
+        "item3": "Wyświetlania istotnej reklamy przez partnerów",
+        "item4": "Zapewnienia bezpieczeństwa i zapobiegania oszustwom"
       },
       "section4": {
-        "title": "4. Cookie рекламных партнеров",
-        "content": "Наш сайт использует рекламные сервисы третьих сторон:",
+        "title": "4. Pliki cookie partnerów reklamowych",
+        "content": "Nasza strona używa zewnętrznych serwisów reklamowych:",
         "googleTitle": "Google AdSense:",
-        "googleContent": "Google использует cookie для показа рекламы на основе ваших интересов. Вы можете отключить персонализированную рекламу Google на странице настроек рекламы Google.",
-        "yandexTitle": "Яндекс.Директ:",
-        "yandexContent": "Яндекс использует cookie для показа релевантной рекламы. Вы можете управлять рекламными предпочтениями в настройках Яндекса."
+        "googleContent": "Google używa plików cookie do wyświetlania reklam opartych na Twoich zainteresowaniach. Możesz wyłączyć spersonalizowaną reklamę Google na stronie ustawień Google Ads.",
+        "yandexTitle": "Yandex.Direct:",
+        "yandexContent": "Yandex używa plików cookie do wyświetlania istotnej reklamy. Możesz zarządzać preferencjami reklamowymi w ustawieniach Yandex."
       },
       "section5": {
-        "title": "5. Управление cookie",
-        "content": "Вы можете управлять cookie следующими способами:",
-        "item1": "Через настройки вашего браузера (вы можете отключить или удалить cookie)",
-        "item2": "Через настройки рекламных предпочтений Google и Яндекс",
-        "item3": "Используя расширения браузера для блокировки рекламы"
+        "title": "5. Zarządzanie plikami cookie",
+        "content": "Możesz zarządzać plikami cookie przez:",
+        "item1": "Ustawienia przeglądarki (możesz wyłączyć lub usunąć pliki cookie)",
+        "item2": "Ustawienia preferencji reklamowych Google i Yandex",
+        "item3": "Rozszerzenia przeglądarki do blokowania reklam"
       },
       "section6": {
-        "title": "6. Изменения в политике cookie",
-        "content": "Мы можем периодически обновлять данную Политику использования cookie. Изменения вступают в силу после публикации на этой странице."
+        "title": "6. Zmiany w polityce",
+        "content": "Możemy okresowo aktualizować tę Politykę plików cookie. Zmiany wchodzą w życie po publikacji."
       },
       "contact": {
-        "title": "Контакты",
-        "content": "Если у вас есть вопросы относительно использования cookie, пожалуйста, свяжитесь с нами:",
-        "link": "Страница контактов"
+        "title": "Kontakt",
+        "content": "Jeśli masz pytania dotyczące używania plików cookie, skontaktuj się z nami:",
+        "link": "Strona kontaktowa"
       }
     }
   },
   "about": {
-    "title": "О сайте",
-    "description": "Узнайте больше о Calc1.ru — самом полном наборе бесплатных онлайн калькуляторов для всех сфер жизни.",
+    "title": "O nas",
+    "description": "Dowiedz się więcej o Calc1.ru — najbardziej kompletnym zestawie darmowych kalkulatorów online dla wszystkich obszarów życia.",
     "section1": {
-      "title": "О проекте",
-      "content": "Calc1.ru — это бесплатный онлайн-ресурс, предлагающий широкий спектр калькуляторов для различных сфер жизни. Наша цель — предоставить пользователям удобные и точные инструменты для расчетов в области финансов, математики, строительства, здоровья и многих других областей."
+      "title": "O projekcie",
+      "content": "Calc1.ru to darmowy zasób online oferujący szeroki zakres kalkulatorów dla różnych obszarów życia. Naszym celem jest zapewnienie użytkownikom wygodnych i dokładnych narzędzi do obliczeń w finansach, matematyce, budownictwie, zdrowiu i wielu innych dziedzinach."
     },
     "section2": {
-      "title": "Наша миссия",
-      "content": "Мы стремимся сделать сложные расчеты доступными и понятными для каждого. Calc1.ru объединяет множество калькуляторов в одном месте, экономя ваше время и обеспечивая точность расчетов."
+      "title": "Nasza misja",
+      "content": "Dążymy do tego, aby skomplikowane obliczenia były dostępne i zrozumiałe dla wszystkich. Calc1.ru łączy wiele kalkulatorów w jednym miejscu, oszczędzając Twój czas i zapewniając dokładność obliczeń."
     },
     "section3": {
-      "title": "Кто мы",
-      "content": "Calc1.ru создан командой профессионалов, которые понимают важность удобных и надежных инструментов для повседневных расчетов. Мы постоянно работаем над улучшением функциональности и добавлением новых калькуляторов."
+      "title": "Kim jesteśmy",
+      "content": "Calc1.ru został stworzony przez zespół profesjonalistów, którzy rozumieją znaczenie wygodnych i niezawodnych narzędzi do codziennych obliczeń. Stale pracujemy nad poprawą funkcjonalności i dodawaniem nowych kalkulatorów."
     },
     "section4": {
-      "title": "Почему выбирают нас",
-      "content": "Преимущества Calc1.ru:",
-      "item1": "Бесплатный доступ ко всем калькуляторам",
-      "item2": "Простой и интуитивно понятный интерфейс",
-      "item3": "Точные расчеты на основе актуальных формул и норм",
-      "item4": "Многоязычная поддержка",
-      "item5": "Регулярное обновление и добавление новых калькуляторов"
+      "title": "Dlaczego nas wybrać",
+      "content": "Zalety Calc1.ru:",
+      "item1": "Darmowy dostęp do wszystkich kalkulatorów",
+      "item2": "Prosty i intuicyjny interfejs",
+      "item3": "Dokładne obliczenia oparte na aktualnych formułach i standardach",
+      "item4": "Obsługa wielojęzyczna",
+      "item5": "Regularne aktualizacje i dodawanie nowych kalkulatorów"
     },
     "contact": {
-      "title": "Контакты",
-      "content": "Если у вас есть вопросы, предложения или отзывы, мы будем рады услышать от вас:",
-      "link": "Связаться с нами"
+      "title": "Kontakt",
+      "content": "Jeśli masz pytania, sugestie lub opinie, chętnie Cię wysłuchamy:",
+      "link": "Skontaktuj się z nami"
     }
   },
   "contact": {
-    "title": "Контакты",
-    "description": "Свяжитесь с командой Calc1.ru. Мы всегда готовы ответить на ваши вопросы и помочь.",
+    "title": "Kontakt",
+    "description": "Skontaktuj się z zespołem Calc1.ru. Zawsze jesteśmy gotowi odpowiedzieć na Twoje pytania i pomóc.",
     "email": {
-      "title": "Электронная почта",
-      "description": "Для общих вопросов, предложений и обратной связи:"
+      "title": "Email",
+      "description": "Dla ogólnych pytań, sugestii i opinii:"
     },
     "form": {
-      "title": "Форма обратной связи",
-      "description": "Заполните форму ниже, и мы ответим вам как можно скорее:",
-      "name": "Ваше имя",
+      "title": "Formularz kontaktowy",
+      "description": "Wypełnij poniższy formularz, a odpowiemy jak najszybciej:",
+      "name": "Twoje imię",
       "email": "Email",
-      "message": "Ваше сообщение",
-      "submit": "Отправить",
-      "sending": "Отправка..."
+      "message": "Twoja wiadomość",
+      "submit": "Wyślij",
+      "sending": "Wysyłanie..."
     },
     "additional": {
-      "title": "Дополнительная информация",
-      "content": "Мы стремимся отвечать на все запросы в течение 24-48 часов. Для срочных вопросов используйте электронную почту."
+      "title": "Informacje dodatkowe",
+      "content": "Dążymy do odpowiedzi na wszystkie zapytania w ciągu 24-48 godzin. Dla pilnych pytań użyj email."
     }
   },
   "categories": {
@@ -327,41 +338,11 @@
     },
     "construction": {
       "title": "Строительные калькуляторы",
-      "subtitle": "Обои, краска, бетон, кровля",
       "description": "Обои, краска, бетон, кровля",
+      "subtitle": "Обои, краска, бетон, кровля",
       "seo": {
         "keywords": "строительные калькуляторы, калькуляторы для строительства, калькулятор краски, калькулятор обоев, калькулятор штукатурки, калькулятор бетона, калькулятор цемента, калькулятор фундамента, калькулятор вентиляции, калькулятор площади стен, калькулятор арматуры, калькулятор кабеля, калькулятор труб, калькулятор кровли, калькулятор плиточного клея, калькулятор шпатлёвки, калькулятор грунтовки, строительные расчёты, расчёт материалов, онлайн калькулятор строительства, калькулятор материалов для строительства, расчёт количества материалов, строительный калькулятор онлайн, калькулятор для ремонта, калькулятор строительных работ, калькулятор отделочных материалов, калькулятор кровельных материалов, калькулятор бетонных работ, калькулятор кирпича, калькулятор блоков, калькулятор трубопровода, калькулятор электропроводки, калькулятор площади поверхности, строительные инструменты онлайн",
         "overview": "Строительные калькуляторы Calc1.ru — это комплексный набор онлайн-инструментов для точных расчётов материалов и работ при строительстве и ремонте. Все калькуляторы используют актуальные строительные нормы и стандарты, что гарантирует точность расчётов."
-      },
-      "calculators": {
-        "wallpaper": {
-          "title": "Калькулятор обоев",
-          "description": "Расчёт количества обоев для комнаты"
-        },
-        "materials": {
-          "title": "Калькулятор материалов",
-          "description": "Расчёт краски, шпатлёвки, грунтовки и плиточного клея"
-        },
-        "concrete": {
-          "title": "Калькулятор бетона",
-          "description": "Расчёт количества цемента, песка, щебня и воды для приготовления бетона"
-        },
-        "roof": {
-          "title": "Калькулятор кровли",
-          "description": "Расчёт кровельных материалов и стоимости"
-        },
-        "wall": {
-          "title": "Калькулятор кирпича и блоков",
-          "description": "Расчёт количества кирпичей, газоблоков и пеноблоков для стены"
-        },
-        "tile": {
-          "title": "Калькулятор плитки",
-          "description": "Расчёт количества плитки для пола и стен"
-        },
-        "laminate": {
-          "title": "Калькулятор ламината",
-          "description": "Расчёт количества ламината для пола"
-        }
       }
     },
     "auto": {

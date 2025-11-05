@@ -2186,384 +2186,384 @@
 			}
 		},
 		"alimony": {
-			"title": "Калькулятор алиментов",
-			"description": "Расчёт алиментов на детей в процентах от дохода или фиксированной сумме",
+			"title": "Alimony Calculator",
+			"description": "Calculate child support as percentage of income or fixed amount",
 			"breadcrumbs": {
-				"category": "Финансы"
+				"category": "Finance"
 			},
 			"form": {
-				"title": "Параметры расчёта",
-				"calculationMethod": "Способ расчёта",
-				"childrenCount": "Количество детей",
-				"monthlyIncome": "Ежемесячный доход (₽)",
-				"fixedAmount": "Фиксированная сумма (₽)",
-				"livingWage": "Прожиточный минимум (₽)",
-				"livingWageMultiplier": "Кратность прожиточному минимуму",
-				"additionalExpenses": "Дополнительные расходы (₽)",
-				"calculate": "Рассчитать",
-				"reset": "Сбросить",
+				"title": "Calculation Parameters",
+				"calculationMethod": "Calculation Method",
+				"childrenCount": "Number of Children",
+				"monthlyIncome": "Monthly Income ($)",
+				"fixedAmount": "Fixed Amount ($)",
+				"livingWage": "Living Wage ($)",
+				"livingWageMultiplier": "Multiplier of Living Wage",
+				"additionalExpenses": "Additional Expenses ($)",
+				"calculate": "Calculate",
+				"reset": "Reset",
 				"errors": {
-					"title": "Ошибки в данных",
-					"childrenCountRequired": "Укажите количество детей",
-					"invalidChildrenCount": "Количество детей должно быть от 1 до 10",
-					"incomeRequired": "Укажите доход",
-					"invalidIncome": "Доход должен быть больше 0",
-					"fixedAmountRequired": "Укажите фиксированную сумму",
-					"invalidFixedAmount": "Фиксированная сумма должна быть больше 0",
-					"livingWageRequired": "Укажите прожиточный минимум",
-					"invalidLivingWage": "Прожиточный минимум должен быть больше 0"
+					"title": "Data Errors",
+					"childrenCountRequired": "Please specify number of children",
+					"invalidChildrenCount": "Number of children must be from 1 to 10",
+					"incomeRequired": "Please specify income",
+					"invalidIncome": "Income must be greater than 0",
+					"fixedAmountRequired": "Please specify fixed amount",
+					"invalidFixedAmount": "Fixed amount must be greater than 0",
+					"livingWageRequired": "Please specify living wage",
+					"invalidLivingWage": "Living wage must be greater than 0"
 				}
 			},
 			"results": {
-				"title": "Результаты расчёта",
-				"monthlyPayment": "Ежемесячная сумма алиментов",
-				"yearlyPayment": "Годовая сумма алиментов",
-				"percentage": "Процент от дохода",
-				"remainingIncome": "Остаток дохода",
-				"perChild": "На одного ребёнка",
-				"total": "Всего",
-				"placeholder": "Введите параметры для расчёта"
+				"title": "Calculation Results",
+				"monthlyPayment": "Monthly Alimony Amount",
+				"yearlyPayment": "Annual Alimony Amount",
+				"percentage": "Percentage of Income",
+				"remainingIncome": "Remaining Income",
+				"perChild": "Per Child",
+				"total": "Total",
+				"placeholder": "Enter parameters for calculation"
 			},
 			"options": {
 				"calculationMethods": {
 					"percentage": {
-						"label": "В процентах от дохода",
-						"description": "По ст. 81 СК РФ"
+						"label": "As Percentage of Income",
+						"description": "According to Art. 81 Family Code"
 					},
 					"fixed": {
-						"label": "Фиксированная сумма",
-						"description": "По ст. 83 СК РФ"
+						"label": "Fixed Amount",
+						"description": "According to Art. 83 Family Code"
 					},
 					"mixed": {
-						"label": "Смешанный вариант",
-						"description": "Процент + фиксированная сумма"
+						"label": "Mixed Option",
+						"description": "Percentage + Fixed Amount"
 					}
 				}
 			},
 			"hero": {
-				"methods": "3 Способа расчёта",
-				"accuracy": "Точность расчёта",
-				"legal": "По СК РФ"
+				"methods": "3 Calculation Methods",
+				"accuracy": "Calculation Accuracy",
+				"legal": "According to Family Code"
 			},
 			"features": {
-				"percentageCalculation": "Расчёт в процентах от дохода",
-				"fixedAmountCalculation": "Расчёт фиксированной суммы",
-				"mixedCalculation": "Смешанный расчёт",
-				"legalCompliance": "Соответствие СК РФ",
-				"accuracy": "Высокая точность расчётов"
+				"percentageCalculation": "Calculation as Percentage of Income",
+				"fixedAmountCalculation": "Fixed Amount Calculation",
+				"mixedCalculation": "Mixed Calculation",
+				"legalCompliance": "Compliance with Family Code",
+				"accuracy": "High Calculation Accuracy"
 			},
 			"seo": {
-				"title": "Калькулятор алиментов онлайн — Расчёт алиментов на детей | Calc1.ru",
-				"description": "Бесплатный онлайн калькулятор алиментов для расчёта алиментов на детей в процентах от дохода или фиксированной сумме. Учитывает количество детей, доход родителя, прожиточный минимум. Соответствует Семейному кодексу РФ.",
-				"keywords": "калькулятор алиментов, расчёт алиментов, алименты на детей, сколько алиментов платить, алименты в процентах, фиксированные алименты, алименты на одного ребёнка, алименты на двоих детей, алименты на троих детей, расчёт алиментов от зарплаты, минимальные алименты, максимальные алименты, калькулятор алиментов онлайн, ст 81 СК РФ, ст 83 СК РФ, семейный кодекс алименты, размер алиментов, как рассчитать алименты, алименты 2024, индексация алиментов",
+				"title": "Alimony Calculator Online — Calculate Child Support | Calc1.ru",
+				"description": "Free online alimony calculator for calculating child support as percentage of income or fixed amount. Accounts for number of children, parent income, living wage. Complies with Family Code.",
+				"keywords": "alimony calculator, child support calculator, calculate alimony, alimony percentage, fixed alimony, alimony for one child, alimony for two children, alimony for three children, alimony from salary, minimum alimony, maximum alimony, online alimony calculator, family code alimony, alimony amount, how to calculate alimony, alimony 2024, alimony indexing",
 				"overview": {
-					"title": "Калькулятор алиментов онлайн",
-					"content": "Онлайн калькулятор алиментов поможет рассчитать размер алиментов на детей в соответствии с Семейным кодексом РФ. Поддерживает расчёт в процентах от дохода, фиксированной сумме и смешанном варианте. Учитывает количество детей, доход родителя, прожиточный минимум и дополнительные расходы.",
-					"additionalContent": "Согласно ст. 81 СК РФ, алименты на несовершеннолетних детей взыскиваются в размере: на одного ребёнка - 1/4 (25%) дохода, на двоих детей - 1/3 (33%) дохода, на троих и более детей - 1/2 (50%) дохода. По ст. 83 СК РФ алименты могут быть установлены в твёрдой денежной сумме, кратной прожиточному минимуму. Калькулятор учитывает все эти варианты и помогает рассчитать точную сумму алиментов.",
+					"title": "Alimony Calculator Online",
+					"content": "Online alimony calculator will help calculate child support amount in accordance with Family Code. Supports calculation as percentage of income, fixed amount and mixed option. Accounts for number of children, parent income, living wage and additional expenses.",
+					"additionalContent": "According to Art. 81 Family Code, alimony for minor children is collected in the following amounts: for one child - 1/4 (25%) of income, for two children - 1/3 (33%) of income, for three or more children - 1/2 (50%) of income. Under Art. 83 Family Code, alimony can be set as fixed amount, multiple of living wage. Calculator accounts for all these options and helps calculate exact alimony amount.",
 					"calculationExamples": {
-						"title": "Примеры расчёта алиментов",
-						"content": "Рассмотрим практические примеры расчёта алиментов для различных ситуаций:",
+						"title": "Alimony Calculation Examples",
+						"content": "Let's consider practical examples of alimony calculation for various situations:",
 						"example1": {
-							"title": "Пример 1: Один ребёнок, доход 50000 ₽",
-							"description": "Расчёт алиментов на одного ребёнка при доходе 50000 ₽",
-							"input": "Количество детей: 1\nДоход: 50000 ₽/мес\nСпособ: В процентах от дохода",
-							"calculation": "Процент от дохода: 25% (1/4)\nАлименты в месяц: 50000 × 0.25 = 12500 ₽\nАлименты в год: 12500 × 12 = 150000 ₽\nОстаток дохода: 50000 - 12500 = 37500 ₽",
-							"result": "Ежемесячная сумма: 12500 ₽, Годовая сумма: 150000 ₽",
-							"type": "Один ребёнок",
-							"note": "На одного ребёнка взыскивается 25% (1/4) от всех видов заработка родителя согласно ст. 81 СК РФ"
+							"title": "Example 1: One Child, Income $50,000",
+							"description": "Alimony calculation for one child with income $50,000",
+							"input": "Number of Children: 1\nIncome: $50,000/month\nMethod: As Percentage of Income",
+							"calculation": "Percentage of Income: 25% (1/4)\nAlimony per Month: $50,000 × 0.25 = $12,500\nAlimony per Year: $12,500 × 12 = $150,000\nRemaining Income: $50,000 - $12,500 = $37,500",
+							"result": "Monthly Amount: $12,500, Annual Amount: $150,000",
+							"type": "One Child",
+							"note": "For one child 25% (1/4) of all types of parent earnings is collected according to Art. 81 Family Code"
 						},
 						"example2": {
-							"title": "Пример 2: Двое детей, доход 80000 ₽",
-							"description": "Расчёт алиментов на двоих детей при доходе 80000 ₽",
-							"input": "Количество детей: 2\nДоход: 80000 ₽/мес\nСпособ: В процентах от дохода",
-							"calculation": "Процент от дохода: 33.33% (1/3)\nАлименты в месяц: 80000 × 0.3333 = 26664 ₽\nАлименты в год: 26664 × 12 = 319968 ₽\nНа одного ребёнка: 13332 ₽/мес\nОстаток дохода: 80000 - 26664 = 53336 ₽",
-							"result": "Ежемесячная сумма: 26664 ₽ (13332 ₽ на каждого), Годовая сумма: 319968 ₽",
-							"type": "Двое детей",
-							"note": "На двоих детей взыскивается 1/3 (33.33%) от всех видов заработка родителя, сумма делится поровну между детьми"
+							"title": "Example 2: Two Children, Income $80,000",
+							"description": "Alimony calculation for two children with income $80,000",
+							"input": "Number of Children: 2\nIncome: $80,000/month\nMethod: As Percentage of Income",
+							"calculation": "Percentage of Income: 33.33% (1/3)\nAlimony per Month: $80,000 × 0.3333 = $26,664\nAlimony per Year: $26,664 × 12 = $319,968\nPer Child: $13,332/month\nRemaining Income: $80,000 - $26,664 = $53,336",
+							"result": "Monthly Amount: $26,664 ($13,332 each), Annual Amount: $319,968",
+							"type": "Two Children",
+							"note": "For two children 1/3 (33.33%) of all types of parent earnings is collected, amount divided equally between children"
 						},
 						"example3": {
-							"title": "Пример 3: Трое детей, доход 60000 ₽",
-							"description": "Расчёт алиментов на троих детей при доходе 60000 ₽",
-							"input": "Количество детей: 3\nДоход: 60000 ₽/мес\nСпособ: В процентах от дохода",
-							"calculation": "Процент от дохода: 50% (1/2)\nАлименты в месяц: 60000 × 0.5 = 30000 ₽\nАлименты в год: 30000 × 12 = 360000 ₽\nНа одного ребёнка: 10000 ₽/мес\nОстаток дохода: 60000 - 30000 = 30000 ₽",
-							"result": "Ежемесячная сумма: 30000 ₽ (10000 ₽ на каждого), Годовая сумма: 360000 ₽",
-							"type": "Трое детей",
-							"note": "На троих и более детей взыскивается 1/2 (50%) от всех видов заработка родителя, сумма делится поровну между всеми детьми"
+							"title": "Example 3: Three Children, Income $60,000",
+							"description": "Alimony calculation for three children with income $60,000",
+							"input": "Number of Children: 3\nIncome: $60,000/month\nMethod: As Percentage of Income",
+							"calculation": "Percentage of Income: 50% (1/2)\nAlimony per Month: $60,000 × 0.5 = $30,000\nAlimony per Year: $30,000 × 12 = $360,000\nPer Child: $10,000/month\nRemaining Income: $60,000 - $30,000 = $30,000",
+							"result": "Monthly Amount: $30,000 ($10,000 each), Annual Amount: $360,000",
+							"type": "Three Children",
+							"note": "For three or more children 1/2 (50%) of all types of parent earnings is collected, amount divided equally among all children"
 						},
 						"example4": {
-							"title": "Пример 4: Фиксированная сумма, прожиточный минимум",
-							"description": "Расчёт алиментов в фиксированной сумме, кратной прожиточному минимуму",
-							"input": "Количество детей: 1\nПрожиточный минимум: 12000 ₽\nКратность: 1.5\nСпособ: Фиксированная сумма",
-							"calculation": "Фиксированная сумма: 12000 × 1.5 = 18000 ₽/мес\nАлименты в год: 18000 × 12 = 216000 ₽",
-							"result": "Ежемесячная сумма: 18000 ₽, Годовая сумма: 216000 ₽",
-							"type": "Фиксированная сумма",
-							"note": "Фиксированная сумма устанавливается по ст. 83 СК РФ, когда родитель имеет нерегулярный доход или получает доход в иностранной валюте"
+							"title": "Example 4: Fixed Amount, Living Wage",
+							"description": "Alimony calculation as fixed amount, multiple of living wage",
+							"input": "Number of Children: 1\nLiving Wage: $12,000\nMultiplier: 1.5\nMethod: Fixed Amount",
+							"calculation": "Fixed Amount: $12,000 × 1.5 = $18,000/month\nAlimony per Year: $18,000 × 12 = $216,000",
+							"result": "Monthly Amount: $18,000, Annual Amount: $216,000",
+							"type": "Fixed Amount",
+							"note": "Fixed amount is set under Art. 83 Family Code when parent has irregular income or receives income in foreign currency"
 						},
 						"example5": {
-							"title": "Пример 5: Смешанный вариант",
-							"description": "Расчёт алиментов в смешанном варианте: процент + фиксированная сумма",
-							"input": "Количество детей: 2\nДоход: 40000 ₽/мес\nПроцент: 20% (по соглашению)\nФиксированная сумма: 5000 ₽/мес",
-							"calculation": "От дохода: 40000 × 0.2 = 8000 ₽\nФиксированная часть: 5000 ₽\nИтого в месяц: 8000 + 5000 = 13000 ₽\nАлименты в год: 13000 × 12 = 156000 ₽",
-							"result": "Ежемесячная сумма: 13000 ₽, Годовая сумма: 156000 ₽",
-							"type": "Смешанный вариант",
-							"note": "Смешанный вариант применяется, когда есть дополнительный доход или по соглашению сторон"
+							"title": "Example 5: Mixed Option",
+							"description": "Alimony calculation in mixed option: percentage + fixed amount",
+							"input": "Number of Children: 2\nIncome: $40,000/month\nPercentage: 20% (by agreement)\nFixed Amount: $5,000/month",
+							"calculation": "From Income: $40,000 × 0.2 = $8,000\nFixed Part: $5,000\nTotal per Month: $8,000 + $5,000 = $13,000\nAlimony per Year: $13,000 × 12 = $156,000",
+							"result": "Monthly Amount: $13,000, Annual Amount: $156,000",
+							"type": "Mixed Option",
+							"note": "Mixed option is used when there is additional income or by agreement of parties"
 						},
 						"example6": {
-							"title": "Пример 6: Высокий доход, четверо детей",
-							"description": "Расчёт алиментов на четверых детей при высоком доходе",
-							"input": "Количество детей: 4\nДоход: 150000 ₽/мес\nСпособ: В процентах от дохода",
-							"calculation": "Процент от дохода: 50% (1/2, максимум)\nАлименты в месяц: 150000 × 0.5 = 75000 ₽\nАлименты в год: 75000 × 12 = 900000 ₽\nНа одного ребёнка: 18750 ₽/мес\nОстаток дохода: 150000 - 75000 = 75000 ₽",
-							"result": "Ежемесячная сумма: 75000 ₽ (18750 ₽ на каждого), Годовая сумма: 900000 ₽",
-							"type": "Четверо детей",
-							"note": "На троих и более детей максимальный процент составляет 50% от дохода, независимо от количества детей"
+							"title": "Example 6: High Income, Four Children",
+							"description": "Alimony calculation for four children with high income",
+							"input": "Number of Children: 4\nIncome: $150,000/month\nMethod: As Percentage of Income",
+							"calculation": "Percentage of Income: 50% (1/2, maximum)\nAlimony per Month: $150,000 × 0.5 = $75,000\nAlimony per Year: $75,000 × 12 = $900,000\nPer Child: $18,750/month\nRemaining Income: $150,000 - $75,000 = $75,000",
+							"result": "Monthly Amount: $75,000 ($18,750 each), Annual Amount: $900,000",
+							"type": "Four Children",
+							"note": "For three or more children maximum percentage is 50% of income, regardless of number of children"
 						}
 					}
 				},
 				"calculation": {
-					"title": "Как рассчитываются алименты",
-					"content": "Расчёт алиментов включает несколько этапов в зависимости от способа взыскания и количества детей.",
-					"percentage": "В процентах: Алименты = Доход × Процент (25% - 1 ребёнок, 33% - 2 ребёнка, 50% - 3+ ребёнка)",
-					"fixed": "Фиксированная сумма: Алименты = Прожиточный минимум × Кратность",
-					"mixed": "Смешанный: Алименты = (Доход × Процент) + Фиксированная сумма",
-					"yearly": "Годовая сумма: Алименты в месяц × 12",
-					"perChild": "На одного ребёнка: Общая сумма ÷ Количество детей",
+					"title": "How Alimony Is Calculated",
+					"content": "Alimony calculation includes several steps depending on collection method and number of children.",
+					"percentage": "As percentage: Alimony = Income × Percentage (25% - 1 child, 33% - 2 children, 50% - 3+ children)",
+					"fixed": "Fixed amount: Alimony = Living Wage × Multiplier",
+					"mixed": "Mixed: Alimony = (Income × Percentage) + Fixed Amount",
+					"yearly": "Annual amount: Alimony per month × 12",
+					"perChild": "Per child: Total Amount ÷ Number of Children",
 					"steps": {
-						"count": "Определение количества детей",
-						"method": "Выбор способа расчёта (процент, фиксированная, смешанная)",
-						"income": "Расчёт алиментов от дохода или фиксированной суммы",
-						"distribution": "Распределение между детьми поровну"
+						"count": "Determining number of children",
+						"method": "Choosing calculation method (percentage, fixed, mixed)",
+						"income": "Calculating alimony from income or fixed amount",
+						"distribution": "Distribution among children equally"
 					}
 				},
 				"advantages": {
-					"title": "Преимущества калькулятора алиментов",
-					"content": "Использование калькулятора алиментов даёт множество преимуществ: точный расчёт в соответствии с СК РФ, планирование бюджета, понимание своих обязательств.",
-					"accuracy": "Точный расчёт по СК РФ",
-					"planning": "Планирование бюджета",
-					"legal": "Соответствие законодательству",
-					"convenience": "Удобный и быстрый расчёт"
+					"title": "Alimony Calculator Advantages",
+					"content": "Using alimony calculator provides many advantages: accurate calculation in accordance with Family Code, budget planning, understanding your obligations.",
+					"accuracy": "Accurate calculation according to Family Code",
+					"planning": "Budget planning",
+					"legal": "Compliance with legislation",
+					"convenience": "Convenient and fast calculation"
 				},
 				"tips": {
-					"title": "Советы по расчёту алиментов",
-					"content": "Для получения точного результата следуйте нашим рекомендациям при расчёте алиментов.",
-					"income": "Учитывайте все виды доходов: зарплата, премии, доходы от предпринимательства, пенсия",
-					"agreement": "При наличии соглашения об уплате алиментов используйте условия соглашения",
-					"indexation": "Помните об индексации фиксированных алиментов при изменении прожиточного минимума",
-					"taxes": "Алименты рассчитываются от дохода после удержания НДФЛ (13%)"
+					"title": "Alimony Calculation Tips",
+					"content": "For accurate result follow our recommendations when calculating alimony.",
+					"income": "Account for all types of income: salary, bonuses, business income, pension",
+					"agreement": "If there is alimony agreement, use agreement terms",
+					"indexation": "Remember about fixed alimony indexing when living wage changes",
+					"taxes": "Alimony is calculated from income after personal income tax (13%) deduction"
 				},
 				"faq": {
-					"title": "Часто задаваемые вопросы о расчёте алиментов",
+					"title": "Frequently Asked Questions About Alimony Calculation",
 					"faqItems": [
 						{
-							"q": "Как рассчитать алименты на одного ребёнка?",
-							"a": "На одного ребёнка взыскивается 25% (1/4) от всех видов дохода родителя согласно ст. 81 СК РФ. Пример: доход 50000 ₽, алименты = 50000 × 0.25 = 12500 ₽/мес."
+							"q": "How to calculate alimony for one child?",
+							"a": "For one child 25% (1/4) of all types of parent income is collected according to Art. 81 Family Code. Example: income $50,000, alimony = $50,000 × 0.25 = $12,500/month."
 						},
 						{
-							"q": "Как рассчитать алименты на двоих детей?",
-							"a": "На двоих детей взыскивается 33.33% (1/3) от всех видов дохода родителя. Сумма делится поровну между детьми. Пример: доход 60000 ₽, алименты = 60000 × 0.3333 = 20000 ₽/мес (10000 ₽ на каждого ребёнка)."
+							"q": "How to calculate alimony for two children?",
+							"a": "For two children 33.33% (1/3) of all types of parent income is collected. Amount divided equally between children. Example: income $60,000, alimony = $60,000 × 0.3333 = $20,000/month ($10,000 per child)."
 						},
 						{
-							"q": "Как рассчитать алименты на троих детей?",
-							"a": "На троих и более детей взыскивается 50% (1/2) от всех видов дохода родителя - это максимальный процент. Сумма делится поровну между всеми детьми. Пример: доход 80000 ₽, алименты = 80000 × 0.5 = 40000 ₽/мес (13333 ₽ на каждого при 3 детях)."
+							"q": "How to calculate alimony for three children?",
+							"a": "For three or more children 50% (1/2) of all types of parent income is collected - this is maximum percentage. Amount divided equally among all children. Example: income $80,000, alimony = $80,000 × 0.5 = $40,000/month ($13,333 each for 3 children)."
 						},
 						{
-							"q": "С какого дохода удерживаются алименты?",
-							"a": "Алименты удерживаются со всех видов заработка и дохода: зарплата, премии, гонорары, доходы от предпринимательства, пенсия, стипендия, пособия (кроме единовременных), доходы от сдачи имущества в аренду."
+							"q": "From what income is alimony withheld?",
+							"a": "Alimony is withheld from all types of earnings and income: salary, bonuses, fees, business income, pension, scholarship, benefits (except one-time), rental income."
 						},
 						{
-							"q": "Как рассчитываются алименты в фиксированной сумме?",
-							"a": "Фиксированная сумма устанавливается по ст. 83 СК РФ кратной прожиточному минимуму. Формула: Алименты = Прожиточный минимум × Кратность. Пример: прожиточный минимум 12000 ₽, кратность 1.5, алименты = 12000 × 1.5 = 18000 ₽/мес."
+							"q": "How is alimony calculated as fixed amount?",
+							"a": "Fixed amount is set under Art. 83 Family Code as multiple of living wage. Formula: Alimony = Living Wage × Multiplier. Example: living wage $12,000, multiplier 1.5, alimony = $12,000 × 1.5 = $18,000/month."
 						},
 						{
-							"q": "Можно ли установить алименты больше 50% от дохода?",
-							"a": "По общему правилу максимальный процент составляет 50%, но по решению суда может быть увеличено до 70% в исключительных случаях (ст. 99 Закона об исполнительном производстве). Также при задолженности по алиментам допускается удержание до 70%."
+							"q": "Can alimony be set above 50% of income?",
+							"a": "Generally maximum percentage is 50%, but court decision can increase it to 70% in exceptional cases (Art. 99 Enforcement Proceedings Law). Also with alimony debt withholding up to 70% is allowed."
 						},
 						{
-							"q": "Как индексируются алименты в фиксированной сумме?",
-							"a": "Алименты в фиксированной сумме индексируются пропорционально росту прожиточного минимума в регионе. При изменении прожиточного минимума судебный пристав пересчитывает размер алиментов автоматически."
+							"q": "How is fixed amount alimony indexed?",
+							"a": "Fixed amount alimony is indexed proportionally to growth of living wage in region. When living wage changes, bailiff recalculates alimony amount automatically."
 						},
 						{
-							"q": "Считаются ли алименты с дохода до или после уплаты налогов?",
-							"a": "Алименты рассчитываются от дохода после удержания НДФЛ (13%). То есть если зарплата 100000 ₽, то налог = 13000 ₽, доход после налогов = 87000 ₽, алименты на 1 ребёнка = 87000 × 0.25 = 21750 ₽."
+							"q": "Is alimony calculated from income before or after taxes?",
+							"a": "Alimony is calculated from income after personal income tax (13%) deduction. That is if salary is $100,000, tax = $13,000, income after taxes = $87,000, alimony for 1 child = $87,000 × 0.25 = $21,750."
 						},
 						{
-							"q": "Как рассчитать алименты при нерегулярном доходе?",
-							"a": "При нерегулярном доходе или получении дохода в иностранной валюте алименты устанавливаются в фиксированной сумме (ст. 83 СК РФ). Размер определяется судом с учётом материального положения сторон и прожиточного минимума."
+							"q": "How to calculate alimony with irregular income?",
+							"a": "With irregular income or income in foreign currency alimony is set as fixed amount (Art. 83 Family Code). Amount determined by court considering material position of parties and living wage."
 						},
 						{
-							"q": "Как делятся алименты между несколькими детьми?",
-							"a": "Общая сумма алиментов делится поровну между всеми детьми. Например, при доходе 60000 ₽ и 2 детях: алименты = 20000 ₽ (33%), на каждого ребёнка = 10000 ₽."
+							"q": "How is alimony divided between multiple children?",
+							"a": "Total alimony amount is divided equally among all children. For example, with income $60,000 and 2 children: alimony = $20,000 (33%), per child = $10,000."
 						},
 						{
-							"q": "Можно ли установить алименты по соглашению сторон?",
-							"a": "Да, родители могут заключить соглашение об уплате алиментов (ст. 99-105 СК РФ), в котором могут установить размер алиментов, который не может быть меньше, чем предусмотрено ст. 81 СК РФ (25%, 33%, 50%)."
+							"q": "Can alimony be set by agreement of parties?",
+							"a": "Yes, parents can conclude alimony agreement (Art. 99-105 Family Code), in which they can set alimony amount that cannot be less than provided by Art. 81 Family Code (25%, 33%, 50%)."
 						},
 						{
-							"q": "Как рассчитываются алименты при наличии детей от разных браков?",
-							"a": "Алименты взыскиваются в общем размере для всех детей, но сумма делится поровну между всеми детьми. Например, если 2 ребёнка от первого брака и 1 от второго, общая сумма = 50% от дохода, на каждого ребёнка = 50% ÷ 3 = 16.67%."
+							"q": "How is alimony calculated with children from different marriages?",
+							"a": "Alimony is collected in general amount for all children, but amount divided equally among all children. For example, if 2 children from first marriage and 1 from second, total = 50% of income, per child = 50% ÷ 3 = 16.67%."
 						},
 						{
-							"q": "Каков минимальный размер алиментов?",
-							"a": "Минимальный размер алиментов не установлен законом, но суд должен учитывать прожиточный минимум. На практике минимальные алименты обычно не ниже 1/4 части прожиточного минимума на ребёнка в регионе."
+							"q": "What is minimum alimony amount?",
+							"a": "Minimum alimony amount is not set by law, but court must consider living wage. In practice minimum alimony usually not less than 1/4 of living wage for child in region."
 						},
 						{
-							"q": "Как рассчитываются алименты на ребёнка-инвалида?",
-							"a": "На ребёнка-инвалида алименты взыскиваются в том же размере (25%, 33%, 50%), но дополнительно могут быть взысканы расходы на лечение, реабилитацию, уход (ст. 86 СК РФ)."
+							"q": "How is alimony calculated for disabled child?",
+							"a": "For disabled child alimony is collected in same amount (25%, 33%, 50%), but additionally expenses for treatment, rehabilitation, care can be collected (Art. 86 Family Code)."
 						},
 						{
-							"q": "Можно ли уменьшить размер алиментов?",
-							"a": "Размер алиментов может быть уменьшен судом при наличии уважительных причин: рождение других детей, инвалидность плательщика, низкий доход, иные обстоятельства, заслуживающие внимания (ст. 119 СК РФ)."
+							"q": "Can alimony amount be reduced?",
+							"a": "Alimony amount can be reduced by court with valid reasons: birth of other children, payer disability, low income, other circumstances deserving attention (Art. 119 Family Code)."
 						},
 						{
-							"q": "Как рассчитываются алименты при зарплате менее прожиточного минимума?",
-							"a": "Даже при низком доходе алименты рассчитываются в процентах. Если получается сумма меньше прожиточного минимума, взыскатель может обратиться в суд для установления алиментов в фиксированной сумме, кратной прожиточному минимуму."
+							"q": "How is alimony calculated with salary below living wage?",
+							"a": "Even with low income alimony is calculated as percentage. If resulting amount is less than living wage, collector can apply to court to set alimony as fixed amount, multiple of living wage."
 						},
 						{
-							"q": "Учитываются ли премии при расчёте алиментов?",
-							"a": "Да, все виды премий (ежемесячные, квартальные, годовые) учитываются при расчёте алиментов. Премии включаются в базу для расчёта и облагаются алиментами в том же проценте."
+							"q": "Are bonuses considered in alimony calculation?",
+							"a": "Yes, all types of bonuses (monthly, quarterly, annual) are considered in alimony calculation. Bonuses are included in calculation base and subject to alimony at same percentage."
 						},
 						{
-							"q": "Как рассчитываются алименты при работе по совместительству?",
-							"a": "Алименты удерживаются со всех мест работы. С каждого места работы удерживается установленный процент от дохода. Например, при доходе 50000 ₽ на основной работе и 20000 ₽ по совместительству, алименты = (50000 + 20000) × 0.25 = 17500 ₽ (на 1 ребёнка)."
+							"q": "How is alimony calculated with part-time work?",
+							"a": "Alimony is withheld from all workplaces. From each workplace established percentage of income is withheld. For example, with income $50,000 at main job and $20,000 part-time, alimony = ($50,000 + $20,000) × 0.25 = $17,500 (for 1 child)."
 						},
 						{
-							"q": "Как рассчитываются алименты при неофициальном доходе?",
-							"a": "При неофициальном доходе алименты могут быть установлены в фиксированной сумме на основе доказательств реального дохода или уровня жизни плательщика. Суд учитывает все обстоятельства дела."
+							"q": "How is alimony calculated with unofficial income?",
+							"a": "With unofficial income alimony can be set as fixed amount based on evidence of real income or payer standard of living. Court considers all circumstances of case."
 						},
 						{
-							"q": "Можно ли рассчитать алименты в смешанном варианте?",
-							"a": "Да, смешанный вариант применяется, когда есть основной доход (в процентах) и дополнительный доход или дополнительные расходы на ребёнка (фиксированная сумма). Размер определяется соглашением сторон или решением суда."
+							"q": "Can alimony be calculated in mixed option?",
+							"a": "Yes, mixed option is used when there is main income (as percentage) and additional income or additional child expenses (fixed amount). Amount determined by agreement of parties or court decision."
 						},
 						{
-							"q": "Как рассчитываются алименты при получении дохода в иностранной валюте?",
-							"a": "При получении дохода в иностранной валюте алименты устанавливаются в фиксированной сумме в рублях (ст. 83 СК РФ). Размер определяется судом с учётом курса валюты и материального положения сторон."
+							"q": "How is alimony calculated when receiving income in foreign currency?",
+							"a": "When receiving income in foreign currency alimony is set as fixed amount in rubles (Art. 83 Family Code). Amount determined by court considering exchange rate and material position of parties."
 						},
 						{
-							"q": "Как рассчитываются алименты при увольнении?",
-							"a": "После увольнения алименты рассчитываются от среднего заработка за последние 3 месяца или от размера пособия по безработице. Также возможно установление алиментов в фиксированной сумме."
+							"q": "How is alimony calculated upon dismissal?",
+							"a": "After dismissal alimony is calculated from average earnings for last 3 months or from unemployment benefit amount. Also setting alimony as fixed amount is possible."
 						},
 						{
-							"q": "Как рассчитываются алименты при работе ИП?",
-							"a": "Для ИП алименты рассчитываются от чистой прибыли (доходы минус расходы) или могут быть установлены в фиксированной сумме. При регулярной прибыли - в процентах, при нерегулярной - в фиксированной сумме."
+							"q": "How is alimony calculated for individual entrepreneur?",
+							"a": "For individual entrepreneur alimony is calculated from net profit (income minus expenses) or can be set as fixed amount. With regular profit - as percentage, with irregular - as fixed amount."
 						},
 						{
-							"q": "Можно ли изменить размер алиментов после установления?",
-							"a": "Да, размер алиментов может быть изменён судом при изменении материального или семейного положения сторон, состояния здоровья, иных обстоятельств (ст. 119 СК РФ). Требуется обращение в суд с соответствующим заявлением."
+							"q": "Can alimony amount be changed after establishment?",
+							"a": "Yes, alimony amount can be changed by court when material or family position of parties, health status, other circumstances change (Art. 119 Family Code). Court application with appropriate statement is required."
 						},
 						{
-							"q": "Как рассчитываются алименты при наличии детей от разных матерей?",
-							"a": "Общая сумма алиментов составляет 50% от дохода (максимум), независимо от количества детей и их матерей. Сумма делится поровну между всеми детьми. Например, 2 ребёнка от первой жены и 2 от второй: алименты = 50% от дохода, на каждого ребёнка = 12.5%."
+							"q": "How is alimony calculated with children from different mothers?",
+							"a": "Total alimony amount is 50% of income (maximum), regardless of number of children and their mothers. Amount divided equally among all children. For example, 2 children from first wife and 2 from second: alimony = 50% of income, per child = 12.5%."
 						},
 						{
-							"q": "Учитываются ли доходы от сдачи имущества в аренду?",
-							"a": "Да, доходы от сдачи имущества в аренду учитываются при расчёте алиментов. Эти доходы включаются в общую базу для расчёта алиментов в процентах или могут учитываться при установлении фиксированной суммы."
+							"q": "Is rental income considered?",
+							"a": "Yes, rental income is considered in alimony calculation. These incomes are included in general base for alimony calculation as percentage or can be considered when setting fixed amount."
 						},
 						{
-							"q": "Как рассчитываются алименты при задолженности?",
-							"a": "При наличии задолженности по алиментам удерживается до 70% от дохода (ст. 99 Закона об исполнительном производстве). Сначала погашается задолженность, затем текущие алименты."
+							"q": "How is alimony calculated with debt?",
+							"a": "With alimony debt up to 70% of income is withheld (Art. 99 Enforcement Proceedings Law). Debt is paid first, then current alimony."
 						},
 						{
-							"q": "Как рассчитываются алименты на ребёнка старше 18 лет, если он учится?",
-							"a": "Алименты на совершеннолетних детей взыскиваются только при их нетрудоспособности и нуждаемости (ст. 85 СК РФ). На обучающихся очно студентов алименты не взыскиваются автоматически, требуется отдельное решение суда."
+							"q": "How is alimony calculated for child over 18 if studying?",
+							"a": "Alimony for adult children is collected only when they are disabled and needy (Art. 85 Family Code). For full-time students alimony is not collected automatically, separate court decision is required."
 						},
 						{
-							"q": "Можно ли установить алименты меньше 25% на одного ребёнка?",
-							"a": "По соглашению сторон можно установить размер алиментов, но он не может быть меньше предусмотренного законом (25% на одного ребёнка). Только суд может уменьшить размер при наличии уважительных причин (ст. 119 СК РФ)."
+							"q": "Can alimony be set below 25% for one child?",
+							"a": "By agreement of parties alimony amount can be set, but it cannot be less than provided by law (25% for one child). Only court can reduce amount with valid reasons (Art. 119 Family Code)."
 						},
 						{
-							"q": "Как рассчитываются алименты при работе вахтовым методом?",
-							"a": "При работе вахтовым методом алименты рассчитываются от среднего заработка за период. Если доход стабильный - в процентах, если нерегулярный - может быть установлена фиксированная сумма с учётом среднего дохода."
+							"q": "How is alimony calculated with shift work?",
+							"a": "With shift work alimony is calculated from average earnings for period. If income is stable - as percentage, if irregular - fixed amount can be set considering average income."
 						},
 						{
-							"q": "Учитываются ли доходы от продажи имущества при расчёте алиментов?",
-							"a": "Доходы от единовременной продажи имущества обычно не учитываются в ежемесячных алиментах. Однако такие доходы могут быть учтены судом при определении размера фиксированных алиментов или при установлении размера алиментов по соглашению."
+							"q": "Is income from property sale considered in alimony calculation?",
+							"a": "Income from one-time property sale usually not considered in monthly alimony. However such income can be considered by court when determining fixed alimony amount or when setting alimony amount by agreement."
 						},
 						{
-							"q": "Как рассчитываются алименты при получении пенсии?",
-							"a": "Алименты удерживаются и с пенсии (кроме пенсии по потере кормильца). Размер тот же: 25% на одного ребёнка, 33% на двоих, 50% на троих и более. Пенсия учитывается в общую базу дохода."
+							"q": "How is alimony calculated when receiving pension?",
+							"a": "Alimony is also withheld from pension (except survivor pension). Amount is same: 25% for one child, 33% for two, 50% for three or more. Pension is included in general income base."
 						},
 						{
-							"q": "Можно ли рассчитать алименты с учётом индексации?",
-							"a": "Да, фиксированные алименты индексируются автоматически при изменении прожиточного минимума. Алименты в процентах индексируются автоматически при росте дохода. Калькулятор позволяет рассчитать текущий размер с учётом прожиточного минимума."
+							"q": "Can alimony be calculated accounting for indexing?",
+							"a": "Yes, fixed alimony is indexed automatically when living wage changes. Percentage alimony is indexed automatically when income grows. Calculator allows calculating current amount considering living wage."
 						}
 					]
 				}
 			}
 		},
 		"profit-margin": {
-			"title": "Калькулятор маржинальности",
-			"description": "Расчёт маржи, наценки и рентабельности бизнеса",
+			"title": "Profit Margin Calculator",
+			"description": "Calculate margin, markup and business profitability",
 			"breadcrumbs": {
-				"category": "Финансы"
+				"category": "Finance"
 			},
 			"form": {
-				"title": "Параметры расчёта",
-				"calculationType": "Тип расчёта",
-				"revenue": "Выручка (₽)",
-				"cost": "Себестоимость (₽)",
-				"profit": "Прибыль (₽)",
-				"margin": "Маржа (%)",
-				"markup": "Наценка (%)",
-				"calculate": "Рассчитать",
-				"reset": "Сбросить",
+				"title": "Calculation Parameters",
+				"calculationType": "Calculation Type",
+				"revenue": "Revenue ($)",
+				"cost": "Cost ($)",
+				"profit": "Profit ($)",
+				"margin": "Margin (%)",
+				"markup": "Markup (%)",
+				"calculate": "Calculate",
+				"reset": "Reset",
 				"errors": {
-					"title": "Ошибки в данных",
-					"revenueRequired": "Укажите выручку",
-					"invalidRevenue": "Выручка должна быть больше 0",
-					"costRequired": "Укажите себестоимость",
-					"invalidCost": "Себестоимость должна быть больше 0 и меньше выручки",
-					"profitRequired": "Укажите прибыль",
-					"invalidProfit": "Прибыль должна быть больше 0",
-					"marginRequired": "Укажите маржу",
-					"invalidMargin": "Маржа должна быть от 0 до 100%"
+					"title": "Data Errors",
+					"revenueRequired": "Please specify revenue",
+					"invalidRevenue": "Revenue must be greater than 0",
+					"costRequired": "Please specify cost",
+					"invalidCost": "Cost must be greater than 0 and less than revenue",
+					"profitRequired": "Please specify profit",
+					"invalidProfit": "Profit must be greater than 0",
+					"marginRequired": "Please specify margin",
+					"invalidMargin": "Margin must be from 0 to 100%"
 				}
 			},
 			"results": {
-				"title": "Результаты расчёта",
-				"grossMargin": "Валовая маржа",
-				"profitMargin": "Маржа прибыли",
-				"markup": "Наценка",
-				"revenue": "Выручка",
-				"cost": "Себестоимость",
-				"profit": "Прибыль",
-				"roi": "Рентабельность",
-				"placeholder": "Введите параметры для расчёта"
+				"title": "Calculation Results",
+				"grossMargin": "Gross Margin",
+				"profitMargin": "Profit Margin",
+				"markup": "Markup",
+				"revenue": "Revenue",
+				"cost": "Cost",
+				"profit": "Profit",
+				"roi": "ROI",
+				"placeholder": "Enter parameters for calculation"
 			},
 			"options": {
 				"calculationTypes": {
 					"margin": {
-						"label": "Расчёт маржи",
-						"description": "Выручка и себестоимость"
+						"label": "Calculate Margin",
+						"description": "Revenue and cost"
 					},
 					"markup": {
-						"label": "Расчёт наценки",
-						"description": "Себестоимость и наценка"
+						"label": "Calculate Markup",
+						"description": "Cost and markup"
 					},
 					"revenue": {
-						"label": "Расчёт выручки",
-						"description": "Себестоимость и маржа"
+						"label": "Calculate Revenue",
+						"description": "Cost and margin"
 					}
 				}
 			},
 			"hero": {
-				"types": "3 Типа расчётов",
-				"accuracy": "Точность расчёта",
-				"business": "Для бизнеса"
+				"types": "3 Calculation Types",
+				"accuracy": "Calculation Accuracy",
+				"business": "For Business"
 			},
 			"features": {
-				"marginCalculation": "Расчёт маржинальности",
-				"markupCalculation": "Расчёт наценки",
-				"profitAnalysis": "Анализ прибыли",
-				"roiCalculation": "Расчёт рентабельности",
-				"accuracy": "Высокая точность расчётов"
+				"marginCalculation": "Profitability Calculation",
+				"markupCalculation": "Markup Calculation",
+				"profitAnalysis": "Profit Analysis",
+				"roiCalculation": "ROI Calculation",
+				"accuracy": "High Calculation Accuracy"
 			},
 			"seo": {
-				"title": "Калькулятор маржинальности онлайн — Расчёт маржи и наценки | Calc1.ru",
-				"description": "Бесплатный онлайн калькулятор маржинальности для расчёта маржи, наценки и рентабельности бизнеса. Рассчитывает валовую маржу, маржу прибыли, наценку и ROI. Помогает принимать финансовые решения.",
-				"keywords": "калькулятор маржинальности, расчёт маржи, маржа прибыли, валовая маржа, наценка, рентабельность, ROI, маржинальность бизнеса, расчёт наценки, маржа от выручки, маржа от себестоимости, калькулятор маржи онлайн, калькулятор наценки, расчёт рентабельности, финансовая маржа, операционная маржа, чистая маржа, маржа в процентах, как рассчитать маржу, калькулятор рентабельности",
+				"title": "Profit Margin Calculator Online — Calculate Margin and Markup | Calc1.ru",
+				"description": "Free online profit margin calculator for calculating margin, markup and business profitability. Calculates gross margin, profit margin, markup and ROI. Helps make financial decisions.",
+				"keywords": "profit margin calculator, margin calculation, profit margin, gross margin, markup, profitability, ROI, business profitability, markup calculation, margin from revenue, margin from cost, online margin calculator, markup calculator, profitability calculation, financial margin, operating margin, net margin, margin percentage, how to calculate margin, ROI calculator",
 				"overview": {
-					"title": "Калькулятор маржинальности онлайн",
-					"content": "Онлайн калькулятор маржинальности поможет рассчитать маржу, наценку и рентабельность бизнеса. Поддерживает расчёт маржи от выручки, наценки от себестоимости, выручки при известной марже и других финансовых показателей.",
-					"additionalContent": "Маржа - это показатель рентабельности, показывающий процент прибыли от выручки. Валовая маржа = (Выручка - Себестоимость) / Выручка × 100%. Маржа прибыли = (Выручка - Все расходы) / Выручка × 100%. Наценка = (Выручка - Себестоимость) / Себестоимость × 100%. Калькулятор учитывает все эти показатели и помогает принимать финансовые решения.",
+					"title": "Profit Margin Calculator Online",
+					"content": "Online profit margin calculator will help calculate margin, markup and business profitability. Supports calculation of margin from revenue, markup from cost, revenue with known margin and other financial indicators.",
+					"additionalContent": "Margin is profitability indicator showing percentage of profit from revenue. Gross Margin = (Revenue - Cost) / Revenue × 100%. Profit Margin = (Revenue - All Expenses) / Revenue × 100%. Markup = (Revenue - Cost) / Cost × 100%. Calculator accounts for all these indicators and helps make financial decisions.",
 					"calculationExamples": {
 						"title": "Примеры расчёта маржинальности",
 						"content": "Рассмотрим практические примеры расчёта маржинальности для различных бизнес-ситуаций:",
