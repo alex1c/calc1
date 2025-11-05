@@ -358,7 +358,7 @@ export default async function TimePage({ params: { locale } }: Props) {
 				{/* Calculators Grid */}
 				<div className='mb-12'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-6'>
-						{t('common.availableCalculators') || 'Доступные калькуляторы'}
+						{t('common.availableCalculators')}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 						{calculators.map((calculator) => (
@@ -500,15 +500,15 @@ export default async function TimePage({ params: { locale } }: Props) {
 							name: 'Calc1.ru',
 							url: 'https://calc1.ru',
 						},
-						about: {
-							'@type': 'Thing',
-							name: 'Калькуляторы времени и дат',
-							description:
-								'Онлайн-калькуляторы для работы со временем и датами',
-						},
-						mainEntity: {
-							'@type': 'ItemList',
-							name: 'Калькуляторы времени и дат',
+					about: {
+						'@type': 'Thing',
+						name: seoData?.title || tCategories('title'),
+						description:
+							seoData?.description || tCategories('description'),
+					},
+					mainEntity: {
+						'@type': 'ItemList',
+						name: seoData?.title || tCategories('title'),
 							numberOfItems: calculators.length,
 							itemListElement: calculators.map((calc, idx) => ({
 								'@type': 'ListItem',
@@ -556,7 +556,7 @@ export default async function TimePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

@@ -249,7 +249,7 @@ export default async function AgePage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: (await import(`../../../../messages/${locale}.json`)).default.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

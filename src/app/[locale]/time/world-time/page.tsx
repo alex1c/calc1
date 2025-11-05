@@ -117,11 +117,12 @@ export default async function WorldTimePage({ params: { locale } }: Props) {
 		},
 	];
 
-	// Get FAQ items for structured data
+	// Get FAQ items and HowTo for structured data
 	const { loadMergedTimeTranslations } = await import('@/lib/i18n-utils');
 	const messages = await loadMergedTimeTranslations(locale);
 	const faqRaw = messages.calculators?.worldTime?.seo?.faq?.faqItems || [];
 	const faq = Array.isArray(faqRaw) ? faqRaw : [];
+	const howTo = messages.calculators?.worldTime?.seo?.howTo;
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -259,7 +260,7 @@ export default async function WorldTimePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: (await import(`../../../../messages/${locale}.json`)).default.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -280,45 +281,46 @@ export default async function WorldTimePage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как использовать калькулятор мирового времени',
-						description:
-							'Пошаговая инструкция по использованию калькулятора мирового времени для работы с разными часовыми поясами',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Найти нужный город',
-								text: 'Используйте поиск по названию города или выберите из списка популярных городов',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавить город',
-								text: 'Выберите город из результатов поиска, и он автоматически добавится к списку отображаемых городов',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Просмотреть время',
-								text: 'Калькулятор автоматически покажет текущее время в добавленных городах с учётом их часовых поясов',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Сравнить время',
-								text: 'Все города отображаются одновременно, что позволяет легко сравнить время между разными часовыми поясами',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Настроить формат',
-								text: 'В настройках можно выбрать формат времени (12/24 часа), отображение секунд, даты и других параметров',
-							},
-						],
-					}),
-				}}
-			/>
+			{howTo && (
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							'@context': 'https://schema.org',
+							'@type': 'HowTo',
+							name: howTo.title,
+							description: howTo.description,
+							step: [
+								{
+									'@type': 'HowToStep',
+									name: howTo.step1?.name,
+									text: howTo.step1?.text,
+								},
+								{
+									'@type': 'HowToStep',
+									name: howTo.step2?.name,
+									text: howTo.step2?.text,
+								},
+								{
+									'@type': 'HowToStep',
+									name: howTo.step3?.name,
+									text: howTo.step3?.text,
+								},
+								{
+									'@type': 'HowToStep',
+									name: howTo.step4?.name,
+									text: howTo.step4?.text,
+								},
+								{
+									'@type': 'HowToStep',
+									name: howTo.step5?.name,
+									text: howTo.step5?.text,
+								},
+							],
+						}),
+					}}
+				/>
+			)}
 		</div>
 	);
 }

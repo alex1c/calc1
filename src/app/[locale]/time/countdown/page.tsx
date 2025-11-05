@@ -259,7 +259,7 @@ export default async function CountdownPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: (await import(`../../../../messages/${locale}.json`)).default.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

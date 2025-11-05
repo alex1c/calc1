@@ -2160,6 +2160,30 @@
           "India": "India",
           "UTC+5:30": "UTC+5:30"
         },
+        "howTo": {
+          "title": "Come usare il calcolatore dell'ora mondiale",
+          "description": "Istruzioni passo-passo per usare il calcolatore dell'ora mondiale per lavorare con diversi fusi orari",
+          "step1": {
+            "name": "Trova la città desiderata",
+            "text": "Usa la ricerca per nome della città o seleziona dalla lista delle città popolari"
+          },
+          "step2": {
+            "name": "Aggiungi città",
+            "text": "Seleziona la città dai risultati della ricerca e verrà automaticamente aggiunta all'elenco delle città visualizzate"
+          },
+          "step3": {
+            "name": "Visualizza l'ora",
+            "text": "Il calcolatore mostrerà automaticamente l'ora corrente nelle città aggiunte, tenendo conto dei loro fusi orari"
+          },
+          "step4": {
+            "name": "Confronta l'ora",
+            "text": "Tutte le città vengono visualizzate contemporaneamente, permettendo di confrontare facilmente l'ora tra diversi fusi orari"
+          },
+          "step5": {
+            "name": "Imposta il formato",
+            "text": "Nelle impostazioni puoi scegliere il formato dell'ora (12/24 ore), visualizzazione dei secondi, data e altri parametri"
+          }
+        },
         "tips": {
           "title": "Consigli per l'uso",
           "tip1": "Aggiungi le città utilizzate di frequente",
