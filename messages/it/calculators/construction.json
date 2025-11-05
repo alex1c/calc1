@@ -39,7 +39,7 @@
         "rollArea": "Area di un rotolo",
         "reserve": "Azione",
         "recommendation": "Raccomandazione",
-        "recommendationText": "Ti consigliamo di utilizzare rotoli {consigliati} per la regolazione del modello e le riparazioni future",
+        "recommendationText": "Ti consigliamo di utilizzare {recommended} rotoli per la regolazione del modello e le riparazioni future",
         "placeholder": "Immettere i parametri per il calcolo"
       },
       "options": {
@@ -1041,9 +1041,73 @@
         "calculation": {
           "title": "Come calcolare la quantità di mastice",
           "content": "Il calcolo dello stucco comprende diverse fasi per ottenere un risultato accurato, tenendo conto di tutti i parametri della stanza e del tipo di stucco.",
+          "formulasTitle": "Formule di calcolo:",
           "area": "Area della parete = 2 × (Lunghezza + Larghezza) × Altezza",
           "layers": "Consumo per strato = Superficie utilizzabile × Consumo (kg/m²)",
-          "total": "Quantità totale = Consumo per strato × Numero di strati × (1 + Stock / 100)"
+          "total": "Quantità totale = Consumo per strato × Numero di strati × (1 + Stock / 100)",
+          "exampleLabels": {
+            "input": "Dati di input:",
+            "calculation": "Calcolo:",
+            "result": "Risultato:",
+            "type": "Tipo:"
+          }
+        },
+        "puttyTypes": {
+          "title": "Tipi di stucco",
+          "subtitle": "Tipi principali di stucco e le loro caratteristiche:",
+          "types": {
+            "starting": {
+              "type": "Stucco iniziale",
+              "consumption": "1.2-1.5 kg/m²",
+              "description": "Per livellare le irregolarità"
+            },
+            "finishing": {
+              "type": "Stucco di finitura",
+              "consumption": "0.8-1.2 kg/m²",
+              "description": "Per la livellatura finale"
+            },
+            "universal": {
+              "type": "Stucco universale",
+              "consumption": "1-1.3 kg/m²",
+              "description": "Per inizio e finitura"
+            },
+            "gypsum": {
+              "type": "Stucco di gesso",
+              "consumption": "1.2-1.5 kg/m²",
+              "description": "Per ambienti asciutti"
+            }
+          }
+        },
+        "consumptionRates": {
+          "title": "Norme di consumo dello stucco",
+          "subtitle": "Consumo di stucco in base al tipo di superficie e stucco:",
+          "rates": {
+            "smooth": {
+              "surface": "Superficie liscia",
+              "consumption": "0.8-1 kg/m²",
+              "description": "Consumo minimo"
+            },
+            "medium": {
+              "surface": "Irregolarità media",
+              "consumption": "1-1.3 kg/m²",
+              "description": "Consumo standard"
+            },
+            "rough": {
+              "surface": "Irregolarità forte",
+              "consumption": "1.3-1.8 kg/m²",
+              "description": "Consumo aumentato"
+            },
+            "ceiling": {
+              "surface": "Soffitto",
+              "consumption": "1.2-1.5 kg/m²",
+              "description": "Per il soffitto"
+            },
+            "walls": {
+              "surface": "Pareti",
+              "consumption": "1-1.3 kg/m²",
+              "description": "Per le pareti"
+            }
+          }
         },
         "advantages": {
           "title": "Vantaggi del calcolatore di stucco",
@@ -1066,7 +1130,7 @@
           }
         },
         "tips": {
-          "title": "Sovietici sulla categoria scarpe",
+          "title": "Suggerimenti per il calcolo dello stucco",
           "content": "Per ottenere un risultato accurato, seguire i nostri consigli durante il calcolo dello stucco.",
           "preparation": {
             "title": "Preparazione della superficie",
@@ -2985,6 +3049,32 @@
             "pattern": "Per le piastrelle con motivi, aumentare il margine al 20%",
             "grout": "Scegli la larghezza della cucitura corretta",
             "quality": "Utilizzare adesivo per piastrelle di qualità"
+          }
+        },
+        "tileTypes": {
+          "title": "Tipi di piastrelle per pavimenti e pareti",
+          "subtitle": "Dimensioni e tipi popolari di piastrelle per diverse stanze:",
+          "types": {
+            "ceramic": {
+              "type": "Piastrelle in ceramica",
+              "size": "30×30, 45×45 cm",
+              "description": "Per pavimenti e pareti"
+            },
+            "porcelain": {
+              "type": "Gres porcellanato",
+              "size": "60×60, 80×80 cm",
+              "description": "Per pavimenti, resistente all'usura"
+            },
+            "mosaic": {
+              "type": "Mosaico",
+              "size": "5×5, 10×10 cm",
+              "description": "Per decorazione e grembiuli"
+            },
+            "bathroom": {
+              "type": "Piastrelle per bagno",
+              "size": "20×30, 30×60 cm",
+              "description": "Resistente all'umidità"
+            }
           }
         },
         "faq": {
@@ -5292,7 +5382,7 @@
         "length": "Lunghezza della linea (m)",
         "lengthPlaceholder": "Immettere la lunghezza del cavo",
         "material": "Materiale conduttore",
-        "phaseType": "Il ragazzo ricorda",
+        "phaseType": "Tipo di rete",
         "powerFactor": "Fattore di potenza (cosφ)",
         "powerFactorPlaceholder": "Inserisci il fattore di potenza",
         "voltageDrop": "Perdita di tensione ammissibile (%)",
@@ -6830,7 +6920,7 @@
         "voltage": "Voltaggio (V)",
         "length": "Lunghezza cavo (m)",
         "material": "Materiale conduttore",
-        "phaseType": "Il ragazzo ricorda",
+        "phaseType": "Tipo di rete",
         "powerFactor": "Fattore di potenza (cos φ)",
         "voltageDrop": "Caduta di tensione consentita (%)",
         "circuitBreakerType": "Tipo di macchina",

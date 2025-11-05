@@ -165,38 +165,38 @@ export default function TileSEO() {
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Типы плитки для пола и стен
+						{t('seo.tileTypes.title')}
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Популярные размеры и типы плитки для разных помещений:
+						{t('seo.tileTypes.subtitle')}
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
 						{[
 							{
-								type: 'Керамическая плитка',
+								type: t('seo.tileTypes.types.ceramic.type'),
 								icon: Square,
-								size: '30×30, 45×45 см',
-								description: 'Для пола и стен',
+								size: t('seo.tileTypes.types.ceramic.size'),
+								description: t('seo.tileTypes.types.ceramic.description'),
 							},
 							{
-								type: 'Керамогранит',
+								type: t('seo.tileTypes.types.porcelain.type'),
 								icon: Square,
-								size: '60×60, 80×80 см',
-								description: 'Для пола, износостойкая',
+								size: t('seo.tileTypes.types.porcelain.size'),
+								description: t('seo.tileTypes.types.porcelain.description'),
 							},
 							{
-								type: 'Мозаика',
+								type: t('seo.tileTypes.types.mosaic.type'),
 								icon: Square,
-								size: '5×5, 10×10 см',
-								description: 'Для декора и фартуков',
+								size: t('seo.tileTypes.types.mosaic.size'),
+								description: t('seo.tileTypes.types.mosaic.description'),
 							},
 							{
-								type: 'Плитка для ванной',
+								type: t('seo.tileTypes.types.bathroom.type'),
 								icon: Home,
-								size: '20×30, 30×60 см',
-								description: 'Влагостойкая',
+								size: t('seo.tileTypes.types.bathroom.size'),
+								description: t('seo.tileTypes.types.bathroom.description'),
 							},
 						].map((item, idx) => {
 							const Icon = item.icon;

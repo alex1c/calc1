@@ -260,7 +260,7 @@ export default async function WorldTimePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: (await import(`../../../../messages/${locale}.json`)).default.breadcrumbs?.home || 'Home',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

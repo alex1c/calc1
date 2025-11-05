@@ -78,7 +78,7 @@ export default function PuttySEO() {
 										</p>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Входные данные:
+												{t('seo.calculation.exampleLabels.input')}
 											</p>
 											<code className='text-xs text-blue-800 dark:text-blue-300 font-mono break-all whitespace-pre-wrap'>
 												{t(
@@ -88,7 +88,7 @@ export default function PuttySEO() {
 										</div>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Расчёт:
+												{t('seo.calculation.exampleLabels.calculation')}
 											</p>
 											<code className='text-xs text-green-800 dark:text-green-300 font-mono break-all whitespace-pre-wrap'>
 												{t(
@@ -99,7 +99,7 @@ export default function PuttySEO() {
 										<div className='grid grid-cols-2 gap-2 mb-2'>
 											<div className='bg-yellow-100 dark:bg-yellow-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-yellow-800 dark:text-yellow-300 mb-1'>
-													Результат:
+													{t('seo.calculation.exampleLabels.result')}
 												</p>
 												<p className='text-xs text-yellow-900 dark:text-yellow-200 font-bold'>
 													{t(
@@ -109,7 +109,7 @@ export default function PuttySEO() {
 											</div>
 											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
-													Тип:
+													{t('seo.calculation.exampleLabels.type')}
 												</p>
 												<p className='text-xs text-purple-900 dark:text-purple-200'>
 													{t(
@@ -144,7 +144,7 @@ export default function PuttySEO() {
 					</p>
 					<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-2'>
-							Формулы расчёта:
+							{t('seo.calculation.formulasTitle')}
 						</h3>
 						<ul className='space-y-2 text-yellow-800 dark:text-yellow-200 text-sm'>
 							<li>
@@ -165,38 +165,38 @@ export default function PuttySEO() {
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Типы шпатлёвки
+						{t('seo.puttyTypes.title')}
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Основные типы шпатлёвки и их характеристики:
+						{t('seo.puttyTypes.subtitle')}
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
 						{[
 							{
-								type: 'Стартовая шпатлёвка',
+								type: t('seo.puttyTypes.types.starting.type'),
 								icon: Layers,
-								consumption: '1.2-1.5 кг/м²',
-								description: 'Для выравнивания неровностей',
+								consumption: t('seo.puttyTypes.types.starting.consumption'),
+								description: t('seo.puttyTypes.types.starting.description'),
 							},
 							{
-								type: 'Финишная шпатлёвка',
+								type: t('seo.puttyTypes.types.finishing.type'),
 								icon: Layers,
-								consumption: '0.8-1.2 кг/м²',
-								description: 'Для финального выравнивания',
+								consumption: t('seo.puttyTypes.types.finishing.consumption'),
+								description: t('seo.puttyTypes.types.finishing.description'),
 							},
 							{
-								type: 'Универсальная шпатлёвка',
+								type: t('seo.puttyTypes.types.universal.type'),
 								icon: Layers,
-								consumption: '1-1.3 кг/м²',
-								description: 'Для старта и финиша',
+								consumption: t('seo.puttyTypes.types.universal.consumption'),
+								description: t('seo.puttyTypes.types.universal.description'),
 							},
 							{
-								type: 'Гипсовая шпатлёвка',
+								type: t('seo.puttyTypes.types.gypsum.type'),
 								icon: Layers,
-								consumption: '1.2-1.5 кг/м²',
-								description: 'Для сухих помещений',
+								consumption: t('seo.puttyTypes.types.gypsum.consumption'),
+								description: t('seo.puttyTypes.types.gypsum.description'),
 							},
 						].map((item, idx) => {
 							const Icon = item.icon;
@@ -226,40 +226,39 @@ export default function PuttySEO() {
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Нормы расхода шпатлёвки
+						{t('seo.consumptionRates.title')}
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Расход шпатлёвки в зависимости от типа поверхности и
-						шпатлёвки:
+						{t('seo.consumptionRates.subtitle')}
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
 						{[
 							{
-								surface: 'Гладкая поверхность',
-								consumption: '0.8-1 кг/м²',
-								description: 'Минимальный расход',
+								surface: t('seo.consumptionRates.rates.smooth.surface'),
+								consumption: t('seo.consumptionRates.rates.smooth.consumption'),
+								description: t('seo.consumptionRates.rates.smooth.description'),
 							},
 							{
-								surface: 'Средняя неровность',
-								consumption: '1-1.3 кг/м²',
-								description: 'Стандартный расход',
+								surface: t('seo.consumptionRates.rates.medium.surface'),
+								consumption: t('seo.consumptionRates.rates.medium.consumption'),
+								description: t('seo.consumptionRates.rates.medium.description'),
 							},
 							{
-								surface: 'Сильная неровность',
-								consumption: '1.3-1.8 кг/м²',
-								description: 'Увеличенный расход',
+								surface: t('seo.consumptionRates.rates.rough.surface'),
+								consumption: t('seo.consumptionRates.rates.rough.consumption'),
+								description: t('seo.consumptionRates.rates.rough.description'),
 							},
 							{
-								surface: 'Потолок',
-								consumption: '1.2-1.5 кг/м²',
-								description: 'Для потолка',
+								surface: t('seo.consumptionRates.rates.ceiling.surface'),
+								consumption: t('seo.consumptionRates.rates.ceiling.consumption'),
+								description: t('seo.consumptionRates.rates.ceiling.description'),
 							},
 							{
-								surface: 'Стены',
-								consumption: '1-1.3 кг/м²',
-								description: 'Для стен',
+								surface: t('seo.consumptionRates.rates.walls.surface'),
+								consumption: t('seo.consumptionRates.rates.walls.consumption'),
+								description: t('seo.consumptionRates.rates.walls.description'),
 							},
 						].map((item, idx) => (
 							<div
