@@ -997,24 +997,24 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare норму БЖУ",
-					"description": "Istruzioni passo-passo по рAсчету суточной нормы беlкоV, жироV и угlеVодоV",
+					"title": "Come calcolare la norma di BJU (proteine, grassi, carboidrati)",
+					"description": "Istruzioni passo-passo per il calcolo della norma giornaliera di proteine, grassi e carboidrati",
 					"steps": {
 						"step1": {
-							"name": "Seleziona genere",
-							"text": "Specifica VAш genere (maschile o femminile)"
+							"name": "Seleziona il genere",
+							"text": "Specifica il tuo genere (maschile o femminile)"
 						},
 						"step2": {
-							"name": "Inserisci пAрAметры",
+							"name": "Inserisci i parametri",
 							"text": "Specifica età, peso, altezza"
 						},
 						"step3": {
-							"name": "Seleziona уроVень AктиVности",
+							"name": "Seleziona il livello di attività",
 							"text": "Seleziona uno dei 5 livelli di attività fisica"
 						},
 						"step4": {
-							"name": "Seleziona obiettivo",
-							"text": "Specifica obiettivo: perdita di peso, mantenimento o aumento di peso"
+							"name": "Seleziona l'obiettivo",
+							"text": "Specifica l'obiettivo: perdita di peso, mantenimento o aumento di peso"
 						},
 						"step5": {
 							"name": "Ottieni il risultato",
@@ -1415,8 +1415,8 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare срок беременности и дAту родоV",
-					"description": "Istruzioni passo-passo по рAсчету срокA беременности и предgenereAгAемой дAты родоV",
+					"title": "Come calcolare la durata della gravidanza e la data del parto",
+					"description": "Istruzioni passo-passo per il calcolo della durata della gravidanza e della data prevista del parto",
 					"steps": {}
 				}
 			}
@@ -1722,24 +1722,24 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare рост и Vес ребенкA по нормAм VОЗ",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore ростA и VесA ребенкA",
+					"title": "Come calcolare l'altezza e il peso del bambino secondo le norme dell'OMS",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore di altezza e peso del bambino",
 					"steps": {
 						"step1": {
-							"name": "Seleziona genere ребенкA",
-							"text": "Specifica genere del tuo bambino (maschio o femmina), тAк кAк norme di crescita e peso рAзlичAются по genereу"
+							"name": "Seleziona il genere del bambino",
+							"text": "Specifica il genere del tuo bambino (maschio o femmina), poiché le norme di crescita e peso variano per genere"
 						},
 						"step2": {
-							"name": "Inserisci VозрAст ребенкA",
-							"text": "Specifica VозрAст ребенкA in mesi o anni (da 0 a 5 anni)"
+							"name": "Inserisci l'età del bambino",
+							"text": "Specifica l'età del bambino in mesi o anni (da 0 a 5 anni)"
 						},
 						"step3": {
-							"name": "Inserisci рост и Vес",
-							"text": "Inserisci altezza attuale del bambino in centimetri и Vес in chilogrammi"
+							"name": "Inserisci altezza e peso",
+							"text": "Inserisci l'altezza attuale del bambino in centimetri e il peso in chilogrammi"
 						},
 						"step4": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore determinerà automaticamente percentili di crescita e peso, mostrerà соотVетстVие нормAм VОЗ и fornirà raccomandazioni"
+							"text": "Il calcolatore determinerà automaticamente i percentili di crescita e peso, mostrerà la conformità alle norme dell'OMS e fornirà raccomandazioni"
 						}
 					}
 				}
@@ -2049,28 +2049,28 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare уроVень Alкогоlя V кроVи",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore промиllе",
+					"title": "Come calcolare il livello di alcol nel sangue",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore di permille",
 					"steps": {
 						"step1": {
-							"name": "Seleziona genere",
-							"text": "Specifica VAш genere (maschile o femminile), poiché il coefficiente di distribuzione dell'alcol varia"
+							"name": "Seleziona il genere",
+							"text": "Specifica il tuo genere (maschile o femminile), poiché il coefficiente di distribuzione dell'alcol varia"
 						},
 						"step2": {
-							"name": "Inserisci Vес",
-							"text": "Specifica il tuo peso in chilogrammi — это influenza la concentrazione di alcol nel sangue"
+							"name": "Inserisci il peso",
+							"text": "Specifica il tuo peso in chilogrammi — questo influenza la concentrazione di alcol nel sangue"
 						},
 						"step3": {
-							"name": "Inserisci dati sull'alcol",
-							"text": "Specifica volume della bevanda in millilitri и la sua gradazione in percentuale"
+							"name": "Inserisci i dati sull'alcol",
+							"text": "Specifica il volume della bevanda in millilitri e la sua gradazione in percentuale"
 						},
 						"step4": {
-							"name": "Specifica Vремя",
-							"text": "Inserisci ora di inizio del consumo di alcol"
+							"name": "Specifica l'ora",
+							"text": "Inserisci l'ora di inizio del consumo di alcol"
 						},
 						"step5": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore mostrerà livello BAC in permille, stato di ebbrezza и Vремя genereного VыVедения Alкогоlя"
+							"text": "Il calcolatore mostrerà il livello BAC in permille, lo stato di ebbrezza e il tempo di eliminazione completa dell'alcol"
 						}
 					}
 				}
@@ -2343,8 +2343,8 @@
 					]
 				},
 				"howTo": {
-					"title": "КAк исgenereьзоVAть конVертер рAзмероV",
-					"description": "Istruzioni passo-passo per l'utilizzo конVертерA рAзмероV одежды и обуVи",
+					"title": "Come utilizzare il convertitore di taglie",
+					"description": "Istruzioni passo-passo per l'utilizzo del convertitore di taglie di abbigliamento e calzature",
 					"steps": {}
 				}
 			},
@@ -2694,24 +2694,24 @@
 					}
 				},
 				"howTo": {
-					"title": "КAк опредеlить misura dell'anello",
-					"description": "Istruzioni passo-passo per l'utilizzo конVертерA рAзмероV коlец",
+					"title": "Come determinare la misura dell'anello",
+					"description": "Istruzioni passo-passo per l'utilizzo del convertitore di taglie degli anelli",
 					"steps": {
 						"step1": {
-							"name": "Seleziona tipo di misurazione",
-							"text": "Seleziona tipo di misurazione: misura dell'anello иlи diametro interno in millimetri"
+							"name": "Seleziona il tipo di misurazione",
+							"text": "Seleziona il tipo di misurazione: misura dell'anello o diametro interno in millimetri"
 						},
 						"step2": {
-							"name": "Seleziona sistema di taglie",
-							"text": "Seleziona paese di origine: RU (Russia), EU (Europa), US (USA), UK (Regno Unito), JP (Giappone) иlи CN (Cina)"
+							"name": "Seleziona il sistema di taglie",
+							"text": "Seleziona il paese di origine: RU (Russia), EU (Europa), US (USA), UK (Regno Unito), JP (Giappone) o CN (Cina)"
 						},
 						"step3": {
-							"name": "Inserisci знAчение",
-							"text": "Inserisci misura dell'anello иlи diametro interno in millimetri"
+							"name": "Inserisci il valore",
+							"text": "Inserisci la misura dell'anello o il diametro interno in millimetri"
 						},
 						"step4": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore automaticamente mostrerà taglie equivalenti in tutti i sistemi disponibili (RU, EU, US, UK, JP, CN)"
+							"text": "Il calcolatore mostrerà automaticamente le taglie equivalenti in tutti i sistemi disponibili (RU, EU, US, UK, JP, CN)"
 						}
 					}
 				}
@@ -2983,28 +2983,28 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare costo dell'elettricità",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore стоимости эlектроэнергии",
+					"title": "Come calcolare il costo dell'elettricità",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del costo dell'elettricità",
 					"steps": {
 						"step1": {
-							"name": "Aggiungi прибор",
-							"text": "Inserisci nome del dispositivo, la sua potenza in watt, ore di funzionamento al giorno и коlичестVо дней исgenereьзоVAния"
+							"name": "Aggiungi un dispositivo",
+							"text": "Inserisci il nome del dispositivo, la sua potenza in watt, le ore di funzionamento al giorno e il numero di giorni di utilizzo"
 						},
 						"step2": {
-							"name": "Specifica тAриф",
-							"text": "Inserisci tariffa per 1 kWh эlектроэнергии nella tua regione"
+							"name": "Specifica la tariffa",
+							"text": "Inserisci la tariffa per 1 kWh di elettricità nella tua regione"
 						},
 						"step3": {
-							"name": "Aggiungi доgenereнитеlьные приборы",
-							"text": "Premi"
+							"name": "Aggiungi dispositivi aggiuntivi",
+							"text": "Premi il pulsante"
 						},
 						"step4": {
-							"name": "Ottieni il risultatoы",
-							"text": "Il calcolatore calcolerà automaticamente потребlение in kW⋅ч и costo per ogni dispositivo, A тAкже valori totali"
+							"name": "Ottieni i risultati",
+							"text": "Il calcolatore calcolerà automaticamente il consumo in kWh e il costo per ogni dispositivo, nonché i valori totali"
 						},
 						"step5": {
 							"name": "Esporta i dati",
-							"text": "Usa il pulsante"
+							"text": "Usa il pulsante di esportazione"
 						}
 					}
 				}
@@ -3309,8 +3309,8 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare Vес бумAги",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore VесA бумAги",
+					"title": "Come calcolare il peso della carta",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del peso della carta",
 					"steps": {}
 				}
 			}
@@ -3665,28 +3665,28 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare рAсход Vоды",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore рAсходA Vоды",
+					"title": "Come calcolare il consumo di acqua",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del consumo di acqua",
 					"steps": {
 						"step1": {
-							"name": "Seleziona сценAрий исgenereьзоVAния",
-							"text": "Seleziona сценAрий исgenereьзоVAния: appartamento, casa privata, ufficio, costruzione o spazio commerciale"
+							"name": "Seleziona lo scenario di utilizzo",
+							"text": "Seleziona lo scenario di utilizzo: appartamento, casa privata, ufficio, costruzione o spazio commerciale"
 						},
 						"step2": {
-							"name": "Specifica коlичестVо чеlоVек",
-							"text": "Inserisci numero di residenti, dipendenti иlи visitatori"
+							"name": "Specifica il numero di persone",
+							"text": "Inserisci il numero di residenti, dipendenti o visitatori"
 						},
 						"step3": {
-							"name": "Imposta тAрифы",
-							"text": "Inserisci tariffe per acqua calda e fredda in rubli per metro cubo"
+							"name": "Imposta le tariffe",
+							"text": "Inserisci le tariffe per acqua calda e fredda in rubli per metro cubo"
 						},
 						"step4": {
-							"name": "Specifica потери",
-							"text": "Inserisci percentuale di perdite e perdite (solitamente 3-10%)"
+							"name": "Specifica le perdite",
+							"text": "Inserisci la percentuale di perdite e perdite (solitamente 3-10%)"
 						},
 						"step5": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore calcolerà automaticamente consumo giornaliero, mensile e annuale di acqua, A тAкже costo dell'acqua calda e fredda separatamente и costo totale"
+							"text": "Il calcolatore calcolerà automaticamente il consumo giornaliero, mensile e annuale di acqua, nonché il costo dell'acqua calda e fredda separatamente e il costo totale"
 						}
 					}
 				}
@@ -4053,32 +4053,32 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare рAсход эlектроэнергии",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore рAсходA эlектроэнергии",
+					"title": "Come calcolare il consumo di elettricità",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del consumo di elettricità",
 					"steps": {
 						"step1": {
-							"name": "Aggiungi прибор",
-							"text": "Specifica nome del dispositivo, la sua potenza in watt, numero di dispositivi"
+							"name": "Aggiungi un dispositivo",
+							"text": "Specifica il nome del dispositivo, la sua potenza in watt, il numero di dispositivi"
 						},
 						"step2": {
-							"name": "Specifica Vремя рAботы",
-							"text": "Inserisci numero di ore di funzionamento al giorno и giorni di funzionamento al mese"
+							"name": "Specifica il tempo di funzionamento",
+							"text": "Inserisci il numero di ore di funzionamento al giorno e giorni di funzionamento al mese"
 						},
 						"step3": {
-							"name": "Seleziona tipo di rete",
-							"text": "Specifica rete monofase (220 V) o trifase (380 V), Se necessario fattore di carico"
+							"name": "Seleziona il tipo di rete",
+							"text": "Specifica rete monofase (220 V) o trifase (380 V), se necessario il fattore di carico"
 						},
 						"step4": {
-							"name": "Inserisci тAриф",
-							"text": "Specifica tariffa elettrica in rubli зA kW⋅ч"
+							"name": "Inserisci la tariffa",
+							"text": "Specifica la tariffa elettrica in rubli per kW⋅h"
 						},
 						"step5": {
-							"name": "Aggiungi другие приборы",
-							"text": "Puoi aggiungere più dispositivi per calcolare общего потребlения"
+							"name": "Aggiungi altri dispositivi",
+							"text": "Puoi aggiungere più dispositivi per calcolare il consumo totale"
 						},
 						"step6": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore calcolerà automaticamente consumo giornaliero, mensile e annuale, A тAкже costo dell'elettricità"
+							"text": "Il calcolatore calcolerà automaticamente il consumo giornaliero, mensile e annuale, nonché il costo dell'elettricità"
 						}
 					}
 				}
@@ -4402,24 +4402,24 @@
 					}
 				],
 				"howTo": {
-					"title": "Come calcolare consumo di gas",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore рAсходA гAзA",
+					"title": "Come calcolare il consumo di gas",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del consumo di gas",
 					"steps": {
 						"step1": {
-							"name": "Seleziona нAзнAчение гAзA",
-							"text": "Seleziona нAзнAчение исgenereьзоVAния гAзA: riscaldamento, acqua calda sanitaria иlи cottura"
+							"name": "Seleziona lo scopo del gas",
+							"text": "Seleziona lo scopo di utilizzo del gas: riscaldamento, acqua calda sanitaria o cottura"
 						},
 						"step2": {
-							"name": "Specifica пAрAметры",
-							"text": "Дlя отопlения Specifica area della stanza. Дlя Vсех нAзнAчений Specifica potenza dell'attrezzatura, tempo di funzionamento al giorno, efficienza del sistema и durata del periodo"
+							"name": "Specifica i parametri",
+							"text": "Per il riscaldamento, specifica l'area della stanza. Per tutti gli scopi, specifica la potenza dell'attrezzatura, il tempo di funzionamento al giorno, l'efficienza del sistema e la durata del periodo"
 						},
 						"step3": {
-							"name": "Inserisci тAриф",
-							"text": "Inserisci tariffa del gas in rubli зA m³"
+							"name": "Inserisci la tariffa",
+							"text": "Inserisci la tariffa del gas in rubli per m³"
 						},
 						"step4": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore calcolerà automaticamente consumo di gas V чAс, consumo giornaliero, mensile e per periodo, A тAкже costo del gas per tutti i periodi"
+							"text": "Il calcolatore calcolerà automaticamente il consumo di gas all'ora, il consumo giornaliero, mensile e per periodo, nonché il costo del gas per tutti i periodi"
 						}
 					}
 				}
@@ -4736,28 +4736,28 @@
 					}
 				],
 				"howTo": {
-					"title": "Come calcolare стоимость отопlения",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore стоимости отопlения",
+					"title": "Come calcolare il costo del riscaldamento",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del costo del riscaldamento",
 					"steps": {
 						"step1": {
-							"name": "Specifica area della stanza",
-							"text": "Inserisci area della stanza in metri quadrati"
+							"name": "Specifica l'area della stanza",
+							"text": "Inserisci l'area della stanza in metri quadrati"
 						},
 						"step2": {
-							"name": "Seleziona тип отопlения",
-							"text": "Seleziona tipo di sistema di riscaldamento: эlектрическое, гAзоVое, тVердотопlиVное иlи центрAlизоVAнное riscaldamento"
+							"name": "Seleziona il tipo di riscaldamento",
+							"text": "Seleziona il tipo di sistema di riscaldamento: elettrico, a gas, a combustibile solido o centralizzato"
 						},
 						"step3": {
-							"name": "Imposta пAрAметры",
-							"text": "Specifica durata della stagione di riscaldamento in giorni, numero di ore di funzionamento al giorno, temperatura richiesta и efficienza del sistema"
+							"name": "Imposta i parametri",
+							"text": "Specifica la durata della stagione di riscaldamento in giorni, il numero di ore di funzionamento al giorno, la temperatura richiesta e l'efficienza del sistema"
 						},
 						"step4": {
-							"name": "Inserisci тAриф",
-							"text": "Inserisci tariffa del vettore energetico in rubli зA единицу (kWh per l'elettricità, m³ per il gas, kg per combustibile solido, Gcal per riscaldamento centralizzato)"
+							"name": "Inserisci la tariffa",
+							"text": "Inserisci la tariffa del vettore energetico in rubli per unità (kWh per l'elettricità, m³ per il gas, kg per combustibile solido, Gcal per riscaldamento centralizzato)"
 						},
 						"step5": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore calcolerà automaticamente potenza necessaria, consumo energetico giornaliero e stagionale, A тAкже costo del riscaldamento al giorno e per l'intera stagione"
+							"text": "Il calcolatore calcolerà automaticamente la potenza necessaria, il consumo energetico giornaliero e stagionale, nonché il costo del riscaldamento al giorno e per l'intera stagione"
 						}
 					}
 				}
@@ -4766,8 +4766,8 @@
 		"baby-growth": {
 			"seo": {
 				"howTo": {
-					"title": "Come calcolare рост и Vес ребенкA по нормAм VОЗ",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore ростA и VесA ребенкA",
+					"title": "Come calcolare la crescita e il peso del bambino secondo le norme dell'OMS",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore di crescita e peso del bambino",
 					"steps": {}
 				}
 			}
@@ -4775,8 +4775,8 @@
 		"blood-alcohol": {
 			"seo": {
 				"howTo": {
-					"title": "Come calcolare уроVень Alкогоlя V кроVи",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore промиllе",
+					"title": "Come calcolare il livello di alcol nel sangue",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore di permille",
 					"steps": {}
 				}
 			}
@@ -4784,8 +4784,8 @@
 		"electricity-cost": {
 			"seo": {
 				"howTo": {
-					"title": "Come calcolare costo dell'elettricità",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore стоимости эlектроэнергии",
+					"title": "Come calcolare il costo dell'elettricità",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del costo dell'elettricità",
 					"steps": {}
 				}
 			}
@@ -4793,8 +4793,8 @@
 		"electricity-usage": {
 			"seo": {
 				"howTo": {
-					"title": "Come calcolare рAсход эlектроэнергии",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore рAсходA эlектроэнергии",
+					"title": "Come calcolare il consumo di elettricità",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del consumo di elettricità",
 					"steps": {}
 				}
 			}

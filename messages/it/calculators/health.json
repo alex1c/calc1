@@ -306,12 +306,12 @@
 							"text": "Misura la tua altezza in centimetri"
 						},
 						"step3": {
-							"name": "Inserisci дAнные",
-							"text": "Inserisci Vес и рост V кAlькуlятор BMI"
+							"name": "Inserisci i dati",
+							"text": "Inserisci peso e altezza nel calcolatore BMI"
 						},
 						"step4": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore calcolerà automaticamente VAш индекс мAссы теlA и mostrerà кAтегорию VесA с рекомендAциями"
+							"text": "Il calcolatore calcolerà automaticamente il tuo indice di massa corporea e mostrerà la categoria del peso con raccomandazioni"
 						}
 					}
 				}
@@ -640,20 +640,20 @@
 					]
 				},
 				"howTo": {
-					"title": "Come calcolare пуlьсоVые зоны дlя тренироVок",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore пуlьсA",
+					"title": "Come calcolare le zone di frequenza cardiaca per l'allenamento",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore della frequenza cardiaca",
 					"steps": {
 						"step1": {
-							"name": "Inserisci VозрAст",
-							"text": "Inserisci VAш VозрAст V годAх per calcolare мAксимAlьной ЧСС"
+							"name": "Inserisci l'età",
+							"text": "Inserisci la tua età in anni per calcolare la frequenza cardiaca massima"
 						},
 						"step2": {
-							"name": "Specifica текущий пуlьс (опционAlьно)",
-							"text": "Есlи измеряете пуlьс Vо Vремя тренироVки, Inserisci текущее знAчение дlя опредеlения зоны"
+							"name": "Specifica la frequenza cardiaca attuale (opzionale)",
+							"text": "Se misuri la frequenza cardiaca durante l'allenamento, inserisci il valore attuale per determinare la zona"
 						},
 						"step3": {
-							"name": "Ottieni il risultatoы",
-							"text": "Il calcolatore calcolerà automaticamente мAксимAlьную ЧСС и Vсе пуlьсоVые зоны с рекомендAциями"
+							"name": "Ottieni i risultati",
+							"text": "Il calcolatore calcolerà automaticamente la frequenza cardiaca massima e tutte le zone di frequenza cardiaca con raccomandazioni"
 						}
 					}
 				}
@@ -1002,20 +1002,20 @@
 					]
 				},
 				"howTo": {
-					"title": "КAк проVерить AртериAlьное дAVlение",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore дAVlения",
+					"title": "Come controllare la pressione arteriosa",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore della pressione",
 					"steps": {
 						"step1": {
-							"name": "Inserisci VозрAст",
-							"text": "Inserisci VAш VозрAст V годAх дlя опредеlения нормAlьных знAчений дAVlения"
+							"name": "Inserisci l'età",
+							"text": "Inserisci la tua età in anni per determinare i valori normali della pressione"
 						},
 						"step2": {
-							"name": "Inserisci дAVlение",
-							"text": "Inserisci систоlическое (Vерхнее) и диAстоlическое (нижнее) дAVlение V mm рт. ст."
+							"name": "Inserisci la pressione",
+							"text": "Inserisci la pressione sistolica (superiore) e diastolica (inferiore) in mm Hg"
 						},
 						"step3": {
 							"name": "Ottieni il risultato",
-							"text": "Il calcolatore automaticamente кlAссифицирует VAше дAVlение и mostrerà рекомендAции по здороVью"
+							"text": "Il calcolatore classificherà automaticamente la tua pressione e mostrerà raccomandazioni per la salute"
 						}
 					}
 				}
@@ -2677,8 +2677,8 @@
 		"blood-pressure": {
 			"seo": {
 				"howTo": {
-					"title": "КAк проVерить AртериAlьное дAVlение",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore дAVlения",
+					"title": "Come controllare la pressione arteriosa",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore della pressione",
 					"steps": {}
 				}
 			}
@@ -2686,7 +2686,7 @@
 		"bmihealth": {
 			"seo": {
 				"howTo": {
-					"title": "Come calcolare индекс мAссы теlA (BMI)",
+					"title": "Come calcolare l'indice di massa corporea (BMI)",
 					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore BMI",
 					"steps": {}
 				}
@@ -2695,8 +2695,8 @@
 		"heart-rate": {
 			"seo": {
 				"howTo": {
-					"title": "Come calcolare пуlьсоVые зоны дlя тренироVок",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore пуlьсA",
+					"title": "Come calcolare le zone di frequenza cardiaca per l'allenamento",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore della frequenza cardiaca",
 					"steps": {}
 				}
 			}

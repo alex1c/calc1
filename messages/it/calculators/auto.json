@@ -2763,7 +2763,7 @@
 			"title": "Calcolatore delle tasse di trasporto",
 			"description": "Calcola la tassa di trasporto in base alla potenza del motore, alla regione e al periodo di proprietà",
 			"breadcrumbs": {
-				"category": "РђРИС‚Рѕ"
+				"category": "Auto"
 			},
 			"form": {
 				"title": "Parametri di calcolo",
@@ -3381,8 +3381,8 @@
 							"text": "Inserisci       .       ."
 						},
 						"step3": {
-							"name": "Inserisci  ",
-							"text": "Specifica consumo di benzina per 100 km dal libretto di circolazione и consumo di gas (solitamente нA 10-20% боlьше del consumo di benzina)"
+							"name": "Inserisci il consumo",
+							"text": "Specifica il consumo di benzina per 100 km dal libretto di circolazione e il consumo di gas (solitamente del 10-20% maggiore del consumo di benzina)"
 						},
 						"step4": {
 							"name": "Specifica   ",

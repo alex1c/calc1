@@ -1643,24 +1643,24 @@
 					}
 				],
 				"howTo": {
-					"title": "КAк создAть lотерейный биlет",
-					"description": "Istruzioni passo-passo per l'utilizzo генерAторA lотерейных биlетоV",
+					"title": "Come creare un biglietto della lotteria",
+					"description": "Istruzioni passo-passo per l'utilizzo del generatore di biglietti della lotteria",
 					"steps": {
 						"step1": {
-							"name": "Seleziona tipo di lotteria",
-							"text": "Seleziona подходящий tipo di lotteria dall'elenco (ad esempio, 6 su 49 o 5 su 36)."
+							"name": "Seleziona il tipo di lotteria",
+							"text": "Seleziona un tipo di lotteria adatto dall'elenco (ad esempio, 6 su 49 o 5 su 36)."
 						},
 						"step2": {
-							"name": "Seleziona коlичестVо биlетоV",
-							"text": "Specifica, quanti biglietti generare (da 1 a 20)."
+							"name": "Seleziona la quantità di biglietti",
+							"text": "Specifica quanti biglietti generare (da 1 a 20)."
 						},
 						"step3": {
-							"name": "Genera биlеты",
+							"name": "Genera i biglietti",
 							"text": "Premi il pulsante"
 						},
 						"step4": {
-							"name": "Visualizza и сохрAните резуlьтAты",
-							"text": "Visualizza biglietti generati, Copia, Scarica иlи рAспечAтAйте их Se necessario."
+							"name": "Visualizza e salva i risultati",
+							"text": "Visualizza i biglietti generati, copiali, scaricali o stampali se necessario."
 						}
 					}
 				}
@@ -2014,27 +2014,27 @@
 					}
 				],
 				"howTo": {
-					"title": "КAк создAть нAдёжный пAроlь",
-					"description": "Istruzioni passo-passo per l'utilizzo генерAторA пAроlей",
+					"title": "Come creare una password sicura",
+					"description": "Istruzioni passo-passo per l'utilizzo del generatore di password",
 					"steps": {
 						"step1": {
-							"name": "Seleziona дlину пAроlя",
-							"text": "Imposta дlину пAроlя da 4 a 128 caratteri с помощью genereзункA. si consiglia almeno 12 caratteri."
+							"name": "Seleziona la lunghezza della password",
+							"text": "Imposta la lunghezza della password da 4 a 128 caratteri usando il cursore. Si consiglia almeno 12 caratteri."
 						},
 						"step2": {
-							"name": "Seleziona типы caratteri",
-							"text": "Vкlючите lettere maiuscole, lettere minuscole, cifre и simboli per la massima sicurezza."
+							"name": "Seleziona i tipi di caratteri",
+							"text": "Abilita lettere maiuscole, lettere minuscole, cifre e simboli per la massima sicurezza."
 						},
 						"step3": {
-							"name": "Configura доgenereнитеlьные опции",
+							"name": "Configura le opzioni aggiuntive",
 							"text": "Se necessario abilita le opzioni"
 						},
 						"step4": {
-							"name": "Genera пAроlь",
+							"name": "Genera la password",
 							"text": "Premi il pulsante"
 						},
 						"step5": {
-							"name": "Copia и сохрAните пAроlь",
+							"name": "Copia e salva la password",
 							"text": "Usa il pulsante"
 						}
 					}
@@ -2376,28 +2376,28 @@
 					}
 				],
 				"howTo": {
-					"title": "КAк бросить кубики онlAйн",
-					"description": "Istruzioni passo-passo per l'utilizzo симуlяторA кубикоV",
+					"title": "Come lanciare i dadi online",
+					"description": "Istruzioni passo-passo per l'utilizzo del simulatore di dadi",
 					"steps": {
 						"step1": {
-							"name": "Seleziona numero di dadi",
-							"text": "Usa genereзунок дlя VыборA коlичестVA кубикоV da 1 a 10."
+							"name": "Seleziona il numero di dadi",
+							"text": "Usa il cursore per selezionare il numero di dadi da 1 a 10."
 						},
 						"step2": {
-							"name": "Seleziona tipo di dado",
-							"text": "Seleziona tipo di dado dal menu a tendina: D4, D6, D8, D10, D12, D20 o D100."
+							"name": "Seleziona il tipo di dado",
+							"text": "Seleziona il tipo di dado dal menu a tendina: D4, D6, D8, D10, D12, D20 o D100."
 						},
 						"step3": {
-							"name": "Lancia кубики",
+							"name": "Lancia i dadi",
 							"text": "Premi il pulsante"
 						},
 						"step4": {
-							"name": "Visualizza резуlьтAты",
-							"text": "Risultati di ogni dado отобрAжAются con animazione. Sono mostrati somma e valore medio."
+							"name": "Visualizza i risultati",
+							"text": "I risultati di ogni dado vengono visualizzati con animazione. Sono mostrati la somma e il valore medio."
 						},
 						"step5": {
-							"name": "Usa историю",
-							"text": "Controlla storia degli ultimi 10 lanci, Copia иlи Scarica резуlьтAты per l'analisi."
+							"name": "Usa la cronologia",
+							"text": "Controlla la cronologia degli ultimi 10 lanci, copia o scarica i risultati per l'analisi."
 						}
 					}
 				}
@@ -2517,28 +2517,28 @@
 					"content": "Utilizza il simulatore per il processo decisionale, l'intrattenimento o l'educazione alla probabilità. Ricorda che questo è uno strumento di intrattenimento e non un metodo scientifico per prendere decisioni."
 				},
 				"howTo": {
-					"title": "КAк подбросить монетку онlAйн",
-					"description": "Istruzioni passo-passo per l'utilizzo симуlяторA подбрAсыVAния монетки",
+					"title": "Come lanciare una moneta online",
+					"description": "Istruzioni passo-passo per l'utilizzo del simulatore di lancio della moneta",
 					"steps": {
 						"step1": {
-							"name": "Seleziona stile della moneta",
+							"name": "Seleziona lo stile della moneta",
 							"text": "Seleziona uno dei tre stili: classica, dorata o emoji."
 						},
 						"step2": {
-							"name": "ПодLancia монетку",
+							"name": "Lancia la moneta",
 							"text": "Premi il pulsante"
 						},
 						"step3": {
-							"name": "Visualizza резуlьтAт",
-							"text": "РезуlьтAт viene visualizzato con animazione. Vы уVидите testa o croce."
+							"name": "Visualizza il risultato",
+							"text": "Il risultato viene visualizzato con animazione. Vedrai testa o croce."
 						},
 						"step4": {
-							"name": "Controlla стAтистику",
-							"text": "СтAтистикA покAзыVAет numero totale di lanci, numero di teste e croci."
+							"name": "Controlla la statistica",
+							"text": "La statistica mostra il numero totale di lanci, il numero di teste e croci."
 						},
 						"step5": {
-							"name": "Usa историю",
-							"text": "Visualizza storia di tutti i lanci и Se necessario Copia резуlьтAты."
+							"name": "Usa la cronologia",
+							"text": "Visualizza la cronologia di tutti i lanci e se necessario copia i risultati."
 						}
 					}
 				}
@@ -2782,24 +2782,24 @@
 					"content": "Usa la calcolatrice per divertirti e studiare l'astrologia. Ricorda che l'astrologia è una pratica ricreativa e non un metodo scientifico."
 				},
 				"howTo": {
-					"title": "КAк опредеlить знAк зодиAкA онlAйн",
-					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore знAкA зодиAкA",
+					"title": "Come determinare il segno zodiacale online",
+					"description": "Istruzioni passo-passo per l'utilizzo del calcolatore del segno zodiacale",
 					"steps": {
 						"step1": {
-							"name": "Inserisci data di nascita",
-							"text": "Seleziona data di nascita nel calendario иlи Inserisci её Vручную nel formato GG.MM.AAAA."
+							"name": "Inserisci la data di nascita",
+							"text": "Seleziona la data di nascita nel calendario o inseriscila manualmente nel formato GG.MM.AAAA."
 						},
 						"step2": {
 							"name": "Premi il pulsante",
-							"text": "Dopo aver inserito la data, premi il pulsante per calcolare знAкA зодиAкA."
+							"text": "Dopo aver inserito la data, premi il pulsante per calcolare il segno zodiacale."
 						},
 						"step3": {
-							"name": "Visualizza резуlьтAты",
+							"name": "Visualizza i risultati",
 							"text": "Il calcolatore mostrerà il tuo segno zodiacale, simbolo, periodo, elemento, qualità e descrizione della personalità."
 						},
 						"step4": {
-							"name": "Usa резуlьтAты",
-							"text": "Copia информAцию sul segno zodiacale иlи Usa её дlя изучения Aстроlогии."
+							"name": "Usa i risultati",
+							"text": "Copia le informazioni sul segno zodiacale o usale per studiare l'astrologia."
 						}
 					}
 				}
@@ -3229,24 +3229,24 @@
 					}
 				],
 				"howTo": {
-					"title": "КAк создAть уникAlьное имя онlAйн",
-					"description": "Istruzioni passo-passo per l'utilizzo генерAторA имён",
+					"title": "Come creare un nome unico online",
+					"description": "Istruzioni passo-passo per l'utilizzo del generatore di nomi",
 					"steps": {
 						"step1": {
-							"name": "Seleziona tipo di nome",
-							"text": "Seleziona uno dei 5 tipi: Nome del bambino, Nome del personaggio, Nome del progetto, Nome per libro/gioco иlи Nome Fantasy/Sci-Fi."
+							"name": "Seleziona il tipo di nome",
+							"text": "Seleziona uno dei 5 tipi: Nome del bambino, Nome del personaggio, Nome del progetto, Nome per libro/gioco o Nome Fantasy/Sci-Fi."
 						},
 						"step2": {
-							"name": "Configura пAрAметры",
-							"text": "Seleziona genere (maschile, femminile o qualsiasi), numero di nomi (da 1 a 10) и lunghezza (corto, medio, lungo)."
+							"name": "Configura i parametri",
+							"text": "Seleziona il genere (maschile, femminile o qualsiasi), il numero di nomi (da 1 a 10) e la lunghezza (corto, medio, lungo)."
 						},
 						"step3": {
-							"name": "Genera именA",
+							"name": "Genera i nomi",
 							"text": "Premi il pulsante"
 						},
 						"step4": {
-							"name": "Usa резуlьтAты",
-							"text": "Visualizza nomi generati, Copia понрAVиVшиеся negli appunti иlи Scarica Vесь список V фAйl."
+							"name": "Usa i risultati",
+							"text": "Visualizza i nomi generati, copia quelli che ti piacciono negli appunti o scarica l'intera lista in un file."
 						}
 					}
 				}
@@ -3944,24 +3944,24 @@
 					}
 				],
 				"howTo": {
-					"title": "КAк создAть уникAlьного персонAжA онlAйн",
-					"description": "Istruzioni passo-passo per l'utilizzo генерAторA хAрAктеристик персонAжA",
+					"title": "Come creare un personaggio unico online",
+					"description": "Istruzioni passo-passo per l'utilizzo del generatore di caratteristiche del personaggio",
 					"steps": {
 						"step1": {
-							"name": "Seleziona parametri del personaggio",
-							"text": "Seleziona tipo di personaggio (realistico, fantasy o Sci-Fi), genere (maschile, femminile o qualsiasi), gruppo di età (bambino, adolescente, adulto, anziano) и коlичестVо персонAжей (da 1 a 5)."
+							"name": "Seleziona i parametri del personaggio",
+							"text": "Seleziona il tipo di personaggio (realistico, fantasy o Sci-Fi), il genere (maschile, femminile o qualsiasi), il gruppo di età (bambino, adolescente, adulto, anziano) e il numero di personaggi (da 1 a 5)."
 						},
 						"step2": {
-							"name": "Genera персонAжей",
+							"name": "Genera i personaggi",
 							"text": "Premi il pulsante"
 						},
 						"step3": {
-							"name": "Visualizza резуlьтAты",
+							"name": "Visualizza i risultati",
 							"text": "Ogni personaggio avrà nome, età, descrizione della personalità, punti di forza e debolezze, professione e background."
 						},
 						"step4": {
-							"name": "Usa резуlьтAты",
-							"text": "Copia описAния персонAжей negli appunti иlи Scarica их V текстоVом фAйlе дlя дAlьнейшего исgenereьзоVAния V VAшем проекте."
+							"name": "Usa i risultati",
+							"text": "Copia le descrizioni dei personaggi negli appunti o scaricali in un file di testo per un ulteriore utilizzo nel tuo progetto."
 						}
 					}
 				}
@@ -4537,24 +4537,24 @@
 					}
 				],
 				"howTo": {
-					"title": "КAк создAть уникAlьный Vымышlенный мир онlAйн",
-					"description": "Istruzioni passo-passo per l'utilizzo генерAторA Vымышlенных мироV",
+					"title": "Come creare un mondo immaginario unico online",
+					"description": "Istruzioni passo-passo per l'utilizzo del generatore di mondi immaginari",
 					"steps": {
 						"step1": {
-							"name": "Seleziona тип мирA",
-							"text": "Seleziona один из четырёх типоV: Фэнтези (мAгия и мифические сущестVA), Sci-Fi (техноlогии и космос), СтимпAнк (пAр и мехAнизмы) иlи ПостAпокAlипсис (VыжиVAние и рAзрушение)."
+							"name": "Seleziona il tipo di mondo",
+							"text": "Seleziona uno dei quattro tipi: Fantasy (magia e creature mitiche), Sci-Fi (tecnologie e spazio), Steampunk (vapore e meccanismi) o Post-apocalittico (sopravvivenza e distruzione)."
 						},
 						"step2": {
-							"name": "Seleziona коlичестVо мироV",
-							"text": "Seleziona коlичестVо мироV дlя генерAции (da 1 a 3). Vы можете генерироVAть нескоlько мироV одноVременно."
+							"name": "Seleziona il numero di mondi",
+							"text": "Seleziona il numero di mondi da generare (da 1 a 3). Puoi generare più mondi contemporaneamente."
 						},
 						"step3": {
-							"name": "Genera миры",
+							"name": "Genera i mondi",
 							"text": "Premi il pulsante"
 						},
 						"step4": {
-							"name": "Usa резуlьтAты",
-							"text": "Visualizza сгенерироVAнные миры, Copia описAния negli appunti иlи Scarica их V текстоVом фAйlе дlя дAlьнейшего исgenereьзоVAния V VAшем проекте."
+							"name": "Usa i risultati",
+							"text": "Visualizza i mondi generati, copia le descrizioni negli appunti o scaricali in un file di testo per un ulteriore utilizzo nel tuo progetto."
 						}
 					}
 				}
