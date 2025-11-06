@@ -22,6 +22,7 @@ import {
 } from '@/lib/calculators/foundation';
 
 export default function FoundationCalculator() {
+	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.foundation');
 
 	const [foundationType, setFoundationType] =
@@ -195,7 +196,7 @@ export default function FoundationCalculator() {
 			setErrors([]);
 			setIsCalculated(true);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};
@@ -485,7 +486,7 @@ export default function FoundationCalculator() {
 											min='0.01'
 										/>
 										<span className='absolute right-3 top-2 text-gray-500 dark:text-gray-400 text-sm'>
-											м
+											{tCommon('units.meters')}
 										</span>
 									</div>
 								</div>
@@ -603,7 +604,7 @@ export default function FoundationCalculator() {
 											min='0.01'
 										/>
 										<span className='absolute right-3 top-2 text-gray-500 dark:text-gray-400 text-sm'>
-											м
+											{tCommon('units.meters')}
 										</span>
 									</div>
 								</div>

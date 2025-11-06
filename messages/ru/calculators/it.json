@@ -721,6 +721,24 @@
 					"wifi": "Wi-Fi",
 					"vcard": "vCard"
 				},
+				"wifi": {
+					"ssid": "SSID (Имя сети)",
+					"password": "Пароль",
+					"security": "Тип безопасности",
+					"securityTypes": {
+						"WPA": "WPA",
+						"WPA2": "WPA2",
+						"nopass": "Без пароля"
+					}
+				},
+				"vcard": {
+					"name": "Имя",
+					"phone": "Телефон",
+					"address": "Адрес",
+					"namePlaceholder": "Иван Иванов",
+					"addressPlaceholder": "Москва, ул. Примерная, 1"
+				},
+				"downloadError": "Ошибка при скачивании. Попробуйте использовать функцию копирования.",
 				"errorLevels": {
 					"L": "Низкий (L)",
 					"M": "Средний (M)",

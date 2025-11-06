@@ -114,6 +114,9 @@ export default async function LpgPaybackPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedAutoTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedAutoTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -267,7 +270,7 @@ export default async function LpgPaybackPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -287,41 +290,23 @@ export default async function LpgPaybackPage({
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать окупаемость ГБО',
-						description:
-							'Пошаговая инструкция по использованию калькулятора окупаемости ГБО',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите стоимость установки ГБО',
-								text: 'Укажите стоимость установки газобаллонного оборудования в вашем регионе (обычно 35000-80000 ₽ в зависимости от поколения)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите годовой пробег',
-								text: 'Введите реальный годовой пробег вашего автомобиля в километрах. Это критически важно для точного расчёта окупаемости.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите расход топлива',
-								text: 'Укажите расход бензина на 100 км из паспорта автомобиля и расход газа (обычно на 10-20% больше расхода бензина)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите цены на топливо',
-								text: 'Введите текущие цены на бензин и газ в вашем регионе. Обычно газ дешевле бензина на 30-40%.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает срок окупаемости ГБО, годовую и месячную экономию, стоимость топлива за год и экономию за несколько лет',
+			{(() => {
+		const howTo = messages.calculators?.lpg-payback?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()} срок окупаемости ГБО, годовую и месячную экономию, стоимость топлива за год и экономию за несколько лет',
 							},
 						],
 					}),

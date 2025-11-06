@@ -137,6 +137,9 @@ export default async function Page({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	const breadcrumbItems = [
 		{
 			label: tCategories('life.title'),
@@ -289,7 +292,7 @@ export default async function Page({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -309,40 +312,23 @@ export default async function Page({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать стоимость электроэнергии',
-						description:
-							'Пошаговая инструкция по использованию калькулятора стоимости электроэнергии',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте прибор',
-								text: 'Введите название прибора, его мощность в ваттах, часы работы в день и количество дней использования',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите тариф',
-								text: 'Введите тариф за 1 кВт⋅ч электроэнергии в вашем регионе',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте дополнительные приборы',
-								text: 'Нажмите "Добавить прибор" для расчета нескольких устройств одновременно',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результаты',
-								text: 'Калькулятор автоматически рассчитает потребление в кВт⋅ч и стоимость для каждого прибора, а также итоговые значения',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Экспортируйте данные',
+			{(() => {
+		const howTo = messages.calculators?.electricityCost?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}кспортируйте данные',
 								text: 'Используйте кнопку "Экспорт CSV" для сохранения результатов в файл',
 							},
 						],

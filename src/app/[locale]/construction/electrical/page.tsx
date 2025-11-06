@@ -119,6 +119,9 @@ export default async function ElectricalPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -273,7 +276,7 @@ export default async function ElectricalPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -290,49 +293,23 @@ export default async function ElectricalPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать сечение кабеля и мощность автомата',
-						description:
-							'Пошаговая инструкция по использованию калькулятора электрики',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип расчёта',
-								text: 'Выберите что нужно рассчитать: только сечение кабеля, только автомат, или оба расчёта одновременно',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите данные нагрузки',
-								text: 'Укажите мощность нагрузки в кВт или ток в амперах, напряжение сети, длину кабеля',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите параметры сети',
-								text: 'Укажите тип сети (однофазная 220 В или трёхфазная 380 В), материал проводника (медь или алюминий), способ прокладки',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Настройте дополнительные параметры',
-								text: 'Укажите коэффициент мощности (cos φ) и допустимое падение напряжения (обычно 3%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип автомата',
-								text: 'Выберите тип автоматического выключателя: B для ламп и обогревателей, C для розеток (самый распространённый), D для двигателей',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает сечение кабеля (рекомендуемое и стандартное), падение напряжения, сопротивление, и номинал автомата с запасом 25%',
+				{(() => {
+		const howTo = messages.calculators?.electrical?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}читает сечение кабеля (рекомендуемое и стандартное), падение напряжения, сопротивление, и номинал автомата с запасом 25%',
 							},
 						],
 					}),

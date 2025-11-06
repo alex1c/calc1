@@ -71,12 +71,12 @@ export default function DaysBetweenCalculator() {
 	const handleCopyResult = async () => {
 		if (!result) return;
 
-		const resultText = `Разница между датами:
-Начальная дата: ${result.startDate}
-Конечная дата: ${result.endDate}
-Всего дней: ${result.totalDays}
-Это ${result.weeks} недель и ${result.days} дней
-В пересчёте: ${result.years} лет, ${result.months} месяцев, ${result.days} дней`;
+		const resultText = `${t('results.copyText.title')}
+${t('results.copyText.startDate')} ${result.startDate}
+${t('results.copyText.endDate')} ${result.endDate}
+${t('results.copyText.totalDays')} ${result.totalDays}
+${t('results.copyText.thisIs')} ${result.weeks} ${t('results.copyText.weeks')} ${result.days} ${t('results.copyText.days')}
+${t('results.copyText.inCalculation')} ${result.years} ${t('results.copyText.years')} ${result.months} ${t('results.copyText.months')} ${result.days} ${t('results.copyText.days2')}`;
 
 		try {
 			await navigator.clipboard.writeText(resultText);
@@ -99,7 +99,7 @@ export default function DaysBetweenCalculator() {
 						{t('form.title')}
 					</h2>
 					<p className='text-gray-600'>
-						Введите две даты для расчёта разницы
+						{t('form.description')}
 					</p>
 				</div>
 				<div className='flex items-center justify-center py-12'>
@@ -137,7 +137,7 @@ export default function DaysBetweenCalculator() {
 							value={startDate}
 							onChange={(e) => setStartDate(e.target.value)}
 							className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-							placeholder='Выберите начальную дату'
+							placeholder={t('form.startDatePlaceholder')}
 						/>
 					</div>
 				</div>
@@ -153,7 +153,7 @@ export default function DaysBetweenCalculator() {
 							value={endDate}
 							onChange={(e) => setEndDate(e.target.value)}
 							className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-							placeholder='Выберите конечную дату'
+							placeholder={t('form.endDatePlaceholder')}
 						/>
 						<button
 							onClick={handleSetToday}

@@ -75,7 +75,7 @@ export default async function InvestmentPage({ params: { locale } }: Props) {
 									15%
 								</div>
 								<div className='text-green-100'>
-									Максимальная доходность
+									{t('hero.maxYield')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -84,7 +84,7 @@ export default async function InvestmentPage({ params: { locale } }: Props) {
 									99%
 								</div>
 								<div className='text-green-100'>
-									Точность расчёта
+									{t('hero.accuracy')}
 								</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
@@ -93,7 +93,7 @@ export default async function InvestmentPage({ params: { locale } }: Props) {
 									PDF
 								</div>
 								<div className='text-green-100'>
-									Экспорт результатов
+									{t('hero.export')}
 								</div>
 							</div>
 						</div>
@@ -138,11 +138,11 @@ export default async function InvestmentPage({ params: { locale } }: Props) {
 							ratingCount: '127',
 						},
 						featureList: [
-							'Расчёт доходности инвестиций',
-							'Капитализация процентов',
-							'Сложные проценты',
-							'График начислений',
-							'Экспорт результатов',
+							t('hero.feature1'),
+							t('hero.feature2'),
+							t('hero.feature3'),
+							t('hero.feature4'),
+							t('hero.feature5'),
 						],
 					}),
 				}}

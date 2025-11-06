@@ -108,6 +108,9 @@ export default async function ZodiacCalculatorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -166,7 +169,7 @@ export default async function ZodiacCalculatorPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -184,38 +187,20 @@ export default async function ZodiacCalculatorPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.zodiacCalculator?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как определить знак зодиака онлайн',
-		description: 'Пошаговая инструкция по использованию калькулятора знака зодиака',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Введите дату рождения',
-				text: 'Выберите дату рождения в календаре или введите её вручную в формате ДД.ММ.ГГГГ.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Нажмите кнопку "Определить знак"',
-				text: 'После ввода даты нажмите кнопку для расчёта знака зодиака.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Просмотрите результаты',
-				text: 'Калькулятор покажет ваш знак зодиака, символ, период, стихию, качество и описание характера.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Используйте результаты',
-				text: 'Скопируйте информацию о знаке зодиака или используйте её для изучения астрологии.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

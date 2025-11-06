@@ -108,6 +108,9 @@ export default async function NameGeneratorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -166,7 +169,7 @@ export default async function NameGeneratorPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -184,38 +187,20 @@ export default async function NameGeneratorPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.nameGenerator?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как создать уникальное имя онлайн',
-		description: 'Пошаговая инструкция по использованию генератора имён',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите тип имени',
-				text: 'Выберите один из 5 типов: Имя ребёнка, Имя персонажа, Название проекта, Имя для книги/игры или Фэнтези/Sci-Fi имя.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Настройте параметры',
-				text: 'Выберите пол (мужской, женский или любой), количество имён (от 1 до 10) и длину (короткое, среднее, длинное).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Сгенерируйте имена',
-				text: 'Нажмите кнопку "Сгенерировать" для создания списка имён в соответствии с выбранными параметрами.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Используйте результаты',
-				text: 'Просмотрите сгенерированные имена, скопируйте понравившиеся в буфер обмена или скачайте весь список в файл.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

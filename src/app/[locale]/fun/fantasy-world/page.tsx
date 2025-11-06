@@ -108,6 +108,9 @@ export default async function FantasyWorldPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -166,7 +169,7 @@ export default async function FantasyWorldPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -184,38 +187,20 @@ export default async function FantasyWorldPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.fantasyWorld?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как создать уникальный вымышленный мир онлайн',
-		description: 'Пошаговая инструкция по использованию генератора вымышленных миров',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите тип мира',
-				text: 'Выберите один из четырёх типов: Фэнтези (магия и мифические существа), Sci-Fi (технологии и космос), Стимпанк (пар и механизмы) или Постапокалипсис (выживание и разрушение).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Выберите количество миров',
-				text: 'Выберите количество миров для генерации (от 1 до 3). Вы можете генерировать несколько миров одновременно.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Сгенерируйте миры',
-				text: 'Нажмите кнопку "Сгенерировать" для создания миров с полным набором характеристик: название, климат, культура, правительство, ресурсы, конфликты и легенды.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Используйте результаты',
-				text: 'Просмотрите сгенерированные миры, скопируйте описания в буфер обмена или скачайте их в текстовом файле для дальнейшего использования в вашем проекте.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

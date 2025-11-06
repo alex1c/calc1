@@ -128,6 +128,9 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -280,7 +283,7 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -300,36 +303,23 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как определить размер кольца',
-						description:
-							'Пошаговая инструкция по использованию конвертера размеров колец',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип измерения',
-								text: 'Выберите тип измерения: размер кольца или внутренний диаметр в миллиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите систему размеров',
-								text: 'Выберите исходную страну: RU (Россия), EU (Европа), US (США), UK (Великобритания), JP (Япония) или CN (Китай)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите значение',
-								text: 'Введите размер кольца или внутренний диаметр в миллиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически покажет эквивалентные размеры во всех доступных системах (RU, EU, US, UK, JP, CN)',
+			{(() => {
+		const howTo = messages.calculators?.ringSize?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ькулятор автоматически покажет эквивалентные размеры во всех доступных системах (RU, EU, US, UK, JP, CN)',
 							},
 						],
 					}),

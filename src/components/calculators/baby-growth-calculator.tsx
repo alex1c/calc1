@@ -26,6 +26,7 @@ import {
 
 export default function BabyGrowthCalculator() {
 	const t = useTranslations('calculators.babyGrowth');
+	const tCommon = useTranslations('common');
 	const locale = useLocale();
 
 	const [formData, setFormData] = useState<BabyGrowthInput>({
@@ -77,7 +78,7 @@ export default function BabyGrowthCalculator() {
 			const calculationResult = calculateBabyGrowth(formData, locale);
 			setResult(calculationResult);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 		}
 
 		setIsCalculating(false);

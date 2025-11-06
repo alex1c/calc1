@@ -20,6 +20,7 @@ import {
 
 export default function WallAreaCalculator() {
 	const t = useTranslations('calculators.wallArea');
+	const tCommon = useTranslations('common');
 
 	const [result, setResult] = useState<WallAreaResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
@@ -135,7 +136,7 @@ export default function WallAreaCalculator() {
 			setErrors([]);
 			setIsCalculated(true);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};

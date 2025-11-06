@@ -109,6 +109,9 @@ export default async function CarDepreciationPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedAutoTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedAutoTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('auto.title'), href: '/auto' },
 		{ label: t('title') },
@@ -242,7 +245,7 @@ export default async function CarDepreciationPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

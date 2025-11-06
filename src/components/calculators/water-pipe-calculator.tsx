@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Droplets, Calculator, RotateCcw, Copy, Check } from 'lucide-react';
 
 export default function WaterPipeCalculator() {
+	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.waterPipeCalculator');
 
 	// State for calculation inputs
@@ -258,7 +259,7 @@ export default function WaterPipeCalculator() {
 					<>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.flowRate')} (м³/с)
+								{t('form.flowRate')} ({tCommon('units.cubicMetersPerSecond')})
 							</label>
 							<input
 								type='number'
@@ -271,7 +272,7 @@ export default function WaterPipeCalculator() {
 						</div>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.velocity')} (м/с)
+								{t('form.velocity')} ({tCommon('units.metersPerSecond')})
 							</label>
 							<input
 								type='number'
@@ -289,7 +290,7 @@ export default function WaterPipeCalculator() {
 					<>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.diameter')} (м)
+								{t('form.diameter')} ({tCommon('units.meters')})
 							</label>
 							<input
 								type='number'
@@ -302,7 +303,7 @@ export default function WaterPipeCalculator() {
 						</div>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.velocity')} (м/с)
+								{t('form.velocity')} ({tCommon('units.metersPerSecond')})
 							</label>
 							<input
 								type='number'
@@ -320,7 +321,7 @@ export default function WaterPipeCalculator() {
 					<>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.flowRate')} (м³/с)
+								{t('form.flowRate')} ({tCommon('units.cubicMetersPerSecond')})
 							</label>
 							<input
 								type='number'
@@ -333,7 +334,7 @@ export default function WaterPipeCalculator() {
 						</div>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.diameter')} (м)
+								{t('form.diameter')} ({tCommon('units.meters')})
 							</label>
 							<input
 								type='number'
@@ -346,7 +347,7 @@ export default function WaterPipeCalculator() {
 						</div>
 						<div>
 							<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-								{t('form.length')} (м)
+								{t('form.length')} ({tCommon('units.meters')})
 							</label>
 							<input
 								type='number'

@@ -116,6 +116,9 @@ export default async function RandomNumberGeneratorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -174,7 +177,7 @@ export default async function RandomNumberGeneratorPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -192,44 +195,20 @@ export default async function RandomNumberGeneratorPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.randomNumberGenerator?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как использовать генератор случайных чисел',
-		description: 'Пошаговая инструкция по использованию генератора случайных чисел',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Установите минимальное значение',
-				text: 'Введите минимальное значение в поле "Минимальное значение".',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Установите максимальное значение',
-				text: 'Введите максимальное значение в поле "Максимальное значение".',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Выберите количество чисел',
-				text: 'Укажите, сколько чисел нужно сгенерировать (от 1 до 1000).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Настройте дополнительные опции',
-				text: 'Выберите, разрешить ли дубликаты и нужно ли сортировать результат.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 5,
-				name: 'Сгенерируйте числа',
-				text: 'Нажмите кнопку "Сгенерировать числа" для получения результатов.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

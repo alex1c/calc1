@@ -115,6 +115,9 @@ export default async function DiceRollerPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -173,7 +176,7 @@ export default async function DiceRollerPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -191,44 +194,20 @@ export default async function DiceRollerPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.diceRoller?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как бросить кубики онлайн',
-		description: 'Пошаговая инструкция по использованию симулятора кубиков',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите количество кубиков',
-				text: 'Используйте ползунок для выбора количества кубиков от 1 до 10.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Выберите тип кубика',
-				text: 'Выберите тип кубика из выпадающего списка: D4, D6, D8, D10, D12, D20 или D100.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Бросьте кубики',
-				text: 'Нажмите кнопку "Бросить кубики" для генерации случайных результатов.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Просмотрите результаты',
-				text: 'Результаты каждого кубика отображаются с анимацией. Показаны сумма и среднее значение.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 5,
-				name: 'Используйте историю',
-				text: 'Проверьте историю последних 10 бросков, скопируйте или скачайте результаты для анализа.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

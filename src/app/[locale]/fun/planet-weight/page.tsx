@@ -108,6 +108,9 @@ export default async function PlanetWeightPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -166,7 +169,7 @@ export default async function PlanetWeightPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -184,38 +187,20 @@ export default async function PlanetWeightPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.planetWeight?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как рассчитать вес на других планетах',
-		description: 'Пошаговая инструкция по использованию калькулятора веса на планетах',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Введите ваш вес на Земле',
-				text: 'Введите ваш текущий вес в килограммах или фунтах в поле "Ваш вес на Земле".',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Выберите единицу измерения',
-				text: 'Выберите единицу измерения: килограммы (кг) или фунты (lb).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Нажмите "Рассчитать"',
-				text: 'Нажмите кнопку "Рассчитать вес на планетах" для получения результатов.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Просмотрите результаты',
-				text: 'Просмотрите таблицу с вашим весом на всех планетах Солнечной системы и Луне.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

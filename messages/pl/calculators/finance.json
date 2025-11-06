@@ -1692,6 +1692,26 @@
 						"patience": "Не забирайте деньги раньше времени — каждый дополнительный год значительно увеличивает итоговую сумму"
 					}
 				},
+				"howTo": {
+					"title": "Jak używać kalkulatora odsetek składanych",
+					"description": "Przewodnik krok po kroku dotyczący używania kalkulatora",
+					"step1": {
+						"name": "Wprowadź kapitał początkowy",
+						"text": "Wprowadź kwotę kapitału początkowego w złotych"
+					},
+					"step2": {
+						"name": "Określ stopę procentową",
+						"text": "Wprowadź roczną stopę procentową"
+					},
+					"step3": {
+						"name": "Wybierz okres",
+						"text": "Określ okres oszczędzania w latach i miesiącach"
+					},
+					"step4": {
+						"name": "Kliknij oblicz",
+						"text": "Uzyskaj wynik z wykresem wzrostu"
+					}
+				},
 				"faq": {
 					"title": "Часто задаваемые вопросы",
 					"faqItems": [

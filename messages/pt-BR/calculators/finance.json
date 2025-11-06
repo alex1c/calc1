@@ -1692,6 +1692,26 @@
 						"patience": "Не забирайте деньги раньше времени — каждый дополнительный год значительно увеличивает итоговую сумму"
 					}
 				},
+				"howTo": {
+					"title": "Como usar a calculadora de juros compostos",
+					"description": "Guia passo a passo para usar a calculadora",
+					"step1": {
+						"name": "Digite o capital inicial",
+						"text": "Digite o valor do capital inicial em reais"
+					},
+					"step2": {
+						"name": "Especifique a taxa de juros",
+						"text": "Digite a taxa de juros anual"
+					},
+					"step3": {
+						"name": "Selecione o prazo",
+						"text": "Especifique o prazo de poupança em anos e meses"
+					},
+					"step4": {
+						"name": "Clique em calcular",
+						"text": "Obtenha o resultado com o gráfico de crescimento"
+					}
+				},
 				"faq": {
 					"title": "Часто задаваемые вопросы",
 					"faqItems": [

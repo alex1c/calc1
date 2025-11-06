@@ -66,7 +66,11 @@ export default function PensionCalculator() {
 	const validateInput = (): string[] => {
 		const validationErrors: string[] = [];
 
-		if (!input.currentAge || input.currentAge < 18 || input.currentAge > 100) {
+		if (
+			!input.currentAge ||
+			input.currentAge < 18 ||
+			input.currentAge > 100
+		) {
 			validationErrors.push(t('form.errors.invalidCurrentAge'));
 		}
 
@@ -91,9 +95,7 @@ export default function PensionCalculator() {
 		}
 
 		if (input.currentAge >= input.retirementAge) {
-			validationErrors.push(
-				'Текущий возраст не может быть больше или равен пенсионному возрасту'
-			);
+			validationErrors.push(t('form.errors.ageGreaterThanRetirement'));
 		}
 
 		return validationErrors;
@@ -234,7 +236,9 @@ export default function PensionCalculator() {
 								placeholder='25'
 							/>
 							<p className='text-xs text-gray-500 dark:text-gray-400 mt-1'>
-								Минимальный стаж: {MINIMUM_EXPERIENCE} лет
+								{t('hints.minimumExperience', {
+									years: MINIMUM_EXPERIENCE,
+								})}
 							</p>
 						</div>
 
@@ -258,7 +262,7 @@ export default function PensionCalculator() {
 								placeholder='50000'
 							/>
 							<p className='text-xs text-gray-500 dark:text-gray-400 mt-1'>
-								Используйте среднюю зарплату за весь период работы
+								{t('hints.useAverageSalary')}
 							</p>
 						</div>
 
@@ -283,7 +287,7 @@ export default function PensionCalculator() {
 								placeholder='60'
 							/>
 							<p className='text-xs text-gray-500 dark:text-gray-400 mt-1'>
-								Мужчины: 60-65 лет, Женщины: 55-60 лет (с переходным периодом)
+								{t('hints.retirementAgeInfo')}
 							</p>
 						</div>
 
@@ -340,14 +344,17 @@ export default function PensionCalculator() {
 									{t('results.estimatedPension')}
 								</h3>
 								<div className='text-3xl font-bold text-green-900 dark:text-green-100 mb-2'>
-									{result.estimatedPension.toLocaleString('ru-RU', {
-										style: 'currency',
-										currency: 'RUB',
-										minimumFractionDigits: 0,
-									})}
+									{result.estimatedPension.toLocaleString(
+										'ru-RU',
+										{
+											style: 'currency',
+											currency: 'RUB',
+											minimumFractionDigits: 0,
+										}
+									)}
 								</div>
 								<p className='text-sm text-green-700 dark:text-green-300'>
-									в месяц
+									{t('results.perMonth')}
 								</p>
 							</div>
 
@@ -358,14 +365,17 @@ export default function PensionCalculator() {
 									{t('results.fixedPayment')}
 								</h3>
 								<div className='text-xl font-bold text-blue-900 dark:text-blue-100'>
-									{result.fixedPayment.toLocaleString('ru-RU', {
-										style: 'currency',
-										currency: 'RUB',
-										minimumFractionDigits: 0,
-									})}
+									{result.fixedPayment.toLocaleString(
+										'ru-RU',
+										{
+											style: 'currency',
+											currency: 'RUB',
+											minimumFractionDigits: 0,
+										}
+									)}
 								</div>
 								<p className='text-sm text-blue-700 dark:text-blue-300'>
-									Фиксированная часть пенсии (2024)
+									{t('results.fixedPaymentLabel')}
 								</p>
 							</div>
 
@@ -378,7 +388,7 @@ export default function PensionCalculator() {
 								<div className='space-y-2 text-sm'>
 									<div>
 										<span className='text-purple-700 dark:text-purple-300'>
-											Всего баллов:
+											{t('results.totalPoints')}
 										</span>{' '}
 										<strong className='text-purple-900 dark:text-purple-100 text-xl'>
 											{result.totalPoints.toFixed(1)}
@@ -392,9 +402,10 @@ export default function PensionCalculator() {
 											{result.requiredPoints}
 										</strong>
 									</div>
-									{result.totalPoints < result.requiredPoints && (
+									{result.totalPoints <
+										result.requiredPoints && (
 										<p className='text-red-600 dark:text-red-400 text-xs'>
-											⚠️ Недостаточно баллов для получения пенсии
+											⚠️ {t('results.insufficientPoints')}
 										</p>
 									)}
 								</div>
@@ -404,7 +415,7 @@ export default function PensionCalculator() {
 							<div className='bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-md p-4'>
 								<h3 className='text-lg font-semibold text-orange-800 dark:text-orange-200 mb-3 flex items-center'>
 									<Calendar className='w-5 h-5 mr-2' />
-									Информация о стаже
+									{t('results.experienceInfo')}
 								</h3>
 								<div className='space-y-2 text-sm'>
 									<div>
@@ -412,7 +423,8 @@ export default function PensionCalculator() {
 											{t('results.yearsToRetirement')}:
 										</span>{' '}
 										<strong className='text-orange-900 dark:text-orange-100'>
-											{result.yearsToRetirement} лет
+											{result.yearsToRetirement}{' '}
+											{t('results.years')}
 										</strong>
 									</div>
 									<div>
@@ -420,7 +432,8 @@ export default function PensionCalculator() {
 											{t('results.totalExperience')}:
 										</span>{' '}
 										<strong className='text-orange-900 dark:text-orange-100'>
-											{result.totalExperience.toFixed(1)} лет
+											{result.totalExperience.toFixed(1)}{' '}
+											{t('results.years')}
 										</strong>
 									</div>
 									<div>
@@ -428,12 +441,17 @@ export default function PensionCalculator() {
 											{t('results.minimumExperience')}:
 										</span>{' '}
 										<strong className='text-orange-900 dark:text-orange-100'>
-											{result.minimumExperience} лет
+											{result.minimumExperience}{' '}
+											{t('results.years')}
 										</strong>
 									</div>
-									{result.totalExperience < result.minimumExperience && (
+									{result.totalExperience <
+										result.minimumExperience && (
 										<p className='text-red-600 dark:text-red-400 text-xs'>
-											⚠️ Недостаточно стажа для получения пенсии
+											⚠️{' '}
+											{t(
+												'results.insufficientExperience'
+											)}
 										</p>
 									)}
 								</div>
@@ -449,4 +467,3 @@ export default function PensionCalculator() {
 		</div>
 	);
 }
-

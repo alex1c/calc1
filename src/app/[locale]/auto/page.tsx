@@ -211,6 +211,9 @@ export default async function AutoPage({ params: { locale } }: Props) {
 		locale,
 		namespace: 'categories',
 	});
+
+	const { loadMergedAutoTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedAutoTranslations(locale);
 	const currentLocale = await getLocale();
 
 	const calculators = getCalculators(t);
@@ -499,7 +502,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 								{
 									'@type': 'ListItem',
 									position: 1,
-									name: 'Главная',
+									name: messages.breadcrumbs?.home || 'Home',
 									item: `https://calc1.ru/${locale}`,
 								},
 								{
@@ -544,7 +547,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

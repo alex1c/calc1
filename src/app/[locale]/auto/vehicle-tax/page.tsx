@@ -109,6 +109,11 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -263,7 +268,7 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -284,40 +289,30 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать транспортный налог',
-						description:
-							'Пошаговая инструкция по использованию калькулятора транспортного налога',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите мощность двигателя',
-								text: 'Укажите мощность двигателя вашего автомобиля в лошадиных силах (указана в ПТС)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите регион регистрации',
-								text: 'Выберите регион, где зарегистрирован автомобиль (это влияет на ставку налога)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите срок владения',
-								text: 'Введите количество месяцев владения автомобилем в налоговом периоде (от 1 до 12)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Получите точную сумму транспортного налога с учётом всех параметров',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.vehicle-tax?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

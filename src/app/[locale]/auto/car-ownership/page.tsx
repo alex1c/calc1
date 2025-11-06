@@ -110,6 +110,11 @@ export default async function CarOwnershipPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -268,7 +273,7 @@ export default async function CarOwnershipPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -289,50 +294,30 @@ export default async function CarOwnershipPage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать стоимость владения автомобилем',
-						description:
-							'Пошаговая инструкция по использованию калькулятора стоимости владения',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите стоимость автомобиля',
-								text: 'Укажите стоимость покупки автомобиля',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите срок владения',
-								text: 'Введите количество лет, в течение которых планируете владеть автомобилем',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите пробег и расход топлива',
-								text: 'Укажите годовой пробег в километрах и расход топлива в литрах на 100 км',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите расходы на страховки и налоги',
-								text: 'Укажите стоимость ОСАГО, КАСКО (опционально) и транспортного налога',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите расходы на ТО и амортизацию',
-								text: 'Укажите стоимость обслуживания и ремонта, а также процент амортизации',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Получите полную стоимость владения, стоимость 1 км и разбивку по статьям расходов',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.['car-ownership']?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

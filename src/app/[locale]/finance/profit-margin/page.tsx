@@ -115,6 +115,9 @@ export default async function ProfitMarginPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFinanceTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -269,7 +272,7 @@ export default async function ProfitMarginPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -287,38 +290,23 @@ export default async function ProfitMarginPage({ params: { locale } }: Props) {
 						],
 					}),
 				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать маржинальность бизнеса',
-						description:
-							'Пошаговая инструкция по использованию калькулятора маржинальности',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип расчёта',
-								text: 'Выберите что нужно рассчитать: маржу от выручки и себестоимости, наценку от себестоимости и процента наценки, или выручку при известной себестоимости и желаемой марже',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите известные данные',
-								text: 'В зависимости от типа расчёта введите выручку и себестоимость, себестоимость и наценку, или себестоимость и желаемую маржу',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите "Рассчитать"',
-								text: 'Калькулятор автоматически рассчитает маржу, наценку, прибыль и рентабельность',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Анализируйте результаты',
-								text: 'Изучите полученные показатели: валовую маржу, маржу прибыли, наценку, прибыль и ROI для принятия финансовых решений',
+			/>{(() => {
+		const howTo = messages.calculators?.profit-margin?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}те полученные показатели: валовую маржу, маржу прибыли, наценку, прибыль и ROI для принятия финансовых решений',
 							},
 						],
 					}),

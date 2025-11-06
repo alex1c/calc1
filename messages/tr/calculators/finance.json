@@ -1692,6 +1692,26 @@
 						"patience": "Не забирайте деньги раньше времени — каждый дополнительный год значительно увеличивает итоговую сумму"
 					}
 				},
+				"howTo": {
+					"title": "Bileşik faiz hesaplayıcısı nasıl kullanılır",
+					"description": "Hesaplayıcıyı kullanma adım adım kılavuzu",
+					"step1": {
+						"name": "Ana parayı girin",
+						"text": "Ana para tutarını TL cinsinden girin"
+					},
+					"step2": {
+						"name": "Faiz oranını belirtin",
+						"text": "Yıllık faiz oranını girin"
+					},
+					"step3": {
+						"name": "Vadeyi seçin",
+						"text": "Birikim vadesini yıl ve ay olarak belirtin"
+					},
+					"step4": {
+						"name": "Hesapla'ya tıklayın",
+						"text": "Büyüme grafiği ile sonucu alın"
+					}
+				},
 				"faq": {
 					"title": "Часто задаваемые вопросы",
 					"faqItems": [

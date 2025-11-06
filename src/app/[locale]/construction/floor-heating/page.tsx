@@ -120,6 +120,9 @@ export default async function FloorHeatingPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -278,7 +281,7 @@ export default async function FloorHeatingPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -295,48 +298,23 @@ export default async function FloorHeatingPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать тёплый пол',
-						description:
-							'Пошаговая инструкция по использованию калькулятора тёплого пола',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте площадь',
-								text: 'Укажите площадь помещения в м², где будет установлен тёплый пол',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип помещения',
-								text: 'Выберите тип помещения (ванная, кухня, спальня, гостиная), так как для каждого типа своя рекомендуемая мощность',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите утепление',
-								text: 'Выберите качество утепления (хорошее, среднее, плохое), это влияет на расчёт мощности',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите температуру',
-								text: 'Укажите желаемую температуру пола в градусах (обычно 24-30°C)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите режим работы',
-								text: 'Установите количество часов работы в сутки и стоимость электроэнергии',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.floorHeating?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}
 								text: 'Калькулятор автоматически рассчитает необходимую мощность, потребление энергии и стоимость эксплуатации',
 							},
 						],

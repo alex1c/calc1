@@ -202,7 +202,7 @@ export default function InvestmentSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							Простые проценты
+							{t('seo.calculation.simpleTitle')}
 						</h3>
 						<p className='text-green-800'>
 							{t('seo.calculation.simple')}
@@ -210,7 +210,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							Капитализация
+							{t('seo.calculation.capitalizedTitle')}
 						</h3>
 						<p className='text-blue-800'>
 							{t('seo.calculation.capitalized')}
@@ -218,7 +218,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
-							Сложные проценты
+							{t('seo.calculation.compoundTitle')}
 						</h3>
 						<p className='text-purple-800'>
 							{t('seo.calculation.compound')}
@@ -243,7 +243,7 @@ export default function InvestmentSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 					<div className='bg-yellow-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 mb-2'>
-							Простые проценты
+							{t('seo.types.simpleTitle')}
 						</h3>
 						<p className='text-yellow-800'>
 							{t('seo.types.simple')}
@@ -251,7 +251,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							Капитализация процентов
+							{t('seo.types.capitalizedTitle')}
 						</h3>
 						<p className='text-blue-800'>
 							{t('seo.types.capitalized')}
@@ -259,7 +259,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							Сложные проценты
+							{t('seo.types.compoundTitle')}
 						</h3>
 						<p className='text-green-800'>
 							{t('seo.types.compound')}
@@ -284,7 +284,7 @@ export default function InvestmentSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-2'>
-							Точность расчётов
+							{t('seo.advantages.accuracyTitle')}
 						</h3>
 						<p className='text-green-800'>
 							{t('seo.advantages.safety')}
@@ -292,7 +292,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-2'>
-							Эффективная ставка
+							{t('seo.advantages.effectiveRateTitle')}
 						</h3>
 						<p className='text-blue-800'>
 							{t('seo.advantages.guaranteed')}
@@ -300,7 +300,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-2'>
-							Гибкость планирования
+							{t('seo.advantages.flexibilityTitle')}
 						</h3>
 						<p className='text-purple-800'>
 							{t('seo.advantages.liquidity')}
@@ -308,7 +308,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-orange-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-orange-900 mb-2'>
-							Налоговый учёт
+							{t('seo.advantages.taxTitle')}
 						</h3>
 						<p className='text-orange-800'>
 							{t('seo.advantages.tax')}
@@ -333,7 +333,7 @@ export default function InvestmentSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-yellow-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 mb-4'>
-							Сравнение предложений
+							{t('seo.tips.compareTitle')}
 						</h3>
 						<p className='text-yellow-800'>
 							{t('seo.tips.compare')}
@@ -341,13 +341,13 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-blue-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 mb-4'>
-							Выбор срока
+							{t('seo.tips.termTitle')}
 						</h3>
 						<p className='text-blue-800'>{t('seo.tips.term')}</p>
 					</div>
 					<div className='bg-green-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 mb-4'>
-							Капитализация
+							{t('seo.tips.capitalizationTitle')}
 						</h3>
 						<p className='text-green-800'>
 							{t('seo.tips.capitalization')}
@@ -355,7 +355,7 @@ export default function InvestmentSEO() {
 					</div>
 					<div className='bg-purple-50 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 mb-4'>
-							Досрочное расторжение
+							{t('seo.tips.earlyTitle')}
 						</h3>
 						<p className='text-purple-800'>{t('seo.tips.early')}</p>
 					</div>

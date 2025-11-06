@@ -93,11 +93,11 @@ export default function AddTimeCalculator() {
 	const handleCopyResult = async () => {
 		if (!result) return;
 
-		const resultText = `Результат прибавления времени:
-Начальная дата: ${startDate} ${startTime}
-Добавлено: ${addDays} дней, ${addHours} часов, ${addMinutes} минут
-Итоговая дата: ${result.formattedDate} ${result.resultTime}
-День недели: ${result.dayOfWeek}`;
+		const resultText = `${t('results.copyText.title')}
+${t('results.copyText.startDate')} ${startDate} ${startTime}
+${t('results.copyText.added')} ${addDays} ${t('results.copyText.days')} ${addHours} ${t('results.copyText.hours')} ${addMinutes} ${t('results.copyText.minutes')}
+${t('results.copyText.finalDate')} ${result.formattedDate} ${result.resultTime}
+${t('results.copyText.dayOfWeek')} ${result.dayOfWeek}`;
 
 		try {
 			await navigator.clipboard.writeText(resultText);

@@ -115,6 +115,9 @@ export default async function PlasterPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	const breadcrumbItems = [
 		{
 			label: tCategories('construction.title'),
@@ -267,7 +270,7 @@ export default async function PlasterPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -286,57 +289,30 @@ export default async function PlasterPage({ params: { locale } }: Props) {
 					}),
 				}}
 			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество штукатурки',
-						description:
-							'Пошаговая инструкция по использованию калькулятора расхода штукатурки',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте размеры комнаты',
-								text: 'Укажите длину, ширину комнаты и высоту стен в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите площадь окон и дверей',
-								text: 'Введите общую площадь окон и дверей в квадратных метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите количество слоёв',
-								text: 'Укажите количество слоёв штукатурки (обычно 1-2 слоя)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите норму расхода',
-								text: 'Укажите норму расхода штукатурки в килограммах на квадратный метр (обычно 9-17 кг/м²)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте запас',
-								text: 'Укажите процент запаса на потери (рекомендуется 10%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите размер упаковки',
-								text: 'Введите вес одного мешка штукатурки в килограммах (например, 30 кг)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимое количество штукатурки и число мешков',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.plaster?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps || {})
+									.sort()
+									.map((key) => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

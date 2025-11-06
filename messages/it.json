@@ -33,6 +33,19 @@
     "result": "Risultato",
     "clear": "Cancella",
     "favorites": "Preferiti",
+    "calculationError": "Errore nel calcolo. Controlla i dati inseriti.",
+    "units": {
+      "meters": "m",
+      "centimeters": "cm",
+      "millimeters": "mm",
+      "kilograms": "kg",
+      "grams": "g",
+      "liters": "l",
+      "milliliters": "ml",
+      "cubicMeters": "m³",
+      "metersPerSecond": "m/s",
+      "cubicMetersPerSecond": "m³/s"
+    },
     "notFound": {
       "title": "Pagina non trovata",
       "description": "Spiacente, la pagina richiesta non esiste.",

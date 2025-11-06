@@ -152,7 +152,7 @@ export default async function AddTimePage({
 								<div className='text-2xl font-bold text-white mb-1'>
 									{t('hero.time')}
 								</div>
-								<div className='text-green-100'>Точный расчёт</div>
+								<div className='text-green-100'>{t('hero.accurateCalculation')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
@@ -166,7 +166,7 @@ export default async function AddTimePage({
 								<div className='text-2xl font-bold text-white mb-1'>
 									{t('hero.free')}
 								</div>
-								<div className='text-green-100'>Использование</div>
+								<div className='text-green-100'>{t('hero.usage')}</div>
 							</div>
 						</div>
 					</div>
@@ -270,50 +270,30 @@ export default async function AddTimePage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как прибавить время к дате',
-						description:
-							'Пошаговая инструкция по использованию калькулятора прибавления времени',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите начальную дату и время',
-								text: 'Укажите дату и время, от которой начинается отсчёт',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество дней',
-								text: 'Введите количество дней, которое нужно прибавить (можно оставить 0)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество часов',
-								text: 'Введите количество часов, которое нужно прибавить (можно оставить 0)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество минут',
-								text: 'Введите количество минут, которое нужно прибавить (можно оставить 0)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Калькулятор автоматически вычислит итоговую дату и время',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Результат отобразится с итоговой датой, временем и днём недели',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.addTime?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

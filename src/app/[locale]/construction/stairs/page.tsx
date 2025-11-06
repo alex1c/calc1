@@ -103,6 +103,9 @@ export default async function StairsPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -261,7 +264,7 @@ export default async function StairsPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -278,49 +281,23 @@ export default async function StairsPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать лестницу',
-						description:
-							'Пошаговая инструкция по использованию калькулятора лестницы',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте высоту',
-								text: 'Укажите высоту от пола до пола следующего этажа в сантиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите длину',
-								text: 'Введите длину проёма для лестницы в сантиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип лестницы',
-								text: 'Выберите тип лестницы (маршевая, винтовая, поворотная)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите параметры ступеней',
-								text: 'Укажите минимальную высоту и максимальную ширину ступеней или используйте стандартные значения',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите толщину проступи',
-								text: 'Укажите толщину проступи в миллиметрах (обычно 30-50 мм)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает количество ступеней, их размеры, угол наклона и проверит соответствие формуле безопасности',
+				{(() => {
+		const howTo = messages.calculators?.stairsCalculator?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ятор автоматически рассчитает количество ступеней, их размеры, угол наклона и проверит соответствие формуле безопасности',
 							},
 						],
 					}),

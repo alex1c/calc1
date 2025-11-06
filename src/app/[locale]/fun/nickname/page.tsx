@@ -115,6 +115,9 @@ export default async function NicknameGeneratorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -173,7 +176,7 @@ export default async function NicknameGeneratorPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -191,44 +194,20 @@ export default async function NicknameGeneratorPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.nicknameGenerator?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как создать никнейм с помощью генератора',
-		description: 'Пошаговая инструкция по использованию генератора никнеймов',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите тематику',
-				text: 'Выберите подходящую тематику: игровая, фэнтези, технологии, милая или профессиональная.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Выберите стиль',
-				text: 'Выберите стиль никнейма: крутой, острый, современный, классический или креативный.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Настройте длину и параметры',
-				text: 'Выберите длину никнейма и включите опции для цифр и символов, если необходимо.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Сгенерируйте никнеймы',
-				text: 'Нажмите кнопку "Сгенерировать ники" для получения 10 вариантов никнеймов.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 5,
-				name: 'Выберите понравившийся вариант',
-				text: 'Просмотрите сгенерированные варианты и выберите понравившийся, скопируйте или скачайте его.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

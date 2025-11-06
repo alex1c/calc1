@@ -144,17 +144,17 @@ export default function GradeCalculator() {
 		input.courses.forEach((course, index) => {
 			if (!course.name || course.name.trim() === '') {
 				validationErrors.push(
-					`${t('form.errors.courseNameRequired')} (Предмет ${index + 1})`
+					`${t('form.errors.courseNameRequired')} (${t('form.errors.courseNumber', { number: index + 1 })})`
 				);
 			}
 			if (!course.grade || course.grade.trim() === '') {
 				validationErrors.push(
-					`${t('form.errors.gradeRequired')} (${course.name || `Предмет ${index + 1}`})`
+					`${t('form.errors.gradeRequired')} (${course.name || t('form.errors.courseNumber', { number: index + 1 })})`
 				);
 			}
 			if (!course.credits || course.credits <= 0) {
 				validationErrors.push(
-					`${t('form.errors.invalidCredits')} (${course.name || `Предмет ${index + 1}`})`
+					`${t('form.errors.invalidCredits')} (${course.name || t('form.errors.courseNumber', { number: index + 1 })})`
 				);
 			}
 		});
@@ -318,7 +318,7 @@ export default function GradeCalculator() {
 									>
 										<div className='flex items-start justify-between mb-3'>
 											<span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
-												Предмет {index + 1}
+												{t('form.courseNumber', { number: index + 1 })}
 											</span>
 											{input.courses.length > 1 && (
 												<button
@@ -347,7 +347,7 @@ export default function GradeCalculator() {
 														)
 													}
 													className='w-full px-2 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white'
-													placeholder='Название предмета'
+													placeholder={t('form.courseNamePlaceholder')}
 												/>
 											</div>
 
@@ -481,7 +481,7 @@ export default function GradeCalculator() {
 									{result.gpa.toFixed(2)} / {getMaxGPA().toFixed(1)}
 								</div>
 								<p className='text-sm text-green-700 dark:text-green-300'>
-									Средневзвешенный балл
+									{t('results.weightedAverage')}
 								</p>
 							</div>
 
@@ -495,7 +495,7 @@ export default function GradeCalculator() {
 									{result.totalCredits}
 								</div>
 								<p className='text-sm text-blue-700 dark:text-blue-300'>
-									Всего кредитов (часов)
+									{t('results.totalCredits')}
 								</p>
 							</div>
 
@@ -508,7 +508,7 @@ export default function GradeCalculator() {
 									{result.totalPoints.toFixed(2)}
 								</div>
 								<p className='text-sm text-purple-700 dark:text-purple-300'>
-									Качественный балл
+									{t('results.qualityScore')}
 								</p>
 							</div>
 

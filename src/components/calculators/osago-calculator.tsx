@@ -40,35 +40,31 @@ export default function OsagoCalculator() {
 	const [isCalculated, setIsCalculated] = useState(false);
 
 	const regions = [
-		{ value: 'moscow', label: 'Москва' },
-		{ value: 'spb', label: 'Санкт-Петербург' },
-		{ value: 'other', label: 'Другие регионы' },
+		{ value: 'moscow', label: t('form.regions.moscow') },
+		{ value: 'spb', label: t('form.regions.spb') },
+		{ value: 'other', label: t('form.regions.other') },
 	];
 
 	const driversCountOptions = [
-		{ value: 'one', label: 'Один водитель' },
-		{ value: 'several', label: 'Несколько водителей' },
-		{ value: 'unlimited', label: 'Неограниченное число' },
+		{ value: 'one', label: t('form.driversCountOptions.one') },
+		{ value: 'several', label: t('form.driversCountOptions.several') },
+		{ value: 'unlimited', label: t('form.driversCountOptions.unlimited') },
 	];
 
 	const bonusMalusOptions = [
-		{ value: 0.5, label: '0.5 (Максимальная скидка)' },
-		{ value: 0.6, label: '0.6' },
-		{ value: 0.7, label: '0.7' },
-		{ value: 0.8, label: '0.8' },
-		{ value: 0.9, label: '0.9' },
-		{ value: 1.0, label: '1.0 (Базовый тариф)' },
-		{ value: 1.1, label: '1.1' },
-		{ value: 1.2, label: '1.2' },
-		{ value: 1.3, label: '1.3' },
-		{ value: 1.4, label: '1.4' },
-		{ value: 1.5, label: '1.5' },
-		{ value: 1.6, label: '1.6' },
-		{ value: 1.7, label: '1.7' },
-		{ value: 1.8, label: '1.8' },
-		{ value: 1.9, label: '1.9' },
-		{ value: 2.0, label: '2.0' },
-		{ value: 2.45, label: '2.45 (Максимальная надбавка)' },
+		{ value: 0.5, label: t('form.bonusMalusOptions.0.5') },
+		{ value: 0.6, label: t('form.bonusMalusOptions.0.6') },
+		{ value: 0.65, label: t('form.bonusMalusOptions.0.65') },
+		{ value: 0.7, label: t('form.bonusMalusOptions.0.7') },
+		{ value: 0.8, label: t('form.bonusMalusOptions.0.8') },
+		{ value: 0.9, label: t('form.bonusMalusOptions.0.9') },
+		{ value: 1.0, label: t('form.bonusMalusOptions.1.0') },
+		{ value: 1.4, label: t('form.bonusMalusOptions.1.4') },
+		{ value: 1.5, label: t('form.bonusMalusOptions.1.5') },
+		{ value: 1.6, label: t('form.bonusMalusOptions.1.6') },
+		{ value: 1.7, label: t('form.bonusMalusOptions.1.7') },
+		{ value: 2.0, label: t('form.bonusMalusOptions.2.0') },
+		{ value: 2.45, label: t('form.bonusMalusOptions.2.45') },
 	];
 
 	const handleInputChange = (
@@ -92,25 +88,23 @@ export default function OsagoCalculator() {
 		const errors: string[] = [];
 
 		if (!formData.region) {
-			errors.push('Выберите регион');
+			errors.push(t('form.errors.regionRequired'));
 		}
 
 		if (formData.enginePower <= 0) {
-			errors.push('Мощность двигателя должна быть больше 0');
+			errors.push(t('form.errors.enginePowerGreaterThanZero'));
 		}
 
 		if (formData.driverAge < 18 || formData.driverAge > 100) {
-			errors.push('Возраст водителя должен быть от 18 до 100 лет');
+			errors.push(t('form.errors.driverAgeInvalid'));
 		}
 
 		if (formData.drivingExperience < 0) {
-			errors.push('Стаж вождения не может быть отрицательным');
+			errors.push(t('form.errors.drivingExperienceNegative'));
 		}
 
 		if (formData.drivingExperience > formData.driverAge - 16) {
-			errors.push(
-				'Стаж вождения не может превышать возраст минус 16 лет'
-			);
+			errors.push(t('form.errors.drivingExperienceTooHigh'));
 		}
 
 		return errors;

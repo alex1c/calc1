@@ -104,6 +104,9 @@ export default async function RebarCalculatorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -262,7 +265,7 @@ export default async function RebarCalculatorPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -279,48 +282,23 @@ export default async function RebarCalculatorPage({
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество арматуры',
-						description:
-							'Пошаговая инструкция по использованию калькулятора арматуры',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип конструкции',
-								text: 'Выберите тип конструкции (плита, фундамент, колонна, стена)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите размеры',
-								text: 'Введите длину, ширину и высоту конструкции в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите шаг сетки',
-								text: 'Укажите шаг арматурной сетки в сантиметрах (обычно 10-20 см)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите диаметр арматуры',
-								text: 'Выберите диаметр арматуры (8, 10, 12, 14, 16, 18, 20 мм)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество слоёв',
-								text: 'Укажите количество слоёв арматуры (обычно 1-2 слоя)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.rebarCalculator?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}олучите результат',
 								text: 'Калькулятор автоматически рассчитает количество стержней, общую длину и вес арматуры',
 							},
 						],

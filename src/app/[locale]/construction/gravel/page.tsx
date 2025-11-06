@@ -118,6 +118,9 @@ export default async function GravelPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -272,7 +275,7 @@ export default async function GravelPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -289,49 +292,23 @@ export default async function GravelPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество щебня',
-						description:
-							'Пошаговая инструкция по использованию калькулятора щебня',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип работ',
-								text: 'Укажите тип работ: фундамент, дорожка, отмостка или подсыпка',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите способ ввода данных',
-								text: 'Укажите размеры (длина × ширина), площадь или объём напрямую',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите размеры участка',
-								text: 'Для способа "Длина × Ширина": укажите длину, ширину и толщину слоя. Для "Площадь": укажите площадь и толщину. Для "Объём": укажите объём напрямую',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите фракцию щебня',
-								text: 'Выберите фракцию щебня: 5-10 мм (декор), 10-20 мм (фундамент, дорожки), 20-40 мм (подушка, отмостка), 40-70 мм (подсыпка)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите запас материала',
-								text: 'Укажите запас материала в процентах (обычно 10-15%) для компенсации усадки при трамбовке',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает объём и вес щебня с учётом запаса, а также количество мешков по 50 кг для транспортировки',
+				{(() => {
+		const howTo = messages.calculators?.gravel?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}лятор автоматически рассчитает объём и вес щебня с учётом запаса, а также количество мешков по 50 кг для транспортировки',
 							},
 						],
 					}),

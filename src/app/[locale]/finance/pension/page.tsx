@@ -109,6 +109,9 @@ export default async function PensionPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFinanceTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -256,7 +259,7 @@ export default async function PensionPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -277,45 +280,51 @@ export default async function PensionPage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать пенсию',
-						description:
-							'Пошаговая инструкция по использованию калькулятора пенсии',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите текущий возраст',
-								text: 'Укажите ваш текущий возраст в годах (от 18 до 100 лет)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите трудовой стаж',
-								text: 'Введите количество лет трудового стажа. Это критически важно для точного расчёта пенсионных баллов.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите среднюю зарплату',
-								text: 'Укажите среднюю зарплату за весь период работы в рублях в месяц. Используйте среднее значение, а не только текущую зарплату.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите пенсионный возраст',
-								text: 'Введите возраст выхода на пенсию (обычно 55-60 лет для женщин, 60-65 лет для мужчин, с учётом переходного периода)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает предполагаемый размер пенсии, пенсионные баллы, фиксированную выплату и другую информацию',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.pension?.seo?.howTo;
+				if (!howTo) return null;
+				const steps = [];
+				// Collect all step1, step2, step3, step4, etc.
+				for (let i = 1; i <= 10; i++) {
+					const stepKey = `step${i}`;
+					if (howTo[stepKey]) {
+						steps.push({
+							'@type': 'HowToStep',
+							name: howTo[stepKey].name,
+							text: howTo[stepKey].text,
+						});
+					}
+				}
+				// If no step1, step2, etc., check if steps object exists and has content
+				if (steps.length === 0 && howTo.steps && Object.keys(howTo.steps).length > 0) {
+					Object.keys(howTo.steps)
+						.sort()
+						.forEach(key => {
+							if (howTo.steps[key]) {
+								steps.push({
+									'@type': 'HowToStep',
+									name: howTo.steps[key].name,
+									text: howTo.steps[key].text,
+								});
+							}
+						});
+				}
+				if (steps.length === 0) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: steps,
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

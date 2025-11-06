@@ -125,6 +125,9 @@ export default async function PuttyPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -283,7 +286,7 @@ export default async function PuttyPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -304,50 +307,30 @@ export default async function PuttyPage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество шпатлёвки',
-						description:
-							'Пошаговая инструкция по использованию калькулятора шпатлёвки',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте комнату',
-								text: 'Укажите длину, ширину и высоту стен комнаты в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите проёмы',
-								text: 'Введите площадь всех окон и дверей в квадратных метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите количество слоёв',
-								text: 'Укажите количество слоёв шпатлёвки (обычно 2 слоя: стартовая и финишная)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите норму расхода',
-								text: 'Укажите норму расхода шпатлёвки в кг/м² (обычно 1-1.5 кг/м² на слой)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите запас',
-								text: 'Укажите процент запаса материала (рекомендуется 10-15%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимое количество шпатлёвки в килограммах и упаковках',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.putty?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

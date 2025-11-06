@@ -1692,6 +1692,26 @@
 						"patience": "Don't withdraw money prematurely — each additional year significantly increases final amount"
 					}
 				},
+				"howTo": {
+					"title": "How to Use Compound Interest Calculator",
+					"description": "Step-by-step guide on using the calculator",
+					"step1": {
+						"name": "Enter Principal",
+						"text": "Enter the principal amount in dollars"
+					},
+					"step2": {
+						"name": "Specify Interest Rate",
+						"text": "Enter the annual interest rate"
+					},
+					"step3": {
+						"name": "Select Term",
+						"text": "Specify the savings term in years and months"
+					},
+					"step4": {
+						"name": "Click Calculate",
+						"text": "Get result with growth chart"
+					}
+				},
 				"faq": {
 					"title": "Frequently Asked Questions",
 					"faqItems": [

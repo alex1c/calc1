@@ -49,16 +49,16 @@ export default function FuelCalculator() {
 		const errors: string[] = [];
 
 		if (formData.consumption <= 0) {
-			errors.push('Расход топлива должен быть больше 0');
+			errors.push(t('form.errors.consumptionGreaterThanZero'));
 		}
 
 		if (mode === 'distance') {
 			if (formData.fuelAmount <= 0) {
-				errors.push('Количество топлива должно быть больше 0');
+				errors.push(t('form.errors.fuelAmountGreaterThanZero'));
 			}
 		} else {
 			if (formData.distance <= 0) {
-				errors.push('Дистанция должна быть больше 0');
+				errors.push(t('form.errors.distanceGreaterThanZero'));
 			}
 		}
 
@@ -292,7 +292,7 @@ export default function FuelCalculator() {
 											{t('results.consumption')}:
 										</span>
 										<span className='font-medium'>
-											{formData.consumption} л/100 км
+											{formData.consumption} {t('results.per100km')}
 										</span>
 									</div>
 
@@ -303,7 +303,7 @@ export default function FuelCalculator() {
 													{t('results.fuelAmount')}:
 												</span>
 												<span className='font-medium'>
-													{formData.fuelAmount} л
+													{formData.fuelAmount} {t('results.liters')}
 												</span>
 											</div>
 											<div className='flex justify-between'>
@@ -314,7 +314,7 @@ export default function FuelCalculator() {
 													:
 												</span>
 												<span className='font-medium'>
-													{result.distance} км
+													{result.distance} {t('results.km')}
 												</span>
 											</div>
 										</>
@@ -325,7 +325,7 @@ export default function FuelCalculator() {
 													{t('results.distance')}:
 												</span>
 												<span className='font-medium'>
-													{formData.distance} км
+													{formData.distance} {t('results.km')}
 												</span>
 											</div>
 											<div className='flex justify-between'>
@@ -336,7 +336,7 @@ export default function FuelCalculator() {
 													:
 												</span>
 												<span className='font-medium'>
-													{result.fuelNeeded} л
+													{result.fuelNeeded} {t('results.liters')}
 												</span>
 											</div>
 										</>

@@ -518,7 +518,7 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 								{
 									'@type': 'ListItem',
 									position: 1,
-									name: 'Главная',
+									name: messages.breadcrumbs?.home || 'Home',
 									item: `https://calc1.ru/${locale}`,
 								},
 								{
@@ -563,7 +563,7 @@ export default async function ConstructionPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

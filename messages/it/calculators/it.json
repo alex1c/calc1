@@ -721,6 +721,24 @@
           "wifi": "Wifi",
           "vcard": "vCard"
         },
+        "wifi": {
+          "ssid": "SSID (Nome della rete)",
+          "password": "Password",
+          "security": "Tipo di sicurezza",
+          "securityTypes": {
+            "WPA": "WPA",
+            "WPA2": "WPA2",
+            "nopass": "Senza password"
+          }
+        },
+        "vcard": {
+          "name": "Nome",
+          "phone": "Telefono",
+          "address": "Indirizzo",
+          "namePlaceholder": "Mario Rossi",
+          "addressPlaceholder": "Milano, Via Esempio, 1"
+        },
+        "downloadError": "Errore durante il download. Prova a utilizzare la funzione di copia.",
         "errorLevels": {
           "L": "Basso (L)",
           "M": "Medio (M)",

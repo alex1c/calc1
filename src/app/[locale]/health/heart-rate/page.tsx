@@ -186,7 +186,7 @@ export default async function HeartRatePage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -205,29 +205,20 @@ export default async function HeartRatePage({
 	};
 
 	// JSON-LD structured data for HowTo
-	const howToData = {
+	const howTo = messages.calculators?.heartRate?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как рассчитать пульсовые зоны для тренировок',
-		description: 'Пошаговая инструкция по использованию калькулятора пульса',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				name: 'Введите возраст',
-				text: 'Введите ваш возраст в годах для расчёта максимальной ЧСС',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Укажите текущий пульс (опционально)',
-				text: 'Если измеряете пульс во время тренировки, введите текущее значение для определения зоны',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Получите результаты',
-				text: 'Калькулятор автоматически рассчитает максимальную ЧСС и все пульсовые зоны с рекомендациями',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;;
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>

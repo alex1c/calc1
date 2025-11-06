@@ -126,6 +126,9 @@ export default async function TilePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -284,7 +287,7 @@ export default async function TilePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -301,48 +304,23 @@ export default async function TilePage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество плитки',
-						description:
-							'Пошаговая инструкция по использованию калькулятора плитки',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте комнату',
-								text: 'Укажите длину и ширину комнаты в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите размер плитки',
-								text: 'Введите длину и ширину плитки в сантиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество в упаковке',
-								text: 'Введите количество плиток в одной упаковке',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите запас',
-								text: 'Укажите процент запаса материала (рекомендуется 10%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите ширину шва',
-								text: 'Введите ширину шва между плитками в миллиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.tile?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ame: 'Получите результат',
 								text: 'Калькулятор автоматически рассчитает необходимое количество плиток и упаковок',
 							},
 						],

@@ -22,6 +22,7 @@ import {
 } from '@/lib/calculators/wall';
 
 function WallCalculatorComponent() {
+	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.wall');
 	const [input, setInput] = useState<Partial<WallInput>>({
 		wallLength: 0,
@@ -81,7 +82,7 @@ function WallCalculatorComponent() {
 			setResult(calculationResult);
 			setErrors([]);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};
@@ -143,8 +144,8 @@ function WallCalculatorComponent() {
 								}
 								className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 							>
-								<option value='meters'>м</option>
-								<option value='centimeters'>см</option>
+								<option value='meters'>{tCommon('units.meters')}</option>
+								<option value='centimeters'>{tCommon('units.centimeters')}</option>
 							</select>
 						</div>
 
@@ -272,7 +273,7 @@ function WallCalculatorComponent() {
 										placeholder='0'
 									/>
 									<p className='text-sm text-gray-500 mt-1'>
-										мм
+										{tCommon('units.millimeters')}
 									</p>
 								</div>
 								<div>
@@ -293,7 +294,7 @@ function WallCalculatorComponent() {
 										placeholder='0'
 									/>
 									<p className='text-sm text-gray-500 mt-1'>
-										мм
+										{tCommon('units.millimeters')}
 									</p>
 								</div>
 								<div>
@@ -314,7 +315,7 @@ function WallCalculatorComponent() {
 										placeholder='0'
 									/>
 									<p className='text-sm text-gray-500 mt-1'>
-										мм
+										{tCommon('units.millimeters')}
 									</p>
 								</div>
 							</div>
@@ -338,7 +339,7 @@ function WallCalculatorComponent() {
 								className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 								placeholder='10'
 							/>
-							<p className='text-sm text-gray-500 mt-1'>мм</p>
+							<p className='text-sm text-gray-500 mt-1'>{tCommon('units.millimeters')}</p>
 						</div>
 
 						{/* Reserve and Price */}

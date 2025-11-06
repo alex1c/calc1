@@ -108,6 +108,9 @@ export default async function CharacterTraitsPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -166,7 +169,7 @@ export default async function CharacterTraitsPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -184,38 +187,20 @@ export default async function CharacterTraitsPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.characterTraits?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как создать уникального персонажа онлайн',
-		description: 'Пошаговая инструкция по использованию генератора характеристик персонажа',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите параметры персонажа',
-				text: 'Выберите тип персонажа (реалистичный, фэнтези или Sci-Fi), пол (мужской, женский или любой), возрастную группу (ребёнок, подросток, взрослый, пожилой) и количество персонажей (от 1 до 5).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Сгенерируйте персонажей',
-				text: 'Нажмите кнопку "Сгенерировать" для создания персонажей с полным набором характеристик.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Просмотрите результаты',
-				text: 'Каждый персонаж будет иметь имя, возраст, описание характера, сильные и слабые стороны, профессию и предысторию.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Используйте результаты',
-				text: 'Скопируйте описания персонажей в буфер обмена или скачайте их в текстовом файле для дальнейшего использования в вашем проекте.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

@@ -42,15 +42,15 @@ export default function KaskoCalculator() {
 	const [isCalculated, setIsCalculated] = useState(false);
 
 	const regions = [
-		{ value: 'moscow', label: 'Москва' },
-		{ value: 'spb', label: 'Санкт-Петербург' },
-		{ value: 'other', label: 'Другие регионы' },
+		{ value: 'moscow', label: t('form.regions.moscow') },
+		{ value: 'spb', label: t('form.regions.spb') },
+		{ value: 'other', label: t('form.regions.other') },
 	];
 
 	const franchiseOptions = [
-		{ value: 'none', label: 'Без франшизы' },
-		{ value: '10000', label: '10 000 руб.' },
-		{ value: '20000', label: '20 000 руб.' },
+		{ value: 'none', label: t('form.franchiseOptions.none') },
+		{ value: '10000', label: t('form.franchiseOptions.10000') },
+		{ value: '20000', label: t('form.franchiseOptions.20000') },
 	];
 
 	const handleInputChange = (
@@ -77,32 +77,30 @@ export default function KaskoCalculator() {
 		const errors: string[] = [];
 
 		if (formData.carValue <= 0) {
-			errors.push('Стоимость автомобиля должна быть больше 0');
+			errors.push(t('form.errors.carValueGreaterThanZero'));
 		}
 
 		if (
 			formData.carYear < 1990 ||
 			formData.carYear > new Date().getFullYear() + 1
 		) {
-			errors.push('Год выпуска должен быть от 1990 до текущего года');
+			errors.push(t('form.errors.carYearInvalid'));
 		}
 
 		if (formData.driverAge < 18 || formData.driverAge > 100) {
-			errors.push('Возраст водителя должен быть от 18 до 100 лет');
+			errors.push(t('form.errors.driverAgeInvalid'));
 		}
 
 		if (formData.drivingExperience < 0) {
-			errors.push('Стаж вождения не может быть отрицательным');
+			errors.push(t('form.errors.drivingExperienceNegative'));
 		}
 
 		if (formData.drivingExperience > formData.driverAge - 16) {
-			errors.push(
-				'Стаж вождения не может превышать возраст минус 16 лет'
-			);
+			errors.push(t('form.errors.drivingExperienceTooHigh'));
 		}
 
 		if (!formData.region) {
-			errors.push('Выберите регион');
+			errors.push(t('form.errors.regionRequired'));
 		}
 
 		return errors;

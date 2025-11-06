@@ -125,6 +125,9 @@ export default async function HeatingCostPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -281,7 +284,7 @@ export default async function HeatingCostPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -301,41 +304,23 @@ export default async function HeatingCostPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать стоимость отопления',
-						description:
-							'Пошаговая инструкция по использованию калькулятора стоимости отопления',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите площадь помещения',
-								text: 'Введите площадь помещения в квадратных метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип отопления',
-								text: 'Выберите тип отопительной системы: электрическое, газовое, твердотопливное или централизованное отопление',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите параметры',
-								text: 'Укажите продолжительность отопительного сезона в днях, количество часов работы в день, требуемую температуру и КПД системы',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите тариф',
-								text: 'Введите тариф на энергоноситель в рублях за единицу (кВт⋅ч для электричества, м³ для газа, кг для твердого топлива, Гкал для центрального отопления)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимую мощность, суточное и сезонное потребление энергии, а также стоимость отопления в день и за весь сезон',
+			{(() => {
+		const howTo = messages.calculators?.heatingCost?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ую мощность, суточное и сезонное потребление энергии, а также стоимость отопления в день и за весь сезон',
 							},
 						],
 					}),

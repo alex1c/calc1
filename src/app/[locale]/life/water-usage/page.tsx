@@ -127,6 +127,9 @@ export default async function WaterUsagePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -285,7 +288,7 @@ export default async function WaterUsagePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -305,41 +308,23 @@ export default async function WaterUsagePage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать расход воды',
-						description:
-							'Пошаговая инструкция по использованию калькулятора расхода воды',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите сценарий использования',
-								text: 'Выберите сценарий использования: квартира, частный дом, офис, строительство или коммерческое помещение',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество человек',
-								text: 'Введите количество жильцов, сотрудников или посетителей',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите тарифы',
-								text: 'Введите тарифы на горячую и холодную воду в рублях за кубометр',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите потери',
-								text: 'Введите процент потерь и протечек (обычно 3-10%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает суточный, месячный и годовой расход воды, а также стоимость горячей и холодной воды отдельно и общую стоимость',
+			{(() => {
+		const howTo = messages.calculators?.waterUsage?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ый, месячный и годовой расход воды, а также стоимость горячей и холодной воды отдельно и общую стоимость',
 							},
 						],
 					}),

@@ -12,6 +12,7 @@ import {
 
 export default function LaminateCalculator() {
 	const t = useTranslations('calculators.laminate');
+	const tCommon = useTranslations('common');
 	const [input, setInput] = useState<Partial<LaminateInput>>({
 		roomLength: 0,
 		roomWidth: 0,
@@ -47,7 +48,7 @@ export default function LaminateCalculator() {
 			setResult(calculationResult);
 			setErrors([]);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};

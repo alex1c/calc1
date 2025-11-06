@@ -1692,6 +1692,26 @@
 						"patience": "Не забирайте деньги раньше времени — каждый дополнительный год значительно увеличивает итоговую сумму"
 					}
 				},
+				"howTo": {
+					"title": "Comment utiliser le calculateur d'intérêts composés",
+					"description": "Guide étape par étape pour utiliser le calculateur",
+					"step1": {
+						"name": "Entrez le capital initial",
+						"text": "Entrez le montant du capital initial en euros"
+					},
+					"step2": {
+						"name": "Spécifiez le taux d'intérêt",
+						"text": "Entrez le taux d'intérêt annuel"
+					},
+					"step3": {
+						"name": "Sélectionnez la durée",
+						"text": "Spécifiez la durée de l'épargne en années et mois"
+					},
+					"step4": {
+						"name": "Cliquez sur calculer",
+						"text": "Obtenez le résultat avec le graphique de croissance"
+					}
+				},
 				"faq": {
 					"title": "Часто задаваемые вопросы",
 					"faqItems": [

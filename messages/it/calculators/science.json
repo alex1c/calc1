@@ -65,14 +65,19 @@
           "gradeRequired": "Seleziona valutazione",
           "creditsRequired": "Specificare il numero di crediti",
           "invalidCredits": "Il numero di crediti deve essere maggiore di 0",
-          "invalidGrade": "Valutazione errata"
-        }
+          "invalidGrade": "Valutazione errata",
+          "courseNumber": "Elemento {number}"
+        },
+        "courseNamePlaceholder": "Titolo dell'argomento",
+        "selectPlaceholder": "Seleziona",
+        "courseNumber": "Elemento {number}"
       },
       "results": {
         "title": "Risultati del calcolo",
         "gpa": "Media dei voti (GPA)",
-        "totalCredits": "Crediti totali",
+        "totalCredits": "Crediti totali (ore)",
         "weightedAverage": "Media ponderata",
+        "qualityScore": "Punteggio qualitativo",
         "totalPoints": "Punti totali",
         "courses": "Elementi",
         "course": "Articolo",

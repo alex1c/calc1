@@ -105,6 +105,9 @@ export default async function ElectricityUsagePage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -263,7 +266,7 @@ export default async function ElectricityUsagePage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -283,46 +286,23 @@ export default async function ElectricityUsagePage({
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать расход электроэнергии',
-						description:
-							'Пошаговая инструкция по использованию калькулятора расхода электроэнергии',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте прибор',
-								text: 'Укажите название прибора, его мощность в ваттах, количество приборов',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите время работы',
-								text: 'Введите количество часов работы в день и дней работы в месяц',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип сети',
-								text: 'Укажите однофазную (220 В) или трёхфазную (380 В) сеть, при необходимости коэффициент нагрузки',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите тариф',
-								text: 'Укажите тариф на электроэнергию в рублях за кВт⋅ч',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте другие приборы',
-								text: 'Можно добавить несколько приборов для расчёта общего потребления',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает потребление в день, месяц и год, а также стоимость электроэнергии',
+			{(() => {
+		const howTo = messages.calculators?.electricityUsage?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()} 'Калькулятор автоматически рассчитает потребление в день, месяц и год, а также стоимость электроэнергии',
 							},
 						],
 					}),

@@ -119,6 +119,9 @@ export default async function CableSectionPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -277,7 +280,7 @@ export default async function CableSectionPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -294,48 +297,23 @@ export default async function CableSectionPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать сечение кабеля',
-						description:
-							'Пошаговая инструкция по использованию калькулятора сечения кабеля',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите мощность',
-								text: 'Введите мощность нагрузки в кВт или ток в амперах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите напряжение',
-								text: 'Выберите напряжение сети (220В для однофазной, 380В для трёхфазной)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите длину кабеля',
-								text: 'Введите длину кабеля в метрах для расчёта падения напряжения',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите материал',
-								text: 'Выберите материал проводника (медь или алюминий)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип прокладки',
-								text: 'Укажите способ прокладки кабеля (открытая, закрытая)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.cableSectionCalculator?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}олучите результат',
 								text: 'Калькулятор автоматически рассчитает необходимое сечение кабеля и падение напряжения',
 							},
 						],

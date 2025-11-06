@@ -115,6 +115,9 @@ export default async function LotteryGeneratorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -173,7 +176,7 @@ export default async function LotteryGeneratorPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -191,38 +194,20 @@ export default async function LotteryGeneratorPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.lotteryGenerator?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как создать лотерейный билет',
-		description: 'Пошаговая инструкция по использованию генератора лотерейных билетов',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите тип лотереи',
-				text: 'Выберите подходящий тип лотереи из списка (например, 6 из 49 или 5 из 36).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Выберите количество билетов',
-				text: 'Укажите, сколько билетов нужно сгенерировать (от 1 до 20).',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Сгенерируйте билеты',
-				text: 'Нажмите кнопку "Сгенерировать билеты" для создания случайных комбинаций.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Просмотрите и сохраните результаты',
-				text: 'Просмотрите сгенерированные билеты, скопируйте, скачайте или распечатайте их при необходимости.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

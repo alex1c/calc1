@@ -116,6 +116,9 @@ export default async function VentilationPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	const breadcrumbItems = [
 		{
 			label: tCategories('construction.title'),
@@ -268,7 +271,7 @@ export default async function VentilationPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -287,42 +290,30 @@ export default async function VentilationPage({ params: { locale } }: Props) {
 					}),
 				}}
 			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать вентиляцию помещения',
-						description:
-							'Пошаговая инструкция по использованию калькулятора вентиляции',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте размеры помещения',
-								text: 'Измерьте длину, ширину и высоту помещения в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип помещения',
-								text: 'Выберите тип помещения из списка: жилая комната, кухня, ванная, офис и т.д.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество людей',
-								text: 'Введите максимальное количество людей, которые будут находиться в помещении одновременно',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает объём помещения, требуемую производительность вентиляции и рекомендации по выбору системы',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.ventilation?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps || {})
+									.sort()
+									.map((key) => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

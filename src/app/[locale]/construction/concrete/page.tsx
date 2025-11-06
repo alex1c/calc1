@@ -123,6 +123,9 @@ export default async function ConcretePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -281,7 +284,7 @@ export default async function ConcretePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -302,45 +305,30 @@ export default async function ConcretePage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество бетона',
-						description:
-							'Пошаговая инструкция по использованию калькулятора бетона',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите объём бетона',
-								text: 'Введите объём бетона в м³ или литрах, который вам необходим',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите марку бетона',
-								text: 'Выберите марку бетона (М100, М150, М200, М250, М300 и т.д.) в зависимости от назначения',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите пропорции',
-								text: 'Укажите пропорции цемента, песка и щебня (или используйте стандартные значения)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите водоцементное соотношение',
-								text: 'Укажите соотношение воды к цементу (обычно 0.4-0.7)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимое количество цемента, песка, щебня и воды',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.concrete?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

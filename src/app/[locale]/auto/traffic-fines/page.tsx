@@ -109,6 +109,11 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -265,7 +270,7 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -286,40 +291,30 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать штрафы ГИБДД',
-						description:
-							'Пошаговая инструкция по использованию калькулятора штрафов ГИБДД',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите нарушения',
-								text: 'Выберите одно или несколько нарушений ПДД из списка (превышение скорости, парковка, проезд на красный и т.д.)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Просмотрите размер штрафа',
-								text: 'Калькулятор покажет размер штрафа за каждое нарушение согласно КоАП РФ',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Учтите скидку при досрочной оплате',
-								text: 'При оплате в течение 20 дней действует скидка 50% на большинство штрафов',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите итоговую сумму',
-								text: 'Калькулятор автоматически суммирует все штрафы и рассчитывает сумму к оплате со скидкой',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.traffic-fines?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

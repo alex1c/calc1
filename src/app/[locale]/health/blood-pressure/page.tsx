@@ -186,7 +186,7 @@ export default async function BloodPressurePage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -205,29 +205,20 @@ export default async function BloodPressurePage({
 	};
 
 	// JSON-LD structured data for HowTo
-	const howToData = {
+	const howTo = messages.calculators?.bloodPressure?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как проверить артериальное давление',
-		description: 'Пошаговая инструкция по использованию калькулятора давления',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				name: 'Введите возраст',
-				text: 'Введите ваш возраст в годах для определения нормальных значений давления',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Введите давление',
-				text: 'Введите систолическое (верхнее) и диастолическое (нижнее) давление в мм рт. ст.',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Получите результат',
-				text: 'Калькулятор автоматически классифицирует ваше давление и покажет рекомендации по здоровью',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;;
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>

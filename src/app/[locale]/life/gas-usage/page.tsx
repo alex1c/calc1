@@ -125,6 +125,9 @@ export default async function GasUsagePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -281,7 +284,7 @@ export default async function GasUsagePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -301,36 +304,23 @@ export default async function GasUsagePage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать расход газа',
-						description:
-							'Пошаговая инструкция по использованию калькулятора расхода газа',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите назначение газа',
-								text: 'Выберите назначение использования газа: отопление, горячее водоснабжение или приготовление пищи',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите параметры',
-								text: 'Для отопления укажите площадь помещения. Для всех назначений укажите мощность оборудования, время работы в день, КПД системы и продолжительность периода',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите тариф',
-								text: 'Введите тариф на газ в рублях за м³',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает расход газа в час, суточный, месячный и за период расход, а также стоимость газа для всех периодов',
+			{(() => {
+		const howTo = messages.calculators?.gasUsage?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}итает расход газа в час, суточный, месячный и за период расход, а также стоимость газа для всех периодов',
 							},
 						],
 					}),

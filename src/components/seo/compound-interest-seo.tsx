@@ -33,25 +33,25 @@ export default function CompoundInterestSEO() {
 	// Chart data for visualization - Growth comparison
 	const growthComparison = [
 		{
-			period: '1 год',
+			period: tSeo('comparison.simpleVsCompound.periods.1year'),
 			simple: 112000,
 			compound: 112680,
 			color: 'bg-green-500',
 		},
 		{
-			period: '3 года',
+			period: tSeo('comparison.simpleVsCompound.periods.3years'),
 			simple: 136000,
 			compound: 140490,
 			color: 'bg-blue-500',
 		},
 		{
-			period: '5 лет',
+			period: tSeo('comparison.simpleVsCompound.periods.5years'),
 			simple: 160000,
 			compound: 176235,
 			color: 'bg-purple-500',
 		},
 		{
-			period: '10 лет',
+			period: tSeo('comparison.simpleVsCompound.periods.10years'),
 			simple: 220000,
 			compound: 310585,
 			color: 'bg-orange-500',
@@ -61,28 +61,28 @@ export default function CompoundInterestSEO() {
 	// Compounding frequency comparison
 	const frequencyComparison = [
 		{
-			frequency: 'Ежегодно',
+			frequency: tSeo('comparison.frequency.frequencies.annually'),
 			amount: 176234,
 			color: 'bg-red-500',
 		},
 		{
-			frequency: 'Полгода',
-			frequencyLabel: 'Раз в полгода',
+			frequency: tSeo('comparison.frequency.frequencies.semiAnnually'),
+			frequencyLabel: tSeo('comparison.frequency.frequencies.semiAnnually'),
 			amount: 179587,
 			color: 'bg-orange-500',
 		},
 		{
-			frequency: 'Ежеквартально',
+			frequency: tSeo('comparison.frequency.frequencies.quarterly'),
 			amount: 181169,
 			color: 'bg-yellow-500',
 		},
 		{
-			frequency: 'Ежемесячно',
+			frequency: tSeo('comparison.frequency.frequencies.monthly'),
 			amount: 183975,
 			color: 'bg-green-500',
 		},
 		{
-			frequency: 'Ежедневно',
+			frequency: tSeo('comparison.frequency.frequencies.daily'),
 			amount: 184826,
 			color: 'bg-blue-500',
 		},
@@ -155,7 +155,7 @@ export default function CompoundInterestSEO() {
 										</p>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Входные данные:
+												{tSeo('calculation.exampleLabels.input')}
 											</p>
 											<code className='text-xs text-blue-800 dark:text-blue-300 font-mono break-all whitespace-pre-wrap'>
 												{tSeo(
@@ -165,7 +165,7 @@ export default function CompoundInterestSEO() {
 										</div>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Расчёт:
+												{tSeo('calculation.exampleLabels.calculation')}
 											</p>
 											<code className='text-xs text-green-800 dark:text-green-300 font-mono break-all whitespace-pre-wrap'>
 												{tSeo(
@@ -176,7 +176,7 @@ export default function CompoundInterestSEO() {
 										<div className='grid grid-cols-2 gap-2 mb-2'>
 											<div className='bg-green-100 dark:bg-green-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-green-800 dark:text-green-300 mb-1'>
-													Итоговая сумма:
+													{tSeo('calculation.exampleLabels.result')}
 												</p>
 												<p className='text-xs text-green-900 dark:text-green-200 font-bold'>
 													{tSeo(
@@ -186,7 +186,7 @@ export default function CompoundInterestSEO() {
 											</div>
 											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
-													Проценты:
+													{tSeo('calculation.exampleLabels.interest')}
 												</p>
 												<p className='text-xs text-purple-900 dark:text-purple-200 font-bold'>
 													{tSeo(
@@ -212,8 +212,7 @@ export default function CompoundInterestSEO() {
 						<div className='bg-gray-50 dark:bg-gray-700 p-5 rounded-lg'>
 							<h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2'>
 								<BarChart3 className='w-5 h-5 text-blue-600 dark:text-blue-400' />
-								Сравнение простых и сложных процентов (100 000
-								₽, 12% годовых)
+								{tSeo('comparison.simpleVsCompound.title')}
 							</h4>
 							<div className='space-y-4'>
 								{growthComparison.map((item, index) => (
@@ -224,14 +223,14 @@ export default function CompoundInterestSEO() {
 											</span>
 											<div className='flex gap-4 text-sm'>
 												<span className='text-red-600 dark:text-red-400'>
-													Простой:{' '}
+													{tSeo('comparison.simpleVsCompound.simple')}{' '}
 													{item.simple.toLocaleString(
 														'ru-RU'
 													)}{' '}
 													₽
 												</span>
 												<span className='text-green-600 dark:text-green-400 font-semibold'>
-													Сложный:{' '}
+													{tSeo('comparison.simpleVsCompound.compound')}{' '}
 													{item.compound.toLocaleString(
 														'ru-RU'
 													)}{' '}
@@ -286,8 +285,7 @@ export default function CompoundInterestSEO() {
 						<div className='bg-gray-50 dark:bg-gray-700 p-5 rounded-lg'>
 							<h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2'>
 								<TrendingUp className='w-5 h-5 text-purple-600 dark:text-purple-400' />
-								Влияние частоты капитализации (100 000 ₽, 12%
-								годовых, 5 лет)
+								{tSeo('comparison.frequency.title')}
 							</h4>
 							<div className='space-y-3'>
 								{frequencyComparison.map((item, index) => (
@@ -341,7 +339,7 @@ export default function CompoundInterestSEO() {
 				</p>
 				<div className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mt-4'>
 					<h3 className='font-semibold text-gray-900 dark:text-white mb-2'>
-						Основная формула сложных процентов:
+						{tSeo('calculation.formulas.baseTitle')}
 					</h3>
 					<div className='bg-white dark:bg-gray-600 rounded p-3 mb-3'>
 						<code className='text-sm text-blue-800 dark:text-blue-300 font-mono'>
@@ -349,7 +347,7 @@ export default function CompoundInterestSEO() {
 						</code>
 					</div>
 					<h3 className='font-semibold text-gray-900 dark:text-white mb-2 mt-4'>
-						Формула с регулярными взносами:
+						{tSeo('calculation.formulas.contributionsTitle')}
 					</h3>
 					<div className='bg-white dark:bg-gray-600 rounded p-3'>
 						<code className='text-sm text-green-800 dark:text-green-300 font-mono'>
@@ -357,7 +355,7 @@ export default function CompoundInterestSEO() {
 						</code>
 					</div>
 					<h3 className='font-semibold text-gray-900 dark:text-white mb-2 mt-4'>
-						Эффективная процентная ставка (EAR):
+						{tSeo('calculation.formulas.effectiveRateTitle')}
 					</h3>
 					<div className='bg-white dark:bg-gray-600 rounded p-3'>
 						<code className='text-sm text-purple-800 dark:text-purple-300 font-mono'>

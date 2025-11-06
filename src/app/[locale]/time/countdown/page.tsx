@@ -285,40 +285,56 @@ export default async function CountdownPage({ params: { locale } }: Props) {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как использовать калькулятор обратного отсчёта',
-						description:
-							'Пошаговая инструкция по использованию калькулятора обратного отсчёта для отслеживания времени до событий',
-						step: [
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'HowToStep',
-								name: 'Введите название события',
-								text: 'Введите название события (необязательно), чтобы идентифицировать обратный отсчёт',
+								'@type': 'ListItem',
+								position: 1,
+								name: messages.breadcrumbs?.home || 'Home',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'HowToStep',
-								name: 'Выберите дату события',
-								text: 'Выберите дату и время события в календаре или введите вручную',
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('time.title'),
+								item: `https://calc1.ru/${locale}/time`,
 							},
 							{
-								'@type': 'HowToStep',
-								name: 'Настройте визуализацию',
-								text: 'Выберите цвет обратного отсчёта и настройте звуковые уведомления при необходимости',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Запустите обратный отсчёт',
-								text: 'Нажмите кнопку "Запустить отсчёт", и калькулятор начнёт показывать оставшееся время в днях, часах, минутах и секундах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Отслеживайте время',
-								text: 'Обратный отсчёт обновляется каждую секунду, показывая актуальное время до события. При достижении события включится звуковой сигнал',
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/time/countdown`,
 							},
 						],
 					}),
 				}}
 			/>
+
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.countdown?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

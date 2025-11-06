@@ -117,6 +117,9 @@ export default async function IdealWeightPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedHealthTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedHealthTranslations(locale);
+
 	const tSeo = await getTranslations({
 		locale,
 		namespace: 'calculators.ideal-weight.seo',
@@ -186,7 +189,7 @@ export default async function IdealWeightPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{

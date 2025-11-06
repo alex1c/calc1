@@ -153,7 +153,7 @@ export default async function DaysBetweenPage({
 								<div className='text-2xl font-bold text-white mb-1'>
 									{t('hero.days')}
 								</div>
-								<div className='text-blue-100'>Точный расчёт</div>
+								<div className='text-blue-100'>{t('hero.accurateCalculation')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
@@ -167,7 +167,7 @@ export default async function DaysBetweenPage({
 								<div className='text-2xl font-bold text-white mb-1'>
 									{t('hero.free')}
 								</div>
-								<div className='text-blue-100'>Использование</div>
+								<div className='text-blue-100'>{t('hero.usage')}</div>
 							</div>
 						</div>
 					</div>
@@ -271,40 +271,30 @@ export default async function DaysBetweenPage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать разницу между датами',
-						description:
-							'Пошаговая инструкция по использованию калькулятора разницы между датами',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите начальную дату',
-								text: 'Укажите первую дату, с которой начинается отсчёт',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите конечную дату',
-								text: 'Укажите вторую дату, до которой ведётся отсчёт',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Калькулятор автоматически вычислит разницу в днях, неделях, месяцах и годах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Результат отобразится с детальной информацией о разнице между датами',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.daysBetween?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

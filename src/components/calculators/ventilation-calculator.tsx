@@ -21,6 +21,7 @@ import {
 
 export default function VentilationCalculator() {
 	const t = useTranslations('calculators.ventilation');
+	const tCommon = useTranslations('common');
 
 	const [result, setResult] = useState<VentilationResult | null>(null);
 	const [errors, setErrors] = useState<string[]>([]);
@@ -142,7 +143,7 @@ export default function VentilationCalculator() {
 			setErrors([]);
 			setIsCalculated(true);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};

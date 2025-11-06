@@ -126,6 +126,9 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -284,7 +287,7 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -304,36 +307,23 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать вес бумаги',
-						description:
-							'Пошаговая инструкция по использованию калькулятора веса бумаги',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите формат бумаги',
-								text: 'Выберите формат бумаги из списка: A4, A3, A5 или Letter',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите плотность',
-								text: 'Выберите или введите плотность бумаги в г/м² (обычно указана на упаковке)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите количество листов',
-								text: 'Укажите количество листов бумаги, вес которых нужно рассчитать',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает вес одного листа и общий вес всех листов в граммах и килограммах',
+			{(() => {
+		const howTo = messages.calculators?.paper-weight?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}: 'Калькулятор автоматически рассчитает вес одного листа и общий вес всех листов в граммах и килограммах',
 							},
 						],
 					}),

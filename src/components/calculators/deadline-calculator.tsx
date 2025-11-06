@@ -89,13 +89,13 @@ export default function DeadlineCalculator() {
 	const handleCopyResult = async () => {
 		if (!result) return;
 
-		const resultText = `Расчёт срока выполнения:
-Стартовая дата: ${result.startDate}
-Длительность: ${result.duration} ${result.isWorkDays ? 'рабочих' : 'календарных'} дней
-Конечная дата: ${result.formattedEndDate} (${result.dayOfWeek})
-Всего дней: ${result.totalDays}
-Рабочих дней: ${result.workDays}
-Выходных: ${result.weekends}`;
+		const resultText = `${t('results.copyText.title')}
+${t('results.copyText.startDate')} ${result.startDate}
+${t('results.copyText.duration')} ${result.duration} ${result.isWorkDays ? t('results.copyText.workDays') : t('results.copyText.calendarDays')} ${t('results.copyText.days')}
+${t('results.copyText.endDate')} ${result.formattedEndDate} (${result.dayOfWeek})
+${t('results.copyText.totalDays')} ${result.totalDays}
+${t('results.copyText.workDays2')} ${result.workDays}
+${t('results.copyText.weekends')} ${result.weekends}`;
 
 		try {
 			await navigator.clipboard.writeText(resultText);
@@ -258,7 +258,7 @@ export default function DeadlineCalculator() {
 							{t('results.title')}
 						</h3>
 						<p className='text-gray-600'>
-							Длительность: {result.duration} {result.isWorkDays ? 'рабочих' : 'календарных'} дней
+							{t('results.copyText.duration')} {result.duration} {result.isWorkDays ? t('results.duration.workDays') : t('results.duration.calendarDays')} {t('results.duration.days')}
 						</p>
 					</div>
 

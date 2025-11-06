@@ -97,7 +97,7 @@ export default function LotteryGenerator() {
 	const handleCopy = async () => {
 		const text = generatedTickets
 			.map((ticket, index) => {
-				const ticketStr = `Билет ${index + 1}: ${ticket.numbers.join(
+				const ticketStr = `${t('results.ticketNumber', { number: index + 1 })}: ${ticket.numbers.join(
 					', '
 				)}`;
 				return ticket.bonus
@@ -114,7 +114,7 @@ export default function LotteryGenerator() {
 	const handleDownload = () => {
 		const content = generatedTickets
 			.map((ticket, index) => {
-				const ticketStr = `Билет ${index + 1}: ${ticket.numbers.join(
+				const ticketStr = `${t('results.ticketNumber', { number: index + 1 })}: ${ticket.numbers.join(
 					', '
 				)}`;
 				return ticket.bonus
@@ -137,7 +137,7 @@ export default function LotteryGenerator() {
 	const handlePrint = () => {
 		const printContent = generatedTickets
 			.map((ticket, index) => {
-				const ticketStr = `Билет ${index + 1}: ${ticket.numbers.join(
+				const ticketStr = `${t('results.ticketNumber', { number: index + 1 })}: ${ticket.numbers.join(
 					', '
 				)}`;
 				return ticket.bonus
@@ -151,7 +151,7 @@ export default function LotteryGenerator() {
 			printWindow.document.write(`
 				<html>
 					<head>
-						<title>Лотерейные билеты</title>
+						<title>${t('results.pdfTitle')}</title>
 						<style>
 							body { font-family: Arial, sans-serif; padding: 20px; }
 							.ticket { margin: 20px 0; padding: 15px; border: 2px solid #000; }
@@ -160,12 +160,12 @@ export default function LotteryGenerator() {
 						</style>
 					</head>
 					<body>
-						<h1>Лотерейные билеты</h1>
+						<h1>${t('results.pdfH1')}</h1>
 						${generatedTickets
 							.map(
 								(ticket, index) => `
 							<div class="ticket">
-								<h3>Билет ${index + 1}</h3>
+								<h3>${t('results.ticketNumber', { number: index + 1 })}</h3>
 								<div class="numbers">
 									${ticket.numbers.join(' - ')}
 									${ticket.bonus ? ` <span class="bonus">+ ${ticket.bonus}</span>` : ''}

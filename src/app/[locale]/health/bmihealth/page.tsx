@@ -186,7 +186,7 @@ export default async function BMIHealthPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -205,34 +205,20 @@ export default async function BMIHealthPage({
 	};
 
 	// JSON-LD structured data for HowTo
-	const howToData = {
+	const howTo = messages.calculators?.bmiHealth?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как рассчитать индекс массы тела (BMI)',
-		description: 'Пошаговая инструкция по использованию калькулятора BMI',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				name: 'Измерьте вес',
-				text: 'Измерьте свой вес в килограммах утром натощак для наиболее точного результата',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Измерьте рост',
-				text: 'Измерьте свой рост в сантиметрах',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Введите данные',
-				text: 'Введите вес и рост в калькулятор BMI',
-			},
-			{
-				'@type': 'HowToStep',
-				name: 'Получите результат',
-				text: 'Калькулятор автоматически рассчитает ваш индекс массы тела и покажет категорию веса с рекомендациями',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;;
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>

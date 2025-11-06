@@ -107,6 +107,9 @@ export default async function HashratePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedItTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedItTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -267,7 +270,7 @@ export default async function HashratePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -288,39 +291,30 @@ export default async function HashratePage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать доходность майнинга',
-						description: tSeo('calculation.content'),
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите хешрейт оборудования',
-								text: 'Введите хешрейт вашего майнинг-оборудования и выберите единицу измерения (H/s, KH/s, MH/s, GH/s, TH/s, PH/s).',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите параметры сети',
-								text: 'Введите сложность сети, награду за блок и время блока. Можно выбрать предустановленную криптовалюту или указать параметры вручную.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите затраты',
-								text: 'Введите потребление энергии оборудования в ваттах и стоимость электроэнергии. При необходимости укажите комиссию майнинг-пула.',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Рассчитайте доходность',
-								text: 'Нажмите кнопку "Рассчитать" для получения результатов: доходность, прибыль, затраты на электроэнергию и окупаемость.',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.hashrate?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

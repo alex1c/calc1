@@ -115,6 +115,9 @@ export default async function FoundationPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	const breadcrumbItems = [
 		{
 			label: tCategories('construction.title'),
@@ -267,7 +270,7 @@ export default async function FoundationPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -284,48 +287,23 @@ export default async function FoundationPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать материалы для фундамента',
-						description:
-							'Пошаговая инструкция по использованию калькулятора фундамента',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип фундамента',
-								text: 'Выберите тип фундамента: ленточный, плитный или столбчатый',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите размеры',
-								text: 'Укажите размеры фундамента в метрах (длина, ширина, высота)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите марку бетона',
-								text: 'Выберите марку бетона (М200, М250, М300)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите параметры арматуры',
-								text: 'Укажите диаметр арматуры, шаг и количество слоёв',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте запас',
-								text: 'Укажите процент запаса на потери (рекомендуется 10%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.foundation?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}Получите результат',
 								text: 'Калькулятор автоматически рассчитает объём бетона, количество материалов и арматуры',
 							},
 						],

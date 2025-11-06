@@ -33,6 +33,19 @@
     "result": "Результат",
     "clear": "Очистить",
     "favorites": "Избранное",
+    "calculationError": "Ошибка при расчёте. Проверьте введённые данные.",
+    "units": {
+      "meters": "м",
+      "centimeters": "см",
+      "millimeters": "мм",
+      "kilograms": "кг",
+      "grams": "г",
+      "liters": "л",
+      "milliliters": "мл",
+      "cubicMeters": "м³",
+      "metersPerSecond": "м/с",
+      "cubicMetersPerSecond": "м³/с"
+    },
     "notFound": {
       "title": "Страница не найдена",
       "description": "Извините, запрашиваемая страница не существует.",

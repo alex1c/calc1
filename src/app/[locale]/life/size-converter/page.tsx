@@ -131,6 +131,9 @@ export default async function SizeConverterPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -283,7 +286,7 @@ export default async function SizeConverterPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -303,40 +306,23 @@ export default async function SizeConverterPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как использовать конвертер размеров',
-						description:
-							'Пошаговая инструкция по использованию конвертера размеров одежды и обуви',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите категорию',
-								text: 'Выберите тип одежды или обуви: одежда, джинсы или обувь',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите пол',
-								text: 'Укажите пол: мужской, женский или детский',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите систему размеров',
-								text: 'Выберите исходную страну: RU (Россия), EU (Европа), US (США), UK (Великобритания), JP (Япония) или CN (Китай)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите размер',
-								text: 'Введите ваш размер в исходной системе',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+			{(() => {
+		const howTo = messages.calculators?.size-converter?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}тат',
 								text: 'Калькулятор автоматически покажет эквивалентные размеры во всех доступных системах',
 							},
 						],

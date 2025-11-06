@@ -280,45 +280,30 @@ export default async function TimerPage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как использовать онлайн-таймер',
-						description:
-							'Пошаговая инструкция по использованию онлайн-таймера для управления временем',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите время',
-								text: 'Установите нужное время для таймера используя поля ввода (часы, минуты, секунды) или выберите готовый пресет',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Настройте звук и визуализацию',
-								text: 'Выберите тип звукового сигнала и стиль визуальной индикации (круговой, линейный, цифровой)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Запустите таймер',
-								text: 'Нажмите кнопку "Старт" для начала обратного отсчёта',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Контролируйте время',
-								text: 'Следите за визуальной индикацией оставшегося времени. При необходимости используйте кнопки "Пауза" и "Возобновить"',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Завершение',
-								text: 'При достижении нуля таймер автоматически подаст звуковой сигнал и покажет уведомление о завершении',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.timer?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

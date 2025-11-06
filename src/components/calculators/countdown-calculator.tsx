@@ -186,13 +186,13 @@ export default function CountdownCalculator() {
 
 	const getEventIcon = (eventName: string) => {
 		const name = eventName.toLowerCase();
-		if (name.includes('день рождения') || name.includes('birthday'))
+		if (name.includes(t('form.eventTypes.birthday')) || name.includes('birthday'))
 			return <Heart className='h-5 w-5' />;
-		if (name.includes('новый год') || name.includes('new year'))
+		if (name.includes(t('form.eventTypes.newYear')) || name.includes('new year'))
 			return <Star className='h-5 w-5' />;
-		if (name.includes('рождество') || name.includes('christmas'))
+		if (name.includes(t('form.eventTypes.christmas')) || name.includes('christmas'))
 			return <Gift className='h-5 w-5' />;
-		if (name.includes('отпуск') || name.includes('vacation'))
+		if (name.includes(t('form.eventTypes.vacation')) || name.includes('vacation'))
 			return <Plane className='h-5 w-5' />;
 		return <Target className='h-5 w-5' />;
 	};

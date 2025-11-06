@@ -150,23 +150,23 @@ export default async function AgePage({
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<User className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Возраст
+									{t('hero.age')}
 								</div>
-								<div className='text-purple-100'>Точный расчёт</div>
+								<div className='text-purple-100'>{t('hero.accurateCalculation')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<CheckCircle className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
 									100%
 								</div>
-								<div className='text-purple-100'>Точность</div>
+								<div className='text-purple-100'>{t('hero.accuracy')}</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Calculator className='w-8 h-8 text-white mx-auto mb-2' />
 								<div className='text-2xl font-bold text-white mb-1'>
-									Бесплатно
+									{t('hero.free')}
 								</div>
-								<div className='text-purple-100'>Использование</div>
+								<div className='text-purple-100'>{t('hero.usage')}</div>
 							</div>
 						</div>
 					</div>
@@ -270,40 +270,30 @@ export default async function AgePage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать возраст',
-						description:
-							'Пошаговая инструкция по использованию калькулятора возраста',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите дату рождения',
-								text: 'Укажите дату рождения человека, возраст которого нужно рассчитать',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите дату расчёта (опционально)',
-								text: 'Для расчёта на конкретную дату укажите её в поле "Рассчитать на дату", или оставьте текущую дату',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Калькулятор автоматически вычислит точный возраст в годах, месяцах и днях',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Результат отобразится с детальной информацией: возраст в годах, месяцах, днях и общее количество дней от рождения',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.agecalc?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

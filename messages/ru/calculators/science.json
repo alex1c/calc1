@@ -65,14 +65,19 @@
 					"gradeRequired": "Выберите оценку",
 					"creditsRequired": "Укажите количество кредитов",
 					"invalidCredits": "Количество кредитов должно быть больше 0",
-					"invalidGrade": "Некорректная оценка"
-				}
+					"invalidGrade": "Некорректная оценка",
+					"courseNumber": "Предмет {number}"
+				},
+				"courseNamePlaceholder": "Название предмета",
+				"selectPlaceholder": "Выберите",
+				"courseNumber": "Предмет {number}"
 			},
 			"results": {
 				"title": "Результаты расчёта",
 				"gpa": "Средний балл (GPA)",
-				"totalCredits": "Всего кредитов",
+				"totalCredits": "Всего кредитов (часов)",
 				"weightedAverage": "Средневзвешенный балл",
+				"qualityScore": "Качественный балл",
 				"totalPoints": "Всего баллов",
 				"courses": "Предметы",
 				"course": "Предмет",

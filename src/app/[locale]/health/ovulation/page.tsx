@@ -179,7 +179,7 @@ export default async function OvulationPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -198,32 +198,20 @@ export default async function OvulationPage({
 	};
 
 	// HowTo structured data
-	const howToData = {
+	const howTo = messages.calculators?.ovulation?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: `Как рассчитать овуляцию: ${t('title')}`,
-		description: tSeo('overview.content'),
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Введите дату последней менструации',
-				text: 'Укажите первый день последней менструации',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Укажите длину цикла',
-				text: 'Введите продолжительность вашего менструального цикла (обычно 21-35 дней)',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Получите результат',
-				text: 'Калькулятор покажет дату овуляции, фертильные дни и дату следующей менструации',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

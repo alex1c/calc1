@@ -11,6 +11,7 @@ import {
 } from '@/lib/calculators/tile';
 
 export default function TileCalculator() {
+	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.tile');
 	const [input, setInput] = useState<Partial<TileInput>>({
 		roomLength: 0,
@@ -48,7 +49,7 @@ export default function TileCalculator() {
 			setResult(calculationResult);
 			setErrors([]);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};
@@ -115,7 +116,7 @@ export default function TileCalculator() {
 										placeholder='0.0'
 									/>
 									<span className='text-xs text-gray-500 dark:text-gray-400'>
-										м
+										{tCommon('units.meters')}
 									</span>
 								</div>
 								<div>
@@ -136,7 +137,7 @@ export default function TileCalculator() {
 										placeholder='0.0'
 									/>
 									<span className='text-xs text-gray-500 dark:text-gray-400'>
-										м
+										{tCommon('units.meters')}
 									</span>
 								</div>
 							</div>

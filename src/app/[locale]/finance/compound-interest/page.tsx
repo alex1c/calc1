@@ -114,6 +114,9 @@ export default async function CompoundInterestPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFinanceTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -168,7 +171,7 @@ export default async function CompoundInterestPage({
 								<div className='text-2xl font-bold text-white mb-1'>
 									{t('hero.format')}
 								</div>
-								<div className='text-green-100'>₽ (рубли)</div>
+								<div className='text-green-100'>₽</div>
 							</div>
 							<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>
 								<Percent className='w-8 h-8 text-white mx-auto mb-2' />
@@ -183,7 +186,7 @@ export default async function CompoundInterestPage({
 									{t('hero.frequencies')}
 								</div>
 								<div className='text-green-100'>
-									6 вариантов
+									{t('features.multipleFrequencies')}
 								</div>
 							</div>
 						</div>
@@ -266,7 +269,7 @@ export default async function CompoundInterestPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -287,39 +290,52 @@ export default async function CompoundInterestPage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите начальный капитал',
-								text: 'Введите сумму начального капитала в рублях',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите процентную ставку',
-								text: 'Введите годовую процентную ставку',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите срок',
-								text: 'Укажите срок накопления в годах и месяцах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Получите результат с графиком роста',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howToRaw = tSeo.raw('howTo');
+				const howTo = howToRaw as {
+					title: string;
+					description: string;
+					step1: { name: string; text: string };
+					step2: { name: string; text: string };
+					step3: { name: string; text: string };
+					step4: { name: string; text: string };
+				};
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: tSeo('title'),
+								description: tSeo('description'),
+								step: [
+									{
+										'@type': 'HowToStep',
+										name: howTo?.step1?.name || 'Введите начальный капитал',
+										text: howTo?.step1?.text || 'Введите сумму начального капитала в рублях',
+									},
+									{
+										'@type': 'HowToStep',
+										name: howTo?.step2?.name || 'Укажите процентную ставку',
+										text: howTo?.step2?.text || 'Введите годовую процентную ставку',
+									},
+									{
+										'@type': 'HowToStep',
+										name: howTo?.step3?.name || 'Выберите срок',
+										text: howTo?.step3?.text || 'Укажите срок накопления в годах и месяцах',
+									},
+									{
+										'@type': 'HowToStep',
+										name: howTo?.step4?.name || 'Нажмите рассчитать',
+										text: howTo?.step4?.text || 'Получите результат с графиком роста',
+									},
+								],
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

@@ -137,6 +137,9 @@ export default async function BabyGrowthPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -288,7 +291,7 @@ export default async function BabyGrowthPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -308,36 +311,23 @@ export default async function BabyGrowthPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать рост и вес ребенка по нормам ВОЗ',
-						description:
-							'Пошаговая инструкция по использованию калькулятора роста и веса ребенка',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите пол ребенка',
-								text: 'Укажите пол вашего ребенка (мальчик или девочка), так как нормы роста и веса различаются по полу',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите возраст ребенка',
-								text: 'Укажите возраст ребенка в месяцах или годах (от 0 до 5 лет)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите рост и вес',
-								text: 'Введите текущий рост ребенка в сантиметрах и вес в килограммах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически определит процентили роста и веса, покажет соответствие нормам ВОЗ и даст рекомендации',
+			{(() => {
+		const howTo = messages.calculators?.babyGrowth?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}тор автоматически определит процентили роста и веса, покажет соответствие нормам ВОЗ и даст рекомендации',
 							},
 						],
 					}),

@@ -123,6 +123,9 @@ export default async function LoanOverpaymentPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFinanceTranslations(locale);
+
 	const breadcrumbItems = [
 		{
 			label: tCategories('finance.title'),
@@ -275,7 +278,7 @@ export default async function LoanOverpaymentPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -296,35 +299,37 @@ export default async function LoanOverpaymentPage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать переплату по кредиту',
-						description:
-							'Пошаговая инструкция по использованию калькулятора переплаты по кредиту',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите параметры кредита',
-								text: 'Укажите сумму кредита, срок, процентную ставку и тип платежа',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте дополнительные параметры',
-								text: 'При необходимости укажите первоначальный взнос и дополнительные платежи',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Получите точный расчёт переплаты по кредиту в рублях и процентах',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.['loan-overpayment']?.seo?.howTo;
+				if (!howTo) return null;
+				const steps = [];
+				// Collect all step1, step2, step3, step4, etc.
+				for (let i = 1; i <= 10; i++) {
+					const stepKey = `step${i}`;
+					if (howTo[stepKey]) {
+						steps.push({
+							'@type': 'HowToStep',
+							name: howTo[stepKey].name,
+							text: howTo[stepKey].text,
+						});
+					}
+				}
+				if (steps.length === 0) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: steps,
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

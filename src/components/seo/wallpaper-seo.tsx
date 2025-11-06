@@ -78,7 +78,7 @@ export default function WallpaperSEO() {
 										</p>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Входные данные:
+												{t('seo.calculation.exampleLabels.input')}
 											</p>
 											<code className='text-xs text-blue-800 dark:text-blue-300 font-mono break-all whitespace-pre-wrap'>
 												{t(
@@ -88,7 +88,7 @@ export default function WallpaperSEO() {
 										</div>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Расчёт:
+												{t('seo.calculation.exampleLabels.calculation')}
 											</p>
 											<code className='text-xs text-green-800 dark:text-green-300 font-mono break-all whitespace-pre-wrap'>
 												{t(
@@ -99,7 +99,7 @@ export default function WallpaperSEO() {
 										<div className='grid grid-cols-2 gap-2 mb-2'>
 											<div className='bg-yellow-100 dark:bg-yellow-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-yellow-800 dark:text-yellow-300 mb-1'>
-													Результат:
+													{t('seo.calculation.exampleLabels.result')}
 												</p>
 												<p className='text-xs text-yellow-900 dark:text-yellow-200 font-bold'>
 													{t(
@@ -109,7 +109,7 @@ export default function WallpaperSEO() {
 											</div>
 											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
-													Тип:
+													{t('seo.calculation.exampleLabels.type')}
 												</p>
 												<p className='text-xs text-purple-900 dark:text-purple-200'>
 													{t(
@@ -144,7 +144,7 @@ export default function WallpaperSEO() {
 					</p>
 					<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-2'>
-							Формулы расчёта:
+							{t('seo.calculation.formulasTitle')}
 						</h3>
 						<ul className='space-y-2 text-yellow-800 dark:text-yellow-200 text-sm'>
 							<li>
@@ -211,41 +211,34 @@ export default function WallpaperSEO() {
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Типы обоев для стен
+						{t('seo.wallpaperTypes.title')}
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Популярные типы обоев и их характеристики:
+						{t('seo.wallpaperTypes.description')}
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
 						{[
 							{
-								type: 'Виниловые обои',
+								key: 'vinyl',
 								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Влагостойкие, моющиеся',
 							},
 							{
-								type: 'Флизелиновые обои',
+								key: 'nonWoven',
 								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Прочные, дышащие',
 							},
 							{
-								type: 'Бумажные обои',
+								key: 'paper',
 								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Экологичные, дёшевые',
 							},
 							{
-								type: 'Текстильные обои',
+								key: 'textile',
 								icon: Layers,
-								size: '0.53×10.05 м',
-								description: 'Декоративные, дорогие',
 							},
 						].map((item, idx) => {
 							const Icon = item.icon;
+							const typeData = t.raw(`seo.wallpaperTypes.types.${item.key}`);
 							return (
 								<div
 									key={idx}
@@ -253,13 +246,13 @@ export default function WallpaperSEO() {
 								>
 									<Icon className='w-8 h-8 text-purple-600 dark:text-purple-400 mx-auto mb-2' />
 									<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-										{item.type}
+										{typeData.name}
 									</h3>
 									<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
-										{item.size}
+										{typeData.size}
 									</p>
 									<div className='text-xs text-gray-600 dark:text-gray-400'>
-										{item.description}
+										{typeData.description}
 									</div>
 								</div>
 							);
@@ -272,57 +265,40 @@ export default function WallpaperSEO() {
 			<div className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'>
 				<div className='mb-4'>
 					<h2 className='text-2xl font-bold text-gray-900 dark:text-white'>
-						Стандартные размеры рулонов обоев
+						{t('seo.standardSizes.title')}
 					</h2>
 				</div>
 				<div>
 					<p className='text-gray-700 dark:text-gray-300 mb-4'>
-						Распространённые размеры рулонов обоев и их применение:
+						{t('seo.standardSizes.description')}
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
 						{[
-							{
-								size: '0.53×10.05 м',
-								area: '5.33 м²',
-								description: 'Стандартный',
-							},
-							{
-								size: '0.7×10.05 м',
-								area: '7.04 м²',
-								description: 'Широкий',
-							},
-							{
-								size: '1.06×10.05 м',
-								area: '10.65 м²',
-								description: 'Очень широкий',
-							},
-							{
-								size: '0.53×15.0 м',
-								area: '7.95 м²',
-								description: 'Длинный',
-							},
-							{
-								size: '0.7×15.0 м',
-								area: '10.5 м²',
-								description: 'Широкий длинный',
-							},
-						].map((item, idx) => (
-							<div
-								key={idx}
-								className='bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg text-center border-2 border-pink-200 dark:border-pink-800'
-							>
-								<Ruler className='w-8 h-8 text-pink-600 dark:text-pink-400 mx-auto mb-2' />
-								<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-									{item.size}
-								</h3>
-								<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
-									{item.area}
-								</p>
-								<div className='text-xs text-gray-600 dark:text-gray-400'>
-									{item.description}
+							{ key: 'standard' },
+							{ key: 'wide' },
+							{ key: 'veryWide' },
+							{ key: 'long' },
+							{ key: 'wideLong' },
+						].map((item, idx) => {
+							const sizeData = t.raw(`seo.standardSizes.sizes.${item.key}`);
+							return (
+								<div
+									key={idx}
+									className='bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg text-center border-2 border-pink-200 dark:border-pink-800'
+								>
+									<Ruler className='w-8 h-8 text-pink-600 dark:text-pink-400 mx-auto mb-2' />
+									<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
+										{sizeData.size}
+									</h3>
+									<p className='text-gray-700 dark:text-gray-300 text-sm mb-1 font-bold'>
+										{sizeData.area}
+									</p>
+									<div className='text-xs text-gray-600 dark:text-gray-400'>
+										{sizeData.description}
+									</div>
 								</div>
-							</div>
-						))}
+							);
+						})}
 					</div>
 				</div>
 			</div>

@@ -115,6 +115,9 @@ export default async function AlimonyPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFinanceTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -269,7 +272,7 @@ export default async function AlimonyPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -287,43 +290,23 @@ export default async function AlimonyPage({ params: { locale } }: Props) {
 						],
 					}),
 				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать алименты на детей',
-						description:
-							'Пошаговая инструкция по использованию калькулятора алиментов',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите способ расчёта',
-								text: 'Выберите способ расчёта алиментов: в процентах от дохода, фиксированной сумме или смешанном варианте',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество детей',
-								text: 'Введите количество детей (от 1 до 10). От количества зависит процент: 25% на одного, 33% на двоих, 50% на троих и более',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите данные о доходах',
-								text: 'Если расчёт в процентах - укажите ежемесячный доход после удержания НДФЛ (13%). Если фиксированная сумма - укажите прожиточный минимум и кратность',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Настройте дополнительные параметры',
-								text: 'Для фиксированной суммы укажите прожиточный минимум и кратность. Для смешанного варианта укажите процент и фиксированную часть',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает ежемесячную и годовую сумму алиментов, процент от дохода, сумму на одного ребёнка и остаток дохода',
+			/>{(() => {
+		const howTo = messages.calculators?.alimony?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()} рассчитает ежемесячную и годовую сумму алиментов, процент от дохода, сумму на одного ребёнка и остаток дохода',
 							},
 						],
 					}),

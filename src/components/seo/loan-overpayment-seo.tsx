@@ -36,22 +36,22 @@ export default function LoanOverpaymentSEO() {
 	// Chart data for visualization
 	const paymentTypeComparison = [
 		{
-			type: 'Аннуитетный',
+			type: tSeo('comparison.paymentType.annuity'),
 			overpayment: 340000,
 			color: 'bg-blue-500',
 		},
 		{
-			type: 'Дифференцированный',
+			type: tSeo('comparison.paymentType.differentiated'),
 			overpayment: 312500,
 			color: 'bg-green-500',
 		},
 	];
 
 	const termComparison = [
-		{ term: '1 год', overpayment: 65000, color: 'bg-green-500' },
-		{ term: '3 года', overpayment: 194000, color: 'bg-yellow-500' },
-		{ term: '5 лет', overpayment: 340000, color: 'bg-orange-500' },
-		{ term: '10 лет', overpayment: 720000, color: 'bg-red-500' },
+		{ term: tSeo('comparison.term.periods.1year'), overpayment: 65000, color: 'bg-green-500' },
+		{ term: tSeo('comparison.term.periods.3years'), overpayment: 194000, color: 'bg-yellow-500' },
+		{ term: tSeo('comparison.term.periods.5years'), overpayment: 340000, color: 'bg-orange-500' },
+		{ term: tSeo('comparison.term.periods.10years'), overpayment: 720000, color: 'bg-red-500' },
 	];
 
 	return (
@@ -106,7 +106,7 @@ export default function LoanOverpaymentSEO() {
 										</p>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Входные данные:
+												{tSeo('calculation.exampleLabels.input')}
 											</p>
 											<code className='text-xs text-blue-800 dark:text-blue-300 font-mono break-all whitespace-pre-wrap'>
 												{tSeo(
@@ -116,7 +116,7 @@ export default function LoanOverpaymentSEO() {
 										</div>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Расчёт:
+												{tSeo('calculation.exampleLabels.calculation')}
 											</p>
 											<code className='text-xs text-green-800 dark:text-green-300 font-mono break-all whitespace-pre-wrap'>
 												{tSeo(
@@ -127,7 +127,7 @@ export default function LoanOverpaymentSEO() {
 										<div className='grid grid-cols-2 gap-2 mb-2'>
 											<div className='bg-yellow-100 dark:bg-yellow-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-yellow-800 dark:text-yellow-300 mb-1'>
-													Переплата:
+													{tSeo('calculation.exampleLabels.result')}
 												</p>
 												<p className='text-xs text-yellow-900 dark:text-yellow-200 font-bold'>
 													{tSeo(
@@ -137,7 +137,7 @@ export default function LoanOverpaymentSEO() {
 											</div>
 											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
-													Тип:
+													{tSeo('calculation.exampleLabels.type')}
 												</p>
 												<p className='text-xs text-purple-900 dark:text-purple-200'>
 													{tSeo(
@@ -162,8 +162,7 @@ export default function LoanOverpaymentSEO() {
 						{/* Payment Type Comparison */}
 						<div className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg'>
 							<h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>
-								Сравнение переплаты по типам платежей (1 млн ₽,
-								12% годовых, 5 лет)
+								{tSeo('comparison.paymentType.title')}
 							</h4>
 							<div className='space-y-3'>
 								{paymentTypeComparison.map((item, index) => (
@@ -206,8 +205,7 @@ export default function LoanOverpaymentSEO() {
 						{/* Term Comparison */}
 						<div className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg'>
 							<h4 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>
-								Переплата в зависимости от срока (1 млн ₽, 12%
-								годовых, аннуитетный)
+								{tSeo('comparison.term.title')}
 							</h4>
 							<div className='space-y-3'>
 								{termComparison.map((item, index) => (
@@ -265,23 +263,23 @@ export default function LoanOverpaymentSEO() {
 					</p>
 					<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-2'>
-							Формулы расчёта:
+							{tSeo('calculation.formulas.title')}
 						</h3>
 						<ul className='space-y-2 text-yellow-800 dark:text-yellow-200 text-sm'>
 							<li>
-								<strong>Переплата:</strong>{' '}
+								<strong>{tSeo('calculation.formulas.overpayment')}</strong>{' '}
 								{tSeo('calculation.overpayment')}
 							</li>
 							<li>
-								<strong>Переплата в процентах:</strong>{' '}
+								<strong>{tSeo('calculation.formulas.overpaymentPercentage')}</strong>{' '}
 								{tSeo('calculation.overpaymentPercentage')}
 							</li>
 							<li>
-								<strong>Общая стоимость кредита:</strong>{' '}
+								<strong>{tSeo('calculation.formulas.totalCost')}</strong>{' '}
 								{tSeo('calculation.totalCost')}
 							</li>
 							<li>
-								<strong>Ежемесячный платёж (аннуитет):</strong>{' '}
+								<strong>{tSeo('calculation.formulas.monthlyPayment')}</strong>{' '}
 								{tSeo('calculation.monthlyPayment')}
 							</li>
 						</ul>
@@ -351,7 +349,7 @@ export default function LoanOverpaymentSEO() {
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 						<div className='bg-green-50 dark:bg-green-900/20 p-4 rounded-lg'>
 							<h3 className='font-semibold text-green-900 dark:text-green-100 mb-2'>
-								Снижение переплаты
+								{tSeo('tips.sections.reduce.title')}
 							</h3>
 							<ul className='text-sm text-green-800 dark:text-green-200 space-y-1'>
 								<li>• {tSeo('tips.reduce.shorter')}</li>
@@ -361,7 +359,7 @@ export default function LoanOverpaymentSEO() {
 						</div>
 						<div className='bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg'>
 							<h3 className='font-semibold text-orange-900 dark:text-orange-100 mb-2'>
-								Выбор типа платежа
+								{tSeo('tips.sections.paymentType.title')}
 							</h3>
 							<ul className='text-sm text-orange-800 dark:text-orange-200 space-y-1'>
 								<li>• {tSeo('tips.paymentType.annuity')}</li>
@@ -373,7 +371,7 @@ export default function LoanOverpaymentSEO() {
 						</div>
 						<div className='bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg'>
 							<h3 className='font-semibold text-purple-900 dark:text-purple-100 mb-2'>
-								Дополнительные платежи
+								{tSeo('tips.sections.additional.title')}
 							</h3>
 							<ul className='text-sm text-purple-800 dark:text-purple-200 space-y-1'>
 								<li>• {tSeo('tips.additional.early')}</li>

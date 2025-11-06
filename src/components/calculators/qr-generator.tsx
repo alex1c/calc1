@@ -240,7 +240,7 @@ export default function QRGenerator() {
 			}
 		} catch (error) {
 			console.error('Error downloading QR code:', error);
-			alert('Ошибка при скачивании. Попробуйте использовать функцию копирования.');
+			alert(t('form.downloadError'));
 		}
 	};
 
@@ -300,7 +300,7 @@ export default function QRGenerator() {
 							<>
 								<div>
 									<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-										SSID (Имя сети)
+										{t('form.wifi.ssid')}
 									</label>
 									<input
 										type='text'
@@ -314,7 +314,7 @@ export default function QRGenerator() {
 								</div>
 								<div>
 									<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-										Пароль
+										{t('form.wifi.password')}
 									</label>
 									<input
 										type='text'
@@ -328,7 +328,7 @@ export default function QRGenerator() {
 								</div>
 								<div>
 									<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-										Тип безопасности
+										{t('form.wifi.security')}
 									</label>
 									<select
 										value={input.wifiSecurity || 'WPA'}
@@ -337,9 +337,9 @@ export default function QRGenerator() {
 										}
 										className='w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
 									>
-										<option value='WPA'>WPA</option>
-										<option value='WPA2'>WPA2</option>
-										<option value='nopass'>Без пароля</option>
+										<option value='WPA'>{t('form.wifi.securityTypes.WPA')}</option>
+										<option value='WPA2'>{t('form.wifi.securityTypes.WPA2')}</option>
+										<option value='nopass'>{t('form.wifi.securityTypes.nopass')}</option>
 									</select>
 								</div>
 							</>
@@ -347,7 +347,7 @@ export default function QRGenerator() {
 							<>
 								<div>
 									<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-										Имя
+										{t('form.vcard.name')}
 									</label>
 									<input
 										type='text'
@@ -356,12 +356,12 @@ export default function QRGenerator() {
 											handleInputChange('vCardName', e.target.value)
 										}
 										className='w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
-										placeholder='Иван Иванов'
+										placeholder={t('form.vcard.namePlaceholder')}
 									/>
 								</div>
 								<div>
 									<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-										Телефон
+										{t('form.vcard.phone')}
 									</label>
 									<input
 										type='text'
@@ -389,7 +389,7 @@ export default function QRGenerator() {
 								</div>
 								<div>
 									<label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
-										Адрес
+										{t('form.vcard.address')}
 									</label>
 									<input
 										type='text'
@@ -398,7 +398,7 @@ export default function QRGenerator() {
 											handleInputChange('vCardAddress', e.target.value)
 										}
 										className='w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white'
-										placeholder='Москва, ул. Примерная, 1'
+										placeholder={t('form.vcard.addressPlaceholder')}
 									/>
 								</div>
 							</>

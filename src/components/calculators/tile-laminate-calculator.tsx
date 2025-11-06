@@ -54,7 +54,7 @@ export default function TileLaminateCalculator() {
 			setResult(calculationResult);
 			setErrors([]);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};

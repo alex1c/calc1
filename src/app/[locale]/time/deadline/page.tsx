@@ -270,45 +270,30 @@ export default async function DeadlinePage({
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать срок выполнения проекта',
-						description:
-							'Пошаговая инструкция по использованию калькулятора срока выполнения',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите стартовую дату',
-								text: 'Укажите дату начала проекта или задачи',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите длительность',
-								text: 'Укажите количество дней выполнения (рабочих или календарных)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип дней',
-								text: 'Выберите режим: рабочие дни (только будни) или календарные дни (все дни)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Калькулятор автоматически вычислит дату окончания с учётом выбранного типа дней',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Результат отобразится с конечной датой, днём недели и информацией о рабочих и выходных днях',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.deadline?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

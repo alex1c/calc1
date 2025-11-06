@@ -13,6 +13,7 @@ import {
 
 export default function PensionSEO() {
 	const t = useTranslations('calculators.pension');
+	const tSeo = useTranslations('calculators.pension.seo');
 
 	const borderColors = [
 		'border-blue-500',
@@ -85,7 +86,7 @@ export default function PensionSEO() {
 										</p>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Входные данные:
+												{tSeo('calculation.exampleLabels.input')}
 											</p>
 											<code className='text-xs text-blue-800 dark:text-blue-300 font-mono break-all whitespace-pre-wrap'>
 												{t(
@@ -95,7 +96,7 @@ export default function PensionSEO() {
 										</div>
 										<div className='bg-white dark:bg-gray-600 rounded p-2 mb-2'>
 											<p className='text-xs font-semibold text-gray-600 dark:text-gray-400 mb-1'>
-												Расчёт:
+												{tSeo('calculation.exampleLabels.calculation')}
 											</p>
 											<code className='text-xs text-green-800 dark:text-green-300 font-mono break-all whitespace-pre-wrap'>
 												{t(
@@ -106,7 +107,7 @@ export default function PensionSEO() {
 										<div className='grid grid-cols-2 gap-2 mb-2'>
 											<div className='bg-yellow-100 dark:bg-yellow-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-yellow-800 dark:text-yellow-300 mb-1'>
-													Результат:
+													{tSeo('calculation.exampleLabels.result')}
 												</p>
 												<p className='text-xs text-yellow-900 dark:text-yellow-200 font-bold'>
 													{t(
@@ -116,7 +117,7 @@ export default function PensionSEO() {
 											</div>
 											<div className='bg-purple-100 dark:bg-purple-900/30 rounded p-2'>
 												<p className='text-xs font-semibold text-purple-800 dark:text-purple-300 mb-1'>
-													Тип:
+													{tSeo('calculation.exampleLabels.type')}
 												</p>
 												<p className='text-xs text-purple-900 dark:text-purple-200'>
 													{t(
@@ -151,7 +152,7 @@ export default function PensionSEO() {
 					</p>
 					<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>
 						<h3 className='text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-2'>
-							Формула расчёта:
+							{tSeo('calculation.formulasTitle')}
 						</h3>
 						<ul className='space-y-2 text-yellow-800 dark:text-yellow-200 text-sm'>
 							<li>
@@ -165,7 +166,7 @@ export default function PensionSEO() {
 					</div>
 					<div className='mt-4'>
 						<h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-2'>
-							Этапы расчёта:
+							{tSeo('calculation.stepsTitle')}
 						</h3>
 						<ul className='space-y-2 text-gray-700 dark:text-gray-300 text-sm'>
 							<li>1. {t('seo.calculation.steps.experience')}</li>
@@ -185,7 +186,7 @@ export default function PensionSEO() {
 				className='bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6'
 			>
 				<h2 className='text-3xl font-bold text-gray-900 dark:text-white mb-6'>
-					Возможности калькулятора
+					{t('features.title')}
 				</h2>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
@@ -193,8 +194,7 @@ export default function PensionSEO() {
 							{t('features.pensionCalculation')}
 						</h3>
 						<p className='text-green-800 dark:text-green-200'>
-							Точный расчёт предполагаемого размера пенсии на основе стажа,
-							заработка и пенсионных баллов с учётом фиксированной выплаты
+							{t('features.pensionCalculationDesc')}
 						</p>
 					</div>
 					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
@@ -202,8 +202,7 @@ export default function PensionSEO() {
 							{t('features.pointsAnalysis')}
 						</h3>
 						<p className='text-blue-800 dark:text-blue-200'>
-							Анализ накопленных пенсионных баллов (ИПК) и сравнение с
-							минимальными требованиями для получения пенсии
+							{t('features.pointsAnalysisDesc')}
 						</p>
 					</div>
 					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
@@ -211,8 +210,7 @@ export default function PensionSEO() {
 							{t('features.experiencePlanning')}
 						</h3>
 						<p className='text-purple-800 dark:text-purple-200'>
-							Планирование трудового стажа до выхода на пенсию и расчёт
-							общего стажа для определения права на пенсию
+							{t('features.experiencePlanningDesc')}
 						</p>
 					</div>
 					<div className='bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg'>
@@ -220,8 +218,7 @@ export default function PensionSEO() {
 							{t('features.accuracy')}
 						</h3>
 						<p className='text-orange-800 dark:text-orange-200'>
-							Высокая точность расчётов на основе актуальных данных ПФР и
-							официальных формул расчёта пенсии
+							{t('features.accuracyDesc')}
 						</p>
 					</div>
 				</div>
@@ -246,9 +243,7 @@ export default function PensionSEO() {
 							{t('seo.advantages.accuracy')}
 						</h3>
 						<p className='text-green-800 dark:text-green-200'>
-							Точный расчёт размера пенсии с учётом всех параметров: стажа,
-							зарплаты, пенсионных баллов, фиксированной выплаты и стоимости
-							балла
+							{t('seo.advantages.accuracyDesc')}
 						</p>
 					</div>
 					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
@@ -256,8 +251,7 @@ export default function PensionSEO() {
 							{t('seo.advantages.planning')}
 						</h3>
 						<p className='text-blue-800 dark:text-blue-200'>
-							Помогает планировать пенсионное обеспечение, оценивая влияние
-							продолжения работы и увеличения стажа на размер будущей пенсии
+							{t('seo.advantages.planningDesc')}
 						</p>
 					</div>
 					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
@@ -265,8 +259,7 @@ export default function PensionSEO() {
 							{t('seo.advantages.analysis')}
 						</h3>
 						<p className='text-purple-800 dark:text-purple-200'>
-							Детальный анализ пенсионных баллов и стажа для определения
-							достаточности параметров для получения пенсии
+							{t('seo.advantages.analysisDesc')}
 						</p>
 					</div>
 					<div className='bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg'>
@@ -274,8 +267,7 @@ export default function PensionSEO() {
 							{t('seo.advantages.convenience')}
 						</h3>
 						<p className='text-orange-800 dark:text-orange-200'>
-							Удобный и быстрый расчёт без необходимости изучения сложных формул
-							и выполнения расчётов вручную
+							{t('seo.advantages.convenienceDesc')}
 						</p>
 					</div>
 				</div>
@@ -297,7 +289,7 @@ export default function PensionSEO() {
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div className='bg-green-50 dark:bg-green-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-green-900 dark:text-green-100 mb-2'>
-							Стаж
+							{t('seo.tips.sections.experience.title')}
 						</h3>
 						<p className='text-green-800 dark:text-green-200'>
 							{t('seo.tips.experience')}
@@ -305,7 +297,7 @@ export default function PensionSEO() {
 					</div>
 					<div className='bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2'>
-							Зарплата
+							{t('seo.tips.sections.salary.title')}
 						</h3>
 						<p className='text-blue-800 dark:text-blue-200'>
 							{t('seo.tips.salary')}
@@ -313,7 +305,7 @@ export default function PensionSEO() {
 					</div>
 					<div className='bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-purple-900 dark:text-purple-100 mb-2'>
-							Баллы
+							{t('seo.tips.sections.points.title')}
 						</h3>
 						<p className='text-purple-800 dark:text-purple-200'>
 							{t('seo.tips.points')}
@@ -321,7 +313,7 @@ export default function PensionSEO() {
 					</div>
 					<div className='bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg'>
 						<h3 className='text-lg font-semibold text-orange-900 dark:text-orange-100 mb-2'>
-							Индексация
+							{t('seo.tips.sections.indexation.title')}
 						</h3>
 						<p className='text-orange-800 dark:text-orange-200'>
 							{t('seo.tips.indexation')}

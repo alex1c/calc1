@@ -127,6 +127,9 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -285,7 +288,7 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -304,47 +307,30 @@ export default async function WallpaperPage({ params: { locale } }: Props) {
 					}),
 				}}
 			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество обоев',
-						description:
-							'Пошаговая инструкция по использованию калькулятора обоев',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте комнату',
-								text: 'Укажите длину, ширину и высоту стен комнаты в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте окна и двери',
-								text: 'Укажите размеры всех окон и дверей в комнате',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите размер рулона',
-								text: 'Выберите стандартный размер рулона обоев или укажите свой',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите запас',
-								text: 'Укажите процент запаса материала (рекомендуется 10-15%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимое количество рулонов обоев',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.wallpaper?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps || {})
+									.sort()
+									.map((key) => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

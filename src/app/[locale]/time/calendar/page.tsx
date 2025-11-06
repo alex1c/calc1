@@ -280,45 +280,30 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 			/>
 
 			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как использовать онлайн-календарь',
-						description:
-							'Пошаговая инструкция по использованию онлайн-календаря для планирования событий',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите дату',
-								text: 'Нажмите на нужную дату в календаре для создания события',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Заполните форму события',
-								text: 'Введите название события, время, описание и выберите цвет для визуального кодирования',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Настройте напоминания',
-								text: 'Выберите время напоминания о событии (за 15 минут, 1 час, 1 день и т.д.)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Сохраните событие',
-								text: 'Нажмите кнопку "Сохранить", и событие появится в календаре',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Экспортируйте календарь',
-								text: 'Используйте функцию экспорта для сохранения календаря в файл (iCal, CSV) или синхронизации с другими сервисами',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.calendar?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

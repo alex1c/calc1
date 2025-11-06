@@ -43,6 +43,9 @@ export default async function AnglePage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedConverterTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConverterTranslations(locale);
+
 	// Breadcrumb items
 	const breadcrumbItems = [
 		{
@@ -109,7 +112,7 @@ export default async function AnglePage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{

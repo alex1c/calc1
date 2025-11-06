@@ -124,6 +124,9 @@ export default async function PregnancyPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -276,7 +279,7 @@ export default async function PregnancyPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -296,31 +299,23 @@ export default async function PregnancyPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать срок беременности и дату родов',
-						description:
-							'Пошаговая инструкция по расчету срока беременности и предполагаемой даты родов',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите метод расчета',
-								text: 'Выберите один из трех методов: по дате последней менструации, по дате зачатия или по дате ЭКО',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите дату',
-								text: 'Введите соответствующую дату в зависимости от выбранного метода',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор покажет предполагаемую дату родов, текущий срок беременности, триместр и количество дней до родов',
+			{(() => {
+		const howTo = messages.calculators?.pregnancy?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}улятор покажет предполагаемую дату родов, текущий срок беременности, триместр и количество дней до родов',
 							},
 						],
 					}),

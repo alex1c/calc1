@@ -115,6 +115,9 @@ export default async function WallAreaPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	const breadcrumbItems = [
 		{
 			label: tCategories('construction.title'),
@@ -267,7 +270,7 @@ export default async function WallAreaPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -284,43 +287,23 @@ export default async function WallAreaPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать площадь стен для отделки',
-						description:
-							'Пошаговая инструкция по использованию калькулятора площади стен',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте размеры комнаты',
-								text: 'Измерьте длину и ширину комнаты в метрах, а также высоту стен',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите площадь проёмов',
-								text: 'Введите площадь окон и дверей в квадратных метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите количество стен',
-								text: 'Укажите количество стен в комнате: 4 (стандартная), 3 (угловая) или 2 (открытое пространство)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Добавьте запас',
-								text: 'Укажите процент запаса на потери и неровности (рекомендуется 10%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.wallArea?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}
 								text: 'Калькулятор автоматически рассчитает периметр, общую площадь стен, полезную площадь и площадь с запасом',
 							},
 						],

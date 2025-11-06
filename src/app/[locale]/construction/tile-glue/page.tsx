@@ -125,6 +125,9 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -283,7 +286,7 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -302,52 +305,30 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 					}),
 				}}
 			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать количество плиточного клея',
-						description:
-							'Пошаговая инструкция по использованию калькулятора плиточного клея',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте площадь пола',
-								text: 'Укажите площадь пола в квадратных метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите размер плитки',
-								text: 'Введите площадь одной плитки в квадратных метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите ширину шва',
-								text: 'Введите ширину шва между плитками в миллиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите норму расхода',
-								text: 'Укажите норму расхода клея в кг/м² (обычно 3-6 кг/м²)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Установите запас',
-								text: 'Укажите процент запаса материала (рекомендуется 10-15%)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор автоматически рассчитает необходимое количество клея в килограммах и упаковках',
-							},
-						],
-					}),
-				}}
-			/>
+			{(() => {
+				const howTo = messages.calculators?.tileGlue?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps || {})
+									.sort()
+									.map((key) => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

@@ -115,6 +115,9 @@ export default async function PasswordGeneratorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -173,7 +176,7 @@ export default async function PasswordGeneratorPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -191,44 +194,20 @@ export default async function PasswordGeneratorPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.passwordGenerator?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как создать надёжный пароль',
-		description: 'Пошаговая инструкция по использованию генератора паролей',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите длину пароля',
-				text: 'Установите длину пароля от 4 до 128 символов с помощью ползунка. Рекомендуется не менее 12 символов.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Выберите типы символов',
-				text: 'Включите заглавные буквы, строчные буквы, цифры и символы для максимальной надёжности.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Настройте дополнительные опции',
-				text: 'При необходимости включите опции "Исключить похожие символы" и "Исключить неоднозначные символы".',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Сгенерируйте пароль',
-				text: 'Нажмите кнопку "Сгенерировать пароль" для создания случайного пароля.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 5,
-				name: 'Скопируйте и сохраните пароль',
-				text: 'Используйте кнопку "Копировать" для копирования пароля и сохраните его в надёжном менеджере паролей.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

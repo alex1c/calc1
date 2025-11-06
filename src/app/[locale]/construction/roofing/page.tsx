@@ -122,6 +122,9 @@ export default async function RoofingPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -280,7 +283,7 @@ export default async function RoofingPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -297,48 +300,23 @@ export default async function RoofingPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать площадь крыши',
-						description:
-							'Пошаговая инструкция по использованию калькулятора кровли',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Измерьте дом',
-								text: 'Укажите длину и ширину дома в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите тип крыши',
-								text: 'Выберите тип крыши (односкатная, двускатная, вальмовая, мансардная)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите угол наклона',
-								text: 'Укажите угол наклона крыши в градусах (обычно 15-45°)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите свес',
-								text: 'Укажите длину свеса крыши по периметру в метрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите материал',
-								text: 'Выберите кровельный материал (металлочерепица, профнастил, мягкая кровля и т.д.)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.roof?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}учите результат',
 								text: 'Калькулятор автоматически рассчитает площадь крыши и необходимое количество материалов',
 							},
 						],

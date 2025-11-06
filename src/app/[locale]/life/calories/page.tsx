@@ -120,6 +120,9 @@ export default async function CaloriesPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -272,7 +275,7 @@ export default async function CaloriesPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -292,40 +295,23 @@ export default async function CaloriesPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать суточную норму калорий',
-						description:
-							'Пошаговая инструкция по расчету ежедневной потребности в калориях',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Введите ваш пол',
-								text: 'Выберите мужской или женский пол',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите возраст',
-								text: 'Введите ваш возраст в годах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите вес и рост',
-								text: 'Введите ваш вес в килограммах и рост в сантиметрах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите уровень активности',
-								text: 'Выберите один из 5 уровней физической активности',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+			{(() => {
+		const howTo = messages.calculators?.calories?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ame: 'Получите результат',
 								text: 'Калькулятор покажет BMR, TDEE и рекомендации для разных целей',
 							},
 						],

@@ -126,6 +126,9 @@ export default async function FoodRationPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -278,7 +281,7 @@ export default async function FoodRationPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -298,39 +301,23 @@ export default async function FoodRationPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать норму БЖУ',
-						description:
-							'Пошаговая инструкция по расчету суточной нормы белков, жиров и углеводов',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите пол',
-								text: 'Укажите ваш пол (мужской или женский)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите параметры',
-								text: 'Укажите возраст, вес, рост',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите уровень активности',
-								text: 'Выберите один из 5 уровней физической активности',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите цель',
-								text: 'Укажите цель: похудение, поддержание или набор массы',
-							},
-							{
-								'@type': 'HowToStep',
+			{(() => {
+		const howTo = messages.calculators?.foodRation?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}
 								name: 'Получите результат',
 								text: 'Калькулятор покажет калории, белки, жиры и углеводы',
 							},

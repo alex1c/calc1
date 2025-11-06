@@ -21,6 +21,7 @@ import {
 } from '@/lib/calculators/roof';
 
 export default function RoofCalculator() {
+	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.roof');
 	const [input, setInput] = useState<Partial<RoofInput>>({
 		houseLength: 0,
@@ -79,7 +80,7 @@ export default function RoofCalculator() {
 			setResult(calculationResult);
 			setErrors([]);
 		} catch (error) {
-			setErrors(['Ошибка при расчёте. Проверьте введённые данные.']);
+			setErrors([tCommon('calculationError')]);
 			setResult(null);
 		}
 	};
@@ -140,8 +141,12 @@ export default function RoofCalculator() {
 								}
 								className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 							>
-								<option value='meters'>м</option>
-								<option value='centimeters'>см</option>
+								<option value='meters'>
+									{tCommon('units.meters')}
+								</option>
+								<option value='centimeters'>
+									{tCommon('units.centimeters')}
+								</option>
 							</select>
 						</div>
 
@@ -324,8 +329,8 @@ export default function RoofCalculator() {
 									/>
 									<p className='text-sm text-gray-500 mt-1'>
 										{input.units === 'centimeters'
-											? 'см'
-											: 'м'}
+											? tCommon('units.centimeters')
+											: tCommon('units.meters')}
 									</p>
 								</div>
 								<div>
@@ -347,8 +352,8 @@ export default function RoofCalculator() {
 									/>
 									<p className='text-sm text-gray-500 mt-1'>
 										{input.units === 'centimeters'
-											? 'см'
-											: 'м'}
+											? tCommon('units.centimeters')
+											: tCommon('units.meters')}
 									</p>
 								</div>
 							</div>

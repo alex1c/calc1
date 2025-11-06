@@ -130,6 +130,9 @@ export default async function BloodAlcoholPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedLifeTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -281,7 +284,7 @@ export default async function BloodAlcoholPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -301,41 +304,23 @@ export default async function BloodAlcoholPage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать уровень алкоголя в крови',
-						description:
-							'Пошаговая инструкция по использованию калькулятора промилле',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите пол',
-								text: 'Укажите ваш пол (мужской или женский), так как коэффициент распределения алкоголя различается',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите вес',
-								text: 'Укажите ваш вес в килограммах — это влияет на концентрацию алкоголя в крови',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите данные об алкоголе',
-								text: 'Укажите объём напитка в миллилитрах и его крепость в процентах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите время',
-								text: 'Введите время начала употребления алкоголя',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
-								text: 'Калькулятор покажет уровень BAC в промилле, состояние опьянения и время полного выведения алкоголя',
+			{(() => {
+		const howTo = messages.calculators?.bloodAlcohol?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ext: 'Калькулятор покажет уровень BAC в промилле, состояние опьянения и время полного выведения алкоголя',
 							},
 						],
 					}),

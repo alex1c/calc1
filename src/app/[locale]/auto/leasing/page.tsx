@@ -109,6 +109,11 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedAutoTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
+	const messages = await loadMergedAutoTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -267,7 +272,7 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -293,45 +298,56 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать автолизинг',
-						description:
-							'Пошаговая инструкция по использованию калькулятора автолизинга',
-						step: [
+						'@type': 'BreadcrumbList',
+						itemListElement: [
 							{
-								'@type': 'HowToStep',
-								name: 'Введите стоимость автомобиля',
-								text: 'Укажите стоимость автомобиля, который хотите взять в лизинг',
+								'@type': 'ListItem',
+								position: 1,
+								name: messages.breadcrumbs?.home || 'Home',
+								item: `https://calc1.ru/${locale}`,
 							},
 							{
-								'@type': 'HowToStep',
-								name: 'Укажите первоначальный взнос',
-								text: 'Введите размер первоначального взноса (обычно 10-50% от стоимости)',
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('auto.title'),
+								item: `https://calc1.ru/${locale}/auto`,
 							},
 							{
-								'@type': 'HowToStep',
-								name: 'Выберите срок лизинга',
-								text: 'Укажите срок договора лизинга в месяцах (обычно 24-60 месяцев)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Введите ставку удорожания',
-								text: 'Укажите процентную ставку удорожания (обычно 10-18% годовых)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите выкупную стоимость',
-								text: 'Введите сумму выкупной стоимости (если планируете выкупить автомобиль)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Нажмите рассчитать',
-								text: 'Получите точные результаты: ежемесячный платёж, общую стоимость и переплату',
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/auto/leasing`,
 							},
 						],
 					}),
 				}}
 			/>
+
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.leasing?.seo?.howTo;
+				if (!howTo) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

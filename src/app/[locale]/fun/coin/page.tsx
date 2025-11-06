@@ -108,6 +108,9 @@ export default async function CoinFlipperPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedFunTranslations(locale);
+
 	const breadcrumbItems = [
 		{ label: tCategories('fun.title'), href: '/fun' },
 		{ label: t('title') },
@@ -166,7 +169,7 @@ export default async function CoinFlipperPage({
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{
@@ -184,44 +187,20 @@ export default async function CoinFlipperPage({
 		],
 	};
 
-	const howToData = {
+	const howTo = messages.calculators?.coinFlipper?.seo?.howTo;
+	const howToData = howTo ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
-		name: 'Как подбросить монетку онлайн',
-		description: 'Пошаговая инструкция по использованию симулятора подбрасывания монетки',
-		step: [
-			{
+		name: howTo.title,
+		description: howTo.description,
+		step: Object.keys(howTo.steps)
+			.sort()
+			.map(key => ({
 				'@type': 'HowToStep',
-				position: 1,
-				name: 'Выберите стиль монеты',
-				text: 'Выберите один из трёх стилей: классическая, золотая или эмодзи.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 2,
-				name: 'Подбросьте монетку',
-				text: 'Нажмите кнопку "Подбросить монетку" для генерации случайного результата.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 3,
-				name: 'Просмотрите результат',
-				text: 'Результат отображается с анимацией. Вы увидите орёл или решку.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 4,
-				name: 'Проверьте статистику',
-				text: 'Статистика показывает общее количество бросков, количество орлов и решек.',
-			},
-			{
-				'@type': 'HowToStep',
-				position: 5,
-				name: 'Используйте историю',
-				text: 'Просмотрите историю всех бросков и при необходимости скопируйте результаты.',
-			},
-		],
-	};
+				name: howTo.steps[key].name,
+				text: howTo.steps[key].text,
+			})),
+	} : null;
 
 	return (
 		<>

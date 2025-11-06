@@ -131,6 +131,9 @@ export default async function EquationsPage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedMathTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedMathTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -213,7 +216,7 @@ export default async function EquationsPage({ params: { locale } }: Props) {
 			{
 				'@type': 'ListItem',
 				position: 1,
-				name: 'Главная',
+				name: messages.breadcrumbs?.home || 'Home',
 				item: `https://calc1.ru/${locale}`,
 			},
 			{

@@ -109,6 +109,9 @@ export default async function QRGeneratorPage({
 		namespace: 'categories',
 	});
 
+	const { loadMergedItTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedItTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -254,7 +257,7 @@ export default async function QRGeneratorPage({
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{

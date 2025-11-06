@@ -103,6 +103,9 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
+	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const messages = await loadMergedConstructionTranslations(locale);
+
 	// Validate locale
 	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
 		notFound();
@@ -261,7 +264,7 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 							{
 								'@type': 'ListItem',
 								position: 1,
-								name: 'Главная',
+								name: messages.breadcrumbs?.home || 'Home',
 								item: `https://calc1.ru/${locale}`,
 							},
 							{
@@ -278,48 +281,23 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				}}
-			/>
-
-			{/* HowTo Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'HowTo',
-						name: 'Как рассчитать диаметр водопроводной трубы',
-						description:
-							'Пошаговая инструкция по использованию калькулятора водопроводной трубы',
-						step: [
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите расход воды',
-								text: 'Введите максимальный расход воды в литрах в минуту или секунду',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Выберите материал трубы',
-								text: 'Выберите материал трубы (ППР, металлопластик, сталь, медь)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите длину трубы',
-								text: 'Введите длину трубопровода в метрах для расчёта потерь напора',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите количество точек потребления',
-								text: 'Введите количество точек водопотребления (краны, смесители, унитазы)',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Укажите давление',
-								text: 'Укажите давление в системе водоснабжения в барах или атмосферах',
-							},
-							{
-								'@type': 'HowToStep',
-								name: 'Получите результат',
+				{(() => {
+		const howTo = messages.calculators?.waterPipeCalculator?.seo?.howTo;
+		if (!howTo) return null;
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'HowTo',
+			name: howTo.title,
+			description: howTo.description,
+			step: Object.keys(howTo.steps)
+				.sort()
+				.map(key => ({
+					'@type': 'HowToStep',
+					name: howTo.steps[key].name,
+					text: howTo.steps[key].text,
+				})),
+		};
+	})()}ультат',
 								text: 'Калькулятор автоматически рассчитает необходимый диаметр трубы, скорость потока и потери напора',
 							},
 						],
