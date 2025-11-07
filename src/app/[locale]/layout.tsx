@@ -26,11 +26,19 @@ export default async function LocaleLayout({
 	const messages = await getMessages();
 
 	return (
-		<NextIntlClientProvider messages={messages}>
-			<div className='flex flex-col min-h-screen'>
-				{children}
-				<Footer />
-			</div>
-		</NextIntlClientProvider>
+		<>
+			{/* Update HTML lang attribute dynamically based on locale */}
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `document.documentElement.lang = '${locale}';`,
+				}}
+			/>
+			<NextIntlClientProvider messages={messages}>
+				<div className='flex flex-col min-h-screen'>
+					{children}
+					<Footer />
+				</div>
+			</NextIntlClientProvider>
+		</>
 	);
 }

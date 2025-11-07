@@ -206,7 +206,7 @@ export default async function HomePage({ params: { locale } }: Props) {
 	const t = await getTranslations();
 	const tCategories = await getTranslations('categories');
 
-	// Prepare structured data for SEO
+	// Prepare structured data for SEO - WebSite Schema with SearchAction
 	const websiteData = {
 		'@context': 'https://schema.org',
 		'@type': 'WebSite',
@@ -217,11 +217,15 @@ export default async function HomePage({ params: { locale } }: Props) {
 			'@type': 'SearchAction',
 			target: {
 				'@type': 'EntryPoint',
-				urlTemplate: `https://calc1.ru/${locale === 'ru' ? '' : locale}/search?q={search_term_string}`,
+				urlTemplate: `https://calc1.ru/${locale === 'ru' ? '' : locale + '/'}search?q={search_term_string}`,
 			},
 			'query-input': 'required name=search_term_string',
 		},
 		inLanguage: locale,
+		alternateName: 'Calc1',
+		keywords: locale === 'ru'
+			? 'калькулятор онлайн, бесплатные калькуляторы, финансовые калькуляторы, математические калькуляторы'
+			: 'online calculator, free calculators, financial calculators, math calculators',
 	};
 
 	const organizationData = {
