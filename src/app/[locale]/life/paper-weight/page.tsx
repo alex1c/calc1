@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import PaperWeightCalculator from '@/components/calculators/paper-weight-calculator';
 import PaperWeightSEO from '@/components/seo/paper-weight-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -110,7 +111,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -219,42 +220,15 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 				<PaperWeightSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/life/paper-weight`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.7',
-							ratingCount: '890',
-						},
-						featureList: [
-							t('features.densityCalculation'),
-							t('features.areaCalculation'),
-							t('features.weightEstimation'),
-							t('features.formatSupport'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='paper-weight'
+				namespace='calculators.paper-weight.seo'
+				featureKeys={['densityCalculation', 'areaCalculation', 'weightEstimation', 'formatSupport', 'accuracy']}
+				ratingValue='4.7'
+				ratingCount='890'
+				screenshot='https://calc1.ru/images/paper-weight-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -307,28 +281,31 @@ export default async function PaperWeightPage({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.paper-weight?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}: 'Калькулятор автоматически рассчитает вес одного листа и общий вес всех листов в граммах и килограммах',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.paper-weight?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

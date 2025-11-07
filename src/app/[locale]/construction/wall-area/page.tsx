@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { Ruler, Calculator, Square, BarChart3 } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 // Dynamic imports for client components
 const WallAreaCalculator = dynamic(
@@ -95,7 +96,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -202,42 +203,15 @@ export default async function WallAreaPage({ params: { locale } }: Props) {
 				<WallAreaSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/construction/wall-area`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.areaCalculation'),
-							t('features.perimeterCalculation'),
-							t('features.openingsCalculation'),
-							t('features.reserveCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='construction'
+				calculatorId='wall-area'
+				namespace='calculators.wall-area.seo'
+				featureKeys={['areaCalculation', 'perimeterCalculation', 'openingsCalculation', 'reserveCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/wall-area-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -287,29 +261,34 @@ export default async function WallAreaPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				{(() => {
-		const howTo = messages.calculators?.wallArea?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}
-								text: 'Калькулятор автоматически рассчитает периметр, общую площадь стен, полезную площадь и площадь с запасом',
-							},
-						],
-					}),
 				}}
 			/>
+
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.wallArea?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

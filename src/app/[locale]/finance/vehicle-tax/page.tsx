@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import VehicleTaxCalculator from '@/components/calculators/vehicle-tax-calculator';
 import VehicleTaxSEO from '@/components/seo/vehicle-tax-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -106,42 +107,15 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 				<VehicleTaxSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/vehicle-tax`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '178',
-						},
-						featureList: [
-							'Расчёт транспортного налога',
-							'Региональные ставки',
-							'Коэффициент владения',
-							'Мощность двигателя',
-							'Налоговые льготы',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='vehicle-tax'
+				namespace='calculators.vehicle-tax.seo'
+				featureKeys={['calculation', 'regionalRates', 'ownershipCoefficient', 'enginePower', 'taxBenefits']}
+				ratingValue='4.9'
+				ratingCount='178'
+				screenshot='https://calc1.ru/images/vehicle-tax-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import PasswordGenerator from '@/components/calculators/password-generator';
 import PasswordGeneratorSEO from '@/components/seo/password-generator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -89,7 +90,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,32 +131,6 @@ export default async function PasswordGeneratorPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/password`,
-		description: t('description'),
-		applicationCategory: 'SecurityApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '300',
-		},
-		featureList: [
-			'Генерация надёжных паролей',
-			'Настройка длины и символов',
-			'Локальная генерация',
-			'Анализ надёжности',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -195,7 +170,7 @@ export default async function PasswordGeneratorPage({
 	};
 
 	const howTo = messages.calculators?.passwordGenerator?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -211,13 +186,17 @@ export default async function PasswordGeneratorPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='password'
+				namespace='calculators.passwordGenerator'
+				featureKeys={['secureGeneration', 'lengthSettings', 'localGeneration', 'strengthAnalysis']}
+				ratingValue='4.9'
+				ratingCount='300'
+				screenshot='https://calc1.ru/images/password-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

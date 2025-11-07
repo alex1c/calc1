@@ -6,6 +6,7 @@ import VolumeGeometryCalculator from '@/components/calculators/volume-geometry-c
 import VolumeGeometrySEO from '@/components/seo/volume-geometry-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -109,7 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -216,44 +217,16 @@ export default async function VolumeGeometryPage({
 				<VolumeGeometrySEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/math/volume`,
-						applicationCategory: 'EducationalApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							'Расчёт объёма сферы',
-							'Расчёт объёма куба',
-							'Расчёт объёма цилиндра',
-							'Автоматические формулы',
-							'Высокая точность расчётов',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='math'
+				calculatorId='volume'
+				namespace='calculators.volume.seo'
+				featureKeys={['sphereVolume', 'cubeVolume', 'cylinderVolume', 'automaticFormulas', 'highPrecision']}
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/volume-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'

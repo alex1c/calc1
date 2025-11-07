@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import TrafficFinesCalculator from '@/components/calculators/traffic-fines-calculator';
 import TrafficFinesSEO from '@/components/seo/traffic-fines-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -108,42 +109,15 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 				<TrafficFinesSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/traffic-fines`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '234',
-						},
-						featureList: [
-							'Расчёт штрафов ГИБДД',
-							'Нарушения ПДД',
-							'Скидка при оплате',
-							'Превышение скорости',
-							'Неправильная парковка',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='traffic-fines'
+				namespace='calculators.traffic-fines.seo'
+				featureKeys={['calculation', 'violations', 'discount', 'speedExceed', 'parking']}
+				ratingValue='4.8'
+				ratingCount='234'
+				screenshot='https://calc1.ru/images/traffic-fines-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

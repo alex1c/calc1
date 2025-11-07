@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import VolumeCalculator from '@/components/calculators/volume-calculator';
 import VolumeSEO from '@/components/seo/volume-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the volume converter page
@@ -58,33 +59,6 @@ export default async function VolumePage({
 		namespace: 'calculators.volume-converter.seo',
 	});
 
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/converter/volume`,
-		description: t('description'),
-		applicationCategory: 'UtilityApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '150',
-		},
-		featureList: [
-			'Volume unit conversion',
-			'Multiple units support',
-			'Instant calculation',
-			'Multilingual interface',
-		],
-	};
-
 	// FAQ structured data
 	const faqData = tSeo.raw('faqItems');
 	const faqArray = Array.isArray(faqData) ? faqData : [];
@@ -103,13 +77,17 @@ export default async function VolumePage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='converter'
+				calculatorId='volume'
+				namespace='calculators.volume-converter.seo'
+				featureKeys={['unitConversion', 'multipleUnits', 'instantCalculation', 'multilingualInterface']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/volume-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

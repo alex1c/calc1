@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import NameGeneratorCalculator from '@/components/calculators/name-generator-calculator';
 import NameGeneratorSEO from '@/components/seo/name-generator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -123,32 +124,6 @@ export default async function NameGeneratorPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/name-generator`,
-		description: t('description'),
-		applicationCategory: 'CreativeApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			reviewCount: '450',
-		},
-		featureList: [
-			'5 типов имён',
-			'Настройка пола и длины',
-			'Генерация 1-10 имён',
-			'Копирование и скачивание',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -188,7 +163,7 @@ export default async function NameGeneratorPage({
 	};
 
 	const howTo = messages.calculators?.nameGenerator?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -204,13 +179,17 @@ export default async function NameGeneratorPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='name-generator'
+				namespace='calculators.nameGenerator'
+				featureKeys={['nameTypes', 'genderLengthSettings', 'multipleNames', 'copyDownload']}
+				ratingValue='4.8'
+				ratingCount='450'
+				screenshot='https://calc1.ru/images/name-generator-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

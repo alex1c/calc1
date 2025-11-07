@@ -13,6 +13,7 @@ import Header from '@/components/header';
 import BasicMathCalculator from '@/components/calculators/basic-math-calculator';
 import BasicMathSEO from '@/components/seo/basic-math-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -127,45 +128,17 @@ export default async function BasicMathPage({ params: { locale } }: Props) {
 				<BasicMathSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/math/basic`,
-						applicationCategory: 'MathApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '156',
-						},
-						featureList: [
-							t('form.operations.add'),
-							t('form.operations.subtract'),
-							t('form.operations.multiply'),
-							t('form.operations.divide'),
-							'Поддержка клавиатуры',
-							'Многоязычность',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='math'
+				calculatorId='basic'
+				namespace='calculators.basic.seo'
+				featureKeys={['add', 'subtract', 'multiply', 'divide', 'keyboardSupport', 'multilingual']}
+				featureNamespace='calculators.basic.form.operations'
+				ratingValue='4.8'
+				ratingCount='156'
+				screenshot='https://calc1.ru/images/basic-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'

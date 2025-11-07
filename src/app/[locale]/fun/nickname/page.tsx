@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import NicknameGenerator from '@/components/calculators/nickname-generator';
 import NicknameGeneratorSEO from '@/components/seo/nickname-generator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -89,7 +90,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,32 +131,6 @@ export default async function NicknameGeneratorPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/nickname`,
-		description: t('description'),
-		applicationCategory: 'UtilityApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '180',
-		},
-		featureList: [
-			'Генерация уникальных никнеймов',
-			'5 тематик и 5 стилей',
-			'Настройка длины',
-			'Добавление цифр и символов',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -195,7 +170,7 @@ export default async function NicknameGeneratorPage({
 	};
 
 	const howTo = messages.calculators?.nicknameGenerator?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -211,13 +186,17 @@ export default async function NicknameGeneratorPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='nickname'
+				namespace='calculators.nicknameGenerator'
+				featureKeys={['uniqueGeneration', 'themesStyles', 'lengthSettings', 'numbersSymbols']}
+				ratingValue='4.9'
+				ratingCount='180'
+				screenshot='https://calc1.ru/images/nickname-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

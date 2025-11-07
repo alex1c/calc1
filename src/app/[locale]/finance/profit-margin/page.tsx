@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import ProfitMarginCalculator from '@/components/calculators/profit-margin-calculator';
 import ProfitMarginSEO from '@/components/seo/profit-margin-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -99,7 +100,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -207,37 +208,15 @@ export default async function ProfitMarginPage({ params: { locale } }: Props) {
 				<ProfitMarginSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/finance/profit-margin`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('features.marginCalculation'),
-							t('features.markupCalculation'),
-							t('features.profitAnalysis'),
-							t('features.roiCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='profit-margin'
+				namespace='calculators.profit-margin.seo'
+				featureKeys={['marginCalculation', 'markupCalculation', 'profitAnalysis', 'roiCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/profit-margin-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -290,28 +269,32 @@ export default async function ProfitMarginPage({ params: { locale } }: Props) {
 						],
 					}),
 				}}
-			/>{(() => {
-		const howTo = messages.calculators?.profit-margin?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}те полученные показатели: валовую маржу, маржу прибыли, наценку, прибыль и ROI для принятия финансовых решений',
-							},
-						],
-					}),
-				}}
 			/>
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.profit-margin?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

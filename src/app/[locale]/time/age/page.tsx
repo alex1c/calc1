@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import AgeCalculator from '@/components/calculators/age-calculator';
 import AgeSEO from '@/components/seo/age-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -182,41 +183,16 @@ export default async function AgePage({
 				<AgeSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/time/age`,
-						applicationCategory: 'UtilityApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '287',
-						},
-						featureList: [
-							t('seo.advantages.precise'),
-							t('seo.advantages.flexible'),
-							t('seo.advantages.detailed'),
-							t('seo.advantages.mobile'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='time'
+				calculatorId='age'
+				namespace='calculators.agecalc.seo'
+				featureKeys={['precise', 'flexible', 'detailed', 'mobile']}
+				featureNamespace='calculators.agecalc.seo.advantages'
+				ratingValue='4.9'
+				ratingCount='287'
+				screenshot='https://calc1.ru/images/age-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -272,7 +248,7 @@ export default async function AgePage({
 			{/* HowTo Structured Data */}
 			{(() => {
 				const howTo = messages.calculators?.agecalc?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'

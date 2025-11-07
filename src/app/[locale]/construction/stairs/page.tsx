@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import StairsCalculator from '@/components/calculators/stairs-calculator';
 import StairsSEO from '@/components/seo/stairs-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -87,7 +88,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -196,42 +197,15 @@ export default async function StairsPage({ params: { locale } }: Props) {
 				<StairsSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/construction/stairs`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.angleCalculation'),
-							t('features.stepsCalculation'),
-							t('features.comfortFormula'),
-							t('features.visualization'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='construction'
+				calculatorId='stairs'
+				namespace='calculators.stairs.seo'
+				featureKeys={['angleCalculation', 'stepsCalculation', 'comfortFormula', 'visualization', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/stairs-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -281,28 +255,34 @@ export default async function StairsPage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				{(() => {
-		const howTo = messages.calculators?.stairsCalculator?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}ятор автоматически рассчитает количество ступеней, их размеры, угол наклона и проверит соответствие формуле безопасности',
-							},
-						],
-					}),
 				}}
 			/>
+
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.stairsCalculator?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

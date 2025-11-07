@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import WaterUsageCalculator from '@/components/calculators/water-usage-calculator';
 import WaterUsageSEO from '@/components/seo/water-usage-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -111,7 +112,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -220,42 +221,15 @@ export default async function WaterUsagePage({ params: { locale } }: Props) {
 				<WaterUsageSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/life/water-usage`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.densityCalculation'),
-							t('features.areaCalculation'),
-							t('features.weightEstimation'),
-							t('features.formatSupport'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='water-usage'
+				namespace='calculators.water-usage.seo'
+				featureKeys={['densityCalculation', 'areaCalculation', 'weightEstimation', 'formatSupport', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/water-usage-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -308,28 +282,31 @@ export default async function WaterUsagePage({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.waterUsage?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}ый, месячный и годовой расход воды, а также стоимость горячей и холодной воды отдельно и общую стоимость',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.waterUsage?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import ConcreteCalculator from '@/components/calculators/concrete-calculator';
 import ConcreteSEO from '@/components/seo/concrete-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -107,7 +108,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -216,42 +217,15 @@ export default async function ConcretePage({ params: { locale } }: Props) {
 				<ConcreteSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/construction/concrete`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.volumeCalculation'),
-							t('features.concreteCalculation'),
-							t('features.proportionsCalculation'),
-							t('features.materialsCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='construction'
+				calculatorId='concrete'
+				namespace='calculators.concrete.seo'
+				featureKeys={['volumeCalculation', 'concreteCalculation', 'proportionsCalculation', 'materialsCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/concrete-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -307,7 +281,7 @@ export default async function ConcretePage({ params: { locale } }: Props) {
 			{/* HowTo Structured Data */}
 			{(() => {
 				const howTo = messages.calculators?.concrete?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'

@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import BloodPressureCalculator from '@/components/calculators/blood-pressure-calculator';
 import BloodPressureSEO from '@/components/seo/blood-pressure-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for Blood Pressure Calculator page
@@ -91,7 +92,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,39 +131,6 @@ export default async function BloodPressurePage({
 		{ label: tCategories('health.title'), href: '/health' },
 		{ label: t('title') },
 	];
-
-	// JSON-LD structured data for WebApplication
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		description: tSeo('description'),
-		url: `https://calc1.ru/${locale}/health/blood-pressure`,
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		author: {
-			'@type': 'Organization',
-			name: 'Calc1.ru',
-			url: 'https://calc1.ru',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			ratingCount: '178',
-		},
-		featureList: [
-			'Расчёт категории давления',
-			'Нормы по возрасту',
-			'Рекомендации по здоровью',
-			'Визуальные индикаторы',
-			'Оценка уровня риска',
-		],
-	};
 
 	// JSON-LD structured data for FAQ
 	const faqStructuredData = {
@@ -206,7 +174,7 @@ export default async function BloodPressurePage({
 
 	// JSON-LD structured data for HowTo
 	const howTo = messages.calculators?.bloodPressure?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -290,13 +258,17 @@ export default async function BloodPressurePage({
 				</div>
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='blood-pressure'
+				namespace='calculators.bloodPressure.seo'
+				featureKeys={['pressureCategory', 'ageNorms', 'healthRecommendations', 'visualIndicators', 'riskAssessment']}
+				ratingValue='4.8'
+				ratingCount='178'
+				screenshot='https://calc1.ru/images/blood-pressure-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import OvulationCalculator from '@/components/calculators/ovulation-calculator';
 import OvulationSEO from '@/components/seo/ovulation-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the ovulation calculator page
@@ -91,7 +92,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,32 +131,6 @@ export default async function OvulationPage({
 		{ label: tCategories('health.title'), href: '/health' },
 		{ label: t('title') },
 	];
-
-	// JSON-LD structured data for WebApplication
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		description: tSeo('description'),
-		url: `https://calc1.ru/${locale}/health/ovulation`,
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		author: {
-			'@type': 'Organization',
-			name: 'Calc1.ru',
-			url: 'https://calc1.ru',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			reviewCount: '150',
-		},
-	};
 
 	// FAQ structured data
 	const faqStructuredData = {
@@ -199,7 +174,7 @@ export default async function OvulationPage({
 
 	// HowTo structured data
 	const howTo = messages.calculators?.ovulation?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -215,13 +190,17 @@ export default async function OvulationPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='ovulation'
+				namespace='calculators.ovulation.seo'
+				featureKeys={['cycleTracking', 'ovulationPrediction', 'fertilityWindow', 'calendarView']}
+				ratingValue='4.8'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/ovulation-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

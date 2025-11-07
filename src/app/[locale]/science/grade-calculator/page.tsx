@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import GradeCalculator from '@/components/calculators/grade-calculator';
 import GradeCalculatorSEO from '@/components/seo/grade-calculator-seo';
 import { loadMergedScienceTranslations } from '@/lib/i18n-utils';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -87,7 +88,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -194,38 +195,16 @@ export default async function GradeCalculatorPage({
 				<GradeCalculatorSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/science/grade-calculator`,
-						applicationCategory: 'EducationalApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '150',
-						},
-						featureList: [
-							t('features.gpaCalculation'),
-							t('features.multipleSystems'),
-							t('features.weightedAverage'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='science'
+				calculatorId='grade-calculator'
+				namespace='calculators.grade-calculator.seo'
+				featureKeys={['gpaCalculation', 'multipleSystems', 'weightedAverage', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/grade-calculator-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			{faq.length > 0 && (
 				<script

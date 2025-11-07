@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import ConsumerLoanCalculator from '@/components/calculators/consumer-loan-calculator';
 import ConsumerLoanSEO from '@/components/seo/consumer-loan-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -110,42 +111,15 @@ export default async function ConsumerLoanPage({ params: { locale } }: Props) {
 				<ConsumerLoanSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('overview.content'),
-						url: `https://calc1.ru/${locale}/finance/consumer-loan`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							tSeo('features.monthlyPayments'),
-							tSeo('features.paymentSchedule'),
-							tSeo('features.paymentComparison'),
-							tSeo('features.earlyRepayment'),
-							tSeo('features.exportResults'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='consumer-loan'
+				namespace='calculators.consumer-loan.seo'
+				featureKeys={['monthlyPayments', 'paymentSchedule', 'paymentComparison', 'earlyRepayment', 'exportResults']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/consumer-loan-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

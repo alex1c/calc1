@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import AutoLoanCalculator from '@/components/calculators/auto-loan-calculator';
 import AutoLoanSEO from '@/components/seo/auto-loan-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -110,40 +111,16 @@ export default async function AutoLoanPage({ params: { locale } }: Props) {
 				<AutoLoanSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/auto-loan`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('hero.features.accuracy'),
-							t('hero.features.schedule'),
-							t('hero.features.comparison'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='auto-loan'
+				namespace='calculators.auto-loan.seo'
+				featureKeys={['accuracy', 'schedule', 'comparison']}
+				featureNamespace='calculators.auto-loan.hero.features'
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/auto-loan-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

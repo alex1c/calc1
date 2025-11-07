@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import HeatingCostCalculator from '@/components/calculators/heating-cost-calculator';
 import HeatingCostSEO from '@/components/seo/heating-cost-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -109,7 +110,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -216,42 +217,15 @@ export default async function HeatingCostPage({ params: { locale } }: Props) {
 				<HeatingCostSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.meta.title'),
-						description: t('seo.meta.description'),
-						url: `https://calc1.ru/${locale}/life/heating-cost`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '156',
-						},
-						featureList: [
-							t('features.powerCalculation'),
-							t('features.consumptionCalculation'),
-							t('features.costCalculation'),
-							t('features.multipleTypes'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='heating-cost'
+				namespace='calculators.heating-cost.seo'
+				featureKeys={['powerCalculation', 'consumptionCalculation', 'costCalculation', 'multipleTypes', 'accuracy']}
+				ratingValue='4.8'
+				ratingCount='156'
+				screenshot='https://calc1.ru/images/heating-cost-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -304,28 +278,31 @@ export default async function HeatingCostPage({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.heatingCost?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}ую мощность, суточное и сезонное потребление энергии, а также стоимость отопления в день и за весь сезон',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.heatingCost?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

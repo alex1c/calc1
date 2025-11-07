@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import PensionCalculator from '@/components/calculators/pension-calculator';
 import PensionSEO from '@/components/seo/pension-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -195,36 +196,15 @@ export default async function PensionPage({
 				<PensionSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/pension`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('features.pensionCalculation'),
-							t('features.pointsAnalysis'),
-							t('features.experiencePlanning'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='pension'
+				namespace='calculators.pension.seo'
+				featureKeys={['pensionCalculation', 'pointsAnalysis', 'experiencePlanning', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/pension-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

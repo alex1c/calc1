@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import MortgageCalculator from '@/components/calculators/mortgage-calculator';
 import MortgageSEO from '@/components/seo/mortgage-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -88,7 +89,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -193,40 +194,16 @@ export default async function MortgagePage({ params: { locale } }: Props) {
 				<MortgageSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/mortgage`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('hero.features.accuracy'),
-							t('hero.features.schedule'),
-							t('hero.features.comparison'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='mortgage'
+				namespace='calculators.mortgage.seo'
+				featureKeys={['accuracy', 'schedule', 'comparison']}
+				featureNamespace='calculators.mortgage.hero.features'
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/mortgage-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

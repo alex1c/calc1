@@ -6,6 +6,7 @@ import PowerRootCalculator from '@/components/calculators/power-root-calculator'
 import PowerRootSEO from '@/components/seo/power-root-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -169,44 +170,16 @@ export default async function PowerRootPage({ params: { locale } }: Props) {
 				<PowerRootSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/math/power-root`,
-						applicationCategory: 'CalculatorApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '156',
-						},
-						featureList: [
-							t('features.powerCalculation'),
-							t('features.rootCalculation'),
-							t('features.formulaDisplay'),
-							t('features.highPrecision'),
-							t('features.multipleModes'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='math'
+				calculatorId='power-root'
+				namespace='calculators.powerRoot.seo'
+				featureKeys={['powerCalculation', 'rootCalculation', 'formulaDisplay', 'highPrecision', 'multipleModes']}
+				ratingValue='4.9'
+				ratingCount='156'
+				screenshot='https://calc1.ru/images/power-root-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'

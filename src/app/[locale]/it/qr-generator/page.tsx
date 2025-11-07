@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import QRGenerator from '@/components/calculators/qr-generator';
 import QRGeneratorSEO from '@/components/seo/qr-generator-seo';
 import { loadMergedItTranslations } from '@/lib/i18n-utils';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -193,38 +194,16 @@ export default async function QRGeneratorPage({
 				<QRGeneratorSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/it/qr-generator`,
-						applicationCategory: 'UtilityApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '150',
-						},
-						featureList: [
-							t('features.qrGeneration'),
-							t('features.multipleTypes'),
-							t('features.customization'),
-							t('features.download'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='it'
+				calculatorId='qr-generator'
+				namespace='calculators.qr-generator.seo'
+				featureKeys={['qrGeneration', 'multipleTypes', 'customization', 'download']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/qr-generator-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			{faq.length > 0 && (
 				<script

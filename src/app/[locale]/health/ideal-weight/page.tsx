@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import IdealWeightCalculator from '@/components/calculators/ideal-weight-calculator';
 import IdealWeightSEO from '@/components/seo/ideal-weight-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for Ideal Weight Calculator page
@@ -91,7 +92,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -139,33 +140,6 @@ export default async function IdealWeightPage({
 	const faq = Array.isArray(faqRaw)
 		? (faqRaw as Array<{ q: string; a: string }>)
 		: [];
-
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/health/ideal-weight`,
-		description: t('description'),
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '150',
-		},
-		featureList: [
-			t('features.idealWeightCalculation'),
-			t('features.multipleFormulas'),
-			t('features.personalizedResults'),
-			t('features.accuracy'),
-		],
-	};
 
 	// FAQ structured data
 	const faqStructuredData = {
@@ -266,13 +240,17 @@ export default async function IdealWeightPage({
 				<IdealWeightSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='ideal-weight'
+				namespace='calculators.ideal-weight'
+				featureKeys={['idealWeightCalculation', 'multipleFormulas', 'personalizedResults', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/ideal-weight-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

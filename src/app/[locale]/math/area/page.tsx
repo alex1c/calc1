@@ -13,6 +13,7 @@ import Header from '@/components/header';
 import AreaCalculator from '@/components/calculators/area-calculator';
 import AreaSEO from '@/components/seo/area-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -120,45 +121,17 @@ export default async function AreaCalculatorPage({
 				<AreaSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/math/area`,
-						applicationCategory: 'MathApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '189',
-						},
-						featureList: [
-							t('form.figureTypes.circle'),
-							t('form.figureTypes.square'),
-							t('form.figureTypes.triangle'),
-							'Точные формулы',
-							'Мгновенные расчёты',
-							'Многоязычность',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='math'
+				calculatorId='area'
+				namespace='calculators.area.seo'
+				featureKeys={['circle', 'square', 'triangle', 'accurateFormulas', 'instantCalculations', 'multilingual']}
+				featureNamespace='calculators.area.form.figureTypes'
+				ratingValue='4.8'
+				ratingCount='189'
+				screenshot='https://calc1.ru/images/area-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'

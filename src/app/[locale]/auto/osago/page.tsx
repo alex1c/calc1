@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import OsagoCalculator from '@/components/calculators/osago-calculator';
 import OsagoSEO from '@/components/seo/osago-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -88,7 +89,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -198,40 +199,16 @@ export default async function OsagoPage({ params: { locale } }: Props) {
 				<OsagoSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/osago`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '142',
-						},
-						featureList: [
-							t('hero.accuracy'),
-							t('hero.coefficients'),
-							t('hero.calculation'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='auto'
+				calculatorId='osago'
+				namespace='calculators.osago.seo'
+				featureKeys={['accuracy', 'coefficients', 'calculation']}
+				featureNamespace='calculators.osago.hero'
+				ratingValue='4.8'
+				ratingCount='142'
+				screenshot='https://calc1.ru/images/osago-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

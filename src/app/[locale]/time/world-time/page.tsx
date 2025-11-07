@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import WorldTimeCalculator from '@/components/calculators/world-time-calculator';
 import WorldTimeSEO from '@/components/seo/world-time-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -193,41 +194,16 @@ export default async function WorldTimePage({ params: { locale } }: Props) {
 				<WorldTimeSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/time/world-time`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '267',
-						},
-						featureList: [
-							t('seo.features.realTime'),
-							t('seo.features.multipleCities'),
-							t('seo.features.timeZones'),
-							t('seo.features.search'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='time'
+				calculatorId='world-time'
+				namespace='calculators.worldTime.seo'
+				featureKeys={['realTime', 'multipleCities', 'timeZones', 'search']}
+				featureNamespace='calculators.worldTime.seo.features'
+				ratingValue='4.9'
+				ratingCount='267'
+				screenshot='https://calc1.ru/images/world-time-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

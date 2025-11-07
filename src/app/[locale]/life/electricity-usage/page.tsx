@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import ElectricityUsageCalculator from '@/components/calculators/electricity-usage-calculator';
 import ElectricityUsageSEO from '@/components/seo/electricity-usage-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -87,7 +88,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -198,42 +199,15 @@ export default async function ElectricityUsagePage({
 				<ElectricityUsageSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/life/electricity-usage`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.powerCalculation'),
-							t('features.timeCalculation'),
-							t('features.tariffCalculation'),
-							t('features.exportSupport'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='electricity-usage'
+				namespace='calculators.electricity-usage.seo'
+				featureKeys={['powerCalculation', 'timeCalculation', 'tariffCalculation', 'exportSupport', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/electricity-usage-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -286,28 +260,31 @@ export default async function ElectricityUsagePage({
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.electricityUsage?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()} 'Калькулятор автоматически рассчитает потребление в день, месяц и год, а также стоимость электроэнергии',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.electricityUsage?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

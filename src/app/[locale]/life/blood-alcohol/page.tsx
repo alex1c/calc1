@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import BloodAlcoholCalculator from '@/components/calculators/blood-alcohol-calculator';
 import BloodAlcoholSEO from '@/components/seo/blood-alcohol-seo';
 import { Metadata } from 'next';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -109,7 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -217,41 +218,15 @@ export default async function BloodAlcoholPage({ params: { locale } }: Props) {
 				<BloodAlcoholSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/life/blood-alcohol`,
-						applicationCategory: 'HealthApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.7',
-							ratingCount: '950',
-						},
-						featureList: [
-							t('features.bacCalculation'),
-							t('features.eliminationTime'),
-							t('features.stateDetection'),
-							t('features.safetyWarning'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='blood-alcohol'
+				namespace='calculators.blood-alcohol.seo'
+				featureKeys={['bacCalculation', 'eliminationTime', 'stateDetection', 'safetyWarning']}
+				ratingValue='4.7'
+				ratingCount='950'
+				screenshot='https://calc1.ru/images/blood-alcohol-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -304,28 +279,31 @@ export default async function BloodAlcoholPage({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.bloodAlcohol?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}ext: 'Калькулятор покажет уровень BAC в промилле, состояние опьянения и время полного выведения алкоголя',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.bloodAlcohol?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import DepositCalculator from '@/components/calculators/deposit-calculator';
 import InvestmentSEO from '@/components/seo/investment-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -110,42 +111,16 @@ export default async function InvestmentPage({ params: { locale } }: Props) {
 				<InvestmentSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/investment`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('hero.feature1'),
-							t('hero.feature2'),
-							t('hero.feature3'),
-							t('hero.feature4'),
-							t('hero.feature5'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='investment'
+				namespace='calculators.investment.seo'
+				featureKeys={['feature1', 'feature2', 'feature3', 'feature4', 'feature5']}
+				featureNamespace='calculators.investment.hero'
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/investment-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { Hammer, Calculator, Package, Layers } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 // Dynamic imports for client components
 const PlasterCalculator = dynamic(
@@ -95,7 +96,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -202,42 +203,15 @@ export default async function PlasterPage({ params: { locale } }: Props) {
 				<PlasterSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/construction/plaster`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.areaCalculation'),
-							t('features.consumptionCalculation'),
-							t('features.layersCalculation'),
-							t('features.reserveCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='construction'
+				calculatorId='plaster'
+				namespace='calculators.plaster.seo'
+				featureKeys={['areaCalculation', 'consumptionCalculation', 'layersCalculation', 'reserveCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/plaster-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -291,7 +265,7 @@ export default async function PlasterPage({ params: { locale } }: Props) {
 			/>
 			{(() => {
 				const howTo = messages.calculators?.plaster?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'
@@ -301,7 +275,7 @@ export default async function PlasterPage({ params: { locale } }: Props) {
 								'@type': 'HowTo',
 								name: howTo.title,
 								description: howTo.description,
-								step: Object.keys(howTo.steps || {})
+								step: Object.keys(howTo.steps)
 									.sort()
 									.map((key) => ({
 										'@type': 'HowToStep',

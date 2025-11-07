@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import FantasyWorldCalculator from '@/components/calculators/fantasy-world-calculator';
 import FantasyWorldSEO from '@/components/seo/fantasy-world-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -123,32 +124,6 @@ export default async function FantasyWorldPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/fantasy-world`,
-		description: t('description'),
-		applicationCategory: 'CreativeApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '5.0',
-			reviewCount: '750',
-		},
-		featureList: [
-			'4 типа миров',
-			'7 элементов описания',
-			'Генерация 1-3 миров',
-			'Копирование и скачивание',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -188,7 +163,7 @@ export default async function FantasyWorldPage({
 	};
 
 	const howTo = messages.calculators?.fantasyWorld?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -204,13 +179,17 @@ export default async function FantasyWorldPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='fantasy-world'
+				namespace='calculators.fantasyWorld'
+				featureKeys={['worldTypes', 'descriptionElements', 'multipleWorlds', 'copyDownload']}
+				ratingValue='5.0'
+				ratingCount='750'
+				screenshot='https://calc1.ru/images/fantasy-world-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

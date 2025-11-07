@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import PressureCalculator from '@/components/calculators/pressure-calculator';
 import PressureSEO from '@/components/seo/pressure-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the pressure converter page
@@ -58,33 +59,6 @@ export default async function PressurePage({
 		namespace: 'calculators.pressure.seo',
 	});
 
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/converter/pressure`,
-		description: t('description'),
-		applicationCategory: 'UtilityApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '150',
-		},
-		featureList: [
-			'Pressure unit conversion',
-			'Multiple units support',
-			'Instant calculation',
-			'Multilingual interface',
-		],
-	};
-
 	// FAQ structured data
 	const faqData = tSeo.raw('faqItems');
 	const faqArray = Array.isArray(faqData) ? faqData : [];
@@ -103,13 +77,17 @@ export default async function PressurePage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='converter'
+				calculatorId='pressure'
+				namespace='calculators.pressure.seo'
+				featureKeys={['unitConversion', 'multipleUnits', 'instantCalculation', 'multilingualInterface']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/pressure-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import AngleCalculator from '@/components/calculators/angle-calculator';
 import AngleSEO from '@/components/seo/angle-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the angle converter page
@@ -60,33 +61,6 @@ export default async function AnglePage({
 		locale,
 		namespace: 'calculators.angle-converter.seo',
 	});
-
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/converter/angle`,
-		description: t('description'),
-		applicationCategory: 'UtilityApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '150',
-		},
-		featureList: [
-			'Angle unit conversion',
-			'Multiple units support',
-			'Instant calculation',
-			'Multilingual interface',
-		],
-	};
 
 	// FAQ structured data
 	const faqData = tSeo.raw('faqItems');
@@ -151,13 +125,17 @@ export default async function AnglePage({
 				<AngleSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='converter'
+				calculatorId='angle'
+				namespace='calculators.angle-converter.seo'
+				featureKeys={['unitConversion', 'multipleUnits', 'instantCalculation', 'multilingualInterface']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/angle-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import TileGlueCalculator from '@/components/calculators/tile-glue-calculator';
 import TileGlueSEO from '@/components/seo/tile-glue-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -109,7 +110,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -218,42 +219,15 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 				<TileGlueSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/construction/tile-glue`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.areaCalculation'),
-							t('features.tileGlueCalculation'),
-							t('features.packageCalculation'),
-							t('features.reserveCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='construction'
+				calculatorId='tile-glue'
+				namespace='calculators.tile-glue.seo'
+				featureKeys={['areaCalculation', 'tileGlueCalculation', 'packageCalculation', 'reserveCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/tile-glue-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -307,7 +281,7 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 			/>
 			{(() => {
 				const howTo = messages.calculators?.tileGlue?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'
@@ -317,7 +291,7 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 								'@type': 'HowTo',
 								name: howTo.title,
 								description: howTo.description,
-								step: Object.keys(howTo.steps || {})
+								step: Object.keys(howTo.steps)
 									.sort()
 									.map((key) => ({
 										'@type': 'HowToStep',

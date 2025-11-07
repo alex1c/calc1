@@ -6,6 +6,7 @@ import CaloriesCalculator from '@/components/calculators/calories-calculator';
 import CaloriesSEO from '@/components/seo/calories-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -99,7 +100,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -207,42 +208,15 @@ export default async function CaloriesPage({ params: { locale } }: Props) {
 				<CaloriesSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/life/calories`,
-						applicationCategory: 'HealthApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '267',
-						},
-						featureList: [
-							t('features.bmrCalculation'),
-							t('features.tdeeCalculation'),
-							t('features.foodDatabase'),
-							t('features.harrisBenedict'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='calories'
+				namespace='calculators.calories.seo'
+				featureKeys={['bmrCalculation', 'tdeeCalculation', 'foodDatabase', 'harrisBenedict', 'accuracy']}
+				ratingValue='4.8'
+				ratingCount='267'
+				screenshot='https://calc1.ru/images/calories-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -295,29 +269,31 @@ export default async function CaloriesPage({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.calories?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}ame: 'Получите результат',
-								text: 'Калькулятор покажет BMR, TDEE и рекомендации для разных целей',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.calories?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

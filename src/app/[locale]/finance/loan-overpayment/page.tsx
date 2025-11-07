@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { DollarSign, Calculator, TrendingDown, Percent } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 // Dynamic imports for client components
 const LoanOverpaymentCalculator = dynamic(
@@ -101,7 +102,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -210,42 +211,15 @@ export default async function LoanOverpaymentPage({
 				<LoanOverpaymentSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/finance/loan-overpayment`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('features.overpaymentCalculation'),
-							t('features.annuityPayment'),
-							t('features.differentiatedPayment'),
-							t('features.percentageCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='loan-overpayment'
+				namespace='calculators.loan-overpayment.seo'
+				featureKeys={['overpaymentCalculation', 'annuityPayment', 'differentiatedPayment', 'percentageCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/loan-overpayment-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

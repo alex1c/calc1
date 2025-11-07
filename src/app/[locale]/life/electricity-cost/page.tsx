@@ -6,6 +6,7 @@ import { Zap, Calculator, DollarSign, Layers } from 'lucide-react';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import ElectricityCostSEO from '@/components/seo/electricity-cost-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 const ElectricityCostCalculator = dynamic(
 	() => import('@/components/calculators/electricity-cost-calculator'),
@@ -115,7 +116,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -224,42 +225,15 @@ export default async function Page({ params: { locale } }: Props) {
 				<ElectricityCostSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('h1'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/life/electricity-cost`,
-						applicationCategory: 'UtilityApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '150',
-						},
-						featureList: [
-							'Расчет потребления электроэнергии по мощности и времени',
-							'Расчет стоимости электроэнергии по тарифу',
-							'Поддержка нескольких приборов одновременно',
-							'Экспорт результатов в CSV',
-							'Автоматическое суммирование расхода',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='electricity-cost'
+				namespace='calculators.electricity-cost.seo'
+				featureKeys={['powerTimeCalculation', 'tariffCalculation', 'multipleDevices', 'csvExport', 'autoSum']}
+				ratingValue='4.9'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/electricity-cost-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -312,29 +286,31 @@ export default async function Page({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.electricityCost?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}кспортируйте данные',
-								text: 'Используйте кнопку "Экспорт CSV" для сохранения результатов в файл',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.electricityCost?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

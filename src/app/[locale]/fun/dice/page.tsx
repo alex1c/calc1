@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import DiceRoller from '@/components/calculators/dice-roller';
 import DiceRollerSEO from '@/components/seo/dice-roller-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -89,7 +90,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,32 +131,6 @@ export default async function DiceRollerPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/dice`,
-		description: t('description'),
-		applicationCategory: 'GameApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '500',
-		},
-		featureList: [
-			'Бросок от 1 до 10 кубиков',
-			'7 типов кубиков (D4-D100)',
-			'История бросков',
-			'Криптографически стойкая генерация',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -195,7 +170,7 @@ export default async function DiceRollerPage({
 	};
 
 	const howTo = messages.calculators?.diceRoller?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -211,13 +186,17 @@ export default async function DiceRollerPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='dice'
+				namespace='calculators.diceRoller'
+				featureKeys={['multipleDice', 'diceTypes', 'throwHistory', 'cryptographicGeneration']}
+				ratingValue='4.9'
+				ratingCount='500'
+				screenshot='https://calc1.ru/images/dice-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

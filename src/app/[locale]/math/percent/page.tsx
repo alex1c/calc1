@@ -12,6 +12,7 @@ import Header from '@/components/header';
 import PercentCalculator from '@/components/calculators/percent-calculator';
 import PercentSEO from '@/components/seo/percent-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -128,43 +129,21 @@ export default async function PercentCalculatorPage({
 				<PercentSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/math/percent`,
-						applicationCategory: 'MathApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '203',
-						},
-						featureList: [
-							t('find_percent_of_number'),
-							t('what_percent_is'),
-							t('find_number_from_percent'),
-							t('increase_or_decrease'),
-							'Мгновенные расчёты',
-							'Многоязычность',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='math'
+				calculatorId='percent'
+				namespace='calculators.math_percent.seo'
+				featureKeys={[
+					'find_percent_of_number',
+					'what_percent_is',
+					'find_number_from_percent',
+					'increase_or_decrease',
+				]}
+				ratingValue='4.9'
+				ratingCount='203'
+				screenshot='https://calc1.ru/images/percent-screenshot.jpg'
+				featureNamespace='calculators.math_percent'
 			/>
 
 			{/* FAQ Structured Data */}

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import HashrateCalculator from '@/components/calculators/hashrate-calculator';
 import HashrateCalculatorSEO from '@/components/seo/hashrate-calculator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -200,44 +201,16 @@ export default async function HashratePage({ params: { locale } }: Props) {
 				<HashrateCalculatorSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/it/hashrate`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.8',
-							ratingCount: '156',
-						},
-						featureList: [
-							tSeo('features.multipleAlgorithms'),
-							tSeo('features.profitability'),
-							tSeo('features.roi'),
-							tSeo('features.electricity'),
-							tSeo('features.poolFee'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='it'
+				calculatorId='hashrate'
+				namespace='calculators.hashrate.seo'
+				featureKeys={['multipleAlgorithms', 'profitability', 'roi', 'electricity', 'poolFee']}
+				ratingValue='4.8'
+				ratingCount='156'
+				screenshot='https://calc1.ru/images/hashrate-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			{faq.length > 0 && (
 				<script
@@ -293,7 +266,7 @@ export default async function HashratePage({ params: { locale } }: Props) {
 			{/* HowTo Structured Data */}
 			{(() => {
 				const howTo = messages.calculators?.hashrate?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import FuelCalculator from '@/components/calculators/fuel-calculator';
 import FuelConsumptionSEO from '@/components/seo/fuel-consumption-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -91,7 +92,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -201,40 +202,16 @@ export default async function FuelConsumptionPage({
 				<FuelConsumptionSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/fuel-consumption`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('hero.accuracy'),
-							t('hero.modes'),
-							t('hero.speed'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='auto'
+				calculatorId='fuel-consumption'
+				namespace='calculators.fuel-consumption.seo'
+				featureKeys={['accuracy', 'modes', 'speed']}
+				featureNamespace='calculators.fuel-consumption.hero'
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/fuel-consumption-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

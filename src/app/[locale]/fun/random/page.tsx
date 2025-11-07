@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import RandomNumberGenerator from '@/components/calculators/random-number-generator';
 import RandomNumberGeneratorSEO from '@/components/seo/random-number-generator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -90,7 +91,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -131,32 +132,6 @@ export default async function RandomNumberGeneratorPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/random`,
-		description: t('description'),
-		applicationCategory: 'UtilityApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '250',
-		},
-		featureList: [
-			'Генерация случайных чисел',
-			'Настройка диапазона',
-			'Контроль дубликатов',
-			'Сортировка результатов',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -196,7 +171,7 @@ export default async function RandomNumberGeneratorPage({
 	};
 
 	const howTo = messages.calculators?.randomNumberGenerator?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -212,13 +187,17 @@ export default async function RandomNumberGeneratorPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='random'
+				namespace='calculators.randomNumberGenerator'
+				featureKeys={['generation', 'rangeSettings', 'duplicateControl', 'sorting']}
+				ratingValue='4.9'
+				ratingCount='250'
+				screenshot='https://calc1.ru/images/random-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

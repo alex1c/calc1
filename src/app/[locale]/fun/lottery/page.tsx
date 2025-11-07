@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import LotteryGenerator from '@/components/calculators/lottery-generator';
 import LotteryGeneratorSEO from '@/components/seo/lottery-generator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -89,7 +90,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,32 +131,6 @@ export default async function LotteryGeneratorPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/lottery`,
-		description: t('description'),
-		applicationCategory: 'EntertainmentApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			reviewCount: '220',
-		},
-		featureList: [
-			'Генерация лотерейных билетов',
-			'8 типов лотерей',
-			'До 20 билетов за раз',
-			'Бонусные числа',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -195,7 +170,7 @@ export default async function LotteryGeneratorPage({
 	};
 
 	const howTo = messages.calculators?.lotteryGenerator?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -211,13 +186,17 @@ export default async function LotteryGeneratorPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='lottery'
+				namespace='calculators.lotteryGenerator'
+				featureKeys={['ticketGeneration', 'lotteryTypes', 'multipleTickets', 'bonusNumbers']}
+				ratingValue='4.8'
+				ratingCount='220'
+				screenshot='https://calc1.ru/images/lottery-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

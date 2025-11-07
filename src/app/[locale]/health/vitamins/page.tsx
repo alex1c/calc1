@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import VitaminsCalculator from '@/components/calculators/vitamins-calculator';
 import VitaminsSEO from '@/components/seo/vitamins-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the vitamins calculator page
@@ -58,34 +59,6 @@ export default async function VitaminsPage({
 		namespace: 'calculators.vitamins.seo',
 	});
 
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/health/vitamins`,
-		description: t('description'),
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '200',
-		},
-		featureList: [
-			'Daily vitamin requirements',
-			'Mineral intake calculation',
-			'Age and gender specific',
-			'Activity level adjustment',
-			'Multilingual support',
-		],
-	};
-
 	// FAQ structured data
 	const faqStructuredData = {
 		'@context': 'https://schema.org',
@@ -128,13 +101,17 @@ export default async function VitaminsPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='vitamins'
+				namespace='calculators.vitamins.seo'
+				featureKeys={['dailyRequirements', 'mineralCalculation', 'ageGenderSpecific', 'activityAdjustment', 'multilingualSupport']}
+				ratingValue='4.9'
+				ratingCount='200'
+				screenshot='https://calc1.ru/images/vitamins-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

@@ -13,6 +13,7 @@ import Header from '@/components/header';
 import TaxCalculator from '@/components/calculators/tax-calculator';
 import TaxCalculatorSEO from '@/components/seo/tax-calculator-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -127,43 +128,15 @@ export default async function TaxCalculatorPage({ params: { locale } }: Props) {
 				<TaxCalculatorSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/tax-calculator`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('seo.features.vatCalculation'),
-							t('seo.features.multipleRates'),
-							t('seo.features.additionalTaxes'),
-							t('seo.features.currencySupport'),
-							t('seo.features.localCalculation'),
-							t('seo.features.exportResults'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='tax-calculator'
+				namespace='calculators.tax-calculator.seo'
+				featureKeys={['vatCalculation', 'multipleRates', 'additionalTaxes', 'currencySupport', 'localCalculation', 'exportResults']}
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/tax-calculator-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

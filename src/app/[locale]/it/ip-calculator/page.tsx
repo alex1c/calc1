@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import IpCalculator from '@/components/calculators/ip-calculator';
 import IpCalculatorSEO from '@/components/seo/ip-calculator-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -110,44 +111,16 @@ export default async function IpCalculatorPage({ params: { locale } }: Props) {
 				<IpCalculatorSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/it/ip-calculator`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('features.ipv4Calculation'),
-							t('features.ipv6Calculation'),
-							t('features.cidrSupport'),
-							t('features.reverseCalculation'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='it'
+				calculatorId='ip-calculator'
+				namespace='calculators.ipCalculator.seo'
+				featureKeys={['ipv4Calculation', 'ipv6Calculation', 'cidrSupport', 'reverseCalculation', 'accuracy']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/ip-calculator-screenshot.jpg'
 			/>
-
 			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'

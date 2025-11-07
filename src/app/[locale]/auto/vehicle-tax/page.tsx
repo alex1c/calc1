@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import VehicleTaxCalculator from '@/components/calculators/vehicle-tax-calculator';
 import VehicleTaxSEO from '@/components/seo/vehicle-tax-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -88,7 +89,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -194,42 +195,15 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 				<VehicleTaxSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/vehicle-tax`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '178',
-						},
-						featureList: [
-							'Расчёт транспортного налога',
-							'Региональные ставки',
-							'Коэффициент владения',
-							'Мощность двигателя',
-							'Налоговые льготы',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='auto'
+				calculatorId='vehicle-tax'
+				namespace='calculators.vehicle-tax.seo'
+				featureKeys={['calculation', 'regionalRates', 'ownershipCoefficient', 'enginePower', 'taxBenefits']}
+				ratingValue='4.9'
+				ratingCount='178'
+				screenshot='https://calc1.ru/images/vehicle-tax-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -291,7 +265,7 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 			{/* HowTo Structured Data */}
 			{(() => {
 				const howTo = messages.calculators?.vehicle-tax?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'

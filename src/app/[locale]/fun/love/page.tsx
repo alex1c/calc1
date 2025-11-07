@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import LoveCompatibilityCalculator from '@/components/calculators/love-compatibility-calculator';
 import LoveCompatibilitySEO from '@/components/seo/love-compatibility-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -89,7 +90,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,32 +131,6 @@ export default async function LoveCompatibilityPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/love`,
-		description: t('description'),
-		applicationCategory: 'EntertainmentApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			reviewCount: '200',
-		},
-		featureList: [
-			'Расчёт совместимости по дате рождения',
-			'Учёт знаков зодиака',
-			'Нумерологический расчёт',
-			'Учёт возрастной разницы',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -195,7 +170,7 @@ export default async function LoveCompatibilityPage({
 	};
 
 	const howTo = messages.calculators?.loveCompatibility?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -211,13 +186,17 @@ export default async function LoveCompatibilityPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='love'
+				namespace='calculators.loveCompatibility'
+				featureKeys={['birthDateCalculation', 'zodiacSigns', 'numerology', 'ageDifference']}
+				ratingValue='4.8'
+				ratingCount='200'
+				screenshot='https://calc1.ru/images/love-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

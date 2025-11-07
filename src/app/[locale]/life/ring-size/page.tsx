@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import RingSizeCalculator from '@/components/calculators/ring-size-calculator';
 import RingSizeSEO from '@/components/seo/ring-size-seo';
 import { Metadata } from 'next';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -107,7 +108,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -215,42 +216,15 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 				<RingSizeSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/life/ring-size`,
-						applicationCategory: 'UtilityApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '200',
-						},
-						featureList: [
-							'Конвертация размеров колец между 6 системами',
-							'Измерение по размеру или диаметру',
-							'Таблица соответствий размеров',
-							'Поддержка RU, EU, US, UK, JP, CN',
-							'Точные международные стандарты',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='ring-size'
+				namespace='calculators.ring-size.seo'
+				featureKeys={['sizeConversion', 'measurement', 'sizeTable', 'systemSupport', 'standards']}
+				ratingValue='4.9'
+				ratingCount='200'
+				screenshot='https://calc1.ru/images/ring-size-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -303,28 +277,31 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.ringSize?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()}ькулятор автоматически покажет эквивалентные размеры во всех доступных системах (RU, EU, US, UK, JP, CN)',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.ringSize?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

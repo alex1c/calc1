@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import DoseCalculator from '@/components/calculators/dose-calculator';
 import DoseSEO from '@/components/seo/dose-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the dose calculator page
@@ -58,34 +59,6 @@ export default async function DosePage({
 		namespace: 'calculators.dose.seo',
 	});
 
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/health/dose`,
-		description: t('description'),
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '180',
-		},
-		featureList: [
-			'Weight-based dosage calculation',
-			'Unit conversion (kg/lbs)',
-			'Safety warnings',
-			'Multiple frequency options',
-			'Multilingual support',
-		],
-	};
-
 	// FAQ structured data
 	const faqStructuredData = {
 		'@context': 'https://schema.org',
@@ -120,13 +93,17 @@ export default async function DosePage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='dose'
+				namespace='calculators.dose.seo'
+				featureKeys={['weightBasedCalculation', 'unitConversion', 'safetyWarnings', 'frequencyOptions', 'multilingualSupport']}
+				ratingValue='4.9'
+				ratingCount='180'
+				screenshot='https://calc1.ru/images/dose-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

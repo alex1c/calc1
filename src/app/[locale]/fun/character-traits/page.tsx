@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import CharacterTraitsCalculator from '@/components/calculators/character-traits-calculator';
 import CharacterTraitsSEO from '@/components/seo/character-traits-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -123,32 +124,6 @@ export default async function CharacterTraitsPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/character-traits`,
-		description: t('description'),
-		applicationCategory: 'CreativeApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			reviewCount: '600',
-		},
-		featureList: [
-			'3 типа персонажей',
-			'4 возрастные группы',
-			'Полный профиль персонажа',
-			'Копирование и скачивание',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -188,7 +163,7 @@ export default async function CharacterTraitsPage({
 	};
 
 	const howTo = messages.calculators?.characterTraits?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -204,13 +179,17 @@ export default async function CharacterTraitsPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='character-traits'
+				namespace='calculators.characterTraits'
+				featureKeys={['characterTypes', 'ageGroups', 'fullProfile', 'copyDownload']}
+				ratingValue='4.9'
+				ratingCount='600'
+				screenshot='https://calc1.ru/images/character-traits-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

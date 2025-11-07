@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import ZodiacCalculator from '@/components/calculators/zodiac-calculator';
 import ZodiacCalculatorSEO from '@/components/seo/zodiac-calculator-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -123,32 +124,6 @@ export default async function ZodiacCalculatorPage({
 		: [];
 
 	// Structured Data
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/fun/zodiac`,
-		description: t('description'),
-		applicationCategory: 'EntertainmentApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.7',
-			reviewCount: '350',
-		},
-		featureList: [
-			'Определение знака по дате рождения',
-			'12 знаков зодиака',
-			'Стихии и качества',
-			'Описание характера',
-		],
-	};
-
 	const faqPageData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -188,7 +163,7 @@ export default async function ZodiacCalculatorPage({
 	};
 
 	const howTo = messages.calculators?.zodiacCalculator?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -204,13 +179,17 @@ export default async function ZodiacCalculatorPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='fun'
+				calculatorId='zodiac'
+				namespace='calculators.zodiacCalculator'
+				featureKeys={['birthDateSign', 'zodiacSigns', 'elementsQualities', 'characterDescription']}
+				ratingValue='4.7'
+				ratingCount='350'
+				screenshot='https://calc1.ru/images/zodiac-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

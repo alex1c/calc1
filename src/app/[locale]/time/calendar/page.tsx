@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import CalendarCalculator from '@/components/calculators/calendar-calculator';
 import CalendarSEO from '@/components/seo/calendar-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -86,7 +87,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -192,41 +193,16 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 				<CalendarSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/time/calendar`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '234',
-						},
-						featureList: [
-							t('seo.features.events'),
-							t('seo.features.export'),
-							t('seo.features.mobile'),
-							t('seo.features.holidays'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='time'
+				calculatorId='calendar'
+				namespace='calculators.calendar.seo'
+				featureKeys={['events', 'export', 'mobile', 'holidays']}
+				featureNamespace='calculators.calendar.seo.features'
+				ratingValue='4.9'
+				ratingCount='234'
+				screenshot='https://calc1.ru/images/calendar-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -282,7 +258,7 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 			{/* HowTo Structured Data */}
 			{(() => {
 				const howTo = messages.calculators?.calendar?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import CreditCalculator from '@/components/calculators/credit-calculator';
 import CreditLoanSEO from '@/components/seo/credit-loan-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -127,33 +128,16 @@ export default async function CreditLoanPage({ params: { locale } }: Props) {
 				<CreditLoanSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('title'),
-						description: t('description'),
-						url: `https://calc1.ru/${locale}/finance/credit-loan`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						featureList: [
-							t('seo.features.items.0'),
-							t('seo.features.items.1'),
-							t('seo.features.items.2'),
-							t('seo.features.items.3'),
-							t('seo.features.items.4'),
-							t('seo.features.items.5'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='credit-loan'
+				namespace='calculators.credit-loan.seo'
+				featureKeys={['items.0', 'items.1', 'items.2', 'items.3', 'items.4', 'items.5']}
+				featureNamespace='calculators.credit-loan.seo.features'
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/credit-loan-screenshot.jpg'
 			/>
 		</div>
 	);

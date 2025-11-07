@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import LeasingCalculator from '@/components/calculators/leasing-calculator';
 import LeasingSEO from '@/components/seo/leasing-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -88,7 +89,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -198,42 +199,15 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 				<LeasingSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/leasing`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '89',
-						},
-						featureList: [
-							'Расчёт автолизинга',
-							'Ежемесячные платежи',
-							'Выкупная стоимость',
-							'Переплата по лизингу',
-							'Сравнение с кредитом',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='auto'
+				calculatorId='leasing'
+				namespace='calculators.leasing.seo'
+				featureKeys={['calculation', 'monthlyPayments', 'buyoutCost', 'overpayment', 'comparison']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/leasing-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -326,7 +300,7 @@ export default async function LeasingPage({ params: { locale } }: Props) {
 			{/* HowTo Structured Data */}
 			{(() => {
 				const howTo = messages.calculators?.leasing?.seo?.howTo;
-				if (!howTo) return null;
+				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
 						type='application/ld+json'

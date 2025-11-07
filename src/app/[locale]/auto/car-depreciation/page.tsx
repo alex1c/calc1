@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import CarDepreciationCalculator from '@/components/calculators/car-depreciation-calculator';
 import CarDepreciationSEO from '@/components/seo/car-depreciation-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -84,7 +85,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -182,40 +183,15 @@ export default async function CarDepreciationPage({
 				<CarDepreciationSEO />
 			</div>
 
-			{/* Structured Data: WebApplication */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/car-depreciation`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '137',
-						},
-						featureList: [
-							'Графики',
-							'Методы',
-							'Рыночные коэффициенты',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='auto'
+				calculatorId='car-depreciation'
+				namespace='calculators.car-depreciation.seo'
+				featureKeys={['charts', 'methods', 'marketCoefficients']}
+				ratingValue='4.9'
+				ratingCount='137'
+				screenshot='https://calc1.ru/images/car-depreciation-screenshot.jpg'
 			/>
 
 			{/* Structured Data: FAQ */}

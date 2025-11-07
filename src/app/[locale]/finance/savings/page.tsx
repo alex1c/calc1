@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import SavingsCalculator from '@/components/calculators/savings-calculator';
 import SavingsSEO from '@/components/seo/savings-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -110,42 +111,15 @@ export default async function SavingsPage({ params: { locale } }: Props) {
 				<SavingsSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/savings`,
-						applicationCategory: 'BusinessApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '156',
-						},
-						featureList: [
-							'Расчёт накоплений',
-							'Финансовые цели',
-							'Ежемесячные взносы',
-							'Сложные проценты',
-							'График накоплений',
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='savings'
+				namespace='calculators.savings.seo'
+				featureKeys={['calculation', 'financialGoals', 'monthlyContributions', 'compoundInterest', 'savingsSchedule']}
+				ratingValue='4.9'
+				ratingCount='156'
+				screenshot='https://calc1.ru/images/savings-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

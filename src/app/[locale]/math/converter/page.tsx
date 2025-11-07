@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import ConverterSEO from '@/components/seo/converter-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 // Dynamic import for calculator component
 const ConverterCalculator = dynamic(
@@ -209,42 +210,6 @@ export default async function ConverterPage({
 		},
 	};
 
-	// JSON-LD structured data for WebApplication
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: tSeo('title'),
-		description: tSeo('description'),
-		url: `https://calc1.ru/${locale}/math/converter`,
-		applicationCategory: 'BusinessApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		author: {
-			'@type': 'Organization',
-			name: 'Calc1.ru',
-			url: 'https://calc1.ru',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.9',
-			ratingCount: '89',
-		},
-		featureList: [
-			'Конвертация длины',
-			'Конвертация массы',
-			'Конвертация времени',
-			'Конвертация объема',
-			'Поддержка метрических и имперских единиц',
-			'Мгновенные результаты',
-			'Высокая точность расчетов',
-			'Многоязычная поддержка',
-		],
-	};
-
 	// Breadcrumbs items
 	const breadcrumbItems = [
 		{
@@ -258,7 +223,17 @@ export default async function ConverterPage({
 
 	return (
 		<>
-			{/* Structured Data */}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='math'
+				calculatorId='converter'
+				namespace='calculators.converter.seo'
+				featureKeys={['lengthConversion', 'massConversion', 'timeConversion', 'volumeConversion', 'metricImperialSupport', 'instantResults', 'highPrecision', 'multilingualSupport']}
+				ratingValue='4.9'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/converter-screenshot.jpg'
+			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
@@ -269,12 +244,6 @@ export default async function ConverterPage({
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(softwareStructuredData),
-				}}
-			/>
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
 				}}
 			/>
 

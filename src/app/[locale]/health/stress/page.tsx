@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import StressCalculator from '@/components/calculators/stress-calculator';
 import StressSEO from '@/components/seo/stress-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the stress calculator page
@@ -58,34 +59,6 @@ export default async function StressPage({
 		namespace: 'calculators.stress.seo',
 	});
 
-	// WebApplication structured data
-	const webApplicationStructuredData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		url: `https://calc1.ru/${locale}/health/stress`,
-		description: t('description'),
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			reviewCount: '150',
-		},
-		featureList: [
-			'Stress level assessment',
-			'10-question test',
-			'Personalized results',
-			'Stress management advice',
-			'Multilingual support',
-		],
-	};
-
 	// FAQ structured data
 	const faqStructuredData = {
 		'@context': 'https://schema.org',
@@ -128,13 +101,17 @@ export default async function StressPage({
 
 	return (
 		<>
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationStructuredData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='stress'
+				namespace='calculators.stress.seo'
+				featureKeys={['stressAssessment', 'questionTest', 'personalizedResults', 'managementAdvice', 'multilingualSupport']}
+				ratingValue='4.8'
+				ratingCount='150'
+				screenshot='https://calc1.ru/images/stress-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

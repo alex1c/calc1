@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import CustomsCalculator from '@/components/calculators/customs-calculator';
 import CustomsSEO from '@/components/seo/customs-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -88,7 +89,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -196,40 +197,16 @@ export default async function CustomsPage({ params: { locale } }: Props) {
 				<CustomsSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/auto/customs`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.7',
-							ratingCount: '89',
-						},
-						featureList: [
-							t('hero.accuracy'),
-							t('hero.speed'),
-							t('hero.calculation'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='auto'
+				calculatorId='customs'
+				namespace='calculators.customs.seo'
+				featureKeys={['accuracy', 'speed', 'calculation']}
+				featureNamespace='calculators.customs.hero'
+				ratingValue='4.7'
+				ratingCount='89'
+				screenshot='https://calc1.ru/images/customs-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

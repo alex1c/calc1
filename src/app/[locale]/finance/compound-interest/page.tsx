@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import CompoundInterestCalculator from '@/components/calculators/compound-interest-calculator';
 import CompoundInterestSEO from '@/components/seo/compound-interest-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -91,7 +92,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -203,40 +204,16 @@ export default async function CompoundInterestPage({
 				<CompoundInterestSEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/finance/compound-interest`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('hero.format'),
-							t('hero.accuracy'),
-							t('hero.frequencies'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='compound-interest'
+				namespace='calculators.compound-interest.seo'
+				featureKeys={['format', 'accuracy', 'frequencies']}
+				featureNamespace='calculators.compound-interest.hero'
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/compound-interest-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

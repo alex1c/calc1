@@ -6,6 +6,7 @@ import BMICalculator from '@/components/calculators/bmi-calculator';
 import BMISEO from '@/components/seo/bmi-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -173,42 +174,21 @@ export default async function BMIPage({ params: { locale } }: Props) {
 				<BMISEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: tSeo('title'),
-						description: tSeo('description'),
-						url: `https://calc1.ru/${locale}/life/bmi`,
-						applicationCategory: 'HealthApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'USD',
-						},
-						author: {
-							'@type': 'Organization',
-							name: 'Calc1.ru',
-							url: 'https://calc1.ru',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '234',
-						},
-						featureList: [
-							t('features.bmiCalculation'),
-							t('features.categoryDetermination'),
-							t('features.normalRange'),
-							t('features.healthImplications'),
-							t('features.visualScale'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='life'
+				calculatorId='bmi'
+				namespace='calculators.bmi.seo'
+				featureKeys={[
+					'bmiCalculation',
+					'categoryDetermination',
+					'normalRange',
+					'healthImplications',
+					'visualScale',
+				]}
+				ratingValue='4.9'
+				ratingCount='234'
+				screenshot='https://calc1.ru/images/bmi-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}

@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import BMIHealthCalculator from '@/components/calculators/bmi-health-calculator';
 import BMIHealthSEO from '@/components/seo/bmi-health-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for BMI Health Calculator page
@@ -91,7 +92,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -130,39 +131,6 @@ export default async function BMIHealthPage({
 		{ label: tCategories('health.title'), href: '/health' },
 		{ label: t('title') },
 	];
-
-	// JSON-LD structured data for WebApplication
-	const webApplicationData = {
-		'@context': 'https://schema.org',
-		'@type': 'WebApplication',
-		name: t('title'),
-		description: tSeo('description'),
-		url: `https://calc1.ru/${locale}/health/bmihealth`,
-		applicationCategory: 'HealthApplication',
-		operatingSystem: 'Any',
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-		},
-		author: {
-			'@type': 'Organization',
-			name: 'Calc1.ru',
-			url: 'https://calc1.ru',
-		},
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: '4.8',
-			ratingCount: '156',
-		},
-		featureList: [
-			'Расчёт индекса массы тела',
-			'Определение категории веса',
-			'Расчёт нормального диапазона веса',
-			'Визуальная шкала BMI',
-			'Рекомендации по здоровью',
-		],
-	};
 
 	// JSON-LD structured data for FAQ
 	const faqStructuredData = {
@@ -206,7 +174,7 @@ export default async function BMIHealthPage({
 
 	// JSON-LD structured data for HowTo
 	const howTo = messages.calculators?.bmiHealth?.seo?.howTo;
-	const howToData = howTo ? {
+	const howToData = howTo && howTo.steps ? {
 		'@context': 'https://schema.org',
 		'@type': 'HowTo',
 		name: howTo.title,
@@ -290,13 +258,17 @@ export default async function BMIHealthPage({
 				</div>
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(webApplicationData),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='health'
+				calculatorId='bmihealth'
+				namespace='calculators.bmiHealth.seo'
+				featureKeys={['bmiCalculation', 'weightCategory', 'normalWeightRange', 'visualScale', 'healthRecommendations']}
+				ratingValue='4.8'
+				ratingCount='156'
+				screenshot='https://calc1.ru/images/bmihealth-screenshot.jpg'
 			/>
+			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import AlimonyCalculator from '@/components/calculators/alimony-calculator';
 import AlimonySEO from '@/components/seo/alimony-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 interface Props {
 	params: { locale: string };
@@ -99,7 +100,7 @@ export async function generateMetadata({
 		},
 		verification: {
 			google: 'your-google-verification-code',
-			yandex: 'your-yandex-verification-code',
+			yandex: 'ae0a3b638a5ae1ab',
 		},
 	};
 }
@@ -207,37 +208,21 @@ export default async function AlimonyPage({ params: { locale } }: Props) {
 				<AlimonySEO />
 			</div>
 
-			{/* Structured Data */}
-			<script
-				type='application/ld+json'
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'WebApplication',
-						name: t('seo.title'),
-						description: t('seo.description'),
-						url: `https://calc1.ru/${locale}/finance/alimony`,
-						applicationCategory: 'FinanceApplication',
-						operatingSystem: 'Any',
-						offers: {
-							'@type': 'Offer',
-							price: '0',
-							priceCurrency: 'RUB',
-						},
-						aggregateRating: {
-							'@type': 'AggregateRating',
-							ratingValue: '4.9',
-							ratingCount: '127',
-						},
-						featureList: [
-							t('features.percentageCalculation'),
-							t('features.fixedAmountCalculation'),
-							t('features.mixedCalculation'),
-							t('features.legalCompliance'),
-							t('features.accuracy'),
-						],
-					}),
-				}}
+			{/* Structured Data - SoftwareApplication */}
+			<SoftwareApplicationSchema
+				category='finance'
+				calculatorId='alimony'
+				namespace='calculators.alimony'
+				featureKeys={[
+					'percentageCalculation',
+					'fixedAmountCalculation',
+					'mixedCalculation',
+					'legalCompliance',
+					'accuracy',
+				]}
+				ratingValue='4.9'
+				ratingCount='127'
+				screenshot='https://calc1.ru/images/alimony-screenshot.jpg'
 			/>
 
 			{/* FAQ Structured Data */}
@@ -290,28 +275,32 @@ export default async function AlimonyPage({ params: { locale } }: Props) {
 						],
 					}),
 				}}
-			/>{(() => {
-		const howTo = messages.calculators?.alimony?.seo?.howTo;
-		if (!howTo) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()} рассчитает ежемесячную и годовую сумму алиментов, процент от дохода, сумму на одного ребёнка и остаток дохода',
-							},
-						],
-					}),
-				}}
 			/>
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.alimony?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }
