@@ -1,6 +1,341 @@
 {
-	"calculators": {}
+  "calculators": {
+    "grade-calculator": {
+      "title": "Notenrechner (GPA)",
+      "description": "Berechnung des Notendurchschnitts (GPA) basierend auf Noten und Credits",
+      "breadcrumbs": {
+        "category": "Studium und Wissenschaft"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "gradingSystem": "Bewertungssystem",
+        "courses": "Artikel",
+        "grade": "Bewertung",
+        "credits": "Kredite",
+        "courseName": "Titel des Themas",
+        "addCourse": "Artikel hinzufügen",
+        "removeCourse": "Löschen",
+        "calculate": "Berechnen",
+        "reset": "Zurücksetzen",
+        "gradingSystems": {
+          "5-point": "5 Punkte (Russland)",
+          "4-point": "4-Punkte (GPA)",
+          "100-point": "100 Punkte (Prozentsatz)",
+          "letter": "Alphabetisch (A-F)"
+        },
+        "gradeOptions": {
+          "5-point": {
+            "5": "5 (Ausgezeichnet)",
+            "4": "4 (Gut)",
+            "3": "3 (Befriedigend)",
+            "2": "2 (Unbefriedigend)"
+          },
+          "4-point": {
+            "4.0": "4,0 (A)",
+            "3.7": "3,7 (A-)",
+            "3.3": "3,3 (B+)",
+            "3.0": "3,0 (B)",
+            "2.7": "2,7 (B-)",
+            "2.3": "2,3 (C+)",
+            "2.0": "2,0 (C)",
+            "1.7": "1,7 (C-)",
+            "1.3": "1,3 (D+)",
+            "1.0": "1,0 (D)",
+            "0.0": "0,0 (F)"
+          },
+          "100-point": {
+            "90-100": "90-100 (ausgezeichnet)",
+            "80-89": "80-89 (Gut)",
+            "70-79": "70-79 (Befriedigend)",
+            "60-69": "60-69 (Unbefriedigend)",
+            "0-59": "0-59 (Unbefriedigend)"
+          },
+          "letter": {
+            "A": "A (Ausgezeichnet)",
+            "B": "B (Gut)",
+            "C": "C (Befriedigend)",
+            "D": "D (Schwach)",
+            "F": "F (ungenügend)"
+          }
+        },
+        "errors": {
+          "title": "Datenfehler",
+          "atLeastOneCourse": "Fügen Sie mindestens ein Element hinzu",
+          "courseNameRequired": "Geben Sie den Namen des Artikels ein",
+          "gradeRequired": "Bewertung auswählen",
+          "creditsRequired": "Geben Sie die Anzahl der Credits an",
+          "invalidCredits": "Die Anzahl der Credits muss größer als 0 sein",
+          "invalidGrade": "Falsche Bewertung",
+          "courseNumber": "Artikel {Nummer}"
+        },
+        "courseNamePlaceholder": "Titel des Themas",
+        "selectPlaceholder": "Wählen",
+        "courseNumber": "Artikel {Nummer}"
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "gpa": "Notendurchschnitt (GPA)",
+        "totalCredits": "Gesamtpunkte (Stunden)",
+        "weightedAverage": "Gewichteter Durchschnitt",
+        "qualityScore": "Qualitätsfaktor",
+        "totalPoints": "Gesamtpunktzahl",
+        "courses": "Artikel",
+        "course": "Artikel",
+        "grade": "Bewertung",
+        "credits": "Kredite",
+        "points": "Punkte",
+        "placeholder": "Fügen Sie Fächer hinzu, um den Notendurchschnitt zu berechnen"
+      },
+      "hero": {
+        "accuracy": "Berechnungsgenauigkeit",
+        "multipleSystems": "Systeme",
+        "planning": "Planung"
+      },
+      "features": {
+        "gpaCalculation": "GPA-Berechnung",
+        "multipleSystems": "Mehrere Bewertungssysteme",
+        "weightedAverage": "Gewichteter Durchschnitt",
+        "accuracy": "Hohe Berechnungsgenauigkeit"
+      },
+      "seo": {
+        "title": "Online-Notenrechner (GPA) – GPA-Berechnung | Calc1.ru",
+        "description": "Kostenloser Online-Notendurchschnittsrechner (GPA) zur Berechnung des GPA basierend auf Noten und Credits. Unterstützt 5-Punkte-, 4-Punkte- (GPA), 100-Punkte- und Buchstabenbewertungssysteme. Hilft Ihnen bei der Planung Ihres Studiums.",
+        "keywords": "Notenrechner, GPA-Rechner, GPA-Berechnung, GPA online, GPA-Rechner, GPA-Berechnung, gewichteter Durchschnitt, Schülernotenrechner, GPA-Rechner, Notenrechner, Diplom-GPA, Zertifikat-GPA-Berechnung, Notenrechner mit Credits, GPA inklusive Credits, gewichteter GPA, ungewichteter GPA, durchschnittliche Berechnung der Zulassungspunktzahl, Universitäts-GPA, Schulnotenrechner",
+        "overview": {
+          "title": "Online-Notenrechner (GPA)",
+          "content": "Der Online-Notendurchschnittsrechner (GPA) hilft Ihnen bei der Berechnung Ihres Notendurchschnitts basierend auf den Kursnoten und der Anzahl der Credits (Stunden). Unterstützt verschiedene Bewertungssysteme: 5 Punkte (Russland), 4 Punkte (GPA, USA), 100 Punkte (Prozent) und Buchstabe (A-F).",
+          "additionalContent": "GPA (Grade Point Average) ist der durchschnittliche Notendurchschnitt, der als gewichteter Durchschnitt der Noten unter Berücksichtigung der Credits (Stunden) jedes Fachs berechnet wird. Formel: GPA = Summe (Note × Credits) / Summe der Credits. Je mehr Credits ein Fach hat, desto größer ist sein Einfluss auf Ihren Gesamtnotendurchschnitt.",
+          "calculationExamples": {
+            "title": "Beispiele für GPA-Berechnungen",
+            "content": "Schauen wir uns praktische Beispiele für die Berechnung von Durchschnittswerten für verschiedene Situationen an:",
+            "example1": {
+              "title": "Beispiel 1: 5-Punkte-System, 4 Items",
+              "description": "Student mit guten Noten",
+              "input": "Mathematik: 5 (3 Credits)\nPhysik: 4 (4 Credits)\nChemie: 5 (2 Credits)\nGeschichte: 4 (2 Credits)",
+              "calculation": "Punkte = (5x3) + (4x4) + (5x2) + (4x2) = 15 + 16 + 10 + 8 = 49\nCredits = 3 + 4 + 2 + 2 = 11\nNotendurchschnitt = 49 / 11 = 4,45",
+              "result": "Notendurchschnitt = 4,45 von 5,0",
+              "type": "5-Punkte-System",
+              "note": "Ein GPA über 4,0 gilt als hervorragendes Ergebnis"
+            },
+            "example2": {
+              "title": "Beispiel 2: 4-Punkte-System (GPA), 5 Fächer",
+              "description": "Schüler mit unterschiedlichen Noten",
+              "input": "Mathematik: 4,0 (3 Credits)\nPhysik: 3,7 (4 Credits)\nChemie: 3,0 (3 Credits)\nEnglisch: 3,3 (2 Credits)\nGeschichte: 2,7 (3 Credits)",
+              "calculation": "Punkte = (4,0×3) + (3,7×4) + (3,0×3) + (3,3×2) + (2,7×3) = 12 + 14,8 + 9 + 6,6 + 8,1 = 50,5\nCredits = 3 + 4 + 3 + 2 + 3 = 15\nNotendurchschnitt = 50,5 / 15 = 3,37",
+              "result": "Notendurchschnitt = 3,37 von 4,0",
+              "type": "4-Punkte-System",
+              "note": "GPA 3,0-3,5 gilt als gutes Ergebnis"
+            },
+            "example3": {
+              "title": "Beispiel 3: Briefsystem, 6 Artikel",
+              "description": "Student mit guten Noten",
+              "input": "Mathematik: A (4 Credits)\nPhysik: A (4 Credits)\nChemie: B (3 Credits)\nEnglisch: A (3 Credits)\nGeschichte: B (2 Credits)\nKunst: A (2 Credits)",
+              "calculation": "A = 4,0, B = 3,0\nPunkte = (4,0×4) + (4,0×4) + (3,0×3) + (4,0×3) + (3,0×2) + (4,0×2) = 16 + 16 + 9 + 12 + 6 + 8 = 67\nCredits = 4 + 4 + 3 + 3 + 2 + 2 = 18\nGPA = 67 / 18 = 3,72",
+              "result": "Notendurchschnitt = 3,72 von 4,0",
+              "type": "Buchstabensystem",
+              "note": "Überwiegend A-Noten ergeben einen hohen Notendurchschnitt"
+            },
+            "example4": {
+              "title": "Beispiel 4: Einfluss von Credits auf den GPA",
+              "description": "Zwei Studierende mit gleichen Noten, aber unterschiedlichen Credits",
+              "input": "Schüler 1:\nMathematik: 5 (6 Credits)\nPhysik: 4 (2 Credits)\n\nSchüler 2:\nMathematik: 5 (2 Credits)\nPhysik: 4 (6 Credits)",
+              "calculation": "Schüler 1: Notendurchschnitt = (5×6 + 4×2) / (6+2) = 38/8 = 4,75\nSchüler 2: Notendurchschnitt = (5×2 + 4×6) / (2+6) = 34/8 = 4,25",
+              "result": "Schüler 1: Notendurchschnitt 4,75, Schüler 2: Notendurchschnitt 4,25",
+              "type": "Auswirkungen von Krediten",
+              "note": "Fächer mit mehr Credits haben einen größeren Einfluss auf den Notendurchschnitt"
+            },
+            "example5": {
+              "title": "Beispiel 5: 100-Punkte-System",
+              "description": "Berechnen des GPA aus prozentualen Noten",
+              "input": "Mathematik: 95 % (4 Credits)\nPhysik: 87 % (4 Credits)\nChemie: 78 % (3 Credits)\nGeschichte: 92 % (2 Credits)",
+              "calculation": "Konvertierung zu 4.0: 95 % → 4,0, 87 % → 3,7, 78 % → 3,0, 92 % → 4,0\nPunkte = (4,0×4) + (3,7×4) + (3,0×3) + (4,0×2) = 16 + 14,8 + 9 + 8 = 47,8\nCredits = 4 + 4 + 3 + 2 = 13\nNotendurchschnitt = 47,8 / 13 = 3,68",
+              "result": "Notendurchschnitt = 3,68 von 4,0",
+              "type": "100-Punkte-System",
+              "note": "Prozentuale Noten werden anhand der Standardskala in GPA umgerechnet"
+            },
+            "example6": {
+              "title": "Beispiel 6: Verbesserung des GPA",
+              "description": "Berechnung der erforderlichen Noten zur Verbesserung des GPA",
+              "input": "Aktueller Notendurchschnitt: 3,2 (45 Credits)\nNeue Gegenstände: 15 Credits\nGewünschter Notendurchschnitt: 3,5",
+              "calculation": "Aktuelle Punkte = 3,2 × 45 = 144\nErforderlich für GPA 3,5 = 3,5 × 60 = 210\nWählen Sie = 210 - 144 = 66\nDurchschnittliche Punktzahl in neuen Fächern = 66 / 15 = 4,4",
+              "result": "Erfordert einen Notendurchschnitt von 4,4 in neuen Kursen",
+              "type": "Planung",
+              "note": "Um Ihren Notendurchschnitt zu verbessern, müssen Sie in Fächern mit einer hohen Anzahl an Leistungspunkten gute Noten erzielen"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird der GPA berechnet?",
+          "content": "Die Berechnung des GPA (Grade Point Average) umfasst mehrere Schritte zur Ermittlung des durchschnittlichen Notendurchschnitts unter Berücksichtigung der Credits (Stunden) jedes Fachs.",
+          "formula": "GPA = Summe (Note × Credits) / Summe der Credits",
+          "weighted": "Der gewichtete Durchschnitt berücksichtigt die Anzahl der Credits (Stunden) jedes Fachs",
+          "credits": "Credits (Stunden) zeigen das Gewicht eines Faches in der Gesamtnote",
+          "conversion": "Zum Vergleich werden verschiedene Bewertungssysteme in eine einzige Skala umgewandelt",
+          "steps": {
+            "grades": "Eingabe der Noten für jedes Fach",
+            "credits": "Angabe der Anzahl der Credits (Stunden) für jedes Fach",
+            "calculation": "Berechnung der gewichteten Durchschnittspunktzahl",
+            "result": "Erhalten Sie Ihren endgültigen GPA"
+          }
+        },
+        "advantages": {
+          "title": "Vorteile des Notenrechners",
+          "content": "Die Verwendung eines Notenrechners bietet viele Vorteile: genaue GPA-Berechnung, Studienplanung, Fortschrittsverfolgung.",
+          "accuracy": "Genaue GPA-Berechnung",
+          "planning": "Studienplanung",
+          "tracking": "Fortschrittsverfolgung",
+          "convenience": "Bequeme und schnelle Bezahlung"
+        },
+        "tips": {
+          "title": "Tipps zur Berechnung des GPA",
+          "content": "Um ein genaues Ergebnis zu erhalten, befolgen Sie unsere Empfehlungen zur Berechnung des GPA.",
+          "credits": "Geben Sie für jedes Fach die genaue Anzahl der Credits (Stunden) an – diese ist für eine korrekte Berechnung entscheidend",
+          "system": "Wählen Sie das richtige Notensystem für Ihre Institution",
+          "allGrades": "Beziehen Sie alle Fächer ein, um einen genauen Notendurchschnitt zu erhalten",
+          "regular": "Berechnen Sie Ihren GPA regelmäßig neu, wenn Sie neue Noten erhalten"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zum GPA",
+          "faqItems": [
+            {
+              "q": "Was ist GPA?",
+              "a": "GPA (Grade Point Average) ist der durchschnittliche Notendurchschnitt, der als gewichteter Durchschnitt der Noten unter Berücksichtigung der Credits (Stunden) jedes Fachs berechnet wird. Der GPA zeigt die akademische Gesamtleistung eines Schülers."
+            },
+            {
+              "q": "Wie berechnet man den GPA?",
+              "a": "GPA = Summe (Note × Credits) / Summe der Credits. Zum Beispiel Mathematik 5 (3 Credits), Physik 4 (4 Credits): Notendurchschnitt = (5×3 + 4×4) / (3+4) = 31/7 = 4,43."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen gewichtetem und ungewichtetem GPA?",
+              "a": "Der gewichtete GPA berücksichtigt die Anzahl der Credits (Stunden) jedes Fachs. Ein ungewichteter GPA ist einfach der arithmetische Durchschnitt aller Noten. Der gewichtete GPA ist genauer."
+            },
+            {
+              "q": "Was sind GPA-Credits?",
+              "a": "Credits (oder Stunden) sind eine Maßeinheit für den Umfang der wissenschaftlichen Arbeit in einem Fach. Kurse mit mehr Credits haben einen größeren Einfluss auf Ihren Gesamtdurchschnitt."
+            },
+            {
+              "q": "Wie konvertiert man Noten vom 5-Punkte-System in GPA?",
+              "a": "5→4,0, 4→3,0, 3→2,0, 2→0,0. Die genaue Umrechnung hängt jedoch von den Anforderungen der jeweiligen Schule oder des jeweiligen Systems ab."
+            },
+            {
+              "q": "Wie rechnet man Prozentnoten in GPA um?",
+              "a": "90–100 % → 4,0, 80–89 % → 3,0–3,9, 70–79 % → 2,0–2,9, 60–69 % → 1,0–1,9, 0–59 % → 0,0. Die genaue Umrechnung hängt vom Maßstab ab."
+            },
+            {
+              "q": "Wie konvertiert man Buchstabennoten in GPA?",
+              "a": "A→4,0, B→3,0, C→2,0, D→1,0, F→0,0. Für Mittelstufen: A-→3,7, B+→3,3, B-→2,7, C+→2,3, C-→1,7, D+→1,3."
+            },
+            {
+              "q": "Beeinflussen Credits den Notendurchschnitt?",
+              "a": "Ja, Credits haben einen erheblichen Einfluss auf den Notendurchschnitt. Ein Kurs mit mehr Credits hat bei der GPA-Berechnung mehr Gewicht."
+            },
+            {
+              "q": "Welcher Notendurchschnitt gilt als gut?",
+              "a": "GPA 3,0–3,5 gilt als gut, 3,5–4,0 als ausgezeichnet. In Russland gelten 4,0-4,5 von 5,0 als gutes Ergebnis."
+            },
+            {
+              "q": "Ist es möglich, den Notendurchschnitt zu verbessern?",
+              "a": "Ja, Ihr GPA kann verbessert werden, indem Sie in neuen Kursen gute Noten erzielen, insbesondere in solchen mit mehr Credits. Je mehr neue Kredite, desto größer die Auswirkung auf den GPA."
+            },
+            {
+              "q": "Wie berechnet man, welcher GPA erforderlich ist, um ein Ziel zu erreichen?",
+              "a": "Wenn aktueller GPA = G1 (C1-Credits), gewünschter GPA = G2, neue Fächer = C2-Credits, dann gewünschter GPA in neuen Fächern = (G2×(C1+C2) – G1×C1) / C2."
+            },
+            {
+              "q": "Hat die Wiederholung einen Einfluss auf den Notendurchschnitt?",
+              "a": "Hängt von der Politik der Bildungseinrichtung ab. In manchen Fällen ersetzt der neue Score den alten, in anderen werden beide Scores berücksichtigt. Erkundigen Sie sich bei Ihrer Schule nach den Regeln."
+            },
+            {
+              "q": "Wie berechnet man den GPA für ein Semester?",
+              "a": "Verwenden Sie ausschließlich Noten und Credits aus dem aktuellen Semester. Semester-GPA = Summe (Note × Semester-Credits) / Semester-Credit-Summe."
+            },
+            {
+              "q": "Wie berechnet man den Gesamt-GPA?",
+              "a": "Nutzen Sie alle Noten und Credits für die gesamte Studienzeit. Gesamt-GPA = Summe (Note × Credits aller Fächer) / Summe aller Credits."
+            },
+            {
+              "q": "Was ist ein kumulativer GPA?",
+              "a": "Der kumulative GPA ist die durchschnittliche Gesamtpunktzahl für die gesamte Studienzeit, einschließlich aller Semester und Jahre. Dies ist der umfassendste Indikator für die akademische Leistung."
+            },
+            {
+              "q": "Wie berechnet man den GPA für die Hochschulzulassung?",
+              "a": "Für die Zulassung ist in der Regel ein kumulativer GPA für die gesamte Studienzeit an der Schule oder am College erforderlich. Stellen Sie sicher, dass Sie an Ihrer Zieluniversität das richtige Notensystem verwenden."
+            },
+            {
+              "q": "Beeinflusst der GPA das Stipendium?",
+              "a": "Ja, in vielen Bildungseinrichtungen wirkt sich der Notendurchschnitt auf Stipendien aus. Normalerweise ist ein GPA über einem bestimmten Schwellenwert erforderlich (z. B. 3,5 oder 4,0)."
+            },
+            {
+              "q": "Wie berechnet man den GPA unter Berücksichtigung von bestanden/nicht bestanden?",
+              "a": "Kurse mit einem Pass/Fail-System werden in der Regel nicht auf den GPA angerechnet oder gelten als bestandene Note. Erkundigen Sie sich bei Ihrer Schule nach den Regeln."
+            },
+            {
+              "q": "Ist ein GPA über 4,0 möglich?",
+              "a": "Im Standard-4-Punkte-System liegt das Maximum bei 4,0. In einigen gewichteten GPA-Systemen können jedoch für schwierige Kurse zusätzliche Punkte vergeben werden, sodass Sie einen GPA über 4,0 erreichen können."
+            },
+            {
+              "q": "Wie berechnet man den GPA für ein Diplom?",
+              "a": "Verwenden Sie alle Noten und Credits aller im Diplom enthaltenen Kurse. Diplom-GPA = Summe (Note × Credits) / Summe der Credits aller Diplomfächer."
+            },
+            {
+              "q": "Beeinflusst der Notendurchschnitt die Beschäftigung?",
+              "a": "In einigen Branchen (insbesondere bei Hochschulabsolventen) berücksichtigen Arbeitgeber bei der Auswahl von Kandidaten möglicherweise den GPA. Allerdings sind Erfahrung und Fähigkeiten oft wichtiger als der Notendurchschnitt."
+            },
+            {
+              "q": "Wie berechnet man den GPA?",
+              "a": "Die Durchschnittsnote des Zeugnisses errechnet sich aus dem arithmetischen Mittel aller Noten (ohne Credits). Durchschnittliche Punktzahl = Summe der Noten / Anzahl der Fächer."
+            },
+            {
+              "q": "Was soll ich tun, wenn ich mich nicht an die Anzahl der Credits erinnere?",
+              "a": "Für Informationen zu Credits wenden Sie sich bitte an Ihren Fachbereich oder Ihr Dekanat. Wenn die Credits nicht bekannt sind, kann der arithmetische Durchschnitt (ungewichteter GPA) verwendet werden, dieser ist jedoch weniger genau."
+            },
+            {
+              "q": "Wie berechnet man den GPA für den Master-Abschluss?",
+              "a": "Der Master-GPA wird auf die gleiche Weise berechnet, es werden jedoch nur Noten und Credits aus dem Masterstudiengang berücksichtigt. Für die Zulassung zu einigen Programmen ist ein Mindest-GPA erforderlich (normalerweise 3,0–3,5)."
+            },
+            {
+              "q": "Beeinträchtigt der Notendurchschnitt Ihre Fähigkeit, ein Graduiertenstudium zu absolvieren?",
+              "a": "Ja, für die Zulassung zur Graduiertenschule ist häufig ein hoher Notendurchschnitt (in der Regel 3,5–4,0 oder höher) erforderlich. Der GPA bescheinigt akademische Leistungen und die Befähigung zum wissenschaftlichen Arbeiten."
+            },
+            {
+              "q": "Wie berechnet man den GPA unter Berücksichtigung von Prüfungen und Tests?",
+              "a": "Typischerweise werden bei der GPA nur Prüfungsnoten (numerische Noten) berücksichtigt und Credits werden nicht gezählt oder als bestandene Note gewertet. Erkundigen Sie sich bei Ihrer Schule nach den Regeln."
+            },
+            {
+              "q": "Ist es möglich, den Notendurchschnitt online zu berechnen?",
+              "a": "Ja, mit unserem GPA-Rechner können Sie Ihren GPA online berechnen. Geben Sie einfach Ihre Noten und Credits ein und der Rechner berechnet automatisch Ihren Notendurchschnitt."
+            },
+            {
+              "q": "Wie oft sollte der GPA neu berechnet werden?",
+              "a": "Es wird empfohlen, Ihren GPA nach Erhalt jeder neuen Note oder nach jedem Semesterende neu zu berechnen. Dies wird Ihnen helfen, Ihre Fortschritte zu verfolgen und Ihr Studium zu planen."
+            },
+            {
+              "q": "Was ist ein Qualitätsfaktor beim GPA?",
+              "a": "Die qualitative Punktzahl ist die Anzahl der in allen Fächern gesammelten Punkte (Note × Credits). Der qualitative Score wird zur Berechnung des GPA verwendet."
+            },
+            {
+              "q": "Wie berechnet man den GPA für ein mehrjähriges Studium?",
+              "a": "Verwenden Sie alle Noten und Credits aller Studienjahre. Gesamt-GPA = Summe (Note × Credits für alle Jahre) / Summe der Credits für alle Jahre."
+            },
+            {
+              "q": "Beeinflusst der GPA das Gruppenranking?",
+              "a": "Ja, viele Schulen ordnen die Schüler nach ihrem Notendurchschnitt ein. Studierende mit einem hohen Notendurchschnitt erzielen in Rankings in der Regel einen höheren Rang."
+            },
+            {
+              "q": "Wie berechnet man den GPA für Online-Kurse?",
+              "a": "Der GPA für Online-Kurse wird auf die gleiche Weise berechnet wie für reguläre Kurse. Berücksichtigt werden Noten und Credits (Stunden) von Online-Kursen."
+            },
+            {
+              "q": "Was ist der Mindest-GPA für den Abschluss?",
+              "a": "Der Mindest-GPA für den Abschluss variiert je nach Institution. Typischerweise ist ein GPA von mindestens 2,0 (4-Punkte-System) oder 3,0 (5-Punkte-System) erforderlich."
+            },
+            {
+              "q": "Wie berechnet man den GPA für Transferstudenten?",
+              "a": "Bei einem Wechsel wird der GPA nur auf der Grundlage der an der neuen Bildungseinrichtung erzielten Noten berechnet. Noten einer früheren Einrichtung werden in der Regel nicht auf den Notendurchschnitt einer neuen Einrichtung übertragen."
+            }
+          ]
+        }
+      }
+    }
+  }
 }
-
-
-

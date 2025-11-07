@@ -1,55 +1,67 @@
 {
   "common": {
     "search": "Search",
-    "searchPlaceholder": "Start typing calculator name...",
-    "searchResults": "Search Results",
+    "searchPlaceholder": "Start typing the name of the calculator...",
+    "searchResults": "Search results",
     "resultsFor": "Results for",
     "loading": "Loading...",
     "found": "Found",
-    "results": "results",
+    "results": "Results",
     "noResults": "Nothing found",
-    "tryAnotherQuery": "Try another query or check spelling",
+    "tryAnotherQuery": "Try another query or check your spelling",
     "noQuery": "No search query",
-    "enterSearchTerm": "Enter a search term to find calculators",
+    "enterSearchTerm": "Enter your search term to find calculators",
     "useCalculator": "Use calculator",
     "language": "Language",
     "categories": "Categories",
-    "calculators": "Calculators",
+    "calculators": "Calculator",
     "calculatorsCount": "Calculators",
-    "free": "Free",
+    "free": "For free",
     "sections": "Sections",
     "online": "Online",
     "accuracy": "Accuracy",
-    "instant": "Instant",
+    "instant": "Instantly",
     "calculation": "Calculation",
     "usage": "Usage",
-    "results": "Results",
     "speed": "Speed",
     "conversion": "Conversion",
     "converters": "Converters",
     "calculatorsWillBeAdded": "Calculators will be added soon.",
-    "availableCalculators": "Available Calculators",
+    "availableCalculators": "Available calculators",
     "calculate": "Calculate",
     "result": "Result",
     "clear": "Clear",
     "favorites": "Favorites",
+    "calculationError": "Calculation error. Check the entered data.",
+    "units": {
+      "meters": "m",
+      "centimeters": "cm",
+      "millimeters": "mm",
+      "kilograms": "kg",
+      "grams": "G",
+      "liters": "l",
+      "milliliters": "ml",
+      "cubicMeters": "m³",
+      "metersPerSecond": "m/s",
+      "cubicMetersPerSecond": "m3/s"
+    },
     "notFound": {
-      "title": "Page Not Found",
+      "title": "Page not found",
       "description": "Sorry, the requested page does not exist.",
-      "goHome": "Go Home",
+      "goHome": "Home",
       "suggestions": {
-        "title": "You might be looking for:",
-        "checkUrl": "Check the correctness of the entered address",
+        "title": "You may have been looking for:",
+        "checkUrl": "Check that the entered address is correct",
         "useSearch": "Use the calculator search",
-        "goToHome": "Return to the home page"
+        "goToHome": "Return to main page"
       }
     },
     "pdf": {
-      "header": "calc1.ru calculator #1 in the world",
+      "header": "calc1.ru #1 calculator in the world",
       "savePdf": "Save to PDF",
       "generated": "Generated",
       "page": "Page",
-      "of": "of"
+      "of": "from"
     }
   },
   "brand": {
@@ -60,7 +72,7 @@
     "home": "Home",
     "categories": {
       "finance": "Finance",
-      "math": "Math",
+      "math": "Mathematics",
       "life": "Life",
       "auto": "Auto",
       "construction": "Construction",
@@ -68,44 +80,44 @@
       "health": "Health",
       "science": "Science",
       "converter": "Converters",
-      "fun": "Fun",
+      "fun": "Entertainment",
       "it": "IT",
-      "calculators": "All Calculators"
+      "calculators": "All calculators"
     }
   },
   "navigation": {
     "home": "Home",
     "finance": "Finance",
-    "math": "Math",
+    "math": "Mathematics",
     "life": "Life",
     "construction": "Construction",
     "auto": "Auto",
     "time": "Time",
     "health": "Health",
     "science": "Science",
-    "converter": "Converter",
-    "fun": "Fun",
+    "converter": "Converters",
+    "fun": "Entertainment",
     "it": "IT"
   },
   "footer": {
     "description": "Free online calculators for all areas of life. Finance, mathematics, construction, health and much more.",
     "categories": "Categories",
-    "quickLinks": "Quick Links",
-    "about": "About",
-    "contact": "Contact",
+    "quickLinks": "Quick links",
+    "about": "About the site",
+    "contact": "Contacts",
     "share": "Share",
-    "shareDescription": "Share the calculator with friends and colleagues!",
+    "shareDescription": "Share the calculator with your friends and colleagues!",
     "shareFacebook": "Share on Facebook",
     "shareTwitter": "Share on Twitter",
     "shareVK": "Share on VKontakte",
     "shareTelegram": "Share on Telegram",
     "shareWhatsApp": "Share on WhatsApp",
-    "shareEmail": "Share via email",
+    "shareEmail": "Share by email",
     "copyLink": "Copy link",
     "linkCopied": "Link copied!",
     "shareNative": "Share",
     "rights": "All rights reserved.",
-    "disclaimer": "Calculators are for informational purposes only. Results may differ from actual values.",
+    "disclaimer": "Calculators are intended for informational purposes. Results may differ from actual values.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "cookies": "Cookie Policy",
@@ -114,184 +126,184 @@
   "legal": {
     "privacy": {
       "title": "Privacy Policy",
-      "description": "Privacy Policy of Calc1.ru. Learn how we collect, use and protect your personal data.",
+      "description": "Privacy Policy Calc1.ru. Find out how we collect, use and protect your personal information.",
       "lastUpdated": "Last updated: 2024",
-      "introduction": "Calc1.ru (hereinafter — \"Site\") respects your privacy and is committed to protecting your personal data. This Privacy Policy describes how we collect, use, store and protect information about users of our site.",
+      "introduction": "Calc1.ru (hereinafter referred to as the “Site”) respects your privacy and is committed to protecting your personal data. This Privacy Policy describes how we collect, use, store and protect information about users of our site.",
       "section1": {
-        "title": "1. Information Collection",
+        "title": "1. Collection of information",
         "content": "We may collect the following types of information:",
-        "item1": "Automatically collected information: IP address, browser type, operating system, visit time, pages you view",
-        "item2": "Information you provide: data entered into calculators (not stored on server)",
+        "item1": "Information automatically collected: IP address, browser type, operating system, time of visit, pages you view",
+        "item2": "Information you provide: data entered into calculators (not stored on the server)",
         "item3": "Information from cookies and similar technologies",
         "item4": "Information from advertising partners (Google AdSense, Yandex.Direct)",
         "item5": "Language settings and user preferences"
       },
       "section2": {
-        "title": "2. Information Use",
-        "content": "We use collected information for the following purposes:",
-        "item1": "Providing and improving site functionality",
-        "item2": "Analyzing site usage for optimization",
-        "item3": "Showing personalized advertising through partners",
-        "item4": "Compliance with legal requirements"
+        "title": "2. Use of information",
+        "content": "We use the collected information for the following purposes:",
+        "item1": "Providing and improving the functionality of the site",
+        "item2": "Analysis of website usage for its optimization",
+        "item3": "Displaying personalized advertising through partners",
+        "item4": "Legal Compliance"
       },
       "section3": {
-        "title": "3. Cookie Usage",
-        "content": "Our site uses cookies to improve user experience and show advertising. For more details, see our ",
+        "title": "3. Use of cookies",
+        "content": "Our site uses cookies to improve your user experience and display advertising. For more details, see our",
         "link": "Cookie Policy",
         "additional": ""
       },
       "section4": {
-        "title": "4. Advertising and Partners",
-        "content": "Our site uses third-party advertising services for monetization:",
+        "title": "4. Advertising and partners",
+        "content": "Our site uses third party advertising services for monetization:",
         "googleTitle": "Google AdSense:",
-        "googleContent": "Google uses cookies to show advertising based on your interests. You can adjust advertising on Google Ads settings page or disable cookies in browser settings.",
+        "googleContent": "Google uses cookies to serve ads based on your interests. You can customize your advertising on the Google Ads settings page or disable cookies in your browser settings.",
         "yandexTitle": "Yandex.Direct:",
-        "yandexContent": "Yandex uses cookies to personalize advertising. You can manage settings in Yandex Browser or through Yandex advertising preferences."
+        "yandexContent": "Yandex uses cookies to personalize advertising. You can manage your settings in Yandex Browser or through the Yandex advertising preference settings."
       },
       "section5": {
-        "title": "5. Data Security",
-        "content": "We take reasonable measures to protect your information from unauthorized access, alteration, disclosure or destruction. However, no method of transmission over the internet or electronic storage method is 100% secure."
+        "title": "5. Data security",
+        "content": "We take reasonable measures to protect your information from unauthorized access, alteration, disclosure or destruction. However, no method of transmission over the Internet, or method of electronic storage is 100% secure."
       },
       "section6": {
-        "title": "6. Your Rights",
-        "content": "You have the right to:",
+        "title": "6. Your rights",
+        "content": "You have the right:",
         "item1": "Request a copy of your personal data",
         "item2": "Request correction of inaccurate data",
         "item3": "Request deletion of your data",
         "item4": "Opt out of data processing for marketing purposes"
       },
       "section7": {
-        "title": "7. Privacy Policy Changes",
-        "content": "We reserve the right to update this Privacy Policy at any time. Changes take effect after publication on this page."
+        "title": "7. Changes to the privacy policy",
+        "content": "We reserve the right to update this Privacy Policy at any time. Changes take effect upon publication on this page."
       },
       "contact": {
-        "title": "Contact",
-        "content": "If you have questions about this Privacy Policy, please contact us:",
+        "title": "Contacts",
+        "content": "If you have any questions regarding this Privacy Policy, please contact us:",
         "link": "Contact page"
       }
     },
     "terms": {
       "title": "Terms of Use",
-      "description": "Terms of Use of Calc1.ru. Read the rules for using our site and calculators.",
+      "description": "Terms of use Calc1.ru. Read the rules for using our website and calculators.",
       "lastUpdated": "Last updated: 2024",
-      "introduction": "Welcome to Calc1.ru (hereinafter — \"Site\"). By using this site, you agree to comply with these Terms of Use. If you do not agree with these terms, please do not use our site.",
+      "introduction": "Welcome to Calc1.ru (hereinafter referred to as the “Site”). By using this site you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our site.",
       "section1": {
-        "title": "1. Acceptance of Terms",
-        "content": "By using Calc1.ru, you confirm that you have read, understood and agree to comply with these Terms of Use and our Privacy Policy."
+        "title": "1. Acceptance of terms and conditions",
+        "content": "By using Calc1.ru, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy."
       },
       "section2": {
-        "title": "2. Service Use",
-        "content": "You may use our calculators for personal and commercial purposes provided that:",
+        "title": "2. Use of the service",
+        "content": "You can use our calculators for personal and commercial purposes, provided:",
         "item1": "You will not use the site for illegal purposes",
-        "item2": "You will not attempt to breach site security",
-        "item3": "You will not copy content without citing the source",
-        "item4": "You acknowledge that calculator results are for informational purposes"
+        "item2": "You will not attempt to compromise the security of the site",
+        "item3": "You will not copy content without indicating the source.",
+        "item4": "You acknowledge that the results of the calculators are for informational purposes only."
       },
       "section3": {
-        "title": "3. Limitation of Liability",
-        "content": "Calculators on Calc1.ru are provided \"as is\" without any warranties. Calculation results are for informational purposes and may differ from actual values.",
-        "additional": "We are not liable for any losses or damages arising from the use or inability to use our calculators."
+        "title": "3. Limitation of liability",
+        "content": "Calculators on Calc1.ru are provided “as is” without any warranties. The calculation results are for informational purposes only and may differ from actual values.",
+        "additional": "We are not responsible for any loss or damage arising from the use or inability to use our calculators."
       },
       "section4": {
-        "title": "4. Intellectual Property",
-        "content": "All site content, including design, text, graphics, logos and software, is the property of Calc1.ru and protected by copyright laws."
+        "title": "4. Intellectual property",
+        "content": "All site content, including design, text, graphics, logos and software, is the property of Calc1.ru and is protected by copyright laws."
       },
       "section5": {
-        "title": "5. Prohibited Actions",
-        "content": "It is prohibited to:",
+        "title": "5. Prohibited actions",
+        "content": "Prohibited:",
         "item1": "Use automated systems to collect data from the site",
         "item2": "Distribute viruses or malware",
-        "item3": "Attempt to hack or disrupt the site",
-        "item4": "Use the site for spam or phishing",
-        "item5": "Copy and reproduce content without permission"
+        "item3": "Attempts to hack or disrupt the operation of the site",
+        "item4": "Using the site for spam or phishing",
+        "item5": "Copying and reproducing content without permission"
       },
       "section6": {
-        "title": "6. Terms Changes",
-        "content": "We reserve the right to change these Terms of Use at any time. Changes take effect after publication on this page."
+        "title": "6. Changes in conditions",
+        "content": "We reserve the right to change these Terms of Use at any time. Changes take effect upon publication on this page."
       },
       "contact": {
-        "title": "Contact",
-        "content": "If you have questions about these Terms of Use, please contact us:",
+        "title": "Contacts",
+        "content": "If you have any questions regarding these Terms of Use, please contact us:",
         "link": "Contact page"
       }
     },
     "cookies": {
       "title": "Cookie Policy",
-      "description": "Cookie Policy of Calc1.ru. Learn how we use cookies and how you can manage them.",
+      "description": "Cookie Policy on Calc1.ru. Find out how we use cookies and how you can control them.",
       "lastUpdated": "Last updated: 2024",
-      "introduction": "Calc1.ru uses cookies and similar technologies to improve site functionality, analyze traffic and show personalized advertising. This policy explains what cookies are, how we use them and how you can manage them.",
+      "introduction": "Calc1.ru uses cookies and similar technologies to improve site functionality, analyze traffic and serve personalized advertisements. This policy explains what cookies are, how we use them and how you can control them.",
       "section1": {
-        "title": "1. What are Cookies",
-        "content": "Cookies are small text files that a website saves on your device (computer, tablet or mobile phone) when you visit it. They allow the site to remember your actions and preferences for a certain period of time."
+        "title": "1. What are cookies",
+        "content": "Cookies are small text files that a website stores on your device (computer, tablet or mobile phone) when you visit it. They allow the site to remember your actions and preferences over a period of time."
       },
       "section2": {
-        "title": "2. Types of Cookies We Use",
+        "title": "2. Types of cookies we use",
         "content": "We use the following types of cookies:",
         "item1": {
-          "title": "Essential cookies: ",
-          "content": "These cookies are necessary for the site to function and cannot be disabled. They include saving language settings and other user preferences."
+          "title": "Necessary cookies:",
+          "content": "These cookies are essential for the site to function and cannot be disabled. These include storing language settings and other user preferences."
         },
         "item2": {
-          "title": "Analytics cookies: ",
+          "title": "Analytical cookies:",
           "content": "These cookies help us understand how visitors interact with the site by collecting anonymous statistics."
         },
         "item3": {
-          "title": "Advertising cookies: ",
-          "content": "These cookies are used by advertising partners (Google AdSense, Yandex.Direct) to show personalized advertising."
+          "title": "Advertising cookies:",
+          "content": "These cookies are used by advertising partners (Google AdSense, Yandex.Direct) to display personalized advertising."
         }
       },
       "section3": {
-        "title": "3. How We Use Cookies",
+        "title": "3. How we use cookies",
         "content": "Cookies are used for:",
         "item1": "Remembering user language settings",
-        "item2": "Analyzing traffic and improving site functionality",
+        "item2": "Analyze traffic and improve site functionality",
         "item3": "Showing relevant advertising through partners",
-        "item4": "Ensuring security and preventing fraud"
+        "item4": "Ensure security and prevent fraud"
       },
       "section4": {
-        "title": "4. Advertising Partner Cookies",
-        "content": "Our site uses third-party advertising services:",
+        "title": "4. Cookies of advertising partners",
+        "content": "Our website uses third party advertising services:",
         "googleTitle": "Google AdSense:",
-        "googleContent": "Google uses cookies to show advertising based on your interests. You can disable personalized Google advertising on Google Ads settings page.",
+        "googleContent": "Google uses cookies to serve ads based on your interests. You can turn off Google's personalized advertising from the Google Ads Settings page.",
         "yandexTitle": "Yandex.Direct:",
-        "yandexContent": "Yandex uses cookies to show relevant advertising. You can manage advertising preferences in Yandex settings."
+        "yandexContent": "Yandex uses cookies to display relevant advertising. You can manage advertising preferences in Yandex settings."
       },
       "section5": {
-        "title": "5. Cookie Management",
+        "title": "5. Cookie management",
         "content": "You can manage cookies in the following ways:",
         "item1": "Through your browser settings (you can disable or delete cookies)",
         "item2": "Through Google and Yandex advertising preferences settings",
-        "item3": "Using browser extensions to block advertising"
+        "item3": "Using browser extensions to block ads"
       },
       "section6": {
-        "title": "6. Cookie Policy Changes",
-        "content": "We may periodically update this Cookie Policy. Changes take effect after publication on this page."
+        "title": "6. Changes to the cookie policy",
+        "content": "We may update this Cookie Policy from time to time. Changes take effect upon publication on this page."
       },
       "contact": {
-        "title": "Contact",
-        "content": "If you have questions about cookie usage, please contact us:",
+        "title": "Contacts",
+        "content": "If you have any questions regarding the use of cookies, please contact us:",
         "link": "Contact page"
       }
     }
   },
   "about": {
-    "title": "About",
-    "description": "Learn more about Calc1.ru — the most comprehensive set of free online calculators for all areas of life.",
+    "title": "About the site",
+    "description": "Find out more about Calc1.ru - the most complete set of free online calculators for all areas of life.",
     "section1": {
-      "title": "About the Project",
-      "content": "Calc1.ru is a free online resource offering a wide range of calculators for various areas of life. Our goal is to provide users with convenient and accurate tools for calculations in finance, mathematics, construction, health and many other areas."
+      "title": "About the project",
+      "content": "Calc1.ru is a free online resource that offers a wide range of calculators for various areas of life. Our goal is to provide users with convenient and accurate tools for calculations in finance, mathematics, construction, health and many other areas."
     },
     "section2": {
-      "title": "Our Mission",
-      "content": "We strive to make complex calculations accessible and understandable for everyone. Calc1.ru combines many calculators in one place, saving your time and ensuring calculation accuracy."
+      "title": "Our mission",
+      "content": "We strive to make complex calculations accessible and understandable to everyone. Calc1.ru brings together many calculators in one place, saving you time and ensuring accurate calculations."
     },
     "section3": {
-      "title": "Who We Are",
-      "content": "Calc1.ru was created by a team of professionals who understand the importance of convenient and reliable tools for everyday calculations. We constantly work on improving functionality and adding new calculators."
+      "title": "Who are we",
+      "content": "Calc1.ru was created by a team of professionals who understand the importance of convenient and reliable tools for everyday calculations. We are constantly working to improve functionality and add new calculators."
     },
     "section4": {
-      "title": "Why Choose Us",
-      "content": "Calc1.ru advantages:",
+      "title": "Why choose us",
+      "content": "Advantages of Calc1.ru:",
       "item1": "Free access to all calculators",
       "item2": "Simple and intuitive interface",
       "item3": "Accurate calculations based on current formulas and standards",
@@ -299,75 +311,75 @@
       "item5": "Regular updates and addition of new calculators"
     },
     "contact": {
-      "title": "Contact",
-      "content": "If you have questions, suggestions or feedback, we would be happy to hear from you:",
+      "title": "Contacts",
+      "content": "If you have questions, suggestions or feedback, we would love to hear from you:",
       "link": "Contact us"
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contacts",
     "description": "Contact the Calc1.ru team. We are always ready to answer your questions and help.",
     "email": {
-      "title": "Email",
+      "title": "E-mail",
       "description": "For general questions, suggestions and feedback:"
     },
     "form": {
-      "title": "Contact Form",
-      "description": "Fill out the form below and we will respond as soon as possible:",
-      "name": "Your name",
+      "title": "Feedback form",
+      "description": "Fill out the form below and we will respond to you as soon as possible:",
+      "name": "your name",
       "email": "Email",
-      "message": "Your message",
+      "message": "your message",
       "submit": "Send",
       "sending": "Sending..."
     },
     "additional": {
-      "title": "Additional Information",
-      "content": "We strive to respond to all requests within 24-48 hours. For urgent questions, please use email."
+      "title": "Additional information",
+      "content": "We strive to respond to all inquiries within 24-48 hours. For urgent questions, use email."
     }
   },
   "categories": {
     "finance": {
-      "title": "Financial Calculators",
+      "title": "Financial calculators",
       "description": "Loans, deposits, mortgages, taxes and investments",
       "subcategories": {
         "loans": "Loans",
-        "investments": "Investments and Savings",
-        "taxes": "Taxes and Fines",
-        "business": "Business and Finance"
+        "investments": "Investments and savings",
+        "taxes": "Taxes and fines",
+        "business": "Business and finance"
       },
       "seo": {
-        "keywords": "financial calculators, loan calculator, mortgage calculator, auto loan calculator, investment calculator, deposit calculator, tax calculator, penalty calculator, loan calculation online, mortgage calculation, auto loan calculation, loan interest calculation, annuity payment, differentiated payment, loan overpayment, leasing calculator, investment calculator, deposit calculator, savings account calculator, vehicle tax calculation, traffic fine calculator, tax calculator, income tax calculator, financial planning, budget calculator, budget planning, loan calculator, mortgage calculator, auto loan calculator, investment calculator, tax calculator, savings calculator",
-        "overview": "Financial calculators Calc1.ru are a set of online tools for accurate financial calculations: loans, mortgages, auto loans, investments, deposits, taxes and fines. All calculators use current rates and tariffs for accurate calculations.",
+        "keywords": "financial calculators, loan calculator, mortgage calculator, car loan calculator, investment calculator, deposit calculator, tax calculator, fines calculator, online loan calculation, mortgage calculation, car loan calculation, loan interest calculation, annuity payment, differentiated payment, loan overpayment, leasing calculator, investment calculator, deposit calculator, savings account calculator, transport tax calculation, traffic police fines calculator, tax calculator, personal income tax calculator, income tax, financial planning, budget calculator, budget planning, loan calculator, mortgage calculator, auto loan calculator, investment calculator, tax calculator, savings calculator",
+        "overview": "Financial calculators Calc1.ru are a set of online tools for accurate financial calculations: loans, mortgages, car loans, investments, deposits, taxes and fines. All calculators use current rates and tariffs for accurate calculations.",
         "advantages": {
-          "title": "Advantages of our financial calculators",
+          "title": "Benefits of our financial calculators",
           "accurate": "Accurate calculations",
           "accurateDesc": "All calculators use current financial formulas",
-          "free": "Free",
+          "free": "For free",
           "freeDesc": "Completely free access to all calculators",
           "charts": "Charts and visualization",
-          "chartsDesc": "Clear charts for better understanding of results",
+          "chartsDesc": "Visual graphs for better understanding of results",
           "forAll": "For everyone",
           "forAllDesc": "From individuals to businesses"
         },
         "sections": {
-          "title": "Financial sections",
+          "title": "Finance sections",
           "loans": {
             "name": "Loans",
-            "description": "Mortgage, auto loan, consumer loan, leasing"
+            "description": "Mortgage, car loan, consumer loan, leasing"
           },
           "investments": {
-            "name": "Investments and Savings",
+            "name": "Investments and savings",
             "description": "Investments, deposits, savings accounts"
           },
           "taxes": {
-            "name": "Taxes and Fines",
-            "description": "Income tax, vehicle tax, traffic fines"
+            "name": "Taxes and fines",
+            "description": "Personal income tax, transport tax, traffic police fines"
           }
         }
       }
     },
     "math": {
-      "title": "Mathematical Calculators",
+      "title": "Math calculators",
       "description": "Basic operations, fractions, percentages, geometry",
       "subcategories": {
         "arithmetic": "Arithmetic",
@@ -377,402 +389,406 @@
         "conversion": "Conversion"
       },
       "seo": {
-        "keywords": "mathematical calculators, math calculator, online math calculator, percentage calculator, area calculator, volume calculator, power calculator, root calculator, equation calculator, statistics calculator, unit converter, fraction calculator, calculator for students, calculator for school, math converter, percentage calculation online, area calculation, volume calculation, power of number, root of number, equation solving, statistical calculations, length converter, weight converter, area converter, volume converter, mathematical operations, geometric calculations, basic math calculator, percentage calculator, area calculator, volume calculator, power root calculator, equations calculator",
-        "overview": "Mathematical calculators Calc1.ru are a set of online tools for performing mathematical calculations: basic operations, percentages, area, volume, powers and roots, equations, statistics, unit converter. Suitable for students, schoolchildren and professionals."
+        "keywords": "mathematical calculators, mathematics calculator, online mathematics calculator, percentage calculator, area calculator, volume calculator, powers calculator, roots calculator, equations calculator, statistics calculator, unit converter, fraction calculator, calculator for schoolchildren, calculator for students, mathematical converter, online calculation of percentages, calculation of area of figures, calculation volume of bodies, power of a number, root of a number, solving equations, statistical calculations, length converter, weight converter, area converter, volume converter, mathematical operations, geometric calculations, basic math calculator, percentage calculator, area calculator, volume calculator, power root calculator, equations calculator",
+        "overview": "Mathematical calculators Calc1.ru is a set of online tools for performing mathematical calculations: basic operations, percentages, area, volume, powers and roots, equations, statistics, unit converter. Suitable for students, schoolchildren and professionals."
       }
     },
     "life": {
-      "title": "Life Calculators",
+      "title": "Household calculators",
       "description": "Calories, BMI, pregnancy, health",
       "subcategories": {
         "health": "Health",
         "nutrition": "Nutrition",
         "family": "Family",
-        "household": "Household",
-        "utilities": "Utilities"
+        "household": "Life",
+        "utilities": "Public utilities"
       },
       "seo": {
-        "keywords": "life calculators, household calculators, BMI calculator, calorie calculator, pregnancy calculator, baby growth calculator, electricity consumption calculator, water consumption calculator, gas consumption calculator, heating cost calculator, electricity cost calculator, paper weight calculator, ring size calculator, clothing size converter, alcohol calculator, BJU calculator, home calculator, family calculator, health calculator, household calculations, calorie calculation online, BMI calculation online, electricity consumption calculation, water consumption calculation, gas consumption calculation, heating cost calculation, life calculators, household calculators, daily life calculators",
-        "overview": "Life calculators Calc1.ru are a set of online tools for household calculations: BMI, calories, pregnancy, baby growth, electricity consumption, water, gas and heating. Suitable for home, family and health."
+        "keywords": "household calculators, calculators for life, BMI calculator, calorie calculator, pregnancy calculator, child height calculator, electricity consumption calculator, water consumption calculator, gas consumption calculator, heating cost calculator, electricity cost calculator, paper weight calculator, ring size calculator, clothing size converter, ppm alcohol calculator, norm calculator BZHU, calculator for home, calculator for family, health calculator, household calculations, calorie calculation online, BMI calculation online, electricity consumption calculation, water consumption calculation, gas consumption calculation, heating cost calculation, life calculators, household calculators, daily life calculators",
+        "overview": "Household calculators Calc1.ru is a set of online tools for household calculations: BMI, calories, pregnancy, child growth, electricity, water, gas and heating consumption. Suitable for home, family and health."
       }
     },
     "construction": {
-      "title": "Construction Calculators",
+      "title": "Construction calculators",
       "description": "Wallpaper, paint, concrete, roofing",
       "subtitle": "Wallpaper, paint, concrete, roofing",
       "seo": {
-        "keywords": "construction calculators, building calculators, paint calculator, wallpaper calculator, plaster calculator, concrete calculator, cement calculator, foundation calculator, ventilation calculator, wall area calculator, rebar calculator, cable calculator, pipe calculator, roof calculator, tile adhesive calculator, putty calculator, primer calculator, construction calculations, material calculation, online construction calculator, building materials calculator, material quantity calculation, construction calculator online, renovation calculator, construction work calculator, finishing materials calculator, roofing materials calculator, concrete work calculator, brick calculator, block calculator, pipeline calculator, electrical wiring calculator, surface area calculator, construction tools online",
-        "overview": "Construction calculators Calc1.ru is a comprehensive set of online tools for accurate calculations of materials and work during construction and renovation. All calculators use current construction standards and regulations, ensuring calculation accuracy."
+        "keywords": "construction calculators, construction calculators, paint calculator, wallpaper calculator, plaster calculator, concrete calculator, cement calculator, foundation calculator, ventilation calculator, wall area calculator, reinforcement calculator, cable calculator, pipe calculator, roofing calculator, tile adhesive calculator, calculator putties, primer calculator, construction calculations, materials calculation, online construction calculator, construction materials calculator, calculation of the amount of materials, online construction calculator, repair calculator, construction work calculator, finishing materials calculator, roofing materials calculator, concrete work calculator, brick calculator, block calculator, pipeline calculator, calculator electrical wiring, surface area calculator, construction tools online",
+        "overview": "Construction calculators Calc1.ru are a comprehensive set of online tools for accurate calculations of materials and work during construction and repairs. All calculators use current building codes and standards, which guarantees the accuracy of the calculations."
       }
     },
     "auto": {
-      "title": "Auto Calculators",
+      "title": "Auto calculators",
       "description": "Fuel consumption, taxes, leasing, insurance",
       "seo": {
-        "title": "Auto Calculators Online — Calculate All Vehicle Expenses | Calc1.ru",
-        "description": "Free auto calculators online: fuel consumption, auto loan, insurance (OSAGO, CASCO), vehicle tax, leasing, customs duties and traffic fines calculation. Accurate calculations for drivers and car owners.",
-        "keywords": "auto calculators, car calculators, fuel consumption calculator, auto loan calculator, OSAGO calculator, CASCO calculator, vehicle tax calculator, leasing calculator, customs calculator, traffic fines calculator, car ownership calculator, car depreciation calculator, fuel consumption online, gasoline consumption calculation, auto loan calculation, car insurance calculation, vehicle tax calculator, leasing calculator online, customs duties calculator, traffic fines online, car ownership cost, car depreciation, calculator for drivers, auto tools online, auto loan cost calculation, OSAGO insurance calculation, CASCO insurance calculation, auto expenses calculator, car budget planning, auto loan calculator online, OSAGO calculator online, CASCO calculator online, vehicle tax calculator online, leasing calculator online, customs calculator online, fines calculator online, auto calculator 2024, car calculators 2024, auto calculator, car calculator, vehicle calculator, car loan calculator, auto insurance calculator",
+        "title": "Online car calculators - Calculation of all auto expenses | Calc1.ru",
+        "description": "Free online car calculators: calculation of fuel consumption, car loan, insurance (MTPL, CASCO), transport tax, leasing, customs duties and traffic police fines. Accurate calculations for motorists and car owners.",
+        "keywords": "auto calculators, car calculators, fuel consumption calculator, car loan calculator, OSAGO calculator, CASCO calculator, transport tax calculator, leasing calculator, customs calculator, traffic police fines calculator, car ownership calculator, car depreciation calculator, online fuel consumption, gasoline consumption calculation, car loan calculation, calculation car insurance, transport tax calculator, leasing calculator online, customs payments calculator, traffic police fines online, cost of owning a car, car depreciation, calculator for motorists, online car tools, calculating the cost of a car loan, calculating compulsory motor vehicle liability insurance, calculating CASCO insurance, car expenses calculator, car budget planning, online car loan calculator, online compulsory motor vehicle liability calculator, CASCO calculator online, transport tax calculator online, leasing calculator online, customs calculator online, fines calculator online, auto calculator 2024, car calculators 2024, auto calculator, car calculator, vehicle calculator, car loan calculator, auto insurance calculator",
         "overview": {
-          "title": "Auto Calculators Calc1.ru",
-          "content": "Auto Calculators Calc1.ru is a complete set of online tools for accurate calculation of all expenses related to car ownership and operation. Our calculators will help you calculate fuel consumption, auto loan cost, insurance payments (OSAGO and CASCO), vehicle tax, leasing payments, customs duties and traffic fines.",
-          "additionalContent": "All calculators use current rates, tariffs and coefficients approved by government agencies and financial institutions. Calculations are performed instantly and absolutely free, without registration and usage restrictions."
+          "title": "Car calculators Calc1.ru",
+          "content": "Car calculators Calc1.ru are a complete set of online tools for accurately calculating all costs associated with owning and operating a car. Our calculators will help you calculate fuel consumption, the cost of a car loan, insurance payments (MTPL and CASCO), transport tax, leasing payments, customs duties and traffic police fines.",
+          "additionalContent": "All calculators use current tariffs, rates and coefficients approved by government agencies and financial institutions. Calculations are performed instantly and absolutely free, without registration or restrictions on use."
         },
         "advantages": {
-          "title": "Auto Calculator Advantages",
-          "content": "Our auto calculators provide many advantages for drivers:",
-          "comprehensive": "Complete set of tools — all necessary calculations in one place",
+          "title": "Advantages of car calculators",
+          "content": "Our car calculators provide many benefits for motorists:",
+          "comprehensive": "A complete set of tools - all the necessary calculations in one place",
           "accurate": "Accurate calculations based on current tariffs and rates",
-          "fast": "Instant results without waiting and queues",
-          "free": "Completely free, without hidden fees and restrictions",
+          "fast": "Instant results without waiting or queuing",
+          "free": "Completely free, no hidden fees or restrictions",
           "accessible": "Works on all devices: computers, tablets and smartphones",
-          "detailed": "Detailed results with breakdown by expense items"
+          "detailed": "Detailed results by cost item"
         },
         "tips": {
-          "title": "Tips for Using Auto Calculators",
-          "content": "To get the most accurate results, follow these recommendations:",
-          "data": "Use accurate data: real fuel consumption, current car cost, exact driving experience",
-          "comparison": "Compare results from different calculators to verify accuracy",
-          "regular": "Regularly recalculate expenses when tariffs or conditions change",
+          "title": "Tips for using car calculators",
+          "content": "To get the most accurate results, follow these guidelines:",
+          "data": "Use accurate data: real fuel consumption, current cost of the car, accurate driving experience",
+          "comparison": "Compare results from different calculators to check accuracy",
+          "regular": "Regularly recalculate costs when rates or conditions change",
           "planning": "Use calculators for long-term car budget planning"
         },
         "faq": {
-          "title": "Frequently Asked Questions About Auto Calculators",
+          "title": "Frequently asked questions about car calculators",
           "faqItems": [
             {
-              "q": "What auto calculators are available on Calc1.ru?",
-              "a": "Calc1.ru provides calculators for: fuel consumption, auto loan, OSAGO, CASCO, vehicle tax, leasing, customs duties, traffic fines, car ownership cost and depreciation. All calculators work online and are completely free."
+              "q": "What car calculators are available on Calc1.ru?",
+              "a": "Calculators are available on Calc1.ru: fuel consumption, car loan, compulsory motor liability insurance, comprehensive insurance, transport tax, leasing, customs duties, traffic police fines, cost of car ownership and depreciation. All calculators work online and are absolutely free."
             },
             {
-              "q": "How accurate are auto calculator calculations?",
-              "a": "Calculators use current tariffs, rates and formulas approved by government agencies. Accuracy depends on the correctness of entered data. For preliminary estimates and planning, calculators provide sufficiently accurate results."
+              "q": "How accurate are car calculators?",
+              "a": "Calculators use current tariffs, rates and formulas approved by government agencies. Accuracy depends on the correctness of the entered data. For preliminary assessment and planning, calculators provide fairly accurate results."
             },
             {
-              "q": "Is using auto calculators free?",
-              "a": "Yes, all auto calculators on Calc1.ru are completely free. You can use them unlimited times without registration and hidden fees."
+              "q": "Are car calculators free to use?",
+              "a": "Yes, all car calculators on Calc1.ru are completely free. You can use them an unlimited number of times without registration or hidden fees."
             },
             {
-              "q": "How to calculate fuel consumption for a car?",
-              "a": "Use the fuel consumption calculator, specifying your car's actual consumption in liters per 100 km and fuel volume. The calculator will show how many kilometers can be driven or how much fuel is needed for a trip."
+              "q": "How to calculate fuel consumption by car?",
+              "a": "Use the fuel consumption calculator, indicating the actual consumption of your car in liters per 100 km and the volume of fuel. The calculator will show how many kilometers you can travel or how much fuel you need for the trip."
             },
             {
-              "q": "How to calculate auto loan cost?",
-              "a": "In the auto loan calculator, specify car cost, down payment, loan term, interest rate and payment type (annuity or differentiated). The calculator will calculate monthly payment, total payment amount and overpayment."
+              "q": "How to calculate the cost of a car loan?",
+              "a": "In the car loan calculator, enter the cost of the car, the down payment, the loan term, the interest rate and the type of payments (annuity or differentiated). The calculator will calculate the monthly payment, total payment amount and overpayment."
             },
             {
-              "q": "How to calculate OSAGO cost?",
-              "a": "In the OSAGO calculator, specify region, engine power, driver age and experience, number of drivers and KBM coefficient. The calculator will calculate policy cost considering all current coefficients."
+              "q": "How to calculate the cost of compulsory motor liability insurance?",
+              "a": "In the OSAGO calculator, indicate the region, engine power, age and length of service of the driver, number of drivers and KBM coefficient. The calculator will calculate the cost of the policy taking into account all current coefficients."
             },
             {
-              "q": "How to calculate CASCO cost?",
-              "a": "In the CASCO calculator, specify car cost, year of manufacture, driver age and experience, region, alarm presence and deductible amount. The calculator will calculate full auto insurance policy cost."
+              "q": "How to calculate the cost of CASCO?",
+              "a": "In the CASCO calculator, indicate the cost of the car, year of manufacture, age and experience of the driver, region, presence of an alarm system and the amount of the franchise. The calculator will calculate the cost of a full auto insurance policy."
             },
             {
-              "q": "How to calculate vehicle tax?",
-              "a": "In the vehicle tax calculator, specify engine power in horsepower and car registration region. The calculator will calculate tax amount according to current rates in your region."
+              "q": "How to calculate transport tax?",
+              "a": "In the vehicle tax calculator, enter the engine power in horsepower and the region of registration of the car. The calculator will calculate the tax amount based on the current rates in your region."
             },
             {
-              "q": "How to calculate leasing cost?",
-              "a": "In the leasing calculator, specify car cost, down payment, leasing term, interest rate and buyout cost. The calculator will calculate monthly payments and total leasing cost."
+              "q": "How to calculate the cost of leasing?",
+              "a": "In the leasing calculator, enter the cost of the car, the down payment, the lease term, the interest rate and the redemption price. The calculator will calculate monthly payments and total leasing costs."
             },
             {
               "q": "How to calculate customs duties on a car?",
-              "a": "In the customs duties calculator, specify car cost, engine volume, fuel type, car age and power. The calculator will calculate duty, excise tax, VAT and recycling fee."
+              "a": "In the customs duty calculator, enter the cost of the car, engine size, fuel type, age of the car and power. The calculator will calculate duties, excise taxes, VAT and recycling fees."
             },
             {
-              "q": "How to calculate traffic fines?",
-              "a": "In the traffic fines calculator, select traffic violations. The calculator will calculate fine amounts considering early payment discount (50% within 20 days)."
+              "q": "How to calculate traffic police fines?",
+              "a": "In the traffic police fine calculator, select traffic violations. The calculator will calculate the amount of fines taking into account the discount for early payment (50% within 20 days)."
             },
             {
-              "q": "How to calculate car ownership cost?",
-              "a": "In the ownership cost calculator, specify car cost, ownership period, mileage, fuel consumption, insurance costs, taxes, maintenance and depreciation. The calculator will calculate total ownership cost and cost per 1 km."
+              "q": "How to calculate the cost of owning a car?",
+              "a": "In the cost of ownership calculator, enter the cost of the car, length of ownership, mileage, fuel consumption, cost of insurance, taxes, maintenance and depreciation. The calculator will calculate the total cost of ownership and the cost of 1 km."
             },
             {
               "q": "How to calculate car depreciation?",
-              "a": "In the depreciation calculator, specify purchase cost, age, mileage, car class and depreciation method. The calculator will calculate current value and value loss over the period."
+              "a": "In the depreciation calculator, enter the vehicle's purchase price, age, mileage, vehicle class, and depreciation method. The calculator will calculate the current value and loss of value for the period."
             },
             {
-              "q": "Are tariffs updated in calculators?",
-              "a": "Yes, we regularly update tariffs, rates and coefficients in calculators according to legislative changes and current market data. However, for accurate calculation before important decisions, it is recommended to verify current rates."
+              "q": "Are rates updated in calculators?",
+              "a": "Yes, we regularly update tariffs, rates and odds in calculators in accordance with changes in legislation and current market data. However, for an accurate calculation, it is recommended to check the current rates before making important decisions."
             },
             {
-              "q": "Can calculation results be saved?",
-              "a": "You can copy calculation results or take a screenshot of the results page. Some calculators provide the ability to download results in CSV or PDF format."
+              "q": "Is it possible to save the calculation results?",
+              "a": "You can copy the calculation results or take a screenshot of the page with the results. Some calculators provide the ability to download results in CSV or PDF format."
             },
             {
               "q": "Do calculators work on mobile devices?",
-              "a": "Yes, all calculators are fully adapted for use on mobile devices, tablets and smartphones. The interface automatically adjusts to screen size."
+              "a": "Yes, all calculators are fully adapted to work on mobile devices, tablets and smartphones. The interface automatically adjusts to the screen size."
             },
             {
               "q": "Can calculators be used for commercial purposes?",
-              "a": "Yes, calculators can be used for commercial purposes. However, results are approximate and do not replace consultation with specialists when making important financial decisions."
+              "a": "Yes, calculators can be used for commercial purposes. However, the results are indicative only and are not a substitute for professional advice when making important financial decisions."
             },
             {
-              "q": "Which calculator to use for car budget planning?",
-              "a": "For comprehensive planning, use the car ownership cost calculator, which accounts for all expenses: fuel, insurance, taxes, maintenance and depreciation. Auto loan and leasing calculators are also useful for financing planning."
+              "q": "Which calculator should I use to plan my car budget?",
+              "a": "For comprehensive planning, use a car ownership cost calculator that takes into account all costs: fuel, insurance, taxes, maintenance and depreciation. Car loan and leasing calculators are also useful for planning financing."
             },
             {
-              "q": "Are calculations accurate for specific regions?",
-              "a": "Calculators account for regional coefficients (e.g., for OSAGO and vehicle tax). However, rates may differ among insurance companies and in different regions, so results are approximate."
+              "q": "Are the calculations accurate for specific regions?",
+              "a": "Calculators take into account regional coefficients (for example, for compulsory motor liability insurance and transport tax). However, rates may vary between insurers and regions, so results are estimates only."
             },
             {
-              "q": "How often should car expenses be recalculated?",
-              "a": "It is recommended to recalculate expenses when tariffs change (insurance, taxes), when mileage or operating conditions change, and before making important decisions (purchase, sale, insurance, lending)."
+              "q": "How often should you recalculate your car expenses?",
+              "a": "It is recommended to recalculate expenses when tariffs change (insurance, taxes), when mileage or operating conditions change, and also before making important decisions (purchase, sale, insurance, lending)."
             },
             {
-              "q": "Can multiple options be compared?",
-              "a": "Yes, you can open the calculator in multiple browser tabs and calculate different options for comparison. This is especially useful when choosing an auto loan, insurance or car."
+              "q": "Is it possible to compare several options?",
+              "a": "Yes, you can open the calculator in several browser tabs and calculate different options for comparison. This is especially useful when choosing a car loan, insurance or car."
             },
             {
-              "q": "What to do if calculation results differ from actual ones?",
-              "a": "Differences may arise due to additional fees, individual contract terms or tariff changes. Calculators provide approximate results. For accurate calculations, contact relevant organizations."
+              "q": "What to do if the calculation results differ from the real ones?",
+              "a": "Differences may arise due to additional fees, individual contract terms or changes in rates. Calculators provide approximate results. For accurate calculations, please contact the relevant organizations."
             },
             {
-              "q": "Are there calculators for electric cars?",
-              "a": "Main calculators (consumption, loan, taxes) are suitable for electric cars as well. For energy consumption calculation, use the fuel consumption calculator, specifying consumption in kWh/100km instead of liters."
+              "q": "Are there calculators for electric vehicles?",
+              "a": "Basic calculators (expense, credit, taxes) are also suitable for electric vehicles. To calculate energy consumption, use the fuel consumption calculator, indicating the consumption in kWh/100km instead of liters."
             },
             {
-              "q": "How to calculate savings from early auto loan repayment?",
-              "a": "In the auto loan calculator, specify additional payments for early repayment. The calculator will recalculate the payment schedule and show interest savings and loan term reduction."
+              "q": "How to calculate savings from early repayment of a car loan?",
+              "a": "In the car loan calculator, enter additional payments for early repayment. The calculator will recalculate the payment schedule and show savings on interest and a reduction in the loan term."
             },
             {
-              "q": "Are benefits accounted for in calculators?",
-              "a": "Main calculators do not account for individual benefits (e.g., for large families or disabled persons). For calculations with benefits, contact relevant organizations directly."
+              "q": "Are benefits taken into account in the calculators?",
+              "a": "Basic calculators do not take into account individual benefits (for example, for large families or disabled people). To make calculations taking into account benefits, please contact the relevant organizations directly."
             },
             {
-              "q": "Can fuel consumption be calculated for a hybrid car?",
-              "a": "Yes, use the fuel consumption calculator, specifying your hybrid's real consumption. Hybrids typically have consumption of 4-6 l/100km depending on operating mode."
+              "q": "Is it possible to calculate fuel consumption for a hybrid car?",
+              "a": "Yes, use the fuel consumption calculator and enter the actual fuel consumption of your hybrid. Hybrids usually have a consumption of 4-6 l/100 km depending on the operating mode."
             },
             {
-              "q": "How to calculate optimal auto loan term?",
-              "a": "Use the auto loan calculator to calculate different loan terms. Compare monthly payments, total overpayment and cost per 1 km. Optimal term is usually 4-5 years with balance between payment and overpayment."
+              "q": "How to calculate the optimal term of a car loan?",
+              "a": "Use a car loan calculator to calculate different loan terms. Compare monthly payments, total overpayment and cost of 1 km. The optimal period is usually 4-5 years with a balance between payment and overpayment."
             },
             {
-              "q": "What is better: auto loan or leasing?",
-              "a": "Compare both options: use auto loan and leasing calculators with the same parameters. Auto loan is better for long-term ownership, leasing — for business and frequent car changes."
+              "q": "What is more profitable: car loan or leasing?",
+              "a": "Compare both options: use car loan and leasing calculators with the same parameters. A car loan is more profitable for long-term ownership, while leasing is more profitable for business and when changing cars frequently."
             },
             {
-              "q": "How to calculate real annual ownership cost?",
-              "a": "Use the car ownership cost calculator, specifying a 1-year period. The calculator will calculate all annual expenses: fuel, insurance, taxes, maintenance and depreciation."
+              "q": "How to calculate the real cost of ownership for a year?",
+              "a": "Use the car ownership cost calculator, specifying a period of 1 year. The calculator will calculate all annual expenses: fuel, insurance, taxes, maintenance and depreciation."
+            },
+            {
+              "q": "Are seasonal factors taken into account in the calculators?",
+              "a": "Basic calculators do not take into account seasonal factors (for example, winter fuel consumption is 10-15% higher). For accurate planning, consider these factors when entering data."
             }
           ]
         }
       }
     },
     "time": {
-      "title": "Time and Date",
-      "description": "Date differences, age, timers",
+      "title": "Time and date",
+      "description": "Date difference, age, timers",
       "seo": {
-        "title": "Time and Date Calculators Online — Calculate Time, Dates and Age | Calc1.ru",
-        "description": "Free time and date calculators online: difference between dates, age calculation, timers, countdown, calendar, world time, time addition, deadline calculation. Accurate calculations for time planning and organization.",
-        "keywords": "time calculators, date calculator, age calculator, date difference calculator, days between dates calculator, time calculator, online timer, countdown, online calendar, world time, time addition, deadline calculator, age calculation, how many days between dates, online time calculator, time calculator, date calculator, age calculator, timer online, countdown calculator, free time calculator, online date calculator, online age calculator, online date difference calculator, online days between dates calculator, countdown timer, free online timer, free online calendar, online world time, add time to date, online deadline calculation, calculate difference between dates, how many days left, how old is person, birthday calculator, work time calculator, working hours calculator, meeting time calculator, flight time calculator, time zone calculator, time converter, business time calculator, planning time calculator, travel time calculator, study time calculator, event time calculator, online time calculator, free time calculator, web time calculator, interactive time calculator, time calculator 2024, Russian time calculator, time and date calculator, date difference calculator, days calculator, age calculation, time addition calculator, deadline calculator, world time calculator, online timer, countdown timer, event countdown, birthday calculator, date interval calculator, time zone converter, time planning calculator, business time calculator, travel time calculator",
+        "title": "Online time and date calculators - Calculating times, dates and ages | Calc1.ru",
+        "description": "Free online time and date calculators: difference between dates, age calculation, timers, countdown, calendar, world time, adding time, calculating deadlines. Accurate calculations for planning and organizing time.",
+        "keywords": "time calculators, date calculator, age calculator, date difference calculator, days between dates calculator, time calculator, online timer, countdown, online calendar, world time, adding time, deadline calculator, age calculation, how many days between dates, online time calculator, time calculator, date calculator, age calculator, timer online, countdown calculator, time calculator free, online date calculator, online age calculator, online date difference calculator, online days calculator, countdown timer, free online timer, online free calendar, online world time, adding time to a date, online deadline calculation, calculating the difference between dates, how many days are left, how old is a person, birthday calculator, work time calculator, work time calculator, meeting time calculator, time calculator flights, time zone calculator, time converter, time calculator for business, time calculator for planning, time calculator for travel, time calculator for study, time calculator for events, online time calculator, free time calculator, web time calculator, interactive time calculator, time calculator 2024, Russian time calculator, time and date calculator, date difference calculator, days calculator, age calculation, time addition calculator, deadline calculator, world time calculator, online timer, countdown timer, event countdown, birthday calculator, date interval calculator, time zone converter, time planning calculator, business time calculator, travel time calculator",
         "overview": {
-          "title": "Time and Date Calculators Calc1.ru",
-          "content": "Time and Date Calculators Calc1.ru is a complete set of online tools for accurate work with time and dates. Our calculators will help you calculate the difference between dates, determine age, use timers and countdown, work with calendar, find world time in different cities, add time to dates and calculate deadlines.",
-          "additionalContent": "All calculators work in real-time, automatically account for leap years, daylight saving time transitions and support all world time zones. Calculations are performed instantly and absolutely free, without registration and usage restrictions. Suitable for personal planning, business, travel and study."
+          "title": "Time and date calculators Calc1.ru",
+          "content": "Time and date calculators Calc1.ru is a complete set of online tools for accurately working with time and dates. Our calculators will help you calculate the difference between dates, determine age, use timers and countdowns, work with the calendar, find out world time in different cities, add time to dates and calculate deadlines.",
+          "additionalContent": "All calculators work in real time, automatically take into account leap years, daylight saving time and support all time zones in the world. Calculations are performed instantly and absolutely free, without registration or restrictions on use. Suitable for personal planning, business, travel and study."
         },
         "advantages": {
-          "title": "Time and Date Calculator Advantages",
-          "content": "Our time and date calculators provide many advantages:",
-          "comprehensive": "Complete set of tools — all necessary time and date calculations in one place",
-          "accurate": "Accurate calculations accounting for leap years, time zones and daylight saving time",
-          "fast": "Instant results without waiting and complex calculations",
-          "free": "Completely free, without hidden fees and restrictions",
+          "title": "Benefits of time and date calculators",
+          "content": "Our time and date calculators provide many benefits:",
+          "comprehensive": "A complete set of tools - all the necessary time and date calculations in one place",
+          "accurate": "Accurate calculations taking into account leap years, time zones and daylight saving time",
+          "fast": "Instant results without waiting or complicated calculations",
+          "free": "Completely free, no hidden fees or restrictions",
           "accessible": "Works on all devices: computers, tablets and smartphones",
-          "detailed": "Detailed results with breakdown by days, hours, minutes and seconds"
+          "detailed": "Detailed results broken down by days, hours, minutes and seconds"
         },
         "tips": {
-          "title": "Tips for Using Time and Date Calculators",
-          "content": "To get the most accurate results, follow these recommendations:",
-          "accurate": "Use accurate dates and times: check input format, account for time zones when working with world time",
-          "planning": "Use calculators for long-term planning: calculate deadlines in advance, plan meetings considering time zones",
-          "regular": "Regularly use timers and countdown for time control and productivity improvement",
-          "comparison": "Use multiple calculators for comprehensive time planning: combine calendar, timers and world time"
+          "title": "Tips for using time and date calculators",
+          "content": "To get the most accurate results, follow these guidelines:",
+          "accurate": "Use accurate dates and times: check input format, take time zones into account when working with world time",
+          "planning": "Use calculators for long-term planning: calculate deadlines in advance, plan meetings taking into account time zones",
+          "regular": "Use timers and countdowns regularly to manage time and increase productivity",
+          "comparison": "Use multiple calculators for comprehensive time planning: combine calendar, timers and world clock"
         },
         "faq": {
-          "title": "Frequently Asked Questions About Time and Date Calculators",
+          "title": "Frequently asked questions about time and date calculators",
           "faqItems": [
             {
               "q": "What time and date calculators are available on Calc1.ru?",
-              "a": "Calc1.ru provides calculators for: date difference, time addition, age calculation, deadline calculation, online calendar, timer, countdown and world time. All calculators work online and are completely free."
+              "a": "Calc1.ru offers calculators: date differences, adding time, calculating age, calculating deadlines, online calendar, timer, countdown and world time. All calculators work online and are absolutely free."
             },
             {
-              "q": "How accurate are time and date calculator calculations?",
-              "a": "Calculators use accurate time calculation algorithms accounting for leap years, time zones and daylight saving time. Accuracy depends on the correctness of entered data. For time planning and organization, calculators provide very accurate results."
+              "q": "How accurate are time and date calculators?",
+              "a": "The calculators use precise algorithms for calculating time, taking into account leap years, time zones and daylight saving time. Accuracy depends on the correctness of the entered data. For planning and time management, calculators provide very accurate results."
             },
             {
-              "q": "Is using time and date calculators free?",
-              "a": "Yes, all time and date calculators on Calc1.ru are completely free. You can use them unlimited times without registration and hidden fees."
+              "q": "Are time and date calculators free to use?",
+              "a": "Yes, all time and date calculators on Calc1.ru are completely free. You can use them an unlimited number of times without registration or hidden fees."
             },
             {
-              "q": "How to calculate difference between two dates?",
-              "a": "Use the date difference calculator, specifying start and end dates. The calculator will show exact difference in days, weeks, months and years accounting for leap years."
+              "q": "How to calculate the difference between two dates?",
+              "a": "Use the date difference calculator by entering the start and end date. The calculator will show the exact difference in days, weeks, months and years, taking into account leap years."
             },
             {
-              "q": "How to calculate person's age?",
-              "a": "In the age calculator, specify date of birth, and the calculator will show exact age in years, months, days and even hours on current date."
+              "q": "How to calculate a person's age?",
+              "a": "In the age calculator, enter your date of birth, and the calculator will show your exact age in years, months, days and even hours as of the current date."
             },
             {
-              "q": "How to use timer for time management?",
-              "a": "Set the required time in the timer (hours, minutes, seconds) and start countdown. The timer will show remaining time and sound an alarm when finished. Suitable for Pomodoro technique, cooking, workouts."
+              "q": "How to use a timer to manage time?",
+              "a": "Set the desired time in the timer (hours, minutes, seconds) and start the countdown. The timer will show the remaining time and beep when finished. Suitable for Pomodoro technique, cooking, training."
             },
             {
-              "q": "How to use countdown to event?",
-              "a": "In the countdown calculator, specify event date and time. The calculator will show how many days, hours, minutes and seconds are left until the event, updating every second."
+              "q": "How to use the countdown to an event?",
+              "a": "In the countdown calculator, enter the date and time of the event. The calculator will show how many days, hours, minutes and seconds are left until the event, updating every second."
             },
             {
-              "q": "How to use online calendar?",
-              "a": "Open online calendar, add events with description, time and reminders. Use color coding for different event types and export calendar for synchronization with other services."
+              "q": "How to use an online calendar?",
+              "a": "Open your online calendar, add events with descriptions, times and reminders. Use color coding for different types of events and export your calendar to sync with other services."
             },
             {
-              "q": "How to find world time in different cities?",
-              "a": "In the world time calculator, add required cities via search. The calculator will show current time in all cities simultaneously accounting for their time zones and daylight saving time."
+              "q": "How to find out world time in different cities?",
+              "a": "In the world time calculator, add the desired cities through the search. The calculator will show the current time in all cities simultaneously, taking into account their time zones and summer time."
             },
             {
               "q": "How to add time to date?",
-              "a": "In the time addition calculator, specify start date and time, then add required interval (days, hours, minutes, seconds). The calculator will calculate resulting date and time."
+              "a": "In the time addition calculator, enter the starting date and time, then add the desired interval (days, hours, minutes, seconds). The calculator will calculate the resulting date and time."
             },
             {
-              "q": "How to calculate project deadline?",
-              "a": "In the deadline calculator, specify project start date and number of days until deadline (or end date). The calculator will show exact deadline date and number of days, weeks and months until it."
+              "q": "How to calculate the project deadline?",
+              "a": "In the deadline calculator, enter the start date and the number of days until the deadline (or end date). The calculator will show the exact date of the deadline and the number of days, weeks and months before it."
             },
             {
-              "q": "Are leap years accounted for in calculations?",
-              "a": "Yes, all calculators automatically account for leap years (February 29) when calculating date differences and age, ensuring maximum accuracy of results."
+              "q": "Are leap years taken into account in calculations?",
+              "a": "Yes, all calculators automatically take into account leap years (February 29) when calculating date and age differences, ensuring maximum accuracy of results."
             },
             {
-              "q": "Are all time zones supported in world time calculator?",
-              "a": "Yes, world time calculator supports all world time zones, including standard (UTC) and local time zones of all countries. You can find time in any city in the world."
+              "q": "Are all time zones supported in the world time calculator?",
+              "a": "Yes, the world time calculator supports all time zones in the world, including standard (UTC) and local time zones of all countries. You can find time in any city in the world."
             },
             {
               "q": "Can time calculators be used for business?",
-              "a": "Yes, time calculators are great for business: planning international meetings, deadline control, coordinating remote teams, planning video conferences considering time zones."
+              "a": "Yes, time calculators are great for business: planning international meetings, monitoring deadlines, coordinating the work of remote teams, scheduling video conferences taking into account time zones."
             },
             {
               "q": "Can time calculators be used for travel?",
-              "a": "Yes, time calculators are ideal for travel: adapting to local time, planning flights, calculating time differences between countries, planning tours and events."
+              "a": "Yes, time calculators are ideal for travel: adapting to local time, planning flights, calculating time differences between countries, planning excursions and events."
             },
             {
-              "q": "How to use timer for Pomodoro technique?",
-              "a": "Set timer for 25 minutes for work interval, after completion take a 5-minute break (use timer again), after 4 cycles take a long break of 15-30 minutes."
+              "q": "How to use a timer for the Pomodoro technique?",
+              "a": "Set a timer for 25 minutes for the work interval, after completion take a 5 minute break (use the timer again), after 4 cycles take a long break of 15-30 minutes."
             },
             {
-              "q": "Can calendar be used for event planning?",
-              "a": "Yes, online calendar is great for event planning. Create events with description, time, color coding and reminders. Export calendar for synchronization with other services."
+              "q": "Can I use a calendar to plan events?",
+              "a": "Yes, an online calendar is great for event planning. Create events with description, time, color coding and reminders. Export your calendar to sync with other services."
             },
             {
-              "q": "How to use countdown to birthday?",
-              "a": "In the countdown calculator, set birthday date (you can select next year if birthday already passed this year), and the timer will show how many days are left until this event."
+              "q": "How to use the birthday countdown?",
+              "a": "In the countdown calculator, set the date of your birthday (you can select the next year if your birthday has already passed this year), and the timer will show how many days are left until this event."
             },
             {
-              "q": "Can time calculators be used for study?",
-              "a": "Yes, time calculators are suitable for study: controlling assignment deadlines, planning exam preparation, organizing study time, calculating age for historical research."
+              "q": "Can time calculators be used for studying?",
+              "a": "Yes, time calculators are suitable for studying: monitoring assignment deadlines, planning exam preparation, organizing study time, calculating age for historical research."
             },
             {
-              "q": "How to use world time calculator for call planning?",
-              "a": "Add cities of call participants to world time calculator. See current time in each city and choose time convenient for everyone, considering time zone differences and usual business hours."
+              "q": "How to use the World Time Calculator to schedule calls?",
+              "a": "Add the cities of the call participants to the world time calculator. View the current time in each city and choose a time that works for everyone, taking into account time zone differences and normal business hours."
             },
             {
-              "q": "Can timer be used for cooking?",
-              "a": "Yes, timer is ideal for controlling cooking time. Set required time (e.g., 8 minutes for boiling eggs, 15 minutes for baking) and use sound signal for notification."
+              "q": "Can I use a timer for cooking?",
+              "a": "Yes, the timer is ideal for controlling cooking time. Set the desired time (for example, 8 minutes for boiling eggs, 15 minutes for baking) and use the sound signal for notification."
             },
             {
-              "q": "How to use date difference calculator for work experience calculation?",
-              "a": "In the date difference calculator, specify work start date and current date (or work end date). The calculator will show exact work experience in years, months and days."
+              "q": "How to use the date difference calculator to calculate work experience?",
+              "a": "In the date difference calculator, enter the work start date and the current date (or work end date). The calculator will show the exact length of service in years, months and days."
             },
             {
-              "q": "Can countdown be used for motivation?",
-              "a": "Yes, countdown to important events (vacation, birthday, goal achievement) motivates and helps visualize progress toward goal. Seeing how much time is left makes planning and acting easier."
+              "q": "Can countdowns be used for motivation?",
+              "a": "Yes, counting down to important events (vacation, birthday, achieving a goal) motivates and helps to visualize progress towards the goal. Seeing how much time is left makes it easier to plan and act."
             },
             {
-              "q": "How to use calendar for family planning?",
-              "a": "Create events for all family members, using different colors for each family member or event type. Export calendar and share it with family for synchronization."
+              "q": "How to use a calendar for family planning?",
+              "a": "Create events for all family members using different colors for each family member or event type. Export your calendar and share it with your family to sync."
             },
             {
-              "q": "Can world time calculator be used for client work?",
-              "a": "Yes, add cities where your clients are located, and the calculator will show their current time. This helps determine optimal time for calls and meetings considering clients' business hours."
+              "q": "Can the world time calculator be used with clients?",
+              "a": "Yes, add the cities where your clients are located and the calculator will show their current time. This will help determine the optimal time for calls and meetings, taking into account clients' working hours."
             },
             {
-              "q": "How to use time addition calculator for arrival time calculation?",
-              "a": "Specify departure time and add trip duration (hours, minutes). The calculator will calculate exact arrival time, accounting for all trip parameters."
+              "q": "How to use the time addition calculator to calculate your arrival time?",
+              "a": "Enter the departure time and add the duration of the trip (hours, minutes). The calculator will calculate the exact time of arrival, taking into account all the travel parameters."
             },
             {
-              "q": "Can timer be used for interval training?",
-              "a": "Yes, set timer for exercise time (e.g., 30 seconds), after signal set timer for rest time (15 seconds), repeat cycle required number of times."
+              "q": "Can I use a timer for interval training?",
+              "a": "Yes, set the timer for the duration of the exercise (for example, 30 seconds), after the signal, set the timer for the rest period (15 seconds), repeat the cycle the required number of times."
             },
             {
-              "q": "How to use deadline calculator for project planning?",
-              "a": "Specify project start date and number of days until deadline (or end date). The calculator will show exact deadline date and help control task execution time for the project."
+              "q": "How to use a deadline calculator to plan projects?",
+              "a": "Indicate the start date of the project and the number of days until the deadline (or end date). The calculator will show the exact deadline date and help control the time it takes to complete project tasks."
             },
             {
-              "q": "Can countdown be used to track time until vacation?",
-              "a": "Yes, set vacation start date, and the timer will show how many days are left. This helps motivate and plan vacation preparation in advance."
+              "q": "Can I use a countdown to track time until vacation?",
+              "a": "Yes, set the start date for your vacation and the timer will show how many days are left. This helps motivate and plan your vacation preparations in advance."
             },
             {
-              "q": "How to use world time calculator for online event planning?",
-              "a": "Add cities of all online event participants. The calculator will show their current time, which helps choose optimal event start time convenient for maximum number of participants."
+              "q": "How to use the World Time Calculator to plan online events?",
+              "a": "Add the cities of all online event participants. The calculator will show their current time, which will help you choose the optimal start time for the event, convenient for the maximum number of participants."
             }
           ]
         }
       }
     },
     "health": {
-      "title": "Health and Medical",
-      "description": "BMI, heart rate, blood pressure, vitamins",
+      "title": "Health and medicine",
+      "description": "BMI, pulse, blood pressure, vitamins",
       "seo": {
-        "title": "Medical Calculators Online — Calculate Health and Medical Indicators | Calc1.ru",
-        "description": "Free medical calculators online: BMI (body mass index) calculation, heart rate, blood pressure, ovulation, vitamins and minerals, stress level, medication dosage. Accurate calculations for health monitoring and medical indicators.",
-        "keywords": "medical calculators, health calculator, BMI calculator, body mass index, heart rate calculator, heart rate, heart rate zones, blood pressure calculator, normal pressure, hypertension, hypotension, ovulation calculator, fertile days, menstrual cycle, vitamins calculator, daily vitamins intake, minerals calculator, stress calculator, stress level, stress test, dosage calculator, weight-based dose calculation, medication dosage, online medical calculations, health monitoring, disease prevention, healthy lifestyle, medical indicators, normal values, health calculator, health calculator, BMI calculator, heart rate calculator, blood pressure calculator, ovulation calculator, vitamins calculator, stress test, dosage calculator",
+        "title": "Online medical calculators - Calculation of health and medical indicators | Calc1.ru",
+        "description": "Free online medical calculators: calculation of BMI (body mass index), pulse, blood pressure, ovulation, vitamins and minerals, stress level, medication dosage. Accurate calculations for monitoring health and medical indicators.",
+        "keywords": "medical calculators, health calculator, BMI calculator, body mass index, pulse calculator, heart rate, pulse zones, blood pressure calculator, normal pressure, hypertension, hypotension, ovulation calculator, fertile days, menstrual cycle, vitamin calculator, daily value of vitamins, minerals calculator, stress calculator, stress level, test for stress, dosage calculator, dose calculation by weight, drug dosage, online medical calculations, health control, disease prevention, healthy lifestyle, medical indicators, normal values, health calculator, health calculator, BMI calculator, heart rate calculator, blood pressure calculator, ovulation calculator, vitamins calculator, stress test, dosage calculator",
         "overview": {
-          "title": "Medical Calculators Calc1.ru",
-          "content": "Medical Calculators Calc1.ru is a set of professional online tools for medical calculations and health monitoring. Our calculators will help you calculate body mass index (BMI), determine heart rate zones for workouts, assess blood pressure, calculate ovulation days, determine vitamins and minerals needs, assess stress level and calculate correct medication dosage.",
-          "additionalContent": "All calculators are developed based on World Health Organization (WHO) recommendations and international medical standards. They account for age, gender, physical activity and other individual parameters for accurate and personalized calculations. Calculators are suitable for daily health monitoring, workout planning, pregnancy, vitamins and medication intake."
+          "title": "Medical calculators Calc1.ru",
+          "content": "Medical calculators Calc1.ru is a set of professional online tools for medical calculations and health monitoring. Our calculators will help you calculate your body mass index (BMI), determine your heart rate zones for training, estimate your blood pressure, calculate your ovulation days, determine your vitamin and mineral needs, assess your stress levels, and calculate the correct dosage of medications.",
+          "additionalContent": "All calculators are developed based on the recommendations of the World Health Organization (WHO) and international medical standards. They take into account age, gender, physical activity and other individual parameters for accurate and personalized calculations. Calculators are suitable for daily health monitoring, training planning, pregnancy, taking vitamins and medications."
         },
         "advantages": {
-          "title": "Advantages of Our Medical Calculators",
-          "content": "Our medical calculators provide many advantages for health monitoring:",
+          "title": "Benefits of our medical calculators",
+          "content": "Our medical calculators provide many benefits for health monitoring:",
           "accurate": {
-            "title": "Calculation accuracy",
-            "description": "All calculations are based on medical standards and WHO recommendations, ensuring accuracy of results."
+            "title": "Accuracy of calculations",
+            "description": "All calculations are based on medical standards and WHO recommendations, which guarantees the accuracy of the results."
           },
           "personalized": {
             "title": "Personalization",
-            "description": "Calculators account for individual parameters: age, gender, weight, height, activity level."
+            "description": "Calculators take into account individual parameters: age, gender, weight, height, activity level."
           },
           "comprehensive": {
-            "title": "Information completeness",
+            "title": "Completeness of information",
             "description": "Each calculator provides detailed results with interpretation and recommendations."
           },
           "free": {
-            "title": "Free",
+            "title": "For free",
             "description": "All calculators are completely free and available without registration at any time."
           },
           "mobile": {
             "title": "Mobile version",
-            "description": "Adaptive design works on all devices: computers, tablets and smartphones."
+            "description": "Responsive design works on all devices: computers, tablets and smartphones."
           },
           "professional": {
             "title": "Professional recommendations",
-            "description": "Results are accompanied by medical recommendations and specialist advice."
+            "description": "The results are accompanied by medical recommendations and expert advice."
           }
         },
         "tips": {
-          "title": "Tips for Using Medical Calculators",
-          "content": "To get accurate results and effective health monitoring, follow these recommendations:",
+          "title": "Tips for using medical calculators",
+          "content": "For accurate results and effective health monitoring, follow these recommendations:",
           "regular": {
-            "title": "Regular monitoring",
-            "description": "Use calculators regularly to track changes in health indicators and effectiveness of improvement measures."
+            "title": "Regular control",
+            "description": "Use calculators regularly to track changes in health indicators and the effectiveness of improvement measures."
           },
           "consultation": {
             "title": "Doctor consultation",
-            "description": "Calculator results are for informational purposes and do not replace specialist consultation. If indicators deviate from normal, consult a doctor."
+            "description": "The results of the calculators are for informational purposes only and do not replace consultation with a specialist. If there are deviations from the norm, consult a doctor."
           },
           "accuracy": {
-            "title": "Data accuracy",
-            "description": "Enter current and accurate data (weight, height, age) to get reliable calculation results."
+            "title": "Data Accuracy",
+            "description": "Enter current and accurate data (weight, height, age) to obtain reliable calculation results."
           },
           "comprehensive": {
-            "title": "Comprehensive approach",
-            "description": "Use multiple calculators together for comprehensive health assessment and getting complete picture."
+            "title": "Integrated approach",
+            "description": "Use several calculators together for a comprehensive health assessment and get the full picture."
           }
         },
         "faq": {
@@ -780,126 +796,158 @@
           "faqItems": [
             {
               "q": "What are medical calculators?",
-              "a": "Medical calculators are online tools for calculating various medical indicators: body mass index, heart rate, blood pressure, ovulation, vitamins needs, stress level, medication dosage. They help monitor health and get medical recommendations based on individual parameters."
+              "a": "Medical calculators are online tools for calculating various medical indicators: body mass index, pulse, blood pressure, ovulation, vitamin requirements, stress levels, medication dosages. They help monitor your health and receive medical recommendations based on individual parameters."
             },
             {
-              "q": "How accurate are medical calculator calculations?",
-              "a": "Calculators are based on WHO recommendations and international medical standards. Accuracy depends on correctness of entered data and individual body characteristics. For accurate diagnosis and treatment, always consult a doctor."
+              "q": "How accurate are medical calculators?",
+              "a": "Calculators are based on WHO recommendations and international medical standards. Accuracy depends on the correctness of the entered data and the individual characteristics of the organism. For accurate diagnosis and treatment, always consult your doctor."
             },
             {
-              "q": "Can calculators be used instead of doctor consultation?",
-              "a": "No, calculators are for informational purposes and do not replace specialist consultation. They help monitor health, but if indicators deviate from normal or there are disease symptoms, you need to consult a doctor."
+              "q": "Can calculators be used instead of consulting a doctor?",
+              "a": "No, calculators are for informational purposes only and do not replace consultation with a specialist. They help monitor health, but if there are deviations from the norm or symptoms of disease, you should consult a doctor."
             },
             {
               "q": "What medical calculators are available?",
-              "a": "Available calculators: BMI (body mass index), heart rate and heart rate zones, blood pressure, ovulation and fertile days, vitamins and minerals, stress level, medication dosage by weight. Each calculator accounts for individual parameters."
+              "a": "Calculators are available: BMI (body mass index), pulse and pulse zones, blood pressure, ovulation and fertile days, vitamins and minerals, stress levels, medication dosages by weight. Each calculator takes into account individual parameters."
             },
             {
-              "q": "How to properly use BMI calculator?",
-              "a": "To calculate BMI, enter current weight in kilograms and height in centimeters. Note that BMI does not account for muscle mass, so for athletes it may not be entirely accurate. Interpret results together with a doctor."
+              "q": "How to use the BMI calculator correctly?",
+              "a": "To calculate BMI, enter your current weight in kilograms and height in centimeters. Keep in mind that BMI does not take muscle mass into account, so it may not be entirely accurate for athletes. Interpret the results with your doctor."
             },
             {
-              "q": "What are heart rate zones and why are they needed?",
-              "a": "Heart rate zones are ranges of heart rate for different workout goals: recovery zone (50-60%), fat burning (60-70%), aerobic (70-80%), anaerobic (80-90%), maximum (90-100%). They help optimize workouts."
+              "q": "What are pulse zones and why are they needed?",
+              "a": "Heart rate zones are heart rate ranges for different training purposes: rest zone (50-60%), fat burning (60-70%), aerobic (70-80%), anaerobic (80-90%), maximum (90-100%). They help optimize your workouts."
             },
             {
-              "q": "How to interpret blood pressure calculator results?",
-              "a": "Calculator classifies pressure according to international standards: normal (<130/85), elevated (130-139/85-89), stage I hypertension (140-159/90-99), stage II (160-179/100-109), stage III (≥180/≥110). If indicators deviate, consult a doctor."
+              "q": "How to interpret the results of the pressure calculator?",
+              "a": "The calculator classifies blood pressure according to international standards: normal (<130/85), elevated (130-139/85-89), grade I hypertension (140-159/90-99), grade II (160-179/100-109), grade III (≥180/≥110). If there are any deviations, consult a doctor."
             },
             {
-              "q": "How does ovulation calculator work?",
-              "a": "Ovulation calculator calculates ovulation date based on last menstrual period date and cycle length. Method is suitable for regular cycles. To increase accuracy, combine with ovulation tests and basal temperature measurement."
+              "q": "How does the ovulation calculator work?",
+              "a": "The ovulation calculator calculates your ovulation date based on your last menstrual period and cycle length. The method is suitable for regular cycles. Combine with ovulation tests and basal temperature measurements for increased accuracy."
             },
             {
-              "q": "How to calculate vitamins needs?",
-              "a": "Vitamins calculator accounts for gender, age and physical activity level to determine daily needs for 13 vitamins and 8 minerals. With high activity, need for some vitamins increases by 15-20%."
+              "q": "How to calculate the need for vitamins?",
+              "a": "The vitamin calculator takes into account gender, age and physical activity level to determine your daily requirement of 13 vitamins and 8 minerals. With high activity, the need for certain vitamins increases by 15-20%."
             },
             {
-              "q": "What does stress test show?",
-              "a": "Stress test assesses stress level by 10 questions with scoring system (0-30 points). Result shows: low stress (0-10), medium (11-20), high (21-30). With high level, consulting a specialist is recommended."
+              "q": "What does a stress test show?",
+              "a": "The stress test assesses the level of stress using 10 questions with a point system (0-30 points). The result shows: low stress (0-10), medium (11-20), high (21-30). If the level is high, it is recommended to consult a specialist."
             },
             {
-              "q": "How to calculate medication dosage?",
-              "a": "Dosage calculator calculates dose using formula: body weight × dosage per kg × intake frequency. Shows single and daily dose. Important: always consult a doctor before taking medications."
+              "q": "How to calculate the dosage of a medicine?",
+              "a": "The dosage calculator calculates the dose using the formula: body weight × dosage per kg × frequency of administration. Shows single and daily dose. Important: Always consult your doctor before taking medications."
             },
             {
               "q": "Are medical calculators safe?",
-              "a": "Yes, calculators are safe to use. They perform mathematical calculations based on medical formulas. However, results are for informational purposes and do not replace medical diagnosis."
+              "a": "Yes, calculators are safe to use. They perform mathematical calculations based on medical formulas. However, the results are for informational purposes only and do not replace medical diagnosis."
             },
             {
               "q": "Can calculators be used for children?",
-              "a": "Some calculators (BMI, heart rate, vitamins, dosage) can be used for children accounting for age characteristics. For medication dosage for children, always consult a pediatrician. Interpret results together with a pediatric doctor."
+              "a": "Some calculators (BMI, pulse, vitamins, dosage) can be used for children, taking into account age characteristics. For dosage of medications for children, be sure to consult a pediatrician. Interpret the results together with your pediatrician."
             },
             {
               "q": "How often should health indicators be checked?",
-              "a": "Frequency depends on indicator: BMI — once a month, blood pressure — daily with hypertension, heart rate — during workouts, vitamins — when lifestyle changes, stress — weekly. With health problems, monitor indicators according to doctor's recommendations."
+              "a": "The frequency depends on the indicator: BMI - once a month, pressure - daily for hypertension, pulse - during training, vitamins - when changing lifestyle, stress - weekly. If you have health problems, monitor your readings as recommended by your doctor."
             },
             {
-              "q": "What to do if calculator result shows deviation from normal?",
-              "a": "If indicator deviates from normal: don't panic, result is approximate; consult a doctor for accurate diagnosis; if necessary, undergo medical examination; follow specialist recommendations."
+              "q": "What to do if the calculator result shows a deviation from the norm?",
+              "a": "If there is a deviation from the norm: do not panic, the result is approximate; consult your doctor for an accurate diagnosis; undergo a medical examination if necessary; follow the specialist's recommendations."
             },
             {
-              "q": "Do calculators account for chronic diseases?",
-              "a": "Calculators do not account for chronic diseases, medication intake and individual metabolism characteristics. With existing diseases, results may require adjustment. Always consult a doctor."
+              "q": "Do the calculators take into account chronic diseases?",
+              "a": "The calculators do not take into account chronic diseases, medications and individual metabolic characteristics. If there are diseases, the results may require adjustments. Be sure to consult your doctor."
             },
             {
-              "q": "Can calculators be used during pregnancy?",
-              "a": "Some calculators (BMI, blood pressure, vitamins) can be used during pregnancy accounting for body changes. For medication and vitamins dosage during pregnancy, doctor consultation is mandatory. Ovulation calculator is not used during pregnancy."
+              "q": "Can calculators be used by pregnant women?",
+              "a": "Some calculators (BMI, blood pressure, vitamins) can be used during pregnancy, taking into account changes in the body. For the dosage of medications and vitamins during pregnancy, consultation with a doctor is required. The ovulation calculator is not used during pregnancy."
             },
             {
-              "q": "How do calculators help in health monitoring?",
-              "a": "Calculators help: track changes in indicators, get early signals about problems, plan workouts and nutrition, control medication and vitamins intake, motivate healthy lifestyle."
+              "q": "How do calculators help in monitoring your health?",
+              "a": "Calculators help: track changes in indicators, receive early signals about problems, plan workouts and nutrition, control the intake of medications and vitamins, and motivate a healthy lifestyle."
             },
             {
-              "q": "Is registration required to use calculators?",
-              "a": "No, all calculators are available free without registration. You can use them anonymously at any time. Data is not saved and not shared with third parties."
+              "q": "Do I need to register to use the calculators?",
+              "a": "No, all calculators are available for free without registration. You can use them anonymously at any time. The data is not saved or transferred to third parties."
             },
             {
-              "q": "On which devices do calculators work?",
-              "a": "Calculators work on all devices: computers (Windows, Mac, Linux), tablets (iPad, Android), smartphones (iPhone, Android). Adaptive design ensures convenient use on any screen."
+              "q": "What devices do calculators work on?",
+              "a": "Calculators work on all devices: computers (Windows, Mac, Linux), tablets (iPad, Android), smartphones (iPhone, Android). Responsive design ensures convenient use on any screen."
             },
             {
-              "q": "Can calculation results be saved?",
-              "a": "Results can be copied or screenshot taken. Some calculators provide ability to export to PDF. Calculation history is not saved automatically if you are not registered."
+              "q": "Is it possible to save calculation results?",
+              "a": "The results can be copied or taken a screenshot. Some calculators provide the ability to export to PDF. Payment history is not saved automatically if you are not registered."
             },
             {
-              "q": "Are calculators based on scientific data?",
-              "a": "Yes, all calculators are based on WHO recommendations, international medical standards and scientific research. Formulas and standards correspond to modern medical protocols."
+              "q": "Are calculators based on scientific evidence?",
+              "a": "Yes, all calculators are based on WHO recommendations, international medical standards and scientific research. Formulas and standards comply with modern medical protocols."
+            },
+            {
+              "q": "What to do if the calculator shows an error?",
+              "a": "If there is an error: check the correctness of the entered data, make sure that all fields are filled in, refresh the page, check your Internet connection. If the error persists, write to support."
+            },
+            {
+              "q": "Can calculators be used for professional medical practice?",
+              "a": "Calculators can be used as an auxiliary tool, but do not replace professional medical equipment and diagnostics. For medical practice, use certified medical devices."
+            },
+            {
+              "q": "How does the vitamin calculator take into account diet?",
+              "a": "The vitamin calculator calculates your overall requirement but does not take into account your specific diet. For vegetarians and people with dietary restrictions, additional consultation with a nutritionist may be required to adjust the norms."
+            },
+            {
+              "q": "What affects the accuracy of the ovulation calculator?",
+              "a": "Accuracy depends on the regularity of the cycle, stress, illness, medication, climate change. If your cycle is irregular, use additional methods: ovulation tests, basal temperature, ultrasound."
+            },
+            {
+              "q": "How to interpret the results of a stress test?",
+              "a": "Low level (0-10) - everything is fine; medium (11-20) – you should pay attention to stress management; high (21-30) - it is recommended to consult a specialist. The results are indicative only."
+            },
+            {
+              "q": "Can the dosage calculator be used for all medications?",
+              "a": "The calculator is only suitable for drugs dosed by body weight (mg/kg). Many medications have a fixed dosage. Always follow the instructions for the drug and the doctor's prescription. The calculator is not a substitute for medical advice."
+            },
+            {
+              "q": "How often are calculators updated?",
+              "a": "Calculators are regularly updated to reflect the latest medical recommendations and standards. Formulas and standards comply with current versions of WHO protocols and international standards."
+            },
+            {
+              "q": "How do calculators help prevent diseases?",
+              "a": "Calculators help: monitor health indicators, identify deviations at an early stage, motivate a healthy lifestyle, and plan preventive measures. Regular use helps to identify problems early."
             }
           ]
         }
       }
     },
     "science": {
-      "title": "Education and Science",
+      "title": "Study and science",
       "description": "Physics, chemistry, geometry, statistics",
       "seo": {
-        "keywords": "science calculators, physics calculator, chemistry calculator, statistics calculator, advanced geometry, speed calculation, acceleration calculation, force calculation, energy calculation, molar mass, solution concentration, chemical equations, mean value, median, standard deviation, complex geometric shapes, scientific calculations, study calculator, science calculator, physics calculator, chemistry calculator, statistics calculator",
-        "overview": "Science calculators Calc1.ru are a set of online tools for scientific calculations: physics, chemistry, geometry, statistics. Suitable for students, scientists and everyone engaged in scientific calculations."
+        "keywords": "scientific calculators, physics calculator, chemistry calculator, statistics calculator, advanced geometry, velocity calculation, acceleration calculation, force calculation, energy calculation, molar mass, solution concentration, chemical equations, mean, median, standard deviation, complex geometric figures, scientific calculations, study calculator, science calculator, physics calculator, chemistry calculator, statistics calculator",
+        "overview": "Scientific calculators Calc1.ru is a set of online tools for scientific calculations: physics, chemistry, geometry, statistics. Suitable for students, scientists and anyone involved in scientific calculations."
       }
     },
     "converter": {
-      "title": "Online Converters",
+      "title": "Online converters",
       "description": "Length, weight, temperature, speed",
       "seo": {
-        "title": "Online Unit Converters — Convert All Units | Calc1.ru",
-        "description": "Free online unit converters: length (mm, cm, m, km, miles), weight (g, kg, pounds), temperature (°C, °F, K), speed (km/h, m/s, knots), pressure (Pa, atm, mmHg), volume (l, gallons, m³), energy (J, cal, Wh), data (bytes, KB, MB, GB, TB). Accurate calculations for professionals and everyday use.",
-        "keywords": "unit converters, length converter, weight converter, temperature converter, speed converter, pressure converter, volume converter, energy converter, data converter, unit conversion, meter to feet converter, kilogram to pound converter, degree converter, online speed converter, mm to cm converter, cm to m converter, km to miles converter, grams to kilograms converter, pounds to kilograms converter, celsius to fahrenheit converter, fahrenheit to celsius converter, kelvin converter, km/h to m/s converter, m/s to km/h converter, knots converter, pascal converter, atmosphere converter, mmHg converter, liter converter, gallon converter, cubic meter converter, joule converter, calorie converter, watt-hour converter, byte converter, kilobyte converter, megabyte converter, gigabyte converter, terabyte converter, online unit converter, calculator converter, unit conversion, metric system, imperial system, unit converter, length converter, weight converter, temperature converter, speed converter, pressure converter, volume converter, energy converter, data converter",
+        "title": "Online Unit Converters - Convert All Units | Calc1.ru",
+        "description": "Free online unit converters: length (mm, cm, m, km, miles), weight (g, kg, lb), temperature (°C, °F, K), speed (km/h, m/s, knots), pressure (Pa, atm, mmHg), volume (l, gal, m³), energy (J, cal, Wh), data (bytes, KB, MB, GB, TB). Accurate calculations for professionals and everyday use.",
+        "keywords": "unit converters, length converter, weight converter, temperature converter, speed converter, pressure converter, volume converter, energy converter, data converter, unit conversion, meters to feet converter, kilograms to pounds converter, degrees converter, speed converter online, mm to cm converter, cm to m converter, km to miles converter, grams to kilograms converter, pounds to kilograms converter, Celsius to Fahrenheit converter, converter fahrenheit to celsius, kelvin converter, km/h to m/s converter, m/s to km/h converter, knots converter, pascals converter, atmospheres converter, mmHg converter, liters converter, gallons converter, cubic meters converter, joules converter, calories converter, watt-hour converter, bytes converter, kilobytes converter, megabytes converter, gigabyte converter, terabyte converter, online unit converter, converter calculator, unit conversion, metric system, imperial system, unit converter, length converter, weight converter, temperature converter, speed converter, pressure converter, volume converter, energy converter, data converter",
         "overview": {
-          "title": "Online Unit Converters Calc1.ru",
-          "content": "Online Converters Calc1.ru is a complete set of tools for accurate conversion of all major units of measurement. Our converters allow instant conversion between different units of length, weight, temperature, speed, pressure, volume, energy and data.",
-          "additionalContent": "All converters use accurate international standards and conversion coefficients. Metric, imperial and other measurement systems are supported. Calculations are performed instantly with accuracy up to 15 decimal places. All tools are completely free and available without registration."
+          "title": "Online unit converters Calc1.ru",
+          "content": "Online converters Calc1.ru are a complete set of tools for accurate conversion of all basic units of measurement. Our converters allow you to instantly convert between different units of length, weight, temperature, speed, pressure, volume, energy and data.",
+          "additionalContent": "All converters use accurate international standards and conversion factors. Metric, imperial and other measurement systems are supported. Calculations are performed instantly with an accuracy of 15 decimal places. All tools are completely free and available without registration."
         },
         "advantages": {
-          "title": "Advantages of Our Converters",
-          "content": "Our unit converters offer many advantages for users:",
+          "title": "Advantages of our converters",
+          "content": "Our unit converters offer many benefits to users:",
           "precise": {
             "title": "Accurate calculations",
-            "content": "All converters use accurate international standards and conversion coefficients. Calculations are based on official values approved by metrological organizations."
+            "content": "All converters use accurate international standards and conversion factors. Calculations are based on official values ​​approved by metrological organizations."
           },
           "instant": {
             "title": "Instant conversion",
-            "content": "All conversions are performed instantly in real-time as you enter values. No need to wait for processing or loading results."
+            "content": "All conversions are performed instantly in real time as you enter values. There is no need to wait for results to be processed or downloaded."
           },
           "comprehensive": {
             "title": "Many units",
@@ -907,35 +955,35 @@
           },
           "multilingual": {
             "title": "Multilingual interface",
-            "content": "Converters are available in 4 languages: Russian, English, Spanish and German. Interface automatically adapts to selected language."
+            "content": "Converters are available in 4 languages: Russian, English, Spanish and German. The interface automatically adapts to the selected language."
           },
           "mobile": {
             "title": "Mobile version",
-            "content": "All converters are fully adapted for use on mobile devices, tablets and smartphones. Interface is optimized for convenient use on any device."
+            "content": "All converters are fully adapted to work on mobile devices, tablets and smartphones. The interface is optimized for easy use on any device."
           },
           "free": {
-            "title": "Free and without registration",
-            "content": "All converters are completely free and available without registration. You can use them unlimited times without hidden fees or restrictions."
+            "title": "Free and no registration required",
+            "content": "All converters are completely free and available without registration. You can use them an unlimited number of times with no hidden fees or restrictions."
           }
         },
         "tips": {
-          "title": "Useful Tips",
-          "content": "For maximum efficiency using unit converters:",
+          "title": "Useful tips",
+          "content": "To get the most out of unit converters:",
           "tip1": {
             "title": "Check units of measurement",
-            "content": "Always verify that you selected correct units of measurement for source value and result. Pay attention to metric and imperial systems."
+            "content": "Always ensure that you have selected the correct units for the input value and the result. Please note the metric and imperial systems."
           },
           "tip2": {
-            "title": "Use accurate values",
-            "content": "For scientific and professional calculations, use accurate values. Converters support values with accuracy up to 15 decimal places."
+            "title": "Use exact values",
+            "content": "For scientific and professional calculations, use exact values. Converters support values ​​up to 15 decimal places."
           },
           "tip3": {
-            "title": "Remember measurement systems",
-            "content": "Different countries use different measurement systems (metric, imperial, US). Make sure you use correct system for your task."
+            "title": "Be mindful of measurement systems",
+            "content": "Different countries use different measurement systems (metric, imperial, American). Make sure you are using the right system for your task."
           },
           "tip4": {
-            "title": "Verify results",
-            "content": "For critical calculations, it is recommended to verify conversion results, especially when working with unfamiliar units of measurement."
+            "title": "Check the results",
+            "content": "For critical calculations, it is recommended to check the conversion results, especially when working with unfamiliar units of measurement."
           }
         },
         "faq": {
@@ -943,452 +991,465 @@
           "faqItems": [
             {
               "q": "What units of measurement do converters support?",
-              "a": "Converters support all major units of measurement in each category: length (mm, cm, m, km, miles), weight (g, kg, pounds), temperature (°C, °F, K), speed (km/h, m/s, knots), pressure (Pa, atm, mmHg), volume (l, gallons, m³), energy (J, cal, Wh), data (bytes, KB, MB, GB, TB)."
+              "a": "Converters support all major units of measurement in each category: length (mm, cm, m, km, miles), weight (g, kg, lb), temperature (°C, °F, K), speed (km/h, m/s, knots), pressure (Pa, atm, mmHg), volume (l, gallons, m³), energy (J, cal, Wh), data (bytes, KB, MB, GB, TB)."
             },
             {
               "q": "Are converter calculations accurate?",
-              "a": "Yes, all converters use accurate international standards and conversion coefficients. Calculations are based on official values approved by metrological organizations. Calculation accuracy is up to 15 decimal places."
+              "a": "Yes, all converters use accurate international standards and conversion factors. Calculations are based on official values ​​approved by metrological organizations. The calculation accuracy is up to 15 decimal places."
             },
             {
               "q": "Are converters free?",
-              "a": "Yes, all unit converters on Calc1.ru are completely free. You can use them unlimited times without registration and hidden fees."
+              "a": "Yes, all unit converters on Calc1.ru are completely free. You can use them an unlimited number of times without registration or hidden fees."
             },
             {
               "q": "How to convert length units?",
-              "a": "Select length converter, enter value in source units (e.g., meters) and select target unit (e.g., kilometers). Converter will instantly show result."
+              "a": "Select the length converter, enter the value in the source units (for example, meters) and select the target unit (for example, kilometers). The converter will instantly show the result."
             },
             {
               "q": "How to convert weight units?",
-              "a": "Use weight converter, specifying value in grams, kilograms or pounds. Converter will convert value to unit you selected."
+              "a": "Use the weight converter to enter the value in grams, kilograms or pounds. The converter will convert the value to your chosen unit of measurement."
             },
             {
               "q": "How to convert temperature?",
-              "a": "In temperature converter, enter value in Celsius, Fahrenheit or Kelvin. Converter will automatically convert value to all other scales."
+              "a": "In the temperature converter, enter the value in Celsius, Fahrenheit or Kelvin. The converter will automatically convert the value to all other scales."
             },
             {
               "q": "How to convert speed?",
-              "a": "In speed converter, enter value in km/h, m/s or knots. Converter will instantly show equivalent value in other speed units."
+              "a": "In the speed converter, enter the value in km/h, m/s or knots. The converter will instantly show the equivalent value in other speed units."
             },
             {
               "q": "How to convert pressure?",
-              "a": "In pressure converter, specify value in Pascals, atmospheres or millimeters of mercury. Converter will convert value to selected unit."
+              "a": "In the pressure converter, enter the value in Pascals, atmospheres or millimeters of mercury. The converter will convert the value to the selected unit."
             },
             {
               "q": "How to convert volume?",
-              "a": "Use volume converter to convert liters, gallons and cubic meters. Enter value in one unit, and converter will show equivalent in others."
+              "a": "Use the volume converter to convert liters, gallons and cubic meters. Enter a value in one unit and the converter will show the equivalent in others."
             },
             {
               "q": "How to convert energy?",
-              "a": "In energy converter, enter value in Joules, calories or watt-hours. Converter will convert value between all energy units."
+              "a": "In the energy converter, enter the value in Joules, calories or watt hours. The converter will convert the value between all energy units."
             },
             {
               "q": "How to convert data?",
-              "a": "In data converter, specify value in bytes, kilobytes, megabytes, gigabytes or terabytes. Converter uses binary system (1024-based)."
+              "a": "In the data converter, enter the value in bytes, kilobytes, megabytes, gigabytes, or terabytes. The converter uses the binary system (1024-base)."
             },
             {
               "q": "Do converters work on mobile devices?",
-              "a": "Yes, all converters are fully adapted for use on mobile devices, tablets and smartphones. Interface automatically adapts to screen size."
+              "a": "Yes, all converters are fully adapted to work on mobile devices, tablets and smartphones. The interface automatically adjusts to the screen size."
             },
             {
-              "q": "In which languages are converters available?",
-              "a": "Converters are available in 4 languages: Russian, English, Spanish and German. Interface automatically adapts to selected language."
+              "q": "What languages ​​are the converters available in?",
+              "a": "Converters are available in 4 languages: Russian, English, Spanish and German. The interface automatically adapts to the selected language."
             },
             {
-              "q": "Can conversion results be saved?",
-              "a": "You can copy conversion results to clipboard or take screenshot of results page. Some converters provide ability to download results."
+              "q": "Is it possible to save the conversion results?",
+              "a": "You can copy the conversion results to the clipboard or take a screenshot of the results page. Some converters provide the ability to download the results."
             },
             {
-              "q": "What is conversion accuracy?",
-              "a": "All converters perform calculations with accuracy up to 15 decimal places. This ensures high accuracy for scientific and professional calculations."
+              "q": "What is the conversion accuracy?",
+              "a": "All converters perform calculations with an accuracy of 15 decimal places. This ensures high accuracy for scientific and professional calculations."
             },
             {
-              "q": "Can multiple values be converted simultaneously?",
-              "a": "Converters process one value at a time. To convert multiple values, perform calculation for each value separately or open converter in multiple browser tabs."
+              "q": "Is it possible to convert multiple values ​​at the same time?",
+              "a": "Converters process one value at a time. To convert multiple values, perform the calculation for each value separately or open the converter in several browser tabs."
             },
             {
-              "q": "What is the difference between metric and imperial system?",
-              "a": "Metric system is based on SI system (International System of Units) and uses base units: meter, kilogram, second. Imperial system is used in USA, UK and some other countries and is based on feet, pounds and other traditional units."
+              "q": "What is the difference between the metric and imperial system?",
+              "a": "The metric system is based on the SI (International System of Units) system and uses the basic units: meter, kilogram, second. The imperial system is used in the US, UK and some other countries and is based on feet, pounds and other traditional units."
             },
             {
-              "q": "Why does data converter use 1024 system instead of 1000?",
-              "a": "Data converter uses binary system (1024-based), which is used in computer systems, as computers work in binary number system. This is standard for measuring data volume in IT."
+              "q": "Why does the data converter use the 1024 system and not the 1000 system?",
+              "a": "The data converter uses the binary system (1024-base), which is used in computer systems because computers operate in the binary number system. This is a standard for measuring data volume in IT."
             },
             {
               "q": "Can converters be used for scientific calculations?",
-              "a": "Yes, converters are suitable for scientific and professional calculations. All conversion coefficients are based on international standards and ensure high accuracy."
+              "a": "Yes, the converters are suitable for scientific and professional calculations. All conversion factors are based on international standards and ensure high accuracy."
+            },
+            {
+              "q": "How often are conversion rates updated?",
+              "a": "Conversion factors are based on physical constants and international standards that do not change. We regularly check and update converters to ensure maximum accuracy."
+            },
+            {
+              "q": "Are there any restrictions on the use of converters?",
+              "a": "No, there are no restrictions on the use of converters. You can use them an unlimited number of times for any purpose, including commercial ones."
+            },
+            {
+              "q": "Does the temperature converter support absolute zero?",
+              "a": "Yes, the temperature converter correctly handles all temperature values, including absolute zero (0 K = -273.15°C = -459.67°F)."
+            },
+            {
+              "q": "How to convert large values?",
+              "a": "Converters can work with any values, including very large numbers. The maximum value is limited only by the capabilities of JavaScript, which allows you to handle numbers of almost any size."
+            },
+            {
+              "q": "What should I do if the conversion result seems incorrect?",
+              "a": "Check that you have selected the correct units for the input value and the result. Make sure you understand the difference between the metric and imperial systems. If the problem persists, try recalculating the value manually to check."
+            },
+            {
+              "q": "Can converters be used offline?",
+              "a": "No, converters require an internet connection as they run in a browser. However, after the page loads, basic functions may work even with a slow Internet connection."
+            },
+            {
+              "q": "Are there converters for other units of measurement?",
+              "a": "Converters are currently available for 8 main categories of units of measurement. We are constantly working to add new categories and units of measurement. Stay tuned!"
+            },
+            {
+              "q": "How to convert units in recipes?",
+              "a": "For recipes, use a weight converter (to convert grams to pounds) and a volume converter (to convert liters to gallons or milliliters). This is especially useful when using international recipes."
+            },
+            {
+              "q": "Is the converter suitable for education?",
+              "a": "Yes, converters are ideal for education. Students and teachers can use them to learn units of measurement and complete learning tasks involving conversions between measurement systems."
+            },
+            {
+              "q": "How do I convert units for international travel?",
+              "a": "For international travel, use a temperature converter (to convert weather), a speed converter (to convert speed limits), and a length converter (to convert distances). This will help you navigate countries with different measurement systems."
+            },
+            {
+              "q": "Are there converters for specialized units?",
+              "a": "Converters for basic units of measurement are now available. Specialized units (such as medicine or science) may require additional converters, which we plan to add in the future."
             }
           ]
         }
       }
     },
     "fun": {
-      "title": "Entertainment and Hobbies",
+      "title": "Entertainment and hobbies",
       "description": "Compatibility, generators, games",
       "seo": {
-        "title": "Entertainment Calculators Online — Generators, Games and Entertainment | Calc1.ru",
-        "description": "Free entertainment calculators online: password generators, nickname generators, name generators, random number generators, lottery tickets, compatibility and love calculators, zodiac sign, online dice, coin flipper, character generators and fantasy world generators. Entertainment and creativity for everyone!",
-        "keywords": "entertainment calculators, password generator, nickname generator, name generator, random number generator, lottery generator, compatibility calculator, love calculator, zodiac calculator, zodiac sign by date, weight on planets calculator, dice roll online, coin flip online, heads tails online, character generator, fantasy world generator, character stats generator, fictional world generator, character name generator, online entertainment, online generators, fun calculators, password generator, random number generator, compatibility calculator, love calculator, zodiac calculator, dice roller, coin flipper, lottery generator, character generator, fantasy world generator, name generator, nickname generator, planet weight, compatibility by birth date, online horoscope, D&D dice, board games, role-playing games",
+        "title": "Online entertainment calculators - Generators, games and entertainment | Calc1.ru",
+        "description": "Free online entertainment calculators: generators of passwords, nicknames, names, random numbers, lottery tickets, compatibility and love calculators, zodiac sign, online dice, coin toss, character and fantasy world generators. Fun and creativity for everyone!",
+        "keywords": "entertainment calculators, password generator, nickname generator, name generator, random number generator, lottery generator, compatibility calculator, love calculator, zodiac calculator, zodiac sign by date, weight calculator on planets, online dice toss, toss a coin online, heads tails online, character generator, fantasy worlds generator, character characteristics generator, fictional worlds generator, generator names for characters, online entertainment, online generators, fun calculators, password generator, random number generator, compatibility calculator, love calculator, zodiac calculator, dice roller, coin flipper, lottery generator, character generator, fantasy world generator, name generator, nickname generator, planet weight, compatibility by date of birth, online horoscope, D&D dice, board games, role-playing games",
         "overview": {
-          "title": "About Entertainment Calculators",
-          "content": "Entertainment Calculators Calc1.ru is a unique set of online tools for entertainment, creativity and hobbies. In our catalog you will find 12 different calculators: from password and random number generators to compatibility calculators and game simulators.",
-          "additionalContent": "Our entertainment calculators will help you: create a unique password to protect your accounts, come up with an original nickname for games and social networks, generate a name for a character or project, find out your zodiac sign and characteristics, calculate compatibility with a partner, create characters for stories and games, build a fantasy world for your work, play dice and coin flip, generate lottery tickets for drawings, find out your weight on other planets. All calculators work completely online, do not require registration and are available free 24/7."
+          "title": "About entertainment calculators",
+          "content": "Entertainment calculators Calc1.ru is a unique set of online tools for entertainment, creativity and hobbies. In our catalog you will find 12 different calculators: from password generators and random number generators to compatibility calculators and gaming simulators.",
+          "additionalContent": "Our entertainment calculators will help you: create a unique password to protect your accounts, come up with an original nickname for games and social networks, generate a name for a character or project, find out your zodiac sign and characteristics, calculate compatibility with a partner, create characters for stories and games, build a fantasy world for your work, play with cubes and coins, generate lottery tickets for drawings, find out your weight on other planets. All calculators work completely online, do not require registration and are available for free 24/7."
         },
         "advantages": {
-          "title": "Advantages of Our Entertainment Calculators",
-          "content": "We offer a wide selection of entertainment calculators with unique capabilities:",
+          "title": "Benefits of our fun calculators",
+          "content": "We offer a wide selection of entertainment calculators with unique features:",
           "free": {
-            "title": "Free use",
+            "title": "Free to use",
             "content": "All calculators are completely free and do not require registration. Use them as many times as needed without restrictions."
           },
           "instant": {
             "title": "Instant results",
-            "content": "All calculations and generations are performed instantly in real-time. Results appear immediately after pressing the button."
+            "content": "All calculations and generation are performed instantly in real time. The results appear immediately after pressing the button."
           },
           "secure": {
-            "title": "Data security",
-            "content": "Password generators and other tools work locally in your browser. Data is not sent to server and not saved."
+            "title": "Data Security",
+            "content": "Password generators and other tools run locally in your browser. The data is not transferred to the server and is not saved."
           },
           "comprehensive": {
             "title": "Wide functionality",
-            "content": "12 different calculators cover all entertainment and creativity needs: from password creation to building fantasy worlds."
+            "content": "12 different calculators cover all your entertainment and creativity needs, from creating passwords to building fantasy worlds."
           },
           "mobile": {
             "title": "Mobile adaptation",
-            "content": "All calculators are fully adapted for use on smartphones and tablets. Interface is optimized for touch control."
+            "content": "All calculators are fully adapted to work on smartphones and tablets. The interface is optimized for touch control."
           },
           "creative": {
-            "title": "Creative tools",
-            "content": "Character generators, name generators and world generators help writers, game designers and all creative people create unique content."
+            "title": "Creative Tools",
+            "content": "Character, name and world generators help writers, game designers and all creative people create unique content."
           }
         },
         "tips": {
-          "title": "Usage Tips",
-          "content": "For maximum efficiency using our entertainment calculators, follow these tips:",
-          "tip1": "Use password generator to create strong passwords at least 12 characters long with combination of letters, numbers and symbols.",
-          "tip2": "Name and character generators can be used to create unique heroes for your stories, games or creative projects.",
-          "tip3": "Compatibility calculator and zodiac are for entertainment and are not a scientific method of relationship analysis.",
-          "tip4": "Game simulators (dice, coin) are ideal for board games, making simple decisions and learning probability theory."
+          "title": "Tips for use",
+          "content": "To get the most out of our fun calculators, follow these tips:",
+          "tip1": "Use a password generator to create strong passwords that are at least 12 characters long with a combination of letters, numbers, and symbols.",
+          "tip2": "Name and character generators can be used to create unique characters for your stories, games, or creative projects.",
+          "tip3": "The compatibility calculator and zodiac are intended for entertainment purposes and are not a scientific method of relationship analysis.",
+          "tip4": "Game simulators (dice, coin) are ideal for board games, making simple decisions and teaching probability theory."
         },
         "faq": {
           "title": "Frequently Asked Questions",
           "faqItems": [
             {
-              "q": "What are entertainment calculators?",
-              "a": "Entertainment calculators are online tools for entertainment, creativity and hobbies. They include password generators, name generators, character generators, random number generators, compatibility calculators, zodiac calculators and game simulators."
+              "q": "What are recreational calculators?",
+              "a": "Fun calculators are online tools for entertainment, creativity and hobbies. They include password generators, name generators, character generators, random number generators, compatibility calculators, zodiac calculators and gaming simulators."
             },
             {
               "q": "How many entertainment calculators are available?",
-              "a": "Currently 12 entertainment calculators are available: password generator, nickname generator, name generator, random number generator, lottery generator, compatibility calculator, love calculator, zodiac calculator, weight on planets calculator, online dice, coin flipper, character generator and fantasy world generator."
+              "a": "There are currently 12 fun calculators available: password generator, nickname generator, name generator, random number generator, lottery generator, compatibility calculator, love calculator, zodiac calculator, planet weight calculator, online dice, coin toss, character generator and fantasy world generator."
             },
             {
-              "q": "Is using entertainment calculators free?",
+              "q": "Are recreational calculators free to use?",
               "a": "Yes, all entertainment calculators are completely free and do not require registration. Use them as many times as needed without restrictions."
             },
             {
-              "q": "Is password generator safe to use?",
-              "a": "Yes, password generator works completely locally in your browser. Passwords are not sent to server, not saved and cannot be intercepted by third parties."
+              "q": "Is it safe to use a password generator?",
+              "a": "Yes, the password generator works entirely locally in your browser. Passwords are not transmitted to the server, are not stored and cannot be intercepted by third parties."
             },
             {
               "q": "Can generators be used for commercial purposes?",
-              "a": "Yes, all generators can be used for any purpose, including commercial. There are no usage restrictions."
+              "a": "Yes, all generators can be used for any purpose, including commercial. There are no restrictions on use."
             },
             {
               "q": "Do calculators work on mobile devices?",
-              "a": "Yes, all entertainment calculators are fully adapted for use on smartphones and tablets. Interface is optimized for touch control."
+              "a": "Yes, all entertainment calculators are fully adapted to work on smartphones and tablets. The interface is optimized for touch control."
             },
             {
-              "q": "Can generation results be saved?",
-              "a": "Most generators provide ability to copy results to clipboard or download them to a text file. Some calculators also support printing results."
+              "q": "Is it possible to save the generation results?",
+              "a": "Most generators provide the ability to copy the results to the clipboard or download them as a text file. Some calculators also support printing results."
             },
             {
-              "q": "How random are generator results?",
-              "a": "All generators use cryptographically secure algorithms to create truly random results. Each generation is independent and equally probable."
+              "q": "How random are the generators' results?",
+              "a": "All generators use cryptographically strong algorithms to generate truly random results. Each generation is independent and equally probable."
             },
             {
-              "q": "Can zodiac calculator be used for important decisions?",
-              "a": "Zodiac calculator is for entertainment and is not a scientific method. It is not recommended to use it for important life decisions."
+              "q": "Can you use a zodiac calculator to make important decisions?",
+              "a": "The zodiac calculator is intended for entertainment purposes and is not a scientific method. It is not recommended to use it to make important life decisions."
             },
             {
-              "q": "Is compatibility calculator suitable for real relationships?",
-              "a": "Compatibility calculator is an entertainment tool based on astrological principles. It does not replace real communication and understanding in relationships."
+              "q": "Is the compatibility calculator suitable for real relationships?",
+              "a": "Compatibility Calculator is an entertaining tool based on astrological principles. It does not replace real communication and mutual understanding in a relationship."
             },
             {
-              "q": "Can character generator be used for books?",
-              "a": "Yes, character generator is ideal for creating unique heroes for books, stories, games and other creative projects."
+              "q": "Can I use a character generator for books?",
+              "a": "Yes, the character generator is perfect for creating unique characters for books, stories, games and other creative projects."
             },
             {
               "q": "Do calculators work offline?",
-              "a": "After first page load, most calculators can work in offline mode, as all calculations are performed locally in browser."
+              "a": "After the first page load, most calculators can work offline, since all calculations are performed locally in the browser."
             },
             {
               "q": "Can dice be used for board games?",
-              "a": "Yes, dice simulator is ideal for board games (D&D, Pathfinder, Warhammer) and supports all standard dice types (D4, D6, D8, D10, D12, D20, D100)."
+              "a": "Yes, the dice simulator is ideal for board games (D&D, Pathfinder, Warhammer) and supports all standard dice types (D4, D6, D8, D10, D12, D20, D100)."
             },
             {
-              "q": "Does lottery generator guarantee a win?",
-              "a": "No, lottery generator creates random number combinations. Winning chances depend on specific lottery rules. This is an entertainment tool."
+              "q": "Does the lottery generator guarantee winning?",
+              "a": "No, the lottery generator creates random combinations of numbers. The odds of winning depend on the rules of the specific lottery. This is an entertaining tool."
             },
             {
-              "q": "Can name generator be used for children?",
-              "a": "Yes, name generator supports 'child name' type with real popular names. You can select gender and name length."
+              "q": "Can I use a baby name generator?",
+              "a": "Yes, the name generator supports the 'baby name' type with real popular names. You can choose the gender and length of the name."
             },
             {
-              "q": "What is the difference between nickname generator and name generator?",
-              "a": "Nickname generator creates short, catchy names for games and social networks with various themes and styles. Name generator creates full names for children, characters, projects, books and games."
+              "q": "What is the difference between a nickname generator and a name generator?",
+              "a": "The nickname generator creates short, sonorous names for games and social networks with various themes and styles. The name generator creates full names for children, characters, projects, books and games."
             },
             {
-              "q": "Can multiple characters be created at once?",
-              "a": "Yes, character generator allows creating from 1 to 5 characters simultaneously with various characteristics, professions and backstories."
+              "q": "Is it possible to create several characters at once?",
+              "a": "Yes, the character generator allows you to create from 1 to 5 characters at a time with different characteristics, professions and stories."
             },
             {
-              "q": "Does weight on planets calculator work for any measurement units?",
-              "a": "Weight on planets calculator supports kilograms and pounds. Calculations are based on accurate gravity values for each planet."
+              "q": "Does the weight calculator work on planets for any units of measurement?",
+              "a": "Planet weight calculator supports kilograms and pounds. Calculations are based on the exact gravity values ​​of each planet."
             },
             {
-              "q": "Can fantasy world generator be used for games?",
-              "a": "Yes, fantasy world generator is ideal for creating fictional universes for games, books, stories and other creative projects."
+              "q": "Is it possible to use a fantasy world generator for games?",
+              "a": "Yes, the Fantasy World Generator is ideal for creating fictional universes for games, books, stories and other creative projects."
             },
             {
-              "q": "How many worlds can be created at once?",
-              "a": "Fantasy world generator allows creating from 1 to 3 worlds simultaneously with full description of climate, culture, government, resources and conflicts."
+              "q": "How many worlds can you create at once?",
+              "a": "The fantasy world generator allows you to create from 1 to 3 worlds at a time with a full description of climate, culture, government, resources and conflicts."
             },
             {
-              "q": "Is random number generator suitable for programming?",
-              "a": "Yes, random number generator can be used for testing algorithms, creating test data and other programming tasks."
+              "q": "Is a random number generator good for programming?",
+              "a": "Yes, a random number generator can be used for testing algorithms, generating test data, and other programming tasks."
             },
             {
-              "q": "Can generator parameters be customized?",
-              "a": "Yes, most generators provide settings for customizing results: length, style, number of elements, filters and other parameters."
+              "q": "Is it possible to customize generator parameters?",
+              "a": "Yes, most generators provide settings for customizing the results: length, style, number of elements, filters and other parameters."
             },
             {
               "q": "Are generation results saved between sessions?",
-              "a": "Generation results are not automatically saved between sessions. It is recommended to copy or download results if you want to save them for further use."
+              "a": "Generation results are not automatically saved between sessions. It is recommended to copy or download the results if you want to save them for future use."
             },
             {
-              "q": "Can generators be used for education?",
-              "a": "Yes, many generators are great for education: random number generator for studying statistics, weight on planets calculator for studying physics, game simulators for studying probability theory."
+              "q": "Can generators be used for training?",
+              "a": "Yes, many generators are great for learning: a random number generator for learning statistics, a planetary weight calculator for learning physics, game simulators for learning probability theory."
             },
             {
-              "q": "Are there restrictions on number of generations?",
-              "a": "No, there are no restrictions on number of generations. You can use calculators unlimited times."
+              "q": "Are there any restrictions on the number of generations?",
+              "a": "No, there are no restrictions on the number of generations. You can use calculators an unlimited number of times."
             },
             {
-              "q": "Do calculators work in browser private mode?",
+              "q": "Do calculators work in private browser mode?",
               "a": "Yes, all calculators work in any browser mode, including private. All generations occur locally and are not saved."
             },
             {
-              "q": "Can results be exported to Excel?",
-              "a": "Some calculators provide ability to download results in text format, which can be imported into Excel. You can also copy results and paste into Excel manually."
+              "q": "Is it possible to export the results to Excel?",
+              "a": "Some calculators provide the ability to download results in a text format that can be imported into Excel. You can also copy the results and paste them into Excel manually."
             },
             {
               "q": "How often are calculators updated?",
-              "a": "We regularly update calculators, adding new features, improving interface and fixing possible errors. Follow updates!"
+              "a": "We regularly update calculators, adding new features, improving the interface and correcting possible errors. Stay tuned!"
             },
             {
-              "q": "Can a new entertainment calculator be suggested?",
-              "a": "Yes, we are always open to suggestions for new calculators. Contact us through feedback form on the site."
+              "q": "Can we suggest a new entertainment calculator?",
+              "a": "Yes, we are always open to suggestions for new calculators. Contact us via the feedback form on the website."
             },
             {
               "q": "Are calculators suitable for all ages?",
-              "a": "Yes, entertainment calculators are suitable for all ages. Some calculators may be especially interesting for children and teenagers, while others are for adults for creativity and entertainment."
+              "a": "Yes, fun calculators are suitable for all ages. Some calculators may be especially interesting for children and teenagers, while others may be of particular interest to adults for creativity and entertainment."
             }
           ]
         }
       }
     },
     "it": {
-      "title": "IT Calculators",
+      "title": "IT calculators",
       "description": "IP addresses, hashing, encoding, network calculations",
       "seo": {
-        "title": "IT Calculators Online — Network and Cryptocurrency Calculations | Calc1.ru",
-        "description": "Free IT calculators online: IP address and subnet calculation (IPv4, IPv6, CIDR), hashrate calculator for cryptocurrency mining, network calculations. Accurate tools for developers, system administrators and IT specialists.",
-        "keywords": "IT calculators, IP address calculator, hashrate calculator, mining calculator, Bitcoin mining, Ethereum mining, IP calculator online, CIDR calculator, IPv4 calculator, IPv6 calculator, subnet calculator, network calculations, subnet calculation, network tools, IT tools online, mining profitability calculator, mining ROI calculator, mining profitability, hashrate calculator, network difficulty, block reward, block time, mining ROI, ASIC mining, GPU mining, mining farm, Bitcoin calculator, Ethereum calculator, network calculator, IP calculator, subnet calculator, CIDR calculator, hashrate calculator, mining calculator, cryptocurrency calculator, Bitcoin mining calculator, Ethereum mining calculator",
+        "title": "IT calculators online - Network and cryptocurrency calculations | Calc1.ru",
+        "description": "Free online IT calculators: calculation of IP addresses and subnets (IPv4, IPv6, CIDR), hashrate calculator for cryptocurrency mining, network calculations. Accurate tools for developers, system administrators and IT specialists.",
+        "keywords": "IT calculators, IP address calculator, hashrate calculator, mining calculator, Bitcoin mining, Ethereum mining, IP calculator online, CIDR calculator, IPv4 calculator, IPv6 calculator, subnetwork calculator, network calculations, subnetwork calculation, network tools, IT tools online, mining profitability calculator, payback calculator mining, mining profitability, hashrate calculator, network difficulty, block reward, block time, ROI mining, ASIC mining, GPU mining, mining farm, Bitcoin calculator, Ethereum calculator, network calculator, IP calculator, subnet calculator, CIDR calculator, hashrate calculator, mining calculator, cryptocurrency calculator, Bitcoin mining calculator, Ethereum mining calculator",
         "overview": {
-          "title": "IT Calculators Calc1.ru",
-          "content": "IT Calculators Calc1.ru is a comprehensive set of online tools for IT professionals, developers and system administrators. Our calculators help perform accurate calculations of network parameters, IP addresses, subnets, as well as cryptocurrency mining profitability.",
-          "additionalContent": "All calculators use current standards and formulas, ensuring calculation accuracy. Tools work instantly, completely free and without registration. Suitable for professional use in IT infrastructure, development and cryptocurrency mining."
+          "title": "IT calculators Calc1.ru",
+          "content": "IT calculators Calc1.ru is a comprehensive set of online tools for IT specialists, developers and system administrators. Our calculators help you perform accurate calculations of network parameters, IP addresses, subnets, as well as the profitability of cryptocurrency mining.",
+          "additionalContent": "All calculators use current standards and formulas, ensuring accurate calculations. The tools work instantly, absolutely free and without registration. Suitable for professional use in IT infrastructure, development and cryptocurrency mining."
         },
         "advantages": {
-          "title": "IT Calculator Advantages",
-          "content": "Our IT calculators provide many advantages for IT specialists:",
+          "title": "Advantages of IT calculators",
+          "content": "Our IT calculators provide many benefits for IT professionals:",
           "accurate": "Accurate calculations",
-          "accurateDesc": "Use current network addressing standards and mining formulas for maximum accuracy",
+          "accurateDesc": "Uses current network addressing standards and mining formulas for maximum accuracy",
           "professional": "Professional tools",
           "professionalDesc": "Designed for use in professional IT environments and cryptocurrency mining",
-          "comprehensive": "Complete set of features",
-          "comprehensiveDesc": "Cover all basic needs: from network calculations to mining profitability analysis",
+          "comprehensive": "Full feature set",
+          "comprehensiveDesc": "Cover all basic needs: from network calculations to analysis of mining profitability",
           "fast": "Instant results",
-          "fastDesc": "All calculations are performed instantly in real-time without delays",
-          "free": "Free",
-          "freeDesc": "Completely free, without registration and hidden fees",
-          "accessible": "Accessibility",
+          "fastDesc": "All calculations are performed instantly in real time without delays",
+          "free": "For free",
+          "freeDesc": "Completely free, no registration or hidden fees",
+          "accessible": "Availability",
           "accessibleDesc": "Works on all devices with adaptive interface for convenient work at any time"
         },
         "tips": {
-          "title": "Tips for Using IT Calculators",
-          "content": "To get the most accurate results, follow these recommendations:",
-          "data": "Use current data: real network parameters, current blockchain difficulty, accurate equipment specifications",
-          "verification": "Verify results using multiple sources to confirm accuracy",
+          "title": "Tips for using IT calculators",
+          "content": "To get the most accurate results, follow these guidelines:",
+          "data": "Use up-to-date data: real network parameters, current blockchain complexity, exact hardware characteristics",
+          "verification": "Check results against multiple sources to confirm accuracy",
           "regular": "Regularly recalculate parameters when network configuration or mining conditions change",
-          "planning": "Use calculators for planning network infrastructure and evaluating mining investments"
+          "planning": "Use calculators to plan your network infrastructure and estimate mining investments"
         },
         "faq": {
-          "title": "Frequently Asked Questions About IT Calculators",
+          "title": "Frequently asked questions about IT calculators",
           "faqItems": [
             {
               "q": "What IT calculators are available on Calc1.ru?",
-              "a": "Calc1.ru provides calculators for: IP addresses and subnets (IPv4/IPv6, CIDR), hashrate for cryptocurrency mining (Bitcoin, Ethereum and others). All calculators work online and are completely free."
+              "a": "Calc1.ru offers calculators for: IP addresses and subnets (IPv4/IPv6, CIDR), hashrate for mining cryptocurrencies (Bitcoin, Ethereum and others). All calculators work online and are absolutely free."
             },
             {
-              "q": "How accurate are IT calculator calculations?",
-              "a": "Calculators use current network addressing standards (RFC) and mining formulas used in blockchain networks. Accuracy depends on the correctness of entered data. For professional use, calculators provide highly accurate results."
+              "q": "How accurate are IT calculators?",
+              "a": "The calculators use the latest network addressing standards (RFC) and mining formulas used in blockchain networks. Accuracy depends on the correctness of the entered data. For professional use, calculators provide highly accurate results."
             },
             {
-              "q": "Is using IT calculators free?",
-              "a": "Yes, all IT calculators on Calc1.ru are completely free. You can use them unlimited times without registration and hidden fees."
+              "q": "Are IT calculators free to use?",
+              "a": "Yes, all IT calculators on Calc1.ru are completely free. You can use them an unlimited number of times without registration or hidden fees."
             },
             {
               "q": "How to calculate subnet parameters by IP and CIDR?",
-              "a": "Use the IP address calculator, specifying the IP address with CIDR notation (e.g., 192.168.1.0/24). The calculator will show the network address, IP range, subnet mask, number of hosts and other parameters."
+              "a": "Use an IP address calculator by entering an IP address with CIDR notation (for example, 192.168.1.0/24). The calculator will show the network address, IP range, subnet mask, number of hosts and other parameters."
             },
             {
-              "q": "How to calculate cryptocurrency mining profitability?",
-              "a": "Use the hashrate calculator, specifying equipment hashrate, network difficulty, block reward, block time, energy consumption and electricity cost. The calculator will calculate profitability, profit and ROI."
+              "q": "How to calculate the profitability of cryptocurrency mining?",
+              "a": "Use the hashrate calculator by entering hardware hashrate, network difficulty, block reward, block time, energy consumption and electricity cost. The calculator will calculate profitability, profit and payback."
             },
             {
               "q": "How to calculate the number of hosts in a subnet?",
-              "a": "In the IP address calculator, specify CIDR notation or IP with mask. The calculator will automatically calculate the number of available hosts using the formula: 2^(32-CIDR) - 2 for IPv4."
+              "a": "In the IP address calculator, enter CIDR notation or IP with mask. The calculator will automatically calculate the number of available hosts using the formula: 2^(32-CIDR) - 2 for IPv4."
             },
             {
-              "q": "How to calculate mining equipment ROI?",
-              "a": "In the hashrate calculator, specify equipment cost and calculate net profit. ROI = Equipment Cost / Net Profit per Day. The result will show the number of days to ROI."
+              "q": "How to calculate the payback of mining equipment?",
+              "a": "In the hashrate calculator, enter the cost of the equipment and calculate the net profit. Payback = Cost of equipment / Net profit per day. The result will show the number of days until payback."
             },
             {
               "q": "Does the calculator support IPv6 addresses?",
-              "a": "Yes, the IP address calculator fully supports both IPv4 and IPv6 addresses. You can calculate subnets for both IP protocol versions."
+              "a": "Yes, the IP address calculator fully supports both IPv4 and IPv6 addresses. You can calculate subnets for both versions of the IP protocol."
             },
             {
-              "q": "How to account for mining pool fee in calculations?",
-              "a": "In the hashrate calculator, specify the pool fee percentage (usually 1-3%). The calculator will automatically deduct the fee from income when calculating net profit."
+              "q": "How to take into account the mining pool commission when calculating?",
+              "a": "In the hashrate calculator, enter the percentage of the pool commission (usually 1-3%). The calculator will automatically subtract commission from income when calculating net profit."
             },
             {
-              "q": "How to calculate subnet broadcast address?",
-              "a": "Use the IP address calculator. The broadcast address is calculated automatically as the last address in the subnet range and displayed in the results."
+              "q": "How to calculate the broadcast address of a subnet?",
+              "a": "Use an IP address calculator. The broadcast address is calculated automatically as the last address in the subnet range and appears in the results."
             },
             {
               "q": "What hashrate is needed for profitable mining?",
-              "a": "Required hashrate depends on network difficulty, cryptocurrency price and electricity costs. Use the hashrate calculator, gradually increasing hashrate until mining becomes profitable."
+              "a": "The required hashrate depends on the complexity of the network, the value of the cryptocurrency and energy costs. Use a hashrate calculator and gradually increase your hashrate until mining becomes profitable."
             },
             {
-              "q": "How to perform reverse IP range to CIDR calculation?",
-              "a": "In the IP address calculator, select \"IP range\" mode and specify first and last IP addresses. The calculator will automatically determine the minimum CIDR for the given range."
+              "q": "How to reverse-calculate IP range in CIDR?",
+              "a": "In the IP address calculator, select the \"IP Range\" mode and enter the first and last IP addresses. The calculator will automatically determine the minimum CIDR for the given range."
             },
             {
-              "q": "Can I calculate profitability for different cryptocurrencies?",
-              "a": "Yes, the hashrate calculator supports various cryptocurrencies: Bitcoin, Ethereum, Litecoin and others. You can select a preset cryptocurrency or specify parameters manually."
+              "q": "Is it possible to calculate returns for different cryptocurrencies?",
+              "a": "Yes, the hashrate calculator supports various cryptocurrencies: Bitcoin, Ethereum, Litecoin and others. You can select a preset cryptocurrency or specify the parameters manually."
             },
             {
               "q": "How to calculate subnet mask from CIDR?",
-              "a": "CIDR shows the number of ones in the mask. For example, /24 means mask 255.255.255.0. The IP address calculator automatically converts CIDR to subnet mask."
+              "a": "CIDR shows the number of units in the mask. For example, /24 means the mask is 255.255.255.0. The IP address calculator automatically converts the CIDR to a subnet mask."
             },
             {
-              "q": "How to account for network difficulty changes in mining?",
-              "a": "Network difficulty constantly changes. Use current difficulty data from blockchain explorers or mining pools. The calculator supports manual difficulty entry for accurate calculations."
+              "q": "How to take into account changes in network difficulty when mining?",
+              "a": "Network complexity is constantly changing. Use up-to-date difficulty data from blockchain explorers or mining pools. The calculator supports manual difficulty entry for accurate calculations."
             },
             {
               "q": "What are private IP addresses?",
-              "a": "Private IP addresses are used for internal networks: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 for IPv4. The calculator automatically determines address type (private or public)."
+              "a": "Private IP addresses are used for internal networks: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 for IPv4. The calculator automatically determines the type of address (private or public)."
             },
             {
-              "q": "How to calculate block finding time for mining?",
-              "a": "Block finding time = Network Difficulty / Hashrate. The hashrate calculator automatically calculates theoretical block finding time when mining solo."
+              "q": "How to calculate the time it takes to mine a block?",
+              "a": "Time to find a block = Network complexity / Hashrate. The hashrate calculator automatically calculates the theoretical block time when working alone."
             },
             {
-              "q": "Can I use the calculator for local network design?",
-              "a": "Yes, the IP address calculator is great for local network design. You can calculate subnets, determine IP ranges and plan network infrastructure."
+              "q": "Can the calculator be used to design local networks?",
+              "a": "Yes, the IP address calculator is great for designing local networks. You can calculate subnets, define IP ranges, and plan your network infrastructure."
             },
             {
-              "q": "How to calculate electricity costs for mining?",
-              "a": "In the hashrate calculator, specify equipment energy consumption in watts and electricity cost per kWh. The calculator will automatically calculate electricity costs per day, month and year."
+              "q": "How to calculate electricity costs when mining?",
+              "a": "In the hashrate calculator, enter the energy consumption of the equipment in watts and the cost of electricity per kWh. The calculator will automatically calculate your energy costs per day, month and year."
             },
             {
-              "q": "How to split a network into multiple subnets?",
-              "a": "Use the IP address calculator to calculate parameters for each subnet. Determine the required number of hosts in each subnet and select the appropriate CIDR. The calculator will show all subnet parameters."
+              "q": "How to split a network into several subnets?",
+              "a": "Use the IP address calculator to calculate the parameters for each subnet. Determine the required number of hosts in each subnet and select the appropriate CIDR. The calculator will show all subnet parameters."
             },
             {
               "q": "What is ROI in mining and how to calculate it?",
-              "a": "ROI (Return on Investment) is investment return. Calculated as: ROI = Equipment Cost / Net Profit per Day. The hashrate calculator automatically calculates ROI based on entered data."
+              "a": "ROI (Return on Investment) is the return on investment. Calculated as: ROI = Equipment cost / Net profit per day. The hashrate calculator automatically calculates ROI based on the entered data."
             },
             {
-              "q": "How to verify IP address correctness?",
-              "a": "The IP address calculator automatically checks IP address format and range. When entering an incorrect address, the calculator will display a validation error."
+              "q": "How to check if the IP address is correct?",
+              "a": "The IP address calculator automatically checks the format and range of IP addresses. If you enter an incorrect address, the calculator will display a validation error."
             },
             {
-              "q": "Can I use the calculator to calculate mining farm profitability?",
-              "a": "Yes, the hashrate calculator can be used to calculate mining farm profitability. Enter the total hashrate of all devices and total energy consumption of the entire farm."
+              "q": "Is it possible to use a calculator to calculate the profitability of a mining farm?",
+              "a": "Yes, the hashrate calculator can be used to calculate the profitability of a mining farm. Enter the total hashrate of all devices and the total energy consumption of the entire farm."
             },
             {
-              "q": "How to calculate first and last IP in a subnet?",
+              "q": "How to calculate the first and last IP in a subnet?",
               "a": "First IP = network address + 1, last IP = broadcast address - 1. The IP address calculator automatically calculates and displays these addresses in the results."
             },
             {
-              "q": "How to account for halving when calculating mining profitability?",
-              "a": "Halving reduces block reward by half. When calculating profitability, use the current block reward after halving. For Bitcoin, the reward decreases every 210,000 blocks."
+              "q": "How to take into account halving when calculating mining profitability?",
+              "a": "Halving reduces the block reward by half. When calculating profitability, use the current block reward after the halving. For Bitcoin, the reward decreases every 210,000 blocks."
             },
             {
-              "q": "How to calculate subnet for server infrastructure?",
-              "a": "Determine the number of servers to be placed and select an appropriate CIDR for the subnet. The calculator will show how many hosts are available and if the subnet is suitable for your needs."
+              "q": "How to calculate a subnet for a server infrastructure?",
+              "a": "Determine the number of servers you need to host and select the appropriate CIDR for the subnet. The calculator will show you how many hosts are available and whether the subnet is suitable for your needs."
             },
             {
-              "q": "Can I compare profitability of different mining algorithms?",
+              "q": "Is it possible to compare the profitability of different mining algorithms?",
               "a": "Yes, use the hashrate calculator for each cryptocurrency separately. Calculate profitability for Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) and compare results."
             },
             {
-              "q": "How to calculate optimal electricity cost for profitable mining?",
-              "a": "Use the hashrate calculator, gradually decreasing electricity cost until profit becomes positive. This will show the maximum electricity cost at which mining remains profitable."
+              "q": "How to calculate the optimal cost of electricity for profitable mining?",
+              "a": "Use the hashrate calculator, gradually reducing the cost of electricity until the profit becomes positive. This will show the maximum cost of electricity at which mining remains profitable."
             },
             {
-              "q": "How to account for cryptocurrency price changes in mining?",
-              "a": "Cryptocurrency price affects profitability in rubles. When price changes, recalculate profitability in the calculator. Profit in rubles = Profit in cryptocurrency × Current price."
+              "q": "How to take into account changes in the cryptocurrency exchange rate when mining?",
+              "a": "The cryptocurrency exchange rate affects the profitability in rubles. If the exchange rate changes, recalculate the yield in the calculator. Income in rubles = Income in cryptocurrency × Current exchange rate."
             },
             {
-              "q": "How to calculate subnet for cloud services?",
-              "a": "Consider cloud provider requirements and planned infrastructure scale. Use the IP address calculator to calculate subnets considering cloud platform limitations and requirements."
+              "q": "How to calculate a subnet for cloud services?",
+              "a": "Consider the requirements of the cloud provider and the planned scale of the infrastructure. Use the IP address calculator to calculate subnets taking into account the limitations and requirements of the cloud platform."
             }
           ]
         }
       }
-    }
-  },
-  "math_basic": {
-    "title": "Basic Math Calculator",
-    "description": "Perform basic arithmetic operations online: addition, subtraction, multiplication and division.",
-    "number1": "First number",
-    "number2": "Second number",
-    "operation": "Operation",
-    "calculate": "Calculate",
-    "result": "Result",
-    "error_div_zero": "Division by zero is not allowed",
-    "seo_title": "Online Basic Math Calculator",
-    "seo_description": "Perform basic math operations easily in your browser. Supports English, German, Spanish, and Russian.",
-    "operations": {
-      "add": "Addition (+)",
-      "subtract": "Subtraction (−)",
-      "multiply": "Multiplication (×)",
-      "divide": "Division (÷)"
-    },
-    "seo_content": {
-      "title": "About Basic Math Calculator",
-      "content": "Online basic math calculator helps you quickly perform basic arithmetic operations: addition, subtraction, multiplication and division. Convenient for students, accountants and anyone who needs to calculate directly in the browser. Available in English, German, Spanish and Russian languages."
-    },
-    "features": {
-      "title": "Calculator Features",
-      "keyboard_support": "Keyboard input support",
-      "enter_key": "Enter key for quick calculation",
-      "auto_formatting": "Automatic result formatting",
-      "division_protection": "Division by zero protection",
-      "multi_language": "Multi-language interface",
-      "mobile_responsive": "Mobile-responsive design"
     }
   }
 }

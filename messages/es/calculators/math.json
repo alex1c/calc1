@@ -1,6 +1,2135 @@
 {
-	"calculators": {}
+  "calculators": {
+    "basic": {
+      "title": "Calculadora de operaciones simples",
+      "description": "Calculadora online para suma, resta, multiplicación y división.",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "number1": "primer numero",
+        "number2": "segundo numero",
+        "operation": "Operación",
+        "operations": {
+          "add": "Suma (+)",
+          "subtract": "Resta (-)",
+          "multiply": "Multiplicación (×)",
+          "divide": "División (÷)"
+        },
+        "calculate": "Calcular",
+        "reset": "Reiniciar"
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "result": "Resultado",
+        "error_div_zero": "La división por cero es imposible",
+        "placeholder": "Ingrese números y seleccione operación"
+      },
+      "seo": {
+        "title": "Calculadora de operaciones matemáticas simples en línea",
+        "description": "Calculadora online gratuita para operaciones aritméticas básicas: suma, resta, multiplicación y división.",
+        "overview": {
+          "title": "Acerca de la calculadora de operaciones simples",
+          "content": "Una calculadora en línea para operaciones matemáticas simples le ayudará a realizar rápidamente cálculos básicos: suma, resta, multiplicación y división. Conveniente para estudiantes, contadores y cualquier persona que necesite calcular directamente en el navegador.",
+          "examples": {
+            "title": "Ejemplos de cálculos",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora para diversas operaciones matemáticas:",
+            "example1": {
+              "title": "Sumar números",
+              "description": "Primer número: 25, segundo número: 17",
+              "calculation": "25 + 17 = 42",
+              "result": "Resultado: 42"
+            },
+            "example2": {
+              "title": "Restar números",
+              "description": "Minuendo: 100, sustraendo: 35",
+              "calculation": "100 - 35 = 65",
+              "result": "Resultado: 65"
+            },
+            "example3": {
+              "title": "Multiplicar números",
+              "description": "Primer multiplicador: 12, segundo multiplicador: 8",
+              "calculation": "12 × 8 = 96",
+              "result": "Resultado: 96"
+            },
+            "example4": {
+              "title": "Dividir números",
+              "description": "Dividendo: 144, divisor: 12",
+              "calculation": "144 ÷ 12 = 12",
+              "result": "Resultado: 12"
+            },
+            "example5": {
+              "title": "Operaciones con números decimales",
+              "description": "Suma: 3,5 + 2,7",
+              "calculation": "3,5 + 2,7 = 6,2",
+              "result": "Resultado: 6.2"
+            },
+            "example6": {
+              "title": "Operaciones con grandes números.",
+              "description": "Multiplicación: 1250 × 4",
+              "calculation": "1250 × 4 = 5000",
+              "result": "Resultado: 5000"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo funcionan las operaciones matemáticas",
+          "content": "La calculadora realiza cuatro operaciones aritméticas básicas: suma (+), resta (-), multiplicación (×) y división (÷). Todos los cálculos se realizan con alta precisión y admiten tanto números enteros como decimales."
+        },
+        "features": {
+          "title": "Funciones básicas",
+          "keyboard": "Soporte de teclado",
+          "keyboardDesc": "Capacidad para ingresar números y operaciones desde el teclado para cálculos rápidos",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño responsivo para un fácil uso en teléfonos inteligentes y tabletas",
+          "multilingual": "Plurilingüe",
+          "multilingualDesc": "Admite los idiomas ruso, inglés, español y alemán",
+          "precision": "Alta precisión",
+          "precisionDesc": "Cálculos precisos con soporte decimal."
+        },
+        "advantages": {
+          "title": "Ventajas",
+          "content": "Cálculos rápidos y precisos, interfaz sencilla, soporte de teclado, multilingüe, de uso gratuito."
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Utilice la tecla Intro para realizar cálculos rápidos, compruebe que los números se hayan introducido correctamente y utilice un punto para los decimales."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo usar una calculadora para sumar?",
+              "a": "Ingrese el primer número, seleccione la operación de suma (+), ingrese el segundo número y presione 'Calcular' o presione Enter. Por ejemplo: 15 + 25 = 40."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para restar?",
+              "a": "Sí, la calculadora admite la operación de resta (-). Ingrese el minuendo, seleccione la operación de resta, ingrese el sustraendo y obtenga el resultado."
+            },
+            {
+              "q": "¿Cómo multiplicar números en una calculadora?",
+              "a": "Para multiplicar, ingrese el primer factor, seleccione la operación de multiplicación (×), ingrese el segundo factor y haga clic en 'Calcular'. Por ejemplo: 12 × 8 = 96."
+            },
+            {
+              "q": "¿Qué hacer al dividir por cero?",
+              "a": "La calculadora está protegida contra la división por cero. Si intenta dividir por cero, recibirá el mensaje de error \"La división por cero no es posible\"."
+            },
+            {
+              "q": "¿La calculadora admite números decimales?",
+              "a": "Sí, la calculadora admite operaciones con números decimales. Utilice un punto para separar las partes enteras y fraccionarias. Por ejemplo: 3,5 + 2,7 = 6,2."
+            },
+            {
+              "q": "¿Puedo usar el teclado para escribir?",
+              "a": "Sí, la calculadora admite la entrada por teclado. Puede ingresar números y usar la tecla Enter para realizar el cálculo."
+            },
+            {
+              "q": "¿Cómo funciona la calculadora en dispositivos móviles?",
+              "a": "La calculadora está adaptada para dispositivos móviles con una interfaz fácil de usar y soporte de entrada táctil."
+            },
+            {
+              "q": "¿En qué idiomas está disponible la calculadora?",
+              "a": "La calculadora está disponible en cuatro idiomas: ruso, inglés, español y alemán."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para la contabilidad en la escuela?",
+              "a": "Sí, la calculadora es ideal para cálculos escolares, tareas y comprobar operaciones aritméticas."
+            },
+            {
+              "q": "¿Cómo comprobar la exactitud de los cálculos?",
+              "a": "Para comprobarlo, puedes realizar la operación inversa o utilizar una calculadora para volver a calcular con los mismos números."
+            },
+            {
+              "q": "¿La calculadora admite números negativos?",
+              "a": "Sí, la calculadora admite operaciones con números negativos. Por ejemplo: -5 + 3 = -2 o 10 - (-3) = 13."
+            },
+            {
+              "q": "¿Cómo trabajar con grandes números?",
+              "a": "La calculadora admite operaciones con números grandes. Por ejemplo: 1250 × 4 = 5000 o 10000 ÷ 25 = 400."
+            },
+            {
+              "q": "¿Puedo utilizar una calculadora para cálculos contables?",
+              "a": "Sí, la calculadora es adecuada para cálculos contables sencillos, cálculo de sumas, diferencias y otras operaciones básicas."
+            },
+            {
+              "q": "¿Cómo funciona el formateo automático de resultados?",
+              "a": "La calculadora formatea automáticamente el resultado, eliminando ceros adicionales después del punto decimal y mostrando los números en un formato conveniente."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el interés?",
+              "a": "Utilice la multiplicación y la división para calcular porcentajes. Por ejemplo, 20% de 100: 100 × 0,2 = 20."
+            },
+            {
+              "q": "¿Cómo trabajar con fracciones en una calculadora?",
+              "a": "Para trabajar con fracciones, conviértalas a forma decimal. Por ejemplo, 1/2 = 0,5, luego utilice operaciones normales."
+            },
+            {
+              "q": "¿La calculadora admite operaciones con cero?",
+              "a": "Sí, la calculadora maneja correctamente las operaciones con cero. Por ejemplo: 5 + 0 = 5, 5 × 0 = 0, pero la división por cero no es posible."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para revisar mi tarea?",
+              "a": "Sí, la calculadora es excelente para probar tu aritmética en las tareas."
+            },
+            {
+              "q": "¿Cómo funciona la calculadora en tema oscuro?",
+              "a": "La calculadora admite un tema oscuro con colores adaptados para un uso cómodo en condiciones de poca luz."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el área?",
+              "a": "Para calcular el área, use la operación de multiplicación. Por ejemplo, el área de un rectángulo es: largo × ancho = área."
+            },
+            {
+              "q": "¿Cómo trabajar con números en notación científica?",
+              "a": "La calculadora maneja automáticamente números grandes y puede mostrarlos en notación científica si es necesario."
+            },
+            {
+              "q": "¿Es posible utilizar una calculadora para calcular la media aritmética?",
+              "a": "Para calcular la media aritmética, utilice las operaciones de suma y división. Por ejemplo, la media de los números 10, 20, 30: (10 + 20 + 30) ÷ 3 = 20."
+            },
+            {
+              "q": "¿Cómo funciona una calculadora con números de diferente precisión?",
+              "a": "La calculadora determina automáticamente la precisión del resultado en función de la precisión de los datos de entrada y muestra el resultado con la precisión adecuada."
+            },
+            {
+              "q": "¿Es posible utilizar la calculadora para calcular el descuento?",
+              "a": "Sí, utilice operaciones de multiplicación y resta para calcular descuentos. Por ejemplo, un descuento del 20%: precio × 0,2 = importe del descuento, precio - descuento = precio total."
+            },
+            {
+              "q": "¿Cómo trabajar con números en diferentes sistemas numéricos?",
+              "a": "La calculadora funciona con números en el sistema numérico decimal. Para trabajar con otros sistemas, primero convierta los números a decimal."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular proporciones?",
+              "a": "Para calcular proporciones, utilice las operaciones de multiplicación y división. Por ejemplo, si 2 = 10, entonces 3 = (3 × 10) ÷ 2 = 15."
+            },
+            {
+              "q": "¿Cómo funciona una calculadora con números muy pequeños?",
+              "a": "La calculadora admite operaciones con números muy pequeños (decimales) y muestra el resultado con la precisión adecuada."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el IVA?",
+              "a": "Para calcular el IVA, utilice operaciones de multiplicación y suma. Por ejemplo, IVA 20%: importe × 0,2 = IVA, importe + IVA = importe total."
+            },
+            {
+              "q": "¿Cómo trabajar con números en notación científica?",
+              "a": "La calculadora procesa automáticamente números en notación científica y puede mostrar los resultados en un formato conveniente."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el tiempo?",
+              "a": "Para calcular el tiempo, utilice operaciones de suma y resta. Por ejemplo, 2 horas 30 minutos + 1 hora 45 minutos = 4 horas 15 minutos."
+            },
+            {
+              "q": "¿Cómo funciona la calculadora con números en diferentes formatos?",
+              "a": "La calculadora reconoce automáticamente números en varios formatos y los convierte a una forma estándar para realizar cálculos."
+            }
+          ]
+        }
+      }
+    },
+    "math_percent": {
+      "title": "Calculadora de intereses",
+      "description": "Una calculadora de porcentajes en línea lo ayudará a calcular rápidamente el porcentaje de un número, averiguar el porcentaje, aumentar o disminuir un número en un porcentaje.",
+      "find_percent_of_number": "encontrar el porcentaje de un numero",
+      "find_percent_of_number_desc": "Calcular que porcentaje es un numero de otro",
+      "what_percent_is": "¿Qué porcentaje hace un número de otro?",
+      "what_percent_is_desc": "Calcular porcentaje entre dos números.",
+      "find_number_from_percent": "Encuentra un número por porcentaje",
+      "find_number_from_percent_desc": "Calcula el número original cuando se conocen el porcentaje y el resultado.",
+      "increase_or_decrease": "Aumentar o disminuir un número en un porcentaje.",
+      "increase_or_decrease_desc": "Sumar o restar un porcentaje de un número",
+      "number": "Número",
+      "percentage": "Por ciento",
+      "first_number": "primer numero",
+      "second_number": "segundo numero",
+      "part_value": "Parte",
+      "operation": "Operación",
+      "calculate": "Calcular",
+      "calculating": "Calculemos...",
+      "result": "Resultado",
+      "increase": "Aumentar",
+      "decrease": "Disminuir",
+      "errors": {
+        "error_title": "Error de cálculo",
+        "invalid_input": "Por favor ingresa números válidos",
+        "calculation_failed": "Error de cálculo. Verifique los datos ingresados."
+      },
+      "tips": {
+        "title": "Concejo",
+        "enter_key": "Presione Enter para calcular",
+        "auto_calculate": "Los resultados se actualizan automáticamente a medida que escribes",
+        "negative_numbers": "Los números negativos no son compatibles"
+      },
+      "seo": {
+        "title": "Calculadora de porcentajes en línea: calcule rápidamente el porcentaje de un número",
+        "description": "Calculadora de porcentajes online sencilla: calcula el porcentaje de un número, descubre qué porcentaje es un número respecto de otro o aumenta un número en un porcentaje. Disponible en 4 idiomas.",
+        "overview": {
+          "title": "Acerca de la calculadora de intereses",
+          "content": "Una calculadora de porcentajes en línea le ayuda a calcular el porcentaje de un número, averiguar el porcentaje y cambiar el número a un porcentaje determinado. Adecuado para calcular descuentos, impuestos, ganancias y otras tareas cotidianas.",
+          "examples": {
+            "title": "Ejemplos de cálculos",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de intereses para diversas tareas:",
+            "example1": {
+              "title": "Porcentaje del número",
+              "description": "Encuentra el 20% del número 500.",
+              "calculation": "20% de 500 = 500 × 0,20 = 100",
+              "result": "Resultado: 100"
+            },
+            "example2": {
+              "title": "Porcentaje",
+              "description": "¿25 es qué porcentaje de 200?",
+              "calculation": "25 ÷ 200 × 100% = 12,5%",
+              "result": "Resultado: 12,5%"
+            },
+            "example3": {
+              "title": "Número por porcentaje",
+              "description": "Si 15% es 30, encuentra el número original.",
+              "calculation": "30 ÷ 0,15 = 200",
+              "result": "Resultado: 200"
+            },
+            "example4": {
+              "title": "Incremento por porcentaje",
+              "description": "Aumentar 1000 en un 15%",
+              "calculation": "1000 + (1000 × 0,15) = 1000 + 150 = 1150",
+              "result": "Resultado: 1150"
+            },
+            "example5": {
+              "title": "Disminución por porcentaje",
+              "description": "Disminuir 800 en un 10%",
+              "calculation": "800 - (800 × 0,10) = 800 - 80 = 720",
+              "result": "Resultado: 720"
+            },
+            "example6": {
+              "title": "Cálculo complejo",
+              "description": "Precio del producto 2000₽, 20% de descuento, luego 18% de impuestos",
+              "calculation": "2000 - 20% = 1600₽, luego 1600 + 18% = 1888₽",
+              "result": "Precio final: 1888₽"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calcula el interés",
+          "content": "La calculadora utiliza fórmulas estándar para calcular porcentajes: porcentaje de número (número × porcentaje ÷ 100), porcentaje (parte ÷ todo × 100), aumento/disminución en porcentaje (número ± número × porcentaje ÷ 100)."
+        },
+        "features": {
+          "title": "Funciones básicas",
+          "instant": "Liquidaciones instantáneas",
+          "instantDesc": "Los resultados se calculan automáticamente a medida que ingresa los datos.",
+          "multimode": "Múltiples modos",
+          "multimodeDesc": "4 tipos diferentes de cálculos de intereses en una sola calculadora",
+          "precision": "Alta precisión",
+          "precisionDesc": "Cálculos precisos con soporte decimal.",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño responsivo para un fácil uso en todos los dispositivos"
+        },
+        "advantages": {
+          "title": "Ventajas",
+          "content": "Cálculos de intereses rápidos y precisos, interfaz sencilla, soporte para varios tipos de cálculos, multilingüe, de uso gratuito."
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Utilice la tecla Intro para realizar cálculos rápidos, compruebe que los números se hayan introducido correctamente y utilice un punto para los decimales."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el porcentaje de un número?",
+              "a": "Para calcular el porcentaje de un número, use la fórmula: número × porcentaje ÷ 100. Por ejemplo, 20% de 500 = 500 × 20 ÷ 100 = 100."
+            },
+            {
+              "q": "¿Cómo encontrar el porcentaje de dos números?",
+              "a": "Para encontrar el porcentaje, use la fórmula: (número menor ÷ número mayor) × 100%. Por ejemplo, 25 de 200 = (25 ÷ 200) × 100% = 12,5%."
+            },
+            {
+              "q": "¿Cómo aumentar un número en un porcentaje?",
+              "a": "Para aumentar un número en un porcentaje, use la fórmula: número + (número × porcentaje ÷ 100). Por ejemplo, aumente 1000 en un 15% = 1000 + (1000 × 15 ÷ 100) = 1150."
+            },
+            {
+              "q": "¿Cómo reducir un número en un porcentaje?",
+              "a": "Para disminuir un número en un porcentaje, use la fórmula: número - (número × porcentaje ÷ 100). Por ejemplo, reduzca 800 en un 10% = 800 - (800 × 10 ÷ 100) = 720."
+            },
+            {
+              "q": "¿Cómo encontrar el número original si se conoce el porcentaje y el resultado?",
+              "a": "Para encontrar el número original, use la fórmula: resultado ÷ (porcentaje ÷ 100). Por ejemplo, si el 15% es 30, entonces el número original = 30 ÷ 0,15 = 200."
+            },
+            {
+              "q": "¿Es posible utilizar la calculadora para calcular el descuento?",
+              "a": "Sí, la calculadora es excelente para calcular descuentos. Utilice el modo 'disminución por porcentaje' para calcular el precio con descuento."
+            },
+            {
+              "q": "¿Cómo calcular los impuestos usando una calculadora?",
+              "a": "Para calcular el impuesto, utilice el modo 'aumento por porcentaje'. Por ejemplo, para IVA 20%: precio + 20% = precio con impuestos."
+            },
+            {
+              "q": "¿Es posible calcular la ganancia como porcentaje?",
+              "a": "Sí, utiliza el modo 'porcentaje' para calcular la rentabilidad. Por ejemplo, un beneficio de 50.000 rublos con una facturación de 200.000 rublos = 25%."
+            },
+            {
+              "q": "¿Cómo trabajar con porcentajes decimales?",
+              "a": "La calculadora admite porcentajes decimales. Por ejemplo, 12,5% de 1000 = 1000 × 12,5 ÷ 100 = 125."
+            },
+            {
+              "q": "¿Es posible calcular el interés compuesto?",
+              "a": "Para el interés compuesto, utilice la calculadora paso a paso: primero calcule el porcentaje del importe y luego súmelo al importe original."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de finalización del plan?",
+              "a": "Utilice el modo 'relación porcentual': resultado real ÷ indicador planificado × 100%. Por ejemplo, plan 1000, hecho 850 = 85%."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el interés del préstamo?",
+              "a": "Sí, la calculadora es adecuada para calcular el interés simple de un préstamo. Para intereses compuestos, se recomienda una calculadora de préstamos especializada."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de crecimiento?",
+              "a": "Para calcular el crecimiento porcentual, utilice la fórmula: ((valor nuevo - valor anterior) ÷ valor anterior) × 100%. Por ejemplo, crecimiento de 100 a 120 = 20%."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje del importe con impuestos incluidos?",
+              "a": "Sí, primero calcule el monto con impuestos (aumente en porcentaje), luego encuentre el porcentaje de este monto."
+            },
+            {
+              "q": "¿Cómo trabajar con porcentajes negativos?",
+              "a": "Los porcentajes negativos significan disminución. Utilice el modo 'reducir por porcentaje' con un valor porcentual positivo."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje del salario?",
+              "a": "Sí, la calculadora es adecuada para calcular impuestos sobre la renta, contribuciones a pensiones y otras deducciones salariales."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje del monto del depósito?",
+              "a": "Utilice el modo 'porcentaje del número' para calcular el interés del depósito. Por ejemplo, 5% anual de 100.000₽ = 5.000₽ por año."
+            },
+            {
+              "q": "¿Es posible calcular un porcentaje del costo de un artículo?",
+              "a": "Sí, la calculadora es adecuada para calcular márgenes comerciales, descuentos, impuestos y otras transacciones con bienes."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de área?",
+              "a": "Utilice el modo 'porcentaje del número' para calcular una fracción del área. Por ejemplo, 30% de 100 m² = 30 m²."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje de tiempo?",
+              "a": "Sí, la calculadora es adecuada para calcular el porcentaje de tiempo. Por ejemplo, 25% de 8 horas = 2 horas."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de volumen?",
+              "a": "Utilice el modo 'porcentaje del número' para calcular parte del volumen. Por ejemplo, 15% de 1000 litros = 150 litros."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje de peso?",
+              "a": "Sí, la calculadora es adecuada para calcular el porcentaje de peso. Por ejemplo, 10% de 50 kg = 5 kg."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de cantidad?",
+              "a": "Utilice el modo 'porcentaje del número' para calcular una porción de una cantidad. Por ejemplo, 20% de 100 piezas = 20 piezas."
+            },
+            {
+              "q": "¿Es posible calcular un porcentaje del importe del pedido?",
+              "a": "Sí, la calculadora es adecuada para calcular descuentos, impuestos, propinas y otras operaciones con el importe del pedido."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje del costo de los servicios?",
+              "a": "Utilice la calculadora para calcular impuestos, descuentos, comisiones y otras operaciones con el costo de los servicios."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje de ingresos?",
+              "a": "Sí, la calculadora es adecuada para calcular impuestos, contribuciones, pensión alimenticia y otras deducciones de la renta."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de gastos?",
+              "a": "Utilice la calculadora para calcular partes de gastos, ahorros, gastos excesivos y otras transacciones de gastos."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje de inversión?",
+              "a": "Sí, la calculadora es adecuada para calcular rendimientos de inversiones, pérdidas, comisiones y otras transacciones de inversión."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de facturación?",
+              "a": "Utilice la calculadora para calcular parte de la facturación, el margen, la rentabilidad y otros indicadores comerciales."
+            },
+            {
+              "q": "¿Es posible calcular el porcentaje de ingresos?",
+              "a": "Sí, la calculadora es adecuada para calcular impuestos sobre los ingresos, comisiones, reservas y otras transacciones con ingresos."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje de ganancia?",
+              "a": "Utilice la calculadora para calcular los impuestos sobre las ganancias, dividendos, reinversiones y otras transacciones de ganancias."
+            },
+            {
+              "q": "¿Es posible calcular un porcentaje del valor de la propiedad?",
+              "a": "Sí, la calculadora es adecuada para calcular impuestos a la propiedad, comisiones de agentes, seguros y otras transacciones inmobiliarias."
+            },
+            {
+              "q": "¿Cómo calcular el porcentaje del coste de un coche?",
+              "a": "Utilice la calculadora para calcular impuestos sobre automóviles, seguros, arrendamientos y otras transacciones de automóviles."
+            }
+          ]
+        }
+      },
+      "results": {
+        "percent_of_number": "{porcentaje}% de {número} es igual a {resultado}",
+        "what_percent": "{número1} es {resultado}% de {número2}",
+        "number_from_percent": "Si {parte} es {porcentaje}%, entonces el número original es {resultado}",
+        "increase_by_percent": "Aumentar {número} en {porcentaje} % da {resultado}",
+        "decrease_by_percent": "Disminuir {número} en {porcentaje} % da {resultado}"
+      },
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      }
+    },
+    "area": {
+      "title": "calculadora de área",
+      "description": "Calcula el área de un círculo, cuadrado o triángulo online. Una calculadora sencilla y precisa con fórmulas.",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "selectFigure": "Seleccione una forma",
+        "figureTypes": {
+          "circle": "Círculo",
+          "square": "Cuadrado",
+          "triangle": "Triángulo"
+        },
+        "radius": "Radio (r)",
+        "side": "Lado (a)",
+        "base": "Base(una)",
+        "height": "Altura (h)",
+        "errors": {
+          "title": "Errores de datos",
+          "required": "Este campo es obligatorio",
+          "positive": "El valor debe ser positivo."
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "area": "Cuadrado",
+        "formula": "Fórmula",
+        "circleFormula": "S = π×r²",
+        "squareFormula": "S = a²",
+        "triangleFormula": "S = ½ × a × h",
+        "parametersUsed": "Parámetros utilizados",
+        "radius": "Radio",
+        "side": "Lado",
+        "base": "Razón",
+        "height": "Altura",
+        "calculationError": "Error de cálculo"
+      },
+      "seo": {
+        "title": "Calculadora de área de forma en línea: círculo, cuadrado, triángulo",
+        "description": "Calculadora online gratuita para calcular el área de un círculo, cuadrado y triángulo. Fórmulas precisas, cálculos instantáneos, soporte para varias unidades de medida.",
+        "overview": {
+          "title": "Acerca de la calculadora de área de forma",
+          "content": "Calculadora online para calcular el área de formas geométricas básicas: círculo, cuadrado y triángulo. Herramienta fácil de usar con cálculo automático mediante fórmulas. Adecuado para estudiantes, ingenieros y cualquier persona que necesite calcular rápidamente el área de una figura.",
+          "examples": {
+            "title": "Ejemplos de cálculos",
+            "content": "Veamos ejemplos prácticos de cálculo del área de varias formas geométricas:",
+            "example1": {
+              "title": "Área de un círculo",
+              "description": "Círculo con radio de 5 cm.",
+              "calculation": "S = π × r² = 3,14 × 5² = 3,14 × 25 = 78,5",
+              "result": "Área: 78,5 cm²"
+            },
+            "example2": {
+              "title": "Área cuadrada",
+              "description": "Cuadrado con lado 8 m",
+              "calculation": "S = a² = 8² = 64",
+              "result": "Superficie: 64 m²"
+            },
+            "example3": {
+              "title": "Área de un triángulo",
+              "description": "Triángulo con base 6 cm y altura 4 cm.",
+              "calculation": "S = ½ × a × h = ½ × 6 × 4 = 12",
+              "result": "Área: 12 cm²"
+            },
+            "example4": {
+              "title": "gran circulo",
+              "description": "Círculo con radio de 10 m.",
+              "calculation": "S = π × r² = 3,14 × 10² = 3,14 × 100 = 314",
+              "result": "Superficie: 314 m²"
+            },
+            "example5": {
+              "title": "gran plaza",
+              "description": "Cuadrado con lado 15 cm",
+              "calculation": "S = a² = 15² = 225",
+              "result": "Área: 225 cm²"
+            },
+            "example6": {
+              "title": "gran triangulo",
+              "description": "Triángulo con base 12 m y altura 8 m",
+              "calculation": "S = ½ × a × h = ½ × 12 × 8 = 48",
+              "result": "Superficie: 48 m²"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula el área?",
+          "content": "El área de un círculo se calcula mediante la fórmula S = π × r², donde r es el radio. El área de un cuadrado se calcula como S = a², donde a es la longitud del lado. El área de un triángulo se calcula mediante la fórmula S = ½ × a × h, donde a es la base, h es la altura."
+        },
+        "features": {
+          "title": "Funciones básicas",
+          "precision": "Alta precisión",
+          "precisionDesc": "Cálculos precisos utilizando constantes matemáticas.",
+          "instant": "Liquidaciones instantáneas",
+          "instantDesc": "Los resultados se calculan automáticamente a medida que ingresa los datos.",
+          "formulas": "Fórmulas probadas",
+          "formulasDesc": "Usar fórmulas de geometría matemática estándar",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño responsivo para un fácil uso en todos los dispositivos"
+        },
+        "advantages": {
+          "title": "Ventajas",
+          "content": "Cálculos de área rápidos y precisos, soporte para formas geométricas básicas, interfaz clara, aplicación automática de fórmulas matemáticas, resultados con precisión de 2 decimales."
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Asegúrese de que todos los valores sean positivos. Para un círculo, ingrese el radio, para un cuadrado, la longitud del lado, para un triángulo, la base y la altura. El resultado se muestra en unidades cuadradas."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el área de un círculo?",
+              "a": "El área de un círculo se calcula mediante la fórmula S = π × r², donde π ≈ 3,14, r es el radio del círculo. Por ejemplo, para un círculo con un radio de 5 cm: S = 3,14 × 5² = 78,5 cm²."
+            },
+            {
+              "q": "¿Cómo encontrar el área de un cuadrado?",
+              "a": "El área de un cuadrado se calcula mediante la fórmula S = a², donde a es la longitud del lado. Por ejemplo, un cuadrado de 8 m de lado tiene un área S = 8² = 64 m²."
+            },
+            {
+              "q": "¿Cómo calcular el área de un triángulo?",
+              "a": "El área de un triángulo se calcula mediante la fórmula S = ½ × a × h, donde a es la base, h es la altura. Por ejemplo, un triángulo con una base de 6 cm y una altura de 4 cm: S = ½ × 6 × 4 = 12 cm²."
+            },
+            {
+              "q": "¿En qué unidades de medida funciona la calculadora?",
+              "a": "La calculadora funciona con cualquier unidad de longitud (cm, m, pulgadas, pies). El resultado del área estará en las unidades cuadradas correspondientes (cm², m², in², ft²)."
+            },
+            {
+              "q": "¿Es posible calcular el área de un rectángulo?",
+              "a": "Para un rectángulo, usa la fórmula para el área de un cuadrado, pero ten en cuenta que los lados pueden ser diferentes. Área de un rectángulo: S = a × b, donde a y b son las longitudes de los lados."
+            },
+            {
+              "q": "¿Cómo calcular el área de una habitación de forma irregular?",
+              "a": "Para habitaciones de forma irregular, divídalas en formas simples (rectángulos, triángulos), calcule el área de cada parte y sume los resultados."
+            },
+            {
+              "q": "¿Es posible calcular el área de una elipse?",
+              "a": "El área de la elipse se calcula mediante la fórmula S = π × a × b, donde a y b son los semiejes de la elipse. Nuestra calculadora aún no admite elipse, pero puedes usar la fórmula."
+            },
+            {
+              "q": "¿Cómo calcular el área de un trapezoide?",
+              "a": "El área de un trapezoide se calcula mediante la fórmula S = ½ × (a + b) × h, donde a y b son las bases del trapezoide, h es la altura. Nuestra calculadora aún no admite trapecio."
+            },
+            {
+              "q": "¿Es posible calcular el área de un paralelogramo?",
+              "a": "El área de un paralelogramo se calcula mediante la fórmula S = a × h, donde a es la base, h es la altura. Usa la calculadora de triángulos y multiplica el resultado por 2."
+            },
+            {
+              "q": "¿Cómo calcular el área de un rombo?",
+              "a": "El área de un rombo se puede calcular de dos maneras: S = a × h (como un paralelogramo) o S = ½ × d₁ × d₂ (mediante diagonales), donde d₁ y d₂ son las diagonales del rombo."
+            },
+            {
+              "q": "¿Es posible calcular el área de un polígono?",
+              "a": "Para un polígono regular, el área se calcula mediante la fórmula S = ½ × P × a, donde P es el perímetro, a es la apotema. Para polígonos irregulares, divídalos en triángulos."
+            },
+            {
+              "q": "¿Cómo calcular el área de un sector de un círculo?",
+              "a": "El área de un sector circular se calcula mediante la fórmula S = (α/360°) × π × r², donde α es el ángulo central en grados, r es el radio del círculo."
+            },
+            {
+              "q": "¿Es posible calcular el área de un segmento de círculo?",
+              "a": "El área de un segmento de círculo se calcula como la diferencia entre el área del sector y el área del triángulo formado por los radios y la cuerda."
+            },
+            {
+              "q": "¿Cómo calcular el área de un anillo?",
+              "a": "El área del anillo se calcula como la diferencia entre las áreas de dos círculos: S = π × (R² - r²), donde R es el radio exterior, r es el radio interior."
+            },
+            {
+              "q": "¿Es posible calcular la superficie de un cilindro?",
+              "a": "La superficie del cilindro consta de dos círculos y un rectángulo: S = 2πr² + 2πrh, donde r es el radio de la base, h es la altura del cilindro."
+            },
+            {
+              "q": "¿Cómo calcular el área de superficie de una esfera?",
+              "a": "El área de superficie de una esfera se calcula mediante la fórmula S = 4πr², donde r es el radio de la esfera. Esto es 4 veces el área de un círculo del mismo radio."
+            },
+            {
+              "q": "¿Es posible calcular la superficie de un cono?",
+              "a": "El área de superficie del cono se calcula mediante la fórmula S = πr² + πrl, donde r es el radio de la base, l es la generatriz del cono."
+            },
+            {
+              "q": "¿Cómo calcular el área de superficie de una pirámide?",
+              "a": "El área de superficie de la pirámide incluye el área de la base y el área de las caras laterales. Para una pirámide regular: S = S₀ + ½Pl, donde S₀ es el área de la base, P es el perímetro de la base, l es la apotema."
+            },
+            {
+              "q": "¿Es posible calcular el área superficial de un prisma?",
+              "a": "El área de superficie de un prisma se calcula como la suma de las áreas de las dos bases y el área de la superficie lateral: S = 2S₀ + Pl, donde S₀ es el área de la base, P es el perímetro de la base, l es la altura del prisma."
+            },
+            {
+              "q": "¿Cómo calcular el área de superficie de un cubo?",
+              "a": "El área de superficie de un cubo se calcula mediante la fórmula S = 6a², donde a es la longitud del borde del cubo. Esta es la suma de las áreas de las seis caras."
+            },
+            {
+              "q": "¿Es posible calcular la superficie de un paralelepípedo?",
+              "a": "El área de superficie de un paralelepípedo se calcula mediante la fórmula S = 2(ab + bc + ac), donde a, b, c son las longitudes de los bordes del paralelepípedo."
+            },
+            {
+              "q": "¿Cómo calcular el área de superficie de un tetraedro?",
+              "a": "El área superficial de un tetraedro se calcula como la suma de las áreas de las cuatro caras triangulares. Para un tetraedro regular: S = √3 × a², donde a es la longitud del borde."
+            },
+            {
+              "q": "¿Es posible calcular la superficie de un octaedro?",
+              "a": "El área superficial del octaedro se calcula como la suma de las áreas de las ocho caras triangulares. Para un octaedro regular: S = 2√3 × a², donde a es la longitud de la arista."
+            },
+            {
+              "q": "¿Cómo calcular el área de superficie de un icosaedro?",
+              "a": "El área superficial del icosaedro se calcula como la suma de las áreas de veinte caras triangulares. Para un icosaedro regular: S = 5√3 × a², donde a es la longitud del borde."
+            },
+            {
+              "q": "¿Es posible calcular la superficie de un dodecaedro?",
+              "a": "El área superficial de un dodecaedro se calcula como la suma de las áreas de doce caras pentagonales. Para un dodecaedro regular: S = 3√(25+10√5) × a², donde a es la longitud del borde."
+            },
+            {
+              "q": "¿Cómo calcular la superficie de un toroide?",
+              "a": "El área de superficie del toro se calcula mediante la fórmula S = 4π²Rr, donde R es la distancia desde el centro del toro al centro de la tubería, r es el radio de la tubería."
+            },
+            {
+              "q": "¿Es posible calcular el área de superficie de un elipsoide?",
+              "a": "El área de superficie del elipsoide se calcula mediante una fórmula compleja que depende de los semiejes a, b, c. Para un esferoide (a = b ≠ c) la fórmula está simplificada."
+            },
+            {
+              "q": "¿Cómo calcular el área de superficie de un hiperboloide?",
+              "a": "El área de superficie de un hiperboloide se calcula mediante cálculo integral y depende de los parámetros del hiperboloide."
+            },
+            {
+              "q": "¿Es posible calcular la superficie de un paraboloide?",
+              "a": "El área de superficie de un paraboloide se calcula mediante cálculo integral y depende de los parámetros del paraboloide."
+            },
+            {
+              "q": "¿Cómo calcular el área superficial de una superficie cilíndrica?",
+              "a": "El área de una superficie cilíndrica se calcula mediante la fórmula S = 2πrh, donde r es el radio de la base, h es la altura del cilindro."
+            },
+            {
+              "q": "¿Es posible calcular el área de una superficie cónica?",
+              "a": "El área de la superficie cónica se calcula mediante la fórmula S = πrl, donde r es el radio de la base, l es la generatriz del cono."
+            },
+            {
+              "q": "¿Cómo calcular el área superficial de una superficie esférica?",
+              "a": "El área de una superficie esférica se calcula mediante la fórmula S = 4πr², donde r es el radio de la esfera."
+            },
+            {
+              "q": "¿Es posible calcular el área de una superficie elíptica?",
+              "a": "El área de una superficie elíptica se calcula mediante cálculo integral y depende de los parámetros de la elipse."
+            }
+          ]
+        }
+      }
+    },
+    "volume": {
+      "title": "Calculadora de volumen sólido",
+      "description": "Calcula online el volumen de una esfera, cubo o cilindro. Una calculadora sencilla y precisa con fórmulas.",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "selectShape": "Seleccionar cuerpo",
+        "shapeTypes": {
+          "sphere": "Esfera",
+          "cube": "Cubo",
+          "cylinder": "Cilindro"
+        },
+        "radius": "Radio (r)",
+        "side": "Lado (a)",
+        "height": "Altura (h)",
+        "calculate": "Calcular",
+        "clear": "Claro",
+        "calculating": "Cálculo...",
+        "errors": {
+          "title": "Errores de datos",
+          "required": "Este campo es obligatorio",
+          "positive": "El valor debe ser positivo."
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "volume": "Volumen",
+        "formula": "Fórmula",
+        "sphereFormula": "V = (4/3) × π × r³",
+        "cubeFormula": "V = a³",
+        "cylinderFormula": "V = π × r² × h",
+        "parametersUsed": "Parámetros utilizados",
+        "radius": "Radio",
+        "side": "Lado",
+        "height": "Altura",
+        "calculationError": "Error de cálculo"
+      },
+      "seo": {
+        "title": "Calculadora de volumen sólido en línea: esfera, cubo, cilindro",
+        "form": {
+          "shapeTypes": {
+            "sphere": "Esfera",
+            "cube": "Cubo",
+            "cylinder": "Cilindro"
+          }
+        },
+        "overview": {
+          "title": "Acerca de la calculadora de volumen de cuerpos geométricos.",
+          "content": "La calculadora de volumen sólido en línea proporciona cálculos precisos para formas geométricas básicas: esfera, cubo y cilindro. Esta herramienta matemática utiliza fórmulas geométricas comprobadas para calcular el volumen de sólidos espaciales. La calculadora de volumen es ideal para estudiantes que estudian geometría de sólidos, ingenieros que trabajan con cálculos volumétricos, arquitectos que planifican proyectos de construcción y cualquier persona que necesite calcular de forma rápida y precisa el volumen de un sólido geométrico.",
+          "examples": {
+            "title": "Ejemplos de cálculos de volumen.",
+            "sphere": {
+              "title": "Cálculo del volumen de una esfera.",
+              "example1": "Baloncesto: radio 12 cm → V = (4/3) × π × 12³ = 7.238,23 cm³",
+              "example2": "Tierra (aproximadamente): radio 6,371 km → V = (4/3) × π × 6,371³ = 1,08 × 10¹² km³",
+              "example3": "Balón de fútbol: radio 11 cm → V = (4/3) × π × 11³ = 5.575,28 cm³"
+            },
+            "cube": {
+              "title": "Cálculo del volumen del cubo.",
+              "example1": "Cubo de Rubik: lado 5,7 cm → V = 5,7³ = 185,19 cm³",
+              "example2": "Un cubo de agua: lado 1 m → V = 1³ = 1 m³ = 1.000 litros",
+              "example3": "Caja: lado 20 cm → V = 20³ = 8.000 cm³ = 8 litros"
+            },
+            "cylinder": {
+              "title": "Cálculo del volumen del cilindro.",
+              "example1": "Lata de conservas: radio 3,5 cm, altura 10 cm → V = π × 3,5² × 10 = 384,85 cm³",
+              "example2": "Vaso de agua: radio 3 cm, altura 12 cm → V = π × 3² × 12 = 339,29 cm³",
+              "example3": "Barril: radio 30 cm, altura 80 cm → V = π × 30² × 80 = 226.194,67 cm³ = 226 litros"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula el volumen?",
+          "content": "El volumen de una esfera se calcula mediante la fórmula V = (4/3) × π × r³, donde r es el radio. El volumen de un cubo se calcula como V = a³, donde a es la longitud del lado. El volumen de un cilindro se calcula mediante la fórmula V = π × r² × h, donde r es el radio de la base, h es la altura.",
+          "sphereDescription": "donde r es el radio de la esfera",
+          "cubeDescription": "donde a es la longitud de un lado",
+          "cylinderDescription": "donde r es el radio de la base, h es la altura"
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "content": "Cálculos rápidos y precisos, soporte para cuerpos geométricos básicos, interfaz clara, aplicación automática de fórmulas matemáticas, resultados con precisión de 2 decimales.",
+          "items": [
+            "Cálculos instantáneos con alta precisión",
+            "Soporte para múltiples cuerpos geométricos.",
+            "Interfaz fácil de usar con retroalimentación visual",
+            "Diseño responsivo para todos los dispositivos",
+            "Soporte multilingüe (ruso, inglés, español, alemán)",
+            "No requiere registro ni instalación de programas.",
+            "Uso gratuito sin restricciones"
+          ]
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Asegúrese de que todos los valores sean positivos. Para una esfera, ingrese el radio, para un cubo, la longitud del lado, para un cilindro, el radio de la base y la altura. El resultado se muestra en unidades cúbicas.",
+          "importantNotes": "Notas importantes:",
+          "notes": [
+            "Utilice siempre las mismas unidades de medida para todos los parámetros.",
+            "Para una esfera, mida desde el centro hasta la superficie para obtener el radio.",
+            "Para un cilindro, la altura debe ser perpendicular a la base.",
+            "Los resultados se muestran en unidades cúbicas de su entrada.",
+            "Utilice notación decimal para cálculos precisos"
+          ]
+        },
+        "examples": {
+          "title": "Ejemplos de cálculos",
+          "sphereExample": "Ejemplo de esfera",
+          "cubeExample": "Ejemplo de cubo",
+          "cylinderExample": "Ejemplo de cilindro",
+          "given": "Con un poco de suerte",
+          "calculation": "Cálculo",
+          "sphereDescription": "El volumen de una esfera con un radio de 5 unidades es aproximadamente 523,60 unidades cúbicas.",
+          "cubeDescription": "El volumen de un cubo de 4 unidades de lado es 64 unidades cúbicas.",
+          "cylinderDescription": "El volumen de un cilindro con un radio de 3 unidades y una altura de 8 unidades es aproximadamente 226,19 unidades cúbicas."
+        },
+        "applications": {
+          "title": "Aplicaciones",
+          "construction": "Construcción y arquitectura",
+          "education": "Educación y formación",
+          "constructionItems": [
+            "Cálculo del volumen de hormigón para cimentaciones.",
+            "Determinación del volumen de tanques y contenedores.",
+            "Planificación del volumen de materiales de construcción.",
+            "Estimación del volumen de locales."
+          ],
+          "educationItems": [
+            "Tarea de geometría",
+            "Comprender los conceptos matemáticos",
+            "Comprobación de cálculos manuales",
+            "Estudiar fórmulas de volumen."
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Calculadora online para el volumen de cuerpos geométricos.",
+          "content": "Nuestra calculadora de volumen sólido en línea proporciona cálculos rápidos y precisos para esferas, cubos y cilindros. Su interfaz sencilla y sus resultados instantáneos la convierten en una herramienta ideal para estudiantes, ingenieros, arquitectos y cualquier persona que necesite cálculos precisos de volumen de formas geométricas.",
+          "multilingual": "La calculadora de volumen corporal en línea está disponible en ruso, inglés, español y alemán para usuarios de todo el mundo.",
+          "keywords": "calculadora de los techos, volúmenes de cybia, volumen cilíndrico, fórmula, geometría, estereometría, matemáticas, calculadora en línea, cálculos, volúmenes de ancho geométrico, volúmenes de la figura prost, volúmenes de incluye, volumen caballo, oraciones, héroe paralelopedo, volumen tetraadra, octaedra, volumen de la dodera, el volumen del ilipsoide, volumen de la tora, volúmenes del vass, el resumen del segmento musculoesquelético, volumen de la bola sloya, cinturón de bolas de volumen"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre el cálculo del volumen",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular el volumen de una esfera en función de su radio?",
+              "a": "El volumen de una esfera se calcula mediante la fórmula V = (4/3) × π × r³, donde r es el radio de la esfera. Por ejemplo, para una esfera con un radio de 5 cm, el volumen será V = (4/3) × π × 5³ = 523,6 cm³."
+            },
+            {
+              "q": "¿Qué fórmula se utiliza para calcular el volumen de un cubo?",
+              "a": "El volumen de cuba se calcula mediante la fórmula V = a³, donde a - cuba de frotamiento largo. Por ejemplo, el cubo con un lado de 4 cm se encuentra en el volumen V = 4³ = 64 cm³."
+            },
+            {
+              "q": "¿Cómo encontrar el volumen de un cilindro según su radio y altura?",
+              "a": "El volumen de un cilindro se calcula mediante la fórmula V = π × r² × h, donde r es el radio de la base, h es la altura. Por ejemplo, un cilindro con un radio de 3 cm y una altura de 8 cm tiene un volumen V = π × 3² × 8 = 226,2 cm³."
+            },
+            {
+              "q": "¿En qué unidades de medida se muestra el resultado?",
+              "a": "El resultado se muestra en unidades cúbicas de medida correspondientes a los parámetros ingresados. Si ingresa las dimensiones en centímetros, el resultado será en cm³, si está en metros, en m³."
+            },
+            {
+              "q": "¿Es posible utilizar la calculadora para calcular el volumen de otros cuerpos geométricos?",
+              "a": "Nuestra calculadora soporta el cálculo del volumen de una esfera, cubo y cilindro. Para otros cuerpos geométricos (pirámide, cono, prisma), se utilizan otras fórmulas que se pueden encontrar en los libros de texto de geometría."
+            },
+            {
+              "q": "¿Qué tan precisos son los cálculos de volumen en la calculadora?",
+              "a": "La calculadora proporciona una alta precisión en los cálculos utilizando la constante π ≈ 3,14159. Los resultados se muestran con una precisión de 6 decimales para valores pequeños y hasta 2 decimales para volúmenes grandes."
+            },
+            {
+              "q": "¿Cómo utilizar una calculadora de volumen para cálculos de construcción?",
+              "a": "Para cálculos de construcción, ingrese las dimensiones en metros o centímetros. Por ejemplo, para calcular el volumen de hormigón de una columna cilíndrica, introduzca el radio y la altura de la columna. El resultado mostrará el volumen en metros cúbicos o centímetros."
+            },
+            {
+              "q": "¿Es posible calcular el volumen de una esfera conociendo sólo el diámetro?",
+              "a": "Sí, si conoces el diámetro de la esfera, divídelo entre 2 para obtener el radio, luego usa la fórmula V = (4/3) × π × r³. Por ejemplo, para una esfera con un diámetro de 10 cm, el radio es de 5 cm, el volumen será V = (4/3) × π × 5³ = 523,6 cm³."
+            },
+            {
+              "q": "¿Cómo comprobar la exactitud del cálculo del volumen?",
+              "a": "Utilice valores conocidos para comprobarlo. Por ejemplo, un cubo de 1 metro de lado tiene un volumen de 1 m³ = 1.000 litros. Una esfera con un radio de 1 metro tiene un volumen de (4/3) × π ≈ 4,19 m³."
+            },
+            {
+              "q": "¿Es la calculadora adecuada para fines educativos?",
+              "a": "Sí, la calculadora es ideal para estudiar geometría y estereometría. Le ayuda a comprender fórmulas de volumen, probar cálculos manuales y explorar la relación entre el tamaño y el volumen de sólidos geométricos."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un cono truncado?",
+              "a": "El volumen de un cono truncado se calcula mediante la fórmula V = (π × h × (R² + Rr + r²)) / 3, donde h es la altura, R es el radio de la base más grande, r es el radio de la base más pequeña. Nuestra calculadora aún no admite conos truncados."
+            },
+            {
+              "q": "¿Cuál es el volumen de los cuerpos de revolución?",
+              "a": "El volumen de cuerpos de rotación es el volumen de figuras que se obtienen al girar una figura plana alrededor de un eje. La esfera, el cilindro y el cono son ejemplos de cuerpos de rotación. Nuestra calculadora admite esferas y cilindros."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de una pirámide?",
+              "a": "El volumen de la pirámide se calcula mediante la fórmula V = (S × h) / 3, donde S es el área de la base, h es la altura de la pirámide. Para una pirámide regular con base cuadrada: V = (a² × h) / 3, donde a es el lado de la base."
+            },
+            {
+              "q": "¿Cuál es el volumen de los poliedros?",
+              "a": "El volumen de los poliedros es el volumen de figuras espaciales de caras planas. El cubo, el tetraedro, el octaedro, el dodecaedro y el icosaedro son poliedros regulares. Nuestra calculadora admite cubos."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un prisma?",
+              "a": "El volumen del prisma se calcula mediante la fórmula V = S × h, donde S es el área de la base, h es la altura del prisma. Para un prisma rectangular: V = a × b × h, donde a y b son los lados de la base."
+            },
+            {
+              "q": "¿Cuál es el volumen de un paralelepípedo?",
+              "a": "El volumen de un paralelepípedo se calcula mediante la fórmula V = a × b × c, donde a, b, c son las longitudes de los bordes. Un cuboide es un caso especial de paralelepípedo con ángulos rectos."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un tetraedro?",
+              "a": "El volumen de un tetraedro regular se calcula mediante la fórmula V = (a³ × √2) / 12, donde a es la longitud de la arista. Para un tetraedro arbitrario, use la fórmula V = (1/6) × |det(AB, AC, AD)|, donde A, B, C, D son los vértices."
+            },
+            {
+              "q": "¿Cuál es el volumen de un octaedro?",
+              "a": "El volumen de un octaedro regular se calcula mediante la fórmula V = (a³ × √2) / 3, donde a es la longitud de la arista. El octaedro tiene 8 caras triangulares y es uno de los cinco poliedros regulares."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un dodecaedro?",
+              "a": "El volumen de un dodecaedro regular se calcula mediante la fórmula V = (a³ × (15 + 7√5)) / 4, donde a es la longitud de la arista. El dodecaedro tiene 12 caras pentagonales y es uno de los poliedros regulares."
+            },
+            {
+              "q": "¿Cuál es el volumen de un icosaedro?",
+              "a": "El volumen de un icosaedro regular se calcula mediante la fórmula V = (5a³ × (3 + √5)) / 12, donde a es la longitud de la arista. El icosaedro tiene 20 caras triangulares y es uno de los poliedros regulares."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un elipsoide?",
+              "a": "El volumen del elipsoide se calcula mediante la fórmula V = (4π × a × b × c) / 3, donde a, b, c son los semiejes del elipsoide. Una esfera es un caso especial de elipsoide cuando todos los semiejes son iguales."
+            },
+            {
+              "q": "¿Cuál es el volumen de un toroide?",
+              "a": "El volumen de un toro (donut) se calcula mediante la fórmula V = 2π² × R × r², donde R es la distancia del centro al centro del tubo, r es el radio del tubo. Un toro se obtiene girando un círculo alrededor de un eje."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de una pirámide truncada?",
+              "a": "El volumen de una pirámide truncada se calcula mediante la fórmula V = (h × (S₁ + S₂ + √(S₁ × S₂))) / 3, donde h es la altura, S₁ es el área de la base más grande, S₂ es el área de la base más pequeña."
+            },
+            {
+              "q": "¿Cuál es el volumen de un segmento cilíndrico?",
+              "a": "El volumen de un segmento cilíndrico es el volumen de la parte del cilindro cortada por un plano. Calculado por la fórmula V = π × r² × h, donde r es el radio del cilindro, h es la altura del segmento."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un segmento esférico?",
+              "a": "El volumen de un segmento esférico se calcula mediante la fórmula V = (π × h² × (3R - h)) / 3, donde h es la altura del segmento, R es el radio de la esfera. Un segmento esférico es una parte de una esfera cortada por un plano."
+            },
+            {
+              "q": "¿Cuál es el volumen de la capa esférica?",
+              "a": "El volumen de una capa esférica es el volumen de la parte de la pelota entre dos planos paralelos. Se calcula como la diferencia entre los volúmenes de dos segmentos esféricos."
+            },
+            {
+              "q": "¿Cómo calcular el volumen de un cinturón de bolas?",
+              "a": "El volumen de un cinturón esférico es el volumen de la parte de la pelota entre dos planos paralelos, incluida la parte central. Calculado mediante la fórmula V = (π × h × (3a² + 3b² + h²)) / 6, donde h es la altura del cinturón, a y b son los radios de las bases."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora de volumen para cálculos arquitectónicos?",
+              "a": "Para cálculos arquitectónicos, utilice la calculadora para determinar el volumen de habitaciones, columnas y tanques. Ingrese las dimensiones en metros para obtener el volumen en metros cúbicos."
+            },
+            {
+              "q": "¿Es posible calcular el volumen de cuerpos geométricos complejos?",
+              "a": "Para cuerpos complejos, divídalos en formas geométricas simples (esferas, cubos, cilindros), calcule el volumen de cada parte por separado y sume los resultados."
+            },
+            {
+              "q": "¿Cómo calcular el volumen para cálculos hidráulicos?",
+              "a": "Para cálculos hidráulicos, utilice una calculadora para determinar el volumen de tuberías, depósitos y tanques. Los resultados ayudarán a calcular el flujo, la presión y otros parámetros hidráulicos."
+            }
+          ]
+        }
+      }
+    },
+    "powerRoot": {
+      "title": "Calculadora de potencias y raíces.",
+      "description": "Calcula la potencia de un número o extrae la raíz de cualquier potencia en línea. Una calculadora sencilla y precisa con fórmulas.",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "hero": {
+        "power": "Grados",
+        "root": "Raíces",
+        "accuracy": "Precisión de cálculo"
+      },
+      "features": {
+        "powerCalculation": "exponenciación",
+        "rootCalculation": "Extracción de raíces",
+        "formulaDisplay": "Mostrando fórmulas",
+        "highPrecision": "Alta precisión",
+        "multipleModes": "Diferentes modos"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "mode": "Modo de cálculo",
+        "modes": {
+          "power": "exponenciación",
+          "root": "Extracción de raíces"
+        },
+        "base": "Base(una)",
+        "exponent": "Grado (n)",
+        "number": "Número(a)",
+        "rootDegree": "Grado de raíz (n)",
+        "errors": {
+          "title": "Errores de datos",
+          "required": "Este campo es obligatorio",
+          "positive": "El valor debe ser positivo."
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "result": "Resultado",
+        "formula": "Fórmula",
+        "parametersUsed": "Parámetros utilizados",
+        "base": "Razón",
+        "exponent": "Grado",
+        "number": "Número",
+        "rootDegree": "Grado de raíz",
+        "calculationError": "Error de cálculo"
+      },
+      "seo": {
+        "title": "Calculadora de potencias y raíces en línea: exponenciación, extracción de raíces",
+        "overview": {
+          "title": "Acerca de la calculadora de potencias y raíces",
+          "content": "Calculadora online para calcular potencias de números y extraer raíces de cualquier grado. Una herramienta fácil de usar con cálculo automático mediante fórmulas matemáticas. Adecuado para estudiantes, ingenieros y cualquier persona que necesite calcular rápidamente la potencia o raíz de un número.",
+          "additionalContent": "Nuestra calculadora de exponentes y raíces admite todas las operaciones matemáticas básicas con exponentes y raíces. Si eres un estudiante de álgebra, un ingeniero que trabaja en cálculos técnicos o simplemente necesitas calcular la potencia de un número, esta herramienta proporciona resultados precisos al instante.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculos",
+            "content": "Veamos varios ejemplos del uso de la calculadora de potencias y raíces:",
+            "powerExamples": {
+              "title": "Ejemplos de exponenciación",
+              "example1": {
+                "title": "cuadratura",
+                "calculation": "5² = 5 × 5 = 25",
+                "description": "el cuadrado de 5 es 25"
+              },
+              "example2": {
+                "title": "Cubo",
+                "calculation": "3³ = 3 × 3 × 3 = 27",
+                "description": "El cubo del numero 3 es 27."
+              },
+              "example3": {
+                "title": "Elevando a la cuarta potencia",
+                "calculation": "2⁴ = 2 × 2 × 2 × 2 = 16",
+                "description": "El numero 2 elevado a la cuarta potencia es 16"
+              },
+              "example4": {
+                "title": "Elevando a una potencia negativa",
+                "calculation": "2⁻³ = 1/(2³) = 1/8 = 0,125",
+                "description": "El número 2 elevado a -3 es 0,125."
+              },
+              "example5": {
+                "title": "Elevando a una potencia fraccionaria",
+                "calculation": "8^(1/3) = ∛8 = 2",
+                "description": "El numero 8 elevado a 1/3 es 2"
+              }
+            },
+            "rootExamples": {
+              "title": "Ejemplos de extracción de raíces.",
+              "example1": {
+                "title": "Raíz cuadrada",
+                "calculation": "√16 = 4",
+                "description": "La raíz cuadrada de 16 es 4, ya que 4² = 16"
+              },
+              "example2": {
+                "title": "raíz cúbica",
+                "calculation": "∛27 = 3",
+                "description": "La raíz cúbica de 27 es 3 ya que 3³ = 27"
+              },
+              "example3": {
+                "title": "Cuarta raíz",
+                "calculation": "∜81 = 3",
+                "description": "La raíz cuarta de 81 es 3, ya que 3⁴ = 81"
+              },
+              "example4": {
+                "title": "Quinta raíz",
+                "calculation": "∛32 = 2",
+                "description": "La raíz quinta de 32 es 2, ya que 2⁵ = 32"
+              },
+              "example5": {
+                "title": "raíz decimal",
+                "calculation": "√0,25 = 0,5",
+                "description": "La raíz cuadrada de 0,25 es 0,5, ya que 0,5² = 0,25"
+              }
+            }
+          }
+        },
+        "powerSection": {
+          "title": "¿Qué es una potencia de un número?",
+          "content": "Una potencia de un número es una operación matemática en la que un número se multiplica por sí mismo un número determinado de veces. Fórmula: aⁿ, donde a es la base, n es el exponente. Por ejemplo, 2³ significa 2 × 2 × 2 = 8.",
+          "example1": {
+            "title": "Ejemplo 1",
+            "description": "2 al cubo es igual a 8"
+          },
+          "example2": {
+            "title": "Ejemplo 2",
+            "description": "5 al cuadrado es igual a 25"
+          }
+        },
+        "rootSection": {
+          "title": "¿Cuál es la raíz de un número?",
+          "content": "La raíz de un número es la operación inversa de elevar a una potencia. La raíz enésima de a es el número que, elevado a la enésima potencia, da a. Por ejemplo, √9 = 3 porque 3² = 9.",
+          "example1": {
+            "title": "Raíz cuadrada",
+            "description": "La raíz cuadrada de 9 es 3."
+          },
+          "example2": {
+            "title": "raíz cúbica",
+            "description": "La raíz cúbica de 8 es 2."
+          }
+        },
+        "howToUse": {
+          "title": "Cómo usar la calculadora",
+          "content": "Seleccione el modo de cálculo: exponenciación o extracción de raíces. Ingrese los valores requeridos y haga clic en el botón 'Calcular'. La calculadora aplicará automáticamente la fórmula adecuada y mostrará el resultado.",
+          "given": "Con un poco de suerte",
+          "calculation": "Cálculo",
+          "powerExample": {
+            "title": "Ejemplo de exponenciación",
+            "description": "2 elevado a 3 es igual a 8"
+          },
+          "rootExample": {
+            "title": "Ejemplo de extracción de raíces",
+            "description": "La raíz cúbica de 8 es 2."
+          }
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "content": "Cálculos rápidos y precisos, soporte para potencias y raíces de cualquier grado, interfaz clara, aplicación automática de fórmulas matemáticas, resultados con precisión de 6 decimales.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Utiliza fórmulas matemáticas actualizadas y garantiza una alta precisión de los cálculos.",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Admite potencias y raíces de cualquier grado, incluidos exponentes negativos y fraccionarios",
+          "comprehensive": "Análisis completo",
+          "comprehensiveDesc": "Muestra fórmulas, soluciones paso a paso e información detallada de cálculos.",
+          "export": "Exportar datos",
+          "exportDesc": "Posibilidad de guardar resultados en varios formatos para uso futuro.",
+          "items": [
+            "Cálculos instantáneos con alta precisión",
+            "Soporta poderes y raíces de cualquier grado.",
+            "Interfaz fácil de usar con retroalimentación visual",
+            "Diseño responsivo para todos los dispositivos",
+            "Soporte multilingüe (ruso, inglés, español, alemán)",
+            "No requiere registro ni instalación de programas.",
+            "Uso gratuito sin restricciones"
+          ]
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Asegúrese de que todos los valores sean correctos. Para potencias, ingresa la base y el exponente. Para raíces, ingrese el número y grado de la raíz. El resultado se muestra con gran precisión.",
+          "importantNotes": "Notas importantes:",
+          "notes": [
+            "No se puede elevar 0 a una potencia negativa.",
+            "No se puede sacar una raíz par de un número negativo.",
+            "El grado de la raíz no puede ser 0.",
+            "Los resultados se muestran con una precisión de 6 decimales.",
+            "Utilice notación decimal para cálculos precisos"
+          ]
+        },
+        "applications": {
+          "title": "Aplicaciones",
+          "mathematics": "Matemáticas y álgebra",
+          "science": "Ciencia e Ingeniería",
+          "mathematicsItems": [
+            "Resolver ecuaciones algebraicas",
+            "Cálculos de geometría",
+            "Estudiar funciones y gráficas.",
+            "análisis matemático"
+          ],
+          "scienceItems": [
+            "Cálculos físicos",
+            "Ingeniería Informática",
+            "Análisis estadístico",
+            "investigación científica"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Calculadora online de potencias y raíces.",
+          "content": "Nuestra calculadora de potencias y raíces en línea proporciona cálculos rápidos y precisos para cualquier potencia y raíz. Su interfaz sencilla y sus resultados instantáneos la convierten en una herramienta ideal para estudiantes, ingenieros y cualquier otra persona que necesite cálculos matemáticos precisos.",
+          "multilingual": "Nuestra calculadora de títulos y raíces en línea admite cuatro idiomas: ruso, inglés, español y alemán."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo elevar un número a una potencia en línea?",
+              "a": "Seleccione el modo 'Exponenciación', ingrese la base y el exponente, haga clic en 'Calcular'. Por ejemplo, para 2³, ingrese base 2 y potencia 3."
+            },
+            {
+              "q": "¿Cómo extraer la raíz de cualquier grado?",
+              "a": "Seleccione el modo 'Extracción de raíz', ingrese el número y grado de la raíz. Por ejemplo, para ∛8, ingresa el número 8 y la raíz potencia 3."
+            },
+            {
+              "q": "¿Es posible elevarlo a una potencia negativa?",
+              "a": "Sí, la calculadora admite potencias negativas. Por ejemplo, 2⁻³ = 1/(2³) = 0,125."
+            },
+            {
+              "q": "¿Cómo calcular la potencia fraccionaria?",
+              "a": "La potencia fraccionaria equivale a sacar la raíz. Por ejemplo, 8^(1/3) = ∛8 = 2."
+            },
+            {
+              "q": "¿Qué es una raíz cuadrada?",
+              "a": "La raíz cuadrada de a es el número que, elevado al cuadrado, da a. Por ejemplo, √9 = 3, ya que 3² = 9."
+            },
+            {
+              "q": "¿Qué es una raíz cúbica?",
+              "a": "La raíz cúbica de a es el número que, elevado al cubo, da a. Por ejemplo, ∛8 = 2, ya que 2³ = 8."
+            },
+            {
+              "q": "¿Es posible sacar la raíz de un número negativo?",
+              "a": "De un número negativo sólo se puede extraer la raíz impar. En los números reales no existe raíz par de un número negativo."
+            },
+            {
+              "q": "¿Cómo funciona la calculadora de grados?",
+              "a": "La calculadora usa la fórmula aⁿ = a × a × ... × a (n veces). Para potencias negativas se utiliza la fórmula a⁻ⁿ = 1/aⁿ."
+            },
+            {
+              "q": "¿Cómo funciona la calculadora de raíces?",
+              "a": "La calculadora encuentra un número x tal que xⁿ = a, donde a es el número radical, n es la potencia de la raíz."
+            },
+            {
+              "q": "¿Es posible elevar 0 a una potencia?",
+              "a": "0 se puede elevar a cualquier potencia positiva, el resultado será 0. 0⁰ no está definido."
+            },
+            {
+              "q": "¿Qué es un grado con exponente 0?",
+              "a": "Cualquier número elevado a 0 es igual a 1 (excepto 0⁰). Por ejemplo, 5⁰ = 1, 100⁰ = 1."
+            },
+            {
+              "q": "¿Cómo calcular la raíz de un número grande?",
+              "a": "La calculadora procesa automáticamente números de cualquier tamaño. Simplemente ingrese el número y el grado de la raíz."
+            },
+            {
+              "q": "¿Se pueden utilizar números decimales?",
+              "a": "Sí, la calculadora admite decimales tanto para base como para potencia o raíz."
+            },
+            {
+              "q": "¿Cómo calcular la raíz de una fracción?",
+              "a": "La raíz de una fracción es igual a la raíz del numerador dividida por la raíz del denominador. Por ejemplo, √(4/9) = √4/√9 = 2/3."
+            },
+            {
+              "q": "¿Qué son las raíces irracionales?",
+              "a": "Las raíces irracionales son raíces que no se pueden representar como una fracción ordinaria. Por ejemplo, √2 ≈ 1,414."
+            },
+            {
+              "q": "¿Cómo comprobar si la raíz se calcula correctamente?",
+              "a": "Eleve el resultado a la potencia de la raíz. Si obtiene el número original, el cálculo es correcto. Por ejemplo, ∛8 = 2, compruebe: 2³ = 8."
+            },
+            {
+              "q": "¿Es posible calcular la raíz de una potencia mayor que 10?",
+              "a": "Sí, la calculadora admite raíces de cualquier grado, incluidos exponentes muy grandes."
+            },
+            {
+              "q": "¿Cómo calcular el exponente con exponente decimal?",
+              "a": "Los exponentes con exponente decimal se calculan mediante logaritmos. La calculadora maneja automáticamente estos casos."
+            },
+            {
+              "q": "¿Cuál es la raíz enésima?",
+              "a": "La raíz enésima de un número es un número x tal que xⁿ = a. Denotado como ⁿ√a o a^(1/n)."
+            },
+            {
+              "q": "¿Cómo calcular la potencia de un número mayor que 100?",
+              "a": "La calculadora procesa automáticamente números de cualquier tamaño. Simplemente ingrese la base y el grado."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para cálculos científicos?",
+              "a": "Sí, la calculadora es adecuada para cálculos científicos y de ingeniería y proporciona una alta precisión de los cálculos."
+            },
+            {
+              "q": "¿Cómo calcular la raíz de un producto?",
+              "a": "La raíz de un producto es igual al producto de las raíces. Por ejemplo, √(a×b) = √a × √b."
+            },
+            {
+              "q": "¿Qué es una raíz aritmética?",
+              "a": "Una raíz aritmética es un valor de raíz no negativo. Por ejemplo, √9 = 3 (no -3)."
+            },
+            {
+              "q": "¿Cómo calcular la potencia de un producto?",
+              "a": "La potencia de un producto es igual al producto de potencias. Por ejemplo, (a×b)ⁿ = aⁿ × bⁿ."
+            },
+            {
+              "q": "¿Es posible calcular la raíz de un grado?",
+              "a": "Sí, la raíz de un grado es igual al grado dividido por el grado de la raíz. Por ejemplo, √(aⁿ) = a^(n/2)."
+            },
+            {
+              "q": "¿Cómo calcular el grado de una raíz?",
+              "a": "El grado de una raíz es igual a la raíz elevada a una potencia. Por ejemplo, (ⁿ√a)ᵐ = ⁿ√(aᵐ)."
+            },
+            {
+              "q": "¿Qué son las raíces complejas?",
+              "a": "Las raíces complejas aparecen cuando se saca una raíz par de un número negativo. La calculadora muestra la parte real."
+            },
+            {
+              "q": "¿Cómo calcular la raíz de una suma?",
+              "a": "La raíz de la suma no es igual a la suma de las raíces. Por ejemplo, √(a+b) ≠ √a + √b."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para aprender?",
+              "a": "Sí, la calculadora es excelente para aprender matemáticas, mostrar fórmulas y soluciones paso a paso."
+            },
+            {
+              "q": "¿Cómo calcular la raíz de un cociente?",
+              "a": "La raíz del cociente es igual al cociente de las raíces. Por ejemplo, √(a/b) = √a / √b."
+            }
+          ]
+        }
+      }
+    },
+    "equations": {
+      "title": "Calculadora de resolución de ecuaciones",
+      "description": "Calculadora online para resolver ecuaciones lineales y cuadráticas con explicación paso a paso",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "hero": {
+        "types": "tipos de ecuaciones",
+        "accuracy": "Precisión de cálculo",
+        "format": "Formato de datos"
+      },
+      "form": {
+        "title": "Introduce la ecuación",
+        "mode": "Modo de entrada",
+        "modes": {
+          "parse": "Introducir ecuación",
+          "manual": "Introducir probabilidades"
+        },
+        "enterEquation": "Introduce la ecuación",
+        "examples": "Ejemplos",
+        "equationType": "Tipo de ecuación",
+        "equationTypes": {
+          "linear": "Lineal (ax + b = 0)",
+          "quadratic": "Cuadrado (ax² + bx + c = 0)"
+        },
+        "linearFormat": "Formato",
+        "quadraticFormat": "Formato",
+        "coefficientA": "Coeficiente A",
+        "coefficientB": "Factor B",
+        "coefficientC": "Coeficiente C",
+        "calculate": "Decidir",
+        "reset": "Reiniciar",
+        "errors": {
+          "title": "Errores de datos"
+        }
+      },
+      "results": {
+        "title": "Resultado de la solución",
+        "types": {
+          "linear": "ecuación lineal",
+          "quadratic": "ecuación cuadrática",
+          "unsupported": "Tipo de ecuación no admitida"
+        },
+        "oneSolution": "Una solución",
+        "twoSolutions": "Dos soluciones",
+        "noSolution": "Sin soluciones",
+        "complexRoots": "La ecuación tiene raíces complejas (sin soluciones reales)",
+        "steps": "Solución paso a paso",
+        "discriminant": "discriminante"
+      },
+      "seo": {
+        "title": "Calculadora de resolución de ecuaciones en línea: ecuaciones lineales y cuadráticas | calc1.ru",
+        "description": "Calculadora online gratuita para resolver ecuaciones lineales y cuadráticas con explicación detallada paso a paso. Soporte para idiomas ruso, inglés, español y alemán.",
+        "overview": {
+          "title": "Calculadora online para resolver ecuaciones.",
+          "content": "Nuestra calculadora te permite resolver ecuaciones lineales y cuadráticas online con explicaciones detalladas paso a paso. Simplemente ingrese la ecuación o los coeficientes y la calculadora encontrará instantáneamente la solución. Ideal para estudiantes, escolares y cualquier persona que estudie matemáticas.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculos de ecuaciones",
+            "linearExamples": {
+              "title": "Ejemplos de resolución de ecuaciones lineales.",
+              "example1": {
+                "equation": "2x + 5 = 15",
+                "solution": "x = 5",
+                "steps": "2x = 15 - 5 = 10, x = 10/2 = 5"
+              },
+              "example2": {
+                "equation": "3x - 7 = 14",
+                "solution": "x = 7",
+                "steps": "3x = 14 + 7 = 21, x = 21/3 = 7"
+              },
+              "example3": {
+                "equation": "5x + 3 = 3x + 8",
+                "solution": "x = 3",
+                "steps": "5x - 3x = 8 - 2, 2, 2x = 6, x = 3"
+              }
+            },
+            "quadraticExamples": {
+              "title": "Ejemplos de resolución de ecuaciones cuadráticas.",
+              "example1": {
+                "equation": "x² + 5x + 6 = 0",
+                "discriminant": "D = 25 - 24 = 1",
+                "solutions": "x₁ = -2, x₂ = -3",
+                "steps": "D = 5² - 4×1×6 = 1 > 0, dos raíces"
+              },
+              "example2": {
+                "equation": "x² - 4x + 4 = 0",
+                "discriminant": "D = 16 - 16 = 0",
+                "solutions": "x = 2",
+                "steps": "D = (-4)² - 4×1×4 = 0, una raíz"
+              },
+              "example3": {
+                "equation": "x² + 2x + 5 = 0",
+                "discriminant": "D = 4 - 20 = -16",
+                "solutions": "Sin raíces reales",
+                "steps": "D = 2² - 4×1×5 = -16 < 0, raíces complejas"
+              }
+            }
+          }
+        },
+        "linearEquations": {
+          "title": "Cómo resolver ecuaciones lineales",
+          "content": "La ecuación lineal es ax + b = 0, donde a y b son números conocidos y x es una cantidad desconocida. Para resolver, necesitas expresar x.",
+          "formula": "hacha + b = 0 → x = -b/a",
+          "example": "Ejemplo: 2x + 5 = 15 → 2x = 10 → x = 5"
+        },
+        "quadraticEquations": {
+          "title": "Cómo resolver ecuaciones cuadráticas",
+          "content": "La ecuación cuadrática tiene la forma ax² + bx + c = 0. Resuelta mediante el discriminante: D = b² - 4ac. El número de raíces depende del valor discriminante.",
+          "formula": "x = (-b ± √D) / (2a)",
+          "discriminant": "D = b² - 4ac",
+          "twoRoots": "dos raices",
+          "oneRoot": "una raíz",
+          "noRoots": "Sin raíces reales"
+        },
+        "roots": {
+          "title": "¿Cuáles son las raíces de una ecuación?",
+          "content": "Las raíces de una ecuación son los valores de una variable en los que la ecuación se convierte en una verdadera igualdad numérica. Dependiendo del tipo de ecuación, puede haber un número diferente de raíces.",
+          "real": "Las raíces reales son números ordinarios en la recta numérica.",
+          "complex": "Raíces complejas: aparecen cuando el discriminante es negativo.",
+          "repeated": "Raíces múltiples: cuando el discriminante es cero"
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "content": "Nuestra calculadora de ecuaciones en línea proporciona soluciones rápidas y precisas con explicaciones detalladas de cada paso.",
+          "items": [
+            "Resuelve instantáneamente cualquier ecuación lineal y cuadrática",
+            "Explicación detallada paso a paso de la solución.",
+            "Determinación del número de raíces y discriminante.",
+            "Admite 4 idiomas: ruso, inglés, español, alemán",
+            "Dos modos de entrada: texto y coeficientes",
+            "Completamente gratis sin registro",
+            "Diseño responsivo para todos los dispositivos"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Calculadora de ecuaciones en línea",
+          "content": "La calculadora de resolución de ecuaciones en línea en Calc1.ru admite ruso, inglés, español y alemán. ¡Resuelve ecuaciones lineales y cuadráticas con explicaciones detalladas gratis!"
+        },
+        "faq": {
+          "question1": "¿Cómo resolver una ecuación online gratis?",
+          "answer1": "Ingrese la ecuación en el formato '2x + 5 = 15' o 'x² + 2x + 1 = 0' y haga clic en el botón 'Resolver'. La calculadora detectará automáticamente el tipo de ecuación y proporcionará una solución con una explicación paso a paso.",
+          "question2": "¿Cómo encontrar las raíces de una ecuación cuadrática usando un discriminante?",
+          "answer2": "Para la ecuación cuadrática ax² + bx + c = 0, primero calcula el discriminante D = b² - 4ac. Si D > 0, la ecuación tiene dos raíces, si D = 0 - una raíz, si D < 0 - no hay raíces reales.",
+          "question3": "¿Cómo se calcula cuántas soluciones tiene una ecuación?",
+          "answer3": "Una ecuación lineal tiene una solución (si a ≠ 0). Una ecuación cuadrática puede tener 0, 1 o 2 soluciones según el discriminante. La calculadora determina automáticamente el número de soluciones.",
+          "question4": "¿Cómo resolver ecuaciones lineales en una variable?",
+          "answer4": "Las ecuaciones lineales de la forma ax + b = 0 se resuelven moviendo términos: ax = -b, luego x = -b/a. Por ejemplo, 3x + 6 = 0 → 3x = -6 → x = -2.",
+          "question5": "¿Cuál es el discriminante en una ecuación cuadrática?",
+          "answer5": "El discriminante D = b² - 4ac determina el número de raíces de la ecuación cuadrática. Para D > 0 - dos raíces, D = 0 - una raíz, D < 0 - sin raíces reales.",
+          "question6": "¿Cómo resolver una ecuación cuadrática usando la fórmula de Vieta?",
+          "answer6": "Según el teorema de Vieta: x₁ + x₂ = -b/a y x₁ × x₂ = c/a. Esto funciona para ecuaciones cuadráticas reducidas de la forma x² + px + q = 0.",
+          "question7": "¿Cómo comprobar la exactitud de la solución de una ecuación?",
+          "answer7": "Sustituye el valor encontrado en la ecuación original. Si el lado izquierdo es igual al derecho, la solución es correcta. Por ejemplo, para x = 5 en la ecuación 2x ​​+ 5 = 15: 2×5 + 5 = 15 ✓",
+          "question8": "¿Qué hacer si la ecuación no tiene soluciones?",
+          "answer8": "Si obtienes una contradicción (por ejemplo, 0 = 5), la ecuación no tiene soluciones. Si obtenemos la identidad (0 = 0), la ecuación tiene infinitas soluciones.",
+          "question9": "¿Cómo resolver ecuaciones con fracciones?",
+          "answer9": "Multiplica ambos lados de la ecuación por el denominador común para eliminar fracciones. Luego resuelve como una ecuación normal.",
+          "question10": "¿Cómo resolver sistemas de ecuaciones lineales?",
+          "answer10": "Utilice métodos de sustitución, suma o gráficos. Nuestra calculadora mostrará soluciones paso a paso para cada ecuación por separado.",
+          "question11": "¿Cuál es la raíz de una ecuación en matemáticas?",
+          "answer11": "La raíz de una ecuación es el valor de la variable en el que la ecuación se convierte en una verdadera ecuación numérica. Por ejemplo, la raíz de la ecuación 2x ​​+ 3 = 7 es x = 2.",
+          "question12": "¿Cómo resolver ecuaciones con módulo?",
+          "answer12": "Expanda el módulo por definición: |x| = x para x ≥ 0 y |x| = -x para x < 0. Considere ambos casos por separado.",
+          "question13": "¿Cómo resolver ecuaciones irracionales?",
+          "answer13": "Eleva ambos lados de la ecuación a una potencia para eliminar la raíz. Asegúrate de verificar las raíces resultantes sustituyéndolas en la ecuación original.",
+          "question14": "¿Cómo resolver ecuaciones exponenciales?",
+          "answer14": "Reducir a la misma base o usar logaritmos. Por ejemplo, 2ˣ = 8 → 2ˣ = 2³ → x = 3.",
+          "question15": "¿Cómo resolver ecuaciones logarítmicas?",
+          "answer15": "Utilice las propiedades de los logaritmos y la definición: logₐ(b) = c significa aᶜ = b. Verifique el alcance.",
+          "question16": "¿Cómo resolver ecuaciones trigonométricas?",
+          "answer16": "Utilice identidades trigonométricas básicas y fórmulas de reducción. Considere la periodicidad de las funciones trigonométricas.",
+          "question17": "¿Qué son las ecuaciones equivalentes?",
+          "answer17": "Las ecuaciones equivalentes tienen las mismas raíces. Se obtienen entre sí mediante transformaciones equivalentes: suma, resta, multiplicación por un número distinto de cero.",
+          "question18": "¿Cómo resolver ecuaciones con parámetros?",
+          "answer18": "Considere diferentes casos de valores de parámetros. Para cada caso, resuelva la ecuación por separado e indique las condiciones del parámetro.",
+          "question19": "¿Cómo resolver ecuaciones de grados superiores?",
+          "answer19": "Intente factorizar, utilizando un cambio de variable o métodos especiales (como el esquema de Horner para polinomios).",
+          "question20": "¿Cómo resolver ecuaciones con dos variables?",
+          "answer20": "Expresar una variable en términos de otra o resolver como un sistema de ecuaciones. Gráficamente, es una línea recta o curva en el plano coordenado.",
+          "question21": "¿Qué es ODZ en ecuaciones?",
+          "answer21": "VA es el rango de valores permitidos de una variable para el cual la expresión tiene sentido. Por ejemplo, para √x necesitas x ≥ 0, para 1/x necesitas x ≠ 0.",
+          "question22": "¿Cómo resolver ecuaciones con radicales?",
+          "answer22": "Elevar a ambos lados al poder apropiado para deshacerse del radical. Asegúrese de revisar las raíces resultantes.",
+          "question23": "¿Cómo resolver ecuaciones usando el método de intervalos?",
+          "answer23": "Encuentra los ceros de la función, divide la recta numérica en intervalos y determina el signo de la función en cada intervalo.",
+          "question24": "¿Cómo resolver ecuaciones gráficamente?",
+          "answer24": "Grafica los lados izquierdo y derecho de la ecuación. Los puntos de intersección de las gráficas dan las raíces de la ecuación.",
+          "question25": "¿Qué son las raíces extrañas?",
+          "answer25": "Las raíces extrañas aparecen al elevar una ecuación a una potencia par o al multiplicar por una expresión con una variable. Es necesario eliminarlos mediante verificación.",
+          "question26": "¿Cómo resolver ecuaciones usando cambios de variable?",
+          "answer26": "Introduzca una nueva variable en lugar de una expresión compleja. Resuelve la ecuación para la nueva variable y luego regresa a la variable original.",
+          "question27": "¿Cómo resolver ecuaciones usando el método de sustitución?",
+          "answer27": "Expresa una variable en términos de otra de una ecuación y sustitúyela en la segunda ecuación. Obtenga una ecuación con una variable.",
+          "question28": "¿Cómo resolver ecuaciones usando el método de la suma?",
+          "answer28": "Suma o resta ecuaciones hasta que una de las variables desaparezca. Obtenga una ecuación con una variable.",
+          "question29": "¿Cómo resolver ecuaciones usando una calculadora?",
+          "answer29": "Ingresa la ecuación en nuestra calculadora en línea en formato de texto o usando coeficientes. Obtenga una solución instantánea con una explicación paso a paso.",
+          "question30": "¿Cómo resolver ecuaciones para prepararse para el Examen Estatal Unificado?",
+          "answer30": "Conozca los principales tipos de ecuaciones: lineales, cuadráticas, racionales, irracionales. Practica con nuestra calculadora con explicaciones detalladas de cada paso de la solución."
+        }
+      }
+    },
+    "statistics": {
+      "title": "Calculadora de estadísticas",
+      "description": "Calcule la media, la mediana, la varianza y otros indicadores en línea",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "form": {
+        "title": "Introduce los detalles",
+        "inputLabel": "Números",
+        "placeholder": "Ingrese números separados por comas o espacios",
+        "hint": "Ejemplo: 1, 2, 3, 4, 5 o 1 2 3 4 5",
+        "calculate": "Calcular",
+        "clear": "Claro",
+        "errors": {
+          "title": "Errores de datos"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "mean": "Promedio",
+        "median": "Mediana",
+        "mode": "Moda",
+        "variance": "Dispersión",
+        "standardDeviation": "Desviación estándar",
+        "min": "Mínimo",
+        "max": "Máximo",
+        "count": "Cantidad",
+        "sum": "Suma",
+        "noMode": "Sin moda"
+      },
+      "seo": {
+        "title": "Calculadora estadística en línea: media, mediana y varianza | calc1.ru",
+        "description": "Calculadora online gratuita para calcular indicadores estadísticos: media, mediana, moda, dispersión, desviación estándar. Soporte para idiomas ruso, inglés, español y alemán.",
+        "overview": {
+          "title": "Calculadora de estadísticas en línea",
+          "content": "Nuestra calculadora le permite calcular rápidamente los principales indicadores estadísticos: media aritmética, mediana, moda, dispersión y desviación estándar. Simplemente ingrese números separados por comas o espacios y obtenga un análisis estadístico completo.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculos de indicadores estadísticos.",
+            "example1": {
+              "title": "Ejemplo 1: números primos",
+              "data": "1, 2, 3, 4, 5",
+              "mean": "3.0",
+              "median": "3.0",
+              "mode": "Sin moda",
+              "variance": "2.0",
+              "stdDev": "1.41"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Números con repeticiones",
+              "data": "1, 2, 2, 3, 4, 4, 4",
+              "mean": "2,86",
+              "median": "3.0",
+              "mode": "4",
+              "variance": "1.27",
+              "stdDev": "1.13"
+            },
+            "example3": {
+              "title": "Ejemplo 3: conjunto de datos grande",
+              "data": "10, 15, 20, 25, 30, 35, 40",
+              "mean": "25.0",
+              "median": "25.0",
+              "mode": "Sin moda",
+              "variance": "100.0",
+              "stdDev": "10.0"
+            }
+          }
+        },
+        "mean": {
+          "title": "Media aritmética",
+          "content": "La media aritmética es la suma de todos los valores dividida por su número. Este es uno de los indicadores de tendencia central más importantes.",
+          "formula": "Media = Σx/n",
+          "exampleTitle": "Un ejemplo",
+          "example": "Para los números 1, 2, 3, 4, 5: promedio = (1+2+3+4+5)/5 = 3"
+        },
+        "median": {
+          "title": "Mediana",
+          "content": "La mediana es el valor que divide por la mitad la serie ordenada. Si el número de elementos es par, la mediana es igual a la media aritmética de los dos valores centrales.",
+          "formula": "Mediana = el valor promedio de una serie ordenada",
+          "exampleTitle": "Un ejemplo",
+          "example": "Para los números 1, 2, 3, 4, 5: mediana = 3. Para los números 1, 2, 3, 4: mediana = (2+3)/2 = 2,5"
+        },
+        "mode": {
+          "title": "Moda",
+          "content": "La moda es el valor que ocurre con mayor frecuencia en una serie de datos. Una serie puede tener varios modos o ningún modo.",
+          "formula": "Moda = valor que ocurre con más frecuencia",
+          "exampleTitle": "Un ejemplo",
+          "example": "Para los números 1, 2, 2, 3, 4: moda = 2. Para los números 1, 2, 3, 4: sin moda"
+        },
+        "variance": {
+          "title": "Dispersión",
+          "content": "La varianza muestra cuánto se desvían los valores de la media. Cuanto mayor es la varianza, mayor es la dispersión de los datos.",
+          "formula": "Varianza = Σ(x - media)² / n",
+          "exampleTitle": "Un ejemplo",
+          "example": "Para los números 1, 2, 3, 4, 5: varianza = ((1-3)² + (2-3)² + (3-3)² + (4-3)² + (5-3)²) / 5 = 2"
+        },
+        "standardDeviation": {
+          "title": "Desviación estándar",
+          "content": "La desviación estándar es la raíz cuadrada de la varianza. Muestra la desviación promedio de los valores de la media aritmética.",
+          "formula": "Desviación estándar = √varianza",
+          "exampleTitle": "Un ejemplo",
+          "example": "Para los números 1, 2, 3, 4, 5: desviación estándar = √2 ≈ 1,41"
+        },
+        "applications": {
+          "title": "Aplicación de estadísticas",
+          "content": "Los cálculos estadísticos se utilizan ampliamente en varios campos:",
+          "items": [
+            "Análisis de datos en negocios y economía.",
+            "Investigaciones científicas y experimentos.",
+            "control de calidad del producto",
+            "investigacion medica",
+            "Encuestas de opinión",
+            "Análisis financiero e inversiones.",
+            "Educación y pedagogía",
+            "Estadísticas deportivas"
+          ]
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "content": "Nuestra calculadora de estadísticas en línea proporciona cálculos rápidos y precisos con resultados detallados.",
+          "items": [
+            "Cálculo instantáneo de todos los indicadores estadísticos clave.",
+            "Soporte para ingresar números separados por comas o espacios",
+            "Hermosa visualización de resultados con codificación de colores",
+            "Admite 4 idiomas: ruso, inglés, español, alemán",
+            "Diseño responsivo para todos los dispositivos",
+            "Completamente gratis sin registro",
+            "Cálculos precisos con precisión personalizable"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Calculadora de estadísticas en línea",
+          "content": "La calculadora de estadísticas en línea en Calc1.ru admite ruso, inglés, español y alemán. ¡Calcule la media, la mediana, la varianza y otros indicadores gratis!"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre cálculos estadísticos",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular la media aritmética online?",
+              "a": "Nuestra calculadora estadística calcula automáticamente la media aritmética. Simplemente ingrese números separados por comas o espacios y obtenga un resultado de cálculo promedio preciso."
+            },
+            {
+              "q": "¿Qué es la mediana en estadística y cómo encontrarla?",
+              "a": "La mediana es el valor que divide por la mitad una serie ordenada de datos. Nuestra calculadora de mediana ordena automáticamente los datos y encuentra el valor central, o el promedio de dos valores centrales."
+            },
+            {
+              "q": "¿Cómo calcular la varianza y la desviación estándar?",
+              "a": "La dispersión muestra la dispersión de los datos en relación con la media. La desviación estándar es la raíz cuadrada de la varianza. Nuestra calculadora de varianza realiza todos los cálculos automáticamente con alta precisión."
+            },
+            {
+              "q": "¿Qué es la moda en las estadísticas?",
+              "a": "La moda es el valor que ocurre con más frecuencia en una serie de datos. Nuestra calculadora modal identifica todos los valores modales y muestra si no hay ningún valor modal."
+            },
+            {
+              "q": "¿Cómo utilizar una calculadora estadística para analizar datos?",
+              "a": "Ingrese su información en el campo de entrada usando comas o espacios como delimitadores. La calculadora calculará instantáneamente todos los principales indicadores estadísticos para analizar sus datos."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre media y mediana?",
+              "a": "La media aritmética es la suma de todos los valores dividida por su número. La mediana es el valor central de una serie ordenada. La mediana es más resistente a valores atípicos y extremos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para una muestra?",
+              "a": "Nuestra calculadora estadística funciona tanto con la población como con la muestra. Todas las fórmulas tienen en cuenta los denominadores correctos para realizar cálculos estadísticos precisos."
+            },
+            {
+              "q": "¿Qué muestra la desviación estándar?",
+              "a": "La desviación estándar muestra la desviación promedio de los valores de la media aritmética. Cuanto mayor sea la desviación estándar, mayor será la dispersión de los datos en su muestra."
+            },
+            {
+              "q": "¿Cómo interpretar los resultados del análisis estadístico?",
+              "a": "La media muestra el valor típico, la mediana muestra la tendencia central y la moda muestra los valores más comunes. La varianza y la desviación estándar muestran la dispersión de los datos alrededor de la media."
+            },
+            {
+              "q": "¿Es posible calcular estadísticas para grandes conjuntos de datos?",
+              "a": "Sí, nuestra calculadora de estadísticas online procesa grandes cantidades de datos. Simplemente ingrese todos los números separados por comas o espacios y obtenga un análisis estadístico completo."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas descriptivas?",
+              "a": "Nuestra calculadora calcula todos los estadísticos descriptivos básicos: media, mediana, moda, varianza, desviación estándar, mínimo, máximo y número de elementos."
+            },
+            {
+              "q": "¿Qué es la tendencia central en estadística?",
+              "a": "La tendencia central es el valor típico o central en la distribución de datos. Medidas básicas de tendencia central: media aritmética, mediana y moda."
+            },
+            {
+              "q": "¿Cómo calcular la difusión de datos?",
+              "a": "La dispersión de los datos se mide por la varianza y la desviación estándar. Nuestra calculadora calcula automáticamente estas métricas, que muestran en qué medida los datos se desvían del promedio."
+            },
+            {
+              "q": "¿Qué son los valores atípicos en las estadísticas?",
+              "a": "Los valores atípicos son valores que difieren significativamente del resto de los datos. La mediana es más resistente a los valores atípicos que la media aritmética, por lo que suele utilizarse para analizar datos con valores extremos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para distribución normal?",
+              "a": "Para una distribución normal, la media, la mediana y la moda son iguales. Nuestra calculadora le ayudará a determinar qué tan cerca están sus datos de una distribución normal."
+            },
+            {
+              "q": "¿Qué son cuantiles y percentiles?",
+              "a": "Los cuantiles dividen datos ordenados en partes iguales. La mediana es el percentil 50. Nuestra calculadora calcula los cuantiles principales para analizar la distribución de los datos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para series de tiempo?",
+              "a": "Para las series temporales, la media, la tendencia y la volatilidad son importantes. Nuestra calculadora calcula estadísticas básicas para analizar datos de tiempo."
+            },
+            {
+              "q": "¿Qué es el coeficiente de variación?",
+              "a": "El coeficiente de variación es la relación entre la desviación estándar y la media, expresada como porcentaje. Muestra la variabilidad relativa de los datos independientemente de las unidades de medida."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para datos cualitativos?",
+              "a": "Para los datos cualitativos, los principales indicadores son la moda y la frecuencia de aparición. Nuestra calculadora determina los valores más comunes y su distribución."
+            },
+            {
+              "q": "¿Qué son la asimetría y la curtosis?",
+              "a": "La asimetría muestra la desviación de la distribución de la simetría, la curtosis muestra la nitidez del pico de distribución. Estas medidas ayudan a evaluar la forma de la distribución de datos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para datos financieros?",
+              "a": "Para los datos financieros, el rendimiento promedio, la volatilidad (desviación estándar) y el riesgo son importantes. Nuestra calculadora le ayuda a analizar el rendimiento financiero y el retorno de la inversión."
+            },
+            {
+              "q": "¿Qué son los intervalos de confianza?",
+              "a": "Los intervalos de confianza muestran el rango dentro del cual se encuentra el valor real de un parámetro con una probabilidad dada. Nuestra calculadora calcula estadísticas básicas para construir intervalos de confianza."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para la investigación médica?",
+              "a": "En medicina, las medias, las medianas para la solidez frente a los valores atípicos y las desviaciones estándar para evaluar la dispersión son importantes. Nuestra calculadora ayuda a analizar datos médicos."
+            },
+            {
+              "q": "¿Qué es el rango intercuartil (RIC)?",
+              "a": "IQR es la diferencia entre el tercer y el primer cuartil (Q3 - Q1). Muestra la dispersión del 50% central de los datos y es menos sensible a los valores atípicos que la desviación estándar."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para el control de calidad?",
+              "a": "En el control de calidad, los promedios, las desviaciones estándar y los límites de control son importantes. Nuestra calculadora estadística calcula todos los indicadores necesarios para el control estadístico de procesos."
+            },
+            {
+              "q": "¿Qué es una puntuación z en estadística?",
+              "a": "La puntuación z muestra cuántas desviaciones estándar se desvía un valor de la media. Z = (x - μ) / σ, donde x es el valor, μ es la media, σ es la desviación estándar."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para la investigación de mercados?",
+              "a": "En marketing, los valores medios de las preferencias de los consumidores, los ingresos medios y las desviaciones estándar de los precios son importantes. Nuestra calculadora de estadísticas le ayuda a analizar los datos del mercado."
+            },
+            {
+              "q": "¿Cuál es la regla general 68-95-99,7?",
+              "a": "Para una distribución normal: el 68% de los datos está dentro de 1σ de la media, el 95% está dentro de 2σ, el 99,7% está dentro de 3σ. Nuestra calculadora de estadísticas muestra la distribución de sus datos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para encuestas sociológicas?",
+              "a": "Para los datos sociológicos, son importantes los valores modales, las medianas de robustez frente a respuestas extremas y las desviaciones estándar para evaluar la coherencia de las opiniones."
+            },
+            {
+              "q": "¿Qué es la desviación absoluta mediana (MAD)?",
+              "a": "MAD es la mediana de las desviaciones absolutas de la mediana. Una medida de dispersión que es más robusta frente a los valores atípicos que la desviación estándar."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para datos deportivos?",
+              "a": "En los deportes, son importantes los promedios, las medianas de resistencia a resultados extremos y las desviaciones estándar para evaluar la estabilidad del rendimiento."
+            },
+            {
+              "q": "¿Cuál es el error estándar de la media?",
+              "a": "El error estándar de la media es la desviación estándar de la distribución muestral de la media. Muestra la precisión de la estimación de la media muestral."
+            },
+            {
+              "q": "¿Qué son la correlación y la covarianza?",
+              "a": "La correlación muestra una relación lineal entre variables, la covarianza muestra una variabilidad conjunta. Nuestra calculadora calcula estadísticas básicas para analizar relaciones entre datos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para encuestas sociológicas?",
+              "a": "Para las encuestas, los valores modales, las medianas y las distribuciones de respuestas son importantes. Nuestra calculadora ayuda a analizar los resultados de estudios sociológicos y encuestas de opinión pública."
+            },
+            {
+              "q": "¿Qué es la significancia estadística?",
+              "a": "La significación estadística indica la probabilidad de que el efecto observado no se deba al azar. Nuestra calculadora calcula estadísticas clave para evaluar la importancia de sus resultados."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para el control de calidad?",
+              "a": "En el control de calidad, son importantes los promedios del proceso, las desviaciones estándar para evaluar la estabilidad y los límites de control. Nuestra calculadora ayuda a analizar la calidad del producto."
+            },
+            {
+              "q": "¿Qué es el análisis de regresión?",
+              "a": "El análisis de regresión examina la relación entre variables. Nuestra calculadora calcula indicadores estadísticos básicos para construir modelos de regresión y pronósticos."
+            },
+            {
+              "q": "¿Cómo calcular estadísticas para las pruebas A/B?",
+              "a": "Para las pruebas A/B, los valores de conversión promedio, la significación estadística de las diferencias y los intervalos de confianza son importantes. Nuestra calculadora ayuda a analizar los resultados de los experimentos."
+            },
+            {
+              "q": "¿Qué son las estadísticas bayesianas?",
+              "a": "La estadística bayesiana utiliza conocimientos previos para actualizar las probabilidades. Nuestra calculadora calcula estadísticas básicas para el análisis de datos bayesianos."
+            }
+          ]
+        }
+      }
+    },
+    "converter": {
+      "title": "Convertidor de unidades",
+      "description": "Convierte longitud, masa, tiempo y volumen online",
+      "breadcrumbs": {
+        "category": "Matemáticas"
+      },
+      "hero": {
+        "units": "unidades de medida",
+        "accuracy": "Precisión de cálculo",
+        "format": "Formato de datos"
+      },
+      "form": {
+        "title": "Convertidor de unidades",
+        "selectCategory": "Seleccionar categoría",
+        "categories": {
+          "length": "Longitud",
+          "mass": "Peso",
+          "time": "Tiempo",
+          "volume": "Volumen"
+        },
+        "fromUnit": "De la unidad",
+        "toUnit": "Por unidad",
+        "value": "Significado",
+        "selectUnit": "Seleccionar unidad",
+        "reset": "Reiniciar",
+        "errors": {
+          "title": "Errores de datos"
+        }
+      },
+      "results": {
+        "title": "Resultado de la conversión",
+        "conversionInfo": "Tasa de conversión"
+      },
+      "units": {
+        "length": {
+          "m": "metro",
+          "km": "kilómetro (km)",
+          "cm": "centímetro (cm)",
+          "mm": "milímetro (mm)",
+          "inch": "pulgada",
+          "foot": "pie (pies)",
+          "yard": "yarda (yd)",
+          "mile": "milla (mi)"
+        },
+        "mass": {
+          "kg": "kilogramos (kg)",
+          "g": "gramo (g)",
+          "mg": "miligramo (mg)",
+          "tonne": "tonelada de (t)",
+          "lb": "libra (lb)",
+          "oz": "onza (oz)"
+        },
+        "time": {
+          "second": "segundo(s)",
+          "minute": "minuto (min)",
+          "hour": "tiempo (horas)",
+          "day": "día(d)",
+          "week": "domingo (domingo)"
+        },
+        "volume": {
+          "l": "litro (l)",
+          "ml": "mililitro (ml)",
+          "m3": "metro cúbico (m‰)",
+          "cm3": "centímetro cúbico (cm³)",
+          "gallon": "galón",
+          "pint": "pinta (pt)"
+        }
+      },
+      "seo": {
+        "title": "Conversor de unidades en línea: longitud, masa, tiempo, volumen | calc1.ru",
+        "description": "Conversor de unidades en línea gratuito para longitud, masa, tiempo y volumen. Soporte para idiomas ruso, inglés, español y alemán.",
+        "overview": {
+          "title": "Conversor de unidades en línea",
+          "content": "Nuestro conversor le permite convertir de forma rápida y precisa entre diferentes unidades de medida: longitud, masa, tiempo y volumen. Simplemente seleccione una categoría, unidades de medida e ingrese un valor para obtener resultados instantáneos.",
+          "examples": {
+            "title": "Ejemplos de cálculos de conversión de unidades",
+            "lengthExamples": {
+              "title": "Ejemplos de conversión de longitud",
+              "example1": "100cm = 1m = 1000mm",
+              "example2": "1 km = 1000 m = 100000 cm",
+              "example3": "1 pulgada = 2,54 cm = 25,4 mm",
+              "example4": "1 pie = 30,48 cm = 0,3048 m",
+              "example5": "1 milla = 1,609 km = 1609 m"
+            },
+            "massExamples": {
+              "title": "Ejemplos de conversión masiva",
+              "example1": "1 kg = 1000 g = 1000000 mg",
+              "example2": "1 tonelada = 1000 kg = 1000000 años",
+              "example3": "1 libra = 0,453 kg = 453 g",
+              "example4": "1 onza = 28,35 g = 28350 mg",
+              "example5": "500 g = 0,5 kg = 500000 mg"
+            },
+            "timeExamples": {
+              "title": "Ejemplos de conversión de tiempo",
+              "example1": "1 hora = 60 minutos = 3600 segundos",
+              "example2": "1 día = 24 horas = 1440 minutos",
+              "example3": "1 semana = 7 días = 168 horas",
+              "example4": "30 minutos = 1800 segundos = 0,5 horas",
+              "example5": "2 horas 30 minutos = 150 minutos = 9000 segundos"
+            },
+            "volumeExamples": {
+              "title": "Ejemplos de conversión de volumen",
+              "example1": "1 litro = 1000 ml = 0,001 m³",
+              "example2": "1 m3 = 1000 litros = 100,0000 ml",
+              "example3": "1 galón = 3,785 litros = 3785 ml",
+              "example4": "500 ml = 0,5 litros = 0,0005 m3",
+              "example5": "1 pinta = 0,473 litros = 473 ml"
+            }
+          }
+        },
+        "length": {
+          "title": "Conversión de longitud",
+          "content": "Convertir entre unidades de longitud métricas e imperiales. Se admiten todas las unidades básicas, desde milímetros hasta millas.",
+          "units": [
+            "Sistema métrico: mm, cm, m, km",
+            "Sistema imperial: pulgadas, pies, yardas, millas.",
+            "Tasas de conversión exactas",
+            "Soporte para cálculos científicos."
+          ]
+        },
+        "mass": {
+          "title": "Conversión masiva",
+          "content": "Convertir entre diferentes unidades de masa y peso. Desde miligramos hasta toneladas, incluidas las unidades imperiales.",
+          "units": [
+            "Sistema métrico: mg, g, kg, t",
+            "Sistema imperial: onzas, libras",
+            "Factores de conversión precisos",
+            "Soporte de medición de cocción"
+          ]
+        },
+        "time": {
+          "title": "Conversión de tiempo",
+          "content": "Convertir entre diferentes unidades de tiempo. Desde segundos hasta semanas con cálculos precisos.",
+          "units": [
+            "Unidades básicas: segundos, minutos, horas.",
+            "Largo plazo: días, semanas",
+            "Cálculos de tiempo precisos",
+            "Apoyo a la planificación"
+          ]
+        },
+        "volume": {
+          "title": "Conversión de volumen",
+          "content": "Convertir entre diferentes unidades de volumen. Desde mililitros hasta metros cúbicos y unidades imperiales.",
+          "units": [
+            "Sistema métrico: ml, l, m³, cm³",
+            "Sistema imperial: pintas, galones",
+            "Cálculos volumétricos precisos",
+            "Soporte para líquidos y gases."
+          ]
+        },
+        "applications": {
+          "title": "Aplicación del convertidor",
+          "content": "El convertidor de unidades se usa ampliamente en varios campos:",
+          "items": [
+            "Investigaciones científicas y experimentos.",
+            "Cálculos y diseño de ingeniería.",
+            "Cocina y recetas",
+            "Viajes y navegación",
+            "Educación y formación",
+            "Medicina y productos farmacéuticos.",
+            "Construcción y arquitectura",
+            "Deportes y fitness"
+          ]
+        },
+        "advantages": {
+          "title": "Ventajas del convertidor",
+          "content": "Nuestro conversor de unidades en línea proporciona conversiones rápidas y precisas con una interfaz fácil de usar.",
+          "items": [
+            "Conversión instantánea en tiempo real",
+            "Admite 4 categorías de unidades de medida",
+            "Factores de conversión precisos",
+            "Admite 4 idiomas: ruso, inglés, español, alemán",
+            "Diseño responsivo para todos los dispositivos",
+            "Completamente gratis sin registro",
+            "Interfaz intuitiva"
+          ]
+        },
+        "onlineConverter": {
+          "title": "Conversor de unidades en línea",
+          "content": "El conversor de unidades en línea en Calc1.ru admite ruso, inglés, español y alemán. ¡Convierte longitud, masa, tiempo y volumen gratis!"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre el conversor de unidades",
+          "faqItems": [
+            {
+              "q": "¿Cómo utilizar un conversor de unidades online?",
+              "a": "Seleccione una categoría de unidad (longitud, masa, tiempo o volumen), luego seleccione una unidad de origen y de destino, ingrese un valor y el resultado aparecerá automáticamente. Nuestro conversor de unidades admite conversión instantánea y en tiempo real."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el conversor de longitud?",
+              "a": "El convertidor de longitud admite unidades métricas (milímetros, centímetros, metros, kilómetros) y unidades imperiales (pulgadas, pies, yardas, millas). Todos los factores de conversión se basan en estándares internacionales oficiales."
+            },
+            {
+              "q": "¿Cómo convertir kilogramos a libras y onzas?",
+              "a": "Para convertir el peso, utilice nuestro conversor de peso: 1 kilogramo = 2,205 libras = 35,274 onzas. Ingrese el valor en kilogramos, seleccione libras u onzas como unidad objetivo y obtenga el resultado exacto."
+            },
+            {
+              "q": "¿Qué tan precisos son los resultados de la conversión de hora?",
+              "a": "Todos los factores de conversión de tiempo se basan en estándares internacionales oficiales y garantizan la máxima precisión de cálculo. El conversor de tiempo admite segundos, minutos, horas, días y semanas."
+            },
+            {
+              "q": "¿Cómo convertir litros a galones y pintas?",
+              "a": "El convertidor de volumen admite unidades métricas (mililitros, litros, metros cúbicos) y unidades imperiales (pintas, galones). 1 litro = 0,264 galones = 2,113 pintas. Introduzca un valor y seleccione la unidad de destino."
+            },
+            {
+              "q": "¿El conversor de unidades admite cálculos científicos?",
+              "a": "Sí, nuestro conversor de unidades admite cálculos científicos con alta precisión. Todos los factores de conversión se basan en estándares internacionales y son adecuados para cálculos científicos y de ingeniería."
+            },
+            {
+              "q": "¿Cómo utilizar un convertidor de unidades de cocción?",
+              "a": "El conversor de unidades es ideal para cocinar. Convierta gramos a onzas, mililitros a tazas, kilogramos a libras para medir con precisión los ingredientes de las recetas."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el convertidor de masa?",
+              "a": "El convertidor de masa admite unidades métricas (miligramos, gramos, kilogramos, toneladas) y unidades imperiales (onzas, libras). Todos los factores de conversión se basan en estándares oficiales."
+            },
+            {
+              "q": "¿Cómo convertir metros a pies y pulgadas?",
+              "a": "Para convertir longitud utilice nuestro conversor: 1 metro = 3,281 pies = 39,37 pulgadas. Ingrese el valor en metros, seleccione pies o pulgadas como unidad objetivo y obtenga el resultado exacto."
+            },
+            {
+              "q": "¿El convertidor de unidades es compatible con dispositivos móviles?",
+              "a": "Sí, nuestro conversor de unidades en línea responde y está totalmente preparado para dispositivos móviles. La interfaz se ajusta automáticamente al tamaño de la pantalla para facilitar su uso en teléfonos inteligentes y tabletas."
+            },
+            {
+              "q": "¿Cómo utilizar un conversor de unidades para viajar?",
+              "a": "Un conversor de unidades es fundamental para viajar. Convierta kilómetros a millas para navegación, kilogramos a libras para equipaje, litros a galones para combustible, horas a hora local."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el conversor de volumen?",
+              "a": "El convertidor de volumen admite unidades métricas (mililitros, litros, metros cúbicos, centímetros cúbicos) y unidades imperiales (pintas, galones). Todos los cálculos volumétricos se realizan con alta precisión."
+            },
+            {
+              "q": "¿Cómo convertir horas a minutos y segundos?",
+              "a": "El conversor de tiempo admite todas las unidades básicas: 1 hora = 60 minutos = 3600 segundos. Ingrese el valor en horas, seleccione minutos o segundos como unidad objetivo y obtenga el resultado exacto."
+            },
+            {
+              "q": "¿El conversor de unidades admite varios idiomas?",
+              "a": "Sí, nuestro conversor de unidades admite 4 idiomas: ruso, inglés, español y alemán. La interfaz cambia automáticamente según el idioma seleccionado."
+            },
+            {
+              "q": "¿Cómo utilizar un conversor de unidades para la construcción?",
+              "a": "El convertidor de unidades se utiliza mucho en la construcción. Convierta metros a pies para habitaciones, kilogramos a libras para materiales, litros a galones para líquidos."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el conversor de tiempo?",
+              "a": "El conversor de tiempo admite unidades básicas: segundos, minutos, horas, días, semanas. Todos los cálculos de tiempo se realizan con una precisión de milisegundos para cálculos científicos y de ingeniería."
+            },
+            {
+              "q": "¿Cómo convertir toneladas a kilogramos y gramos?",
+              "a": "Para convertir masa, utiliza nuestro conversor: 1 tonelada = 1000 kilogramos = 1.000.000 gramos. Ingrese el valor en toneladas, seleccione kilogramos o gramos como unidad objetivo."
+            },
+            {
+              "q": "¿El conversor de unidades admite la exportación de resultados?",
+              "a": "Nuestro conversor de unidades le permite copiar los resultados a su portapapeles para su uso posterior. Los resultados de la conversión se pueden guardar o compartir con colegas."
+            },
+            {
+              "q": "¿Cómo utilizar un convertidor de unidades médicas?",
+              "a": "Un convertidor de unidades es indispensable en medicina. Convierta miligramos a gramos para dosis de medicamentos, mililitros a litros para líquidos y kilogramos a libras para el peso de los pacientes."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el conversor de longitud?",
+              "a": "El convertidor de longitud admite unidades métricas (milímetros, centímetros, metros, kilómetros) y unidades imperiales (pulgadas, pies, yardas, millas). Todos los factores de conversión se basan en estándares internacionales."
+            },
+            {
+              "q": "¿Cómo convertir metros cúbicos a litros y mililitros?",
+              "a": "El convertidor de volumen permite una conversión precisa: 1 metro cúbico = 1000 litros = 1.000.000 mililitros. Ingrese el valor en metros cúbicos, seleccione litros o mililitros como unidad de destino."
+            },
+            {
+              "q": "¿El conversor de unidades admite unidades históricas?",
+              "a": "Nuestro conversor de unidades admite las principales unidades de medida modernas. Para unidades históricas, se recomienda utilizar convertidores especializados o libros de referencia."
+            },
+            {
+              "q": "¿Cómo utilizar un conversor de unidades para deportes?",
+              "a": "Un conversor de unidades es útil en los deportes. Convierta kilómetros a millas para correr, kilogramos a libras para peso, litros a galones para hidratación y horas a minutos para entrenar."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el convertidor de masa?",
+              "a": "El convertidor de masa admite unidades métricas (miligramos, gramos, kilogramos, toneladas) y unidades imperiales (onzas, libras). Todos los factores de conversión se basan en estándares internacionales oficiales."
+            },
+            {
+              "q": "¿Cómo convertir semanas a días y horas?",
+              "a": "El conversor de tiempo admite una conversión precisa: 1 semana = 7 días = 168 horas. Ingrese un valor en semanas, seleccione días u horas como unidad objetivo y obtenga el resultado exacto."
+            },
+            {
+              "q": "¿El convertidor de unidades admite unidades de temperatura?",
+              "a": "Nuestro conversor de unidades admite longitud, masa, tiempo y volumen. Para convertir temperaturas, utilice un convertidor de temperatura especializado."
+            },
+            {
+              "q": "¿Cómo utilizar un conversor de unidades para la educación?",
+              "a": "Un conversor de unidades es indispensable en la educación. Los estudiantes pueden convertir unidades de medida para resolver problemas de física, química y matemáticas. Los profesores utilizan el convertidor para comprobar los cálculos."
+            },
+            {
+              "q": "¿Qué unidades de medida admite el conversor de volumen?",
+              "a": "El convertidor de volumen admite unidades métricas (mililitros, litros, metros cúbicos, centímetros cúbicos) y unidades imperiales (pintas, galones). Todos los cálculos volumétricos se realizan con alta precisión."
+            },
+            {
+              "q": "¿Cómo convertir yardas a metros y centímetros?",
+              "a": "El convertidor de longitud admite una conversión precisa: 1 yarda = 0,914 metros = 91,4 centímetros. Ingrese el valor en yardas, seleccione metros o centímetros como unidad objetivo."
+            },
+            {
+              "q": "¿El conversor de unidades admite unidades monetarias?",
+              "a": "Nuestro conversor de unidades admite unidades físicas (longitud, masa, tiempo, volumen). Para convertir monedas, utilice un conversor de divisas especializado."
+            }
+          ]
+        }
+      }
+    }
+  }
 }
-
-
-

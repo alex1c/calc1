@@ -1,6 +1,1015 @@
 {
-	"calculators": {}
+  "calculators": {
+    "ipCalculator": {
+      "title": "Calculadora de dirección IP y subred - Calculadora de IP",
+      "description": "Calculadora online de direcciones IP y subredes para IPv4 e IPv6. Calcule la red, primera y última IP, CIDR y número de hosts. Soporte para cálculo de rango inverso.",
+      "breadcrumbs": {
+        "it": "ÉL",
+        "category": "ÉL"
+      },
+      "hero": {
+        "networks": "Redes",
+        "accuracy": "Precisión de cálculo",
+        "format": "Formato de datos"
+      },
+      "features": {
+        "ipv4Calculation": "Cálculo de IPv4",
+        "ipv6Calculation": "Cálculo de IPv6",
+        "cidrSupport": "Soporte CIDR",
+        "reverseCalculation": "Cálculo inverso",
+        "accuracy": "Alta precisión"
+      },
+      "form": {
+        "title": "Cálculo de IP y subredes.",
+        "description": "Calcule los parámetros de red, el rango de IP y la cantidad de hosts",
+        "ipAddress": "dirección IP/CIDR",
+        "ipAddressPlaceholder": "192.168.1.0/24 o 2001:db8::/48",
+        "ipMask": "IP + máscara",
+        "ipMaskPlaceholder": "192.168.1.0 + 255.255.255.0",
+        "ipRange": "rango de IP",
+        "ipRangePlaceholder": "192.168.1.1 - 192.168.1.254",
+        "calculationType": "Tipo de cálculo",
+        "calculate": "Calcular",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "calculationTypes": {
+          "cidr": "IP/CIDR",
+          "mask": "IP + máscara",
+          "range": "rango de IP"
+        },
+        "errors": {
+          "ipRequired": "Introduzca la dirección IP",
+          "invalidIp": "Dirección IP incorrecta",
+          "invalidCidr": "CIDR incorrecto",
+          "invalidMask": "Máscara incorrecta",
+          "invalidRange": "Rango no válido",
+          "ipv4Only": "Sólo IPv4",
+          "ipv6Only": "Sólo IPv6"
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "ipType": "Tipo IP",
+        "networkAddress": "dirección de red",
+        "firstIp": "Primera propiedad intelectual",
+        "lastIp": "Última IP",
+        "broadcastAddress": "dirección de transmisión",
+        "subnetMask": "Máscara recordada",
+        "cidr": "CIDR",
+        "hostsCount": "Número de anfitriones",
+        "hostRange": "rango de host",
+        "summary": "Resultados",
+        "summaryText": "Una red {network} con {hosts} hosts en el rango {first} - {last}.",
+        "network": "Neto",
+        "specifications": "Características",
+        "hosts": "Anfitriones",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "export": "Exportar",
+        "exportPdf": "PDF",
+        "exportExcel": "Sobresalir"
+      },
+      "tips": {
+        "title": "Consejos para trabajar con IP y subredes",
+        "content": "El cálculo correcto de IP y subredes garantiza una configuración de red correcta:",
+        "cidr": {
+          "title": "Notación CIDR",
+          "description": "CIDR muestra el número de bits en la máscara de subred",
+          "example": "Ejemplo: /24 significa máscara 255.255.255.0"
+        },
+        "ipv4": {
+          "title": "dirección IPv4",
+          "private": "Privado: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16",
+          "public": "Público: todos los demás",
+          "description": "IPv4 utiliza direcciones de 32 bits"
+        },
+        "ipv6": {
+          "title": "dirección IPv6",
+          "private": "Local: fe80::/10, fc00::/7",
+          "public": "Mundial: 2000::/3",
+          "description": "IPv6 utiliza direcciones de 128 bits"
+        },
+        "subnets": {
+          "title": "Recordar",
+          "calculation": "Refleja: 2^(32-CIDR) - 2 fármacos",
+          "description": "Considere las direcciones de red y de transmisión"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de IP y subred en línea - CIDR / IPv4 / IPv6",
+        "description": "La calculadora de dirección IP y subred le permite calcular la red, la primera/última IP, la máscara, el CIDR y la cantidad de hosts para IPv4 e IPv6. Soporte para cálculo de rango inverso en CIDR.",
+        "keywords": "Calculadora de IP, CIDR en línea, subred IPv4 IPv6, recuento de hosts, rango de IP, máscara de IP, calculadora de TI, calculadora de red, calculadora de subred, calculadora de dirección IP, máscara de subred, dirección de transmisión, primera IP, última IP, número de hosts, rango de IP, dirección de red, cálculo de subred, calculadora de rango de IP, calculadora CIDR, calculadora IPv4, calculadora IPv6, ingeniero de redes, administrador de sistemas, especialista en TI, administración de redes, direccionamiento IP, cálculo de subredes, tecnologías de red, redes informáticas, TCP/IP, Internet protocolos",
+        "overview": {
+          "title": "Acerca de la calculadora de IP y subred",
+          "content": "Calculadora online de direcciones IP y subredes para IPv4 e IPv6. Calcule la red, primera y última IP, CIDR y número de hosts. Soporte para cálculo de rango inverso. Se tienen en cuenta todos los parámetros de direccionamiento de red.",
+          "examples": {
+            "title": "Ejemplos de uso de la calculadora.",
+            "cidrExample": {
+              "title": "Cálculo de subred usando CIDR",
+              "scenario": "Por ejemplo, es necesario calcular los parámetros de la red 192.168.1.0/24.",
+              "calculation": "La calculadora determinará: máscara de subred 255.255.255.0, número de hosts 254, primera IP 192.168.1.1, última IP 192.168.1.254, dirección de transmisión 192.168.1.255",
+              "result": "La red puede contener 254 hosts con direcciones de 192.168.1.1 a 192.168.1.254"
+            },
+            "subnetExample": {
+              "title": "subredes",
+              "scenario": "Por ejemplo, necesitas dividir la red 10.0.0.0/16 en 4 subredes",
+              "calculation": "La calculadora creará subredes: 10.0.0.0/18, 10.0.64.0/18, 10.0.128.0/18, 10.0.192.0/18",
+              "result": "Cada subred puede contener hasta 16.382 hosts"
+            },
+            "rangeExample": {
+              "title": "Cálculo de rango inverso",
+              "scenario": "Por ejemplo, necesita encontrar el CIDR para el rango de 172.16.0.1 a 172.16.255.254",
+              "calculation": "La calculadora determinará: red 172.16.0.0/16, máscara 255.255.0.0, número de hosts 65.534",
+              "result": "El rango corresponde a la red 172.16.0.0/16"
+            },
+            "ipv6Example": {
+              "title": "Trabajar con IPv6",
+              "scenario": "Por ejemplo, necesita calcular la subred 2001:db8::/64",
+              "calculation": "La calculadora determinará: prefijo 2001:db8::, longitud del prefijo 64, número de direcciones 2^64",
+              "result": "Una subred puede contener 18.446.744.073.709.551.616 direcciones"
+            },
+            "networkExample": {
+              "title": "Determinar los parámetros de la red",
+              "scenario": "Por ejemplo, necesita definir los parámetros de red para IP 203.0.113.42/28",
+              "calculation": "La calculadora determinará: red 203.0.113.32, máscara 255.255.255.240, primera IP 203.0.113.33, última IP 203.0.113.46, transmisión 203.0.113.47",
+              "result": "La red contiene 14 hosts con direcciones de 203.0.113.33 a 203.0.113.46"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calculan la IP y las subredes",
+          "content": "La calculadora utiliza fórmulas de cálculo de red estándar:",
+          "network": "Dirección de red: IP y máscara",
+          "hosts": "Número de hosts: 2^(32-CIDR) - 2",
+          "range": "Rango: red + 1 para transmitir - 1"
+        },
+        "features": {
+          "title": "Funciones básicas",
+          "ipv4": "Cálculo de redes IPv4",
+          "ipv4Desc": "Cálculo completo de los parámetros de subred IPv4.",
+          "ipv6": "Cálculo de redes IPv6",
+          "ipv6Desc": "Soporte para direcciones IPv6 modernas",
+          "cidr": "Notación CIDR",
+          "cidrDesc": "Trabajar con notación CIDR para cálculos precisos",
+          "reverse": "Cálculo inverso",
+          "reverseDesc": "Determinación de CIDR por rango de IP",
+          "visualization": "Avance",
+          "visualizationDesc": "Representación gráfica de una subred.",
+          "export": "Exportar resultados",
+          "exportDesc": "Guardar resultados en PDF o Excel",
+          "validation": "Verificación de validación",
+          "validationDesc": "Verificación automática de direcciones IP"
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "content": "Nuestra calculadora de IP ofrece muchos beneficios para los cálculos de red.",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Utiliza estándares actuales de direccionamiento de red",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Admite varios formatos de entrada",
+          "comprehensive": "Análisis completo",
+          "comprehensiveDesc": "Contabilización de todos los parámetros de direccionamiento de red.",
+          "export": "Exportar datos",
+          "exportDesc": "Posibilidad de guardar resultados en PDF o Excel."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular una subred por IP y máscara?",
+              "a": "Dirección de red = IP y máscara, número de hosts = 2^(32-CIDR) - 2."
+            },
+            {
+              "q": "¿Qué es CIDR y cómo utilizarlo?",
+              "a": "CIDR muestra la cantidad de bits en la máscara de subred, por ejemplo /24 significa 255.255.255.0."
+            },
+            {
+              "q": "¿Cómo determinar la primera y última IP de la red?",
+              "a": "Primera IP = dirección de red + 1, última IP = dirección de transmisión - 1."
+            },
+            {
+              "q": "¿Cómo calcular la cantidad de hosts disponibles?",
+              "a": "Número de hosts = 2^(32-CIDR) - 2 para IPv4, 2^(128-CIDR) para IPv6."
+            },
+            {
+              "q": "¿Se puede utilizar esta calculadora para IPv6?",
+              "a": "Sí, la calculadora admite direcciones IPv4 e IPv6."
+            },
+            {
+              "q": "¿Cómo invertir el cálculo desde un rango en CIDR?",
+              "a": "La calculadora determinará automáticamente el CIDR mínimo para un rango de IP determinado."
+            },
+            {
+              "q": "¿Cómo saber la dirección de transmisión?",
+              "a": "Dirección de transmisión = dirección de red + (2^(32-CIDR) - 1)."
+            },
+            {
+              "q": "¿Cómo convertir una máscara de subred a CIDR?",
+              "a": "CIDR = número de unos en la máscara de subred en notación binaria."
+            },
+            {
+              "q": "¿Cómo comprobar si la dirección IP es correcta?",
+              "a": "La calculadora verifica automáticamente el formato y el rango de direcciones IP."
+            },
+            {
+              "q": "¿Cómo calcular la subred para múltiples rangos de IP?",
+              "a": "Utilice el cálculo retrospectivo para determinar el CIDR general para el rango."
+            },
+            {
+              "q": "¿Es la calculadora adecuada para la formación de ingenieros de redes?",
+              "a": "Sí, la calculadora es excelente para aprender sobre direccionamiento de redes y subredes."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para diseñar redes locales?",
+              "a": "Sí, la calculadora le ayudará a diseñar la estructura de subred óptima."
+            },
+            {
+              "q": "¿Cómo calcular una subred para una granja de servidores?",
+              "a": "Determine la cantidad de servidores y seleccione el CIDR apropiado para la subred."
+            },
+            {
+              "q": "¿Qué son las direcciones IP privadas?",
+              "a": "Direcciones privadas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 para redes internas."
+            },
+            {
+              "q": "¿Cómo calcular una subred para una oficina?",
+              "a": "Considere la cantidad de dispositivos y el crecimiento planificado de la red al elegir un CIDR."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para IPv6?",
+              "a": "Sí, la calculadora es totalmente compatible con direcciones y cálculos IPv6."
+            },
+            {
+              "q": "¿Cómo calcular una subred para un centro de datos?",
+              "a": "Utilice subredes grandes con CIDR bajo para alojar muchos servidores."
+            },
+            {
+              "q": "¿Qué es una dirección de transmisión?",
+              "a": "La dirección para enviar paquetes a todos los hosts de la subred, normalmente la última dirección."
+            },
+            {
+              "q": "¿Cómo calcular la subred de tu red doméstica?",
+              "a": "Utilice 192.168.0.0/24 o 192.168.1.0/24 para una red doméstica típica."
+            },
+            {
+              "q": "¿Puedo usar una calculadora de VPN?",
+              "a": "Sí, la calculadora te ayudará a configurar subredes para conexiones VPN."
+            },
+            {
+              "q": "¿Cómo calcular una subred para servicios en la nube?",
+              "a": "Considere los requisitos del proveedor de la nube y la escala planificada."
+            },
+            {
+              "q": "¿Qué es una máscara de subred?",
+              "a": "Un número de 32 bits que determina qué parte de la dirección IP pertenece a la red."
+            },
+            {
+              "q": "¿Cómo calcular una subred para dispositivos IoT?",
+              "a": "Utilice subredes grandes para alojar varios dispositivos IoT."
+            },
+            {
+              "q": "¿Puedo usar una calculadora por seguridad?",
+              "a": "Sí, configurar correctamente las subredes es importante para la seguridad de la red."
+            },
+            {
+              "q": "¿Cómo calcular la subred para dispositivos móviles?",
+              "a": "Considere la asignación de direcciones IP dinámicas y DHCP."
+            },
+            {
+              "q": "¿Qué es una dirección de red?",
+              "a": "La primera dirección de la subred se utiliza para identificar la propia red."
+            },
+            {
+              "q": "¿Cómo calcular una subred para redes industriales?",
+              "a": "Considere los requisitos de confiabilidad y aislamiento de los sistemas industriales."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para IPv6?",
+              "a": "Sí, la calculadora admite todas las funciones modernas de IPv6."
+            },
+            {
+              "q": "¿Cómo calcular una subred para instituciones educativas?",
+              "a": "Planifique subredes por departamento y tipo de dispositivo."
+            },
+            {
+              "q": "¿Qué es una subred?",
+              "a": "División lógica de la red en segmentos más pequeños para gestionar el tráfico."
+            },
+            {
+              "q": "¿Cómo calcular una subred para bancos?",
+              "a": "Considere los requisitos de seguridad y aislamiento de los sistemas financieros."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para IPv6?",
+              "a": "Sí, la calculadora es totalmente compatible con los estándares IPv6."
+            },
+            {
+              "q": "¿Cómo calcular una subred para agencias gubernamentales?",
+              "a": "Seguir los requisitos y estándares de seguridad de la información."
+            }
+          ]
+        }
+      }
+    },
+    "hashrate": {
+      "title": "Calculadora de hashrate para minería - Cálculo de la rentabilidad de las criptomonedas",
+      "description": "Calculadora de hashrate en línea para minería de criptomonedas. Calcule la rentabilidad, las ganancias, el tiempo de bloqueo y la recuperación de la inversión del equipo. Soporte para varios algoritmos de minería (SHA-256, Ethash, Scrypt, etc.).",
+      "breadcrumbs": {
+        "it": "ÉL",
+        "category": "ÉL"
+      },
+      "hero": {
+        "algorithms": "Algoritmos",
+        "accuracy": "Precisión de cálculo",
+        "profitability": "Rentabilidad"
+      },
+      "form": {
+        "title": "Cálculo de la rentabilidad minera.",
+        "description": "Calcule la rentabilidad minera teniendo en cuenta el hashrate, la complejidad de la red y los costos de energía.",
+        "hashrate": "tasa de hash",
+        "hashratePlaceholder": "100 (TH/s, GH/s, MH/s, etc.)",
+        "hashrateUnit": "unidad de hashrate",
+        "networkDifficulty": "Complejidad de la red",
+        "networkDifficultyPlaceholder": "Automáticamente o ingresar manualmente",
+        "blockReward": "Recompensa de bloque",
+        "blockRewardPlaceholder": "Por ejemplo: 6,25 (BTC) o 2 (ETH)",
+        "blockTime": "Tiempo de bloqueo (segundos)",
+        "blockTimePlaceholder": "Automáticamente o ingresar manualmente",
+        "powerConsumption": "Consumo de energía (W)",
+        "powerConsumptionPlaceholder": "Por ejemplo: 3500",
+        "electricityCost": "Costo de la electricidad (₽/kWh)",
+        "electricityCostPlaceholder": "Por ejemplo: 4,5",
+        "poolFee": "Comisión del pool (%)",
+        "poolFeePlaceholder": "Por ejemplo: 1",
+        "cryptocurrency": "Criptomoneda",
+        "algorithm": "Algoritmo",
+        "calculate": "Calcular",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "hashrateUnits": {
+          "h": "H/s (hashes por segundo)",
+          "kh": "KH/s (kiloashes por segundo)",
+          "mh": "MH/s (megahashes por segundo)",
+          "gh": "GH/s (gigahashes por segundo)",
+          "th": "TH/s (terahashes por segundo)",
+          "ph": "PH/s (petahashes por segundo)"
+        },
+        "cryptocurrencies": {
+          "btc": "Bitcoin (BTC)",
+          "eth": "Etereum (ETH)",
+          "ltc": "Litecoin (LTC)",
+          "bch": "Efectivo de Bitcoin (BCH)",
+          "dash": "Dash (DASH)",
+          "zec": "Zcash (ZEC)",
+          "custom": "Otro (configurado manualmente)"
+        },
+        "errors": {
+          "title": "Errores de datos",
+          "hashrateRequired": "Ingrese la tasa de hash",
+          "invalidHashrate": "Hashrate incorrecto",
+          "networkDifficultyRequired": "Ingrese a la complejidad de la red",
+          "invalidNetworkDifficulty": "Complejidad de red incorrecta",
+          "blockRewardRequired": "Ingrese la recompensa del bloque",
+          "invalidBlockReward": "Recompensa de bloque incorrecta",
+          "blockTimeRequired": "Ingrese el tiempo de bloqueo",
+          "invalidBlockTime": "Tiempo de bloqueo no válido",
+          "powerConsumptionRequired": "Introduzca el consumo de energía",
+          "invalidPowerConsumption": "Consumo de energía incorrecto",
+          "electricityCostRequired": "Introduce el coste de la electricidad.",
+          "invalidElectricityCost": "Costo incorrecto de la electricidad.",
+          "poolFeeInvalid": "La comisión del pool debe ser del 0 al 100%."
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "dailyRevenue": "Ingresos por día",
+        "monthlyRevenue": "Ingresos por mes",
+        "yearlyRevenue": "Ingresos por año",
+        "dailyProfit": "Ganancia por día",
+        "monthlyProfit": "Ganancia por mes",
+        "yearlyProfit": "Beneficio por año",
+        "electricityCost": "Costos de energía",
+        "dailyElectricity": "por dia",
+        "monthlyElectricity": "Por mes",
+        "yearlyElectricity": "Por año",
+        "blockTime": "Bloquear tiempo de residencia",
+        "blocksPerDay": "Bloques por día",
+        "blocksPerMonth": "Bloques por mes",
+        "profitability": "Rentabilidad",
+        "profitable": "Rentable",
+        "unprofitable": "Improductivo",
+        "breakeven": "Cubrir los gastos",
+        "roi": "venganza",
+        "roiDays": "Días para recuperar la inversión",
+        "hashratePerCoin": "Hashrate por moneda",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingrese los parámetros de minería y haga clic en 'Calcular'",
+        "summary": "Resultados",
+        "summaryText": "Ingresos: {ingresos} por día, Ganancias: {beneficios} por día, Recuperación de la inversión: {roi} días."
+      },
+      "tips": {
+        "title": "Consejos para calcular el hashrate",
+        "content": "Para calcular con precisión la rentabilidad minera, considere los siguientes factores:",
+        "hashrate": {
+          "title": "Hashrate del equipo",
+          "description": "Hashrate muestra el rendimiento de su hardware. Indique el hashrate real de su minero.",
+          "example": "Ejemplo: Antminer S19 Pro tiene un hashrate de 110 TH/s"
+        },
+        "difficulty": {
+          "title": "Complejidad de la red",
+          "description": "La complejidad de la red cambia constantemente. Utilice datos actualizados de grupos o exploradores de blockchain.",
+          "example": "Ejemplo: La dificultad de la red Bitcoin puede cambiar cada 2016 bloques"
+        },
+        "electricity": {
+          "title": "Costos de energía",
+          "description": "Considere el costo real de la electricidad en su área para calcular con precisión su rentabilidad.",
+          "example": "Ejemplo: Con un coste de 4,5 ₽/kWh y un consumo de 3500 W, los costes serán ~378 ₽/día"
+        },
+        "profitability": {
+          "title": "Rentabilidad de la minería",
+          "description": "La rentabilidad depende del tipo de cambio de la criptomoneda, la complejidad de la red y el costo de la electricidad. Vuelva a calcular periódicamente.",
+          "example": "Ejemplo: la minería puede ser rentable con poca dificultad y un alto valor de criptomoneda"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de hashrate para minería - Cálculo de rentabilidad de criptomonedas online | calc1.ru",
+        "description": "Calculadora de hashrate en línea para minería de criptomonedas. Calcule la rentabilidad de minar Bitcoin, Ethereum, Litecoin y otras criptomonedas, teniendo en cuenta el hashrate, la complejidad de la red, los costos de electricidad y las tarifas del pool. Cálculo de ganancias, recuperación de la inversión de equipos y tiempo de bloqueo.",
+        "keywords": "calculadora de hashrate, cálculo de minería, rentabilidad de minería, calculadora de minería, rentabilidad de minería, cálculo de rentabilidad de criptomonedas, calculadora de minería de Bitcoin, calculadora de minería de Ethereum, calculadora de hashrate, dificultad de red, recompensa de bloque, tiempo de bloque, recuperación de la minería, costos de minería, minería de electricidad, comisión de pool, beneficio minero, minería de criptomonedas, calculadora de minería en línea, cálculo de minería de Bitcoin, cálculo de minería de Ethereum, minería SHA-256, minería de Ethash, minería de Scrypt, equipo de minería, minería ASIC, minería de GPU, granja minera, rentabilidad de minería de Bitcoin, rentabilidad de minería de Ethereum, rentabilidad de minería, ROI minería, rentabilidad minera, calculadora de minería de criptomonedas, calculadora de hashrate, calculadora de rentabilidad minera, calculadora de minería Bitcoin, calculadora de minería Ethereum, calculadora de ROI de minería",
+        "overview": {
+          "title": "Acerca de la calculadora de hashrate para minería",
+          "content": "Una calculadora de hashrate en línea para la minería de criptomonedas le permite calcular la rentabilidad de la minería teniendo en cuenta el hashrate del equipo, la complejidad de la red, la recompensa del bloque, los costos de electricidad y la comisión del pool. La calculadora admite varias criptomonedas y algoritmos de minería: Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) y otros.",
+          "additionalContent": "La calculadora calcula: rentabilidad minera (ingresos por día/mes/año), beneficio neto teniendo en cuenta los costos de energía, tiempo de bloque, número de bloques por período, retorno de la inversión (ROI) del equipo, rentabilidad minera (rentable/no rentable). Todos los cálculos se realizan teniendo en cuenta los parámetros actuales de la red y nos permiten predecir la rentabilidad minera para planificar inversiones en equipos mineros.",
+          "calculationExamples": [
+            {
+              "title": "Cálculo de la rentabilidad de la minería de Bitcoin",
+              "description": "Ejemplo de cálculo para minería de Bitcoin usando un minero ASIC",
+              "input": "Hashrate: 100 TH/s, Complejidad de la red: 67.607.408.984.302, Bloque: 6,25 BTC, Tiempo: 600 segundos, Potencia: 3250 W, Electricidad: 4,5 ₽/kWh, Comisión del pool: 1%",
+              "calculation": "Ingresos por día = (100 TH/s / 67.607.408.984.302) * 6,25 BTC * 144 bloques/día = 0,001326 BTC/día. Costos = 3,25 kW * 24 horas * 4,5 ₽ = 351 ₽/día. Beneficio = Ingresos - Costos - Comisión del Pool.",
+              "result": "Ingresos: 0,001326 BTC/día (~13.260 ₽ a razón de 10.000.000 ₽/BTC), Costos: 351 ₽/día, Beneficio: ~12.909 ₽/día (rentable)",
+              "type": "bitcóin"
+            },
+            {
+              "title": "Cálculo de la rentabilidad de la minería de Ethereum",
+              "description": "Ejemplo de cálculo para la minería de Ethereum usando GPU",
+              "input": "Hashrate: 500 MH/s, Complejidad de la red: 13,894,987,442,494,052, Bloque: 2 ETH, Tiempo: 12 segundos, Potencia: 300 W, Electricidad: 5 ₽/kWh, Comisión del pool: 1%",
+              "calculation": "Ingresos por día = (500 MH/s / 13.894.987.442.494.052) * 2 ETH * 7200 bloques/día = 0,000518 ETH/día. Costos = 0,3 kW * 24 horas * 5 ₽ = 36 ₽/día. Beneficio = Ingresos - Costos - Comisión del Pool.",
+              "result": "Ingresos: 0,000518 ETH/día (~518 ₽ a razón de 1.000.000 ₽/ETH), Costos: 36 ₽/día, Beneficio: ~477 ₽/día (rentable)",
+              "type": "etéreo"
+            },
+            {
+              "title": "Cálculo de la recuperación de la inversión de una granja minera.",
+              "description": "Un ejemplo de cálculo de la recuperación de la inversión de equipos para una granja minera.",
+              "input": "Costo del equipo: 500 000 ₽, Hashrate: 200 TH/s, Beneficio neto: 25 000 ₽/día",
+              "calculation": "Recuperación = Costo del equipo / Beneficio neto por día = 500 000 ₽ / 25 000 ₽/día = 20 días",
+              "result": "Recuperación del equipo: 20 días. Con una rentabilidad estable, el equipo se amortizará después de 20 días de extracción.",
+              "type": "rey"
+            },
+            {
+              "title": "Cálculo del tiempo de bloque.",
+              "description": "Un ejemplo de cómo calcular el tiempo que lleva encontrar un bloque para un hashrate determinado",
+              "input": "Hashrate: 50 TH/s, Complejidad de la red: 67,607,408,984,302",
+              "calculation": "Tiempo de bloqueo = Dificultad de la red / Hashrate = 67,607,408,984,302 / 50 TH/s = 1,352,148,179,686 segundos = ~42,839 años",
+              "result": "Tiempo de residencia del bloque: ~42.839 años (cuando se trabaja solo). En un grupo, la probabilidad de encontrar un bloque depende de la participación en el hashrate total del grupo.",
+              "type": "tiempo de bloqueo"
+            },
+            {
+              "title": "Cálculo de rentabilidad teniendo en cuenta la comisión del pool.",
+              "description": "Un ejemplo de cálculo de rentabilidad teniendo en cuenta la comisión del pool de minería",
+              "input": "Ingresos: 10.000 ₽/día, Costos: 500 ₽/día, Comisión del pool: 2%",
+              "calculation": "Ingresos netos = 10.000 ₽ * (1 - 0,02) = 9.800 ₽. Beneficio neto = 9.800 ₽ - 500 ₽ = 9.300 ₽/día",
+              "result": "Ingresos netos: 9.800 ₽/día (después de la comisión del pool 2%), Beneficio neto: 9.300 ₽/día (rentable)",
+              "type": "tarifa de piscina"
+            },
+            {
+              "title": "Cálculo de minería no rentable.",
+              "description": "Ejemplo de cálculo cuando la minería deja de ser rentable",
+              "input": "Ingresos: 500 ₽/día, Costos: 800 ₽/día, Comisión del pool: 1%",
+              "calculation": "Ingresos netos = 500 ₽ * (1 - 0,01) = 495 ₽. Beneficio neto = 495 ₽ - 800 ₽ = -305 ₽/día (pérdida)",
+              "result": "Ingresos netos: 495 ₽/día, Beneficio neto: -305 ₽/día (no rentable). La minería no es rentable debido a los altos costos de energía.",
+              "type": "improductivo"
+            }
+          ]
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula la rentabilidad minera?",
+          "content": "La calculadora utiliza fórmulas estándar para calcular la rentabilidad minera:",
+          "revenue": "Ingresos = (Hashrate / Dificultad de la red) * Recompensa por bloque * Bloques por período",
+          "blocksPerPeriod": "Bloques por período = (Período en segundos) / Tiempo de bloque",
+          "electricityCost": "Costos de electricidad = (Consumo en kW) * 24 horas * Costo por kWh",
+          "profit": "Beneficio = Ingresos * (1 - Comisión del pool%) - Costos de electricidad",
+          "roi": "Recuperación = Costo del equipo / Beneficio neto por día"
+        },
+        "features": {
+          "title": "Funciones básicas",
+          "multipleAlgorithms": "Muchos algoritmos",
+          "multipleAlgorithmsDesc": "Admite SHA-256, Ethash, Scrypt y otros algoritmos de minería",
+          "profitability": "Cálculo de rentabilidad",
+          "profitabilityDesc": "Cálculo del beneficio neto teniendo en cuenta todos los costes.",
+          "roi": "Cálculo de recuperación",
+          "roiDesc": "Cálculo del tiempo de recuperación del equipo.",
+          "electricity": "Medición de electricidad",
+          "electricityDesc": "Cálculo de costes de electricidad.",
+          "poolFee": "Contabilidad de comisiones de pool",
+          "poolFeeDesc": "Cálculo de rentabilidad teniendo en cuenta la comisión del pool de minería",
+          "blockTime": "Cálculo del tiempo de bloqueo",
+          "blockTimeDesc": "Calcular el tiempo que lleva encontrar un bloque para un hashrate determinado"
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "content": "Nuestra calculadora de hashrate ofrece muchos beneficios para los mineros:",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Utiliza fórmulas actuales para calcular la rentabilidad minera.",
+          "comprehensive": "Análisis completo",
+          "comprehensiveDesc": "Teniendo en cuenta todos los factores: hashrate, dificultad, costes, comisiones.",
+          "flexible": "Configuraciones flexibles",
+          "flexibleDesc": "Soporte para varias criptomonedas y algoritmos.",
+          "profitability": "Análisis de Rentabilidad",
+          "profitabilityDesc": "Determinación de la rentabilidad o no rentabilidad de la minería"
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Para obtener la máxima precisión de cálculo, siga estos consejos:",
+          "tip1": "Utilice datos de dificultad de red actualizados de exploradores de blockchain o grupos de minería.",
+          "tip2": "Considere el costo real de la electricidad en su área para calcular con precisión su rentabilidad.",
+          "tip3": "Vuelva a calcular periódicamente su rentabilidad, ya que la complejidad de la red y el tipo de cambio de las criptomonedas cambian constantemente.",
+          "tip4": "Tenga en cuenta la comisión del pool de minería al calcular su beneficio minero neto."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es el hashrate en la minería?",
+              "a": "Hashrate es una métrica del rendimiento del hardware de minería que mide la cantidad de operaciones hash que el hardware puede realizar por segundo. Medido en H/s, KH/s, MH/s, GH/s, TH/s, PH/s."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad minera?",
+              "a": "Rentabilidad = (Su hashrate / dificultad de la red) * Recompensa del bloque * Número de bloques por período. La rentabilidad depende del hashrate del equipo, la complejidad de la red y la recompensa del bloque."
+            },
+            {
+              "q": "¿Qué es la complejidad de la red?",
+              "a": "La dificultad de la red es un parámetro de blockchain que determina qué tan difícil es encontrar un nuevo bloque. La dificultad cambia constantemente dependiendo de la potencia informática general de la red."
+            },
+            {
+              "q": "¿Cómo calcular el beneficio neto de la minería?",
+              "a": "Beneficio neto = Ingresos * (1 - Comisión del pool%) - Costos de electricidad. Costos de electricidad = (Consumo en kW) * 24 horas * Costo por kWh."
+            },
+            {
+              "q": "¿Cómo calcular la recuperación de la inversión de los equipos de minería?",
+              "a": "Recuperación de la inversión = Costo del equipo / Beneficio neto por día. El resultado muestra la cantidad de días necesarios para pagar el equipo."
+            },
+            {
+              "q": "¿Qué es el tiempo de bloqueo?",
+              "a": "El tiempo de bloque es el tiempo promedio entre dos bloques consecutivos en la cadena de bloques. Para Bitcoin son ~10 minutos, para Ethereum son ~12 segundos."
+            },
+            {
+              "q": "¿Cómo tener en cuenta la comisión del pool de minería?",
+              "a": "La tarifa del pool se deduce de los ingresos mineros. Por ejemplo, con unos ingresos de 1000 ₽/día y una comisión del 1%, el ingreso neto será de 990 ₽/día."
+            },
+            {
+              "q": "¿Es posible calcular rentabilidades para diferentes criptomonedas?",
+              "a": "Sí, la calculadora admite varias criptomonedas: Bitcoin, Ethereum, Litecoin y otras. Cada criptomoneda tiene sus propios parámetros (algoritmo, dificultad, recompensa del bloque)."
+            },
+            {
+              "q": "¿Con qué frecuencia se debe recalcular la rentabilidad minera?",
+              "a": "Se recomienda recalcular la rentabilidad periódicamente, ya que la complejidad de la red, el tipo de cambio de las criptomonedas y el coste de la electricidad cambian constantemente. Al menos una vez por semana."
+            },
+            {
+              "q": "¿Qué hacer si la minería no es rentable?",
+              "a": "Si la minería no es rentable, considere: reducir los costos de energía, cambiar a equipos más eficientes, cambiar la criptomoneda para minar o detener temporalmente la minería hasta que mejoren las condiciones."
+            },
+            {
+              "q": "¿Qué hashrate se necesita para una minería rentable?",
+              "a": "El hashrate requerido depende de la complejidad de la red, el valor de la criptomoneda y los costos de energía. Utilice la calculadora para calcular el hashrate mínimo para obtener rentabilidad."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre SHA-256, Ethash y Scrypt?",
+              "a": "SHA-256 es un algoritmo para Bitcoin (minería ASIC), Ethash es un algoritmo para Ethereum (minería GPU), Scrypt es un algoritmo para Litecoin (minería ASIC/GPU). Cada algoritmo requiere un hardware diferente."
+            },
+            {
+              "q": "¿Cómo calcular la cantidad de bloques por día?",
+              "a": "Número de bloques por día = (24 horas * 3600 segundos) / Tiempo de bloque. Para Bitcoin (tiempo de bloque ~600 segundos), esto es ~144 bloques por día."
+            },
+            {
+              "q": "¿Qué es la comisión del pool de minería?",
+              "a": "Una tarifa de grupo es el porcentaje de los ingresos mineros que cobra un grupo de minería por agrupar el poder de hashing de los mineros. Normalmente entre el 1 y el 3%."
+            },
+            {
+              "q": "¿Cómo calcular los costos de energía?",
+              "a": "Costo = (Consumo en kW) * 24 horas * Costo por kWh. Por ejemplo, con un consumo de 3,5 kW y un coste de 4,5 ₽/kWh: 3,5 * 24 * 4,5 = 378 ₽/día."
+            },
+            {
+              "q": "¿Es posible utilizar una calculadora para calcular la rentabilidad de una granja minera?",
+              "a": "Sí, la calculadora se puede utilizar para calcular la rentabilidad de una granja minera. Ingrese el hashrate total de todos los dispositivos y el consumo total de energía."
+            },
+            {
+              "q": "¿Cómo tener en cuenta los cambios en la complejidad de la red?",
+              "a": "La dificultad de la red cambia periódicamente (para Bitcoin cada 2016 bloques). Utilice datos de dificultad actualizados para realizar cálculos precisos. La calculadora admite la entrada manual de dificultad."
+            },
+            {
+              "q": "¿Qué es una recompensa en bloque?",
+              "a": "Una recompensa por bloque es la cantidad de criptomonedas que recibe un minero por encontrar un nuevo bloque. Para Bitcoin, la recompensa disminuye cada 210.000 bloques (reducción a la mitad)."
+            },
+            {
+              "q": "¿Cómo calcular el tiempo de bloqueo para un solo minero?",
+              "a": "Tiempo para encontrar un bloque = Complejidad de la red / Hashrate. El resultado muestra el tiempo de permanencia teórico del bloque cuando trabaja solo. En un grupo, la probabilidad depende de la proporción del hashrate total."
+            },
+            {
+              "q": "¿Es posible calcular la rentabilidad de la minería en la nube?",
+              "a": "Sí, la calculadora se puede utilizar para estimar la rentabilidad de la minería en la nube. Tenga en cuenta que en la minería en la nube no hay costos de electricidad, pero sí una tarifa de alquiler de hashrate."
+            },
+            {
+              "q": "¿Cómo elegir la criptomoneda óptima para minar?",
+              "a": "Utilice la calculadora para comparar la rentabilidad de diferentes criptomonedas. Considere: complejidad de la red, tasa de criptomonedas, recompensa por bloque, disponibilidad de equipos y costo de electricidad."
+            },
+            {
+              "q": "¿Qué es el ROI en la minería?",
+              "a": "ROI (Return on Investment) es el retorno de la inversión. Muestra cuánto tiempo tardará el equipo de minería en amortizarse con la rentabilidad actual. ROI = Costo del equipo / Beneficio neto por día."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad cuando cambia el tipo de cambio de las criptomonedas?",
+              "a": "Si el tipo de cambio cambia, vuelva a calcular el rendimiento en la calculadora. Ingresos en rublos = Ingresos en criptomonedas * Tasa. Cuando el tipo de cambio sube, aumenta la rentabilidad; cuando cae, disminuye."
+            },
+            {
+              "q": "¿Qué es la reducción a la mitad en la minería?",
+              "a": "La reducción a la mitad es una reducción a la mitad de la recompensa del bloque que se produce periódicamente (para Bitcoin cada 210.000 bloques). La reducción a la mitad afecta la rentabilidad minera al reducir la recompensa del bloque."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad de los mineros ASIC?",
+              "a": "Para los mineros ASIC, ingrese el hashrate del hardware real (indicado en las especificaciones), el consumo de energía y la dificultad actual de la red. Los mineros ASIC suelen ser más eficientes para algoritmos específicos."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad de los mineros GPU?",
+              "a": "Para mineros de GPU, ingrese el hashrate total de todas las tarjetas de video, el consumo total de energía del sistema y los parámetros de red. La minería GPU es adecuada para algoritmos que requieren una gran cantidad de memoria."
+            },
+            {
+              "q": "¿Qué es un pool de minería?",
+              "a": "Un pool de minería es una unión de mineros para buscar bloques de forma conjunta. Los ingresos se distribuyen en proporción al hashrate invertido. Los pools cobran una comisión (normalmente del 1 al 3%)."
+            },
+            {
+              "q": "¿Cómo calcular su participación en un pool de minería?",
+              "a": "Participación en el grupo = (Su hashrate / Hashrate total del grupo) * 100%. Cuanto mayor sea su participación, mayor será la probabilidad de recibir una recompensa, pero la recompensa se distribuye en proporción a la participación."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para comparar diferentes mineros?",
+              "a": "Sí, utiliza la calculadora para comparar la rentabilidad de diferentes modelos de minero. Ingrese los parámetros de cada minero por separado y compare los resultados."
+            },
+            {
+              "q": "¿Cómo contabilizar la depreciación del equipo?",
+              "a": "La depreciación del equipo se puede tener en cuenta en el cálculo de la recuperación de la inversión. Agregue el costo de la depreciación a sus gastos diarios para obtener un cálculo más preciso de la rentabilidad."
+            },
+            {
+              "q": "¿Qué es la eficiencia minera (J/TH)?",
+              "a": "La eficiencia minera muestra el consumo de energía por unidad de hashrate. Medido en J/TH (julios por terahesh). Cuanto menor sea el valor, más eficiente será el minero."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad cuando se trabaja solo (minería en solitario)?",
+              "a": "Cuando extraigas en solitario, utiliza las mismas fórmulas, pero ten en cuenta que la probabilidad de encontrar un bloque es muy baja. La rentabilidad será inestable. En el pool, los ingresos son más estables."
+            },
+            {
+              "q": "¿Es posible calcular la rentabilidad de minar múltiples criptomonedas?",
+              "a": "Sí, calcula la rentabilidad de cada criptomoneda por separado y compara los resultados. Elija la criptomoneda más rentable según su equipo."
+            },
+            {
+              "q": "¿Cómo calcular el coste mínimo de la electricidad para obtener rentabilidad?",
+              "a": "Utilice la calculadora para reducir gradualmente el coste de la electricidad hasta que el beneficio sea positivo. Esto mostrará el costo máximo de la electricidad para la rentabilidad."
+            },
+            {
+              "q": "¿Qué es la dificultad minera?",
+              "a": "La dificultad de la minería es un parámetro que muestra qué tan difícil es encontrar un bloque en la cadena de bloques. Cuanto mayor sea la dificultad, más potencia informática se necesitará para encontrar el bloque."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad teniendo en cuenta los impuestos?",
+              "a": "Después de calcular tu beneficio neto, resta los impuestos según las leyes de tu país. Los impuestos a la minería varían de un país a otro."
+            }
+          ]
+        }
+      }
+    },
+    "qr-generator": {
+      "title": "generador de códigos QR",
+      "description": "Cree códigos QR para texto, URL, correo electrónico, teléfono y otros datos. Personaliza tamaño, colores y formato.",
+      "breadcrumbs": {
+        "it": "ÉL",
+        "category": "ÉL"
+      },
+      "form": {
+        "title": "Parámetros de generación",
+        "dataType": "tipo de datos",
+        "text": "Texto",
+        "url": "URL",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "sms": "SMS",
+        "wifi": {
+          "ssid": "SSID (nombre de red)",
+          "password": "Contraseña",
+          "security": "Tipo de seguridad",
+          "securityTypes": {
+            "WPA": "WPA",
+            "WPA2": "WPA2",
+            "nopass": "Sin contraseña"
+          }
+        },
+        "vcard": {
+          "name": "Nombre",
+          "phone": "Teléfono",
+          "address": "DIRECCIÓN",
+          "namePlaceholder": "Iván Ivanov",
+          "addressPlaceholder": "Moscú, calle. Ejemplo, 1"
+        },
+        "data": "Datos",
+        "dataPlaceholder": "Introduce texto o URL",
+        "size": "Tamaño del código QR",
+        "errorCorrection": "Nivel de corrección de errores",
+        "foregroundColor": "color de primer plano",
+        "backgroundColor": "Color de fondo",
+        "generate": "Generar",
+        "reset": "Reiniciar",
+        "download": "Descargar",
+        "dataTypes": {
+          "text": "Texto",
+          "url": "URL",
+          "email": "Correo electrónico",
+          "phone": "Teléfono",
+          "sms": "SMS",
+          "wifi": "wifi",
+          "vcard": "tarjeta virtual"
+        },
+        "downloadError": "Error al descargar. Intente utilizar la función de copia.",
+        "errorLevels": {
+          "L": "Bajo (L)",
+          "M": "Medio (M)",
+          "Q": "Bueno (Q)",
+          "H": "Alto (Alto)"
+        },
+        "errors": {
+          "title": "Errores de datos",
+          "dataRequired": "Ingrese datos para el código QR",
+          "invalidUrl": "URL incorrecta",
+          "invalidEmail": "Correo electrónico incorrecto",
+          "invalidPhone": "Teléfono incorrecto"
+        }
+      },
+      "results": {
+        "title": "código qr",
+        "placeholder": "Ingrese datos para generar código QR",
+        "qrCode": "código qr",
+        "dataPreview": "Vista previa de datos",
+        "downloadPng": "Descargar PNG",
+        "downloadSvg": "Descargar SVG",
+        "copy": "Copiar datos"
+      },
+      "hero": {
+        "fast": "Generacion rapida",
+        "customizable": "Configuración",
+        "formats": "Formato"
+      },
+      "features": {
+        "qrGeneration": "Generación de códigos QR",
+        "multipleTypes": "Diferentes tipos de datos",
+        "customization": "Personalizando la apariencia",
+        "download": "Descargar en diferentes formatos"
+      },
+      "seo": {
+        "title": "Generador de códigos QR online - Crea códigos QR gratis | calc1.ru",
+        "description": "Generador de códigos QR en línea gratuito para crear códigos QR a partir de texto, URL, correo electrónico, teléfono y otros datos. Personalice el tamaño, los colores y el nivel de corrección de errores. Descargue en formatos PNG y SVG.",
+        "keywords": "Generador de códigos QR, creación de códigos QR, código QR en línea, generador de códigos QR gratuito, código QR a partir de texto, código QR desde URL, código QR para Wi-Fi, código QR para correo electrónico, código QR para teléfono, configuración del generador de códigos QR, descarga de código QR, código QR PNG, código QR SVG, creación de códigos QR en línea, generador de QR gratuito, generador de códigos QR, generador de códigos QR, generador de códigos QR gratis, creación de códigos QR, código QR con configuración",
+        "overview": {
+          "title": "Generador de código QR en línea",
+          "content": "El generador de códigos QR en línea le permite crear códigos QR a partir de varios tipos de datos: texto, URL, correo electrónico, teléfono, SMS, Wi-Fi, vCard. Personaliza el tamaño, los colores, el nivel de corrección de errores y descarga el código QR en formato PNG o SVG.",
+          "additionalContent": "Un código QR (código de respuesta rápida) es un código de barras bidimensional que se puede escanear con la cámara de un teléfono inteligente. Los códigos QR se utilizan para intercambiar información rápidamente: enlaces, contactos, texto, contraseñas de Wi-Fi, etc. Nuestro generador admite varios tipos de datos y configuraciones de apariencia.",
+          "calculationExamples": {
+            "title": "Ejemplos de uso del generador de códigos QR",
+            "content": "Veamos ejemplos prácticos de creación de códigos QR para diversos fines:",
+            "example1": {
+              "title": "Ejemplo 1: código QR para URL",
+              "description": "Crear un código QR para un sitio web",
+              "input": "Tipo: URL\nDatos: https://calc1.ru",
+              "calculation": "Genere código QR para URL con detección automática de formato de datos",
+              "result": "El código QR está listo para escanear e ir al sitio.",
+              "type": "URL",
+              "note": "Los códigos QR para URL abren automáticamente el enlace cuando se escanean"
+            },
+            "example2": {
+              "title": "Ejemplo 2: código QR para texto",
+              "description": "Crear un código QR con información de texto",
+              "input": "Tipo: Texto\nDatos: ¡Bienvenido a Calc1.ru!",
+              "calculation": "Generando código QR con contenido de texto",
+              "result": "El código QR contiene texto que aparecerá cuando se escanee",
+              "type": "Texto",
+              "note": "Los códigos QR de texto son convenientes para enviar mensajes cortos"
+            },
+            "example3": {
+              "title": "Ejemplo 3: código QR para correo electrónico",
+              "description": "Crear un código QR para una dirección de correo electrónico",
+              "input": "Tipo: Correo electrónico\nDetalles: info@calc1.ru",
+              "calculation": "Generar código QR en formato mailto:",
+              "result": "El código QR abrirá automáticamente el cliente de correo electrónico cuando se escanee",
+              "type": "Correo electrónico",
+              "note": "Los códigos QR de correo electrónico le permiten enviar rápidamente un correo electrónico a una dirección específica"
+            },
+            "example4": {
+              "title": "Ejemplo 4: código QR para teléfono",
+              "description": "Crear un código QR para un número de teléfono",
+              "input": "Tipo: Teléfono\nDatos: +7 (999) 123-45-67",
+              "calculation": "Generar código QR en formato tel:",
+              "result": "El código QR iniciará automáticamente una llamada cuando se escanee",
+              "type": "Teléfono",
+              "note": "Los códigos QR telefónicos son convenientes para marcar números rápidamente"
+            },
+            "example5": {
+              "title": "Ejemplo 5: código QR para Wi-Fi",
+              "description": "Crear un código QR para conectarse a Wi-Fi",
+              "input": "Tipo: Wi-Fi\nSSID: Mi Red\nContraseña: micontraseña123\nTipo de seguridad: WPA",
+              "calculation": "Genera código QR en formato WIFI:",
+              "result": "El código QR te permite conectarte automáticamente a una red Wi-Fi",
+              "type": "wifi",
+              "note": "Los códigos QR de Wi-Fi conectan automáticamente su dispositivo a la red cuando se escanean"
+            },
+            "example6": {
+              "title": "Ejemplo 6: código QR para vCard",
+              "description": "Crear un código QR con información de contacto",
+              "input": "Tipo: vCard\nNombre: Iván Ivanov\nTeléfono: +7 (999) 123-45-6\nCorreo electrónico: ivan@example.com",
+              "calculation": "Generar código QR en formato vCard (VCARD)",
+              "result": "El código QR agregará automáticamente el contacto a su libreta de direcciones",
+              "type": "tarjeta virtual",
+              "note": "Los códigos QR vCard son convenientes para intercambiar información de contacto"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona el generador de códigos QR?",
+          "content": "El generador de códigos QR crea códigos de barras bidimensionales basados ​​en los datos ingresados ​​utilizando algoritmos de corrección de errores.",
+          "dataEncoding": "Codificación de datos: el texto se convierte en código binario según el estándar del código QR",
+          "errorCorrection": "Corrección de errores: los códigos QR contienen información redundante para recuperación en caso de daño",
+          "modules": "Módulos: los datos se codifican como módulos (cuadrados blancos y negros)",
+          "format": "Formato: El código QR incluye información del servicio para su correcto escaneo",
+          "steps": {
+            "input": "Ingresar datos para codificar",
+            "encoding": "Codificación de datos en formato de código QR",
+            "generation": "Generando una imagen de código QR",
+            "export": "Exportar al formato seleccionado (PNG, SVG)"
+          }
+        },
+        "advantages": {
+          "title": "Ventajas de un generador de códigos QR",
+          "content": "El uso de un generador de códigos QR ofrece muchas ventajas: generación rápida, personalización de la apariencia y soporte para varios tipos de datos.",
+          "speed": "Generacion rapida",
+          "customization": "Personaliza el tamaño y los colores.",
+          "multipleTypes": "Soporte para varios tipos de datos.",
+          "formats": "Exportar en PNG y SVG"
+        },
+        "tips": {
+          "title": "Consejos para usar un generador de códigos QR",
+          "content": "Para obtener un código QR de alta calidad, siga nuestras recomendaciones.",
+          "size": "Elija el tamaño del código QR según la ubicación. Para imprimir, utilice un tamaño mayor (300-500 px)",
+          "errorCorrection": "Utilice un nivel de corrección de errores más alto (H) para códigos QR que puedan estar dañados",
+          "colors": "Asegúrese de que los colores tengan suficiente contraste para un escaneo adecuado",
+          "testing": "Pruebe el código QR en diferentes dispositivos antes de usarlo"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre códigos QR",
+          "faqItems": [
+            {
+              "q": "¿Qué es un código QR?",
+              "a": "Un código QR (código de respuesta rápida) es un código de barras bidimensional que se puede escanear con la cámara de un teléfono inteligente. Los códigos QR se utilizan para intercambiar información rápidamente: enlaces, contactos, mensajes de texto, contraseñas de Wi-Fi, etc."
+            },
+            {
+              "q": "¿Cómo crear un código QR?",
+              "a": "Para crear un código QR, ingrese datos (texto, URL, correo electrónico, teléfono, etc.), seleccione el tamaño y la configuración, luego haga clic en 'Generar'. El código QR se creará y estará listo para descargar."
+            },
+            {
+              "q": "¿Qué tipos de datos admite el generador?",
+              "a": "El generador admite: texto, URL, correo electrónico, teléfono, SMS, Wi-Fi, vCard. Cada tipo de datos tiene su propio formato y se procesa automáticamente al generar un código QR."
+            },
+            {
+              "q": "¿Qué tamaño de código QR debo elegir?",
+              "a": "El tamaño del código QR depende de la ubicación. Para páginas web: 200-300px, para impresión: 300-500px, para carteles grandes: 500-1000px. Cuantos más datos haya en el código QR, mayor debe ser el tamaño."
+            },
+            {
+              "q": "¿Qué es el nivel de corrección de errores?",
+              "a": "El nivel de corrección de errores determina qué tan resistente es el código QR a los daños. Niveles: L (7%), M (15%), Q (25%), H (30%). Cuanto mayor sea el nivel, más información redundante habrá en el código QR."
+            },
+            {
+              "q": "¿Es posible cambiar los colores del código QR?",
+              "a": "Sí, puedes elegir un color de primer plano (normalmente negro) y un color de fondo (normalmente blanco). Es importante garantizar suficiente contraste para una exploración adecuada."
+            },
+            {
+              "q": "¿En qué formatos puedo descargar un código QR?",
+              "a": "El código QR se puede descargar en formatos PNG (imagen rasterizada) y SVG (imagen vectorial). PNG es adecuado para web e impresión, SVG es adecuado para escalar sin pérdida de calidad."
+            },
+            {
+              "q": "¿Cómo crear un código QR para Wi-Fi?",
+              "a": "Seleccione el tipo 'Wi-Fi', ingrese SSID (nombre de red), contraseña y tipo de seguridad (WPA, WPA2, etc.). El código QR se conectará automáticamente a una red Wi-Fi cuando se escanee."
+            },
+            {
+              "q": "¿Cómo crear un código QR para correo electrónico?",
+              "a": "Seleccione el tipo 'Correo electrónico' e ingrese su dirección de correo electrónico. El código QR abrirá automáticamente el cliente de correo electrónico cuando se escanee para enviar una carta a la dirección especificada."
+            },
+            {
+              "q": "¿Cómo crear un código QR para tu teléfono?",
+              "a": "Seleccione el tipo 'Teléfono' e ingrese el número de teléfono. El código QR iniciará automáticamente una llamada cuando se escanee en un dispositivo con funcionalidad telefónica."
+            },
+            {
+              "q": "¿Cómo crear un código QR con información de contacto?",
+              "a": "Utilice el tipo 'vCard' e ingrese la información de contacto: nombre, teléfono, correo electrónico, dirección, etc. El código QR agregará automáticamente el contacto a su libreta de direcciones cuando se escanee."
+            },
+            {
+              "q": "¿Es posible crear un código QR con un logo?",
+              "a": "Nuestro generador admite la personalización básica del color. Para agregar un logotipo, utilice editores de códigos QR especiales o programas gráficos después de la generación."
+            },
+            {
+              "q": "¿Cuál es el tamaño máximo de datos para un código QR?",
+              "a": "El tamaño máximo de datos depende del nivel de corrección de errores: L - hasta 2953 caracteres (dígitos), M - hasta 2331 caracteres, Q - hasta 1663 caracteres, H - hasta 1273 caracteres. Para texto: hasta aproximadamente 4296 caracteres (números) o 2953 caracteres (letras)."
+            },
+            {
+              "q": "¿Por qué no se puede escanear el código QR?",
+              "a": "Posibles motivos: contraste de color insuficiente, tamaño demasiado pequeño, código QR dañado, nivel de corrección de errores bajo. Aumente el tamaño, utilice colores blanco y negro, mejore el nivel de corrección de errores."
+            },
+            {
+              "q": "¿Es posible crear códigos QR para enlaces no fuertes?",
+              "a": "Un código QR sólo puede contener un enlace. Para varios enlaces, cree varios códigos QR o utilice un servicio especial que cree una página con una selección de enlaces."
+            },
+            {
+              "q": "¿Cómo crear un código QR para SMS?",
+              "a": "Seleccione el tipo 'SMS', ingrese el número de teléfono y el texto del mensaje. El código QR abrirá automáticamente la aplicación de SMS cuando se escanee."
+            },
+            {
+              "q": "¿Son seguros los códigos QR?",
+              "a": "Los códigos QR en sí son seguros, pero debes tener cuidado al escanear códigos QR de fuentes desconocidas, ya que pueden contener enlaces maliciosos. Comprueba la URL antes de ir."
+            },
+            {
+              "q": "¿Es posible editar un código QR una vez creado?",
+              "a": "El código QR no se puede editar: son datos codificados. Para cambiar, es necesario crear un nuevo código QR con nuevos datos."
+            },
+            {
+              "q": "¿Cómo imprimir un código QR?",
+              "a": "Descarga el código QR en formato PNG con resolución suficiente (mínimo 300 DPI para impresión). Utilice un tamaño de al menos 2x2 cm para un escaneo adecuado."
+            },
+            {
+              "q": "¿Es posible crear un código QR en color?",
+              "a": "Sí, puedes elegir cualquier color para el primer plano y el fondo. Es importante garantizar suficiente contraste (se recomienda al menos el 70%) para una exploración adecuada."
+            },
+            {
+              "q": "¿Cómo funciona la corrección de errores en los códigos QR?",
+              "a": "La corrección de errores agrega información redundante al código QR, lo que permite restaurar los datos si están parcialmente dañados. El nivel H (30%) le permite recuperar hasta el 30% de los datos dañados."
+            },
+            {
+              "q": "¿Es posible crear un código QR para una aplicación?",
+              "a": "Sí, cree un código QR con una URL que conduzca a la página de descarga de la aplicación en App Store o Google Play. Al escanear, se abrirá la página correspondiente."
+            },
+            {
+              "q": "¿Cómo crear un código QR para pago?",
+              "a": "Cree un código QR con una URL a la página de pago o utilice un formato especial para pagos (por ejemplo, para algunos sistemas de pago). El formato específico depende del sistema de pago."
+            },
+            {
+              "q": "¿Es posible realizar un seguimiento de los escaneos de códigos QR?",
+              "a": "Un código QR normal no contiene función de seguimiento. Para realizar un seguimiento, utilice enlaces cortos de URL con análisis o servicios especiales que creen códigos QR con seguimiento."
+            },
+            {
+              "q": "¿Cómo crear un código QR para un evento?",
+              "a": "Cree un código QR con una URL a la página del evento en su calendario o use el formato iCalendar (ICS). Muchos servicios de calendario admiten la adición automática de eventos desde códigos QR."
+            },
+            {
+              "q": "¿Es posible crear un código QR para una contraseña de Wi-Fi?",
+              "a": "Sí, use el tipo 'Wi-Fi' e ingrese el SSID, contraseña y tipo de seguridad. El código QR te permitirá conectarte automáticamente a la red sin ingresar una contraseña."
+            },
+            {
+              "q": "¿Cómo crear un código QR para redes sociales?",
+              "a": "Crea un código QR con una URL a tu perfil de red social (Facebook, Instagram, Twitter, etc.). Cuando se escanee, se abrirá la página de perfil correspondiente."
+            },
+            {
+              "q": "¿Es posible crear un código QR para el archivo PDF?",
+              "a": "Un código QR no puede contener directamente un archivo PDF. Cree un código QR con una URL para un archivo PDF publicado en Internet o utilice el almacenamiento en la nube para alojar el archivo."
+            },
+            {
+              "q": "¿Cómo crear un código QR para una tarjeta de presentación?",
+              "a": "Utilice el tipo 'vCard' e introduzca todos los datos necesarios: nombre, cargo, empresa, teléfono, correo electrónico, dirección, sitio web. El código QR agregará automáticamente el contacto a su libreta de direcciones."
+            },
+            {
+              "q": "¿Es posible crear un código QR con geolocalización?",
+              "a": "Crea un código QR con una URL en Google Maps u otro mapa con coordenadas. Al escanear, se abrirá un mapa con la ubicación especificada."
+            },
+            {
+              "q": "¿Cómo crear un código QR para vídeos de YouTube?",
+              "a": "Crea un código QR a partir de la URL de un vídeo de YouTube. Cuando se escanee, el video se abrirá en su navegador o en la aplicación de YouTube."
+            },
+            {
+              "q": "¿Es posible utilizar un código QR en publicidad?",
+              "a": "Sí, los códigos QR se utilizan mucho en publicidad para navegar rápidamente a un sitio web, descargar una aplicación u obtener información adicional. Es importante utilizar suficiente tamaño y contraste."
+            },
+            {
+              "q": "¿Cómo crear un código QR dinámico?",
+              "a": "Nuestro generador crea códigos QR estáticos. Para códigos QR dinámicos (con la capacidad de cambiar la URL), utilice servicios especiales que brinden dicha función."
+            },
+            {
+              "q": "¿Es posible crear un código QR para una dirección Bitcoin?",
+              "a": "Cree un código QR con texto que contenga una dirección de Bitcoin. Muchas billeteras reconocen automáticamente las direcciones de Bitcoin cuando escaneas un código QR."
+            }
+          ]
+        }
+      }
+    }
+  }
 }
-
-
-

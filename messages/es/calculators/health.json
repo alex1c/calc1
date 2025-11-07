@@ -1,6 +1,2705 @@
 {
-	"calculators": {}
+  "calculators": {
+    "bmiHealth": {
+      "title": "Calculadora del índice de masa corporal (IMC)",
+      "description": "Calcule su índice de masa corporal (IMC) en línea. Determine si su peso cumple con los estándares de la OMS. Rápido, preciso y gratuito.",
+      "form": {
+        "title": "Parámetros de cálculo",
+        "weight": "Peso",
+        "weightPlaceholder": "Introduce tu peso",
+        "height": "Altura",
+        "heightPlaceholder": "Introduce tu altura",
+        "calculate": "Calcular el IMC",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "errors": {
+          "weightRequired": "Introduce tu peso",
+          "heightRequired": "Introduce tu altura",
+          "weightRange": "El peso debe ser de 20 a 300 kg.",
+          "heightRange": "La altura debe ser de 100 a 250 cm.",
+          "calculationError": "Error de cálculo"
+        }
+      },
+      "results": {
+        "bmiUnit": "kilogramos/m²",
+        "scale": "escala de IMC",
+        "recommendation": "Recomendación",
+        "normalRange": "peso normal",
+        "normalRangeText": "Para tu altura, un peso normal está entre {min} y {max} kg"
+      },
+      "categories": {
+        "underweight": "falta de masa",
+        "normal": "Norma",
+        "overweight": "Sobrepeso",
+        "obese1": "Obesidad I grado",
+        "obese2": "Obesidad II grado",
+        "obese3": "Obesidad III grado"
+      },
+      "interpretations": {
+        "underweight": "Se recomienda aumentar de peso",
+        "normal": "Peso corporal saludable",
+        "overweight": "Posible riesgo de enfermedad.",
+        "obese1": "Mayor riesgo",
+        "obese2": "Alto riesgo",
+        "obese3": "Riesgo muy alto"
+      },
+      "recommendations": {
+        "weightGain": "Se recomienda consultar a un médico para crear un plan de aumento de peso.",
+        "maintain": "Mantenga su peso actual mediante una alimentación saludable y actividad física.",
+        "weightLoss": "Se recomienda perder peso bajo la supervisión de un especialista."
+      },
+      "table": {
+        "title": "Clasificación del IMC de la OMS",
+        "category": "Categoría",
+        "bmiRange": "Índice de IMC (kg/m²)",
+        "interpretation": "Interpretación"
+      },
+      "seo": {
+        "title": "Calculadora de IMC en línea: calcule el índice de masa corporal",
+        "description": "Descubra su índice de masa corporal (IMC) en línea. Determine si su peso corresponde a la norma según la fórmula de la OMS. Rápido y gratuito.",
+        "keywords": "calculadora de bmi, índice de masa corporal, calcular el bmi, norma de peso, obesidad, bajo peso, índice de masa corporal en línea, cálculo de bmi, norma de bmi, peso corporal, altura del peso, peso saludable, sobrepeso, bajo peso, grado de obesidad, grasa visceral, porcentaje de grasa, metabolismo, pérdida de peso, aumento de peso, salud, dieta, nutrición, deportes, fitness, cardio, entrenamiento de fuerza, calorías, edad metabólica, composición corporal",
+        "overview": {
+          "title": "Acerca de la calculadora de IMC",
+          "content": "El índice de masa corporal (IMC) es una medida que ayuda a medir si el peso de una persona coincide con su altura. Nuestra calculadora utiliza la fórmula estándar de la OMS para calcular con precisión el IMC y determinar su categoría de peso.",
+          "additionalContent": "El IMC es una herramienta importante para evaluar los riesgos para la salud asociados con el sobrepeso o el bajo peso. Aunque el IMC no tiene en cuenta la masa muscular ni otras características individuales, sigue siendo un indicador ampliamente utilizado en medicina y atención sanitaria.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo del IMC",
+            "content": "Veamos ejemplos prácticos de cálculo del índice de masa corporal para diferentes casos:",
+            "example1": {
+              "title": "Ejemplo 1: peso normal",
+              "description": "Hombre, altura 175 cm, peso 70 kg",
+              "input": "Peso: 70 kilogramos\nAltura: 175 cm (1,75 m)",
+              "calculation": "IMC = 70 / (1,75)²\nIMC = 70 / 3,0625\nIMC = 22,86",
+              "result": "IMC = 22,86",
+              "type": "Peso normal (18,5-24,9)"
+            },
+            "example2": {
+              "title": "Ejemplo 2: peso insuficiente",
+              "description": "Mujer, altura 165 cm, peso 48 kg",
+              "input": "Peso: 48 kilos\nAltura: 165 cm (1,65 m)",
+              "calculation": "IMC = 48 / (1,65)²\nIMC = 48 / 2,7225\nIMC = 17,63",
+              "result": "IMC = 17,63",
+              "type": "Bajo peso (<18,5)"
+            },
+            "example3": {
+              "title": "Ejemplo 3: sobrepeso",
+              "description": "Hombre, altura 180 cm, peso 90 kg",
+              "input": "Peso: 90 kilogramos\nAltura: 180 cm (1,80 m)",
+              "calculation": "IMC = 90 / (1,80)²\nIMC = 90 / 3,24\nIMC = 27,78",
+              "result": "IMC = 27,78",
+              "type": "Sobrepeso (25-29,9)"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Obesidad I grado",
+              "description": "Mujer, altura 160 cm, peso 85 kg.",
+              "input": "Peso: 85 kilos\nAltura: 160 cm (1,60 m)",
+              "calculation": "IMC = 85 / (1,60)²\nIMC = 85 / 2,56\nIMC = 33,20",
+              "result": "IMC = 33,20",
+              "type": "Obesidad I grado (30-34,9)"
+            },
+            "example5": {
+              "title": "Ejemplo 5: Obesidad II grado",
+              "description": "Macho, altura 170 cm, peso 110 kg",
+              "input": "Peso: 110 kilos\nAltura: 170 cm (1,70 m)",
+              "calculation": "IMC = 110 / (1,70)²\nIMC = 110 / 2,89\nIMC = 38,06",
+              "result": "IMC = 38,06",
+              "type": "Obesidad II grado (35-39,9)"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Obesidad III grado",
+              "description": "Mujer, altura 155 cm, peso 95 kg",
+              "input": "Peso: 95 kilogramos\nAltura: 155 cm (1,55 m)",
+              "calculation": "IMC = 95 / (1,55)²\nIMC = 95 / 2,4025\nIMC = 39,54",
+              "result": "IMC = 39,54",
+              "type": "Obesidad grado III (≥40)"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula el IMC?",
+          "content": "El IMC se calcula utilizando la fórmula recomendada por la Organización Mundial de la Salud:",
+          "step1": "Mide tu peso en kilogramos",
+          "step2": "Mide tu altura en centímetros.",
+          "step3": "Divide tu peso por el cuadrado de tu altura en metros",
+          "step4": "El valor resultante es tu índice de masa corporal."
+        },
+        "categories": {
+          "title": "Categorías IMC en la OMS",
+          "content": "La Organización Mundial de la Salud ha definido las siguientes categorías de IMC:",
+          "normal": {
+            "title": "Peso normal (18,5-24,9)",
+            "description": "Peso óptimo para la salud y la longevidad."
+          },
+          "overweight": {
+            "title": "Sobrepeso (25,0-29,9)",
+            "description": "Mayor riesgo de desarrollar enfermedades."
+          },
+          "obesity": {
+            "title": "Obesidad (≥30,0)",
+            "description": "Riesgo para la salud significativamente mayor"
+          },
+          "underweight": {
+            "title": "Bajo peso (<18,5)",
+            "description": "Posibles problemas de salud"
+          }
+        },
+        "advantages": {
+          "title": "Ventajas de nuestra calculadora",
+          "content": "Nuestra calculadora de IMC ofrece muchos beneficios:",
+          "quick": "Cálculo rápido en unos segundos.",
+          "accurate": "Resultados precisos según la fórmula de la OMS",
+          "free": "Completamente gratis sin registro",
+          "multilingual": "Admite 4 idiomas (ruso, inglés, español, alemán)",
+          "mobile": "Diseño responsivo para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para obtener resultados precisos, siga estas pautas:",
+          "measurement": "Mide tu peso por la mañana en ayunas.",
+          "consistency": "Utilice las mismas escalas para las medidas.",
+          "consultation": "Si es anormal, consulte a un médico.",
+          "lifestyle": "Combine el cálculo del IMC con la evaluación del estilo de vida"
+        },
+        "limitations": {
+          "title": "Limitaciones del IMC",
+          "content": "El IMC tiene algunas limitaciones y no tiene en cuenta:",
+          "muscle": "Porcentaje de masa muscular",
+          "age": "Características de la edad",
+          "gender": "Diferencias de sexo en el tipo de cuerpo.",
+          "ethnicity": "Características étnicas"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es el IMC (índice de masa corporal)?",
+              "a": "El IMC (índice de masa corporal) es un índice de masa corporal que muestra la relación entre el peso y la altura. Se utiliza para evaluar el riesgo de enfermedades asociadas con el sobrepeso o el bajo peso. Fórmula de cálculo: IMC = peso (kg) / (altura (m))²."
+            },
+            {
+              "q": "¿Cómo calcular el IMC en línea?",
+              "a": "Para calcular el IMC en línea, ingrese su peso en kilogramos y su altura en centímetros en la calculadora. El sistema calculará automáticamente su índice de masa corporal utilizando la fórmula de la OMS y mostrará su categoría de peso: normal, bajo peso, sobrepeso u obesidad."
+            },
+            {
+              "q": "¿Qué IMC se considera normal para las mujeres?",
+              "a": "El IMC normal para las mujeres es de 18,5 a 24,9 kg/m². Este rango corresponde a los riesgos más bajos para la salud. Los valores inferiores a 18,5 indican bajo peso y los valores superiores a 25 indican sobrepeso u obesidad."
+            },
+            {
+              "q": "¿Qué IMC se considera normal para los hombres?",
+              "a": "El IMC normal para los hombres también es de 18,5 a 24,9 kg/m². Esta gama es óptima para la salud independientemente del sexo. Un IMC superior a 25 indica sobrepeso y superior a 30 indica obesidad."
+            },
+            {
+              "q": "¿Qué significa un IMC con bajo peso?",
+              "a": "El bajo peso se define como un IMC inferior a 18,5 kg/m². Esto puede indicar desnutrición, problemas de salud o cuestiones constitucionales. Se recomienda consultar a un médico para evaluar su estado de salud."
+            },
+            {
+              "q": "¿Qué significa sobrepeso por IMC?",
+              "a": "El sobrepeso se define como un IMC de 25 a 29,9 kg/m². Esto indica estar por encima del rango de peso normal y puede aumentar el riesgo de enfermedad cardiovascular. Se recomienda revisar su dieta y aumentar la actividad física."
+            },
+            {
+              "q": "¿Qué significa obesidad IMC clase I?",
+              "a": "La obesidad de primer grado se define como un IMC de 30 a 34,9 kg/m². Esta es una condición grave que aumenta significativamente el riesgo de desarrollar diabetes, hipertensión y otras enfermedades. Es necesaria la consulta con un médico para desarrollar una estrategia de pérdida de peso."
+            },
+            {
+              "q": "¿Qué significa obesidad IMC clase II?",
+              "a": "La obesidad de segundo grado se define como un IMC de 35-39,9 kg/m². Esta condición requiere un enfoque integral del control de peso bajo la supervisión de especialistas. Alto riesgo de complicaciones de salud."
+            },
+            {
+              "q": "¿Qué significa obesidad grado III del IMC?",
+              "a": "La obesidad grado III (obesidad mórbida) se define como un IMC ≥40 kg/m². Esta es una condición crítica que requiere intervención médica inmediata y tratamiento integral bajo supervisión médica."
+            },
+            {
+              "q": "¿Por qué el IMC podría ser inexacto para los deportistas?",
+              "a": "El IMC no tiene en cuenta la masa muscular, por lo que los deportistas con músculos desarrollados pueden tener un índice sobreestimado. El músculo pesa más que la grasa, por lo que un atleta con un porcentaje de grasa corporal normal puede tener un IMC en el rango de sobrepeso."
+            },
+            {
+              "q": "¿Cómo se relaciona el IMC con el riesgo de enfermedad?",
+              "a": "Un IMC alto (especialmente por encima de 30) se asocia con un mayor riesgo de desarrollar diabetes tipo 2, enfermedades cardiovasculares, hipertensión, algunos cánceres y enfermedades musculoesqueléticas."
+            },
+            {
+              "q": "¿Con qué frecuencia se debe controlar el IMC?",
+              "a": "Se recomienda controlar el IMC una vez al mes cuando su peso esté estable y más a menudo durante un programa activo de cambio de peso. El seguimiento regular ayuda a realizar un seguimiento del progreso y a ajustar rápidamente su enfoque en materia de nutrición y actividad física."
+            },
+            {
+              "q": "¿Se puede utilizar el IMC en niños?",
+              "a": "Para niños y adolescentes, se utilizan tablas de IMC especiales que tienen en cuenta la edad y el sexo (tablas de percentiles). La fórmula estándar del IMC es para adultos mayores de 18 años."
+            },
+            {
+              "q": "¿Cómo afecta el IMC al metabolismo?",
+              "a": "Un IMC alto puede indicar un trastorno metabólico. En la obesidad, a menudo se observa resistencia a la insulina, lo que puede conducir al desarrollo del síndrome metabólico. Un IMC bajo también puede indicar problemas metabólicos."
+            },
+            {
+              "q": "¿Qué es la grasa visceral y cómo se relaciona con el IMC?",
+              "a": "La grasa visceral es la grasa que rodea los órganos internos. El IMC no diferencia entre grasa visceral y subcutánea. Incluso con un IMC normal, puede haber un alto porcentaje de grasa visceral, lo que aumenta el riesgo de padecer enfermedades."
+            },
+            {
+              "q": "¿Cómo bajar el IMC de forma segura?",
+              "a": "Para reducir el IMC de forma segura, se recomienda una pérdida de peso gradual de 0,5 a 1 kg por semana mediante una dieta equilibrada con déficit de calorías, actividad física regular y cambios en el estilo de vida. Se requiere consulta con un médico."
+            },
+            {
+              "q": "¿Cómo aumentar el IMC si tienes bajo peso?",
+              "a": "Para aumentar el IMC si tiene bajo peso, se recomienda aumentar su ingesta calórica con énfasis en alimentos saludables, entrenamiento de fuerza para desarrollar masa muscular y consultar con un médico para descartar causas médicas de bajo peso."
+            },
+            {
+              "q": "¿Cuál es el IMC normal para las personas mayores?",
+              "a": "Para las personas mayores (mayores de 65 años), el rango de IMC aceptable es ligeramente superior: 23-28 kg/m². Esto se debe a cambios en la composición corporal relacionados con la edad. Sin embargo, es importante considerar su salud general y las recomendaciones de su médico."
+            },
+            {
+              "q": "¿El IMC afecta la esperanza de vida?",
+              "a": "Sí, las investigaciones muestran que un IMC en el rango de 18,5 a 24,9 se asocia con una esperanza de vida más larga. Una desviación significativa en cualquier dirección (bajo peso o exceso de peso, obesidad) puede reducir la esperanza de vida."
+            },
+            {
+              "q": "¿Cuál es el mejor IMC para bajar de peso?",
+              "a": "El objetivo de perder peso debe ser alcanzar un IMC normal en el rango de 18,5 a 24,9. El valor objetivo específico depende de las características individuales, la edad, el sexo y las recomendaciones del médico. Es importante perder peso hasta alcanzar un nivel saludable, no un mínimo."
+            },
+            {
+              "q": "¿Qué es la edad metabólica y cómo se relaciona con el IMC?",
+              "a": "La edad metabólica refleja la tasa metabólica en comparación con la edad cronológica. Un IMC alto puede indicar un metabolismo más lento y una mayor edad metabólica. Sin embargo, estos son indicadores diferentes, medidos de manera diferente."
+            },
+            {
+              "q": "¿En qué se diferencia el IMC del porcentaje de grasa corporal?",
+              "a": "El IMC muestra la relación entre el peso y la altura y el porcentaje de grasa corporal muestra la proporción de tejido adiposo en el peso corporal total. El IMC no tiene en cuenta la composición corporal, por lo que una persona con un IMC normal puede tener un alto porcentaje de grasa corporal (especialmente si tiene poca masa muscular)."
+            },
+            {
+              "q": "¿Se puede utilizar el IMC durante el embarazo?",
+              "a": "El IMC previo al embarazo se utiliza para determinar el aumento de peso durante el embarazo. El aumento de peso recomendado depende del IMC inicial: con IMC normal - 11,5-16 kg, con IMC excesivo - 7-11,5 kg, con obesidad - 5-9 kg."
+            },
+            {
+              "q": "¿Cómo se relaciona el IMC con la dieta y la nutrición?",
+              "a": "El IMC está directamente relacionado con el equilibrio calórico. Para un IMC normal, es importante una dieta equilibrada con calorías adecuadas: déficit de calorías para perder peso, exceso para ganar peso, equilibrio para mantener. La calidad de la comida también es importante."
+            },
+            {
+              "q": "¿Qué IMC se considera ideal para la salud?",
+              "a": "El IMC ideal para la salud está en el rango de 20-25 kg/m². Dentro de este rango, el valor óptimo es individual y depende de la edad, el sexo, la herencia, el nivel de actividad física y otros factores."
+            },
+            {
+              "q": "¿Puede el IMC ser bajo en la obesidad?",
+              "a": "No, por definición, el IMC no puede ser bajo en la obesidad. Sin embargo, puede darse una situación en la que una persona con un IMC normal tenga un alto porcentaje de grasa corporal (especialmente grasa visceral), lo que a veces se denomina \"obesidad con peso normal\"."
+            },
+            {
+              "q": "¿Cómo afecta el IMC a los resultados del entrenamiento?",
+              "a": "El IMC puede influir en la eficacia del entrenamiento. Si tiene un IMC alto, el ejercicio cardiovascular puede ser más eficaz para quemar calorías. Cuando se tiene un IMC bajo, es importante combinar el entrenamiento con una nutrición adecuada para ganar masa muscular."
+            },
+            {
+              "q": "¿Cómo interpretar correctamente los resultados de la calculadora de IMC?",
+              "a": "Los resultados de la calculadora de IMC deben interpretarse teniendo en cuenta la edad, el sexo, el nivel de actividad física, la masa muscular y la salud general. El IMC es un punto de partida, pero no un diagnóstico definitivo. En caso de desviaciones de la norma, es importante consultar a un médico."
+            },
+            {
+              "q": "¿Existen alternativas al IMC para estimar el peso?",
+              "a": "Sí, existen alternativas: porcentaje de grasa corporal (medido por bioimpedancia o calibre), circunferencia de cintura, relación cintura-cadera, análisis de composición corporal (DEXA). Estos métodos son más precisos, pero el IMC sigue siendo la herramienta de detección más accesible."
+            },
+            {
+              "q": "¿Cómo mantener un IMC normal a largo plazo?",
+              "a": "Para mantener un IMC normal, son importantes hábitos saludables constantes: una dieta equilibrada, actividad física regular, sueño adecuado, control del estrés y control regular del peso. Lo importante no es una dieta a corto plazo, sino cambios en el estilo de vida."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo calcular el índice de masa corporal (IMC)",
+          "description": "Instrucciones paso a paso para usar la calculadora de IMC",
+          "steps": {
+            "step1": {
+              "name": "Mide tu peso",
+              "text": "Mida su peso en kilogramos por la mañana con el estómago vacío para obtener el resultado más preciso."
+            },
+            "step2": {
+              "name": "Mide tu altura",
+              "text": "Mide tu altura en centímetros."
+            },
+            "step3": {
+              "name": "Introduce los detalles",
+              "text": "Ingrese su peso y altura en la calculadora de IMC"
+            },
+            "step4": {
+              "name": "obtener el resultado",
+              "text": "La calculadora calculará automáticamente su índice de masa corporal y mostrará su categoría de peso con recomendaciones."
+            }
+          }
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "heartRate": {
+      "title": "Calculadora de pulso y frecuencia cardíaca online",
+      "description": "Calcula tu frecuencia cardíaca (FC) y zonas de pulso. Determine la carga óptima para entrenar según la edad y el nivel de condición física. Rápido, preciso y gratuito.",
+      "form": {
+        "title": "Parámetros de cálculo",
+        "age": "Edad",
+        "agePlaceholder": "Introduce tu edad",
+        "years": "años",
+        "currentHR": "frecuencia cardiaca actual",
+        "currentHRPlaceholder": "Introduce tu frecuencia cardíaca actual",
+        "bpm": "latidos/min",
+        "currentHRHint": "Opcional: para determinar la zona actual.",
+        "calculate": "Calcular frecuencia cardiaca",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "errors": {
+          "ageRequired": "Introduce tu edad",
+          "ageRange": "La edad debe estar entre 1 y 120 años.",
+          "heartRateRequired": "Introduce tu frecuencia cardíaca actual",
+          "heartRateRange": "El pulso debe ser de 30 a 250 latidos/min.",
+          "calculationError": "Error de cálculo"
+        }
+      },
+      "infographic": {
+        "formula": "220 - edad",
+        "formulaDescription": "Fórmula de frecuencia cardíaca máxima",
+        "zones": "5 zonas",
+        "zonesDescription": "Zonas de pulso para entrenar.",
+        "range": "50-100%",
+        "rangeDescription": "Desde frecuencia cardíaca máxima"
+      },
+      "results": {
+        "maxHR": "frecuencia cardíaca máxima",
+        "maxHRFormula": "Fórmula: 220 - edad",
+        "bpm": "latidos/min",
+        "currentZone": "Zona actual",
+        "zones": "Zonas de pulso",
+        "scale": "Escala de zonas de pulso."
+      },
+      "zones": {
+        "resting": {
+          "title": "Área de recreación",
+          "description": "Carga ligera, recuperación activa.",
+          "benefits": "Mejora el estado general"
+        },
+        "fatBurning": {
+          "title": "Zona de quema de grasa",
+          "description": "Carga moderada",
+          "benefits": "quema de grasa"
+        },
+        "aerobic": {
+          "title": "Zona aeróbica",
+          "description": "Entrenamiento de resistencia",
+          "benefits": "Mejora el corazón y los pulmones."
+        },
+        "anaerobic": {
+          "title": "Zona anaeróbica",
+          "description": "Alta intensidad",
+          "benefits": "Aumenta la fuerza y ​​la velocidad."
+        },
+        "maximum": {
+          "title": "Carga máxima",
+          "description": "Casi el límite de posibilidades",
+          "benefits": "Sólo para aquellos preparados"
+        },
+        "below": "Por debajo de lo normal",
+        "above": "Por encima del máximo"
+      },
+      "table": {
+        "title": "Zonas de frecuencia cardíaca para entrenar",
+        "zone": "Zona",
+        "percentage": "% de FCmáx",
+        "characteristics": "Característica",
+        "benefits": "Beneficio"
+      },
+      "seo": {
+        "title": "Calculadora de frecuencia cardíaca en línea: calcule la frecuencia cardíaca por edad",
+        "description": "Descubra su frecuencia cardíaca (FC) y zonas de pulso. Calcula la carga óptima para entrenar en función de la edad y el nivel de entrenamiento. Gratis y preciso.",
+        "keywords": "calculadora de pulso, calculadora de frecuencia cardíaca, zonas de pulso, frecuencia cardíaca, entrenamiento, cardio, pulso máximo, pulso para bajar de peso, zona de pulso, entrenamiento cardiovascular, zona aeróbica, zona anaeróbica, zona de quema de grasa, entrenamiento de pulso, monitorización de pulso, pulsómetro, reloj deportivo, pulsera fitness, zonas de carga, pulso en reposo, pulso durante el ejercicio, recuperación de pulso, pulso de carrera, pulso en bicicleta, entrenamiento de intervalos, pulso para principiantes, pulso para deportistas, pulso, pulso normal, pulso alto",
+        "overview": {
+          "title": "Acerca de la calculadora de frecuencia cardíaca",
+          "content": "La frecuencia cardíaca (FC) es un indicador importante para controlar la intensidad del entrenamiento. Nuestra calculadora le ayudará a determinar su frecuencia cardíaca máxima y sus zonas de frecuencia cardíaca para un entrenamiento eficaz.",
+          "additionalContent": "Monitorizar tu frecuencia cardíaca durante el entrenamiento te ayuda a optimizar tu carga, mejorar los resultados y evitar el sobreentrenamiento. Se utilizan diferentes zonas de frecuencia cardíaca para lograr diferentes objetivos: perder peso, desarrollar resistencia o aumentar la fuerza.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de frecuencia cardíaca y zonas de pulso.",
+            "content": "Veamos ejemplos prácticos de cálculo de frecuencia cardíaca máxima y zonas de pulso para diferentes edades:",
+            "example1": {
+              "title": "Ejemplo 1: Joven deportista de 25 años",
+              "description": "Cálculo de la frecuencia cardíaca máxima y todas las zonas de frecuencia cardíaca.",
+              "input": "Edad: 25 años",
+              "calculation": "Frecuencia cardíaca máxima = 220 - 25 = 195 latidos/min\n\nZona de descanso (50-60%): 98-117 lpm\nZona de quema de grasa (60-70%): 117-137 latidos/min\nZona aeróbica (70-80%): 137-156 latidos/min\nZona anaeróbica (80-90%): 156-176 latidos/min\nZona máxima (90-100%): 176-195 bpm",
+              "result": "Frecuencia cardíaca máxima: 195 latidos/min",
+              "type": "Zona óptima para adelgazar: 117-137 latidos/min"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Edad promedio 40 años",
+              "description": "Cálculo para una persona de mediana edad.",
+              "input": "Edad: 40 años",
+              "calculation": "Frecuencia cardíaca máxima = 220 - 40 = 180 latidos/min\n\nZona de descanso (50-60%): 90-108 lpm\nZona de quema de grasa (60-70%): 108-126 latidos/min\nZona aeróbica (70-80%): 126-144 latidos/min\nZona anaeróbica (80-90%): 144-162 latidos/min\nZona máxima (90-100%): 162-180 bpm",
+              "result": "Frecuencia cardíaca máxima: 180 latidos/min",
+              "type": "Zona de resistencia óptima: 126-144 bpm"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Hombre mayor de 60 años",
+              "description": "Cálculo para una persona mayor.",
+              "input": "Edad: 60 años",
+              "calculation": "Frecuencia cardíaca máxima = 220 - 60 = 160 latidos/min\n\nZona de descanso (50-60%): 80-96 lpm\nZona de quema de grasa (60-70%): 96-112 latidos/min\nZona aeróbica (70-80%): 112-128 latidos/min\nZona anaeróbica (80-90%): 128-144 latidos/min\nZona máxima (90-100%): 144-160 bpm",
+              "result": "Frecuencia cardíaca máxima: 160 latidos/min",
+              "type": "Zona de relajación y quema de grasas recomendada"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Atleta principiante, 30 años, frecuencia cardíaca actual 150",
+              "description": "Determinar la zona de frecuencia cardíaca actual",
+              "input": "Edad: 30 años\nFrecuencia cardíaca actual: 150 latidos/min",
+              "calculation": "Frecuencia cardíaca máxima = 220 - 30 = 190 latidos/min\nFrecuencia cardíaca actual: 150 latidos/min\nPorcentaje del máximo: (150 / 190) × 100% = 79%",
+              "result": "Zona actual: Aeróbica (70-80%)",
+              "type": "Ideal para desarrollar la resistencia"
+            },
+            "example5": {
+              "title": "Ejemplo 5: Atleta entrenado, 35 años",
+              "description": "Cálculo para entrenamiento a intervalos.",
+              "input": "Edad: 35 años",
+              "calculation": "Frecuencia cardíaca máxima = 220 - 35 = 185 latidos/min\n\nIntervalos de alta intensidad:\nZona anaeróbica (80-90%): 148-167 latidos/min\n\nIntervalos de recuperación:\nZona de descanso (50-60%): 93-111 lpm",
+              "result": "Frecuencia cardíaca máxima: 185 latidos/min",
+              "type": "Para intervalos: 148-167 latidos/min (trabajo), 93-111 latidos/min (descanso)"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Entrenamiento para bajar de peso, 45 años",
+              "description": "Cálculo de la zona óptima para adelgazar.",
+              "input": "Edad: 45 años\nObjetivo: perder peso",
+              "calculation": "Frecuencia cardíaca máxima = 220 - 45 = 175 latidos/min\n\nZona de quema de grasa (60-70%): 105-123 latidos/min\n\nSe recomienda entrenar en esta zona durante 30-60 minutos para una quema de grasa óptima.",
+              "result": "Frecuencia cardíaca máxima: 175 latidos/min",
+              "type": "Zona óptima para perder peso: 105-123 latidos/min"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula la frecuencia cardíaca?",
+          "content": "La frecuencia cardíaca máxima se calcula mediante la fórmula estándar:",
+          "formula": "Fórmula de cálculo",
+          "step1": "Determina tu edad en años.",
+          "step2": "Resta la edad de 220",
+          "step3": "El valor resultante es tu frecuencia cardíaca máxima.",
+          "step4": "Calcular zonas de frecuencia cardíaca como porcentaje del máximo"
+        },
+        "zones": {
+          "title": "Zonas de frecuencia cardíaca para entrenar",
+          "content": "Se utilizan diferentes zonas de frecuencia cardíaca para distintos fines de entrenamiento:",
+          "resting": {
+            "title": "Área de recreación (50-60%)",
+            "description": "Carga ligera para la recuperación."
+          },
+          "fatBurning": {
+            "title": "Zona de quema de grasa (60-70%)",
+            "description": "Óptimo para bajar de peso"
+          },
+          "aerobic": {
+            "title": "Zona aeróbica (70-80%)",
+            "description": "Mejora la resistencia"
+          },
+          "anaerobic": {
+            "title": "Zona anaeróbica (80-90%)",
+            "description": "Desarrolla fuerza y ​​velocidad."
+          },
+          "maximum": {
+            "title": "Zona máxima (90-100%)",
+            "description": "Sólo para deportistas experimentados."
+          }
+        },
+        "advantages": {
+          "title": "Ventajas de nuestra calculadora",
+          "content": "Nuestra calculadora de frecuencia cardíaca ofrece muchos beneficios:",
+          "quick": "Cálculo rápido en unos segundos.",
+          "accurate": "Resultados precisos usando fórmula estándar",
+          "free": "Completamente gratis sin registro",
+          "multilingual": "Admite 4 idiomas (ruso, inglés, español, alemán)",
+          "mobile": "Diseño responsivo para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para un entrenamiento eficaz, siga estas recomendaciones:",
+          "measurement": "Toma tu frecuencia cardíaca por la mañana en reposo",
+          "consistency": "Entrena regularmente en la zona objetivo.",
+          "consultation": "Consulta a tu médico antes de empezar a hacer ejercicio.",
+          "training": "Combina diferentes zonas de frecuencia cardíaca en tus entrenamientos"
+        },
+        "safety": {
+          "title": "Medidas de seguridad",
+          "content": "Al entrenar por pulsos, es importante seguir las precauciones de seguridad:",
+          "consultation": "Consulta a tu médico antes de empezar a hacer ejercicio.",
+          "gradual": "Empezar con baja intensidad",
+          "monitoring": "Vigila constantemente tu salud",
+          "medical": "Si no te sientes bien, deja de entrenar."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es la frecuencia cardíaca (FC)?",
+              "a": "La frecuencia cardíaca es el número de latidos del corazón por minuto. Este es un indicador importante para controlar la intensidad de la actividad física y evaluar el estado del sistema cardiovascular. Medido en latidos por minuto (bpm o bpm)."
+            },
+            {
+              "q": "¿Cómo calcular la frecuencia cardíaca máxima?",
+              "a": "La frecuencia cardíaca máxima se calcula mediante la fórmula: 220 menos la edad en años. Por ejemplo, para una persona de 30 años, la frecuencia cardíaca máxima es de 190 latidos por minuto (220 - 30 = 190). Esta es una fórmula aproximada y los valores individuales pueden variar."
+            },
+            {
+              "q": "¿Qué zonas de frecuencia cardíaca deberías utilizar para entrenar?",
+              "a": "Para perder peso, utilice la zona de quema de grasa (60-70% del máximo), para desarrollar resistencia - la zona aeróbica (70-80%), para desarrollar fuerza - la zona anaeróbica (80-90%). Se recomienda a los principiantes comenzar desde la zona de descanso (50-70%)."
+            },
+            {
+              "q": "¿Es seguro entrenar usando tu frecuencia cardíaca?",
+              "a": "Sí, el entrenamiento de frecuencia cardíaca es seguro cuando se realiza correctamente. Es importante consultar a un médico antes de iniciar un entrenamiento intenso, comenzar con una intensidad baja, controlar constantemente cómo se siente y no exceder su frecuencia cardíaca máxima."
+            },
+            {
+              "q": "¿Qué se considera frecuencia cardíaca normal en reposo?",
+              "a": "La frecuencia cardíaca normal en reposo para los adultos es de 60 a 100 latidos por minuto. En los atletas entrenados, la frecuencia cardíaca en reposo puede ser más baja (40-60 latidos/min). Una frecuencia cardíaca en reposo elevada puede indicar problemas de salud."
+            },
+            {
+              "q": "¿Cómo medir tu frecuencia cardíaca durante el ejercicio?",
+              "a": "Puedes medir tu pulso manualmente (en la muñeca o en el cuello), pero durante el entrenamiento es más conveniente utilizar un pulsómetro, una pulsera de fitness o un reloj deportivo. Mida su frecuencia cardíaca regularmente durante el ejercicio para controlar la intensidad."
+            },
+            {
+              "q": "¿Qué es la zona de quema de grasa y por qué es importante?",
+              "a": "La zona de quema de grasa es del 60-70% de la frecuencia cardíaca máxima. En esta zona, el cuerpo utiliza de forma más eficaz la grasa como fuente de energía. El entrenamiento en esta zona es óptimo para perder peso y puede durar más que el entrenamiento de alta intensidad."
+            },
+            {
+              "q": "¿En qué se diferencia la zona aeróbica de la zona anaeróbica?",
+              "a": "Zona aeróbica (70-80% del máximo): es un entrenamiento con acceso a oxígeno, desarrolla resistencia. Zona anaeróbica (80-90% del máximo): entrenar sin suficiente oxígeno, desarrolla fuerza y ​​​​velocidad, pero requiere más recuperación."
+            },
+            {
+              "q": "¿Cuánto tiempo debes entrenar en cada zona?",
+              "a": "Zona de quema de grasa: 30-60 minutos, zona aeróbica: 20-60 minutos, zona anaeróbica: 10-30 minutos (intervalo), zona máxima: solo a corto plazo (segundos a minutos) para atletas experimentados."
+            },
+            {
+              "q": "¿Es posible superar tu frecuencia cardíaca máxima?",
+              "a": "Superar la frecuencia cardíaca máxima es posible, pero peligroso para la salud. No se recomienda superar el 100% del máximo calculado, especialmente sin preparación. Si no se siente bien, reduzca inmediatamente la intensidad."
+            },
+            {
+              "q": "¿Cómo se relaciona la frecuencia cardíaca con la recuperación post-entrenamiento?",
+              "a": "Una rápida recuperación de la frecuencia cardíaca después del ejercicio (vuelve a la normalidad en 1 o 2 minutos) indica una buena condición física. La recuperación lenta puede indicar sobreentrenamiento o problemas de salud."
+            },
+            {
+              "q": "¿Cuál es la frecuencia cardíaca óptima para bajar de peso?",
+              "a": "Para perder peso, la zona de quema de grasa es óptima (60-70% de la frecuencia cardíaca máxima). En esta zona, puedes entrenar por más tiempo, el cuerpo quema grasa de manera eficiente y el entrenamiento es más fácil de tolerar que el entrenamiento de alta intensidad."
+            },
+            {
+              "q": "¿La edad afecta tu frecuencia cardíaca durante el ejercicio?",
+              "a": "Sí, la frecuencia cardíaca máxima disminuye con la edad. La fórmula \"220 - edad\" tiene esto en cuenta. A las personas mayores se recomienda bajar la intensidad del entrenamiento y priorizar las zonas de relajación y quema de grasas."
+            },
+            {
+              "q": "¿Qué es el pulso en reposo y por qué medirlo?",
+              "a": "El pulso en reposo es su frecuencia cardíaca en reposo (se mide mejor por la mañana después de despertarse). Una disminución de la frecuencia cardíaca en reposo con el tiempo indica una mejor condición física. Un aumento puede indicar sobreentrenamiento o problemas de salud."
+            },
+            {
+              "q": "¿Cómo utilizar la frecuencia cardíaca para el entrenamiento a intervalos?",
+              "a": "El entrenamiento por intervalos alterna periodos de alta intensidad (80-90% del máximo) y recuperación (50-70% del máximo). Por ejemplo, 1 minuto en la zona anaeróbica, luego 2 minutos en la zona de descanso. Esto desarrolla fuerza y ​​resistencia."
+            },
+            {
+              "q": "¿Necesitas un pulsómetro para entrenar?",
+              "a": "Un monitor de frecuencia cardíaca es opcional, pero muy útil para controlar con precisión la intensidad de tus entrenamientos, especialmente para principiantes. Puedes medir tu frecuencia cardíaca manualmente, pero esto es menos conveniente durante el entrenamiento."
+            },
+            {
+              "q": "¿Qué frecuencia cardíaca es peligrosa para la salud?",
+              "a": "Un pulso que excede significativamente la frecuencia cardíaca máxima o causa síntomas: dolor en el pecho, dificultad para respirar severa, mareos, náuseas se considera peligroso. Si se presentan estos síntomas, deje de hacer ejercicio inmediatamente y consulte a un médico."
+            },
+            {
+              "q": "¿En qué se diferencia la frecuencia cardíaca entre hombres y mujeres?",
+              "a": "En las mujeres, la frecuencia cardíaca en reposo suele ser ligeramente mayor que en los hombres (de 5 a 10 latidos/min). La fórmula de frecuencia cardíaca máxima \"220 - edad\" es universal para ambos sexos, pero las mujeres pueden tener una frecuencia cardíaca máxima ligeramente mayor."
+            },
+            {
+              "q": "¿Qué hacer si tu frecuencia cardíaca es demasiado alta durante el ejercicio?",
+              "a": "Si su frecuencia cardíaca supera la zona objetivo o siente molestias, reduzca la intensidad: disminuya la velocidad, haga una pausa, camine. Es importante escuchar a tu cuerpo y no ignorar las señales."
+            },
+            {
+              "q": "¿Cómo entrenar por frecuencia cardíaca para desarrollar la resistencia?",
+              "a": "Para desarrollar la resistencia, entrena en la zona aeróbica (70-80% del máximo) durante 30-60 minutos. Estos entrenamientos mejoran la función cardiovascular, aumentan la capacidad pulmonar y aumentan la resistencia general."
+            },
+            {
+              "q": "¿Qué es la reserva de frecuencia cardíaca y por qué es necesaria?",
+              "a": "Reserva de frecuencia cardíaca = frecuencia cardíaca máxima - frecuencia cardíaca en reposo. Esta es la gama que se puede utilizar para entrenar. El cálculo de zonas basado en la reserva de frecuencia cardíaca (método Karvonen) es más preciso que el cálculo basado en la frecuencia cardíaca máxima."
+            },
+            {
+              "q": "¿Cómo cambia la frecuencia cardíaca con los diferentes tipos de entrenamiento?",
+              "a": "Cuando corres, tu frecuencia cardíaca suele ser más alta que cuando caminas o andas en bicicleta con el mismo esfuerzo percibido. La natación produce una frecuencia cardíaca más baja debido a la posición horizontal. El entrenamiento de fuerza puede provocar picos a corto plazo en la frecuencia cardíaca."
+            },
+            {
+              "q": "¿Puedo utilizar la misma zona para todos los entrenamientos?",
+              "a": "No se recomienda utilizar una sola zona. Una variedad de zonas en el entrenamiento (entrenamiento en diferentes zonas de frecuencia cardíaca) da mejores resultados que un entrenamiento monótono en una zona. Combina diferentes zonas en tu plan de entrenamiento."
+            },
+            {
+              "q": "¿Cómo se relaciona la frecuencia cardíaca con la frecuencia cardíaca en reposo por la mañana?",
+              "a": "La frecuencia cardíaca en reposo matutina es un indicador importante de recuperación. Si su frecuencia cardíaca matutina es de 5 a 10 latidos por minuto más alta de lo habitual, esto puede indicar una recuperación insuficiente o la aparición de una enfermedad. En tales casos, conviene reducir la carga."
+            },
+            {
+              "q": "¿Cuáles son las zonas de frecuencia cardíaca para el entrenamiento cardiovascular?",
+              "a": "Las zonas de frecuencia cardíaca para el entrenamiento cardiovascular dividen el rango desde el reposo hasta el máximo en 5 zonas: descanso (50-60%), quema de grasa (60-70%), aeróbica (70-80%), anaeróbica (80-90%), máxima (90-100%). Cada zona tiene sus propios objetivos y efectos."
+            },
+            {
+              "q": "¿Con qué frecuencia debes entrenar según la frecuencia cardíaca?",
+              "a": "Para principiantes: 3-4 veces por semana durante 20-30 minutos en la zona de quema de grasa. Para quienes entrenan: 4-6 veces por semana con zonas alternas (días de recuperación en zona de descanso, días de trabajo en zonas objetivo). Es importante dejar tiempo para la recuperación."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora de frecuencia cardíaca para niños?",
+              "a": "La fórmula \"220 - edad\" es adecuada para adultos. Para niños y adolescentes se utilizan otros métodos de cálculo. Se recomienda a los niños que consulten a un pediatra antes de iniciar un entrenamiento intensivo de frecuencia cardíaca."
+            },
+            {
+              "q": "¿Cómo afecta la frecuencia cardíaca a la eficacia del entrenamiento?",
+              "a": "Entrenar en la zona de frecuencia cardíaca correcta es más efectivo para lograr objetivos específicos. Entrenar a una intensidad demasiado baja tendrá poco efecto, mientras que entrenar a una intensidad demasiado alta puede provocar sobreentrenamiento y lesiones. La zona óptima depende del objetivo."
+            },
+            {
+              "q": "¿Qué es la frecuencia cardíaca con carga máxima y por qué deberías saberla?",
+              "a": "La frecuencia cardíaca máxima de ejercicio (frecuencia cardíaca máxima) es el límite teórico de la frecuencia cardíaca. Conocer este valor permite calcular zonas de frecuencia cardíaca óptimas para entrenar y evitar sobrecargas peligrosas."
+            },
+            {
+              "q": "¿Cómo iniciar correctamente el entrenamiento de frecuencia cardíaca?",
+              "a": "Comience por determinar su frecuencia cardíaca máxima mediante una fórmula o prueba. Comienza a entrenar en la zona de descanso (50-60% del máximo) y aumenta gradualmente la intensidad. Consulta con tu médico, especialmente si tienes problemas de salud o hace tiempo que no haces ejercicio."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo calcular zonas de frecuencia cardíaca para entrenar",
+          "description": "Instrucciones paso a paso para usar la calculadora de frecuencia cardíaca",
+          "steps": {
+            "step1": {
+              "name": "Introduce tu edad",
+              "text": "Introduce tu edad en años para calcular tu frecuencia cardíaca máxima"
+            },
+            "step2": {
+              "name": "Ingrese su frecuencia cardíaca actual (opcional)",
+              "text": "Si mide su frecuencia cardíaca durante el ejercicio, ingrese el valor actual para determinar la zona"
+            },
+            "step3": {
+              "name": "Obtener resultados",
+              "text": "La calculadora calculará automáticamente la frecuencia cardíaca máxima y todas las zonas de frecuencia cardíaca con recomendaciones."
+            }
+          }
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "bloodPressure": {
+      "title": "Calculadora de presión arterial en línea",
+      "description": "Calcule la presión arterial normal por edad y calcule su valor actual. Rápido, preciso y gratuito.",
+      "form": {
+        "title": "Parámetros de cálculo",
+        "age": "Edad",
+        "agePlaceholder": "Introduce tu edad",
+        "years": "años",
+        "systolic": "Presión sistólica",
+        "systolicPlaceholder": "Introduzca la presión superior",
+        "diastolic": "presión diastólica",
+        "diastolicPlaceholder": "Introduzca una presión más baja",
+        "mmhg": "mmHg art.",
+        "systolicHint": "Presión superior (sistólica)",
+        "diastolicHint": "Presión más baja (diastólica)",
+        "calculate": "Calcular la presión arterial",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "errors": {
+          "ageRequired": "Introduce tu edad",
+          "ageRange": "La edad debe estar entre 1 y 120 años.",
+          "systolicRequired": "Introduzca la presión sistólica",
+          "systolicRange": "La presión sistólica debe estar entre 50 y 300 mmHg. Arte.",
+          "diastolicRequired": "Introduzca la presión diastólica",
+          "diastolicRange": "La presión diastólica debe estar entre 30 y 200 mmHg. Arte.",
+          "systolicMustBeHigher": "La presión sistólica debe ser mayor que la diastólica.",
+          "calculationError": "Error de cálculo"
+        }
+      },
+      "infographic": {
+        "measurement": "120/80",
+        "measurementDescription": "presión normal",
+        "categories": "6 categorías",
+        "categoriesDescription": "Clasificación de la presión arterial",
+        "age": "Por edad",
+        "ageDescription": "Las normas dependen de la edad."
+      },
+      "results": {
+        "mmhg": "mmHg art.",
+        "description": "Descripción",
+        "recommendation": "Recomendación",
+        "riskLevel": "Nivel de riesgo",
+        "normalRange": "normal para tu edad",
+        "normalRangeText": "Norma: {min}-{max} / {minD}-{maxD} mmHg. Arte."
+      },
+      "categories": {
+        "hypotension": {
+          "title": "hipotonía",
+          "description": "presión arterial baja"
+        },
+        "normal": {
+          "title": "Norma",
+          "description": "presión arterial normal"
+        },
+        "prehypertension": {
+          "title": "Prehipertensión",
+          "description": "Aumento de la presión normal"
+        },
+        "hypertension1": {
+          "title": "Hipertensión I grados",
+          "description": "hipertensión moderada"
+        },
+        "hypertension2": {
+          "title": "Hipertensión II grados",
+          "description": "hipertensión severa"
+        },
+        "hypertension3": {
+          "title": "Hipertensión III grados",
+          "description": "hipertensión severa"
+        }
+      },
+      "recommendations": {
+        "hypotensionRecommendation": "Consulte a su médico, aumente la ingesta de líquidos y sal.",
+        "normalRecommendation": "Mantenga un estilo de vida saludable y controle periódicamente su presión arterial.",
+        "prehypertensionRecommendation": "Cuida tu dieta, reduce el consumo de sal, muévete más",
+        "hypertension1Recommendation": "Asegúrese de consultar a su médico y cambiar su estilo de vida.",
+        "hypertension2Recommendation": "Consulte a un médico inmediatamente, se requiere medicación.",
+        "hypertension3Recommendation": "Consulte a un médico de inmediato, alto riesgo de complicaciones."
+      },
+      "riskLevels": {
+        "low": "Bajo riesgo",
+        "moderate": "Riesgo moderado",
+        "high": "Alto riesgo",
+        "veryHigh": "Riesgo muy alto",
+        "critical": "Riesgo crítico"
+      },
+      "table": {
+        "title": "Normas de presión arterial por edad.",
+        "age": "Edad",
+        "normal": "Normal (mmHg)",
+        "comment": "Comentario",
+        "years": "años",
+        "comments": {
+          "excellent": "Excelente presión",
+          "normal": "Dentro de los límites normales",
+          "slightIncrease": "Un pequeño aumento es aceptable.",
+          "monitor": "Controla el nivel",
+          "moderateIncrease": "El aumento moderado es típico"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de presión en línea: normal según la edad, control de la presión arterial",
+        "description": "Descubra la presión arterial normal por edad y controle su presión arterial. Cálculo rápido, interpretación y consejos de salud.",
+        "keywords": "calculadora de presión, presión arterial, presión normal, hipertensión, hipotensión, presión por edad, presión sistólica, presión diastólica, alta presión, baja presión, hipertensión arterial, presión arterial normal, control de presión, medición de la presión arterial, presión arterial en adultos, presión arterial en ancianos, crisis hipertensiva, pastillas para la presión arterial, reducción de la presión arterial, aumento de la presión arterial, monitoreo de la presión arterial, presión arterial y edad, salud vascular, sistema cardiovascular, prevención de la hipertensión, tratamiento de la hipertensión, presión arterial 120 sobre 80, presión arterial 140 sobre 90, presión arterial 160 sobre 100, presión arterial peligrosa",
+        "overview": {
+          "title": "Acerca de la calculadora de presión arterial",
+          "content": "La presión arterial es un indicador importante de la salud cardiovascular. Nuestra calculadora le ayudará a determinar la presión arterial normal por edad y a estimar sus indicadores actuales.",
+          "additionalContent": "El control regular de la presión arterial ayuda a detectar desviaciones de manera oportuna y a prevenir el desarrollo de enfermedades graves. Nuestra calculadora tiene en cuenta las normas de edad y clasifica su presión arterial según los estándares internacionales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo y evaluación de la presión arterial.",
+            "content": "Veamos ejemplos prácticos de evaluación de la presión arterial para diferentes casos:",
+            "example1": {
+              "title": "Ejemplo 1: presión normal",
+              "description": "joven de 25 años",
+              "input": "Edad: 25 años\nSistólica: 120 mm Hg. Arte.\nDiastólica: 80 mm Hg. Arte.",
+              "calculation": "Clasificación: presión normal\nSistólica 120 ≤ 130 ✓\nDiastólica 80 ≤ 85 ✓\nNorma para mayores de 25 años: 110-130 / 70-85 mm Hg. Arte.",
+              "result": "Categoría: Normal",
+              "type": "Recomendación: Mantener un estilo de vida saludable"
+            },
+            "example2": {
+              "title": "Ejemplo 2: prehipertensión",
+              "description": "Hombre de mediana edad de 45 años.",
+              "input": "Edad: 45 años\nSistólica: 138 mm Hg. Arte.\nDiastólica: 88 mm Hg. Arte.",
+              "calculation": "Clasificación: Prehipertensión\nSistólica 138 ≤ 140 ✓\nDiastólica 88 ≤ 90 ✓\nNormal para mayores de 45 años: 120-140 / 80-90 mmHg. Arte.",
+              "result": "Categoría: Prehipertensión",
+              "type": "Recomendación: seguimiento de la nutrición y la actividad"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Hipertensión I grados",
+              "description": "Hombre mayor de 65 años.",
+              "input": "Edad: 65 años\nSistólica: 155 mm Hg. Arte.\nDiastólica: 95 mm Hg. Arte.",
+              "calculation": "Clasificación: Hipertensión en etapa I\nSistólica 155 ≤ 160 ✓\nDiastólica 95 ≤ 100 ✓\nNorma para mayores de 65 años: 130-150 / 80-90 mm Hg. Arte.",
+              "result": "Categoría: Hipertensión I grados",
+              "type": "Recomendación: Se requiere consulta con un médico."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Hipertensión II grados",
+              "description": "Hombre con presión arterial alta",
+              "input": "Edad: 50 años\nSistólica: 175 mm Hg. Arte.\nDiastólica: 105 mm Hg. Arte.",
+              "calculation": "Clasificación: Hipertensión en estadio II\nSistólica 175 ≤ 180 ✓\nDiastólica 105 ≤ 110 ✓\nNivel de riesgo: Alto",
+              "result": "Categoría: Hipertensión II grados",
+              "type": "Recomendación: consulta inmediata con un médico."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Hipertensión en estadio III",
+              "description": "Condición crítica",
+              "input": "Edad: 55 años\nSistólica: 190 mm Hg. Arte.\nDiastólica: 115 mm Hg. Arte.",
+              "calculation": "Clasificación: Hipertensión en estadio III\nSistólica 190 > 180 ✗\nDiastólica 115 > 110 ✗\nNivel de riesgo: Crítico",
+              "result": "Categoría: Hipertensión III grados",
+              "type": "Recomendación: consulte a un médico inmediatamente."
+            },
+            "example6": {
+              "title": "Ejemplo 6: hipotensión",
+              "description": "Baja presión",
+              "input": "Edad: 30 años\nSistólica: 95 mm Hg. Arte.\nDiastólica: 55 mm Hg. Arte.",
+              "calculation": "Clasificación: hipotensión\nSistólica 95 < 100 ✗\nDiastólica 55 < 60 ✗\nNivel de riesgo: Bajo",
+              "result": "Categoría: Hipotensión",
+              "type": "Recomendación: consultar al médico, aumentar el líquido."
+            }
+          }
+        },
+        "categories": {
+          "title": "Categorías de presión arterial",
+          "content": "La presión arterial se clasifica en las siguientes categorías:",
+          "hypotension": {
+            "title": "hipotonía",
+            "description": "Sistólica < 100 o diastólica < 60 mm Hg. Arte."
+          },
+          "normal": {
+            "title": "Norma",
+            "description": "Sistólica ≤ 130 y diastólica ≤ 85 mmHg. Arte."
+          },
+          "prehypertension": {
+            "title": "Prehipertensión",
+            "description": "Sistólica ≤ 140 y diastólica ≤ 90 mmHg. Arte."
+          },
+          "hypertension1": {
+            "title": "Hipertensión I grados",
+            "description": "Sistólica ≤ 160 y diastólica ≤ 100 mmHg. Arte."
+          },
+          "hypertension2": {
+            "title": "Hipertensión II grados",
+            "description": "Sistólica ≤ 180 y diastólica ≤ 110 mmHg. Arte."
+          },
+          "hypertension3": {
+            "title": "Hipertensión III grados",
+            "description": "Sistólica > 180 o diastólica > 110 mmHg. Arte."
+          }
+        },
+        "measurement": {
+          "title": "Cómo medir la presión correctamente",
+          "content": "Para obtener resultados precisos, es importante medir correctamente su presión arterial:",
+          "step1": "Descanse 5 minutos antes de medir.",
+          "step2": "Siéntate cómodamente, con la espalda recta y los pies en el suelo.",
+          "step3": "El brazalete debe estar a la altura del corazón.",
+          "step4": "Mida la presión en ambos brazos, use el valor más alto"
+        },
+        "advantages": {
+          "title": "Ventajas de nuestra calculadora",
+          "content": "Nuestra calculadora de presión arterial ofrece muchos beneficios:",
+          "quick": "Cálculo rápido en unos segundos.",
+          "accurate": "Clasificación precisa según estándares internacionales.",
+          "free": "Completamente gratis sin registro",
+          "multilingual": "Admite 4 idiomas (ruso, inglés, español, alemán)",
+          "mobile": "Diseño responsivo para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para mantener una presión arterial normal, siga estas recomendaciones:",
+          "measurement": "Mida su presión arterial regularmente al mismo tiempo.",
+          "consistency": "Lleve un diario de mediciones",
+          "consultation": "Consulte a su médico si hay alguna desviación.",
+          "lifestyle": "Llevar un estilo de vida saludable: nutrición adecuada, actividad física."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es la presión arterial?",
+              "a": "La presión arterial es la fuerza con la que la sangre empuja contra las paredes de las arterias. Se mide en milímetros de mercurio (mm Hg) y consta de dos valores: sistólico (superior, cuando el corazón se contrae) y diastólico (inferior, cuando el corazón se relaja)."
+            },
+            {
+              "q": "¿Qué presión arterial se considera normal?",
+              "a": "La presión arterial normal es inferior a 130/85 mmHg. Arte. Sin embargo, la norma puede variar según la edad, el sexo y las características individuales del cuerpo. Para los jóvenes, la norma es 120/80 mmHg. Art., para personas mayores se permiten hasta 140/90 mm Hg. Arte."
+            },
+            {
+              "q": "¿Qué es la presión sistólica y diastólica?",
+              "a": "La presión sistólica (superior) es la presión máxima en las arterias cuando el corazón se contrae y bombea sangre hacia las arterias. La presión diastólica (inferior) es la presión mínima en las arterias cuando el corazón se relaja y se llena de sangre."
+            },
+            {
+              "q": "¿Qué es la hipertensión?",
+              "a": "La hipertensión (hipertensión arterial) es un aumento persistente de la presión arterial por encima de 140/90 mmHg. Arte. Esta es una enfermedad grave que requiere supervisión y tratamiento médico. La hipertensión puede ser de grado I (140-160/90-100), grado II (160-180/100-110) y grado III (>180/>110)."
+            },
+            {
+              "q": "¿Qué es la hipotensión?",
+              "a": "La hipotensión es la presión arterial baja, generalmente por debajo de 100/60 mmHg. Arte. para sistólica o por debajo de 60 mm Hg. Arte. para diastólica. La hipotensión puede causar mareos, debilidad y fatiga."
+            },
+            {
+              "q": "¿Con qué frecuencia debes medir tu presión arterial?",
+              "a": "Se recomienda a las personas sanas medir su presión arterial una vez al año. Si existen factores de riesgo o anomalías, con mayor frecuencia, por recomendación de un médico. Para la hipertensión: diariamente a la misma hora (mañana y noche) para controlar la eficacia del tratamiento."
+            },
+            {
+              "q": "¿Cómo medir correctamente la presión arterial?",
+              "a": "Para medir correctamente la presión arterial: descanse 5 minutos, siéntese cómodamente con la espalda recta, los pies en el suelo y el manguito debe quedar a la altura del corazón. Mida con ambas manos, use el valor mayor. No fume ni beba café 30 minutos antes de la medición."
+            },
+            {
+              "q": "¿Qué presión es peligrosa para la salud?",
+              "a": "Una presión superior a 180/110 mm Hg se considera peligrosa. Arte. (hipertensión en etapa III) es una condición crítica que requiere atención médica inmediata. También es peligroso un fuerte aumento de la presión arterial (crisis hipertensiva), que puede provocar un derrame cerebral o un ataque cardíaco."
+            },
+            {
+              "q": "¿La edad afecta la presión arterial normal?",
+              "a": "Sí, con la edad los valores de presión permitidos aumentan ligeramente. Para personas de 20 a 40 años, la norma es 120/80 mmHg. Art., durante 40-60 años - hasta 140/90 mm Hg. Art., para personas mayores de 60 años: hasta 150/90 mm Hg. Arte. Sin embargo, estos valores son condicionales y dependen de características individuales."
+            },
+            {
+              "q": "¿Qué es la prehipertensión?",
+              "a": "La prehipertensión (presión arterial normal alta) es una afección en la que la presión sistólica es de 130 a 140 mmHg. Art. Y diastólica: 85-90 mm Hg. Arte. Esto todavía no es hipertensión, pero requiere atención y cambios en el estilo de vida para prevenir el desarrollo de hipertensión."
+            },
+            {
+              "q": "¿Cuáles son los síntomas de la hipertensión?",
+              "a": "Los síntomas de la hipertensión pueden incluir: dolor de cabeza (especialmente por la mañana), mareos, tinnitus, moscas volantes ante los ojos, taquicardia, dificultad para respirar al realizar esfuerzos, dolor de corazón. Sin embargo, la hipertensión suele ser asintomática, por lo que es importante realizar mediciones periódicas."
+            },
+            {
+              "q": "¿Cuáles son los factores de riesgo para desarrollar hipertensión?",
+              "a": "Factores de riesgo: herencia, edad (más de 40 años), sobrepeso, tabaquismo, abuso de alcohol, sedentarismo, consumo excesivo de sal, estrés, diabetes, enfermedad renal."
+            },
+            {
+              "q": "¿Cómo bajar la presión arterial sin medicamentos?",
+              "a": "Puede reducir la presión arterial: perdiendo peso, reduciendo el consumo de sal (hasta 5 g por día), aumentando la actividad física (30-40 minutos por día), dejando de fumar y de beber alcohol, controlando el estrés, comiendo sano (frutas, verduras, alimentos bajos en grasas), durmiendo lo suficiente (7-9 horas)."
+            },
+            {
+              "q": "¿Qué es una crisis hipertensiva?",
+              "a": "Una crisis hipertensiva es un aumento brusco de la presión arterial a valores muy altos (generalmente por encima de 180/120 mm Hg) con síntomas de daño a órganos diana (dolor de cabeza, visión borrosa, dolor en el pecho, dificultad para respirar). Requiere atención médica inmediata."
+            },
+            {
+              "q": "¿Es posible hacer ejercicio si se tiene hipertensión?",
+              "a": "Sí, la actividad física moderada es buena para la hipertensión: caminar, nadar, andar en bicicleta, hacer yoga. Sin embargo, antes de empezar a entrenar, debes consultar a tu médico. Evite las actividades de alta intensidad y el levantamiento de objetos pesados, que pueden aumentar la presión arterial."
+            },
+            {
+              "q": "¿Cómo llevar un diario de presión arterial?",
+              "a": "Anota en tu diario: fecha y hora de la medición, presión sistólica y diastólica, pulso, salud, ingesta de medicamentos, actividad física. Mida su presión arterial a la misma hora (mañana y tarde) cuando esté en reposo. Esto ayudará al médico a evaluar la eficacia del tratamiento."
+            },
+            {
+              "q": "¿El estrés afecta la presión arterial?",
+              "a": "Sí, el estrés puede aumentar temporalmente la presión arterial debido a la liberación de hormonas (adrenalina, cortisol). El estrés crónico puede contribuir al desarrollo de la hipertensión. Es importante controlar el estrés mediante la relajación, la actividad física, el sueño adecuado y técnicas de respiración."
+            },
+            {
+              "q": "¿Qué alimentos aumentan la presión arterial?",
+              "a": "Aumenta la presión arterial: sal (sodio), alcohol, cafeína (en grandes cantidades), alimentos grasos, alimentos procesados, conservas, carnes ahumadas, quesos, encurtidos. Para reducir la presión arterial se recomienda una dieta mediterránea o dieta DASH con énfasis en frutas, verduras y cereales integrales."
+            },
+            {
+              "q": "¿Qué alimentos ayudan a bajar la presión arterial?",
+              "a": "Ayudan a reducir la presión arterial: alimentos ricos en potasio (plátanos, patatas, frijoles), magnesio (nueces, semillas, verduras), omega-3 (pescado), remolacha, ajo, té verde, chocolate amargo (con moderación), bayas. Es importante llevar una dieta general equilibrada y baja en sodio."
+            },
+            {
+              "q": "¿Necesito tomar pastillas para la presión arterial todo el tiempo?",
+              "a": "Sí, la hipertensión suele requerir medicación constante para mantener la presión arterial normal. La interrupción del uso puede provocar un aumento de la presión arterial y complicaciones. El médico prescribe medicamentos y dosis individualmente. No deje de tomarlo sin consultar a su médico."
+            },
+            {
+              "q": "¿Se puede curar la hipertensión?",
+              "a": "La cura completa de la hipertensión sólo es posible con la hipertensión secundaria (causada por otras enfermedades, como la enfermedad renal). En el caso de la hipertensión esencial (primaria), la curación completa es rara, pero es posible controlar eficazmente la presión arterial con medicamentos y cambios en el estilo de vida."
+            },
+            {
+              "q": "¿La presión afecta la visión?",
+              "a": "Sí, la presión arterial alta puede dañar los vasos sanguíneos de la retina, lo que puede provocar problemas de visión. Durante una crisis hipertensiva, es posible una pérdida temporal de la visión. El control regular de la presión arterial y el tratamiento de la hipertensión son importantes para preservar la visión."
+            },
+            {
+              "q": "¿Qué es la hipertensión sistólica aislada?",
+              "a": "La hipertensión sistólica aislada es una afección en la que sólo la presión sistólica está elevada (generalmente por encima de 140 mm Hg) y la presión diastólica es normal (por debajo de 90 mm Hg). A menudo ocurre en personas mayores y requiere tratamiento."
+            },
+            {
+              "q": "¿Cómo cambia la presión arterial a lo largo del día?",
+              "a": "La presión arterial fluctúa naturalmente durante el día: generalmente es más baja durante la noche (durante el sueño), aumenta por la mañana, puede ser más alta durante el día con la actividad y el estrés, y disminuye por la noche. Es importante medir la presión arterial al mismo tiempo para comparar los resultados."
+            },
+            {
+              "q": "¿Qué es la hipertensión de “bata blanca”?",
+              "a": "La hipertensión de “bata blanca” es un aumento de la presión arterial sólo cuando la mide un médico, mientras que en casa la presión es normal. Esto se debe a la ansiedad. Para un diagnóstico preciso, se recomienda controlar diariamente la presión arterial o realizar mediciones en el hogar."
+            },
+            {
+              "q": "¿La presión afecta los riñones?",
+              "a": "Sí, la presión arterial alta puede dañar los vasos sanguíneos de los riñones, lo que provoca una función renal deficiente y enfermedad renal crónica. Por otro lado, la enfermedad renal puede provocar hipertensión. El control de la presión arterial es importante para proteger los riñones."
+            },
+            {
+              "q": "¿Cómo se relaciona la presión arterial con el accidente cerebrovascular y el ataque cardíaco?",
+              "a": "La presión arterial alta es un importante factor de riesgo de accidente cerebrovascular e infarto de miocardio. Daña las arterias, favorece la formación de coágulos sanguíneos y la aterosclerosis. Controlar y tratar la hipertensión reduce significativamente el riesgo de estas peligrosas complicaciones."
+            },
+            {
+              "q": "¿Necesito medir la presión arterial en ambos brazos?",
+              "a": "Sí, se recomienda medir la presión en ambos brazos en la primera medición. La diferencia es de 10 a 15 mm Hg. Arte. entre las manos puede ser normal. Si la diferencia es mayor, esto puede indicar problemas con los vasos sanguíneos. Utilice el valor mayor para estimar."
+            },
+            {
+              "q": "¿Cómo elegir el tensiómetro adecuado para tu hogar?",
+              "a": "Al elegir un tonómetro: son preferibles los tonómetros automáticos con brazalete para el hombro (más precisos), verifique el tamaño del brazalete para la circunferencia del brazo, asegúrese de que esté certificado, lea las reseñas. Compruebe periódicamente la precisión del tonómetro en un centro de servicio."
+            },
+            {
+              "q": "¿Cómo mantener la presión arterial normal a largo plazo?",
+              "a": "Para mantener una presión arterial normal, es importante: un estilo de vida saludable (dieta saludable baja en sal, actividad física regular, dejar de fumar y beber alcohol), control de peso, manejo del estrés, sueño adecuado (7-9 horas), control regular de la presión arterial y, si es necesario, tomar los medicamentos recetados por su médico."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo controlar la presión arterial",
+          "description": "Instrucciones paso a paso para usar una calculadora de presión.",
+          "steps": {
+            "step1": {
+              "name": "Introduce tu edad",
+              "text": "Ingrese su edad en años para determinar los valores normales de presión arterial"
+            },
+            "step2": {
+              "name": "Introduzca la presión",
+              "text": "Ingrese la presión sistólica (superior) y diastólica (inferior) en mmHg. Arte."
+            },
+            "step3": {
+              "name": "obtener el resultado",
+              "text": "La calculadora clasificará automáticamente tu presión arterial y te mostrará recomendaciones de salud"
+            }
+          }
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "ovulation": {
+      "title": "Calculadora de ovulación y ciclo menstrual.",
+      "description": "Calcula la fecha de ovulación, los días favorables para la concepción y la próxima menstruación. Calculadora de ciclo online gratuita para mujeres.",
+      "form": {
+        "title": "Parámetros de cálculo",
+        "lastPeriodDate": "Fecha de inicio de la última menstruación.",
+        "cycleLength": "Duración promedio del ciclo",
+        "periodLength": "Duración de la menstruación",
+        "days": "días",
+        "calculate": "Calcular",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "errors": {
+          "lastPeriodRequired": "Ingrese la fecha de inicio de su último período menstrual",
+          "lastPeriodFuture": "La fecha no puede ser en el futuro.",
+          "cycleLengthRange": "La duración del ciclo debe ser de 15 a 45 días.",
+          "periodLengthRange": "La duración de la menstruación debe ser de 1 a 10 días.",
+          "calculationError": "Error de cálculo"
+        }
+      },
+      "infographic": {
+        "ovulation": "dia de la ovulacion",
+        "ovulationDescription": "día más probable",
+        "fertile": "dias fertiles",
+        "fertileDescription": "Favorable para la concepción",
+        "cycle": "ciclo menstrual",
+        "cycleDescription": "De menstruación en menstruación"
+      },
+      "results": {
+        "ovulation": "fecha de ovulación",
+        "fertileStart": "Inicio del período fértil",
+        "fertileEnd": "Fin del periodo fértil",
+        "nextPeriod": "Próxima menstruación",
+        "cycleInfo": "Información del ciclo",
+        "cycleLength": "Duración del ciclo",
+        "periodLength": "Duración de la menstruación",
+        "ovulationDay": "dia de la ovulacion"
+      },
+      "cycleTypes": {
+        "short": {
+          "title": "ciclo corto",
+          "description": "El ciclo es de 21-24 días. La ovulación suele ocurrir entre los días 7 y 10."
+        },
+        "normal": {
+          "title": "ciclo normal",
+          "description": "El ciclo es de 25-30 días. La ovulación suele ocurrir entre los días 12 y 15."
+        },
+        "long": {
+          "title": "ciclo largo",
+          "description": "El ciclo es de 31-35 días. La ovulación suele ser entre 17 y 21 días."
+        }
+      },
+      "calendar": {
+        "title": "Calendario del ciclo",
+        "legend": {
+          "period": "Menstruación",
+          "fertile": "dias fertiles",
+          "ovulation": "Ovulación",
+          "today": "Hoy"
+        }
+      },
+      "tips": {
+        "title": "Consejos importantes",
+        "variation": "El ciclo puede variar ±2 días, especialmente con estrés o cambio climático.",
+        "consultation": "Los resultados son aproximados y no reemplazan la consulta con un médico.",
+        "tracking": "Mantenga un calendario de menstruación para realizar cálculos más precisos."
+      },
+      "seo": {
+        "title": "Calculadora de ovulación: calcula los días fértiles y el ciclo.",
+        "description": "Calcula la fecha de ovulación, los días favorables para la concepción y la próxima menstruación. Calculadora de ciclo online gratuita para mujeres.",
+        "keywords": "calculadora de ovulación, ciclo menstrual, días fértiles, concepción, ovulación, calendario de ciclo, día de ovulación, planificación del embarazo, concebir un hijo, menstruación, menstruación, salud reproductiva, fertilidad, días favorables para la concepción, calendario de concepción, calcular la ovulación, ovulación en línea, ciclo de la mujer, día del ciclo, temperatura basal, prueba de ovulación, signos de ovulación, síntomas de ovulación, planificación del embarazo, períodos perdidos, ciclo regular, ciclo irregular, ciclo corto, ciclo largo, calendario método",
+        "overview": {
+          "title": "Acerca de la calculadora de ovulación",
+          "content": "Una calculadora de ovulación te ayudará a calcular los días óptimos para la concepción y a conocer la fecha de tu próxima menstruación. Simplemente ingrese la fecha de inicio de su ciclo y su duración y recibirá un calendario de fertilidad personalizado.",
+          "additionalContent": "El cálculo de la ovulación se basa en el método del calendario y es adecuado para mujeres con un ciclo regular. Para aumentar la precisión, se recomienda mantener un calendario de menstruación durante varios meses y combinar el método del calendario con otros métodos para determinar la ovulación.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de ovulación y días fértiles.",
+            "content": "Veamos ejemplos prácticos de cálculo de la ovulación para diferentes tipos de ciclos:",
+            "example1": {
+              "title": "Ejemplo 1: Ciclo normal 28 días",
+              "description": "Última menstruación 1 de marzo, ciclo 28 días.",
+              "input": "Fecha de la última menstruación: 1 de marzo\nDuración del ciclo: 28 días\nDuración de la menstruación: 5 días",
+              "calculation": "Fecha de ovulación = 1 de marzo + (28 - 14) = 1 de marzo + 14 = 15 de marzo\nPeríodo fértil: 13-16 de marzo (4 días)\nPróxima menstruación: 29 de marzo",
+              "result": "Ovulación: 15 de marzo",
+              "type": "Días fértiles: 13-16 de marzo"
+            },
+            "example2": {
+              "title": "Ejemplo 2: ciclo corto 24 días",
+              "description": "Última menstruación 5 de abril, ciclo 24 días.",
+              "input": "Fecha del último período menstrual: 5 de abril\nDuración del ciclo: 24 días\nDuración de la menstruación: 4 días",
+              "calculation": "Fecha de ovulación = 5 de abril + (24 - 14) = 5 de abril + 10 = 15 de abril\nPeríodo fértil: 13-16 de abril (4 días)\nPróxima menstruación: 29 de abril",
+              "result": "Ovulación: 15 de abril",
+              "type": "Días fértiles: 13-16 de abril"
+            },
+            "example3": {
+              "title": "Ejemplo 3: ciclo largo 32 días",
+              "description": "Última menstruación 10 de mayo, ciclo 32 días.",
+              "input": "Fecha del último período menstrual: 10 de mayo\nDuración del ciclo: 32 días\nDuración de la menstruación: 6 días",
+              "calculation": "Fecha de ovulación = 10 de mayo + (32 - 14) = 10 de mayo + 18 = 28 de mayo\nPeriodo fértil: 26-29 de mayo (4 días)\nPróxima menstruación: 11 de junio",
+              "result": "Ovulación: 28 de mayo",
+              "type": "Días fértiles: 26-29 de mayo"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Ciclo irregular (varía)",
+              "description": "Última menstruación el 15 de junio, duración media del ciclo 28 días.",
+              "input": "Fecha del último período menstrual: 15 de junio\nDuración media del ciclo: 28 días.\nDuración de la menstruación: 5 días",
+              "calculation": "Fecha de ovulación ≈ 15 + 14 de junio = 29 de junio\nPeriodo fértil: 27-30 de junio\n⚠️ Con un ciclo irregular, la precisión disminuye",
+              "result": "Ovulación: ~29 de junio (aprox.)",
+              "type": "Se recomienda utilizar métodos adicionales."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Planificación de un embarazo",
+              "description": "Ciclo 30 días, última menstruación 1 de julio.",
+              "input": "Fecha del último período menstrual: 1 de julio\nDuración del ciclo: 30 días\nObjetivo: planificación del embarazo",
+              "calculation": "Fecha de ovulación = 1 de julio + (30 - 14) = 1 de julio + 16 = 17 de julio\nPeríodo fértil: 15-18 de julio\nDías óptimos para la concepción: del 15 al 17 de julio.",
+              "result": "Ovulación: 17 de julio",
+              "type": "Días óptimos para la concepción: del 15 al 17 de julio."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Determinar su próximo período",
+              "description": "Última menstruación 20 de agosto, ciclo 26 días.",
+              "input": "Fecha del último período menstrual: 20 de agosto\nDuración del ciclo: 26 días\nDuración de la menstruación: 5 días",
+              "calculation": "Fecha de ovulación = 20 de agosto + (26 - 14) = 20 de agosto + 12 = 1 de septiembre\nPeríodo fértil: 30 de agosto - 2 de septiembre\nPróxima menstruación: 15 de septiembre",
+              "result": "Ovulación: 1 de septiembre",
+              "type": "Próxima menstruación: 15 de septiembre"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula la ovulación?",
+          "content": "La ovulación suele ocurrir 14 días antes del inicio de su próximo período. El período fértil incluye 2 días antes de la ovulación, el día de la ovulación y 1 día después de la misma.",
+          "formula": "Fecha de ovulación = Fecha de la última menstruación + (Duración del ciclo - 14) días"
+        },
+        "cycleTypes": {
+          "title": "Tipos de ciclo menstrual",
+          "content": "El ciclo menstrual puede tener diferentes duraciones:",
+          "short": {
+            "title": "Ciclo corto (21-24 días)",
+            "description": "Ovulación los días 7-10. Ciclo frecuente, pero dentro de límites normales."
+          },
+          "normal": {
+            "title": "Ciclo normal (25-30 días)",
+            "description": "Ovulación los días 12-15. El tipo de ciclo más común."
+          },
+          "long": {
+            "title": "Ciclo largo (31-35 días)",
+            "description": "Ovulación los días 17-21. Menos común, pero aceptable."
+          }
+        },
+        "advantages": {
+          "title": "Ventajas de nuestra calculadora",
+          "content": "Nuestra calculadora de ovulación ofrece muchos beneficios:",
+          "quick": "Cálculo rápido",
+          "quickDescription": "Cálculo rápido en unos segundos.",
+          "accurate": "Cálculos precisos",
+          "accurateDescription": "Cálculos precisos basados ​​en datos médicos.",
+          "free": "gratis",
+          "freeDescription": "Completamente gratis sin registro",
+          "multilingual": "Plurilingüe",
+          "multilingualDescription": "Admite 4 idiomas (ruso, inglés, español, alemán)",
+          "mobile": "Versión móvil",
+          "mobileDescription": "Diseño responsivo para todos los dispositivos",
+          "calendar": "calendario visual",
+          "calendarDescription": "Calendario visual con marcas de colores."
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para un cálculo más preciso de la ovulación, siga estas recomendaciones:",
+          "tracking": "Mantenga un calendario de menstruación",
+          "trackingDescription": "Mantenga un calendario menstrual durante al menos 3 meses.",
+          "consistency": "Observa la regularidad de tu ciclo.",
+          "consistencyDescription": "Observa la regularidad de tu ciclo.",
+          "consultation": "consulta a tu medico",
+          "consultationDescription": "Consulta a tu médico si tienes un ciclo irregular.",
+          "lifestyle": "Llevar un estilo de vida saludable",
+          "lifestyleDescription": "Llevar un estilo de vida saludable: nutrición adecuada, actividad física."
+        },
+        "table": {
+          "type": "Tipo de ciclo",
+          "duration": "Duración (días)",
+          "ovulationDay": "dia de la ovulacion",
+          "comment": "Comentario",
+          "days": "días"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es la ovulación?",
+              "a": "La ovulación es el proceso de liberación de un óvulo maduro del ovario hacia las trompas de Falopio. Esto ocurre alrededor de la mitad del ciclo menstrual y es el momento más favorable para la concepción. El óvulo es viable entre 12 y 24 horas después de la ovulación."
+            },
+            {
+              "q": "¿Qué son los días fértiles?",
+              "a": "Los días fértiles son el período en el que la probabilidad de concepción es mayor. Por lo general, esto es 2-3 días antes de la ovulación, el día de la ovulación y 1 día después. Los espermatozoides pueden vivir en el cuerpo de una mujer hasta 5-7 días, por lo que las relaciones sexuales unos días antes de la ovulación también pueden conducir a la concepción."
+            },
+            {
+              "q": "¿Cuál es la duración normal del ciclo menstrual?",
+              "a": "La duración normal del ciclo menstrual es de 21 a 35 días, con un promedio de 28 días. Un ciclo se considera regular si su duración no cambia en más de 2-3 días. El primer día del ciclo es el primer día de la menstruación."
+            },
+            {
+              "q": "¿Qué tan precisos son los cálculos de la calculadora de ovulación?",
+              "a": "La calculadora proporciona resultados aproximados basados ​​en datos médicos estándar. La precisión depende de la regularidad de su ciclo. Con un ciclo regular, la precisión es de aproximadamente 80-90%. Si tienes un ciclo irregular, se recomienda utilizar métodos adicionales para determinar la ovulación (pruebas, temperatura basal) y consultar a un médico."
+            },
+            {
+              "q": "¿Cómo calcular el día de la ovulación?",
+              "a": "El día de la ovulación se calcula mediante la fórmula: Fecha de la última menstruación + (Duración del ciclo - 14) días. Por ejemplo, con un ciclo de 28 días y la última menstruación el 1 de marzo: ovulación = 1 de marzo + (28 - 14) = 15 de marzo. La ovulación suele ocurrir 14 días antes del inicio de su siguiente período."
+            },
+            {
+              "q": "¿Cómo calcular los días fértiles?",
+              "a": "Los días fértiles se calculan de la siguiente manera: 2-3 días antes de la ovulación, el día de la ovulación y 1 día después de la ovulación. Por ejemplo, si la ovulación es el 15 de marzo, los días fértiles son del 13 al 16 de marzo (4 días). Este es el período de máxima probabilidad de concepción."
+            },
+            {
+              "q": "¿Cuándo comenzará tu próximo período?",
+              "a": "El siguiente período comienza la duración de su ciclo después de su último período. Por ejemplo, con la última menstruación el 1 de marzo y un ciclo de 28 días, la siguiente menstruación comenzará el 29 de marzo. La duración de la menstruación suele ser de 3 a 7 días."
+            },
+            {
+              "q": "¿Es posible quedar embarazada el día de la ovulación?",
+              "a": "Sí, el día de la ovulación es uno de los días más favorables para la concepción. La probabilidad de concepción el día de la ovulación es máxima (hasta 33%). Sin embargo, para aumentar tus posibilidades, también se recomienda intentar concebir 2-3 días antes de la ovulación, ya que los espermatozoides pueden vivir en el cuerpo durante varios días."
+            },
+            {
+              "q": "¿Es posible quedar embarazada durante la menstruación?",
+              "a": "Teóricamente posible, pero improbable. La probabilidad de concebir durante la menstruación es muy baja, pero no nula, especialmente con un ciclo corto (21-24 días) o ovulación temprana. Los espermatozoides pueden permanecer viables hasta por 7 días, por lo que la fertilización es posible con un ciclo corto."
+            },
+            {
+              "q": "¿Qué afecta el día de la ovulación?",
+              "a": "El día de la ovulación se ve afectado por: estrés, cambio climático, enfermedades, medicamentos, cambios de peso, actividad física, cambios hormonales. Estos factores pueden adelantar o retrasar la ovulación varios días, lo que reduce la precisión del método del calendario."
+            },
+            {
+              "q": "¿Cómo determinar la ovulación sin calculadora?",
+              "a": "Puede determinar la ovulación: mediante una prueba de ovulación (muestra un aumento de LH), midiendo la temperatura basal (aumentando de 0,3 a 0,5 ° C), observando el moco cervical (que se vuelve transparente y viscoso), monitorización por ultrasonido, signos (dolor en la parte inferior del abdomen, aumento de la libido)."
+            },
+            {
+              "q": "¿Qué es un ciclo corto y cómo afecta la ovulación?",
+              "a": "El ciclo corto es de 21 a 24 días. Con este ciclo, la ovulación ocurre antes, generalmente entre los días 7 y 10 del ciclo. Esto es normal, pero es importante tenerlo en cuenta al planificar un embarazo. Con un ciclo corto, el período fértil comienza antes."
+            },
+            {
+              "q": "¿Qué es un ciclo largo y cómo afecta la ovulación?",
+              "a": "El ciclo largo es de 31 a 35 días o más. Con este ciclo, la ovulación ocurre más tarde, generalmente entre 17 y 21 días o más. Esto también es normal. Con un ciclo largo, el período fértil cambia en consecuencia y la menstruación llega más tarde."
+            },
+            {
+              "q": "¿Cómo llevar un calendario de menstruación?",
+              "a": "Lleve un calendario, anotando: el primer día de cada menstruación, la duración de la menstruación, la duración del ciclo (el número de días desde el primer día de una menstruación hasta el primer día de la siguiente), el bienestar, los signos de ovulación. Mantenga un calendario durante al menos 3 a 6 meses para determinar la duración promedio de su ciclo."
+            },
+            {
+              "q": "¿Qué es un ciclo irregular?",
+              "a": "Un ciclo irregular es cuando la duración de su ciclo varía significativamente (más de 7 días) entre ciclos. Por ejemplo, un ciclo dura 25 días y el siguiente, 35 días. Si tienes un ciclo irregular, el método del calendario es menos preciso; se recomienda consultar a un médico y utilizar otros métodos para determinar la ovulación."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para protegerme?",
+              "a": "El método del calendario (método Ogino-Knaus) tiene una baja eficacia para la prevención (índice de Pearl 9-25). No se recomienda como método anticonceptivo primario. Para protegerse, es mejor utilizar métodos más fiables (condones, anticonceptivos hormonales, DIU)."
+            },
+            {
+              "q": "¿Cómo mejorar la precisión de los cálculos de ovulación?",
+              "a": "Para aumentar la precisión: mantenga un calendario menstrual durante al menos 3 a 6 meses, tenga en cuenta la duración promedio del ciclo, use métodos adicionales (pruebas de ovulación, temperatura basal), controle los signos de ovulación, tenga en cuenta los factores que afectan el ciclo (estrés, enfermedad)."
+            },
+            {
+              "q": "¿Cuándo es el mejor momento para realizar una prueba de embarazo después de la ovulación?",
+              "a": "Se puede realizar una prueba de embarazo no antes de 10 a 14 días después de la ovulación (o después de la fecha prevista de la próxima menstruación). Antes, la prueba puede mostrar un resultado falso negativo porque el nivel de hCG aún es demasiado bajo para detectarlo."
+            },
+            {
+              "q": "¿Cuál es la fase lútea del ciclo?",
+              "a": "La fase lútea es el período posterior a la ovulación hasta que comienza la siguiente menstruación. Generalmente de 12 a 16 días, en promedio 14 días. Si la fase lútea dura menos de 10 días, esto puede indicar problemas con la concepción y requiere consulta con un médico."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a la ovulación?",
+              "a": "El estrés puede retrasar la ovulación o hacer que su ciclo sea irregular. En condiciones de estrés severo, la ovulación puede ocurrir más tarde de lo habitual o no ocurrir (ciclo anovulatorio). El manejo del estrés es importante para la regularidad del ciclo y una concepción exitosa."
+            },
+            {
+              "q": "¿Qué es un ciclo anovulatorio?",
+              "a": "Un ciclo anovulatorio es un ciclo menstrual en el que no se produce la ovulación. Puede llegar la menstruación, pero no se ha producido la ovulación. Estos ciclos pueden ocurrir 1 o 2 veces al año y se consideran normales. Los ciclos anovulatorios frecuentes requieren consulta con un médico."
+            },
+            {
+              "q": "¿Cómo afecta la edad a la ovulación?",
+              "a": "Con la edad (después de los 35 años), la ovulación puede volverse irregular y los ciclos pueden alargarse o acortarse. La cantidad de óvulos disminuye, lo que afecta la fertilidad. Las adolescentes también pueden tener ciclos irregulares en los primeros años después de la menarquia."
+            },
+            {
+              "q": "¿Es posible quedar embarazada inmediatamente después de la menstruación?",
+              "a": "Posiblemente, especialmente con un ciclo corto. Si el ciclo es de 21 a 24 días y la menstruación dura de 5 a 7 días, la ovulación puede ocurrir tan pronto como entre 7 y 10 días del ciclo. Los espermatozoides pueden vivir hasta 7 días, por lo que las relaciones sexuales inmediatamente después de la menstruación pueden conducir a la concepción si ovulas temprano."
+            },
+            {
+              "q": "¿Qué es la temperatura basal y cómo medirla?",
+              "a": "La temperatura basal es la temperatura corporal en reposo, medida inmediatamente después de despertarse. Durante la ovulación, la temperatura aumenta entre 0,3 y 0,5°C y permanece elevada hasta la menstruación. Mide tu temperatura por la mañana, sin levantarte de la cama, a la misma hora, con el mismo termómetro."
+            },
+            {
+              "q": "¿Cómo funciona una prueba de ovulación?",
+              "a": "Una prueba de ovulación mide el nivel de hormona luteinizante (LH) en la orina. 24-36 horas antes de la ovulación se produce un aumento de LH, que se registra en la prueba. Una prueba positiva significa que la ovulación se producirá dentro de las próximas 24 a 36 horas. Este es un método más preciso que el método del calendario."
+            },
+            {
+              "q": "¿Cómo ayudan los signos de ovulación en el cálculo?",
+              "a": "Signos de ovulación: dolor en la parte inferior del abdomen (dolor moderado), aumento de la libido, cambios en el moco cervical, aumento de la temperatura basal, prueba de ovulación positiva. La combinación del método del calendario con la observación de signos aumenta la precisión a la hora de determinar los días fértiles."
+            },
+            {
+              "q": "¿Qué hacer si tienes un ciclo irregular?",
+              "a": "Para un ciclo irregular: mantenga un calendario durante al menos 6 meses para determinar la duración promedio, use métodos adicionales (pruebas, temperatura basal), consulte a un ginecólogo para identificar las causas de la irregularidad, eliminar factores de estrés, normalizar el peso y la nutrición."
+            },
+            {
+              "q": "¿Los medicamentos afectan la ovulación?",
+              "a": "Sí, algunos medicamentos pueden afectar la ovulación: medicamentos hormonales, antidepresivos, antiinflamatorios, quimioterapia. Los anticonceptivos orales suprimen la ovulación. Después de cancelar OK, es posible que el ciclo no se restablezca inmediatamente. Al tomar medicamentos, considere su efecto en su ciclo."
+            },
+            {
+              "q": "¿Cómo afecta la dieta a la ovulación?",
+              "a": "La nutrición afecta la ovulación: las deficiencias nutricionales, las dietas estrictas y el sobrepeso o el bajo peso pueden alterar el ciclo y la ovulación. Para una ovulación normal, es importante una dieta equilibrada con cantidades suficientes de proteínas, grasas, carbohidratos, vitaminas y minerales."
+            },
+            {
+              "q": "¿Cuándo consultar a un médico al planificar un embarazo?",
+              "a": "Debes consultar a un médico: si no has podido quedar embarazada durante más de un año (o 6 meses si tienes más de 35 años), con un ciclo irregular, en ausencia de ovulación, con problemas de salud que afecten a la fertilidad. El médico puede prescribir exámenes y tratamientos."
+            }
+          ]
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "vitamins": {
+      "title": "Calculadora de vitaminas y minerales.",
+      "description": "Calcule su requerimiento diario de vitaminas y minerales por edad, sexo y nivel de actividad.",
+      "form": {
+        "title": "Parámetros de cálculo",
+        "gender": "Piso",
+        "male": "Hombre",
+        "female": "Mujer",
+        "age": "Edad",
+        "agePlaceholder": "Introduce tu edad",
+        "years": "años",
+        "activityLevel": "Nivel de actividad",
+        "activity": {
+          "low": {
+            "title": "Corto",
+            "description": "Estilo de vida sedentario"
+          },
+          "medium": {
+            "title": "Promedio",
+            "description": "Actividad moderada"
+          },
+          "high": {
+            "title": "Alto",
+            "description": "Cargas activas"
+          }
+        },
+        "calculate": "Calcular",
+        "calculating": "Cálculo...",
+        "reset": "Reiniciar",
+        "errors": {
+          "genderRequired": "Seleccione género",
+          "ageRange": "La edad debe estar entre 1 y 120 años.",
+          "activityRequired": "Seleccionar nivel de actividad",
+          "calculationError": "Error de cálculo"
+        }
+      },
+      "infographic": {
+        "vitamins": "vitaminas",
+        "vitaminsDescription": "13 vitaminas esenciales",
+        "minerals": "Minerales",
+        "mineralsDescription": "8 minerales importantes",
+        "personalized": "Personalización",
+        "personalizedDescription": "Por edad y actividad"
+      },
+      "results": {
+        "summary": "Resumen",
+        "gender": "Piso",
+        "age": "Edad",
+        "activity": "Actividad",
+        "vitamins": "vitaminas",
+        "minerals": "Minerales",
+        "showDetails": "Mostrar detalles",
+        "hideDetails": "Ocultar detalles",
+        "copyTable": "Copiar tabla",
+        "exportPDF": "Exportar a PDF",
+        "recommendations": "Recomendaciones"
+      },
+      "table": {
+        "name": "Nombre",
+        "norm": "Norma (día)",
+        "role": "Papel en el cuerpo",
+        "increasedNeed": "Mayor necesidad"
+      },
+      "vitamins": {
+        "vitaminA": {
+          "name": "vitamina a",
+          "description": "Vitamina liposoluble importante para la visión y la inmunidad.",
+          "role": {
+            "visionImmunity": "Visión, inmunidad, crecimiento celular."
+          },
+          "increasedNeed": {
+            "computerWork": "Cuando se trabaja en una computadora"
+          }
+        },
+        "vitaminC": {
+          "name": "vitamina c",
+          "description": "Vitamina soluble en agua, potente antioxidante.",
+          "role": {
+            "immunityVessels": "Inmunidad, vasos sanguíneos, cicatrización de heridas."
+          },
+          "increasedNeed": {
+            "stressColds": "Para el estrés y los resfriados"
+          }
+        },
+        "vitaminD": {
+          "name": "vitamina d",
+          "description": "Vitamina solar, regula el calcio y el fósforo.",
+          "role": {
+            "bonesCalcium": "Huesos, metabolismo del calcio, inmunidad."
+          },
+          "increasedNeed": {
+            "winterSun": "En invierno, sin sol"
+          }
+        },
+        "vitaminE": {
+          "name": "vitamina e",
+          "description": "Antioxidante, protege las células del daño.",
+          "role": {
+            "antioxidantSkin": "Antioxidante, piel, reproducción."
+          },
+          "increasedNeed": {
+            "sports": "Al practicar deportes"
+          }
+        },
+        "vitaminB1": {
+          "name": "Vitamina B1",
+          "description": "Tiamina, importante para el sistema nervioso",
+          "role": {
+            "nervousSystem": "Sistema nervioso, energía."
+          },
+          "increasedNeed": {
+            "loads": "Durante la actividad física"
+          }
+        },
+        "vitaminB2": {
+          "name": "Vitamina B2",
+          "description": "Riboflavina, participa en el metabolismo energético.",
+          "role": {
+            "energyMetabolism": "Metabolismo energético, piel."
+          },
+          "increasedNeed": {
+            "sports": "Al practicar deportes"
+          }
+        },
+        "vitaminB3": {
+          "name": "Vitamina B3",
+          "description": "Niacina, importante para la producción de energía",
+          "role": {
+            "energyProduction": "Producción de energía, cuero."
+          },
+          "increasedNeed": {
+            "highActivity": "En alta actividad"
+          }
+        },
+        "vitaminB6": {
+          "name": "Vitamina B6",
+          "description": "Piridoxina, participa en el metabolismo de las proteínas.",
+          "role": {
+            "proteinMetabolism": "Metabolismo de proteínas, sistema nervioso."
+          },
+          "increasedNeed": {
+            "proteinDiet": "En una dieta proteica"
+          }
+        },
+        "vitaminB12": {
+          "name": "Vitamina B12",
+          "description": "Cobalamina, importante para la hematopoyesis",
+          "role": {
+            "bloodFormation": "Hematopoyesis, sistema nervioso."
+          },
+          "increasedNeed": {
+            "vegetarianism": "Por el vegetarianismo"
+          }
+        },
+        "folate": {
+          "name": "ácido fólico",
+          "description": "Importante para la división celular y el desarrollo fetal.",
+          "role": {
+            "cellDivision": "División celular, desarrollo fetal."
+          },
+          "increasedNeed": {
+            "pregnancy": "durante el embarazo"
+          }
+        },
+        "calcium": {
+          "name": "Calcio",
+          "description": "Mineral principal de huesos y dientes.",
+          "role": {
+            "bonesTeeth": "Huesos, dientes, músculos."
+          },
+          "increasedNeed": {
+            "pregnancy": "durante el embarazo"
+          }
+        },
+        "magnesium": {
+          "name": "Magnesio",
+          "description": "Importante para el corazón y los músculos.",
+          "role": {
+            "heartMuscles": "Corazón, músculos, sistema nervioso."
+          },
+          "increasedNeed": {
+            "stress": "Bajo estrés"
+          }
+        },
+        "zinc": {
+          "name": "Zinc",
+          "description": "Importante para la inmunidad y la cicatrización de heridas.",
+          "role": {
+            "immunity": "Inmunidad, cicatrización de heridas."
+          },
+          "increasedNeed": {
+            "activeTraining": "Durante el entrenamiento activo"
+          }
+        },
+        "iron": {
+          "name": "Hierro",
+          "description": "Necesario para la formación de hemoglobina.",
+          "role": {
+            "hemoglobin": "Hemoglobina, oxígeno."
+          },
+          "increasedNeed": {
+            "women": "Mujer"
+          }
+        },
+        "potassium": {
+          "name": "Potasio",
+          "description": "Importante para el corazón y la presión arterial.",
+          "role": {
+            "heartPressure": "Corazón, presión arterial, músculos."
+          },
+          "increasedNeed": {
+            "sweating": "al sudar"
+          }
+        },
+        "iodine": {
+          "name": "Yodo",
+          "description": "Necesario para la función tiroidea.",
+          "role": {
+            "thyroid": "Glándula tiroides, metabolismo."
+          },
+          "increasedNeed": {
+            "iodineDeficiency": "Deficiencia de yodo en la región."
+          }
+        },
+        "selenium": {
+          "name": "Selenio",
+          "description": "Antioxidante, protege contra los radicales libres.",
+          "role": {
+            "antioxidant": "Antioxidante, inmunidad."
+          },
+          "increasedNeed": {
+            "environmentalStress": "Bajo estrés ambiental"
+          }
+        },
+        "phosphorus": {
+          "name": "Fósforo",
+          "description": "Importante para los huesos y el metabolismo energético.",
+          "role": {
+            "bonesEnergy": "Huesos, metabolismo energético."
+          },
+          "increasedNeed": {
+            "highActivity": "En alta actividad"
+          }
+        }
+      },
+      "recommendations": {
+        "highActivityRecommendation": "Durante una actividad intensa, aumente la ingesta de vitaminas y minerales del grupo B.",
+        "womenRecommendation": "Es especialmente importante que las mujeres obtengan suficiente hierro y folato.",
+        "ageRecommendation": "Después de los 50 años, aumente su consumo de vitamina D y calcio.",
+        "lowActivityRecommendation": "Durante la actividad baja, controle el equilibrio de vitaminas y minerales."
+      },
+      "tips": {
+        "title": "Consejos importantes",
+        "consultation": "Consulte a su médico antes de tomar suplementos.",
+        "balancedDiet": "Una dieta equilibrada es la base para la obtención de vitaminas.",
+        "supplements": "Los suplementos no sustituyen a una dieta nutritiva."
+      },
+      "seo": {
+        "title": "Calculadora de vitaminas en línea: descubra el requerimiento diario por edad",
+        "description": "Calcule la norma de vitaminas y minerales por edad, sexo y actividad. Descubra qué sustancias le faltan a su cuerpo.",
+        "keywords": "calculadora de vitaminas, requerimiento diario de vitaminas, vitaminas por edad, minerales, suplementos vitamínicos, requerimiento diario de vitaminas, norma de vitaminas, vitaminas y minerales, vitaminas para mujeres, vitaminas para hombres, vitaminas para niños, vitaminas para mujeres embarazadas, vitaminas para atletas, vitaminas B, vitamina D, vitamina C, vitamina A, vitamina E, calcio, hierro, magnesio, zinc, ácido fólico, vitamina B12, deficiencia de vitaminas, deficiencia de vitaminas, hipovitaminosis, deficiencia de vitaminas, complejos vitamínicos, suplementos dietéticos, multivitaminas, multivitaminas, vitaminas online, calcular vitaminas",
+        "overview": {
+          "title": "Acerca de la calculadora de vitaminas",
+          "content": "La calculadora de vitaminas te ayudará a determinar cuántas vitaminas y minerales necesita tu cuerpo diariamente. Los datos se basan en las recomendaciones de la OMS y se ajustan por edad y actividad.",
+          "additionalContent": "El equilibrio correcto de vitaminas y minerales es necesario para mantener la salud, la inmunidad, la energía y el funcionamiento normal de todos los sistemas del cuerpo. La calculadora tiene en cuenta características individuales: sexo, edad y nivel de actividad física para ofrecer recomendaciones personalizadas.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de las necesidades diarias de vitaminas y minerales.",
+            "content": "Veamos ejemplos prácticos de cálculo de la ingesta diaria de vitaminas y minerales para diferentes casos:",
+            "example1": {
+              "title": "Ejemplo 1: Mujer joven de 25 años, actividad media",
+              "description": "Cálculo del valor diario para una mujer de mediana edad.",
+              "input": "Género: Mujer\nEdad: 25 años\nActividad: Mediana",
+              "calculation": "Vitamina A: 700 mcg\nVitamina C: 75 mg\nVitamina D: 600 UI\nVitamina E: 15 mg\nHierro: 18 mg (aumentado para mujeres)\nCalcio: 1000 mg\nÁcido fólico: 400 mcg",
+              "result": "Valor diario: 13 vitaminas + 8 minerales",
+              "type": "Actividad media: normas básicas."
+            },
+            "example2": {
+              "title": "Ejemplo 2: Hombre activo, 35 años, muy activo",
+              "description": "Cálculo para un hombre con alta actividad física.",
+              "input": "Género: Hombre\nEdad: 35 años\nActividad: Alta",
+              "calculation": "Vitamina B1: 1,5 mg × 1,2 = 1,8 mg (aumentado en un 20%)\nVitamina B2: 1,7 mg × 1,2 = 2,04 mg\nVitamina C: 90 mg × 1,2 = 108 mg\nMagnesio: 420 mg × 1,15 = 483 mg\nZinc: 11 mg × 1,2 = 13,2 mg\nCon alta actividad, la necesidad aumenta entre un 15 y un 20%.",
+              "result": "Valor diario: aumentado para un estilo de vida activo",
+              "type": "Alta actividad: aumento del 15-20%"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Mujer mayor de 50 años, baja actividad",
+              "description": "Cálculo para una anciana con baja actividad.",
+              "input": "Género: Mujer\nEdad: 55 años\nActividad: Baja",
+              "calculation": "Vitamina D: 800 UI (aumentada a partir de 50 años)\nCalcio: 1200 mg (aumentado para prevenir la osteoporosis)\nVitamina B12: 2,4 mcg (importante para mayores de 50 años)\nMagnesio: 320 mg\nDespués de los 50 años, aumenta la necesidad de calcio y vitamina D",
+              "result": "Valor diario: adaptado para mayores de 50 años.",
+              "type": "Edad 50+: niveles elevados de calcio y vitamina D"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Adolescente de 16 años, actividad media",
+              "description": "Cálculo para un adolescente durante el período de crecimiento.",
+              "input": "Género: Hombre\nEdad: 16 años\nActividad: Mediana",
+              "calculation": "Vitamina A: 900 mcg (aumentada para el crecimiento)\nVitamina C: 75 mg\nVitamina D: 600 UI\nCalcio: 1300 mg (aumentado para el crecimiento óseo)\nHierro: 11 mg\nZinc: 11 mg (importante para el crecimiento)\nDurante el período de crecimiento, aumenta la necesidad de calcio y zinc.",
+              "result": "Valor diario: tiene en cuenta el período de crecimiento.",
+              "type": "Adolescencia: mayores estándares de crecimiento"
+            },
+            "example5": {
+              "title": "Ejemplo 5: Mujer embarazada, actividad media",
+              "description": "Cálculo para una mujer embarazada (normas especiales)",
+              "input": "Género: Mujer\nEdad: 28 años\nActividad: Mediana\nCondición: Embarazo",
+              "calculation": "Ácido fólico: 600 mcg (aumentado 1,5 veces)\nHierro: 27 mg (aumentado durante el embarazo)\nCalcio: 1000-1300 mg (aumentado)\nVitamina D: 600 UI\nVitamina B12: 2,6 mcg\nEl ácido fólico y el hierro son especialmente importantes durante el embarazo.",
+              "result": "Norma diaria: normas especiales para el embarazo.",
+              "type": "Embarazo: el ácido fólico y el hierro son fundamentales"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Deportista vegetariano, 30 años, muy activo",
+              "description": "Cálculo para un vegetariano con alta actividad.",
+              "input": "Género: Hombre\nEdad: 30 años\nActividad: Alta\nDieta: Vegetariana",
+              "calculation": "Vitamina B12: 2,4 mcg (crítica, sólo en productos animales)\nHierro: 14 mg × 1,5 = 21 mg (el hierro no hemo se absorbe menos)\nZinc: 11 mg × 1,2 = 13,2 mg\nVitamina D: 600 UI\nVitamina B6: 2 mg × 1,2 = 2,4 mg\nEs importante que los vegetarianos controlen la vitamina B12 y el hierro.",
+              "result": "Valor diario: teniendo en cuenta una dieta vegetariana",
+              "type": "Vegetarianismo: Énfasis en B12 y Hierro"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calculan los estándares?",
+          "content": "Las normas de vitaminas y minerales se calculan según las recomendaciones de la OMS, teniendo en cuenta el sexo, la edad y el nivel de actividad física. Con alta actividad, la necesidad de determinadas vitaminas aumenta en un 20%."
+        },
+        "vitamins": {
+          "title": "Vitaminas y su papel.",
+          "content": "Las vitaminas se dividen en solubles en agua (B, C) y solubles en grasa (A, D, E, K). Cada vitamina realiza una función única en el cuerpo."
+        },
+        "minerals": {
+          "title": "Minerales y su importancia.",
+          "content": "Los minerales son esenciales para el funcionamiento normal de todos los sistemas del cuerpo. Son especialmente importantes el calcio, el hierro, el magnesio y el zinc."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestra calculadora",
+          "content": "Nuestra calculadora de vitaminas ofrece muchos beneficios:",
+          "personalized": "Cálculo personalizado",
+          "personalizedDescription": "Tiene en cuenta género, edad y actividad.",
+          "comprehensive": "Información completa",
+          "comprehensiveDescription": "13 vitaminas y 8 minerales",
+          "accurate": "Datos precisos",
+          "accurateDescription": "Basado en recomendaciones de la OMS",
+          "free": "gratis",
+          "freeDescription": "Completamente gratis sin registro",
+          "multilingual": "Plurilingüe",
+          "multilingualDescription": "Soporta 4 idiomas",
+          "mobile": "Versión móvil",
+          "mobileDescription": "Diseño responsivo para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para mantener niveles óptimos de vitaminas y minerales:",
+          "diet": "Alimentación equilibrada",
+          "dietDescription": "Incluye una variedad de alimentos en tu dieta.",
+          "supplements": "Aditivos según sea necesario",
+          "supplementsDescription": "Tome suplementos sólo según lo recomiende su médico.",
+          "monitoring": "Control periódico",
+          "monitoringDescription": "Controla tus niveles de vitaminas periódicamente",
+          "lifestyle": "Estilo de vida saludable",
+          "lifestyleDescription": "Actividad física y sueño adecuado."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo determinar la necesidad diaria de vitaminas?",
+              "a": "El requerimiento diario depende de la edad, el sexo, el nivel de actividad física y el estado de salud. Nuestra calculadora tiene en cuenta estos factores para realizar un cálculo preciso. Las recomendaciones se basan en los estándares de la OMS y tienen en cuenta las características individuales."
+            },
+            {
+              "q": "¿Cómo afecta la actividad física a la necesidad de vitaminas?",
+              "a": "Con una actividad física elevada, la necesidad de vitamina B, vitamina C y algunos minerales aumenta entre un 10 y un 20% debido al metabolismo acelerado, el aumento del gasto energético y el aumento de la sudoración. Las vitaminas B, la vitamina C, el magnesio y el zinc son especialmente importantes para los deportistas."
+            },
+            {
+              "q": "¿Necesito tomar suplementos vitamínicos?",
+              "a": "Con una dieta equilibrada, la mayoría de las vitaminas se pueden obtener de los alimentos. Los suplementos sólo son necesarios en caso de deficiencia o necesidades especiales (embarazo, ejercicio intenso, enfermedades crónicas), según lo determine un médico. No debes tomar vitaminas sin receta."
+            },
+            {
+              "q": "¿Qué tan precisos son los cálculos de la calculadora?",
+              "a": "La calculadora se basa en las recomendaciones de la OMS y tiene en cuenta los principales factores (género, edad, actividad). Sin embargo, las necesidades individuales pueden variar según las condiciones de salud, los medicamentos, el clima y otros factores. La consulta con un médico es importante para una evaluación precisa."
+            },
+            {
+              "q": "¿Qué vitaminas son las más importantes?",
+              "a": "Todas las vitaminas son importantes, pero de particular importancia son: vitamina D (inmunidad, huesos), vitamina C (inmunidad, antioxidante), vitamina B (energía, sistema nervioso), vitamina A (visión, inmunidad), ácido fólico (hematopoyesis, embarazo). Una deficiencia de cualquier vitamina puede provocar problemas de salud."
+            },
+            {
+              "q": "¿Por qué es peligrosa la deficiencia de vitaminas?",
+              "a": "La deficiencia de vitaminas puede provocar problemas graves: falta de vitamina D, osteoporosis y inmunidad debilitada, vitamina B12, anemia y problemas neurológicos, vitamina C, escorbuto y inmunidad debilitada, vitamina A, problemas de visión. Es importante identificar y cubrir el déficit de manera oportuna."
+            },
+            {
+              "q": "¿Es posible sufrir una sobredosis de vitaminas?",
+              "a": "Sí, una sobredosis de vitaminas (especialmente las vitaminas liposolubles A, D, E, K) es peligrosa. Las vitaminas solubles en agua (B, C) se excretan en la orina, pero una cantidad excesiva también puede causar problemas. Tome las vitaminas únicamente según las recomendaciones de su médico y no exceda la dosis."
+            },
+            {
+              "q": "¿Cómo afecta la edad a la necesidad de vitaminas?",
+              "a": "Con la edad, las necesidades cambian: después de los 50 años, aumenta la necesidad de vitamina D y calcio (prevención de la osteoporosis), vitamina B12 (empeora la absorción) y vitamina B6. Los niños y adolescentes necesitan más calcio, zinc y vitamina D para crecer. Las personas mayores suelen necesitar suplementos."
+            },
+            {
+              "q": "¿Por qué las mujeres necesitan más hierro?",
+              "a": "Las mujeres en edad fértil necesitan 18 mg de hierro al día (los hombres necesitan entre 8 y 10 mg) debido a la menstruación regular, en la que se pierde sangre y hierro. La deficiencia de hierro en las mujeres suele provocar anemia, fatiga y debilidad. Durante el embarazo, la necesidad es aún mayor: 27 mg."
+            },
+            {
+              "q": "¿Qué vitaminas son importantes durante el embarazo?",
+              "a": "Durante el embarazo son de vital importancia: ácido fólico (600 mcg, prevención de malformaciones), hierro (27 mg, prevención de la anemia), calcio (1300 mg), vitamina D (600 UI), vitamina B12. El uso de suplementos debe ser supervisado por un médico."
+            },
+            {
+              "q": "¿Los vegetarianos necesitan vitaminas?",
+              "a": "Es especialmente importante para los vegetarianos controlar la vitamina B12 (no se encuentra en los alimentos vegetales), el hierro (el hierro no hemo se absorbe menos), el zinc, la vitamina D (si hay poco sol) y los omega-3. Se recomienda tomar suplementos de B12 e incluir alimentos fortificados en su dieta."
+            },
+            {
+              "q": "¿Cómo entender que no hay suficientes vitaminas?",
+              "a": "Signos de deficiencia: fatiga, debilidad, caída del cabello, uñas quebradizas, piel seca, problemas de visión, resfriados frecuentes, irritabilidad, entumecimiento de las extremidades. Sin embargo, sólo un médico puede hacer un diagnóstico preciso basándose en análisis de sangre."
+            },
+            {
+              "q": "¿Es posible obtener todas las vitaminas de los alimentos?",
+              "a": "Con una dieta equilibrada y variada, puedes obtener la mayoría de las vitaminas. Sin embargo, algunas vitaminas (D, B12) son difíciles de obtener en cantidades suficientes sólo a través de los alimentos, especialmente en determinadas condiciones (invierno, vegetarianismo, edad). En tales casos, se necesitan suplementos."
+            },
+            {
+              "q": "¿Cuándo es el mejor momento para tomar vitaminas?",
+              "a": "Las vitaminas liposolubles (A, D, E, K) se toman mejor con una comida que contenga grasa para una mejor absorción. Los hidrosolubles (B, C) se pueden tomar con el estómago vacío o con alimentos. Los multivitamínicos generalmente se toman por la mañana o temprano en la tarde con el desayuno."
+            },
+            {
+              "q": "¿Los medicamentos afectan la absorción de vitaminas?",
+              "a": "Sí, algunos medicamentos pueden reducir la absorción de vitaminas: los antibióticos afectan las vitaminas B, los anticonceptivos orales afectan el ácido fólico y la B12, y los anticonvulsivos afectan el ácido fólico y la vitamina D. Si está tomando medicamentos, consulte a su médico sobre la necesidad de suplementos."
+            },
+            {
+              "q": "¿Es posible tomar varias vitaminas al mismo tiempo?",
+              "a": "Sí, puedes tomar varias vitaminas al mismo tiempo. Los complejos multivitamínicos están especialmente diseñados para ello. Sin embargo, es importante no exceder la cantidad diaria. Algunas vitaminas se absorben mejor juntas (por ejemplo, vitamina D con calcio, vitamina C con hierro)."
+            },
+            {
+              "q": "¿Los niños necesitan vitaminas?",
+              "a": "Las vitaminas para el crecimiento y el desarrollo son especialmente importantes para los niños: vitamina D (prevención del raquitismo), calcio (crecimiento de los huesos), hierro (prevención de la anemia), zinc (inmunidad, crecimiento), vitamina A (visión). A los niños se les suele recetar vitamina D, especialmente en zonas con poco sol."
+            },
+            {
+              "q": "¿Cómo almacenar vitaminas?",
+              "a": "Las vitaminas se almacenan en un lugar fresco, seco y oscuro, alejado de la humedad y de la luz solar directa. No guardar en el baño debido a la humedad. Verifique la fecha de vencimiento. Algunas vitaminas (especialmente la vitamina C) pierden actividad rápidamente si no se almacenan adecuadamente."
+            },
+            {
+              "q": "¿Es posible sustituir las vitaminas por productos naturales?",
+              "a": "Sí, se pueden obtener muchas vitaminas de los alimentos naturales: vitamina C de los cítricos y las bayas, vitamina A de las zanahorias y el hígado, vitamina D del pescado y los huevos, calcio de los productos lácteos. Sin embargo, en caso de deficiencias o necesidades especiales, pueden ser necesarios suplementos."
+            },
+            {
+              "q": "¿Fumar afecta la necesidad de vitaminas?",
+              "a": "Sí, fumar aumenta las necesidades de vitamina C entre 30 y 50 mg por día debido al aumento del estrés oxidativo. Los fumadores también necesitan más vitamina E y otros antioxidantes. La mejor solución es dejar de fumar, pero hasta que lo haga, es importante aumentar la ingesta de antioxidantes."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a las vitaminas?",
+              "a": "El estrés aumenta la necesidad de vitaminas del grupo B (especialmente B1, B5, B6, B12), vitamina C y magnesio. El estrés crónico agota estas vitaminas. Es importante mantener sus niveles mediante nutrición y, si es necesario, suplementos."
+            },
+            {
+              "q": "¿Es posible tomar vitaminas en ayunas?",
+              "a": "Las vitaminas hidrosolubles (B, C) se pueden tomar con el estómago vacío. Los liposolubles (A, D, E, K) se toman mejor con una comida que contenga grasa para una mejor absorción. Si las vitaminas le provocan náuseas, tómelas con las comidas. Siga las instrucciones del paquete."
+            },
+            {
+              "q": "¿Con qué frecuencia debes controlar tus niveles de vitaminas?",
+              "a": "Si no hay síntomas de deficiencia, se pueden realizar pruebas cada 1 o 2 años. Si hay síntomas o factores de riesgo (vegetarianismo, embarazo, mayores de 50 años, enfermedades crónicas), por recomendación de un médico, generalmente una vez cada 6 a 12 meses. Es especialmente importante controlar la vitamina D, B12 y el hierro."
+            },
+            {
+              "q": "¿Es posible tomar vitaminas caducadas?",
+              "a": "No se recomienda tomar vitaminas caducadas. Con el tiempo, pierden potencia y pueden ser menos eficaces. Las vitaminas B y la vitamina C pierden su actividad con especial rapidez. Use vitaminas antes de la fecha de vencimiento."
+            },
+            {
+              "q": "¿Cómo afectan las vitaminas a la inmunidad?",
+              "a": "Las vitaminas son fundamentales para la inmunidad: vitamina C (fortalece la actividad de las células inmunitarias), vitamina D (regula la respuesta inmunitaria), vitamina A (apoya las membranas mucosas), zinc (importante para el funcionamiento del sistema inmunológico). La deficiencia de estas vitaminas debilita el sistema inmunológico."
+            },
+            {
+              "q": "¿Los deportistas necesitan vitaminas?",
+              "a": "Sí, los deportistas necesitan más vitaminas debido al aumento del estrés: vitamina B (energía), vitamina C (recuperación, antioxidante), vitamina D (huesos, músculos), magnesio (músculos), zinc (recuperación). Con entrenamiento intenso, la necesidad aumenta entre un 15 y un 20%."
+            },
+            {
+              "q": "¿Es posible tomar vitaminas si estás enfermo?",
+              "a": "En caso de enfermedad, la necesidad de vitaminas puede cambiar. Algunas enfermedades interfieren con la absorción de vitaminas (enfermedades del tracto gastrointestinal, hígado). Es importante consultar a un médico antes de tomar vitaminas, especialmente si padece enfermedades crónicas o está tomando medicamentos. No te automediques."
+            },
+            {
+              "q": "¿Cómo afectan las vitaminas a la piel y al cabello?",
+              "a": "Las vitaminas son importantes para la belleza: vitamina A (salud de la piel), vitamina C (síntesis de colágeno), vitamina E (antioxidante, protección UV), vitamina D (crecimiento del cabello), vitamina B (salud del cabello y las uñas), zinc (reparación de la piel). La deficiencia se manifiesta por sequedad y caída del cabello."
+            },
+            {
+              "q": "¿El alcohol afecta las vitaminas?",
+              "a": "Sí, el alcohol altera la absorción y aumenta el consumo de vitaminas: vitamina B (especialmente B1, B6, ácido fólico), vitamina C, magnesio. El consumo regular de alcohol aumenta el riesgo de deficiencia. Se recomienda aumentar la ingesta de estas vitaminas o tomar suplementos."
+            },
+            {
+              "q": "¿Cómo interactúan las vitaminas entre sí?",
+              "a": "Las vitaminas interactúan: la vitamina C mejora la absorción de hierro, la vitamina D mejora el calcio, la vitamina E actúa sinérgicamente con la vitamina C y las vitaminas B trabajan juntas. Sin embargo, algunas vitaminas pueden competir (por ejemplo, el exceso de zinc reduce la absorción de cobre). El equilibrio es importante."
+            }
+          ]
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "stress": {
+      "title": "Calculadora de nivel de estrés",
+      "description": "Realice una prueba de estrés en línea. Responda 10 preguntas y descubra qué tan estresado está y qué medidas puede tomar para recuperar la calma.",
+      "infographic": {
+        "low": "Corto",
+        "lowDescription": "todo esta bien",
+        "moderate": "Promedio",
+        "moderateDescription": "tenga en cuenta",
+        "high": "Alto",
+        "highDescription": "necesita atencion"
+      },
+      "progress": {
+        "question": "Pregunta",
+        "of": "de"
+      },
+      "questions": {
+        "question1": "A menudo me siento cansado, incluso después de descansar.",
+        "question2": "Me cuesta concentrarme.",
+        "question3": "Me irritan las pequeñas cosas.",
+        "question4": "A menudo tengo dolores de cabeza o dolores musculares.",
+        "question5": "Tengo dificultad para conciliar el sueño o me despierto con frecuencia por la noche.",
+        "question6": "Me siento ansioso o inquieto.",
+        "question7": "Mi apetito ha cambiado.",
+        "question8": "Me resulta difícil relajarme incluso los fines de semana.",
+        "question9": "Siento que no puedo manejar las cosas.",
+        "question10": "Muchas veces no tengo energía."
+      },
+      "options": {
+        "never": "Nunca (0 puntos)",
+        "rarely": "Rara vez (1 punto)",
+        "often": "A menudo (2 puntos)",
+        "always": "Constantemente (3 puntos)"
+      },
+      "navigation": {
+        "previous": "Atrás",
+        "next": "Próximo",
+        "calculate": "Calcular",
+        "calculating": "Cálculo...",
+        "restart": "pasar de nuevo"
+      },
+      "results": {
+        "title": "Resultados de la prueba",
+        "totalScore": "Puntuación total",
+        "advice": "Recomendaciones"
+      },
+      "levels": {
+        "low": {
+          "title": "Bajo estrés",
+          "description": "Tu nivel de estrés es bajo. Hace frente bien a las tareas diarias y mantiene un equilibrio saludable entre el trabajo y el juego.",
+          "advice": "Continúe manteniendo un estilo de vida saludable haciendo ejercicio con regularidad, durmiendo lo suficiente y encontrando tiempo para relajarse."
+        },
+        "moderate": {
+          "title": "Nivel promedio de estrés",
+          "description": "Tienes un nivel moderado de estrés. Esto es normal en la vida moderna, pero conviene prestar atención a las técnicas de gestión del estrés.",
+          "advice": "Pruebe técnicas de relajación, meditación y ejercicio regular. Asegúrese de tener suficiente tiempo para la relajación y los pasatiempos."
+        },
+        "high": {
+          "title": "Altos niveles de estrés",
+          "description": "Tus niveles de estrés son altos. Esto puede afectar negativamente a su salud y calidad de vida. Se recomienda que tome medidas para reducir el estrés.",
+          "advice": "Considere acudir a un profesional (psicólogo o médico). Practique técnicas de manejo del estrés y asegúrese de dormir y descansar lo suficiente."
+        }
+      },
+      "tips": {
+        "title": "Consejos importantes",
+        "honest": "Responda todas las preguntas honestamente para obtener un resultado preciso.",
+        "consultation": "Los resultados de las pruebas no reemplazan la consulta con un especialista.",
+        "regular": "Realice una prueba con regularidad para realizar un seguimiento de los cambios en sus niveles de estrés."
+      },
+      "seo": {
+        "title": "Calculadora de nivel de estrés online: haz el test gratis",
+        "description": "Realice una prueba de estrés en línea. Responda 10 preguntas y descubra qué tan estresado está y qué medidas puede tomar para recuperar la calma.",
+        "keywords": "calculadora de estrés, prueba de estrés, nivel de estrés, estrés en línea, prueba psicológica, evaluación de estrés, nivel de estrés, estrés crónico, manejo del estrés, síntomas de estrés, signos de estrés, prueba de estrés en línea, prueba de estrés psicológico, medidor de estrés, índice de estrés, nivel de ansiedad, estrés y salud, métodos de reducción del estrés, técnicas de relajación, meditación de estrés, ejercicios de respiración, cómo afrontar el estrés, estrés en el trabajo, estrés educativo, estrés emocional, estrés físico, causas del estrés, consecuencias del estrés, prevención del estrés, resistencia al estrés",
+        "overview": {
+          "title": "Acerca de la calculadora de estrés",
+          "content": "Nuestra calculadora de estrés le ayudará a evaluar su nivel de estrés actual y obtener recomendaciones personalizadas para reducirlo. La prueba se basa en métodos científicos para evaluar el estrés.",
+          "additionalContent": "El estrés es la reacción natural del cuerpo ante los desafíos y cambios. Sin embargo, el estrés crónico puede afectar negativamente la salud física y mental. La detección temprana de altos niveles de estrés permite tomar medidas oportunas y prevenir el desarrollo de problemas graves. Nuestra prueba lo ayudará a evaluar su condición y recibir recomendaciones para el manejo del estrés.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de niveles de estrés.",
+            "content": "Veamos ejemplos prácticos de cómo pasar la prueba e interpretar los resultados:",
+            "example1": {
+              "title": "Ejemplo 1: bajo estrés",
+              "description": "Persona con poco estrés",
+              "input": "Pregunta 1: Rara vez (1 punto)\nPregunta 2: Nunca (0 puntos)\nPregunta 3: Rara vez (1 punto)\nPregunta 4: Nunca (0 puntos)\nPregunta 5: Rara vez (1 punto)\nPregunta 6: Nunca (0 puntos)\nPregunta 7: Rara vez (1 punto)\nPregunta 8: Nunca (0 puntos)\nPregunta 9: Rara vez (1 punto)\nPregunta 10: Rara vez (1 punto)",
+              "calculation": "Suma de puntos: 1+0+1+0+1+0+1+0+1+1 = 6 puntos\nRango: 0-10 puntos\nNivel de estrés: Bajo",
+              "result": "Nivel de estrés bajo (6 puntos)",
+              "type": "Está bien, continúa manteniendo un estilo de vida saludable."
+            },
+            "example2": {
+              "title": "Ejemplo 2: nivel de estrés medio",
+              "description": "Una persona con niveles moderados de estrés.",
+              "input": "Pregunta 1: A menudo (2 puntos)\nPregunta 2: A menudo (2 puntos)\nPregunta 3: Rara vez (1 punto)\nPregunta 4: Rara vez (1 punto)\nPregunta 5: A menudo (2 puntos)\nPregunta 6: Rara vez (1 punto)\nPregunta 7: Rara vez (1 punto)\nPregunta 8: A menudo (2 puntos)\nPregunta 9: Rara vez (1 punto)\nPregunta 10: A menudo (2 puntos)",
+              "calculation": "Puntos totales: 2+2+1+1+2+1+1+2+1+2 = 15 puntos\nRango: 11-20 puntos\nNivel de estrés: Medio",
+              "result": "Nivel medio de estrés (15 puntos)",
+              "type": "Presta atención, utiliza técnicas de relajación."
+            },
+            "example3": {
+              "title": "Ejemplo 3: Altos niveles de estrés",
+              "description": "Persona con altos niveles de estrés.",
+              "input": "Pregunta 1: Constantemente (3 puntos)\nPregunta 2: A menudo (2 puntos)\nPregunta 3: Constantemente (3 puntos)\nPregunta 4: A menudo (2 puntos)\nPregunta 5: Constantemente (3 puntos)\nPregunta 6: A menudo (2 puntos)\nPregunta 7: Constantemente (3 puntos)\nPregunta 8: A menudo (2 puntos)\nPregunta 9: Constantemente (3 puntos)\nPregunta 10: A menudo (2 puntos)",
+              "calculation": "Puntos totales: 3+2+3+2+3+2+3+2+3+2 = 25 puntos\nRango: 21-30 puntos\nNivel de estrés: Alto",
+              "result": "Alto nivel de estrés (25 puntos)",
+              "type": "Se recomienda consultar a un especialista."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Caso límite: transición de bajo a medio",
+              "description": "El resultado está en el límite entre el nivel bajo y el medio.",
+              "input": "Pregunta 1: Rara vez (1 punto)\nPregunta 2: Rara vez (1 punto)\nPregunta 3: Rara vez (1 punto)\nPregunta 4: Rara vez (1 punto)\nPregunta 5: Rara vez (1 punto)\nPregunta 6: Rara vez (1 punto)\nPregunta 7: Rara vez (1 punto)\nPregunta 8: A menudo (2 puntos)\nPregunta 9: Rara vez (1 punto)\nPregunta 10: Rara vez (1 punto)",
+              "calculation": "Suma de puntos: 1+1+1+1+1+1+1+2+1+1 = 11 puntos\nRango: 11-20 puntos\nNivel de estrés: Medio (límite inferior)",
+              "result": "Nivel medio de estrés (11 puntos)",
+              "type": "En el límite entre bajo y medio, vale la pena monitorear la condición."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Persona trabajadora con cargas elevadas",
+              "description": "Hombre experimentando estrés en el trabajo",
+              "input": "Pregunta 1: A menudo (2 puntos)\nPregunta 2: Constantemente (3 puntos)\nPregunta 3: A menudo (2 puntos)\nPregunta 4: A menudo (2 puntos)\nPregunta 5: Constantemente (3 puntos)\nPregunta 6: A menudo (2 puntos)\nPregunta 7: Rara vez (1 punto)\nPregunta 8: Constantemente (3 puntos)\nPregunta 9: A menudo (2 puntos)\nPregunta 10: A menudo (2 puntos)",
+              "calculation": "Puntos totales: 2+3+2+2+3+2+1+3+2+2 = 22 puntos\nRango: 21-30 puntos\nNivel de estrés: Alto",
+              "result": "Alto nivel de estrés (22 puntos)",
+              "type": "Estrés laboral, se requiere gestión de carga."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Estudiante en periodo de exámenes",
+              "description": "Estudiante tomando una prueba durante una sesión",
+              "input": "Pregunta 1: A menudo (2 puntos)\nPregunta 2: A menudo (2 puntos)\nPregunta 3: Rara vez (1 punto)\nPregunta 4: Rara vez (1 punto)\nPregunta 5: A menudo (2 puntos)\nPregunta 6: A menudo (2 puntos)\nPregunta 7: A menudo (2 puntos)\nPregunta 8: A menudo (2 puntos)\nPregunta 9: A menudo (2 puntos)\nPregunta 10: Rara vez (1 punto)",
+              "calculation": "Puntos totales: 2+2+1+1+2+2+2+2+2+1 = 17 puntos\nRango: 11-20 puntos\nNivel de estrés: Medio",
+              "result": "Nivel medio de estrés (17 puntos)",
+              "type": "Estrés por estudios, normal en época de exámenes"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula el nivel de estrés?",
+          "content": "La prueba consta de 10 preguntas, cada una de las cuales se puntúa en una escala de 0 a 3 puntos. La puntuación total determina el nivel de estrés: 0-10 (bajo), 11-20 (medio), 21-30 (alto)."
+        },
+        "stressLevels": {
+          "title": "Niveles de estrés",
+          "content": "El estrés puede ser beneficioso en pequeñas cantidades, pero el estrés crónico tiene efectos negativos sobre la salud. Es importante poder reconocer los signos del estrés y gestionarlo."
+        },
+        "management": {
+          "title": "Manejo del estrés",
+          "content": "El manejo eficaz del estrés incluye técnicas de relajación, ejercicio, alimentación saludable, sueño adecuado y apoyo social."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestra calculadora",
+          "content": "Nuestra calculadora de estrés ofrece muchos beneficios:",
+          "quick": "prueba rápida",
+          "quickDescription": "Sólo 10 preguntas en 5 minutos",
+          "accurate": "Resultados precisos",
+          "accurateDescription": "Basado en métodos científicos.",
+          "personalized": "Recomendaciones personales",
+          "personalizedDescription": "Consejos personalizados para reducir el estrés",
+          "free": "gratis",
+          "freeDescription": "Completamente gratis sin registro",
+          "multilingual": "Plurilingüe",
+          "multilingualDescription": "Soporta 4 idiomas",
+          "mobile": "Versión móvil",
+          "mobileDescription": "Diseño responsivo para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para gestionar eficazmente el estrés:",
+          "relaxation": "Técnicas de relajación",
+          "relaxationDescription": "Meditación, ejercicios de respiración, yoga.",
+          "exercise": "Actividad fisica",
+          "exerciseDescription": "El ejercicio regular reduce los niveles de estrés",
+          "sleep": "Sueño de calidad",
+          "sleepDescription": "7-9 horas de sueño por noche",
+          "social": "apoyo social",
+          "socialDescription": "Comunicación con amigos y familiares."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué es el estrés?",
+              "a": "El estrés es la reacción del cuerpo a estímulos y desafíos externos. En pequeñas cantidades puede resultar beneficioso (eustrés), motivando la acción. Sin embargo, el estrés crónico (angustia) afecta negativamente a la salud física y mental, debilitando el sistema inmunológico y provocando diversas enfermedades."
+            },
+            {
+              "q": "¿Qué tan precisos son los resultados de la prueba?",
+              "a": "La prueba se basa en métodos científicos para evaluar el estrés y proporciona una estimación aproximada de los niveles de estrés. Ayudará a determinar la tendencia general, pero para un diagnóstico y tratamiento precisos del estrés crónico, se recomienda consultar con un especialista (psicólogo, psicoterapeuta o médico)."
+            },
+            {
+              "q": "¿Cuándo deberías buscar ayuda?",
+              "a": "Busque ayuda si: los niveles altos de estrés duran más de dos semanas, el estrés interfiere con su vida diaria y su trabajo, desarrollan síntomas físicos (dolores de cabeza, insomnio, problemas digestivos), se siente ansioso o deprimido, tiene pensamientos suicidas (busque ayuda de inmediato)."
+            },
+            {
+              "q": "¿Cómo reducir los niveles de estrés?",
+              "a": "Métodos eficaces para reducir el estrés: técnicas de relajación (meditación, ejercicios de respiración, relajación muscular progresiva), ejercicio (caminar, correr, yoga), alimentación saludable, sueño adecuado (7-9 horas), apoyo social (socializar con amigos), gestión del tiempo, aficiones y creatividad."
+            },
+            {
+              "q": "¿Cuáles son los signos de altos niveles de estrés?",
+              "a": "Signos de estrés elevado: físico (dolores de cabeza, tensión muscular, fatiga, problemas para dormir, cambios en el apetito), emocional (irritabilidad, ansiedad, depresión, cambios de humor), cognitivo (dificultad para concentrarse, olvidos, pensamientos negativos), conductual (evitación de la comunicación, procrastinación, abuso de alcohol)."
+            },
+            {
+              "q": "¿Con qué frecuencia se puede realizar una prueba de estrés?",
+              "a": "La prueba se puede realizar con la frecuencia que necesite. Se recomienda tomarlo una vez a la semana o cuando cambien las circunstancias de la vida (mudanzas, cambios de trabajo, eventos importantes). Las pruebas periódicas le ayudarán a realizar un seguimiento de los cambios en sus niveles de estrés y la eficacia de sus técnicas de manejo del estrés."
+            },
+            {
+              "q": "¿Puede el estrés ser beneficioso?",
+              "a": "Sí, el estrés a corto plazo (eustrés) puede ser beneficioso: te motiva a actuar, aumenta la concentración, mejora la productividad y te ayuda a adaptarte al cambio. Sin embargo, el estrés crónico (angustia) a largo plazo es perjudicial para la salud y debe controlarse."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a tu salud?",
+              "a": "El estrés crónico afecta negativamente a la salud: debilita el sistema inmunológico (aumenta el riesgo de infecciones), aumenta la presión arterial, aumenta el riesgo de enfermedades cardiovasculares, provoca problemas digestivos, altera el sueño, contribuye al desarrollo de ansiedad y depresión y acelera el envejecimiento."
+            },
+            {
+              "q": "¿Qué técnicas de relajación son efectivas para el estrés?",
+              "a": "Técnicas de relajación efectivas: respiración profunda (respiración abdominal), meditación (mindfulness), relajación muscular progresiva (tensión y relajación sucesivas de los músculos), yoga, tai chi, visualización (presentación de imágenes tranquilas), masajes, aromaterapia, escucha de música."
+            },
+            {
+              "q": "¿Cómo afecta el sueño al estrés?",
+              "a": "El sueño y el estrés están interconectados: la falta de sueño aumenta los niveles de estrés y reduce la capacidad de afrontarlo, el estrés altera el sueño (insomnio, despertares frecuentes), para reducir el estrés es importante dormir de 7 a 9 horas al día, un sueño de calidad ayuda a recuperarse y afrontar mejor el estrés al día siguiente."
+            },
+            {
+              "q": "¿Qué es el estrés laboral?",
+              "a": "El estrés laboral se produce por factores del trabajo: sobrecarga, conflictos con los compañeros, incertidumbre, falta de control, falta de reconocimiento, malas condiciones laborales. Síntomas: fatiga, irritabilidad, disminución de la productividad, problemas para dormir. La gestión del estrés laboral incluye la gestión del tiempo, la delegación y la comunicación con la dirección."
+            },
+            {
+              "q": "¿Cómo afecta la nutrición al estrés?",
+              "a": "La nutrición afecta el estrés: una dieta equilibrada ayuda a afrontar el estrés, las deficiencias nutricionales aumentan el estrés, la cafeína y el azúcar pueden aumentar temporalmente la energía pero luego empeoran el estrés, el alcohol no ayuda a afrontar el estrés sino que sólo lo enmascara, es importante comer con regularidad, incluye magnesio (nueces, verduras), omega-3 (pescado)."
+            },
+            {
+              "q": "¿Es posible deshacerse completamente del estrés?",
+              "a": "No es posible ni necesario deshacerse completamente del estrés: es una parte natural de la vida. El objetivo no es eliminar el estrés, sino aprender a gestionarlo. Importante: reconocer el estrés, comprender sus fuentes, aplicar técnicas de manejo, prevenir el estrés crónico, transformar el malestar en euestrés (estrés beneficioso)."
+            },
+            {
+              "q": "¿Cómo ayuda el deporte a reducir el estrés?",
+              "a": "El deporte reduce eficazmente el estrés: la actividad física libera endorfinas (hormonas de la felicidad), reduce los niveles de cortisol (hormona del estrés), mejora el sueño, aumenta la autoestima, distrae la atención de los problemas, mejora la circulación sanguínea y la función cerebral. Recomendado: 150 minutos de actividad moderada por semana, ejercicio regular y elección de actividades agradables."
+            },
+            {
+              "q": "¿Qué es el estrés crónico?",
+              "a": "El estrés crónico es un estrés constante y prolongado que no desaparece y se convierte en parte de la vida cotidiana. Se diferencia del estrés a corto plazo en que el cuerpo está constantemente en un estado de tensión. Motivos: problemas constantes en el trabajo, dificultades económicas, conflictos familiares, enfermedades crónicas. Requiere ayuda profesional."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a las relaciones?",
+              "a": "El estrés afecta negativamente a las relaciones: aumenta la irritabilidad y el conflicto, reduce la capacidad de empatizar, reduce el deseo de comunicarse, afecta la vida íntima y puede conducir al aislamiento. Importante: comunicación abierta con tu pareja sobre estrés, técnicas de relajación conjunta, apoyo mutuo, ayuda profesional si es necesario."
+            },
+            {
+              "q": "¿Se puede utilizar la meditación para reducir el estrés?",
+              "a": "Sí, la meditación es muy eficaz para reducir el estrés: reduce los niveles de cortisol, reduce la ansiedad, mejora la concentración, aumenta la estabilidad emocional y mejora el sueño. Tipos de meditación: mindfulness, meditación respiratoria, meditación guiada, meditación trascendental. Comience con 5 a 10 minutos al día."
+            },
+            {
+              "q": "¿Cómo ayudar a un ser querido con estrés?",
+              "a": "Para ayudar a un ser querido con estrés: escuche sin juzgar, ofrezca apoyo y comprensión, no presione ni exija soluciones inmediatas, ofrezca actividades conjuntas (paseos, pasatiempos), fomente la derivación a un especialista, tenga paciencia, evite frases como “simplemente relájese”, ofrezca ayuda práctica."
+            },
+            {
+              "q": "¿Qué ejercicios de respiración ayudan con el estrés?",
+              "a": "Ejercicios de respiración efectivos: respiración abdominal profunda (inhala por la nariz durante 4 segundos, exhala por la boca durante 6 segundos), respiración cuadrada (4-4-4-4: inhalar-mantener-exhalar-mantener), respiración 4-7-8 (inhalar 4, sostener 7, exhalar 8), respiración alterna por fosas nasales. Realice durante 5 a 10 minutos cuando se sienta estresado."
+            },
+            {
+              "q": "¿El estrés está relacionado con la ansiedad?",
+              "a": "Sí, el estrés y la ansiedad están estrechamente relacionados: el estrés puede causar ansiedad, la ansiedad aumenta el estrés, ambos tienen síntomas similares (ansiedad, problemas de sueño, síntomas físicos), el estrés crónico puede provocar un trastorno de ansiedad, las técnicas de manejo del estrés ayudan a reducir la ansiedad. Si tienes ansiedad severa, consulta con un especialista."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a la inmunidad?",
+              "a": "El estrés crónico debilita el sistema inmunológico: aumenta los niveles de cortisol, lo que inhibe el sistema inmunológico, reduce la cantidad de células inmunes, aumenta el riesgo de infecciones, retarda la cicatrización de heridas y puede exacerbar enfermedades crónicas. Es importante controlar el estrés para mantener un sistema inmunológico saludable."
+            },
+            {
+              "q": "¿Qué es la tolerancia al estrés?",
+              "a": "La tolerancia al estrés es la capacidad de afrontar eficazmente el estrés y recuperarse rápidamente de él. Una alta resistencia al estrés ayuda a afrontar mejor las dificultades, recuperarse más rápido, mantener la salud y mantener la productividad. Desarrollado a través de: ejercicio regular, sueño saludable, conexiones sociales, pensamiento positivo y práctica de técnicas de manejo del estrés."
+            },
+            {
+              "q": "¿Puede el estrés causar dolor físico?",
+              "a": "Sí, el estrés puede provocar dolores físicos: tensión muscular (cuello, hombros, espalda), dolores de cabeza tensionales, dolores abdominales y problemas digestivos, dolores en el pecho, aumento del dolor crónico. Esto se debe a la tensión muscular, los cambios en la circulación sanguínea y el efecto del estrés sobre los receptores del dolor. El manejo del estrés puede reducir el dolor."
+            },
+            {
+              "q": "¿Cómo ayuda la gestión del tiempo a reducir el estrés?",
+              "a": "La gestión eficaz del tiempo reduce el estrés: programar tareas reduce la sensación de abrumador, priorizar le ayuda a centrarse en lo que es importante, delegar reduce la carga de trabajo, evitar la procrastinación reduce el estrés de los plazos, crear planes realistas evita la sobrecarga. Técnicas: matriz de Eisenhower, método Pomodoro, lista de tareas pendientes."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a la memoria y la concentración?",
+              "a": "El estrés crónico afecta la memoria y la concentración: el cortisol elevado afecta el hipocampo (centro de la memoria), dificultando la concentración, provocando olvidos, reduciendo las capacidades cognitivas y puede provocar “niebla mental”. Reducir el estrés, dormir lo suficiente y hacer ejercicio ayudan a mejorar la memoria y la concentración."
+            },
+            {
+              "q": "¿Puedo tomar medicamentos para el estrés?",
+              "a": "Los medicamentos para el estrés sólo deben ser recetados por un médico. Se utilizan los siguientes: sedantes (solo con receta médica, de corta duración), antidepresivos (para la depresión asociada al estrés), magnesio y vitamina B (adicionalmente). No te automediques. Los medicamentos complementan, pero no reemplazan, las técnicas de manejo del estrés y los cambios en el estilo de vida."
+            },
+            {
+              "q": "¿Cómo afecta el estrés a los niños y adolescentes?",
+              "a": "Los niños y adolescentes también experimentan estrés: presiones académicas, presión social, cambios en la familia. Síntomas: problemas de sueño, cambios de comportamiento, disminución del rendimiento académico, síntomas físicos. Ayuda: comunicación abierta, apoyo, formación en técnicas de manejo del estrés, descanso y entretenimiento adecuado, contactar con un psicólogo infantil si es necesario."
+            },
+            {
+              "q": "¿Qué vitaminas ayudan con el estrés?",
+              "a": "Vitaminas que ayudan con el estrés: vitaminas del grupo B (B1, B5, B6, B12) - para el sistema nervioso y la energía, vitamina C - antioxidante, reduce el cortisol, magnesio - relaja los músculos, reduce la ansiedad, vitamina D - afecta el estado de ánimo, omega-3 - apoya el cerebro. Es importante obtenerlo de los alimentos y, si es necesario, de suplementos según lo prescrito por tu médico."
+            },
+            {
+              "q": "¿Cómo se relacionan el trabajo y el estrés?",
+              "a": "El trabajo es una causa común de estrés: sobrecarga, conflictos, plazos, incertidumbre, falta de conciliación. Gestión del estrés laboral: gestión del tiempo, límites claros entre trabajo y descanso, comunicación con la dirección, delegación, descansos, lugar de trabajo saludable. Si el estrés en el trabajo es constante, plantéate cambiar de trabajo o contactar con un especialista."
+            },
+            {
+              "q": "¿Puede el estrés provocar depresión?",
+              "a": "El estrés crónico puede contribuir al desarrollo de la depresión: el estrés prolongado agota los recursos del cuerpo, cambia la química del cerebro y reduce la capacidad para afrontar las dificultades. Sin embargo, no todo el estrés conduce a la depresión; los factores individuales, el apoyo social y los métodos de manejo son importantes. Si presenta signos de depresión (estado de ánimo deprimido, pérdida de interés), consulte a un especialista."
+            }
+          ]
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "dose": {
+      "title": "Calculadora de dosis por peso",
+      "description": "Calcule la dosis correcta de medicamento en función del peso corporal. Seguro y preciso.",
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculo por peso corporal.",
+        "safe": "Seguro",
+        "safeDescription": "Advertencias excesivas",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "weight": "peso corporal",
+      "dosage": "Dosificación",
+      "frequency": "Frecuencia de recepción",
+      "maxDose": "Dosis máxima diaria (mg, opcional)",
+      "calculate": "Calcular",
+      "calculating": "Cálculo...",
+      "reset": "Reiniciar",
+      "weightUnit": "kilos",
+      "dosageUnit": "mg/kg",
+      "unitToggle": "Unidades de cambio (kg ↔ lbs)",
+      "frequencyOptions": {
+        "1": "1 vez por día",
+        "2": "2 veces al día",
+        "3": "3 veces al día",
+        "4": "4 veces al día"
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "perIntake": "De una vez",
+        "perDay": "por dia",
+        "perIntakeDescription": "Dosis por dosis",
+        "perDayDescription": "Dosis diaria total"
+      },
+      "warning": {
+        "title": "⚠️ ¡Atención!",
+        "exceeded": "Se ha superado la dosis máxima diaria ({maxDose} mg).",
+        "consultation": "Asegúrese de consultar a su médico."
+      },
+      "tips": {
+        "title": "Consejos importantes",
+        "consultation": "Siempre consulte a su médico antes de tomar medicamentos.",
+        "accuracy": "Asegúrese de que la información que ingrese sea precisa.",
+        "children": "Para los niños, utilice dosis especiales para niños."
+      },
+      "seo": {
+        "title": "Presisiones de la calculadora sobre el peso — cálculo en línea de la premisa",
+        "description": "Calculadora en línea para calcular la dosis por peso corporal. Calcule la dosis de su medicamento por kg o libra, averigüe la dosis diaria y evite excederla.",
+        "keywords": "calculadora de dosis, cálculo de dosis por peso, dosis de medicamento, mg por kg, dosis diaria, dosis por peso corporal, cálculo de medicamento por peso, dosis de medicamento, dosis correcta, calculadora de dosis médica, dosis para adultos, dosis para niños, cálculo de dosis de medicamento, dosis en mg, dosis por kilogramo, dosis segura, dosis máxima, dosis medicinal, dosis farmacológica, dosis personal, dosis exacta, dosis en línea, calculadora de dosis, dosis de medicamento, cálculo de dosis de medicamento, dosis para tratamiento, profiláctico dosis, dosis terapéutica, dosis de antibióticos, dosis de antipiréticos",
+        "overview": {
+          "title": "Acerca de la calculadora de dosis",
+          "content": "Nuestra calculadora le ayudará a calcular la dosis correcta de medicamento en función del peso corporal. Esto es especialmente importante para una dosificación precisa de los medicamentos.",
+          "additionalContent": "La dosificación correcta de los medicamentos es fundamental para la eficacia del tratamiento y la seguridad del paciente. Calcular la dosis en peso permite personalizar el tratamiento y evitar tanto una eficacia insuficiente como una sobredosis. La calculadora tiene en cuenta el peso corporal y la dosis recomendada por kilogramo, calculando tanto la dosis única como la diaria, teniendo en cuenta la frecuencia de administración.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de la dosis del medicamento en peso.",
+            "content": "Veamos ejemplos prácticos de cálculo de dosis para diferentes casos:",
+            "example1": {
+              "title": "Ejemplo 1: Adulto, antibiótico",
+              "description": "Cálculo de la dosis de antibióticos para un adulto.",
+              "input": "Peso corporal: 70 kg\nDosis: 20 mg/kg\nFrecuencia de administración: 2 veces al día",
+              "calculation": "Dosis por kg: 20 mg/kg\nDosis única = 70 kg × 20 mg/kg = 1400 mg\nDosis diaria = 1400 mg × 2 = 2800 mg",
+              "result": "Dosis única: 1400 mg",
+              "type": "Dosis diaria: 2800 mg (2 veces al día)"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Niño, antipirético",
+              "description": "Cálculo de la dosis de paracetamol para un niño.",
+              "input": "Peso corporal: 25 kg\nDosis: 15 mg/kg\nFrecuencia de administración: 3 veces al día\nDosis máxima diaria: 60 mg/kg",
+              "calculation": "Dosis única = 25 kg × 15 mg/kg = 375 mg\nDosis diaria = 375 mg × 3 = 1125 mg\nMáximo para 25 kg = 25 × 60 = 1500 mg\n1125 < 1500 – seguro",
+              "result": "Dosis única: 375 mg",
+              "type": "Dosis diaria: 1125 mg (dentro de los límites normales)"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Exceder la dosis máxima",
+              "description": "El caso en que la dosis calculada exceda el máximo",
+              "input": "Peso corporal: 90 kg\nDosis: 25 mg/kg\nFrecuencia de administración: 3 veces al día\nDosis máxima diaria: 2000 mg",
+              "calculation": "Dosis única = 90 × 25 = 2250 mg\nDosis diaria = 2250 × 3 = 6750 mg\nMáximo: 2000 mg\n6750 > 2000 - ¡EXCESO!",
+              "result": "Dosis única: 2250 mg",
+              "type": "⚠️ ¡Se ha superado la dosis máxima! Se requiere consulta médica"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Adulto ligero",
+              "description": "Cálculo para una persona con bajo peso corporal.",
+              "input": "Peso corporal: 50 kg\nDosis: 10 mg/kg\nFrecuencia de administración: 1 vez al día",
+              "calculation": "Dosis única = 50 × 10 = 500 mg\nDosis diaria = 500 × 1 = 500 mg",
+              "result": "Dosis única: 500 mg",
+              "type": "Dosis diaria: 500 mg (1 vez al día)"
+            },
+            "example5": {
+              "title": "Ejemplo 5: Persona grande, alta frecuencia de uso",
+              "description": "Cálculo para una persona con un gran peso corporal.",
+              "input": "Peso corporal: 100 kg\nDosis: 12 mg/kg\nFrecuencia de administración: 4 veces al día",
+              "calculation": "Dosis única = 100 × 12 = 1200 mg\nDosis diaria = 1200 × 4 = 4800 mg",
+              "result": "Dosis única: 1200 mg",
+              "type": "Dosis diaria: 4800 mg (4 veces al día)"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Adolescente, dosis media",
+              "description": "Cálculo para un adolescente.",
+              "input": "Peso corporal: 60 kg\nDosis: 18 mg/kg\nFrecuencia de administración: 2 veces al día\nDosis máxima diaria: 2400 mg",
+              "calculation": "Dosis única = 60 × 18 = 1080 mg\nDosis diaria = 1080 × 2 = 2160 mg\nMáximo: 2400 mg\n2160 < 2400 - seguro",
+              "result": "Dosis única: 1080 mg",
+              "type": "Dosis diaria: 2160 mg (segura, por debajo del máximo)"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Cómo se calcula la dosis",
+          "content": "La dosis se calcula mediante la fórmula: Peso corporal × Dosis por kg × Número de dosis por día. El resultado muestra la dosis por dosis y la dosis diaria total."
+        },
+        "safety": {
+          "title": "Seguridad",
+          "content": "Siempre consulte a su médico antes de tomar cualquier medicamento. La calculadora tiene únicamente fines informativos y no reemplaza el consejo médico."
+        },
+        "advantages": {
+          "title": "Ventajas",
+          "content": "Cálculo preciso, soporte para diferentes unidades de medida, advertencias sobre exceso de dosis, interfaz multilingüe."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo se calcula la dosis por peso?",
+              "a": "La dosis se calcula multiplicando el peso corporal (en kg) por la dosis por kilogramo de peso (mg/kg), luego multiplicando el resultado por el número de dosis por día. Fórmula: Dosis única = Peso corporal × Dosis por kg; Dosis diaria = Dosis única × Número de dosis."
+            },
+            {
+              "q": "¿Se puede utilizar para niños?",
+              "a": "Sí, los niños pueden utilizar la calculadora, pero con precaución. Para los niños, es especialmente importante utilizar las dosis especiales para niños indicadas en las instrucciones del medicamento y asegúrese de consultar con un pediatra. El cuerpo de los niños es más sensible a los medicamentos y una dosis incorrecta puede ser peligrosa."
+            },
+            {
+              "q": "¿Qué hacer si se excede la dosis?",
+              "a": "Si la dosis calculada supera la dosis máxima diaria indicada en la calculadora, no tome el medicamento bajo ningún concepto sin consultar a un médico. Asegúrese de consultar a un especialista para ajustar su régimen de tratamiento. Superar la dosis máxima es peligroso para la salud."
+            },
+            {
+              "q": "¿Qué tan precisos son los cálculos de la calculadora?",
+              "a": "La calculadora realiza cálculos matemáticos precisos basados ​​en los datos ingresados. Sin embargo, el resultado depende de la exactitud de los datos introducidos (peso corporal, dosis por kg). La calculadora no tiene en cuenta las características individuales del cuerpo, enfermedades hepáticas, renales y otros factores. Consulte siempre a su médico."
+            },
+            {
+              "q": "¿Puedo usar una calculadora en lugar de consultar a un médico?",
+              "a": "¡No! La calculadora tiene únicamente fines informativos y no reemplaza el consejo médico. Sólo un médico puede tener en cuenta todos los factores (estado de salud, otros medicamentos, contraindicaciones) y prescribir la dosis correcta. La automedicación es peligrosa para la salud."
+            },
+            {
+              "q": "¿Cómo medir correctamente el peso corporal para calcularlo?",
+              "a": "El peso corporal debe medirse en una báscula precisa, sin ropa o con un mínimo de ropa ligera, por la mañana, con el estómago vacío. Pésese a la misma hora del día para mayor precisión. Para un cálculo preciso, utilice el peso actual, no el anterior."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre una dosis única y una diaria?",
+              "a": "Una dosis única es la cantidad de medicamento que se debe tomar a la vez. La dosis diaria es la cantidad total de medicamento que se debe tomar durante todo el día (la suma de todas las dosis únicas). Por ejemplo, si una dosis única es de 500 mg y se toma 3 veces al día, entonces la dosis diaria = 500 × 3 = 1500 mg."
+            },
+            {
+              "q": "¿Cuál es la dosis por kilogramo?",
+              "a": "La dosis por kilogramo (mg/kg) es la cantidad de miligramos de medicamento necesarios por kilogramo de peso corporal. Por ejemplo, una dosis de 20 mg/kg significa que por cada kilogramo de peso se necesitan 20 mg del medicamento. Para una persona de 70 kg esto sería 70 x 20 = 1400 mg."
+            },
+            {
+              "q": "¿Cómo convertir libras a kilogramos?",
+              "a": "1 libra = 0,453592 kg (aproximadamente 0,454 kg). Para traducir: Peso en kg = Peso en libras × 0,454. Por ejemplo, 150 libras = 150 × 0,454 = 68,1 kg. La calculadora tiene una función para cambiar unidades de medida."
+            },
+            {
+              "q": "¿Se puede utilizar para personas mayores?",
+              "a": "Sí, puedes usarlo, pero con especial atención. Los adultos mayores suelen tener una función renal y hepática disminuida, lo que afecta la eliminación del fármaco. Las dosis pueden requerir ajustes. Asegúrese de consultar a un médico que tendrá en cuenta su edad y estado de salud."
+            },
+            {
+              "q": "¿Qué pasa si me olvidé de una dosis de medicamento?",
+              "a": "Si omite una dosis, generalmente no tome una dosis doble para compensar la dosis omitida. Continúe tomando como de costumbre. Si ha omitido muchas dosis o no está seguro, consulte a su médico. No aumente la dosis por su cuenta."
+            },
+            {
+              "q": "¿Con qué frecuencia puedo usar la calculadora?",
+              "a": "La calculadora se puede utilizar tantas veces como sea necesario para comprobar las dosis de diferentes medicamentos. Sin embargo, recuerde que la dosis debe ser prescrita por un médico y que la calculadora sirve únicamente para comprobarla y comprenderla. No cambie la dosis usted mismo según los cálculos."
+            },
+            {
+              "q": "¿La calculadora tiene en cuenta las interacciones con otros medicamentos?",
+              "a": "No, la calculadora no tiene en cuenta las interacciones con otros medicamentos que toma. Las interacciones pueden afectar la eficacia y seguridad de la dosis. Sólo un médico puede tener en cuenta todos los medicamentos que está tomando y prescribir una dosis segura."
+            },
+            {
+              "q": "¿Se puede utilizar en mujeres embarazadas y lactantes?",
+              "a": "Para las mujeres embarazadas y lactantes, las dosis suelen ser diferentes y requieren atención especial. Muchos medicamentos están contraindicados durante el embarazo y la lactancia. Asegúrese de consultar con su médico, quien tendrá en cuenta estos factores y le recetará una dosis segura o un tratamiento alternativo."
+            },
+            {
+              "q": "¿Qué hacer si la dosis por kg no está indicada en las instrucciones?",
+              "a": "Si no se indica la dosis por kg, entonces el medicamento tiene una dosis fija que no depende del peso. En este caso la calculadora no sirve. Utilice la dosis indicada en las instrucciones o prescrita por su médico. No todos los medicamentos se dosifican según el peso."
+            },
+            {
+              "q": "¿Cómo se tiene en cuenta la función renal en el cálculo?",
+              "a": "La calculadora no tiene en cuenta la función renal. En caso de enfermedad renal, se debe reducir la dosis de muchos medicamentos, ya que son eliminados por los riñones más lentamente. Si tiene problemas renales, asegúrese de consultar a su médico para ajustar la dosis."
+            },
+            {
+              "q": "¿Cómo se tiene en cuenta la función hepática en el cálculo?",
+              "a": "La calculadora no tiene en cuenta la función hepática. En caso de enfermedades hepáticas, el metabolismo de los fármacos se altera y es necesario ajustar las dosis. En caso de enfermedades hepáticas, el médico debe ajustar la dosis teniendo en cuenta el estado del hígado."
+            },
+            {
+              "q": "¿Se puede utilizar en animales?",
+              "a": "La calculadora está diseñada para personas. Para los animales, las dosis pueden variar significativamente. No utilice una calculadora para calcular las dosis para animales; comuníquese con un veterinario que conozca los detalles de la dosificación de medicamentos para animales."
+            },
+            {
+              "q": "¿Cuál es la dosis máxima diaria?",
+              "a": "La dosis máxima diaria es la cantidad máxima permitida de medicamento que se puede tomar al día sin riesgo para la salud. Superar esta dosis es peligroso y puede provocar una sobredosis y efectos secundarios. La calculadora avisa si se supera la dosis máxima."
+            },
+            {
+              "q": "¿Cómo tener en cuenta la edad al calcular la dosis?",
+              "a": "La calculadora tiene en cuenta el peso corporal, pero no directamente la edad. Sin embargo, en los niños y los adultos mayores, el peso corporal a menudo se correlaciona con la edad, y los cálculos del peso explican indirectamente estas diferencias. Para la dosificación exacta, el médico debe tener en cuenta la edad por separado."
+            },
+            {
+              "q": "¿Puedo dividir la tableta si la dosis calculada es menor?",
+              "a": "No todas las tabletas se pueden dividir, depende de la forma de liberación. Las tabletas recubiertas, las cápsulas y las tabletas de liberación modificada generalmente no se pueden dividir. Si necesita una dosis más baja, consulte a su médico o farmacéutico para ver si existe algún medicamento con la dosis adecuada o una forma de dosificación para dividir."
+            },
+            {
+              "q": "¿Cómo recalcular la dosis al cambiar de peso?",
+              "a": "Si el peso cambia, se debe volver a calcular la dosis: ingrese el nuevo peso en la calculadora con los mismos parámetros de dosificación. Si pierde o aumenta de peso, especialmente durante el tratamiento a largo plazo, consulte a su médico para volver a calcular su dosis según su nuevo peso."
+            },
+            {
+              "q": "¿La calculadora tiene en cuenta la tolerancia individual?",
+              "a": "No, la calculadora no tiene en cuenta la tolerancia individual al fármaco, reacciones alérgicas, enfermedades concomitantes ni características genéticas del metabolismo. Sólo un médico puede tener en cuenta todos estos factores y prescribir una dosis segura y eficaz."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para todo tipo de medicamentos?",
+              "a": "La calculadora sólo es adecuada para medicamentos dosificados según el peso corporal (mg/kg). Muchos medicamentos tienen una dosis fija que no depende del peso. Además, algunos medicamentos requieren métodos de cálculo especiales (por ejemplo, quimioterapia). Utilice la calculadora sólo para medicamentos con dosis por kg."
+            },
+            {
+              "q": "¿Cómo afecta la frecuencia de recepción al cálculo?",
+              "a": "La frecuencia de dosificación determina cuántas veces al día debe tomar el medicamento. Afecta la dosis diaria: cuanto más a menudo lo tomes, mayor será la dosis diaria. Por ejemplo, con una dosis única de 500 mg: 1 vez al día = 500 mg/día, 2 veces = 1000 mg/día, 3 veces = 1500 mg/día."
+            },
+            {
+              "q": "¿Qué hacer si la dosis calculada no corresponde a la forma de liberación disponible?",
+              "a": "Si la dosis calculada no coincide con las formas farmacéuticas disponibles (por ejemplo, necesita 375 mg, pero las tabletas son solo de 250 o 500 mg), no intente ajustar la dosis usted mismo. Comuníquese con su médico; él seleccionará la forma adecuada o ajustará el régimen de dosificación."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para dosis profilácticas?",
+              "a": "Sí, la calculadora se puede utilizar para calcular las dosis profilácticas si están indicadas en mg/kg. Sin embargo, las dosis preventivas a menudo difieren de las terapéuticas y deben ser recetadas por un médico, teniendo en cuenta los factores de riesgo individuales y el estado de salud."
+            },
+            {
+              "q": "¿Cómo contabilizar los trastornos digestivos?",
+              "a": "La calculadora no tiene en cuenta los trastornos digestivos que pueden afectar la absorción de medicamentos. Si hay problemas con el tracto gastrointestinal (úlceras, inflamación, cirugía), la absorción puede verse afectada y es necesario ajustar la dosis. Discuta esto con su médico."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para medicamentos intravenosos?",
+              "a": "La calculadora puede calcular la dosis, pero los medicamentos intravenosos requieren un cuidado especial y una administración profesional. Nunca administre usted mismo medicamentos intravenosos. Las inyecciones deben ser realizadas por personal médico, incluso si conoce la dosis."
+            },
+            {
+              "q": "¿Qué pasa si las instrucciones contradicen el cálculo?",
+              "a": "Siga siempre las instrucciones del medicamento y la prescripción médica. Si los cálculos de la calculadora contradicen las instrucciones o la prescripción médica, utilice datos oficiales. La calculadora es una herramienta auxiliar y no sustituye al consejo médico."
+            }
+          ]
+        }
+      },
+      "breadcrumbs": {
+        "category": "Salud"
+      }
+    },
+    "ideal-weight": {
+      "title": "Calculadora de peso ideal",
+      "description": "Cálculo del peso ideal mediante diversas fórmulas basadas en altura, sexo y edad.",
+      "breadcrumbs": {
+        "category": "Salud"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "gender": "Piso",
+        "height": "Altura (cm)",
+        "age": "Edad (años)",
+        "formula": "Fórmula de cálculo",
+        "calculate": "Calcular",
+        "reset": "Reiniciar",
+        "genders": {
+          "male": "Masculino",
+          "female": "Femenino"
+        },
+        "formulas": {
+          "broca": "la fórmula de broca",
+          "lorentz": "fórmula de lorenz",
+          "devine": "La fórmula de Devin",
+          "hamwi": "Fórmula Humvee",
+          "robinson": "fórmula robinson",
+          "miller": "la fórmula de miller"
+        },
+        "errors": {
+          "title": "Errores de datos",
+          "heightRequired": "Por favor indica tu altura",
+          "invalidHeight": "La altura debe ser de 100 a 250 cm.",
+          "ageRequired": "Por favor indica tu edad",
+          "invalidAge": "La edad debe estar entre 1 y 120 años."
+        }
+      },
+      "results": {
+        "title": "Resultados del cálculo",
+        "idealWeight": "peso ideal",
+        "weightRange": "rango de peso",
+        "currentWeight": "Peso actual",
+        "difference": "Diferencia",
+        "formulaUsed": "Fórmula utilizada",
+        "recommendations": "Recomendaciones",
+        "placeholder": "Ingrese los parámetros para el cálculo"
+      },
+      "hero": {
+        "accuracy": "Precisión de cálculo",
+        "multipleFormulas": "6 Fórmula",
+        "health": "Para la salud"
+      },
+      "features": {
+        "idealWeightCalculation": "Cálculo del peso ideal",
+        "multipleFormulas": "Varias fórmulas",
+        "personalizedResults": "Resultados personalizados",
+        "accuracy": "Alta precisión de cálculo"
+      },
+      "seo": {
+        "title": "Calculadora de peso ideal online - Cálculo del peso ideal mediante fórmulas | calc1.ru",
+        "description": "Calculadora de peso ideal online gratuita para calcular tu peso óptimo en función de la altura, el sexo y la edad. Admite 6 fórmulas diferentes: Brock, Lorenz, Devin, Humvee, Robinson, Miller. Ayuda a determinar el peso saludable.",
+        "keywords": "calculadora de peso ideal, cálculo de peso ideal, peso ideal por altura, fórmula de Broca, fórmula de Lorenz, fórmula de Devin, fórmula Humvee, peso normal, peso saludable, peso ideal para hombres, peso ideal para mujeres, calculadora de peso en línea, cálculo de peso por altura, norma de peso, peso óptimo, peso correcto, calculadora de peso corporal, fórmula de peso ideal, cálculo de peso ideal en línea, peso normal de una persona, peso saludable para la altura, peso ideal por edad, calculadora de peso y altura, norma de peso por altura, calculadora de peso ideal, cálculo de peso normal",
+        "overview": {
+          "title": "Calculadora de peso ideal online",
+          "content": "Una calculadora de peso ideal en línea le ayudará a calcular su peso óptimo según la altura, el sexo y la edad. Admite 6 fórmulas de cálculo diferentes: Brock, Lorenz, Devin, Humvee, Robinson y Miller. Cada fórmula tiene en cuenta varios factores y da su propio resultado.",
+          "additionalContent": "Un peso ideal es aquel con el que una persona se siente cómoda y tiene riesgos mínimos para la salud. Las diferentes fórmulas tienen en cuenta diferentes factores: altura, sexo, edad, tipo de cuerpo. La fórmula de Brock es la más simple: Peso ideal = Altura - 100 (para hombres) o Altura - 110 (para mujeres). La fórmula de Lorentz es más precisa y tiene en cuenta el género. La calculadora muestra los resultados de todas las fórmulas para comparar.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo del peso ideal.",
+            "content": "Veamos ejemplos prácticos de cálculo del peso ideal para varios casos:",
+            "example1": {
+              "title": "Ejemplo 1: Hombre, altura 180 cm.",
+              "description": "Joven de estatura media.",
+              "input": "Género: Masculino\nAltura: 180 cm\nEdad: 30 años",
+              "calculation": "Broca: 180 - 100 = 80 kg\nLorenza: (180 - 100) - (180 - 150) / 4 = 80 - 7,5 = 72,5 kg\nDevin: 50 + 2,3 × (180 / 2,54 - 60) = 50 + 2,3 × 10,87 = 75 kg\nHumvees: 48 + 2,7 × (180 / 2,54 - 60) = 48 + 2,7 × 10,87 = 77,3 kg",
+              "result": "Peso ideal: 72-80 kg (según fórmula)",
+              "type": "Altura media",
+              "note": "Diferentes fórmulas dan resultados ligeramente diferentes, pero generalmente valores cercanos."
+            },
+            "example2": {
+              "title": "Ejemplo 2: Mujer, altura 165 cm",
+              "description": "Mujer de estatura media",
+              "input": "Género: Femenino\nAltura: 165 cm\nEdad: 28 años",
+              "calculation": "Broca: 165 - 110 = 55 kg\nLorenza: (165 - 100) - (165 - 150) / 2 = 65 - 7,5 = 57,5 kg\nDevin: 45,5 + 2,3 × (165 / 2,54 - 60) = 45,5 + 2,3 × 4,96 = 56,9 kg\nHumvees: 45,5 + 2,2 × (165 / 2,54 - 60) = 45,5 + 2,2 × 4,96 = 56,4 kg",
+              "result": "Peso ideal: 55-58 kg (según fórmula)",
+              "type": "Altura media",
+              "note": "El peso ideal de las mujeres suele ser menor que el de los hombres de la misma altura."
+            },
+            "example3": {
+              "title": "Ejemplo 3: Hombre alto, altura 195 cm.",
+              "description": "hombre alto",
+              "input": "Género: Masculino\nAltura: 195 cm\nEdad: 35 años",
+              "calculation": "Broca: 195 - 100 = 95 kg\nLorenza: (195 - 100) - (195 - 150) / 4 = 95 - 11,25 = 83,75 kg\nDevin: 50 + 2,3 × (195 / 2,54 - 60) = 50 + 2,3 × 16,77 = 88,6 kg\nHumvee: 48 + 2,7 × (195 / 2,54 - 60) = 48 + 2,7 × 16,77 = 93,3 kg",
+              "result": "Peso ideal: 84-95 kg (según fórmula)",
+              "type": "Alto",
+              "note": "Si eres alto, tu peso ideal es significativamente mayor"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Mujer baja, altura 155 cm.",
+              "description": "mujer bajita",
+              "input": "Género: Femenino\nAltura: 155 cm\nEdad: 25 años",
+              "calculation": "Broca: 155 - 110 = 45kg\nLorenza: (155 - 100) - (155 - 150) / 2 = 55 - 2,5 = 52,5 kg\nDevin: 45,5 + 2,3 × (155 / 2,54 - 60) = 45,5 + 2,3 × 1,02 = 47,8 kg\nHumvee: 45,5 + 2,2 × (155 / 2,54 - 60) = 45,5 + 2,2 × 1,02 = 47,7 kg",
+              "result": "Peso ideal: 45-53 kg (según fórmula)",
+              "type": "baja estatura",
+              "note": "Si eres bajito, tu peso ideal es menor"
+            },
+            "example5": {
+              "title": "Ejemplo 5: Hombre mayor, altura 175 cm.",
+              "description": "Hombre de mediana edad considerando la edad",
+              "input": "Género: Masculino\nAltura: 175 cm\nEdad: 55 años",
+              "calculation": "Broca: 175 - 100 = 75 kg\nLorenza: (175 - 100) - (175 - 150) / 4 = 75 - 6,25 = 68,75 kg\nDevin: 50 + 2,3 × (175 / 2,54 - 60) = 50 + 2,3 × 8,9 = 70,5 kg\nHumvees: 48 + 2,7 × (175 / 2,54 - 60) = 48 + 2,7 × 8,9 = 72 kg",
+              "result": "Peso ideal: 69-75 kg (según fórmula)",
+              "type": "mediana edad",
+              "note": "Algunas fórmulas tienen en cuenta la edad, otras no."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Comparación de fórmulas",
+              "description": "Comparar los resultados de diferentes fórmulas para una persona.",
+              "input": "Género: Femenino\nAltura: 170 cm\nEdad: 30 años",
+              "calculation": "Roto: 170 - 110 = 60 kg\nLorentsa: (170 - 100) - (170 - 150) / 2 = 70 - 10 kg\nDevin: 45,5 + 2,3 × (170 / 2,54 - 60) = 45,5 + 2,3 × 6,93 = 61,4 kg\nHamvi: 45,5 + 2,2 × (170 / 2,54 - 60) = 45,5 + 2,2 × 6,93 = 60,7 kg\nRobinson: 49 + 1,7 × (170 / 2,54 - 60) = 49 + 1,7 × 6,93 = 60,8 kg\nMolinero: 53,1 + 1,36 × (170 / 2,54 - 60) = 53,1 + 1,36 × 6,93 = 62,5 kg",
+              "result": "Peso ideal: 60-63 kg (la gama de fórmulas es pequeña)",
+              "type": "Comparación",
+              "note": "Todas las fórmulas dan resultados similares, lo que indica su fiabilidad."
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula el peso ideal?",
+          "content": "Calcular tu peso ideal implica varias fórmulas, cada una de las cuales tiene en cuenta diferentes factores para determinar tu peso óptimo.",
+          "broca": "Fórmula de Broca: Para hombres = Altura - 100, Para mujeres = Altura - 110",
+          "lorentz": "Fórmula de Lorenz: Para hombres = (Altura - 100) - (Altura - 150) / 4, Para mujeres = (Altura - 100) - (Altura - 150) / 2",
+          "devine": "Fórmula de Devin: Para hombres = 50 + 2,3 × (Altura en pulgadas - 60), Para mujeres = 45,5 + 2,3 × (Altura en pulgadas - 60)",
+          "hamwi": "Fórmula Humvee: Hombres = 48 + 2,7 × (Altura en pulgadas - 60), Mujeres = 45,5 + 2,2 × (Altura en pulgadas - 60)",
+          "robinson": "Fórmula de Robinson: Para hombres = 52 + 1,9 × (Altura en pulgadas - 60), Para mujeres = 49 + 1,7 × (Altura en pulgadas - 60)",
+          "miller": "Fórmula de Miller: Para hombres = 56,2 + 1,41 × (Altura en pulgadas - 60), Para mujeres = 53,1 + 1,36 × (Altura en pulgadas - 60)",
+          "steps": {
+            "parameters": "Ingresando parámetros: altura, sexo, edad",
+            "formula": "Seleccionar una fórmula de cálculo",
+            "calculation": "Cálculo del peso ideal mediante la fórmula seleccionada.",
+            "comparison": "Comparar los resultados de diferentes fórmulas."
+          }
+        },
+        "advantages": {
+          "title": "Beneficios de la Calculadora de Peso Ideal",
+          "content": "El uso de una calculadora de peso ideal ofrece muchas ventajas: cálculo preciso mediante varias fórmulas, comparación de resultados y planificación del peso.",
+          "accuracy": "Cálculo preciso utilizando fórmulas probadas",
+          "multipleFormulas": "6 fórmulas diferentes para comparar",
+          "personalized": "Resultados personalizados según sexo y edad.",
+          "convenience": "Pago cómodo y rápido"
+        },
+        "tips": {
+          "title": "Consejos para calcular tu peso ideal",
+          "content": "Para obtener un resultado preciso, sigue nuestras recomendaciones a la hora de calcular tu peso ideal.",
+          "height": "Indique su altura exacta en centímetros sin zapatos; esto es fundamental para un cálculo preciso.",
+          "formula": "Utilice varias fórmulas para comparar: diferentes fórmulas pueden producir resultados ligeramente diferentes",
+          "age": "Considere la edad: algunas fórmulas tienen en cuenta la edad al calcular",
+          "consultation": "Recuerda que el peso ideal es orientativo. Para una evaluación precisa, consulte a un médico o nutricionista."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre el peso ideal",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular tu peso ideal?",
+              "a": "El peso ideal se calcula mediante varias fórmulas basadas en la altura, el sexo y la edad. La fórmula de Broca más simple: Para hombres = Altura - 100, Para mujeres = Altura - 110. Las fórmulas más precisas tienen en cuenta factores adicionales."
+            },
+            {
+              "q": "¿Cuál es la fórmula de peso ideal más precisa?",
+              "a": "No existe una fórmula única y más precisa. Cada fórmula tiene sus propias características y tiene en cuenta diferentes factores. Se recomienda utilizar varias fórmulas y tomar el valor medio. La fórmula de Lorentz se considera una de las más precisas."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre las fórmulas de Broca y Lorentz?",
+              "a": "La fórmula de Brock es simple: Peso ideal = Altura - 100 (hombres) o Altura - 110 (mujeres). La fórmula de Lorenz es más precisa: Para hombres = (Altura - 100) - (Altura - 150) / 4, Para mujeres = (Altura - 100) - (Altura - 150) / 2. La fórmula de Lorenz da resultados más precisos para personas de estatura media."
+            },
+            {
+              "q": "¿La calculadora tiene en cuenta la edad?",
+              "a": "Algunas fórmulas (Devina, Humvee) tienen en cuenta parcialmente la edad mediante ajustes. Sin embargo, la mayoría de las fórmulas se basan principalmente en la altura y el género. Para un cálculo más preciso en función de la edad, se recomienda consultar con un médico."
+            },
+            {
+              "q": "¿Cuál es el peso ideal para un hombre de 180 cm de altura?",
+              "a": "Según la fórmula de Brock: 180 - 100 = 80 kg. Según la fórmula de Lorentz: (180 - 100) - (180 - 150) / 4 = 80 - 7,5 = 72,5 kg. Según la fórmula de Devin: 50 + 2,3 × (180 / 2,54 - 60) ≈ 75 kg. Normalmente, el peso ideal para un hombre de 180 cm es de 72 a 80 kg."
+            },
+            {
+              "q": "¿Cuál es el peso ideal para una mujer de 165 cm de altura?",
+              "a": "Según la fórmula de Brock: 165 - 110 = 55 kg. Según la fórmula de Lorentz: (165 - 100) - (165 - 150) / 2 = 65 - 7,5 = 57,5 ​​kg. Según la fórmula de Devin: 45,5 + 2,3 × (165 / 2,54 - 60) ≈ 57 kg. Normalmente, el peso ideal para una mujer de 165 cm es de 55 a 58 kg."
+            },
+            {
+              "q": "¿La edad afecta el peso ideal?",
+              "a": "Sí, a medida que envejece, su metabolismo se ralentiza y su peso normal puede aumentar ligeramente. Sin embargo, la mayoría de las fórmulas para el peso ideal no tienen en cuenta directamente la edad. Para tener en cuenta la edad se recomienda consultar con un médico o nutricionista."
+            },
+            {
+              "q": "¿Cuál es la fórmula de Devin?",
+              "a": "La fórmula de Devin es una fórmula para calcular el peso ideal que tiene en cuenta la altura en pulgadas. Para hombres: Peso ideal = 50 + 2,3 × (Altura en pulgadas - 60). Para mujeres: Peso ideal = 45,5 + 2,3 × (Altura en pulgadas - 60). La fórmula es popular en medicina."
+            },
+            {
+              "q": "¿Cuál es la fórmula del Humvee?",
+              "a": "La fórmula Humvee es otra fórmula para calcular tu peso ideal. Para hombres: Peso ideal = 48 + 2,7 × (Altura en pulgadas - 60). Para mujeres: Peso ideal = 45,5 + 2,2 × (Altura en pulgadas - 60). La fórmula da resultados cercanos a la fórmula de Devin."
+            },
+            {
+              "q": "¿Cómo calcular el peso ideal usando la fórmula de Lorentz?",
+              "a": "Fórmula de Lorenz: Para hombres = (Altura - 100) - (Altura - 150) / 4. Para mujeres = (Altura - 100) - (Altura - 150) / 2. Por ejemplo, un hombre mide 180 cm: (180 - 100) - (180 - 150) / 4 = 80 - 7,5 = 72,5 kg."
+            },
+            {
+              "q": "¿Es posible utilizar la calculadora para niños?",
+              "a": "Las fórmulas para el peso ideal están destinadas a adultos (a partir de 18 años). Para niños y adolescentes se utilizan otros métodos de cálculo que tienen en cuenta la edad, el sexo y las etapas de desarrollo. Para los niños se recomienda consultar con un pediatra."
+            },
+            {
+              "q": "¿El tipo de cuerpo afecta el peso ideal?",
+              "a": "Sí, tu tipo de cuerpo (asténico, normosténico, hiperesténico) afecta tu peso ideal. Las personas con huesos anchos (hiperstenias) pueden tener sobrepeso y aun así estar sanas. Las fórmulas de peso ideal dan valores promedio."
+            },
+            {
+              "q": "¿Qué es el peso normal?",
+              "a": "El peso normal es el rango de peso en el que una persona tiene riesgos mínimos para la salud. El peso normal suele estar dentro del ±10% del peso ideal. Por ejemplo, con un peso ideal de 70 kg, el peso normal es de 63 a 77 kg."
+            },
+            {
+              "q": "¿Cómo calcular el rango de peso normal?",
+              "a": "Rango de Peso Normal = Peso Ideal ± 10%. Por ejemplo, con un peso ideal de 70 kg: Mínimo = 70 × 0,9 = 63 kg, Máximo = 70 × 1,1 = 77 kg. El peso normal es de 63 a 77 kg."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre peso ideal y normal?",
+              "a": "El peso ideal es el peso óptimo para una persona en particular. El peso normal es el rango de peso (±10% del ideal) en el que una persona se considera sana. El peso normal tiene un rango más amplio que el peso ideal."
+            },
+            {
+              "q": "¿Cómo calcular el peso ideal para deportistas?",
+              "a": "Para los atletas, las fórmulas de peso ideal pueden ser inexactas porque tienen un mayor porcentaje de masa muscular. Los deportistas pueden pesar por encima de su peso ideal pero aun así tener un porcentaje de grasa corporal bajo. Para los deportistas, se recomienda consultar con un entrenador o médico deportivo."
+            },
+            {
+              "q": "¿La calculadora tiene en cuenta la masa muscular?",
+              "a": "No, las fórmulas de peso ideal no tienen en cuenta la masa muscular. Se basan en la altura, el sexo y, a veces, la edad. Para las personas con músculos desarrollados (atletas, culturistas), se puede subestimar el peso ideal según las fórmulas."
+            },
+            {
+              "q": "¿Con qué frecuencia debes comprobar tu peso ideal?",
+              "a": "El peso ideal permanece relativamente constante después de la edad adulta y al final del crecimiento (generalmente después de los 18 a 20 años). Puedes comprobarlo cada pocos meses o si hay cambios significativos en el peso."
+            },
+            {
+              "q": "¿Qué debo hacer si mi peso es muy diferente a mi peso ideal?",
+              "a": "Si su peso difiere significativamente de su peso ideal (más del 20%), se recomienda consultar con un médico o nutricionista. Le ayudarán a crear un plan para normalizar su peso, teniendo en cuenta sus características de salud individuales."
+            },
+            {
+              "q": "¿Es posible alcanzar tu peso ideal rápidamente?",
+              "a": "La pérdida o el aumento rápido de peso pueden ser perjudiciales para su salud. Se recomienda un cambio de peso gradual: 0,5-1 kg por semana. Los cambios rápidos pueden provocar problemas metabólicos y de salud."
+            },
+            {
+              "q": "¿Cómo calcular el peso ideal durante el embarazo?",
+              "a": "Durante el embarazo, el peso aumenta debido al feto, la placenta, el líquido amniótico y otros factores. Las fórmulas para el peso ideal no están destinadas a mujeres embarazadas. Se recomienda la consulta con un ginecólogo para el control de peso durante el embarazo."
+            },
+            {
+              "q": "¿La altura afecta el peso ideal?",
+              "a": "Sí, la altura es el factor principal para calcular tu peso ideal. Cuanto mayor sea tu altura, mayor será tu peso ideal. Todas las fórmulas tienen en cuenta el crecimiento como parámetro principal."
+            },
+            {
+              "q": "¿Qué fórmula es mejor para personas altas?",
+              "a": "Para personas altas (más de 190 cm), las fórmulas de Lorenz, Devin y Humvee suelen dar resultados más precisos que la sencilla fórmula de Broca. La fórmula de Broca puede sobrestimar el peso ideal de las personas altas."
+            },
+            {
+              "q": "¿Qué fórmula es mejor para personas de baja estatura?",
+              "a": "Para personas de baja estatura (menos de 160 cm), todas las fórmulas dan resultados relativamente similares. La fórmula de Lorentz puede ser un poco más precisa ya que tiene en cuenta ajustes para diferentes alturas."
+            },
+            {
+              "q": "¿Cómo calcular el peso ideal para personas mayores?",
+              "a": "Para las personas mayores (mayores de 65 años), el peso ideal puede ser ligeramente mayor, ya que la masa muscular disminuye con la edad. Sin embargo, las fórmulas de peso ideal siguen siendo las mismas. Se recomienda consultar a un médico para tener en cuenta las características relacionadas con la edad."
+            },
+            {
+              "q": "¿Qué es el índice de masa corporal (IMC) y cómo se relaciona con el peso ideal?",
+              "a": "IMC = Peso / (Estatura en metros)². El peso ideal corresponde a un IMC en el rango de 18,5-24,9 (peso normal). El peso ideal se puede calcular a partir del IMC: Peso = IMC × (Altura en metros)². Por ejemplo, con una altura de 1,75 m y un IMC de 22: Peso = 22 × 3,0625 = 67,4 kg."
+            },
+            {
+              "q": "¿Cómo tener en cuenta el porcentaje de grasa a la hora de calcular el peso ideal?",
+              "a": "Las fórmulas de peso ideal no tienen en cuenta directamente el porcentaje de grasa corporal. Para una valoración más precisa, se recomienda medir el porcentaje de grasa (calibradores, bioimpedancia) y tener en cuenta la masa muscular. Porcentaje normal de grasa corporal: hombres 10-20%, mujeres 18-28%."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para planificar mi dieta?",
+              "a": "Sí, una calculadora de peso ideal puede ayudarle a determinar su objetivo dietético. Sin embargo, para crear un plan de nutrición y ejercicio, se recomienda consultar con un nutricionista o preparador físico."
+            },
+            {
+              "q": "¿Cómo calcular el peso ideal de personas con amputaciones?",
+              "a": "Para las personas con amputaciones, se utilizan fórmulas especiales teniendo en cuenta las partes del cuerpo amputadas. Las fórmulas de peso ideal no tienen en cuenta las amputaciones. Se recomienda consultar a un médico para un cálculo preciso."
+            },
+            {
+              "q": "¿La herencia afecta el peso ideal?",
+              "a": "Sí, la herencia afecta el tipo de cuerpo, el metabolismo y la tendencia a ganar peso. Sin embargo, las fórmulas de peso ideal se basan en promedios y no tienen en cuenta la herencia. Para tener en cuenta los factores hereditarios, se recomienda consultar con un médico."
+            },
+            {
+              "q": "¿Cómo calcular el peso ideal para la diabetes?",
+              "a": "Para las personas con diabetes, el control del peso es especialmente importante. Se pueden utilizar fórmulas de peso ideal, pero se deben tener en cuenta las características individuales de la enfermedad. Se recomienda consultar a un endocrinólogo para crear un plan de normalización de peso."
+            },
+            {
+              "q": "¿Cuál es la fórmula de Robinson?",
+              "a": "La fórmula de Robinson es otra fórmula para calcular el peso ideal. Para hombres: Peso ideal = 52 + 1,9 × (Altura en pulgadas - 60). Para mujeres: Peso ideal = 49 + 1,7 × (Altura en pulgadas - 60). La fórmula da resultados cercanos a la fórmula de Devin."
+            },
+            {
+              "q": "¿Cuál es la fórmula de Miller?",
+              "a": "La fórmula de Miller es una fórmula para calcular el peso ideal, desarrollada en 1983. Para hombres: Peso ideal = 56,2 + 1,41 × (Altura en pulgadas - 60). Para mujeres: Peso ideal = 53,1 + 1,36 × (Altura en pulgadas - 60). La fórmula se considera más precisa para la gente moderna."
+            },
+            {
+              "q": "¿Cómo comparar los resultados de diferentes fórmulas?",
+              "a": "Se recomienda calcular tu peso ideal utilizando varias fórmulas y tomar el valor o rango promedio. Si los resultados varían mucho (más de 5 kg), puede que valga la pena consultar con tu médico para determinar la fórmula más adecuada."
+            },
+            {
+              "q": "¿Es posible utilizar el peso ideal como único criterio de salud?",
+              "a": "No, el peso ideal es sólo uno de los indicadores. También son importantes el porcentaje de grasa, la masa muscular, el bienestar general, la actividad física y la nutrición. Para evaluar completamente su salud, se recomienda un examen completo."
+            }
+          ]
+        }
+      }
+    },
+    "blood-pressure": {
+      "seo": {
+        "howTo": {
+          "title": "Cómo controlar la presión arterial",
+          "description": "Instrucciones paso a paso para usar una calculadora de presión.",
+          "steps": {}
+        }
+      }
+    },
+    "bmihealth": {
+      "seo": {
+        "howTo": {
+          "title": "Cómo calcular el índice de masa corporal (IMC)",
+          "description": "Instrucciones paso a paso para usar la calculadora de IMC",
+          "steps": {}
+        }
+      }
+    },
+    "heart-rate": {
+      "seo": {
+        "howTo": {
+          "title": "Cómo calcular zonas de frecuencia cardíaca para entrenar",
+          "description": "Instrucciones paso a paso para usar la calculadora de frecuencia cardíaca",
+          "steps": {}
+        }
+      }
+    }
+  }
 }
-
-
-

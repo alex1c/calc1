@@ -1,6 +1,2135 @@
 {
-	"calculators": {}
+  "calculators": {
+    "basic": {
+      "title": "Einfacher Operationsrechner",
+      "description": "Online-Rechner für Addition, Subtraktion, Multiplikation und Division.",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "number1": "Erste Nummer",
+        "number2": "Zweite Nummer",
+        "operation": "Betrieb",
+        "operations": {
+          "add": "Zusatz (+)",
+          "subtract": "Subtraktion (−)",
+          "multiply": "Multiplikation (×)",
+          "divide": "Teilung (÷)"
+        },
+        "calculate": "Berechnen",
+        "reset": "Zurücksetzen"
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "result": "Ergebnis",
+        "error_div_zero": "Eine Division durch Null ist unmöglich",
+        "placeholder": "Zahlen eingeben und Vorgang auswählen"
+      },
+      "seo": {
+        "title": "Einfacher Online-Rechner für mathematische Operationen",
+        "description": "Kostenloser Online-Rechner für Grundrechenarten: Addition, Subtraktion, Multiplikation und Division.",
+        "overview": {
+          "title": "Über den Rechner für einfache Operationen",
+          "content": "Ein Online-Rechner für einfache mathematische Operationen hilft Ihnen, schnell grundlegende Berechnungen durchzuführen: Addition, Subtraktion, Multiplikation und Division. Praktisch für Studenten, Buchhalter und alle, die direkt im Browser rechnen müssen.",
+          "examples": {
+            "title": "Beispiele für Berechnungen",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Taschenrechners für verschiedene mathematische Operationen an:",
+            "example1": {
+              "title": "Zahlen hinzufügen",
+              "description": "Erste Zahl: 25, zweite Zahl: 17",
+              "calculation": "25 + 17 = 42",
+              "result": "Ergebnis: 42"
+            },
+            "example2": {
+              "title": "Zahlen subtrahieren",
+              "description": "Minuend: 100, Subtrahend: 35",
+              "calculation": "100 - 35 = 65",
+              "result": "Ergebnis: 65"
+            },
+            "example3": {
+              "title": "Zahlen multiplizieren",
+              "description": "Erster Multiplikator: 12, zweiter Multiplikator: 8",
+              "calculation": "12 × 8 = 96",
+              "result": "Ergebnis: 96"
+            },
+            "example4": {
+              "title": "Zahlen dividieren",
+              "description": "Dividende: 144, Divisor: 12",
+              "calculation": "144 ÷ 12 = 12",
+              "result": "Ergebnis: 12"
+            },
+            "example5": {
+              "title": "Operationen mit Dezimalzahlen",
+              "description": "Addition: 3,5 + 2,7",
+              "calculation": "3,5 + 2,7 = 6,2",
+              "result": "Ergebnis: 6.2"
+            },
+            "example6": {
+              "title": "Operationen mit großen Zahlen",
+              "description": "Multiplikation: 1250 × 4",
+              "calculation": "1250 × 4 = 5000",
+              "result": "Ergebnis: 5000"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie mathematische Operationen funktionieren",
+          "content": "Der Rechner führt vier grundlegende arithmetische Operationen aus: Addition (+), Subtraktion (-), Multiplikation (×) und Division (÷). Alle Berechnungen werden mit hoher Präzision durchgeführt und unterstützen sowohl ganze Zahlen als auch Dezimalzahlen."
+        },
+        "features": {
+          "title": "Grundfunktionen",
+          "keyboard": "Tastaturunterstützung",
+          "keyboardDesc": "Möglichkeit zur Eingabe von Zahlen und Operationen über die Tastatur für schnelle Berechnungen",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Responsive Design für einfache Nutzung auf Smartphones und Tablets",
+          "multilingual": "Mehrsprachig",
+          "multilingualDesc": "Unterstützt Russisch, Englisch, Spanisch und Deutsch",
+          "precision": "Hohe Genauigkeit",
+          "precisionDesc": "Genaue Berechnungen mit Dezimalunterstützung"
+        },
+        "advantages": {
+          "title": "Vorteile",
+          "content": "Schnelle und genaue Berechnungen, einfache Benutzeroberfläche, Tastaturunterstützung, mehrsprachig, kostenlose Nutzung."
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Verwenden Sie die Eingabetaste für schnelle Berechnungen, überprüfen Sie, ob die Zahlen korrekt eingegeben wurden, und verwenden Sie einen Punkt für Dezimalzahlen."
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie verwende ich einen Taschenrechner zur Addition?",
+              "a": "Geben Sie die erste Zahl ein, wählen Sie die Additionsoperation (+), geben Sie die zweite Zahl ein und drücken Sie „Berechnen“ oder drücken Sie die Eingabetaste. Zum Beispiel: 15 + 25 = 40."
+            },
+            {
+              "q": "Kann ich zum Subtrahieren einen Taschenrechner verwenden?",
+              "a": "Ja, der Rechner unterstützt die Subtraktionsoperation (-). Geben Sie den Minuend ein, wählen Sie die Subtraktionsoperation aus, geben Sie den Subtrahend ein und erhalten Sie das Ergebnis."
+            },
+            {
+              "q": "Wie multipliziert man Zahlen auf einem Taschenrechner?",
+              "a": "Um zu multiplizieren, geben Sie den ersten Faktor ein, wählen Sie die Multiplikationsoperation (×), geben Sie den zweiten Faktor ein und klicken Sie auf „Berechnen“. Zum Beispiel: 12 × 8 = 96."
+            },
+            {
+              "q": "Was tun bei einer Division durch Null?",
+              "a": "Der Rechner ist vor Division durch Null geschützt. Wenn Sie versuchen, durch Null zu dividieren, erhalten Sie die Fehlermeldung „Division durch Null ist nicht möglich“."
+            },
+            {
+              "q": "Unterstützt der Rechner Dezimalzahlen?",
+              "a": "Ja, der Rechner unterstützt Operationen mit Dezimalzahlen. Verwenden Sie einen Punkt, um die ganzen und gebrochenen Teile zu trennen. Zum Beispiel: 3,5 + 2,7 = 6,2."
+            },
+            {
+              "q": "Kann ich die Tastatur zur Eingabe nutzen?",
+              "a": "Ja, der Rechner unterstützt Tastatureingaben. Sie können Zahlen eingeben und mit der Eingabetaste die Berechnung durchführen."
+            },
+            {
+              "q": "Wie funktioniert der Rechner auf mobilen Geräten?",
+              "a": "Der Rechner ist für mobile Geräte geeignet und verfügt über eine benutzerfreundliche Oberfläche und Unterstützung für die Touch-Eingabe."
+            },
+            {
+              "q": "In welchen Sprachen ist der Rechner verfügbar?",
+              "a": "Der Rechner ist in vier Sprachen verfügbar: Russisch, Englisch, Spanisch und Deutsch."
+            },
+            {
+              "q": "Kann ich einen Taschenrechner für die Buchhaltung in der Schule verwenden?",
+              "a": "Ja, der Taschenrechner eignet sich hervorragend für Schulberechnungen, Hausaufgaben und die Überprüfung von Rechenoperationen."
+            },
+            {
+              "q": "Wie kann man die Richtigkeit von Berechnungen überprüfen?",
+              "a": "Um dies zu überprüfen, können Sie den umgekehrten Vorgang durchführen oder einen Taschenrechner verwenden, um mit denselben Zahlen neu zu rechnen."
+            },
+            {
+              "q": "Unterstützt der Rechner negative Zahlen?",
+              "a": "Ja, der Rechner unterstützt Operationen mit negativen Zahlen. Zum Beispiel: -5 + 3 = -2 oder 10 - (-3) = 13."
+            },
+            {
+              "q": "Wie arbeite ich mit großen Zahlen?",
+              "a": "Der Rechner unterstützt Operationen mit großen Zahlen. Zum Beispiel: 1250 × 4 = 5000 oder 10000 ÷ 25 = 400."
+            },
+            {
+              "q": "Kann ich einen Taschenrechner für Buchhaltungsberechnungen verwenden?",
+              "a": "Ja, der Rechner eignet sich für einfache Buchhaltungsberechnungen, die Berechnung von Summen, Differenzen und anderen Grundoperationen."
+            },
+            {
+              "q": "Wie funktioniert die automatische Ergebnisformatierung?",
+              "a": "Der Rechner formatiert das Ergebnis automatisch, entfernt zusätzliche Nullen nach dem Dezimalpunkt und zeigt die Zahlen in einem praktischen Format an."
+            },
+            {
+              "q": "Kann ich zur Zinsberechnung einen Taschenrechner verwenden?",
+              "a": "Verwenden Sie Multiplikation und Division, um Prozentsätze zu berechnen. Zum Beispiel 20 % von 100: 100 × 0,2 = 20."
+            },
+            {
+              "q": "Wie arbeitet man mit Brüchen auf einem Taschenrechner?",
+              "a": "Um mit Brüchen zu arbeiten, wandeln Sie diese in die Dezimalform um. Zum Beispiel 1/2 = 0,5, dann verwenden Sie normale Operationen."
+            },
+            {
+              "q": "Unterstützt der Rechner Operationen mit Null?",
+              "a": "Ja, der Rechner verarbeitet Operationen mit Null korrekt. Zum Beispiel: 5 + 0 = 5, 5 × 0 = 0, aber eine Division durch Null ist nicht möglich."
+            },
+            {
+              "q": "Kann ich einen Taschenrechner verwenden, um meine Hausaufgaben zu überprüfen?",
+              "a": "Ja, der Taschenrechner eignet sich hervorragend zum Testen Ihrer Rechenleistung bei Hausaufgaben."
+            },
+            {
+              "q": "Wie funktioniert der Rechner im dunklen Theme?",
+              "a": "Der Rechner unterstützt ein dunkles Design mit angepassten Farben für eine komfortable Nutzung bei schlechten Lichtverhältnissen."
+            },
+            {
+              "q": "Kann ich die Fläche mit einem Taschenrechner berechnen?",
+              "a": "Um die Fläche zu berechnen, verwenden Sie die Multiplikationsoperation. Die Fläche eines Rechtecks ​​beträgt beispielsweise: Länge × Breite = Fläche."
+            },
+            {
+              "q": "Wie arbeitet man mit Zahlen in wissenschaftlicher Notation?",
+              "a": "Der Rechner verarbeitet große Zahlen automatisch und kann sie bei Bedarf in wissenschaftlicher Notation anzeigen."
+            },
+            {
+              "q": "Ist es möglich, das arithmetische Mittel mit einem Taschenrechner zu berechnen?",
+              "a": "Um das arithmetische Mittel zu berechnen, verwenden Sie die Operationen Addition und Division. Zum Beispiel der Durchschnitt der Zahlen 10, 20, 30: (10 + 20 + 30) ÷ 3 = 20."
+            },
+            {
+              "q": "Wie funktioniert ein Taschenrechner mit Zahlen unterschiedlicher Genauigkeit?",
+              "a": "Der Rechner ermittelt automatisch die Genauigkeit des Ergebnisses anhand der Genauigkeit der Eingabedaten und zeigt das Ergebnis mit der entsprechenden Genauigkeit an."
+            },
+            {
+              "q": "Ist es möglich, den Rechner zur Berechnung des Rabatts zu nutzen?",
+              "a": "Ja, verwenden Sie Multiplikations- und Subtraktionsoperationen, um Rabatte zu berechnen. Beispiel: 20 % Rabatt: Preis × 0,2 = Rabattbetrag, Preis – Rabatt = Gesamtpreis."
+            },
+            {
+              "q": "Wie arbeite ich mit Zahlen in verschiedenen Zahlensystemen?",
+              "a": "Der Rechner arbeitet mit Zahlen im dezimalen Zahlensystem. Um mit anderen Systemen zu arbeiten, wandeln Sie die Zahlen zunächst in Dezimalzahlen um."
+            },
+            {
+              "q": "Kann ich Proportionen mit einem Taschenrechner berechnen?",
+              "a": "Um Proportionen zu berechnen, verwenden Sie die Operationen Multiplikation und Division. Wenn beispielsweise 2 = 10, dann 3 = (3 × 10) ÷ 2 = 15."
+            },
+            {
+              "q": "Wie funktioniert ein Taschenrechner mit sehr kleinen Zahlen?",
+              "a": "Der Rechner unterstützt Operationen mit sehr kleinen Zahlen (Dezimalzahlen) und zeigt das Ergebnis entsprechend präzise an."
+            },
+            {
+              "q": "Kann ich einen Rechner zur Berechnung der Mehrwertsteuer verwenden?",
+              "a": "Zur Berechnung der Mehrwertsteuer verwenden Sie Multiplikations- und Additionsoperationen. Beispiel: Mehrwertsteuer 20 %: Betrag × 0,2 = Mehrwertsteuer, Betrag + Mehrwertsteuer = Gesamtbetrag."
+            },
+            {
+              "q": "Wie arbeitet man mit Zahlen in wissenschaftlicher Notation?",
+              "a": "Der Rechner verarbeitet Zahlen automatisch in wissenschaftlicher Notation und kann die Ergebnisse in einem praktischen Format anzeigen."
+            },
+            {
+              "q": "Kann ich die Zeit mit einem Taschenrechner berechnen?",
+              "a": "Um die Zeit zu berechnen, verwenden Sie Additions- und Subtraktionsoperationen. Beispiel: 2 Stunden 30 Minuten + 1 Stunde 45 Minuten = 4 Stunden 15 Minuten."
+            },
+            {
+              "q": "Wie funktioniert der Rechner mit Zahlen in verschiedenen Formaten?",
+              "a": "Der Rechner erkennt automatisch Zahlen in verschiedenen Formaten und wandelt sie für Berechnungen in eine Standardform um."
+            }
+          ]
+        }
+      }
+    },
+    "math_percent": {
+      "title": "Zinsrechner",
+      "description": "Mit einem Online-Prozentrechner können Sie schnell den Prozentsatz einer Zahl berechnen, den Prozentsatz ermitteln und eine Zahl um einen Prozentsatz erhöhen oder verringern.",
+      "find_percent_of_number": "Finden Sie den Prozentsatz einer Zahl",
+      "find_percent_of_number_desc": "Berechnen Sie, wie viel Prozent eine Zahl von einer anderen ist",
+      "what_percent_is": "Wie viel Prozent macht eine Zahl von einer anderen aus?",
+      "what_percent_is_desc": "Berechnen Sie den Prozentsatz zwischen zwei Zahlen",
+      "find_number_from_percent": "Finden Sie eine prozentuale Zahl",
+      "find_number_from_percent_desc": "Berechnen Sie die ursprüngliche Zahl, wenn der Prozentsatz und das Ergebnis bekannt sind",
+      "increase_or_decrease": "Erhöhen oder verringern Sie eine Zahl um einen Prozentsatz",
+      "increase_or_decrease_desc": "Addieren oder subtrahieren Sie einen Prozentsatz von einer Zahl",
+      "number": "Nummer",
+      "percentage": "Prozent",
+      "first_number": "Erste Nummer",
+      "second_number": "Zweite Nummer",
+      "part_value": "Teil",
+      "operation": "Betrieb",
+      "calculate": "Berechnen",
+      "calculating": "Berechnen wir...",
+      "result": "Ergebnis",
+      "increase": "Zunahme",
+      "decrease": "Verringern",
+      "errors": {
+        "error_title": "Rechenfehler",
+        "invalid_input": "Bitte geben Sie gültige Nummern ein",
+        "calculation_failed": "Rechenfehler. Überprüfen Sie die eingegebenen Daten."
+      },
+      "tips": {
+        "title": "Rat",
+        "enter_key": "Drücken Sie die Eingabetaste, um zu berechnen",
+        "auto_calculate": "Die Ergebnisse werden während der Eingabe automatisch aktualisiert",
+        "negative_numbers": "Negative Zahlen werden nicht unterstützt"
+      },
+      "seo": {
+        "title": "Online-Prozentrechner – Berechnen Sie schnell den Prozentsatz einer Zahl",
+        "description": "Einfacher Online-Prozentrechner: Berechnen Sie den Prozentsatz einer Zahl, finden Sie heraus, wie viel Prozent eine Zahl von einer anderen ist, oder erhöhen Sie eine Zahl um einen Prozentsatz. Verfügbar in 4 Sprachen.",
+        "overview": {
+          "title": "Über den Zinsrechner",
+          "content": "Ein Online-Prozentrechner hilft Ihnen, den Prozentsatz einer Zahl zu berechnen, den Prozentsatz herauszufinden und die Zahl in einen bestimmten Prozentsatz umzuwandeln. Geeignet für die Berechnung von Rabatten, Steuern, Gewinnen und anderen alltäglichen Aufgaben.",
+          "examples": {
+            "title": "Beispiele für Berechnungen",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Zinsrechners für verschiedene Aufgaben an:",
+            "example1": {
+              "title": "Prozentsatz der Anzahl",
+              "description": "Finden Sie 20 % der Zahl 500",
+              "calculation": "20 % von 500 = 500 × 0,20 = 100",
+              "result": "Ergebnis: 100"
+            },
+            "example2": {
+              "title": "Prozentsatz",
+              "description": "25 ist wie viel Prozent von 200?",
+              "calculation": "25 ÷ 200 × 100 % = 12,5 %",
+              "result": "Ergebnis: 12,5 %"
+            },
+            "example3": {
+              "title": "Anzahl in Prozent",
+              "description": "Wenn 15 % 30 sind, ermitteln Sie die ursprüngliche Zahl",
+              "calculation": "30 ÷ 0,15 = 200",
+              "result": "Ergebnis: 200"
+            },
+            "example4": {
+              "title": "Prozentual erhöhen",
+              "description": "Erhöhe 1000 um 15 %",
+              "calculation": "1000 + (1000 × 0,15) = 1000 + 150 = 1150",
+              "result": "Ergebnis: 1150"
+            },
+            "example5": {
+              "title": "Prozentuale Verringerung",
+              "description": "800 um 10 % verringern",
+              "calculation": "800 - (800 × 0,10) = 800 - 80 = 720",
+              "result": "Ergebnis: 720"
+            },
+            "example6": {
+              "title": "Komplexe Berechnung",
+              "description": "Produktpreis 2000₽, 20 % Rabatt, dann 18 % Steuer",
+              "calculation": "2000 - 20 % = 1600₽, dann 1600 + 18 % = 1888₽",
+              "result": "Endpreis: 1888₽"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie Zinsen berechnet werden",
+          "content": "Der Rechner verwendet Standardformeln zur Berechnung von Prozentsätzen: Prozentsatz der Zahl (Anzahl × Prozentsatz ÷ 100), Prozentsatz (Teil ÷ Ganzes × 100), Erhöhung/Verringerung um Prozentsatz (Anzahl ± Zahl × Prozentsatz ÷ 100)."
+        },
+        "features": {
+          "title": "Grundfunktionen",
+          "instant": "Sofortige Abrechnung",
+          "instantDesc": "Die Ergebnisse werden automatisch berechnet, während Sie Daten eingeben",
+          "multimode": "Mehrere Modi",
+          "multimodeDesc": "4 verschiedene Arten der Zinsberechnung in einem Rechner",
+          "precision": "Hohe Genauigkeit",
+          "precisionDesc": "Genaue Berechnungen mit Dezimalunterstützung",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Responsive Design für einfache Nutzung auf allen Geräten"
+        },
+        "advantages": {
+          "title": "Vorteile",
+          "content": "Schnelle und genaue Zinsberechnungen, einfache Benutzeroberfläche, Unterstützung verschiedener Berechnungsarten, mehrsprachig, kostenlose Nutzung."
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Verwenden Sie die Eingabetaste für schnelle Berechnungen, überprüfen Sie, ob die Zahlen korrekt eingegeben wurden, und verwenden Sie einen Punkt für Dezimalzahlen."
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man den Prozentsatz einer Zahl?",
+              "a": "Um den Prozentsatz einer Zahl zu berechnen, verwenden Sie die Formel: Zahl × Prozentsatz ÷ 100. Beispiel: 20 % von 500 = 500 × 20 ÷ 100 = 100."
+            },
+            {
+              "q": "Wie finde ich den Prozentsatz zweier Zahlen?",
+              "a": "Um den Prozentsatz zu ermitteln, verwenden Sie die Formel: (kleinere Zahl ÷ größere Zahl) × 100 %. Beispiel: 25 von 200 = (25 ÷ 200) × 100 % = 12,5 %."
+            },
+            {
+              "q": "Wie kann man eine Zahl um einen Prozentsatz erhöhen?",
+              "a": "Um eine Zahl um einen Prozentsatz zu erhöhen, verwenden Sie die Formel: Zahl + (Zahl × Prozentsatz ÷ 100). Erhöhen Sie beispielsweise 1000 um 15 % = 1000 + (1000 × 15 ÷ 100) = 1150."
+            },
+            {
+              "q": "Wie kann man eine Zahl um einen Prozentsatz reduzieren?",
+              "a": "Um eine Zahl um einen Prozentsatz zu verringern, verwenden Sie die Formel: Zahl – (Zahl × Prozentsatz ÷ 100). Reduzieren Sie beispielsweise 800 um 10 % = 800 – (800 × 10 ÷ 100) = 720."
+            },
+            {
+              "q": "Wie finde ich die ursprüngliche Zahl, wenn der Prozentsatz und das Ergebnis bekannt sind?",
+              "a": "Um die ursprüngliche Zahl zu ermitteln, verwenden Sie die Formel: Ergebnis ÷ (Prozentsatz ÷ 100). Wenn beispielsweise 15 % 30 sind, dann ist die ursprüngliche Zahl = 30 ÷ 0,15 = 200."
+            },
+            {
+              "q": "Ist es möglich, den Rechner zur Berechnung des Rabatts zu nutzen?",
+              "a": "Ja, der Rechner eignet sich hervorragend zur Berechnung von Rabatten. Verwenden Sie den Modus „Prozentsatz verringern“, um den ermäßigten Preis zu berechnen."
+            },
+            {
+              "q": "Wie berechnet man die Steuer mit einem Taschenrechner?",
+              "a": "Um die Steuer zu berechnen, verwenden Sie den Modus „Prozentsatz erhöhen“. Zum Beispiel für 20 % Mehrwertsteuer: Preis + 20 % = Preis mit Steuer."
+            },
+            {
+              "q": "Ist es möglich, den Gewinn in Prozent zu berechnen?",
+              "a": "Ja, verwenden Sie den „Prozentsatz“-Modus zur Berechnung der Rentabilität. Zum Beispiel ein Gewinn von 50.000 Rubel bei einem Umsatz von 200.000 Rubel = 25 %."
+            },
+            {
+              "q": "Wie arbeitet man mit Dezimalprozentsätzen?",
+              "a": "Der Rechner unterstützt Dezimalprozentsätze. Zum Beispiel 12,5 % von 1000 = 1000 × 12,5 ÷ 100 = 125."
+            },
+            {
+              "q": "Ist es möglich, Zinseszinsen zu berechnen?",
+              "a": "Für den Zinseszins verwenden Sie den Rechner Schritt für Schritt: Berechnen Sie zunächst den Prozentsatz des Betrags und addieren Sie ihn dann zum ursprünglichen Betrag."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz der Planerfüllung?",
+              "a": "Verwenden Sie den Modus „Prozentverhältnis“: tatsächliches Ergebnis ÷ geplanter Indikator × 100 %. Beispiel: Plan 1000, Fakt 850 = 85 %."
+            },
+            {
+              "q": "Kann ich die Kreditzinsen mit einem Rechner berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung der einfachen Zinsen für einen Kredit. Für den Zinseszins empfiehlt sich ein spezieller Kreditrechner."
+            },
+            {
+              "q": "Wie berechnet man den Wachstumsprozentsatz?",
+              "a": "Um das prozentuale Wachstum zu berechnen, verwenden Sie die Formel: ((neuer Wert – alter Wert) ÷ alter Wert) × 100 %. Beispiel: Wachstum von 100 auf 120 = 20 %."
+            },
+            {
+              "q": "Ist es möglich, den Prozentsatz des Betrags inklusive Steuern zu berechnen?",
+              "a": "Ja, berechnen Sie zuerst den Betrag mit Steuer (Erhöhung um Prozentsatz) und ermitteln Sie dann den Prozentsatz dieses Betrags."
+            },
+            {
+              "q": "Wie arbeite ich mit negativen Prozentsätzen?",
+              "a": "Negative Prozentsätze bedeuten einen Rückgang. Verwenden Sie den Modus „Um Prozent reduzieren“ mit einem positiven Prozentwert."
+            },
+            {
+              "q": "Ist es möglich, den Prozentsatz des Gehalts zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Einkommenssteuern, Rentenbeiträgen und anderen Gehaltsabzügen."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz des Einzahlungsbetrags?",
+              "a": "Verwenden Sie den Modus „Prozentsatz der Zahl“, um die Zinsen für die Einlage zu berechnen. Zum Beispiel 5 % pro Jahr von 100.000₽ = 5.000₽ pro Jahr."
+            },
+            {
+              "q": "Ist es möglich, einen Prozentsatz der Kosten eines Artikels zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Handelsspannen, Rabatten, Steuern und anderen Transaktionen mit Waren."
+            },
+            {
+              "q": "Wie berechnet man den Flächenprozentsatz?",
+              "a": "Verwenden Sie den Modus „Prozent der Zahl“, um einen Bruchteil der Fläche zu berechnen. Beispielsweise sind 30 % von 100 m² = 30 m²."
+            },
+            {
+              "q": "Ist es möglich, den Prozentsatz der Zeit zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Zeitanteilen. Beispiel: 25 % von 8 Stunden = 2 Stunden."
+            },
+            {
+              "q": "Wie berechnet man den Volumenprozentsatz?",
+              "a": "Verwenden Sie den Modus „Prozent der Zahl“, um einen Teil des Volumens zu berechnen. Beispielsweise sind 15 % von 1000 Litern = 150 Liter."
+            },
+            {
+              "q": "Ist es möglich, den Gewichtsanteil zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Gewichtsprozenten. Beispielsweise sind 10 % von 50 kg = 5 kg."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz der Menge?",
+              "a": "Verwenden Sie den Modus „Prozentsatz der Zahl“, um einen Teil einer Menge zu berechnen. Beispielsweise sind 20 % von 100 Stück = 20 Stück."
+            },
+            {
+              "q": "Ist es möglich, einen Prozentsatz des Bestellbetrags zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Rabatten, Steuern, Trinkgeldern und anderen Vorgängen anhand der Bestellmenge."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz der Dienstleistungskosten?",
+              "a": "Verwenden Sie den Rechner, um Steuern, Rabatte, Provisionen und andere Vorgänge mit den Kosten für Dienstleistungen zu berechnen."
+            },
+            {
+              "q": "Ist es möglich, den Prozentsatz des Einkommens zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Steuern, Beiträgen, Unterhaltszahlungen und anderen Abzügen vom Einkommen."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz der Ausgaben?",
+              "a": "Verwenden Sie den Rechner, um Ausgabenanteile, Ersparnisse, Mehrausgaben und andere Ausgabentransaktionen zu berechnen."
+            },
+            {
+              "q": "Ist es möglich, den Prozentsatz der Investition zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Anlagerenditen, Verlusten, Provisionen und anderen Anlagetransaktionen."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz des Umsatzes?",
+              "a": "Verwenden Sie den Rechner, um einen Teil des Umsatzes, der Marge, der Rentabilität und anderer Geschäftsindikatoren zu berechnen."
+            },
+            {
+              "q": "Ist es möglich, den Prozentsatz des Umsatzes zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Steuern auf Einnahmen, Provisionen, Rücklagen und anderen Transaktionen mit Einnahmen."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz des Gewinns?",
+              "a": "Berechnen Sie mit dem Rechner Steuern auf Gewinne, Dividenden, Reinvestitionen und andere Gewinntransaktionen."
+            },
+            {
+              "q": "Ist es möglich, einen Prozentsatz des Immobilienwertes zu berechnen?",
+              "a": "Ja, der Rechner eignet sich zur Berechnung von Grundsteuern, Maklerprovisionen, Versicherungen und anderen Immobilientransaktionen."
+            },
+            {
+              "q": "Wie berechnet man den Prozentsatz der Kosten eines Autos?",
+              "a": "Berechnen Sie mit dem Rechner Kfz-Steuern, Versicherungen, Leasing und andere Autotransaktionen."
+            }
+          ]
+        }
+      },
+      "results": {
+        "percent_of_number": "{percentage} % von {number} ist gleich {result}",
+        "what_percent": "{number1} ist {result} % von {number2}",
+        "number_from_percent": "Wenn {part} {percentage} % beträgt, ist die ursprüngliche Zahl {result}",
+        "increase_by_percent": "Das Erhöhen von {number} um {percentage} % ergibt {result}",
+        "decrease_by_percent": "Verringern Sie {number} um {percentage} %, erhalten Sie {result}"
+      },
+      "breadcrumbs": {
+        "category": "Mathematik"
+      }
+    },
+    "area": {
+      "title": "Flächenrechner",
+      "description": "Berechnen Sie online die Fläche eines Kreises, Quadrats oder Dreiecks. Ein einfacher und genauer Rechner mit Formeln.",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "selectFigure": "Wählen Sie eine Form aus",
+        "figureTypes": {
+          "circle": "Kreis",
+          "square": "Quadrat",
+          "triangle": "Dreieck"
+        },
+        "radius": "Radius (r)",
+        "side": "Seite (a)",
+        "base": "Basis(a)",
+        "height": "Höhe (h)",
+        "errors": {
+          "title": "Datenfehler",
+          "required": "Dieses Feld ist erforderlich",
+          "positive": "Der Wert muss positiv sein"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "area": "Quadrat",
+        "formula": "Formel",
+        "circleFormula": "S = π × r²",
+        "squareFormula": "S = a²",
+        "triangleFormula": "S = ½ × a × h",
+        "parametersUsed": "Verwendete Parameter",
+        "radius": "Radius",
+        "side": "Seite",
+        "base": "Grund",
+        "height": "Höhe",
+        "calculationError": "Rechenfehler"
+      },
+      "seo": {
+        "title": "Online-Formflächenrechner – Kreis, Quadrat, Dreieck",
+        "description": "Kostenloser Online-Rechner zur Berechnung der Fläche eines Kreises, Quadrats und Dreiecks. Genaue Formeln, sofortige Berechnungen, Unterstützung verschiedener Maßeinheiten.",
+        "overview": {
+          "title": "Über den Formflächenrechner",
+          "content": "Online-Rechner zur Berechnung der Fläche grundlegender geometrischer Formen: Kreis, Quadrat und Dreieck. Einfach zu bedienendes Tool mit automatischer Berechnung anhand von Formeln. Geeignet für Studenten, Ingenieure und alle, die schnell die Fläche einer Figur berechnen müssen.",
+          "examples": {
+            "title": "Beispiele für Berechnungen",
+            "content": "Schauen wir uns praktische Beispiele für die Berechnung der Fläche verschiedener geometrischer Formen an:",
+            "example1": {
+              "title": "Fläche eines Kreises",
+              "description": "Kreis mit Radius 5 cm",
+              "calculation": "S = π × r² = 3,14 × 5² = 3,14 × 25 = 78,5",
+              "result": "Fläche: 78,5 cm²"
+            },
+            "example2": {
+              "title": "Quadratischer Bereich",
+              "description": "Quadrat mit einer Seitenlänge von 8 m",
+              "calculation": "S = a² = 8² = 64",
+              "result": "Fläche: 64 m²"
+            },
+            "example3": {
+              "title": "Fläche eines Dreiecks",
+              "description": "Dreieck mit Basis 6 cm und Höhe 4 cm",
+              "calculation": "S = ½ × a × h = ½ × 6 × 4 = 12",
+              "result": "Fläche: 12 cm²"
+            },
+            "example4": {
+              "title": "Großer Kreis",
+              "description": "Kreis mit Radius 10 m",
+              "calculation": "S = π × r² = 3,14 × 10² = 3,14 × 100 = 314",
+              "result": "Fläche: 314 m²"
+            },
+            "example5": {
+              "title": "Großer Platz",
+              "description": "Quadratisch mit einer Seitenlänge von 15 cm",
+              "calculation": "S = a² = 15² = 225",
+              "result": "Fläche: 225 cm²"
+            },
+            "example6": {
+              "title": "Großes Dreieck",
+              "description": "Dreieck mit einer Grundfläche von 12 m und einer Höhe von 8 m",
+              "calculation": "S = ½ × a × h = ½ × 12 × 8 = 48",
+              "result": "Fläche: 48 m²"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird die Fläche berechnet?",
+          "content": "Die Fläche eines Kreises wird nach der Formel S = π × r² berechnet, wobei r der Radius ist. Die Fläche eines Quadrats wird berechnet als S = a², wobei a die Seitenlänge ist. Die Fläche eines Dreiecks wird nach der Formel S = ½ × a × h berechnet, wobei a die Basis und h die Höhe ist."
+        },
+        "features": {
+          "title": "Grundfunktionen",
+          "precision": "Hohe Genauigkeit",
+          "precisionDesc": "Genaue Berechnungen mit mathematischen Konstanten",
+          "instant": "Sofortige Abrechnung",
+          "instantDesc": "Die Ergebnisse werden automatisch berechnet, während Sie Daten eingeben",
+          "formulas": "Bewährte Formeln",
+          "formulasDesc": "Verwendung standardmäßiger mathematischer Geometrieformeln",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Responsive Design für einfache Nutzung auf allen Geräten"
+        },
+        "advantages": {
+          "title": "Vorteile",
+          "content": "Schnelle und genaue Flächenberechnungen, Unterstützung grundlegender geometrischer Formen, übersichtliche Benutzeroberfläche, automatische Anwendung mathematischer Formeln, Ergebnisse mit einer Genauigkeit von bis zu 2 Dezimalstellen."
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Stellen Sie sicher, dass alle Werte positiv sind. Geben Sie für einen Kreis den Radius ein, für ein Quadrat die Seitenlänge und für ein Dreieck die Grundfläche und Höhe. Das Ergebnis wird in Quadrateinheiten angezeigt."
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man die Fläche eines Kreises?",
+              "a": "Die Fläche eines Kreises wird nach der Formel S = π × r² berechnet, wobei π ≈ 3,14, r der Radius des Kreises ist. Zum Beispiel für einen Kreis mit einem Radius von 5 cm: S = 3,14 × 5² = 78,5 cm²."
+            },
+            {
+              "q": "Wie finde ich die Fläche eines Quadrats?",
+              "a": "Die Fläche eines Quadrats wird nach der Formel S = a² berechnet, wobei a die Seitenlänge ist. Beispielsweise hat ein Quadrat mit einer Seitenlänge von 8 m eine Fläche S = 8² = 64 m²."
+            },
+            {
+              "q": "Wie berechnet man die Fläche eines Dreiecks?",
+              "a": "Die Fläche eines Dreiecks wird nach der Formel S = ½ × a × h berechnet, wobei a die Basis und h die Höhe ist. Zum Beispiel ein Dreieck mit einer Grundfläche von 6 cm und einer Höhe von 4 cm: S = ½ × 6 × 4 = 12 cm²."
+            },
+            {
+              "q": "In welchen Maßeinheiten arbeitet der Rechner?",
+              "a": "Der Rechner arbeitet mit beliebigen Längeneinheiten (cm, m, Zoll, Fuß). Das Flächenergebnis erfolgt in den entsprechenden Quadrateinheiten (cm², m², in², ft²)."
+            },
+            {
+              "q": "Ist es möglich, die Fläche eines Rechtecks ​​zu berechnen?",
+              "a": "Verwenden Sie für ein Rechteck die Formel für die Fläche eines Quadrats. Beachten Sie jedoch, dass die Seiten unterschiedlich sein können. Fläche eines Rechtecks: S = a × b, wobei a und b die Längen der Seiten sind."
+            },
+            {
+              "q": "Wie berechnet man die Fläche eines unregelmäßig geformten Raums?",
+              "a": "Teilen Sie Räume mit unregelmäßiger Form in einfache Formen (Rechtecke, Dreiecke) auf, berechnen Sie die Fläche jedes Teils und addieren Sie die Ergebnisse."
+            },
+            {
+              "q": "Ist es möglich, die Fläche einer Ellipse zu berechnen?",
+              "a": "Die Fläche der Ellipse wird nach der Formel S = π × a × b berechnet, wobei a und b die Halbachsen der Ellipse sind. Unser Rechner unterstützt die Ellipse noch nicht, aber Sie können die Formel verwenden."
+            },
+            {
+              "q": "Wie berechnet man die Fläche eines Trapezes?",
+              "a": "Die Fläche eines Trapezes wird nach der Formel S = ½ × (a + b) × h berechnet, wobei a und b die Basen des Trapezes sind, h die Höhe. Unser Rechner unterstützt noch kein Trapez."
+            },
+            {
+              "q": "Ist es möglich, die Fläche eines Parallelogramms zu berechnen?",
+              "a": "Die Fläche eines Parallelogramms wird nach der Formel S = a × h berechnet, wobei a die Basis und h die Höhe ist. Benutzen Sie den Dreiecksrechner und multiplizieren Sie das Ergebnis mit 2."
+            },
+            {
+              "q": "Wie berechnet man die Fläche einer Raute?",
+              "a": "Die Fläche einer Raute kann auf zwei Arten berechnet werden: S = a × h (als Parallelogramm) oder S = ½ × d₁ × d₂ (über Diagonalen), wobei d₁ und d₂ die Diagonalen der Raute sind."
+            },
+            {
+              "q": "Ist es möglich, die Fläche eines Polygons zu berechnen?",
+              "a": "Für ein regelmäßiges Polygon wird die Fläche nach der Formel S = ½ × P × a berechnet, wobei P der Umfang und a das Apothem ist. Teilen Sie unregelmäßige Polygone in Dreiecke auf."
+            },
+            {
+              "q": "Wie berechnet man die Fläche eines Kreissektors?",
+              "a": "Die Fläche eines Kreissektors wird durch die Formel S = (α/360°) × π × r² berechnet, wobei α der Mittelpunktswinkel in Grad und r der Radius des Kreises ist."
+            },
+            {
+              "q": "Ist es möglich, die Fläche eines Kreissegments zu berechnen?",
+              "a": "Die Fläche eines Kreissegments wird als Differenz zwischen der Fläche des Sektors und der Fläche des aus den Radien und der Sehne gebildeten Dreiecks berechnet."
+            },
+            {
+              "q": "Wie berechnet man die Fläche eines Rings?",
+              "a": "Die Fläche des Rings wird als Differenz zwischen den Flächen zweier Kreise berechnet: S = π × (R² – r²), wobei R der Außenradius und r der Innenradius ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Zylinders zu berechnen?",
+              "a": "Die Oberfläche des Zylinders besteht aus zwei Kreisen und einem Rechteck: S = 2πr² + 2πrh, wobei r der Radius der Grundfläche und h die Höhe des Zylinders ist."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche einer Kugel?",
+              "a": "Die Oberfläche einer Kugel wird nach der Formel S = 4πr² berechnet, wobei r der Radius der Kugel ist. Dies ist das Vierfache der Fläche eines Kreises mit demselben Radius."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Kegels zu berechnen?",
+              "a": "Die Oberfläche des Kegels wird nach der Formel S = πr² + πrl berechnet, wobei r der Radius der Basis und l die Erzeugende des Kegels ist."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche einer Pyramide?",
+              "a": "Die Oberfläche der Pyramide umfasst die Fläche der Grundfläche und die Fläche der Seitenflächen. Für eine regelmäßige Pyramide: S = S₀ + ½Pl, wobei S₀ die Grundfläche, P der Umfang der Grundfläche und l das Apothem ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Prismas zu berechnen?",
+              "a": "Die Oberfläche eines Prismas wird als Summe der Flächen der beiden Basen und der Fläche der Seitenfläche berechnet: S = 2S₀ + Pl, wobei S₀ die Fläche der Basis, P der Umfang der Basis und l die Höhe des Prismas ist."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche eines Würfels?",
+              "a": "Die Oberfläche eines Würfels wird nach der Formel S = 6a² berechnet, wobei a die Länge der Würfelkante ist. Dies ist die Summe der Flächen aller sechs Flächen."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Parallelepipeds zu berechnen?",
+              "a": "Die Oberfläche eines Parallelepipeds wird nach der Formel S = 2(ab + bc + ac) berechnet, wobei a, b, c die Längen der Kanten des Parallelepipeds sind."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche eines Tetraeders?",
+              "a": "Die Oberfläche eines Tetraeders wird als Summe der Flächen der vier Dreiecksflächen berechnet. Für ein regelmäßiges Tetraeder: S = √3 × a², wobei a die Kantenlänge ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Oktaeders zu berechnen?",
+              "a": "Die Oberfläche des Oktaeders wird als Summe der Flächen der acht Dreiecksflächen berechnet. Für ein regelmäßiges Oktaeder: S = 2√3 × a², wobei a die Kantenlänge ist."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche eines Ikosaeders?",
+              "a": "Die Oberfläche des Ikosaeders wird als Summe der Flächen von zwanzig Dreiecksflächen berechnet. Für ein regelmäßiges Ikosaeder: S = 5√3 × a², wobei a die Kantenlänge ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Dodekaeders zu berechnen?",
+              "a": "Die Oberfläche eines Dodekaeders wird als Summe der Flächen von zwölf fünfeckigen Flächen berechnet. Für ein reguläres Dodekaeder: S = 3√(25+10√5) × a², wobei a die Kantenlänge ist."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche eines Torus?",
+              "a": "Die Oberfläche des Torus wird nach der Formel S = 4π²Rr berechnet, wobei R der Abstand vom Mittelpunkt des Torus zum Mittelpunkt des Rohrs und r der Radius des Rohrs ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Ellipsoids zu berechnen?",
+              "a": "Die Oberfläche des Ellipsoids wird nach einer komplexen Formel in Abhängigkeit von den Halbachsen a, b, c berechnet. Für ein Sphäroid (a = b ≠ c) wird die Formel vereinfacht."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche eines Hyperboloids?",
+              "a": "Die Oberfläche eines Hyperboloids wird mittels Integralrechnung berechnet und hängt von den Parametern des Hyperboloids ab."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche eines Paraboloids zu berechnen?",
+              "a": "Die Oberfläche eines Paraboloids wird mittels Integralrechnung berechnet und hängt von den Parametern des Paraboloids ab."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche einer zylindrischen Oberfläche?",
+              "a": "Die Fläche einer Zylinderoberfläche wird nach der Formel S = 2πrh berechnet, wobei r der Radius der Basis und h die Höhe des Zylinders ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche einer Kegelfläche zu berechnen?",
+              "a": "Die Fläche der Kegeloberfläche wird nach der Formel S = πrl berechnet, wobei r der Radius der Basis und l die Mantellinie des Kegels ist."
+            },
+            {
+              "q": "Wie berechnet man die Oberfläche einer Kugeloberfläche?",
+              "a": "Die Fläche einer Kugeloberfläche wird nach der Formel S = 4πr² berechnet, wobei r der Radius der Kugel ist."
+            },
+            {
+              "q": "Ist es möglich, die Oberfläche einer elliptischen Fläche zu berechnen?",
+              "a": "Die Fläche einer elliptischen Fläche wird mittels Integralrechnung berechnet und hängt von den Parametern der Ellipse ab."
+            }
+          ]
+        }
+      }
+    },
+    "volume": {
+      "title": "Festkörpervolumenrechner",
+      "description": "Berechnen Sie online das Volumen einer Kugel, eines Würfels oder eines Zylinders. Ein einfacher und genauer Rechner mit Formeln.",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "selectShape": "Körper auswählen",
+        "shapeTypes": {
+          "sphere": "Kugel",
+          "cube": "Würfel",
+          "cylinder": "Zylinder"
+        },
+        "radius": "Radius (r)",
+        "side": "Seite (a)",
+        "height": "Höhe (h)",
+        "calculate": "Berechnen",
+        "clear": "Klar",
+        "calculating": "Berechnung...",
+        "errors": {
+          "title": "Datenfehler",
+          "required": "Dieses Feld ist erforderlich",
+          "positive": "Der Wert muss positiv sein"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "volume": "Volumen",
+        "formula": "Formel",
+        "sphereFormula": "V = (4/3) × π × r³",
+        "cubeFormula": "V = a³",
+        "cylinderFormula": "V = π × r² × h",
+        "parametersUsed": "Verwendete Parameter",
+        "radius": "Radius",
+        "side": "Seite",
+        "height": "Höhe",
+        "calculationError": "Rechenfehler"
+      },
+      "seo": {
+        "title": "Online-Rechner für Volumenkörper – Kugel, Würfel, Zylinder",
+        "form": {
+          "shapeTypes": {
+            "sphere": "Kugel",
+            "cube": "Würfel",
+            "cylinder": "Zylinder"
+          }
+        },
+        "overview": {
+          "title": "Über den Volumenrechner geometrischer Körper",
+          "content": "Der Online-Volumenrechner bietet genaue Berechnungen für grundlegende geometrische Formen: Kugel, Würfel und Zylinder. Dieses Mathematiktool verwendet bewährte Geometrieformeln, um das Volumen räumlicher Körper zu berechnen. Der Volumenrechner ist ideal für Studenten, die sich mit Volumengeometrie befassen, Ingenieure, die mit volumetrischen Berechnungen arbeiten, Architekten, die Bauprojekte planen, und alle, die das Volumen eines geometrischen Körpers schnell und genau berechnen müssen.",
+          "examples": {
+            "title": "Beispiele für Volumenberechnungen",
+            "sphere": {
+              "title": "Berechnung des Volumens einer Kugel",
+              "example1": "Basketball: Radius 12 cm → V = (4/3) × π × 12³ = 7.238,23 cm³",
+              "example2": "Erde (ungefähr): Radius 6,371 km → V = (4/3) × π × 6,371³ = 1,08 × 10¹² km³",
+              "example3": "Fußball: Radius 11 cm → V = (4/3) × π × 11³ = 5.575,28 cm³"
+            },
+            "cube": {
+              "title": "Berechnung des Würfelvolumens",
+              "example1": "Zauberwürfel: Seite 5,7 cm → V = 5,7³ = 185,19 cm³",
+              "example2": "Ein Wasserwürfel: Seitenlänge 1 m → V = 1³ = 1 m³ = 1.000 Liter",
+              "example3": "Kasten: Seite 20 cm → V = 20³ = 8.000 cm³ = 8 Liter"
+            },
+            "cylinder": {
+              "title": "Berechnung des Zylindervolumens",
+              "example1": "Konservendose: Radius 3,5 cm, Höhe 10 cm → V = π × 3,5² × 10 = 384,85 cm³",
+              "example2": "Glas Wasser: Radius 3 cm, Höhe 12 cm → V = π × 3² × 12 = 339,29 cm³",
+              "example3": "Fass: Radius 30 cm, Höhe 80 cm → V = π × 30² × 80 = 226.194,67 cm³ = 226 Liter"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird das Volumen berechnet?",
+          "content": "Das Volumen einer Kugel wird durch die Formel V = (4/3) × π × r³ berechnet, wobei r der Radius ist. Das Volumen eines Würfels wird als V = a³ berechnet, wobei a die Seitenlänge ist. Das Volumen eines Zylinders wird nach der Formel V = π × r² × h berechnet, wobei r der Radius der Basis und h die Höhe ist.",
+          "sphereDescription": "wobei r der Radius der Kugel ist",
+          "cubeDescription": "wobei a die Länge einer Seite ist",
+          "cylinderDescription": "Dabei ist r der Radius der Basis, h die Höhe"
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "content": "Schnelle und genaue Berechnungen, Unterstützung grundlegender geometrischer Körper, übersichtliche Benutzeroberfläche, automatische Anwendung mathematischer Formeln, Ergebnisse mit einer Genauigkeit von bis zu 2 Dezimalstellen.",
+          "items": [
+            "Sofortige Berechnungen mit hoher Genauigkeit",
+            "Unterstützung für mehrere geometrische Körper",
+            "Benutzerfreundliche Oberfläche mit visuellem Feedback",
+            "Responsive Design für alle Geräte",
+            "Mehrsprachiger Support (Russisch, Englisch, Spanisch, Deutsch)",
+            "Erfordert keine Registrierung oder Installation von Programmen",
+            "Kostenlose Nutzung ohne Einschränkungen"
+          ]
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Stellen Sie sicher, dass alle Werte positiv sind. Geben Sie für eine Kugel den Radius, für einen Würfel die Seitenlänge und für einen Zylinder den Basisradius und die Höhe ein. Das Ergebnis wird in Kubikeinheiten angezeigt.",
+          "importantNotes": "Wichtige Hinweise:",
+          "notes": [
+            "Verwenden Sie für alle Parameter immer die gleichen Maßeinheiten",
+            "Messen Sie bei einer Kugel den Radius vom Mittelpunkt zur Oberfläche",
+            "Bei einem Zylinder muss die Höhe senkrecht zur Basis sein",
+            "Die Ergebnisse werden in Kubikeinheiten Ihrer Eingabe angezeigt",
+            "Verwenden Sie für genaue Berechnungen die Dezimalschreibweise"
+          ]
+        },
+        "examples": {
+          "title": "Beispiele für Berechnungen",
+          "sphereExample": "Beispiel einer Kugel",
+          "cubeExample": "Würfelbeispiel",
+          "cylinderExample": "Beispiel eines Zylinders",
+          "given": "Hoffentlich",
+          "calculation": "Berechnung",
+          "sphereDescription": "Das Volumen einer Kugel mit einem Radius von 5 Einheiten beträgt ungefähr 523,60 Kubikeinheiten.",
+          "cubeDescription": "Das Volumen eines Würfels mit einer Seitenlänge von 4 Einheiten beträgt 64 Kubikeinheiten.",
+          "cylinderDescription": "Das Volumen eines Zylinders mit einem Radius von 3 Einheiten und einer Höhe von 8 Einheiten beträgt ungefähr 226,19 Kubikeinheiten."
+        },
+        "applications": {
+          "title": "Anwendungen",
+          "construction": "Bau und Architektur",
+          "education": "Schul-und Berufsbildung",
+          "constructionItems": [
+            "Berechnung des Betonvolumens für Fundamente",
+            "Bestimmung des Volumens von Tanks und Behältern",
+            "Planung des Baumaterialvolumens",
+            "Schätzung des Raumvolumens"
+          ],
+          "educationItems": [
+            "Hausaufgaben zur Geometrie",
+            "Mathematische Konzepte verstehen",
+            "Überprüfung manueller Berechnungen",
+            "Volumenformeln studieren"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Online-Rechner für das Volumen geometrischer Körper",
+          "content": "Unser Online-Volumenrechner bietet schnelle und genaue Berechnungen für Kugeln, Würfel und Zylinder. Seine einfache Benutzeroberfläche und die sofortigen Ergebnisse machen es zu einem idealen Werkzeug für Studenten, Ingenieure, Architekten und alle, die genaue Volumenberechnungen geometrischer Formen benötigen.",
+          "multilingual": "Der Online-Körpervolumenrechner ist für Benutzer auf der ganzen Welt in Russisch, Englisch, Spanisch und Deutsch verfügbar.",
+          "keywords": "Rechner der Decken, Volumina von Cybia, Volumen zylindrisch, Formel, Geometrie, Stereometrie, Mathematik, Online-Rechner, Berechnungen, Volumina der geometrischen Breite, Volumina der Prost-Figur, Volumina von Einschlüssen, Volumen Pferd, Sätze, parallelopedischer Held, Volumen Tetraadra, Oktaeder, Volumen der Dodera, das Volumen von Ilipsoid, Volumen der Tora, Volumina des Vass, das zusammenfassende Muskel-Skelett-Segment, Volumen von Ball Sloya, Volumen-Ballgürtel"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zur Volumenberechnung",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man das Volumen einer Kugel anhand ihres Radius?",
+              "a": "Das Volumen einer Kugel wird durch die Formel V = (4/3) × π × r³ berechnet, wobei r der Radius der Kugel ist. Für eine Kugel mit einem Radius von 5 cm beträgt das Volumen beispielsweise V = (4/3) × π × 5³ = 523,6 cm³."
+            },
+            {
+              "q": "Mit welcher Formel berechnet man das Volumen eines Würfels?",
+              "a": "Das Volumen von Kuba wird nach der Formel V = a³ berechnet, wobei a - langes Reiben von Kuba. Beispielsweise kommt der Würfel mit der Seitenlänge 4 cm im Volumen V = 4³ = 64 cm³ vor."
+            },
+            {
+              "q": "Wie ermittelt man das Volumen eines Zylinders anhand seines Radius und seiner Höhe?",
+              "a": "Das Volumen eines Zylinders wird nach der Formel V = π × r² × h berechnet, wobei r der Radius der Basis und h die Höhe ist. Beispielsweise hat ein Zylinder mit einem Radius von 3 cm und einer Höhe von 8 cm ein Volumen V = π × 3² × 8 = 226,2 cm³."
+            },
+            {
+              "q": "In welchen Maßeinheiten wird das Ergebnis angezeigt?",
+              "a": "Das Ergebnis wird in kubischen Maßeinheiten entsprechend den eingegebenen Parametern angezeigt. Wenn Sie die Maße in Zentimetern eingeben, erhalten Sie das Ergebnis in cm³, bei Metern in m³."
+            },
+            {
+              "q": "Ist es möglich, mit dem Rechner das Volumen anderer geometrischer Körper zu berechnen?",
+              "a": "Unser Rechner unterstützt die Berechnung des Volumens einer Kugel, eines Würfels und eines Zylinders. Für andere geometrische Körper (Pyramide, Kegel, Prisma) werden andere Formeln verwendet, die in Geometrielehrbüchern zu finden sind."
+            },
+            {
+              "q": "Wie genau sind die Volumenberechnungen im Rechner?",
+              "a": "Der Rechner bietet eine hohe Berechnungsgenauigkeit mit der Konstante π ≈ 3,14159. Die Ergebnisse werden bei kleinen Werten mit einer Genauigkeit von 6 Dezimalstellen und bei großen Volumina mit einer Genauigkeit von bis zu 2 Dezimalstellen angezeigt."
+            },
+            {
+              "q": "Wie verwende ich einen Volumenrechner für Bauberechnungen?",
+              "a": "Geben Sie für Konstruktionsberechnungen die Maße in Metern oder Zentimetern ein. Um beispielsweise das Betonvolumen für eine zylindrische Säule zu berechnen, geben Sie den Radius und die Höhe der Säule ein. Das Ergebnis zeigt das Volumen in Kubikmetern oder Zentimetern an."
+            },
+            {
+              "q": "Ist es möglich, das Volumen einer Kugel zu berechnen, wenn man nur den Durchmesser kennt?",
+              "a": "Ja, wenn Sie den Durchmesser der Kugel kennen, teilen Sie ihn durch 2, um den Radius zu erhalten, und verwenden Sie dann die Formel V = (4/3) × π × r³. Für eine Kugel mit einem Durchmesser von 10 cm beträgt der Radius beispielsweise 5 cm, das Volumen beträgt V = (4/3) × π × 5³ = 523,6 cm³."
+            },
+            {
+              "q": "Wie kann man die Richtigkeit der Volumenberechnung überprüfen?",
+              "a": "Verwenden Sie zur Überprüfung bekannte Werte. Beispielsweise hat ein Würfel mit einer Seitenlänge von 1 Meter ein Volumen von 1 m³ = 1.000 Liter. Eine Kugel mit einem Radius von 1 Meter hat ein Volumen von (4/3) × π ≈ 4,19 m³."
+            },
+            {
+              "q": "Ist der Rechner für Bildungszwecke geeignet?",
+              "a": "Ja, der Rechner eignet sich ideal zum Studium von Geometrie und Stereometrie. Es hilft Ihnen, Volumenformeln zu verstehen, manuelle Berechnungen zu testen und die Beziehung zwischen Größe und Volumen geometrischer Körper zu untersuchen."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Kegelstumpfes?",
+              "a": "Das Volumen eines Kegelstumpfes wird nach der Formel V = (π × h × (R² + Rr + r²)) / 3 berechnet, wobei h die Höhe, R der Radius der größeren Basis und r der Radius der kleineren Basis ist. Unser Rechner unterstützt noch keine Kegelstümpfe."
+            },
+            {
+              "q": "Wie groß ist das Volumen der Revolutionskörper?",
+              "a": "Das Volumen von Rotationskörpern ist das Volumen von Figuren, das durch Drehen einer flachen Figur um eine Achse entsteht. Kugel, Zylinder und Kegel sind Beispiele für Rotationskörper. Unser Rechner unterstützt Kugel und Zylinder."
+            },
+            {
+              "q": "Wie berechnet man das Volumen einer Pyramide?",
+              "a": "Das Volumen der Pyramide wird nach der Formel V = (S × h) / 3 berechnet, wobei S die Grundfläche und h die Höhe der Pyramide ist. Für eine regelmäßige Pyramide mit quadratischer Grundfläche: V = (a² × h) / 3, wobei a die Seite der Grundfläche ist."
+            },
+            {
+              "q": "Wie groß ist das Volumen von Polyedern?",
+              "a": "Das Volumen von Polyedern ist das Volumen von Raumfiguren mit flachen Flächen. Würfel, Tetraeder, Oktaeder, Dodekaeder und Ikosaeder sind regelmäßige Polyeder. Unser Rechner unterstützt Cube."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Prismas?",
+              "a": "Das Volumen des Prismas wird nach der Formel V = S × h berechnet, wobei S die Grundfläche und h die Höhe des Prismas ist. Für ein rechteckiges Prisma: V = a × b × h, wobei a und b die Seiten der Basis sind."
+            },
+            {
+              "q": "Wie groß ist das Volumen eines Parallelepipeds?",
+              "a": "Das Volumen eines Parallelepipeds wird nach der Formel V = a × b × c berechnet, wobei a, b, c die Längen der Kanten sind. Ein Quader ist ein Sonderfall eines Parallelepipeds mit rechten Winkeln."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Tetraeders?",
+              "a": "Das Volumen eines regelmäßigen Tetraeders wird durch die Formel V = (a³ × √2) / 12 berechnet, wobei a die Länge der Kante ist. Verwenden Sie für ein beliebiges Tetraeder die Formel V = (1/6) × |det(AB, AC, AD)|, wobei A, B, C, D die Eckpunkte sind."
+            },
+            {
+              "q": "Wie groß ist das Volumen eines Oktaeders?",
+              "a": "Das Volumen eines regelmäßigen Oktaeders wird durch die Formel V = (a³ × √2) / 3 berechnet, wobei a die Länge der Kante ist. Das Oktaeder hat 8 dreieckige Flächen und ist eines der fünf regelmäßigen Polyeder."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Dodekaeders?",
+              "a": "Das Volumen eines regelmäßigen Dodekaeders wird durch die Formel V = (a³ × (15 + 7√5)) / 4 berechnet, wobei a die Länge der Kante ist. Das Dodekaeder hat 12 fünfeckige Flächen und gehört zu den regelmäßigen Polyedern."
+            },
+            {
+              "q": "Wie groß ist das Volumen eines Ikosaeders?",
+              "a": "Das Volumen eines regelmäßigen Ikosaeders wird durch die Formel V = (5a³ × (3 + √5)) / 12 berechnet, wobei a die Länge der Kante ist. Das Ikosaeder hat 20 Dreiecksflächen und gehört zu den regelmäßigen Polyedern."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Ellipsoids?",
+              "a": "Das Volumen des Ellipsoids wird durch die Formel V = (4π × a × b × c) / 3 berechnet, wobei a, b, c die Halbachsen des Ellipsoids sind. Eine Kugel ist ein Sonderfall eines Ellipsoids, bei dem alle Halbachsen gleich sind."
+            },
+            {
+              "q": "Wie groß ist das Volumen eines Torus?",
+              "a": "Das Volumen eines Torus (Donuts) wird nach der Formel V = 2π² × R × r² berechnet, wobei R der Abstand vom Mittelpunkt zum Mittelpunkt des Rohrs und r der Radius des Rohrs ist. Ein Torus entsteht durch die Drehung eines Kreises um eine Achse."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Pyramidenstumpfes?",
+              "a": "Das Volumen eines Pyramidenstumpfes wird nach der Formel V = (h × (S₁ + S₂ + √(S₁ × S₂))) / 3 berechnet, wobei h die Höhe, S₁ die Fläche der größeren Grundfläche und S₂ die Fläche der kleineren Grundfläche ist."
+            },
+            {
+              "q": "Wie groß ist das Volumen eines zylindrischen Segments?",
+              "a": "Das Volumen eines Zylindersegments ist das Volumen des Teils des Zylinders, der durch eine Ebene abgeschnitten wird. Berechnet nach der Formel V = π × r² × h, wobei r der Radius des Zylinders und h die Höhe des Segments ist."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Kugelsegments?",
+              "a": "Das Volumen eines Kugelsegments wird durch die Formel V = (π × h² × (3R – h)) / 3 berechnet, wobei h die Höhe des Segments und R der Radius der Kugel ist. Ein Kugelsegment ist ein durch eine Ebene abgeschnittener Teil einer Kugel."
+            },
+            {
+              "q": "Wie groß ist das Volumen der Kugelschicht?",
+              "a": "Das Volumen einer Kugelschicht ist das Volumen des Teils der Kugel zwischen zwei parallelen Ebenen. Er wird als Differenz zwischen den Volumina zweier Kugelsegmente berechnet."
+            },
+            {
+              "q": "Wie berechnet man das Volumen eines Kugelgürtels?",
+              "a": "Das Volumen eines Kugelgürtels ist das Volumen des Teils der Kugel zwischen zwei parallelen Ebenen, einschließlich des Mittelteils. Berechnet nach der Formel V = (π × h × (3a² + 3b² + h²)) / 6, wobei h die Höhe des Gürtels und a und b die Radien der Basen sind."
+            },
+            {
+              "q": "Wie verwende ich den Volumenrechner für Architekturberechnungen?",
+              "a": "Verwenden Sie für Architekturberechnungen den Rechner, um das Volumen von Räumen, Säulen und Tanks zu ermitteln. Geben Sie die Abmessungen in Metern ein, um das Volumen in Kubikmetern zu erhalten."
+            },
+            {
+              "q": "Ist es möglich, das Volumen komplexer geometrischer Körper zu berechnen?",
+              "a": "Zerlegen Sie komplexe Körper in einfache geometrische Formen (Kugeln, Würfel, Zylinder), berechnen Sie das Volumen jedes Teils separat und addieren Sie die Ergebnisse."
+            },
+            {
+              "q": "Wie berechnet man das Volumen für hydraulische Berechnungen?",
+              "a": "Verwenden Sie für hydraulische Berechnungen einen Taschenrechner, um das Volumen von Rohrleitungen, Reservoirs und Tanks zu ermitteln. Die Ergebnisse helfen bei der Berechnung von Durchfluss, Druck und anderen hydraulischen Parametern."
+            }
+          ]
+        }
+      }
+    },
+    "powerRoot": {
+      "title": "Potenz- und Wurzelrechner",
+      "description": "Berechnen Sie online die Potenz einer Zahl oder ziehen Sie die Wurzel einer beliebigen Potenz. Ein einfacher und genauer Rechner mit Formeln.",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "hero": {
+        "power": "Abschlüsse",
+        "root": "Wurzeln",
+        "accuracy": "Berechnungsgenauigkeit"
+      },
+      "features": {
+        "powerCalculation": "Potenzierung",
+        "rootCalculation": "Wurzelextraktion",
+        "formulaDisplay": "Formeln anzeigen",
+        "highPrecision": "Hohe Genauigkeit",
+        "multipleModes": "Verschiedene Modi"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "mode": "Berechnungsmodus",
+        "modes": {
+          "power": "Potenzierung",
+          "root": "Wurzelextraktion"
+        },
+        "base": "Basis(a)",
+        "exponent": "Abschluss (n)",
+        "number": "Nummer(a)",
+        "rootDegree": "Wurzelgrad (n)",
+        "errors": {
+          "title": "Datenfehler",
+          "required": "Dieses Feld ist erforderlich",
+          "positive": "Der Wert muss positiv sein"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "result": "Ergebnis",
+        "formula": "Formel",
+        "parametersUsed": "Verwendete Parameter",
+        "base": "Grund",
+        "exponent": "Grad",
+        "number": "Nummer",
+        "rootDegree": "Wurzelabschluss",
+        "calculationError": "Rechenfehler"
+      },
+      "seo": {
+        "title": "Online-Rechner für Potenzen und Wurzeln – Potenzierung, Wurzelziehen",
+        "overview": {
+          "title": "Über den Potenz- und Wurzelrechner",
+          "content": "Online-Rechner zur Berechnung von Potenzen von Zahlen und zum Ziehen von Wurzeln jeden Grades. Ein benutzerfreundliches Tool mit automatischer Berechnung anhand mathematischer Formeln. Geeignet für Studenten, Ingenieure und alle, die schnell die Potenz oder Wurzel einer Zahl berechnen müssen.",
+          "additionalContent": "Unser Exponenten- und Wurzelrechner unterstützt alle grundlegenden mathematischen Operationen mit Exponenten und Wurzeln. Ganz gleich, ob Sie ein Algebra-Student sind, ein Ingenieur, der an technischen Berechnungen arbeitet, oder einfach nur die Potenz einer Zahl berechnen müssen, dieses Tool liefert sofort genaue Ergebnisse.",
+          "calculationExamples": {
+            "title": "Beispiele für Berechnungen",
+            "content": "Schauen wir uns verschiedene Beispiele für die Verwendung des Potenzen- und Wurzelrechners an:",
+            "powerExamples": {
+              "title": "Beispiele für Potenzierung",
+              "example1": {
+                "title": "Quadrieren",
+                "calculation": "5² = 5 × 5 = 25",
+                "description": "Das Quadrat von 5 ist 25"
+              },
+              "example2": {
+                "title": "Würfel",
+                "calculation": "3³ = 3 × 3 × 3 = 27",
+                "description": "Der Würfel der Zahl 3 ist 27"
+              },
+              "example3": {
+                "title": "Erhöhung zur vierten Potenz",
+                "calculation": "2⁴ = 2 × 2 × 2 × 2 = 16",
+                "description": "Die Zahl 2 hoch vier ist 16"
+              },
+              "example4": {
+                "title": "Aufsteigen in eine negative Potenz",
+                "calculation": "2⁻³ = 1/(2³) = 1/8 = 0,125",
+                "description": "Die Zahl 2 hoch -3 ist 0,125"
+              },
+              "example5": {
+                "title": "Erhöhung auf eine Bruchpotenz",
+                "calculation": "8^(1/3) = ∛8 = 2",
+                "description": "Die Zahl 8 hoch 1/3 ist 2"
+              }
+            },
+            "rootExamples": {
+              "title": "Beispiele für Wurzelextraktion",
+              "example1": {
+                "title": "Quadratwurzel",
+                "calculation": "√16 = 4",
+                "description": "Die Quadratwurzel aus 16 ist 4, da 4² = 16"
+              },
+              "example2": {
+                "title": "Kubikwurzel",
+                "calculation": "∛27 = 3",
+                "description": "Die Kubikwurzel von 27 ist 3, da 3³ = 27"
+              },
+              "example3": {
+                "title": "Vierte Wurzel",
+                "calculation": "∜81 = 3",
+                "description": "Die vierte Wurzel von 81 ist 3, da 3⁴ = 81"
+              },
+              "example4": {
+                "title": "Fünfte Wurzel",
+                "calculation": "∛32 = 2",
+                "description": "Die fünfte Wurzel aus 32 ist 2, da 2⁵ = 32"
+              },
+              "example5": {
+                "title": "Dezimalwurzel",
+                "calculation": "√0,25 = 0,5",
+                "description": "Die Quadratwurzel von 0,25 ist 0,5, da 0,5² = 0,25"
+              }
+            }
+          }
+        },
+        "powerSection": {
+          "title": "Was ist eine Potenz einer Zahl?",
+          "content": "Eine Potenz einer Zahl ist eine mathematische Operation, bei der eine Zahl eine bestimmte Anzahl von Malen mit sich selbst multipliziert wird. Formel: aⁿ, wobei a die Basis und n der Exponent ist. Beispielsweise bedeutet 2³ 2 × 2 × 2 = 8.",
+          "example1": {
+            "title": "Beispiel 1",
+            "description": "2 Würfel ergeben 8"
+          },
+          "example2": {
+            "title": "Beispiel 2",
+            "description": "5 zum Quadrat ergibt 25"
+          }
+        },
+        "rootSection": {
+          "title": "Was ist die Wurzel einer Zahl?",
+          "content": "Die Wurzel einer Zahl ist die umgekehrte Operation zur Potenzierung. Die n-te Wurzel von a ist die Zahl, die, wenn man sie in die n-te Potenz erhöht, a ergibt. Zum Beispiel ist √9 = 3, weil 3² = 9.",
+          "example1": {
+            "title": "Quadratwurzel",
+            "description": "Die Quadratwurzel aus 9 ist 3"
+          },
+          "example2": {
+            "title": "Kubikwurzel",
+            "description": "Die Kubikwurzel aus 8 ist 2"
+          }
+        },
+        "howToUse": {
+          "title": "So verwenden Sie den Rechner",
+          "content": "Wählen Sie den Berechnungsmodus: Potenzierung oder Wurzelextraktion. Geben Sie die erforderlichen Werte ein und klicken Sie auf die Schaltfläche „Berechnen“. Der Rechner wendet automatisch die entsprechende Formel an und zeigt das Ergebnis an.",
+          "given": "Hoffentlich",
+          "calculation": "Berechnung",
+          "powerExample": {
+            "title": "Beispiel für Potenzierung",
+            "description": "2 hoch 3 ergibt 8"
+          },
+          "rootExample": {
+            "title": "Beispiel für die Wurzelextraktion",
+            "description": "Die Kubikwurzel aus 8 ist 2"
+          }
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "content": "Schnelle und genaue Berechnungen, Unterstützung für Potenzen und Wurzeln jeden Grads, übersichtliche Benutzeroberfläche, automatische Anwendung mathematischer Formeln, Ergebnisse mit einer Genauigkeit von bis zu 6 Dezimalstellen.",
+          "accurate": "Genaue Berechnungen",
+          "accurateDesc": "Verwendet aktuelle mathematische Formeln und gewährleistet eine hohe Genauigkeit der Berechnungen",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützt Potenzen und Wurzeln jeden Grades, einschließlich negativer und gebrochener Exponenten",
+          "comprehensive": "Vollständige Analyse",
+          "comprehensiveDesc": "Zeigt Formeln, Schritt-für-Schritt-Lösungen und detaillierte Berechnungsinformationen an",
+          "export": "Daten exportieren",
+          "exportDesc": "Möglichkeit, Ergebnisse in verschiedenen Formaten für die zukünftige Verwendung zu speichern",
+          "items": [
+            "Sofortige Berechnungen mit hoher Genauigkeit",
+            "Unterstützt Kräfte und Wurzeln jeglichen Ausmaßes",
+            "Benutzerfreundliche Oberfläche mit visuellem Feedback",
+            "Responsive Design für alle Geräte",
+            "Mehrsprachiger Support (Russisch, Englisch, Spanisch, Deutsch)",
+            "Erfordert keine Registrierung oder Installation von Programmen",
+            "Kostenlose Nutzung ohne Einschränkungen"
+          ]
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Stellen Sie sicher, dass alle Werte korrekt sind. Geben Sie für Potenzen die Basis und den Exponenten ein. Geben Sie für Wurzeln die Anzahl und den Grad der Wurzel ein. Das Ergebnis wird mit hoher Genauigkeit angezeigt.",
+          "importantNotes": "Wichtige Hinweise:",
+          "notes": [
+            "Sie können 0 nicht negativ potenzieren",
+            "Aus einer negativen Zahl kann man keine gerade Wurzel ziehen.",
+            "Der Grad der Wurzel darf nicht 0 sein",
+            "Die Ergebnisse werden mit einer Genauigkeit von 6 Dezimalstellen angezeigt",
+            "Verwenden Sie für genaue Berechnungen die Dezimalschreibweise"
+          ]
+        },
+        "applications": {
+          "title": "Anwendungen",
+          "mathematics": "Mathematik und Algebra",
+          "science": "Wissenschaft und Technik",
+          "mathematicsItems": [
+            "Algebraische Gleichungen lösen",
+            "Geometrieberechnungen",
+            "Studieren von Funktionen und Graphen",
+            "Mathematische Analyse"
+          ],
+          "scienceItems": [
+            "Physikalische Berechnungen",
+            "Technische Informatik",
+            "Statistische Analyse",
+            "Wissenschaftliche Forschung"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Online-Rechner für Potenzen und Wurzeln",
+          "content": "Unser Online-Rechner für Potenzen und Wurzeln bietet schnelle und genaue Berechnungen für alle Potenzen und Wurzeln. Seine einfache Benutzeroberfläche und die sofortigen Ergebnisse machen es zu einem idealen Werkzeug für Studenten, Ingenieure und alle anderen, die genaue mathematische Berechnungen benötigen.",
+          "multilingual": "Unser Online-Rechner für Abschlüsse und Wurzeln unterstützt vier Sprachen – Russisch, Englisch, Spanisch und Deutsch."
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie kann man online eine Zahl potenzieren?",
+              "a": "Wählen Sie den Modus „Potenzierung“, geben Sie die Basis und den Exponenten ein und klicken Sie auf „Berechnen“. Geben Sie beispielsweise für 2³ die Basis 2 und die Potenz 3 ein."
+            },
+            {
+              "q": "Wie extrahiere ich die Wurzel eines beliebigen Grades?",
+              "a": "Wählen Sie den Modus „Wurzelextraktion“ und geben Sie die Anzahl und den Grad der Wurzel ein. Geben Sie beispielsweise für ∛8 die Zahl 8 und die Wurzelpotenz 3 ein."
+            },
+            {
+              "q": "Ist es möglich, es auf eine negative Potenz zu erhöhen?",
+              "a": "Ja, der Rechner unterstützt negative Potenzen. Zum Beispiel: 2⁻³ = 1/(2³) = 0,125."
+            },
+            {
+              "q": "Wie berechnet man die Bruchleistung?",
+              "a": "Die gebrochene Potenz entspricht dem Ziehen der Wurzel. Zum Beispiel 8^(1/3) = ∛8 = 2."
+            },
+            {
+              "q": "Was ist eine Quadratwurzel?",
+              "a": "Die Quadratwurzel von a ist die Zahl, die quadriert a ergibt. Zum Beispiel ist √9 = 3, da 3² = 9."
+            },
+            {
+              "q": "Was ist eine Kubikwurzel?",
+              "a": "Die Kubikwurzel von a ist die Zahl, die, wenn man sie kubiert, a ergibt. Zum Beispiel ist ∛8 = 2, da 2³ = 8."
+            },
+            {
+              "q": "Ist es möglich, aus einer negativen Zahl die Wurzel zu ziehen?",
+              "a": "Aus einer negativen Zahl kann nur die ungerade Wurzel gezogen werden. Eine gerade Wurzel einer negativen Zahl gibt es in reellen Zahlen nicht."
+            },
+            {
+              "q": "Wie funktioniert der Abschlussrechner?",
+              "a": "Der Rechner verwendet die Formel aⁿ = a × a × ... × a (n-mal). Für negative Potenzen wird die Formel a⁻ⁿ = 1/aⁿ verwendet."
+            },
+            {
+              "q": "Wie funktioniert der Wurzelrechner?",
+              "a": "Der Rechner findet eine Zahl x mit xⁿ = a, wobei a die Wurzelzahl und n die Potenz der Wurzel ist."
+            },
+            {
+              "q": "Ist es möglich, 0 zu potenzieren?",
+              "a": "0 kann auf jede positive Potenz erhöht werden, das Ergebnis ist 0. 0⁰ ist undefiniert."
+            },
+            {
+              "q": "Was ist ein Grad mit Exponent 0?",
+              "a": "Jede Zahl hoch 0 ist gleich 1 (außer 0⁰). Zum Beispiel: 5⁰ = 1, 100⁰ = 1."
+            },
+            {
+              "q": "Wie berechnet man die Wurzel einer großen Zahl?",
+              "a": "Der Rechner verarbeitet automatisch Zahlen jeder Größe. Geben Sie einfach die Zahl und den Grad der Wurzel ein."
+            },
+            {
+              "q": "Können Dezimalzahlen verwendet werden?",
+              "a": "Ja, der Rechner unterstützt Dezimalzahlen sowohl für die Basis als auch für die Potenz oder Wurzel."
+            },
+            {
+              "q": "Wie berechnet man die Wurzel eines Bruchs?",
+              "a": "Die Wurzel eines Bruchs ist gleich der Wurzel des Zählers dividiert durch die Wurzel des Nenners. Zum Beispiel: √(4/9) = √4/√9 = 2/3."
+            },
+            {
+              "q": "Was sind irrationale Wurzeln?",
+              "a": "Irrationale Wurzeln sind Wurzeln, die nicht als gewöhnlicher Bruch dargestellt werden können. Zum Beispiel: √2 ≈ 1,414."
+            },
+            {
+              "q": "Wie kann man überprüfen, ob die Wurzel korrekt berechnet wurde?",
+              "a": "Erhöhen Sie das Ergebnis mit der Potenz der Wurzel. Wenn Sie die ursprüngliche Zahl erhalten, ist die Berechnung korrekt. Beispiel: ∛8 = 2, prüfen Sie: 2³ = 8."
+            },
+            {
+              "q": "Ist es möglich, die Wurzel einer Potenz größer als 10 zu berechnen?",
+              "a": "Ja, der Rechner unterstützt Wurzeln jeden Grades, einschließlich sehr großer Exponenten."
+            },
+            {
+              "q": "Wie berechnet man einen Exponenten mit einem Dezimalexponenten?",
+              "a": "Exponenten mit einem dezimalen Exponenten werden mit Logarithmen berechnet. Solche Fälle erledigt der Rechner automatisch."
+            },
+            {
+              "q": "Was ist die n-te Wurzel?",
+              "a": "Die n-te Wurzel einer Zahl ist eine Zahl x mit xⁿ = a. Wird als ⁿ√a oder a^(1/n) bezeichnet."
+            },
+            {
+              "q": "Wie berechnet man die Potenz einer Zahl größer als 100?",
+              "a": "Der Rechner verarbeitet automatisch Zahlen jeder Größe. Geben Sie einfach die Basis und den Grad ein."
+            },
+            {
+              "q": "Kann der Rechner für wissenschaftliche Berechnungen verwendet werden?",
+              "a": "Ja, der Rechner eignet sich für wissenschaftliche und technische Berechnungen und bietet eine hohe Berechnungsgenauigkeit."
+            },
+            {
+              "q": "Wie berechnet man die Wurzel eines Produkts?",
+              "a": "Die Wurzel eines Produkts ist gleich dem Produkt der Wurzeln. Zum Beispiel: √(a×b) = √a × √b."
+            },
+            {
+              "q": "Was ist eine arithmetische Wurzel?",
+              "a": "Eine arithmetische Wurzel ist ein nichtnegativer Wurzelwert. Beispielsweise ist √9 = 3 (nicht -3)."
+            },
+            {
+              "q": "Wie berechnet man die Leistung eines Produkts?",
+              "a": "Die Leistung eines Produkts ist gleich dem Produkt der Potenzen. Zum Beispiel (a×b)ⁿ = aⁿ × bⁿ."
+            },
+            {
+              "q": "Ist es möglich, die Wurzel eines Grades zu berechnen?",
+              "a": "Ja, die Wurzel eines Grades ist gleich dem Grad dividiert durch den Grad der Wurzel. Zum Beispiel: √(aⁿ) = a^(n/2)."
+            },
+            {
+              "q": "Wie berechnet man den Grad einer Wurzel?",
+              "a": "Der Grad einer Wurzel ist gleich der Potenz der Wurzel. Zum Beispiel (ⁿ√a)ᵐ = ⁿ√(aᵐ)."
+            },
+            {
+              "q": "Was sind komplexe Wurzeln?",
+              "a": "Komplexe Wurzeln entstehen, wenn man aus einer negativen Zahl eine gerade Wurzel zieht. Der Rechner zeigt den Realteil an."
+            },
+            {
+              "q": "Wie berechnet man die Wurzel einer Summe?",
+              "a": "Die Wurzel der Summe ist nicht gleich der Summe der Wurzeln. Zum Beispiel: √(a+b) ≠ √a + √b."
+            },
+            {
+              "q": "Kann ich zum Lernen einen Taschenrechner verwenden?",
+              "a": "Ja, der Taschenrechner eignet sich hervorragend zum Erlernen von Mathematik, indem er Formeln und Schritt-für-Schritt-Lösungen anzeigt."
+            },
+            {
+              "q": "Wie berechnet man die Wurzel eines Quotienten?",
+              "a": "Die Wurzel des Quotienten ist gleich dem Quotienten der Wurzeln. Zum Beispiel: √(a/b) = √a / √b."
+            }
+          ]
+        }
+      }
+    },
+    "equations": {
+      "title": "Rechner zum Lösen von Gleichungen",
+      "description": "Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit Schritt-für-Schritt-Erklärung",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "hero": {
+        "types": "Arten von Gleichungen",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "form": {
+        "title": "Geben Sie die Gleichung ein",
+        "mode": "Eingabemodus",
+        "modes": {
+          "parse": "Geben Sie die Gleichung ein",
+          "manual": "Geben Sie die Quoten ein"
+        },
+        "enterEquation": "Geben Sie die Gleichung ein",
+        "examples": "Beispiele",
+        "equationType": "Gleichungstyp",
+        "equationTypes": {
+          "linear": "Linear (ax + b = 0)",
+          "quadratic": "Quadrat (ax² + bx + c = 0)"
+        },
+        "linearFormat": "Format",
+        "quadraticFormat": "Format",
+        "coefficientA": "Koeffizient A",
+        "coefficientB": "Faktor B",
+        "coefficientC": "Koeffizient C",
+        "calculate": "Entscheiden",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "title": "Datenfehler"
+        }
+      },
+      "results": {
+        "title": "Lösungsergebnis",
+        "types": {
+          "linear": "Lineare Gleichung",
+          "quadratic": "Quadratische Gleichung",
+          "unsupported": "Nicht unterstützter Gleichungstyp"
+        },
+        "oneSolution": "Eine Lösung",
+        "twoSolutions": "Zwei Lösungen",
+        "noSolution": "Keine Lösungen",
+        "complexRoots": "Die Gleichung hat komplexe Wurzeln (keine reellen Lösungen)",
+        "steps": "Schritt-für-Schritt-Lösung",
+        "discriminant": "Diskriminant"
+      },
+      "seo": {
+        "title": "Online-Rechner zum Lösen von Gleichungen – lineare und quadratische Gleichungen | Calc1.ru",
+        "description": "Kostenloser Online-Rechner zum Lösen linearer und quadratischer Gleichungen mit detaillierter Schritt-für-Schritt-Erklärung. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+        "overview": {
+          "title": "Online-Rechner zum Lösen von Gleichungen",
+          "content": "Mit unserem Rechner können Sie lineare und quadratische Gleichungen online mit detaillierten Schritt-für-Schritt-Erklärungen lösen. Geben Sie einfach die Gleichung oder die Koeffizienten ein und der Rechner findet sofort die Lösung. Ideal für Studenten, Schüler und alle, die Mathematik studieren.",
+          "calculationExamples": {
+            "title": "Beispiele für Gleichungsberechnungen",
+            "linearExamples": {
+              "title": "Beispiele für die Lösung linearer Gleichungen",
+              "example1": {
+                "equation": "2x + 5 = 15",
+                "solution": "x = 5",
+                "steps": "2x = 15 - 5 = 10, x = 10/2 = 5"
+              },
+              "example2": {
+                "equation": "3x - 7 = 14",
+                "solution": "x = 7",
+                "steps": "3x = 14 + 7 = 21, x = 21/3 = 7"
+              },
+              "example3": {
+                "equation": "5x + 3 = 3x + 8",
+                "solution": "x = 3",
+                "steps": "5x - 3x = 8 - 2, 2, 2x = 6, x = 3"
+              }
+            },
+            "quadraticExamples": {
+              "title": "Beispiele zum Lösen quadratischer Gleichungen",
+              "example1": {
+                "equation": "x² + 5x + 6 = 0",
+                "discriminant": "D = 25 - 24 = 1",
+                "solutions": "x₁ = -2, x₂ = -3",
+                "steps": "D = 5² - 4×1×6 = 1 > 0, zwei Wurzeln"
+              },
+              "example2": {
+                "equation": "x² - 4x + 4 = 0",
+                "discriminant": "D = 16 - 16 = 0",
+                "solutions": "x = 2",
+                "steps": "D = (-4)² - 4×1×4 = 0, eine Wurzel"
+              },
+              "example3": {
+                "equation": "x² + 2x + 5 = 0",
+                "discriminant": "D = 4 - 20 = -16",
+                "solutions": "Keine echten Wurzeln",
+                "steps": "D = 2² - 4×1×5 = -16 < 0, komplexe Wurzeln"
+              }
+            }
+          }
+        },
+        "linearEquations": {
+          "title": "So lösen Sie lineare Gleichungen",
+          "content": "Die lineare Gleichung lautet ax + b = 0, wobei a und b bekannte Zahlen und x eine unbekannte Größe sind. Zum Lösen müssen Sie x ausdrücken.",
+          "formula": "ax + b = 0 → x = -b/a",
+          "example": "Beispiel: 2x + 5 = 15 → 2x = 10 → x = 5"
+        },
+        "quadraticEquations": {
+          "title": "So lösen Sie quadratische Gleichungen",
+          "content": "Die quadratische Gleichung hat die Form ax² + bx + c = 0. Gelöst durch die Diskriminante: D = b² - 4ac. Die Anzahl der Wurzeln hängt vom Diskriminanzwert ab.",
+          "formula": "x = (-b ± √D) / (2a)",
+          "discriminant": "D = b² - 4ac",
+          "twoRoots": "Zwei Wurzeln",
+          "oneRoot": "Eine Wurzel",
+          "noRoots": "Keine echten Wurzeln"
+        },
+        "roots": {
+          "title": "Was sind die Wurzeln einer Gleichung?",
+          "content": "Die Wurzeln einer Gleichung sind die Werte einer Variablen, bei denen die Gleichung in eine echte numerische Gleichheit übergeht. Abhängig von der Art der Gleichung kann es eine unterschiedliche Anzahl von Wurzeln geben.",
+          "real": "Reelle Wurzeln sind gewöhnliche Zahlen auf der Zahlengeraden",
+          "complex": "Komplexe Wurzeln – erscheinen, wenn die Diskriminante negativ ist",
+          "repeated": "Mehrere Wurzeln – wenn die Diskriminante Null ist"
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "content": "Unser Online-Gleichungsrechner bietet schnelle und genaue Lösungen mit detaillierten Erklärungen zu jedem Schritt.",
+          "items": [
+            "Lösen Sie sofort alle linearen und quadratischen Gleichungen",
+            "Detaillierte Schritt-für-Schritt-Erklärung der Lösung",
+            "Bestimmung der Anzahl der Wurzeln und der Diskriminante",
+            "Unterstützt 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+            "Zwei Eingabemodi: Text und Koeffizienten",
+            "Völlig kostenlos ohne Registrierung",
+            "Responsive Design für alle Geräte"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Online-Gleichungsrechner",
+          "content": "Der Online-Rechner zum Lösen von Gleichungen bei Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Lösen Sie kostenlos lineare und quadratische Gleichungen mit detaillierten Erklärungen!"
+        },
+        "faq": {
+          "question1": "Wie kann man online kostenlos eine Gleichung lösen?",
+          "answer1": "Geben Sie die Gleichung im Format „2x + 5 = 15“ oder „x² + 2x + 1 = 0“ ein und klicken Sie auf die Schaltfläche „Lösen“. Der Rechner erkennt automatisch die Art der Gleichung und liefert eine Lösung mit schrittweiser Erklärung.",
+          "question2": "Wie findet man die Wurzeln einer quadratischen Gleichung mithilfe einer Diskriminante?",
+          "answer2": "Berechnen Sie für die quadratische Gleichung ax² + bx + c = 0 zunächst die Diskriminante D = b² - 4ac. Wenn D > 0, hat die Gleichung zwei Wurzeln, wenn D = 0 – eine Wurzel, wenn D < 0 – gibt es keine echten Wurzeln.",
+          "question3": "Wie findet man heraus, wie viele Lösungen eine Gleichung hat?",
+          "answer3": "Eine lineare Gleichung hat eine Lösung (wenn a ≠ 0). Eine quadratische Gleichung kann je nach Diskriminante 0, 1 oder 2 Lösungen haben. Der Rechner ermittelt automatisch die Anzahl der Lösungen.",
+          "question4": "Wie löst man lineare Gleichungen in einer Variablen?",
+          "answer4": "Lineare Gleichungen der Form ax + b = 0 werden durch Verschieben von Termen gelöst: ax = -b, dann x = -b/a. Zum Beispiel: 3x + 6 = 0 → 3x = -6 → x = -2.",
+          "question5": "Was ist die Diskriminante in einer quadratischen Gleichung?",
+          "answer5": "Die Diskriminante D = b² - 4ac bestimmt die Anzahl der Wurzeln der quadratischen Gleichung. Für D > 0 – zwei Wurzeln, D = 0 – eine Wurzel, D < 0 – keine echten Wurzeln.",
+          "question6": "Wie löst man eine quadratische Gleichung mit der Formel von Vieta?",
+          "answer6": "Nach dem Satz von Vieta: x₁ + x₂ = -b/a und x₁ × x₂ = c/a. Dies funktioniert für reduzierte quadratische Gleichungen der Form x² + px + q = 0.",
+          "question7": "Wie kann man die Richtigkeit der Lösung einer Gleichung überprüfen?",
+          "answer7": "Setzen Sie den gefundenen Wert in die ursprüngliche Gleichung ein. Wenn die linke Seite gleich der rechten ist, ist die Lösung richtig. Zum Beispiel für x = 5 in der Gleichung 2x + 5 = 15: 2×5 + 5 = 15 ✓",
+          "question8": "Was tun, wenn die Gleichung keine Lösungen hat?",
+          "answer8": "Wenn Sie einen Widerspruch erhalten (z. B. 0 = 5), hat die Gleichung keine Lösungen. Wenn wir die Identität (0 = 0) erhalten, hat die Gleichung unendlich viele Lösungen.",
+          "question9": "Wie löst man Gleichungen mit Brüchen?",
+          "answer9": "Multiplizieren Sie beide Seiten der Gleichung mit dem gemeinsamen Nenner, um Brüche zu eliminieren. Dann lösen Sie die Gleichung als Normalgleichung.",
+          "question10": "Wie löst man lineare Gleichungssysteme?",
+          "answer10": "Verwenden Sie Substitutions-, Additions- oder grafische Methoden. Unser Rechner zeigt Schritt-für-Schritt-Lösungen für jede Gleichung separat an.",
+          "question11": "Was ist die Wurzel einer Gleichung in der Mathematik?",
+          "answer11": "Die Wurzel einer Gleichung ist der Wert der Variablen, bei dem die Gleichung eine echte numerische Gleichung wird. Beispielsweise ist die Wurzel der Gleichung 2x + 3 = 7 x = 2.",
+          "question12": "Wie löst man Gleichungen mit Modul?",
+          "answer12": "Erweitern Sie das Modul per Definition: |x| = x für x ≥ 0 und |x| = -x für x < 0. Betrachten Sie beide Fälle getrennt.",
+          "question13": "Wie löst man irrationale Gleichungen?",
+          "answer13": "Potenzieren Sie beide Seiten der Gleichung, um die Wurzel loszuwerden. Überprüfen Sie unbedingt die resultierenden Wurzeln, indem Sie sie in die ursprüngliche Gleichung einsetzen.",
+          "question14": "Wie löst man Exponentialgleichungen?",
+          "answer14": "Reduzieren Sie auf die gleiche Basis oder verwenden Sie Logarithmen. Zum Beispiel: 2ˣ = 8 → 2ˣ = 2³ → x = 3.",
+          "question15": "Wie löst man logarithmische Gleichungen?",
+          "answer15": "Nutzen Sie die Eigenschaften von Logarithmen und die Definition: logₐ(b) = c bedeutet aᶜ = b. Überprüfen Sie den Umfang.",
+          "question16": "Wie löst man trigonometrische Gleichungen?",
+          "answer16": "Verwenden Sie grundlegende trigonometrische Identitäten und Reduktionsformeln. Betrachten Sie die Periodizität trigonometrischer Funktionen.",
+          "question17": "Was sind äquivalente Gleichungen?",
+          "answer17": "Äquivalente Gleichungen haben die gleichen Wurzeln. Sie werden durch äquivalente Transformationen voneinander erhalten: Addition, Subtraktion, Multiplikation mit einer Zahl ungleich Null.",
+          "question18": "Wie löst man Gleichungen mit Parametern?",
+          "answer18": "Betrachten Sie verschiedene Fälle von Parameterwerten. Lösen Sie die Gleichung für jeden Fall separat und geben Sie die Bedingungen für den Parameter an.",
+          "question19": "Wie löst man Gleichungen höheren Grades?",
+          "answer19": "Versuchen Sie es mit Faktorisieren, indem Sie eine Variablenänderung oder spezielle Methoden verwenden (z. B. Horners Schema für Polynome).",
+          "question20": "Wie löst man Gleichungen mit zwei Variablen?",
+          "answer20": "Drücken Sie eine Variable durch eine andere aus oder lösen Sie sie als Gleichungssystem. Grafisch handelt es sich um eine Gerade oder Kurve auf der Koordinatenebene.",
+          "question21": "Was ist ODZ in Gleichungen?",
+          "answer21": "VA ist der Bereich zulässiger Werte einer Variablen, für die der Ausdruck sinnvoll ist. Beispielsweise benötigen Sie für √x x ≥ 0, für 1/x benötigen Sie x ≠ 0.",
+          "question22": "Wie löst man Gleichungen mit Radikalen?",
+          "answer22": "Erhöhen Sie beide Seiten mit der entsprechenden Macht, um den Radikalen loszuwerden. Überprüfen Sie unbedingt die resultierenden Wurzeln.",
+          "question23": "Wie löst man Gleichungen mit der Intervallmethode?",
+          "answer23": "Finden Sie die Nullstellen der Funktion, teilen Sie die Zahlenlinie in Intervalle auf und bestimmen Sie das Vorzeichen der Funktion in jedem Intervall.",
+          "question24": "Wie löst man Gleichungen grafisch?",
+          "answer24": "Zeichnen Sie die linke und rechte Seite der Gleichung grafisch auf. Die Schnittpunkte der Graphen ergeben die Wurzeln der Gleichung.",
+          "question25": "Was sind Fremdwurzeln?",
+          "answer25": "Fremdwurzeln treten auf, wenn eine Gleichung gerade potenziert wird oder wenn mit einem Ausdruck mit einer Variablen multipliziert wird. Sie müssen durch Überprüfung aussortiert werden.",
+          "question26": "Wie löst man Gleichungen mithilfe von Variablenänderungen?",
+          "answer26": "Geben Sie anstelle eines komplexen Ausdrucks eine neue Variable ein. Lösen Sie die Gleichung nach der neuen Variablen und kehren Sie dann zur ursprünglichen Variablen zurück.",
+          "question27": "Wie löst man Gleichungen mit der Substitutionsmethode?",
+          "answer27": "Drücken Sie eine Variable durch eine andere aus einer Gleichung aus und setzen Sie sie in die zweite Gleichung ein. Erhalten Sie eine Gleichung mit einer Variablen.",
+          "question28": "Wie löst man Gleichungen mit der Additionsmethode?",
+          "answer28": "Addiere oder subtrahiere Gleichungen, bis eine der Variablen verschwindet. Erhalten Sie eine Gleichung mit einer Variablen.",
+          "question29": "Wie löst man Gleichungen mit einem Taschenrechner?",
+          "answer29": "Geben Sie die Gleichung im Textformat oder mithilfe von Koeffizienten in unseren Online-Rechner ein. Erhalten Sie eine sofortige Lösung mit Schritt-für-Schritt-Erklärung.",
+          "question30": "Wie löst man Gleichungen zur Vorbereitung auf das Einheitliche Staatsexamen?",
+          "answer30": "Lernen Sie die wichtigsten Gleichungstypen kennen: linear, quadratisch, rational, irrational. Üben Sie mit unserem Rechner mit detaillierten Erläuterungen zu jedem Lösungsschritt."
+        }
+      }
+    },
+    "statistics": {
+      "title": "Statistikrechner",
+      "description": "Berechnen Sie Mittelwert, Median, Varianz und andere Indikatoren online",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "form": {
+        "title": "Geben Sie Details ein",
+        "inputLabel": "Zahlen",
+        "placeholder": "Geben Sie durch Kommas oder Leerzeichen getrennte Zahlen ein",
+        "hint": "Beispiel: 1, 2, 3, 4, 5 oder 1 2 3 4 5",
+        "calculate": "Berechnen",
+        "clear": "Klar",
+        "errors": {
+          "title": "Datenfehler"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "mean": "Durchschnitt",
+        "median": "Mittlere",
+        "mode": "Mode",
+        "variance": "Streuung",
+        "standardDeviation": "Standardabweichung",
+        "min": "Minimum",
+        "max": "Maximal",
+        "count": "Menge",
+        "sum": "Summe",
+        "noMode": "Keine Mode"
+      },
+      "seo": {
+        "title": "Online-Statistikrechner – Mittelwert, Median, Varianz | Calc1.ru",
+        "description": "Kostenloser Online-Rechner zur Berechnung statistischer Indikatoren: Mittelwert, Median, Modus, Streuung, Standardabweichung. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+        "overview": {
+          "title": "Online-Statistikrechner",
+          "content": "Mit unserem Rechner können Sie schnell die wichtigsten statistischen Indikatoren berechnen: arithmetisches Mittel, Median, Modus, Streuung und Standardabweichung. Geben Sie einfach durch Kommas oder Leerzeichen getrennte Zahlen ein und erhalten Sie eine vollständige statistische Analyse.",
+          "calculationExamples": {
+            "title": "Beispiele für die Berechnung statistischer Indikatoren",
+            "example1": {
+              "title": "Beispiel 1: Primzahlen",
+              "data": "1, 2, 3, 4, 5",
+              "mean": "3,0",
+              "median": "3,0",
+              "mode": "Keine Mode",
+              "variance": "2,0",
+              "stdDev": "1.41"
+            },
+            "example2": {
+              "title": "Beispiel 2: Zahlen mit Wiederholungen",
+              "data": "1, 2, 2, 3, 4, 4, 4",
+              "mean": "2,86",
+              "median": "3,0",
+              "mode": "4",
+              "variance": "1.27",
+              "stdDev": "1.13"
+            },
+            "example3": {
+              "title": "Beispiel 3: Großer Datensatz",
+              "data": "10, 15, 20, 25, 30, 35, 40",
+              "mean": "25.0",
+              "median": "25.0",
+              "mode": "Keine Mode",
+              "variance": "100,0",
+              "stdDev": "10.0"
+            }
+          }
+        },
+        "mean": {
+          "title": "Arithmetisches Mittel",
+          "content": "Das arithmetische Mittel ist die Summe aller Werte dividiert durch ihre Anzahl. Dies ist einer der wichtigsten Indikatoren der zentralen Tendenz.",
+          "formula": "Mittelwert = Σx/n",
+          "exampleTitle": "Ein Beispiel",
+          "example": "Für die Zahlen 1, 2, 3, 4, 5: Durchschnitt = (1+2+3+4+5)/5 = 3"
+        },
+        "median": {
+          "title": "Mittlere",
+          "content": "Der Median ist der Wert, der die geordnete Reihe in zwei Hälften teilt. Bei gerader Anzahl der Elemente ist der Median gleich dem arithmetischen Mittel der beiden Zentralwerte.",
+          "formula": "Median = der Durchschnittswert einer geordneten Reihe",
+          "exampleTitle": "Ein Beispiel",
+          "example": "Für die Zahlen 1, 2, 3, 4, 5: Median = 3. Für die Zahlen 1, 2, 3, 4: Median = (2+3)/2 = 2,5"
+        },
+        "mode": {
+          "title": "Mode",
+          "content": "Der Modus ist der Wert, der in einer Datenreihe am häufigsten vorkommt. Eine Serie kann mehrere oder gar keinen Modus haben.",
+          "formula": "Modus = am häufigsten vorkommender Wert",
+          "exampleTitle": "Ein Beispiel",
+          "example": "Für die Nummern 1, 2, 2, 3, 4: Modus = 2. Für die Nummern 1, 2, 3, 4: kein Modus"
+        },
+        "variance": {
+          "title": "Streuung",
+          "content": "Die Varianz gibt an, wie stark die Werte vom Mittelwert abweichen. Je größer die Varianz, desto größer die Streuung der Daten.",
+          "formula": "Varianz = Σ(x - Mittelwert)² / n",
+          "exampleTitle": "Ein Beispiel",
+          "example": "Für die Zahlen 1, 2, 3, 4, 5: Varianz = ((1-3)² + (2-3)² + (3-3)² + (4-3)² + (5-3)²) / 5 = 2"
+        },
+        "standardDeviation": {
+          "title": "Standardabweichung",
+          "content": "Die Standardabweichung ist die Quadratwurzel der Varianz. Zeigt die durchschnittliche Abweichung der Werte vom arithmetischen Mittel an.",
+          "formula": "Standardabweichung = √Varianz",
+          "exampleTitle": "Ein Beispiel",
+          "example": "Für die Zahlen 1, 2, 3, 4, 5: Standardabweichung = √2 ≈ 1,41"
+        },
+        "applications": {
+          "title": "Anwendung von Statistiken",
+          "content": "Statistische Berechnungen werden in verschiedenen Bereichen häufig eingesetzt:",
+          "items": [
+            "Datenanalyse in Wirtschaft und Wirtschaft",
+            "Wissenschaftliche Forschung und Experimente",
+            "Produktqualitätskontrolle",
+            "Medizinische Forschung",
+            "Meinungsumfragen",
+            "Finanzanalyse und Investitionen",
+            "Bildung und Pädagogik",
+            "Sportstatistiken"
+          ]
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "content": "Unser Online-Statistikrechner liefert schnelle und genaue Berechnungen mit detaillierten Ergebnissen.",
+          "items": [
+            "Sofortige Berechnung aller wichtigen statistischen Indikatoren",
+            "Unterstützung für die Eingabe von durch Kommas oder Leerzeichen getrennten Zahlen",
+            "Schöne Ergebnisdarstellung mit Farbcodierung",
+            "Unterstützt 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+            "Responsive Design für alle Geräte",
+            "Völlig kostenlos ohne Registrierung",
+            "Präzise Berechnungen mit anpassbarer Genauigkeit"
+          ]
+        },
+        "onlineCalculator": {
+          "title": "Online-Statistikrechner",
+          "content": "Der Online-Statistikrechner bei Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Berechnen Sie kostenlos Mittelwert, Median, Varianz und andere Indikatoren!"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zu statistischen Berechnungen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man das arithmetische Mittel online?",
+              "a": "Unser Statistikrechner berechnet automatisch das arithmetische Mittel. Geben Sie einfach durch Kommas oder Leerzeichen getrennte Zahlen ein und erhalten Sie ein genaues Ergebnis der Durchschnittsberechnung."
+            },
+            {
+              "q": "Was ist der Median in der Statistik und wie findet man ihn?",
+              "a": "Der Median ist der Wert, der eine geordnete Datenreihe in zwei Hälften teilt. Unser Medianrechner sortiert die Daten automatisch und ermittelt den Zentralwert oder den Durchschnitt zweier Zentralwerte."
+            },
+            {
+              "q": "Wie berechnet man Varianz und Standardabweichung?",
+              "a": "Die Streuung zeigt die Streuung der Daten relativ zum Mittelwert. Die Standardabweichung ist die Quadratwurzel der Varianz. Unser Varianzrechner führt alle Berechnungen automatisch und mit hoher Genauigkeit durch."
+            },
+            {
+              "q": "Was ist Mode in der Statistik?",
+              "a": "Der Modus ist der am häufigsten vorkommende Wert in einer Datenreihe. Unser Modalrechner identifiziert alle Modalwerte und zeigt an, ob kein Modalwert vorhanden ist."
+            },
+            {
+              "q": "Wie verwende ich einen Statistikrechner zur Datenanalyse?",
+              "a": "Geben Sie Ihre Informationen in das Eingabefeld ein und verwenden Sie Kommas oder Leerzeichen als Trennzeichen. Der Rechner berechnet sofort alle wichtigen statistischen Indikatoren für die Analyse Ihrer Daten."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen Mittelwert und Median?",
+              "a": "Das arithmetische Mittel ist die Summe aller Werte dividiert durch ihre Anzahl. Der Median ist der zentrale Wert einer geordneten Reihe. Der Median ist resistenter gegenüber Ausreißern und Extremwerten."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für eine Stichprobe?",
+              "a": "Unser Statistikrechner arbeitet sowohl mit der Grundgesamtheit als auch mit der Stichprobe. Alle Formeln berücksichtigen die richtigen Nenner für genaue statistische Berechnungen."
+            },
+            {
+              "q": "Was zeigt die Standardabweichung?",
+              "a": "Die Standardabweichung gibt die durchschnittliche Abweichung der Werte vom arithmetischen Mittel an. Je größer die Standardabweichung, desto größer ist die Streuung der Daten in Ihrer Stichprobe."
+            },
+            {
+              "q": "Wie sind die Ergebnisse der statistischen Analyse zu interpretieren?",
+              "a": "Der Mittelwert zeigt den typischen Wert, der Median zeigt die zentrale Tendenz und der Modus zeigt die häufigsten Werte. Varianz und Standardabweichung zeigen die Streuung der Daten um den Mittelwert."
+            },
+            {
+              "q": "Ist es möglich, Statistiken für große Datenmengen zu berechnen?",
+              "a": "Ja, unser Online-Statistikrechner verarbeitet große Datenmengen. Geben Sie einfach alle Zahlen durch Kommas oder Leerzeichen getrennt ein und Sie erhalten eine vollständige statistische Analyse."
+            },
+            {
+              "q": "Wie berechnet man deskriptive Statistiken?",
+              "a": "Unser Rechner berechnet alle grundlegenden deskriptiven Statistiken: Mittelwert, Median, Modus, Varianz, Standardabweichung, Minimum, Maximum und Anzahl der Elemente."
+            },
+            {
+              "q": "Was ist die zentrale Tendenz in der Statistik?",
+              "a": "Die zentrale Tendenz ist der typische oder zentrale Wert in der Datenverteilung. Grundmaße der zentralen Tendenz: arithmetisches Mittel, Median und Modus."
+            },
+            {
+              "q": "Wie berechnet man die Datenverteilung?",
+              "a": "Die Streuung der Daten wird anhand der Varianz und Standardabweichung gemessen. Unser Rechner berechnet automatisch diese Kennzahlen, die zeigen, wie weit die Daten vom Durchschnitt abweichen."
+            },
+            {
+              "q": "Was sind Ausreißer in der Statistik?",
+              "a": "Ausreißer sind Werte, die deutlich vom Rest der Daten abweichen. Der Median ist resistenter gegen Ausreißer als das arithmetische Mittel und wird daher häufig zur Analyse von Daten mit Extremwerten verwendet."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für die Normalverteilung?",
+              "a": "Bei einer Normalverteilung sind Mittelwert, Median und Modus gleich. Mit unserem Rechner können Sie ermitteln, wie nahe Ihre Daten an einer Normalverteilung liegen."
+            },
+            {
+              "q": "Was sind Quantile und Perzentile?",
+              "a": "Quantile teilen geordnete Daten in gleiche Teile. Der Median ist das 50. Perzentil. Unser Rechner berechnet Hauptquantile, um die Datenverteilung zu analysieren."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für Zeitreihen?",
+              "a": "Für Zeitreihen sind Mittelwert, Trend und Volatilität wichtig. Unser Rechner berechnet grundlegende Statistiken zur Analyse von Zeitdaten."
+            },
+            {
+              "q": "Was ist der Variationskoeffizient?",
+              "a": "Der Variationskoeffizient ist das Verhältnis der Standardabweichung zum Mittelwert, ausgedrückt in Prozent. Zeigt die relative Variabilität der Daten unabhängig von den Maßeinheiten an."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für qualitative Daten?",
+              "a": "Bei qualitativen Daten sind die Hauptindikatoren Art und Häufigkeit des Auftretens. Unser Rechner ermittelt die häufigsten Werte und deren Verteilung."
+            },
+            {
+              "q": "Was sind Schiefe und Kurtosis?",
+              "a": "Schiefe zeigt die Abweichung der Verteilung von der Symmetrie, Kurtosis zeigt die Schärfe des Verteilungspeaks. Diese Maßnahmen helfen bei der Bewertung der Form der Datenverteilung."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für Finanzdaten?",
+              "a": "Für Finanzdaten sind die durchschnittliche Rendite, die Volatilität (Standardabweichung) und das Risiko wichtig. Unser Rechner hilft Ihnen bei der Analyse der finanziellen Leistung und Kapitalrendite."
+            },
+            {
+              "q": "Was sind Konfidenzintervalle?",
+              "a": "Konfidenzintervalle geben den Bereich an, in dem der wahre Wert eines Parameters mit einer gegebenen Wahrscheinlichkeit liegt. Unser Rechner berechnet grundlegende Statistiken zur Erstellung von Konfidenzintervallen."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für die medizinische Forschung?",
+              "a": "In der Medizin sind Mittelwerte, Mediane für die Robustheit gegenüber Ausreißern und Standardabweichungen zur Beurteilung der Streuung wichtig. Unser Rechner hilft bei der Analyse medizinischer Daten."
+            },
+            {
+              "q": "Was ist der Interquartilbereich (IQR)?",
+              "a": "Der IQR ist die Differenz zwischen dem dritten und dem ersten Quartil (Q3 – Q1). Zeigt die Streuung der zentralen 50 % der Daten an und reagiert weniger empfindlich auf Ausreißer als die Standardabweichung."
+            },
+            {
+              "q": "Wie berechnet man Statistiken zur Qualitätskontrolle?",
+              "a": "Bei der Qualitätskontrolle sind Durchschnittswerte, Standardabweichungen und Kontrollgrenzen wichtig. Unser Statistikrechner berechnet alle notwendigen Kennzahlen zur statistischen Prozesskontrolle."
+            },
+            {
+              "q": "Was ist ein Z-Score in der Statistik?",
+              "a": "Der Z-Score gibt an, um wie viele Standardabweichungen ein Wert vom Mittelwert abweicht. Z = (x - μ) / σ, wobei x der Wert, μ der Mittelwert und σ die Standardabweichung ist."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für die Marktforschung?",
+              "a": "Im Marketing sind Durchschnittswerte der Verbraucherpräferenzen, Medianeinkommen und Standardabweichungen der Preise wichtig. Unser Statistikrechner hilft Ihnen bei der Analyse von Marktdaten."
+            },
+            {
+              "q": "Was ist die Faustregel 68-95-99,7?",
+              "a": "Für eine Normalverteilung: 68 % der Daten liegen innerhalb von 1σ vom Mittelwert, 95 % liegen innerhalb von 2σ, 99,7 % liegen innerhalb von 3σ. Unser Statistikrechner zeigt die Streuung Ihrer Daten."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für soziologische Umfragen?",
+              "a": "Für soziologische Daten sind Modalwerte, Mediane für die Robustheit gegenüber extremen Antworten und Standardabweichungen zur Beurteilung der Konsistenz von Meinungen wichtig."
+            },
+            {
+              "q": "Was ist die mittlere absolute Abweichung (MAD)?",
+              "a": "MAD ist der Median der absoluten Abweichungen vom Median. Ein Maß für die Streuung, das gegenüber Ausreißern robuster ist als die Standardabweichung."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für Sportdaten?",
+              "a": "Im Sport sind Durchschnittswerte, Mediane für den Widerstand gegen extreme Ergebnisse und Standardabweichungen zur Beurteilung der Leistungsstabilität wichtig."
+            },
+            {
+              "q": "Was ist der Standardfehler des Mittelwerts?",
+              "a": "Der Standardfehler des Mittelwerts ist die Standardabweichung der Stichprobenverteilung des Mittelwerts. Zeigt die Genauigkeit der Schätzung des Stichprobenmittelwerts an."
+            },
+            {
+              "q": "Was sind Korrelation und Kovarianz?",
+              "a": "Die Korrelation zeigt eine lineare Beziehung zwischen Variablen, die Kovarianz zeigt die gemeinsame Variabilität. Unser Rechner berechnet grundlegende Statistiken, um Beziehungen zwischen Daten zu analysieren."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für soziologische Umfragen?",
+              "a": "Für Umfragen sind Modalwerte, Mediane und Antwortverteilungen wichtig. Unser Rechner hilft bei der Analyse der Ergebnisse soziologischer Studien und Meinungsumfragen."
+            },
+            {
+              "q": "Was ist statistische Signifikanz?",
+              "a": "Die statistische Signifikanz gibt die Wahrscheinlichkeit an, dass der beobachtete Effekt nicht auf Zufall zurückzuführen ist. Unser Rechner berechnet wichtige Statistiken, um die Aussagekraft Ihrer Ergebnisse zu bewerten."
+            },
+            {
+              "q": "Wie berechnet man Statistiken zur Qualitätskontrolle?",
+              "a": "Bei der Qualitätskontrolle sind Prozessmittelwerte, Standardabweichungen zur Beurteilung der Stabilität und Kontrollgrenzen wichtig. Unser Rechner hilft bei der Analyse der Produktqualität."
+            },
+            {
+              "q": "Was ist eine Regressionsanalyse?",
+              "a": "Die Regressionsanalyse untersucht die Beziehung zwischen Variablen. Unser Rechner berechnet grundlegende statistische Indikatoren für die Erstellung von Regressionsmodellen und Prognosen."
+            },
+            {
+              "q": "Wie berechnet man Statistiken für A/B-Tests?",
+              "a": "Für A/B-Tests sind durchschnittliche Conversion-Werte, statistische Signifikanz von Unterschieden und Konfidenzintervalle wichtig. Unser Rechner hilft bei der Analyse der Ergebnisse von Experimenten."
+            },
+            {
+              "q": "Was sind Bayes'sche Statistiken?",
+              "a": "Die Bayes'sche Statistik nutzt Vorwissen, um Wahrscheinlichkeiten zu aktualisieren. Unser Rechner berechnet grundlegende Statistiken für die Bayes'sche Datenanalyse."
+            }
+          ]
+        }
+      }
+    },
+    "converter": {
+      "title": "Einheitenumrechner",
+      "description": "Konvertieren Sie Länge, Masse, Zeit und Volumen online",
+      "breadcrumbs": {
+        "category": "Mathematik"
+      },
+      "hero": {
+        "units": "Maßeinheiten",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "form": {
+        "title": "Einheitenumrechner",
+        "selectCategory": "Kategorie auswählen",
+        "categories": {
+          "length": "Länge",
+          "mass": "Gewicht",
+          "time": "Zeit",
+          "volume": "Volumen"
+        },
+        "fromUnit": "Von der Einheit",
+        "toUnit": "Pro Einheit",
+        "value": "Bedeutung",
+        "selectUnit": "Einheit auswählen",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "title": "Datenfehler"
+        }
+      },
+      "results": {
+        "title": "Konvertierungsergebnis",
+        "conversionInfo": "Conversion-Rate"
+      },
+      "units": {
+        "length": {
+          "m": "Meter",
+          "km": "Kilometer (km)",
+          "cm": "Zentimeter (cm)",
+          "mm": "Millimeter (mm)",
+          "inch": "Zoll",
+          "foot": "Fuß (ft)",
+          "yard": "Yard (yd)",
+          "mile": "Meile (mi)"
+        },
+        "mass": {
+          "kg": "Kilogramm (kg)",
+          "g": "Gramm (g)",
+          "mg": "Milligramm (mg)",
+          "tonne": "Tonne (t)",
+          "lb": "Pfund (lb)",
+          "oz": "Unze (oz)"
+        },
+        "time": {
+          "second": "Sekunde(n)",
+          "minute": "Minute (min)",
+          "hour": "Zeit (h)",
+          "day": "Tag(d)",
+          "week": "Sonntag (Sonntag)"
+        },
+        "volume": {
+          "l": "Liter (l)",
+          "ml": "Milliliter (ml)",
+          "m3": "Kubikmeter (m‰)",
+          "cm3": "Kubikzentimeter (cm³)",
+          "gallon": "Gallone",
+          "pint": "Pint (pt)"
+        }
+      },
+      "seo": {
+        "title": "Online-Einheitenrechner - Länge, Masse, Zeit, Volumen | Calc1.ru",
+        "description": "Kostenloser Online-Einheitenrechner für Länge, Masse, Zeit und Volumen. Unterstützung für Russisch, Englisch, Spanisch und Deutsch.",
+        "overview": {
+          "title": "Online-Einheitenrechner",
+          "content": "Mit unserem Konverter können Sie schnell und genau zwischen verschiedenen Maßeinheiten umrechnen: Länge, Masse, Zeit und Volumen. Wählen Sie einfach eine Kategorie und Maßeinheiten aus und geben Sie einen Wert ein, um sofortige Ergebnisse zu erhalten.",
+          "examples": {
+            "title": "Beispiele für Einheitenumrechnerberechnungen",
+            "lengthExamples": {
+              "title": "Beispiele für Längenumrechnungen",
+              "example1": "100 cm = 1 m = 1000 mm",
+              "example2": "1 km = 1000 m = 100000 cm",
+              "example3": "1 Zoll = 2,54 cm = 25,4 mm",
+              "example4": "1 Fuß = 30,48 cm = 0,3048 m",
+              "example5": "1 Meile = 1,609 km = 1609 m"
+            },
+            "massExamples": {
+              "title": "Beispiele für Massenkonvertierungen",
+              "example1": "1 kg = 1000 g = 1000000 mg",
+              "example2": "1 Tonne = 1000 kg = 1000000 Jahre",
+              "example3": "1 Pfund = 0,453 kg = 453 g",
+              "example4": "1 Unze = 28,35 g = 28350 mg",
+              "example5": "500 g = 0,5 kg = 500000 mg"
+            },
+            "timeExamples": {
+              "title": "Beispiele für Zeitumrechnungen",
+              "example1": "1 Stunde = 60 Minuten = 3600 Sekunden",
+              "example2": "1 Tag = 24 Stunden = 1440 Minuten",
+              "example3": "1 Woche = 7 Tage = 168 Stunden",
+              "example4": "30 Minuten = 1800 Sekunden = 0,5 Stunden",
+              "example5": "2 Stunden 30 Minuten = 150 Minuten = 9000 Sekunden"
+            },
+            "volumeExamples": {
+              "title": "Beispiele für Volumenumrechnungen",
+              "example1": "1 Liter = 1000 ml = 0,001 m³",
+              "example2": "1 m3 = 1000 Liter = 100.0000 ml",
+              "example3": "1 Gallone = 3,785 Liter = 3785 ml",
+              "example4": "500 ml = 0,5 Liter = 0,0005 m3",
+              "example5": "1 Pint = 0,473 Liter = 473 ml"
+            }
+          }
+        },
+        "length": {
+          "title": "Längenumrechnung",
+          "content": "Konvertieren Sie zwischen metrischen und imperialen Längeneinheiten. Alle Grundeinheiten von Millimeter bis Meilen werden unterstützt.",
+          "units": [
+            "Metrisches System: mm, cm, m, km",
+            "Imperiales System: Zoll, Fuß, Yards, Meilen",
+            "Genaue Umrechnungskurse",
+            "Unterstützung für wissenschaftliche Berechnungen"
+          ]
+        },
+        "mass": {
+          "title": "Massenkonvertierung",
+          "content": "Konvertieren Sie zwischen verschiedenen Massen- und Gewichtseinheiten. Von Milligramm bis Tonnen, einschließlich imperialer Einheiten.",
+          "units": [
+            "Metrisches System: mg, g, kg, t",
+            "Imperiales System: Unzen, Pfund",
+            "Genaue Umrechnungsfaktoren",
+            "Unterstützung bei der Kochmessung"
+          ]
+        },
+        "time": {
+          "title": "Zeitumrechnung",
+          "content": "Konvertieren Sie zwischen verschiedenen Zeiteinheiten. Von Sekunden bis zu Wochen mit genauen Berechnungen.",
+          "units": [
+            "Grundeinheiten: Sekunden, Minuten, Stunden",
+            "Langfristig: Tage, Wochen",
+            "Genaue Timing-Berechnungen",
+            "Planungsunterstützung"
+          ]
+        },
+        "volume": {
+          "title": "Volumenumrechnung",
+          "content": "Konvertieren Sie zwischen verschiedenen Volumeneinheiten. Von Millilitern über Kubikmeter bis hin zu imperialen Einheiten.",
+          "units": [
+            "Metrisches System: ml, l, m³, cm³",
+            "Imperiales System: Pints, Gallonen",
+            "Genaue volumetrische Berechnungen",
+            "Unterstützung für Flüssigkeiten und Gase"
+          ]
+        },
+        "applications": {
+          "title": "Anwendung des Konverters",
+          "content": "Der Einheitenumrechner wird in verschiedenen Bereichen häufig verwendet:",
+          "items": [
+            "Wissenschaftliche Forschung und Experimente",
+            "Technische Berechnungen und Konstruktion",
+            "Kochen und Rezepte",
+            "Reisen und Navigation",
+            "Schul-und Berufsbildung",
+            "Medizin und Pharmazeutika",
+            "Bau und Architektur",
+            "Sport und Fitness"
+          ]
+        },
+        "advantages": {
+          "title": "Vorteile des Konverters",
+          "content": "Unser Online-Einheitenrechner bietet schnelle und genaue Umrechnungen mit einer benutzerfreundlichen Oberfläche.",
+          "items": [
+            "Sofortige Konvertierung in Echtzeit",
+            "Unterstützt 4 Kategorien von Maßeinheiten",
+            "Genaue Umrechnungsfaktoren",
+            "Unterstützt 4 Sprachen: Russisch, Englisch, Spanisch, Deutsch",
+            "Responsive Design für alle Geräte",
+            "Völlig kostenlos ohne Registrierung",
+            "Intuitive Benutzeroberfläche"
+          ]
+        },
+        "onlineConverter": {
+          "title": "Online-Einheitenrechner",
+          "content": "Der Online-Einheitenrechner bei Calc1.ru unterstützt Russisch, Englisch, Spanisch und Deutsch. Konvertieren Sie kostenlos Länge, Masse, Zeit und Volumen!"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zum Einheitenumrechner",
+          "faqItems": [
+            {
+              "q": "Wie verwende ich einen Online-Einheitenrechner?",
+              "a": "Wählen Sie eine Einheitenkategorie (Länge, Masse, Zeit oder Volumen), wählen Sie dann eine Quell- und Zieleinheit aus, geben Sie einen Wert ein und das Ergebnis wird automatisch angezeigt. Unser Einheitenumrechner unterstützt die sofortige Umrechnung in Echtzeit."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Längenkonverter?",
+              "a": "Der Längenkonverter unterstützt metrische Einheiten (Millimeter, Zentimeter, Meter, Kilometer) und imperiale Einheiten (Zoll, Fuß, Yards, Meilen). Alle Umrechnungsfaktoren basieren auf offiziellen internationalen Standards."
+            },
+            {
+              "q": "Wie rechnet man Kilogramm in Pfund und Unzen um?",
+              "a": "Um das Gewicht umzurechnen, verwenden Sie unseren Gewichtsumrechner: 1 Kilogramm = 2,205 Pfund = 35,274 Unzen. Geben Sie den Wert in Kilogramm ein, wählen Sie Pfund oder Unzen als Zieleinheit und erhalten Sie das genaue Ergebnis."
+            },
+            {
+              "q": "Wie genau sind die Ergebnisse der Zeitumrechnung?",
+              "a": "Alle Zeitumrechnungsfaktoren basieren auf offiziellen internationalen Standards und gewährleisten maximale Berechnungsgenauigkeit. Der Zeitkonverter unterstützt Sekunden, Minuten, Stunden, Tage und Wochen."
+            },
+            {
+              "q": "Wie rechnet man Liter in Gallonen und Pints ​​um?",
+              "a": "Der Volumenkonverter unterstützt metrische Einheiten (Milliliter, Liter, Kubikmeter) und britische Einheiten (Pints, Gallonen). 1 Liter = 0,264 Gallonen = 2,113 Pints. Geben Sie einen Wert ein und wählen Sie die Zieleinheit aus."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner wissenschaftliche Berechnungen?",
+              "a": "Ja, unser Einheitenumrechner unterstützt wissenschaftliche Berechnungen mit hoher Genauigkeit. Alle Umrechnungsfaktoren basieren auf internationalen Standards und sind für ingenieurwissenschaftliche und wissenschaftliche Berechnungen geeignet."
+            },
+            {
+              "q": "Wie verwende ich einen Kocheinheiten-Konverter?",
+              "a": "Der Einheitenumrechner ist ideal zum Kochen. Konvertieren Sie Gramm in Unzen, Milliliter in Tassen und Kilogramm in Pfund, um die Zutaten in Rezepten genau zu messen."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Massenkonverter?",
+              "a": "Der Massenumrechner unterstützt metrische Einheiten (Milligramm, Gramm, Kilogramm, Tonnen) und imperiale Einheiten (Unzen, Pfund). Alle Umrechnungsfaktoren basieren auf offiziellen Standards."
+            },
+            {
+              "q": "Wie rechnet man Meter in Fuß und Zoll um?",
+              "a": "Um die Länge umzurechnen, verwenden Sie unseren Umrechner: 1 Meter = 3,281 Fuß = 39,37 Zoll. Geben Sie den Wert in Metern ein, wählen Sie Fuß oder Zoll als Zieleinheit und erhalten Sie das genaue Ergebnis."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner mobile Geräte?",
+              "a": "Ja, unser Online-Einheitenrechner ist responsiv und vollständig für Mobilgeräte geeignet. Für eine einfache Nutzung auf Smartphones und Tablets passt sich die Benutzeroberfläche automatisch an die Bildschirmgröße an."
+            },
+            {
+              "q": "Wie verwende ich einen Einheitenumrechner für Reisen?",
+              "a": "Auf Reisen ist ein Einheitenumrechner unerlässlich. Konvertieren Sie Kilometer in Meilen für die Navigation, Kilogramm in Pfund für Gepäck, Liter in Gallonen für Kraftstoff und Stunden in Ortszeit."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Volumenumrechner?",
+              "a": "Der Volumenkonverter unterstützt metrische Einheiten (Milliliter, Liter, Kubikmeter, Kubikzentimeter) und imperiale Einheiten (Pints, Gallonen). Alle volumetrischen Berechnungen werden mit hoher Genauigkeit durchgeführt."
+            },
+            {
+              "q": "Wie rechnet man Stunden in Minuten und Sekunden um?",
+              "a": "Der Zeitkonverter unterstützt alle Grundeinheiten: 1 Stunde = 60 Minuten = 3600 Sekunden. Geben Sie den Wert in Stunden ein, wählen Sie Minuten oder Sekunden als Zieleinheit und erhalten Sie das genaue Ergebnis."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner mehrere Sprachen?",
+              "a": "Ja, unser Einheitenumrechner unterstützt 4 Sprachen: Russisch, Englisch, Spanisch und Deutsch. Die Oberfläche wechselt automatisch je nach ausgewählter Sprache."
+            },
+            {
+              "q": "Wie verwende ich einen Einheitenumrechner für den Bau?",
+              "a": "Der Einheitenumrechner wird häufig im Bauwesen verwendet. Konvertieren Sie Meter in Fuß für Räume, Kilogramm in Pfund für Materialien und Liter in Gallonen für Flüssigkeiten."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Zeitkonverter?",
+              "a": "Der Zeitkonverter unterstützt Grundeinheiten: Sekunden, Minuten, Stunden, Tage, Wochen. Alle Timing-Berechnungen für wissenschaftliche und technische Berechnungen werden mit einer Genauigkeit von Millisekunden durchgeführt."
+            },
+            {
+              "q": "Wie rechnet man Tonnen in Kilogramm und Gramm um?",
+              "a": "Um die Masse umzurechnen, verwenden Sie unseren Umrechner: 1 Tonne = 1000 Kilogramm = 1.000.000 Gramm. Geben Sie den Wert in Tonnen ein, wählen Sie Kilogramm oder Gramm als Zieleinheit."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner den Export von Ergebnissen?",
+              "a": "Mit unserem Einheitenumrechner können Sie die Ergebnisse zur späteren Verwendung in Ihre Zwischenablage kopieren. Die Konvertierungsergebnisse können gespeichert oder mit Kollegen geteilt werden."
+            },
+            {
+              "q": "Wie verwende ich einen Umrechner für medizinische Einheiten?",
+              "a": "Ein Einheitenumrechner ist in der Medizin unverzichtbar. Rechnen Sie Milligramm in Gramm für Arzneimitteldosierungen, Milliliter in Liter für Flüssigkeiten und Kilogramm in Pfund für das Patientengewicht um."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Längenkonverter?",
+              "a": "Der Längenkonverter unterstützt metrische Einheiten (Millimeter, Zentimeter, Meter, Kilometer) und imperiale Einheiten (Zoll, Fuß, Yards, Meilen). Alle Umrechnungsfaktoren basieren auf internationalen Standards."
+            },
+            {
+              "q": "Wie rechnet man Kubikmeter in Liter und Milliliter um?",
+              "a": "Der Volumenumrechner unterstützt die genaue Umrechnung: 1 Kubikmeter = 1000 Liter = 1.000.000 Milliliter. Geben Sie den Wert in Kubikmetern ein, wählen Sie als Zieleinheit Liter oder Milliliter."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner historische Einheiten?",
+              "a": "Unser Einheitenumrechner unterstützt die wichtigsten modernen Maßeinheiten. Für historische Einheiten empfiehlt sich die Nutzung spezialisierter Umrechner oder Nachschlagewerke."
+            },
+            {
+              "q": "Wie verwende ich einen Einheitenumrechner für Sport?",
+              "a": "Im Sport ist ein Einheitenumrechner sinnvoll. Rechnen Sie Kilometer in Meilen fürs Laufen, Kilogramm in Pfund für das Gewicht, Liter in Gallonen für die Flüssigkeitszufuhr und Stunden in Minuten für das Training um."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Massenkonverter?",
+              "a": "Der Massenumrechner unterstützt metrische Einheiten (Milligramm, Gramm, Kilogramm, Tonnen) und imperiale Einheiten (Unzen, Pfund). Alle Umrechnungsfaktoren basieren auf offiziellen internationalen Standards."
+            },
+            {
+              "q": "Wie rechnet man Wochen in Tage und Stunden um?",
+              "a": "Der Zeitkonverter unterstützt eine genaue Umrechnung: 1 Woche = 7 Tage = 168 Stunden. Geben Sie einen Wert in Wochen ein, wählen Sie Tage oder Stunden als Zieleinheit und erhalten Sie das genaue Ergebnis."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner Temperatureinheiten?",
+              "a": "Unser Einheitenumrechner unterstützt Länge, Masse, Zeit und Volumen. Um Temperaturen umzurechnen, verwenden Sie einen speziellen Temperaturkonverter."
+            },
+            {
+              "q": "Wie verwende ich einen Einheitenumrechner für den Bildungsbereich?",
+              "a": "Ein Einheitenumrechner ist in der Bildung unverzichtbar. Studierende können Maßeinheiten umrechnen, um Probleme in Physik, Chemie und Mathematik zu lösen. Lehrer nutzen den Konverter, um Berechnungen zu überprüfen."
+            },
+            {
+              "q": "Welche Maßeinheiten unterstützt der Volumenumrechner?",
+              "a": "Der Volumenkonverter unterstützt metrische Einheiten (Milliliter, Liter, Kubikmeter, Kubikzentimeter) und imperiale Einheiten (Pints, Gallonen). Alle volumetrischen Berechnungen werden mit hoher Genauigkeit durchgeführt."
+            },
+            {
+              "q": "Wie rechnet man Yards in Meter und Zentimeter um?",
+              "a": "Der Längenkonverter unterstützt eine genaue Umrechnung: 1 Yard = 0,914 Meter = 91,4 Zentimeter. Geben Sie den Wert in Yards ein, wählen Sie Meter oder Zentimeter als Zieleinheit."
+            },
+            {
+              "q": "Unterstützt der Einheitenumrechner Währungseinheiten?",
+              "a": "Unser Einheitenumrechner unterstützt physikalische Einheiten (Länge, Masse, Zeit, Volumen). Verwenden Sie zum Umrechnen von Währungen einen speziellen Währungsumrechner."
+            }
+          ]
+        }
+      }
+    }
+  }
 }
-
-
-

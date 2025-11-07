@@ -1,6 +1,2191 @@
 {
-	"calculators": {}
+  "calculators": {
+    "length": {
+      "title": "Conversor de longitud en línea",
+      "description": "Convierta rápidamente unidades de longitud: milímetros, centímetros, metros, kilómetros y millas. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Convirtámonos...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "mm": "milímetros",
+        "cm": "centímetro",
+        "m": "metro",
+        "km": "kilómetros",
+        "mi": "estimado"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en tasas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de longitud en línea: mm, cm, m, km, millas | calc1.ru",
+        "description": "Conversor de longitud online gratuito para convertir milímetros, centímetros, metros, kilómetros y millas. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de longitud.",
+        "keywords": "convertidor de longitud, mm a cm, cm a m, m a km, km a millas, millas a km, convertidor de unidades de longitud, conversión de milímetros, conversión de centímetros, conversión de metros, conversión de kilómetros, conversión de millas, convertidor de longitud en línea, convertidor de mm, convertidor de cm, convertidor de m, convertidor de km, convertidor de millas, unidades de longitud, sistema métrico, unidades imperiales, pulgadas a centímetros, pies a metros, yardas a metros, conversión de longitud en línea, calculadora de longitud, conversión de unidades de longitud, convertidor de distancia, convertidor de longitud, mm a cm, cm a m, metros a kilómetros, millas a km",
+        "h1": "Conversor de longitud en línea",
+        "h2": "Convertir mm, cm, m, km, millas",
+        "overview": {
+          "title": "Acerca del convertidor de longitud",
+          "content": "Nuestro conversor de longitud le permite convertir de forma rápida y precisa entre diferentes unidades de longitud. Soporta todas las unidades básicas: milímetros, centímetros, metros, kilómetros y millas.",
+          "additionalContent": "El convertidor utiliza factores de conversión precisos basados ​​en estándares internacionales. Adecuado para construcción, ingeniería, educación y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir diferentes unidades de longitud:",
+            "example1": {
+              "title": "Convertir milímetros a centímetros",
+              "description": "Traducción de pequeñas medidas para cálculos precisos.",
+              "input": "100mm",
+              "calculation": "100 mm ÷ 10 = 10 cm",
+              "result": "10 centímetros",
+              "type": "sistema métrico"
+            },
+            "example2": {
+              "title": "Convertir metros a kilómetros",
+              "description": "Conversión de metros a kilómetros para largas distancias",
+              "input": "2500 metros",
+              "calculation": "2500 m ÷ 1000 = 2,5 km",
+              "result": "2,5 kilómetros",
+              "type": "sistema métrico"
+            },
+            "example3": {
+              "title": "Convertir kilómetros a millas",
+              "description": "Conversión de kilómetros a millas para pagos internacionales",
+              "input": "100 kilometros",
+              "calculation": "100 kilómetros × 0,62137 = 62,137 millas",
+              "result": "62,137 millas",
+              "type": "sistema imperial"
+            },
+            "example4": {
+              "title": "Convertir millas a kilómetros",
+              "description": "Conversión de millas a kilómetros para estándares internacionales",
+              "input": "50 millas",
+              "calculation": "50 millas × 1,60934 = 80,467 kilómetros",
+              "result": "80,467 kilometros",
+              "type": "sistema imperial"
+            },
+            "example5": {
+              "title": "Convertir centímetros a metros",
+              "description": "Conversión de centímetros a metros para mayor comodidad",
+              "input": "150cm",
+              "calculation": "150 cm ÷ 100 = 1,5 m",
+              "result": "1,5 metros",
+              "type": "sistema métrico"
+            },
+            "example6": {
+              "title": "Convertir kilómetros a metros",
+              "description": "Convierta kilómetros a metros para obtener mediciones precisas",
+              "input": "3,5 kilómetros",
+              "calculation": "3,5 kilómetros × 1000 = 3500 metros",
+              "result": "3500m",
+              "type": "sistema métrico"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de longitud se convierten a través de la unidad base: metro. Cada unidad tiene su propio coeficiente con respecto al metro, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 5 unidades básicas de longitud: milímetros (mm), centímetros (cm), metros (m), kilómetros (km) y millas."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir milímetros a centímetros?",
+            "a": "Divide milímetros por 10 para obtener centímetros. Por ejemplo: 50 mm = 5 cm."
+          },
+          {
+            "q": "¿Cómo convertir kilómetros a millas?",
+            "a": "1 kilómetro ≈ 0,62137 millas. Multiplica los kilómetros por este factor. Por ejemplo: 10 km ≈ 6,21 millas."
+          },
+          {
+            "q": "¿Cuántos metros hay en un kilómetro?",
+            "a": "Hay 1000 metros en un kilómetro. Este es el sistema métrico estándar."
+          },
+          {
+            "q": "¿Cómo convertir millas a kilómetros?",
+            "a": "1 milla ≈ 1,60934 kilómetros. Multiplica millas por este factor para obtener kilómetros."
+          },
+          {
+            "q": "¿Cómo convertir centímetros a metros?",
+            "a": "Divide centímetros por 100 para obtener metros. Por ejemplo: 150 cm = 1,5 m."
+          },
+          {
+            "q": "¿Cómo convertir metros a centímetros?",
+            "a": "Multiplica metros por 100 para obtener centímetros. Por ejemplo: 2 m = 200 cm."
+          },
+          {
+            "q": "¿Cuántos milímetros hay en un centímetro?",
+            "a": "Hay 10 milímetros en un centímetro. Esta es la unidad básica del sistema métrico."
+          },
+          {
+            "q": "¿Cómo convertir kilómetros a metros?",
+            "a": "Multiplica kilómetros por 1000 para obtener metros. Por ejemplo: 5 km = 5000 m."
+          },
+          {
+            "q": "¿Qué es una milla?",
+            "a": "Las millas son una unidad de longitud en el sistema imperial, equivalente a 1,60934 kilómetros. Utilizado en EE. UU., Reino Unido y algunos otros países."
+          },
+          {
+            "q": "¿Cómo convertir metros a kilómetros?",
+            "a": "Divide metros por 1000 para obtener kilómetros. Por ejemplo: 2500 m = 2,5 km."
+          },
+          {
+            "q": "¿Cuántas millas hay en un kilómetro?",
+            "a": "Un kilómetro equivale aproximadamente a 0,62137 millas. Este es el factor de conversión estándar."
+          },
+          {
+            "q": "¿Qué unidades de longitud admite el conversor?",
+            "a": "El convertidor admite 5 unidades: milímetros (mm), centímetros (cm), metros (m), kilómetros (km) y millas."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Los factores de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Es posible convertir entre pulgadas y pies?",
+            "a": "En la versión actual, el convertidor admite mm, cm, m, km y millas. Está previsto agregar pulgadas y pies en futuras actualizaciones."
+          },
+          {
+            "q": "¿Cómo convertir varios valores a la vez?",
+            "a": "El convertidor procesa un valor a la vez. Para convertir varios valores, realice el cálculo para cada valor por separado."
+          },
+          {
+            "q": "¿El convertidor admite valores negativos?",
+            "a": "No, la longitud es siempre un valor positivo. El convertidor no admite números negativos."
+          },
+          {
+            "q": "¿Cuál es el tamaño máximo del valor que se puede convertir?",
+            "a": "El conversor admite valores de hasta 15 decimales. El valor máximo está limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿Es un conversor gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en la construcción?",
+            "a": "Sí, el convertidor se usa ampliamente en la construcción para convertir entre unidades métricas e imperiales cuando se trabaja en proyectos internacionales."
+          },
+          {
+            "q": "¿El convertidor es adecuado para la educación?",
+            "a": "Sí, el convertidor es ideal para que estudiantes y profesores enseñen unidades de longitud y completen tareas educativas."
+          },
+          {
+            "q": "¿Qué unidad de longitud se utiliza en el sistema métrico?",
+            "a": "La unidad básica de longitud en el sistema métrico es el metro. Todas las demás unidades (mm, cm, km) se derivan del metro."
+          },
+          {
+            "q": "¿En qué países se utilizan las millas?",
+            "a": "Las millas se utilizan en EE. UU., Reino Unido y algunos otros países que todavía utilizan el sistema de medición imperial."
+          },
+          {
+            "q": "¿Qué tan rápido funciona el convertidor?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir largas distancias?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidas distancias muy largas (millones de kilómetros o millas)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: metro o centímetro?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. El metro es conveniente para distancias largas, el centímetro para distancias pequeñas."
+          },
+          {
+            "q": "¿Por qué una milla no es exactamente igual a 1,6 km?",
+            "a": "Las millas y los kilómetros se encuentran en diferentes sistemas de medición (imperial y métrico), por lo que el factor de conversión no es un número redondo."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en ciencia?",
+            "a": "Sí, el conversor se utiliza en cálculos científicos para convertir entre diferentes unidades de longitud en estudios internacionales."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "weight": {
+      "title": "Conversor de peso en línea",
+      "description": "Convierta rápidamente unidades de peso: gramos, kilogramos y libras. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Convirtámonos...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "g": "GRAMO",
+        "kg": "kilos",
+        "lb": "libras"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en tasas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de peso en línea: g, kg, lbs | calc1.ru",
+        "description": "Conversor de peso online gratuito para convertir gramos, kilogramos y libras. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de peso.",
+        "keywords": "convertidor de peso, gramos a kilogramos, kilogramos a libras, libras a kilogramos, g a kg, kg a libras, convertidor de unidades de peso, conversión de gramos, conversión de kilogramos, conversión de libras, conversor de peso en línea, conversor de gramos, conversor de kilogramos, convertidor de libras, unidades de peso, sistema de peso métrico, unidades de peso imperiales, onzas a gramos, toneladas a kilogramos, conversión de peso en línea, calculadora de peso, conversión de unidades de peso, peso corporal, masa, conversor de peso, gramos a kilogramos, kilogramos a libras, libras a kg",
+        "h1": "Conversor de peso en línea",
+        "h2": "Convertir g, kg, lb",
+        "overview": {
+          "title": "Sobre el convertidor de peso",
+          "content": "Nuestro conversor de peso le permite convertir de forma rápida y precisa entre diferentes unidades de peso. Admite todas las unidades básicas: gramos, kilogramos y libras.",
+          "additionalContent": "El convertidor utiliza factores de conversión precisos basados ​​en estándares internacionales. Adecuado para cocinar, hacer ejercicio, medicina, comercio y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir diferentes unidades de peso:",
+            "example1": {
+              "title": "Convertir gramos a kilogramos",
+              "description": "Conversión de gramos a kilogramos para mayor comodidad",
+              "input": "2500 gramos",
+              "calculation": "2500 gramos ÷ 1000 = 2,5 kilos",
+              "result": "2,5 kilogramos",
+              "type": "sistema métrico"
+            },
+            "example2": {
+              "title": "Convertir kilogramos a libras",
+              "description": "Conversión de kilogramos a libras para estándares internacionales",
+              "input": "70 kilos",
+              "calculation": "70 kg × 2,20462 = 154,323 libras",
+              "result": "154,323 libras",
+              "type": "sistema imperial"
+            },
+            "example3": {
+              "title": "Convertir libras a kilogramos",
+              "description": "Convertir libras a kilogramos para el sistema métrico",
+              "input": "150 libras",
+              "calculation": "150 libras × 0,453592 = 68,039 kg",
+              "result": "68.039 kilos",
+              "type": "sistema imperial"
+            },
+            "example4": {
+              "title": "Convertir kilogramos a gramos",
+              "description": "Convierta kilogramos a gramos para obtener mediciones precisas",
+              "input": "1,25 kilogramos",
+              "calculation": "1,25 kg × 1000 = 1250 g",
+              "result": "1250 gramos",
+              "type": "sistema métrico"
+            },
+            "example5": {
+              "title": "Convertir gramos a libras",
+              "description": "Traducción de gramos en libras a kilogramos.",
+              "input": "500 gramos",
+              "calculation": "500 g ÷ 1000 = 0,5 kg; 0,5 kg × 2,20462 = 1,102 libras",
+              "result": "1,102 libras",
+              "type": "sistema mixto"
+            },
+            "example6": {
+              "title": "Convertir libras a gramos",
+              "description": "Convertir libras a gramos a través de kilogramos",
+              "input": "5 libras",
+              "calculation": "5 libras × 0,453592 = 2,268 kg; 2,268 kilogramos × 1000 = 2268 gramos",
+              "result": "2268 gramos",
+              "type": "sistema mixto"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de peso se convierten a través de la unidad base: gramo. Cada unidad tiene su propio coeficiente con respecto al gramo, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades básicas de peso: gramos (g), kilogramos (kg) y libras (lb)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir gramos a kilogramos?",
+            "a": "Divide gramos por 1000 para obtener kilogramos. Por ejemplo: 1500 g = 1,5 kg."
+          },
+          {
+            "q": "¿Cómo convertir kilogramos a libras?",
+            "a": "1 kilogramo ≈ 2,20462 libras. Multiplica los kilogramos por este factor. Por ejemplo: 5 kg ≈ 11,02 libras."
+          },
+          {
+            "q": "¿Cuántos gramos hay en un kilogramo?",
+            "a": "Hay 1000 gramos en un kilogramo. Este es el sistema métrico estándar."
+          },
+          {
+            "q": "¿Cómo convertir libras a kilogramos?",
+            "a": "1 libra ≈ 0,453592 kilogramos. Multiplica las libras por este factor para obtener kilogramos."
+          },
+          {
+            "q": "¿Cómo convertir kilogramos a gramos?",
+            "a": "Multiplica kilogramos por 1000 para obtener gramos. Por ejemplo: 2,5 kg = 2500 g."
+          },
+          {
+            "q": "¿Cuántas libras hay en un kilogramo?",
+            "a": "Hay aproximadamente 2,20462 libras en un kilogramo. Este es el factor de conversión estándar."
+          },
+          {
+            "q": "¿Cómo convertir gramos a libras?",
+            "a": "Primero, convierta gramos a kilogramos (÷ 1000), luego kilogramos a libras (× 2,20462). Por ejemplo: 500 g = 0,5 kg = 1,102 libras."
+          },
+          {
+            "q": "¿Cómo convertir libras a gramos?",
+            "a": "Primero convierta libras a kilogramos (×0,453592), luego kilogramos a gramos (×1000). Por ejemplo: 1 libra = 0,453592 kg = 453,592 g."
+          },
+          {
+            "q": "¿Qué es una libra?",
+            "a": "Una libra es una unidad imperial de peso equivalente a 0,453592 kilogramos. Utilizado en EE. UU., Reino Unido y algunos otros países."
+          },
+          {
+            "q": "¿Qué unidades de peso soporta el convertidor?",
+            "a": "El convertidor admite 3 unidades: gramos (g), kilogramos (kg) y libras (lb)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de peso?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Los factores de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Se pueden convertir onzas y toneladas?",
+            "a": "La versión actual del convertidor admite g, kg y lbs. Está previsto agregar onzas y toneladas en futuras actualizaciones."
+          },
+          {
+            "q": "¿Cómo convertir el peso corporal?",
+            "a": "El convertidor es adecuado para convertir el peso corporal. Simplemente ingrese el peso en una unidad y seleccione la unidad deseada para convertir."
+          },
+          {
+            "q": "¿El convertidor admite valores negativos?",
+            "a": "No, el peso siempre es un valor positivo. El convertidor no admite números negativos."
+          },
+          {
+            "q": "¿Cuál es el peso máximo que se puede convertir?",
+            "a": "El conversor admite valores de hasta 15 decimales. El valor máximo está limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿El convertidor wesa es gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de peso?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor para cocinar?",
+            "a": "Sí, el conversor se utiliza mucho en cocina para convertir recetas entre unidades métricas e imperiales."
+          },
+          {
+            "q": "¿El convertidor es adecuado para fitness?",
+            "a": "Sí, el conversor es ideal para el fitness para realizar un seguimiento del peso corporal y convertir entre diferentes unidades de medida."
+          },
+          {
+            "q": "¿Qué unidad de peso se utiliza en el sistema métrico?",
+            "a": "La unidad básica de peso en el sistema métrico es el gramo. El kilogramo (1000 g) es una unidad derivada."
+          },
+          {
+            "q": "¿Qué países usan libras?",
+            "a": "Las libras se utilizan en los EE. UU., el Reino Unido y algunos otros países que todavía utilizan el sistema de medición imperial."
+          },
+          {
+            "q": "¿Qué tan rápido funciona el convertidor de peso?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir pesos muy grandes?",
+            "a": "Sí, el convertidor puede manejar cualquier valor, incluidos pesos muy grandes (millones de kilogramos o libras)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: gramo o kilogramo?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Un gramo es conveniente para pesas pequeñas, un kilogramo para las grandes."
+          },
+          {
+            "q": "¿Por qué una libra no es exactamente igual a 0,5 kg?",
+            "a": "Las libras y los kilogramos se encuentran en diferentes sistemas de medida (imperial y métrico), por lo que el factor de conversión no es un número redondo."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en medicina?",
+            "a": "Sí, el convertidor se utiliza en medicina para convertir entre diferentes unidades de peso en estudios y dosis internacionales."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor para operar?",
+            "a": "Sí, el conversor se utiliza en el comercio para convertir entre unidades métricas e imperiales en transacciones internacionales."
+          },
+          {
+            "q": "¿Cómo convertir el peso de los ingredientes en una receta?",
+            "a": "Ingrese el peso del producto en una unidad de medida y seleccione la unidad deseada. El convertidor convertirá instantáneamente el valor para usarlo en la receta."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "temperature": {
+      "title": "Conversor de temperatura en línea",
+      "description": "Convierta rápidamente temperaturas entre Celsius, Fahrenheit y Kelvin. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Convirtámonos...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "C": "°C",
+        "F": "°F",
+        "K": "k"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Convertidor de temperatura en línea — °C, °F, K | calc1.ru",
+        "description": "Conversor de temperatura online gratuito para convertir grados Celsius, Fahrenheit y Kelvin. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de temperatura.",
+        "keywords": "convertidor de temperatura, Celsius a Fahrenheit, Fahrenheit a Celsius, Kelvin a Celsius, Celsius a Kelvin, Fahrenheit a Kelvin, Kelvin a Fahrenheit, convertidor de unidades de temperatura, conversión de temperatura, Celsius, Fahrenheit, Kelvin, temperatura del aire, temperatura corporal, temperatura del agua, cero absoluto, convertidor °C, convertidor °F, convertidor K, convertidor de temperatura en línea, calculadora de temperatura, conversión de temperatura, grados Celsius, grados Fahrenheit, escala kelvin, meteorología, climatología, punto de congelación, punto de ebullición, convertidor de temperatura, celsius a fahrenheit, fahrenheit a celsius, kelvin a celsius",
+        "h1": "Conversor de temperatura en línea",
+        "h2": "Convertir °C, °F, K",
+        "overview": {
+          "title": "Sobre el convertidor de temperatura",
+          "content": "Nuestro conversor de temperatura le permite convertir de forma rápida y precisa entre diferentes unidades de temperatura. Admite todas las unidades básicas: Celsius, Fahrenheit y Kelvin.",
+          "additionalContent": "El convertidor utiliza fórmulas de conversión precisas basadas en estándares internacionales. Adecuado para meteorología, medicina, cocina, ciencia y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir diferentes unidades de temperatura:",
+            "example1": {
+              "title": "Convertir Celsius a Fahrenheit",
+              "description": "Conversión de temperatura para el clima",
+              "input": "25ºC",
+              "calculation": "F = (25 × 9/5) + 32 = 77°F",
+              "result": "77°F",
+              "type": "clima"
+            },
+            "example2": {
+              "title": "Convertir grados Fahrenheit a Celsius",
+              "description": "Conversión de temperatura corporal",
+              "input": "98,6 °F",
+              "calculation": "C = (98,6 - 32) × 5/9 = 37°C",
+              "result": "37ºC",
+              "type": "medicamento"
+            },
+            "example3": {
+              "title": "Convertir Kelvin a Celsius",
+              "description": "Conversión de temperatura para la ciencia",
+              "input": "300K",
+              "calculation": "C = 300 - 273,15 = 26,85°C",
+              "result": "26,85°C",
+              "type": "ciencia"
+            },
+            "example4": {
+              "title": "Convertir Celsius a Kelvin",
+              "description": "Conversión de temperatura para la física.",
+              "input": "0ºC",
+              "calculation": "K = 0 + 273,15 = 273,15K",
+              "result": "273,15K",
+              "type": "física"
+            },
+            "example5": {
+              "title": "Convertir Fahrenheit a Kelvin",
+              "description": "Conversión de temperatura para cálculos científicos.",
+              "input": "32°F",
+              "calculation": "K = (32 - 32) × 5/9 + 273,15 = 273,15K",
+              "result": "273,15K",
+              "type": "ciencia"
+            },
+            "example6": {
+              "title": "Convertir Kelvin a Fahrenheit",
+              "description": "Conversión de temperatura absoluta",
+              "input": "373,15K",
+              "calculation": "F = (373,15 - 273,15) × 9/5 + 32 = 212°F",
+              "result": "212°F",
+              "type": "ciencia"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de temperatura se convierten a través de la unidad base: Celsius. Cada unidad tiene su propia fórmula de conversión, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades de temperatura básicas: Celsius (°C), Fahrenheit (°F) y Kelvin (K)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir grados Celsius a Fahrenheit?",
+            "a": "Utilice la fórmula F = (C × 9/5) + 32. Por ejemplo: 25°C = (25 × 9/5) + 32 = 77°F."
+          },
+          {
+            "q": "¿Cómo convertir Kelvin a Celsius?",
+            "a": "Utilice la fórmula C = K - 273,15. Por ejemplo: 300K = 300 - 273,15 = 26,85°C."
+          },
+          {
+            "q": "¿Cómo convertir grados Fahrenheit a Kelvin?",
+            "a": "Utilice K = (F - 32) × 5/9 + 273,15. Por ejemplo: 68°F = (68 - 32) × 5/9 + 273,15 = 293,15K."
+          },
+          {
+            "q": "¿Qué es el cero absoluto?",
+            "a": "El cero absoluto es 0K (-273,15°C o -459,67°F). Esta es la temperatura más baja posible."
+          },
+          {
+            "q": "¿Cómo convertir grados Fahrenheit a Celsius?",
+            "a": "Utilice la fórmula C = (F - 32) × 5/9. Por ejemplo: 86°F = (86 - 32) × 5/9 = 30°C."
+          },
+          {
+            "q": "¿Cómo convertir grados Celsius a Kelvin?",
+            "a": "Utilice la fórmula K = C + 273,15. Por ejemplo: 20°C = 20 + 273,15 = 293,15K."
+          },
+          {
+            "q": "¿Cuál es el punto de congelación del agua?",
+            "a": "Punto de congelación del agua: 0°C = 32°F = 273,15K."
+          },
+          {
+            "q": "¿Cuál es el punto de ebullición del agua?",
+            "a": "Punto de ebullición del agua: 100°C = 212°F = 373,15K (a presión atmosférica estándar)."
+          },
+          {
+            "q": "¿Cuál es la temperatura normal del cuerpo humano?",
+            "a": "Temperatura corporal normal: 36,6°C = 97,88°F = 309,75K. Fahrenheit generalmente indica 98,6 °F (37 °C)."
+          },
+          {
+            "q": "¿Qué es la escala Celsius?",
+            "a": "La escala Celsius se basa en los puntos de congelación y ebullición del agua: 0°C es congelación, 100°C es ebullición. Utilizado en la mayoría de los países del mundo."
+          },
+          {
+            "q": "¿Qué es la escala Fahrenheit?",
+            "a": "La escala Fahrenheit se basa en el punto de congelación de la solución salina (0°F) y la temperatura del cuerpo humano (96°F). Utilizado en los EE.UU."
+          },
+          {
+            "q": "¿Qué es la escala Kelvin?",
+            "a": "La escala Kelvin es una escala de temperatura absoluta, donde 0K es el cero absoluto. Utilizado en ciencia. K = ºC + 273,15."
+          },
+          {
+            "q": "¿Qué unidades de temperatura admite el convertidor?",
+            "a": "El convertidor admite 3 unidades: Celsius (°C), Fahrenheit (°F) y Kelvin (K)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de temperatura?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Las fórmulas de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Es posible convertir temperaturas negativas?",
+            "a": "Sí, el convertidor soporta temperaturas negativas. El cero absoluto es la temperatura más baja posible."
+          },
+          {
+            "q": "¿Cuál es el rango máximo de temperatura que se puede convertir?",
+            "a": "El convertidor puede funcionar con cualquier valor de temperatura, limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿Está libre el convertidor de temperatura?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de temperatura?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en meteorología?",
+            "a": "Sí, el conversor se utiliza mucho en meteorología para convertir entre diferentes unidades de temperatura en los pronósticos internacionales."
+          },
+          {
+            "q": "¿El convertidor es apto para cocinar?",
+            "a": "Sí, el conversor es ideal para cocinar para convertir temperaturas del horno y recetas entre diferentes sistemas de medición."
+          },
+          {
+            "q": "¿Por qué la fórmula de conversión de Fahrenheit es más complicada?",
+            "a": "La fórmula es más complicada porque los puntos de referencia de las escalas Fahrenheit y Celsius son diferentes. En grados Celsius 0° significa que el agua se congela, en Fahrenheit 32°."
+          },
+          {
+            "q": "¿En qué países se utiliza Fahrenheit?",
+            "a": "Fahrenheit se utiliza en EE.UU., las Bahamas, Belice y algunos otros países. La mayoría de los países utilizan grados Celsius."
+          },
+          {
+            "q": "¿Qué tan rápido funciona el convertidor de temperatura?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Se pueden convertir temperaturas muy altas?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidas temperaturas muy altas (miles de grados)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: Celsius o Fahrenheit?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Celsius es conveniente para cálculos científicos, Fahrenheit para los cotidianos."
+          },
+          {
+            "q": "¿Por qué se utiliza Kelvin en la ciencia?",
+            "a": "Kelvin es una escala absoluta, donde 0K es el cero absoluto. Esto es conveniente para cálculos científicos, especialmente en física y química."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en medicina?",
+            "a": "Sí, el convertidor se utiliza en medicina para convertir la temperatura corporal entre diferentes unidades en estudios internacionales."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Puedo usar un convertidor para la temperatura del horno?",
+            "a": "Sí, el conversor es ideal para convertir las temperaturas del horno entre Celsius y Fahrenheit en recetas."
+          },
+          {
+            "q": "¿Cómo convertir la temperatura en una receta?",
+            "a": "Ingrese la temperatura de la receta en una unidad y seleccione la unidad deseada. El convertidor convertirá instantáneamente el valor."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "speed": {
+      "title": "Conversor de velocidad en línea",
+      "description": "Convierta rápidamente la velocidad entre km/h, m/s y nudos. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Convirtámonos...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "kmh": "kilómetros por hora",
+        "ms": "EM",
+        "knots": "nodos"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de velocidad en línea: km/h, m/s, velocidad | calc1.ru",
+        "description": "Conversor de velocidad online gratuito para convertir kilómetros por hora, metros por segundo y nudos. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de velocidad.",
+        "keywords": "convertidor de velocidad, km/h a m/s, m/s a km/h, nudos a km/h, km/h a nudos, m/s a nudos, nudos a m/s, convertidor de unidades de velocidad, conversión de velocidad, velocidad del automóvil, velocidad del viento, velocidad del barco, velocidad del avión, convertidor de km/h, convertidor de m/s, convertidor de nudos, convertidor de velocidad en línea, calculadora de velocidad, conversión de velocidad, velocidad de viaje, velocidad del viento, nudos marinos, aviación, navegación, convertidor de velocidad, km/h a m/s, m/s a km/h, nudos a km/h",
+        "h1": "Conversor de velocidad en línea",
+        "h2": "Convertir km/h, m/s, distancia",
+        "overview": {
+          "title": "Sobre el convertidor de velocidad",
+          "content": "Nuestro conversor de velocidad le permite convertir de forma rápida y precisa entre diferentes unidades de velocidad. Soporta todas las unidades básicas: km/h, m/s y nudos.",
+          "additionalContent": "El convertidor utiliza fórmulas de conversión precisas basadas en estándares internacionales. Adecuado para automovilistas, marineros, aviadores, deportistas y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir diferentes unidades de velocidad:",
+            "example1": {
+              "title": "Convertir km/h a m/s",
+              "description": "Conversión de velocidad del coche",
+              "input": "100 kilómetros por hora",
+              "calculation": "100 km/h ÷ 3,6 = 27,78 m/s",
+              "result": "27,78m/s",
+              "type": "automóvil"
+            },
+            "example2": {
+              "title": "Convertir m/s a km/h",
+              "description": "Conversión de la velocidad del viento",
+              "input": "15m/s",
+              "calculation": "15 m/s × 3,6 = 54 km/h",
+              "result": "54 kilómetros por hora",
+              "type": "viento"
+            },
+            "example3": {
+              "title": "Convertir nudos a km/h",
+              "description": "Conversión de velocidad del barco",
+              "input": "20 nudos",
+              "calculation": "20 nudos × 1,852 = 37,04 km/h",
+              "result": "37,04 kilómetros por hora",
+              "type": "transporte marítimo"
+            },
+            "example4": {
+              "title": "Convertir km/h a nudos",
+              "description": "Traducción de velocidad para la navegación.",
+              "input": "50 kilómetros por hora",
+              "calculation": "50 km/h ÷ 1,852 = 27 nudos",
+              "result": "27 nudos",
+              "type": "navegación"
+            },
+            "example5": {
+              "title": "Convertir m/s a nodos",
+              "description": "Conversión de velocidad para la aviación.",
+              "input": "10m/s",
+              "calculation": "10 m/s × 1,94384 = 19,44 nudos",
+              "result": "19,44 nudos",
+              "type": "aviación"
+            },
+            "example6": {
+              "title": "Convertir nudos a m/s",
+              "description": "Conversión de velocidad para cálculos científicos.",
+              "input": "30 nudos",
+              "calculation": "30 nudos ÷ 1,94384 = 15,43 m/s",
+              "result": "15,43 m/s",
+              "type": "ciencia"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de velocidad se convierten a través de la unidad base: m/s. Cada unidad tiene su propia fórmula de conversión, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades básicas de velocidad: kilómetros por hora (km/h), metros por segundo (m/s) y nudos (millas náuticas por hora)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir km/h a m/s?",
+            "a": "Divida km/h por 3,6 para obtener m/s. Por ejemplo: 36 km/h = 36 ÷ 3,6 = 10 m/s."
+          },
+          {
+            "q": "¿Cómo convertir nudos a km/h?",
+            "a": "Multiplica los nudos por 1,852 para obtener km/h. Por ejemplo: 10 nudos = 10 × 1,852 = 18,52 km/h."
+          },
+          {
+            "q": "¿Cómo convertir m/s a nodos?",
+            "a": "Multiplique m/s por 1,94384 para obtener nodos. Por ejemplo: 5 m/s = 5 × 1,94384 = 9,72 nudos."
+          },
+          {
+            "q": "¿Qué es un nodo?",
+            "a": "Un nudo es una unidad de velocidad equivalente a una milla náutica por hora (1,852 km/h). Utilizado en aplicaciones marítimas y de aviación."
+          },
+          {
+            "q": "¿Cómo convertir m/s a km/h?",
+            "a": "Multiplica m/s por 3,6 para obtener km/h. Por ejemplo: 25 m/s = 25 × 3,6 = 90 km/h."
+          },
+          {
+            "q": "¿Cómo convertir km/h a nudos?",
+            "a": "Divida km/h por 1,852 para obtener nudos. Por ejemplo: 37 km/h = 37 ÷ 1,852 = 20 nudos."
+          },
+          {
+            "q": "¿Cuántos metros por segundo hay en un kilómetro por hora?",
+            "a": "1 km/h = 0,27778 m/s. Para un tramo de traslación de caja km/h a 3,6."
+          },
+          {
+            "q": "¿Cuántos kilómetros por hora hay en un nodo?",
+            "a": "1 nudo = 1,852 km/h. Este es el factor de conversión de millas náuticas estándar."
+          },
+          {
+            "q": "¿Qué unidades de velocidad admite el convertidor?",
+            "a": "El convertidor admite 3 unidades: kilómetros por hora (km/h), metros por segundo (m/s) y nudos (millas náuticas por hora)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de velocidad?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Las fórmulas de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Es posible convertir millas por hora y pies por segundo?",
+            "a": "En la versión actual, el convertidor admite km/h, m/s y nudos. Está previsto agregar millas por hora y pies por segundo en futuras actualizaciones."
+          },
+          {
+            "q": "¿Cómo convertir la velocidad del viento?",
+            "a": "El convertidor es adecuado para convertir la velocidad del viento. La velocidad del viento suele medirse en m/s o km/h, pero los marineros utilizan nudos."
+          },
+          {
+            "q": "¿El convertidor admite valores de velocidad negativos?",
+            "a": "No, la velocidad siempre es un valor positivo. El convertidor no admite números negativos."
+          },
+          {
+            "q": "¿Cuál es el rango máximo de velocidad que se puede convertir?",
+            "a": "El convertidor puede funcionar con cualquier valor de velocidad, limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿Convertidor de velocidad gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de velocidad?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en aplicaciones marinas?",
+            "a": "Sí, el conversor es muy utilizado en asuntos marítimos para convertir entre nudos y otras unidades de velocidad en la navegación internacional."
+          },
+          {
+            "q": "¿El convertidor es adecuado para la aviación?",
+            "a": "Sí, el convertidor es ideal para que la aviación convierta entre diferentes unidades de velocidad de la aeronave."
+          },
+          {
+            "q": "¿Cómo convertir la velocidad del coche?",
+            "a": "El convertidor es adecuado para convertir la velocidad del coche. Normalmente se utiliza km/h, pero para cálculos científicos puede ser necesario m/s."
+          },
+          {
+            "q": "¿Qué es una milla náutica?",
+            "a": "Una milla náutica equivale a 1852 metros. Utilizado en navegación marítima y aérea. Nudo = 1 milla náutica por hora."
+          },
+          {
+            "q": "¿En qué unidades se mide la velocidad en meteorología?",
+            "a": "En meteorología, la velocidad del viento suele medirse en m/s o km/h. Los marineros usan nudos."
+          },
+          {
+            "q": "¿Qué tan rápido es el convertidor de velocidad?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir velocidades muy altas?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidas velocidades muy altas (velocidad del sonido, velocidad de la luz, etc.)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: km/h o m/s?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Km/h es conveniente para cálculos cotidianos, m/s, para cálculos científicos."
+          },
+          {
+            "q": "¿Por qué se utiliza el nudo en asuntos marítimos?",
+            "a": "El nudo se utiliza tradicionalmente en asuntos marítimos porque la milla náutica está asociada a un grado de latitud, lo que resulta útil para la navegación."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en deportes?",
+            "a": "Sí, el conversor se utiliza en deportes para convertir la velocidad de corredores, ciclistas y otros atletas entre diferentes unidades."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Es posible utilizar el convertidor para calcular el tiempo de viaje?",
+            "a": "El convertidor sólo convierte unidades de velocidad. Para calcular el tiempo de viaje, use la fórmula: tiempo = distancia ÷ velocidad."
+          },
+          {
+            "q": "¿Cómo convertir la velocidad del velocímetro de un automóvil?",
+            "a": "El velocímetro suele indicar km/h. Ingrese este valor y seleccione la unidad deseada para la conversión a m/s o nudos."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "pressure": {
+      "title": "Convertidor de presión en línea",
+      "description": "Convierta rápidamente la presión entre pascales, atmósferas y milímetros de mercurio. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Convirtámonos...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "Pa": "Pensilvania",
+        "atm": "cajero automático",
+        "mmHg": "mmHg art."
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Convertidor de presión en línea: Pa, atm, mmHg. Arte. | calc1.ru",
+        "description": "Conversor de presión online gratuito para convertir Pascales, atmósferas y milímetros de mercurio. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de presión.",
+        "keywords": "convertidor de presión, pascales a atmósferas, atmósferas a pascales, mmHg a pascales, pascales a mmHg, atmósferas a mmHg, mmHg a atmósferas, convertidor de unidades de presión, conversión de presión, presión atmosférica, presión de aire, presión de gas, convertidor de Pa, convertidor de atm, convertidor de mmHg, convertidor de presión en línea, calculadora de presión, conversión de presión, presión estándar, presión a nivel del mar, presión de neumáticos, presión arterial, bar a pascal, torr a pascal, presión convertidor, pascal a atm, atm a pascal, mmHg a pascal",
+        "h1": "Convertidor de presión en línea",
+        "h2": "Conversión Pa, atm, mm rt. calle.",
+        "overview": {
+          "title": "Acerca del convertidor de presión",
+          "content": "Nuestro convertidor de presión le permite convertir de forma rápida y precisa entre diferentes unidades de presión. Soporta todas las unidades básicas: Pascales, atmósferas y milímetros de mercurio.",
+          "additionalContent": "El convertidor utiliza fórmulas de conversión precisas basadas en estándares internacionales. Adecuado para meteorología, física, química, medicina, ingeniería y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir diferentes unidades de presión:",
+            "example1": {
+              "title": "Convertir Pascales a Atmósferas",
+              "description": "Conversión de presión para meteorología",
+              "input": "101325 Pa",
+              "calculation": "101325 Pa ÷ 101325 = 1 atmósfera",
+              "result": "1 atmósfera",
+              "type": "meteorología"
+            },
+            "example2": {
+              "title": "Convertir atmósferas a Pascales",
+              "description": "Traducción de presión para la física.",
+              "input": "1,5 atmósferas",
+              "calculation": "1,5 atm × 101325 = 151987,5 Pa",
+              "result": "151987,5Pa",
+              "type": "física"
+            },
+            "example3": {
+              "title": "Conversión mmHg art. a Pascal",
+              "description": "Traducción de presión para medicina",
+              "input": "120 mmHg art.",
+              "calculation": "120 mm punto. calle. × 133,322 = 15998,64 Bueno",
+              "result": "15998,64Pa",
+              "type": "medicamento"
+            },
+            "example4": {
+              "title": "Convertir pascales a mmHg. Arte.",
+              "description": "Conversión de presión para barometría",
+              "input": "101325 Pa",
+              "calculation": "101325 Pa ÷ 133,322 = 760 mm rt. calle.",
+              "result": "760 mmHg art.",
+              "type": "barometría"
+            },
+            "example5": {
+              "title": "Convertir atmósferas a mmHg. Arte.",
+              "description": "Conversión de presión estándar",
+              "input": "1 atmósfera",
+              "calculation": "1 atm × 760 = 760 mm Hg. Arte.",
+              "result": "760 mmHg art.",
+              "type": "estándar"
+            },
+            "example6": {
+              "title": "Conversión mmHg art. en la atmósfera",
+              "description": "Conversión de presión para ingeniería.",
+              "input": "760 mmHg art.",
+              "calculation": "760 mmHg art. ÷ 760 = 1 atmósfera",
+              "result": "1 atmósfera",
+              "type": "ingeniería"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de presión se convierten utilizando la unidad base Pascal. Cada unidad tiene su propia fórmula de conversión, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades básicas de presión: pascales (Pa), atmósferas (atm) y milímetros de mercurio (mmHg)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir pascales a atmósferas?",
+            "a": "Divida el valor de Pascal por 101325 para obtener la atmósfera. Por ejemplo: 101325 Pa = 101325 ÷ 101325 = 1 atm."
+          },
+          {
+            "q": "Cómo convertir mmHg. Arte. en pascales?",
+            "a": "Multiplica mmHg. Arte. a 133.322 para obtener Pascales. Por ejemplo: 760 mm Hg. Arte. = 760 × 133,322 = 101325 Pa."
+          },
+          {
+            "q": "Cómo convertir atmósferas a mm Hg. Arte.?",
+            "a": "Multiplique las atmósferas por 760 para obtener mmHg. Arte. Por ejemplo: 1 atm = 1 × 760 = 760 mmHg. Arte."
+          },
+          {
+            "q": "¿Qué es la presión atmosférica estándar?",
+            "a": "La presión atmosférica estándar es 101325 Pa (1 atm o 760 mmHg) al nivel del mar a 0°C."
+          },
+          {
+            "q": "¿Cómo convertir atmósferas a Pascales?",
+            "a": "Multiplica las atmósferas por 101325 para obtener Pascales. Por ejemplo: 2 atm = 2 × 101325 = 202650 Pa."
+          },
+          {
+            "q": "Cómo convertir pascales a mmHg. Arte.?",
+            "a": "Divida los pascales por 133,322 para obtener mmHg. Arte. Por ejemplo: 101325 Pa = 101325 ÷ 133,322 = 760 mm Hg. Arte."
+          },
+          {
+            "q": "¿Cuántos pascales hay en una atmósfera?",
+            "a": "1 atmósfera = 101325 Pascales. Este es el valor estándar al nivel del mar."
+          },
+          {
+            "q": "¿Cuántos milímetros de mercurio hay en una atmósfera?",
+            "a": "1 atmósfera = 760 milímetros de mercurio. Este es el valor predeterminado."
+          },
+          {
+            "q": "¿Qué unidades de presión soporta el convertidor?",
+            "a": "El convertidor admite 3 unidades: Pascales (Pa), atmósferas (atm) y milímetros de mercurio (mmHg)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de presión?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Las fórmulas de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Es posible convertir barras y torrs?",
+            "a": "En la versión actual, el convertidor admite Pa, atm y mmHg. Arte. Está previsto añadir barras y torrs en futuras actualizaciones."
+          },
+          {
+            "q": "¿Cómo convertir la presión de los neumáticos?",
+            "a": "El convertidor es adecuado para convertir la presión de los neumáticos. Generalmente se utiliza bar o PSI, que se puede convertir mediante Pascales."
+          },
+          {
+            "q": "¿El convertidor soporta presión negativa?",
+            "a": "Sí, el convertidor mantiene una presión negativa (vacío). El vacío se expresa como presión menor que la presión atmosférica."
+          },
+          {
+            "q": "¿Cuál es el rango de presión máximo que se puede convertir?",
+            "a": "El convertidor puede funcionar con cualquier valor de presión, limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿Está libre el convertidor de presión?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de presión?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en meteorología?",
+            "a": "Sí, el conversor es muy utilizado en meteorología para convertir entre diferentes unidades de presión atmosférica en los pronósticos."
+          },
+          {
+            "q": "¿El convertidor es apto para uso médico?",
+            "a": "Sí, el conversor es ideal para que la medicina convierta la presión arterial entre diferentes unidades de medida."
+          },
+          {
+            "q": "¿Cómo convertir la presión del gas?",
+            "a": "El convertidor es adecuado para convertir la presión del gas. Ingrese la presión en una unidad y seleccione la unidad deseada para convertir."
+          },
+          {
+            "q": "¿Qué es Pascal?",
+            "a": "Pascal (Pa) es una unidad de presión del SI. 1Pa = 1N/m². Nombrado en honor a Blaise Pascal."
+          },
+          {
+            "q": "¿Qué es la atmósfera?",
+            "a": "La atmósfera (atm) es una unidad de presión fuera del sistema aproximadamente igual a la presión del aire al nivel del mar. 1 atmósfera = 101325 Pa."
+          },
+          {
+            "q": "¿Qué es un milímetro de mercurio?",
+            "a": "Un milímetro de mercurio (mmHg) es una unidad de presión basada en la altura de una columna de mercurio. 1 mmHg art. = 133,322Pa."
+          },
+          {
+            "q": "¿A qué velocidad funciona el convertidor de presión?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir presiones muy altas?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidas presiones muy altas (miles de atmósferas o millones de pascales)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: Pascal o atmósfera?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Pascal es conveniente para cálculos científicos, atmósfera, para los cotidianos."
+          },
+          {
+            "q": "¿Por qué se utiliza mmHg? Arte. en medicina?",
+            "a": "Los milímetros de mercurio se han utilizado tradicionalmente en medicina para medir la presión arterial, desde que los primeros aparatos fueron el mercurio."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en física?",
+            "a": "Sí, en física se utiliza un convertidor para convertir entre diferentes unidades de presión en experimentos científicos."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Se puede utilizar un convertidor para la presión de los neumáticos de un automóvil?",
+            "a": "Sí, el convertidor se puede utilizar para convertir la presión de los neumáticos. Tenga en cuenta que la presión de los neumáticos normalmente se indica en bar o PSI."
+          },
+          {
+            "q": "¿Cómo convertir la presión de un barómetro?",
+            "a": "El barómetro suele indicar mmHg. Arte. Ingrese este valor y seleccione la unidad deseada para convertir a Pascales o atmósferas."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "volume-converter": {
+      "title": "Conversor de volumen en línea",
+      "description": "Convierta rápidamente el volumen entre litros, galones y metros cúbicos. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Convirtámonos...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "liters": "litro",
+        "gallons": "galones",
+        "m3": "m³"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de volumen en línea: litros, galones, m³ Calc1.ru",
+        "description": "Conversor de volumen online gratuito para convertir litros, galones y metros cúbicos. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de volumen.",
+        "keywords": "convertidor de volumen, litros a galones, galones a litros, m3 a litros, litros a m3, galones a m3, m3 a galones, convertidor de volumen, conversión de volumen, volumen de líquido, volumen de gas, volumen de agua, convertidor de litros, convertidor de galones, convertidor de m3, convertidor de volumen en línea, calculadora de volumen, conversión de volumen, metros cúbicos, metros cúbicos, mililitros a litros, cuartos a litros, pintas a litros, volumen del tanque, volumen de la cuenca, convertidor de volumen, litros a galones, galones a litros, metros cúbicos a litros",
+        "h1": "Conversor de volumen en línea",
+        "h2": "Conversión litros, galones, m³",
+        "overview": {
+          "title": "Acerca del convertidor de volumen",
+          "content": "Nuestro conversor de volumen le permite convertir de forma rápida y precisa entre diferentes unidades de volumen. Soporta todas las unidades básicas: litros, galones y metros cúbicos.",
+          "additionalContent": "El convertidor utiliza factores de conversión precisos basados ​​en estándares internacionales. Apto para cocina, química, construcción, logística y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos de conversión para varias unidades de volumen:",
+            "example1": {
+              "title": "Convertir litros a galones",
+              "description": "Traducción de los culins",
+              "input": "3,78541 litros",
+              "calculation": "3,78541 L ÷ 3,78541 = 1 galón",
+              "result": "1 galón",
+              "type": "cocinando"
+            },
+            "example2": {
+              "title": "Convertir galones a litros",
+              "description": "Conversión de volumen para recetas",
+              "input": "5 galones",
+              "calculation": "5 galones × 3,78541 = 18,927 l",
+              "result": "18.927 litros",
+              "type": "recetas"
+            },
+            "example3": {
+              "title": "Convertir m³ a litros",
+              "description": "Conversión de volumen para química.",
+              "input": "2,5 m³",
+              "calculation": "2,5 m³ × 1000 = 2500 litros",
+              "result": "2500 litros",
+              "type": "química"
+            },
+            "example4": {
+              "title": "Convertir litros a m³",
+              "description": "Conversión de volumen para construcción.",
+              "input": "5000 litros",
+              "calculation": "5000 litros ÷ 1000 = 5 m³",
+              "result": "5 m³",
+              "type": "construcción"
+            },
+            "example5": {
+              "title": "Convertir galones a m³",
+              "description": "Traducción del volumen para logística.",
+              "input": "100 galones",
+              "calculation": "100 galones × 3,78541 ÷ 1000 = 0,378541 m³",
+              "result": "0,378541 m³",
+              "type": "logística"
+            },
+            "example6": {
+              "title": "Convertir m³ a galones",
+              "description": "Traducción del volumen para la industria.",
+              "input": "1m³",
+              "calculation": "1 m³ × 1000 ÷ 3,78541 = 264,172 galones",
+              "result": "264.172 galones",
+              "type": "industria"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de volumen se convierten a través de la unidad base: litro. Cada unidad tiene su propia fórmula de conversión, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades básicas de volumen: litros (l), galones (gal) y metros cúbicos (m³)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir litros a galones?",
+            "a": "Divide la cantidad de litros por 3,78541 para obtener galones. Por ejemplo: 3,78541 l = 3,78541 ÷ 3,78541 = 1 galón."
+          },
+          {
+            "q": "¿Cómo convertir m³ a litros?",
+            "a": "Multiplica la cantidad de metros cúbicos por 1000 para obtener litros. Por ejemplo: 1 m³ = 1 × 1000 = 1000 l."
+          },
+          {
+            "q": "¿Cómo convertir galones a m³?",
+            "a": "Multiplique galones por 3,78541 y luego divida entre 1000. Por ejemplo: 1 galón = 1 × 3,78541 ÷ 1000 = 0,00378541 m³."
+          },
+          {
+            "q": "¿Qué es un galón?",
+            "a": "Un galón es una unidad de volumen igual a 3,78541 litros. Utilizado en EE. UU. y algunos otros países."
+          },
+          {
+            "q": "¿Cómo convertir galones a litros?",
+            "a": "Multiplica galones por 3,78541 para obtener litros. Por ejemplo: 2 galones = 2 × 3,78541 = 7,57082 l."
+          },
+          {
+            "q": "¿Cómo convertir litros a m³?",
+            "a": "Divide la cantidad de litros por 1000 para obtener metros cúbicos. Por ejemplo: 2000 l = 2000 ÷ 1000 = 2 m³."
+          },
+          {
+            "q": "¿Cuántos litros hay en un metro cúbico?",
+            "a": "En un metro cúbico hay 1000 litros. Este es el valor estándar del sistema métrico."
+          },
+          {
+            "q": "¿Cuántos litros hay en un galón?",
+            "a": "Hay 3,78541 litros en un galón. Este es el factor de conversión estándar para el galón estadounidense."
+          },
+          {
+            "q": "¿Qué unidades de volumen admite el convertidor?",
+            "a": "El convertidor admite 3 unidades: litro (l), galón (gal) y metro cúbico (m³)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de volumen?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Los factores de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Es posible convertir entre mililitros y pintas?",
+            "a": "En la versión actual, el convertidor admite litros, galones y m³. Está previsto agregar mililitros y pintas en futuras actualizaciones."
+          },
+          {
+            "q": "¿Cómo convertir el volumen de agua?",
+            "a": "El convertidor es adecuado para convertir el volumen de agua. Ingrese el volumen en una unidad y seleccione la unidad deseada para la conversión."
+          },
+          {
+            "q": "¿El convertidor admite valores de volumen negativos?",
+            "a": "No, el volumen es siempre un valor positivo. El convertidor no admite números negativos."
+          },
+          {
+            "q": "¿Cuál es el monto máximo que se puede convertir?",
+            "a": "El convertidor puede funcionar con cualquier valor de volumen, limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿El conversor de volumen es gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de volumen?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor para cocinar?",
+            "a": "Sí, el conversor se utiliza mucho en cocina para convertir recetas entre unidades de volumen métricas e imperiales."
+          },
+          {
+            "q": "¿El convertidor es adecuado para química?",
+            "a": "Sí, el convertidor es ideal para química para convertir volúmenes de soluciones y reactivos entre diferentes unidades de medida."
+          },
+          {
+            "q": "¿Cómo convertir el volumen de un tanque o piscina?",
+            "a": "El convertidor es adecuado para convertir el volumen de tanques, piscinas y otros contenedores. Ingrese el volumen en una unidad y seleccione el deseado."
+          },
+          {
+            "q": "¿Qué es un metro cúbico?",
+            "a": "Un metro cúbico (m³) es una unidad de volumen en el sistema métrico. 1 m³ = 1000 litros. Utilizado para grandes volúmenes."
+          },
+          {
+            "q": "¿Qué países utilizan galones?",
+            "a": "Los galones se utilizan en EE.UU., Liberia y Myanmar. La mayoría de los países utilizan litros."
+          },
+          {
+            "q": "¿Qué tan rápido funciona el convertidor de volumen?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir volúmenes muy grandes?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidos volúmenes muy grandes (millones de litros o metros cúbicos)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: el litro o el metro cúbico?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Un litro es conveniente para volúmenes pequeños, un metro cúbico para volúmenes grandes."
+          },
+          {
+            "q": "¿Por qué un galón no equivale a 4 litros?",
+            "a": "El galón y el litro se encuentran en diferentes sistemas de medición (imperial y métrico), por lo que el factor de conversión no es un número redondo."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en la construcción?",
+            "a": "Sí, el convertidor se utiliza en la construcción para convertir volúmenes de hormigón, agua y otros materiales entre diferentes unidades."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Puedo usar el convertidor para calcular el volumen de líquido en una receta?",
+            "a": "Sí, el conversor es ideal para convertir volúmenes de líquidos en recetas entre litros y galones."
+          },
+          {
+            "q": "¿Cómo convertir el volumen de una receta?",
+            "a": "Ingrese el volumen de la receta en una unidad de medida y seleccione la unidad deseada. El convertidor convertirá instantáneamente el valor."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "energy-converter": {
+      "title": "Conversor de energía en línea",
+      "description": "Convierta rápidamente energía entre julios, calorías y vatios-hora. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Conversión...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "J": "j",
+        "cal": "permanecer",
+        "Wh": "Вт⋅ч"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión exactas.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de energía en línea - J, cal, Wh | calc1.ru",
+        "description": "Conversor de energía en línea gratuito para convertir julios, calorías y vatios hora. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de energía.",
+        "keywords": "convertidor de energía, julios a calorías, calorías a julios, Wh a julios, julios a Wh, calorías a Wh, Wh a calorías, convertidor de unidades de energía, conversión de energía, energía eléctrica, energía térmica, convertidor de julios, convertidor de calorías, convertidor de vatios-hora, convertidor de energía en línea, calculadora de energía, conversión de energía, kilocalorías a julios, megajulios a calorías, energía de la batería, energía de la batería, energía de los alimentos, convertidor de energía, julios a calorías, calorías a julios, vatios-hora a julios",
+        "h1": "Conversor de energía en línea",
+        "h2": "Conversión J, cal, W⋅h",
+        "overview": {
+          "title": "Sobre el convertidor de energía",
+          "content": "Nuestro conversor de energía le permite convertir de forma rápida y precisa entre diferentes unidades de energía. Admite todas las unidades básicas: julios, calorías y vatios-hora.",
+          "additionalContent": "El convertidor utiliza fórmulas de conversión precisas basadas en estándares internacionales. Adecuado para física, química, nutrición, ingeniería eléctrica y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos de conversión para varias unidades de energía:",
+            "example1": {
+              "title": "Conversión de julios a calorías",
+              "description": "Conversión de energía para dietética.",
+              "input": "4184J",
+              "calculation": "4184 J ÷ 4,184 = 1000 calorías",
+              "result": "1000 calorías",
+              "type": "dietética"
+            },
+            "example2": {
+              "title": "Convertir calorías a julios",
+              "description": "Conversión de energía alimentaria",
+              "input": "200 calorías",
+              "calculation": "200 calorías × 4,184 = 836,8 J",
+              "result": "836,8J",
+              "type": "nutrición"
+            },
+            "example3": {
+              "title": "Convertir T⋅h en Julios",
+              "description": "Conversión de energía de la batería",
+              "input": "10 Вт⋅ч",
+              "calculation": "10 W⋅h × 3600 = 36000 J",
+              "result": "36000J",
+              "type": "electrotecnia"
+            },
+            "example4": {
+              "title": "Convertir julios a Wh",
+              "description": "Conversión de energía para electrónica.",
+              "input": "7200J",
+              "calculation": "7200 J ÷ 3600 = 2 W⋅h",
+              "result": "2 Вт⋅ч",
+              "type": "electrónica"
+            },
+            "example5": {
+              "title": "Convertir calorías a Wh",
+              "description": "Conversión de energía para la física.",
+              "input": "860 calorías",
+              "calculation": "860 calorías × 4,184 ÷ 3600 = 1 W⋅h",
+              "result": "1 Вт⋅ч",
+              "type": "física"
+            },
+            "example6": {
+              "title": "Conversión de W⋅h a calorías",
+              "description": "Conversión de energía para cálculos térmicos.",
+              "input": "5 Вт⋅ч",
+              "calculation": "5 W⋅h × 3600 ÷ 4,184 = 4300 calorías",
+              "result": "4300 calorías",
+              "type": "ingeniería de calefacción"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de energía se convierten a través de la unidad base: Joule. Cada unidad tiene su propia fórmula de conversión, lo que garantiza la precisión de los cálculos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades de energía básicas: julios (J), calorías (cal) y vatios-hora (Wh)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir julios a calorías?",
+            "a": "Divida los julios entre 4,184 para obtener calorías. Por ejemplo: 4,184 J = 4,184 ÷ 4,184 = 1 cal."
+          },
+          {
+            "q": "¿Cómo convertir Wh a Julios?",
+            "a": "Multiplique Wh por 3600 para obtener julios. Por ejemplo: 1 Wh = 1 × 3600 = 3600 J."
+          },
+          {
+            "q": "¿Cómo convertir calorías a Wh?",
+            "a": "Multiplique las calorías por 4,184 y luego divida entre 3600. Por ejemplo: 1 cal = 1 × 4,184 ÷ 3600 = 0,00116 Wh."
+          },
+          {
+            "q": "¿Qué es un vatio hora?",
+            "a": "Un vatio-hora es una unidad de medida de energía equivalente a la energía consumida por un dispositivo de 1 vatio durante 1 hora."
+          },
+          {
+            "q": "¿Cómo convertir calorías a julios?",
+            "a": "Multiplique las calorías por 4,184 para obtener julios. Por ejemplo: 100 cal = 100 × 4,184 = 418,4 J."
+          },
+          {
+            "q": "¿Cómo convertir julios a Wh?",
+            "a": "Divida los julios por 3600 para obtener vatios hora. Por ejemplo: 7200 J = 7200 ÷ 3600 = 2 Wh."
+          },
+          {
+            "q": "¿Cuántos julios hay en una caloría?",
+            "a": "1 caloría = 4,184 julios. Este es el valor estándar para el equivalente mecánico del calor."
+          },
+          {
+            "q": "¿Cuántos julios hay en un vatio hora?",
+            "a": "1 vatio-hora = 3600 julios. Este es el valor estándar: 1 W × 3600 segundos = 3600 J."
+          },
+          {
+            "q": "¿Qué unidades de energía admite el convertidor?",
+            "a": "El convertidor admite 3 unidades: julios (J), calorías (cal) y vatios-hora (Wh)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de energía?",
+            "a": "Sí, todos los cálculos se basan en estándares internacionales precisos. Las fórmulas de conversión corresponden a valores oficiales."
+          },
+          {
+            "q": "¿Es posible convertir kilovatios-hora y kilocalorías?",
+            "a": "En la versión actual, el convertidor admite J, cal y Wh. Los kilovatios hora y las kilocalorías se pueden convertir multiplicando los valores por 1000 respectivamente."
+          },
+          {
+            "q": "¿Cómo convertir la energía de los alimentos?",
+            "a": "El convertidor es adecuado para convertir la energía alimentaria. Normalmente se utilizan kilocalorías (kcal), que se pueden convertir en calorías."
+          },
+          {
+            "q": "¿El convertidor soporta valores de energía negativos?",
+            "a": "No, la energía siempre es un valor positivo. El convertidor no admite números negativos."
+          },
+          {
+            "q": "¿Cuál es el rango máximo de energía que se puede convertir?",
+            "a": "El convertidor puede funcionar con cualquier valor de energía, limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿El convertidor de energía es gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de energía?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en dietética?",
+            "a": "Sí, el conversor es muy utilizado en dietética para convertir la energía de los alimentos entre calorías y julios en estudios internacionales."
+          },
+          {
+            "q": "¿El convertidor es adecuado para ingeniería eléctrica?",
+            "a": "Sí, el convertidor es ideal para ingeniería eléctrica para convertir energía entre vatios hora y julios."
+          },
+          {
+            "q": "¿Cómo convertir la energía de la batería?",
+            "a": "El convertidor es adecuado para convertir la energía de la batería. Los vatios-hora (Wh) se utilizan comúnmente y se pueden convertir a julios."
+          },
+          {
+            "q": "¿Qué es julio?",
+            "a": "Joule (J) es la unidad de energía del SI. 1 J = 1 N⋅m = 1 W⋅s. El nombre de James Prescott Joule."
+          },
+          {
+            "q": "¿Qué es una caloría?",
+            "a": "La caloría (cal) es una unidad de medida de energía no sistémica equivalente a la cantidad de calor necesaria para calentar 1 gramo de agua a 1 °C. 1 cal = 4,184 J."
+          },
+          {
+            "q": "¿En qué unidades se mide la energía de los alimentos?",
+            "a": "La energía dietética generalmente se mide en kilocalorías (kcal), donde 1 kcal = 1000 cal = 4184 J. Los envases de alimentos suelen estar etiquetados como \"kcal\" o simplemente \"calorías\"."
+          },
+          {
+            "q": "¿A qué velocidad funciona el convertidor de energía?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir energías muy grandes?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidas energías muy elevadas (millones de julios, kilovatios-hora, etc.)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: julios o calorías?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Joule es una unidad estándar del SI, la caloría es una unidad tradicional de nutrición."
+          },
+          {
+            "q": "¿Por qué se utiliza el vatio-hora en ingeniería eléctrica?",
+            "a": "El vatio-hora es útil para medir la energía consumida o producida por dispositivos eléctricos, ya que muestra la potencia x el tiempo."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en física?",
+            "a": "Sí, el convertidor se utiliza en física para convertir entre diferentes unidades de energía en experimentos y cálculos científicos."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Es posible utilizar un convertidor para calcular la energía de la batería?",
+            "a": "Sí, el convertidor es ideal para convertir la energía de la batería entre vatios hora y julios."
+          },
+          {
+            "q": "¿Cómo transferir energía desde una etiqueta de energía?",
+            "a": "La energía en una etiqueta nutricional suele aparecer en kilocalorías. Multiplique por 1000 para obtener calorías, luego use el convertidor para convertir a julios."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "data-converter": {
+      "title": "Conversor de datos en línea",
+      "description": "Convierta rápidamente datos entre bytes, kilobytes, megabytes, gigabytes y terabytes. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Conversión...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "B": "Byte (B)",
+        "KB": "Kilobyte (KB)",
+        "MB": "megabyte (MB)",
+        "GB": "gigabytes (GB)",
+        "TB": "Terabytes (TB)"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas de conversión exactas (sistema base 1024)",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de datos en línea: bytes, kilobytes, megabytes, gigabytes, terabytes | calc1.ru",
+        "description": "Conversor de datos online gratuito para convertir bytes, kilobytes, megabytes, gigabytes y terabytes. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades de datos (sistema base 1024).",
+        "keywords": "convertidor de datos, bytes a kilobytes, kilobytes a megabytes, megabytes a gigabytes, gigabytes a terabytes, terabytes a gigabytes, convertidor de unidades de datos, conversión de bytes, conversión de kilobytes, conversión de megabytes, conversión de gigabytes, conversión de terabytes, conversor de datos en línea, conversor de bytes, convertidor de kilobytes, convertidor de megabytes, convertidor de gigabytes, convertidor de terabytes, volumen de datos, tamaño de archivo, capacidad de memoria, capacidad de disco, capacidad de almacenamiento, kibibytes, mebibytes, gibibytes, tebibytes, sistema base 1024, sistema binario, conversor de datos, bytes a kilobytes, kilobytes a megabytes, megabytes a gigabytes, gigabytes a terabytes",
+        "h1": "Conversor de datos en línea",
+        "h2": "Convertir bytes, kilobytes, megabytes, gigabytes y terabytes",
+        "overview": {
+          "title": "Acerca del convertidor de datos",
+          "content": "Nuestro conversor de datos le permite realizar conversiones rápidas y precisas entre diferentes unidades de datos. Admite todas las unidades principales: bytes, kilobytes, megabytes, gigabytes y terabytes.",
+          "additionalContent": "El convertidor utiliza el sistema de conversión binaria exacta (base 1024), que se utiliza en los sistemas informáticos. Adecuado para profesionales de TI, desarrolladores, administradores de sistemas y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir varias unidades de datos:",
+            "example1": {
+              "title": "Convertir kilobytes a megabytes",
+              "description": "Conversión de tamaño de archivo",
+              "input": "2048KB",
+              "calculation": "2048 KB ÷ 1024 = 2 MB",
+              "result": "2 megas",
+              "type": "archivos"
+            },
+            "example2": {
+              "title": "Convertir megabytes a gigabytes",
+              "description": "Conversión de capacidad de memoria",
+              "input": "4096 megas",
+              "calculation": "4096 MB ÷ 1024 = 4 GB",
+              "result": "4GB",
+              "type": "memoria"
+            },
+            "example3": {
+              "title": "Convertir gigabytes a terabytes",
+              "description": "Convertir la capacidad del disco",
+              "input": "2048GB",
+              "calculation": "2048 GB ÷ 1024 = 2 TB",
+              "result": "2 TB",
+              "type": "discos"
+            },
+            "example4": {
+              "title": "Convertir bytes a kilobytes",
+              "description": "Conversión de tamaño de datos",
+              "input": "8192B",
+              "calculation": "8192 B ÷ 1024 = 8 KB",
+              "result": "8 KB",
+              "type": "datos"
+            },
+            "example5": {
+              "title": "Convertir terabytes a gigabytes",
+              "description": "Conversión de volumen de almacenamiento",
+              "input": "1,5 TB",
+              "calculation": "1,5 TB × 1024 = 1536 GB",
+              "result": "1536GB",
+              "type": "almacenamiento"
+            },
+            "example6": {
+              "title": "Convertir megabytes a bytes",
+              "description": "Traducción para programación.",
+              "input": "10 megas",
+              "calculation": "10 MB × 1024 × 1024 = 10485760 B",
+              "result": "10485760B",
+              "type": "programación"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de datos se convierten mediante la unidad básica: byte. Se utiliza el sistema binario (base 1024), que garantiza cálculos precisos de los datos informáticos."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 5 unidades de datos básicas: bytes (B), kilobytes (KB), megabytes (MB), gigabytes (GB) y terabytes (TB)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cuántos bytes hay en un kilobyte?",
+            "a": "1 kilobyte equivale a 1024 bytes. Esto se debe al sistema numérico binario utilizado en las computadoras."
+          },
+          {
+            "q": "¿Cómo traducir gigabayta en megabays?",
+            "a": "Multiplique la cantidad de gigabytes por 1024 para obtener megabytes. Por ejemplo: 1 GB = 1 × 1024 = 1024 MB."
+          },
+          {
+            "q": "¿Cuál es la diferencia entre un kilobyte y un kibibyte?",
+            "a": "Kilobyte (KB) = 1024 bytes, kibibyte (KiB) = 1024 bytes. Nuestro convertidor utiliza un sistema informático estándar (1024)."
+          },
+          {
+            "q": "¿Cuántos terabytes hay en un petabyte?",
+            "a": "1 petabyte equivale a 1024 terabytes. Esta es la siguiente unidad de medida después del terabyte."
+          },
+          {
+            "q": "¿Cómo convertir kilobytes a megabytes?",
+            "a": "Divida la cantidad de kilobytes por 1024 para obtener megabytes. Por ejemplo: 2048 KB = 2048 ÷ 1024 = 2 MB."
+          },
+          {
+            "q": "¿Cómo traducir megabays a gigabytes?",
+            "a": "Divida la cantidad de megabytes por 1024 para obtener gigabytes. Por ejemplo: 4096 MB = 4096 ÷ 1024 = 4 GB."
+          },
+          {
+            "q": "¿Cuántos megabytes hay en un gigabyte?",
+            "a": "Hay 1024 megabytes en un gigabyte. Este es el valor binario estándar (base 1024)."
+          },
+          {
+            "q": "¿Cómo traducir los terabys en gigabayta?",
+            "a": "Multiplique la cantidad de terabytes por 1024 para obtener gigabytes. Por ejemplo: 2 TB = 2 × 1024 = 2048 GB."
+          },
+          {
+            "q": "¿Cuántos gigabytes hay en un terabyte?",
+            "a": "Un terabyte tiene 1024 gigabytes. Este es el valor estándar del sistema binario."
+          },
+          {
+            "q": "¿Qué unidades de datos admite el convertidor?",
+            "a": "El convertidor admite 5 unidades: bytes (B), kilobytes (KB), megabytes (MB), gigabytes (GB) y terabytes (TB)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de datos?",
+            "a": "Sí, todos los cálculos se basan en el sistema binario exacto (base 1024) utilizado en los sistemas informáticos."
+          },
+          {
+            "q": "¿Por qué se usa 1024 y no 1000?",
+            "a": "Se utiliza 1024 porque es 2^10 (potencia de dos), que corresponde al sistema numérico binario utilizado en las computadoras."
+          },
+          {
+            "q": "¿Es posible convertir petabytes y exabytes?",
+            "a": "En la versión actual, el convertidor admite B, KB, MB, GB y TB. Está previsto añadir petabytes y exabytes en futuras actualizaciones."
+          },
+          {
+            "q": "¿Cómo convertir el tamaño del archivo?",
+            "a": "El convertidor es adecuado para convertir tamaños de archivos. Ingrese el tamaño en una unidad y seleccione la unidad deseada para convertir."
+          },
+          {
+            "q": "¿El convertidor admite valores de datos negativos?",
+            "a": "No, el volumen de datos siempre es un valor positivo. El convertidor no admite números negativos."
+          },
+          {
+            "q": "¿Cuál es la cantidad máxima de datos que se pueden convertir?",
+            "a": "El convertidor puede funcionar con cualquier valor, limitado únicamente por las capacidades de JavaScript."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿El conversor de datos es gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de datos?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza un convertidor en TI?",
+            "a": "Sí, el convertidor se utiliza ampliamente en TI para transferir volúmenes de datos, memoria, discos y almacenamiento entre diferentes unidades."
+          },
+          {
+            "q": "¿El convertidor es adecuado para administradores de sistemas?",
+            "a": "Sí, el conversor es ideal para que los administradores de sistemas conviertan volúmenes de disco, memoria y almacenamiento."
+          },
+          {
+            "q": "¿Cómo convertir la capacidad del disco o de la memoria?",
+            "a": "El convertidor es adecuado para convertir capacidad de disco y memoria. Ingrese el volumen en una unidad y seleccione la unidad deseada."
+          },
+          {
+            "q": "¿Qué es un byte?",
+            "a": "Un byte (B) es la unidad básica de datos en informática. 1 byte = 8 bits. Esta es la unidad mínima de información direccionable."
+          },
+          {
+            "q": "¿Cuál es la diferencia entre KB y KiB?",
+            "a": "KB (kilobyte) = 1024 bytes (unidad binaria), KiB (kibibyte) = 1024 bytes (unidad binaria oficial). Nuestro convertidor utiliza KB = 1024 bytes."
+          },
+          {
+            "q": "¿Qué tan rápido es el convertidor de datos?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir cantidades muy grandes de datos?",
+            "a": "Sí, el convertidor puede funcionar con cualquier valor, incluidos volúmenes muy grandes (petabytes, exabytes, etc.)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: byte o kilobyte?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen escalas diferentes. Un byte es útil para datos pequeños, un kilobyte es útil para archivos."
+          },
+          {
+            "q": "¿Por qué los fabricantes de discos utilizan 1000 y no 1024?",
+            "a": "Los fabricantes utilizan 1000 con fines de marketing (sistema de 10 bases). La capacidad de disco real utilizada es 1024 (sistema de 2 bases)."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en programación?",
+            "a": "Sí, el convertidor se utiliza en programación para calcular la cantidad de datos, memoria y buffers en varias unidades de medida."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Es posible utilizar el convertidor para calcular el volumen de tráfico de Internet?",
+            "a": "Sí, el conversor es ideal para convertir volúmenes de tráfico de Internet entre diferentes unidades de medida."
+          },
+          {
+            "q": "¿Cómo convertir el tamaño de un archivo desde el sistema operativo?",
+            "a": "El sistema operativo muestra el tamaño del archivo en una de las unidades (KB, MB, GB). Ingrese este valor y seleccione la unidad deseada para convertir."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    },
+    "angle-converter": {
+      "title": "Conversor de ángulos en línea",
+      "description": "Convierte rápidamente ángulos entre grados, radianes y revoluciones. Convertidor preciso y conveniente.",
+      "value": "Introducir valor",
+      "fromUnit": "De la unidad",
+      "toUnit": "Por unidad",
+      "button": "Convertir",
+      "calculating": "Conversión...",
+      "reset": "Reiniciar",
+      "result": "Resultado",
+      "commonConversions": "Otras unidades",
+      "units": {
+        "deg": "grados (°)",
+        "rad": "Radianes (rad)",
+        "rev": "Revoluciones (rpm)"
+      },
+      "infographic": {
+        "precise": "Preciso",
+        "preciseDescription": "Cálculos precisos",
+        "fast": "Rápido",
+        "fastDescription": "Conversión instantánea",
+        "multilingual": "Plurilingüe",
+        "multilingualDescription": "4 idiomas"
+      },
+      "tips": {
+        "title": "💡 Consejos útiles",
+        "accuracy": "Todos los cálculos se basan en fórmulas matemáticas precisas para convertir ángulos.",
+        "instant": "El resultado se muestra instantáneamente al cambiar los parámetros.",
+        "multilingual": "Interfaz disponible en 4 idiomas"
+      },
+      "seo": {
+        "title": "Conversor de ángulos online: grados, radianes, revoluciones | calc1.ru",
+        "description": "Conversor de ángulos online gratuito para convertir grados, radianes y revoluciones. Cálculos precisos con soporte para 4 idiomas. Conversión instantánea de unidades angulares.",
+        "keywords": "convertidor de ángulos, grados a radianes, radianes a grados, grados a revoluciones, revoluciones a grados, radianes a revoluciones, revoluciones a radianes, convertidor de unidades de ángulos, conversión de grados, conversión de radianes, conversión de revoluciones, convertidor de ángulos en línea, convertidor de grados, convertidor de radianes, convertidor de revoluciones, unidades de ángulos, ángulo en grados, ángulo en radianes, ángulo en revoluciones, medida de ángulo en grados, medida de ángulo en radianes, matemáticas de ángulos, trigonometría, conversión de ángulos en línea, calculadora de ángulos, conversión de unidades de ángulos, convertidor de ángulos, grados a radianes, radianes a grados, grados a revoluciones, revoluciones a grados, radianes a revoluciones",
+        "h1": "Conversor de ángulos en línea",
+        "h2": "Convertir grados, radianes y revoluciones",
+        "overview": {
+          "title": "Sobre el convertidor de ángulos",
+          "content": "Nuestro conversor de ángulos le permite convertir de forma rápida y precisa entre diferentes unidades de ángulos. Soporta grados, radianes y revoluciones.",
+          "additionalContent": "El convertidor utiliza fórmulas matemáticas precisas para convertir ángulos. Adecuado para matemáticas, física, ingeniería, programación y uso diario. Todos los cálculos se realizan instantáneamente con una precisión de 15 decimales.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo",
+            "content": "A continuación se muestran ejemplos de cálculos para convertir diferentes unidades angulares:",
+            "example1": {
+              "title": "Convertir grados a radianes",
+              "description": "Convertir grados a radianes para matemáticas",
+              "input": "180°",
+              "calculation": "180° × π / 180 = π radianes ≈ 3,14159 radianes",
+              "result": "3,14159 radianes",
+              "type": "matemáticas"
+            },
+            "example2": {
+              "title": "Convertir radianes a grados",
+              "description": "Convertir radianes a grados para trigonometría",
+              "input": "π/2 radianes",
+              "calculation": "π/2 × 180 / π = 90°",
+              "result": "90°",
+              "type": "trigonometría"
+            },
+            "example3": {
+              "title": "Convertir grados a revoluciones",
+              "description": "Convertir grados a revoluciones para rotación",
+              "input": "360°",
+              "calculation": "360° ÷ 360 = 1 revolución",
+              "result": "1 vuelta",
+              "type": "mecánica"
+            },
+            "example4": {
+              "title": "Convertir revoluciones a grados",
+              "description": "Convertir revoluciones a grados para ángulos",
+              "input": "2,5 vueltas",
+              "calculation": "2,5 × 360 = 900°",
+              "result": "900°",
+              "type": "ingeniería"
+            },
+            "example5": {
+              "title": "Convertir radianes a revoluciones",
+              "description": "Convertir radianes a revoluciones para rotación",
+              "input": "2π radianes",
+              "calculation": "2π ÷ (2π) = 1 revolución",
+              "result": "1 vuelta",
+              "type": "física"
+            },
+            "example6": {
+              "title": "Convertir revoluciones a radianes",
+              "description": "Convertir revoluciones a radianes para matemáticas",
+              "input": "0,5 vuelta",
+              "calculation": "0,5 × 2π = π radianes ≈ 3,14159 radianes",
+              "result": "3,14159 radianes",
+              "type": "matemáticas"
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo funciona la conversión?",
+          "content": "Todas las unidades de ángulos se convierten utilizando la unidad base radianes. Los grados se convierten usando la fórmula: radianes = grados × π / 180. Las revoluciones se convierten usando la fórmula: radianes = revoluciones × 2π."
+        },
+        "units": {
+          "title": "Unidades apoyadas",
+          "content": "El convertidor admite 3 unidades básicas de ángulos: grados (°), radianes (rad) y revoluciones (rpm)."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestro conversor",
+          "content": "Cálculos precisos, conversión instantánea, soporte para 4 idiomas, interfaz fácil de usar, versión móvil."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes"
+        },
+        "faqItems": [
+          {
+            "q": "¿Cómo convertir grados a radianes?",
+            "a": "Multiplica los grados por π y divide por 180. Por ejemplo: 180° = 180 × π / 180 = π radianes ≈ 3,14159 radianes."
+          },
+          {
+            "q": "¿Cómo convertir radianes a grados?",
+            "a": "Multiplica radianes por 180 y divide por pi. Por ejemplo: π radianes = π × 180 / π = 180°."
+          },
+          {
+            "q": "¿Cómo convertir grados a revoluciones?",
+            "a": "Divide los grados por 360 para obtener las RPM. Por ejemplo: 360° = 360 ÷ 360 = 1 revolución."
+          },
+          {
+            "q": "¿Cómo convertir revoluciones a grados?",
+            "a": "Multiplica las rpm por 360 para obtener los grados. Por ejemplo: 2,5 vueltas = 2,5 × 360 = 900°."
+          },
+          {
+            "q": "¿Cómo convertir radianes a revoluciones?",
+            "a": "Divide los radianes por 2π para obtener las revoluciones. Por ejemplo: 2π radianes = 2π ÷ (2π) = 1 revolución."
+          },
+          {
+            "q": "¿Cómo convertir revoluciones a radianes?",
+            "a": "Multiplica las revoluciones por 2π para obtener radianes. Por ejemplo: 0,5 revolución = 0,5 × 2π = π radianes ≈ 3,14159 radianes."
+          },
+          {
+            "q": "¿Cuantos grados hay en un radian?",
+            "a": "1 radián = 180 / π ≈ 57,2958°. Este es el valor estándar para la medida del ángulo en radianes."
+          },
+          {
+            "q": "¿Cuántos radianes hay en un grado?",
+            "a": "1° = π / 180 ≈ 0,017453 radianes. Este es el valor estándar de la medida en grados del ángulo."
+          },
+          {
+            "q": "¿Qué unidades de ángulo admite el convertidor?",
+            "a": "El convertidor admite 3 unidades: grados (°), radianes (rad) y revoluciones (rpm)."
+          },
+          {
+            "q": "¿Son precisos los cálculos del convertidor de ángulos?",
+            "a": "Sí, todos los cálculos se basan en fórmulas matemáticas exactas. Las fórmulas de conversión cumplen con los estándares internacionales."
+          },
+          {
+            "q": "¿Es posible convertir ángulos negativos?",
+            "a": "Sí, el convertidor admite ángulos negativos, que se utilizan para indicar ángulos de rotación en la dirección opuesta."
+          },
+          {
+            "q": "¿Cómo convertir ángulos mayores a 360 grados?",
+            "a": "El convertidor puede manejar ángulos de cualquier tamaño, incluidos ángulos superiores a 360° (más de una rotación completa)."
+          },
+          {
+            "q": "¿Se puede utilizar el convertidor en dispositivos móviles?",
+            "a": "Sí, el conversor está totalmente adaptado para dispositivos móviles y funciona en todas las plataformas: iOS, Android, Windows, macOS."
+          },
+          {
+            "q": "¿El convertidor de ángulo es gratuito?",
+            "a": "Sí, el convertidor es completamente gratuito y está disponible sin registro. Puedes usarlo en cualquier momento."
+          },
+          {
+            "q": "¿Necesito una conexión a Internet para que funcione el convertidor?",
+            "a": "Sí, se requiere una conexión a Internet para utilizar el convertidor en línea. Todos los cálculos se realizan en el navegador."
+          },
+          {
+            "q": "¿Cómo guardar el resultado de la conversión de ángulos?",
+            "a": "El resultado se puede copiar al portapapeles o tomar una captura de pantalla. También puede registrar el resultado manualmente."
+          },
+          {
+            "q": "¿Se utiliza el convertidor en matemáticas?",
+            "a": "Sí, el conversor se usa mucho en matemáticas para convertir entre grados y radianes en trigonometría y geometría."
+          },
+          {
+            "q": "¿El convertidor es adecuado para la física?",
+            "a": "Sí, el convertidor es ideal para que la física convierta la rotación y los ángulos de rotación entre diferentes unidades."
+          },
+          {
+            "q": "¿Cómo convertir ángulos para programar?",
+            "a": "El convertidor es adecuado para convertir ángulos en programación. Normalmente se utilizan radianes, que se pueden convertir a grados."
+          },
+          {
+            "q": "¿Qué es un radián?",
+            "a": "Radianes (rad) es la unidad de medida del SI para ángulos planos. 1 radian es igual al ángulo subtendido por un arco de círculo cuya longitud es igual al radio del círculo. 1 rad = 180 / π ≈ 57,2958°."
+          },
+          {
+            "q": "¿Qué es un título?",
+            "a": "Un grado (°) es una unidad de medida para ángulos planos. 1 grado es igual a 1/360 de una revolución completa. 1° = π / 180 ≈ 0,017453 radianes."
+          },
+          {
+            "q": "¿Qué es la facturación?",
+            "a": "Una revolución (rev) es una unidad de medida de ángulos igual a una rotación completa (360° o 2π radianes). 1 revolución = 360° = 2π radianes."
+          },
+          {
+            "q": "¿Qué tan rápido es el convertidor de ángulos?",
+            "a": "El convertidor funciona al instante. Los cálculos se realizan en tiempo real a medida que se ingresan los valores."
+          },
+          {
+            "q": "¿Es posible convertir ángulos muy grandes?",
+            "a": "Sí, el convertidor puede trabajar con ángulos de cualquier tamaño, incluidos ángulos muy grandes (miles de grados, decenas de revoluciones, etc.)."
+          },
+          {
+            "q": "¿Qué unidad es más precisa: grados o radianes?",
+            "a": "Ambas unidades son igualmente precisas, sólo que tienen representaciones diferentes. El radián es conveniente para las matemáticas, el grado es para el uso diario."
+          },
+          {
+            "q": "¿Por qué se utilizan radianes en matemáticas?",
+            "a": "Los radianes se utilizan en matemáticas porque muchas fórmulas de trigonometría y cálculo se simplifican al utilizar radianes en lugar de grados."
+          },
+          {
+            "q": "¿Se utiliza un convertidor en ingeniería?",
+            "a": "Sí, el convertidor se utiliza en ingeniería para calcular ángulos de rotación, rotación de mecanismos y desplazamientos angulares en varias unidades de medida."
+          },
+          {
+            "q": "¿Cómo funciona la conversión inversa?",
+            "a": "El conversor admite conversión bidireccional: puede convertir de una unidad a otra y viceversa, simplemente intercambiando las unidades."
+          },
+          {
+            "q": "¿Es posible utilizar un convertidor para calcular los ángulos de rotación?",
+            "a": "Sí, el conversor es ideal para convertir ángulos de rotación de mecanismos entre grados, radianes y revoluciones."
+          },
+          {
+            "q": "¿Cómo convertir ángulos de grados a radianes para JavaScript?",
+            "a": "JavaScript suele utilizar radianes. Multiplica los grados por Math.PI y divide por 180. Por ejemplo: 90° = 90 × Math.PI / 180 = π/2 radianes."
+          },
+          {
+            "q": "¿Cuántas revoluciones hay en 720 grados?",
+            "a": "720° ÷ 360 = 2 vueltas. Eso es un giro completo más otro giro completo."
+          },
+          {
+            "q": "¿Cuántos grados hay en π/4 radianes?",
+            "a": "π/4 × 180 / π = 45°. Esto es un cuarto de ángulo recto (90°)."
+          },
+          {
+            "q": "¿Cómo convertir ángulos para gráficos y tablas?",
+            "a": "El convertidor es adecuado para convertir ángulos al crear gráficos y tablas. Normalmente se utilizan grados para facilitar la visualización."
+          },
+          {
+            "q": "¿Qué es un ángulo de 90 grados en radianes?",
+            "a": "90° = 90 × π / 180 = π/2 radianes ≈ 1,5708 radianes. Este es un ángulo recto."
+          },
+          {
+            "q": "¿Cuántos radianes hay en una rotación completa?",
+            "a": "Rotación completa = 360° = 2π radianes ≈ 6,28319 radianes."
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "category": "Convertidores"
+      }
+    }
+  }
 }
-
-
-

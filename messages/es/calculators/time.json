@@ -1,6 +1,2486 @@
 {
-	"calculators": {}
+  "calculators": {
+    "daysBetween": {
+      "title": "Calculadora de diferencia de fecha",
+      "description": "Una calculadora de diferencia de fechas en línea lo ayudará a determinar la cantidad de días, semanas, meses o años entre dos fechas.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "daysBetween": "Diferencia entre fechas",
+        "category": "Tiempo"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "description": "Introduce dos fechas para calcular la diferencia.",
+        "startDate": "Fecha de inicio",
+        "endDate": "Fecha de finalización",
+        "startDatePlaceholder": "Seleccione fecha de inicio",
+        "endDatePlaceholder": "Seleccionar fecha de finalización",
+        "today": "Hoy",
+        "calculate": "Calcular",
+        "calculating": "Estamos contando...",
+        "reset": "Reiniciar"
+      },
+      "results": {
+        "title": "Resultado del cálculo",
+        "totalDays": "Días totales",
+        "weeks": "semanas",
+        "months": "meses",
+        "years": "Años",
+        "days": "Días",
+        "copy": "Copiar resultado",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingrese las fechas y haga clic en 'Calcular'",
+        "copyText": {
+          "title": "Diferencia entre fechas:",
+          "startDate": "Fecha de inicio:",
+          "endDate": "Fecha de finalización:",
+          "totalDays": "Días totales:",
+          "thisIs": "Este",
+          "weeks": "semanas y",
+          "days": "días",
+          "inCalculation": "En términos de:",
+          "years": "años,",
+          "months": "meses,",
+          "days2": "días"
+        }
+      },
+      "hero": {
+        "days": "Días",
+        "accurateCalculation": "Cálculo exacto",
+        "accuracy": "Exactitud",
+        "free": "gratis",
+        "usage": "Uso"
+      },
+      "seo": {
+        "title": "Calculadora de diferencia de fechas - Calculadora de días entre fechas | calc1.ru",
+        "description": "Calculadora de diferencia de fechas online gratuita. Descubra el número de días, semanas, meses y años entre dos fechas. Calcule con precisión los días previos al evento o la diferencia entre fechas.",
+        "keywords": "calculadora de diferencia entre fechas, diferencia entre fechas, calculadora de fecha, días entre fechas, cuantos días entre fechas, diferencia de días, calculadora de días, calculadora de fecha, días entre fechas, calculadora de diferencia de fecha, calculadora de fecha en línea, calculadora de fecha en línea, diferencia de fecha en línea, días antes del evento, días antes de la fecha, días después de la fecha, calcular los días entre fechas, cuántos días han pasado, cuántos días quedan, diferencia en semanas, diferencia en meses, diferencia en años, calculadora de calendario, días entre fechas en línea, etiqueta zwischen daten, calculadora jours entre fechas, calcular dias entre fechas, calculadora de días entre fechas, calculadora de intervalo de fechas, calculadora de rango de fechas, diferencia entre fechas, calculadora de días",
+        "overview": {
+          "title": "Calculadora de diferencia de fecha",
+          "content": "Una calculadora de diferencia de fechas en línea le permite calcular con precisión la cantidad de días, semanas, meses y años entre dos fechas. La calculadora tiene en cuenta los años bisiestos, las diferentes duraciones de los meses y calcula con precisión la diferencia, incluidas las fechas de inicio y finalización.",
+          "additionalContent": "La calculadora es útil para programar eventos, calcular plazos de proyectos, determinar edades, calcular días de vacaciones, calcular intereses para un período y muchas otras tareas relacionadas con fechas e intervalos de tiempo.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de la diferencia entre fechas.",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de diferencia de fechas:",
+            "example1": {
+              "title": "Ejemplo 1: diferencia entre dos fechas dentro de un año",
+              "description": "Cálculo de días entre el 1 de enero de 2024 y el 31 de diciembre de 2024",
+              "input": "Fecha de inicio: 1 de enero de 2024\nFecha de finalización: 31 de diciembre de 2024",
+              "calculation": "2024 es un año bisiesto (366 días)\n1 de enero - día 1\n31 de diciembre - día 366\nDiferencia: 366 - 1 = 365 días (365 días entre fechas)",
+              "result": "Resultado: 365 días (12 meses, 52 semanas)",
+              "type": "Un año calendario",
+              "note": "Un año bisiesto contiene 366 días, pero hay 365 días entre el 1 de enero y el 31 de diciembre."
+            },
+            "example2": {
+              "title": "Ejemplo 2: diferencia entre fechas de años bisiestos",
+              "description": "Cálculo de días entre el 1 de febrero de 2023 y el 1 de febrero de 2025",
+              "input": "Fecha de inicio: 1 de febrero de 2023\nFecha de finalización: 1 de febrero de 2025",
+              "calculation": "2023: 365 días (no año bisiesto)\n2024: 366 días (año bisiesto)\n2025: 365 días (no año bisiesto)\nDel 1 de febrero de 2023 al 1 de febrero de 2025: 365 + 366 = 731 días",
+              "result": "Resultado: 731 días (24 meses, 104 semanas, 2 años)",
+              "type": "Dos años con año bisiesto.",
+              "note": "El año bisiesto 2024 añade un día extra"
+            },
+            "example3": {
+              "title": "Ejemplo 3: diferencia en un mes",
+              "description": "Cálculo de días entre el 15 de enero de 2024 y el 25 de enero de 2024",
+              "input": "Fecha de inicio: 15 de enero de 2024\nFecha de finalización: 25 de enero de 2024",
+              "calculation": "Enero contiene 31 días.\nDel 15 al 25: 25 - 15 = 10 días",
+              "result": "Resultado: 10 días (1 semana, 3 días)",
+              "type": "dentro de un mes",
+              "note": "Cálculo simple de la diferencia entre los números del mes."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Diferencia entre límites anuales",
+              "description": "Cálculo de días entre el 15 de diciembre de 2023 y el 15 de enero de 2024",
+              "input": "Fecha de inicio: 15 de diciembre de 2023\nFecha de finalización: 15 de enero de 2024",
+              "calculation": "Del 15 de diciembre al 31 de diciembre: 31 - 15 = 16 días\nDel 1 de enero al 15 de enero: 15 días\nTotal: 16 + 15 = 31 días",
+              "result": "Resultado: 31 días (1 mes, 4 semanas, 3 días)",
+              "type": "Cruzando la frontera del año.",
+              "note": "El cálculo incluye los días de ambos meses y la transición al Año Nuevo."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Diferencia a lo largo de varios años",
+              "description": "Cálculo de días entre el 1 de enero de 2020 y el 1 de enero de 2024",
+              "input": "Fecha de inicio: 1 de enero de 2020\nFecha de finalización: 1 de enero de 2024",
+              "calculation": "2020: 366 días (año bisiesto)\n2021: 365 días\n2022: 365 días\n2023: 365 días\nTotal: 366 + 365 + 365 + 365 = 1461 días",
+              "result": "Resultado: 1461 días (48 meses, 208 semanas, 4 años)",
+              "type": "Varios años",
+              "note": "El año bisiesto 2020 suma un día al total"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Diferencia para calcular edad o plazo",
+              "description": "Cálculo de días entre su cumpleaños 15 de mayo de 1990 y la fecha actual 1 de enero de 2024",
+              "input": "Fecha de inicio: 15 de mayo de 1990\nFecha de finalización: 1 de enero de 2024",
+              "calculation": "Del 15 de mayo de 1990 al 1 de enero de 2024\nAños bisiestos: 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020 (8 años)\nAños normales: 33 años - 8 = 25 años\n365 × 25 + 366 × 8 + días desde el 15 de mayo hasta finales de 1990 + días desde principios de 2024 = ~12,295 días",
+              "result": "Resultado: ~12.295 días (~403 meses, ~1.756 semanas, ~33,7 años)",
+              "type": "Acuerdo a largo plazo",
+              "note": "Un cálculo preciso requiere tener en cuenta todos los años bisiestos y las fechas exactas."
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula la diferencia entre fechas?",
+          "content": "La diferencia entre fechas se calcula calculando el número de días desde la fecha de inicio hasta la fecha de finalización, de forma inclusiva o exclusiva (según la configuración de la calculadora).",
+          "formula": "Diferencia = Fecha de finalización - Fecha de inicio (en días, semanas, meses, años)",
+          "leapYear": "Los años bisiestos (divisibles por 4, excepto los años seculares, que son divisibles por 400) contienen 366 días en lugar de 365.",
+          "months": "Duración de los meses: 31 días (enero, marzo, mayo, julio, agosto, octubre, diciembre), 30 días (abril, junio, septiembre, noviembre), 28/29 días (febrero)."
+        },
+        "advantages": {
+          "title": "Ventajas de una calculadora de diferencia de fechas",
+          "content": "Nuestra calculadora ofrece muchos beneficios:",
+          "precise": "Exactitud",
+          "preciseDesc": "Cuentas para años bisiestos, diferentes duraciones de meses y fechas exactas del calendario.",
+          "flexible": "Flexibilidad",
+          "flexibleDesc": "Funciona con cualquier fecha en el pasado y en el futuro.",
+          "detailed": "Información detallada",
+          "detailedDesc": "Muestra la diferencia en días, semanas, meses y años al mismo tiempo.",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Versión totalmente adaptada para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Algunos consejos útiles para utilizar la calculadora:",
+          "accurate": "Especifique fechas exactas para obtener resultados precisos",
+          "leap": "Recuerda que los años bisiestos contienen 366 días (29 de febrero)",
+          "timezone": "La calculadora funciona con fechas sin tener en cuenta la hora ni las zonas horarias.",
+          "inclusive": "El resultado puede incluir o excluir las fechas de inicio y finalización; consulte la configuración"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo funciona la calculadora de diferencia de fechas?",
+              "a": "La calculadora calcula el número de días entre dos fechas específicas, teniendo en cuenta los años bisiestos y la duración exacta de los meses. El resultado se muestra en días, semanas, meses y años."
+            },
+            {
+              "q": "¿Cuentan los años bisiestos?",
+              "a": "Sí, la calculadora tiene en cuenta automáticamente los años bisiestos (años divisibles por 4, excepto los años centenarios, que deben ser divisibles por 400). Un año bisiesto tiene 366 días en lugar de 365."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia para fechas futuras?",
+              "a": "Sí, la calculadora funciona con cualquier fecha, tanto del pasado como del futuro. Puedes calcular cuántos días quedan antes del evento o cuántos días han pasado desde el evento."
+            },
+            {
+              "q": "¿Cómo se calcula la diferencia en meses y años?",
+              "a": "La diferencia mensual se calcula como el número aproximado de meses entre las fechas. La diferencia en años se calcula de manera similar. La precisión depende de fechas específicas y duración de los meses."
+            },
+            {
+              "q": "¿Se incluyen las fechas de inicio y finalización en el cálculo?",
+              "a": "Depende de la configuración de la calculadora. Normalmente se incluye la fecha de inicio y la fecha de finalización puede incluirse o excluirse. Verifique la lógica de funcionamiento en la descripción de la calculadora."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia entre fechas en diferentes zonas horarias?",
+              "a": "La calculadora funciona con fechas sin tener en cuenta la hora ni las zonas horarias. Si necesita tener en cuenta las zonas horarias, primero convierta las fechas a la misma zona horaria."
+            },
+            {
+              "q": "¿Cómo calcular los días antes de un evento?",
+              "a": "Especifique la fecha de hoy como fecha de inicio y la fecha del evento como fecha de finalización. La calculadora mostrará cuántos días quedan hasta el evento."
+            },
+            {
+              "q": "¿Cómo calcular cuántos días han pasado desde una fecha determinada?",
+              "a": "Especifique la última fecha como fecha de inicio y la fecha de hoy como fecha de finalización. La calculadora mostrará el número de días que han pasado."
+            },
+            {
+              "q": "¿Los cálculos son precisos para intervalos grandes?",
+              "a": "Sí, la calculadora calcula con precisión la diferencia incluso en intervalos de decenas y cientos de años, teniendo en cuenta todos los años bisiestos y la duración exacta de los meses."
+            },
+            {
+              "q": "¿Es posible guardar el resultado del cálculo?",
+              "a": "Sí, puedes copiar el resultado o tomar una captura de pantalla de la página. Algunas calculadoras admiten la exportación de resultados en varios formatos."
+            },
+            {
+              "q": "¿La calculadora funciona en dispositivos móviles?",
+              "a": "Sí, la calculadora está totalmente adaptada para funcionar en dispositivos móviles, tablets y smartphones. La interfaz se ajusta automáticamente al tamaño de la pantalla."
+            },
+            {
+              "q": "¿La calculadora es gratuita?",
+              "a": "Sí, la calculadora es completamente gratuita y no requiere registro. Puedes usarlo un número ilimitado de veces sin restricciones."
+            },
+            {
+              "q": "¿Cómo calcular los días laborables entre fechas?",
+              "a": "La calculadora básica cuenta todos los días, incluidos los fines de semana. Para calcular solo los días laborables, utilice una calculadora especial de días laborables o aclare la configuración."
+            },
+            {
+              "q": "¿Cuentan las vacaciones?",
+              "a": "La calculadora estándar no tiene en cuenta los días festivos. Calcula el número exacto de días del calendario. Para tener en cuenta los días festivos, utilice calculadoras especializadas."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia en horas, minutos y segundos?",
+              "a": "Esta calculadora calcula la diferencia en días, semanas, meses y años. Para calcular el tiempo (horas, minutos, segundos), utilice una calculadora de tiempo o una calculadora de diferencia horaria."
+            },
+            {
+              "q": "¿Cómo calcular los días de vacaciones?",
+              "a": "Ingrese la fecha de inicio de las vacaciones como fecha de inicio y la fecha de finalización de las vacaciones como fecha de finalización. La calculadora mostrará el número total de días de vacaciones."
+            },
+            {
+              "q": "¿Es posible calcular la edad en días?",
+              "a": "Sí, ingresa tu fecha de nacimiento como fecha de inicio y la fecha de hoy como fecha de finalización. La calculadora mostrará tu edad en días, semanas, meses y años."
+            },
+            {
+              "q": "¿Cómo calcular el tiempo de finalización del proyecto?",
+              "a": "Especifique la fecha de inicio del proyecto como fecha de inicio y la fecha de finalización planificada como fecha de finalización. La calculadora mostrará la duración total del proyecto en varias unidades de medida."
+            },
+            {
+              "q": "¿Se tienen en cuenta diferentes calendarios (juliano, gregoriano)?",
+              "a": "La calculadora utiliza el calendario gregoriano moderno. Para fechas históricas anteriores a 1582, es posible que sea necesario tener en cuenta el calendario juliano."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia entre fechas de diferentes épocas?",
+              "a": "La calculadora trabaja con fechas de la Era Común (AD). Las fechas anteriores a la Era Común (BC) requerirán un procesamiento especial o una calculadora diferente."
+            },
+            {
+              "q": "¿Cómo calcular los días hasta el día de pago?",
+              "a": "Ingrese la fecha de hoy como fecha de inicio y la fecha del próximo salario como fecha de finalización. La calculadora mostrará cuántos días quedan hasta que recibas tu salario."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia por el período de alquiler?",
+              "a": "Sí, ingrese la fecha de inicio del arrendamiento como fecha de inicio y la fecha de finalización del arrendamiento como fecha de finalización. La calculadora mostrará la duración del alquiler en días y otras unidades."
+            },
+            {
+              "q": "¿Cómo calcular los días entre pagos?",
+              "a": "Especifique la fecha del pago anterior como fecha de inicio y la fecha del próximo pago como fecha de finalización. La calculadora mostrará el intervalo entre pagos en días."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia para el período de formación?",
+              "a": "Sí, ingrese la fecha de inicio como fecha de inicio y la fecha de finalización como fecha de finalización. La calculadora mostrará la duración del entrenamiento en varias unidades."
+            },
+            {
+              "q": "¿Cómo calcular los días hasta tu cumpleaños?",
+              "a": "Ingrese la fecha de hoy como fecha de inicio y su próximo cumpleaños como fecha de finalización. La calculadora mostrará cuántos días quedan hasta tu cumpleaños."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia por el período de garantía?",
+              "a": "Sí, ingrese la fecha de compra como fecha de inicio y la fecha de finalización de la garantía como fecha de finalización. La calculadora mostrará cuántos días de garantía quedan o han pasado."
+            },
+            {
+              "q": "¿Cómo calcular los días previos a un evento importante?",
+              "a": "Especifique la fecha de hoy como fecha de inicio y la fecha del evento como fecha de finalización. La calculadora mostrará el número exacto de días antes del evento."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia por el período de suscripción?",
+              "a": "Sí, especifique la fecha de inicio de la suscripción como fecha de inicio y la fecha de finalización de la suscripción como fecha de finalización. La calculadora mostrará la duración de la suscripción en días."
+            },
+            {
+              "q": "¿Cómo calcular los días entre visitas al médico?",
+              "a": "Especifique la fecha de la visita anterior como fecha de inicio y la fecha de la próxima visita como fecha de finalización. La calculadora mostrará el intervalo entre visitas en días."
+            },
+            {
+              "q": "¿Es posible calcular la diferencia para el período del préstamo?",
+              "a": "Sí, especifique la fecha de recepción del préstamo como fecha de inicio y la fecha de finalización del préstamo como fecha de finalización. La calculadora mostrará el plazo del préstamo en días y otras unidades."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo calcular la diferencia entre fechas",
+          "description": "Instrucciones paso a paso para usar la calculadora de diferencia de fechas",
+          "steps": {
+            "step1": {
+              "name": "Seleccione fecha de inicio",
+              "text": "Especifica la primera fecha a partir de la cual comienza la cuenta atrás."
+            },
+            "step2": {
+              "name": "Seleccionar fecha de finalización",
+              "text": "Especifica la segunda fecha hasta la que estás contando."
+            },
+            "step3": {
+              "name": "Haga clic en calcular",
+              "text": "La calculadora calculará automáticamente la diferencia en días, semanas, meses y años."
+            },
+            "step4": {
+              "name": "obtener el resultado",
+              "text": "El resultado se mostrará con información detallada sobre la diferencia entre las fechas."
+            }
+          }
+        }
+      }
+    },
+    "addTime": {
+      "title": "Agregar días, horas y minutos a una fecha",
+      "description": "La calculadora de suma de tiempo en línea lo ayudará a agregar rápidamente la cantidad requerida de días, horas o minutos a una fecha determinada.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "addTime": "Agregar tiempo",
+        "category": "Tiempo"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "startDate": "Fecha de inicio",
+        "startTime": "Tiempo",
+        "addDays": "Agregar días",
+        "addHours": "Agregar horas",
+        "addMinutes": "Agregar minutos",
+        "today": "Hoy",
+        "now": "Ahora",
+        "calculate": "Calcular",
+        "calculating": "Estamos contando...",
+        "reset": "Reiniciar"
+      },
+      "results": {
+        "title": "Resultado del cálculo",
+        "resultDate": "fecha final",
+        "resultTime": "Tiempo",
+        "dayOfWeek": "Día de la semana",
+        "copy": "Copiar resultado",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingrese los parámetros y haga clic en 'Calcular'",
+        "copyText": {
+          "title": "Resultado de sumar tiempo:",
+          "startDate": "Fecha de inicio:",
+          "added": "Agregado:",
+          "days": "días,",
+          "hours": "horas,",
+          "minutes": "minutos",
+          "finalDate": "Fecha final:",
+          "dayOfWeek": "Día de la semana:"
+        }
+      },
+      "hero": {
+        "time": "Tiempo",
+        "accurateCalculation": "Cálculo exacto",
+        "accuracy": "Exactitud",
+        "free": "gratis",
+        "usage": "Uso"
+      },
+      "seo": {
+        "title": "Agregar calculadora de tiempo | calc1.ru",
+        "description": "Calculadora online gratuita para sumar días, horas y minutos a una fecha determinada. Calcule la fecha y hora futuras, teniendo en cuenta las características del calendario y la transición entre meses y años.",
+        "keywords": "agregar tiempo hasta la fecha, calculadora de tiempo, agregar calculadora de tiempo, agregar días hasta la fecha, agregar días hasta la fecha, agregar horas hasta la fecha, agregar minutos hasta la fecha, calcular fecha futura, calculadora de fecha y hora, calcular fecha futura, calculadora de fecha y hora, agregar tiempo en línea, agregar días hasta la fecha, agregar horas hasta la fecha, agregar minutos hasta la fecha, calculadora de suma de tiempo, calculadora de fecha futura, calcular la fecha en días, calcular la fecha en horas, calcular la fecha en minutos, agregar días a la fecha actual, agregar tiempo a la fecha en línea, zeit hinzufügen rechner, calculadora de fecha futura, calcular fecha futura, agregar horas a la fecha, agregar minutos a la fecha, calculadora de fecha con hora, calculadora de fecha futura, calculadora de suma de tiempo, calculadora aritmética de fecha, calculadora de fecha más días",
+        "overview": {
+          "title": "Calculadora para sumar el tiempo hasta la fecha.",
+          "content": "La calculadora de suma de tiempo en línea le permite agregar cualquier cantidad de días, horas o minutos a una fecha y hora determinadas y obtener la fecha y hora finales exactas. La calculadora tiene en cuenta automáticamente la transición entre días, meses y años, incluidos los años bisiestos.",
+          "additionalContent": "La calculadora es útil para planificar eventos, calcular el cronograma de tareas, determinar fechas límite, calcular la hora de finalización de procesos y muchas otras tareas relacionadas con fechas y horas.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo agregando tiempo a una fecha",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de suma de tiempo:",
+            "example1": {
+              "title": "Ejemplo 1: agregar días a una fecha",
+              "description": "Cálculo de la fecha a 30 días del 1 de enero de 2024",
+              "input": "Fecha de inicio: 1 de enero de 2024, 10:00\nAñadir: 30 días",
+              "calculation": "1 de enero de 2024 + 30 días = 31 de enero de 2024\nTiempo restante: 10:00",
+              "result": "Resultado: 31 de enero de 2024, 10:00 (miércoles)",
+              "type": "Agregando días",
+              "note": "El tiempo sigue siendo el mismo al agregar solo días"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Agregar horas moviéndose cada dos días",
+              "description": "Cálculo del tiempo en 15 horas a partir del 1 de enero de 2024 a las 14:00 horas.",
+              "input": "Fecha de inicio: 1 de enero de 2024, 14:00\nAñadir: 15 horas",
+              "calculation": "14:00 + 15 horas = 29:00 = 2 de enero de 2024, 05:00\nCruzando la frontera del día",
+              "result": "Resultado: 2 de enero de 2024, 05:00 (martes)",
+              "type": "Agregar horas",
+              "note": "Cruzar el límite del día cambia automáticamente la fecha"
+            },
+            "example3": {
+              "title": "Ejemplo 3: agregar días y horas",
+              "description": "Cálculo después de 5 días y 8 horas a partir del 28 de enero de 2024 a las 20:00 horas.",
+              "input": "Fecha de inicio: 28 de enero de 2024, 20:00\nAñadir: 5 días, 8 horas",
+              "calculation": "28 de enero + 5 días = 2 de febrero\n20:00 + 8 horas = 04:00 del día siguiente\nTotal: 3 de febrero de 2024, 04:00",
+              "result": "Resultado: 3 de febrero de 2024, 04:00 (sábado)",
+              "type": "Suma combinada",
+              "note": "Agregar horas puede cambiar la fecha al pasar la medianoche."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Sumar minutos por hora y día",
+              "description": "Cálculo en 150 minutos a partir del 31 de diciembre de 2023 a las 23:30",
+              "input": "Fecha de inicio: 31 de diciembre de 2023, 23:30\nAñadir: 150 minutos",
+              "calculation": "150 minutos = 2 horas 30 minutos\n23:30 + 2:30 = 02:00 del día siguiente\nTransición al Año Nuevo: 1 de enero de 2024",
+              "result": "Resultado: 1 de enero de 2024, 02:00 (lunes)",
+              "type": "Agregando minutos",
+              "note": "Agregar minutos puede cambiar la hora, el día e incluso el año."
+            },
+            "example5": {
+              "title": "Ejemplo 5: agregar tiempo a lo largo de un límite de mes",
+              "description": "Cálculo después de 35 días a partir del 28 de febrero de 2024 a las 12:00 horas.",
+              "input": "Fecha de inicio: 28 de febrero de 2024, 12:00\nAñadir: 35 días",
+              "calculation": "2024 es un año bisiesto, febrero contiene 29 días.\n28 de febrero + 2 días = 1 de marzo\n+ 33 días = 3 de abril de 2024",
+              "result": "Resultado: 3 de abril de 2024, 12:00 (miércoles)",
+              "type": "Transición en un mes",
+              "note": "La calculadora tiene en cuenta diferentes duraciones de meses y años bisiestos."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Agregar tiempo a lo largo de un límite de año",
+              "description": "Cálculo a los 40 días y 5 horas a partir del 20 de diciembre de 2023 a las 18:00 horas",
+              "input": "Fecha de inicio: 20 de diciembre de 2023, 18:00\nAñadir: 40 días, 5 horas",
+              "calculation": "20 de diciembre + 40 días = 30 de enero de 2024\n18:00 + 5 horas = 23:00",
+              "result": "Resultado: 30 de enero de 2024, 23:00 (martes)",
+              "type": "Transición en un año",
+              "note": "La calculadora maneja correctamente el cruce del límite del año."
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula agregar tiempo a una fecha?",
+          "content": "El cálculo se realiza sumando secuencialmente días, horas y minutos a la fecha y hora de inicio, teniendo en cuenta las características del calendario.",
+          "formula": "Fecha total = Fecha de inicio + Días + (Horas + Minutos) / 24",
+          "days": "Suma de días: se tienen en cuenta la duración de los meses (28-31 días) y los años bisiestos.",
+          "hours": "Sumando horas: si el total es > 24 horas, la fecha se incrementa automáticamente en los días correspondientes.",
+          "minutes": "Agregar minutos: Si el total es > 60 minutos, el reloj aumenta automáticamente, lo que puede afectar la fecha."
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora de suma de tiempo",
+          "content": "Nuestra calculadora ofrece muchos beneficios:",
+          "precise": "Exactitud",
+          "preciseDesc": "Tiene en cuenta todas las características del calendario: duración de los meses, años bisiestos, cruces de fronteras.",
+          "flexible": "Flexibilidad",
+          "flexibleDesc": "Funciona con cualquier combinación de días, horas y minutos.",
+          "detailed": "Información detallada",
+          "detailedDesc": "Muestra la fecha final, hora y día de la semana.",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Versión totalmente adaptada para todos los dispositivos"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Algunos consejos útiles para utilizar la calculadora:",
+          "accurate": "Especifique la fecha y hora exactas de inicio para obtener resultados precisos",
+          "combined": "Puede agregar días, horas y minutos a la vez para cálculos complejos",
+          "timezone": "La calculadora funciona con la hora local sin tener en cuenta zonas horarias.",
+          "negative": "Para restar tiempo, use valores negativos (si son compatibles) o una calculadora de diferencia de fechas"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo funciona la calculadora de suma de tiempo?",
+              "a": "La calculadora suma el número especificado de días, horas y minutos a una fecha y hora de inicio determinadas, contabilizando automáticamente las transiciones entre días, meses y años."
+            },
+            {
+              "q": "¿Es posible agregar solo días sin horas ni minutos?",
+              "a": "Sí, puede especificar solo días, dejando horas y minutos iguales a cero. El tiempo en este caso permanecerá sin cambios."
+            },
+            {
+              "q": "¿Qué pasa si agregas más de 24 horas?",
+              "a": "Si la suma de horas excede 24, la calculadora aumentará automáticamente la fecha en la cantidad adecuada de días. Por ejemplo, 25 horas = 1 día y 1 hora."
+            },
+            {
+              "q": "¿Cuentan los años bisiestos?",
+              "a": "Sí, la calculadora tiene en cuenta automáticamente los años bisiestos (años divisibles por 4, excepto los años centenarios, que deben ser divisibles por 400). Un año bisiesto contiene 366 días."
+            },
+            {
+              "q": "¿Es posible sumar un número negativo de días?",
+              "a": "Depende de la implementación de la calculadora. Por lo general, puede usar valores negativos para restar el tiempo, pero es mejor usar una calculadora de diferencia de fechas especial para esto."
+            },
+            {
+              "q": "¿Cómo calcular una fecha después de una determinada cantidad de días?",
+              "a": "Especifique una fecha de inicio, ingrese la cantidad de días en el campo 'Agregar días', deje las horas y minutos en cero (o ingrese la hora actual) y haga clic en 'Calcular'."
+            },
+            {
+              "q": "¿Es posible agregar solo horas sin días?",
+              "a": "Sí, puede especificar sólo horas, dejando días y minutos iguales a cero. Esto resulta útil para calcular el tiempo después de varias horas."
+            },
+            {
+              "q": "¿Cómo calcular la hora de finalización de un evento?",
+              "a": "Especifique la hora de inicio del evento como fecha y hora de inicio, agregue la duración del evento (días, horas, minutos) y obtenga la hora de finalización."
+            },
+            {
+              "q": "¿Cuentan las diferentes duraciones de meses?",
+              "a": "Sí, la calculadora tiene en cuenta automáticamente que los meses tienen diferentes duraciones: 31 días (enero, marzo, mayo, julio, agosto, octubre, diciembre), 30 días (abril, junio, septiembre, noviembre), 28/29 días (febrero)."
+            },
+            {
+              "q": "¿Es posible agregar tiempo a una fecha futura?",
+              "a": "Sí, la calculadora funciona con cualquier fecha, tanto del pasado como del futuro. Puede calcular la fecha después de un tiempo determinado desde cualquier punto de partida."
+            },
+            {
+              "q": "¿Cómo calcular la fecha límite?",
+              "a": "Especifique la fecha y hora actuales como fecha de inicio, agregue la fecha límite del proyecto (días, horas) y obtenga la fecha y hora exactas de la fecha límite."
+            },
+            {
+              "q": "¿Qué pasa cuando cruzas la frontera del mes?",
+              "a": "La calculadora pasará automáticamente al siguiente mes según su duración. Por ejemplo, 31 de enero + 1 día = 1 de febrero (no 32 de enero)."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el tiempo de funcionamiento?",
+              "a": "Sí, ingrese la hora de inicio del trabajo, agregue la cantidad de horas y minutos de trabajo y obtenga la hora de finalización de la jornada o turno de trabajo."
+            },
+            {
+              "q": "¿Cómo calcular la fecha en una semana?",
+              "a": "Ingrese la fecha de inicio y agregue 7 días. La hora permanecerá sin cambios a menos que se especifiquen horas y minutos."
+            },
+            {
+              "q": "¿Se tiene en cuenta el cruce de la frontera del año?",
+              "a": "Sí, la calculadora maneja correctamente la transición de diciembre a enero del año siguiente, aumentando el año automáticamente."
+            },
+            {
+              "q": "¿Es posible agregar sólo minutos?",
+              "a": "Sí, solo puedes especificar minutos, dejando los días y las horas establecidos en cero. Al superar los 60 minutos, el reloj aumentará automáticamente."
+            },
+            {
+              "q": "¿Cómo calcular la hora de llegada con una duración de viaje conocida?",
+              "a": "Ingrese la hora de salida, agregue la duración del viaje (horas, minutos) y obtenga la hora de llegada a su destino."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular la vida útil?",
+              "a": "Sí, ingresa la fecha de fabricación o compra, agrega la fecha de vencimiento (días) y obtén la fecha de vencimiento."
+            },
+            {
+              "q": "¿Cómo calcular la próxima fecha de pago?",
+              "a": "Ingrese la fecha del último pago, agregue el intervalo entre pagos (días) y obtenga la fecha del próximo pago."
+            },
+            {
+              "q": "¿Qué sucede cuando agregas tiempo a fin de mes?",
+              "a": "La calculadora pasará automáticamente al mes siguiente si la fecha resultante excede la duración del mes actual. Por ejemplo, 31 de enero + 1 día = 1 de febrero."
+            },
+            {
+              "q": "¿Es posible calcular la fecha en unos meses?",
+              "a": "Sí, pero necesitas convertir meses a días. Por ejemplo, 3 meses ≈ 90 días (el número exacto depende de los meses específicos). Para mayor precisión, es mejor indicar el número de días."
+            },
+            {
+              "q": "¿Cómo calcular el final de las vacaciones?",
+              "a": "Ingrese la fecha de inicio de las vacaciones, agregue la duración de las vacaciones (días) y obtenga la fecha de finalización de las vacaciones."
+            },
+            {
+              "q": "¿Cuenta la transición después de una semana?",
+              "a": "La calculadora muestra la fecha final y el día de la semana. La transición a una semana se produce automáticamente al agregar más de 7 días."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el tiempo de cocción de un plato?",
+              "a": "Sí, ingresa la hora de inicio de cocción, agrega el tiempo de cocción (horas, minutos) y obtén el tiempo de preparación del plato."
+            },
+            {
+              "q": "¿Cómo calcular la fecha de entrega?",
+              "a": "Ingrese la fecha de salida, agregue el tiempo de entrega (días) y obtenga la fecha de entrega. Para un cálculo más preciso, también puedes especificar las horas."
+            },
+            {
+              "q": "¿Qué sucede cuando agregas tiempo en un año bisiesto?",
+              "a": "La calculadora tiene en cuenta automáticamente que un año bisiesto contiene 366 días (29 de febrero). Si sumas días posteriores al 29 de febrero, el cálculo será correcto."
+            },
+            {
+              "q": "¿Cómo calcular la hora del próximo evento?",
+              "a": "Especifique la fecha y hora del último evento, agregue el intervalo entre eventos (días, horas, minutos) y obtenga la fecha y hora del próximo evento."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el período de garantía?",
+              "a": "Sí, ingrese la fecha de compra, agregue el período de garantía (días) y obtenga la fecha de finalización del período de garantía."
+            },
+            {
+              "q": "¿Cómo calcular la hora de finalización de un evento?",
+              "a": "Especifique la hora de inicio del evento, agregue la duración del evento (horas, minutos) y obtenga la hora de finalización."
+            },
+            {
+              "q": "¿Es posible agregar tiempo a una fecha del pasado?",
+              "a": "Sí, la calculadora funciona con cualquier fecha. Puede calcular qué fecha fue después de un tiempo determinado a partir de la fecha anterior."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo agregar tiempo a una fecha",
+          "description": "Instrucciones paso a paso para usar la calculadora de suma de tiempo",
+          "steps": {
+            "step1": {
+              "name": "Seleccione fecha y hora de inicio",
+              "text": "Especifica la fecha y hora a partir de la cual comienza la cuenta atrás."
+            },
+            "step2": {
+              "name": "Especifique el número de días",
+              "text": "Ingresa el número de días a agregar (puedes dejar 0)"
+            },
+            "step3": {
+              "name": "Por favor indique el número de horas",
+              "text": "Ingresa el número de horas que deseas agregar (puedes dejar 0)"
+            },
+            "step4": {
+              "name": "Especifique el número de minutos",
+              "text": "Ingresa el número de minutos a agregar (puedes dejar 0)"
+            },
+            "step5": {
+              "name": "Haga clic en calcular",
+              "text": "La calculadora calculará automáticamente la fecha y hora finales."
+            },
+            "step6": {
+              "name": "obtener el resultado",
+              "text": "El resultado se mostrará con la fecha, hora y día de la semana resultantes."
+            }
+          }
+        }
+      }
+    },
+    "age": {
+      "title": "Calculadora de edad: descubra su edad exacta en años, meses y días",
+      "description": "Una sencilla calculadora en línea que calcula con precisión la edad de una persona en función de su fecha de nacimiento. Muestra no sólo años, sino también meses, días, horas e incluso segundos. Útil para completar formularios, documentos, juegos y simplemente por curiosidad.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "age": "Edad",
+        "category": "Tiempo"
+      },
+      "hero": {
+        "age": "Edad",
+        "accurateCalculation": "Cálculo exacto",
+        "accuracy": "Exactitud",
+        "free": "gratis",
+        "usage": "Uso"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "description": "Descubre tu edad exacta en años, meses y días.",
+        "birthDate": "Fecha de nacimiento",
+        "birthDatePlaceholder": "Selecciona fecha de nacimiento",
+        "calculateDate": "Calcular por fecha",
+        "calculateDatePlaceholder": "Seleccione fecha para el cálculo",
+        "today": "Hoy",
+        "calculate": "Calcular",
+        "calculating": "Estamos contando...",
+        "reset": "Reiniciar",
+        "errors": {
+          "invalidDate": "Por favor introduce fechas válidas",
+          "birthDateAfterCalculate": "La fecha de nacimiento no puede ser posterior a la fecha de cálculo.",
+          "calculationError": "Error de cálculo. Consulta las fechas introducidas."
+        }
+      },
+      "results": {
+        "title": "Resultado del cálculo",
+        "calculationTitle": "Cálculo de edad",
+        "birthDate": "Fecha de nacimiento",
+        "calculateDate": "Fecha de cálculo",
+        "age": "Edad",
+        "years": "Años",
+        "months": "meses",
+        "days": "Días",
+        "totalDays": "Días totales",
+        "period": "De {a}",
+        "copy": "Copiar resultado",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingrese su fecha de nacimiento y haga clic en 'Calcular'"
+      },
+      "seo": {
+        "title": "Calculadora de edad: calcula exactamente cuántos años tienes",
+        "description": "Descubra su edad exacta por fecha de nacimiento: en años, meses, días y segundos. Calculadora de edad en línea gratuita: ¡simplemente ingrese la fecha y obtenga el resultado!",
+        "keywords": "calculadora de edad, cuantos años tengo, calcular edad, fecha de nacimiento, cuantos días tengo, edad en línea, calculadora de edad, calcular edad, edad de cumpleaños, días entre fechas",
+        "howTo": {
+          "title": "Cómo calcular la edad",
+          "description": "Instrucciones paso a paso para usar la calculadora de edad.",
+          "steps": {}
+        }
+      },
+      "faq": {
+        "question1": "¿Cómo funciona la calculadora de edad?",
+        "answer1": "Compara la fecha de nacimiento ingresada con la fecha actual y calcula el número exacto de años, meses y días vividos.",
+        "question2": "¿Es posible especificar una fecha futura?",
+        "answer2": "Sí, pero el resultado mostrará cuánto tiempo queda hasta esa fecha, no tu edad actual.",
+        "question3": "¿Se puede utilizar la calculadora para animales?",
+        "answer3": "Sí, simplemente ingresa la fecha de nacimiento de tu mascota; el principio es el mismo.",
+        "question4": "¿Cómo saber la edad de una persona en una fecha específica?",
+        "answer4": "Seleccione cualquier fecha futura o pasada; la calculadora mostrará su edad.",
+        "question5": "¿Es posible calcular la edad en horas y minutos?",
+        "answer5": "Sí, la versión extendida muestra la edad en segundos.",
+        "question6": "¿Con qué frecuencia se actualiza la fecha?",
+        "answer6": "El resultado se actualiza en tiempo real a medida que cambia la hora actual en el dispositivo.",
+        "question7": "¿Es necesario registrarse para utilizarlo?",
+        "answer7": "No, la calculadora es completamente gratuita y no requiere iniciar sesión.",
+        "question8": "¿Es posible guardar el resultado?",
+        "answer8": "Sí, puedes copiar o descargar el resultado como texto o imagen.",
+        "question9": "¿Puedo usar la calculadora en la versión móvil?",
+        "answer9": "Por supuesto, está totalmente adaptado para smartphones y tablets.",
+        "question10": "¿Puedo insertar una calculadora en mi sitio web?",
+        "answer10": "Sí, se proporciona un widget o API para la integración."
+      }
+    },
+    "agecalc": {
+      "title": "Calculadora de edad: descubra su edad exacta en años, meses y días",
+      "description": "Una sencilla calculadora en línea que calcula con precisión la edad de una persona en función de su fecha de nacimiento. Muestra no sólo años, sino también meses, días, horas e incluso segundos. Útil para completar formularios, documentos, juegos y simplemente por curiosidad.",
+      "breadcrumbs": {
+        "category": "Tiempo"
+      },
+      "hero": {
+        "age": "Edad",
+        "accurateCalculation": "Cálculo exacto",
+        "accuracy": "Exactitud",
+        "free": "gratis",
+        "usage": "Uso"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "description": "Descubre tu edad exacta en años, meses y días.",
+        "birthDate": "Fecha de nacimiento",
+        "birthDatePlaceholder": "Selecciona fecha de nacimiento",
+        "calculateDate": "Calcular por fecha",
+        "calculateDatePlaceholder": "Seleccione fecha para el cálculo",
+        "today": "Hoy",
+        "calculate": "Calcular",
+        "calculating": "Estamos contando...",
+        "reset": "Reiniciar",
+        "errors": {
+          "invalidDate": "Por favor introduce fechas válidas",
+          "birthDateAfterCalculate": "La fecha de nacimiento no puede ser posterior a la fecha de cálculo.",
+          "calculationError": "Error de cálculo. Consulta las fechas introducidas."
+        }
+      },
+      "results": {
+        "title": "Resultado del cálculo",
+        "calculationTitle": "Cálculo de edad",
+        "birthDate": "Fecha de nacimiento",
+        "calculateDate": "Fecha de cálculo",
+        "age": "Edad",
+        "years": "Años",
+        "months": "meses",
+        "days": "Días",
+        "totalDays": "Días totales",
+        "period": "De {a}",
+        "copy": "Copiar resultado",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingrese su fecha de nacimiento y haga clic en 'Calcular'"
+      },
+      "seo": {
+        "title": "Calculadora de edad: calcula exactamente cuántos años tienes | calc1.ru",
+        "description": "Descubra su edad exacta por fecha de nacimiento: en años, meses, días y segundos. Calculadora de edad en línea gratuita: ¡simplemente ingrese la fecha y obtenga el resultado!",
+        "keywords": "calculadora de edad, cuantos años tengo, calcular edad, fecha de nacimiento, cuantos días tengo, edad en línea, calculadora de edad, calcular edad, edad de cumpleaños, días entre fechas, edad en años, edad en meses, edad en días, edad exacta, cuantos años tiene una persona, edad por fecha de nacimiento, calculadora de fecha de nacimiento, calcular cuantos años, calcular edad en línea, edad en segundos, edad en horas, edad en minutos, calculadora de cumpleaños, calculadora de edad de la persona, cálculo de edad exacta, cuantos días desde el nacimiento, cuantos meses desde el nacimiento, cuantas semanas desde el nacimiento, edad en una fecha determinada, edad en el futuro, edad en el pasado, calcular edad, edad en días, edad en meses, edad en años, calculadora de cumpleaños, edad exacta de una persona, cálculo de edad en línea",
+        "overview": {
+          "title": "Acerca de la calculadora de edad",
+          "content": "La calculadora de edad proporciona una manera conveniente de calcular la edad exacta de una persona por fecha de nacimiento, en años, meses y días. Simplemente ingrese su fecha de nacimiento y obtenga el resultado en diferentes formatos, incluidos días, meses y años, así como fechas exactas para una fácil referencia.",
+          "additionalContent": "La calculadora tiene en cuenta los años bisiestos, la diferente duración de los meses y calcula con precisión la edad en cualquier fecha, tanto en el pasado como en el futuro. Útil para completar trámites, determinar categorías de edad, planificar eventos y simplemente por curiosidad.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculo de edad",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de edad:",
+            "example1": {
+              "title": "Ejemplo 1: bebé recién nacido",
+              "description": "Cálculo de la edad de un niño nacido el 1 de enero de 2024, al 31 de enero de 2024",
+              "input": "Fecha de nacimiento: 1 de enero de 2024\nFecha de cálculo: 31 de enero de 2024",
+              "calculation": "31 de enero - 1 de enero = 30 días\nMes: enero (31 días)\nEdad: 0 años, 1 mes, 0 días",
+              "result": "Resultado: 0 años, 1 mes, 0 días (30 días desde el nacimiento)",
+              "type": "Recién nacido",
+              "note": "Para niños menores de un año, la edad se muestra en meses y días."
+            },
+            "example2": {
+              "title": "Ejemplo 2: Niño de 5 años",
+              "description": "Cálculo de la edad de un niño nacido el 15 de marzo de 2019, al 15 de marzo de 2024",
+              "input": "Fecha de nacimiento: 15 de marzo de 2019\nFecha de cálculo: 15 de marzo de 2024",
+              "calculation": "2024 - 2019 = 5 años\nMes: marzo (partidos)\nDía: 15 (igual)\nEdad: exactamente 5 años",
+              "result": "Resultado: 5 años, 0 meses, 0 días (1826 días desde el nacimiento)",
+              "type": "Cumpleaños",
+              "note": "Cumpleaños exacto: la edad se muestra en años completos."
+            },
+            "example3": {
+              "title": "Ejemplo 3: Adulto teniendo en cuenta los años bisiestos",
+              "description": "Calcular la edad de una persona nacida el 29 de febrero de 2000, al 1 de marzo de 2024",
+              "input": "Fecha de nacimiento: 29 de febrero de 2000\nFecha de cálculo: 1 de marzo de 2024",
+              "calculation": "2000-2024: 24 años\nAños bisiestos: 2000, 2004, 2008, 2012, 2016, 2020, 2024 (7 años)\n29 de febrero en años no bisiestos = 28 de febrero\nDel 29 de febrero de 2000 al 1 de marzo de 2024: 24 años, 0 meses, 2 días",
+              "result": "Resultado: 24 años, 0 meses, 1 día (~8770 días desde el nacimiento)",
+              "type": "año bisiesto",
+              "note": "Para los nacidos el 29 de febrero, la edad se calcula a partir del 28 de febrero en años no bisiestos."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Edad en una fecha específica",
+              "description": "Cálculo de la edad a 1 de enero de 2025 para una persona nacida el 15 de junio de 1990",
+              "input": "Fecha de nacimiento: 15 de junio de 1990\nFecha de cálculo: 1 de enero de 2025",
+              "calculation": "1990-2025: 34 años\nDel 15 de junio de 1990 al 15 de junio de 2024: 34 años\nDel 15 de junio de 2024 al 1 de enero de 2025: 6 meses 17 días\nEdad: 34 años, 6 meses, 17 días",
+              "result": "Resultado: 34 años, 6 meses, 17 días (~12,613 días desde el nacimiento)",
+              "type": "Para una fecha específica",
+              "note": "La calculadora puede calcular la edad en cualquier fecha especificada."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Persona mayor",
+              "description": "Cálculo de la edad de una persona nacida el 10 de mayo de 1950, a la fecha de hoy (1 de enero de 2024)",
+              "input": "Fecha de nacimiento: 10 de mayo de 1950\nFecha de cálculo: 1 de enero de 2024",
+              "calculation": "1950-2024: 73 años\nDel 10 de mayo de 1950 al 10 de mayo de 2023: 73 años\nDel 10 de mayo de 2023 al 1 de enero de 2024: 7 meses 22 días\nEdad: 73 años, 7 meses, 22 días",
+              "result": "Resultado: 73 años, 7 meses, 22 días (~26,885 días desde el nacimiento)",
+              "type": "Vejez",
+              "note": "La calculadora calcula con precisión la edad incluso en intervalos muy grandes"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Edad en días, horas, minutos",
+              "description": "Cálculo de la edad en unidades detalladas para una persona nacida el 20 de diciembre de 2020 a las 10:30, para el 20 de diciembre de 2024 a las 15:45",
+              "input": "Fecha de nacimiento: 20 de diciembre de 2020, 10:30\nFecha de cálculo: 20 de diciembre de 2024, 15:45",
+              "calculation": "Años: 2024 - 2020 = 4 años\nHora: 15:45 - 10:30 = 5 horas 15 minutos\nDías totales: 4 años × 365,25 (incluidos los días bisiestos) ≈ 1461 días\nHoras totales: 1461 × 24 + 5 = 35.069 horas\nMinutos totales: 35.069 × 60 + 15 = 2.104.155 minutos",
+              "result": "Resultado: 4 años, 0 meses, 0 días (~1461 días, ~35,069 horas, ~2,104,155 minutos)",
+              "type": "Cálculo detallado",
+              "note": "Para un cálculo preciso teniendo en cuenta el tiempo, es necesario indicar la hora de nacimiento y cálculo."
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula la edad?",
+          "content": "El cálculo se realiza mediante un algoritmo simple que compara la fecha de nacimiento con la fecha actual o la fecha de cálculo especificada, teniendo en cuenta los años bisiestos y el número exacto de días.",
+          "formula": "Edad = Fecha de cálculo - Fecha de nacimiento (en años, meses, días)"
+        },
+        "advantages": {
+          "title": "Beneficios de una calculadora de edad",
+          "content": "Nuestra calculadora ofrece muchos beneficios:",
+          "precise": "Exactitud",
+          "preciseDesc": "Cálculos precisos teniendo en cuenta los años bisiestos y el número exacto de días.",
+          "flexible": "Flexibilidad",
+          "flexibleDesc": "Cálculo para cualquier fecha.",
+          "detailed": "Información detallada",
+          "detailedDesc": "Muestra el resultado exacto en años, meses, días y segundos.",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Versión totalmente adaptada a todos los dispositivos y pantallas"
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Algunos consejos útiles:",
+          "accurate": "La fecha exacta de nacimiento dará un resultado más preciso.",
+          "leap": "Se tienen en cuenta los años bisiestos.",
+          "timezone": "La hora exacta tiene en cuenta la zona horaria y la fecha.",
+          "specificDate": "Puedes especificar una fecha específica para calcular la edad en ese momento."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo funciona la calculadora de edad?",
+              "a": "La calculadora compara la fecha de nacimiento ingresada con la fecha actual o la fecha de cálculo especificada y calcula el número exacto de años, meses y días vividos. El resultado tiene en cuenta los años bisiestos y la duración exacta de los meses."
+            },
+            {
+              "q": "¿Es posible especificar una fecha para el cálculo?",
+              "a": "Sí, puedes especificar cualquier fecha en el futuro. La calculadora mostrará cuántos años, meses y días tendrá una persona en esta fecha. Esto es útil para planificar eventos o determinar categorías de edad."
+            },
+            {
+              "q": "¿Es posible especificar una fecha pasada para el cálculo?",
+              "a": "Sí, puede especificar cualquier fecha del pasado. La calculadora mostrará la edad de la persona en esta fecha. Esto es útil para cálculos históricos o para determinar la edad en el momento de un evento importante."
+            },
+            {
+              "q": "¿Cómo calcular la edad en días?",
+              "a": "La calculadora muestra automáticamente el número total de días desde el nacimiento hasta la fecha de cálculo. Este valor aparece en los resultados como 'Total de días'."
+            },
+            {
+              "q": "¿Cuentan los años bisiestos?",
+              "a": "Sí, la calculadora tiene en cuenta automáticamente los años bisiestos (años divisibles por 4, excepto los años centenarios, que deben ser divisibles por 400). Un año bisiesto contiene 366 días en lugar de 365, lo que afecta a la precisión del cálculo."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para animales?",
+              "a": "Sí, puedes utilizar la calculadora para calcular la edad de cualquier ser vivo: mascotas, animales, etc. El principio de cálculo es el mismo: la fecha de nacimiento se compara con la fecha de cálculo."
+            },
+            {
+              "q": "¿Cómo calcular la edad en horas, minutos y segundos?",
+              "a": "Para calcular la edad en unidades detalladas, es necesario indicar no solo la fecha, sino también la hora de nacimiento y el cálculo. La calculadora mostrará tu edad en años, meses, días, horas, minutos y segundos."
+            },
+            {
+              "q": "¿Es posible calcular la edad de los nacidos el 29 de febrero?",
+              "a": "Sí, la calculadora procesa correctamente la fecha de nacimiento como 29 de febrero. En los años no bisiestos la edad se calcula a partir del 28 de febrero o del 1 de marzo, según la lógica de la calculadora."
+            },
+            {
+              "q": "¿Cómo puedo saber mi edad en una fecha específica?",
+              "a": "Ingrese su fecha de nacimiento en el campo 'Fecha de nacimiento' y la fecha deseada en el campo 'Calcular hasta la fecha'. La calculadora mostrará la edad exacta en esta fecha en años, meses y días."
+            },
+            {
+              "q": "¿La calculadora es gratuita?",
+              "a": "Sí, la calculadora es completamente gratuita y no requiere registro. Puedes usarlo un número ilimitado de veces sin restricciones."
+            },
+            {
+              "q": "¿Es posible guardar el resultado del cálculo?",
+              "a": "Sí, puedes copiar el resultado o tomar una captura de pantalla de la página. Algunas calculadoras admiten la exportación de resultados en varios formatos."
+            },
+            {
+              "q": "¿La calculadora funciona en dispositivos móviles?",
+              "a": "Sí, la calculadora está totalmente adaptada para funcionar en dispositivos móviles, tablets y smartphones. La interfaz se ajusta automáticamente al tamaño de la pantalla."
+            },
+            {
+              "q": "¿Con qué frecuencia se actualiza el resultado?",
+              "a": "Si se especifica la fecha actual, el resultado se actualiza en tiempo real a medida que cambia la hora en el dispositivo. Para fechas fijas el resultado permanece constante."
+            },
+            {
+              "q": "¿Es posible calcular la edad de varias personas al mismo tiempo?",
+              "a": "Normalmente la calculadora calcula la edad de una persona a la vez. Para calcular la edad de varias personas, realice el cálculo para cada una por separado."
+            },
+            {
+              "q": "¿Cómo calcular la edad para determinar la categoría de edad?",
+              "a": "Indique su fecha de nacimiento y la fecha en que se determinó la categoría. La calculadora mostrará la edad exacta, que se puede utilizar para asignarla a un grupo de edad específico."
+            },
+            {
+              "q": "¿Se tienen en cuenta las diferentes zonas horarias?",
+              "a": "La calculadora básica funciona con fechas sin tener en cuenta la hora. Para tener en cuenta las zonas horarias y la hora exacta, es necesario especificar la hora de nacimiento y el cálculo."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para completar documentos?",
+              "a": "Sí, la calculadora es útil para completar diversos documentos, formularios y solicitudes donde debes indicar tu edad exacta en años, meses y días."
+            },
+            {
+              "q": "¿Cómo calcular la edad para la planificación de eventos?",
+              "a": "Indique la fecha de nacimiento del participante y la fecha del evento previsto. La calculadora mostrará su edad en esa fecha, lo que le ayudará a determinar los límites y requisitos de edad."
+            },
+            {
+              "q": "¿Los cálculos son precisos para intervalos grandes?",
+              "a": "Sí, la calculadora calcula con precisión la edad incluso en intervalos de decenas y cientos de años, teniendo en cuenta todos los años bisiestos y la duración exacta de los meses."
+            },
+            {
+              "q": "¿Es posible calcular la edad en semanas?",
+              "a": "La calculadora muestra la edad en años, meses y días. Para convertir a semanas, use el número total de días dividido por 7 (aproximadamente)."
+            },
+            {
+              "q": "¿Cómo calcular la edad de un niño en meses?",
+              "a": "Indique la fecha de nacimiento del niño y la fecha actual. La calculadora mostrará tu edad en años, meses y días. Para niños menores de un año, la edad se mostrará en meses y días."
+            },
+            {
+              "q": "¿Es posible utilizar una calculadora para determinar la mayoría de edad?",
+              "a": "Sí, incluya la fecha de nacimiento y la fecha de inspección. Si la edad a la fecha de verificación es de 18 años o más, la persona se considera mayor de edad."
+            },
+            {
+              "q": "¿Cómo calcular la edad para participar en competiciones?",
+              "a": "Indique la fecha de nacimiento del participante y la fecha de la competición. La calculadora mostrará su edad en esa fecha para ayudar a determinar la elegibilidad por edad."
+            },
+            {
+              "q": "¿Es posible calcular la edad para obtener la licencia de conducir?",
+              "a": "Sí, incluya su fecha de nacimiento y la fecha actual (o la fecha en que adquirió su licencia). La calculadora mostrará la edad, que se puede comparar con la edad mínima para obtener una licencia (normalmente 18 años)."
+            },
+            {
+              "q": "¿Cómo calcular la edad para el cálculo de la pensión?",
+              "a": "Ingrese su fecha de nacimiento y fecha de jubilación. La calculadora mostrará su edad en esa fecha para ayudar a determinar su elegibilidad para la pensión."
+            },
+            {
+              "q": "¿Cómo calcular la edad con fines educativos?",
+              "a": "Indique la fecha de nacimiento del estudiante y la fecha de inicio del curso escolar o de formación. La calculadora mostrará la edad en esta fecha, lo cual es importante para determinar el nivel de grado y los grupos de edad."
+            },
+            {
+              "q": "¿Es posible calcular la edad a efectos legales?",
+              "a": "Sí, la calculadora se puede utilizar para determinar la edad en una fecha específica, lo cual es importante para cuestiones legales relacionadas con la edad adulta, la capacidad y las restricciones de edad."
+            },
+            {
+              "q": "¿Cómo calcular la edad a efectos del seguro?",
+              "a": "Ingrese su fecha de nacimiento y fecha de seguro. La calculadora mostrará su edad en esa fecha, que se utiliza para determinar las tarifas y términos del seguro."
+            },
+            {
+              "q": "¿Es posible calcular la edad al revés (hace cuántos años)?",
+              "a": "Sí, ingrese la fecha posterior como fecha de nacimiento y la fecha anterior como fecha de cálculo. La calculadora mostrará una edad negativa, o puede usarla para determinar cuántos años hace que ocurrió el evento."
+            },
+            {
+              "q": "¿Cómo calcular tu edad para determinar tu próximo cumpleaños?",
+              "a": "La calculadora muestra tu edad actual. Para determinar la fecha de su próximo cumpleaños, utilice la calculadora de suma de tiempo sumando la cantidad requerida de años, meses y días a su fecha de nacimiento."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo calcular la edad",
+          "description": "Instrucciones paso a paso para usar la calculadora de edad.",
+          "steps": {
+            "step1": {
+              "name": "Introduce la fecha de nacimiento",
+              "text": "Ingrese la fecha de nacimiento de la persona cuya edad desea calcular"
+            },
+            "step2": {
+              "name": "Especifique la fecha de cálculo (opcional)",
+              "text": "Para calcular para una fecha específica, ingrésela en el campo"
+            },
+            "step3": {
+              "name": "Haga clic en calcular",
+              "text": "La calculadora calculará automáticamente la edad exacta en años, meses y días."
+            },
+            "step4": {
+              "name": "obtener el resultado",
+              "text": "El resultado se mostrará con información detallada: edad en años, meses, días y el número total de días desde el nacimiento."
+            }
+          }
+        }
+      },
+      "faq": {
+        "question1": "¿Cómo funciona la calculadora de edad?",
+        "answer1": "Compara la fecha de nacimiento ingresada con la fecha actual y calcula el número exacto de años, meses y días vividos.",
+        "question2": "¿Es posible especificar una fecha futura?",
+        "answer2": "Sí, pero el resultado mostrará cuánto tiempo queda hasta esa fecha, no tu edad actual.",
+        "question3": "¿Se puede utilizar la calculadora para animales?",
+        "answer3": "Sí, simplemente ingresa la fecha de nacimiento de tu mascota; el principio es el mismo.",
+        "question4": "¿Cómo saber la edad de una persona en una fecha específica?",
+        "answer4": "Seleccione cualquier fecha futura o pasada; la calculadora mostrará su edad.",
+        "question5": "¿Es posible calcular la edad en horas y minutos?",
+        "answer5": "Sí, la versión extendida muestra la edad en segundos.",
+        "question6": "¿Con qué frecuencia se actualiza la fecha?",
+        "answer6": "El resultado se actualiza en tiempo real a medida que cambia la hora actual en el dispositivo.",
+        "question7": "¿Es necesario registrarse para utilizarlo?",
+        "answer7": "No, la calculadora es completamente gratuita y no requiere iniciar sesión.",
+        "question8": "¿Es posible guardar el resultado?",
+        "answer8": "Sí, puedes copiar o descargar el resultado como texto o imagen.",
+        "question9": "¿Puedo usar la calculadora en la versión móvil?",
+        "answer9": "Por supuesto, está totalmente adaptado para smartphones y tablets.",
+        "question10": "¿Puedo insertar una calculadora en mi sitio web?",
+        "answer10": "Sí, se proporciona un widget o API para la integración."
+      }
+    },
+    "deadline": {
+      "title": "Calculadora de plazos",
+      "description": "Calculadora online del plazo para realizar una tarea o proyecto, teniendo en cuenta días laborables y fines de semana.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "deadline": "Fecha de vencimiento",
+        "category": "Tiempo"
+      },
+      "form": {
+        "title": "Parámetros de cálculo",
+        "description": "Calcular la fecha de finalización de un proyecto o tarea",
+        "startDate": "Fecha de inicio",
+        "duration": "Duración (días)",
+        "dayType": "tipo de dias",
+        "workDays": "Días laborables",
+        "workDaysDesc": "Solo entre semana (lunes a viernes)",
+        "calendarDays": "Días calendario",
+        "calendarDaysDesc": "Todos los días incluidos fines de semana",
+        "today": "Hoy",
+        "calculate": "Calcular",
+        "calculating": "Estamos contando...",
+        "reset": "Reiniciar"
+      },
+      "hero": {
+        "weeks": "semanas",
+        "days": "Días",
+        "projects": "Proyectos"
+      },
+      "features": {
+        "workDays": "Contabilización de días laborables.",
+        "weekends": "Excepción de fines de semana",
+        "holidays": "contabilidad de vacaciones",
+        "flexibility": "Configuraciones flexibles",
+        "accuracy": "Cálculos precisos"
+      },
+      "results": {
+        "title": "Resultado del cálculo",
+        "endDate": "Fecha de finalización",
+        "dayOfWeek": "Día de la semana",
+        "totalDays": "Días totales",
+        "workDays": "Días laborables",
+        "weekends": "Fines de semana",
+        "copy": "Copiar resultado",
+        "copied": "¡Copiado!",
+        "placeholder": "Ingrese los parámetros y haga clic en 'Calcular'",
+        "copyText": {
+          "title": "Cálculo de la fecha de vencimiento:",
+          "startDate": "Fecha de inicio:",
+          "duration": "Duración:",
+          "workDays": "trabajadores",
+          "calendarDays": "calendario",
+          "days": "días",
+          "endDate": "Fecha de finalización:",
+          "totalDays": "Días totales:",
+          "workDays2": "Días laborables:",
+          "weekends": "Fines de semana:"
+        },
+        "duration": {
+          "workDays": "trabajadores",
+          "calendarDays": "calendario",
+          "days": "días"
+        }
+      },
+      "seo": {
+        "title": "Calculadora de plazos: cálculo en línea de los plazos de las tareas | calc1.ru",
+        "description": "Calculadora gratuita de plazos de proyectos y tareas en línea. Contabilización de días laborables y fines de semana, cálculo rápido y preciso de la fecha de finalización. Ideal para planificar plazos y gestionar proyectos.",
+        "keywords": "calculadora de fecha de vencimiento, calculadora de fecha límite, fecha de finalización del proyecto, calcular la fecha límite, calcular la fecha de finalización del proyecto, terminrechner, fechas límite de tareas, calculadora de fecha final, fecha límite de días laborables, gestión de proyectos, calculadora de fecha límite, calcular fecha límite, fecha límite, fecha límite del proyecto, calculadora de días laborables, calcular fecha final, fecha límite de tarea, calculadora de fecha límite en línea, calcular fecha límite, calculadora de fecha límite del proyecto, calculadora de días laborables, calculadora de días calendario, fecha límite del proyecto en línea, calcular fecha límite del proyecto, fecha de finalización del trabajo, fecha límite en línea, calculadora de fecha límite, calculadora de fecha límite del proyecto, termin berechnen, calculadora fecha límite, calcular fecha límite, gestión de plazos, planificación de plazos, cálculo de plazos del proyecto",
+        "overview": {
+          "title": "Acerca de la calculadora de fecha de vencimiento",
+          "content": "La calculadora de fechas de vencimiento es una herramienta conveniente para planificar proyectos y tareas. Le permite calcular rápidamente la fecha de finalización del trabajo, teniendo en cuenta los días laborables y los fines de semana.",
+          "additionalContent": "La calculadora admite dos modos de cálculo: días laborables (solo entre semana, excluidos los fines de semana) y días naturales (incluidos todos los días). Esto le permite planificar con precisión los plazos de trabajo, teniendo en cuenta las características específicas del proyecto.",
+          "calculationExamples": {
+            "title": "Ejemplos de cálculos de plazos",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de fecha de vencimiento:",
+            "example1": {
+              "title": "Ejemplo 1: Proyecto con días laborables",
+              "description": "Cálculo de la fecha de finalización de un proyecto iniciado el 1 de enero de 2024 con una duración de 10 días hábiles",
+              "input": "Fecha de inicio: 1 de enero de 2024 (lunes)\nDuración: 10 días hábiles\nTipo de días: Días laborables",
+              "calculation": "1 de enero (lunes) + 2 días = 3 de enero (miércoles)\n3 de enero + 5 días = 10 de enero (miércoles)\n10 de enero + 3 días = 15 de enero (lunes)\nTeniendo en cuenta los fines de semana: 13 y 14 de enero excluidos\nTotal: 15 de enero de 2024 (lunes)",
+              "result": "Resultado: 15 de enero de 2024, lunes (10 días hábiles)",
+              "type": "Días laborables",
+              "note": "Los fines de semana (sábado y domingo) están excluidos del cálculo."
+            },
+            "example2": {
+              "title": "Ejemplo 2: Proyecto con días naturales",
+              "description": "Cálculo de la fecha de finalización de un proyecto iniciado el 15 de enero de 2024, con una duración de 14 días naturales",
+              "input": "Fecha de inicio: 15 de enero de 2024 (lunes)\nDuración: 14 días naturales\nTipo de días: Días naturales",
+              "calculation": "15 de enero + 14 días = 29 de enero de 2024\nIncluido fines de semana: 20-21 ene (sábado-domingo) incluido\nTotal: 29 de enero de 2024 (lunes)",
+              "result": "Resultado: 29 de enero de 2024, lunes (14 días naturales)",
+              "type": "Días calendario",
+              "note": "Todos los días, incluidos los fines de semana, se tienen en cuenta en el cálculo."
+            },
+            "example3": {
+              "title": "Ejemplo 3: proyecto a largo plazo",
+              "description": "Cálculo de la fecha de finalización de un proyecto iniciado el 1 de febrero de 2024, con una duración de 30 días hábiles",
+              "input": "Fecha de inicio: 1 de febrero de 2024 (jueves)\nDuración: 30 días hábiles\nTipo de días: Días laborables",
+              "calculation": "30 días laborables ≈ 6 semanas (5 días laborables × 6)\nIncluye fines de semana: + 12 días libres\n1 de febrero + 30 trabajadores = 12 de marzo de 2024",
+              "result": "Resultado: 12 de marzo de 2024, martes (30 días hábiles, 42 días naturales)",
+              "type": "Proyecto a largo plazo",
+              "note": "Para proyectos a largo plazo, la duración del calendario es mayor debido a los fines de semana."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Proyecto con transición en un mes",
+              "description": "Cálculo de la fecha de finalización de un proyecto iniciado el 28 de febrero de 2024 con una duración de 5 días hábiles",
+              "input": "Fecha de inicio: 28 de febrero de 2024 (miércoles)\nDuración: 5 días laborables\nTipo de días: Días laborables",
+              "calculation": "28 de febrero (miércoles) + 2 días = 1 de marzo (viernes)\n1 de marzo + 3 días = 6 de marzo (miércoles)\nTeniendo en cuenta los fines de semana: 2 y 3 de marzo (sábado-domingo) excluidos\nTotal: 6 de marzo de 2024 (miércoles)",
+              "result": "Resultado: 6 de marzo de 2024, miércoles (5 días hábiles)",
+              "type": "Transición en un mes",
+              "note": "La calculadora maneja correctamente el cruce del límite del mes."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Proyecto corto",
+              "description": "Calcular la fecha de finalización de una tarea iniciada el lunes 5 de febrero de 2024, con una duración de 3 días hábiles",
+              "input": "Fecha de inicio: 5 de febrero de 2024 (lunes)\nDuración: 3 días laborables\nTipo de días: Días laborables",
+              "calculation": "5 de febrero (lunes) + 1 día = 6 de febrero (martes)\n6 de febrero + 1 día = 7 de febrero (miércoles)\n7 de febrero + 1 día = 8 de febrero (jueves)\nTotal: 8 de febrero de 2024 (jueves)",
+              "result": "Resultado: 8 de febrero de 2024, jueves (3 días hábiles)",
+              "type": "tarea corta",
+              "note": "Para tareas cortas, los cálculos se realizan rápidamente, los siete días de la semana."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Proyecto de fin de semana",
+              "description": "Cálculo de la fecha de finalización de un proceso continuo iniciado el viernes 16 de febrero de 2024 con una duración de 7 días naturales",
+              "input": "Fecha de inicio: 16 de febrero de 2024 (viernes)\nDuración: 7 días naturales\nTipo de días: Días naturales",
+              "calculation": "16 de febrero (viernes) + 7 días = 23 de febrero de 2024\nIncluido fines de semana: 17-18 febrero (sábado-domingo) incluido\nTotal: 23 de febrero de 2024 (viernes)",
+              "result": "Resultado: 23 de febrero de 2024, viernes (7 días naturales)",
+              "type": "Proceso continuo",
+              "note": "Los días calendario incluyen todos los días de la semana, incluidos los fines de semana."
+            }
+          }
+        },
+        "calculation": {
+          "title": "¿Cómo se calcula la fecha de vencimiento?",
+          "content": "La calculadora utiliza un algoritmo simple para determinar la fecha de finalización:",
+          "step1": "Introduzca la fecha de inicio del proyecto.",
+          "step2": "Especifique el número de días (laborables o calendario)",
+          "step3": "Seleccione el tipo de cálculo (días laborables o naturales)",
+          "step4": "Obtenga la fecha de finalización exacta, incluidos los fines de semana"
+        },
+        "advantages": {
+          "title": "Beneficios de la calculadora",
+          "accuracy": "Precisión de los cálculos.",
+          "accuracyDesc": "Tiene en cuenta todos los días laborables y fines de semana.",
+          "flexibility": "Flexibilidad de configuración",
+          "flexibilityDesc": "Soporte para diferentes tipos de días.",
+          "efficiency": "Velocidad de trabajo",
+          "efficiencyDesc": "Resultados instantáneos",
+          "planning": "Planificación",
+          "planningDesc": "Ayuda con la gestión de proyectos."
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "tip1": "Usar entre semana",
+          "tip1Desc": "para proyectos que se realizan sólo entre semana",
+          "tip2": "Días calendario",
+          "tip2Desc": "adecuado para procesos continuos",
+          "tip3": "Planifique con anticipación",
+          "tip3Desc": "crear tiempo de reserva para circunstancias imprevistas"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo calcular la fecha de finalización de un proyecto?",
+              "a": "Ingrese la fecha de inicio del proyecto y el número de días (laborables o calendario). Seleccione el tipo de días y haga clic en 'Calcular'. La calculadora mostrará instantáneamente la fecha de finalización del proyecto."
+            },
+            {
+              "q": "¿Solo se pueden tener en cuenta los días laborables?",
+              "a": "Sí, la calculadora admite dos modos: días laborables (solo entre semana, de lunes a viernes) y días calendario (todos los días, incluidos los fines de semana). Seleccione el tipo requerido al calcular."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre días laborables y días naturales?",
+              "a": "Días laborables: solo entre semana (de lunes a viernes), excluidos los fines de semana. Los días calendario son todos los días de la semana, incluidos el sábado y el domingo. La elección depende de las características específicas del proyecto."
+            },
+            {
+              "q": "¿Es la calculadora adecuada para proyectos de aula?",
+              "a": "Sí, la calculadora es excelente para calcular plazos para proyectos educativos, trabajos de curso, diplomas y otras tareas académicas. Puedes utilizar tanto días laborables como días naturales."
+            },
+            {
+              "q": "¿Es posible especificar una fecha límite exacta?",
+              "a": "La calculadora básica funciona con fechas. Para indicar la hora exacta, utilice una calculadora de suma de tiempo o consulte la lógica de funcionamiento en la descripción de la calculadora."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para fechas futuras?",
+              "a": "Sí, la calculadora funciona con cualquier fecha, tanto del pasado como del futuro. Puedes calcular la fecha de finalización de proyectos que comienzan en cualquier momento."
+            },
+            {
+              "q": "¿Cómo calcular el plazo de un proyecto de obra?",
+              "a": "Especifique la fecha de inicio del trabajo, ingrese el número de días hábiles (generalmente solo entre semana) y seleccione el modo \"Días hábiles\". La calculadora mostrará la fecha de finalización teniendo en cuenta los fines de semana."
+            },
+            {
+              "q": "¿Cuentan las vacaciones?",
+              "a": "La calculadora básica sólo tiene en cuenta los fines de semana estándar (sábado y domingo). Para contabilizar los días festivos, utilice calculadoras especializadas o agregue días adicionales al cálculo."
+            },
+            {
+              "q": "¿Es posible calcular el plazo para varias tareas al mismo tiempo?",
+              "a": "La calculadora calcula la fecha límite para una tarea a la vez. Para tareas múltiples, realice cálculos para cada una por separado o utilice el planificador de proyectos."
+            },
+            {
+              "q": "¿Cómo calcular el tiempo de finalización del pedido?",
+              "a": "Especifique la fecha de aceptación del pedido como fecha de inicio, ingrese la fecha de finalización (días hábiles o días calendario según las condiciones) y obtenga la fecha de preparación del pedido."
+            },
+            {
+              "q": "¿Es posible calcular el plazo teniendo en cuenta los retrasos?",
+              "a": "Para tener en cuenta posibles retrasos, agregue tiempo de reserva (búfer) al tiempo estimado. Por ejemplo, si la fecha límite es de 10 días, agregue un margen de seguridad de 2 a 3 días para estar seguro."
+            },
+            {
+              "q": "¿Cómo calcular el período de tiempo de un proceso continuo?",
+              "a": "Para procesos continuos (producción, entrega sin paradas), utilice el modo 'Días naturales'. Esto tendrá en cuenta todos los días, incluidos los fines de semana."
+            },
+            {
+              "q": "¿Es posible calcular el plazo teniendo en cuenta el tiempo en diferentes zonas horarias?",
+              "a": "La calculadora funciona con fechas sin tener en cuenta la hora ni las zonas horarias. Para tener en cuenta con precisión las zonas horarias, primero convierta las fechas a la misma zona horaria."
+            },
+            {
+              "q": "¿Cómo calcular la fecha límite de un proyecto?",
+              "a": "Especifique la fecha de inicio del proyecto, ingrese la duración total del proyecto en días hábiles o calendario (según el modo de trabajo) y obtenga la fecha límite exacta."
+            },
+            {
+              "q": "¿La calculadora es gratuita?",
+              "a": "Sí, la calculadora es completamente gratuita y no requiere registro. Puedes usarlo un número ilimitado de veces sin restricciones."
+            },
+            {
+              "q": "¿Es posible guardar el resultado del cálculo?",
+              "a": "Sí, puedes copiar el resultado o tomar una captura de pantalla de la página. Algunas calculadoras admiten la exportación de resultados en varios formatos."
+            },
+            {
+              "q": "¿La calculadora funciona en dispositivos móviles?",
+              "a": "Sí, la calculadora está totalmente adaptada para funcionar en dispositivos móviles, tablets y smartphones. La interfaz se ajusta automáticamente al tamaño de la pantalla."
+            },
+            {
+              "q": "¿Cómo calcular el plazo para un proyecto con un cronograma de trabajo no estándar?",
+              "a": "Para proyectos con un cronograma no estándar (por ejemplo, 4/2 o cronograma rotativo), use días calendario y ajuste manualmente el resultado o use calculadoras especializadas."
+            },
+            {
+              "q": "¿Es posible calcular la fecha de vencimiento de un grupo de tareas?",
+              "a": "La calculadora calcula la fecha límite para una tarea. Para un grupo de tareas, utilice el método de la ruta crítica o realice cálculos para cada tarea por separado y determine el plazo total."
+            },
+            {
+              "q": "¿Cómo calcular el plazo de un proyecto con varias etapas?",
+              "a": "Calcule la duración de cada etapa por separado, luego sume los resultados o utilice un planificador de proyectos para calcular la duración total, teniendo en cuenta las etapas paralelas y secuenciales."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el tiempo de entrega?",
+              "a": "Sí, introduce la fecha de salida, introduce el tiempo de entrega en días laborables o días naturales (según condiciones de entrega) y obtén la fecha de recepción."
+            },
+            {
+              "q": "¿Cómo calcular el plazo para una tarea con plazo flotante?",
+              "a": "Utilice la calculadora para calcular el período mínimo y máximo especificando diferentes fechas de inicio o diferentes duraciones. Esto ayudará a determinar el rango de plazos posibles."
+            },
+            {
+              "q": "¿Es posible calcular el plazo teniendo en cuenta los fines de semana en diferentes países?",
+              "a": "La calculadora básica tiene en cuenta los fines de semana estándar (sábado y domingo). Para tener en cuenta los fines de semana en diferentes países (por ejemplo, de viernes a sábado), utilice calculadoras especializadas."
+            },
+            {
+              "q": "¿Cómo calcular el plazo de un proyecto teniendo en cuenta el tiempo de inactividad?",
+              "a": "Para contabilizar el tiempo de inactividad, agregue días adicionales al período estimado o utilice días calendario, que incluyen automáticamente todos los días, incluido el posible tiempo de inactividad."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el período de garantía?",
+              "a": "Sí, ingrese la fecha de compra como fecha de inicio, ingrese el período de garantía en días (generalmente días calendario) y obtenga la fecha de finalización del período de garantía."
+            },
+            {
+              "q": "¿Cómo calcular el plazo para un proyecto a tiempo parcial?",
+              "a": "Para proyectos a tiempo parcial, convierta las horas de trabajo a días laborables. Por ejemplo, si trabaja 4 horas al día en lugar de 8, duplique la cantidad de días hábiles para calcular."
+            },
+            {
+              "q": "¿Es posible calcular el período teniendo en cuenta las vacaciones?",
+              "a": "Para contabilizar las vacaciones, agregue la cantidad de días de vacaciones al período estimado. O utilice días calendario, que incluyen automáticamente todos los días, incluidos los días festivos."
+            },
+            {
+              "q": "¿Cómo calcular el plazo de un proyecto con interrupciones?",
+              "a": "Para proyectos con descansos, calcule la fecha límite para cada período de trabajo por separado y sume los resultados, o use días calendario que incluyan todos los días."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para calcular el período de alquiler?",
+              "a": "Sí, especifique la fecha de inicio del alquiler como fecha de inicio, ingrese el período de alquiler en días calendario y obtenga la fecha de finalización del alquiler."
+            },
+            {
+              "q": "¿Cómo calcular el plazo de un proyecto con varios plazos?",
+              "a": "Utiliza la calculadora para calcular cada plazo por separado, indicando las fechas de inicio y las duraciones correspondientes. Esto ayudará a planificar todas las etapas del proyecto."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo calcular el tiempo de finalización del proyecto",
+          "description": "Instrucciones paso a paso para usar la calculadora de fecha de vencimiento",
+          "steps": {}
+        }
+      }
+    },
+    "calendar": {
+      "title": "Calendario en línea - Calendario en línea",
+      "description": "Calendario interactivo en línea con la capacidad de agregar eventos, días festivos y exportar a formato iCal.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "calendar": "Calendario",
+        "category": "Tiempo"
+      },
+      "hero": {
+        "days": "días al año",
+        "events": "eventos",
+        "access": "acceso"
+      },
+      "form": {
+        "title": "Gestión de calendario",
+        "addEvent": "Agregar un evento",
+        "editEvent": "Editar evento",
+        "eventTitle": "Nombre del evento",
+        "eventDate": "Fecha del evento",
+        "eventTime": "Hora del evento",
+        "eventDescription": "Descripción",
+        "eventColor": "Color del evento",
+        "eventTitlePlaceholder": "Introduzca el nombre del evento",
+        "eventDescriptionPlaceholder": "Descripción del evento (opcional)",
+        "save": "Ahorrar",
+        "cancel": "Cancelar",
+        "delete": "Borrar",
+        "edit": "Editar",
+        "add": "Agregar",
+        "update": "Actualizar",
+        "export": "Exportar a iCal"
+      },
+      "results": {
+        "title": "Eventos",
+        "noEvents": "No hay eventos para este día.",
+        "export": "Exportar a iCal",
+        "import": "Importar desde iCal"
+      },
+      "seo": {
+        "title": "Calendario online - calendario interactivo con eventos | calc1.ru",
+        "description": "Calendario en línea gratuito con la posibilidad de agregar eventos, días festivos y exportar. Interfaz fácil de usar y soporte para dispositivos móviles. Ideal para planificar y organizar el tiempo.",
+        "keywords": "calendario en línea, calendario de eventos, calendario de vacaciones, exportación iCal, calendario en línea gratis, calendario en línea, calendario de eventos, calendario de vacaciones, calendario personal, calendario de planificación, calendario con recordatorios, calendario de reuniones, calendario de trabajo, calendario familiar, calendario en línea 2024, calendario web, calendario interactivo, calendario de tareas, calendario de tareas, calendario de eventos, calendario de fin de semana, calendario de vacaciones, calendario de vacaciones, calendario con notas, calendario con flores, calendario de exportación, sincronización de calendario, calendario web, calendario personal, calendario de planificación, calendario con recordatorios, reunión calendario, calendario de trabajo, calendario familiar, calendario interactivo, calendario de horarios, calendario de tareas, calendario de eventos, calendario de vacaciones en línea, exportación de calendario, sincronización de calendario, calendario en línea ruso, calendario en línea gratuito",
+        "overview": {
+          "title": "Sobre el calendario",
+          "content": "Un calendario en línea es una herramienta conveniente para planificar y organizar su tiempo. Crea eventos, marca fechas importantes y gestiona tu agenda.",
+          "additionalContent": "El calendario permite agregar eventos con descripción, hora, código de colores y recordatorios. Puede exportar su calendario a varios formatos (iCal, CSV) y sincronizarlo con otros servicios para acceder fácilmente en todos los dispositivos.",
+          "calculationExamples": {
+            "title": "Ejemplos de uso del calendario",
+            "content": "Veamos ejemplos prácticos del uso de un calendario en línea:",
+            "example1": {
+              "title": "Ejemplo 1: Planificación de la semana laboral",
+              "description": "Agregando reuniones de trabajo y tareas para la semana del 15 al 19 de enero de 2024",
+              "input": "Lunes 15 de enero: Reunión del equipo (09:00)\nMartes 16 de enero: Presentación del proyecto (14:00 horas)\nMiércoles 17 de enero: Fecha límite de presentación de informes (17:00 horas)\nJueves 18 de enero: Conferencia (10:00)\nViernes 19 de enero: Reunión de planificación (16:00 horas)",
+              "calculation": "Creación de 5 eventos en una semana.\nCodificación de colores: reuniones de trabajo (azul), plazos (rojo)\nRecordatorios: 1 hora antes de cada reunión",
+              "result": "Resultado: 5 eventos en el calendario, planificación visual de la semana.",
+              "type": "Planificación del trabajo",
+              "note": "La codificación de colores le ayuda a evaluar visualmente y rápidamente el nivel de ocupación de su semana"
+            },
+            "example2": {
+              "title": "Ejemplo 2: Calendario familiar",
+              "description": "Planificación de eventos familiares para el mes: cumpleaños, eventos, viajes.",
+              "input": "10 de enero: cumpleaños del hijo (todo el día)\n20 de enero: Reunión escolar (18:00 horas)\n25 de enero: Viaje familiar (10:00-20:00)\n30 de enero: Sección de deportes (15:00 horas)",
+              "calculation": "Crea eventos familiares con flores\nRecordatorios de eventos importantes\nExportar para sincronización con otros calendarios",
+              "result": "Resultado: 4 eventos familiares en el calendario, compartidos por la familia",
+              "type": "Planificación familiar",
+              "note": "El calendario familiar ayuda a coordinar el horario de todos los miembros de la familia."
+            },
+            "example3": {
+              "title": "Ejemplo 3: Planificación de unas vacaciones",
+              "description": "Creando eventos para el periodo vacacional del 1 al 15 de febrero de 2024",
+              "input": "1 de febrero: Inicio de vacaciones (todo el día)\n5 de febrero: Viaje a la montaña (08:00-20:00)\n10 de febrero: Excursión (09:00-17:00)\n15 de febrero: Fin de vacaciones (todo el día)",
+              "calculation": "Bloquear un período de vacaciones\nPlanificación de actividades durante las vacaciones.\nExportar un calendario para sincronización",
+              "result": "Resultado: Planificación de 4 eventos para el período vacacional",
+              "type": "Planificación de vacaciones",
+              "note": "El calendario te ayuda a planificar tu tiempo de vacaciones de la manera más eficiente posible."
+            },
+            "example4": {
+              "title": "Ejemplo 4: Calendario Académico",
+              "description": "Planificación de eventos educativos: conferencias, exámenes, fechas límite de tareas.",
+              "input": "20 de enero: Conferencia sobre matemáticas (09:00-10:30)\n22 de enero: fecha límite para los deberes (23:59)\n25 de enero: Examen de Física (14:00-16:00)\n28 de enero: Defensa del proyecto (10:00-12:00)",
+              "calculation": "Creando eventos de aprendizaje\nCodificación de colores: conferencias (azul), fechas límite (rojo), exámenes (naranja)\nRecordatorios diarios y horarios",
+              "result": "Resultado: 4 eventos de formación, control visual de plazos.",
+              "type": "Planificación de instrucción",
+              "note": "El calendario le ayuda a no perderse fechas límite ni eventos educativos importantes."
+            },
+            "example5": {
+              "title": "Ejemplo 5: calendario comercial",
+              "description": "Planificación de eventos de empresa: reuniones con clientes, presentaciones, conferencias.",
+              "input": "12 de enero: Reunión con el cliente (11:00-12:00)\n15 de enero: Presentación de producto (14:00-15:30)\n18 de enero: Rueda de negocios (09:00-18:00)\n22 de enero: Negociaciones del tratado (16:00-17:30)",
+              "calculation": "Creando eventos empresariales\nCodificación de colores por prioridad\nExportar a formato para sincronización con Outlook/Google Calendar",
+              "result": "Resultado: 4 eventos empresariales, planificación profesional.",
+              "type": "Planificación empresarial",
+              "note": "El calendario empresarial le ayuda a gestionar eficazmente reuniones y eventos de negocios"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Calendario de días festivos y fines de semana",
+              "description": "Marcando días festivos y fines de semana para enero de 2024",
+              "input": "1 de enero: Año Nuevo (festivo)\n7 de enero: Navidad (festivo)\nTodos los fines de semana: sábado y domingo de cada mes.\n8 de marzo: Día Internacional de la Mujer (festivo)",
+              "calculation": "Visualización automática de días festivos.\nAgregar vacaciones personales manualmente\nResaltado de color de los fines de semana.",
+              "result": "Resultado: Calendario completo con festivos y fines de semana de un mes",
+              "type": "Calendario de vacaciones",
+              "note": "El calendario muestra automáticamente los días festivos y le permite agregar los suyos propios."
+            }
+          }
+        },
+        "features": {
+          "title": "Funciones de calendario",
+          "events": "Creando eventos",
+          "eventsDesc": "Añade eventos con descripción, hora y recordatorios.",
+          "export": "Exportar datos",
+          "exportDesc": "Exporta tu calendario a varios formatos",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño totalmente responsivo para todos los dispositivos",
+          "holidays": "Vacaciones",
+          "holidaysDesc": "Visualización automática de días festivos.",
+          "notes": "Notas",
+          "notesDesc": "Agregar notas a fechas y eventos",
+          "navigation": "Navegación",
+          "navigationDesc": "Navegación cómoda por mes y año."
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "tip1": "Actualizar eventos regularmente",
+          "tip1Desc": "Mantén tu calendario actualizado",
+          "tip2": "Utilice códigos de colores",
+          "tip2Desc": "Diferentes colores para diferentes tipos de eventos.",
+          "tip3": "Configurar recordatorios",
+          "tip3Desc": "No te pierdas eventos importantes"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo crear un nuevo evento?",
+              "a": "Haga clic en la fecha deseada en el calendario y se abrirá un formulario para crear un evento. Complete el título, fecha, hora (si es necesario), descripción, seleccione un color y haga clic en 'Guardar'. El evento aparecerá en el calendario."
+            },
+            {
+              "q": "¿Es posible exportar un calendario?",
+              "a": "Sí, el calendario admite la exportación a una variedad de formatos, incluido iCal (para sincronizar con otros calendarios), CSV (para trabajar en Excel) y otros formatos. Utilice el botón 'Exportar' para guardar los datos."
+            },
+            {
+              "q": "¿El calendario funciona en dispositivos móviles?",
+              "a": "Sí, el calendario responde completamente y funciona muy bien en dispositivos móviles, tabletas y teléfonos inteligentes. La interfaz se ajusta automáticamente al tamaño de la pantalla, lo que garantiza un uso cómodo en cualquier dispositivo."
+            },
+            {
+              "q": "¿Cómo agregar días festivos?",
+              "a": "Los días festivos se muestran automáticamente en el calendario. Para agregar días festivos personales, cree un evento con la fecha deseada seleccionando el tipo 'Días festivos' o el color apropiado. Se pueden agregar días festivos para todo el día o especificando una hora."
+            },
+            {
+              "q": "¿Puedo sincronizar con otros calendarios?",
+              "a": "Sí, el calendario admite la sincronización con servicios populares, incluidos Google Calendar, Outlook y otros. Para sincronizar, exporte su calendario a iCal e impórtelo al servicio que necesita, o use las funciones de sincronización integradas si están disponibles."
+            },
+            {
+              "q": "¿Cómo editar un evento existente?",
+              "a": "Haga clic en un evento en el calendario para abrir sus detalles, luego haga clic en el botón 'Editar'. Realice los cambios necesarios y guarde. El evento se actualizará en el calendario."
+            },
+            {
+              "q": "¿Cómo eliminar un evento?",
+              "a": "Abra el evento y haga clic en el botón 'Eliminar' o utilice el icono de eliminación correspondiente. Confirma la eliminación y el evento será eliminado del calendario."
+            },
+            {
+              "q": "¿Es posible agregar recordatorios a los eventos?",
+              "a": "Sí, puedes configurar recordatorios al crear o editar un evento. Seleccione una hora de recordatorio (15 minutos, 1 hora, 1 día, etc.) y el calendario le notificará del próximo evento."
+            },
+            {
+              "q": "¿Cómo utilizar el código de colores?",
+              "a": "Al crear un evento, seleccione un color de la paleta. Los diferentes colores ayudan a distinguir visualmente entre tipos de eventos (reuniones de trabajo, asuntos personales, vacaciones, etc.). Esto simplifica la planificación visual y la evaluación de la carga de trabajo."
+            },
+            {
+              "q": "¿Es posible crear eventos recurrentes?",
+              "a": "Sí, muchos calendarios admiten la creación de eventos recurrentes (diarios, semanales, mensuales, etc.). Al crear un evento, seleccione la opción 'Evento recurrente' y configure la frecuencia de repetición."
+            },
+            {
+              "q": "¿Cómo cambiar entre meses?",
+              "a": "Utilice los botones de navegación 'Mes anterior' y 'Mes siguiente' o las teclas de flecha de su teclado para cambiar entre meses. También puede utilizar la navegación rápida a un mes y año específicos."
+            },
+            {
+              "q": "¿Es posible crear eventos para todo el día?",
+              "a": "Sí, al crear un evento, seleccione la opción 'Todo el día' o deje el campo de hora en blanco. Los eventos de todo el día se muestran en una sección especial del calendario y tienen diferencias visuales."
+            },
+            {
+              "q": "¿Cómo ver todos los eventos de una semana o un mes?",
+              "a": "El calendario admite diferentes tipos de visualización: día, semana, mes. Cambie a la vista deseada usando los botones de navegación para ver todos los eventos del período seleccionado."
+            },
+            {
+              "q": "¿Puedo importar eventos de otros calendarios?",
+              "a": "Sí, muchos calendarios admiten la importación de eventos desde otros servicios. Utilice la función 'Importar' y cargue el archivo en iCal, CSV u otro formato compatible."
+            },
+            {
+              "q": "¿Es un calendario gratuito?",
+              "a": "Sí, el calendario online es completamente gratuito y no requiere registro. Puede usarlo una cantidad ilimitada de veces para crear y administrar eventos."
+            },
+            {
+              "q": "¿Es posible guardar el calendario localmente?",
+              "a": "Sí, puedes exportar tu calendario a un archivo (iCal, CSV, etc.) y guardarlo en tu computadora o dispositivo. Esto te permite tener una copia de seguridad y trabajar con el calendario sin conexión."
+            },
+            {
+              "q": "¿Cómo crear un calendario familiar?",
+              "a": "Cree eventos para todos los miembros de la familia usando diferentes colores para cada miembro de la familia o tipo de evento. Exporta tu calendario y compártelo con tu familia para sincronizarlo. Esto ayudará a coordinar el horario de toda la familia."
+            },
+            {
+              "q": "¿Es posible agregar eventos para múltiples zonas horarias?",
+              "a": "El calendario básico funciona con la hora local. Para trabajar con múltiples zonas horarias, cree eventos que especifiquen la zona horaria o use calendarios especializados con soporte para múltiples zonas horarias."
+            },
+            {
+              "q": "¿Cómo planificar unas vacaciones en el calendario?",
+              "a": "Cree un evento de 'Vacaciones' para todo el período de vacaciones (todo el día). Agregue eventos adicionales para planificar sus actividades vacacionales. Utilice códigos de colores para resaltar visualmente los períodos de descanso."
+            },
+            {
+              "q": "¿Puedo utilizar un calendario para planificar mi horario de trabajo?",
+              "a": "Sí, un calendario es excelente para planificar su horario de trabajo. Cree eventos para citas, reuniones, fechas límite, use códigos de colores para diferentes tipos de tareas y exporte para sincronizarlos con calendarios de trabajo."
+            },
+            {
+              "q": "¿Cómo agregar eventos para clases regulares?",
+              "a": "Utilice la función para crear eventos recurrentes. Especifique la fecha de inicio, seleccione la frecuencia de repetición (semanal, mensual, etc.) y la fecha de finalización. El calendario creará automáticamente todos los eventos recurrentes."
+            },
+            {
+              "q": "¿Es posible crear eventos para otras personas?",
+              "a": "Puedes crear eventos en tu calendario para programar reuniones con otras personas. Para crear eventos en los calendarios de otras personas, debe tener acceso a su calendario o utilizar las funciones para compartir."
+            },
+            {
+              "q": "¿Cómo utilizar el calendario para la cuenta del abuelo?",
+              "a": "Cree eventos con el tipo 'Fecha límite' o use un color especial (por ejemplo, rojo). Establece recordatorios el día y unas horas antes de la fecha límite. Esto le ayudará a evitar perder plazos importantes."
+            },
+            {
+              "q": "¿Es posible crear un calendario para múltiples proyectos?",
+              "a": "Sí, use diferentes colores o categorías para diferentes proyectos. Cree eventos y márquelos con colores o etiquetas apropiados. Esto le permitirá separar visualmente proyectos en el mismo calendario."
+            },
+            {
+              "q": "¿Cómo sincronizar tu calendario con tu teléfono?",
+              "a": "Exporte su calendario al formato iCal e impórtelo a la aplicación de calendario de su teléfono (Google Calendar, Apple Calendar, etc.). O utilice la sincronización a través de servicios en la nube, si es compatible."
+            },
+            {
+              "q": "¿Es posible crear eventos para fechas pasadas?",
+              "a": "Sí, puedes crear eventos para cualquier fecha, tanto en el pasado (para historial o archivo) como en el futuro. El calendario admite trabajar con cualquier fecha."
+            },
+            {
+              "q": "¿Cómo organizar tu calendario de estudios?",
+              "a": "Cree eventos para conferencias, seminarios, exámenes, fechas límite de tareas. Utilice diferentes colores: conferencias (azul), exámenes (rojo), fechas límite (naranja). Establezca recordatorios para eventos importantes."
+            },
+            {
+              "q": "¿Puedes utilizar un calendario para planificar tu presupuesto?",
+              "a": "Sí, cree eventos para gastos e ingresos planificados, utilizando una descripción para especificar los montos. Utilice códigos de colores para los tipos de transacciones. Esto le ayudará a visualizar su planificación financiera."
+            },
+            {
+              "q": "¿Cómo puedo compartir mi calendario con otras personas?",
+              "a": "Exporta tu calendario a un archivo (iCal) y envíalo a otras personas. Podrán importar el calendario a sus aplicaciones de calendario. O utilice funciones para compartir si están disponibles."
+            },
+            {
+              "q": "¿Es posible crear un calendario para realizar un seguimiento de los hábitos?",
+              "a": "Sí, cree eventos diarios para realizar un seguimiento de los hábitos (entrenamiento, lectura, meditación, etc.). Utilice códigos de colores para marcar los días completados y perdidos. Esto ayuda a visualizar el progreso."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo utilizar un calendario en línea",
+          "description": "Instrucciones paso a paso para usar un calendario en línea para planificar eventos",
+          "steps": {}
+        }
+      }
+    },
+    "timer": {
+      "title": "Temporizador en línea",
+      "description": "Temporizador online con cuenta atrás para cualquier tarea. Indicación visual y señal sonora al finalizar.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "timer": "Minutero",
+        "category": "Tiempo"
+      },
+      "hero": {
+        "minutes": "minutos de concentración",
+        "breaks": "minutos de descanso",
+        "focus": "concentración"
+      },
+      "form": {
+        "title": "Configurar el temporizador",
+        "hours": "Veces",
+        "minutes": "minutos",
+        "seconds": "Artículos de segunda clase",
+        "start": "Comenzar",
+        "pause": "Pausa",
+        "resume": "Reanudar",
+        "reset": "Reiniciar",
+        "sound": "Sonido",
+        "settings": "Ajustes",
+        "presets": "Preajustes",
+        "pomodoro": "Pomodoro",
+        "cooking": "Cocinando",
+        "workout": "Capacitación",
+        "visualStyle": "Estilo de visualización",
+        "circular": "Circular",
+        "linear": "Lineal",
+        "digital": "Digital",
+        "color": "Color"
+      },
+      "results": {
+        "title": "Minutero",
+        "finished": "¡El tiempo ha terminado!",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "seo": {
+        "title": "Temporizador online - cuenta atrás con visualización y sonido | calc1.ru",
+        "description": "Temporizador en línea gratuito. Configura la cuenta atrás en cualquier momento, recibe una señal sonora y una indicación visual del tiempo restante. Ideal para Pomodoro, cocinar, entrenar y estudiar.",
+        "keywords": "temporizador en línea, temporizador en línea, cuenta atrás, temporizador de cuenta atrás, temporizador de cocina, temporizador de trabajo, temporizador pomodoro, cuenta atrás visual, temporizador de alerta sonora, minutos de cuenta atrás, temporizador en línea gratis, temporizador de cuenta atrás, temporizador en línea con sonido, temporizador para la cocina, temporizador para entrenar, temporizador para Pomodoro, temporizador para estudiar, temporizador para meditación, temporizador con notificaciones, temporizador con visualización, temporizador con progreso, temporizador en línea 2024, gratis en línea temporizador, temporizador web, temporizador interactivo, cronómetro, temporizador de minutos, temporizador de horas, temporizador de cuenta atrás en línea, temporizador de cuenta atrás en línea, temporizador gratuito en línea, temporizador de cocina, temporizador de entrenamiento, temporizador de estudio, temporizador de técnica pomodoro, temporizador de meditación, temporizador de enfoque, temporizador de productividad, temporizador de gestión del tiempo, temporizador de intervalos, cronómetro, temporizador visual, temporizador de sonido, temporizador de alarma, temporizador de notificaciones, aplicación de temporizador, widget de temporizador, herramienta de temporizador, aplicación de temporizador, herramienta de temporizador, temporizador en línea ruso",
+        "overview": {
+          "title": "Sobre el cronómetro",
+          "content": "Un cronómetro en línea es una herramienta conveniente para realizar un seguimiento del tiempo. Establece una cuenta regresiva, recibe notificaciones de audio y una indicación visual del tiempo restante.",
+          "additionalContent": "El temporizador admite varios modos de funcionamiento: cuenta atrás, ajustes preestablecidos para tareas populares (Pomodoro, cocina, entrenamiento), personalización de señales sonoras e indicaciones visuales. Ideal para gestionar el tiempo, aumentar la productividad y organizar las tareas diarias.",
+          "calculationExamples": {
+            "title": "Ejemplos de uso del temporizador",
+            "content": "Veamos ejemplos prácticos del uso de un temporizador en línea:",
+            "example1": {
+              "title": "Ejemplo 1: Técnica Pomodoro - Intervalo de trabajo",
+              "description": "Utilizar un cronómetro para un intervalo de trabajo de 25 minutos mediante la técnica Pomodoro",
+              "input": "Tiempo: 25 minutos (00:25:00)\nModo: Cuenta regresiva\nSonido: encendido\nVisualización: Progreso circular",
+              "calculation": "El cronómetro comienza a las 25:00.\nCuenta regresiva cada segundo\nLa barra de progreso muestra el tiempo restante\nAl llegar a las 00:00 una señal sonora",
+              "result": "Resultado: intervalo de trabajo completo de 25 minutos con notificación",
+              "type": "técnica pomodoro",
+              "note": "Después de completar el intervalo de 25 minutos, hay un descanso de 5 minutos."
+            },
+            "example2": {
+              "title": "Ejemplo 2: Cocinar: hervir huevos",
+              "description": "Usar un temporizador para controlar el tiempo de ebullición del huevo (8 minutos)",
+              "input": "Tiempo: 8 minutos (00:08:00)\nModo: Cuenta regresiva\nSonido: pitido fuerte\nVisualización: Progreso lineal",
+              "calculation": "El cronómetro comienza a las 08:00\nCuenta atrás: 07:59, 07:58...\nIndicación visual de progreso\nA las 00:00 se oye un pitido fuerte.",
+              "result": "Resultado: tiempo exacto de ebullición del huevo (8 minutos) con notificación",
+              "type": "Cocinando",
+              "note": "El temporizador le permite no controlar constantemente el tiempo de cocción."
+            },
+            "example3": {
+              "title": "Ejemplo 3: Entrenamiento - Intervalos de ejercicio",
+              "description": "Uso de un cronómetro para entrenamiento a intervalos: 30 segundos de trabajo, 15 segundos de descanso",
+              "input": "Ciclo 1: 30 segundos de ejercicio (00:00:30)\nCiclo 2: 15 segundos de descanso (00:00:15)\nRepeticiones: 8 ciclos\nSonido: Diferentes señales para trabajar y descansar.",
+              "calculation": "Ronda 1: ejercicios de 30 segundos → sonido\nRonda 2: descanso de 15 segundos → sonido\nRepetir 8 veces\nTiempo total: (30+15)×8 = 360 segundos = 6 minutos",
+              "result": "Resultado: 8 intervalos de ejercicio por un total de 6 minutos.",
+              "type": "Aptitud física",
+              "note": "Los cronómetros de intervalos te ayudan a estructurar tus entrenamientos de manera efectiva"
+            },
+            "example4": {
+              "title": "Ejemplo 4: Estudio - sesión de enfoque",
+              "description": "Usar un cronómetro para una sesión de concentración de estudio de 45 minutos",
+              "input": "Tiempo: 45 minutos (00:45:00)\nModo: Cuenta regresiva\nSonido: Tono suave\nVisualización: Temporizador digital con progreso.",
+              "calculation": "El cronómetro comienza a las 45:00.\nCuenta regresiva cada segundo\nProgreso: 44:59, 44:58... hasta las 00:00\nPitido suave cuando se completa",
+              "result": "Resultado: sesión de concentración de 45 minutos con notificación",
+              "type": "Sesión de estudio",
+              "note": "Las sesiones largas ayudan a mantener una concentración profunda."
+            },
+            "example5": {
+              "title": "Ejemplo 5: Meditación - Sesión de Mindfulness",
+              "description": "Usar un cronómetro para una sesión de meditación de 10 minutos",
+              "input": "Tiempo: 10 minutos (00:10:00)\nModo: Cuenta regresiva\nSonido: tono suave y silencioso\nVisualización: minimalista (sin elementos que distraigan)",
+              "calculation": "El cronómetro comienza a las 10:00\nCuenta regresiva silenciosa\nVisualización sin colores brillantes.\nCuando termine, un suave timbre (campana)",
+              "result": "Resultado: sesión de meditación de 10 minutos con suave aviso.",
+              "type": "Meditación",
+              "note": "Un ambiente tranquilo y notificaciones suaves son importantes para la meditación."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Tarea - Límite de tiempo",
+              "description": "Usar un temporizador para limitar cuánto tiempo puede tardar una tarea (20 minutos)",
+              "input": "Tiempo: 20 minutos (00:20:00)\nModo: Cuenta regresiva\nSonido: señal estándar\nVisualización: Progreso circular con porcentajes.",
+              "calculation": "El cronómetro comienza a las 20:00\nProgreso: 100% → 75% → 50% → 25% → 0%\nIndicación visual del porcentaje completado\nA las 00:00 alarma sonora y notificación visual",
+              "result": "Resultado: límite de tiempo de 20 minutos con visualización completa del progreso",
+              "type": "Gestión del tiempo",
+              "note": "El temporizador le ayuda a limitar el tiempo de las tareas y aumentar la productividad"
+            }
+          }
+        },
+        "features": {
+          "title": "Funciones del temporizador",
+          "countdown": "Cuenta atrás",
+          "countdownDesc": "Cuenta regresiva precisa hasta cero",
+          "sound": "Señales de sonido",
+          "soundDesc": "Notificaciones de sonido personalizables",
+          "visual": "Indicación visual",
+          "visualDesc": "Barra de progreso e indicación de color.",
+          "presets": "Preajustes listos",
+          "presetsDesc": "Selección rápida de intervalos populares.",
+          "controls": "Gestión",
+          "controlsDesc": "Iniciar, pausar, restablecer y reanudar",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño totalmente responsivo"
+        },
+        "useCases": {
+          "title": "Casos de uso",
+          "pomodoro": "técnica pomodoro",
+          "pomodoroDesc": "Técnicas efectivas de gestión del tiempo",
+          "pomodoro1": "25 minutos de trabajo",
+          "pomodoro2": "descanso de 5 minutos",
+          "pomodoro3": "Descanso largo cada 4 ciclos",
+          "cooking": "Cocinando",
+          "cookingDesc": "Temporizadores para procesos culinarios.",
+          "cooking1": "tiempo de ebullición del huevo",
+          "cooking2": "tiempo de horneado",
+          "cooking3": "Hora de infusión de té",
+          "workout": "Entrenamientos",
+          "workoutDesc": "Entrenamiento y ejercicios a intervalos.",
+          "workout1": "tiempo de ejercicio",
+          "workout2": "tiempo de descanso",
+          "workout3": "tiempo total de entrenamiento",
+          "study": "Estudios",
+          "studyDesc": "Planificando tu tiempo de estudio",
+          "study1": "tiempo de concentración",
+          "study2": "tiempo de descanso",
+          "study3": "tiempo total de clase"
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "tip1": "Utilice intervalos cortos",
+          "tip1Desc": "Para una mejor concentración",
+          "tip2": "Configurar sonidos",
+          "tip2Desc": "Elige el tono correcto",
+          "tip3": "Usa señales visuales",
+          "tip3Desc": "Sigue el progreso",
+          "tip4": "tomar descansos",
+          "tip4Desc": "No te olvides del descanso"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "question1": "¿Cómo iniciar un cronómetro?",
+          "answer1": "Seleccione el tiempo deseado y haga clic en el botón \"Iniciar\".",
+          "question2": "¿Es posible configurar un temporizador para varias tareas al mismo tiempo?",
+          "answer2": "Sí, se admiten varios temporizadores.",
+          "question3": "¿Es posible pausar y reanudar la cuenta atrás?",
+          "answer3": "Sí, hay botones Pausa y Reanudar.",
+          "question4": "¿Hay un pitido cuando se completa?",
+          "answer4": "Sí, el timbre se enciende automáticamente.",
+          "question5": "¿Puedo usar el temporizador en dispositivos móviles?",
+          "answer5": "Sí, el temporizador responde completamente para teléfonos inteligentes y tabletas.",
+          "question6": "¿Se puede restablecer el cronómetro en cualquier momento?",
+          "answer6": "Sí, hay un botón Restablecer.",
+          "question7": "¿Se puede cambiar la indicación visual?",
+          "answer7": "Sí, puedes elegir el color de la barra de progreso y el estilo de visualización.",
+          "question8": "¿Es posible integrar un temporizador en su sitio web?",
+          "answer8": "Sí, existe una API y un widget para sitios de terceros.",
+          "question9": "¿Puedo usar el temporizador sin conexión a Internet?",
+          "answer9": "Sí, funciona localmente después de cargar la página.",
+          "question10": "¿El temporizador es adecuado para electrodomésticos Pomodoro?",
+          "answer10": "Sí, es fácil configurar ciclos de 25 minutos de trabajo y 5 minutos de descanso.",
+          "faqItems": [
+            {
+              "q": "¿Cómo iniciar un cronómetro?",
+              "a": "Seleccione el tiempo deseado (horas, minutos, segundos) usando los campos de entrada o ajustes preestablecidos, luego haga clic en el botón 'Iniciar'. El cronómetro comenzará la cuenta regresiva y mostrará el tiempo restante."
+            },
+            {
+              "q": "¿Es posible configurar un temporizador para varias tareas al mismo tiempo?",
+              "a": "Un temporizador básico funciona con una tarea a la vez. Para tareas múltiples, utilice ejecuciones de temporizador secuenciales o temporizadores especializados para múltiples tareas."
+            },
+            {
+              "q": "¿Es posible pausar y reanudar la cuenta atrás?",
+              "a": "Sí, hay botones 'Pausar' para pausar la cuenta regresiva y botones 'Reanudar' para continuar. Durante una pausa, la hora no cambia, el temporizador mantiene su estado actual."
+            },
+            {
+              "q": "¿Hay un pitido cuando se completa?",
+              "a": "Sí, el timbre se activa automáticamente cuando el cronómetro llega a cero. Puede configurar el tipo de sonido y el volumen en la configuración del temporizador."
+            },
+            {
+              "q": "¿Puedo usar el temporizador en dispositivos móviles?",
+              "a": "Sí, el temporizador responde completamente para teléfonos inteligentes y tabletas. La interfaz se ajusta automáticamente al tamaño de la pantalla, lo que garantiza un uso cómodo en cualquier dispositivo."
+            },
+            {
+              "q": "¿Se puede restablecer el cronómetro en cualquier momento?",
+              "a": "Sí, hay un botón 'Reset' que detiene el cronómetro y lo devuelve al tiempo establecido originalmente. Puede utilizarlo en cualquier momento durante el funcionamiento del temporizador."
+            },
+            {
+              "q": "¿Se puede cambiar la indicación visual?",
+              "a": "Sí, puedes elegir el color de la barra de progreso, el estilo de visualización (circular, lineal, digital) y otras opciones de visualización en la configuración del temporizador."
+            },
+            {
+              "q": "¿Qué ajustes preestablecidos están disponibles en el temporizador?",
+              "a": "Hay ajustes preestablecidos disponibles para tareas populares: Pomodoro (25 minutos), cocinar (varios intervalos), entrenar (temporizadores de intervalos), estudiar y otros. También puedes crear tus propios ajustes preestablecidos."
+            },
+            {
+              "q": "¿Es posible personalizar el sonido del temporizador?",
+              "a": "Sí, puedes seleccionar el tipo de sonido (estándar, suave, fuerte), su volumen e incluso apagar el sonido por completo, dejando solo una notificación visual."
+            },
+            {
+              "q": "¿El cronómetro se ejecuta en segundo plano?",
+              "a": "El cronómetro se ejecuta en la pestaña del navegador activo. Para trabajar en segundo plano o con una pestaña cerrada, se requieren aplicaciones especiales o extensiones del navegador."
+            },
+            {
+              "q": "¿Es posible configurar un temporizador para un tiempo específico (no un intervalo)?",
+              "a": "El temporizador en línea funciona en modo de cuenta regresiva (intervalo de tiempo). Para configurar una hora específica, utilice alarmas o temporizadores con la función \"establecer hora\"."
+            },
+            {
+              "q": "¿Cómo utilizar un cronómetro para la técnica Pomodoro?",
+              "a": "Configure un cronómetro de 25 minutos para el intervalo de trabajo, después de finalizar, tome un descanso de 5 minutos (use el cronómetro nuevamente), después de 4 ciclos, tome un descanso largo de 15 a 30 minutos."
+            },
+            {
+              "q": "¿Puedo usar un temporizador para cocinar?",
+              "a": "Sí, el temporizador es ideal para controlar el tiempo de cocción. Configure el tiempo deseado (por ejemplo, 8 minutos para hervir huevos, 15 minutos para hornear) y utilice la señal sonora para notificar."
+            },
+            {
+              "q": "¿Cómo utilizar un cronómetro para el entrenamiento a intervalos?",
+              "a": "Configure el cronómetro para la duración del ejercicio (por ejemplo, 30 segundos), después de la señal, configure el cronómetro para el período de descanso (15 segundos), repita el ciclo la cantidad de veces requerida."
+            },
+            {
+              "q": "¿Puedo usar un cronómetro para meditar?",
+              "a": "Sí, configure el cronómetro para el tiempo de meditación deseado (por ejemplo, 10 a 20 minutos), elija una señal de sonido suave y una visualización minimalista para un ambiente tranquilo."
+            },
+            {
+              "q": "¿Es preciso el cronómetro?",
+              "a": "El cronómetro utiliza una cuenta regresiva precisa segundo a segundo. La precisión varía según el navegador y el rendimiento del dispositivo, pero suele ser muy alta (±1 segundo)."
+            },
+            {
+              "q": "¿Es posible guardar la configuración del temporizador?",
+              "a": "Las configuraciones del temporizador (sonido, visualización, ajustes preestablecidos) generalmente se guardan en el almacenamiento local del navegador y se aplican automáticamente la próxima vez que las use."
+            },
+            {
+              "q": "¿Puedo usar el temporizador sin conexión?",
+              "a": "Después de cargar la primera página, el temporizador puede funcionar sin conexión, ya que las funciones principales se implementan en el lado del cliente. Sin embargo, se recomienda una conexión a Internet para una funcionalidad completa."
+            },
+            {
+              "q": "¿Cómo configurar un temporizador durante mucho tiempo (varias horas)?",
+              "a": "Utilice campos de entrada para horas, minutos y segundos. Por ejemplo, para 2 horas, establezca: 2 horas, 0 minutos, 0 segundos. El temporizador admite cualquier intervalo de tiempo."
+            },
+            {
+              "q": "¿Es posible utilizar un temporizador para limitar el tiempo de una tarea?",
+              "a": "Sí, un temporizador es excelente para limitar el tiempo de las tareas. Establece un límite de tiempo, inicia un cronómetro y trabaja hasta que la señal indique el fin de los tiempos."
+            },
+            {
+              "q": "¿Cómo utilizar un cronómetro para estudiar?",
+              "a": "Configure un temporizador para el tiempo de concentración (por ejemplo, 45 minutos), después de la señal, tómese un descanso de 10 a 15 minutos. Esto ayuda a estructurar el tiempo de estudio y a mantener la concentración."
+            },
+            {
+              "q": "¿Puedo usar un cronómetro para realizar un seguimiento de los tiempos de descanso?",
+              "a": "Sí, se puede utilizar un cronómetro para realizar un seguimiento de los tiempos de descanso. Establezca el tiempo de descanso que desee (por ejemplo, 5 a 10 minutos) y use una alarma para avisarle que regrese al trabajo."
+            },
+            {
+              "q": "¿Cómo utilizar un cronómetro para controlar los tiempos de las reuniones?",
+              "a": "Establezca un cronómetro para la duración de la reunión (por ejemplo, 30 a 60 minutos), inícielo al comienzo de la reunión. Un cronómetro le ayudará a controlar el tiempo y completar la reunión a tiempo."
+            },
+            {
+              "q": "¿Es posible utilizar un cronómetro para controlar el tiempo en los juegos?",
+              "a": "Sí, el temporizador se puede utilizar para limitar el tiempo de las sesiones de juego. Establece un límite (por ejemplo, 1 o 2 horas), inicia un cronómetro y realiza un seguimiento del tiempo de juego."
+            },
+            {
+              "q": "¿Cómo utilizar un temporizador para planificar tu día?",
+              "a": "Divide tu día en bloques de tiempo y usa un cronómetro para cada bloque. Por ejemplo: 25 minutos de trabajo, 5 minutos de descanso, 25 minutos de trabajo, etc. Esto ayuda a estructurar el día."
+            },
+            {
+              "q": "¿Es posible utilizar un cronómetro para controlar el tiempo en las redes sociales?",
+              "a": "Sí, configure un cronómetro para un límite de tiempo (por ejemplo, 15 a 20 minutos) para usar las redes sociales. Esto ayuda a controlar el tiempo y evitar usos innecesarios."
+            },
+            {
+              "q": "¿Cómo utilizar un temporizador para controlar el tiempo de lectura?",
+              "a": "Configure un temporizador para el tiempo de lectura (por ejemplo, 30-60 minutos), inícielo y lea hasta la señal. Esto ayuda a estructurar el tiempo de lectura y a mantener la concentración."
+            },
+            {
+              "q": "¿Puedo usar un temporizador para controlar mi tiempo de sueño?",
+              "a": "El temporizador se puede utilizar para limitar el tiempo de sueño diurno (siesta energética). Configure un cronómetro de 20 a 30 minutos para una siesta corta y asegurarse de despertarse renovado."
+            },
+            {
+              "q": "¿Cómo utilizar un temporizador para controlar el tiempo que se pasa en la computadora?",
+              "a": "Configure el temporizador para un intervalo de trabajo (por ejemplo, 50 minutos), después de la señal, tómese un descanso de 10 minutos para descansar la vista y calentarse. Esto ayuda a reducir el estrés y mantener la productividad."
+            },
+            {
+              "q": "¿Es posible utilizar un temporizador para controlar la hora a la que se realizan las tareas del hogar?",
+              "a": "Sí, configura un temporizador para una tarea específica (por ejemplo, 15 minutos para limpiar la habitación, 10 minutos para lavar los platos). Un cronómetro le ayudará a asignar tiempo de forma eficaz a las tareas del hogar."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo utilizar un cronómetro en línea",
+          "description": "Instrucciones paso a paso para utilizar un temporizador en línea para gestionar el tiempo",
+          "steps": {}
+        }
+      }
+    },
+    "countdown": {
+      "title": "Cuenta regresiva - Calculadora de cuenta regresiva",
+      "description": "Calculadora de cuenta regresiva en línea para un evento importante con visualización del tiempo restante.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "countdown": "Cuenta atrás",
+        "category": "Tiempo"
+      },
+      "hero": {
+        "days": "días al año",
+        "events": "eventos",
+        "tracking": "seguimiento"
+      },
+      "form": {
+        "title": "Configurando la cuenta regresiva",
+        "eventName": "Nombre del evento",
+        "eventDescription": "Descripción del evento",
+        "targetDate": "fecha objetivo",
+        "targetTime": "Tiempo",
+        "color": "Color",
+        "sound": "Sonido",
+        "startCountdown": "Iniciar cuenta regresiva",
+        "edit": "Editar",
+        "stop": "Detener",
+        "eventNamePlaceholder": "Introduzca el nombre del evento",
+        "eventDescriptionPlaceholder": "Descripción del evento (opcional)",
+        "presets": "Plantillas listas para usar",
+        "popularEvents": "Eventos populares",
+        "quickPresets": "Configuración rápida",
+        "eventTypes": {
+          "birthday": "cumpleaños",
+          "newYear": "Año Nuevo",
+          "christmas": "Navidad",
+          "vacation": "vacaciones"
+        },
+        "errors": {
+          "invalidDate": "La fecha objetivo debe ser en el futuro.",
+          "eventNameRequired": "Introduzca el nombre del evento"
+        }
+      },
+      "results": {
+        "title": "Cuenta atrás",
+        "finished": "¡El evento ha llegado!",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "days": "días",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "artículos de segunda clase",
+        "eventHappened": "{eventName} ya sucedió"
+      },
+      "seo": {
+        "title": "Cuenta regresiva en línea: cronómetro para eventos, fechas límite y días festivos | calc1.ru",
+        "description": "Calculadora de cuenta regresiva en línea. Descubra cuántos días, horas, minutos y segundos quedan hasta el evento. Temporizador visual y notificación de audio. Ideal para realizar un seguimiento de fechas y eventos importantes.",
+        "keywords": "cuenta regresiva, cronómetro de cuenta regresiva, días hasta el evento, cuánto queda hasta el evento, cuenta regresiva en línea, cuenta regresiva del evento, cronómetro hasta las vacaciones, cuenta regresiva visual, cuenta regresiva de la fecha límite, calculadora de tiempo restante, cuenta regresiva en línea gratis, cronómetro de cuenta regresiva, calculadora de cuenta regresiva, cuántos días hasta el evento, cuántas horas antes del evento, cronómetro hasta el nuevo año, cronómetro hasta el cumpleaños, cronómetro hasta la boda, cronómetro hasta las vacaciones, cronómetro de fecha límite, cronómetro de cuenta regresiva, calculadora de cuenta regresiva en línea, cuenta regresiva gratuita cronómetro, temporizador de cuenta regresiva para eventos, cuenta regresiva para fechas límite, cuenta regresiva para días festivos, cuenta regresiva para cumpleaños, cuenta regresiva para bodas, cuenta regresiva para vacaciones, cuenta regresiva para proyectos, temporizador visual de cuenta regresiva, cuenta regresiva animada, widget de cuenta regresiva, reloj de cuenta regresiva, cuánto tiempo queda, cronómetro de cuenta regresiva, temporizador de cuenta regresiva, cuenta regresiva en línea en ruso, cuenta regresiva en línea gratuita",
+        "overview": {
+          "title": "Acerca de la calculadora de cuenta regresiva",
+          "content": "Una calculadora de cuenta atrás es una herramienta útil para realizar un seguimiento del tiempo hasta eventos importantes. Establezca una cuenta atrás para un cumpleaños, un día festivo, una fecha límite o unas vacaciones.",
+          "additionalContent": "La calculadora muestra el tiempo exacto antes del evento en días, horas, minutos y segundos. Admite indicación visual de progreso, notificaciones de audio y la capacidad de exportar datos. Genial para planificar, motivar y gestionar el tiempo antes de fechas importantes.",
+          "calculationExamples": {
+            "title": "Ejemplos de uso de cuenta regresiva",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de cuenta regresiva:",
+            "example1": {
+              "title": "Ejemplo 1: conteo inverso hasta el año nuevo",
+              "description": "Estableciendo una cuenta regresiva hasta el 1 de enero de 2025",
+              "input": "Evento: Año Nuevo 2025\nFecha: 1 de enero de 2025, 00:00\nFecha actual: 15 de diciembre de 2024, 10:00",
+              "calculation": "Cálculo de la diferencia: 1 de enero de 2025 - 15 de diciembre de 2024\nDías: 17 días\nHoras: 17×24 = 408 horas\nMinutos: 408×60 = 24.480 minutos\nSegundos: 24.480×60 = 1.468.800 segundos",
+              "result": "Resultado: 17 días 14 horas 0 minutos hasta el Año Nuevo",
+              "type": "Vacaciones",
+              "note": "La cuenta regresiva se actualiza cada segundo y muestra la hora actual hasta el evento."
+            },
+            "example2": {
+              "title": "Ejemplo 2: cuenta regresiva de cumpleaños",
+              "description": "Establecer una cuenta regresiva de cumpleaños (25 de junio de 2025)",
+              "input": "Evento: Cumpleaños\nFecha: 25 de junio de 2025, 00:00\nFecha actual: 1 de enero de 2025, 12:00",
+              "calculation": "Cálculo de la diferencia: 25 de junio de 2025 - 1 de enero de 2025\nDías: 175 días (enero: 31-1=30, febrero-mayo: 28+31+30+31=120, junio: 25)\nHoras: 175×24 = 4200 horas\nMinutos: 4200×60 = 252.000 minutos",
+              "result": "Resultado: 175 días hasta tu cumpleaños",
+              "type": "Eventos personales",
+              "note": "La cuenta regresiva a largo plazo ayuda a planificar los preparativos para eventos importantes"
+            },
+            "example3": {
+              "title": "Ejemplo 3: cuenta atrás para la fecha límite del proyecto",
+              "description": "Establecer una cuenta atrás para la fecha límite del proyecto (15 de marzo de 2025, 17:00)",
+              "input": "Evento: Fecha límite del proyecto\nFecha: 15 de marzo de 2025, 17:00\nFecha actual: 20 de febrero de 2025, 09:00",
+              "calculation": "Cálculo de la diferencia: 15 de marzo de 2025 17:00 - 20 de febrero de 2025 09:00\nDías: 23 días (20 de febrero - 15 de marzo)\nHoras: 23×24 + 8 = 560 horas (8 horas de diferencia en el día)\nMinutos: 560×60 = 33.600 minutos",
+              "result": "Resultado: 23 días y 8 horas antes de la fecha límite del proyecto",
+              "type": "Plazos de trabajo",
+              "note": "La cuenta regresiva para la fecha límite lo ayuda a administrar el tiempo y planificar tareas"
+            },
+            "example4": {
+              "title": "Ejemplo 4: cuenta regresiva para las vacaciones",
+              "description": "Configuración de la cuenta atrás para el inicio de las vacaciones (1 de agosto de 2025)",
+              "input": "Evento: Inicio de vacaciones\nFecha: 1 de agosto de 2025, 00:00\nFecha actual: 10 de mayo de 2025, 14:00",
+              "calculation": "Cálculo de la diferencia: 1 de agosto de 2025 - 10 de mayo de 2025\nDías: 83 días (mayo: 31-10=21, junio: 30, julio: 31, agosto: 1)\nHoras: 83×24 - 14 = 1978 horas\nMinutos: 1978×60 = 118.680 minutos",
+              "result": "Resultado: 82 días 10 horas antes del inicio de las vacaciones.",
+              "type": "Planificación de vacaciones",
+              "note": "La cuenta atrás a largo plazo motiva y ayuda a planificar los preparativos para las vacaciones"
+            },
+            "example5": {
+              "title": "Ejemplo 5: Cuenta regresiva para la boda",
+              "description": "Poniendo la cuenta atrás para la boda (10 de septiembre de 2025, 15:00)",
+              "input": "Evento: Boda\nFecha: 10 de septiembre de 2025, 15:00\nFecha actual: 1 de julio de 2025, 10:00",
+              "calculation": "Cálculo de la diferencia: 10 de septiembre de 2025 15:00 - 1 de julio de 2025 10:00\nDías: 71 días (julio: 31-1=30, agosto: 31, septiembre: 10)\nHoras: 71×24 + 5 = 1709 horas (5 horas de diferencia)\nMinutos: 1709×60 = 102,540 minutos",
+              "result": "Resultado: 71 días 5 horas antes de la boda.",
+              "type": "Eventos de boda",
+              "note": "La cuenta regresiva de la boda te ayuda a realizar un seguimiento de los preparativos y te motiva para las etapas finales."
+            },
+            "example6": {
+              "title": "Ejemplo 6: Cuenta atrás para el examen",
+              "description": "Poniendo la cuenta atrás para el examen (5 de diciembre de 2024, 10:00)",
+              "input": "Evento: Examen\nFecha: 5 de diciembre de 2024, 10:00\nFecha actual: 1 de diciembre de 2024, 08:00",
+              "calculation": "Cálculo de la diferencia: 5 dic 2024 10:00 - 1 dic 2024 08:00\nDías: 4 días\nHoras: 4×24 + 2 = 98 horas (2 horas de diferencia)\nMinutos: 98×60 = 5880 minutos\nSegundos: 5880x60 = 352.800 segundos",
+              "result": "Resultado: 4 días 2 horas antes del examen.",
+              "type": "Eventos educativos",
+              "note": "La cuenta atrás a corto plazo le ayuda a concentrarse y utilizar el tiempo restante de forma eficaz"
+            }
+          }
+        },
+        "features": {
+          "title": "Funciones de calculadora",
+          "countdown": "Cuenta atrás",
+          "countdownDesc": "Cuenta regresiva precisa hasta cero",
+          "visual": "Indicación visual",
+          "visualDesc": "Barra de progreso e indicación de color.",
+          "sound": "Señales de sonido",
+          "soundDesc": "Notificaciones de sonido personalizables",
+          "presets": "Preajustes listos",
+          "presetsDesc": "Selección rápida de intervalos populares.",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño totalmente responsivo",
+          "export": "Exportar resultados",
+          "exportDesc": "Guardar y exportar datos"
+        },
+        "useCases": {
+          "title": "Casos de uso",
+          "events": "Eventos y vacaciones",
+          "eventsDesc": "Seguimiento del tiempo hasta eventos importantes",
+          "events1": "cumpleaños",
+          "events2": "Vacaciones",
+          "events3": "Bodas",
+          "deadlines": "Plazos y proyectos",
+          "deadlinesDesc": "Control de tiempo hasta la finalización de los proyectos.",
+          "deadlines1": "Plazos de trabajo",
+          "deadlines2": "Proyectos educativos",
+          "deadlines3": "Metas personales",
+          "personal": "Eventos personales",
+          "personalDesc": "Seguimiento de fechas personales importantes",
+          "personal1": "Vacaciones",
+          "personal2": "Emocionante",
+          "personal3": "Reuniones importantes",
+          "business": "Negocios y trabajo",
+          "businessDesc": "Planificación y control de procesos de negocio.",
+          "business1": "Presentaciones",
+          "business2": "Conferencias",
+          "business3": "Lanzamiento de proyectos"
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "tip1": "Establecer objetivos realistas",
+          "tip1Desc": "Planifica tu tiempo teniendo en cuenta posibles retrasos",
+          "tip2": "Utilice recordatorios visuales",
+          "tip2Desc": "Personalice la pantalla a color para una mejor experiencia de visualización",
+          "tip3": "Planifique con anticipación",
+          "tip3Desc": "Comienza la cuenta regresiva unas semanas antes del evento.",
+          "tip4": "Configurar notificaciones",
+          "tip4Desc": "Utilice señales sonoras para momentos importantes."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo configurar la cuenta regresiva?",
+              "a": "Seleccione la fecha y hora del evento en la calculadora; el cronómetro mostrará automáticamente el tiempo restante en días, horas, minutos y segundos. Ingrese un nombre para el evento (opcional) y haga clic en \"Iniciar cuenta regresiva\"."
+            },
+            {
+              "q": "¿Se puede cambiar la fecha objetivo?",
+              "a": "Sí, simplemente seleccione una nueva fecha y hora en el formulario y el temporizador se actualizará automáticamente con la nueva cuenta regresiva. Puedes editar un evento en cualquier momento."
+            },
+            {
+              "q": "¿Es posible agregar sonido cuando ocurre un evento?",
+              "a": "Sí, hay una señal de sonido incorporada que se puede configurar en la configuración del temporizador. Cuando se llegue a un evento, el sonido se activará automáticamente."
+            },
+            {
+              "q": "¿Puedo usar un temporizador para días festivos?",
+              "a": "Sí, se admite cualquier tipo de evento: feriados, cumpleaños, bodas, fechas límite, vacaciones y otros. Selecciona la fecha que desees y crea una cuenta atrás."
+            },
+            {
+              "q": "¿Se muestra la hora en diferentes unidades?",
+              "a": "Sí, la cuenta atrás se muestra en días, semanas, horas, minutos y segundos. Todas las unidades se actualizan en tiempo real cada segundo."
+            },
+            {
+              "q": "¿Es posible personalizar la reproducción cromática?",
+              "a": "Sí, el color del temporizador se puede seleccionar desde la paleta en la configuración. Esto ayuda a distinguir visualmente diferentes eventos y hace que la cuenta regresiva sea más visual."
+            },
+            {
+              "q": "¿Es compatible la versión móvil?",
+              "a": "Sí, el temporizador está totalmente adaptado para smartphones y tablets. La interfaz se ajusta automáticamente al tamaño de la pantalla para facilitar su uso en cualquier dispositivo."
+            },
+            {
+              "q": "¿Es posible realizar un seguimiento de varios eventos?",
+              "a": "Sí, puede abrir varios temporizadores de cuenta atrás en diferentes pestañas del navegador o utilizar ajustes preestablecidos ya preparados para crear rápidamente varios eventos."
+            },
+            {
+              "q": "¿El temporizador funciona sin conexión?",
+              "a": "Después de cargar la primera página, las funciones principales pueden funcionar localmente, pero se requiere una conexión a Internet para obtener la hora exacta, ya que se utiliza la hora actual del servidor."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta atrás de Año Nuevo?",
+              "a": "Establezca la fecha en el 1 de enero del próximo año, la hora son las 00:00 y el temporizador mostrará la hora exacta hasta el Año Nuevo. La cuenta atrás se actualiza cada segundo."
+            },
+            {
+              "q": "¿Puedo usar una cuenta regresiva de cumpleaños?",
+              "a": "Sí, establece la fecha de tu cumpleaños (puedes seleccionar el próximo año si tu cumpleaños ya pasó este año) y el cronómetro mostrará cuántos días quedan hasta este evento."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta regresiva hasta la fecha límite?",
+              "a": "Establezca una fecha y hora límite para un proyecto o tarea. El cronómetro mostrará la hora exacta antes de la fecha límite, lo que te ayudará a controlar el tiempo y planificar tu trabajo."
+            },
+            {
+              "q": "¿Puedo utilizar la cuenta regresiva de vacaciones?",
+              "a": "Sí, establece la fecha de inicio de tus vacaciones y el cronómetro mostrará cuántos días quedan. Esto ayuda a motivar y planificar los preparativos de sus vacaciones con anticipación."
+            },
+            {
+              "q": "¿Cómo utilizar una cuenta atrás para una boda?",
+              "a": "Establece la fecha y hora de la boda. La cuenta atrás le ayudará a realizar un seguimiento de los preparativos de la boda y le motivará hasta las etapas finales de la organización del evento."
+            },
+            {
+              "q": "¿Es posible exportar datos de cuenta regresiva?",
+              "a": "Sí, muchas calculadoras admiten la exportación de datos de cuenta regresiva. Puede guardar información sobre un evento y el tiempo anterior para su uso posterior."
+            },
+            {
+              "q": "¿Exactamente informes inversos?",
+              "a": "Sí, la cuenta regresiva se actualiza cada segundo y muestra el tiempo exacto hasta el evento. La precisión depende de la hora del servidor y del rendimiento del navegador, pero suele ser muy alta."
+            },
+            {
+              "q": "¿Es posible utilizar la cuenta regresiva para eventos a largo plazo?",
+              "a": "Sí, la cuenta atrás admite cualquier intervalo de tiempo, desde unos pocos segundos hasta varios años. Se pueden realizar un seguimiento de los objetivos y eventos a largo plazo."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta atrás para el examen?",
+              "a": "Establece la fecha y hora del examen. Una cuenta regresiva a corto plazo lo ayudará a concentrarse en su preparación y a utilizar de manera efectiva el tiempo restante antes del examen."
+            },
+            {
+              "q": "¿Puedo utilizar cuentas atrás para eventos empresariales?",
+              "a": "Sí, la cuenta atrás es estupenda para eventos empresariales: presentaciones, conferencias, lanzamientos de proyectos, plazos y otras fechas laborales importantes."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta atrás para el lanzamiento del proyecto?",
+              "a": "Establecer una fecha de lanzamiento para el proyecto. La cuenta regresiva ayudará a controlar los preparativos para el lanzamiento y motivará al equipo a completar las tareas a tiempo."
+            },
+            {
+              "q": "¿Puedo utilizar la cuenta atrás para fines personales?",
+              "a": "Sí, la cuenta atrás se puede utilizar para realizar un seguimiento del tiempo hasta alcanzar objetivos personales como graduación, mudanza, reuniones importantes y otros eventos."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta atrás de vacaciones?",
+              "a": "Establezca la fecha festiva (Año Nuevo, Navidad, Cumpleaños, etc.). La cuenta regresiva mostrará cuántos días quedan hasta las vacaciones, lo que le ayudará a planificar sus preparativos."
+            },
+            {
+              "q": "¿Se pueden utilizar las cuentas regresivas para eventos educativos?",
+              "a": "Sí, la cuenta regresiva es adecuada para eventos educativos: exámenes, fechas límite de tareas, defensa de tesis, inicio de semestre y otras fechas importantes en los estudios."
+            },
+            {
+              "q": "¿Cómo utilizar las cuentas atrás para planificar eventos?",
+              "a": "Establezca la fecha del evento con anticipación. Una cuenta regresiva a largo plazo le ayuda a planificar los preparativos para el evento y distribuir tareas para el tiempo restante."
+            },
+            {
+              "q": "¿Se pueden utilizar las cuentas atrás como motivación?",
+              "a": "Sí, la cuenta atrás para eventos importantes (vacaciones, cumpleaños, consecución de una meta) motiva y ayuda a visualizar el progreso hacia la meta."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta regresiva de la conferencia?",
+              "a": "Establezca la fecha y hora de la conferencia. La cuenta atrás te ayudará a controlar tus preparativos: registro, elaboración de un informe, reserva de billetes y hoteles."
+            },
+            {
+              "q": "¿Es posible utilizar una cuenta atrás para una reunión importante?",
+              "a": "Sí, fija una fecha y hora para una reunión importante. La cuenta atrás le ayudará a recordar la reunión y a prepararse con antelación."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta atrás para el lanzamiento del producto?",
+              "a": "Establecer una fecha de lanzamiento del producto. La cuenta regresiva ayudará a controlar los preparativos para el lanzamiento y motivará al equipo a completar todas las tareas a tiempo."
+            },
+            {
+              "q": "¿Es posible utilizar una cuenta regresiva para controlar el tiempo hasta que se completa un proyecto?",
+              "a": "Sí, establezca una fecha de finalización para el proyecto. Countdown le ayuda a controlar el tiempo y planificar tareas para cumplir con el plazo."
+            },
+            {
+              "q": "¿Cómo utilizar una cuenta regresiva para realizar un seguimiento de tu tiempo hasta alcanzar una meta?",
+              "a": "Establece una fecha en la que quieras alcanzar tu objetivo. Una cuenta regresiva motiva y ayuda a estructurar el trabajo hacia la consecución de una meta, mostrando cuánto tiempo queda."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "Cómo utilizar una calculadora de cuenta regresiva",
+          "description": "Instrucciones paso a paso para usar una calculadora de cuenta regresiva para realizar un seguimiento del tiempo hasta los eventos",
+          "steps": {}
+        }
+      }
+    },
+    "worldTime": {
+      "title": "hora mundial",
+      "description": "Calculadora de hora mundial en línea. Descubra la hora actual en cualquier país o ciudad.",
+      "breadcrumbs": {
+        "home": "Hogar",
+        "time": "Tiempo",
+        "worldTime": "hora mundial",
+        "category": "Tiempo"
+      },
+      "hero": {
+        "timeZones": "zonas horarias",
+        "cities": "ciudades",
+        "accuracy": "exactitud"
+      },
+      "form": {
+        "title": "Configuración de hora mundial",
+        "addCity": "Agregar ciudad",
+        "searchCities": "Buscar ciudades",
+        "searchPlaceholder": "Introduzca el nombre de la ciudad",
+        "settings": "Ajustes",
+        "refresh": "Actualizar",
+        "timeFormat": "Formato de hora",
+        "dateFormat": "Formato de fecha",
+        "format24h": "24 horas",
+        "format12h": "12 en punto",
+        "showSeconds": "Mostrar segundos",
+        "showDate": "Mostrar fecha",
+        "showDayOfWeek": "Mostrar día de la semana",
+        "showDST": "Mostrar horario de verano",
+        "noCities": "Sin ciudades",
+        "noCitiesDesc": "Agregar ciudades para mostrar la hora",
+        "addFirstCity": "Agregar la primera ciudad",
+        "copy": "Copiar",
+        "copied": "¡Copiado!"
+      },
+      "results": {
+        "title": "hora mundial",
+        "currentTime": "Hora actual",
+        "timeZone": "Huso horario"
+      },
+      "seo": {
+        "title": "Calculadora de hora mundial online: hora en ciudades y países | calc1.ru",
+        "description": "Calculadora de hora mundial en línea. Hora actual en ciudades y países, conversión entre zonas horarias, búsqueda y visualización convenientes. Ideal para planificar reuniones y viajes internacionales.",
+        "keywords": "tiempo para viajar, tiempo para negocios, hora mundial en línea, reloj mundial en línea, calculadora de zona horaria, hora global, hora internacional, zonas horarias actuales, conversor de hora, conversor de hora mundial, múltiples zonas horarias, comparación de hora, hora en línea rusa, hora mundial en línea gratis",
+        "overview": {
+          "title": "Acerca de la calculadora de hora mundial",
+          "content": "La Calculadora de hora mundial es una herramienta útil para trabajar con diferentes zonas horarias. Descubra la hora actual en cualquier parte del mundo, planifique reuniones y viajes internacionales.",
+          "additionalContent": "La calculadora admite agregar varias ciudades al mismo tiempo, contabilizar automáticamente el horario de verano (DST), buscar ciudades por nombre, sincronizar con servidores de hora exactos y visualizar la diferencia horaria entre ciudades. Ideal para negocios, viajes y comunicación con personas en diferentes zonas horarias.",
+          "calculationExamples": {
+            "title": "Ejemplos de uso de la calculadora de hora mundial",
+            "content": "Veamos ejemplos prácticos del uso de la calculadora de hora mundial:",
+            "example1": {
+              "title": "Ejemplo 1: planificación de una videoconferencia internacional",
+              "description": "Organización de una videoconferencia entre Moscú, Nueva York y Tokio",
+              "input": "Ciudad 1: Moscú (UTC+3)\nCiudad 2: Nueva York (UTC-5)\nCiudad 3: Tokio (UTC+9)\nHora actual en Moscú: 14:00 (2 de enero de 2025)",
+              "calculation": "Moscú: 14:00 (UTC+3)\nNueva York: 06:00 (UTC-5) – diferencia -8 horas\nTokio: 20:00 (UTC+9) - diferencia +6 horas\nHora óptima: 09:00 Moscú (01:00 Nueva York, 15:00 Tokio)",
+              "result": "Resultado: la videoconferencia a las 09:00 hora de Moscú es conveniente para todos los participantes",
+              "type": "Planificación empresarial",
+              "note": "Dada la diferencia de zonas horarias, puedes encontrar un horario que sea conveniente para todos los participantes."
+            },
+            "example2": {
+              "title": "Ejemplo 2: Planificación de una llamada a familiares",
+              "description": "Determinar un horario conveniente para llamar de Moscú a Los Ángeles",
+              "input": "Ciudad 1: Moscú (UTC+3)\nCiudad 2: Los Ángeles (UTC-8)\nHora actual en Moscú: 20:00 (tarde del 2 de enero de 2025)",
+              "calculation": "Moscú: 20:00 (UTC+3)\nLos Ángeles: 09:00 (UTC-8) – diferencia -11 horas\nEn Moscú por la tarde (20:00) = mañana en Los Ángeles (09:00)",
+              "result": "Resultado: Hora conveniente para llamar: tarde en Moscú (mañana en Los Ángeles)",
+              "type": "comunicación internacional",
+              "note": "La diferencia de 11 horas significa que cuando es de noche en Moscú, en Los Ángeles es de mañana"
+            },
+            "example3": {
+              "title": "Ejemplo 3: Planificación de vuelo y adaptación a la hora local",
+              "description": "Vuelo de Moscú a Sydney y adaptación a la hora local",
+              "input": "Ciudad de salida: Moscú (UTC+3)\nCiudad de destino: Sídney (UTC+10)\nHora de salida de Moscú: 23:00 (2 de enero de 2025)\nDuración del vuelo: 20 horas",
+              "calculation": "Moscú: 23:00 (UTC+3)\nSídney: 07:00 (UTC+10) - diferencia +7 horas\nHora de llegada: 19:00 hora local de Sídney\nRecomendación: Dormir a bordo para adaptarse a la hora local.",
+              "result": "Resultado: Llegada a las 19:00 hora local de Sydney, debe adaptarse a +7 horas",
+              "type": "Viajes",
+              "note": "Al volar a través de múltiples zonas horarias, es importante planificar el sueño y la adaptación."
+            },
+            "example4": {
+              "title": "Ejemplo 4: planificación de un evento en línea",
+              "description": "Determinar el tiempo para una conferencia en línea con participantes de diferentes países",
+              "input": "Participantes:\n- Londres (UTC+0)\n- París (UTC+1)\n- Dubái (UTC+4)\n- Pekín (UTC+8)\nHora de salida en Londres: 12:00 (enfoque, 2 de enero de 2025)",
+              "calculation": "Londres: 12:00 (UTC+0)\nParís: 13:00 (UTC+1) - diferencia +1 hora\nDubái: 16:00 (UTC+4) - diferencia +4 horas\nBeijing: 20:00 (UTC+8) - diferencia +8 horas\nHora óptima: 10:00 Londres (11:00 París, 14:00 Dubai, 18:00 Beijing)",
+              "result": "Resultado: el evento en línea a las 10:00 hora de Londres es conveniente para todos los participantes",
+              "type": "Eventos en línea",
+              "note": "Al planificar eventos en línea, es importante considerar horarios convenientes para todas las zonas horarias."
+            },
+            "example5": {
+              "title": "Ejemplo 5: trabajar con clientes en diferentes zonas horarias",
+              "description": "Determinar las horas de trabajo de un equipo que trabaja con clientes en diferentes países.",
+              "input": "Oficina: Moscú (UTC+3)\nClientes:\n- Nueva York (UTC-5)\n- Tokio (UTC+9)\n- Londres (UTC+0)\nHorario de trabajo en Moscú: 09:00-18:00",
+              "calculation": "Moscú 09:00-18:00:\n- Nueva York: 01:00-10:00 (temprano en la mañana, horario comercial)\n- Tokio: 15:00-00:00 (día-tarde, horario comercial)\n- Londres: 06:00-15:00 (mañana-tarde, horario de oficina)\nSuperposición: 09:00-15:00, hora de Moscú, la hora óptima",
+              "result": "Resultado: el horario óptimo para trabajar con los clientes es de 09:00 a 15:00, hora de Moscú.",
+              "type": "Comunicaciones empresariales",
+              "note": "Encontrar la superposición entre los horarios comerciales le ayuda a trabajar eficazmente con los clientes"
+            },
+            "example6": {
+              "title": "Ejemplo 6: Planificación de la retransmisión de un evento deportivo",
+              "description": "Determinar el tiempo de transmisión de un partido para espectadores en diferentes países",
+              "input": "Partido en Londres: 20:00 (UTC+0, 2 de enero de 2025)\nEspectadores:\n- Moscú (UTC+3)\n- Nueva York (UTC-5)\n- Sídney (UTC+10)",
+              "calculation": "Partido en Londres: 20:00 (UTC+0)\nMoscú: 23:00 (UTC+3) - tarde, conveniente\nNueva York: 15:00 (UTC-5) - día, conveniente\nSydney: 07:00 del día siguiente (UTC+10) - mañana, inconveniente\nRecomendación: Ten en cuenta que será temprano en la mañana en Sydney.",
+              "result": "Resultado: Transmisión a las 20:00 hora de Londres = 23:00 Moscú, 15:00 Nueva York, 07:00 Sydney (día siguiente)",
+              "type": "Medios y eventos",
+              "note": "Al planificar transmisiones, es importante considerar horarios convenientes para los espectadores en diferentes zonas horarias."
+            }
+          }
+        },
+        "features": {
+          "title": "Funciones de calculadora",
+          "realTime": "Tiempo real",
+          "realTimeDesc": "La hora exacta se actualiza cada segundo.",
+          "multipleCities": "Varias ciudades",
+          "multipleCitiesDesc": "Añade hasta 10 ciudades a la vez",
+          "timeZones": "Zonas horarias",
+          "timeZonesDesc": "Soporta todas las zonas horarias del mundo",
+          "search": "Buscar ciudades",
+          "searchDesc": "Búsqueda rápida por nombre de ciudad",
+          "dst": "horario de verano",
+          "dstDesc": "Contabilidad automática del horario de verano",
+          "mobile": "Versión móvil",
+          "mobileDesc": "Diseño totalmente responsivo"
+        },
+        "useCases": {
+          "title": "Casos de uso",
+          "business": "Negocios y trabajo",
+          "businessDesc": "Planificación de reuniones y llamadas internacionales.",
+          "business1": "Llamadas de conferencia",
+          "business2": "Programar reuniones",
+          "business3": "Trabajando con clientes",
+          "travel": "Viajes",
+          "travelDesc": "Planificación de viajes y adaptación a la hora local.",
+          "travel1": "Planificación de ruta",
+          "travel2": "Adaptación a la hora local",
+          "travel3": "Reservas de hotel",
+          "communication": "Comunicación",
+          "communicationDesc": "Conectarse con amigos y familiares en diferentes países.",
+          "communication1": "llamadas a familiares",
+          "communication2": "Mensajeros",
+          "communication3": "redes sociales",
+          "events": "Eventos",
+          "eventsDesc": "Planificación de participación en eventos internacionales.",
+          "events1": "conferencias en línea",
+          "events2": "Eventos deportivos",
+          "events3": "Eventos culturales"
+        },
+        "popularCities": {
+          "title": "Ciudades populares",
+          "Moscow": "Moscú",
+          "Russia": "Rusia",
+          "UTC+3": "UTC+3",
+          "London": "Londres",
+          "UK": "Gran Bretaña",
+          "UTC+0": "UTC+0",
+          "NewYork": "Nueva York",
+          "USA": "EE.UU",
+          "UTC-5": "UTC-5",
+          "Tokyo": "Tokio",
+          "Japan": "Japón",
+          "UTC+9": "UTC+9",
+          "Sydney": "Sídney",
+          "Australia": "Australia",
+          "UTC+10": "UTC+10",
+          "Paris": "París",
+          "France": "Francia",
+          "UTC+1": "UTC+1",
+          "Berlin": "Berlina",
+          "Germany": "Alemania",
+          "Beijing": "Pekín",
+          "China": "Porcelana",
+          "UTC+8": "UTC+8",
+          "Dubai": "Dubái",
+          "UAE": "Emiratos Árabes Unidos",
+          "UTC+4": "UTC+4",
+          "LosAngeles": "Los Ángeles",
+          "UTC-8": "UTC-8",
+          "Singapore": "Singapur",
+          "Mumbai": "Bombay",
+          "India": "India",
+          "UTC+5:30": "UTC+5:30"
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "tip1": "Agregar ciudades de uso frecuente",
+          "tip1Desc": "Crea tu lista de ciudades favoritas",
+          "tip2": "Considere el horario de verano",
+          "tip2Desc": "Consultar cambios de horario de verano",
+          "tip3": "utilizar la búsqueda",
+          "tip3Desc": "Encuentra rápidamente las ciudades que necesitas",
+          "tip4": "Planifique con anticipación",
+          "tip4Desc": "Tenga en cuenta las diferencias horarias al planificar"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Cómo agregar una ciudad?",
+              "a": "Busque por nombre de ciudad o seleccione una ciudad de la lista popular. Ingrese el nombre de la ciudad en el campo de búsqueda, seleccione la ciudad deseada de los resultados y se agregará automáticamente a la lista de ciudades mostradas."
+            },
+            {
+              "q": "¿Es posible eliminar una ciudad?",
+              "a": "Sí, haga clic en la cruz o en el botón eliminar junto al nombre de la ciudad y se eliminará de la lista. También puede utilizar la función correspondiente en la configuración."
+            },
+            {
+              "q": "¿La hora se actualiza automáticamente?",
+              "a": "Sí, la hora se actualiza cada segundo en tiempo real. Todas las ciudades muestran la hora actual teniendo en cuenta sus zonas horarias."
+            },
+            {
+              "q": "¿Se admite el horario de verano?",
+              "a": "Sí, el horario de verano (DST) se tiene en cuenta automáticamente. La calculadora ajusta automáticamente la hora al cambiar al horario de verano/invierno en cada ciudad."
+            },
+            {
+              "q": "¿Es posible guardar la configuración?",
+              "a": "Sí, las ciudades y configuraciones seleccionadas (formato de hora, visualización de fecha, etc.) se guardan en el almacenamiento local del navegador y se cargan automáticamente la próxima vez que lo visite."
+            },
+            {
+              "q": "¿Funciona en dispositivos móviles?",
+              "a": "Sí, la calculadora responde completamente a teléfonos inteligentes y tabletas. La interfaz se ajusta automáticamente al tamaño de la pantalla, lo que garantiza un uso cómodo en cualquier dispositivo."
+            },
+            {
+              "q": "¿Es posible comparar el tiempo en diferentes ciudades?",
+              "a": "Sí, todas las ciudades agregadas se muestran al mismo tiempo, lo que facilita comparar horas entre diferentes zonas horarias y ver la diferencia horaria."
+            },
+            {
+              "q": "¿Se muestra la hora con precisión?",
+              "a": "Sí, la hora está sincronizada con servidores de hora (NTP). La precisión suele ser muy alta y se actualiza cada segundo para garantizar que esté actualizada."
+            },
+            {
+              "q": "¿Es posible cambiar el formato de hora?",
+              "a": "Sí, se admiten los formatos de hora de 12 horas (AM/PM) y 24 horas. También puede configurar la visualización de segundos, fecha y día de la semana en la configuración de la calculadora."
+            },
+            {
+              "q": "¿Existen restricciones en el número de ciudades?",
+              "a": "Normalmente puedes agregar hasta 10 ciudades a la vez, lo cual es suficiente para la mayoría de los casos de uso. Esta limitación ayuda a preservar el rendimiento y la usabilidad de la interfaz."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para planificar reuniones internacionales?",
+              "a": "Agregue las ciudades de todos los participantes de la reunión y la calculadora mostrará la hora actual en cada ciudad. Esto le ayudará a encontrar el horario óptimo que sea conveniente para todos los participantes, teniendo en cuenta sus zonas horarias."
+            },
+            {
+              "q": "¿Puedo usar la calculadora para viajar?",
+              "a": "Sí, la calculadora es ideal para viajar. Añade ciudades en tu ruta para ver la hora local de tu destino y planifica adaptarte a una nueva zona horaria."
+            },
+            {
+              "q": "¿Cómo calcular la diferencia horaria entre ciudades?",
+              "a": "Añade ambas ciudades a la calculadora. La diferencia horaria será visible inmediatamente: la calculadora muestra la hora actual en cada ciudad y podrá ver fácilmente cuántas horas difiere la hora."
+            },
+            {
+              "q": "¿Se admiten todas las zonas horarias?",
+              "a": "Sí, la calculadora admite todas las zonas horarias mundiales, incluidas las zonas horarias estándar (UTC) y local de todos los países. Puedes encontrar tiempo en cualquier ciudad del mundo."
+            },
+            {
+              "q": "¿Puedo usar la calculadora sin conexión?",
+              "a": "Después de la primera descarga, las funciones básicas pueden funcionar localmente, pero la hora exacta requiere una conexión a Internet, ya que se utiliza la sincronización con servidores de hora exacta."
+            },
+            {
+              "q": "¿Cómo encontrar tiempo en un país específico?",
+              "a": "Ingrese el nombre de la capital o ciudad principal del país deseado en el campo de búsqueda. La calculadora encontrará la ciudad y mostrará su hora actual, indicando la zona horaria."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para trabajar con clientes en diferentes zonas horarias?",
+              "a": "Sí, agrega las ciudades donde se encuentran tus clientes y la calculadora mostrará su hora actual. Esto ayudará a determinar el horario óptimo para llamadas y reuniones, teniendo en cuenta el horario laboral de los clientes."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para programar llamadas?",
+              "a": "Agregue las ciudades de los participantes de la llamada y vea la hora actual en cada una. Elija un horario que sea conveniente para todos, teniendo en cuenta las diferencias de zona horaria y el horario comercial normal."
+            },
+            {
+              "q": "¿Es posible utilizar una calculadora para realizar un seguimiento del tiempo de trabajo de un equipo remoto?",
+              "a": "Sí, agrega las ciudades de todos los miembros del equipo. La calculadora mostrará la hora actual de cada ciudad, lo que ayudará a coordinar el trabajo y planificar las reuniones del equipo."
+            },
+            {
+              "q": "¿Cómo utilizar una calculadora para planificar eventos online?",
+              "a": "Agregue las ciudades de todos los participantes del evento en línea. La calculadora mostrará su hora actual, lo que le ayudará a elegir la hora de inicio óptima para el evento, conveniente para el número máximo de participantes."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para adaptarme a la hora local cuando vuelo?",
+              "a": "Sí, agregue su ciudad de salida y ciudad de destino. La calculadora mostrará la hora local de tu destino, lo que te ayudará a planificar tu sueño y adaptarte a una nueva zona horaria."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para determinar los tiempos de transmisión?",
+              "a": "Añade las ciudades de los espectadores y la ciudad donde se desarrolla el evento. La calculadora mostrará la hora del evento para los espectadores en diferentes zonas horarias, lo que ayudará a evaluar el horario conveniente para la transmisión."
+            },
+            {
+              "q": "¿Puedo utilizar la calculadora para planificar viajes de negocios?",
+              "a": "Sí, agregue ciudades en su itinerario de viaje. La calculadora mostrará la hora local de cada ciudad, lo que te ayudará a planificar reuniones, vuelos y adaptarte a la hora local."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para contactar con amigos y familiares en el extranjero?",
+              "a": "Agrega la ciudad donde viven tus amigos o familiares. La calculadora mostrará su hora actual, lo que les ayudará a elegir un horario conveniente para las llamadas y la comunicación."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para tener en cuenta los plazos en diferentes zonas horarias?",
+              "a": "Sí, agrega la ciudad donde está la fecha límite y la calculadora mostrará la hora local. Esto le ayudará a calcular con precisión el tiempo antes de la fecha límite, teniendo en cuenta la zona horaria."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para programar videoconferencias?",
+              "a": "Agregue las ciudades de todos los participantes de la videoconferencia. La calculadora mostrará su hora actual, lo que les ayudará a encontrar la hora óptima para la conferencia que sea conveniente para todos los participantes."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para realizar un seguimiento del tiempo en varias oficinas?",
+              "a": "Sí, agregue las ciudades de todas las oficinas de la empresa. La calculadora mostrará la hora actual en cada oficina simultáneamente, lo que ayudará a coordinar el trabajo entre oficinas."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para planificar vuelos?",
+              "a": "Añade la ciudad de salida y la ciudad de llegada. La calculadora mostrará la hora local de tu destino, lo que te ayudará a planificar tu salida y llegada teniendo en cuenta la diferencia horaria."
+            },
+            {
+              "q": "¿Puedo usar una calculadora para determinar el mejor momento para realizar llamadas internacionales?",
+              "a": "Sí, agregue las ciudades de los participantes de la llamada. La calculadora mostrará su hora actual, lo que le ayudará a encontrar los horarios en los que todos los participantes estén disponibles (por ejemplo, horario comercial en ambas ciudades)."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora para planificar el trabajo con autónomos en diferentes países?",
+              "a": "Añade las ciudades de todos los autónomos. La calculadora mostrará su hora actual, lo que ayudará a coordinar el trabajo, establecer plazos y planificar las comunicaciones teniendo en cuenta sus zonas horarias."
+            }
+          ]
+        }
+      }
+    },
+    "add-time": {
+      "seo": {
+        "howTo": {
+          "title": "Cómo agregar tiempo a una fecha",
+          "description": "Instrucciones paso a paso para usar la calculadora de suma de tiempo",
+          "steps": {}
+        }
+      }
+    },
+    "days-between": {
+      "seo": {
+        "howTo": {
+          "title": "Cómo calcular la diferencia entre fechas",
+          "description": "Instrucciones paso a paso para usar la calculadora de diferencia de fechas",
+          "steps": {}
+        }
+      }
+    }
+  }
 }
-
-
-

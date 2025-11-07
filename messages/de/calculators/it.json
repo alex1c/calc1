@@ -1,6 +1,1015 @@
 {
-	"calculators": {}
+  "calculators": {
+    "ipCalculator": {
+      "title": "IP-Adress- und Subnetzrechner - IP-Rechner",
+      "description": "Online-Rechner von IP-Adressen und Subnetzen für IPv4 und IPv6. Berechnen Sie das Netzwerk, die erste und letzte IP, CIDR und die Anzahl der Hosts. Unterstützung für die umgekehrte Bereichsberechnung.",
+      "breadcrumbs": {
+        "it": "ES",
+        "category": "ES"
+      },
+      "hero": {
+        "networks": "Netzwerke",
+        "accuracy": "Berechnungsgenauigkeit",
+        "format": "Datenformat"
+      },
+      "features": {
+        "ipv4Calculation": "IPv4-Berechnung",
+        "ipv6Calculation": "IPv6-Berechnung",
+        "cidrSupport": "CIDR-Unterstützung",
+        "reverseCalculation": "Umgekehrte Berechnung",
+        "accuracy": "Hohe Genauigkeit"
+      },
+      "form": {
+        "title": "Berechnung von IP und Subnetzen",
+        "description": "Berechnen Sie Netzwerkparameter, IP-Bereich und Anzahl der Hosts",
+        "ipAddress": "IP-Adresse/CIDR",
+        "ipAddressPlaceholder": "192.168.1.0/24 oder 2001:db8::/48",
+        "ipMask": "IP + Maske",
+        "ipMaskPlaceholder": "192.168.1.0 + 255.255.255.0",
+        "ipRange": "IP-Bereich",
+        "ipRangePlaceholder": "192.168.1.1 - 192.168.1.254",
+        "calculationType": "Berechnungstyp",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "calculationTypes": {
+          "cidr": "IP/CIDR",
+          "mask": "IP + Maske",
+          "range": "IP-Bereich"
+        },
+        "errors": {
+          "ipRequired": "Geben Sie die IP-Adresse ein",
+          "invalidIp": "Falsche IP-Adresse",
+          "invalidCidr": "Falsche CIDR",
+          "invalidMask": "Falsche Maske",
+          "invalidRange": "Ungültiger Bereich",
+          "ipv4Only": "Nur IPv4",
+          "ipv6Only": "Nur IPv6"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "ipType": "Geben Sie IP ein",
+        "networkAddress": "Netzwerkadresse",
+        "firstIp": "Erste IP",
+        "lastIp": "Letzte IP",
+        "broadcastAddress": "Broadcast-Adresse",
+        "subnetMask": "Maske erinnerte",
+        "cidr": "CIDR",
+        "hostsCount": "Anzahl der Hosts",
+        "hostRange": "Wirtsbereich",
+        "summary": "Ergebnisse",
+        "summaryText": "Ein {network}-Netzwerk mit {hosts} Hosts im Bereich {first} – {last}.",
+        "network": "Netto",
+        "specifications": "Eigenschaften",
+        "hosts": "Gastgeber",
+        "copy": "Kopie",
+        "copied": "Kopiert!",
+        "export": "Export",
+        "exportPdf": "PDF",
+        "exportExcel": "Excel"
+      },
+      "tips": {
+        "title": "Tipps zum Arbeiten mit IP und Subnetzen",
+        "content": "Die korrekte Berechnung von IP und Subnetzen gewährleistet die korrekte Netzwerkkonfiguration:",
+        "cidr": {
+          "title": "CIDR-Notation",
+          "description": "CIDR zeigt die Anzahl der Bits in der Subnetzmaske an",
+          "example": "Beispiel: /24 bedeutet Maske 255.255.255.0"
+        },
+        "ipv4": {
+          "title": "IPv4-Adresse",
+          "private": "Privat: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16",
+          "public": "Öffentlich: alle anderen",
+          "description": "IPv4 verwendet 32-Bit-Adressen"
+        },
+        "ipv6": {
+          "title": "IPv6-Adresse",
+          "private": "Lokal: fe80::/10, fc00::/7",
+          "public": "Global: 2000::/3",
+          "description": "IPv6 verwendet 128-Bit-Adressen"
+        },
+        "subnets": {
+          "title": "Erinnern",
+          "calculation": "Reflektiert: 2^(32-CIDR) – 2 Medikamente",
+          "description": "Berücksichtigen Sie Netzwerk- und Broadcast-Adressen"
+        }
+      },
+      "seo": {
+        "title": "Online-IP- und Subnetzrechner – CIDR / IPv4 / IPv6",
+        "description": "Mit dem IP-Adress- und Subnetzrechner können Sie Netzwerk, erste/letzte IP, Maske, CIDR und Anzahl der Hosts für IPv4 und IPv6 berechnen. Unterstützung für die umgekehrte Bereichsberechnung in CIDR.",
+        "keywords": "IP-Rechner, CIDR online, IPv4 IPv6-Subnetz, Hostanzahl, IP-Bereich, IP-Maske, IT-Rechner, Netzwerkrechner, Subnetzrechner, IP-Adressrechner, Subnetzmaske, Broadcast-Adresse, erste IP, letzte IP, Anzahl der Hosts, IP-Bereich, Netzwerkadresse, Subnetzberechnung, IP-Bereichsrechner, CIDR-Rechner, IPv4-Rechner, IPv6-Rechner, Netzwerktechniker, Systemadministrator, IT-Spezialist, Netzwerkadministration, IP-Adressierung, Subnetzberechnung, Netzwerktechnologien, Computernetzwerke, TCP/IP, Internet Protokolle",
+        "overview": {
+          "title": "Über den IP- und Subnetzrechner",
+          "content": "Online-Rechner von IP-Adressen und Subnetzen für IPv4 und IPv6. Berechnen Sie das Netzwerk, die erste und letzte IP, CIDR und die Anzahl der Hosts. Unterstützung für die umgekehrte Bereichsberechnung. Alle Netzwerkadressierungsparameter werden berücksichtigt.",
+          "examples": {
+            "title": "Beispiele für die Verwendung des Taschenrechners",
+            "cidrExample": {
+              "title": "Subnetzberechnung mit CIDR",
+              "scenario": "Beispielsweise müssen die Parameter des Netzwerks 192.168.1.0/24 berechnet werden",
+              "calculation": "Der Rechner ermittelt: Subnetzmaske 255.255.255.0, Anzahl der Hosts 254, erste IP 192.168.1.1, letzte IP 192.168.1.254, Broadcast-Adresse 192.168.1.255",
+              "result": "Das Netzwerk kann 254 Hosts mit Adressen von 192.168.1.1 bis 192.168.1.254 enthalten"
+            },
+            "subnetExample": {
+              "title": "Subnetzbildung",
+              "scenario": "Beispielsweise müssen Sie das Netzwerk 10.0.0.0/16 in 4 Subnetze aufteilen",
+              "calculation": "Der Rechner erstellt Subnetze: 10.0.0.0/18, 10.0.64.0/18, 10.0.128.0/18, 10.0.192.0/18",
+              "result": "Jedes Subnetz kann bis zu 16.382 Hosts enthalten"
+            },
+            "rangeExample": {
+              "title": "Umgekehrte Reichweitenberechnung",
+              "scenario": "Beispielsweise müssen Sie das CIDR für den Bereich von 172.16.0.1 bis 172.16.255.254 ermitteln",
+              "calculation": "Der Rechner ermittelt: Netzwerk 172.16.0.0/16, Maske 255.255.0.0, Anzahl der Hosts 65.534",
+              "result": "Der Bereich entspricht dem Netzwerk 172.16.0.0/16"
+            },
+            "ipv6Example": {
+              "title": "Arbeiten mit IPv6",
+              "scenario": "Beispielsweise müssen Sie das Subnetz 2001:db8::/64 berechnen",
+              "calculation": "Der Rechner ermittelt: Präfix 2001:db8::, Präfixlänge 64, Anzahl der Adressen 2^64",
+              "result": "Ein Subnetz kann 18.446.744.073.709.551.616 Adressen enthalten"
+            },
+            "networkExample": {
+              "title": "Bestimmen von Netzwerkparametern",
+              "scenario": "Beispielsweise müssen Sie Netzwerkparameter für IP 203.0.113.42/28 definieren",
+              "calculation": "Der Rechner ermittelt: Netzwerk 203.0.113.32, Maske 255.255.255.240, erste IP 203.0.113.33, letzte IP 203.0.113.46, Broadcast 203.0.113.47",
+              "result": "Das Netzwerk enthält 14 Hosts mit Adressen von 203.0.113.33 bis 203.0.113.46"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie IP und Subnetze berechnet werden",
+          "content": "Der Rechner verwendet Standardformeln zur Netzwerkberechnung:",
+          "network": "Netzwerkadresse: IP & Maske",
+          "hosts": "Anzahl der Hosts: 2^(32-CIDR) - 2",
+          "range": "Bereich: Netzwerk + 1 bis Broadcast - 1"
+        },
+        "features": {
+          "title": "Grundfunktionen",
+          "ipv4": "Berechnung von IPv4-Netzwerken",
+          "ipv4Desc": "Vollständige Berechnung der IPv4-Subnetzparameter",
+          "ipv6": "Berechnung von IPv6-Netzwerken",
+          "ipv6Desc": "Unterstützung für moderne IPv6-Adressen",
+          "cidr": "CIDR-Notation",
+          "cidrDesc": "Arbeiten mit der CIDR-Notation für genaue Berechnungen",
+          "reverse": "Umgekehrte Berechnung",
+          "reverseDesc": "Bestimmen von CIDR anhand des IP-Bereichs",
+          "visualization": "Vorschau",
+          "visualizationDesc": "Grafische Darstellung eines Subnetzes",
+          "export": "Ergebnisse exportieren",
+          "exportDesc": "Ergebnisse im PDF oder Excel speichern",
+          "validation": "Validierungsprüfung",
+          "validationDesc": "Automatische Überprüfung von IP-Adressen"
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "content": "Unser IP-Rechner bietet viele Vorteile für Netzwerkberechnungen.",
+          "accurate": "Genaue Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Netzwerkadressierungsstandards",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützt verschiedene Eingabeformate",
+          "comprehensive": "Vollständige Analyse",
+          "comprehensiveDesc": "Berücksichtigung aller Netzwerkadressierungsparameter",
+          "export": "Daten exportieren",
+          "exportDesc": "Möglichkeit, Ergebnisse in PDF oder Excel zu speichern"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man ein Subnetz nach IP und Maske?",
+              "a": "Netzwerkadresse = IP und Maske, Anzahl der Hosts = 2^(32-CIDR) – 2."
+            },
+            {
+              "q": "Was ist CIDR und wie wird es verwendet?",
+              "a": "CIDR zeigt die Anzahl der Bits in der Subnetzmaske an, zum Beispiel bedeutet /24 255.255.255.0."
+            },
+            {
+              "q": "Wie ermittelt man die erste und letzte IP im Netzwerk?",
+              "a": "Erste IP = Netzwerkadresse + 1, letzte IP = Broadcast-Adresse - 1."
+            },
+            {
+              "q": "Wie berechnet man die Anzahl der verfügbaren Hosts?",
+              "a": "Anzahl der Hosts = 2^(32-CIDR) – 2 für IPv4, 2^(128-CIDR) für IPv6."
+            },
+            {
+              "q": "Kann dieser Rechner für IPv6 verwendet werden?",
+              "a": "Ja, der Rechner unterstützt sowohl IPv4- als auch IPv6-Adressen."
+            },
+            {
+              "q": "Wie kann ich eine umgekehrte Berechnung aus einem Bereich in CIDR durchführen?",
+              "a": "Der Rechner ermittelt automatisch den minimalen CIDR für einen bestimmten IP-Bereich."
+            },
+            {
+              "q": "Wie finde ich die Sendeadresse heraus?",
+              "a": "Broadcast-Adresse = Netzwerkadresse + (2^(32-CIDR) – 1)."
+            },
+            {
+              "q": "Wie konvertiere ich eine Subnetzmaske in CIDR?",
+              "a": "CIDR = Anzahl der Einsen in der Subnetzmaske in binärer Schreibweise."
+            },
+            {
+              "q": "Wie überprüfe ich, ob die IP-Adresse korrekt ist?",
+              "a": "Der Rechner überprüft automatisch das Format und den Bereich der IP-Adressen."
+            },
+            {
+              "q": "Wie berechnet man das Subnetz für mehrere IP-Bereiche?",
+              "a": "Verwenden Sie eine Rückrechnung, um den Gesamt-CIDR für den Bereich zu ermitteln."
+            },
+            {
+              "q": "Ist der Rechner für die Ausbildung von Netzwerktechnikern geeignet?",
+              "a": "Ja, der Rechner eignet sich hervorragend zum Erlernen der Netzwerkadressierung und Subnetzbildung."
+            },
+            {
+              "q": "Kann der Rechner zum Entwerfen lokaler Netzwerke verwendet werden?",
+              "a": "Ja, der Rechner hilft Ihnen beim Entwurf der optimalen Subnetzstruktur."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für eine Serverfarm?",
+              "a": "Bestimmen Sie die Anzahl der Server und wählen Sie das entsprechende CIDR für das Subnetz aus."
+            },
+            {
+              "q": "Was sind private IP-Adressen?",
+              "a": "Private Adressen: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 für interne Netzwerke."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für ein Büro?",
+              "a": "Berücksichtigen Sie bei der Auswahl eines CIDR die Anzahl der Geräte und das geplante Netzwerkwachstum."
+            },
+            {
+              "q": "Kann der Rechner für IPv6 verwendet werden?",
+              "a": "Ja, der Rechner unterstützt IPv6-Adressen und -Berechnungen vollständig."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für ein Rechenzentrum?",
+              "a": "Verwenden Sie große Subnetze mit niedrigem CIDR, um viele Server zu hosten."
+            },
+            {
+              "q": "Was ist eine Broadcast-Adresse?",
+              "a": "Die Adresse zum Senden von Paketen an alle Hosts im Subnetz, normalerweise die letzte Adresse."
+            },
+            {
+              "q": "Wie berechnet man das Subnetz für Ihr Heimnetzwerk?",
+              "a": "Verwenden Sie 192.168.0.0/24 oder 192.168.1.0/24 für ein typisches Heimnetzwerk."
+            },
+            {
+              "q": "Kann ich einen VPN-Rechner verwenden?",
+              "a": "Ja, der Rechner hilft Ihnen bei der Konfiguration von Subnetzen für VPN-Verbindungen."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für Cloud-Dienste?",
+              "a": "Berücksichtigen Sie die Anforderungen und den geplanten Umfang des Cloud-Anbieters."
+            },
+            {
+              "q": "Was ist eine Subnetzmaske?",
+              "a": "Eine 32-Bit-Zahl, die bestimmt, welcher Teil der IP-Adresse zum Netzwerk gehört."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für IoT-Geräte?",
+              "a": "Verwenden Sie große Subnetze, um mehrere IoT-Geräte zu hosten."
+            },
+            {
+              "q": "Kann ich aus Sicherheitsgründen einen Taschenrechner verwenden?",
+              "a": "Ja, die korrekte Konfiguration von Subnetzen ist wichtig für die Netzwerksicherheit."
+            },
+            {
+              "q": "Wie berechnet man das Subnetz für mobile Geräte?",
+              "a": "Erwägen Sie die dynamische Zuweisung von IP-Adressen und DHCP."
+            },
+            {
+              "q": "Was ist eine Netzwerkadresse?",
+              "a": "Die erste Adresse im Subnetz wird zur Identifizierung des Netzwerks selbst verwendet."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für Industrienetzwerke?",
+              "a": "Berücksichtigen Sie die Zuverlässigkeits- und Isolationsanforderungen industrieller Systeme."
+            },
+            {
+              "q": "Kann der Rechner für IPv6 verwendet werden?",
+              "a": "Ja, der Rechner unterstützt alle modernen IPv6-Funktionen."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für Bildungseinrichtungen?",
+              "a": "Planen Sie Subnetze nach Abteilung und Gerätetyp."
+            },
+            {
+              "q": "Was ist ein Subnetz?",
+              "a": "Logische Aufteilung des Netzwerks in kleinere Segmente zur Verwaltung des Datenverkehrs."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für Banken?",
+              "a": "Berücksichtigen Sie die Sicherheits- und Isolationsanforderungen von Finanzsystemen."
+            },
+            {
+              "q": "Kann der Rechner für IPv6 verwendet werden?",
+              "a": "Ja, der Rechner ist vollständig mit den IPv6-Standards kompatibel."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für Regierungsbehörden?",
+              "a": "Befolgen Sie die Anforderungen und Standards der Informationssicherheit."
+            }
+          ]
+        }
+      }
+    },
+    "hashrate": {
+      "title": "Hashrate-Rechner für das Mining – Berechnung der Rentabilität von Kryptowährungen",
+      "description": "Online-Hashrate-Rechner für das Kryptowährungs-Mining. Berechnen Sie Rentabilität, Gewinn, Blockzeit und Geräteamortisation. Unterstützung für verschiedene Mining-Algorithmen (SHA-256, Ethash, Scrypt usw.).",
+      "breadcrumbs": {
+        "it": "ES",
+        "category": "ES"
+      },
+      "hero": {
+        "algorithms": "Algorithmen",
+        "accuracy": "Berechnungsgenauigkeit",
+        "profitability": "Rentabilität"
+      },
+      "form": {
+        "title": "Berechnung der Bergbaurentabilität",
+        "description": "Berechnen Sie die Mining-Rentabilität unter Berücksichtigung von Hashrate, Netzwerkkomplexität und Energiekosten",
+        "hashrate": "Hashrate",
+        "hashratePlaceholder": "100 (TH/s, GH/s, MH/s usw.)",
+        "hashrateUnit": "Hashrate-Einheit",
+        "networkDifficulty": "Netzwerkkomplexität",
+        "networkDifficultyPlaceholder": "Automatisch oder manuell eingeben",
+        "blockReward": "Belohnung blockieren",
+        "blockRewardPlaceholder": "Zum Beispiel: 6,25 (BTC) oder 2 (ETH)",
+        "blockTime": "Blockzeit (Sekunden)",
+        "blockTimePlaceholder": "Automatisch oder manuell eingeben",
+        "powerConsumption": "Stromverbrauch (W)",
+        "powerConsumptionPlaceholder": "Beispiel: 3500",
+        "electricityCost": "Stromkosten (₽/kWh)",
+        "electricityCostPlaceholder": "Zum Beispiel: 4.5",
+        "poolFee": "Poolprovision (%)",
+        "poolFeePlaceholder": "Zum Beispiel: 1",
+        "cryptocurrency": "Kryptowährung",
+        "algorithm": "Algorithmus",
+        "calculate": "Berechnen",
+        "calculating": "Berechnung...",
+        "reset": "Zurücksetzen",
+        "hashrateUnits": {
+          "h": "H/s (Hashes pro Sekunde)",
+          "kh": "KH/s (Kilohashes pro Sekunde)",
+          "mh": "MH/s (Megahashes pro Sekunde)",
+          "gh": "GH/s (Gigahashes pro Sekunde)",
+          "th": "TH/s (Terahashes pro Sekunde)",
+          "ph": "PH/s (Petahashes pro Sekunde)"
+        },
+        "cryptocurrencies": {
+          "btc": "Bitcoin (BTC)",
+          "eth": "Ethereum (ETH)",
+          "ltc": "Litecoin (LTC)",
+          "bch": "Bitcoin Cash (BCH)",
+          "dash": "Strich (DASH)",
+          "zec": "Zcash (ZEC)",
+          "custom": "Andere (manuell eingestellt)"
+        },
+        "errors": {
+          "title": "Datenfehler",
+          "hashrateRequired": "Geben Sie die Hashrate ein",
+          "invalidHashrate": "Falsche Hashrate",
+          "networkDifficultyRequired": "Geben Sie die Netzwerkkomplexität ein",
+          "invalidNetworkDifficulty": "Falsche Netzwerkkomplexität",
+          "blockRewardRequired": "Blockbelohnung eingeben",
+          "invalidBlockReward": "Falsche Blockbelohnung",
+          "blockTimeRequired": "Geben Sie die Blockzeit ein",
+          "invalidBlockTime": "Ungültige Blockzeit",
+          "powerConsumptionRequired": "Geben Sie den Energieverbrauch ein",
+          "invalidPowerConsumption": "Falscher Energieverbrauch",
+          "electricityCostRequired": "Geben Sie die Stromkosten ein",
+          "invalidElectricityCost": "Falsche Stromkosten",
+          "poolFeeInvalid": "Die Poolprovision sollte zwischen 0 und 100 % liegen"
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnisse",
+        "dailyRevenue": "Einkommen pro Tag",
+        "monthlyRevenue": "Einkommen pro Monat",
+        "yearlyRevenue": "Einkommen pro Jahr",
+        "dailyProfit": "Gewinn pro Tag",
+        "monthlyProfit": "Gewinn pro Monat",
+        "yearlyProfit": "Gewinn pro Jahr",
+        "electricityCost": "Energiekosten",
+        "dailyElectricity": "pro Tag",
+        "monthlyElectricity": "Pro Monat",
+        "yearlyElectricity": "Pro Jahr",
+        "blockTime": "Verweilzeit blockieren",
+        "blocksPerDay": "Blöcke pro Tag",
+        "blocksPerMonth": "Blöcke pro Monat",
+        "profitability": "Rentabilität",
+        "profitable": "Profitabel",
+        "unprofitable": "Unrentabel",
+        "breakeven": "Die Gewinnzone erreichen",
+        "roi": "Rückzahlung",
+        "roiDays": "Tage bis zur Amortisation",
+        "hashratePerCoin": "Hashrate pro Münze",
+        "copy": "Kopie",
+        "copied": "Kopiert!",
+        "placeholder": "Geben Sie die Mining-Parameter ein und klicken Sie auf „Berechnen“.",
+        "summary": "Ergebnisse",
+        "summaryText": "Einkommen: {revenue} pro Tag, Gewinn: {profit} pro Tag, Payback: {roi} Tage."
+      },
+      "tips": {
+        "title": "Tipps zur Berechnung der Hashrate",
+        "content": "Um die Rentabilität des Bergbaus genau zu berechnen, berücksichtigen Sie die folgenden Faktoren:",
+        "hashrate": {
+          "title": "Geräte-Hashrate",
+          "description": "Hashrate zeigt die Leistung Ihrer Hardware. Geben Sie die tatsächliche Hashrate Ihres Miners an.",
+          "example": "Beispiel: Antminer S19 Pro hat eine Hashrate von 110 TH/s"
+        },
+        "difficulty": {
+          "title": "Netzwerkkomplexität",
+          "description": "Die Netzwerkkomplexität verändert sich ständig. Nutzen Sie aktuelle Daten aus Pools oder Blockchain-Explorern.",
+          "example": "Beispiel: Der Schwierigkeitsgrad des Bitcoin-Netzwerks kann sich alle 2016 Blöcke ändern"
+        },
+        "electricity": {
+          "title": "Energiekosten",
+          "description": "Berücksichtigen Sie die tatsächlichen Stromkosten in Ihrer Region, um Ihre Rentabilität genau zu berechnen.",
+          "example": "Beispiel: Bei Kosten von 4,5 ₽/kWh und einem Verbrauch von 3500 W betragen die Kosten ~378 ₽/Tag"
+        },
+        "profitability": {
+          "title": "Rentabilität des Bergbaus",
+          "description": "Die Rentabilität hängt vom Kryptowährungskurs, der Netzwerkkomplexität und den Stromkosten ab. Regelmäßig neu berechnen.",
+          "example": "Beispiel: Mining kann bei geringem Schwierigkeitsgrad und hohem Kryptowährungswert profitabel sein"
+        }
+      },
+      "seo": {
+        "title": "Hashrate-Rechner für das Mining – Berechnung der Rentabilität von Kryptowährungen online | Calc1.ru",
+        "description": "Online-Hashrate-Rechner für das Kryptowährungs-Mining. Berechnen Sie die Rentabilität des Minings von Bitcoin, Ethereum, Litecoin und anderen Kryptowährungen unter Berücksichtigung von Hashrate, Netzwerkkomplexität, Stromkosten und Poolgebühren. Berechnung von Gewinn, Geräterückzahlung und Blockzeit.",
+        "keywords": "Hashrate-Rechner, Mining-Berechnung, Mining-Rentabilität, Mining-Rechner, Mining-Rentabilität, Kryptowährungs-Rentabilitätsberechnung, Bitcoin-Mining-Rechner, Ethereum-Mining-Rechner, Hashrate-Rechner, Netzwerkschwierigkeit, Blockbelohnung, Blockzeit, Mining-Amortisation, Mining-Kosten, Strom-Mining, Poolprovision, Mining-Gewinn, Kryptowährungs-Mining, Online-Mining-Rechner, Bitcoin-Mining-Berechnung, Ethereum-Mining-Berechnung, SHA-256-Mining, Ethash-Mining, Scrypt-Mining, Mining-Ausrüstung, ASIC-Mining, GPU-Mining, Mining-Farm, Bitcoin-Mining-Rentabilität, Rentabilität des Ethereum-Minings, Mining Rentabilität, ROI-Mining, Mining-Rentabilität, Kryptowährungs-Mining-Rechner, Hashrate-Rechner, Mining-Rentabilitätsrechner, Bitcoin-Mining-Rechner, Ethereum-Mining-Rechner, Mining-ROI-Rechner",
+        "overview": {
+          "title": "Über den Hashrate-Rechner für das Mining",
+          "content": "Mit einem Online-Hashrate-Rechner für das Kryptowährungs-Mining können Sie die Mining-Rentabilität unter Berücksichtigung der Hashrate der Ausrüstung, der Netzwerkkomplexität, der Blockbelohnung, der Stromkosten und der Poolprovision berechnen. Der Rechner unterstützt verschiedene Kryptowährungen und Mining-Algorithmen: Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) und andere.",
+          "additionalContent": "Der Rechner berechnet: Mining-Rentabilität (Einkommen pro Tag/Monat/Jahr), Nettogewinn unter Berücksichtigung der Energiekosten, Blockzeit, Anzahl der Blöcke pro Periode, Anlagenrendite (ROI), Mining-Rentabilität (rentabel/unrentabel). Alle Berechnungen werden unter Berücksichtigung aktueller Netzwerkparameter durchgeführt und ermöglichen es uns, die Rentabilität des Bergbaus für die Planung von Investitionen in Bergbauausrüstung vorherzusagen.",
+          "calculationExamples": [
+            {
+              "title": "Berechnung der Rentabilität des Bitcoin-Minings",
+              "description": "Berechnungsbeispiel für Bitcoin-Mining mit einem ASIC-Miner",
+              "input": "Hashrate: 100 TH/s, Netzwerkkomplexität: 67.607.408.984.302, Block: 6,25 BTC, Zeit: 600 Sek., Leistung: 3250 W, Strom: 4,5 ₽/kWh, Poolprovision: 1 %",
+              "calculation": "Einkommen pro Tag = (100 TH/s / 67.607.408.984.302) * 6,25 BTC * 144 Blöcke/Tag = 0,001326 BTC/Tag. Kosten = 3,25 kW * 24 Stunden * 4,5 ₽ = 351 ₽/Tag. Gewinn = Einnahmen – Kosten – Poolprovision.",
+              "result": "Einkommen: 0,001326 BTC/Tag (~13.260 ₽ zum Kurs von 10.000.000 ₽/BTC), Kosten: 351 ₽/Tag, Gewinn: ~12.909 ₽/Tag (profitabel)",
+              "type": "Bitcoin"
+            },
+            {
+              "title": "Berechnung der Rentabilität des Ethereum-Minings",
+              "description": "Berechnungsbeispiel für Ethereum-Mining mit GPU",
+              "input": "Hashrate: 500 MH/s, Netzwerkkomplexität: 13.894.987.442.494.052, Block: 2 ETH, Zeit: 12 Sek., Leistung: 300 W, Strom: 5 ₽/kWh, Poolprovision: 1 %",
+              "calculation": "Einkommen pro Tag = (500 MH/s / 13.894.987.442.494.052) * 2 ETH * 7200 Blöcke/Tag = 0,000518 ETH/Tag. Kosten = 0,3 kW * 24 Stunden * 5 ₽ = 36 ₽/Tag. Gewinn = Einnahmen – Kosten – Poolprovision.",
+              "result": "Einkommen: 0,000518 ETH/Tag (~518 ₽ zum Kurs von 1.000.000 ₽/ETH), Kosten: 36 ₽/Tag, Gewinn: ~477 ₽/Tag (profitabel)",
+              "type": "Ethereum"
+            },
+            {
+              "title": "Berechnung der Amortisation einer Mining-Farm",
+              "description": "Ein Beispiel für die Berechnung der Amortisation der Ausrüstung einer Mining-Farm",
+              "input": "Ausrüstungskosten: 500.000 ₽, Hashrate: 200 TH/s, Nettogewinn: 25.000 ₽/Tag",
+              "calculation": "Amortisation = Ausrüstungskosten / Nettogewinn pro Tag = 500.000 ₽ / 25.000 ₽/Tag = 20 Tage",
+              "result": "Amortisation der Ausrüstung: 20 Tage. Bei stabiler Rentabilität amortisiert sich die Ausrüstung bereits nach 20 Tagen Mining.",
+              "type": "roi"
+            },
+            {
+              "title": "Berechnung der Blockzeit",
+              "description": "Ein Beispiel für die Berechnung der Zeit, die benötigt wird, um einen Block für eine bestimmte Hashrate zu finden",
+              "input": "Hashrate: 50 TH/s, Netzwerkkomplexität: 67.607.408.984.302",
+              "calculation": "Blockzeit = Netzwerkschwierigkeit / Hashrate = 67.607.408.984.302 / 50 TH/s = 1.352.148.179.686 Sekunden = ~42.839 Jahre",
+              "result": "Blockverweildauer: ~42.839 Jahre (bei alleiniger Arbeit). In einem Pool hängt die Wahrscheinlichkeit, einen Block zu finden, vom Anteil an der gesamten Hashrate des Pools ab.",
+              "type": "Blockzeit"
+            },
+            {
+              "title": "Berechnung der Rentabilität unter Berücksichtigung der Poolprovision",
+              "description": "Ein Beispiel für die Berechnung der Rentabilität unter Berücksichtigung der Mining-Pool-Provision",
+              "input": "Einnahmen: 10.000 ₽/Tag, Kosten: 500 ₽/Tag, Poolprovision: 2 %",
+              "calculation": "Nettoeinkommen = 10.000 ₽ * (1 - 0,02) = 9.800 ₽. Nettogewinn = 9.800 ₽ - 500 ₽ = 9.300 ₽/Tag",
+              "result": "Nettoeinkommen: 9.800 ₽/Tag (nach Poolprovision 2 %), Nettogewinn: 9.300 ₽/Tag (profitabel)",
+              "type": "Poolgebühr"
+            },
+            {
+              "title": "Berechnung des unrentablen Bergbaus",
+              "description": "Berechnungsbeispiel, wenn der Bergbau unrentabel wird",
+              "input": "Einnahmen: 500 ₽/Tag, Kosten: 800 ₽/Tag, Poolprovision: 1 %",
+              "calculation": "Nettoeinkommen = 500 ₽ * (1 - 0,01) = 495 ₽. Nettogewinn = 495 ₽ - 800 ₽ = -305 ₽/Tag (Verlust)",
+              "result": "Nettoeinkommen: 495 ₽/Tag, Nettogewinn: -305 ₽/Tag (unrentabel). Aufgrund der hohen Energiekosten ist der Bergbau unrentabel.",
+              "type": "unrentabel"
+            }
+          ]
+        },
+        "calculation": {
+          "title": "Wie wird die Rentabilität des Bergbaus berechnet?",
+          "content": "Der Rechner verwendet Standardformeln zur Berechnung der Bergbaurentabilität:",
+          "revenue": "Umsatz = (Hashrate / Netzwerkschwierigkeit) * Belohnung pro Block * Blöcke pro Periode",
+          "blocksPerPeriod": "Blöcke pro Periode = (Periode in Sekunden) / Blockzeit",
+          "electricityCost": "Stromkosten = (Verbrauch in kW) * 24 Stunden * Kosten pro kWh",
+          "profit": "Gewinn = Einkommen * (1 – Poolprovision%) – Stromkosten",
+          "roi": "Amortisation = Ausrüstungskosten / Nettogewinn pro Tag"
+        },
+        "features": {
+          "title": "Grundfunktionen",
+          "multipleAlgorithms": "Viele Algorithmen",
+          "multipleAlgorithmsDesc": "Unterstützt SHA-256, Ethash, Scrypt und andere Mining-Algorithmen",
+          "profitability": "Rentabilitätsberechnung",
+          "profitabilityDesc": "Berechnung des Nettogewinns unter Berücksichtigung aller Kosten",
+          "roi": "Amortisationsberechnung",
+          "roiDesc": "Berechnung der Amortisationszeit der Ausrüstung",
+          "electricity": "Strommessung",
+          "electricityDesc": "Berechnung der Stromkosten",
+          "poolFee": "Abrechnung der Poolprovisionen",
+          "poolFeeDesc": "Berechnung der Rentabilität unter Berücksichtigung der Mining-Pool-Provision",
+          "blockTime": "Berechnung der Blockzeit",
+          "blockTimeDesc": "Berechnen der Zeit, die benötigt wird, um einen Block für eine bestimmte Hashrate zu finden"
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "content": "Unser Hashrate-Rechner bietet Minern viele Vorteile:",
+          "accurate": "Genaue Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Formeln zur Berechnung der Bergbaurentabilität",
+          "comprehensive": "Vollständige Analyse",
+          "comprehensiveDesc": "Unter Berücksichtigung aller Faktoren: Hashrate, Schwierigkeitsgrad, Kosten, Provisionen",
+          "flexible": "Flexible Einstellungen",
+          "flexibleDesc": "Unterstützung für verschiedene Kryptowährungen und Algorithmen",
+          "profitability": "Rentabilitätsanalyse",
+          "profitabilityDesc": "Bestimmung der Rentabilität oder Unrentabilität des Bergbaus"
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Befolgen Sie für maximale Berechnungsgenauigkeit die folgenden Tipps:",
+          "tip1": "Nutzen Sie aktuelle Netzwerkschwierigkeitsdaten von Blockchain-Explorern oder Mining-Pools.",
+          "tip2": "Berücksichtigen Sie die tatsächlichen Stromkosten in Ihrer Region, um Ihre Rentabilität genau zu berechnen.",
+          "tip3": "Berechnen Sie Ihre Rentabilität regelmäßig neu, da sich die Komplexität des Netzwerks und der Wechselkurs der Kryptowährungen ständig ändern.",
+          "tip4": "Berücksichtigen Sie die Mining-Pool-Provision bei der Berechnung Ihres Netto-Mining-Gewinns."
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Was ist Hashrate im Mining?",
+              "a": "Hashrate ist eine Kennzahl für die Leistung der Mining-Hardware, die die Anzahl der Hash-Vorgänge misst, die die Hardware pro Sekunde ausführen kann. Gemessen in H/s, KH/s, MH/s, GH/s, TH/s, PH/s."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität des Bergbaus?",
+              "a": "Rentabilität = (Ihre Hashrate / Netzwerkschwierigkeit) * Blockbelohnung * Anzahl der Blöcke pro Periode. Die Rentabilität hängt von der Hashrate der Ausrüstung, der Komplexität des Netzwerks und der Blockbelohnung ab."
+            },
+            {
+              "q": "Was ist Netzwerkkomplexität?",
+              "a": "Die Netzwerkschwierigkeit ist ein Blockchain-Parameter, der bestimmt, wie schwierig es ist, einen neuen Block zu finden. Der Schwierigkeitsgrad ändert sich ständig abhängig von der Gesamtrechenleistung des Netzwerks."
+            },
+            {
+              "q": "Wie berechnet man den Nettogewinn aus dem Bergbau?",
+              "a": "Nettogewinn = Einkommen * (1 - Poolprovision%) - Stromkosten. Stromkosten = (Verbrauch in kW) * 24 Stunden * Kosten pro kWh."
+            },
+            {
+              "q": "Wie berechnet man die Amortisation von Bergbaumaschinen?",
+              "a": "Amortisation = Ausrüstungskosten / Nettogewinn pro Tag. Das Ergebnis zeigt die Anzahl der Tage, die zur Bezahlung der Ausrüstung benötigt werden."
+            },
+            {
+              "q": "Was ist Blockzeit?",
+              "a": "Die Blockzeit ist die durchschnittliche Zeit zwischen zwei aufeinanderfolgenden Blöcken in der Blockchain. Bei Bitcoin sind es ~10 Minuten, bei Ethereum ~12 Sekunden."
+            },
+            {
+              "q": "Wie ist die Mining-Pool-Provision zu berücksichtigen?",
+              "a": "Die Poolgebühr wird von den Mining-Einnahmen abgezogen. Bei einem Einkommen von 1000 ₽/Tag und einer Provision von 1 % beträgt das Nettoeinkommen beispielsweise 990 ₽/Tag."
+            },
+            {
+              "q": "Ist es möglich, Renditen für verschiedene Kryptowährungen zu berechnen?",
+              "a": "Ja, der Rechner unterstützt verschiedene Kryptowährungen: Bitcoin, Ethereum, Litecoin und andere. Jede Kryptowährung hat ihre eigenen Parameter (Algorithmus, Schwierigkeit, Blockbelohnung)."
+            },
+            {
+              "q": "Wie oft sollte die Rentabilität des Bergbaus neu berechnet werden?",
+              "a": "Es empfiehlt sich, die Rentabilität regelmäßig neu zu berechnen, da sich die Komplexität des Netzwerks, der Wechselkurs der Kryptowährungen und die Stromkosten ständig ändern. Mindestens einmal pro Woche."
+            },
+            {
+              "q": "Was tun, wenn der Bergbau unrentabel ist?",
+              "a": "Wenn das Mining unrentabel ist, sollten Sie Folgendes in Betracht ziehen: Senkung der Energiekosten, Umstellung auf effizientere Geräte, Umstellung der Kryptowährung auf Mining oder vorübergehende Einstellung des Minings, bis sich die Bedingungen verbessern."
+            },
+            {
+              "q": "Welche Hashrate wird für profitables Mining benötigt?",
+              "a": "Die erforderliche Hashrate hängt von der Komplexität des Netzwerks, dem Wert der Kryptowährung und den Energiekosten ab. Verwenden Sie den Rechner, um die minimale Hashrate für die Rentabilität zu berechnen."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen SHA-256, Ethash und Scrypt?",
+              "a": "SHA-256 ist ein Algorithmus für Bitcoin (ASIC-Mining), Ethash ist ein Algorithmus für Ethereum (GPU-Mining), Scrypt ist ein Algorithmus für Litecoin (ASIC/GPU-Mining). Jeder Algorithmus erfordert unterschiedliche Hardware."
+            },
+            {
+              "q": "Wie berechnet man die Anzahl der Blöcke pro Tag?",
+              "a": "Anzahl der Blöcke pro Tag = (24 Stunden * 3600 Sekunden) / Blockzeit. Für Bitcoin (Blockzeit ~600 Sekunden) sind das ~144 Blöcke pro Tag."
+            },
+            {
+              "q": "Was ist die Mining-Pool-Provision?",
+              "a": "Eine Poolgebühr ist der Prozentsatz der Mining-Einnahmen, den ein Mining-Pool für die Bündelung der Hashing-Leistung der Miner erhebt. Typischerweise 1–3 %."
+            },
+            {
+              "q": "Wie berechnet man die Energiekosten?",
+              "a": "Kosten = (Verbrauch in kW) * 24 Stunden * Kosten pro kWh. Beispielsweise bei einem Verbrauch von 3,5 kW und Kosten von 4,5 ₽/kWh: 3,5 * 24 * 4,5 = 378 ₽/Tag."
+            },
+            {
+              "q": "Ist es möglich, die Rentabilität einer Mining-Farm mit einem Taschenrechner zu berechnen?",
+              "a": "Ja, mit dem Rechner kann die Rentabilität einer Mining-Farm berechnet werden. Geben Sie die Gesamt-Hashrate aller Geräte und den Gesamtenergieverbrauch ein."
+            },
+            {
+              "q": "Wie können Änderungen in der Netzwerkkomplexität berücksichtigt werden?",
+              "a": "Die Netzwerkschwierigkeit ändert sich regelmäßig (für Bitcoin alle 2016 Blöcke). Nutzen Sie aktuelle Schwierigkeitsdaten für genaue Berechnungen. Der Rechner unterstützt die manuelle Eingabe des Schwierigkeitsgrades."
+            },
+            {
+              "q": "Was ist eine Blockbelohnung?",
+              "a": "Eine Blockbelohnung ist der Betrag an Kryptowährung, den ein Miner für das Finden eines neuen Blocks erhält. Bei Bitcoin verringert sich die Belohnung alle 210.000 Blöcke (Halbierung)."
+            },
+            {
+              "q": "Wie berechnet man die Blockzeit für einen einzelnen Miner?",
+              "a": "Zeit, einen Block zu finden = Netzwerkkomplexität / Hashrate. Das Ergebnis zeigt die theoretische Verweildauer des Blocks bei alleiniger Arbeit. In einem Pool hängt die Wahrscheinlichkeit vom Anteil der gesamten Hashrate ab."
+            },
+            {
+              "q": "Ist es möglich, die Rentabilität von Cloud Mining zu berechnen?",
+              "a": "Ja, mit dem Rechner lässt sich die Rentabilität von Cloud Mining abschätzen. Bedenken Sie, dass beim Cloud-Mining keine Stromkosten anfallen, dafür aber eine Mietgebühr für die Hashrate anfällt."
+            },
+            {
+              "q": "Wie wählt man die optimale Kryptowährung für das Mining aus?",
+              "a": "Nutzen Sie den Rechner, um die Rentabilität verschiedener Kryptowährungen zu vergleichen. Berücksichtigen Sie: Netzwerkkomplexität, Kryptowährungsrate, Blockbelohnung, Geräteverfügbarkeit und Stromkosten."
+            },
+            {
+              "q": "Was ist der ROI im Bergbau?",
+              "a": "ROI (Return on Investment) ist die Kapitalrendite. Zeigt an, wie lange es dauern wird, bis sich die Bergbauausrüstung bei der aktuellen Rentabilität amortisiert. ROI = Ausrüstungskosten / Nettogewinn pro Tag."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität, wenn sich der Wechselkurs der Kryptowährung ändert?",
+              "a": "Sollte sich der Wechselkurs ändern, berechnen Sie die Rendite im Rechner neu. Einkommen in Rubel = Einkommen in Kryptowährung * Kurs. Wenn der Wechselkurs steigt, steigt die Rentabilität; wenn es fällt, nimmt es ab."
+            },
+            {
+              "q": "Was bedeutet Halbierung im Bergbau?",
+              "a": "Beim Halving handelt es sich um eine Halbierung der Blockbelohnung, die regelmäßig erfolgt (bei Bitcoin alle 210.000 Blöcke). Die Halbierung wirkt sich auf die Rentabilität des Bergbaus aus, indem sie die Blockbelohnung verringert."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität für ASIC-Miner?",
+              "a": "Geben Sie für ASIC-Miner die tatsächliche Hardware-Hashrate (in den Spezifikationen angegeben), den Energieverbrauch und die aktuelle Netzwerkschwierigkeit ein. ASIC-Miner sind normalerweise für bestimmte Algorithmen effizienter."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität für GPU-Miner?",
+              "a": "Geben Sie für GPU-Miner die Gesamt-Hashrate aller Grafikkarten, den Gesamtstromverbrauch des Systems und die Netzwerkparameter ein. GPU-Mining eignet sich für Algorithmen, die viel Speicher benötigen."
+            },
+            {
+              "q": "Was ist ein Mining-Pool?",
+              "a": "Ein Mining-Pool ist ein Zusammenschluss von Minern zur gemeinsamen Suche nach Blöcken. Die Einnahmen werden proportional zur investierten Hashrate verteilt. Pools erheben eine Provision (normalerweise 1-3 %)."
+            },
+            {
+              "q": "Wie berechnet man Ihren Anteil an einem Mining-Pool?",
+              "a": "Anteil am Pool = (Ihre Hashrate / Gesamtpool-Hashrate) * 100 %. Je größer Ihr Anteil ist, desto höher ist die Wahrscheinlichkeit, eine Belohnung zu erhalten. Die Belohnung wird jedoch proportional zum Anteil verteilt."
+            },
+            {
+              "q": "Kann ich einen Rechner verwenden, um verschiedene Miner zu vergleichen?",
+              "a": "Ja, verwenden Sie den Rechner, um die Rentabilität verschiedener Miner-Modelle zu vergleichen. Geben Sie die Parameter jedes Miners separat ein und vergleichen Sie die Ergebnisse."
+            },
+            {
+              "q": "Wie ist die Abschreibung von Geräten zu berücksichtigen?",
+              "a": "Bei der Amortisationsberechnung können Geräteabschreibungen berücksichtigt werden. Addieren Sie die Abschreibungskosten zu Ihren täglichen Ausgaben, um eine genauere Rentabilitätsberechnung zu erhalten."
+            },
+            {
+              "q": "Was ist die Miner-Effizienz (J/TH)?",
+              "a": "Die Miner-Effizienz zeigt den Energieverbrauch pro Hashrate-Einheit. Gemessen in J/TH (Joule pro Terahesh). Je niedriger der Wert, desto effizienter ist der Miner."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität, wenn man alleine arbeitet (Solo-Mining)?",
+              "a": "Verwenden Sie beim Solo-Mining die gleichen Formeln, beachten Sie jedoch, dass die Wahrscheinlichkeit, einen Block zu finden, sehr gering ist. Die Rentabilität wird instabil sein. Im Pool ist das Einkommen stabiler."
+            },
+            {
+              "q": "Ist es möglich, die Rentabilität für das Mining mehrerer Kryptowährungen zu berechnen?",
+              "a": "Ja, berechnen Sie die Rentabilität für jede Kryptowährung separat und vergleichen Sie die Ergebnisse. Wählen Sie basierend auf Ihrer Ausrüstung die profitabelste Kryptowährung."
+            },
+            {
+              "q": "Wie berechnet man die minimalen Stromkosten für die Rentabilität?",
+              "a": "Mit dem Rechner können Sie die Stromkosten schrittweise senken, bis der Gewinn positiv wird. Dadurch werden die maximalen Stromkosten für die Rentabilität angezeigt."
+            },
+            {
+              "q": "Was ist der Mining-Schwierigkeitsgrad?",
+              "a": "Die Mining-Schwierigkeit ist ein Parameter, der angibt, wie schwierig es ist, einen Block in der Blockchain zu finden. Je höher der Schwierigkeitsgrad, desto mehr Rechenleistung wird benötigt, um den Block zu finden."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität unter Berücksichtigung der Besteuerung?",
+              "a": "Ziehen Sie nach der Berechnung Ihres Nettogewinns die Steuern gemäß den Gesetzen Ihres Landes ab. Die Bergbaubesteuerung variiert von Land zu Land."
+            }
+          ]
+        }
+      }
+    },
+    "qr-generator": {
+      "title": "QR-Code-Generator",
+      "description": "Erstellen Sie QR-Codes für Text, URL, E-Mail, Telefon und andere Daten. Passen Sie Größe, Farben und Format an.",
+      "breadcrumbs": {
+        "it": "ES",
+        "category": "ES"
+      },
+      "form": {
+        "title": "Generierungsparameter",
+        "dataType": "Datentyp",
+        "text": "Text",
+        "url": "URL",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "sms": "SMS",
+        "wifi": {
+          "ssid": "SSID (Netzwerkname)",
+          "password": "Passwort",
+          "security": "Sicherheitstyp",
+          "securityTypes": {
+            "WPA": "WPA",
+            "WPA2": "WPA2",
+            "nopass": "Kein Passwort"
+          }
+        },
+        "vcard": {
+          "name": "Name",
+          "phone": "Telefon",
+          "address": "Adresse",
+          "namePlaceholder": "Iwan Iwanow",
+          "addressPlaceholder": "Moskau, str. Beispiel, 1"
+        },
+        "data": "Daten",
+        "dataPlaceholder": "Geben Sie Text oder URL ein",
+        "size": "Größe des QR-Codes",
+        "errorCorrection": "Fehlerkorrekturstufe",
+        "foregroundColor": "Vordergrundfarbe",
+        "backgroundColor": "Hintergrundfarbe",
+        "generate": "Erzeugen",
+        "reset": "Zurücksetzen",
+        "download": "Herunterladen",
+        "dataTypes": {
+          "text": "Text",
+          "url": "URL",
+          "email": "E-Mail",
+          "phone": "Telefon",
+          "sms": "SMS",
+          "wifi": "W-lan",
+          "vcard": "vCard"
+        },
+        "downloadError": "Fehler beim Herunterladen. Versuchen Sie es mit der Kopierfunktion.",
+        "errorLevels": {
+          "L": "Niedrig (L)",
+          "M": "Mittel (M)",
+          "Q": "Gut (Q)",
+          "H": "Hoch (H)"
+        },
+        "errors": {
+          "title": "Datenfehler",
+          "dataRequired": "Geben Sie Daten für den QR-Code ein",
+          "invalidUrl": "Falsche URL",
+          "invalidEmail": "Falsche E-Mail",
+          "invalidPhone": "Falsches Telefon"
+        }
+      },
+      "results": {
+        "title": "QR-Code",
+        "placeholder": "Geben Sie Daten ein, um einen QR-Code zu generieren",
+        "qrCode": "QR-Code",
+        "dataPreview": "Datenvorschau",
+        "downloadPng": "PNG herunterladen",
+        "downloadSvg": "SVG herunterladen",
+        "copy": "Daten kopieren"
+      },
+      "hero": {
+        "fast": "Schnelle Generation",
+        "customizable": "Aufstellen",
+        "formats": "Format"
+      },
+      "features": {
+        "qrGeneration": "Generierung von QR-Codes",
+        "multipleTypes": "Verschiedene Datentypen",
+        "customization": "Anpassen des Erscheinungsbilds",
+        "download": "In verschiedenen Formaten herunterladen"
+      },
+      "seo": {
+        "title": "Online-QR-Code-Generator – Erstellen Sie kostenlos QR-Codes | Calc1.ru",
+        "description": "Kostenloser Online-QR-Code-Generator zum Erstellen von QR-Codes aus Text, URL, E-Mail, Telefon und anderen Daten. Passen Sie Größe, Farben und Fehlerkorrekturstufe an. Im PNG- und SVG-Format herunterladen.",
+        "keywords": "QR-Code-Generator, QR-Codes erstellen, QR-Code online, kostenloser QR-Code-Generator, QR-Code aus Text, QR-Code aus URL, QR-Code für WLAN, QR-Code für E-Mail, QR-Code für Telefon, Einrichtung des QR-Code-Generators, QR-Code herunterladen, QR-Code PNG, QR-Code SVG, QR-Codes online erstellen, kostenloser QR-Generator, QR-Code-Generator, QR-Code-Generator, QR-Code-Generator kostenlos, QR-Code erstellen, QR-Code mit Einstellungen",
+        "overview": {
+          "title": "Generator-QR-Code online",
+          "content": "Mit dem Online-QR-Code-Generator können Sie QR-Codes aus verschiedenen Datentypen erstellen: Text, URL, E-Mail, Telefon, SMS, WLAN, vCard. Passen Sie Größe, Farben und Fehlerkorrekturstufe an und laden Sie den QR-Code im PNG- oder SVG-Format herunter.",
+          "additionalContent": "Ein QR-Code (Quick Response Code) ist ein zweidimensionaler Barcode, der mit einer Smartphone-Kamera gescannt werden kann. QR-Codes werden zum schnellen Austausch von Informationen verwendet: Links, Kontakte, Text, WLAN-Passwörter usw. Unser Generator unterstützt verschiedene Datentypen und Darstellungseinstellungen.",
+          "calculationExamples": {
+            "title": "Beispiele für die Verwendung des QR-Code-Generators",
+            "content": "Schauen wir uns praktische Beispiele für die Erstellung von QR-Codes für verschiedene Zwecke an:",
+            "example1": {
+              "title": "Beispiel 1: QR-Code für URL",
+              "description": "Erstellen eines QR-Codes für eine Website",
+              "input": "Typ: URL\nDaten: https://calc1.ru",
+              "calculation": "Generieren Sie QR-Code für URL mit automatischer Erkennung des Datenformats",
+              "result": "Der QR-Code kann jetzt gescannt und zur Website weitergeleitet werden",
+              "type": "URL",
+              "note": "QR-Codes für URLs öffnen den Link automatisch, wenn sie gescannt werden"
+            },
+            "example2": {
+              "title": "Beispiel 2: QR-Code für Text",
+              "description": "Erstellen eines QR-Codes mit Textinformationen",
+              "input": "Typ: Text\nDaten: Willkommen bei Calc1.ru!",
+              "calculation": "Generieren eines QR-Codes mit Textinhalten",
+              "result": "Der QR-Code enthält Text, der beim Scannen angezeigt wird",
+              "type": "Text",
+              "note": "Text-QR-Codes eignen sich zum Versenden von Kurznachrichten"
+            },
+            "example3": {
+              "title": "Beispiel 3: QR-Code für E-Mail",
+              "description": "Erstellen eines QR-Codes für eine E-Mail-Adresse",
+              "input": "Typ: E-Mail\nDetails: info@calc1.ru",
+              "calculation": "QR-Code im Mailto-Format generieren:",
+              "result": "Der QR-Code öffnet beim Scannen automatisch den E-Mail-Client",
+              "type": "E-Mail",
+              "note": "Mit E-Mail-QR-Codes können Sie schnell eine E-Mail an eine bestimmte Adresse senden"
+            },
+            "example4": {
+              "title": "Beispiel 4: QR-Code für Telefon",
+              "description": "Erstellen eines QR-Codes für eine Telefonnummer",
+              "input": "Typ: Telefon\nDaten: +7 (999) 123-45-67",
+              "calculation": "QR-Code im Tel-Format generieren:",
+              "result": "Der QR-Code startet beim Scannen automatisch einen Anruf",
+              "type": "Telefon",
+              "note": "Telefon-QR-Codes eignen sich zum schnellen Wählen von Nummern"
+            },
+            "example5": {
+              "title": "Beispiel 5: QR-Code für WLAN",
+              "description": "Erstellen eines QR-Codes zur Verbindung mit WLAN",
+              "input": "Typ: WLAN\nSSID: MeinNetzwerk\nPasswort: mypassword123\nSicherheitstyp: WPA",
+              "calculation": "QR-Code im WIFI-Format generieren:",
+              "result": "Mit dem QR-Code können Sie automatisch eine Verbindung zu einem Wi-Fi-Netzwerk herstellen",
+              "type": "W-lan",
+              "note": "WLAN-QR-Codes verbinden Ihr Gerät beim Scannen automatisch mit dem Netzwerk"
+            },
+            "example6": {
+              "title": "Beispiel 6: QR-Code für vCard",
+              "description": "Erstellen eines QR-Codes mit Kontaktinformationen",
+              "input": "Typ: vCard\nName: Iwan Iwanow\nTelefon: +7 (999) 123-45-6\nE-Mail: ivan@example.com",
+              "calculation": "QR-Code im vCard-Format (VCARD) generieren",
+              "result": "Der QR-Code fügt den Kontakt automatisch Ihrem Adressbuch hinzu",
+              "type": "vCard",
+              "note": "vCard-QR-Codes eignen sich zum Austausch von Kontaktinformationen"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie funktioniert der QR-Code-Generator?",
+          "content": "Der QR-Code-Generator erstellt anhand der eingegebenen Daten mithilfe von Fehlerkorrekturalgorithmen zweidimensionale Barcodes.",
+          "dataEncoding": "Datenkodierung: Text wird gemäß dem QR-Code-Standard in Binärcode umgewandelt",
+          "errorCorrection": "Fehlerbehebung: QR-Codes enthalten redundante Informationen zur Wiederherstellung im Schadensfall",
+          "modules": "Module: Daten werden als Module kodiert (schwarze und weiße Quadrate)",
+          "format": "Format: Der QR-Code enthält Serviceinformationen zum korrekten Scannen",
+          "steps": {
+            "input": "Eingabe von Daten zur Codierung",
+            "encoding": "Kodieren von Daten in das QR-Code-Format",
+            "generation": "Generieren eines QR-Code-Bildes",
+            "export": "Export in ausgewähltes Format (PNG, SVG)"
+          }
+        },
+        "advantages": {
+          "title": "Vorteile eines QR-Code-Generators",
+          "content": "Die Verwendung eines QR-Code-Generators bietet viele Vorteile: schnelle Generierung, individuelle Gestaltung des Erscheinungsbilds, Unterstützung verschiedener Datentypen.",
+          "speed": "Schnelle Generation",
+          "customization": "Passen Sie Größe und Farben an",
+          "multipleTypes": "Unterstützung für verschiedene Datentypen",
+          "formats": "Export in PNG und SVG"
+        },
+        "tips": {
+          "title": "Tipps zur Verwendung eines QR-Code-Generators",
+          "content": "Um einen hochwertigen QR-Code zu erhalten, befolgen Sie unsere Empfehlungen.",
+          "size": "Wählen Sie je nach Standort die Größe des QR-Codes. Verwenden Sie zum Drucken eine größere Größe (300-500 Pixel).",
+          "errorCorrection": "Verwenden Sie eine höhere Fehlerkorrekturstufe (H) für QR-Codes, die möglicherweise beschädigt sind",
+          "colors": "Stellen Sie sicher, dass die Farben ausreichend Kontrast zum ordnungsgemäßen Scannen haben",
+          "testing": "Testen Sie den QR-Code vor der Verwendung auf verschiedenen Geräten"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zu QR-Codes",
+          "faqItems": [
+            {
+              "q": "Was ist ein QR-Code?",
+              "a": "Ein QR-Code (Quick Response Code) ist ein zweidimensionaler Barcode, der mit einer Smartphone-Kamera gescannt werden kann. QR-Codes werden zum schnellen Austausch von Informationen verwendet: Links, Kontakte, Text, WLAN-Passwörter usw."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code?",
+              "a": "Um einen QR-Code zu erstellen, geben Sie Daten ein (Text, URL, E-Mail, Telefon usw.), wählen Sie Größe und Einstellungen aus und klicken Sie dann auf „Generieren“. Der QR-Code wird erstellt und steht zum Download bereit."
+            },
+            {
+              "q": "Welche Datentypen unterstützt der Generator?",
+              "a": "Der Generator unterstützt: Text, URL, E-Mail, Telefon, SMS, WLAN, vCard. Jeder Datentyp hat sein eigenes Format und wird bei der Generierung eines QR-Codes automatisch verarbeitet."
+            },
+            {
+              "q": "Welche QR-Codegröße soll ich wählen?",
+              "a": "Die Größe des QR-Codes hängt vom Standort ab. Für Webseiten: 200–300 Pixel, für Druck: 300–500 Pixel, für große Poster: 500–1000 Pixel. Je mehr Daten im QR-Code enthalten sind, desto größer sollte die Größe sein."
+            },
+            {
+              "q": "Was ist die Fehlerkorrekturstufe?",
+              "a": "Die Fehlerkorrekturstufe bestimmt, wie widerstandsfähig der QR-Code gegen Beschädigungen ist. Stufen: L (7 %), M (15 %), Q (25 %), H (30 %). Je höher die Stufe, desto mehr redundante Informationen enthält der QR-Code."
+            },
+            {
+              "q": "Ist es möglich, die Farben des QR-Codes zu ändern?",
+              "a": "Ja, Sie können eine Vordergrundfarbe (normalerweise Schwarz) und eine Hintergrundfarbe (normalerweise Weiß) auswählen. Für ein ordnungsgemäßes Scannen ist es wichtig, einen ausreichenden Kontrast sicherzustellen."
+            },
+            {
+              "q": "In welchen Formaten kann ich einen QR-Code herunterladen?",
+              "a": "Der QR-Code kann in den Formaten PNG (Rasterbild) und SVG (Vektorbild) heruntergeladen werden. PNG eignet sich für Web und Druck, SVG eignet sich zur Skalierung ohne Qualitätsverlust."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für WLAN?",
+              "a": "Wählen Sie „Wi-Fi“-Typ, geben Sie SSID (Netzwerkname), Passwort und Sicherheitstyp (WPA, WPA2 usw.) ein. Der QR-Code stellt beim Scannen automatisch eine Verbindung zu einem Wi-Fi-Netzwerk her."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für E-Mails?",
+              "a": "Wählen Sie den Typ „E-Mail“ und geben Sie Ihre E-Mail-Adresse ein. Der QR-Code öffnet beim Scannen automatisch den E-Mail-Client, um einen Brief an die angegebene Adresse zu senden."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für Ihr Telefon?",
+              "a": "Wählen Sie den Typ „Telefon“ und geben Sie die Telefonnummer ein. Der QR-Code startet automatisch einen Anruf, wenn er auf einem Gerät mit Telefonfunktion gescannt wird."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code mit Kontaktinformationen?",
+              "a": "Verwenden Sie den Typ „vCard“ und geben Sie Kontaktinformationen ein: Name, Telefon, E-Mail, Adresse usw. Der QR-Code fügt den Kontakt beim Scannen automatisch Ihrem Adressbuch hinzu."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code mit Logo zu erstellen?",
+              "a": "Unser Generator unterstützt die grundlegende Farbanpassung. Um ein Logo hinzuzufügen, verwenden Sie nach der Generierung spezielle QR-Code-Editoren oder Grafikprogramme."
+            },
+            {
+              "q": "Was ist die maximale Datengröße für einen QR-Code?",
+              "a": "Die maximale Datengröße hängt von der Fehlerkorrekturstufe ab: L – bis zu 2953 Zeichen (Ziffern), M – bis zu 2331 Zeichen, Q – bis zu 1663 Zeichen, H – bis zu 1273 Zeichen. Für Text: bis zu ca. 4296 Zeichen (Zahlen) oder 2953 Zeichen (Buchstaben)."
+            },
+            {
+              "q": "Warum kann der QR-Code nicht gescannt werden?",
+              "a": "Mögliche Gründe: unzureichender Farbkontrast, zu kleine Größe, beschädigter QR-Code, niedrige Fehlerkorrekturstufe. Erhöhen Sie die Größe, verwenden Sie Schwarz-Weiß-Farben und verbessern Sie die Fehlerkorrekturstufe."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code für nicht starke Links zu erstellen?",
+              "a": "Ein QR-Code kann nur einen Link enthalten. Erstellen Sie für mehrere Links mehrere QR-Codes oder nutzen Sie einen speziellen Dienst, der eine Seite mit einer Auswahl an Links erstellt."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für SMS?",
+              "a": "Wählen Sie „SMS“-Typ, geben Sie Telefonnummer und Nachrichtentext ein. Der QR-Code öffnet beim Scannen automatisch die SMS-App."
+            },
+            {
+              "q": "Sind QR-Codes sicher?",
+              "a": "QR-Codes selbst sind sicher, Sie sollten jedoch vorsichtig sein, wenn Sie QR-Codes aus unbekannten Quellen scannen, da diese möglicherweise schädliche Links enthalten. Überprüfen Sie die URL, bevor Sie fortfahren."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code nach seiner Erstellung zu bearbeiten?",
+              "a": "Der QR-Code kann nicht bearbeitet werden – es handelt sich um verschlüsselte Daten. Zum Ändern müssen Sie einen neuen QR-Code mit neuen Daten erstellen."
+            },
+            {
+              "q": "Wie drucke ich einen QR-Code?",
+              "a": "Laden Sie den QR-Code im PNG-Format mit ausreichender Auflösung herunter (mindestens 300 DPI zum Drucken). Verwenden Sie für ein ordnungsgemäßes Scannen eine Größe von mindestens 2 x 2 cm."
+            },
+            {
+              "q": "Ist es möglich, einen farbigen QR-Code zu erstellen?",
+              "a": "Ja, Sie können jede Farbe für den Vorder- und Hintergrund wählen. Für ein ordnungsgemäßes Scannen ist es wichtig, einen ausreichenden Kontrast (mindestens 70 % werden empfohlen) sicherzustellen."
+            },
+            {
+              "q": "Wie funktioniert die Fehlerkorrektur bei QR-Codes?",
+              "a": "Durch die Fehlerkorrektur werden dem QR-Code redundante Informationen hinzugefügt, sodass Daten wiederhergestellt werden können, wenn sie teilweise beschädigt sind. Mit Stufe H (30 %) können Sie bis zu 30 % der beschädigten Daten wiederherstellen."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code für eine Bewerbung zu erstellen?",
+              "a": "Ja, erstellen Sie einen QR-Code mit einer URL, die zur App-Download-Seite im App Store oder bei Google Play führt. Beim Scannen öffnet sich die entsprechende Seite."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für die Zahlung?",
+              "a": "Erstellen Sie einen QR-Code mit einer URL zur Zahlungsseite oder verwenden Sie ein spezielles Format für Zahlungen (z. B. für einige Zahlungssysteme). Das konkrete Format hängt vom Zahlungssystem ab."
+            },
+            {
+              "q": "Ist es möglich, QR-Code-Scans zu verfolgen?",
+              "a": "Ein normaler QR-Code enthält keine Tracking-Funktionalität. Verwenden Sie zum Tracking URL-Kurzlinks mit Analysen oder spezielle Dienste, die QR-Codes mit Tracking erstellen."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für eine Veranstaltung?",
+              "a": "Erstellen Sie einen QR-Code mit einer URL zur Veranstaltungsseite in Ihrem Kalender oder verwenden Sie das iCalendar-Format (ICS). Viele Kalenderdienste unterstützen das automatische Hinzufügen von Ereignissen über QR-Codes."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code für ein WLAN-Passwort zu erstellen?",
+              "a": "Ja, verwenden Sie den Typ „Wi-Fi“ und geben Sie die SSID, das Passwort und den Sicherheitstyp ein. Mit dem QR-Code können Sie sich automatisch mit dem Netzwerk verbinden, ohne ein Passwort einzugeben."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für soziale Netzwerke?",
+              "a": "Erstellen Sie einen QR-Code mit einer URL zu Ihrem Profil in sozialen Netzwerken (Facebook, Instagram, Twitter usw.). Beim Scannen wird die entsprechende Profilseite geöffnet."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code für die PDF-Datei zu erstellen?",
+              "a": "Ein QR-Code kann nicht direkt eine PDF-Datei enthalten. Erstellen Sie einen QR-Code mit einer URL für eine im Internet veröffentlichte PDF-Datei oder nutzen Sie einen Cloud-Speicher, um die Datei zu hosten."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für eine Visitenkarte?",
+              "a": "Nutzen Sie den Typ „vCard“ und geben Sie alle notwendigen Daten ein: Name, Position, Firma, Telefon, E-Mail, Adresse, Website. Der QR-Code fügt den Kontakt automatisch Ihrem Adressbuch hinzu."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code mit Geolokalisierung zu erstellen?",
+              "a": "Erstellen Sie einen QR-Code mit einer URL auf Google Maps oder einer anderen Karte mit Koordinaten. Beim Scannen öffnet sich eine Karte mit dem angegebenen Standort."
+            },
+            {
+              "q": "Wie erstelle ich einen QR-Code für YouTube-Videos?",
+              "a": "Erstellen Sie einen QR-Code aus der URL eines YouTube-Videos. Nach dem Scannen wird das Video in Ihrem Browser oder in der YouTube-App geöffnet."
+            },
+            {
+              "q": "Ist die Verwendung eines QR-Codes in der Werbung möglich?",
+              "a": "Ja, QR-Codes werden in der Werbung häufig verwendet, um schnell zu einer Website zu navigieren, eine Anwendung herunterzuladen oder zusätzliche Informationen zu erhalten. Es ist wichtig, ausreichend Größe und Kontrast zu verwenden."
+            },
+            {
+              "q": "Wie erstelle ich einen dynamischen QR-Code?",
+              "a": "Unser Generator erstellt statische QR-Codes. Für dynamische QR-Codes (mit der Möglichkeit, die URL zu ändern) nutzen Sie spezielle Dienste, die eine solche Funktion bereitstellen."
+            },
+            {
+              "q": "Ist es möglich, einen QR-Code für eine Bitcoin-Adresse zu erstellen?",
+              "a": "Erstellen Sie einen QR-Code mit Text, der eine Bitcoin-Adresse enthält. Viele Wallets erkennen Bitcoin-Adressen automatisch, wenn Sie einen QR-Code scannen."
+            }
+          ]
+        }
+      }
+    }
+  }
 }
-
-
-

@@ -213,7 +213,7 @@ export default async function AutoPage({ params: { locale } }: Props) {
 	});
 
 	const { loadMergedAutoTranslations } = await import('@/lib/i18n-utils');
-	const messages = await loadMergedAutoTranslations(locale);
+	const mergedMessages = await loadMergedAutoTranslations(locale);
 	const currentLocale = await getLocale();
 
 	const calculators = getCalculators(t);

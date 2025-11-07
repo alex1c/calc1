@@ -1,6 +1,2486 @@
 {
-	"calculators": {}
+  "calculators": {
+    "daysBetween": {
+      "title": "Datumsdifferenzrechner",
+      "description": "Mit einem Online-Datumsdifferenzrechner können Sie die Anzahl der Tage, Wochen, Monate oder Jahre zwischen zwei Daten ermitteln.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "daysBetween": "Unterschied zwischen den Daten",
+        "category": "Zeit"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "description": "Geben Sie zwei Daten ein, um die Differenz zu berechnen",
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "startDatePlaceholder": "Wählen Sie das Startdatum",
+        "endDatePlaceholder": "Wählen Sie das Enddatum aus",
+        "today": "Heute",
+        "calculate": "Berechnen",
+        "calculating": "Wir zählen...",
+        "reset": "Zurücksetzen"
+      },
+      "results": {
+        "title": "Berechnungsergebnis",
+        "totalDays": "Gesamtzahl der Tage",
+        "weeks": "Wochen",
+        "months": "Monate",
+        "years": "Jahre",
+        "days": "Tage",
+        "copy": "Ergebnis kopieren",
+        "copied": "Kopiert!",
+        "placeholder": "Geben Sie Daten ein und klicken Sie auf „Berechnen“.",
+        "copyText": {
+          "title": "Unterschied zwischen den Daten:",
+          "startDate": "Startdatum:",
+          "endDate": "Enddatum:",
+          "totalDays": "Gesamttage:",
+          "thisIs": "Das",
+          "weeks": "Wochen und",
+          "days": "Tage",
+          "inCalculation": "Bezüglich:",
+          "years": "Jahre,",
+          "months": "Monate,",
+          "days2": "Tage"
+        }
+      },
+      "hero": {
+        "days": "Tage",
+        "accurateCalculation": "Genaue Berechnung",
+        "accuracy": "Genauigkeit",
+        "free": "Kostenlos",
+        "usage": "Verwendung"
+      },
+      "seo": {
+        "title": "Datumsdifferenzrechner - Tage zwischen Datumsrechner | Calc1.ru",
+        "description": "Kostenloser Online-Rechner für Datumsdifferenzen. Ermitteln Sie die Anzahl der Tage, Wochen, Monate und Jahre zwischen zwei Daten. Berechnen Sie genau die Tage vor der Veranstaltung oder die Differenz zwischen beliebigen Daten.",
+        "keywords": "Differenzrechner zwischen Daten, Differenz zwischen Daten, Datumsrechner, Tage zwischen Daten, wie viele Tage zwischen Daten, Differenz in Tagen, Tagesrechner, Datumsrechner, Tage zwischen Daten, Datumsdifferenzrechner, Datumsrechner online, Datumsrechner online, Datumsdifferenz online, Tage vor dem Ereignis, Tage vor dem Datum, Tage nach dem Datum, berechnen Sie die Tage zwischen Daten, wie viele Tage sind vergangen, wie viele Tage verbleiben, Differenz in Wochen, Differenz in Monaten, Differenz in Jahren, Kalenderrechner, Tage zwischen Daten online, Tag zwischen Daten, Taschenrechner Tage Zwischendaten, Tage zwischen Daten berechnen, Rechner für Tage zwischen Daten, Rechner für Datumsintervalle, Rechner für Datumsbereiche, Differenz zwischen Daten, Rechner für Tage",
+        "overview": {
+          "title": "Datumsdifferenzrechner",
+          "content": "Mit einem Online-Datumsdifferenzrechner können Sie die Anzahl der Tage, Wochen, Monate und Jahre zwischen zwei beliebigen Daten genau berechnen. Der Rechner berücksichtigt Schaltjahre und unterschiedliche Monatslängen und berechnet die Differenz inklusive Start- und Enddatum genau.",
+          "additionalContent": "Der Rechner eignet sich zum Planen von Veranstaltungen, Berechnen von Projektfristen, Bestimmen des Alters, Berechnen von Urlaubstagen, Berechnen von Zinsen für einen Zeitraum und vielen anderen Aufgaben im Zusammenhang mit Daten und Zeitintervallen.",
+          "calculationExamples": {
+            "title": "Beispiele für die Berechnung der Differenz zwischen Datumsangaben",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Datumsdifferenzrechners an:",
+            "example1": {
+              "title": "Beispiel 1: Differenz zwischen zwei Daten innerhalb eines Jahres",
+              "description": "Berechnung der Tage zwischen dem 1. Januar 2024 und dem 31. Dezember 2024",
+              "input": "Startdatum: 1. Januar 2024\nEnddatum: 31. Dezember 2024",
+              "calculation": "2024 ist ein Schaltjahr (366 Tage)\n1. Januar – Tag 1\n31. Dezember – Tag 366\nDifferenz: 366 - 1 = 365 Tage (365 Tage zwischen den Daten)",
+              "result": "Ergebnis: 365 Tage (12 Monate, 52 Wochen)",
+              "type": "Ein Kalenderjahr",
+              "note": "Ein Schaltjahr hat 366 Tage, zwischen dem 1. Januar und dem 31. Dezember liegen jedoch 365 Tage"
+            },
+            "example2": {
+              "title": "Beispiel 2: Unterschied zwischen Schaltjahresdaten",
+              "description": "Berechnung der Tage zwischen dem 1. Februar 2023 und dem 1. Februar 2025",
+              "input": "Startdatum: 1. Februar 2023\nEnddatum: 1. Februar 2025",
+              "calculation": "2023: 365 Tage (kein Schaltjahr)\n2024: 366 Tage (Schaltjahr)\n2025: 365 Tage (kein Schaltjahr)\nVom 1. Februar 2023 bis 1. Februar 2025: 365 + 366 = 731 Tage",
+              "result": "Ergebnis: 731 Tage (24 Monate, 104 Wochen, 2 Jahre)",
+              "type": "Zwei Jahre mit Schaltjahr",
+              "note": "Das Schaltjahr 2024 fügt einen zusätzlichen Tag hinzu"
+            },
+            "example3": {
+              "title": "Beispiel 3: Differenz innerhalb eines Monats",
+              "description": "Berechnung der Tage zwischen dem 15. Januar 2024 und dem 25. Januar 2024",
+              "input": "Startdatum: 15. Januar 2024\nEnddatum: 25. Januar 2024",
+              "calculation": "Der Januar umfasst 31 Tage\nVon 15 bis 25: 25 - 15 = 10 Tage",
+              "result": "Ergebnis: 10 Tage (1 Woche, 3 Tage)",
+              "type": "Innerhalb eines Monats",
+              "note": "Einfache Berechnung der Differenz zwischen den Monatszahlen"
+            },
+            "example4": {
+              "title": "Beispiel 4: Unterschied über Jahresgrenzen hinweg",
+              "description": "Berechnung der Tage zwischen dem 15. Dezember 2023 und dem 15. Januar 2024",
+              "input": "Startdatum: 15. Dezember 2023\nEnddatum: 15. Januar 2024",
+              "calculation": "Vom 15. Dezember bis 31. Dezember: 31 - 15 = 16 Tage\nVom 1. Januar bis 15. Januar: 15 Tage\nGesamt: 16 + 15 = 31 Tage",
+              "result": "Ergebnis: 31 Tage (1 Monat, 4 Wochen, 3 Tage)",
+              "type": "Die Grenze des Jahres überschreiten",
+              "note": "Die Berechnung umfasst Tage in beiden Monaten und den Übergang durch das neue Jahr"
+            },
+            "example5": {
+              "title": "Beispiel 5: Differenz über mehrere Jahre",
+              "description": "Berechnung der Tage zwischen dem 1. Januar 2020 und dem 1. Januar 2024",
+              "input": "Startdatum: 1. Januar 2020\nEnddatum: 1. Januar 2024",
+              "calculation": "2020: 366 Tage (Schaltjahr)\n2021: 365 Tage\n2022: 365 Tage\n2023: 365 Tage\nGesamt: 366 + 365 + 365 + 365 = 1461 Tage",
+              "result": "Ergebnis: 1461 Tage (48 Monate, 208 Wochen, 4 Jahre)",
+              "type": "Mehrere Jahre",
+              "note": "Das Schaltjahr 2020 fügt der Gesamtzahl einen Tag hinzu"
+            },
+            "example6": {
+              "title": "Beispiel 6: Differenz zur Berechnung von Alter oder Amtszeit",
+              "description": "Berechnung der Tage zwischen Ihrem Geburtstag, dem 15. Mai 1990, und dem aktuellen Datum, dem 1. Januar 2024",
+              "input": "Startdatum: 15. Mai 1990\nEnddatum: 1. Januar 2024",
+              "calculation": "Vom 15. Mai 1990 bis 1. Januar 2024\nSchaltjahre: 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020 (8 Jahre)\nNormale Jahre: 33 Jahre - 8 = 25 Jahre\n365 × 25 + 366 × 8 + Tage vom 15. Mai bis Ende 1990 + Tage ab Anfang 2024 = ~12.295 Tage",
+              "result": "Ergebnis: ~12.295 Tage (~403 Monate, ~1.756 Wochen, ~33,7 Jahre)",
+              "type": "Langfristige Abwicklung",
+              "note": "Für eine genaue Berechnung müssen alle Schaltjahre und genauen Daten berücksichtigt werden"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird die Differenz zwischen den Daten berechnet?",
+          "content": "Die Differenz zwischen den Daten wird berechnet, indem die Anzahl der Tage vom Start- bis zum Enddatum berechnet wird, einschließlich oder ausschließlich (abhängig von den Rechnereinstellungen).",
+          "formula": "Differenz = Enddatum – Startdatum (in Tagen, Wochen, Monaten, Jahren)",
+          "leapYear": "Schaltjahre (teilbar durch 4, außer weltliche Jahre, die durch 400 teilbar sind) enthalten 366 Tage statt 365.",
+          "months": "Monatslängen: 31 Tage (Januar, März, Mai, Juli, August, Oktober, Dezember), 30 Tage (April, Juni, September, November), 28/29 Tage (Februar)."
+        },
+        "advantages": {
+          "title": "Vorteile eines Datumsdifferenzrechners",
+          "content": "Unser Rechner bietet viele Vorteile:",
+          "precise": "Genauigkeit",
+          "preciseDesc": "Berücksichtigt Schaltjahre, unterschiedliche Monatslängen und genaue Kalenderdaten",
+          "flexible": "Flexibilität",
+          "flexibleDesc": "Funktioniert mit allen Datumsangaben in der Vergangenheit und Zukunft",
+          "detailed": "Detaillierte Informationen",
+          "detailedDesc": "Zeigt den Unterschied in Tagen, Wochen, Monaten und Jahren gleichzeitig an",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig angepasste Version für alle Geräte"
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Einige nützliche Tipps zur Verwendung des Rechners:",
+          "accurate": "Geben Sie genaue Daten an, um genaue Ergebnisse zu erhalten",
+          "leap": "Denken Sie daran, dass Schaltjahre 366 Tage umfassen (29. Februar).",
+          "timezone": "Der Rechner arbeitet mit Datumsangaben ohne Berücksichtigung von Uhrzeit und Zeitzonen",
+          "inclusive": "Das Ergebnis kann das Start- und Enddatum einschließen oder ausschließen – überprüfen Sie die Einstellungen"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie funktioniert der Datumsdifferenzrechner?",
+              "a": "Der Rechner berechnet die Anzahl der Tage zwischen zwei angegebenen Daten und berücksichtigt dabei Schaltjahre und genaue Monatslängen. Das Ergebnis wird in Tagen, Wochen, Monaten und Jahren angezeigt."
+            },
+            {
+              "q": "Zählen Schaltjahre?",
+              "a": "Ja, der Rechner berücksichtigt automatisch Schaltjahre (Jahre, die durch 4 teilbar sind, mit Ausnahme von Jahrhundertjahren, die durch 400 teilbar sein müssen). Ein Schaltjahr hat 366 statt 365 Tage."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für zukünftige Termine zu berechnen?",
+              "a": "Ja, der Rechner funktioniert mit beliebigen Datumsangaben – sowohl in der Vergangenheit als auch in der Zukunft. Sie können berechnen, wie viele Tage bis zum Ereignis verbleiben oder wie viele Tage seit dem Ereignis vergangen sind."
+            },
+            {
+              "q": "Wie wird die Differenz in Monaten und Jahren berechnet?",
+              "a": "Die Monatsdifferenz wird als ungefähre Anzahl der Monate zwischen den Daten berechnet. Die Differenz in Jahren wird auf ähnliche Weise berechnet. Die Genauigkeit hängt von bestimmten Daten und Monatslängen ab."
+            },
+            {
+              "q": "Werden Start- und Enddatum in die Berechnung einbezogen?",
+              "a": "Hängt von den Rechnereinstellungen ab. Normalerweise ist das Startdatum enthalten, und das Enddatum kann eingeschlossen oder ausgeschlossen sein. Überprüfen Sie die Funktionslogik in der Rechnerbeschreibung."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für Daten in verschiedenen Zeitzonen zu berechnen?",
+              "a": "Der Rechner arbeitet mit Datumsangaben ohne Berücksichtigung von Uhrzeit und Zeitzonen. Wenn Sie Zeitzonen berücksichtigen müssen, konvertieren Sie zunächst die Daten in die gleiche Zeitzone."
+            },
+            {
+              "q": "Wie berechnet man die Tage vor einer Veranstaltung?",
+              "a": "Geben Sie das heutige Datum als Startdatum und das Ereignisdatum als Enddatum an. Der Rechner zeigt an, wie viele Tage bis zum Event verbleiben."
+            },
+            {
+              "q": "Wie berechnet man, wie viele Tage seit einem bestimmten Datum vergangen sind?",
+              "a": "Geben Sie das letzte Datum als Startdatum und das heutige Datum als Enddatum an. Der Rechner zeigt die Anzahl der vergangenen Tage an."
+            },
+            {
+              "q": "Sind die Berechnungen für große Intervalle genau?",
+              "a": "Ja, der Rechner berechnet die Differenz selbst für Intervalle von zehn und hundert Jahren genau und berücksichtigt dabei alle Schaltjahre und die genaue Länge der Monate."
+            },
+            {
+              "q": "Ist es möglich, das Berechnungsergebnis zu speichern?",
+              "a": "Ja, Sie können das Ergebnis kopieren oder einen Screenshot der Seite machen. Einige Rechner unterstützen den Export von Ergebnissen in verschiedenen Formaten."
+            },
+            {
+              "q": "Funktioniert der Rechner auf Mobilgeräten?",
+              "a": "Ja, der Rechner ist vollständig für die Verwendung auf Mobilgeräten, Tablets und Smartphones geeignet. Die Oberfläche passt sich automatisch der Bildschirmgröße an."
+            },
+            {
+              "q": "Ist der Rechner kostenlos?",
+              "a": "Ja, der Rechner ist völlig kostenlos und erfordert keine Registrierung. Sie können es unbegrenzt oft und ohne Einschränkungen verwenden."
+            },
+            {
+              "q": "Wie berechnet man Arbeitstage zwischen Daten?",
+              "a": "Der Basisrechner zählt alle Tage, auch die Wochenenden. Um nur Arbeitstage zu berechnen, verwenden Sie einen speziellen Arbeitstagsrechner oder klären Sie die Einstellungen."
+            },
+            {
+              "q": "Zählen Feiertage?",
+              "a": "Der Standardrechner berücksichtigt keine Feiertage. Es berechnet die genaue Anzahl der Kalendertage. Um Feiertage zu berücksichtigen, verwenden Sie spezielle Rechner."
+            },
+            {
+              "q": "Ist es möglich, die Differenz in Stunden, Minuten und Sekunden zu berechnen?",
+              "a": "Dieser Rechner berechnet die Differenz in Tagen, Wochen, Monaten und Jahren. Um die Zeit (Stunden, Minuten, Sekunden) zu berechnen, verwenden Sie einen Zeitrechner oder einen Zeitdifferenzrechner."
+            },
+            {
+              "q": "Wie berechnet man Urlaubstage?",
+              "a": "Geben Sie als Startdatum das Urlaubsbeginndatum und als Enddatum das Urlaubsendedatum ein. Der Rechner zeigt die Gesamtzahl der Urlaubstage an."
+            },
+            {
+              "q": "Ist es möglich, das Alter in Tagen zu berechnen?",
+              "a": "Ja, geben Sie als Startdatum Ihr Geburtsdatum und als Enddatum das heutige Datum ein. Der Rechner zeigt Ihr Alter in Tagen, Wochen, Monaten und Jahren an."
+            },
+            {
+              "q": "Wie berechnet man die Projektabschlusszeit?",
+              "a": "Geben Sie als Startdatum das Projektstartdatum und als Enddatum das geplante Enddatum an. Der Rechner zeigt die Gesamtprojektdauer in verschiedenen Maßeinheiten an."
+            },
+            {
+              "q": "Werden unterschiedliche Kalender berücksichtigt (julianisch, gregorianisch)?",
+              "a": "Der Rechner verwendet den modernen gregorianischen Kalender. Für historische Daten vor 1582 muss möglicherweise der Julianische Kalender berücksichtigt werden."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für Daten aus verschiedenen Epochen zu berechnen?",
+              "a": "Der Rechner arbeitet mit Daten der Common Era (n. Chr.). Daten vor der Zeitrechnung (v. Chr.) erfordern eine spezielle Verarbeitung oder einen anderen Rechner."
+            },
+            {
+              "q": "Wie berechnet man die Tage bis zum Zahltag?",
+              "a": "Geben Sie als Startdatum das heutige Datum und als Enddatum das nächste Gehaltsdatum ein. Der Rechner zeigt an, wie viele Tage bis zum Erhalt Ihres Gehalts verbleiben."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für die Mietdauer zu berechnen?",
+              "a": "Ja, geben Sie als Startdatum das Startdatum des Mietvertrags und als Enddatum das Enddatum des Mietvertrags ein. Der Rechner zeigt die Mietdauer in Tagen und anderen Einheiten an."
+            },
+            {
+              "q": "Wie berechnet man die Tage zwischen den Zahlungen?",
+              "a": "Geben Sie als Startdatum das Datum der vorherigen Zahlung und als Enddatum das Datum der nächsten Zahlung an. Der Rechner zeigt den Abstand zwischen den Zahlungen in Tagen an."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für die Ausbildungszeit zu berechnen?",
+              "a": "Ja, bitte geben Sie als Startdatum das Startdatum und als Enddatum das Enddatum ein. Der Rechner zeigt die Trainingsdauer in verschiedenen Einheiten an."
+            },
+            {
+              "q": "Wie berechnet man die Tage bis zu seinem Geburtstag?",
+              "a": "Geben Sie als Startdatum das heutige Datum und als Enddatum Ihren nächsten Geburtstag ein. Der Rechner zeigt an, wie viele Tage noch bis zu Ihrem Geburtstag verbleiben."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für die Garantiezeit zu berechnen?",
+              "a": "Ja, bitte geben Sie als Startdatum das Kaufdatum und als Enddatum das Enddatum der Garantie ein. Der Rechner zeigt an, wie viele Garantietage noch übrig sind oder bereits vergangen sind."
+            },
+            {
+              "q": "Wie berechnet man die Tage vor einem wichtigen Ereignis?",
+              "a": "Geben Sie das heutige Datum als Startdatum und das Ereignisdatum als Enddatum an. Der Rechner zeigt die genaue Anzahl der Tage vor der Veranstaltung an."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für die Abonnementlaufzeit zu berechnen?",
+              "a": "Ja, geben Sie als Startdatum das Startdatum des Abonnements und als Enddatum das Enddatum des Abonnements an. Der Rechner zeigt die Dauer des Abonnements in Tagen an."
+            },
+            {
+              "q": "Wie berechnet man die Tage zwischen Arztbesuchen?",
+              "a": "Geben Sie als Startdatum das Datum des vorherigen Besuchs und als Enddatum das Datum des nächsten Besuchs an. Der Rechner zeigt den Abstand zwischen den Besuchen in Tagen an."
+            },
+            {
+              "q": "Ist es möglich, die Differenz für die Leihlaufzeit zu berechnen?",
+              "a": "Ja, geben Sie als Startdatum das Darlehenseingangsdatum und als Enddatum das Enddatum des Darlehens an. Der Rechner zeigt die Kreditlaufzeit in Tagen und anderen Einheiten an."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So berechnen Sie die Differenz zwischen Datumsangaben",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Datumsdifferenzrechners",
+          "steps": {
+            "step1": {
+              "name": "Wählen Sie das Startdatum",
+              "text": "Geben Sie das erste Datum an, ab dem der Countdown beginnt"
+            },
+            "step2": {
+              "name": "Wählen Sie das Enddatum aus",
+              "text": "Geben Sie das zweite Datum an, bis zu dem Sie zählen"
+            },
+            "step3": {
+              "name": "Klicken Sie auf Berechnen",
+              "text": "Der Rechner berechnet automatisch die Differenz in Tagen, Wochen, Monaten und Jahren"
+            },
+            "step4": {
+              "name": "Holen Sie sich das Ergebnis",
+              "text": "Das Ergebnis wird mit detaillierten Informationen über die Differenz zwischen den Daten angezeigt"
+            }
+          }
+        }
+      }
+    },
+    "addTime": {
+      "title": "Fügen Sie Tage, Stunden und Minuten zu einem Datum hinzu",
+      "description": "Mit dem Online-Zeitadditionsrechner können Sie schnell die erforderliche Anzahl an Tagen, Stunden oder Minuten zu einem bestimmten Datum hinzufügen.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "addTime": "Fügen Sie Zeit hinzu",
+        "category": "Zeit"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "startDate": "Startdatum",
+        "startTime": "Zeit",
+        "addDays": "Tage hinzufügen",
+        "addHours": "Stunden hinzufügen",
+        "addMinutes": "Minuten hinzufügen",
+        "today": "Heute",
+        "now": "Jetzt",
+        "calculate": "Berechnen",
+        "calculating": "Wir zählen...",
+        "reset": "Zurücksetzen"
+      },
+      "results": {
+        "title": "Berechnungsergebnis",
+        "resultDate": "Endgültiges Datum",
+        "resultTime": "Zeit",
+        "dayOfWeek": "Wochentag",
+        "copy": "Ergebnis kopieren",
+        "copied": "Kopiert!",
+        "placeholder": "Geben Sie Parameter ein und klicken Sie auf „Berechnen“.",
+        "copyText": {
+          "title": "Ergebnis der Addition der Zeit:",
+          "startDate": "Startdatum:",
+          "added": "Hinzugefügt:",
+          "days": "Tage,",
+          "hours": "Std,",
+          "minutes": "Minuten",
+          "finalDate": "Endtermin:",
+          "dayOfWeek": "Wochentag:"
+        }
+      },
+      "hero": {
+        "time": "Zeit",
+        "accurateCalculation": "Genaue Berechnung",
+        "accuracy": "Genauigkeit",
+        "free": "Kostenlos",
+        "usage": "Verwendung"
+      },
+      "seo": {
+        "title": "Zeitrechner hinzufügen | Calc1.ru",
+        "description": "Kostenloser Online-Rechner zum Addieren von Tagen, Stunden und Minuten zu einem bestimmten Datum. Berechnen Sie das zukünftige Datum und die zukünftige Uhrzeit unter Berücksichtigung der Kalenderfunktionen und des Übergangs über die Grenzen von Monaten und Jahren hinweg.",
+        "keywords": "Zeit zum Datum hinzufügen, Zeitrechner, Zeitrechner hinzufügen, Tage zum Datum hinzufügen, Tage zum Datum hinzufügen, Stunden zum Datum hinzufügen, Minuten zum Datum hinzufügen, zukünftiges Datum berechnen, Datums- und Zeitrechner, zukünftiges Datum berechnen, Datum-Uhrzeit-Rechner, Zeit online hinzufügen, Tage zum Datum hinzufügen, Stunden zum Datum hinzufügen, Minuten zum Datum hinzufügen, Zeitadditionsrechner, Rechner für zukünftiges Datum, Datum in Tagen berechnen, Datum in Stunden berechnen, Datum in Minuten berechnen, Tage zum aktuellen Datum hinzufügen, Zeit zum Datum online hinzufügen, Uhrzeit hinzufügen Rechner, Rechner für die Zukunft, Berechnen von Fecha Futura, Stunden zum Datum hinzufügen, Minuten zum Datum hinzufügen, Datumsrechner mit Uhrzeit, zukünftiger Datumsrechner, Zeitadditionsrechner, Datumsarithmetikrechner, Datum plus Tage-Rechner",
+        "overview": {
+          "title": "Rechner zum Addieren der aktuellen Zeit",
+          "content": "Mit dem Online-Zeitadditionsrechner können Sie zu einem bestimmten Datum und einer bestimmten Uhrzeit eine beliebige Anzahl von Tagen, Stunden oder Minuten hinzufügen und so das genaue Enddatum und die endgültige Uhrzeit ermitteln. Der Rechner berücksichtigt automatisch den Übergang über die Grenzen von Tagen, Monaten und Jahren, einschließlich Schaltjahren.",
+          "additionalContent": "Der Rechner ist nützlich für die Planung von Ereignissen, die Berechnung des Zeitplans von Aufgaben, die Bestimmung von Fristen, die Berechnung der Endzeit von Prozessen und viele andere Aufgaben im Zusammenhang mit Datum und Uhrzeit.",
+          "calculationExamples": {
+            "title": "Beispiele für die Berechnung des Hinzufügens von Zeit zu einem Datum",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Zeitadditionsrechners an:",
+            "example1": {
+              "title": "Beispiel 1: Tage zu einem Datum hinzufügen",
+              "description": "Berechnung des Datums 30 Tage ab dem 1. Januar 2024",
+              "input": "Startdatum: 1. Januar 2024, 10:00 Uhr\nHinzufügen: 30 Tage",
+              "calculation": "1. Januar 2024 + 30 Tage = 31. Januar 2024\nVerbleibende Zeit: 10:00",
+              "result": "Ergebnis: 31. Januar 2024, 10:00 Uhr (Mittwoch)",
+              "type": "Tage hinzufügen",
+              "note": "Die Zeit bleibt gleich, wenn nur Tage hinzugefügt werden"
+            },
+            "example2": {
+              "title": "Beispiel 2: Stunden hinzufügen, indem man jeden zweiten Tag umzieht",
+              "description": "Zeitberechnung in 15 Stunden ab 1. Januar 2024, 14:00 Uhr",
+              "input": "Startdatum: 1. Januar 2024, 14:00 Uhr\nHinzufügen: 15 Stunden",
+              "calculation": "14:00 + 15 Stunden = 29:00 = 2. Januar 2024, 05:00\nDie Grenze des Tages überschreiten",
+              "result": "Ergebnis: 2. Januar 2024, 05:00 Uhr (Dienstag)",
+              "type": "Stunden hinzufügen",
+              "note": "Beim Überschreiten der Tagesgrenze ändert sich automatisch das Datum"
+            },
+            "example3": {
+              "title": "Beispiel 3: Tage und Stunden hinzufügen",
+              "description": "Berechnung nach 5 Tagen und 8 Stunden ab 28.01.2024, 20:00 Uhr",
+              "input": "Startdatum: 28. Januar 2024, 20:00 Uhr\nHinzufügen: 5 Tage, 8 Stunden",
+              "calculation": "28. Januar + 5 Tage = 2. Februar\n20:00 + 8 Stunden = 04:00 Uhr am nächsten Tag\nGesamt: 3. Februar 2024, 04:00 Uhr",
+              "result": "Ergebnis: 3. Februar 2024, 04:00 Uhr (Samstag)",
+              "type": "Kombinierte Ergänzung",
+              "note": "Durch das Hinzufügen von Stunden kann sich das Datum nach Mitternacht ändern"
+            },
+            "example4": {
+              "title": "Beispiel 4: Addieren von Minuten nach Stunde und Tag",
+              "description": "Berechnung in 150 Minuten ab 31. Dezember 2023, 23:30 Uhr",
+              "input": "Startdatum: 31. Dezember 2023, 23:30 Uhr\nHinzufügen: 150 Minuten",
+              "calculation": "150 Minuten = 2 Stunden 30 Minuten\n23:30 + 2:30 = 02:00 am nächsten Tag\nÜbergang ins neue Jahr: 1. Januar 2024",
+              "result": "Ergebnis: 1. Januar 2024, 02:00 Uhr (Montag)",
+              "type": "Minuten hinzufügen",
+              "note": "Durch das Hinzufügen von Minuten können Stunde, Tag und sogar Jahr geändert werden"
+            },
+            "example5": {
+              "title": "Beispiel 5: Zeit über eine Monatsgrenze hinweg hinzufügen",
+              "description": "Berechnung nach 35 Tagen ab 28. Februar 2024, 12:00 Uhr",
+              "input": "Startdatum: 28. Februar 2024, 12:00 Uhr\nHinzufügen: 35 Tage",
+              "calculation": "2024 ist ein Schaltjahr, der Februar enthält 29 Tage\n28. Februar + 2 Tage = 1. März\n+ 33 Tage = 3. April 2024",
+              "result": "Ergebnis: 3. April 2024, 12:00 Uhr (Mittwoch)",
+              "type": "Übergang in einem Monat",
+              "note": "Der Rechner berücksichtigt unterschiedliche Monatslängen und Schaltjahre"
+            },
+            "example6": {
+              "title": "Beispiel 6: Zeit über eine Jahresgrenze hinweg hinzufügen",
+              "description": "Berechnung nach 40 Tagen und 5 Stunden ab 20. Dezember 2023, 18:00 Uhr",
+              "input": "Startdatum: 20. Dezember 2023, 18:00 Uhr\nHinzufügen: 40 Tage, 5 Stunden",
+              "calculation": "20. Dezember + 40 Tage = 30. Januar 2024\n18:00 + 5 Stunden = 23:00",
+              "result": "Ergebnis: 30. Januar 2024, 23:00 Uhr (Dienstag)",
+              "type": "Übergang in einem Jahr",
+              "note": "Der Rechner verarbeitet das Überschreiten der Jahresgrenze korrekt"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird das Hinzufügen von Zeit zu einem Datum berechnet?",
+          "content": "Die Berechnung erfolgt durch sequenzielles Addieren von Tagen, Stunden und Minuten zum Startdatum und zur Startzeit unter Berücksichtigung der Kalenderfunktionen.",
+          "formula": "Gesamtdatum = Startdatum + Tage + (Stunden + Minuten) / 24",
+          "days": "Addition von Tagen: Längen von Monaten (28-31 Tage) und Schaltjahren werden berücksichtigt.",
+          "hours": "Stunden hinzufügen: Wenn die Gesamtzahl > 24 Stunden beträgt, wird das Datum automatisch um die entsprechenden Tage erhöht.",
+          "minutes": "Minuten hinzufügen: Wenn die Gesamtzahl > 60 Minuten beträgt, wird die Uhr automatisch erhöht, was Auswirkungen auf das Datum haben kann."
+        },
+        "advantages": {
+          "title": "Vorteile des Zeitadditionsrechners",
+          "content": "Unser Rechner bietet viele Vorteile:",
+          "precise": "Genauigkeit",
+          "preciseDesc": "Berücksichtigt alle Kalendermerkmale: Monatslängen, Schaltjahre, Grenzüberschreitungen",
+          "flexible": "Flexibilität",
+          "flexibleDesc": "Funktioniert mit jeder Kombination aus Tagen, Stunden und Minuten",
+          "detailed": "Detaillierte Informationen",
+          "detailedDesc": "Zeigt das endgültige Datum, die Uhrzeit und den Wochentag an",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig angepasste Version für alle Geräte"
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Einige nützliche Tipps zur Verwendung des Rechners:",
+          "accurate": "Geben Sie das genaue Startdatum und die genaue Startzeit an, um genaue Ergebnisse zu erhalten",
+          "combined": "Für komplexe Berechnungen können Sie Tage, Stunden und Minuten gleichzeitig hinzufügen",
+          "timezone": "Der Rechner arbeitet mit der Ortszeit ohne Berücksichtigung von Zeitzonen",
+          "negative": "Um die Zeit zu subtrahieren, verwenden Sie negative Werte (falls unterstützt) oder einen Datumsdifferenzrechner"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie funktioniert der Zeitadditionsrechner?",
+              "a": "Der Rechner addiert die angegebene Anzahl von Tagen, Stunden und Minuten zu einem bestimmten Startdatum und einer bestimmten Startzeit und berücksichtigt dabei automatisch Übergänge über Tage, Monate und Jahre hinweg."
+            },
+            {
+              "q": "Ist es möglich, nur Tage ohne Stunden und Minuten hinzuzufügen?",
+              "a": "Ja, Sie können nur Tage angeben und Stunden und Minuten gleich Null belassen. Die Zeit bleibt in diesem Fall unverändert."
+            },
+            {
+              "q": "Was passiert, wenn Sie mehr als 24 Stunden hinzufügen?",
+              "a": "Wenn die Stundensumme 24 überschreitet, erhöht der Rechner das Datum automatisch um die entsprechende Anzahl Tage. Beispiel: 25 Stunden = 1 Tag und 1 Stunde."
+            },
+            {
+              "q": "Zählen Schaltjahre?",
+              "a": "Ja, der Rechner berücksichtigt automatisch Schaltjahre (Jahre, die durch 4 teilbar sind, mit Ausnahme von Jahrhundertjahren, die durch 400 teilbar sein müssen). Ein Schaltjahr besteht aus 366 Tagen."
+            },
+            {
+              "q": "Ist es möglich, eine negative Anzahl an Tagen hinzuzufügen?",
+              "a": "Hängt von der Implementierung des Rechners ab. Normalerweise können Sie zum Subtrahieren der Zeit negative Werte verwenden, es ist jedoch besser, hierfür einen speziellen Datumsdifferenzrechner zu verwenden."
+            },
+            {
+              "q": "Wie berechnet man ein Datum nach einer bestimmten Anzahl von Tagen?",
+              "a": "Geben Sie ein Startdatum an, geben Sie die Anzahl der Tage in das Feld „Tage hinzufügen“ ein, belassen Sie die Stunden und Minuten auf Null (oder geben Sie die aktuelle Uhrzeit ein) und klicken Sie auf „Berechnen“."
+            },
+            {
+              "q": "Ist es möglich, nur Stunden ohne Tage hinzuzufügen?",
+              "a": "Ja, Sie können nur Stunden angeben, wobei Tage und Minuten gleich Null bleiben. Dies ist nützlich, um die Zeit nach mehreren Stunden zu berechnen."
+            },
+            {
+              "q": "Wie berechnet man die Endzeit einer Veranstaltung?",
+              "a": "Geben Sie die Startzeit des Ereignisses als Startdatum und -uhrzeit an, fügen Sie die Dauer des Ereignisses (Tage, Stunden, Minuten) hinzu und erhalten Sie die Endzeit."
+            },
+            {
+              "q": "Zählen unterschiedliche Monatslängen?",
+              "a": "Ja, der Rechner berücksichtigt automatisch, dass Monate unterschiedlich lang sind: 31 Tage (Januar, März, Mai, Juli, August, Oktober, Dezember), 30 Tage (April, Juni, September, November), 28/29 Tage (Februar)."
+            },
+            {
+              "q": "Ist es möglich, Zeit zu einem zukünftigen Datum hinzuzufügen?",
+              "a": "Ja, der Rechner funktioniert mit beliebigen Datumsangaben – sowohl in der Vergangenheit als auch in der Zukunft. Sie können das Datum nach einer bestimmten Zeit von jedem beliebigen Ausgangspunkt aus berechnen."
+            },
+            {
+              "q": "Wie berechnet man den Abgabetermin?",
+              "a": "Geben Sie das aktuelle Datum und die aktuelle Uhrzeit als Startdatum an, fügen Sie die Projektfrist (Tage, Stunden) hinzu und erhalten Sie das genaue Datum und die Uhrzeit der Frist."
+            },
+            {
+              "q": "Was passiert, wenn Sie die Monatsgrenze überschreiten?",
+              "a": "Der Rechner wechselt je nach Länge automatisch zum nächsten Monat. Beispiel: 31. Januar + 1 Tag = 1. Februar (nicht 32. Januar)."
+            },
+            {
+              "q": "Kann ich die Betriebszeit mit einem Taschenrechner berechnen?",
+              "a": "Ja, geben Sie die Startzeit der Arbeit ein, addieren Sie die Anzahl der Arbeitsstunden und -minuten und erhalten Sie die Endzeit des Arbeitstages oder der Schicht."
+            },
+            {
+              "q": "Wie berechnet man das Datum in einer Woche?",
+              "a": "Geben Sie das Startdatum ein und fügen Sie 7 Tage hinzu. Die Uhrzeit bleibt unverändert, sofern keine Stunden und Minuten angegeben werden."
+            },
+            {
+              "q": "Wird das Überschreiten der Jahresgrenze berücksichtigt?",
+              "a": "Ja, der Rechner verarbeitet den Übergang von Dezember zum Januar des Folgejahres korrekt und erhöht das Jahr automatisch."
+            },
+            {
+              "q": "Ist es möglich, nur Minuten hinzuzufügen?",
+              "a": "Ja, Sie können nur Minuten angeben, Tage und Stunden bleiben auf Null gesetzt. Bei mehr als 60 Minuten erhöht sich die Uhr automatisch."
+            },
+            {
+              "q": "Wie berechnet man die Ankunftszeit bei bekannter Fahrtdauer?",
+              "a": "Geben Sie die Abfahrtszeit ein, fügen Sie die Reisedauer (Stunden, Minuten) hinzu und erhalten Sie die Ankunftszeit am Zielort."
+            },
+            {
+              "q": "Kann ich die Haltbarkeit mit einem Taschenrechner berechnen?",
+              "a": "Ja, geben Sie das Herstellungs- oder Kaufdatum ein, fügen Sie das Ablaufdatum (Tage) hinzu und erhalten Sie das Ablaufdatum."
+            },
+            {
+              "q": "Wie berechnet man den nächsten Zahlungstermin?",
+              "a": "Geben Sie das Datum der letzten Zahlung ein, addieren Sie das Intervall zwischen den Zahlungen (Tage) und erhalten Sie das Datum der nächsten Zahlung."
+            },
+            {
+              "q": "Was passiert, wenn Sie am Ende des Monats Zeit hinzufügen?",
+              "a": "Der Rechner wechselt automatisch zum nächsten Monat, wenn das resultierende Datum die Länge des aktuellen Monats überschreitet. Beispiel: 31. Januar + 1 Tag = 1. Februar."
+            },
+            {
+              "q": "Ist es möglich, das Datum in ein paar Monaten zu berechnen?",
+              "a": "Ja, aber Sie müssen Monate in Tage umrechnen. Zum Beispiel 3 Monate ≈ 90 Tage (die genaue Anzahl hängt von den einzelnen Monaten ab). Aus Gründen der Genauigkeit ist es besser, die Anzahl der Tage anzugeben."
+            },
+            {
+              "q": "Wie berechnet man das Ende des Urlaubs?",
+              "a": "Geben Sie das Startdatum des Urlaubs ein, fügen Sie die Dauer des Urlaubs (Tage) hinzu und erhalten Sie das Enddatum des Urlaubs."
+            },
+            {
+              "q": "Zählt der Übergang nach einer Woche?",
+              "a": "Der Rechner zeigt das letzte Datum und den letzten Wochentag an. Der Übergang zur Woche erfolgt automatisch, wenn mehr als 7 Tage hinzugefügt werden."
+            },
+            {
+              "q": "Kann ich die Garzeit eines Gerichts mit einem Taschenrechner berechnen?",
+              "a": "Ja, geben Sie die Garstartzeit ein, addieren Sie die Garzeit (Stunden, Minuten) und erhalten Sie die Garzeit."
+            },
+            {
+              "q": "Wie berechnet man den Liefertermin?",
+              "a": "Geben Sie das Abreisedatum ein, fügen Sie die Lieferzeit (Tage) hinzu und erhalten Sie das Lieferdatum. Für eine genauere Berechnung können Sie auch die Stunden angeben."
+            },
+            {
+              "q": "Was passiert, wenn man in einem Schaltjahr Zeit hinzufügt?",
+              "a": "Der Rechner berücksichtigt automatisch, dass ein Schaltjahr 366 Tage (29. Februar) umfasst. Wenn Sie Tage nach dem 29. Februar hinzufügen, ist die Berechnung korrekt."
+            },
+            {
+              "q": "Wie berechnet man den Zeitpunkt des nächsten Ereignisses?",
+              "a": "Geben Sie Datum und Uhrzeit des letzten Ereignisses an, fügen Sie das Intervall zwischen den Ereignissen hinzu (Tage, Stunden, Minuten) und erhalten Sie Datum und Uhrzeit des nächsten Ereignisses."
+            },
+            {
+              "q": "Kann ich die Garantiezeit mit einem Rechner berechnen?",
+              "a": "Ja, geben Sie das Kaufdatum ein, fügen Sie den Garantiezeitraum (Tage) hinzu und erhalten Sie das Enddatum des Garantiezeitraums."
+            },
+            {
+              "q": "Wie berechnet man die Endzeit einer Veranstaltung?",
+              "a": "Geben Sie die Startzeit des Ereignisses an, fügen Sie die Dauer des Ereignisses (Stunden, Minuten) hinzu und erhalten Sie die Endzeit."
+            },
+            {
+              "q": "Ist es möglich, einem Datum in der Vergangenheit Zeit hinzuzufügen?",
+              "a": "Ja, der Rechner funktioniert mit beliebigen Datumsangaben. Sie können berechnen, welches Datum nach einer bestimmten Zeit ab dem vorherigen Datum lag."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So fügen Sie einem Datum Zeit hinzu",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Zeitadditionsrechners",
+          "steps": {
+            "step1": {
+              "name": "Wählen Sie Startdatum und -uhrzeit",
+              "text": "Geben Sie Datum und Uhrzeit an, ab dem der Countdown beginnt"
+            },
+            "step2": {
+              "name": "Geben Sie die Anzahl der Tage an",
+              "text": "Geben Sie die Anzahl der hinzuzufügenden Tage ein (Sie können 0 belassen)"
+            },
+            "step3": {
+              "name": "Bitte geben Sie die Anzahl der Stunden an",
+              "text": "Geben Sie die Anzahl der Stunden ein, die Sie hinzufügen möchten (Sie können 0 belassen)"
+            },
+            "step4": {
+              "name": "Geben Sie die Anzahl der Minuten an",
+              "text": "Geben Sie die Anzahl der hinzuzufügenden Minuten ein (Sie können 0 belassen)"
+            },
+            "step5": {
+              "name": "Klicken Sie auf Berechnen",
+              "text": "Der Rechner berechnet automatisch das endgültige Datum und die endgültige Uhrzeit"
+            },
+            "step6": {
+              "name": "Holen Sie sich das Ergebnis",
+              "text": "Das Ergebnis wird mit dem resultierenden Datum, der Uhrzeit und dem Wochentag angezeigt"
+            }
+          }
+        }
+      }
+    },
+    "age": {
+      "title": "Altersrechner – Finden Sie Ihr genaues Alter in Jahren, Monaten, Tagen heraus",
+      "description": "Ein einfacher Online-Rechner, der das Alter einer Person anhand ihres Geburtsdatums genau berechnet. Zeigt nicht nur Jahre, sondern auch Monate, Tage, Stunden und sogar Sekunden an. Nützlich zum Ausfüllen von Formularen, Dokumenten, Spielen und einfach nur aus Neugier.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "age": "Alter",
+        "category": "Zeit"
+      },
+      "hero": {
+        "age": "Alter",
+        "accurateCalculation": "Genaue Berechnung",
+        "accuracy": "Genauigkeit",
+        "free": "Kostenlos",
+        "usage": "Verwendung"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "description": "Finden Sie Ihr genaues Alter in Jahren, Monaten und Tagen heraus",
+        "birthDate": "Geburtsdatum",
+        "birthDatePlaceholder": "Geburtsdatum auswählen",
+        "calculateDate": "Berechnen Sie nach Datum",
+        "calculateDatePlaceholder": "Wählen Sie das Datum für die Berechnung aus",
+        "today": "Heute",
+        "calculate": "Berechnen",
+        "calculating": "Wir zählen...",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "invalidDate": "Bitte geben Sie gültige Daten ein",
+          "birthDateAfterCalculate": "Das Geburtsdatum darf nicht nach dem Berechnungsdatum liegen",
+          "calculationError": "Rechenfehler. Überprüfen Sie die eingegebenen Daten."
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnis",
+        "calculationTitle": "Altersberechnung",
+        "birthDate": "Geburtsdatum",
+        "calculateDate": "Berechnungsdatum",
+        "age": "Alter",
+        "years": "Jahre",
+        "months": "Monate",
+        "days": "Tage",
+        "totalDays": "Gesamtzahl der Tage",
+        "period": "Von {bis}",
+        "copy": "Ergebnis kopieren",
+        "copied": "Kopiert!",
+        "placeholder": "Geben Sie Ihr Geburtsdatum ein und klicken Sie auf „Berechnen“."
+      },
+      "seo": {
+        "title": "Altersrechner – Berechnen Sie genau, wie alt Sie sind",
+        "description": "Finden Sie Ihr genaues Alter anhand des Geburtsdatums heraus: in Jahren, Monaten, Tagen und Sekunden. Kostenloser Online-Altersrechner – einfach das Datum eingeben und das Ergebnis erhalten!",
+        "keywords": "Altersrechner, wie alt bin ich, Alter berechnen, Geburtsdatum, wie viele Tage bin ich, Alter online, Altersrechner, Alter berechnen, Geburtstagsalter, Tage zwischen Daten",
+        "howTo": {
+          "title": "So berechnen Sie das Alter",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Altersrechners",
+          "steps": {}
+        }
+      },
+      "faq": {
+        "question1": "Wie funktioniert der Altersrechner?",
+        "answer1": "Es vergleicht das eingegebene Geburtsdatum mit dem aktuellen Datum und berechnet die genaue Anzahl der gelebten Jahre, Monate und Tage.",
+        "question2": "Ist es möglich, ein zukünftiges Datum anzugeben?",
+        "answer2": "Ja, aber das Ergebnis zeigt, wie viel Zeit bis zu diesem Datum verbleibt, nicht Ihr aktuelles Alter.",
+        "question3": "Kann der Rechner für Tiere verwendet werden?",
+        "answer3": "Ja, geben Sie einfach das Geburtsdatum Ihres Haustiers ein – das Prinzip ist das gleiche.",
+        "question4": "Wie kann man das Alter einer Person an einem bestimmten Datum herausfinden?",
+        "answer4": "Wählen Sie ein beliebiges Datum in der Zukunft oder in der Vergangenheit aus – der Rechner zeigt das Alter dafür an.",
+        "question5": "Ist es möglich, das Alter in Stunden und Minuten zu berechnen?",
+        "answer5": "Ja, die erweiterte Version zeigt das Alter bis auf Sekunden genau an.",
+        "question6": "Wie oft wird das Datum aktualisiert?",
+        "answer6": "Das Ergebnis wird in Echtzeit aktualisiert, wenn sich die aktuelle Uhrzeit auf dem Gerät ändert.",
+        "question7": "Ist für die Nutzung eine Registrierung erforderlich?",
+        "answer7": "Nein, der Rechner ist völlig kostenlos und erfordert keine Anmeldung.",
+        "question8": "Ist es möglich, das Ergebnis zu speichern?",
+        "answer8": "Ja, Sie können das Ergebnis als Text oder Bild kopieren oder herunterladen.",
+        "question9": "Kann ich den Rechner in der mobilen Version nutzen?",
+        "answer9": "Natürlich ist es vollständig für Smartphones und Tablets angepasst.",
+        "question10": "Kann ich einen Taschenrechner auf meiner Website einbetten?",
+        "answer10": "Ja, es wird ein Widget oder eine API zur Integration bereitgestellt."
+      }
+    },
+    "agecalc": {
+      "title": "Altersrechner – Finden Sie Ihr genaues Alter in Jahren, Monaten, Tagen heraus",
+      "description": "Ein einfacher Online-Rechner, der das Alter einer Person anhand ihres Geburtsdatums genau berechnet. Zeigt nicht nur Jahre, sondern auch Monate, Tage, Stunden und sogar Sekunden an. Nützlich zum Ausfüllen von Formularen, Dokumenten, Spielen und einfach nur aus Neugier.",
+      "breadcrumbs": {
+        "category": "Zeit"
+      },
+      "hero": {
+        "age": "Alter",
+        "accurateCalculation": "Genaue Berechnung",
+        "accuracy": "Genauigkeit",
+        "free": "Kostenlos",
+        "usage": "Verwendung"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "description": "Finden Sie Ihr genaues Alter in Jahren, Monaten und Tagen heraus",
+        "birthDate": "Geburtsdatum",
+        "birthDatePlaceholder": "Geburtsdatum auswählen",
+        "calculateDate": "Berechnen Sie nach Datum",
+        "calculateDatePlaceholder": "Wählen Sie das Datum für die Berechnung aus",
+        "today": "Heute",
+        "calculate": "Berechnen",
+        "calculating": "Wir zählen...",
+        "reset": "Zurücksetzen",
+        "errors": {
+          "invalidDate": "Bitte geben Sie gültige Daten ein",
+          "birthDateAfterCalculate": "Das Geburtsdatum darf nicht nach dem Berechnungsdatum liegen",
+          "calculationError": "Rechenfehler. Überprüfen Sie die eingegebenen Daten."
+        }
+      },
+      "results": {
+        "title": "Berechnungsergebnis",
+        "calculationTitle": "Altersberechnung",
+        "birthDate": "Geburtsdatum",
+        "calculateDate": "Berechnungsdatum",
+        "age": "Alter",
+        "years": "Jahre",
+        "months": "Monate",
+        "days": "Tage",
+        "totalDays": "Gesamtzahl der Tage",
+        "period": "Von {bis}",
+        "copy": "Ergebnis kopieren",
+        "copied": "Kopiert!",
+        "placeholder": "Geben Sie Ihr Geburtsdatum ein und klicken Sie auf „Berechnen“."
+      },
+      "seo": {
+        "title": "Altersrechner – Berechnen Sie genau, wie alt Sie sind | Calc1.ru",
+        "description": "Finden Sie Ihr genaues Alter anhand des Geburtsdatums heraus: in Jahren, Monaten, Tagen und Sekunden. Kostenloser Online-Altersrechner – einfach das Datum eingeben und das Ergebnis erhalten!",
+        "keywords": "Altersrechner, wie alt bin ich, Alter berechnen, Geburtsdatum, wie viele Tage bin ich, Alter online, Altersrechner, Alter berechnen, Geburtstagsalter, Tage zwischen Daten, Alter in Jahren, Alter in Monaten, Alter in Tagen, genaues Alter, wie alt eine Person ist, Alter nach Geburtsdatum, Geburtsdatumsrechner, berechnen wie alt, online berechnen, Alter in Sekunden, Alter in Stunden, Alter in Minuten, Geburtstagsrechner, Altersrechner einer Person, genaue Altersberechnung, wie viele Tage seit der Geburt, wie viele Monate seit der Geburt, wie viele Wochen seit der Geburt, Alter an einem bestimmten Datum, Alter in der Zukunft, Alter in der Vergangenheit, Alter berechnen, Alter in Tagen, Alter in Monaten, Alter in Jahren, Geburtstagsrechner, genaues Alter einer Person, Altersberechnung online",
+        "overview": {
+          "title": "Über den Altersrechner",
+          "content": "Der Altersrechner bietet eine bequeme Möglichkeit, das genaue Alter einer Person anhand des Geburtsdatums in Jahren, Monaten und Tagen zu berechnen. Geben Sie einfach Ihr Geburtsdatum ein und erhalten Sie das Ergebnis in verschiedenen Formaten, einschließlich Tagen, Monaten und Jahren, sowie mit genauen Daten zur leichteren Bezugnahme.",
+          "additionalContent": "Der Rechner berücksichtigt Schaltjahre und unterschiedliche Monatslängen und berechnet das Alter an jedem beliebigen Datum genau – sowohl in der Vergangenheit als auch in der Zukunft. Nützlich zum Ausfüllen von Unterlagen, zur Bestimmung von Alterskategorien, zur Planung von Veranstaltungen und einfach nur aus Neugier.",
+          "calculationExamples": {
+            "title": "Beispiele zur Altersberechnung",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Altersrechners an:",
+            "example1": {
+              "title": "Beispiel 1: Neugeborenes Baby",
+              "description": "Berechnung des Alters eines am 1. Januar 2024 geborenen Kindes per 31. Januar 2024",
+              "input": "Geburtsdatum: 1. Januar 2024\nBerechnungsdatum: 31. Januar 2024",
+              "calculation": "31. Januar - 1. Januar = 30 Tage\nMonat: Januar (31 Tage)\nAlter: 0 Jahre, 1 Monat, 0 Tage",
+              "result": "Ergebnis: 0 Jahre, 1 Monat, 0 Tage (30 Tage ab der Geburt)",
+              "type": "Neugeborenes",
+              "note": "Bei Kindern unter einem Jahr wird das Alter in Monaten und Tagen angegeben"
+            },
+            "example2": {
+              "title": "Beispiel 2: Kind 5 Jahre alt",
+              "description": "Berechnung des Alters eines am 15. März 2019 geborenen Kindes mit Stand vom 15. März 2024",
+              "input": "Geburtsdatum: 15. März 2019\nBerechnungsdatum: 15. März 2024",
+              "calculation": "2024 - 2019 = 5 Jahre\nMonat: März (Spiele)\nTag: 15 (gleich)\nAlter: genau 5 Jahre",
+              "result": "Ergebnis: 5 Jahre, 0 Monate, 0 Tage (1826 Tage ab der Geburt)",
+              "type": "Geburtstag",
+              "note": "Genauer Geburtstag – das Alter wird in ganzen Jahren angezeigt"
+            },
+            "example3": {
+              "title": "Beispiel 3: Erwachsener unter Berücksichtigung von Schaltjahren",
+              "description": "Berechnung des Alters einer am 29. Februar 2000 geborenen Person ab dem 1. März 2024",
+              "input": "Geburtsdatum: 29. Februar 2000\nBerechnungsdatum: 1. März 2024",
+              "calculation": "2000–2024: 24 Jahre\nSchaltjahre: 2000, 2004, 2008, 2012, 2016, 2020, 2024 (7 Jahre)\n29. Februar in Nicht-Schaltjahren = 28. Februar\nVom 29. Februar 2000 bis 1. März 2024: 24 Jahre, 0 Monate, 2 Tage",
+              "result": "Ergebnis: 24 Jahre, 0 Monate, 1 Tag (~8770 Tage ab der Geburt)",
+              "type": "Schaltjahr",
+              "note": "Für diejenigen, die am 29. Februar geboren wurden, wird das Alter in Nicht-Schaltjahren ab dem 28. Februar berechnet"
+            },
+            "example4": {
+              "title": "Beispiel 4: Alter an einem bestimmten Datum",
+              "description": "Berechnung des Alters am 1. Januar 2025 für eine am 15. Juni 1990 geborene Person",
+              "input": "Geburtsdatum: 15. Juni 1990\nBerechnungsdatum: 1. Januar 2025",
+              "calculation": "1990–2025: 34 Jahre\nVom 15. Juni 1990 bis 15. Juni 2024: 34 Jahre\nVom 15. Juni 2024 bis 1. Januar 2025: 6 Monate 17 Tage\nAlter: 34 Jahre, 6 Monate, 17 Tage",
+              "result": "Ergebnis: 34 Jahre, 6 Monate, 17 Tage (~12.613 Tage ab der Geburt)",
+              "type": "Für ein bestimmtes Datum",
+              "note": "Der Rechner kann das Alter an jedem angegebenen Datum berechnen"
+            },
+            "example5": {
+              "title": "Beispiel 5: Ältere Person",
+              "description": "Berechnung des Alters einer am 10. Mai 1950 geborenen Person mit Stand heute (1. Januar 2024)",
+              "input": "Geburtsdatum: 10. Mai 1950\nBerechnungsdatum: 1. Januar 2024",
+              "calculation": "1950-2024: 73 Jahre\nVom 10. Mai 1950 bis 10. Mai 2023: 73 Jahre\nVom 10. Mai 2023 bis 1. Januar 2024: 7 Monate 22 Tage\nAlter: 73 Jahre, 7 Monate, 22 Tage",
+              "result": "Ergebnis: 73 Jahre, 7 Monate, 22 Tage (~26.885 Tage ab der Geburt)",
+              "type": "Alter",
+              "note": "Der Rechner berechnet das Alter auch für sehr große Intervalle genau"
+            },
+            "example6": {
+              "title": "Beispiel 6: Alter in Tagen, Stunden, Minuten",
+              "description": "Berechnung des Alters in detaillierten Einheiten für eine Person, die am 20. Dezember 2020 um 10:30 Uhr geboren wurde, für den 20. Dezember 2024 um 15:45 Uhr",
+              "input": "Geburtsdatum: 20. Dezember 2020, 10:30 Uhr\nBerechnungsdatum: 20. Dezember 2024, 15:45 Uhr",
+              "calculation": "Jahre: 2024 - 2020 = 4 Jahre\nZeit: 15:45 - 10:30 = 5 Stunden 15 Minuten\nGesamttage: 4 Jahre × 365,25 (einschließlich Schalttage) ≈ 1461 Tage\nGesamtstunden: 1461 × 24 + 5 = 35.069 Stunden\nGesamtminuten: 35.069 × 60 + 15 = 2.104.155 Minuten",
+              "result": "Ergebnis: 4 Jahre, 0 Monate, 0 Tage (~1461 Tage, ~35.069 Stunden, ~2.104.155 Minuten)",
+              "type": "Detaillierte Berechnung",
+              "note": "Für eine genaue Berechnung unter Berücksichtigung der Zeit müssen Sie den Geburts- und Berechnungszeitpunkt angeben"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird das Alter berechnet?",
+          "content": "Die Berechnung erfolgt durch einen einfachen Algorithmus, der das Geburtsdatum mit dem aktuellen Datum oder dem angegebenen Berechnungsdatum vergleicht und dabei Schaltjahre und die genaue Anzahl der Tage berücksichtigt.",
+          "formula": "Alter = Berechnungsdatum – Geburtsdatum (in Jahren, Monaten, Tagen)"
+        },
+        "advantages": {
+          "title": "Vorteile eines Altersrechners",
+          "content": "Unser Rechner bietet viele Vorteile:",
+          "precise": "Genauigkeit",
+          "preciseDesc": "Genaue Berechnungen unter Berücksichtigung von Schaltjahren und der genauen Anzahl von Tagen",
+          "flexible": "Flexibilität",
+          "flexibleDesc": "Berechnung für jedes Datum",
+          "detailed": "Detaillierte Informationen",
+          "detailedDesc": "Zeigt das genaue Ergebnis in Jahren, Monaten, Tagen und Sekunden an",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig angepasste Version für alle Geräte und Bildschirme"
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "Einige nützliche Tipps:",
+          "accurate": "Das genaue Geburtsdatum liefert ein genaueres Ergebnis",
+          "leap": "Schaltjahre werden berücksichtigt",
+          "timezone": "Die genaue Uhrzeit berücksichtigt die Zeitzone und das Datum",
+          "specificDate": "Sie können ein bestimmtes Datum angeben, um das Alter zu diesem Zeitpunkt zu berechnen"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie funktioniert der Altersrechner?",
+              "a": "Der Rechner vergleicht das eingegebene Geburtsdatum mit dem aktuellen Datum bzw. dem angegebenen Berechnungsdatum und berechnet die genaue Anzahl der gelebten Jahre, Monate und Tage. Das Ergebnis berücksichtigt Schaltjahre und genaue Monatslängen."
+            },
+            {
+              "q": "Ist es möglich, ein Datum für die Berechnung anzugeben?",
+              "a": "Ja, Sie können ein beliebiges Datum in der Zukunft angeben. Der Rechner zeigt an, wie viele Jahre, Monate und Tage eine Person an diesem Datum haben wird. Dies ist nützlich, um Veranstaltungen zu planen oder Alterskategorien festzulegen."
+            },
+            {
+              "q": "Ist es möglich, für die Berechnung ein vergangenes Datum anzugeben?",
+              "a": "Ja, Sie können ein beliebiges Datum in der Vergangenheit angeben. Der Rechner zeigt das Alter der Person an diesem Datum an. Dies ist nützlich für historische Berechnungen oder die Bestimmung des Alters zum Zeitpunkt eines wichtigen Ereignisses."
+            },
+            {
+              "q": "Wie berechnet man das Alter in Tagen?",
+              "a": "Der Rechner zeigt automatisch die Gesamtzahl der Tage von der Geburt bis zum Berechnungsdatum an. Dieser Wert wird in den Ergebnissen als „Tage insgesamt“ angezeigt."
+            },
+            {
+              "q": "Zählen Schaltjahre?",
+              "a": "Ja, der Rechner berücksichtigt automatisch Schaltjahre (Jahre, die durch 4 teilbar sind, mit Ausnahme von Jahrhundertjahren, die durch 400 teilbar sein müssen). Ein Schaltjahr enthält 366 statt 365 Tage, was sich auf die Genauigkeit der Berechnung auswirkt."
+            },
+            {
+              "q": "Kann der Rechner für Tiere verwendet werden?",
+              "a": "Ja, mit dem Rechner können Sie das Alter jedes Lebewesens berechnen – Haustiere, Tiere usw. Das Berechnungsprinzip ist das gleiche: Das Geburtsdatum wird mit dem Berechnungsdatum verglichen."
+            },
+            {
+              "q": "Wie berechnet man das Alter in Stunden, Minuten und Sekunden?",
+              "a": "Um das Alter in detaillierten Einheiten zu berechnen, ist es notwendig, nicht nur das Datum, sondern auch die Geburtszeit und die Berechnungszeit anzugeben. Der Rechner zeigt Ihr Alter in Jahren, Monaten, Tagen, Stunden, Minuten und Sekunden an."
+            },
+            {
+              "q": "Ist es möglich, das Alter der am 29. Februar Geborenen zu berechnen?",
+              "a": "Ja, der Rechner verarbeitet das Geburtsdatum korrekt als 29. Februar. In Nicht-Schaltjahren wird das Alter je nach Logik des Rechners ab dem 28. Februar oder 1. März berechnet."
+            },
+            {
+              "q": "Wie kann ich mein Alter an einem bestimmten Datum herausfinden?",
+              "a": "Geben Sie im Feld „Geburtsdatum“ Ihr Geburtsdatum und im Feld „Bisheriges Datum berechnen“ das gewünschte Datum ein. Der Rechner zeigt das genaue Alter an diesem Datum in Jahren, Monaten und Tagen an."
+            },
+            {
+              "q": "Ist der Rechner kostenlos?",
+              "a": "Ja, der Rechner ist völlig kostenlos und erfordert keine Registrierung. Sie können es unbegrenzt oft und ohne Einschränkungen verwenden."
+            },
+            {
+              "q": "Ist es möglich, das Berechnungsergebnis zu speichern?",
+              "a": "Ja, Sie können das Ergebnis kopieren oder einen Screenshot der Seite machen. Einige Rechner unterstützen den Export von Ergebnissen in verschiedenen Formaten."
+            },
+            {
+              "q": "Funktioniert der Rechner auf Mobilgeräten?",
+              "a": "Ja, der Rechner ist vollständig für die Verwendung auf Mobilgeräten, Tablets und Smartphones geeignet. Die Oberfläche passt sich automatisch der Bildschirmgröße an."
+            },
+            {
+              "q": "Wie oft wird das Ergebnis aktualisiert?",
+              "a": "Wenn das aktuelle Datum angegeben ist, wird das Ergebnis in Echtzeit aktualisiert, wenn sich die Zeit auf dem Gerät ändert. Bei festen Terminen bleibt das Ergebnis konstant."
+            },
+            {
+              "q": "Ist es möglich, das Alter mehrerer Personen gleichzeitig zu berechnen?",
+              "a": "Normalerweise berechnet der Rechner jeweils das Alter einer Person. Um das Alter mehrerer Personen zu berechnen, führen Sie die Berechnung für jede Person einzeln durch."
+            },
+            {
+              "q": "Wie berechnet man das Alter, um die Alterskategorie zu bestimmen?",
+              "a": "Geben Sie Ihr Geburtsdatum und das Datum der Festlegung der Kategorie an. Der Rechner zeigt das genaue Alter an und ermöglicht die Zuordnung zu einer bestimmten Altersgruppe."
+            },
+            {
+              "q": "Werden unterschiedliche Zeitzonen berücksichtigt?",
+              "a": "Der Basisrechner arbeitet mit Datumsangaben unabhängig von der Zeit. Um Zeitzonen und genaue Uhrzeiten zu berücksichtigen, müssen Sie den Geburts- und Berechnungszeitpunkt angeben."
+            },
+            {
+              "q": "Kann ich zum Ausfüllen von Dokumenten einen Taschenrechner verwenden?",
+              "a": "Ja, der Rechner eignet sich zum Ausfüllen verschiedener Dokumente, Formulare und Anträge, bei denen Sie Ihr genaues Alter in Jahren, Monaten und Tagen angeben müssen."
+            },
+            {
+              "q": "Wie berechnet man das Alter für die Veranstaltungsplanung?",
+              "a": "Geben Sie das Geburtsdatum des Teilnehmers und das Datum der geplanten Veranstaltung an. Der Rechner zeigt Ihr Alter an diesem Datum an, was Ihnen bei der Bestimmung der Altersgrenzen und -anforderungen hilft."
+            },
+            {
+              "q": "Sind die Berechnungen für große Intervalle genau?",
+              "a": "Ja, der Rechner berechnet das Alter auch für Intervalle von mehreren zehn und hundert Jahren genau und berücksichtigt dabei alle Schaltjahre und die genaue Länge der Monate."
+            },
+            {
+              "q": "Ist es möglich, das Alter in Wochen zu berechnen?",
+              "a": "Der Rechner zeigt das Alter in Jahren, Monaten und Tagen an. Zur Umrechnung in Wochen verwenden Sie die Gesamtzahl der Tage dividiert durch (ungefähr) 7."
+            },
+            {
+              "q": "Wie berechnet man das Alter eines Kindes in Monaten?",
+              "a": "Geben Sie das Geburtsdatum des Kindes und das aktuelle Datum an. Der Rechner zeigt Ihr Alter in Jahren, Monaten und Tagen an. Bei Kindern unter einem Jahr wird das Alter in Monaten und Tagen angezeigt."
+            },
+            {
+              "q": "Ist es möglich, das Volljährigkeitsalter mit einem Rechner zu ermitteln?",
+              "a": "Ja, bitte geben Sie Geburtsdatum und Datum der Untersuchung an. Liegt das Alter zum Zeitpunkt der Verifizierung bei 18 Jahren oder mehr, gilt die Person als volljährig."
+            },
+            {
+              "q": "Wie berechnet man das Alter für die Teilnahme an Wettbewerben?",
+              "a": "Geben Sie das Geburtsdatum des Teilnehmers und das Datum des Wettbewerbs an. Der Rechner zeigt Ihr Alter an diesem Datum an, um die Altersberechtigung zu bestimmen."
+            },
+            {
+              "q": "Kann man das Alter für den Führerscheinerwerb berechnen?",
+              "a": "Ja, bitte geben Sie Ihr Geburtsdatum und Ihr aktuelles Datum (oder das Datum, an dem Sie Ihren Führerschein erworben haben) an. Der Rechner zeigt das Alter an, das mit dem Mindestalter für den Führerscheinerwerb (in der Regel 18 Jahre) verglichen werden kann."
+            },
+            {
+              "q": "Wie berechnet man das Alter für die Rentenberechnung?",
+              "a": "Geben Sie Ihr Geburtsdatum und das Datum Ihrer Pensionierung ein. Der Rechner zeigt Ihr Alter an diesem Datum an, um Ihren Rentenanspruch zu ermitteln."
+            },
+            {
+              "q": "Wie berechnet man das Alter für Bildungszwecke?",
+              "a": "Geben Sie das Geburtsdatum des Schülers und den Beginn des Schuljahres oder der Ausbildung an. Der Rechner zeigt das Alter zu diesem Datum an, das für die Bestimmung der Klassenstufe und Altersgruppen wichtig ist."
+            },
+            {
+              "q": "Ist eine Altersberechnung aus rechtlichen Gründen möglich?",
+              "a": "Ja, mit dem Rechner kann das Alter an einem bestimmten Datum ermittelt werden, was für rechtliche Fragen im Zusammenhang mit der Volljährigkeit, der Leistungsfähigkeit und Altersbeschränkungen wichtig ist."
+            },
+            {
+              "q": "Wie berechnet man das Alter für Versicherungszwecke?",
+              "a": "Geben Sie Ihr Geburtsdatum und Ihr Versicherungsdatum ein. Der Rechner zeigt Ihr Alter an diesem Datum an, das zur Ermittlung der Versicherungsprämien und -bedingungen verwendet wird."
+            },
+            {
+              "q": "Ist es möglich, das Alter rückwärts zu berechnen (vor wie vielen Jahren)?",
+              "a": "Ja, geben Sie als Geburtsdatum das spätere Datum und als Berechnungsdatum das frühere Datum ein. Der Rechner zeigt ein negatives Alter an, oder Sie können damit ermitteln, vor wie vielen Jahren das Ereignis stattgefunden hat."
+            },
+            {
+              "q": "Wie berechnen Sie Ihr Alter, um Ihren nächsten Geburtstag zu bestimmen?",
+              "a": "Der Rechner zeigt Ihr aktuelles Alter an. Um das Datum Ihres nächsten Geburtstages zu ermitteln, verwenden Sie den Zeitadditionsrechner, indem Sie die erforderliche Anzahl an Jahren, Monaten und Tagen zu Ihrem Geburtsdatum addieren."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So berechnen Sie das Alter",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Altersrechners",
+          "steps": {
+            "step1": {
+              "name": "Geben Sie das Geburtsdatum ein",
+              "text": "Geben Sie das Geburtsdatum der Person ein, deren Alter Sie berechnen möchten"
+            },
+            "step2": {
+              "name": "Geben Sie das Berechnungsdatum an (optional)",
+              "text": "Um für ein bestimmtes Datum zu berechnen, geben Sie es in das Feld ein"
+            },
+            "step3": {
+              "name": "Klicken Sie auf Berechnen",
+              "text": "Der Rechner berechnet automatisch das genaue Alter in Jahren, Monaten und Tagen"
+            },
+            "step4": {
+              "name": "Holen Sie sich das Ergebnis",
+              "text": "Das Ergebnis wird mit detaillierten Informationen angezeigt: Alter in Jahren, Monaten, Tagen und der Gesamtzahl der Tage seit der Geburt"
+            }
+          }
+        }
+      },
+      "faq": {
+        "question1": "Wie funktioniert der Altersrechner?",
+        "answer1": "Es vergleicht das eingegebene Geburtsdatum mit dem aktuellen Datum und berechnet die genaue Anzahl der gelebten Jahre, Monate und Tage.",
+        "question2": "Ist es möglich, ein zukünftiges Datum anzugeben?",
+        "answer2": "Ja, aber das Ergebnis zeigt, wie viel Zeit bis zu diesem Datum verbleibt, nicht Ihr aktuelles Alter.",
+        "question3": "Kann der Rechner für Tiere verwendet werden?",
+        "answer3": "Ja, geben Sie einfach das Geburtsdatum Ihres Haustiers ein – das Prinzip ist das gleiche.",
+        "question4": "Wie kann man das Alter einer Person an einem bestimmten Datum herausfinden?",
+        "answer4": "Wählen Sie ein beliebiges Datum in der Zukunft oder in der Vergangenheit aus – der Rechner zeigt das Alter dafür an.",
+        "question5": "Ist es möglich, das Alter in Stunden und Minuten zu berechnen?",
+        "answer5": "Ja, die erweiterte Version zeigt das Alter bis auf Sekunden genau an.",
+        "question6": "Wie oft wird das Datum aktualisiert?",
+        "answer6": "Das Ergebnis wird in Echtzeit aktualisiert, wenn sich die aktuelle Uhrzeit auf dem Gerät ändert.",
+        "question7": "Ist für die Nutzung eine Registrierung erforderlich?",
+        "answer7": "Nein, der Rechner ist völlig kostenlos und erfordert keine Anmeldung.",
+        "question8": "Ist es möglich, das Ergebnis zu speichern?",
+        "answer8": "Ja, Sie können das Ergebnis als Text oder Bild kopieren oder herunterladen.",
+        "question9": "Kann ich den Rechner in der mobilen Version nutzen?",
+        "answer9": "Natürlich ist es vollständig für Smartphones und Tablets angepasst.",
+        "question10": "Kann ich einen Taschenrechner auf meiner Website einbetten?",
+        "answer10": "Ja, es wird ein Widget oder eine API zur Integration bereitgestellt."
+      }
+    },
+    "deadline": {
+      "title": "Terminrechner",
+      "description": "Online-Rechner der Frist für die Erledigung einer Aufgabe oder eines Projekts unter Berücksichtigung von Werktagen und Wochenenden.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "deadline": "Fälligkeitsdatum",
+        "category": "Zeit"
+      },
+      "form": {
+        "title": "Berechnungsparameter",
+        "description": "Berechnen Sie das Enddatum eines Projekts oder einer Aufgabe",
+        "startDate": "Startdatum",
+        "duration": "Dauer (Tage)",
+        "dayType": "Art der Tage",
+        "workDays": "Arbeitstage",
+        "workDaysDesc": "Nur wochentags (Mo-Fr)",
+        "calendarDays": "Kalendertage",
+        "calendarDaysDesc": "Alle Tage, auch am Wochenende",
+        "today": "Heute",
+        "calculate": "Berechnen",
+        "calculating": "Wir zählen...",
+        "reset": "Zurücksetzen"
+      },
+      "hero": {
+        "weeks": "Wochen",
+        "days": "Tage",
+        "projects": "Projekte"
+      },
+      "features": {
+        "workDays": "Abrechnung von Arbeitstagen",
+        "weekends": "Ausnahme an Wochenenden",
+        "holidays": "Abrechnung von Feiertagen",
+        "flexibility": "Flexible Einstellungen",
+        "accuracy": "Genaue Berechnungen"
+      },
+      "results": {
+        "title": "Berechnungsergebnis",
+        "endDate": "Enddatum",
+        "dayOfWeek": "Wochentag",
+        "totalDays": "Gesamtzahl der Tage",
+        "workDays": "Arbeitstage",
+        "weekends": "Wochenenden",
+        "copy": "Ergebnis kopieren",
+        "copied": "Kopiert!",
+        "placeholder": "Geben Sie Parameter ein und klicken Sie auf „Berechnen“.",
+        "copyText": {
+          "title": "Berechnung des Fälligkeitsdatums:",
+          "startDate": "Startdatum:",
+          "duration": "Dauer:",
+          "workDays": "Arbeiter",
+          "calendarDays": "Kalender",
+          "days": "Tage",
+          "endDate": "Enddatum:",
+          "totalDays": "Gesamttage:",
+          "workDays2": "Arbeitstage:",
+          "weekends": "Wochenenden:"
+        },
+        "duration": {
+          "workDays": "Arbeiter",
+          "calendarDays": "Kalender",
+          "days": "Tage"
+        }
+      },
+      "seo": {
+        "title": "Fristenrechner – Online-Berechnung von Aufgabenfristen | Calc1.ru",
+        "description": "Kostenloser Online-Rechner für Aufgaben und Projekttermine. Abrechnung von Arbeitstagen und Wochenenden, schnelle und genaue Berechnung des Enddatums. Ideal für die Terminplanung und das Projektmanagement.",
+        "keywords": "Fälligkeitsrechner, Fristenrechner, Projektenddatum, Frist berechnen, Projektenddatum berechnen, Terminrechner, Aufgabenfristen, Enddatumsrechner, Arbeitstagefrist, Projektmanagement, Fristenrechner, Fälligkeitsdatum berechnen, Fristendatum, Projektfälligkeitsdatum, Arbeitstagerechner, Enddatum berechnen, Aufgabenfälligkeitsdatum, Fristenrechner online, Frist berechnen, Projektfristenrechner, Arbeitstagerechner, Kalendertagerechner, Projektfrist online, Projektfrist berechnen, Arbeitsabschlussdatum, Frist online, Fristenrechner, Projektenddatumsrechner, termin berechnen, Rechnerdatum Limit, Berechnung des Fecha-Limits, Terminmanagement, Terminplanung, Projektterminberechnung",
+        "overview": {
+          "title": "Über den Fälligkeitsrechner",
+          "content": "Der Fälligkeitsrechner ist ein praktisches Tool zur Planung von Projekten und Aufgaben. Damit können Sie das Arbeitsende unter Berücksichtigung von Wochentagen und Wochenenden schnell berechnen.",
+          "additionalContent": "Der Rechner unterstützt zwei Berechnungsmodi: Wochentage (nur Wochentage, Wochenenden ausgenommen) und Kalendertage (einschließlich aller Tage). Auf diese Weise können Sie den Zeitpunkt der Arbeiten unter Berücksichtigung der Besonderheiten des Projekts genau planen.",
+          "calculationExamples": {
+            "title": "Beispiele für Fristberechnungen",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Fälligkeitsrechners an:",
+            "example1": {
+              "title": "Beispiel 1: Projekt mit Arbeitstagen",
+              "description": "Berechnung des Fertigstellungstermins eines Projekts, das am 1. Januar 2024 begonnen hat und 10 Arbeitstage dauert",
+              "input": "Startdatum: 1. Januar 2024 (Montag)\nDauer: 10 Werktage\nArt der Tage: Arbeitstage",
+              "calculation": "1. Januar (Mo) + 2 Tage = 3. Januar (Mi)\n3. Jan. + 5 Tage = 10. Jan. (Mi)\n10. Jan. + 3 Tage = 15. Jan. (Mo)\nUnter Berücksichtigung von Wochenenden: 13.-14. Januar ausgeschlossen\nGesamt: 15. Januar 2024 (Montag)",
+              "result": "Ergebnis: 15. Januar 2024, Montag (10 Werktage)",
+              "type": "Arbeitstage",
+              "note": "Wochenenden (Samstag und Sonntag) sind von der Berechnung ausgeschlossen"
+            },
+            "example2": {
+              "title": "Beispiel 2: Projekt mit Kalendertagen",
+              "description": "Berechnung des Enddatums eines Projekts, das am 15. Januar 2024 begonnen hat und 14 Kalendertage dauert",
+              "input": "Startdatum: 15. Januar 2024 (Montag)\nDauer: 14 Kalendertage\nArt der Tage: Kalendertage",
+              "calculation": "15. Januar + 14 Tage = 29. Januar 2024\nEinschließlich Wochenenden: 20.–21. Januar (Sa.–So.) inklusive\nGesamt: 29. Januar 2024 (Montag)",
+              "result": "Ergebnis: 29. Januar 2024, Montag (14 Kalendertage)",
+              "type": "Kalendertage",
+              "note": "Bei der Berechnung werden alle Tage, auch Wochenenden, berücksichtigt"
+            },
+            "example3": {
+              "title": "Beispiel 3: Langfristiges Projekt",
+              "description": "Berechnung des Enddatums eines Projekts, das am 1. Februar 2024 begonnen hat und 30 Arbeitstage dauert",
+              "input": "Startdatum: 1. Februar 2024 (Donnerstag)\nDauer: 30 Werktage\nArt der Tage: Arbeitstage",
+              "calculation": "30 Arbeitstage ≈ 6 Wochen (5 Arbeitstage × 6)\nInklusive Wochenenden: + 12 freie Tage\n1. Februar + 30 Arbeiter = 12. März 2024",
+              "result": "Ergebnis: 12. März 2024, Dienstag (30 Arbeitstage, 42 Kalendertage)",
+              "type": "Langfristiges Projekt",
+              "note": "Bei langfristigen Projekten ist die Kalenderlaufzeit aufgrund der Wochenenden länger"
+            },
+            "example4": {
+              "title": "Beispiel 4: Projekt mit Übergang in einem Monat",
+              "description": "Berechnung des Enddatums eines Projekts, das am 28. Februar 2024 begonnen hat und 5 Arbeitstage dauert",
+              "input": "Startdatum: 28. Februar 2024 (Mittwoch)\nDauer: 5 Werktage\nArt der Tage: Arbeitstage",
+              "calculation": "28. Februar (Mi) + 2 Tage = 1. März (Fr)\n1. März + 3 Tage = 6. März (Mi)\nUnter Berücksichtigung von Wochenenden: 2.-3. März (Sa-So) ausgenommen\nGesamt: 6. März 2024 (Mittwoch)",
+              "result": "Ergebnis: 6. März 2024, Mittwoch (5 Werktage)",
+              "type": "Übergang in einem Monat",
+              "note": "Der Rechner verarbeitet das Überschreiten der Monatsgrenze korrekt"
+            },
+            "example5": {
+              "title": "Beispiel 5: Kurzprojekt",
+              "description": "Berechnen Sie das Enddatum einer Aufgabe, die am Montag, dem 5. Februar 2024, begonnen hat und 3 Werktage dauert",
+              "input": "Startdatum: 5. Februar 2024 (Montag)\nDauer: 3 Werktage\nArt der Tage: Arbeitstage",
+              "calculation": "5. Februar (Mo) + 1 Tag = 6. Februar (Dienstag)\n6. Februar + 1 Tag = 7. Februar (Mi)\n7. Februar + 1 Tag = 8. Februar (Do)\nGesamt: 8. Februar 2024 (Donnerstag)",
+              "result": "Ergebnis: 8. Februar 2024, Donnerstag (3 Werktage)",
+              "type": "Kurze Aufgabe",
+              "note": "Bei kurzen Aufgaben werden Berechnungen schnell und sieben Tage die Woche durchgeführt"
+            },
+            "example6": {
+              "title": "Beispiel 6: Wochenendprojekt",
+              "description": "Berechnung des Enddatums eines kontinuierlichen Prozesses, der am Freitag, dem 16. Februar 2024, begann und 7 Kalendertage dauerte",
+              "input": "Startdatum: 16. Februar 2024 (Freitag)\nDauer: 7 Kalendertage\nArt der Tage: Kalendertage",
+              "calculation": "16. Februar (Fr) + 7 Tage = 23. Februar 2024\nEinschließlich Wochenenden: 17.–18. Februar (Sa.–So.) inklusive\nGesamt: 23. Februar 2024 (Freitag)",
+              "result": "Ergebnis: 23. Februar 2024, Freitag (7 Kalendertage)",
+              "type": "Kontinuierlicher Prozess",
+              "note": "Zu den Kalendertagen zählen alle Wochentage, auch die Wochenenden"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Wie wird das Fälligkeitsdatum berechnet?",
+          "content": "Der Rechner verwendet einen einfachen Algorithmus, um das Enddatum zu ermitteln:",
+          "step1": "Geben Sie das Startdatum des Projekts ein",
+          "step2": "Geben Sie die Anzahl der Tage an (Arbeitstag oder Kalender).",
+          "step3": "Wählen Sie die Berechnungsart (Arbeits- oder Kalendertage)",
+          "step4": "Erhalten Sie das genaue Enddatum, einschließlich der Wochenenden"
+        },
+        "advantages": {
+          "title": "Vorteile des Rechners",
+          "accuracy": "Genauigkeit der Berechnungen",
+          "accuracyDesc": "Berücksichtigt alle Werktage und Wochenenden",
+          "flexibility": "Flexibilität der Einstellungen",
+          "flexibilityDesc": "Unterstützung für verschiedene Arten von Tagen",
+          "efficiency": "Arbeitsgeschwindigkeit",
+          "efficiencyDesc": "Sofortige Ergebnisse",
+          "planning": "Planung",
+          "planningDesc": "Hilft beim Projektmanagement"
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "tip1": "Verwenden Sie Wochentage",
+          "tip1Desc": "für Projekte, die nur werktags durchgeführt werden",
+          "tip2": "Kalendertage",
+          "tip2Desc": "geeignet für kontinuierliche Prozesse",
+          "tip3": "Planen Sie im Voraus",
+          "tip3Desc": "Bauen Sie Pufferzeit für unvorhergesehene Umstände ein"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie berechnet man das Enddatum eines Projekts?",
+              "a": "Geben Sie das Startdatum des Projekts und die Anzahl der Tage (Arbeitstage oder Kalender) ein. Wählen Sie die Art der Tage aus und klicken Sie auf „Berechnen“. Der Rechner zeigt sofort das Enddatum des Projekts an."
+            },
+            {
+              "q": "Können nur Werktage berücksichtigt werden?",
+              "a": "Ja, der Rechner unterstützt zwei Modi: Wochentage (nur Wochentage, Mo-Fr) und Kalendertage (alle Tage einschließlich Wochenenden). Wählen Sie bei der Berechnung den gewünschten Typ aus."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen Arbeitstagen und Kalendertagen?",
+              "a": "Arbeitstage – nur Wochentage (Montag–Freitag), Wochenenden ausgenommen. Kalendertage sind alle Wochentage, einschließlich Samstag und Sonntag. Die Wahl hängt von den Besonderheiten des Projekts ab."
+            },
+            {
+              "q": "Ist der Rechner für Unterrichtsprojekte geeignet?",
+              "a": "Ja, der Rechner eignet sich hervorragend zum Berechnen von Fristen für Bildungsprojekte, Studienarbeiten, Diplome und andere akademische Aufgaben. Sie können sowohl Arbeitstage als auch Kalendertage verwenden."
+            },
+            {
+              "q": "Ist es möglich, eine genaue Frist festzulegen?",
+              "a": "Der Basisrechner arbeitet mit Datumsangaben. Um die genaue Zeit anzuzeigen, verwenden Sie einen Zeitadditionsrechner oder sehen Sie sich die Funktionslogik in der Beschreibung des Rechners an."
+            },
+            {
+              "q": "Kann der Rechner für zukünftige Termine verwendet werden?",
+              "a": "Ja, der Rechner funktioniert mit beliebigen Datumsangaben – sowohl in der Vergangenheit als auch in der Zukunft. Sie können das Enddatum für Projekte berechnen, die jederzeit beginnen."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Arbeitsprojekt?",
+              "a": "Geben Sie das Startdatum der Arbeit an, geben Sie die Anzahl der Arbeitstage ein (normalerweise nur Wochentage) und wählen Sie den Modus „Arbeitstage“. Der Rechner zeigt das Enddatum unter Berücksichtigung der Wochenenden an."
+            },
+            {
+              "q": "Zählen Feiertage?",
+              "a": "Der Basisrechner berücksichtigt nur Standardwochenenden (Samstag und Sonntag). Um Feiertage zu berücksichtigen, verwenden Sie spezielle Rechner oder fügen Sie zusätzliche Tage zur Berechnung hinzu."
+            },
+            {
+              "q": "Ist es möglich, die Frist für mehrere Aufgaben gleichzeitig zu berechnen?",
+              "a": "Der Rechner berechnet die Frist für jeweils eine Aufgabe. Führen Sie bei mehreren Aufgaben die Berechnungen einzeln durch oder nutzen Sie den Projektplaner."
+            },
+            {
+              "q": "Wie berechnet man die Auftragsabwicklungszeit?",
+              "a": "Geben Sie das Bestellannahmedatum als Startdatum an, geben Sie das Fertigstellungsdatum ein (Arbeitstage oder Kalendertage je nach Bedingungen) und erhalten Sie das Bestellbereitschaftsdatum."
+            },
+            {
+              "q": "Ist es möglich, die Frist unter Berücksichtigung von Verzögerungen zu berechnen?",
+              "a": "Um mögliche Verzögerungen zu berücksichtigen, addieren Sie Reservezeit (Puffer) zur geschätzten Zeit. Wenn die Frist beispielsweise 10 Tage beträgt, fügen Sie sicherheitshalber einen Puffer von 2-3 Tagen hinzu."
+            },
+            {
+              "q": "Wie berechnet man den Zeitraum für einen kontinuierlichen Prozess?",
+              "a": "Für kontinuierliche Prozesse (Produktion, Lieferung ohne Unterbrechungen) verwenden Sie den Modus „Kalendertage“. Dabei werden alle Tage berücksichtigt, auch die Wochenenden."
+            },
+            {
+              "q": "Ist es möglich, die Frist unter Berücksichtigung der Zeit in verschiedenen Zeitzonen zu berechnen?",
+              "a": "Der Rechner arbeitet mit Datumsangaben ohne Berücksichtigung von Uhrzeit und Zeitzonen. Um Zeitzonen genau zu berücksichtigen, konvertieren Sie zunächst Datumsangaben in dieselbe Zeitzone."
+            },
+            {
+              "q": "Wie berechnet man den Abgabetermin für ein Projekt?",
+              "a": "Geben Sie das Startdatum des Projekts an, geben Sie die Gesamtdauer des Projekts in Arbeits- oder Kalendertagen (je nach Arbeitsmodus) ein und erhalten Sie das genaue Deadline-Datum."
+            },
+            {
+              "q": "Ist der Rechner kostenlos?",
+              "a": "Ja, der Rechner ist völlig kostenlos und erfordert keine Registrierung. Sie können es unbegrenzt oft und ohne Einschränkungen verwenden."
+            },
+            {
+              "q": "Ist es möglich, das Berechnungsergebnis zu speichern?",
+              "a": "Ja, Sie können das Ergebnis kopieren oder einen Screenshot der Seite machen. Einige Rechner unterstützen den Export von Ergebnissen in verschiedenen Formaten."
+            },
+            {
+              "q": "Funktioniert der Rechner auf Mobilgeräten?",
+              "a": "Ja, der Rechner ist vollständig für die Verwendung auf Mobilgeräten, Tablets und Smartphones geeignet. Die Oberfläche passt sich automatisch der Bildschirmgröße an."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Projekt mit einem nicht standardmäßigen Arbeitsplan?",
+              "a": "Verwenden Sie für Projekte mit einem nicht standardmäßigen Zeitplan (z. B. 4/2 oder Rotationsplan) Kalendertage und passen Sie das Ergebnis manuell an oder verwenden Sie spezielle Rechner."
+            },
+            {
+              "q": "Ist es möglich, das Fälligkeitsdatum für eine Gruppe von Aufgaben zu berechnen?",
+              "a": "Der Rechner berechnet die Frist für eine Aufgabe. Verwenden Sie für eine Gruppe von Aufgaben die Methode des kritischen Pfads oder führen Sie Berechnungen für jede Aufgabe separat durch und ermitteln Sie die Gesamtfrist."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Projekt mit mehreren Phasen?",
+              "a": "Berechnen Sie die Dauer für jede Phase separat und addieren Sie dann die Ergebnisse oder verwenden Sie einen Projektplaner, um die Gesamtdauer unter Berücksichtigung paralleler und aufeinanderfolgender Phasen zu berechnen."
+            },
+            {
+              "q": "Kann ich die Lieferzeit mit einem Rechner berechnen?",
+              "a": "Ja, geben Sie das Abreisedatum ein, geben Sie die Lieferzeit in Arbeitstagen oder Kalendertagen (abhängig von den Lieferbedingungen) ein und erhalten Sie das Empfangsdatum."
+            },
+            {
+              "q": "Wie berechnet man die Frist für eine Aufgabe mit einer gleitenden Frist?",
+              "a": "Berechnen Sie mit dem Rechner den Mindest- und Höchstzeitraum, indem Sie unterschiedliche Starttermine oder unterschiedliche Dauern angeben. Dies hilft dabei, den Bereich möglicher Fristen zu bestimmen."
+            },
+            {
+              "q": "Ist es möglich, die Frist unter Berücksichtigung der Wochenenden in verschiedenen Ländern zu berechnen?",
+              "a": "Der Basisrechner berücksichtigt Standardwochenenden (Samstag und Sonntag). Um Wochenenden in verschiedenen Ländern (z. B. Freitag-Samstag) zu berücksichtigen, verwenden Sie spezielle Rechner."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Projekt unter Berücksichtigung der Ausfallzeiten?",
+              "a": "Um Ausfallzeiten zu berücksichtigen, fügen Sie dem geschätzten Zeitraum zusätzliche Tage hinzu oder verwenden Sie Kalendertage, die automatisch alle Tage, einschließlich möglicher Ausfallzeiten, einschließen."
+            },
+            {
+              "q": "Kann ich die Garantiezeit mit einem Rechner berechnen?",
+              "a": "Ja, geben Sie als Startdatum das Kaufdatum ein, geben Sie den Garantiezeitraum in Tagen (in der Regel Kalendertage) ein und erhalten Sie das Enddatum des Garantiezeitraums."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Teilzeitprojekt?",
+              "a": "Konvertieren Sie bei Teilzeitprojekten die Arbeitszeit in Wochentage. Wenn Sie beispielsweise 4 statt 8 Stunden am Tag arbeiten, verdoppeln Sie die Anzahl der zu berechnenden Arbeitstage."
+            },
+            {
+              "q": "Ist es möglich, den Zeitraum unter Berücksichtigung von Urlaub zu berechnen?",
+              "a": "Um Urlaube zu berücksichtigen, addieren Sie die Anzahl der Urlaubstage zum geschätzten Zeitraum. Oder verwenden Sie Kalendertage, die automatisch alle Tage, einschließlich Feiertage, einschließen."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Projekt mit Unterbrechungen?",
+              "a": "Berechnen Sie bei Projekten mit Pausen die Frist für jede Arbeitsperiode separat und addieren Sie die Ergebnisse oder verwenden Sie Kalendertage, die alle Tage umfassen."
+            },
+            {
+              "q": "Kann ich die Mietdauer mit einem Rechner berechnen?",
+              "a": "Ja, geben Sie als Startdatum das Mietbeginndatum an, geben Sie die Mietdauer in Kalendertagen ein und erhalten Sie das Mietendedatum."
+            },
+            {
+              "q": "Wie berechnet man die Frist für ein Projekt mit mehreren Fristen?",
+              "a": "Berechnen Sie jede Frist einzeln mit dem Rechner und geben Sie dabei die entsprechenden Starttermine und Dauern an. Dies hilft bei der Planung aller Phasen des Projekts."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So berechnen Sie die Projektabschlusszeit",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Fälligkeitsrechners",
+          "steps": {}
+        }
+      }
+    },
+    "calendar": {
+      "title": "Online-Kalender - Online-Kalender",
+      "description": "Interaktiver Online-Kalender mit der Möglichkeit, Ereignisse und Feiertage hinzuzufügen und in das iCal-Format zu exportieren.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "calendar": "Kalender",
+        "category": "Zeit"
+      },
+      "hero": {
+        "days": "Tage im Jahr",
+        "events": "Ereignisse",
+        "access": "Zugang"
+      },
+      "form": {
+        "title": "Kalenderverwaltung",
+        "addEvent": "Fügen Sie ein Ereignis hinzu",
+        "editEvent": "Veranstaltung bearbeiten",
+        "eventTitle": "Veranstaltungsname",
+        "eventDate": "Veranstaltungsdatum",
+        "eventTime": "Veranstaltungszeit",
+        "eventDescription": "Beschreibung",
+        "eventColor": "Ereignisfarbe",
+        "eventTitlePlaceholder": "Geben Sie den Veranstaltungsnamen ein",
+        "eventDescriptionPlaceholder": "Veranstaltungsbeschreibung (optional)",
+        "save": "Speichern",
+        "cancel": "Stornieren",
+        "delete": "Löschen",
+        "edit": "Bearbeiten",
+        "add": "Hinzufügen",
+        "update": "Aktualisieren",
+        "export": "Export nach iCal"
+      },
+      "results": {
+        "title": "Veranstaltungen",
+        "noEvents": "Für diesen Tag gibt es keine Veranstaltungen",
+        "export": "Export nach iCal",
+        "import": "Import aus iCal"
+      },
+      "seo": {
+        "title": "Online-Kalender – interaktiver Kalender mit Veranstaltungen | Calc1.ru",
+        "description": "Kostenloser Online-Kalender mit der Möglichkeit, Ereignisse und Feiertage hinzuzufügen und zu exportieren. Benutzerfreundliche Oberfläche und Unterstützung für mobile Geräte. Ideal zum Planen und Organisieren von Zeit.",
+        "keywords": "Online-Kalender, Veranstaltungskalender, Feiertagskalender, iCal-Export, kostenloser Online-Kalender, Online-Kalender, Veranstaltungskalender, Feiertagskalender, persönlicher Kalender, Planungskalender, Kalender mit Erinnerungen, Besprechungskalender, Arbeitskalender, Familienkalender, Online-Kalender 2024, Webkalender, interaktiver Kalender, Kalenderplan, Aufgabenkalender, Aufgabenkalender, Veranstaltungskalender, Wochenendkalender, Urlaubskalender, Feiertagskalender, Kalender mit Notizen, Kalender mit Blumen, Kalender exportieren, Kalendersynchronisierung, Webkalender, persönlicher Kalender, Planungskalender, Kalender mit Erinnerungen, Besprechungskalender, Arbeit Kalender, Familienkalender, interaktiver Kalender, Zeitplankalender, Aufgabenkalender, Veranstaltungskalender, Feiertagskalender online, Kalenderexport, Kalendersynchronisierung, Online-Kalender Russisch, kostenloser Online-Kalender",
+        "overview": {
+          "title": "Über den Kalender",
+          "content": "Ein Online-Kalender ist ein praktisches Tool zur Planung und Organisation Ihrer Zeit. Erstellen Sie Veranstaltungen, markieren Sie wichtige Termine und verwalten Sie Ihren Zeitplan.",
+          "additionalContent": "Der Kalender unterstützt das Hinzufügen von Ereignissen mit Beschreibung, Uhrzeit, Farbcodierung und Erinnerungen. Sie können Ihren Kalender in verschiedene Formate (iCal, CSV) exportieren und mit anderen Diensten synchronisieren, um auf allen Geräten problemlos darauf zuzugreifen.",
+          "calculationExamples": {
+            "title": "Beispiele für die Verwendung von Kalendern",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung eines Online-Kalenders an:",
+            "example1": {
+              "title": "Beispiel 1: Planung der Arbeitswoche",
+              "description": "Hinzufügen von Arbeitsbesprechungen und Aufgaben für die Woche vom 15. bis 19. Januar 2024",
+              "input": "Montag, 15. Januar: Teambesprechung (09:00)\nDienstag, 16. Januar: Projektpräsentation (14:00)\nMittwoch, 17. Januar: Meldeschluss (17:00)\nDonnerstag, 18. Januar: Konferenz (10:00)\nFreitag, 19. Januar: Planungstreffen (16:00)",
+              "calculation": "Erstellung von 5 Events in einer Woche\nFarbkodierung: Arbeitsbesprechungen (blau), Fristen (rot)\nErinnerungen: 1 Stunde vor jedem Treffen",
+              "result": "Ergebnis: 5 Ereignisse im Kalender, visuelle Planung der Woche",
+              "type": "Arbeitsplanung",
+              "note": "Mithilfe der Farbcodierung können Sie die Auslastung Ihrer Woche schnell visuell einschätzen"
+            },
+            "example2": {
+              "title": "Beispiel 2: Familienkalender",
+              "description": "Familienveranstaltungen für den Monat planen: Geburtstage, Veranstaltungen, Ausflüge",
+              "input": "10. Januar: Geburtstag des Sohnes (ganztägig)\n20. Januar: Schultreffen (18:00)\n25. Januar: Familienausflug (10:00-20:00)\n30. Januar: Sportteil (15:00)",
+              "calculation": "Gestalten Sie Familienfeiern mit Blumen\nErinnerungen für wichtige Ereignisse\nExport zur Synchronisierung mit anderen Kalendern",
+              "result": "Ergebnis: 4 Familienereignisse im Kalender, von der Familie geteilt",
+              "type": "Familienplanung",
+              "note": "Der Familienkalender hilft dabei, den Zeitplan aller Familienmitglieder zu koordinieren"
+            },
+            "example3": {
+              "title": "Beispiel 3: Einen Urlaub planen",
+              "description": "Erstellen von Veranstaltungen für die Ferienzeit vom 1. Februar bis 15. Februar 2024",
+              "input": "1. Februar: Ferienbeginn (ganztägig)\n5. Februar: Ausflug in die Berge (08:00-20:00 Uhr)\n10. Februar: Exkursion (09:00-17:00)\n15. Februar: Ende der Ferien (ganztägig)",
+              "calculation": "Sperrung eines Urlaubszeitraums\nPlanung von Aktivitäten im Urlaub\nExportieren eines Kalenders zur Synchronisierung",
+              "result": "Ergebnis: Planung von 4 Veranstaltungen für die Ferienzeit",
+              "type": "Urlaubsplanung",
+              "note": "Der Kalender hilft Ihnen, Ihre Urlaubszeit so effizient wie möglich zu planen"
+            },
+            "example4": {
+              "title": "Beispiel 4: Akademischer Kalender",
+              "description": "Planung von Bildungsveranstaltungen: Vorlesungen, Prüfungen, Abgabefristen",
+              "input": "20. Januar: Vorlesung Mathematik (09:00-10:30)\n22. Januar: Hausaufgabenfrist (23:59)\n25. Januar: Physikprüfung (14:00-16:00)\n28. Januar: Projektverteidigung (10:00-12:00)",
+              "calculation": "Lernveranstaltungen erstellen\nFarbliche Kennzeichnung: Vorlesungen (blau), Fristen (rot), Prüfungen (orange)\nTägliche und stündliche Erinnerungen",
+              "result": "Ergebnis: 4 Schulungsveranstaltungen, visuelle Kontrolle der Fristen",
+              "type": "Unterrichtsplanung",
+              "note": "Der Kalender hilft Ihnen, wichtige Bildungsveranstaltungen und Termine nicht zu verpassen"
+            },
+            "example5": {
+              "title": "Beispiel 5: Geschäftskalender",
+              "description": "Planung von Geschäftsveranstaltungen: Treffen mit Kunden, Präsentationen, Konferenzen",
+              "input": "12. Januar: Treffen mit dem Kunden (11:00-12:00)\n15. Januar: Produktpräsentation (14:00-15:30)\n18. Januar: Wirtschaftskonferenz (09:00-18:00)\n22. Januar: Vertragsverhandlungen (16:00-17:30)",
+              "calculation": "Erstellen von Geschäftsveranstaltungen\nFarbcodierung nach Priorität\nExportieren in ein Format zur Synchronisierung mit Outlook/Google Kalender",
+              "result": "Ergebnis: 4 Business-Events, professionelle Planung",
+              "type": "Geschäftsplanung",
+              "note": "Der Geschäftskalender hilft Ihnen, Geschäftstreffen und Veranstaltungen effektiv zu verwalten"
+            },
+            "example6": {
+              "title": "Beispiel 6: Kalender für Feiertage und Wochenenden",
+              "description": "Markierung von Feiertagen und Wochenenden für Januar 2024",
+              "input": "1. Januar: Neujahr (Feiertag)\n7. Januar: Weihnachten (Feiertag)\nAlle Wochenenden: Samstag und Sonntag im Monat\n8. März: Internationaler Frauentag (Feiertag)",
+              "calculation": "Automatische Anzeige von Feiertagen\nPersönliche Feiertage manuell hinzufügen\nFarbliche Hervorhebung von Wochenenden",
+              "result": "Ergebnis: Vollständiger Kalender mit Feiertagen und Wochenenden für einen Monat",
+              "type": "Feiertagskalender",
+              "note": "Der Kalender zeigt automatisch Feiertage an und ermöglicht es Ihnen, eigene hinzuzufügen"
+            }
+          }
+        },
+        "features": {
+          "title": "Kalenderfunktionen",
+          "events": "Ereignisse erstellen",
+          "eventsDesc": "Fügen Sie Ereignisse mit Beschreibung, Uhrzeit und Erinnerungen hinzu",
+          "export": "Daten exportieren",
+          "exportDesc": "Exportieren Sie Ihren Kalender in verschiedene Formate",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design für alle Geräte",
+          "holidays": "Feiertage",
+          "holidaysDesc": "Automatische Anzeige von Feiertagen",
+          "notes": "Notizen",
+          "notesDesc": "Fügen Sie Notizen zu Terminen und Ereignissen hinzu",
+          "navigation": "Navigation",
+          "navigationDesc": "Bequeme Navigation nach Monat und Jahr"
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "tip1": "Aktualisieren Sie die Ereignisse regelmäßig",
+          "tip1Desc": "Halten Sie Ihren Kalender auf dem neuesten Stand",
+          "tip2": "Verwenden Sie eine Farbcodierung",
+          "tip2Desc": "Verschiedene Farben für verschiedene Arten von Veranstaltungen",
+          "tip3": "Erinnerungen einrichten",
+          "tip3Desc": "Verpassen Sie keine wichtigen Ereignisse"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie erstelle ich eine neue Veranstaltung?",
+              "a": "Klicken Sie im Kalender auf das gewünschte Datum und es öffnet sich ein Formular zum Anlegen einer Veranstaltung. Geben Sie Titel, Datum, Uhrzeit (falls erforderlich) und Beschreibung ein, wählen Sie eine Farbe aus und klicken Sie auf „Speichern“. Die Veranstaltung wird im Kalender angezeigt."
+            },
+            {
+              "q": "Ist es möglich, einen Kalender zu exportieren?",
+              "a": "Ja, der Kalender unterstützt den Export in verschiedene Formate, darunter iCal (zur Synchronisierung mit anderen Kalendern), CSV (zur Arbeit in Excel) und andere Formate. Benutzen Sie die Schaltfläche „Exportieren“, um die Daten zu speichern."
+            },
+            {
+              "q": "Funktioniert der Kalender auf Mobilgeräten?",
+              "a": "Ja, der Kalender reagiert vollständig und funktioniert hervorragend auf Mobilgeräten, Tablets und Smartphones. Die Benutzeroberfläche passt sich automatisch an die Bildschirmgröße an und sorgt so für eine komfortable Nutzung auf jedem Gerät."
+            },
+            {
+              "q": "Wie füge ich Feiertage hinzu?",
+              "a": "Feiertage werden automatisch im Kalender angezeigt. Um persönliche Feiertage hinzuzufügen, erstellen Sie ein Ereignis mit dem gewünschten Datum, indem Sie den Typ „Feiertag“ oder die entsprechende Farbe auswählen. Feiertage können entweder ganztägig oder durch Angabe einer Uhrzeit hinzugefügt werden."
+            },
+            {
+              "q": "Kann ich mit anderen Kalendern synchronisieren?",
+              "a": "Ja, der Kalender unterstützt die Synchronisierung mit beliebten Diensten, einschließlich Google Kalender, Outlook und anderen. Exportieren Sie zum Synchronisieren Ihren Kalender nach iCal und importieren Sie ihn in den Dienst, den Sie benötigen, oder verwenden Sie die integrierten Synchronisierungsfunktionen, sofern verfügbar."
+            },
+            {
+              "q": "Wie bearbeite ich eine bestehende Veranstaltung?",
+              "a": "Klicken Sie auf ein Ereignis im Kalender, um dessen Details zu öffnen, und klicken Sie dann auf die Schaltfläche „Bearbeiten“. Nehmen Sie die erforderlichen Änderungen vor und speichern Sie. Die Veranstaltung wird im Kalender aktualisiert."
+            },
+            {
+              "q": "Wie lösche ich ein Ereignis?",
+              "a": "Öffnen Sie die Veranstaltung und klicken Sie auf die Schaltfläche „Löschen“ oder verwenden Sie das entsprechende Löschsymbol. Bestätigen Sie den Löschvorgang und das Ereignis wird aus dem Kalender entfernt."
+            },
+            {
+              "q": "Ist es möglich, Erinnerungen zu Ereignissen hinzuzufügen?",
+              "a": "Ja, Sie können beim Erstellen oder Bearbeiten eines Ereignisses Erinnerungen festlegen. Wählen Sie eine Erinnerungszeit (15 Minuten, 1 Stunde, 1 Tag usw.) und der Kalender benachrichtigt Sie über das bevorstehende Ereignis."
+            },
+            {
+              "q": "Wie verwende ich die Farbcodierung?",
+              "a": "Wählen Sie beim Erstellen eines Ereignisses eine Farbe aus der Palette aus. Verschiedene Farben helfen bei der visuellen Unterscheidung zwischen Veranstaltungsarten (Arbeitstreffen, persönliche Angelegenheiten, Feiertage usw.). Dies vereinfacht die visuelle Planung und Arbeitsbelastungsbewertung."
+            },
+            {
+              "q": "Ist es möglich, wiederkehrende Ereignisse zu erstellen?",
+              "a": "Ja, viele Kalender unterstützen das Erstellen wiederkehrender Ereignisse (täglich, wöchentlich, monatlich usw.). Wählen Sie beim Erstellen eines Ereignisses die Option „Wiederkehrendes Ereignis“ und konfigurieren Sie die Wiederholungshäufigkeit."
+            },
+            {
+              "q": "Wie wechsle ich zwischen den Monaten?",
+              "a": "Verwenden Sie die Navigationsschaltflächen „Vorheriger Monat“ und „Nächster Monat“ oder die Pfeiltasten auf Ihrer Tastatur, um zwischen den Monaten zu wechseln. Sie können auch die Schnellnavigation zu einem bestimmten Monat und Jahr verwenden."
+            },
+            {
+              "q": "Ist es möglich, ganztägige Veranstaltungen zu erstellen?",
+              "a": "Ja, wählen Sie beim Erstellen eines Ereignisses die Option „Ganztägig“ oder lassen Sie das Zeitfeld leer. Ereignisse für den ganzen Tag werden in einem speziellen Bereich des Kalenders angezeigt und weisen optische Unterschiede auf."
+            },
+            {
+              "q": "Wie kann ich alle Ereignisse einer Woche oder eines Monats anzeigen?",
+              "a": "Der Kalender unterstützt verschiedene Darstellungsarten: Tag, Woche, Monat. Wechseln Sie mit den Navigationstasten in die gewünschte Ansicht, um alle Ereignisse für den ausgewählten Zeitraum anzuzeigen."
+            },
+            {
+              "q": "Kann ich Ereignisse aus anderen Kalendern importieren?",
+              "a": "Ja, viele Kalender unterstützen den Import von Ereignissen aus anderen Diensten. Verwenden Sie die Funktion „Importieren“ und laden Sie die Datei in iCal, CSV oder einem anderen unterstützten Format hoch."
+            },
+            {
+              "q": "Ist es ein kostenloser Kalender?",
+              "a": "Ja, der Online-Kalender ist völlig kostenlos und erfordert keine Registrierung. Sie können es unbegrenzt oft zum Erstellen und Verwalten von Ereignissen verwenden."
+            },
+            {
+              "q": "Ist es möglich, den Kalender lokal zu speichern?",
+              "a": "Ja, Sie können Ihren Kalender in eine Datei (iCal, CSV usw.) exportieren und auf Ihrem Computer oder Gerät speichern. Dadurch können Sie eine Sicherungskopie erstellen und offline mit dem Kalender arbeiten."
+            },
+            {
+              "q": "Wie erstelle ich einen Familienkalender?",
+              "a": "Erstellen Sie Ereignisse für alle Familienmitglieder, indem Sie für jedes Familienmitglied oder jeden Ereignistyp unterschiedliche Farben verwenden. Exportieren Sie Ihren Kalender und teilen Sie ihn zur Synchronisierung mit Ihrer Familie. Dies wird dazu beitragen, den Zeitplan der gesamten Familie zu koordinieren."
+            },
+            {
+              "q": "Ist es möglich, Ereignisse für mehrere Zeitzonen hinzuzufügen?",
+              "a": "Der Basiskalender arbeitet mit der Ortszeit. Um mit mehreren Zeitzonen zu arbeiten, erstellen Sie Ereignisse, die die Zeitzone angeben, oder verwenden Sie spezielle Kalender mit Unterstützung für mehrere Zeitzonen."
+            },
+            {
+              "q": "Wie plant man einen Urlaub im Kalender?",
+              "a": "Erstellen Sie ein „Urlaub“-Ereignis für den gesamten Urlaubszeitraum (den ganzen Tag). Fügen Sie zusätzliche Veranstaltungen hinzu, um Ihre Urlaubsaktivitäten zu planen. Nutzen Sie die Farbkodierung, um Ruhezeiten optisch hervorzuheben."
+            },
+            {
+              "q": "Kann ich einen Kalender verwenden, um meinen Arbeitsplan zu planen?",
+              "a": "Ja, ein Kalender eignet sich hervorragend zur Planung Ihres Arbeitsplans. Erstellen Sie Ereignisse für Termine, Besprechungen und Fristen, verwenden Sie Farbcodierungen für verschiedene Arten von Aufgaben und exportieren Sie sie, um sie mit Arbeitskalendern zu synchronisieren."
+            },
+            {
+              "q": "Wie füge ich Veranstaltungen für reguläre Kurse hinzu?",
+              "a": "Nutzen Sie die Funktion, um wiederkehrende Ereignisse zu erstellen. Geben Sie das Startdatum an, wählen Sie die Wiederholungsfrequenz (wöchentlich, monatlich usw.) und das Enddatum. Der Kalender erstellt automatisch alle wiederkehrenden Ereignisse."
+            },
+            {
+              "q": "Ist es möglich, Veranstaltungen für andere Personen zu erstellen?",
+              "a": "Sie können Ereignisse in Ihrem Kalender erstellen, um Besprechungen mit anderen Personen zu planen. Um Ereignisse in den Kalendern anderer Personen zu erstellen, müssen Sie Zugriff auf deren Kalender haben oder die Freigabefunktionen verwenden."
+            },
+            {
+              "q": "Wie nutzt man den Kalender für das Konto des Großvaters?",
+              "a": "Erstellen Sie Ereignisse mit dem Typ „Deadline“ oder verwenden Sie eine Sonderfarbe (z. B. Rot). Legen Sie Erinnerungen am Tag und einige Stunden vor Ablauf der Frist fest. So vermeiden Sie, dass Sie wichtige Fristen verpassen."
+            },
+            {
+              "q": "Ist es möglich, einen Kalender für mehrere Projekte zu erstellen?",
+              "a": "Ja, verwenden Sie unterschiedliche Farben oder Kategorien für unterschiedliche Projekte. Erstellen Sie Ereignisse und kennzeichnen Sie sie mit geeigneten Farben oder Beschriftungen. Dadurch können Sie Projekte im selben Kalender visuell trennen."
+            },
+            {
+              "q": "Wie synchronisiere ich Ihren Kalender mit Ihrem Telefon?",
+              "a": "Exportieren Sie Ihren Kalender in das iCal-Format und importieren Sie ihn in die Kalender-App Ihres Telefons (Google Kalender, Apple Kalender usw.). Oder nutzen Sie die Synchronisierung über Cloud-Dienste, sofern unterstützt."
+            },
+            {
+              "q": "Ist es möglich, Veranstaltungen für vergangene Termine anzulegen?",
+              "a": "Ja, Sie können Ereignisse für beliebige Daten erstellen – sowohl in der Vergangenheit (für die Historie oder im Archiv) als auch in der Zukunft. Der Kalender unterstützt das Arbeiten mit beliebigen Daten."
+            },
+            {
+              "q": "Wie organisiere ich meinen Studienkalender?",
+              "a": "Erstellen Sie Veranstaltungen für Vorlesungen, Seminare, Prüfungen und Abgabefristen. Verwenden Sie verschiedene Farben: Vorlesungen (blau), Prüfungen (rot), Fristen (orange). Legen Sie Erinnerungen für wichtige Ereignisse fest."
+            },
+            {
+              "q": "Können Sie einen Kalender zur Planung Ihres Budgets verwenden?",
+              "a": "Ja, erstellen Sie Ereignisse für geplante Ausgaben und Einnahmen und geben Sie die Beträge mithilfe einer Beschreibung an. Verwenden Sie eine Farbcodierung für Transaktionsarten. Dies wird Ihnen helfen, Ihre Finanzplanung zu visualisieren."
+            },
+            {
+              "q": "Wie kann ich meinen Kalender mit anderen teilen?",
+              "a": "Exportieren Sie Ihren Kalender in eine Datei (iCal) und senden Sie ihn an andere Personen. Sie können den Kalender in ihre Kalenderanwendungen importieren. Oder nutzen Sie die Freigabefunktionen, sofern verfügbar."
+            },
+            {
+              "q": "Ist es möglich, einen Kalender zu erstellen, um Gewohnheiten zu verfolgen?",
+              "a": "Ja, erstellen Sie tägliche Ereignisse, um Gewohnheiten zu verfolgen (Training, Lesen, Meditation usw.). Verwenden Sie eine Farbcodierung, um abgeschlossene und verpasste Tage zu markieren. Dies hilft, den Fortschritt zu visualisieren."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So verwenden Sie einen Online-Kalender",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung eines Online-Kalenders zur Planung von Veranstaltungen",
+          "steps": {}
+        }
+      }
+    },
+    "timer": {
+      "title": "Online-Timer",
+      "description": "Online-Timer mit Countdown für jede Aufgabe. Visuelle Anzeige und akustisches Signal bei Fertigstellung.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "timer": "Timer",
+        "category": "Zeit"
+      },
+      "hero": {
+        "minutes": "Minuten der Konzentration",
+        "breaks": "Minuten Ruhe",
+        "focus": "Konzentration"
+      },
+      "form": {
+        "title": "Einstellen des Timers",
+        "hours": "Mal",
+        "minutes": "Minuten",
+        "seconds": "Sekunden",
+        "start": "Start",
+        "pause": "Pause",
+        "resume": "Wieder aufnehmen",
+        "reset": "Zurücksetzen",
+        "sound": "Klang",
+        "settings": "Einstellungen",
+        "presets": "Voreinstellungen",
+        "pomodoro": "Pomodoro",
+        "cooking": "Kochen",
+        "workout": "Ausbildung",
+        "visualStyle": "Anzeigestil",
+        "circular": "Kreisförmig",
+        "linear": "Linear",
+        "digital": "Digital",
+        "color": "Farbe"
+      },
+      "results": {
+        "title": "Timer",
+        "finished": "Die Zeit ist um!",
+        "copy": "Kopie",
+        "copied": "Kopiert!"
+      },
+      "seo": {
+        "title": "Online-Timer - Countdown mit Visualisierung und Ton | Calc1.ru",
+        "description": "Kostenloser Online-Timer. Stellen Sie den Countdown auf einen beliebigen Zeitpunkt ein, erhalten Sie ein akustisches Signal und eine visuelle Anzeige der verbleibenden Zeit. Ideal für Pomodoro, Kochen, Training und Lernen.",
+        "keywords": "Online-Timer, Timer online, Countdown, Countdown-Timer, Kochtimer, Arbeitstimer, Pomodoro-Timer, visueller Countdown, akustischer Alarm-Timer, Countdown-Minuten, Timer online kostenlos, Countdown-Timer, Online-Timer mit Ton, Timer für die Küche, Timer für Training, Timer für Pomodoro, Timer für Studium, Timer für Meditation, Timer mit Benachrichtigungen, Timer mit Visualisierung, Timer mit Fortschritt, Online-Timer 2024, kostenloser Online-Timer, Web-Timer, interaktiver Timer, Stoppuhr-Timer, Minuten-Timer, Stunden-Timer, Timer-Countdown online, Online-Countdown-Timer, kostenloser Timer online, Koch-Timer, Trainings-Timer, Lern-Timer, Pomodoro-Technik-Timer, Meditations-Timer, Fokus-Timer, Produktivitäts-Timer, Zeitmanagement-Timer, Intervall-Timer, Stoppuhr-Timer, visueller Timer, Sound-Timer, Alarm-Timer, Benachrichtigungs-Timer, Timer-App, Timer-Widget, Timer-Tool, Timer-Anwendung, Timer Werkzeug, Timer online Russisch",
+        "overview": {
+          "title": "Über den Timer",
+          "content": "Ein Online-Timer ist ein praktisches Tool zur Zeiterfassung. Stellen Sie einen Countdown ein, erhalten Sie Audiobenachrichtigungen und eine visuelle Anzeige der verbleibenden Zeit.",
+          "additionalContent": "Der Timer unterstützt verschiedene Betriebsmodi: Countdown, Voreinstellungen für beliebte Aufgaben (Pomodoro, Kochen, Training), individuelle Anpassung von Tonsignalen und visuellen Anzeigen. Ideal für Zeitmanagement, Steigerung der Produktivität und Organisation alltäglicher Aufgaben.",
+          "calculationExamples": {
+            "title": "Beispiele für die Verwendung von Timern",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung eines Online-Timers an:",
+            "example1": {
+              "title": "Beispiel 1: Pomodoro-Technik – Arbeitsintervall",
+              "description": "Verwendung eines Timers für ein 25-minütiges Arbeitsintervall mit der Pomodoro-Technik",
+              "input": "Zeit: 25 Minuten (00:25:00)\nModus: Countdown\nTon: Ein\nVisualisierung: Zirkulärer Fortschritt",
+              "calculation": "Der Timer startet um 25:00 Uhr\nCountdown jede Sekunde\nDer Fortschrittsbalken zeigt die verbleibende Zeit an\nBei Erreichen von 00:00 Uhr ertönt ein akustisches Signal",
+              "result": "Ergebnis: Vollständiges 25-Minuten-Arbeitsintervall mit Benachrichtigung",
+              "type": "Pomodoro-Technik",
+              "note": "Nach Abschluss des 25-Minuten-Intervalls gibt es eine 5-minütige Pause"
+            },
+            "example2": {
+              "title": "Beispiel 2: Kochen – Eier kochen",
+              "description": "Mit einem Timer die Eierkochzeit steuern (8 Minuten)",
+              "input": "Zeit: 8 Minuten (00:08:00)\nModus: Countdown\nTon: Lauter Piepton\nVisualisierung: Linearer Fortschritt",
+              "calculation": "Der Timer startet um 08:00 Uhr\nCountdown: 07:59, 07:58...\nVisuelle Fortschrittsanzeige\nUm 00:00 Uhr ertönt ein lauter Piepton",
+              "result": "Ergebnis: Exakte Eierkochzeit (8 Minuten) mit Benachrichtigung",
+              "type": "Kochen",
+              "note": "Der Timer ermöglicht es Ihnen, die Garzeit nicht ständig zu überwachen"
+            },
+            "example3": {
+              "title": "Beispiel 3: Training – Trainingsintervalle",
+              "description": "Verwendung eines Timers für das Intervalltraining: 30 Sekunden Arbeit, 15 Sekunden Pause",
+              "input": "Zyklus 1: 30 Sekunden Training (00:00:30)\nZyklus 2: 15 Sekunden Pause (00:00:15)\nWiederholungen: 8 Zyklen\nTon: Verschiedene Signale für Arbeit und Ruhe",
+              "calculation": "Runde 1: 30 Sek. Übungen → Ton\nRunde 2: 15 Sekunden Pause → Ton\n8 Mal wiederholen\nGesamtzeit: (30+15)×8 = 360 Sekunden = 6 Minuten",
+              "result": "Ergebnis: 8 Übungsintervalle à 6 Minuten",
+              "type": "Fitness",
+              "note": "Intervall-Timer helfen Ihnen, Ihr Training effektiv zu strukturieren"
+            },
+            "example4": {
+              "title": "Beispiel 4: Studie – Fokussitzung",
+              "description": "Verwendung eines Timers für eine 45-minütige Lernkonzentrationssitzung",
+              "input": "Zeit: 45 Minuten (00:45:00)\nModus: Countdown\nTon: Sanfter Ton\nVisualisierung: Digitaler Timer mit Fortschritt",
+              "calculation": "Der Timer beginnt bei 45:00 Uhr\nCountdown jede Sekunde\nFortschritt: 44:59, 44:58... bis 00:00\nLeiser Piepton, wenn der Vorgang abgeschlossen ist",
+              "result": "Ergebnis: 45-minütige Konzentrationssitzung mit Benachrichtigung",
+              "type": "Lernsitzung",
+              "note": "Lange Sitzungen helfen dabei, eine tiefe Konzentration aufrechtzuerhalten"
+            },
+            "example5": {
+              "title": "Beispiel 5: Meditation – Achtsamkeitssitzung",
+              "description": "Verwenden eines Timers für eine 10-minütige Meditationssitzung",
+              "input": "Zeit: 10 Minuten (00:10:00)\nModus: Countdown\nTon: Ruhiger, sanfter Ton\nVisualisierung: Minimalistisch (keine störenden Elemente)",
+              "calculation": "Der Timer startet um 10:00 Uhr\nStiller Countdown\nVisualisierung ohne grelle Farben\nNach Abschluss ertönt ein leiser Klingelton (Glocke).",
+              "result": "Ergebnis: 10-minütige Meditationssitzung mit sanfter Aufmerksamkeit",
+              "type": "Meditation",
+              "note": "Eine ruhige Umgebung und sanfte Benachrichtigungen sind wichtig für die Meditation"
+            },
+            "example6": {
+              "title": "Beispiel 6: Aufgabe – Zeitlimit",
+              "description": "Verwenden eines Timers, um die Dauer einer Aufgabe zu begrenzen (20 Minuten)",
+              "input": "Zeit: 20 Minuten (00:20:00)\nModus: Countdown\nTon: Standardsignal\nVisualisierung: Zirkulärer Fortschritt mit Prozentsätzen",
+              "calculation": "Der Timer startet um 20:00 Uhr\nFortschritt: 100 % → 75 % → 50 % → 25 % → 0 %\nVisuelle Anzeige des Fertigstellungsgrads\nUm 00:00 Uhr akustischer Alarm und visuelle Benachrichtigung",
+              "result": "Ergebnis: 20-Minuten-Zeitlimit mit vollständiger Visualisierung des Fortschritts",
+              "type": "Zeitmanagement",
+              "note": "Der Timer hilft Ihnen, die Zeit für Aufgaben zu begrenzen und die Produktivität zu steigern"
+            }
+          }
+        },
+        "features": {
+          "title": "Timerfunktionen",
+          "countdown": "Countdown",
+          "countdownDesc": "Präziser Countdown bis Null",
+          "sound": "Tonsignale",
+          "soundDesc": "Anpassbare Tonbenachrichtigungen",
+          "visual": "Visuelle Anzeige",
+          "visualDesc": "Fortschrittsbalken und Farbanzeige",
+          "presets": "Fertige Voreinstellungen",
+          "presetsDesc": "Schnelle Auswahl beliebter Intervalle",
+          "controls": "Management",
+          "controlsDesc": "Starten, pausieren, zurücksetzen und fortfahren",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design"
+        },
+        "useCases": {
+          "title": "Anwendungsfälle",
+          "pomodoro": "Pomodoro-Technik",
+          "pomodoroDesc": "Effektive Zeitmanagementtechniken",
+          "pomodoro1": "25 Minuten Arbeit",
+          "pomodoro2": "5 Minuten Pause",
+          "pomodoro3": "Lange Pause alle 4 Zyklen",
+          "cooking": "Kochen",
+          "cookingDesc": "Timer für kulinarische Prozesse",
+          "cooking1": "Eierkochzeit",
+          "cooking2": "Backzeit",
+          "cooking3": "Tee-Aufgusszeit",
+          "workout": "Trainingseinheiten",
+          "workoutDesc": "Intervalltraining und Übungen",
+          "workout1": "Übungszeit",
+          "workout2": "Ruhezeit",
+          "workout3": "Gesamte Trainingszeit",
+          "study": "Studien",
+          "studyDesc": "Planen Sie Ihre Studienzeit",
+          "study1": "Konzentrationszeit",
+          "study2": "Pausenzeit",
+          "study3": "Gesamte Unterrichtszeit"
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "tip1": "Verwenden Sie kurze Intervalle",
+          "tip1Desc": "Für eine bessere Konzentration",
+          "tip2": "Sounds einrichten",
+          "tip2Desc": "Wählen Sie den richtigen Ton",
+          "tip3": "Verwenden Sie visuelle Hinweise",
+          "tip3Desc": "Verfolgen Sie den Fortschritt",
+          "tip4": "Machen Sie Pausen",
+          "tip4Desc": "Vergessen Sie nicht die Ruhe"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "question1": "Wie starte ich einen Timer?",
+          "answer1": "Wählen Sie die gewünschte Zeit aus und klicken Sie auf die Schaltfläche „Start“.",
+          "question2": "Ist es möglich, einen Timer für mehrere Aufgaben gleichzeitig einzustellen?",
+          "answer2": "Ja, mehrere Timer werden unterstützt.",
+          "question3": "Ist es möglich, den Countdown anzuhalten und fortzusetzen?",
+          "answer3": "Ja, es gibt die Schaltflächen „Pause“ und „Fortsetzen“.",
+          "question4": "Gibt es einen Piepton, wenn der Vorgang abgeschlossen ist?",
+          "answer4": "Ja, der Summer schaltet sich automatisch ein.",
+          "question5": "Kann ich den Timer auf mobilen Geräten verwenden?",
+          "answer5": "Ja, der Timer reagiert vollständig auf Smartphones und Tablets.",
+          "question6": "Kann der Timer jederzeit zurückgesetzt werden?",
+          "answer6": "Ja, es gibt eine Reset-Taste.",
+          "question7": "Kann die optische Anzeige geändert werden?",
+          "answer7": "Ja, Sie können die Farbe und den Anzeigestil des Fortschrittsbalkens auswählen.",
+          "question8": "Ist es möglich, einen Timer auf Ihrer Website zu integrieren?",
+          "answer8": "Ja, es gibt eine API und ein Widget für Websites von Drittanbietern.",
+          "question9": "Kann ich den Timer ohne Internetverbindung nutzen?",
+          "answer9": "Ja, es funktioniert lokal, nachdem die Seite geladen wurde.",
+          "question10": "Ist der Timer für Pomodoro-Geräte geeignet?",
+          "answer10": "Ja, es ist einfach, Zyklen von 25 Minuten Arbeit und 5 Minuten Pause einzurichten.",
+          "faqItems": [
+            {
+              "q": "Wie starte ich einen Timer?",
+              "a": "Wählen Sie über die Eingabefelder oder vorgefertigten Voreinstellungen die gewünschte Zeit (Stunden, Minuten, Sekunden) aus und klicken Sie dann auf die Schaltfläche „Start“. Der Timer beginnt mit dem Countdown und zeigt die verbleibende Zeit an."
+            },
+            {
+              "q": "Ist es möglich, einen Timer für mehrere Aufgaben gleichzeitig einzustellen?",
+              "a": "Ein einfacher Timer arbeitet jeweils mit einer Aufgabe. Verwenden Sie für mehrere Aufgaben sequentielle Timer-Läufe oder spezielle Multitasking-Timer."
+            },
+            {
+              "q": "Ist es möglich, den Countdown anzuhalten und fortzusetzen?",
+              "a": "Ja, es gibt Schaltflächen „Pause“, um den Countdown anzuhalten, und Schaltflächen „Fortsetzen“, um fortzufahren. Während einer Pause ändert sich die Zeit nicht, der Timer behält seinen aktuellen Zustand."
+            },
+            {
+              "q": "Gibt es einen Piepton, wenn der Vorgang abgeschlossen ist?",
+              "a": "Ja, der Summer schaltet sich automatisch ein, wenn der Timer Null erreicht. Sie können den Tontyp und die Lautstärke in den Timer-Einstellungen konfigurieren."
+            },
+            {
+              "q": "Kann ich den Timer auf mobilen Geräten verwenden?",
+              "a": "Ja, der Timer reagiert vollständig auf Smartphones und Tablets. Die Benutzeroberfläche passt sich automatisch an die Bildschirmgröße an und sorgt so für eine komfortable Nutzung auf jedem Gerät."
+            },
+            {
+              "q": "Kann der Timer jederzeit zurückgesetzt werden?",
+              "a": "Ja, es gibt eine „Reset“-Taste, die den Timer stoppt und auf die ursprünglich eingestellte Zeit zurücksetzt. Sie können es jederzeit während des Timer-Betriebs verwenden."
+            },
+            {
+              "q": "Kann die optische Anzeige geändert werden?",
+              "a": "Ja, Sie können in den Timer-Einstellungen die Farbe des Fortschrittsbalkens, den Anzeigestil (kreisförmig, linear, digital) und andere Visualisierungsoptionen auswählen."
+            },
+            {
+              "q": "Welche Voreinstellungen sind im Timer verfügbar?",
+              "a": "Für beliebte Aufgaben stehen Voreinstellungen zur Verfügung: Pomodoro (25 Minuten), Kochen (verschiedene Intervalle), Training (Intervalltimer), Lernen und andere. Sie können auch Ihre eigenen Voreinstellungen erstellen."
+            },
+            {
+              "q": "Ist es möglich, den Timer-Sound anzupassen?",
+              "a": "Ja, Sie können den Tontyp (Standard, leise, laut) und die Lautstärke auswählen und den Ton sogar ganz ausschalten, sodass nur eine visuelle Benachrichtigung übrig bleibt."
+            },
+            {
+              "q": "Läuft der Timer im Hintergrund?",
+              "a": "Der Timer läuft im aktiven Browser-Tab. Um im Hintergrund oder mit geschlossenem Tab arbeiten zu können, sind spezielle Anwendungen oder Browsererweiterungen erforderlich."
+            },
+            {
+              "q": "Ist es möglich, einen Timer auf eine bestimmte Zeit (kein Intervall) einzustellen?",
+              "a": "Der Online-Timer arbeitet im Countdown-Modus (Zeitintervall). Um eine bestimmte Zeit einzustellen, verwenden Sie Alarme oder Timer mit der Funktion „Auf Zeit einstellen“."
+            },
+            {
+              "q": "Wie verwende ich einen Timer für die Pomodoro-Technik?",
+              "a": "Stellen Sie einen Timer für das Arbeitsintervall auf 25 Minuten ein, machen Sie nach Abschluss eine 5-minütige Pause (verwenden Sie den Timer erneut), nach 4 Zyklen machen Sie eine lange Pause von 15-30 Minuten."
+            },
+            {
+              "q": "Kann ich zum Kochen einen Timer verwenden?",
+              "a": "Ja, der Timer eignet sich ideal zur Steuerung der Garzeit. Stellen Sie die gewünschte Zeit ein (z. B. 8 Minuten zum Eierkochen, 15 Minuten zum Backen) und nutzen Sie das akustische Signal zur Benachrichtigung."
+            },
+            {
+              "q": "Wie verwende ich einen Timer für Intervalltraining?",
+              "a": "Stellen Sie den Timer auf die Dauer der Übung ein (z. B. 30 Sekunden), stellen Sie nach dem Signal den Timer auf die Ruhezeit (15 Sekunden) ein und wiederholen Sie den Zyklus so oft wie erforderlich."
+            },
+            {
+              "q": "Kann ich einen Timer für die Meditation verwenden?",
+              "a": "Ja, stellen Sie den Timer auf die gewünschte Meditationszeit ein (z. B. 10–20 Minuten), wählen Sie ein sanftes Tonsignal und eine minimalistische Visualisierung für eine ruhige Umgebung."
+            },
+            {
+              "q": "Ist der Timer genau?",
+              "a": "Der Timer verwendet einen genauen Countdown von Sekunde zu Sekunde. Die Genauigkeit variiert je nach Browser- und Geräteleistung, ist jedoch normalerweise sehr hoch (±1 Sekunde)."
+            },
+            {
+              "q": "Ist es möglich, Timereinstellungen zu speichern?",
+              "a": "Timer-Einstellungen (Ton, Visualisierung, Voreinstellungen) werden normalerweise im lokalen Speicher des Browsers gespeichert und bei der nächsten Verwendung automatisch übernommen."
+            },
+            {
+              "q": "Kann ich den Timer offline nutzen?",
+              "a": "Nach dem ersten Laden der Seite kann der Timer offline arbeiten, da die Hauptfunktionen clientseitig implementiert werden. Für den vollen Funktionsumfang wird jedoch eine Internetverbindung empfohlen."
+            },
+            {
+              "q": "Wie stelle ich einen Timer auf eine lange Zeit (mehrere Stunden) ein?",
+              "a": "Nutzen Sie Eingabefelder für Stunden, Minuten und Sekunden. Stellen Sie beispielsweise für 2 Stunden Folgendes ein: 2 Stunden, 0 Minuten, 0 Sekunden. Der Timer unterstützt beliebige Zeitintervalle."
+            },
+            {
+              "q": "Ist es möglich, einen Timer zu verwenden, um die Zeit für eine Aufgabe zu begrenzen?",
+              "a": "Ja, ein Timer eignet sich hervorragend, um die Zeit für Aufgaben zu begrenzen. Legen Sie ein Zeitlimit fest, starten Sie einen Timer und arbeiten Sie, bis das Signal das Ende der Zeit signalisiert."
+            },
+            {
+              "q": "Wie verwende ich einen Timer zum Lernen?",
+              "a": "Stellen Sie einen Timer für die Konzentrationszeit ein (z. B. 45 Minuten), machen Sie nach dem Signal eine Pause von 10-15 Minuten. Dies hilft, Ihre Lernzeit zu strukturieren und die Konzentration aufrechtzuerhalten."
+            },
+            {
+              "q": "Kann ich einen Timer verwenden, um Pausenzeiten zu verfolgen?",
+              "a": "Ja, mit einem Timer können Pausenzeiten erfasst werden. Stellen Sie die gewünschte Pausenzeit ein (z. B. 5–10 Minuten) und nutzen Sie einen Alarm, um Sie auf die Rückkehr zur Arbeit aufmerksam zu machen."
+            },
+            {
+              "q": "Wie kann man Besprechungszeiten mit einem Timer steuern?",
+              "a": "Stellen Sie einen Timer für die Dauer des Meetings ein (z. B. 30–60 Minuten) und starten Sie ihn zu Beginn des Meetings. Ein Timer hilft Ihnen, die Zeit zu kontrollieren und das Meeting pünktlich abzuschließen."
+            },
+            {
+              "q": "Ist es möglich, einen Timer zur Zeitsteuerung in Spielen zu verwenden?",
+              "a": "Ja, der Timer kann verwendet werden, um die Zeit von Spielsitzungen zu begrenzen. Legen Sie ein Limit fest (z. B. 1–2 Stunden), starten Sie einen Timer und behalten Sie den Überblick über die Spielzeit."
+            },
+            {
+              "q": "Wie verwende ich einen Timer, um meinen Tag zu planen?",
+              "a": "Teilen Sie Ihren Tag in Zeitblöcke auf und verwenden Sie für jeden Block einen Timer. Zum Beispiel: 25 Minuten Arbeit, 5 Minuten Pause, 25 Minuten Arbeit usw. Dies hilft, den Tag zu strukturieren."
+            },
+            {
+              "q": "Ist es möglich, die Zeit in sozialen Netzwerken mit einem Timer zu steuern?",
+              "a": "Ja, stellen Sie einen Timer für ein Zeitlimit (z. B. 15–20 Minuten) für die Nutzung sozialer Medien ein. Dies hilft, die Zeit zu kontrollieren und unnötigen Gebrauch zu vermeiden."
+            },
+            {
+              "q": "Wie steuere ich die Lesezeit mit einem Timer?",
+              "a": "Stellen Sie einen Timer für die Lesezeit ein (z. B. 30-60 Minuten), starten Sie ihn und lesen Sie bis zum Signal. Dies hilft, Ihre Lesezeit zu strukturieren und die Konzentration aufrechtzuerhalten."
+            },
+            {
+              "q": "Kann ich einen Timer verwenden, um meine Schlafzeit zu steuern?",
+              "a": "Mit dem Timer kann die Dauer des Tagesschlafs (Powernap) begrenzt werden. Stellen Sie für ein kurzes Nickerchen einen Timer auf 20–30 Minuten ein, um sicherzustellen, dass Sie erfrischt aufwachen."
+            },
+            {
+              "q": "Wie kann man mit einem Timer die am Computer verbrachte Zeit steuern?",
+              "a": "Stellen Sie den Timer auf ein Arbeitsintervall ein (z. B. 50 Minuten). Machen Sie nach dem Signal eine 10-minütige Pause, um Ihre Augen auszuruhen und aufzuwärmen. Dies trägt dazu bei, Stress abzubauen und die Produktivität aufrechtzuerhalten."
+            },
+            {
+              "q": "Ist es möglich, den Zeitpunkt, zu dem die Hausarbeit erledigt ist, mit einem Timer zu steuern?",
+              "a": "Ja, stellen Sie einen Timer für eine bestimmte Aufgabe ein (z. B. 15 Minuten zum Reinigen des Zimmers, 10 Minuten zum Abwaschen des Geschirrs). Ein Timer hilft Ihnen dabei, die Zeit für die Hausarbeit effektiv einzuteilen."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So verwenden Sie einen Online-Timer",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung eines Online-Timers zur Zeitverwaltung",
+          "steps": {}
+        }
+      }
+    },
+    "countdown": {
+      "title": "Countdown - Countdown-Rechner",
+      "description": "Online-Countdown-Rechner zu einem wichtigen Ereignis mit visueller Anzeige der verbleibenden Zeit.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "countdown": "Countdown",
+        "category": "Zeit"
+      },
+      "hero": {
+        "days": "Tage im Jahr",
+        "events": "Ereignisse",
+        "tracking": "Verfolgung"
+      },
+      "form": {
+        "title": "Countdown einstellen",
+        "eventName": "Veranstaltungsname",
+        "eventDescription": "Beschreibung der Veranstaltung",
+        "targetDate": "Zieldatum",
+        "targetTime": "Zeit",
+        "color": "Farbe",
+        "sound": "Klang",
+        "startCountdown": "Countdown starten",
+        "edit": "Bearbeiten",
+        "stop": "Stoppen",
+        "eventNamePlaceholder": "Geben Sie den Veranstaltungsnamen ein",
+        "eventDescriptionPlaceholder": "Veranstaltungsbeschreibung (optional)",
+        "presets": "Vorgefertigte Vorlagen",
+        "popularEvents": "Beliebte Veranstaltungen",
+        "quickPresets": "Schnelleinstellungen",
+        "eventTypes": {
+          "birthday": "Geburtstag",
+          "newYear": "Neujahr",
+          "christmas": "Weihnachten",
+          "vacation": "Urlaub"
+        },
+        "errors": {
+          "invalidDate": "Das Zieldatum muss in der Zukunft liegen",
+          "eventNameRequired": "Geben Sie den Veranstaltungsnamen ein"
+        }
+      },
+      "results": {
+        "title": "Countdown",
+        "finished": "Die Veranstaltung ist da!",
+        "copy": "Kopie",
+        "copied": "Kopiert!",
+        "days": "Tage",
+        "hours": "Std.",
+        "minutes": "Minuten",
+        "seconds": "Sekunden",
+        "eventHappened": "{eventName} ist bereits passiert"
+      },
+      "seo": {
+        "title": "Online-Countdown – Timer für Ereignisse, Fristen und Feiertage | Calc1.ru",
+        "description": "Online-Countdown-Rechner. Finden Sie heraus, wie viele Tage, Stunden, Minuten und Sekunden bis zum Ereignis verbleiben. Visueller Timer und Audiobenachrichtigung. Ideal, um den Überblick über wichtige Termine und Ereignisse zu behalten.",
+        "keywords": "Countdown, Countdown-Timer, Tage bis zum Event, wie viel bleibt bis zum Event, Online-Countdown, Event-Countdown, Timer bis zum Feiertag, visueller Countdown, Deadline-Countdown, Restzeitrechner, Countdown kostenlos online, Countdown-Timer, Countdown-Rechner, wie viele Tage bis zum Event, wie viele Stunden vor dem Event, Timer bis zum neuen Jahr, Timer bis zum Geburtstag, Timer bis zur Hochzeit, Timer bis zu den Ferien, Deadline-Timer, Countdown-Timer, Countdown-Rechner online, kostenloser Countdown Timer, Event-Countdown-Timer, Deadline-Countdown, Feiertags-Countdown, Geburtstags-Countdown, Hochzeits-Countdown, Urlaubs-Countdown, Projekt-Countdown, visueller Countdown-Timer, animierter Countdown, Countdown-Widget, Countdown-Uhr, wie viel Zeit noch übrig ist, Countdown-Timer, Countdown-Timer, Countdown online auf Russisch, kostenloser Countdown online",
+        "overview": {
+          "title": "Über den Countdown-Rechner",
+          "content": "Ein Countdown-Rechner ist ein praktisches Tool, um die Zeit bis zu wichtigen Ereignissen zu verfolgen. Stellen Sie einen Countdown für einen Geburtstag, einen Feiertag, eine Frist oder einen Urlaub ein.",
+          "additionalContent": "Der Rechner zeigt die genaue Zeit vor dem Ereignis in Tagen, Stunden, Minuten und Sekunden an. Unterstützt visuelle Fortschrittsanzeige, Audiobenachrichtigungen und die Möglichkeit, Daten zu exportieren. Ideal zum Planen, Motivieren und Verwalten der Zeit vor wichtigen Terminen.",
+          "calculationExamples": {
+            "title": "Beispiele für die Verwendung des Countdowns",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Countdown-Rechners an:",
+            "example1": {
+              "title": "Beispiel 1: Rückwärtszählung bis Neujahr",
+              "description": "Einen Countdown bis zum 1. Januar 2025 einstellen",
+              "input": "Veranstaltung: Neujahr 2025\nDatum: 1. Januar 2025, 00:00 Uhr\nAktuelles Datum: 15. Dezember 2024, 10:00 Uhr",
+              "calculation": "Berechnung der Differenz: 1. Januar 2025 – 15. Dezember 2024\nTage: 17 Tage\nStunden: 17×24 = 408 Stunden\nMinuten: 408×60 = 24.480 Minuten\nSekunden: 24.480×60 = 1.468.800 Sekunden",
+              "result": "Ergebnis: 17 Tage, 14 Stunden und 0 Minuten bis zum neuen Jahr",
+              "type": "Feiertage",
+              "note": "Der Countdown wird jede Sekunde aktualisiert und zeigt die aktuelle Zeit bis zum Ereignis an"
+            },
+            "example2": {
+              "title": "Beispiel 2: Geburtstags-Countdown",
+              "description": "Einen Geburtstags-Countdown einstellen (25. Juni 2025)",
+              "input": "Ereignis: Geburtstag\nDatum: 25. Juni 2025, 00:00 Uhr\nAktuelles Datum: 1. Januar 2025, 12:00 Uhr",
+              "calculation": "Berechnung der Differenz: 25. Juni 2025 – 1. Januar 2025\nTage: 175 Tage (Januar: 31-1=30, Februar-Mai: 28+31+30+31=120, Juni: 25)\nStunden: 175×24 = 4200 Stunden\nMinuten: 4200×60 = 252.000 Minuten",
+              "result": "Ergebnis: 175 Tage bis zu Ihrem Geburtstag",
+              "type": "Persönliche Ereignisse",
+              "note": "Der Langzeit-Countdown hilft bei der Planung der Vorbereitungen für wichtige Ereignisse"
+            },
+            "example3": {
+              "title": "Beispiel 3: Countdown bis zum Projekttermin",
+              "description": "Einstellen eines Countdowns bis zur Projektfrist (15. März 2025, 17:00 Uhr)",
+              "input": "Veranstaltung: Projektschluss\nDatum: 15. März 2025, 17:00 Uhr\nAktuelles Datum: 20. Februar 2025, 09:00 Uhr",
+              "calculation": "Berechnung der Differenz: 15. März 2025 17:00 Uhr - 20. Februar 2025 09:00 Uhr\nTage: 23 Tage (20. Februar – 15. März)\nStunden: 23×24 + 8 = 560 Stunden (8 Stunden Unterschied am Tag)\nMinuten: 560×60 = 33.600 Minuten",
+              "result": "Ergebnis: 23 Tage und 8 Stunden vor Projektschluss",
+              "type": "Arbeitsfristen",
+              "note": "Der Countdown bis zum Abgabetermin hilft Ihnen, Zeit zu verwalten und Aufgaben zu planen"
+            },
+            "example4": {
+              "title": "Beispiel 4: Countdown bis zum Urlaub",
+              "description": "Einstellen des Countdowns zum Beginn des Urlaubs (1. August 2025)",
+              "input": "Ereignis: Ferienbeginn\nDatum: 1. August 2025, 00:00 Uhr\nAktuelles Datum: 10. Mai 2025, 14:00 Uhr",
+              "calculation": "Berechnung der Differenz: 1. August 2025 – 10. Mai 2025\nTage: 83 Tage (Mai: 31-10=21, Juni: 30, Juli: 31, August: 1)\nStunden: 83×24 – 14 = 1978 Stunden\nMinuten: 1978×60 = 118.680 Minuten",
+              "result": "Ergebnis: 82 Tage 10 Stunden vor Urlaubsantritt",
+              "type": "Urlaubsplanung",
+              "note": "Der Langzeit-Countdown motiviert und hilft bei der Planung der Urlaubsvorbereitungen"
+            },
+            "example5": {
+              "title": "Beispiel 5: Countdown zur Hochzeit",
+              "description": "Countdown zur Hochzeit einstellen (10. September 2025, 15:00 Uhr)",
+              "input": "Veranstaltung: Hochzeit\nDatum: 10. September 2025, 15:00 Uhr\nAktuelles Datum: 1. Juli 2025, 10:00 Uhr",
+              "calculation": "Berechnung der Differenz: 10.09.2025 15:00 - 01.07.2025 10:00\nTage: 71 Tage (Juli: 31-1=30, August: 31, September: 10)\nStunden: 71×24 + 5 = 1709 Stunden (5 Stunden Differenz)\nMinuten: 1709×60 = 102.540 Minuten",
+              "result": "Ergebnis: 71 Tage 5 Stunden vor der Hochzeit",
+              "type": "Hochzeitsveranstaltungen",
+              "note": "Der Hochzeits-Countdown hilft Ihnen, den Überblick über die Vorbereitungen zu behalten und motiviert Sie für die letzten Phasen"
+            },
+            "example6": {
+              "title": "Beispiel 6: Countdown zur Prüfung",
+              "description": "Countdown zur Prüfung einstellen (5. Dezember 2024, 10:00)",
+              "input": "Veranstaltung: Prüfung\nDatum: 5. Dezember 2024, 10:00 Uhr\nAktuelles Datum: 1. Dezember 2024, 08:00 Uhr",
+              "calculation": "Berechnung der Differenz: 5. Dez. 2024 10:00 - 1. Dez. 2024 08:00\nTage: 4 Tage\nStunden: 4×24 + 2 = 98 Stunden (2 Stunden Differenz)\nMinuten: 98×60 = 5880 Minuten\nSekunden: 5880x60 = 352.800 Sekunden",
+              "result": "Ergebnis: 4 Tage 2 Stunden vor der Prüfung",
+              "type": "Bildungsveranstaltungen",
+              "note": "Der kurzfristige Countdown hilft Ihnen, sich zu konzentrieren und die verbleibende Zeit effektiv zu nutzen"
+            }
+          }
+        },
+        "features": {
+          "title": "Rechnerfunktionen",
+          "countdown": "Countdown",
+          "countdownDesc": "Präziser Countdown bis Null",
+          "visual": "Visuelle Anzeige",
+          "visualDesc": "Fortschrittsbalken und Farbanzeige",
+          "sound": "Tonsignale",
+          "soundDesc": "Anpassbare Tonbenachrichtigungen",
+          "presets": "Fertige Voreinstellungen",
+          "presetsDesc": "Schnelle Auswahl beliebter Intervalle",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design",
+          "export": "Ergebnisse exportieren",
+          "exportDesc": "Daten speichern und exportieren"
+        },
+        "useCases": {
+          "title": "Anwendungsfälle",
+          "events": "Veranstaltungen und Feiertage",
+          "eventsDesc": "Verfolgen Sie die Zeit bis zu wichtigen Ereignissen",
+          "events1": "Geburtstage",
+          "events2": "Feiertage",
+          "events3": "Hochzeiten",
+          "deadlines": "Fristen und Projekte",
+          "deadlinesDesc": "Zeitkontrolle bis zum Abschluss von Projekten",
+          "deadlines1": "Arbeitsfristen",
+          "deadlines2": "Bildungsprojekte",
+          "deadlines3": "Persönliche Ziele",
+          "personal": "Persönliche Ereignisse",
+          "personalDesc": "Verfolgen Sie persönliche wichtige Termine",
+          "personal1": "Urlaub",
+          "personal2": "Umzug",
+          "personal3": "Wichtige Treffen",
+          "business": "Geschäft und Arbeit",
+          "businessDesc": "Planung und Steuerung von Geschäftsprozessen",
+          "business1": "Präsentationen",
+          "business2": "Konferenzen",
+          "business3": "Projekte starten"
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "tip1": "Setzen Sie sich realistische Ziele",
+          "tip1Desc": "Planen Sie Ihre Zeit unter Berücksichtigung möglicher Verzögerungen",
+          "tip2": "Verwenden Sie visuelle Erinnerungen",
+          "tip2Desc": "Passen Sie die Farbanzeige für ein besseres Seherlebnis an",
+          "tip3": "Planen Sie im Voraus",
+          "tip3Desc": "Beginnen Sie einige Wochen vor der Veranstaltung mit dem Countdown",
+          "tip4": "Benachrichtigungen einrichten",
+          "tip4Desc": "Nutzen Sie Tonsignale für wichtige Momente"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie stelle ich den Countdown ein?",
+              "a": "Wählen Sie im Rechnerformular das Datum und die Uhrzeit des Ereignisses aus – der Timer zeigt automatisch die verbleibende Zeit in Tagen, Stunden, Minuten und Sekunden an. Geben Sie einen Namen für das Ereignis ein (optional) und klicken Sie auf „Countdown starten“."
+            },
+            {
+              "q": "Kann der Zieltermin geändert werden?",
+              "a": "Ja, wählen Sie einfach ein neues Datum und eine neue Uhrzeit im Formular aus und der Timer wird automatisch mit dem neuen Countdown aktualisiert. Sie können ein Ereignis jederzeit bearbeiten."
+            },
+            {
+              "q": "Ist es möglich, Ton hinzuzufügen, wenn ein Ereignis eintritt?",
+              "a": "Ja, es gibt ein integriertes Tonsignal, das in den Timer-Einstellungen konfiguriert werden kann. Bei Erreichen eines Ereignisses schaltet sich der Ton automatisch ein."
+            },
+            {
+              "q": "Kann ich einen Timer für Feiertage verwenden?",
+              "a": "Ja, jede Art von Veranstaltung wird unterstützt: Feiertage, Geburtstage, Hochzeiten, Termine, Ferien und andere. Wählen Sie das gewünschte Datum aus und erstellen Sie einen Countdown."
+            },
+            {
+              "q": "Wird die Zeit in verschiedenen Einheiten angezeigt?",
+              "a": "Ja, der Countdown wird in Tagen, Wochen, Stunden, Minuten und Sekunden angezeigt. Alle Einheiten werden jede Sekunde in Echtzeit aktualisiert."
+            },
+            {
+              "q": "Ist es möglich, die Farbwiedergabe anzupassen?",
+              "a": "Ja, die Timerfarbe kann aus der Palette in den Einstellungen ausgewählt werden. Dies hilft dabei, verschiedene Ereignisse visuell zu unterscheiden und macht den Countdown visueller."
+            },
+            {
+              "q": "Wird die mobile Version unterstützt?",
+              "a": "Ja, der Timer ist vollständig für Smartphones und Tablets geeignet. Die Benutzeroberfläche passt sich automatisch an die Bildschirmgröße an und ermöglicht so eine einfache Nutzung auf jedem Gerät."
+            },
+            {
+              "q": "Ist es möglich, mehrere Ereignisse zu verfolgen?",
+              "a": "Ja, Sie können mehrere Countdown-Timer in verschiedenen Browser-Registerkarten öffnen oder vorgefertigte Voreinstellungen verwenden, um schnell mehrere Ereignisse zu erstellen."
+            },
+            {
+              "q": "Funktioniert der Timer offline?",
+              "a": "Nach dem ersten Laden der Seite können die Hauptfunktionen lokal ausgeführt werden, für die genaue Uhrzeit ist jedoch eine Internetverbindung erforderlich, da die aktuelle Serverzeit verwendet wird."
+            },
+            {
+              "q": "Wie nutzt man den Neujahrs-Countdown?",
+              "a": "Stellen Sie das Datum auf den 1. Januar des nächsten Jahres ein, die Uhrzeit ist 00:00 Uhr und der Timer zeigt die genaue Zeit bis zum neuen Jahr an. Der Countdown wird jede Sekunde aktualisiert."
+            },
+            {
+              "q": "Kann ich einen Geburtstags-Countdown verwenden?",
+              "a": "Ja, stellen Sie das Datum Ihres Geburtstages ein (Sie können das nächste Jahr auswählen, wenn Ihr Geburtstag in diesem Jahr bereits vergangen ist), und der Timer zeigt an, wie viele Tage bis zu diesem Ereignis verbleiben."
+            },
+            {
+              "q": "Wie verwende ich den Countdown bis zur Deadline?",
+              "a": "Legen Sie einen Stichtag und eine Frist für ein Projekt oder eine Aufgabe fest. Der Timer zeigt die genaue Zeit vor Ablauf der Frist an, was Ihnen hilft, die Zeit zu kontrollieren und Ihre Arbeit zu planen."
+            },
+            {
+              "q": "Kann ich den Feiertags-Countdown nutzen?",
+              "a": "Ja, legen Sie das Startdatum Ihres Urlaubs fest und der Timer zeigt an, wie viele Tage noch übrig sind. Dies hilft Ihnen, Ihre Urlaubsvorbereitungen im Voraus zu motivieren und zu planen."
+            },
+            {
+              "q": "Wie nutzt man einen Hochzeits-Countdown?",
+              "a": "Legen Sie Datum und Uhrzeit der Hochzeit fest. Der Countdown hilft dabei, die Vorbereitungen für die Hochzeit zu verfolgen und motiviert Sie für die letzten Phasen der Organisation der Veranstaltung."
+            },
+            {
+              "q": "Ist es möglich, Countdown-Daten zu exportieren?",
+              "a": "Ja, viele Rechner unterstützen den Export von Countdown-Daten. Sie können Informationen zu einem Ereignis und der Zeit davor zur späteren Verwendung speichern."
+            },
+            {
+              "q": "Genau umgekehrte Berichterstattung?",
+              "a": "Ja, der Countdown wird jede Sekunde aktualisiert und zeigt die genaue Zeit bis zum Ereignis an. Die Genauigkeit hängt von der Serverzeit und der Browserleistung ab, ist jedoch normalerweise sehr hoch."
+            },
+            {
+              "q": "Ist es möglich, den Countdown für Langzeitveranstaltungen zu verwenden?",
+              "a": "Ja, der Countdown unterstützt jedes Zeitintervall – von einigen Sekunden bis zu mehreren Jahren. Langfristige Ziele und Ereignisse können verfolgt werden."
+            },
+            {
+              "q": "Wie nutzt man den Countdown zur Prüfung?",
+              "a": "Legen Sie Datum und Uhrzeit der Prüfung fest. Ein kurzfristiger Countdown hilft Ihnen, sich auf Ihre Vorbereitung zu konzentrieren und die verbleibende Zeit bis zur Prüfung effektiv zu nutzen."
+            },
+            {
+              "q": "Kann ich Countdowns für Geschäftsveranstaltungen verwenden?",
+              "a": "Ja, der Countdown eignet sich hervorragend für Geschäftsveranstaltungen: Präsentationen, Konferenzen, Projektstarts, Fristen und andere wichtige Arbeitstermine."
+            },
+            {
+              "q": "Wie nutzt man den Countdown zum Projektstart?",
+              "a": "Legen Sie einen Starttermin für das Projekt fest. Der Countdown hilft dabei, die Vorbereitungen für den Start zu steuern und das Team zu motivieren, Aufgaben pünktlich zu erledigen."
+            },
+            {
+              "q": "Kann ich den Countdown für persönliche Zwecke nutzen?",
+              "a": "Ja, der Countdown kann verwendet werden, um die Zeit bis zum Erreichen persönlicher Ziele wie Abschluss, Umzug, wichtige Besprechungen und andere Ereignisse zu verfolgen."
+            },
+            {
+              "q": "Wie verwende ich den Feiertags-Countdown?",
+              "a": "Legen Sie das Feiertagsdatum fest (Neujahr, Weihnachten, Geburtstag usw.). Der Countdown zeigt an, wie viele Tage noch bis zum Feiertag verbleiben, und hilft Ihnen bei der Planung Ihrer Vorbereitungen."
+            },
+            {
+              "q": "Können Countdowns für Bildungsveranstaltungen verwendet werden?",
+              "a": "Ja, der Countdown eignet sich für Bildungsveranstaltungen: Prüfungen, Abgabefristen, Verteidigung der Abschlussarbeit, Semesterbeginn und andere wichtige Termine im Studium."
+            },
+            {
+              "q": "Wie nutzt man Countdowns zur Planung von Veranstaltungen?",
+              "a": "Legen Sie den Veranstaltungstermin im Voraus fest. Ein langfristiger Countdown hilft Ihnen, die Vorbereitungen für die Veranstaltung zu planen und Aufgaben für die verbleibende Zeit zu verteilen."
+            },
+            {
+              "q": "Können Countdowns zur Motivation genutzt werden?",
+              "a": "Ja, das Herunterzählen wichtiger Ereignisse (Urlaub, Geburtstag, Erreichen eines Ziels) motiviert und hilft, den Fortschritt auf dem Weg zum Ziel zu visualisieren."
+            },
+            {
+              "q": "Wie verwende ich den Konferenz-Countdown?",
+              "a": "Legen Sie Datum und Uhrzeit der Konferenz fest. Der Countdown hilft Ihnen, Ihre Vorbereitungen zu kontrollieren: Registrierung, Erstellung eines Berichts, Buchung von Tickets und Hotels."
+            },
+            {
+              "q": "Ist es möglich, einen Countdown für ein wichtiges Meeting zu verwenden?",
+              "a": "Ja, legen Sie ein Datum und eine Uhrzeit für ein wichtiges Meeting fest. Der Countdown hilft Ihnen, sich an das Meeting zu erinnern und sich im Voraus darauf vorzubereiten."
+            },
+            {
+              "q": "Wie nutzt man den Countdown bis zur Produkteinführung?",
+              "a": "Legen Sie ein Datum für die Produkteinführung fest. Der Countdown hilft dabei, die Vorbereitungen für den Start zu steuern und das Team zu motivieren, alle Aufgaben pünktlich zu erledigen."
+            },
+            {
+              "q": "Ist es möglich, einen Countdown zu verwenden, um die Zeit bis zum Abschluss eines Projekts zu steuern?",
+              "a": "Ja, legen Sie ein Fertigstellungsdatum für das Projekt fest. Countdown hilft Ihnen, die Zeit zu kontrollieren und Aufgaben so zu planen, dass die Frist eingehalten wird."
+            },
+            {
+              "q": "Wie verwende ich einen Countdown, um die Zeit bis zum Erreichen eines Ziels zu verfolgen?",
+              "a": "Legen Sie ein Datum fest, bis zu dem Sie Ihr Ziel erreichen möchten. Ein Countdown motiviert und hilft, die Arbeit zur Erreichung eines Ziels zu strukturieren und zeigt an, wie viel Zeit noch verbleibt."
+            }
+          ]
+        },
+        "howTo": {
+          "title": "So verwenden Sie einen Countdown-Rechner",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung eines Countdown-Rechners zur Verfolgung der Zeit bis zu Ereignissen",
+          "steps": {}
+        }
+      }
+    },
+    "worldTime": {
+      "title": "Weltzeit",
+      "description": "Online-Weltzeitrechner. Finden Sie die aktuelle Uhrzeit in einem beliebigen Land oder einer beliebigen Stadt heraus.",
+      "breadcrumbs": {
+        "home": "Heim",
+        "time": "Zeit",
+        "worldTime": "Weltzeit",
+        "category": "Zeit"
+      },
+      "hero": {
+        "timeZones": "Zeitzonen",
+        "cities": "Städte",
+        "accuracy": "Genauigkeit"
+      },
+      "form": {
+        "title": "Weltzeiteinstellungen",
+        "addCity": "Stadt hinzufügen",
+        "searchCities": "Städte suchen",
+        "searchPlaceholder": "Geben Sie den Namen der Stadt ein",
+        "settings": "Einstellungen",
+        "refresh": "Aktualisieren",
+        "timeFormat": "Zeitformat",
+        "dateFormat": "Datumsformat",
+        "format24h": "24 Stunden",
+        "format12h": "12 Uhr",
+        "showSeconds": "Sekunden anzeigen",
+        "showDate": "Datum anzeigen",
+        "showDayOfWeek": "Wochentag anzeigen",
+        "showDST": "Sommerzeit anzeigen",
+        "noCities": "Keine Städte",
+        "noCitiesDesc": "Fügen Sie Städte hinzu, um die Zeit anzuzeigen",
+        "addFirstCity": "Erste Stadt hinzufügen",
+        "copy": "Kopie",
+        "copied": "Kopiert!"
+      },
+      "results": {
+        "title": "Weltzeit",
+        "currentTime": "Aktuelle Uhrzeit",
+        "timeZone": "Zeitzone"
+      },
+      "seo": {
+        "title": "Online-Weltzeitrechner – Zeit in Städten und Ländern | Calc1.ru",
+        "description": "Online-Weltzeitrechner. Aktuelle Uhrzeit in Städten und Ländern, Umrechnung zwischen Zeitzonen, komfortable Suche und Visualisierung. Ideal für die Planung internationaler Meetings und Reisen.",
+        "keywords": "Zeit für Reisen, Zeit für Geschäfte, Weltzeit online, Weltzeituhr online, Zeitzonenrechner, globale Zeit, internationale Zeit, aktuelle Zeitzonen, Zeitkonverter, Weltzeitkonverter, mehrere Zeitzonen, Zeitvergleich, Zeit online auf Russisch, kostenlose Weltzeit online",
+        "overview": {
+          "title": "Über den Weltzeitrechner",
+          "content": "Der Weltzeitrechner ist ein praktisches Tool zum Arbeiten mit verschiedenen Zeitzonen. Informieren Sie sich überall auf der Welt über die aktuelle Uhrzeit, planen Sie internationale Meetings und Reisen.",
+          "additionalContent": "Der Rechner unterstützt das gleichzeitige Hinzufügen mehrerer Städte, die automatische Berücksichtigung der Sommerzeit (DST), die Suche nach Städten nach Namen, die Synchronisierung mit genauen Zeitservern und die Visualisierung des Zeitunterschieds zwischen Städten. Ideal für Geschäftsreisen, Reisen und die Kommunikation mit Menschen in verschiedenen Zeitzonen.",
+          "calculationExamples": {
+            "title": "Beispiele für die Verwendung des Weltzeitrechners",
+            "content": "Schauen wir uns praktische Beispiele für die Verwendung des Weltzeitrechners an:",
+            "example1": {
+              "title": "Beispiel 1: Planung einer internationalen Videokonferenz",
+              "description": "Organisation einer Videokonferenz zwischen Moskau, New York und Tokio",
+              "input": "Stadt 1: Moskau (UTC+3)\nStadt 2: New York (UTC-5)\nStadt 3: Tokio (UTC+9)\nAktuelle Zeit in Moskau: 14:00 (2. Januar 2025)",
+              "calculation": "Moskau: 14:00 (UTC+3)\nNew York: 06:00 (UTC-5) – Differenz -8 Stunden\nTokio: 20:00 (UTC+9) – Differenz +6 Stunden\nOptimale Zeit: 09:00 Uhr Moskau (01:00 Uhr New York, 15:00 Uhr Tokio)",
+              "result": "Ergebnis: Die Videokonferenz um 09:00 Uhr Moskauer Zeit ist für alle Teilnehmer günstig",
+              "type": "Geschäftsplanung",
+              "note": "Aufgrund der unterschiedlichen Zeitzonen können Sie eine für alle Teilnehmer passende Zeit finden"
+            },
+            "example2": {
+              "title": "Beispiel 2: Planen eines Anrufs bei Verwandten",
+              "description": "Bestimmen Sie einen geeigneten Zeitpunkt für einen Anruf von Moskau nach Los Angeles",
+              "input": "Stadt 1: Moskau (UTC+3)\nStadt 2: Los Angeles (UTC-8)\nAktuelle Zeit in Moskau: 20:00 Uhr (abends, 2. Januar 2025)",
+              "calculation": "Moskau: 20:00 (UTC+3)\nLos Angeles: 09:00 (UTC-8) – Differenz -11 Stunden\nIn Moskau Abend (20:00) = Morgen in Los Angeles (09:00)",
+              "result": "Ergebnis: Bequemer Zeitpunkt für einen Anruf – Abend in Moskau (Morgen in Los Angeles)",
+              "type": "Internationale Kommunikation",
+              "note": "Der Unterschied von 11 Stunden bedeutet: Wenn es in Moskau Abend ist, ist es in Los Angeles Morgen"
+            },
+            "example3": {
+              "title": "Beispiel 3: Flugplanung und Anpassung an die Ortszeit",
+              "description": "Flug von Moskau nach Sydney und Anpassung an die Ortszeit",
+              "input": "Abflugort: Moskau (UTC+3)\nZielstadt: Sydney (UTC+10)\nAbfahrtszeit von Moskau: 23:00 Uhr (2. Januar 2025)\nFlugdauer: 20 Stunden",
+              "calculation": "Moskau: 23:00 (UTC+3)\nSydney: 07:00 (UTC+10) – Differenz +7 Stunden\nAnkunftszeit: 19:00 Uhr Ortszeit Sydney\nEmpfehlung: Schlafen Sie an Bord, um sich an die Ortszeit anzupassen",
+              "result": "Ergebnis: Ankunft um 19:00 Uhr Ortszeit Sydney, Sie müssen sich auf +7 Stunden einstellen",
+              "type": "Ausflüge",
+              "note": "Wenn Sie über mehrere Zeitzonen fliegen, ist es wichtig, Schlaf und Anpassung einzuplanen"
+            },
+            "example4": {
+              "title": "Beispiel 4: Planung einer Online-Veranstaltung",
+              "description": "Festlegung des Zeitpunkts für eine Online-Konferenz mit Teilnehmern aus verschiedenen Ländern",
+              "input": "Teilnehmer:\n- London (UTC+0)\n- Paris (UTC+1)\n- Dubai (UTC+4)\n- Peking (UTC+8)\nVerbleibende Zeit in London: 12:00 Uhr (Fokus, 2. Januar 2025)",
+              "calculation": "London: 12:00 (UTC+0)\nParis: 13:00 (UTC+1) – Differenz +1 Stunde\nDubai: 16:00 (UTC+4) – Differenz +4 Stunden\nPeking: 20:00 (UTC+8) – Differenz +8 Stunden\nOptimale Zeit: 10:00 Uhr London (11:00 Uhr Paris, 14:00 Uhr Dubai, 18:00 Uhr Peking)",
+              "result": "Ergebnis: Die Online-Veranstaltung um 10:00 Uhr Londoner Zeit ist für alle Teilnehmer praktisch",
+              "type": "Online-Events",
+              "note": "Bei der Planung von Online-Events ist es wichtig, günstige Zeiten für alle Zeitzonen zu berücksichtigen"
+            },
+            "example5": {
+              "title": "Beispiel 5: Arbeiten mit Kunden in verschiedenen Zeitzonen",
+              "description": "Festlegung der Arbeitszeiten für ein Team, das mit Kunden in verschiedenen Ländern arbeitet",
+              "input": "Büro: Moskau (UTC+3)\nKunden:\n- New York (UTC-5)\n- Tokio (UTC+9)\n- London (UTC+0)\nArbeitszeiten in Moskau: 09:00-18:00 Uhr",
+              "calculation": "Moskau 09:00-18:00:\n- New York: 01:00–10:00 Uhr (früher Morgen, Geschäftszeiten)\n- Tokio: 15:00–00:00 Uhr (Tag-Abend, Geschäftszeiten)\n- London: 06:00–15:00 Uhr (vormittags bis nachmittags, Bürozeiten)\nÜberschneidung: 09:00-15:00 Uhr Moskauer Zeit ist optimal",
+              "result": "Ergebnis: Die optimale Zeit für die Arbeit mit Kunden ist 09:00–15:00 Uhr Moskauer Zeit",
+              "type": "Geschäftskommunikation",
+              "note": "Das Finden der Überschneidungen zwischen den Geschäftszeiten hilft Ihnen, effektiv mit Kunden zusammenzuarbeiten"
+            },
+            "example6": {
+              "title": "Beispiel 6: Planung der Übertragung einer Sportveranstaltung",
+              "description": "Bestimmung der Übertragungszeit eines Spiels für Zuschauer in verschiedenen Ländern",
+              "input": "Spiel in London: 20:00 Uhr (UTC+0, 2. Januar 2025)\nZuschauer:\n- Moskau (UTC+3)\n- New York (UTC-5)\n- Sydney (UTC+10)",
+              "calculation": "Spiel in London: 20:00 (UTC+0)\nMoskau: 23:00 (UTC+3) – abends, praktisch\nNew York: 15:00 (UTC-5) – Tag, praktisch\nSydney: 07:00 Uhr am nächsten Tag (UTC+10) – Morgen, ungünstig\nEmpfehlung: Bedenken Sie, dass es in Sydney früher Morgen sein wird",
+              "result": "Ergebnis: Ausstrahlung um 20:00 Uhr Londoner Zeit = 23:00 Uhr Moskau, 15:00 Uhr New York, 07:00 Uhr Sydney (nächster Tag)",
+              "type": "Medien und Veranstaltungen",
+              "note": "Bei der Planung von Übertragungen ist es wichtig, günstige Zeiten für Zuschauer in verschiedenen Zeitzonen zu berücksichtigen"
+            }
+          }
+        },
+        "features": {
+          "title": "Rechnerfunktionen",
+          "realTime": "Echtzeit",
+          "realTimeDesc": "Die genaue Uhrzeit wird jede Sekunde aktualisiert",
+          "multipleCities": "Mehrere Städte",
+          "multipleCitiesDesc": "Fügen Sie bis zu 10 Städte gleichzeitig hinzu",
+          "timeZones": "Zeitzonen",
+          "timeZonesDesc": "Unterstützt alle Zeitzonen der Welt",
+          "search": "Städte suchen",
+          "searchDesc": "Schnelle Suche nach Städtenamen",
+          "dst": "Sommerzeit",
+          "dstDesc": "Automatische Berücksichtigung der Sommerzeit",
+          "mobile": "Mobile Version",
+          "mobileDesc": "Vollständig responsives Design"
+        },
+        "useCases": {
+          "title": "Anwendungsfälle",
+          "business": "Geschäft und Arbeit",
+          "businessDesc": "Planung internationaler Meetings und Anrufe",
+          "business1": "Telefonkonferenzen",
+          "business2": "Planen von Besprechungen",
+          "business3": "Arbeiten mit Kunden",
+          "travel": "Ausflüge",
+          "travelDesc": "Reiseplanung und Anpassung an die Ortszeit",
+          "travel1": "Routenplanung",
+          "travel2": "Anpassung an die Ortszeit",
+          "travel3": "Hotelreservierungen",
+          "communication": "Kommunikation",
+          "communicationDesc": "Kontakte zu Freunden und Verwandten in verschiedenen Ländern knüpfen",
+          "communication1": "Anrufe bei Verwandten",
+          "communication2": "Boten",
+          "communication3": "Soziale Medien",
+          "events": "Veranstaltungen",
+          "eventsDesc": "Planung der Teilnahme an internationalen Veranstaltungen",
+          "events1": "Online-Konferenzen",
+          "events2": "Sportveranstaltungen",
+          "events3": "Kulturelle Veranstaltungen"
+        },
+        "popularCities": {
+          "title": "Beliebte Städte",
+          "Moscow": "Moskau",
+          "Russia": "Russland",
+          "UTC+3": "UTC+3",
+          "London": "London",
+          "UK": "Großbritannien",
+          "UTC+0": "UTC+0",
+          "NewYork": "New York",
+          "USA": "USA",
+          "UTC-5": "UTC-5",
+          "Tokyo": "Tokio",
+          "Japan": "Japan",
+          "UTC+9": "UTC+9",
+          "Sydney": "Sydney",
+          "Australia": "Australien",
+          "UTC+10": "UTC+10",
+          "Paris": "Paris",
+          "France": "Frankreich",
+          "UTC+1": "UTC+1",
+          "Berlin": "Berlin",
+          "Germany": "Deutschland",
+          "Beijing": "Peking",
+          "China": "China",
+          "UTC+8": "UTC+8",
+          "Dubai": "Dubai",
+          "UAE": "Vereinigte Arabische Emirate",
+          "UTC+4": "UTC+4",
+          "LosAngeles": "Los Angeles",
+          "UTC-8": "UTC-8",
+          "Singapore": "Singapur",
+          "Mumbai": "Mumbai",
+          "India": "Indien",
+          "UTC+5:30": "UTC+5:30"
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "tip1": "Fügen Sie häufig genutzte Städte hinzu",
+          "tip1Desc": "Erstellen Sie Ihre Liste Ihrer Lieblingsstädte",
+          "tip2": "Berücksichtigen Sie die Sommerzeit",
+          "tip2Desc": "Überprüfen Sie, ob sich die Sommerzeit geändert hat",
+          "tip3": "Verwenden Sie die Suche",
+          "tip3Desc": "Finden Sie schnell die Städte, die Sie brauchen",
+          "tip4": "Planen Sie im Voraus",
+          "tip4Desc": "Berücksichtigen Sie bei der Planung Zeitunterschiede"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Wie füge ich eine Stadt hinzu?",
+              "a": "Suchen Sie nach dem Namen der Stadt oder wählen Sie eine Stadt aus der beliebten Liste aus. Geben Sie den Namen der Stadt in das Suchfeld ein, wählen Sie die gewünschte Stadt aus den Ergebnissen aus und sie wird automatisch zur Liste der angezeigten Städte hinzugefügt."
+            },
+            {
+              "q": "Ist es möglich, eine Stadt zu löschen?",
+              "a": "Ja, klicken Sie auf das Kreuz oder die Schaltfläche „Löschen“ neben dem Namen der Stadt und die Stadt wird aus der Liste entfernt. Sie können die entsprechende Funktion auch in den Einstellungen nutzen."
+            },
+            {
+              "q": "Wird die Uhrzeit automatisch aktualisiert?",
+              "a": "Ja, die Uhrzeit wird jede Sekunde in Echtzeit aktualisiert. Alle Städte zeigen unter Berücksichtigung ihrer Zeitzonen die aktuelle Uhrzeit an."
+            },
+            {
+              "q": "Wird die Sommerzeit unterstützt?",
+              "a": "Ja, die Sommerzeit (DST) wird automatisch berücksichtigt. Der Rechner passt die Uhrzeit bei der Umstellung auf Sommer-/Winterzeit in jeder Stadt automatisch an."
+            },
+            {
+              "q": "Ist es möglich, Einstellungen zu speichern?",
+              "a": "Ja, die ausgewählten Städte und Einstellungen (Zeitformat, Datumsanzeige etc.) werden im lokalen Speicher des Browsers gespeichert und beim nächsten Besuch automatisch geladen."
+            },
+            {
+              "q": "Funktioniert es auf Mobilgeräten?",
+              "a": "Ja, der Rechner reagiert vollständig auf Smartphones und Tablets. Die Benutzeroberfläche passt sich automatisch an die Bildschirmgröße an und sorgt so für eine komfortable Nutzung auf jedem Gerät."
+            },
+            {
+              "q": "Ist es möglich, die Zeit in verschiedenen Städten zu vergleichen?",
+              "a": "Ja, alle hinzugefügten Städte werden gleichzeitig angezeigt, sodass Sie die Zeiten zwischen verschiedenen Zeitzonen leicht vergleichen und den Zeitunterschied erkennen können."
+            },
+            {
+              "q": "Wird die Uhrzeit genau angezeigt?",
+              "a": "Ja, die Uhrzeit wird mit Zeitservern (NTP) synchronisiert. Die Genauigkeit ist in der Regel sehr hoch und wird jede Sekunde aktualisiert, um die Aktualität sicherzustellen."
+            },
+            {
+              "q": "Ist es möglich, das Zeitformat zu ändern?",
+              "a": "Ja, 12-Stunden- (AM/PM) und 24-Stunden-Zeitformate werden unterstützt. Sie können in den Rechnereinstellungen auch die Anzeige von Sekunden, Datum und Wochentag konfigurieren."
+            },
+            {
+              "q": "Gibt es Beschränkungen hinsichtlich der Anzahl der Städte?",
+              "a": "Normalerweise können Sie bis zu 10 Städte gleichzeitig hinzufügen, was für die meisten Anwendungsfälle ausreicht. Diese Einschränkung trägt dazu bei, die Leistung und Benutzerfreundlichkeit der Schnittstelle zu erhalten."
+            },
+            {
+              "q": "Wie verwende ich den Rechner zur Planung internationaler Meetings?",
+              "a": "Fügen Sie die Städte aller Besprechungsteilnehmer hinzu und der Rechner zeigt die aktuelle Zeit in jeder Stadt an. Dies hilft Ihnen, unter Berücksichtigung ihrer Zeitzonen den optimalen Zeitpunkt zu finden, der für alle Teilnehmer bequem ist."
+            },
+            {
+              "q": "Kann ich den Rechner für Reisen nutzen?",
+              "a": "Ja, der Rechner eignet sich hervorragend für unterwegs. Fügen Sie Ihrer Route Städte hinzu, um die Ortszeit an Ihrem Zielort anzuzeigen und die Anpassung an eine neue Zeitzone zu planen."
+            },
+            {
+              "q": "Wie berechnet man den Zeitunterschied zwischen Städten?",
+              "a": "Addieren Sie beide Städte zum Rechner. Der Zeitunterschied wird sofort sichtbar: Der Rechner zeigt die aktuelle Zeit in jeder Stadt an und Sie können leicht erkennen, um wie viele Stunden die Zeit abweicht."
+            },
+            {
+              "q": "Werden alle Zeitzonen unterstützt?",
+              "a": "Ja, der Rechner unterstützt alle Zeitzonen der Welt, einschließlich der Standardzeitzonen (UTC) und der lokalen Zeitzonen aller Länder. Sie können in jeder Stadt der Welt Zeit finden."
+            },
+            {
+              "q": "Kann ich den Rechner offline nutzen?",
+              "a": "Nach dem ersten Download können die Grundfunktionen lokal funktionieren, für die genaue Uhrzeit ist jedoch eine Internetverbindung erforderlich, da die Synchronisierung mit exakten Zeitservern verwendet wird."
+            },
+            {
+              "q": "Wie finde ich Zeit in einem bestimmten Land?",
+              "a": "Geben Sie im Suchfeld den Namen der Hauptstadt oder Großstadt des gewünschten Landes ein. Der Rechner findet die Stadt und zeigt ihre aktuelle Uhrzeit unter Angabe der Zeitzone an."
+            },
+            {
+              "q": "Kann der Rechner für die Arbeit mit Kunden in verschiedenen Zeitzonen verwendet werden?",
+              "a": "Ja, fügen Sie die Städte hinzu, in denen sich Ihre Kunden befinden, und der Rechner zeigt deren aktuelle Zeit an. Dies hilft dabei, den optimalen Zeitpunkt für Anrufe und Besprechungen unter Berücksichtigung der Arbeitszeiten der Kunden zu bestimmen."
+            },
+            {
+              "q": "Wie verwende ich den Rechner zum Planen von Anrufen?",
+              "a": "Fügen Sie die Städte der Anrufteilnehmer hinzu und sehen Sie jeweils die aktuelle Uhrzeit. Wählen Sie unter Berücksichtigung der Zeitzonenunterschiede und der normalen Geschäftszeiten einen für alle passenden Zeitpunkt."
+            },
+            {
+              "q": "Ist es möglich, die Arbeitszeit eines Remote-Teams mit einem Taschenrechner zu verfolgen?",
+              "a": "Ja, fügen Sie die Städte aller Teammitglieder hinzu. Der Rechner zeigt die aktuelle Uhrzeit in jeder Stadt an, was bei der Koordinierung der Arbeit und der Planung von Teambesprechungen hilft."
+            },
+            {
+              "q": "Wie verwende ich einen Taschenrechner zur Planung von Online-Events?",
+              "a": "Fügen Sie die Städte aller Online-Event-Teilnehmer hinzu. Der Rechner zeigt die aktuelle Uhrzeit an, was Ihnen dabei hilft, die optimale Startzeit für die Veranstaltung auszuwählen, die für die maximale Teilnehmerzahl geeignet ist."
+            },
+            {
+              "q": "Kann ich einen Taschenrechner verwenden, um mich beim Fliegen an die Ortszeit anzupassen?",
+              "a": "Ja, fügen Sie Ihren Abflug- und Zielort hinzu. Der Rechner zeigt die Ortszeit an Ihrem Zielort an, was Ihnen bei der Planung Ihres Schlafs und der Anpassung an eine neue Zeitzone hilft."
+            },
+            {
+              "q": "Wie ermittelt man mit dem Rechner die Sendezeiten?",
+              "a": "Fügen Sie die Städte der Zuschauer und die Stadt hinzu, in der die Veranstaltung stattfindet. Der Rechner zeigt den Zeitpunkt der Veranstaltung für Zuschauer in verschiedenen Zeitzonen an, was dabei hilft, den geeigneten Zeitpunkt für die Ausstrahlung einzuschätzen."
+            },
+            {
+              "q": "Kann ich den Rechner zur Planung von Geschäftsreisen nutzen?",
+              "a": "Ja, fügen Sie Städte zu Ihrer Reiseroute hinzu. Der Rechner zeigt die Ortszeit in jeder Stadt an, was Ihnen bei der Planung von Besprechungen und Flügen und der Anpassung an die Ortszeit hilft."
+            },
+            {
+              "q": "Wie kann ich mit dem Rechner Freunde und Verwandte im Ausland kontaktieren?",
+              "a": "Fügen Sie die Stadt hinzu, in der Ihre Freunde oder Verwandten leben. Der Rechner zeigt die aktuelle Uhrzeit an, was ihnen bei der Auswahl eines geeigneten Zeitpunkts für Anrufe und Kommunikation hilft."
+            },
+            {
+              "q": "Kann der Rechner zur Berücksichtigung von Fristen in verschiedenen Zeitzonen verwendet werden?",
+              "a": "Ja, fügen Sie die Stadt hinzu, in der die Frist endet, und der Rechner zeigt die Ortszeit an. Dies hilft Ihnen, die Zeit vor Ablauf der Frist unter Berücksichtigung der Zeitzone genau zu berechnen."
+            },
+            {
+              "q": "Wie verwende ich den Rechner zur Planung von Videokonferenzen?",
+              "a": "Fügen Sie die Städte aller Videokonferenzteilnehmer hinzu. Der Rechner zeigt die aktuelle Uhrzeit an und hilft so, den für alle Teilnehmer optimalen Zeitpunkt für die Konferenz zu finden."
+            },
+            {
+              "q": "Kann der Rechner zur Zeiterfassung über mehrere Büros hinweg verwendet werden?",
+              "a": "Ja, fügen Sie die Städte aller Firmensitze hinzu. Der Rechner zeigt gleichzeitig die aktuelle Uhrzeit in jedem Büro an, was die Koordinierung der Arbeit zwischen den Büros erleichtert."
+            },
+            {
+              "q": "Wie verwende ich den Rechner zur Flugplanung?",
+              "a": "Fügen Sie den Abflugort und den Ankunftsort hinzu. Der Rechner zeigt die Ortszeit an Ihrem Zielort an, was Ihnen bei der Planung Ihrer Abreise und Ankunft unter Berücksichtigung der Zeitverschiebung hilft."
+            },
+            {
+              "q": "Kann ich mit einem Rechner die beste Zeit für Auslandsgespräche ermitteln?",
+              "a": "Ja, fügen Sie die Städte der Anrufteilnehmer hinzu. Der Rechner zeigt die aktuelle Uhrzeit an, sodass Sie Zeiten finden können, zu denen alle Teilnehmer verfügbar sind (z. B. Geschäftszeiten in beiden Städten)."
+            },
+            {
+              "q": "Wie kann man mit dem Rechner die Zusammenarbeit mit Freiberuflern in verschiedenen Ländern planen?",
+              "a": "Fügen Sie die Städte aller Freelancer hinzu. Der Rechner zeigt ihre aktuelle Uhrzeit an, was dabei hilft, die Arbeit zu koordinieren, Fristen festzulegen und die Kommunikation unter Berücksichtigung ihrer Zeitzonen zu planen."
+            }
+          ]
+        }
+      }
+    },
+    "add-time": {
+      "seo": {
+        "howTo": {
+          "title": "So fügen Sie einem Datum Zeit hinzu",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Zeitadditionsrechners",
+          "steps": {}
+        }
+      }
+    },
+    "days-between": {
+      "seo": {
+        "howTo": {
+          "title": "So berechnen Sie die Differenz zwischen Datumsangaben",
+          "description": "Schritt-für-Schritt-Anleitung zur Verwendung des Datumsdifferenzrechners",
+          "steps": {}
+        }
+      }
+    }
+  }
 }
-
-
-

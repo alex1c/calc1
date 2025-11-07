@@ -1,86 +1,112 @@
 {
   "common": {
     "search": "Suchen",
-    "searchPlaceholder": "Beginne mit der Eingabe des Rechnernamens...",
+    "searchPlaceholder": "Beginnen Sie mit der Eingabe des Namens des Rechners...",
     "searchResults": "Suchergebnisse",
     "resultsFor": "Ergebnisse für",
     "loading": "Laden...",
     "found": "Gefunden",
     "results": "Ergebnisse",
     "noResults": "Nichts gefunden",
-    "tryAnotherQuery": "Versuchen Sie eine andere Abfrage oder überprüfen Sie die Rechtschreibung",
+    "tryAnotherQuery": "Versuchen Sie es mit einer anderen Abfrage oder überprüfen Sie Ihre Rechtschreibung",
     "noQuery": "Keine Suchanfrage",
-    "enterSearchTerm": "Geben Sie einen Suchbegriff ein, um Rechner zu finden",
-    "useCalculator": "Rechner verwenden",
+    "enterSearchTerm": "Geben Sie Ihren Suchbegriff ein, um Taschenrechner zu finden",
+    "useCalculator": "Benutzen Sie den Taschenrechner",
     "language": "Sprache",
     "categories": "Kategorien",
-    "calculators": "Rechner",
+    "calculators": "Kalkulator",
+    "calculatorsCount": "Taschenrechner",
+    "free": "Kostenlos",
+    "sections": "Abschnitte",
+    "online": "Online",
+    "accuracy": "Genauigkeit",
+    "instant": "Sofort",
+    "calculation": "Berechnung",
+    "usage": "Verwendung",
+    "speed": "Geschwindigkeit",
+    "conversion": "Konvertierung",
+    "converters": "Konverter",
+    "calculatorsWillBeAdded": "Rechner werden in Kürze hinzugefügt.",
+    "availableCalculators": "Verfügbare Rechner",
     "calculate": "Berechnen",
     "result": "Ergebnis",
-    "clear": "Löschen",
+    "clear": "Klar",
     "favorites": "Favoriten",
+    "calculationError": "Rechenfehler. Überprüfen Sie die eingegebenen Daten.",
+    "units": {
+      "meters": "M",
+      "centimeters": "cm",
+      "millimeters": "mm",
+      "kilograms": "kg",
+      "grams": "G",
+      "liters": "l",
+      "milliliters": "ml",
+      "cubicMeters": "m³",
+      "metersPerSecond": "MS",
+      "cubicMetersPerSecond": "m3/s"
+    },
     "notFound": {
       "title": "Seite nicht gefunden",
-      "description": "Entschuldigung, die angeforderte Seite existiert nicht.",
-      "goHome": "Zur Startseite",
+      "description": "Leider existiert die angeforderte Seite nicht.",
+      "goHome": "Heim",
       "suggestions": {
-        "title": "Vielleicht suchen Sie nach:",
-        "checkUrl": "Überprüfen Sie die Korrektheit der eingegebenen Adresse",
-        "useSearch": "Verwenden Sie die Rechnersuche",
-        "goToHome": "Zurück zur Startseite"
+        "title": "Möglicherweise haben Sie gesucht nach:",
+        "checkUrl": "Überprüfen Sie, ob die eingegebene Adresse korrekt ist",
+        "useSearch": "Nutzen Sie die Rechnersuche",
+        "goToHome": "Zurück zur Hauptseite"
       }
     },
     "pdf": {
-      "header": "calc1.ru Rechner #1 der Welt",
+      "header": "calc1.ru Nr. 1 Taschenrechner der Welt",
       "savePdf": "Als PDF speichern",
       "generated": "Generiert",
       "page": "Seite",
-      "of": "von"
+      "of": "aus"
     }
   },
   "brand": {
-    "name": "Rechner #1",
+    "name": "Rechner Nr. 1",
     "slogan": "Eine Seite. Alle Rechner."
   },
   "breadcrumbs": {
-    "home": "Startseite",
+    "home": "Heim",
     "categories": {
       "finance": "Finanzen",
       "math": "Mathematik",
       "life": "Leben",
       "auto": "Auto",
-      "construction": "Bauwesen",
+      "construction": "Konstruktion",
       "time": "Zeit",
       "health": "Gesundheit",
       "science": "Wissenschaft",
-      "converter": "Umrechner",
+      "converter": "Konverter",
       "fun": "Unterhaltung",
-      "it": "IT",
+      "it": "ES",
       "calculators": "Alle Rechner"
     }
   },
   "navigation": {
-    "home": "Startseite",
+    "home": "Heim",
     "finance": "Finanzen",
     "math": "Mathematik",
     "life": "Leben",
-    "construction": "Bauwesen",
+    "construction": "Konstruktion",
     "auto": "Auto",
     "time": "Zeit",
     "health": "Gesundheit",
     "science": "Wissenschaft",
-    "converter": "Umrechner",
+    "converter": "Konverter",
     "fun": "Unterhaltung",
-    "it": "IT"
+    "it": "ES"
   },
   "footer": {
     "description": "Kostenlose Online-Rechner für alle Lebensbereiche. Finanzen, Mathematik, Bauwesen, Gesundheit und vieles mehr.",
     "categories": "Kategorien",
-    "quickLinks": "Schnelllinks",
-    "about": "Über uns",
-    "contact": "Kontakt",
-    "share": "Teilen",
-    "shareDescription": "Teilen Sie den Rechner mit Freunden und Kollegen!",
+    "quickLinks": "Schnelle Links",
+    "about": "Über die Website",
+    "contact": "Kontakte",
+    "share": "Aktie",
+    "shareDescription": "Teilen Sie den Rechner mit Ihren Freunden und Kollegen!",
     "shareFacebook": "Auf Facebook teilen",
     "shareTwitter": "Auf Twitter teilen",
     "shareVK": "Auf VKontakte teilen",
@@ -89,283 +115,1341 @@
     "shareEmail": "Per E-Mail teilen",
     "copyLink": "Link kopieren",
     "linkCopied": "Link kopiert!",
-    "shareNative": "Teilen",
+    "shareNative": "Aktie",
     "rights": "Alle Rechte vorbehalten.",
-    "disclaimer": "Rechner dienen nur zu Informationszwecken. Ergebnisse können von tatsächlichen Werten abweichen.",
-    "privacy": "Datenschutzerklärung",
+    "disclaimer": "Rechner dienen der Information. Die Ergebnisse können von den tatsächlichen Werten abweichen.",
+    "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen",
     "cookies": "Cookie-Richtlinie",
     "siteDescription": "Kostenlose Online-Rechner für alle Lebensbereiche"
   },
   "legal": {
     "privacy": {
-      "title": "Datenschutzerklärung",
-      "description": "Datenschutzerklärung von Calc1.ru. Erfahren Sie, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.",
-      "lastUpdated": "Zuletzt aktualisiert: 2024",
-      "introduction": "Calc1.ru (im Folgenden — \"Website\") respektiert Ihre Privatsphäre und verpflichtet sich zum Schutz Ihrer persönlichen Daten. Diese Datenschutzerklärung beschreibt, wie wir Informationen über die Nutzer unserer Website sammeln, verwenden, speichern und schützen.",
+      "title": "Datenschutzrichtlinie",
+      "description": "Datenschutzrichtlinie Calc1.ru. Erfahren Sie, wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen.",
+      "lastUpdated": "Letzte Aktualisierung: 2024",
+      "introduction": "Calc1.ru (im Folgenden als „Website“ bezeichnet) respektiert Ihre Privatsphäre und verpflichtet sich, Ihre persönlichen Daten zu schützen. Diese Datenschutzrichtlinie beschreibt, wie wir Informationen über Benutzer unserer Website sammeln, verwenden, speichern und schützen.",
       "section1": {
-        "title": "1. Informationssammlung",
-        "content": "Wir können folgende Arten von Informationen sammeln:",
-        "item1": "Automatisch gesammelte Informationen: IP-Adresse, Browsertyp, Betriebssystem, Besuchszeit, von Ihnen angesehene Seiten",
-        "item2": "Von Ihnen bereitgestellte Informationen: in Rechner eingegebene Daten (werden nicht auf dem Server gespeichert)",
+        "title": "1. Sammlung von Informationen",
+        "content": "Wir können die folgenden Arten von Informationen sammeln:",
+        "item1": "Automatisch erfasste Informationen: IP-Adresse, Browsertyp, Betriebssystem, Besuchszeit, von Ihnen besuchte Seiten",
+        "item2": "Von Ihnen bereitgestellte Informationen: In Taschenrechner eingegebene Daten (nicht auf dem Server gespeichert)",
         "item3": "Informationen aus Cookies und ähnlichen Technologien",
         "item4": "Informationen von Werbepartnern (Google AdSense, Yandex.Direct)",
         "item5": "Spracheinstellungen und Benutzereinstellungen"
       },
       "section2": {
-        "title": "2. Informationsverwendung",
-        "content": "Wir verwenden gesammelte Informationen für folgende Zwecke:",
-        "item1": "Bereitstellung und Verbesserung der Website-Funktionalität",
+        "title": "2. Verwendung von Informationen",
+        "content": "Wir verwenden die gesammelten Informationen für folgende Zwecke:",
+        "item1": "Bereitstellung und Verbesserung der Funktionalität der Website",
         "item2": "Analyse der Website-Nutzung zur Optimierung",
-        "item3": "Anzeige personalisierter Werbung über Partner",
-        "item4": "Einhaltung rechtlicher Anforderungen"
+        "item3": "Anzeige personalisierter Werbung durch Partner",
+        "item4": "Einhaltung gesetzlicher Vorschriften"
       },
       "section3": {
-        "title": "3. Cookie-Verwendung",
-        "content": "Unsere Website verwendet Cookies, um die Benutzererfahrung zu verbessern und Werbung anzuzeigen. Für weitere Details siehe unsere ",
+        "title": "3. Verwendung von Cookies",
+        "content": "Unsere Website verwendet Cookies, um Ihr Benutzererlebnis zu verbessern und Werbung anzuzeigen. Weitere Einzelheiten finden Sie in unserem",
         "link": "Cookie-Richtlinie",
         "additional": ""
       },
       "section4": {
         "title": "4. Werbung und Partner",
-        "content": "Unsere Website verwendet Werbedienste von Drittanbietern zur Monetarisierung:",
+        "content": "Unsere Website nutzt zur Monetarisierung Werbedienste Dritter:",
         "googleTitle": "Google AdSense:",
-        "googleContent": "Google verwendet Cookies, um Werbung basierend auf Ihren Interessen anzuzeigen. Sie können Werbung auf der Google Ads-Einstellungsseite anpassen oder Cookies in den Browser-Einstellungen deaktivieren.",
+        "googleContent": "Google verwendet Cookies, um Anzeigen basierend auf Ihren Interessen zu schalten. Sie können Ihre Werbung auf der Seite mit den Google-Anzeigeneinstellungen anpassen oder Cookies in Ihren Browsereinstellungen deaktivieren.",
         "yandexTitle": "Yandex.Direct:",
-        "yandexContent": "Yandex verwendet Cookies, um Werbung zu personalisieren. Sie können Einstellungen im Yandex Browser oder über Yandex-Werbeeinstellungen verwalten."
+        "yandexContent": "Yandex verwendet Cookies, um Werbung zu personalisieren. Sie können Ihre Einstellungen im Yandex-Browser oder über die Yandex-Werbepräferenzeinstellungen verwalten."
       },
       "section5": {
         "title": "5. Datensicherheit",
-        "content": "Wir ergreifen angemessene Maßnahmen, um Ihre Informationen vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen. Jedoch ist keine Übertragungsmethode über das Internet oder elektronische Speichermethode zu 100% sicher."
+        "content": "Wir ergreifen angemessene Maßnahmen, um Ihre Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen. Allerdings ist keine Methode der Übertragung über das Internet oder Methode der elektronischen Speicherung zu 100 % sicher."
       },
       "section6": {
         "title": "6. Ihre Rechte",
         "content": "Sie haben das Recht:",
-        "item1": "Eine Kopie Ihrer persönlichen Daten anzufordern",
-        "item2": "Korrektur ungenauer Daten anzufordern",
-        "item3": "Löschung Ihrer Daten anzufordern",
-        "item4": "Der Datenverarbeitung zu Marketingzwecken zu widersprechen"
+        "item1": "Fordern Sie eine Kopie Ihrer persönlichen Daten an",
+        "item2": "Fordern Sie die Korrektur unrichtiger Daten an",
+        "item3": "Fordern Sie die Löschung Ihrer Daten an",
+        "item4": "Widerspruch gegen die Datenverarbeitung zu Marketingzwecken einlegen"
       },
       "section7": {
-        "title": "7. Änderungen der Datenschutzerklärung",
-        "content": "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Änderungen treten nach Veröffentlichung auf dieser Seite in Kraft."
+        "title": "7. Änderungen der Datenschutzbestimmungen",
+        "content": "Wir behalten uns das Recht vor, diese Datenschutzrichtlinie jederzeit zu aktualisieren. Änderungen werden mit der Veröffentlichung auf dieser Seite wirksam."
       },
       "contact": {
-        "title": "Kontakt",
-        "content": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte:",
+        "title": "Kontakte",
+        "content": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:",
         "link": "Kontaktseite"
       }
     },
     "terms": {
       "title": "Nutzungsbedingungen",
-      "description": "Nutzungsbedingungen von Calc1.ru. Lesen Sie die Regeln für die Nutzung unserer Website und Rechner.",
-      "lastUpdated": "Zuletzt aktualisiert: 2024",
-      "introduction": "Willkommen bei Calc1.ru (im Folgenden — \"Website\"). Durch die Nutzung dieser Website stimmen Sie zu, diese Nutzungsbedingungen einzuhalten. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie bitte unsere Website nicht.",
+      "description": "Nutzungsbedingungen Calc1.ru. Lesen Sie die Regeln für die Nutzung unserer Website und unserer Rechner.",
+      "lastUpdated": "Letzte Aktualisierung: 2024",
+      "introduction": "Willkommen bei Calc1.ru (im Folgenden als „Website“ bezeichnet). Durch die Nutzung dieser Website erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie unsere Website bitte nicht.",
       "section1": {
-        "title": "1. Annahme der Bedingungen",
-        "content": "Durch die Nutzung von Calc1.ru bestätigen Sie, dass Sie diese Nutzungsbedingungen und unsere Datenschutzerklärung gelesen, verstanden und sich damit einverstanden erklärt haben."
+        "title": "1. Annahme der Allgemeinen Geschäftsbedingungen",
+        "content": "Durch die Nutzung von Calc1.ru bestätigen Sie, dass Sie diese Nutzungsbedingungen und unsere Datenschutzrichtlinie gelesen und verstanden haben und damit einverstanden sind, an sie gebunden zu sein."
       },
       "section2": {
-        "title": "2. Dienstnutzung",
+        "title": "2. Nutzung des Dienstes",
         "content": "Sie können unsere Rechner für private und kommerzielle Zwecke nutzen, vorausgesetzt:",
         "item1": "Sie werden die Website nicht für illegale Zwecke nutzen",
-        "item2": "Sie werden nicht versuchen, die Website-Sicherheit zu verletzen",
-        "item3": "Sie werden Inhalte nicht ohne Quellenangabe kopieren",
-        "item4": "Sie erkennen an, dass Rechnerergebnisse nur zu Informationszwecken dienen"
+        "item2": "Sie werden nicht versuchen, die Sicherheit der Website zu gefährden",
+        "item3": "Sie werden Inhalte nicht kopieren, ohne die Quelle anzugeben.",
+        "item4": "Sie erkennen an, dass die Ergebnisse der Rechner nur zu Informationszwecken dienen."
       },
       "section3": {
         "title": "3. Haftungsbeschränkung",
-        "content": "Rechner auf Calc1.ru werden \"wie besehen\" ohne Gewährleistung bereitgestellt. Berechnungsergebnisse dienen nur zu Informationszwecken und können von tatsächlichen Werten abweichen.",
-        "additional": "Wir haften nicht für Verluste oder Schäden, die aus der Nutzung oder der Unfähigkeit zur Nutzung unserer Rechner entstehen."
+        "content": "Rechner auf Calc1.ru werden „wie besehen“ ohne jegliche Gewährleistung bereitgestellt. Die Berechnungsergebnisse dienen nur zu Informationszwecken und können von den tatsächlichen Werten abweichen.",
+        "additional": "Wir haften nicht für Verluste oder Schäden, die aus der Nutzung oder Unmöglichkeit der Nutzung unserer Rechner entstehen."
       },
       "section4": {
         "title": "4. Geistiges Eigentum",
-        "content": "Alle Website-Inhalte, einschließlich Design, Text, Grafiken, Logos und Software, sind Eigentum von Calc1.ru und durch Urheberrechtsgesetze geschützt."
+        "content": "Der gesamte Inhalt der Website, einschließlich Design, Text, Grafiken, Logos und Software, ist Eigentum von Calc1.ru und durch Urheberrechtsgesetze geschützt."
       },
       "section5": {
         "title": "5. Verbotene Handlungen",
-        "content": "Es ist verboten:",
-        "item1": "Automatisierte Systeme zur Datensammlung von der Website zu verwenden",
-        "item2": "Viren oder Malware zu verbreiten",
-        "item3": "Zu versuchen, die Website zu hacken oder zu stören",
-        "item4": "Die Website für Spam oder Phishing zu nutzen",
-        "item5": "Inhalte ohne Erlaubnis zu kopieren und zu reproduzieren"
+        "content": "Verboten:",
+        "item1": "Verwenden Sie automatisierte Systeme, um Daten von der Website zu sammeln",
+        "item2": "Verteilen Sie Viren oder Malware",
+        "item3": "Versuche, den Betrieb der Website zu hacken oder zu stören",
+        "item4": "Nutzung der Website für Spam oder Phishing",
+        "item5": "Kopieren und Reproduzieren von Inhalten ohne Genehmigung"
       },
       "section6": {
         "title": "6. Änderungen der Bedingungen",
-        "content": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Änderungen treten nach Veröffentlichung auf dieser Seite in Kraft."
+        "content": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Änderungen werden mit der Veröffentlichung auf dieser Seite wirksam."
       },
       "contact": {
-        "title": "Kontakt",
+        "title": "Kontakte",
         "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:",
         "link": "Kontaktseite"
       }
     },
     "cookies": {
       "title": "Cookie-Richtlinie",
-      "description": "Cookie-Richtlinie von Calc1.ru. Erfahren Sie, wie wir Cookies verwenden und wie Sie sie verwalten können.",
-      "lastUpdated": "Zuletzt aktualisiert: 2024",
-      "introduction": "Calc1.ru verwendet Cookies und ähnliche Technologien, um die Website-Funktionalität zu verbessern, den Datenverkehr zu analysieren und personalisierte Werbung anzuzeigen. Diese Richtlinie erklärt, was Cookies sind, wie wir sie verwenden und wie Sie sie verwalten können.",
+      "description": "Cookie-Richtlinie auf Calc1.ru. Erfahren Sie, wie wir Cookies verwenden und wie Sie diese steuern können.",
+      "lastUpdated": "Letzte Aktualisierung: 2024",
+      "introduction": "Calc1.ru verwendet Cookies und ähnliche Technologien, um die Funktionalität der Website zu verbessern, den Datenverkehr zu analysieren und personalisierte Werbung bereitzustellen. In dieser Richtlinie wird erläutert, was Cookies sind, wie wir sie verwenden und wie Sie sie steuern können.",
       "section1": {
-        "title": "1. Was sind Cookies",
-        "content": "Cookies sind kleine Textdateien, die eine Website auf Ihrem Gerät (Computer, Tablet oder Mobiltelefon) speichert, wenn Sie sie besuchen. Sie ermöglichen es der Website, Ihre Aktionen und Einstellungen für einen bestimmten Zeitraum zu speichern."
+        "title": "1. Was sind Cookies?",
+        "content": "Cookies sind kleine Textdateien, die eine Website auf Ihrem Gerät (Computer, Tablet oder Mobiltelefon) speichert, wenn Sie diese besuchen. Sie ermöglichen es der Website, sich über einen bestimmten Zeitraum an Ihre Aktionen und Präferenzen zu erinnern."
       },
       "section2": {
         "title": "2. Arten von Cookies, die wir verwenden",
-        "content": "Wir verwenden folgende Arten von Cookies:",
+        "content": "Wir verwenden die folgenden Arten von Cookies:",
         "item1": {
-          "title": "Notwendige Cookies: ",
-          "content": "Diese Cookies sind für das Funktionieren der Website erforderlich und können nicht deaktiviert werden. Sie umfassen das Speichern von Spracheinstellungen und anderen Benutzereinstellungen."
+          "title": "Notwendige Cookies:",
+          "content": "Diese Cookies sind für das Funktionieren der Website unerlässlich und können nicht deaktiviert werden. Dazu gehört das Speichern von Spracheinstellungen und anderen Benutzerpräferenzen."
         },
         "item2": {
-          "title": "Analyse-Cookies: ",
+          "title": "Analytische Cookies:",
           "content": "Diese Cookies helfen uns zu verstehen, wie Besucher mit der Website interagieren, indem sie anonyme Statistiken sammeln."
         },
         "item3": {
-          "title": "Werbe-Cookies: ",
+          "title": "Werbe-Cookies:",
           "content": "Diese Cookies werden von Werbepartnern (Google AdSense, Yandex.Direct) verwendet, um personalisierte Werbung anzuzeigen."
         }
       },
       "section3": {
         "title": "3. Wie wir Cookies verwenden",
         "content": "Cookies werden verwendet für:",
-        "item1": "Speicherung von Benutzerspracheinstellungen",
-        "item2": "Analyse des Datenverkehrs und Verbesserung der Website-Funktionalität",
-        "item3": "Anzeige relevanter Werbung über Partner",
-        "item4": "Gewährleistung der Sicherheit und Betrugsprävention"
+        "item1": "Merken der Spracheinstellungen des Benutzers",
+        "item2": "Analysieren Sie den Datenverkehr und verbessern Sie die Funktionalität der Website",
+        "item3": "Einblenden relevanter Werbung durch Partner",
+        "item4": "Sorgen Sie für Sicherheit und verhindern Sie Betrug"
       },
       "section4": {
         "title": "4. Cookies von Werbepartnern",
-        "content": "Unsere Website verwendet Werbedienste von Drittanbietern:",
+        "content": "Unsere Website nutzt Werbedienste Dritter:",
         "googleTitle": "Google AdSense:",
-        "googleContent": "Google verwendet Cookies, um Werbung basierend auf Ihren Interessen anzuzeigen. Sie können personalisierte Google-Werbung auf der Google Ads-Einstellungsseite deaktivieren.",
+        "googleContent": "Google verwendet Cookies, um Anzeigen basierend auf Ihren Interessen zu schalten. Sie können die personalisierte Werbung von Google auf der Seite „Google-Anzeigeneinstellungen“ deaktivieren.",
         "yandexTitle": "Yandex.Direct:",
-        "yandexContent": "Yandex verwendet Cookies, um relevante Werbung anzuzeigen. Sie können Werbeeinstellungen in den Yandex-Einstellungen verwalten."
+        "yandexContent": "Yandex verwendet Cookies, um relevante Werbung anzuzeigen. Sie können Werbepräferenzen in den Yandex-Einstellungen verwalten."
       },
       "section5": {
         "title": "5. Cookie-Verwaltung",
         "content": "Sie können Cookies auf folgende Weise verwalten:",
-        "item1": "Über Ihre Browser-Einstellungen (Sie können Cookies deaktivieren oder löschen)",
-        "item2": "Über Google- und Yandex-Werbeeinstellungen",
-        "item3": "Verwendung von Browser-Erweiterungen zur Werbeblockierung"
+        "item1": "Über Ihre Browsereinstellungen (Sie können Cookies deaktivieren oder löschen)",
+        "item2": "Über die Werbeeinstellungen von Google und Yandex",
+        "item3": "Verwenden von Browsererweiterungen zum Blockieren von Anzeigen"
       },
       "section6": {
         "title": "6. Änderungen der Cookie-Richtlinie",
-        "content": "Wir können diese Cookie-Richtlinie regelmäßig aktualisieren. Änderungen treten nach Veröffentlichung auf dieser Seite in Kraft."
+        "content": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren. Änderungen werden mit der Veröffentlichung auf dieser Seite wirksam."
       },
       "contact": {
-        "title": "Kontakt",
-        "content": "Wenn Sie Fragen zur Cookie-Verwendung haben, kontaktieren Sie uns bitte:",
+        "title": "Kontakte",
+        "content": "Wenn Sie Fragen zur Verwendung von Cookies haben, kontaktieren Sie uns bitte:",
         "link": "Kontaktseite"
       }
     }
   },
   "about": {
-    "title": "Über uns",
-    "description": "Erfahren Sie mehr über Calc1.ru — den umfassendsten Satz kostenloser Online-Rechner für alle Lebensbereiche.",
+    "title": "Über die Website",
+    "description": "Erfahren Sie mehr über Calc1.ru – das umfassendste Set an kostenlosen Online-Rechnern für alle Lebensbereiche.",
     "section1": {
       "title": "Über das Projekt",
-      "content": "Calc1.ru ist eine kostenlose Online-Ressource, die eine breite Palette von Rechnern für verschiedene Lebensbereiche bietet. Unser Ziel ist es, Benutzern bequeme und genaue Tools für Berechnungen in Finanzen, Mathematik, Bauwesen, Gesundheit und vielen anderen Bereichen bereitzustellen."
+      "content": "Calc1.ru ist eine kostenlose Online-Ressource, die eine große Auswahl an Rechnern für verschiedene Lebensbereiche bietet. Unser Ziel ist es, Benutzern praktische und genaue Werkzeuge für Berechnungen in den Bereichen Finanzen, Mathematik, Bauwesen, Gesundheit und vielen anderen Bereichen zur Verfügung zu stellen."
     },
     "section2": {
       "title": "Unsere Mission",
-      "content": "Wir bemühen uns, komplexe Berechnungen für jeden zugänglich und verständlich zu machen. Calc1.ru vereint viele Rechner an einem Ort, spart Ihre Zeit und gewährleistet Berechnungsgenauigkeit."
+      "content": "Wir sind bestrebt, komplexe Berechnungen für jedermann zugänglich und verständlich zu machen. Calc1.ru vereint viele Rechner an einem Ort, was Ihnen Zeit spart und genaue Berechnungen gewährleistet."
     },
     "section3": {
-      "title": "Wer wir sind",
-      "content": "Calc1.ru wurde von einem Team von Fachleuten erstellt, die die Bedeutung bequemer und zuverlässiger Tools für alltägliche Berechnungen verstehen. Wir arbeiten ständig an der Verbesserung der Funktionalität und dem Hinzufügen neuer Rechner."
+      "title": "Wer sind wir?",
+      "content": "Calc1.ru wurde von einem Team von Fachleuten erstellt, die wissen, wie wichtig praktische und zuverlässige Tools für alltägliche Berechnungen sind. Wir arbeiten ständig daran, die Funktionalität zu verbessern und neue Rechner hinzuzufügen."
     },
     "section4": {
-      "title": "Warum uns wählen",
-      "content": "Calc1.ru Vorteile:",
+      "title": "Warum sollten Sie sich für uns entscheiden?",
+      "content": "Vorteile von Calc1.ru:",
       "item1": "Kostenloser Zugang zu allen Rechnern",
       "item2": "Einfache und intuitive Benutzeroberfläche",
       "item3": "Genaue Berechnungen basierend auf aktuellen Formeln und Standards",
-      "item4": "Mehrsprachiger Support",
+      "item4": "Mehrsprachige Unterstützung",
       "item5": "Regelmäßige Updates und Hinzufügung neuer Rechner"
     },
     "contact": {
-      "title": "Kontakt",
-      "content": "Wenn Sie Fragen, Vorschläge oder Feedback haben, würden wir gerne von Ihnen hören:",
+      "title": "Kontakte",
+      "content": "Wenn Sie Fragen, Anregungen oder Feedback haben, freuen wir uns über Ihre Nachricht:",
       "link": "Kontaktieren Sie uns"
     }
   },
   "contact": {
-    "title": "Kontakt",
-    "description": "Kontaktieren Sie das Calc1.ru-Team. Wir sind immer bereit, Ihre Fragen zu beantworten und zu helfen.",
+    "title": "Kontakte",
+    "description": "Kontaktieren Sie das Calc1.ru-Team. Wir sind immer bereit, Ihre Fragen zu beantworten und Ihnen zu helfen.",
     "email": {
       "title": "E-Mail",
-      "description": "Für allgemeine Fragen, Vorschläge und Feedback:"
+      "description": "Für allgemeine Fragen, Anregungen und Feedback:"
     },
     "form": {
-      "title": "Kontaktformular",
+      "title": "Feedback-Formular",
       "description": "Füllen Sie das untenstehende Formular aus und wir werden Ihnen so schnell wie möglich antworten:",
       "name": "Ihr Name",
       "email": "E-Mail",
       "message": "Ihre Nachricht",
-      "submit": "Senden",
-      "sending": "Wird gesendet..."
+      "submit": "Schicken",
+      "sending": "Senden..."
     },
     "additional": {
-      "title": "Zusätzliche Informationen",
-      "content": "Wir bemühen uns, auf alle Anfragen innerhalb von 24-48 Stunden zu antworten. Für dringende Fragen verwenden Sie bitte E-Mail."
+      "title": "Weitere Informationen",
+      "content": "Wir bemühen uns, alle Anfragen innerhalb von 24–48 Stunden zu beantworten. Bei dringenden Fragen nutzen Sie E-Mail."
     }
   },
   "categories": {
     "finance": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Finanzrechner",
+      "description": "Kredite, Einlagen, Hypotheken, Steuern und Investitionen",
+      "subcategories": {
+        "loans": "Kredite",
+        "investments": "Investitionen und Ersparnisse",
+        "taxes": "Steuern und Bußgelder",
+        "business": "Wirtschaft und Finanzen"
+      },
+      "seo": {
+        "keywords": "Finanzrechner, Kreditrechner, Hypothekenrechner, Autokreditrechner, Investitionsrechner, Kautionsrechner, Steuerrechner, Bußgeldrechner, Online-Kreditberechnung, Hypothekenberechnung, Autokreditberechnung, Kreditzinsberechnung, Rentenzahlung, differenzierte Zahlung, Kreditüberzahlung, Leasingrechner, Investitionsrechner, Kautionsrechner, Sparkontorechner, Transportsteuerberechnung, Bußgeldrechner der Verkehrspolizei, Steuerrechner, Einkommensteuerrechner, Einkommensteuer, Finanzplanung, Budgetrechner, Budgetplanung, Kreditrechner, Hypothekenrechner, Autokreditrechner, Investitionsrechner, Steuerrechner, Ersparnisse Taschenrechner",
+        "overview": "Finanzrechner Calc1.ru sind eine Reihe von Online-Tools für genaue Finanzberechnungen: Kredite, Hypotheken, Autokredite, Investitionen, Einlagen, Steuern und Bußgelder. Alle Rechner verwenden für genaue Berechnungen aktuelle Tarife und Tarife.",
+        "advantages": {
+          "title": "Vorteile unserer Finanzrechner",
+          "accurate": "Genaue Berechnungen",
+          "accurateDesc": "Alle Rechner verwenden aktuelle Finanzformeln",
+          "free": "Kostenlos",
+          "freeDesc": "Völlig kostenloser Zugriff auf alle Rechner",
+          "charts": "Diagramme und Visualisierung",
+          "chartsDesc": "Visuelle Grafiken zum besseren Verständnis der Ergebnisse",
+          "forAll": "Für alle",
+          "forAllDesc": "Von Einzelpersonen bis hin zu Unternehmen"
+        },
+        "sections": {
+          "title": "Finanzabschnitte",
+          "loans": {
+            "name": "Kredite",
+            "description": "Hypothek, Autokredit, Verbraucherkredit, Leasing"
+          },
+          "investments": {
+            "name": "Investitionen und Ersparnisse",
+            "description": "Anlagen, Einlagen, Sparkonten"
+          },
+          "taxes": {
+            "name": "Steuern und Bußgelder",
+            "description": "Einkommensteuer, Transportsteuer, Bußgelder der Verkehrspolizei"
+          }
+        }
+      }
     },
     "math": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Mathe-Rechner",
+      "description": "Grundoperationen, Brüche, Prozentsätze, Geometrie",
+      "subcategories": {
+        "arithmetic": "Arithmetik",
+        "geometry": "Geometrie",
+        "algebra": "Algebra",
+        "statistics": "Statistiken",
+        "conversion": "Konvertierung"
+      },
+      "seo": {
+        "keywords": "Mathematische Taschenrechner, Mathematik-Rechner, Online-Mathematik-Rechner, Prozentrechner, Flächenrechner, Volumenrechner, Potenzrechner, Wurzelrechner, Gleichungsrechner, Statistikrechner, Einheitenrechner, Bruchrechner, Rechner für Schüler, Rechner für Studenten, Mathematischer Umrechner, Online-Berechnung von Prozentsätzen, Berechnung der Fläche von Figuren, Berechnung des Volumens von Körpern, Potenz einer Zahl, Wurzel einer Zahl, Lösung von Gleichungen, statistische Berechnungen, Längenrechner, Gewichtsrechner, Flächenrechner, Volumenrechner, mathematische Operationen, geometrische Berechnungen, einfacher mathematischer Rechner, Prozentrechner, Flächenrechner, Volumenrechner, Potenzwurzelrechner, Gleichungsrechner",
+        "overview": "Mathematische Rechner Calc1.ru ist eine Reihe von Online-Tools zur Durchführung mathematischer Berechnungen: Grundoperationen, Prozentsätze, Fläche, Volumen, Potenzen und Wurzeln, Gleichungen, Statistiken, Einheitenumrechner. Geeignet für Studenten, Schüler und Berufstätige."
+      }
     },
     "life": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Haushaltsrechner",
+      "description": "Kalorien, BMI, Schwangerschaft, Gesundheit",
+      "subcategories": {
+        "health": "Gesundheit",
+        "nutrition": "Ernährung",
+        "family": "Familie",
+        "household": "Leben",
+        "utilities": "Öffentliche Versorgungsbetriebe"
+      },
+      "seo": {
+        "keywords": "Haushaltsrechner, Rechner fürs Leben, BMI-Rechner, Kalorienrechner, Schwangerschaftsrechner, Kindergrößenrechner, Stromverbrauchsrechner, Wasserverbrauchsrechner, Gasverbrauchsrechner, Heizkostenrechner, Stromkostenrechner, Papiergewichtsrechner, Ringgrößenrechner, Konfektionsgrößenrechner, ppm-Alkoholrechner, Normrechner BZHU, Rechner für zu Hause, Rechner für Familie, Gesundheitsrechner, Haushaltsberechnungen, Kalorienberechnung online, BMI-Berechnung online, Stromverbrauchsberechnung, Wasserverbrauchsberechnung, Gasverbrauchsberechnung, Heizkostenberechnung, Lebensrechner, Haushaltsrechner, täglich Lebensrechner",
+        "overview": "Haushaltsrechner Calc1.ru ist eine Reihe von Online-Tools für Haushaltsberechnungen: BMI, Kalorien, Schwangerschaft, Kinderwachstum, Strom-, Wasser-, Gas- und Heizverbrauch. Geeignet für Zuhause, Familie und Gesundheit."
+      }
     },
     "construction": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Baurechner",
+      "description": "Tapeten, Farben, Beton, Dächer",
+      "subtitle": "Tapeten, Farben, Beton, Dächer",
+      "seo": {
+        "keywords": "Baurechner, Baurechner, Farbrechner, Tapetenrechner, Putzrechner, Betonrechner, Zementrechner, Fundamentrechner, Lüftungsrechner, Wandflächenrechner, Bewehrungsrechner, Kabelrechner, Rohrrechner, Dacheindeckungsrechner, Fliesenkleberrechner, Rechner Spachtelmasse, Grundierungsrechner, Bauberechnungen, Materialberechnung, Online-Baurechner, Baustoffrechner, Berechnung der Materialmenge, Online-Baurechner, Reparaturrechner, Bauarbeitenrechner, Ausbaumaterialrechner, Dacheindeckungsbaustoffrechner, Betonarbeitsrechner, Ziegelrechner, Blockrechner, Rohrleitungsrechner, Rechner Elektrik Verkabelung, Flächenrechner, Bauwerkzeuge online",
+        "overview": "Baurechner Calc1.ru sind ein umfassendes Set an Online-Tools für genaue Material- und Arbeitsberechnungen beim Bau und bei Reparaturen. Alle Rechner verwenden aktuelle Bauvorschriften und -normen, was die Genauigkeit der Berechnungen garantiert."
+      }
     },
     "auto": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Automatische Rechner",
+      "description": "Kraftstoffverbrauch, Steuern, Leasing, Versicherung",
+      "seo": {
+        "title": "Online-Autorechner – Berechnung aller Autokosten | Calc1.ru",
+        "description": "Kostenlose Online-Autorechner: Berechnung von Kraftstoffverbrauch, Autokredit, Versicherung (MTPL, CASCO), Transportsteuer, Leasing, Zölle und Bußgelder der Verkehrspolizei. Genaue Berechnungen für Autofahrer und Autobesitzer.",
+        "keywords": "Autorechner, Autorechner, Kraftstoffverbrauchsrechner, Autokreditrechner, OSAGO-Rechner, CASCO-Rechner, Transportsteuerrechner, Leasingrechner, Zollrechner, Bußgeldrechner der Verkehrspolizei, Autobesitzrechner, Autowertverlustrechner, Online-Kraftstoffverbrauch, Benzinverbrauchsberechnung, Autokreditberechnung, Berechnung der Kfz-Versicherung, Transportsteuerrechner, Leasingrechner online, Zollzahlungsrechner, Bußgelder der Verkehrspolizei online, Kosten für den Besitz eines Autos, Autowertverlust, Rechner für Autofahrer, Online-Autotools, Berechnung der Kosten eines Autos Darlehen, Berechnung der obligatorischen Kfz-Haftpflichtversicherung, Berechnung der CASCO-Versicherung, Autokostenrechner, Autobudgetplanung, Online-Rechner für Autokredite, Online-Rechner für die obligatorische Kfz-Haftpflicht, CASCO-Rechner online, Transportsteuerrechner online, Leasingrechner online, Zollrechner online, Bußgeldrechner online, Autorechner 2024, Autorechner 2024, Autorechner, Autorechner, Fahrzeugrechner, Autokreditrechner, Autoversicherungsrechner",
+        "overview": {
+          "title": "Autorechner Calc1.ru",
+          "content": "Die Autorechner Calc1.ru sind ein komplettes Set an Online-Tools zur genauen Berechnung aller Kosten, die mit dem Besitz und Betrieb eines Autos verbunden sind. Unsere Rechner helfen Ihnen bei der Berechnung des Kraftstoffverbrauchs, der Kosten eines Autokredits, der Versicherungszahlungen (MTPL und CASCO), der Transportsteuer, der Leasingraten, der Zölle und der Bußgelder der Verkehrspolizei.",
+          "additionalContent": "Alle Rechner verwenden aktuelle Tarife, Tarife und Koeffizienten, die von Regierungsbehörden und Finanzinstituten genehmigt wurden. Berechnungen werden sofort und völlig kostenlos durchgeführt, ohne Registrierung oder Nutzungsbeschränkungen."
+        },
+        "advantages": {
+          "title": "Vorteile von Autorechnern",
+          "content": "Unsere Autorechner bieten Autofahrern viele Vorteile:",
+          "comprehensive": "Ein kompletter Werkzeugsatz – alle notwendigen Berechnungen an einem Ort",
+          "accurate": "Genaue Berechnungen basierend auf aktuellen Tarifen und Tarifen",
+          "fast": "Sofortige Ergebnisse ohne Warten oder Anstehen",
+          "free": "Völlig kostenlos, keine versteckten Gebühren oder Einschränkungen",
+          "accessible": "Funktioniert auf allen Geräten: Computer, Tablets und Smartphones",
+          "detailed": "Detaillierte Ergebnisse nach Kostenposition"
+        },
+        "tips": {
+          "title": "Tipps zur Verwendung von Autorechnern",
+          "content": "Um die genauesten Ergebnisse zu erhalten, befolgen Sie diese Richtlinien:",
+          "data": "Verwenden Sie genaue Daten: tatsächlicher Kraftstoffverbrauch, aktuelle Kosten des Autos, genaues Fahrerlebnis",
+          "comparison": "Vergleichen Sie die Ergebnisse verschiedener Rechner, um die Genauigkeit zu überprüfen",
+          "regular": "Berechnen Sie die Kosten regelmäßig neu, wenn sich Tarife oder Konditionen ändern",
+          "planning": "Nutzen Sie Taschenrechner für die langfristige Planung Ihres Autobudgets"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zu Autorechnern",
+          "faqItems": [
+            {
+              "q": "Welche Autorechner sind auf Calc1.ru verfügbar?",
+              "a": "Auf Calc1.ru sind Rechner verfügbar: Kraftstoffverbrauch, Autokredit, obligatorische Kfz-Haftpflichtversicherung, Vollkaskoversicherung, Transportsteuer, Leasing, Zölle, Bußgelder der Verkehrspolizei, Kosten für den Autobesitz und Wertverlust. Alle Rechner funktionieren online und sind absolut kostenlos."
+            },
+            {
+              "q": "Wie genau sind Autorechner?",
+              "a": "Rechner verwenden aktuelle Tarife, Tarife und Formeln, die von Regierungsbehörden genehmigt wurden. Die Genauigkeit hängt von der Richtigkeit der eingegebenen Daten ab. Zur vorläufigen Beurteilung und Planung liefern Rechner recht genaue Ergebnisse."
+            },
+            {
+              "q": "Ist die Nutzung von Autorechnern kostenlos?",
+              "a": "Ja, alle Autorechner auf Calc1.ru sind völlig kostenlos. Sie können sie unbegrenzt oft nutzen, ohne Registrierung oder versteckte Gebühren."
+            },
+            {
+              "q": "Wie berechnet man den Kraftstoffverbrauch mit dem Auto?",
+              "a": "Nutzen Sie den Kraftstoffverbrauchsrechner und geben Sie den tatsächlichen Verbrauch Ihres Autos in Litern pro 100 km und die Kraftstoffmenge an. Der Rechner zeigt an, wie viele Kilometer Sie zurücklegen können oder wie viel Kraftstoff Sie für die Fahrt benötigen."
+            },
+            {
+              "q": "Wie berechnet man die Kosten für einen Autokredit?",
+              "a": "Geben Sie im Autokredit-Rechner die Kosten für das Auto, die Anzahlung, die Kreditlaufzeit, den Zinssatz und die Art der Zahlungen (Annuität oder differenziert) ein. Der Rechner berechnet die monatliche Zahlung, den Gesamtzahlungsbetrag und die Überzahlung."
+            },
+            {
+              "q": "Wie berechnet man die Kosten einer obligatorischen Kfz-Haftpflichtversicherung?",
+              "a": "Geben Sie im OSAGO-Rechner Region, Motorleistung, Alter und Dienstzeit des Fahrers, Anzahl der Fahrer und KBM-Koeffizienten an. Der Rechner berechnet die Kosten der Police unter Berücksichtigung aller aktuellen Koeffizienten."
+            },
+            {
+              "q": "Wie berechnet man die Kosten für CASCO?",
+              "a": "Geben Sie im CASCO-Rechner die Kosten des Autos, das Baujahr, das Alter und die Erfahrung des Fahrers, die Region, das Vorhandensein einer Alarmanlage und die Höhe der Franchise an. Der Rechner berechnet die Kosten einer Vollkaskoversicherung."
+            },
+            {
+              "q": "Wie berechnet man die Transportsteuer?",
+              "a": "Geben Sie im Kfz-Steuerrechner die Motorleistung in PS und die Zulassungsregion des Autos ein. Der Rechner berechnet den Steuerbetrag anhand der aktuellen Steuersätze in Ihrer Region."
+            },
+            {
+              "q": "Wie berechnet man die Leasingkosten?",
+              "a": "Geben Sie im Leasingrechner die Kosten für das Auto, die Anzahlung, die Leasinglaufzeit, den Zinssatz und den Rückkaufpreis ein. Der Rechner berechnet die monatlichen Raten und die gesamten Leasingkosten."
+            },
+            {
+              "q": "Wie berechnet man die Zölle für ein Auto?",
+              "a": "Geben Sie im Zollrechner den Preis des Autos, die Motorgröße, die Kraftstoffart, das Alter des Autos und die Leistung ein. Der Rechner berechnet Zölle, Verbrauchsteuern, Mehrwertsteuer und Recyclinggebühren."
+            },
+            {
+              "q": "Wie berechnet man Bußgelder der Verkehrspolizei?",
+              "a": "Wählen Sie im Bußgeldrechner der Verkehrspolizei Verkehrsverstöße aus. Der Rechner berechnet die Höhe der Bußgelder unter Berücksichtigung des Skontos bei vorzeitiger Zahlung (50 % innerhalb von 20 Tagen)."
+            },
+            {
+              "q": "Wie berechnet man die Kosten für den Besitz eines Autos?",
+              "a": "Geben Sie im Betriebskostenrechner die Kosten des Fahrzeugs, die Betriebsdauer, die Kilometerleistung, den Kraftstoffverbrauch, die Versicherungskosten, die Steuern, die Wartung und den Wertverlust ein. Der Rechner berechnet die Gesamtbetriebskosten und die Kosten für 1 km."
+            },
+            {
+              "q": "Wie berechnet man den Wertverlust eines Autos?",
+              "a": "Geben Sie im Abschreibungsrechner den Kaufpreis, das Alter, den Kilometerstand, die Fahrzeugklasse und die Abschreibungsmethode des Fahrzeugs ein. Der Rechner berechnet den aktuellen Wert und den Wertverlust für den Zeitraum."
+            },
+            {
+              "q": "Werden die Tarife in Rechnern aktualisiert?",
+              "a": "Ja, wir aktualisieren die Tarife, Quoten und Quoten in den Rechnern regelmäßig entsprechend geänderter Gesetzgebung und aktuellen Marktdaten. Für eine genaue Berechnung empfiehlt es sich jedoch, vor wichtigen Entscheidungen die aktuellen Tarife zu prüfen."
+            },
+            {
+              "q": "Ist es möglich, die Berechnungsergebnisse zu speichern?",
+              "a": "Sie können die Berechnungsergebnisse kopieren oder einen Screenshot der Seite mit den Ergebnissen erstellen. Einige Rechner bieten die Möglichkeit, Ergebnisse im CSV- oder PDF-Format herunterzuladen."
+            },
+            {
+              "q": "Funktionieren Taschenrechner auf Mobilgeräten?",
+              "a": "Ja, alle Rechner sind vollständig für die Verwendung auf Mobilgeräten, Tablets und Smartphones geeignet. Die Oberfläche passt sich automatisch der Bildschirmgröße an."
+            },
+            {
+              "q": "Können Taschenrechner für kommerzielle Zwecke genutzt werden?",
+              "a": "Ja, Taschenrechner können für kommerzielle Zwecke genutzt werden. Die Ergebnisse sind jedoch nur Richtwerte und ersetzen nicht die professionelle Beratung bei wichtigen Finanzentscheidungen."
+            },
+            {
+              "q": "Welchen Rechner sollte ich zur Planung meines Autobudgets verwenden?",
+              "a": "Für eine umfassende Planung nutzen Sie einen Auto-Haltekostenrechner, der alle Kosten berücksichtigt: Kraftstoff, Versicherung, Steuern, Wartung und Wertverlust. Auch Autokredit- und Leasingrechner sind für die Finanzierungsplanung hilfreich."
+            },
+            {
+              "q": "Sind die Berechnungen für bestimmte Regionen korrekt?",
+              "a": "Rechner berücksichtigen regionale Koeffizienten (zum Beispiel für die Kfz-Haftpflichtversicherung und die Transportsteuer). Da die Tarife jedoch je nach Versicherer und Region variieren können, handelt es sich bei den Ergebnissen lediglich um Schätzungen."
+            },
+            {
+              "q": "Wie oft sollten Sie Ihre Autokosten neu berechnen?",
+              "a": "Es wird empfohlen, die Kosten neu zu berechnen, wenn sich Tarife ändern (Versicherungen, Steuern), sich Kilometerstand oder Betriebsbedingungen ändern und auch bevor wichtige Entscheidungen getroffen werden (Kauf, Verkauf, Versicherung, Kreditvergabe)."
+            },
+            {
+              "q": "Ist es möglich, mehrere Optionen zu vergleichen?",
+              "a": "Ja, Sie können den Rechner in mehreren Browser-Tabs öffnen und verschiedene Vergleichsmöglichkeiten berechnen. Dies ist besonders nützlich bei der Auswahl eines Autokredits, einer Versicherung oder eines Autos."
+            },
+            {
+              "q": "Was tun, wenn die Berechnungsergebnisse von den tatsächlichen abweichen?",
+              "a": "Aufgrund zusätzlicher Gebühren, individueller Vertragsbedingungen oder Tarifänderungen kann es zu Differenzen kommen. Rechner liefern ungefähre Ergebnisse. Für genaue Berechnungen wenden Sie sich bitte an die entsprechenden Organisationen."
+            },
+            {
+              "q": "Gibt es Rechner für Elektrofahrzeuge?",
+              "a": "Einfache Rechner (Kosten, Kredit, Steuern) sind auch für Elektrofahrzeuge geeignet. Um den Energieverbrauch zu berechnen, verwenden Sie den Kraftstoffverbrauchsrechner, der den Verbrauch in kWh/100 km statt in Litern angibt."
+            },
+            {
+              "q": "Wie berechnet man die Ersparnisse durch die vorzeitige Rückzahlung eines Autokredits?",
+              "a": "Geben Sie im Autokredit-Rechner zusätzliche Zahlungen für die vorzeitige Rückzahlung ein. Der Rechner berechnet den Zahlungsplan neu und zeigt Zinsersparnisse und eine Verkürzung der Kreditlaufzeit an."
+            },
+            {
+              "q": "Werden Leistungen in den Rechnern berücksichtigt?",
+              "a": "Einfache Rechner berücksichtigen keine individuellen Leistungen (z. B. für kinderreiche Familien oder Menschen mit Behinderung). Für Berechnungen unter Berücksichtigung der Leistungen wenden Sie sich bitte direkt an die entsprechenden Organisationen."
+            },
+            {
+              "q": "Ist es möglich, den Kraftstoffverbrauch eines Hybridautos zu berechnen?",
+              "a": "Ja, nutzen Sie den Kraftstoffverbrauchsrechner und geben Sie den tatsächlichen Kraftstoffverbrauch Ihres Hybrids ein. Hybride haben je nach Betriebsmodus in der Regel einen Verbrauch von 4-6 l/100 km."
+            },
+            {
+              "q": "Wie berechnet man die optimale Laufzeit eines Autokredits?",
+              "a": "Verwenden Sie einen Autokreditrechner, um verschiedene Kreditlaufzeiten zu berechnen. Vergleichen Sie die monatlichen Zahlungen, die Gesamtüberzahlung und die Kosten für 1 km. Der optimale Zeitraum beträgt in der Regel 4-5 Jahre mit einem Gleichgewicht zwischen Zahlung und Überzahlung."
+            },
+            {
+              "q": "Was ist rentabler: Autokredit oder Leasing?",
+              "a": "Vergleichen Sie beide Möglichkeiten: Nutzen Sie Autokredit- und Leasingrechner mit den gleichen Parametern. Ein Autokredit ist für den langfristigen Besitz rentabler, während Leasing für Unternehmen und bei häufigem Autowechsel rentabler ist."
+            },
+            {
+              "q": "Wie berechnet man die tatsächlichen Betriebskosten für ein Jahr?",
+              "a": "Nutzen Sie den Kfz-Haltekostenrechner und geben Sie dabei einen Zeitraum von 1 Jahr an. Der Rechner berechnet alle jährlichen Ausgaben: Kraftstoff, Versicherung, Steuern, Wartung und Abschreibung."
+            },
+            {
+              "q": "Werden in den Rechnern saisonale Faktoren berücksichtigt?",
+              "a": "Grundlegende Rechner berücksichtigen keine saisonalen Faktoren (z. B. ist der Kraftstoffverbrauch im Winter 10–15 % höher). Berücksichtigen Sie für eine genaue Planung diese Faktoren bei der Dateneingabe."
+            }
+          ]
+        }
+      }
     },
     "time": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Uhrzeit und Datum",
+      "description": "Datumsunterschied, Alter, Timer",
+      "seo": {
+        "title": "Online-Zeit- und Datumsrechner – Berechnen von Zeiten, Daten und Alter | Calc1.ru",
+        "description": "Kostenlose Online-Zeit- und Datumsrechner: Differenz zwischen Datumsangaben, Altersberechnung, Timer, Countdown, Kalender, Weltzeit, Zeit hinzufügen, Fristen berechnen. Genaue Berechnungen zur Planung und Organisation der Zeit.",
+        "keywords": "Zeitrechner, Datumsrechner, Altersrechner, Datumsdifferenzrechner, Tage zwischen Datumsrechner, Zeitrechner, Online-Timer, Countdown, Online-Kalender, Weltzeit, Zeit hinzufügen, Fristenrechner, Altersberechnung, wie viele Tage zwischen Daten, Online-Zeitrechner, Zeitrechner, Datumsrechner, Altersrechner, Timer online, Countdown-Rechner, Zeitrechner kostenlos, Online-Datumsrechner, Online-Altersrechner, Online-Datumsdifferenzrechner, Online-Tagesrechner, Countdown-Timer, kostenloser Online-Timer, kostenloser Online-Kalender, Online-Weltzeit, Zeit zu einem Datum hinzufügen, online Fristenberechnung, Berechnung der Differenz zwischen Daten, wie viele Tage verbleiben, wie alt eine Person ist, Geburtstagsrechner, Arbeitszeitrechner, Arbeitszeitrechner, Besprechungszeitrechner, Zeitrechner für Flüge, Zeitzonenrechner, Zeitkonverter, Zeitrechner für Business, Zeitrechner für Planung, Zeitrechner für Reisen, Zeitrechner für Studium, Zeitrechner für Veranstaltungen, Online-Zeitrechner, Freizeitrechner, Web-Zeitrechner, interaktiver Zeitrechner, Zeitrechner 2024, russischer Zeitrechner, Zeit- und Datumsrechner, Datumsdifferenzrechner, Tagesrechner, Altersberechnung, Zeitadditionsrechner, Fristenrechner, Weltzeitrechner, Online-Timer, Countdown-Timer, Ereignis-Countdown, Geburtstagsrechner, Datumsintervallrechner, Zeitzonenkonverter, Zeitplanungsrechner, Geschäftszeitrechner, Reisezeitrechner",
+        "overview": {
+          "title": "Zeit- und Datumsrechner Calc1.ru",
+          "content": "Zeit- und Datumsrechner Calc1.ru ist ein komplettes Set an Online-Tools für die genaue Arbeit mit Zeit und Datum. Unsere Rechner helfen Ihnen, die Differenz zwischen Datumsangaben zu berechnen, das Alter zu bestimmen, Timer und Countdowns zu verwenden, mit dem Kalender zu arbeiten, die Weltzeit in verschiedenen Städten herauszufinden, Zeit zu Datumsangaben hinzuzufügen und Fristen zu berechnen.",
+          "additionalContent": "Alle Rechner arbeiten in Echtzeit, berücksichtigen automatisch Schaltjahre, Sommerzeit und unterstützen alle Zeitzonen der Welt. Berechnungen werden sofort und völlig kostenlos durchgeführt, ohne Registrierung oder Nutzungsbeschränkungen. Geeignet für persönliche Planung, Geschäft, Reisen und Studium."
+        },
+        "advantages": {
+          "title": "Vorteile von Zeit- und Datumsrechnern",
+          "content": "Unsere Zeit- und Datumsrechner bieten viele Vorteile:",
+          "comprehensive": "Ein kompletter Satz an Tools – alle notwendigen Zeit- und Datumsberechnungen an einem Ort",
+          "accurate": "Genaue Berechnungen unter Berücksichtigung von Schaltjahren, Zeitzonen und Sommerzeit",
+          "fast": "Sofortige Ergebnisse ohne Wartezeit oder komplizierte Berechnungen",
+          "free": "Völlig kostenlos, keine versteckten Gebühren oder Einschränkungen",
+          "accessible": "Funktioniert auf allen Geräten: Computer, Tablets und Smartphones",
+          "detailed": "Detaillierte Ergebnisse, aufgeschlüsselt nach Tagen, Stunden, Minuten und Sekunden"
+        },
+        "tips": {
+          "title": "Tipps zur Verwendung von Zeit- und Datumsrechnern",
+          "content": "Um die genauesten Ergebnisse zu erhalten, befolgen Sie diese Richtlinien:",
+          "accurate": "Verwenden Sie genaue Datums- und Uhrzeitangaben: Überprüfen Sie das Eingabeformat und berücksichtigen Sie Zeitzonen, wenn Sie mit der Weltzeit arbeiten",
+          "planning": "Nutzen Sie Taschenrechner für die langfristige Planung: Berechnen Sie Fristen im Voraus, planen Sie Besprechungen unter Berücksichtigung von Zeitzonen",
+          "regular": "Verwenden Sie regelmäßig Timer und Countdowns, um die Zeit zu verwalten und die Produktivität zu steigern",
+          "comparison": "Nutzen Sie mehrere Rechner für eine umfassende Zeitplanung: Kombinieren Sie Kalender, Timer und Weltzeituhr"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zu Zeit- und Datumsrechnern",
+          "faqItems": [
+            {
+              "q": "Welche Zeit- und Datumsrechner sind auf Calc1.ru verfügbar?",
+              "a": "Calc1.ru bietet Rechner: Datumsunterschiede, Zeit hinzufügen, Alter berechnen, Fristen berechnen, Online-Kalender, Timer, Countdown und Weltzeit. Alle Rechner funktionieren online und sind absolut kostenlos."
+            },
+            {
+              "q": "Wie genau sind Zeit- und Datumsrechner?",
+              "a": "Die Rechner nutzen präzise Algorithmen zur Zeitberechnung unter Berücksichtigung von Schaltjahren, Zeitzonen und Sommerzeit. Die Genauigkeit hängt von der Richtigkeit der eingegebenen Daten ab. Für die Planung und das Zeitmanagement liefern Taschenrechner sehr genaue Ergebnisse."
+            },
+            {
+              "q": "Ist die Nutzung von Zeit- und Datumsrechnern kostenlos?",
+              "a": "Ja, alle Zeit- und Datumsrechner auf Calc1.ru sind völlig kostenlos. Sie können sie unbegrenzt oft nutzen, ohne Registrierung oder versteckte Gebühren."
+            },
+            {
+              "q": "Wie berechnet man die Differenz zwischen zwei Daten?",
+              "a": "Nutzen Sie den Datumsdifferenzrechner, indem Sie das Start- und Enddatum eingeben. Der Rechner zeigt die genaue Differenz in Tagen, Wochen, Monaten und Jahren unter Berücksichtigung von Schaltjahren an."
+            },
+            {
+              "q": "Wie berechnet man das Alter einer Person?",
+              "a": "Geben Sie im Altersrechner Ihr Geburtsdatum ein und der Rechner zeigt Ihr genaues Alter in Jahren, Monaten, Tagen und sogar Stunden ab dem aktuellen Datum an."
+            },
+            {
+              "q": "Wie verwende ich einen Timer, um die Zeit zu verwalten?",
+              "a": "Stellen Sie im Timer die gewünschte Zeit ein (Stunden, Minuten, Sekunden) und starten Sie den Countdown. Der Timer zeigt die verbleibende Zeit an und piept, wenn er fertig ist. Geeignet für Pomodoro-Technik, Kochen, Training."
+            },
+            {
+              "q": "Wie nutzt man den Countdown zu einem Event?",
+              "a": "Geben Sie im Countdown-Rechner das Datum und die Uhrzeit des Ereignisses ein. Der Rechner zeigt jede Sekunde an, wie viele Tage, Stunden, Minuten und Sekunden bis zum Ereignis verbleiben."
+            },
+            {
+              "q": "Wie verwende ich einen Online-Kalender?",
+              "a": "Öffnen Sie Ihren Online-Kalender und fügen Sie Ereignisse mit Beschreibungen, Zeiten und Erinnerungen hinzu. Verwenden Sie Farbcodierungen für verschiedene Arten von Ereignissen und exportieren Sie Ihren Kalender, um ihn mit anderen Diensten zu synchronisieren."
+            },
+            {
+              "q": "Wie finde ich die Weltzeit in verschiedenen Städten heraus?",
+              "a": "Fügen Sie im Weltzeitrechner über die Suche die gewünschten Städte hinzu. Der Rechner zeigt die aktuelle Uhrzeit in allen Städten gleichzeitig an und berücksichtigt dabei deren Zeitzonen und Sommerzeit."
+            },
+            {
+              "q": "Wie füge ich die Zeit zum Datum hinzu?",
+              "a": "Geben Sie im Zeitadditionsrechner das Startdatum und die Startzeit ein und addieren Sie dann das gewünschte Intervall (Tage, Stunden, Minuten, Sekunden). Der Rechner berechnet das resultierende Datum und die resultierende Uhrzeit."
+            },
+            {
+              "q": "Wie berechnet man die Projektfrist?",
+              "a": "Geben Sie im Fristenrechner das Startdatum und die Anzahl der Tage bis zur Frist (oder Enddatum) ein. Der Rechner zeigt das genaue Datum der Frist sowie die Anzahl der Tage, Wochen und Monate davor an."
+            },
+            {
+              "q": "Werden Schaltjahre bei der Berechnung berücksichtigt?",
+              "a": "Ja, alle Rechner berücksichtigen bei der Berechnung von Datums- und Altersunterschieden automatisch Schaltjahre (29. Februar), um maximale Genauigkeit der Ergebnisse zu gewährleisten."
+            },
+            {
+              "q": "Werden im Weltzeitrechner alle Zeitzonen unterstützt?",
+              "a": "Ja, der Weltzeitrechner unterstützt alle Zeitzonen der Welt, einschließlich der Standardzeitzonen (UTC) und der lokalen Zeitzonen aller Länder. Sie können in jeder Stadt der Welt Zeit finden."
+            },
+            {
+              "q": "Können Zeitrechner geschäftlich genutzt werden?",
+              "a": "Ja, Zeitrechner eignen sich hervorragend für Unternehmen: Sie planen internationale Meetings, überwachen Fristen, koordinieren die Arbeit von Remote-Teams und planen Videokonferenzen unter Berücksichtigung von Zeitzonen."
+            },
+            {
+              "q": "Können Zeitrechner für Reisen verwendet werden?",
+              "a": "Ja, Zeitrechner sind ideal für Reisen: Anpassung an die Ortszeit, Planung von Flügen, Berechnung von Zeitunterschieden zwischen Ländern, Planung von Ausflügen und Veranstaltungen."
+            },
+            {
+              "q": "Wie verwende ich einen Timer für die Pomodoro-Technik?",
+              "a": "Stellen Sie einen Timer für das Arbeitsintervall auf 25 Minuten ein, machen Sie nach Abschluss eine 5-minütige Pause (verwenden Sie den Timer erneut), nach 4 Zyklen machen Sie eine lange Pause von 15-30 Minuten."
+            },
+            {
+              "q": "Kann ich einen Kalender zum Planen von Veranstaltungen verwenden?",
+              "a": "Ja, ein Online-Kalender eignet sich hervorragend für die Veranstaltungsplanung. Erstellen Sie Ereignisse mit Beschreibung, Zeit, Farbcodierung und Erinnerungen. Exportieren Sie Ihren Kalender, um ihn mit anderen Diensten zu synchronisieren."
+            },
+            {
+              "q": "Wie verwende ich den Geburtstags-Countdown?",
+              "a": "Stellen Sie im Countdown-Rechner das Datum Ihres Geburtstages ein (Sie können das nächste Jahr auswählen, wenn Ihr Geburtstag in diesem Jahr bereits vergangen ist), und der Timer zeigt an, wie viele Tage bis zu diesem Ereignis verbleiben."
+            },
+            {
+              "q": "Können Zeitrechner zum Lernen genutzt werden?",
+              "a": "Ja, Zeitrechner eignen sich zum Lernen: Überwachen von Aufgabenfristen, Planen von Prüfungsvorbereitungen, Organisieren von Lernzeiten, Berechnen des Alters für historische Forschung."
+            },
+            {
+              "q": "Wie verwende ich den Weltzeitrechner, um Anrufe zu planen?",
+              "a": "Fügen Sie die Städte der Anrufteilnehmer zum Weltzeitrechner hinzu. Sehen Sie sich die aktuelle Zeit in jeder Stadt an und wählen Sie unter Berücksichtigung von Zeitzonenunterschieden und normalen Geschäftszeiten eine Zeit aus, die für alle passt."
+            },
+            {
+              "q": "Kann ich zum Kochen einen Timer verwenden?",
+              "a": "Ja, der Timer eignet sich ideal zur Steuerung der Garzeit. Stellen Sie die gewünschte Zeit ein (z. B. 8 Minuten zum Eierkochen, 15 Minuten zum Backen) und nutzen Sie das akustische Signal zur Benachrichtigung."
+            },
+            {
+              "q": "Wie verwende ich den Datumsdifferenzrechner zur Berechnung der Berufserfahrung?",
+              "a": "Geben Sie im Datumsdifferenzrechner das Arbeitsbeginndatum und das aktuelle Datum (oder Arbeitsendedatum) ein. Der Rechner zeigt die genaue Betriebszugehörigkeit in Jahren, Monaten und Tagen an."
+            },
+            {
+              "q": "Können Countdowns zur Motivation genutzt werden?",
+              "a": "Ja, das Herunterzählen wichtiger Ereignisse (Urlaub, Geburtstag, Erreichen eines Ziels) motiviert und hilft, den Fortschritt auf dem Weg zum Ziel zu visualisieren. Wenn Sie sehen, wie viel Zeit noch übrig ist, können Sie leichter planen und handeln."
+            },
+            {
+              "q": "Wie verwende ich einen Kalender für die Familienplanung?",
+              "a": "Erstellen Sie Ereignisse für alle Familienmitglieder, indem Sie für jedes Familienmitglied oder jeden Ereignistyp unterschiedliche Farben verwenden. Exportieren Sie Ihren Kalender und teilen Sie ihn zur Synchronisierung mit Ihrer Familie."
+            },
+            {
+              "q": "Kann der Weltzeitrechner mit Clients genutzt werden?",
+              "a": "Ja, fügen Sie die Städte hinzu, in denen sich Ihre Kunden befinden, und der Rechner zeigt deren aktuelle Zeit an. Dies hilft dabei, den optimalen Zeitpunkt für Anrufe und Besprechungen unter Berücksichtigung der Arbeitszeiten der Kunden zu bestimmen."
+            },
+            {
+              "q": "Wie berechnet man mit dem Zeitadditionsrechner die Ankunftszeit?",
+              "a": "Geben Sie die Abfahrtszeit ein und fügen Sie die Dauer der Fahrt (Stunden, Minuten) hinzu. Der Rechner berechnet unter Berücksichtigung aller Reiseparameter die genaue Ankunftszeit."
+            },
+            {
+              "q": "Kann ich einen Timer für Intervalltraining verwenden?",
+              "a": "Ja, stellen Sie den Timer auf die Dauer der Übung ein (z. B. 30 Sekunden), stellen Sie nach dem Signal den Timer auf die Ruhezeit (15 Sekunden) ein und wiederholen Sie den Zyklus so oft wie erforderlich."
+            },
+            {
+              "q": "Wie verwende ich einen Terminrechner zur Projektplanung?",
+              "a": "Geben Sie das Startdatum des Projekts und die Anzahl der Tage bis zum Stichtag (oder Enddatum) an. Der Rechner zeigt das genaue Deadline-Datum an und hilft dabei, die Zeit zu kontrollieren, die für die Erledigung von Projektaufgaben benötigt wird."
+            },
+            {
+              "q": "Kann ich einen Countdown verwenden, um die Zeit bis zum Urlaub zu verfolgen?",
+              "a": "Ja, legen Sie das Startdatum Ihres Urlaubs fest und der Timer zeigt an, wie viele Tage noch übrig sind. Dies hilft Ihnen, Ihre Urlaubsvorbereitungen im Voraus zu motivieren und zu planen."
+            },
+            {
+              "q": "Wie verwende ich den Weltzeitrechner zur Planung von Online-Events?",
+              "a": "Fügen Sie die Städte aller Online-Event-Teilnehmer hinzu. Der Rechner zeigt die aktuelle Uhrzeit an, was Ihnen dabei hilft, die optimale Startzeit für die Veranstaltung auszuwählen, die für die maximale Teilnehmerzahl geeignet ist."
+            }
+          ]
+        }
+      }
     },
     "health": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Gesundheit und Medizin",
+      "description": "BMI, Puls, Blutdruck, Vitamine",
+      "seo": {
+        "title": "Medizinische Online-Rechner - Berechnung von Gesundheits- und medizinischen Indikatoren | Calc1.ru",
+        "description": "Kostenlose medizinische Online-Rechner: Berechnung von BMI (Body-Mass-Index), Puls, Blutdruck, Eisprung, Vitaminen und Mineralstoffen, Stresslevel, Medikamentendosis. Genaue Berechnungen zur Überwachung von Gesundheits- und medizinischen Indikatoren.",
+        "keywords": "Medizinische Taschenrechner, Gesundheitsrechner, BMI-Rechner, Body-Mass-Index, Pulsrechner, Herzfrequenz, Pulszonen, Blutdruckrechner, Normaldruck, Bluthochdruck, Hypotonie, Eisprungrechner, fruchtbare Tage, Menstruationszyklus, Vitaminrechner, Tageswert an Vitaminen, Mineralstoffrechner, Stressrechner, Stresslevel, Stresstest, Dosierungsrechner, Dosisberechnung nach Gewicht, Medikamentendosis, medizinische Online-Berechnungen, Gesundheitskontrolle, Krankheitsprävention, gesunder Lebensstil, medizinische Indikatoren, Normalwerte, Gesundheitsrechner, Gesundheitsrechner, BMI Rechner, Herzfrequenzrechner, Blutdruckrechner, Eisprungrechner, Vitaminrechner, Stresstest, Dosierungsrechner",
+        "overview": {
+          "title": "Medizinische Rechner Calc1.ru",
+          "content": "Medizinische Rechner Calc1.ru ist eine Reihe professioneller Online-Tools für medizinische Berechnungen und Gesundheitsüberwachung. Unsere Rechner helfen Ihnen, Ihren Body-Mass-Index (BMI) zu berechnen, Ihre Herzfrequenzzonen für das Training zu bestimmen, Ihren Blutdruck abzuschätzen, Ihre Eisprungstage zu berechnen, Ihren Vitamin- und Mineralstoffbedarf zu ermitteln, Ihren Stresspegel einzuschätzen und die richtige Dosierung von Medikamenten zu berechnen.",
+          "additionalContent": "Alle Rechner wurden auf Grundlage der Empfehlungen der Weltgesundheitsorganisation (WHO) und internationaler medizinischer Standards entwickelt. Sie berücksichtigen Alter, Geschlecht, körperliche Aktivität und andere individuelle Parameter für genaue und personalisierte Berechnungen. Taschenrechner eignen sich zur täglichen Gesundheitsüberwachung, Trainingsplanung, Schwangerschaft, Einnahme von Vitaminen und Medikamenten."
+        },
+        "advantages": {
+          "title": "Vorteile unserer medizinischen Rechner",
+          "content": "Unsere medizinischen Rechner bieten viele Vorteile für die Gesundheitsüberwachung:",
+          "accurate": {
+            "title": "Genauigkeit der Berechnungen",
+            "description": "Alle Berechnungen basieren auf medizinischen Standards und Empfehlungen der WHO, was die Genauigkeit der Ergebnisse garantiert."
+          },
+          "personalized": {
+            "title": "Personalisierung",
+            "description": "Rechner berücksichtigen individuelle Parameter: Alter, Geschlecht, Gewicht, Größe, Aktivitätsniveau."
+          },
+          "comprehensive": {
+            "title": "Vollständigkeit der Informationen",
+            "description": "Jeder Rechner liefert detaillierte Ergebnisse mit Interpretation und Empfehlungen."
+          },
+          "free": {
+            "title": "Kostenlos",
+            "description": "Alle Rechner sind völlig kostenlos und jederzeit ohne Registrierung verfügbar."
+          },
+          "mobile": {
+            "title": "Mobile Version",
+            "description": "Responsive Design funktioniert auf allen Geräten: Computer, Tablets und Smartphones."
+          },
+          "professional": {
+            "title": "Professionelle Empfehlungen",
+            "description": "Die Ergebnisse werden durch medizinische Empfehlungen und Expertenrat begleitet."
+          }
+        },
+        "tips": {
+          "title": "Tipps zur Verwendung medizinischer Taschenrechner",
+          "content": "Befolgen Sie diese Empfehlungen, um genaue Ergebnisse und eine effektive Gesundheitsüberwachung zu erhalten:",
+          "regular": {
+            "title": "Regelmäßige Kontrolle",
+            "description": "Verwenden Sie regelmäßig Taschenrechner, um Veränderungen der Gesundheitsindikatoren und die Wirksamkeit von Verbesserungsmaßnahmen zu verfolgen."
+          },
+          "consultation": {
+            "title": "Arztkonsultation",
+            "description": "Die Ergebnisse der Rechner dienen ausschließlich Informationszwecken und ersetzen nicht die Beratung durch einen Spezialisten. Bei Abweichungen von der Norm konsultieren Sie einen Arzt."
+          },
+          "accuracy": {
+            "title": "Datengenauigkeit",
+            "description": "Geben Sie aktuelle und genaue Daten (Gewicht, Größe, Alter) ein, um zuverlässige Berechnungsergebnisse zu erhalten."
+          },
+          "comprehensive": {
+            "title": "Integrierter Ansatz",
+            "description": "Nutzen Sie mehrere Rechner zusammen für eine umfassende Gesundheitsbeurteilung und erhalten Sie ein vollständiges Bild."
+          }
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Was sind medizinische Taschenrechner?",
+              "a": "Medizinische Rechner sind Online-Tools zur Berechnung verschiedener medizinischer Indikatoren: Body-Mass-Index, Puls, Blutdruck, Eisprung, Vitaminbedarf, Stresslevel, Medikamentendosis. Sie helfen dabei, Ihren Gesundheitszustand zu überwachen und medizinische Empfehlungen basierend auf individuellen Parametern zu erhalten."
+            },
+            {
+              "q": "Wie genau sind medizinische Taschenrechner?",
+              "a": "Die Rechner basieren auf Empfehlungen der WHO und internationalen medizinischen Standards. Die Genauigkeit hängt von der Richtigkeit der eingegebenen Daten und den individuellen Eigenschaften des Organismus ab. Für eine genaue Diagnose und Behandlung wenden Sie sich immer an Ihren Arzt."
+            },
+            {
+              "q": "Können Taschenrechner verwendet werden, anstatt einen Arzt aufzusuchen?",
+              "a": "Nein, Rechner dienen nur zu Informationszwecken und ersetzen nicht die Beratung durch einen Spezialisten. Sie helfen bei der Überwachung des Gesundheitszustandes. Bei Abweichungen von der Norm oder Krankheitssymptomen sollten Sie jedoch einen Arzt aufsuchen."
+            },
+            {
+              "q": "Welche medizinischen Rechner gibt es?",
+              "a": "Es stehen Rechner zur Verfügung: BMI (Body-Mass-Index), Puls und Pulszonen, Blutdruck, Eisprung und fruchtbare Tage, Vitamine und Mineralstoffe, Stresslevel, Medikamentendosierungen nach Gewicht. Jeder Rechner berücksichtigt individuelle Parameter."
+            },
+            {
+              "q": "Wie verwende ich den BMI-Rechner richtig?",
+              "a": "Um den BMI zu berechnen, geben Sie Ihr aktuelles Gewicht in Kilogramm und Ihre Körpergröße in Zentimetern ein. Bedenken Sie, dass der BMI die Muskelmasse nicht berücksichtigt und daher für Sportler möglicherweise nicht ganz genau ist. Interpretieren Sie die Ergebnisse mit Ihrem Arzt."
+            },
+            {
+              "q": "Was sind Pulszonen und warum werden sie benötigt?",
+              "a": "Herzfrequenzzonen sind Herzfrequenzbereiche für unterschiedliche Trainingszwecke: Ruhezone (50–60 %), Fettverbrennung (60–70 %), aerob (70–80 %), anaerob (80–90 %), Maximum (90–100 %). Sie helfen, Ihr Training zu optimieren."
+            },
+            {
+              "q": "Wie sind die Ergebnisse des Druckrechners zu interpretieren?",
+              "a": "Der Rechner klassifiziert den Blutdruck nach internationalen Standards: normal (<130/85), erhöht (130-139/85-89), Hypertonie Grad I (140-159/90-99), Grad II (160-179/100-109), Grad III (≥180/≥110). Bei Abweichungen ist ein Arzt aufzusuchen."
+            },
+            {
+              "q": "Wie funktioniert der Eisprungrechner?",
+              "a": "Der Eisprungrechner berechnet Ihr Eisprungdatum basierend auf Ihrer letzten Menstruationsperiode und der Zykluslänge. Die Methode eignet sich für regelmäßige Zyklen. Kombinieren Sie es mit Ovulationstests und Basaltemperaturmessungen, um die Genauigkeit zu erhöhen."
+            },
+            {
+              "q": "Wie berechnet man den Bedarf an Vitaminen?",
+              "a": "Der Vitaminrechner ermittelt unter Berücksichtigung von Geschlecht, Alter und körperlicher Aktivität Ihren Tagesbedarf von 13 Vitaminen und 8 Mineralstoffen. Bei hoher Aktivität steigt der Bedarf an bestimmten Vitaminen um 15-20 %."
+            },
+            {
+              "q": "Was zeigt ein Stresstest?",
+              "a": "Beim Stresstest wird das Stressniveau anhand von 10 Fragen mit einem Punktesystem (0-30 Punkte) ermittelt. Das Ergebnis zeigt: geringe Belastung (0-10), mittlere (11-20), hohe (21-30). Bei hohen Werten empfiehlt es sich, einen Spezialisten aufzusuchen."
+            },
+            {
+              "q": "Wie berechnet man die Dosierung eines Arzneimittels?",
+              "a": "Der Dosierungsrechner berechnet die Dosis nach der Formel: Körpergewicht × Dosierung pro kg × Verabreichungshäufigkeit. Zeigt Einzel- und Tagesdosis. Wichtig: Konsultieren Sie immer Ihren Arzt, bevor Sie Medikamente einnehmen."
+            },
+            {
+              "q": "Sind medizinische Taschenrechner sicher?",
+              "a": "Ja, Taschenrechner sind sicher zu verwenden. Sie führen mathematische Berechnungen auf der Grundlage medizinischer Formeln durch. Die Ergebnisse dienen jedoch nur zu Informationszwecken und ersetzen nicht die medizinische Diagnose."
+            },
+            {
+              "q": "Können Taschenrechner für Kinder verwendet werden?",
+              "a": "Einige Rechner (BMI, Puls, Vitamine, Dosierung) können unter Berücksichtigung von Altersmerkmalen für Kinder verwendet werden. Zur Dosierung von Medikamenten für Kinder konsultieren Sie unbedingt einen Kinderarzt. Interpretieren Sie die Ergebnisse gemeinsam mit Ihrem Kinderarzt."
+            },
+            {
+              "q": "Wie oft sollten Gesundheitsindikatoren überprüft werden?",
+              "a": "Die Häufigkeit hängt vom Indikator ab: BMI – einmal im Monat, Druck – täglich bei Bluthochdruck, Puls – während des Trainings, Vitamine – bei Änderung des Lebensstils, Stress – wöchentlich. Wenn Sie gesundheitliche Probleme haben, überwachen Sie Ihre Messwerte gemäß den Empfehlungen Ihres Arztes."
+            },
+            {
+              "q": "Was tun, wenn das Rechnerergebnis eine Abweichung von der Norm aufweist?",
+              "a": "Bei einer Abweichung von der Norm: Keine Panik, das Ergebnis ist ungefähr; Konsultieren Sie Ihren Arzt für eine genaue Diagnose. sich gegebenenfalls einer ärztlichen Untersuchung unterziehen; Befolgen Sie die Empfehlungen des Spezialisten."
+            },
+            {
+              "q": "Berücksichtigen die Rechner auch chronische Krankheiten?",
+              "a": "Chronische Krankheiten, Medikamente und individuelle Stoffwechselmerkmale berücksichtigen die Rechner nicht. Liegen Erkrankungen vor, kann es sein, dass die Ergebnisse angepasst werden müssen. Konsultieren Sie unbedingt Ihren Arzt."
+            },
+            {
+              "q": "Können Taschenrechner von schwangeren Frauen verwendet werden?",
+              "a": "Einige Rechner (BMI, Blutdruck, Vitamine) können während der Schwangerschaft verwendet werden und berücksichtigen Veränderungen im Körper. Für die Dosierung von Medikamenten und Vitaminen während der Schwangerschaft ist die Rücksprache mit einem Arzt erforderlich. Der Eisprungrechner wird während der Schwangerschaft nicht verwendet."
+            },
+            {
+              "q": "Wie helfen Taschenrechner bei der Überwachung Ihrer Gesundheit?",
+              "a": "Taschenrechner helfen: Veränderungen der Indikatoren zu verfolgen, frühzeitige Signale über Probleme zu erhalten, Training und Ernährung zu planen, die Einnahme von Medikamenten und Vitaminen zu kontrollieren und zu einem gesunden Lebensstil zu motivieren."
+            },
+            {
+              "q": "Muss ich mich registrieren, um die Rechner nutzen zu können?",
+              "a": "Nein, alle Rechner sind ohne Registrierung kostenlos verfügbar. Sie können diese jederzeit anonym nutzen. Eine Speicherung oder Weitergabe der Daten an Dritte erfolgt nicht."
+            },
+            {
+              "q": "Auf welchen Geräten funktionieren Taschenrechner?",
+              "a": "Rechner funktionieren auf allen Geräten: Computer (Windows, Mac, Linux), Tablets (iPad, Android), Smartphones (iPhone, Android). Responsive Design sorgt für eine komfortable Nutzung auf jedem Bildschirm."
+            },
+            {
+              "q": "Ist es möglich, Berechnungsergebnisse zu speichern?",
+              "a": "Die Ergebnisse können kopiert oder als Screenshot erstellt werden. Einige Rechner bieten die Möglichkeit zum Exportieren als PDF. Der Zahlungsverlauf wird nicht automatisch gespeichert, wenn Sie nicht registriert sind."
+            },
+            {
+              "q": "Basieren Taschenrechner auf wissenschaftlichen Erkenntnissen?",
+              "a": "Ja, alle Rechner basieren auf Empfehlungen der WHO, internationalen medizinischen Standards und wissenschaftlicher Forschung. Formeln und Standards entsprechen modernen medizinischen Protokollen."
+            },
+            {
+              "q": "Was tun, wenn der Rechner einen Fehler anzeigt?",
+              "a": "Wenn ein Fehler auftritt: Überprüfen Sie die Richtigkeit der eingegebenen Daten, stellen Sie sicher, dass alle Felder ausgefüllt sind, aktualisieren Sie die Seite, überprüfen Sie Ihre Internetverbindung. Wenn der Fehler weiterhin besteht, schreiben Sie an den Support."
+            },
+            {
+              "q": "Können Taschenrechner für die professionelle medizinische Praxis verwendet werden?",
+              "a": "Taschenrechner können als Hilfsmittel eingesetzt werden, ersetzen jedoch nicht die professionelle medizinische Ausrüstung und Diagnostik. Verwenden Sie für die medizinische Praxis zertifizierte Medizinprodukte."
+            },
+            {
+              "q": "Wie berücksichtigt der Vitaminrechner die Ernährung?",
+              "a": "Der Vitaminrechner berechnet Ihren Gesamtbedarf, berücksichtigt jedoch nicht Ihre spezifische Ernährung. Für Vegetarier und Menschen mit diätetischen Einschränkungen kann eine zusätzliche Beratung durch einen Ernährungsberater erforderlich sein, um die Normen anzupassen."
+            },
+            {
+              "q": "Was beeinflusst die Genauigkeit des Eisprungrechners?",
+              "a": "Die Genauigkeit hängt von der Regelmäßigkeit des Zyklus, Stress, Krankheit, Medikamenten und Klimawandel ab. Wenn Ihr Zyklus unregelmäßig ist, verwenden Sie zusätzliche Methoden: Ovulationstests, Basaltemperatur, Ultraschall."
+            },
+            {
+              "q": "Wie sind die Ergebnisse eines Stresstests zu interpretieren?",
+              "a": "Niedriges Niveau (0-10) – alles ist in Ordnung; mittel (11-20) – Sie sollten auf Stressbewältigung achten; hoch (21-30) – es wird empfohlen, einen Spezialisten zu konsultieren. Die Ergebnisse sind nur Richtwerte."
+            },
+            {
+              "q": "Kann der Dosierungsrechner für alle Medikamente verwendet werden?",
+              "a": "Der Rechner ist nur für Medikamente geeignet, die nach Körpergewicht (mg/kg) dosiert werden. Viele Medikamente haben eine feste Dosierung. Befolgen Sie immer die Anweisungen des Arzneimittels und die ärztliche Verordnung. Der Rechner ist kein Ersatz für eine ärztliche Beratung."
+            },
+            {
+              "q": "Wie oft werden Rechner aktualisiert?",
+              "a": "Die Rechner werden regelmäßig aktualisiert, um den neuesten medizinischen Empfehlungen und Standards Rechnung zu tragen. Formeln und Standards entsprechen den aktuellen Versionen der WHO-Protokolle und internationalen Standards."
+            },
+            {
+              "q": "Wie helfen Taschenrechner, Krankheiten vorzubeugen?",
+              "a": "Rechner helfen: Gesundheitsindikatoren überwachen, Abweichungen frühzeitig erkennen, zu einem gesunden Lebensstil motivieren und vorbeugende Maßnahmen planen. Regelmäßige Anwendung hilft, Probleme frühzeitig zu erkennen."
+            }
+          ]
+        }
+      }
     },
     "science": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Studium und Wissenschaft",
+      "description": "Physik, Chemie, Geometrie, Statistik",
+      "seo": {
+        "keywords": "Wissenschaftliche Taschenrechner, Physik-Rechner, Chemie-Rechner, Statistik-Rechner, erweiterte Geometrie, Geschwindigkeitsberechnung, Beschleunigungsberechnung, Kraftberechnung, Energieberechnung, Molmasse, Lösungskonzentration, chemische Gleichungen, Mittelwert, Median, Standardabweichung, komplexe geometrische Figuren, wissenschaftliche Berechnungen, Studienrechner, Wissenschaftsrechner, Physik-Rechner, Chemie-Rechner, Statistik-Rechner",
+        "overview": "Wissenschaftliche Rechner Calc1.ru ist eine Reihe von Online-Tools für wissenschaftliche Berechnungen: Physik, Chemie, Geometrie, Statistik. Geeignet für Studenten, Wissenschaftler und alle, die sich mit wissenschaftlichen Berechnungen befassen."
+      }
     },
     "converter": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Online-Konverter",
+      "description": "Länge, Gewicht, Temperatur, Geschwindigkeit",
+      "seo": {
+        "title": "Online-Einheitenumrechner – Alle Einheiten umrechnen | Calc1.ru",
+        "description": "Kostenlose Online-Einheitenumrechner: Länge (mm, cm, m, km, Meilen), Gewicht (g, kg, lb), Temperatur (°C, °F, K), Geschwindigkeit (km/h, m/s, Knoten), Druck (Pa, atm, mmHg), Volumen (l, gal, m³), ​​Energie (J, cal, Wh), Daten (Bytes, KB, MB, GB, TB). Präzise Berechnungen für Profis und den täglichen Gebrauch.",
+        "keywords": "Einheitenumrechner, Längenumrechner, Gewichtsumrechner, Temperaturumrechner, Geschwindigkeitsumrechner, Druckumrechner, Volumenumrechner, Energieumrechner, Datenumrechner, Einheitenumrechner, Meter-zu-Fuß-Umrechner, Kilogramm-Pfund-Umrechner, Grad-Umrechner, Geschwindigkeitsumrechner online, mm-cm-Umrechner, cm-m-Umrechner, km-zu-Meilen-Umrechner, Gramm-zu-Kilogramm-Umrechner, Pfund-zu-Kilogramm-Umrechner, Celsius-zu-Fahrenheit-Umrechner, Fahrenheit-zu-Celsius-Umrechner, Kelvin-Umrechner, km/h-zu-m/s-Umrechner, m/s-zu-km/h-Umrechner, Knoten Umrechner, Pascal-Umrechner, Atmosphären-Umrechner, mmHg-Umrechner, Liter-Umrechner, Gallonen-Umrechner, Kubikmeter-Umrechner, Joule-Umrechner, Kalorien-Umrechner, Wattstunden-Umrechner, Byte-Umrechner, Kilobyte-Umrechner, Megabyte-Umrechner, Gigabyte-Umrechner, Terabyte-Umrechner, Online-Einheitenumrechner, Umrechnerrechner, Einheitenumrechnung, metrisches System, imperiales System, Einheitenumrechner, Länge Umrechner, Gewichtsumrechner, Temperaturumrechner, Geschwindigkeitsumrechner, Druckumrechner, Volumenumrechner, Energieumrechner, Datenumrechner",
+        "overview": {
+          "title": "Online-Einheitenumrechner Calc1.ru",
+          "content": "Online-Umrechner Calc1.ru sind ein kompletter Werkzeugsatz zur genauen Umrechnung aller Grundmaßeinheiten. Mit unseren Umrechnern können Sie sofort zwischen verschiedenen Längen-, Gewichts-, Temperatur-, Geschwindigkeits-, Druck-, Volumen-, Energie- und Dateneinheiten umrechnen.",
+          "additionalContent": "Alle Umrechner verwenden genaue internationale Standards und Umrechnungsfaktoren. Metrische, imperiale und andere Maßsysteme werden unterstützt. Berechnungen werden sofort mit einer Genauigkeit von 15 Dezimalstellen durchgeführt. Alle Tools sind völlig kostenlos und ohne Registrierung verfügbar."
+        },
+        "advantages": {
+          "title": "Vorteile unserer Konverter",
+          "content": "Unsere Einheitenumrechner bieten Anwendern viele Vorteile:",
+          "precise": {
+            "title": "Genaue Berechnungen",
+            "content": "Alle Umrechner verwenden genaue internationale Standards und Umrechnungsfaktoren. Die Berechnungen basieren auf offiziellen Werten, die von messtechnischen Organisationen genehmigt wurden."
+          },
+          "instant": {
+            "title": "Sofortige Konvertierung",
+            "content": "Alle Konvertierungen werden sofort und in Echtzeit durchgeführt, während Sie Werte eingeben. Sie müssen nicht warten, bis die Ergebnisse verarbeitet oder heruntergeladen werden."
+          },
+          "comprehensive": {
+            "title": "Viele Einheiten",
+            "content": "Jeder Konverter unterstützt alle wichtigen Maßeinheiten seiner Kategorie. Sie können zwischen metrischen, imperialen und anderen Maßsystemen umrechnen."
+          },
+          "multilingual": {
+            "title": "Mehrsprachige Schnittstelle",
+            "content": "Konverter sind in 4 Sprachen verfügbar: Russisch, Englisch, Spanisch und Deutsch. Die Oberfläche passt sich automatisch an die ausgewählte Sprache an."
+          },
+          "mobile": {
+            "title": "Mobile Version",
+            "content": "Alle Konverter sind vollständig für die Verwendung auf Mobilgeräten, Tablets und Smartphones geeignet. Die Benutzeroberfläche ist für die einfache Nutzung auf jedem Gerät optimiert."
+          },
+          "free": {
+            "title": "Kostenlos und keine Registrierung erforderlich",
+            "content": "Alle Konverter sind völlig kostenlos und ohne Registrierung verfügbar. Sie können sie unbegrenzt oft nutzen, ohne versteckte Gebühren oder Einschränkungen."
+          }
+        },
+        "tips": {
+          "title": "Nützliche Tipps",
+          "content": "So holen Sie das Beste aus den Einheitenumrechnern heraus:",
+          "tip1": {
+            "title": "Überprüfen Sie die Maßeinheiten",
+            "content": "Stellen Sie immer sicher, dass Sie die richtigen Einheiten für den Eingabewert und das Ergebnis ausgewählt haben. Bitte beachten Sie das metrische und imperiale System."
+          },
+          "tip2": {
+            "title": "Verwenden Sie genaue Werte",
+            "content": "Für wissenschaftliche und professionelle Berechnungen verwenden Sie exakte Werte. Konverter unterstützen Werte bis zu 15 Dezimalstellen."
+          },
+          "tip3": {
+            "title": "Achten Sie auf Messsysteme",
+            "content": "Verschiedene Länder verwenden unterschiedliche Maßsysteme (metrisch, imperial, amerikanisch). Stellen Sie sicher, dass Sie das richtige System für Ihre Aufgabe verwenden."
+          },
+          "tip4": {
+            "title": "Überprüfen Sie die Ergebnisse",
+            "content": "Bei kritischen Berechnungen empfiehlt es sich, die Umrechnungsergebnisse zu überprüfen, insbesondere wenn mit unbekannten Maßeinheiten gearbeitet wird."
+          }
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Welche Maßeinheiten unterstützen Konverter?",
+              "a": "Konverter unterstützen alle wichtigen Maßeinheiten in jeder Kategorie: Länge (mm, cm, m, km, Meilen), Gewicht (g, kg, lb), Temperatur (°C, °F, K), Geschwindigkeit (km/h, m/s, Knoten), Druck (Pa, atm, mmHg), Volumen (l, Gallonen, m³), ​​Energie (J, cal, Wh), Daten (Bytes, KB, MB, GB, TB)."
+            },
+            {
+              "q": "Sind die Konverterberechnungen korrekt?",
+              "a": "Ja, alle Umrechner verwenden genaue internationale Standards und Umrechnungsfaktoren. Die Berechnungen basieren auf offiziellen Werten, die von messtechnischen Organisationen genehmigt wurden. Die Berechnungsgenauigkeit beträgt bis zu 15 Dezimalstellen."
+            },
+            {
+              "q": "Sind Konverter kostenlos?",
+              "a": "Ja, alle Einheitenumrechner auf Calc1.ru sind völlig kostenlos. Sie können sie unbegrenzt oft nutzen, ohne Registrierung oder versteckte Gebühren."
+            },
+            {
+              "q": "Wie rechnet man Längeneinheiten um?",
+              "a": "Wählen Sie den Längenkonverter aus, geben Sie den Wert in den Quelleinheiten (z. B. Meter) ein und wählen Sie die Zieleinheit (z. B. Kilometer) aus. Der Konverter zeigt sofort das Ergebnis an."
+            },
+            {
+              "q": "Wie rechnet man Gewichtseinheiten um?",
+              "a": "Verwenden Sie den Gewichtsumrechner, um den Wert in Gramm, Kilogramm oder Pfund einzugeben. Der Konverter rechnet den Wert in die von Ihnen gewählte Maßeinheit um."
+            },
+            {
+              "q": "Wie rechnet man die Temperatur um?",
+              "a": "Geben Sie im Temperaturkonverter den Wert in Celsius, Fahrenheit oder Kelvin ein. Der Konverter rechnet den Wert automatisch in alle anderen Maßstäbe um."
+            },
+            {
+              "q": "Wie rechnet man Geschwindigkeit um?",
+              "a": "Geben Sie im Geschwindigkeitsumrechner den Wert in km/h, m/s oder Knoten ein. Der Umrechner zeigt sofort den entsprechenden Wert in anderen Geschwindigkeitseinheiten an."
+            },
+            {
+              "q": "Wie rechnet man den Druck um?",
+              "a": "Geben Sie im Druckumrechner den Wert in Pascal, Atmosphäre oder Millimeter Quecksilbersäule ein. Der Konverter rechnet den Wert in die ausgewählte Einheit um."
+            },
+            {
+              "q": "Wie rechnet man die Lautstärke um?",
+              "a": "Verwenden Sie den Volumenumrechner, um Liter, Gallonen und Kubikmeter umzurechnen. Geben Sie einen Wert in einer Einheit ein und der Umrechner zeigt das Äquivalent in anderen Einheiten an."
+            },
+            {
+              "q": "Wie wandelt man Energie um?",
+              "a": "Geben Sie im Energierechner den Wert in Joule, Kalorien oder Wattstunden ein. Der Konverter rechnet den Wert zwischen allen Energieeinheiten um."
+            },
+            {
+              "q": "Wie konvertiert man Daten?",
+              "a": "Geben Sie im Datenkonverter den Wert in Bytes, Kilobytes, Megabytes, Gigabytes oder Terabytes ein. Der Konverter verwendet das Binärsystem (1024-Basis)."
+            },
+            {
+              "q": "Funktionieren Konverter auf Mobilgeräten?",
+              "a": "Ja, alle Konverter sind vollständig für die Verwendung auf Mobilgeräten, Tablets und Smartphones geeignet. Die Oberfläche passt sich automatisch der Bildschirmgröße an."
+            },
+            {
+              "q": "In welchen Sprachen sind die Konverter verfügbar?",
+              "a": "Konverter sind in 4 Sprachen verfügbar: Russisch, Englisch, Spanisch und Deutsch. Die Oberfläche passt sich automatisch an die ausgewählte Sprache an."
+            },
+            {
+              "q": "Ist es möglich, die Konvertierungsergebnisse zu speichern?",
+              "a": "Sie können die Konvertierungsergebnisse in die Zwischenablage kopieren oder einen Screenshot der Ergebnisseite erstellen. Einige Konverter bieten die Möglichkeit, die Ergebnisse herunterzuladen."
+            },
+            {
+              "q": "Wie hoch ist die Konvertierungsgenauigkeit?",
+              "a": "Alle Konverter führen Berechnungen mit einer Genauigkeit von 15 Dezimalstellen durch. Dies gewährleistet eine hohe Genauigkeit für wissenschaftliche und professionelle Berechnungen."
+            },
+            {
+              "q": "Ist es möglich, mehrere Werte gleichzeitig umzuwandeln?",
+              "a": "Konverter verarbeiten jeweils einen Wert. Um mehrere Werte umzurechnen, führen Sie die Berechnung für jeden Wert separat durch oder öffnen Sie den Konverter in mehreren Browser-Registerkarten."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen dem metrischen und dem imperialen System?",
+              "a": "Das metrische System basiert auf dem SI-System (Internationales Einheitensystem) und verwendet die Grundeinheiten: Meter, Kilogramm, Sekunde. Das imperiale System wird in den USA, Großbritannien und einigen anderen Ländern verwendet und basiert auf Fuß, Pfund und anderen traditionellen Einheiten."
+            },
+            {
+              "q": "Warum verwendet der Datenkonverter das 1024-System und nicht das 1000-System?",
+              "a": "Der Datenkonverter verwendet das Binärsystem (1024-Basis), das in Computersystemen verwendet wird, da Computer im binären Zahlensystem arbeiten. Hierbei handelt es sich um einen Standard zur Messung des Datenvolumens in der IT."
+            },
+            {
+              "q": "Können Umrechner für wissenschaftliche Berechnungen verwendet werden?",
+              "a": "Ja, die Umrechner sind für wissenschaftliche und professionelle Berechnungen geeignet. Alle Umrechnungsfaktoren basieren auf internationalen Standards und gewährleisten eine hohe Genauigkeit."
+            },
+            {
+              "q": "Wie oft werden die Umrechnungskurse aktualisiert?",
+              "a": "Umrechnungsfaktoren basieren auf physikalischen Konstanten und internationalen Standards, die sich nicht ändern. Wir überprüfen und aktualisieren Konverter regelmäßig, um maximale Genauigkeit zu gewährleisten."
+            },
+            {
+              "q": "Gibt es Einschränkungen bei der Verwendung von Konvertern?",
+              "a": "Nein, es gibt keine Einschränkungen bei der Verwendung von Konvertern. Sie können sie unbegrenzt oft für jeden Zweck verwenden, auch für kommerzielle Zwecke."
+            },
+            {
+              "q": "Unterstützt der Temperaturkonverter den absoluten Nullpunkt?",
+              "a": "Ja, der Temperaturkonverter verarbeitet alle Temperaturwerte korrekt, einschließlich des absoluten Nullpunkts (0 K = -273,15 °C = -459,67 °F)."
+            },
+            {
+              "q": "Wie konvertiert man große Werte?",
+              "a": "Konverter können mit beliebigen Werten arbeiten, auch mit sehr großen Zahlen. Der Maximalwert wird nur durch die Fähigkeiten von JavaScript begrenzt, wodurch Sie Zahlen nahezu jeder Größe verarbeiten können."
+            },
+            {
+              "q": "Was soll ich tun, wenn das Konvertierungsergebnis falsch erscheint?",
+              "a": "Überprüfen Sie, ob Sie für den Eingabewert und das Ergebnis die richtigen Einheiten ausgewählt haben. Stellen Sie sicher, dass Sie den Unterschied zwischen dem metrischen und dem imperialen System verstehen. Wenn das Problem weiterhin besteht, versuchen Sie zur Überprüfung, den Wert manuell neu zu berechnen."
+            },
+            {
+              "q": "Können Konverter offline verwendet werden?",
+              "a": "Nein, Konverter benötigen eine Internetverbindung, da sie in einem Browser ausgeführt werden. Nach dem Laden der Seite funktionieren jedoch möglicherweise grundlegende Funktionen auch bei einer langsamen Internetverbindung."
+            },
+            {
+              "q": "Gibt es Umrechner für andere Maßeinheiten?",
+              "a": "Konverter sind derzeit für 8 Hauptkategorien von Maßeinheiten verfügbar. Wir arbeiten ständig daran, neue Kategorien und Maßeinheiten hinzuzufügen. Bleiben Sie dran!"
+            },
+            {
+              "q": "Wie rechnet man Einheiten in Rezepten um?",
+              "a": "Verwenden Sie für Rezepte einen Gewichtsumrechner (um Gramm in Pfund umzurechnen) und einen Volumenumrechner (um Liter in Gallonen oder Milliliter umzurechnen). Dies ist besonders nützlich, wenn Sie internationale Rezepte verwenden."
+            },
+            {
+              "q": "Ist der Konverter für den Bildungsbereich geeignet?",
+              "a": "Ja, Konverter sind ideal für den Bildungsbereich. Schüler und Lehrer können damit Maßeinheiten erlernen und Lernaufgaben erledigen, bei denen es um Umrechnungen zwischen Maßsystemen geht."
+            },
+            {
+              "q": "Wie rechne ich Einheiten für internationale Reisen um?",
+              "a": "Verwenden Sie für internationale Reisen einen Temperaturkonverter (zur Umrechnung des Wetters), einen Geschwindigkeitskonverter (zur Umrechnung von Geschwindigkeitsbegrenzungen) und einen Längenumrechner (zur Umrechnung von Entfernungen). Dies wird Ihnen helfen, sich in Ländern mit unterschiedlichen Maßsystemen zurechtzufinden."
+            },
+            {
+              "q": "Gibt es Konverter für Spezialeinheiten?",
+              "a": "Umrechner für grundlegende Maßeinheiten sind jetzt verfügbar. Spezialisierte Einheiten (z. B. Medizin oder Wissenschaft) benötigen möglicherweise zusätzliche Konverter, die wir in Zukunft hinzufügen möchten."
+            }
+          ]
+        }
+      }
     },
     "fun": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Unterhaltung und Hobbys",
+      "description": "Kompatibilität, Generatoren, Spiele",
+      "seo": {
+        "title": "Online-Unterhaltungsrechner - Generatoren, Spiele und Unterhaltung | Calc1.ru",
+        "description": "Kostenlose Online-Unterhaltungsrechner: Generatoren für Passwörter, Spitznamen, Namen, Zufallszahlen, Lottoscheine, Kompatibilitäts- und Liebesrechner, Sternzeichen, Online-Würfel, Münzwurf, Charakter- und Fantasieweltgeneratoren. Spaß und Kreativität für alle!",
+        "keywords": "Unterhaltungsrechner, Passwortgenerator, Spitznamengenerator, Namensgenerator, Zufallszahlengenerator, Lotteriegenerator, Kompatibilitätsrechner, Liebesrechner, Sternzeichenrechner, Sternzeichen nach Datum, Gewichtsrechner auf Planeten, Online-Würfelwurf, Online-Münzwurf, Kopf Zahl online, Charaktergenerator, Generator für Fantasiewelten, Generator für Charaktereigenschaften, Generator für fiktive Welten, Generatornamen für Charaktere, Online-Unterhaltung, Online-Generatoren, Spaßrechner, Passwortgenerator, Zufallszahlengenerator, Kompatibilitätsrechner, Liebesrechner, Sternzeichenrechner, Würfelroller, Münzwerfer, Lotteriegenerator, Charaktergenerator, Fantasieweltgenerator, Namensgenerator, Spitznamengenerator, Planetengewicht, Kompatibilität nach Geburtsdatum, Online-Horoskop, D&D-Würfel, Brettspiele, Rollenspiele",
+        "overview": {
+          "title": "Über Unterhaltungsrechner",
+          "content": "Unterhaltungsrechner Calc1.ru ist ein einzigartiges Set an Online-Tools für Unterhaltung, Kreativität und Hobbys. In unserem Katalog finden Sie 12 verschiedene Rechner: von Passwortgeneratoren und Zufallszahlengeneratoren bis hin zu Kompatibilitätsrechnern und Spielesimulatoren.",
+          "additionalContent": "Unsere Unterhaltungsrechner helfen Ihnen: Erstellen Sie ein einzigartiges Passwort zum Schutz Ihrer Konten, erfinden Sie einen originellen Spitznamen für Spiele und soziale Netzwerke, generieren Sie einen Namen für einen Charakter oder ein Projekt, finden Sie Ihr Sternzeichen und Ihre Eigenschaften heraus, berechnen Sie die Kompatibilität mit einem Partner, erstellen Sie Charaktere für Geschichten und Spiele, bauen Sie eine Fantasiewelt für Ihre Arbeit auf, spielen Sie mit Würfeln und Münzen, generieren Sie Lottoscheine für Ziehungen, finden Sie Ihr Gewicht auf anderen Planeten heraus. Alle Rechner funktionieren vollständig online, erfordern keine Registrierung und sind rund um die Uhr kostenlos verfügbar."
+        },
+        "advantages": {
+          "title": "Vorteile unserer lustigen Rechner",
+          "content": "Wir bieten eine große Auswahl an Unterhaltungsrechnern mit einzigartigen Funktionen:",
+          "free": {
+            "title": "Kostenlose Nutzung",
+            "content": "Alle Rechner sind völlig kostenlos und erfordern keine Registrierung. Verwenden Sie sie ohne Einschränkungen so oft wie nötig."
+          },
+          "instant": {
+            "title": "Sofortige Ergebnisse",
+            "content": "Alle Berechnungen und Generierungen werden sofort und in Echtzeit durchgeführt. Die Ergebnisse erscheinen sofort nach dem Drücken der Schaltfläche."
+          },
+          "secure": {
+            "title": "Datensicherheit",
+            "content": "Passwortgeneratoren und andere Tools laufen lokal in Ihrem Browser. Die Daten werden nicht an den Server übertragen und nicht gespeichert."
+          },
+          "comprehensive": {
+            "title": "Große Funktionalität",
+            "content": "12 verschiedene Rechner decken alle Ihre Unterhaltungs- und Kreativitätsbedürfnisse ab, von der Erstellung von Passwörtern bis zum Aufbau von Fantasiewelten."
+          },
+          "mobile": {
+            "title": "Mobile Anpassung",
+            "content": "Alle Rechner sind vollständig für die Verwendung auf Smartphones und Tablets geeignet. Die Benutzeroberfläche ist für die Touch-Steuerung optimiert."
+          },
+          "creative": {
+            "title": "Kreative Werkzeuge",
+            "content": "Charakter-, Namens- und Weltgeneratoren helfen Autoren, Spieledesignern und allen kreativen Menschen, einzigartige Inhalte zu erstellen."
+          }
+        },
+        "tips": {
+          "title": "Tipps zur Anwendung",
+          "content": "Um das Beste aus unseren unterhaltsamen Rechnern herauszuholen, befolgen Sie diese Tipps:",
+          "tip1": "Verwenden Sie einen Passwortgenerator, um sichere Passwörter mit einer Länge von mindestens 12 Zeichen und einer Kombination aus Buchstaben, Zahlen und Symbolen zu erstellen.",
+          "tip2": "Mit Namens- und Charaktergeneratoren können Sie einzigartige Charaktere für Ihre Geschichten, Spiele oder kreativen Projekte erstellen.",
+          "tip3": "Der Kompatibilitätsrechner und der Tierkreis dienen der Unterhaltung und sind keine wissenschaftliche Methode zur Beziehungsanalyse.",
+          "tip4": "Spielsimulatoren (Würfel, Münze) eignen sich ideal für Brettspiele, zum Treffen einfacher Entscheidungen und zum Unterrichten der Wahrscheinlichkeitstheorie."
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen",
+          "faqItems": [
+            {
+              "q": "Was sind Freizeitrechner?",
+              "a": "Spaßrechner sind Online-Tools für Unterhaltung, Kreativität und Hobbys. Dazu gehören Passwortgeneratoren, Namensgeneratoren, Zeichengeneratoren, Zufallszahlengeneratoren, Kompatibilitätsrechner, Sternzeichenrechner und Spielesimulatoren."
+            },
+            {
+              "q": "Wie viele Unterhaltungsrechner gibt es?",
+              "a": "Derzeit sind 12 unterhaltsame Rechner verfügbar: Passwortgenerator, Spitznamengenerator, Namensgenerator, Zufallszahlengenerator, Lotteriegenerator, Kompatibilitätsrechner, Liebesrechner, Tierkreisrechner, Planetengewichtsrechner, Online-Würfel, Münzwurf, Charaktergenerator und Fantasieweltgenerator."
+            },
+            {
+              "q": "Ist die Nutzung von Freizeitrechnern kostenlos?",
+              "a": "Ja, alle Unterhaltungsrechner sind völlig kostenlos und erfordern keine Registrierung. Verwenden Sie sie ohne Einschränkungen so oft wie nötig."
+            },
+            {
+              "q": "Ist die Verwendung eines Passwortgenerators sicher?",
+              "a": "Ja, der Passwortgenerator funktioniert vollständig lokal in Ihrem Browser. Passwörter werden nicht an den Server übermittelt, nicht gespeichert und können nicht von Dritten abgefangen werden."
+            },
+            {
+              "q": "Können Generatoren kommerziell genutzt werden?",
+              "a": "Ja, alle Generatoren können für jeden Zweck verwendet werden, auch für gewerbliche Zwecke. Es gibt keine Nutzungsbeschränkungen."
+            },
+            {
+              "q": "Funktionieren Taschenrechner auf Mobilgeräten?",
+              "a": "Ja, alle Unterhaltungsrechner sind vollständig für die Verwendung auf Smartphones und Tablets geeignet. Die Benutzeroberfläche ist für die Touch-Steuerung optimiert."
+            },
+            {
+              "q": "Ist es möglich, die Generierungsergebnisse zu speichern?",
+              "a": "Die meisten Generatoren bieten die Möglichkeit, die Ergebnisse in die Zwischenablage zu kopieren oder als Textdatei herunterzuladen. Einige Taschenrechner unterstützen auch das Ausdrucken von Ergebnissen."
+            },
+            {
+              "q": "Wie zufällig sind die Ergebnisse der Generatoren?",
+              "a": "Alle Generatoren nutzen kryptografisch starke Algorithmen, um wirklich zufällige Ergebnisse zu generieren. Jede Generation ist unabhängig und gleich wahrscheinlich."
+            },
+            {
+              "q": "Kann man mit einem Sternzeichen-Rechner wichtige Entscheidungen treffen?",
+              "a": "Der Sternzeichen-Rechner dient der Unterhaltung und ist keine wissenschaftliche Methode. Es wird nicht empfohlen, es für wichtige Lebensentscheidungen zu verwenden."
+            },
+            {
+              "q": "Ist der Kompatibilitätsrechner für echte Beziehungen geeignet?",
+              "a": "Der Kompatibilitätsrechner ist ein unterhaltsames Tool, das auf astrologischen Prinzipien basiert. Es ersetzt keine echte Kommunikation und gegenseitiges Verständnis in einer Beziehung."
+            },
+            {
+              "q": "Kann ich einen Zeichengenerator für Bücher verwenden?",
+              "a": "Ja, der Charaktergenerator eignet sich perfekt zum Erstellen einzigartiger Charaktere für Bücher, Geschichten, Spiele und andere kreative Projekte."
+            },
+            {
+              "q": "Funktionieren Taschenrechner offline?",
+              "a": "Nach dem ersten Laden der Seite können die meisten Rechner offline arbeiten, da alle Berechnungen lokal im Browser durchgeführt werden."
+            },
+            {
+              "q": "Können Würfel für Brettspiele verwendet werden?",
+              "a": "Ja, der Würfelsimulator ist ideal für Brettspiele (D&D, Pathfinder, Warhammer) und unterstützt alle gängigen Würfeltypen (D4, D6, D8, D10, D12, D20, D100)."
+            },
+            {
+              "q": "Garantiert der Lotteriegenerator einen Gewinn?",
+              "a": "Nein, der Lotteriegenerator erstellt zufällige Zahlenkombinationen. Die Gewinnchancen hängen von den Regeln der jeweiligen Lotterie ab. Dies ist ein unterhaltsames Tool."
+            },
+            {
+              "q": "Kann ich einen Babynamengenerator verwenden?",
+              "a": "Ja, der Namensgenerator unterstützt den Typ „Babyname“ mit wirklich beliebten Namen. Sie können das Geschlecht und die Länge des Namens wählen."
+            },
+            {
+              "q": "Was ist der Unterschied zwischen einem Nickname-Generator und einem Namensgenerator?",
+              "a": "Der Nickname-Generator erstellt kurze, klangvolle Namen für Spiele und soziale Netzwerke mit unterschiedlichen Themen und Stilen. Der Namensgenerator erstellt vollständige Namen für Kinder, Charaktere, Projekte, Bücher und Spiele."
+            },
+            {
+              "q": "Ist es möglich, mehrere Charaktere gleichzeitig zu erstellen?",
+              "a": "Ja, mit dem Charaktergenerator können Sie jeweils 1 bis 5 Charaktere mit unterschiedlichen Eigenschaften, Berufen und Geschichten erstellen."
+            },
+            {
+              "q": "Funktioniert der Gewichtsrechner für Planeten in allen Maßeinheiten?",
+              "a": "Der Planet-Gewichtsrechner unterstützt Kilogramm und Pfund. Die Berechnungen basieren auf den genauen Schwerkraftwerten jedes Planeten."
+            },
+            {
+              "q": "Ist es möglich, einen Fantasy-Weltgenerator für Spiele zu verwenden?",
+              "a": "Ja, der Fantasy World Generator eignet sich ideal zum Erstellen fiktiver Universen für Spiele, Bücher, Geschichten und andere kreative Projekte."
+            },
+            {
+              "q": "Wie viele Welten kannst du gleichzeitig erschaffen?",
+              "a": "Mit dem Fantasy-Welten-Generator können Sie 1 bis 3 Welten gleichzeitig mit einer vollständigen Beschreibung von Klima, Kultur, Regierung, Ressourcen und Konflikten erstellen."
+            },
+            {
+              "q": "Eignet sich ein Zufallszahlengenerator zum Programmieren?",
+              "a": "Ja, ein Zufallszahlengenerator kann zum Testen von Algorithmen, zum Generieren von Testdaten und für andere Programmieraufgaben verwendet werden."
+            },
+            {
+              "q": "Ist es möglich, Generatorparameter anzupassen?",
+              "a": "Ja, die meisten Generatoren bieten Einstellungen zum Anpassen der Ergebnisse: Länge, Stil, Anzahl der Elemente, Filter und andere Parameter."
+            },
+            {
+              "q": "Werden Generierungsergebnisse zwischen Sitzungen gespeichert?",
+              "a": "Generierungsergebnisse werden zwischen Sitzungen nicht automatisch gespeichert. Es wird empfohlen, die Ergebnisse zu kopieren oder herunterzuladen, wenn Sie sie für die zukünftige Verwendung speichern möchten."
+            },
+            {
+              "q": "Können Generatoren für das Training verwendet werden?",
+              "a": "Ja, viele Generatoren eignen sich hervorragend zum Lernen: ein Zufallszahlengenerator zum Erlernen von Statistiken, ein Planetengewichtsrechner zum Erlernen der Physik, Spielesimulatoren zum Erlernen der Wahrscheinlichkeitstheorie."
+            },
+            {
+              "q": "Gibt es Einschränkungen hinsichtlich der Anzahl der Generationen?",
+              "a": "Nein, es gibt keine Einschränkungen hinsichtlich der Anzahl der Generationen. Sie können Taschenrechner unbegrenzt oft verwenden."
+            },
+            {
+              "q": "Funktionieren Taschenrechner im privaten Browsermodus?",
+              "a": "Ja, alle Rechner funktionieren in jedem Browsermodus, auch privat. Alle Generationen erfolgen lokal und werden nicht gespeichert."
+            },
+            {
+              "q": "Ist ein Export der Ergebnisse nach Excel möglich?",
+              "a": "Einige Rechner bieten die Möglichkeit, Ergebnisse in einem Textformat herunterzuladen, das in Excel importiert werden kann. Sie können die Ergebnisse auch kopieren und manuell in Excel einfügen."
+            },
+            {
+              "q": "Wie oft werden Rechner aktualisiert?",
+              "a": "Wir aktualisieren Rechner regelmäßig, fügen neue Funktionen hinzu, verbessern die Benutzeroberfläche und korrigieren mögliche Fehler. Bleiben Sie dran!"
+            },
+            {
+              "q": "Können wir einen neuen Unterhaltungsrechner vorschlagen?",
+              "a": "Ja, wir sind immer offen für Vorschläge für neue Rechner. Kontaktieren Sie uns über das Feedback-Formular auf der Website."
+            },
+            {
+              "q": "Sind Taschenrechner für jedes Alter geeignet?",
+              "a": "Ja, lustige Taschenrechner sind für alle Altersgruppen geeignet. Einige Taschenrechner sind möglicherweise besonders für Kinder und Jugendliche interessant, während andere aus Gründen der Kreativität und Unterhaltung besonders für Erwachsene von Interesse sein könnten."
+            }
+          ]
+        }
+      }
     },
     "it": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "IT-Rechner",
+      "description": "IP-Adressen, Hashing, Kodierung, Netzwerkberechnungen",
+      "seo": {
+        "title": "IT-Rechner online – Netzwerk- und Kryptowährungsberechnungen | Calc1.ru",
+        "description": "Kostenlose Online-IT-Rechner: Berechnung von IP-Adressen und Subnetzen (IPv4, IPv6, CIDR), Hashrate-Rechner für Kryptowährungs-Mining, Netzwerkberechnungen. Präzise Tools für Entwickler, Systemadministratoren und IT-Spezialisten.",
+        "keywords": "IT-Rechner, IP-Adressrechner, Hashrate-Rechner, Mining-Rechner, Bitcoin-Mining, Ethereum-Mining, IP-Rechner online, CIDR-Rechner, IPv4-Rechner, IPv6-Rechner, Subnetzwerk-Rechner, Netzwerkberechnungen, Subnetzwerk-Berechnung, Netzwerk-Tools, IT-Tools online, Mining-Rentabilitätsrechner, Amortisationsrechner-Mining, Mining-Rentabilität, Hashrate-Rechner, Netzwerkschwierigkeit, Blockbelohnung, Blockzeit, ROI-Mining, ASIC-Mining, GPU-Mining, Mining-Farm, Bitcoin-Rechner, Ethereum-Rechner, Netzwerkrechner, IP-Rechner, Subnetz Rechner, CIDR-Rechner, Hashrate-Rechner, Mining-Rechner, Kryptowährungsrechner, Bitcoin-Mining-Rechner, Ethereum-Mining-Rechner",
+        "overview": {
+          "title": "IT-Rechner Calc1.ru",
+          "content": "IT-Rechner Calc1.ru ist ein umfassendes Set an Online-Tools für IT-Spezialisten, Entwickler und Systemadministratoren. Unsere Rechner helfen Ihnen bei der Durchführung genauer Berechnungen von Netzwerkparametern, IP-Adressen, Subnetzen sowie der Rentabilität des Kryptowährungs-Minings.",
+          "additionalContent": "Alle Rechner verwenden aktuelle Standards und Formeln und gewährleisten so genaue Berechnungen. Die Tools funktionieren sofort, absolut kostenlos und ohne Registrierung. Geeignet für den professionellen Einsatz in der IT-Infrastruktur, Entwicklung und beim Kryptowährungs-Mining."
+        },
+        "advantages": {
+          "title": "Vorteile von IT-Rechnern",
+          "content": "Unsere IT-Rechner bieten IT-Profis viele Vorteile:",
+          "accurate": "Genaue Berechnungen",
+          "accurateDesc": "Verwendet aktuelle Netzwerkadressierungsstandards und Mining-Formeln für maximale Genauigkeit",
+          "professional": "Professionelle Werkzeuge",
+          "professionalDesc": "Konzipiert für den Einsatz in professionellen IT-Umgebungen und dem Kryptowährungs-Mining",
+          "comprehensive": "Vollständiger Funktionsumfang",
+          "comprehensiveDesc": "Decken Sie alle Grundbedürfnisse ab: von Netzwerkberechnungen bis hin zur Analyse der Bergbaurentabilität",
+          "fast": "Sofortige Ergebnisse",
+          "fastDesc": "Alle Berechnungen werden sofort und ohne Verzögerungen in Echtzeit durchgeführt",
+          "free": "Kostenlos",
+          "freeDesc": "Völlig kostenlos, keine Registrierung oder versteckte Gebühren",
+          "accessible": "Verfügbarkeit",
+          "accessibleDesc": "Funktioniert auf allen Geräten mit adaptiver Schnittstelle für jederzeit bequemes Arbeiten"
+        },
+        "tips": {
+          "title": "Tipps zur Verwendung von IT-Rechnern",
+          "content": "Um die genauesten Ergebnisse zu erhalten, befolgen Sie diese Richtlinien:",
+          "data": "Nutzen Sie aktuelle Daten: reale Netzwerkparameter, aktuelle Blockchain-Komplexität, genaue Hardware-Eigenschaften",
+          "verification": "Vergleichen Sie die Ergebnisse mit mehreren Quellen, um die Richtigkeit zu bestätigen",
+          "regular": "Berechnen Sie die Parameter regelmäßig neu, wenn sich die Netzwerkkonfiguration oder die Mining-Bedingungen ändern",
+          "planning": "Verwenden Sie Taschenrechner, um Ihre Netzwerkinfrastruktur zu planen und Mining-Investitionen abzuschätzen"
+        },
+        "faq": {
+          "title": "Häufig gestellte Fragen zu IT-Rechnern",
+          "faqItems": [
+            {
+              "q": "Welche IT-Rechner sind auf Calc1.ru verfügbar?",
+              "a": "Calc1.ru bietet Rechner für: IP-Adressen und Subnetze (IPv4/IPv6, CIDR), Hashrate für das Mining von Kryptowährungen (Bitcoin, Ethereum und andere). Alle Rechner funktionieren online und sind absolut kostenlos."
+            },
+            {
+              "q": "Wie genau sind IT-Rechner?",
+              "a": "Die Rechner nutzen die neuesten Network Addressing Standards (RFC) und Mining-Formeln, die in Blockchain-Netzwerken verwendet werden. Die Genauigkeit hängt von der Richtigkeit der eingegebenen Daten ab. Für den professionellen Einsatz liefern Taschenrechner hochpräzise Ergebnisse."
+            },
+            {
+              "q": "Ist die Nutzung von IT-Rechnern kostenlos?",
+              "a": "Ja, alle IT-Rechner auf Calc1.ru sind völlig kostenlos. Sie können sie unbegrenzt oft nutzen, ohne Registrierung oder versteckte Gebühren."
+            },
+            {
+              "q": "Wie berechnet man Subnetzparameter nach IP und CIDR?",
+              "a": "Verwenden Sie einen IP-Adressrechner, indem Sie eine IP-Adresse mit CIDR-Notation eingeben (z. B. 192.168.1.0/24). Der Rechner zeigt die Netzwerkadresse, den IP-Bereich, die Subnetzmaske, die Anzahl der Hosts und andere Parameter an."
+            },
+            {
+              "q": "Wie berechnet man die Rentabilität des Kryptowährungs-Minings?",
+              "a": "Verwenden Sie den Hashrate-Rechner, indem Sie Hardware-Hashrate, Netzwerkschwierigkeit, Blockbelohnung, Blockzeit, Energieverbrauch und Stromkosten eingeben. Der Rechner berechnet Rentabilität, Gewinn und Amortisation."
+            },
+            {
+              "q": "Wie berechnet man die Anzahl der Hosts in einem Subnetz?",
+              "a": "Geben Sie im IP-Adressrechner die CIDR-Notation oder IP mit Maske ein. Der Rechner berechnet automatisch die Anzahl der verfügbaren Hosts anhand der Formel: 2^(32-CIDR) – 2 für IPv4."
+            },
+            {
+              "q": "Wie berechnet man die Amortisation von Bergbaumaschinen?",
+              "a": "Geben Sie im Hashrate-Rechner die Kosten für die Ausrüstung ein und berechnen Sie den Nettogewinn. Amortisation = Ausrüstungskosten / Nettogewinn pro Tag. Das Ergebnis zeigt die Anzahl der Tage bis zur Amortisation."
+            },
+            {
+              "q": "Unterstützt der Rechner IPv6-Adressen?",
+              "a": "Ja, der IP-Adressrechner unterstützt sowohl IPv4- als auch IPv6-Adressen vollständig. Sie können Subnetze für beide Versionen des IP-Protokolls berechnen."
+            },
+            {
+              "q": "Wie kann die Mining-Pool-Provision bei der Berechnung berücksichtigt werden?",
+              "a": "Geben Sie im Hashrate-Rechner den Prozentsatz der Pool-Provision ein (normalerweise 1-3 %). Der Rechner zieht bei der Berechnung des Nettogewinns automatisch die Provision vom Einkommen ab."
+            },
+            {
+              "q": "Wie berechnet man die Broadcast-Adresse eines Subnetzes?",
+              "a": "Verwenden Sie einen IP-Adressrechner. Die Broadcast-Adresse wird automatisch als letzte Adresse im Subnetzbereich berechnet und erscheint in den Ergebnissen."
+            },
+            {
+              "q": "Welche Hashrate wird für profitables Mining benötigt?",
+              "a": "Die erforderliche Hashrate hängt von der Komplexität des Netzwerks, dem Wert der Kryptowährung und den Energiekosten ab. Verwenden Sie einen Hash-Rate-Rechner und erhöhen Sie Ihre Hash-Rate schrittweise, bis das Mining profitabel wird."
+            },
+            {
+              "q": "Wie berechnet man den IP-Bereich in CIDR um?",
+              "a": "Wählen Sie im IP-Adressrechner den Modus „IP-Bereich“ und geben Sie die erste und letzte IP-Adresse ein. Der Rechner ermittelt automatisch den minimalen CIDR für den angegebenen Bereich."
+            },
+            {
+              "q": "Ist es möglich, Renditen für verschiedene Kryptowährungen zu berechnen?",
+              "a": "Ja, der Hashrate-Rechner unterstützt verschiedene Kryptowährungen: Bitcoin, Ethereum, Litecoin und andere. Sie können eine voreingestellte Kryptowährung auswählen oder die Parameter manuell festlegen."
+            },
+            {
+              "q": "Wie berechnet man die Subnetzmaske anhand von CIDR?",
+              "a": "CIDR zeigt die Anzahl der Einheiten in der Maske an. /24 bedeutet beispielsweise, dass die Maske 255.255.255.0 ist. Der IP-Adressrechner wandelt das CIDR automatisch in eine Subnetzmaske um."
+            },
+            {
+              "q": "Wie können Änderungen der Netzwerkschwierigkeit beim Mining berücksichtigt werden?",
+              "a": "Die Netzwerkkomplexität verändert sich ständig. Nutzen Sie aktuelle Schwierigkeitsdaten von Blockchain-Explorern oder Mining-Pools. Der Rechner unterstützt die manuelle Schwierigkeitseingabe für genaue Berechnungen."
+            },
+            {
+              "q": "Was sind private IP-Adressen?",
+              "a": "Für interne Netzwerke werden private IP-Adressen verwendet: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 für IPv4. Der Rechner ermittelt automatisch die Art der Adresse (privat oder öffentlich)."
+            },
+            {
+              "q": "Wie berechnet man die Zeit, die zum Mining eines Blocks benötigt wird?",
+              "a": "Zeit, einen Block zu finden = Netzwerkkomplexität / Hashrate. Der Hashrate-Rechner berechnet automatisch die theoretische Blockzeit, wenn Sie alleine arbeiten."
+            },
+            {
+              "q": "Kann der Rechner zum Entwerfen lokaler Netzwerke verwendet werden?",
+              "a": "Ja, der IP-Adressrechner eignet sich hervorragend zum Entwerfen lokaler Netzwerke. Sie können Subnetze berechnen, IP-Bereiche definieren und Ihre Netzwerkinfrastruktur planen."
+            },
+            {
+              "q": "Wie berechnet man die Stromkosten beim Mining?",
+              "a": "Geben Sie im Hashrate-Rechner den Energieverbrauch des Geräts in Watt und die Stromkosten pro kWh ein. Der Rechner berechnet automatisch Ihre Energiekosten pro Tag, Monat und Jahr."
+            },
+            {
+              "q": "Wie teilt man ein Netzwerk in mehrere Subnetze auf?",
+              "a": "Verwenden Sie den IP-Adressrechner, um die Parameter für jedes Subnetz zu berechnen. Bestimmen Sie die erforderliche Anzahl von Hosts in jedem Subnetz und wählen Sie das entsprechende CIDR aus. Der Rechner zeigt alle Subnetzparameter an."
+            },
+            {
+              "q": "Was ist der ROI im Mining und wie berechnet man ihn?",
+              "a": "ROI (Return on Investment) ist die Kapitalrendite. Berechnet als: ROI = Ausrüstungskosten / Nettogewinn pro Tag. Der Hashrate-Rechner berechnet automatisch den ROI basierend auf den eingegebenen Daten."
+            },
+            {
+              "q": "Wie überprüfe ich, ob die IP-Adresse korrekt ist?",
+              "a": "Der IP-Adressrechner überprüft automatisch das Format und den Bereich der IP-Adressen. Wenn Sie eine falsche Adresse eingeben, zeigt der Rechner einen Validierungsfehler an."
+            },
+            {
+              "q": "Ist es möglich, die Rentabilität einer Mining-Farm mit einem Taschenrechner zu berechnen?",
+              "a": "Ja, mit dem Hashrate-Rechner kann die Rentabilität einer Mining-Farm berechnet werden. Geben Sie die Gesamt-Hashrate aller Geräte und den Gesamtenergieverbrauch der gesamten Farm ein."
+            },
+            {
+              "q": "Wie berechnet man die erste und letzte IP in einem Subnetz?",
+              "a": "Erste IP = Netzwerkadresse + 1, letzte IP = Broadcast-Adresse - 1. Der IP-Adressrechner berechnet diese Adressen automatisch und zeigt sie in den Ergebnissen an."
+            },
+            {
+              "q": "Wie kann die Halbierung bei der Berechnung der Mining-Rentabilität berücksichtigt werden?",
+              "a": "Durch die Halbierung wird die Blockbelohnung um die Hälfte reduziert. Verwenden Sie bei der Berechnung der Rentabilität die aktuelle Blockbelohnung nach der Halbierung. Bei Bitcoin verringert sich die Belohnung alle 210.000 Blöcke."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für eine Serverinfrastruktur?",
+              "a": "Bestimmen Sie die Anzahl der Server, die Sie hosten müssen, und wählen Sie das entsprechende CIDR für das Subnetz aus. Der Rechner zeigt Ihnen, wie viele Hosts zur Verfügung stehen und ob das Subnetz für Ihre Bedürfnisse geeignet ist."
+            },
+            {
+              "q": "Ist es möglich, die Rentabilität verschiedener Mining-Algorithmen zu vergleichen?",
+              "a": "Ja, verwenden Sie den Hashrate-Rechner für jede Kryptowährung separat. Berechnen Sie die Rentabilität für Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) und vergleichen Sie die Ergebnisse."
+            },
+            {
+              "q": "Wie berechnet man die optimalen Stromkosten für profitables Mining?",
+              "a": "Nutzen Sie den Hashrate-Rechner und reduzieren Sie die Stromkosten schrittweise, bis der Gewinn positiv wird. Dadurch werden die maximalen Stromkosten angezeigt, bei denen der Bergbau profitabel bleibt."
+            },
+            {
+              "q": "Wie können Änderungen des Wechselkurses der Kryptowährung beim Mining berücksichtigt werden?",
+              "a": "Der Wechselkurs der Kryptowährung beeinflusst die Rentabilität in Rubel. Sollte sich der Wechselkurs ändern, berechnen Sie die Rendite im Rechner neu. Einkommen in Rubel = Einkommen in Kryptowährung × Aktueller Wechselkurs."
+            },
+            {
+              "q": "Wie berechnet man ein Subnetz für Cloud-Dienste?",
+              "a": "Berücksichtigen Sie die Anforderungen des Cloud-Anbieters und den geplanten Umfang der Infrastruktur. Verwenden Sie den IP-Adressrechner zur Berechnung von Subnetzen unter Berücksichtigung der Einschränkungen und Anforderungen der Cloud-Plattform."
+            }
+          ]
+        }
+      }
     }
   }
 }

@@ -1,37 +1,63 @@
 {
   "common": {
     "search": "Buscar",
-    "searchPlaceholder": "Comienza a escribir el nombre de la calculadora...",
-    "searchResults": "Resultados de búsqueda",
+    "searchPlaceholder": "Comience a escribir el nombre de la calculadora...",
+    "searchResults": "Resultados de la búsqueda",
     "resultsFor": "Resultados para",
     "loading": "Cargando...",
-    "found": "Encontrado",
-    "results": "resultados",
+    "found": "Encontró",
+    "results": "Resultados",
     "noResults": "No se encontró nada",
-    "tryAnotherQuery": "Prueba otra consulta o verifica la ortografía",
-    "noQuery": "No hay consulta de búsqueda",
-    "enterSearchTerm": "Ingresa un término de búsqueda para encontrar calculadoras",
-    "useCalculator": "Usar calculadora",
+    "tryAnotherQuery": "Pruebe con otra consulta o revise su ortografía.",
+    "noQuery": "Sin consulta de búsqueda",
+    "enterSearchTerm": "Ingrese su término de búsqueda para encontrar calculadoras",
+    "useCalculator": "usar calculadora",
     "language": "Idioma",
     "categories": "Categorías",
-    "calculators": "Calculadoras",
+    "calculators": "Calculadora",
+    "calculatorsCount": "Calculadoras",
+    "free": "gratis",
+    "sections": "Secciones",
+    "online": "En línea",
+    "accuracy": "Exactitud",
+    "instant": "Instantáneamente",
+    "calculation": "Cálculo",
+    "usage": "Uso",
+    "speed": "Velocidad",
+    "conversion": "Conversión",
+    "converters": "Convertidores",
+    "calculatorsWillBeAdded": "Pronto se agregarán calculadoras.",
+    "availableCalculators": "Calculadoras disponibles",
     "calculate": "Calcular",
     "result": "Resultado",
-    "clear": "Limpiar",
+    "clear": "Claro",
     "favorites": "Favoritos",
+    "calculationError": "Error de cálculo. Verifique los datos ingresados.",
+    "units": {
+      "meters": "metro",
+      "centimeters": "centímetro",
+      "millimeters": "milímetros",
+      "kilograms": "kilos",
+      "grams": "GRAMO",
+      "liters": "yo",
+      "milliliters": "ml",
+      "cubicMeters": "m³",
+      "metersPerSecond": "EM",
+      "cubicMetersPerSecond": "m3/s"
+    },
     "notFound": {
       "title": "Página no encontrada",
       "description": "Lo sentimos, la página solicitada no existe.",
-      "goHome": "Ir al inicio",
+      "goHome": "Hogar",
       "suggestions": {
-        "title": "Quizás estabas buscando:",
-        "checkUrl": "Verifica la corrección de la dirección ingresada",
-        "useSearch": "Usa la búsqueda de calculadoras",
-        "goToHome": "Volver a la página de inicio"
+        "title": "Es posible que haya estado buscando:",
+        "checkUrl": "Compruebe que la dirección introducida sea correcta",
+        "useSearch": "Utilice la búsqueda de la calculadora",
+        "goToHome": "Volver a la página principal"
       }
     },
     "pdf": {
-      "header": "calc1.ru calculadora #1 en el mundo",
+      "header": "calc1.ru La calculadora número 1 del mundo",
       "savePdf": "Guardar en PDF",
       "generated": "Generado",
       "page": "Página",
@@ -43,7 +69,7 @@
     "slogan": "Un sitio. Todas las calculadoras."
   },
   "breadcrumbs": {
-    "home": "Inicio",
+    "home": "Hogar",
     "categories": {
       "finance": "Finanzas",
       "math": "Matemáticas",
@@ -55,12 +81,12 @@
       "science": "Ciencia",
       "converter": "Convertidores",
       "fun": "Entretenimiento",
-      "it": "IT",
+      "it": "ÉL",
       "calculators": "Todas las calculadoras"
     }
   },
   "navigation": {
-    "home": "Inicio",
+    "home": "Hogar",
     "finance": "Finanzas",
     "math": "Matemáticas",
     "life": "Vida",
@@ -69,18 +95,18 @@
     "time": "Tiempo",
     "health": "Salud",
     "science": "Ciencia",
-    "converter": "Convertidor",
+    "converter": "Convertidores",
     "fun": "Entretenimiento",
-    "it": "IT"
+    "it": "ÉL"
   },
   "footer": {
-    "description": "Calculadoras online gratuitas para todas las áreas de la vida. Finanzas, matemáticas, construcción, salud y mucho más.",
+    "description": "Calculadoras online gratuitas para todos los ámbitos de la vida. Finanzas, matemáticas, construcción, salud y mucho más.",
     "categories": "Categorías",
     "quickLinks": "Enlaces rápidos",
-    "about": "Acerca de",
-    "contact": "Contacto",
+    "about": "Sobre el sitio",
+    "contact": "Contactos",
     "share": "Compartir",
-    "shareDescription": "¡Comparte la calculadora con amigos y colegas!",
+    "shareDescription": "¡Comparte la calculadora con tus amigos y colegas!",
     "shareFacebook": "Compartir en Facebook",
     "shareTwitter": "Compartir en Twitter",
     "shareVK": "Compartir en VKontakte",
@@ -88,95 +114,95 @@
     "shareWhatsApp": "Compartir en WhatsApp",
     "shareEmail": "Compartir por correo electrónico",
     "copyLink": "Copiar enlace",
-    "linkCopied": "¡Enlace copiado!",
+    "linkCopied": "Enlace copiado!",
     "shareNative": "Compartir",
-    "rights": "Todos los derechos reservados.",
-    "disclaimer": "Las calculadoras son solo para fines informativos. Los resultados pueden diferir de los valores reales.",
-    "privacy": "Política de privacidad",
-    "terms": "Términos de uso",
+    "rights": "Reservados todos los derechos.",
+    "disclaimer": "Las calculadoras están destinadas a fines informativos. Los resultados pueden diferir de los valores reales.",
+    "privacy": "política de privacidad",
+    "terms": "Condiciones de uso",
     "cookies": "Política de cookies",
-    "siteDescription": "Calculadoras online gratuitas para todas las áreas de la vida"
+    "siteDescription": "Calculadoras online gratuitas para todos los ámbitos de la vida."
   },
   "legal": {
     "privacy": {
-      "title": "Política de privacidad",
-      "description": "Política de privacidad de Calc1.ru. Aprende cómo recopilamos, usamos y protegemos tus datos personales.",
+      "title": "política de privacidad",
+      "description": "Política de privacidad Calc1.ru. Descubra cómo recopilamos, utilizamos y protegemos su información personal.",
       "lastUpdated": "Última actualización: 2024",
-      "introduction": "Calc1.ru (en adelante — \"Sitio\") respeta tu privacidad y se compromete a proteger tus datos personales. Esta Política de privacidad describe cómo recopilamos, usamos, almacenamos y protegemos la información sobre los usuarios de nuestro sitio.",
+      "introduction": "Calc1.ru (en adelante, el \"Sitio\") respeta su privacidad y se compromete a proteger sus datos personales. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos la información sobre los usuarios de nuestro sitio.",
       "section1": {
         "title": "1. Recopilación de información",
         "content": "Podemos recopilar los siguientes tipos de información:",
-        "item1": "Información recopilada automáticamente: dirección IP, tipo de navegador, sistema operativo, hora de visita, páginas que visualizas",
-        "item2": "Información que proporcionas: datos ingresados en calculadoras (no se almacenan en el servidor)",
+        "item1": "Información recopilada automáticamente: dirección IP, tipo de navegador, sistema operativo, hora de visita, páginas que visita",
+        "item2": "Información que usted proporciona: datos ingresados ​​en las calculadoras (no almacenados en el servidor)",
         "item3": "Información de cookies y tecnologías similares",
         "item4": "Información de socios publicitarios (Google AdSense, Yandex.Direct)",
-        "item5": "Configuración de idioma y preferencias del usuario"
+        "item5": "Configuración de idioma y preferencias de usuario"
       },
       "section2": {
-        "title": "2. Uso de información",
-        "content": "Usamos la información recopilada para los siguientes propósitos:",
-        "item1": "Proporcionar y mejorar la funcionalidad del sitio",
-        "item2": "Analizar el uso del sitio para optimización",
+        "title": "2. Uso de la información",
+        "content": "Utilizamos la información recopilada para los siguientes propósitos:",
+        "item1": "Proporcionar y mejorar la funcionalidad del sitio.",
+        "item2": "Análisis del uso del sitio web para su optimización.",
         "item3": "Mostrar publicidad personalizada a través de socios",
-        "item4": "Cumplir con requisitos legales"
+        "item4": "Cumplimiento legal"
       },
       "section3": {
         "title": "3. Uso de cookies",
-        "content": "Nuestro sitio usa cookies para mejorar la experiencia del usuario y mostrar publicidad. Para más detalles, consulta nuestra ",
+        "content": "Nuestro sitio utiliza cookies para mejorar su experiencia de usuario y mostrar publicidad. Para más detalles, consulte nuestro",
         "link": "Política de cookies",
         "additional": ""
       },
       "section4": {
         "title": "4. Publicidad y socios",
-        "content": "Nuestro sitio usa servicios de publicidad de terceros para monetización:",
-        "googleTitle": "Google AdSense:",
-        "googleContent": "Google usa cookies para mostrar publicidad basada en tus intereses. Puedes ajustar la publicidad en la página de configuración de Google Ads o desactivar las cookies en la configuración del navegador.",
-        "yandexTitle": "Yandex.Direct:",
-        "yandexContent": "Yandex usa cookies para personalizar la publicidad. Puedes gestionar la configuración en Yandex Browser o a través de las preferencias de publicidad de Yandex."
+        "content": "Nuestro sitio utiliza servicios publicitarios de terceros para la monetización:",
+        "googleTitle": "AdSense de Google:",
+        "googleContent": "Google utiliza cookies para publicar anuncios basados ​​en sus intereses. Puede personalizar su publicidad en la página de configuración de Google Ads o desactivar las cookies en la configuración de su navegador.",
+        "yandexTitle": "Yandex.Directo:",
+        "yandexContent": "Yandex utiliza cookies para personalizar la publicidad. Puede administrar su configuración en el navegador Yandex o mediante la configuración de preferencias de publicidad de Yandex."
       },
       "section5": {
-        "title": "5. Seguridad de datos",
-        "content": "Tomamos medidas razonables para proteger tu información de acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión por internet o método de almacenamiento electrónico es 100% seguro."
+        "title": "5. Seguridad de los datos",
+        "content": "Tomamos medidas razonables para proteger su información del acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión a través de Internet o método de almacenamiento electrónico es 100% seguro."
       },
       "section6": {
         "title": "6. Tus derechos",
-        "content": "Tienes derecho a:",
-        "item1": "Solicitar una copia de tus datos personales",
+        "content": "Tienes derecho:",
+        "item1": "Solicite una copia de sus datos personales",
         "item2": "Solicitar corrección de datos inexactos",
-        "item3": "Solicitar eliminación de tus datos",
-        "item4": "Optar por no procesar datos con fines de marketing"
+        "item3": "Solicitar la eliminación de tus datos",
+        "item4": "Optar por no recibir procesamiento de datos con fines de marketing"
       },
       "section7": {
         "title": "7. Cambios en la política de privacidad",
-        "content": "Nos reservamos el derecho de actualizar esta Política de privacidad en cualquier momento. Los cambios entran en vigor después de la publicación en esta página."
+        "content": "Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Los cambios entran en vigor tras su publicación en esta página."
       },
       "contact": {
-        "title": "Contacto",
-        "content": "Si tienes preguntas sobre esta Política de privacidad, por favor contáctanos:",
-        "link": "Página de contacto"
+        "title": "Contactos",
+        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, por favor contáctenos:",
+        "link": "Pagina de contacto"
       }
     },
     "terms": {
-      "title": "Términos de uso",
-      "description": "Términos de uso de Calc1.ru. Lee las reglas para usar nuestro sitio y calculadoras.",
+      "title": "Condiciones de uso",
+      "description": "Condiciones de uso calc1.ru. Lea las reglas para usar nuestro sitio web y calculadoras.",
       "lastUpdated": "Última actualización: 2024",
-      "introduction": "Bienvenido a Calc1.ru (en adelante — \"Sitio\"). Al usar este sitio, aceptas cumplir con estos Términos de uso. Si no estás de acuerdo con estos términos, por favor no uses nuestro sitio.",
+      "introduction": "Bienvenido a Calc1.ru (en adelante, el \"Sitio\"). Al utilizar este sitio, usted acepta estar sujeto a estos Términos de uso. Si no está de acuerdo con estos términos, no utilice nuestro sitio.",
       "section1": {
-        "title": "1. Aceptación de términos",
-        "content": "Al usar Calc1.ru, confirmas que has leído, entendido y aceptas cumplir con estos Términos de uso y nuestra Política de privacidad."
+        "title": "1. Aceptación de términos y condiciones",
+        "content": "Al utilizar Calc1.ru, usted reconoce que ha leído, comprendido y acepta regirse por estos Términos de uso y nuestra Política de privacidad."
       },
       "section2": {
         "title": "2. Uso del servicio",
-        "content": "Puedes usar nuestras calculadoras para fines personales y comerciales siempre que:",
-        "item1": "No usarás el sitio para fines ilegales",
-        "item2": "No intentarás violar la seguridad del sitio",
-        "item3": "No copiarás contenido sin citar la fuente",
-        "item4": "Reconoces que los resultados de las calculadoras son solo para fines informativos"
+        "content": "Puede utilizar nuestras calculadoras para fines personales y comerciales, siempre que:",
+        "item1": "No utilizarás el sitio con fines ilegales.",
+        "item2": "No intentará comprometer la seguridad del sitio.",
+        "item3": "No copiarás contenido sin indicar la fuente.",
+        "item4": "Usted reconoce que los resultados de las calculadoras tienen fines únicamente informativos."
       },
       "section3": {
         "title": "3. Limitación de responsabilidad",
-        "content": "Las calculadoras en Calc1.ru se proporcionan \"tal cual\" sin garantías. Los resultados de los cálculos son solo para fines informativos y pueden diferir de los valores reales.",
-        "additional": "No nos hacemos responsables de ninguna pérdida o daño derivado del uso o la imposibilidad de usar nuestras calculadoras."
+        "content": "Las calculadoras en Calc1.ru se proporcionan \"tal cual\" sin garantía alguna. Los resultados del cálculo tienen únicamente fines informativos y pueden diferir de los valores reales.",
+        "additional": "No somos responsables de ninguna pérdida o daño que surja del uso o la imposibilidad de utilizar nuestras calculadoras."
       },
       "section4": {
         "title": "4. Propiedad intelectual",
@@ -184,188 +210,1246 @@
       },
       "section5": {
         "title": "5. Acciones prohibidas",
-        "content": "Está prohibido:",
-        "item1": "Usar sistemas automatizados para recopilar datos del sitio",
+        "content": "Prohibido:",
+        "item1": "Utilizar sistemas automatizados para recopilar datos del sitio.",
         "item2": "Distribuir virus o malware",
-        "item3": "Intentar piratear o interrumpir el sitio",
+        "item3": "Intentos de piratear o interrumpir el funcionamiento del sitio.",
         "item4": "Usar el sitio para spam o phishing",
         "item5": "Copiar y reproducir contenido sin permiso"
       },
       "section6": {
-        "title": "6. Cambios en los términos",
-        "content": "Nos reservamos el derecho de cambiar estos Términos de uso en cualquier momento. Los cambios entran en vigor después de la publicación en esta página."
+        "title": "6. Cambios en las condiciones",
+        "content": "Nos reservamos el derecho de cambiar estos Términos de uso en cualquier momento. Los cambios entran en vigor tras su publicación en esta página."
       },
       "contact": {
-        "title": "Contacto",
-        "content": "Si tienes preguntas sobre estos Términos de uso, por favor contáctanos:",
-        "link": "Página de contacto"
+        "title": "Contactos",
+        "content": "Si tiene alguna pregunta sobre estos Términos de uso, comuníquese con nosotros:",
+        "link": "Pagina de contacto"
       }
     },
     "cookies": {
       "title": "Política de cookies",
-      "description": "Política de cookies de Calc1.ru. Aprende cómo usamos las cookies y cómo puedes gestionarlas.",
+      "description": "Política de cookies en Calc1.ru. Descubra cómo utilizamos las cookies y cómo puede controlarlas.",
       "lastUpdated": "Última actualización: 2024",
-      "introduction": "Calc1.ru usa cookies y tecnologías similares para mejorar la funcionalidad del sitio, analizar el tráfico y mostrar publicidad personalizada. Esta política explica qué son las cookies, cómo las usamos y cómo puedes gestionarlas.",
+      "introduction": "Calc1.ru utiliza cookies y tecnologías similares para mejorar la funcionalidad del sitio, analizar el tráfico y publicar anuncios personalizados. Esta política explica qué son las cookies, cómo las usamos y cómo puedes controlarlas.",
       "section1": {
-        "title": "1. Qué son las cookies",
-        "content": "Las cookies son pequeños archivos de texto que un sitio web guarda en tu dispositivo (computadora, tableta o teléfono móvil) cuando lo visitas. Permiten que el sitio recuerde tus acciones y preferencias durante un cierto período de tiempo."
+        "title": "1. ¿Qué son las cookies?",
+        "content": "Las cookies son pequeños archivos de texto que un sitio web almacena en su dispositivo (ordenador, tableta o teléfono móvil) cuando lo visita. Permiten que el sitio recuerde sus acciones y preferencias durante un período de tiempo."
       },
       "section2": {
-        "title": "2. Tipos de cookies que usamos",
-        "content": "Usamos los siguientes tipos de cookies:",
+        "title": "2. Tipos de cookies que utilizamos",
+        "content": "Utilizamos los siguientes tipos de cookies:",
         "item1": {
-          "title": "Cookies esenciales: ",
-          "content": "Estas cookies son necesarias para que el sitio funcione y no se pueden desactivar. Incluyen guardar la configuración de idioma y otras preferencias del usuario."
+          "title": "Cookies necesarias:",
+          "content": "Estas cookies son esenciales para que el sitio funcione y no se pueden desactivar. Estos incluyen el almacenamiento de configuraciones de idioma y otras preferencias del usuario."
         },
         "item2": {
-          "title": "Cookies analíticas: ",
-          "content": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con el sitio recopilando estadísticas anónimas."
+          "title": "Cookies analíticas:",
+          "content": "Estas cookies nos ayudan a comprender cómo los visitantes interactúan con el sitio mediante la recopilación de estadísticas anónimas."
         },
         "item3": {
-          "title": "Cookies publicitarias: ",
-          "content": "Estas cookies son usadas por socios publicitarios (Google AdSense, Yandex.Direct) para mostrar publicidad personalizada."
+          "title": "Cookies publicitarias:",
+          "content": "Estas cookies son utilizadas por socios publicitarios (Google AdSense, Yandex.Direct) para mostrar publicidad personalizada."
         }
       },
       "section3": {
-        "title": "3. Cómo usamos las cookies",
-        "content": "Las cookies se usan para:",
+        "title": "3. Cómo utilizamos las cookies",
+        "content": "Las cookies se utilizan para:",
         "item1": "Recordar la configuración de idioma del usuario",
-        "item2": "Analizar el tráfico y mejorar la funcionalidad del sitio",
+        "item2": "Analizar el tráfico y mejorar la funcionalidad del sitio.",
         "item3": "Mostrar publicidad relevante a través de socios",
-        "item4": "Garantizar la seguridad y prevenir fraudes"
+        "item4": "Garantizar la seguridad y prevenir el fraude"
       },
       "section4": {
         "title": "4. Cookies de socios publicitarios",
-        "content": "Nuestro sitio usa servicios de publicidad de terceros:",
-        "googleTitle": "Google AdSense:",
-        "googleContent": "Google usa cookies para mostrar publicidad basada en tus intereses. Puedes desactivar la publicidad personalizada de Google en la página de configuración de Google Ads.",
-        "yandexTitle": "Yandex.Direct:",
-        "yandexContent": "Yandex usa cookies para mostrar publicidad relevante. Puedes gestionar las preferencias de publicidad en la configuración de Yandex."
+        "content": "Nuestro sitio web utiliza servicios publicitarios de terceros:",
+        "googleTitle": "AdSense de Google:",
+        "googleContent": "Google utiliza cookies para publicar anuncios basados ​​en sus intereses. Puede desactivar la publicidad personalizada de Google desde la página de configuración de anuncios de Google.",
+        "yandexTitle": "Yandex.Directo:",
+        "yandexContent": "Yandex utiliza cookies para mostrar publicidad relevante. Puede administrar las preferencias publicitarias en la configuración de Yandex."
       },
       "section5": {
         "title": "5. Gestión de cookies",
-        "content": "Puedes gestionar las cookies de las siguientes maneras:",
-        "item1": "A través de la configuración de tu navegador (puedes desactivar o eliminar cookies)",
-        "item2": "A través de la configuración de preferencias de publicidad de Google y Yandex",
-        "item3": "Usando extensiones del navegador para bloquear publicidad"
+        "content": "Puedes gestionar las cookies de las siguientes formas:",
+        "item1": "A través de la configuración de su navegador (puede desactivar o eliminar las cookies)",
+        "item2": "A través de la configuración de preferencias publicitarias de Google y Yandex",
+        "item3": "Usar extensiones del navegador para bloquear anuncios"
       },
       "section6": {
         "title": "6. Cambios en la política de cookies",
-        "content": "Podemos actualizar periódicamente esta Política de cookies. Los cambios entran en vigor después de la publicación en esta página."
+        "content": "Es posible que actualicemos esta Política de cookies de vez en cuando. Los cambios entran en vigor tras su publicación en esta página."
       },
       "contact": {
-        "title": "Contacto",
-        "content": "Si tienes preguntas sobre el uso de cookies, por favor contáctanos:",
-        "link": "Página de contacto"
+        "title": "Contactos",
+        "content": "Si tiene alguna pregunta sobre el uso de cookies, por favor contáctenos:",
+        "link": "Pagina de contacto"
       }
     }
   },
   "about": {
-    "title": "Acerca de",
-    "description": "Aprende más sobre Calc1.ru — el conjunto más completo de calculadoras online gratuitas para todas las áreas de la vida.",
+    "title": "Sobre el sitio",
+    "description": "Obtenga más información sobre Calc1.ru, el conjunto más completo de calculadoras en línea gratuitas para todos los ámbitos de la vida.",
     "section1": {
-      "title": "Acerca del proyecto",
-      "content": "Calc1.ru es un recurso online gratuito que ofrece una amplia gama de calculadoras para diversas áreas de la vida. Nuestro objetivo es proporcionar a los usuarios herramientas convenientes y precisas para cálculos en finanzas, matemáticas, construcción, salud y muchas otras áreas."
+      "title": "Sobre el proyecto",
+      "content": "Calc1.ru es un recurso en línea gratuito que ofrece una amplia gama de calculadoras para diversas áreas de la vida. Nuestro objetivo es brindar a los usuarios herramientas convenientes y precisas para cálculos en finanzas, matemáticas, construcción, salud y muchas otras áreas."
     },
     "section2": {
       "title": "Nuestra misión",
-      "content": "Nos esforzamos por hacer que los cálculos complejos sean accesibles y comprensibles para todos. Calc1.ru combina muchas calculadoras en un solo lugar, ahorrando tu tiempo y garantizando la precisión de los cálculos."
+      "content": "Nos esforzamos por hacer que los cálculos complejos sean accesibles y comprensibles para todos. Calc1.ru reúne muchas calculadoras en un solo lugar, lo que le permite ahorrar tiempo y garantizar cálculos precisos."
     },
     "section3": {
-      "title": "Quiénes somos",
-      "content": "Calc1.ru fue creado por un equipo de profesionales que entienden la importancia de herramientas convenientes y confiables para cálculos cotidianos. Trabajamos constantemente en mejorar la funcionalidad y agregar nuevas calculadoras."
+      "title": "¿Quiénes somos?",
+      "content": "Calc1.ru fue creado por un equipo de profesionales que comprenden la importancia de herramientas convenientes y confiables para los cálculos cotidianos. Trabajamos constantemente para mejorar la funcionalidad y agregar nuevas calculadoras."
     },
     "section4": {
-      "title": "Por qué elegirnos",
+      "title": "¿Por qué elegirnos?",
       "content": "Ventajas de Calc1.ru:",
-      "item1": "Acceso gratuito a todas las calculadoras",
-      "item2": "Interfaz simple e intuitiva",
-      "item3": "Cálculos precisos basados en fórmulas y estándares actuales",
+      "item1": "Acceso gratuito a todas las calculadoras.",
+      "item2": "Interfaz sencilla e intuitiva",
+      "item3": "Cálculos precisos basados ​​en fórmulas y estándares actuales.",
       "item4": "Soporte multilingüe",
-      "item5": "Actualizaciones regulares y adición de nuevas calculadoras"
+      "item5": "Actualizaciones periódicas y adición de nuevas calculadoras."
     },
     "contact": {
-      "title": "Contacto",
-      "content": "Si tienes preguntas, sugerencias o comentarios, nos encantaría saber de ti:",
-      "link": "Contáctanos"
+      "title": "Contactos",
+      "content": "Si tiene preguntas, sugerencias o comentarios, nos encantaría saber de usted:",
+      "link": "Contáctenos"
     }
   },
   "contact": {
-    "title": "Contacto",
-    "description": "Contacta al equipo de Calc1.ru. Siempre estamos listos para responder tus preguntas y ayudar.",
+    "title": "Contactos",
+    "description": "Póngase en contacto con el equipo de Calc1.ru. Siempre estamos listos para responder sus preguntas y ayudar.",
     "email": {
       "title": "Correo electrónico",
       "description": "Para preguntas generales, sugerencias y comentarios:"
     },
     "form": {
-      "title": "Formulario de contacto",
-      "description": "Completa el formulario a continuación y te responderemos lo antes posible:",
-      "name": "Tu nombre",
+      "title": "Formulario de comentarios",
+      "description": "Rellena el siguiente formulario y te responderemos lo antes posible:",
+      "name": "Su nombre",
       "email": "Correo electrónico",
-      "message": "Tu mensaje",
+      "message": "tu mensaje",
       "submit": "Enviar",
-      "sending": "Enviando..."
+      "sending": "Envío..."
     },
     "additional": {
       "title": "Información adicional",
-      "content": "Nos esforzamos por responder a todas las solicitudes en un plazo de 24-48 horas. Para preguntas urgentes, por favor usa el correo electrónico."
+      "content": "Nos esforzamos por responder a todas las consultas dentro de las 24-48 horas. Para preguntas urgentes, utilice el correo electrónico."
     }
   },
   "categories": {
     "finance": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "calculadoras financieras",
+      "description": "Préstamos, depósitos, hipotecas, impuestos e inversiones",
+      "subcategories": {
+        "loans": "Préstamos",
+        "investments": "Inversiones y ahorros",
+        "taxes": "Impuestos y multas",
+        "business": "Negocios y finanzas"
+      },
+      "seo": {
+        "keywords": "calculadoras financieras, calculadora de préstamos, calculadora de hipotecas, calculadora de préstamos para automóviles, calculadora de inversiones, calculadora de depósitos, calculadora de impuestos, calculadora de multas, cálculo de préstamos en línea, cálculo de hipotecas, cálculo de préstamos para automóviles, cálculo de intereses de préstamos, pago de anualidades, pago diferenciado, pago en exceso de préstamos, calculadora de arrendamiento, calculadora de inversiones, calculadora de depósitos, calculadora de cuentas de ahorro, cálculo de impuestos de transporte, calculadora de multas de la policía de tránsito, calculadora de impuestos, calculadora de impuestos sobre la renta personal, impuesto sobre la renta, planificación financiera, calculadora de presupuesto, planificación de presupuesto, calculadora de préstamos, calculadora de hipotecas, calculadora de préstamos para automóviles, calculadora de inversiones, calculadora de impuestos, calculadora de ahorros",
+        "overview": "Las calculadoras financieras Calc1.ru son un conjunto de herramientas en línea para cálculos financieros precisos: préstamos, hipotecas, préstamos para automóviles, inversiones, depósitos, impuestos y multas. Todas las calculadoras utilizan tarifas y tarifas actuales para realizar cálculos precisos.",
+        "advantages": {
+          "title": "Beneficios de nuestras calculadoras financieras",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Todas las calculadoras utilizan fórmulas financieras actuales.",
+          "free": "gratis",
+          "freeDesc": "Acceso completamente gratuito a todas las calculadoras.",
+          "charts": "Gráficos y visualización.",
+          "chartsDesc": "Gráficos visuales para una mejor comprensión de los resultados.",
+          "forAll": "Para todos",
+          "forAllDesc": "De particulares a empresas"
+        },
+        "sections": {
+          "title": "Secciones de finanzas",
+          "loans": {
+            "name": "Préstamos",
+            "description": "Hipoteca, préstamo de coche, préstamo de consumo, leasing"
+          },
+          "investments": {
+            "name": "Inversiones y ahorros",
+            "description": "Inversiones, depósitos, cuentas de ahorro."
+          },
+          "taxes": {
+            "name": "Impuestos y multas",
+            "description": "Impuesto sobre la renta personal, impuesto al transporte, multas a la policía de tránsito."
+          }
+        }
+      }
     },
     "math": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "calculadoras matematicas",
+      "description": "Operaciones básicas, fracciones, porcentajes, geometría.",
+      "subcategories": {
+        "arithmetic": "Aritmética",
+        "geometry": "Geometría",
+        "algebra": "Álgebra",
+        "statistics": "Estadística",
+        "conversion": "Conversión"
+      },
+      "seo": {
+        "keywords": "calculadoras matemáticas, calculadora matemática, calculadora matemática en línea, calculadora de porcentaje, calculadora de área, calculadora de volumen, calculadora de potencias, calculadora de raíces, calculadora de ecuaciones, calculadora estadística, conversor de unidades, calculadora de fracciones, calculadora para escolares, calculadora para estudiantes, conversor matemático, cálculo de porcentajes en línea, cálculo de área de figuras, cálculo de volumen de cuerpos, potencia de un número, raíz de un número, resolución de ecuaciones, cálculos estadísticos, conversor de longitud, conversor de peso, conversor de área, conversor de volumen, operaciones matemáticas, cálculos geométricos, calculadora matemática básica, calculadora de porcentaje, calculadora de área, calculadora de volumen, calculadora de raíz de potencia, calculadora de ecuaciones",
+        "overview": "Calculadoras matemáticas Calc1.ru es un conjunto de herramientas en línea para realizar cálculos matemáticos: operaciones básicas, porcentajes, área, volumen, potencias y raíces, ecuaciones, estadísticas, conversor de unidades. Apto para estudiantes, escolares y profesionales."
+      }
     },
     "life": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Calculadoras domésticas",
+      "description": "Calorías, IMC, embarazo, salud",
+      "subcategories": {
+        "health": "Salud",
+        "nutrition": "Nutrición",
+        "family": "Familia",
+        "household": "Vida",
+        "utilities": "Servicios públicos"
+      },
+      "seo": {
+        "keywords": "calculadoras domésticas, calculadoras de por vida, calculadora de IMC, calculadora de calorías, calculadora de embarazo, calculadora de altura infantil, calculadora de consumo de electricidad, calculadora de consumo de agua, calculadora de consumo de gas, calculadora de costos de calefacción, calculadora de costos de electricidad, calculadora de peso de papel, calculadora de tallas de anillos, convertidor de tallas de ropa, calculadora de ppm de alcohol, calculadora de normas BZHU, calculadora para el hogar, calculadora para la familia, calculadora de salud, cálculos domésticos, cálculo de calorías en línea, cálculo de IMC en línea, cálculo de consumo de electricidad, cálculo de consumo de agua, cálculo de consumo de gas, cálculo de costos de calefacción, calculadoras de vida, calculadoras domésticas, calculadoras de la vida diaria",
+        "overview": "Calculadoras domésticas Calc1.ru es un conjunto de herramientas en línea para cálculos domésticos: IMC, calorías, embarazo, crecimiento infantil, consumo de electricidad, agua, gas y calefacción. Apto para el hogar, la familia y la salud."
+      }
     },
     "construction": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "calculadoras de construccion",
+      "description": "Papel pintado, pintura, hormigón, techos.",
+      "subtitle": "Papel pintado, pintura, hormigón, techos.",
+      "seo": {
+        "keywords": "calculadoras de construcción, calculadoras de construcción, calculadora de pintura, calculadora de papel tapiz, calculadora de yeso, calculadora de concreto, calculadora de cemento, calculadora de cimientos, calculadora de ventilación, calculadora de área de pared, calculadora de refuerzo, calculadora de cables, calculadora de tuberías, calculadora de techos, calculadora de adhesivos para tejas, calculadora de masillas, calculadora de imprimación, cálculos de construcción, cálculo de materiales, calculadora de construcción en línea, calculadora de materiales de construcción, cálculo de la cantidad de materiales, calculadora de construcción en línea, calculadora de reparaciones, calculadora de trabajos de construcción, calculadora de materiales de acabado, calculadora de materiales para techos, calculadora de trabajo de concreto, calculadora de ladrillos, calculadora de bloques, calculadora de tuberías, calculadora de cableado eléctrico, superficie calculadora de área, herramientas de construcción en línea",
+        "overview": "Las calculadoras de construcción Calc1.ru son un conjunto completo de herramientas en línea para cálculos precisos de materiales y trabajo durante la construcción y reparación. Todas las calculadoras utilizan códigos y estándares de construcción actuales, lo que garantiza la precisión de los cálculos."
+      }
     },
     "auto": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Calculadoras automáticas",
+      "description": "Consumo de combustible, impuestos, leasing, seguros.",
+      "seo": {
+        "title": "Calculadoras de automóviles en línea - Cálculo de todos los gastos del automóvil | calc1.ru",
+        "description": "Calculadoras de automóviles en línea gratuitas: cálculo del consumo de combustible, préstamo de automóviles, seguros (MTPL, CASCO), impuestos de transporte, leasing, derechos de aduana y multas de la policía de tránsito. Cálculos precisos para automovilistas y propietarios de automóviles.",
+        "keywords": "calculadoras de automóviles, calculadoras de automóviles, calculadora de consumo de combustible, calculadora de préstamos de automóviles, calculadora OSAGO, calculadora CASCO, calculadora de impuestos de transporte, calculadora de arrendamiento, calculadora de aduanas, calculadora de multas de la policía de tránsito, calculadora de propiedad de automóviles, calculadora de depreciación de automóviles, consumo de combustible en línea, cálculo de consumo de gasolina, cálculo de préstamos de automóviles, cálculo de seguros de automóviles, calculadora de impuestos de transporte, calculadora de arrendamiento en línea, calculadora de pagos de aduanas, multas de la policía de tránsito en línea, costo de propiedad de un automóvil, depreciación de automóviles, calculadora para automovilistas, herramientas de automóviles en línea, cálculo del costo de un automóvil préstamo, cálculo del seguro obligatorio de responsabilidad civil de vehículos de motor, cálculo del seguro CASCO, calculadora de gastos de automóvil, planificación del presupuesto del automóvil, calculadora de préstamos de automóvil en línea, calculadora de responsabilidad obligatoria de vehículos de motor en línea, calculadora CASCO en línea, calculadora de impuestos de transporte en línea, calculadora de arrendamiento en línea, calculadora de aduanas en línea, calculadora de multas en línea, calculadora de automóviles 2024, calculadoras de automóviles 2024, calculadora de automóviles, calculadora de automóviles, calculadora de vehículos, calculadora de préstamos para automóviles, calculadora de seguros de automóviles",
+        "overview": {
+          "title": "Calculadoras de coches Calc1.ru",
+          "content": "Las calculadoras de automóviles Calc1.ru son un conjunto completo de herramientas en línea para calcular con precisión todos los costos asociados con la propiedad y operación de un automóvil. Nuestras calculadoras le ayudarán a calcular el consumo de combustible, el coste del préstamo de un automóvil, los pagos de seguros (MTPL y CASCO), los impuestos de transporte, los pagos de arrendamiento, los derechos de aduana y las multas de la policía de tránsito.",
+          "additionalContent": "Todas las calculadoras utilizan tarifas, tasas y coeficientes vigentes aprobados por agencias gubernamentales e instituciones financieras. Los cálculos se realizan de forma instantánea y totalmente gratuita, sin registro ni restricciones de uso."
+        },
+        "advantages": {
+          "title": "Ventajas de las calculadoras de coches",
+          "content": "Nuestras calculadoras de automóviles ofrecen muchos beneficios para los automovilistas:",
+          "comprehensive": "Un conjunto completo de herramientas: todos los cálculos necesarios en un solo lugar",
+          "accurate": "Cálculos precisos basados ​​en tarifas y tarifas vigentes.",
+          "fast": "Resultados instantáneos sin esperas ni colas",
+          "free": "Completamente gratis, sin tarifas ocultas ni restricciones",
+          "accessible": "Funciona en todos los dispositivos: ordenadores, tablets y smartphones",
+          "detailed": "Resultados detallados por rubro de costo"
+        },
+        "tips": {
+          "title": "Consejos para usar calculadoras de automóviles",
+          "content": "Para obtener los resultados más precisos, siga estas pautas:",
+          "data": "Utilice datos precisos: consumo real de combustible, coste actual del coche, experiencia de conducción precisa",
+          "comparison": "Compare los resultados de diferentes calculadoras para comprobar la precisión",
+          "regular": "Recalcular periódicamente los costos cuando las tarifas o las condiciones cambien",
+          "planning": "Utilice calculadoras para planificar el presupuesto del automóvil a largo plazo"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre calculadoras de coches",
+          "faqItems": [
+            {
+              "q": "¿Qué calculadoras de automóviles están disponibles en Calc1.ru?",
+              "a": "En Calc1.ru hay calculadoras disponibles: consumo de combustible, préstamo de automóvil, seguro obligatorio de responsabilidad civil del automóvil, seguro a todo riesgo, impuesto de transporte, arrendamiento, derechos de aduana, multas de la policía de tránsito, costo de propiedad del automóvil y depreciación. Todas las calculadoras funcionan en línea y son absolutamente gratuitas."
+            },
+            {
+              "q": "¿Qué precisión tienen las calculadoras de automóviles?",
+              "a": "Las calculadoras utilizan tarifas, tasas y fórmulas vigentes aprobadas por agencias gubernamentales. La precisión depende de la exactitud de los datos ingresados. Para la evaluación y planificación preliminares, las calculadoras proporcionan resultados bastante precisos."
+            },
+            {
+              "q": "¿Las calculadoras para automóviles son de uso gratuito?",
+              "a": "Sí, todas las calculadoras de automóviles en Calc1.ru son completamente gratuitas. Puedes usarlos un número ilimitado de veces sin registro ni tarifas ocultas."
+            },
+            {
+              "q": "¿Cómo calcular el consumo de combustible en un coche?",
+              "a": "Utilice la calculadora de consumo de combustible, indicando el consumo real de su coche en litros cada 100 km y el volumen de combustible. La calculadora te mostrará cuántos kilómetros puedes recorrer o cuánto combustible necesitas para el viaje."
+            },
+            {
+              "q": "¿Cómo calcular el coste de un préstamo de coche?",
+              "a": "En la calculadora de préstamos para automóviles, ingrese el costo del automóvil, el pago inicial, el plazo del préstamo, la tasa de interés y el tipo de pagos (anualidad o diferenciado). La calculadora calculará el pago mensual, el monto total del pago y el pago en exceso."
+            },
+            {
+              "q": "¿Cómo calcular el coste del seguro obligatorio de responsabilidad civil de automóviles?",
+              "a": "En la calculadora OSAGO, indique la región, la potencia del motor, la edad y la antigüedad del conductor, el número de conductores y el coeficiente KBM. La calculadora calculará el costo de la póliza teniendo en cuenta todos los coeficientes actuales."
+            },
+            {
+              "q": "¿Cómo calcular el costo de CASCO?",
+              "a": "En la calculadora CASCO, indique el costo del automóvil, año de fabricación, edad y experiencia del conductor, región, presencia de un sistema de alarma y el monto de la franquicia. La calculadora calculará el costo de una póliza de seguro de automóvil completa."
+            },
+            {
+              "q": "¿Cómo calcular el impuesto de transporte?",
+              "a": "En la calculadora de impuestos sobre vehículos, ingrese la potencia del motor en caballos de fuerza y ​​la región de registro del automóvil. La calculadora calculará el monto del impuesto en función de las tasas actuales en su región."
+            },
+            {
+              "q": "¿Cómo calcular el coste del arrendamiento?",
+              "a": "En la calculadora de arrendamiento, ingrese el costo del automóvil, el pago inicial, el plazo del arrendamiento, la tasa de interés y el precio de rescate. La calculadora calculará los pagos mensuales y los costos totales de arrendamiento."
+            },
+            {
+              "q": "¿Cómo calcular los derechos de aduana de un coche?",
+              "a": "En la calculadora de derechos de aduana, ingrese el costo del automóvil, el tamaño del motor, el tipo de combustible, la antigüedad del automóvil y la potencia. La calculadora calculará los derechos, impuestos especiales, IVA y tasas de reciclaje."
+            },
+            {
+              "q": "¿Cómo calcular las multas de la policía de tránsito?",
+              "a": "En la calculadora de multas de la policía de tránsito, seleccione infracciones de tránsito. La calculadora calculará el monto de las multas teniendo en cuenta el descuento por pago anticipado (50% dentro de los 20 días)."
+            },
+            {
+              "q": "¿Cómo calcular el coste de tener un coche?",
+              "a": "En la calculadora de costo de propiedad, ingrese el costo del automóvil, la duración de la propiedad, el kilometraje, el consumo de combustible, el costo del seguro, los impuestos, el mantenimiento y la depreciación. La calculadora calculará el coste total de propiedad y el coste de 1 km."
+            },
+            {
+              "q": "¿Cómo calcular la depreciación del coche?",
+              "a": "En la calculadora de depreciación, ingrese el precio de compra, la antigüedad, el kilometraje, la clase de vehículo y el método de depreciación del vehículo. La calculadora calculará el valor actual y la pérdida de valor del período."
+            },
+            {
+              "q": "¿Las tarifas se actualizan en las calculadoras?",
+              "a": "Sí, actualizamos periódicamente tarifas, tasas y probabilidades en las calculadoras de acuerdo con los cambios en la legislación y los datos actuales del mercado. Sin embargo, para un cálculo preciso, se recomienda comprobar las tarifas actuales antes de tomar decisiones importantes."
+            },
+            {
+              "q": "¿Es posible guardar los resultados del cálculo?",
+              "a": "Puede copiar los resultados del cálculo o tomar una captura de pantalla de la página con los resultados. Algunas calculadoras ofrecen la posibilidad de descargar los resultados en formato CSV o PDF."
+            },
+            {
+              "q": "¿Las calculadoras funcionan en dispositivos móviles?",
+              "a": "Sí, todas las calculadoras están totalmente adaptadas para funcionar en dispositivos móviles, tablets y smartphones. La interfaz se ajusta automáticamente al tamaño de la pantalla."
+            },
+            {
+              "q": "¿Se pueden utilizar las calculadoras con fines comerciales?",
+              "a": "Sí, las calculadoras se pueden utilizar con fines comerciales. Sin embargo, los resultados son sólo indicativos y no sustituyen el asesoramiento profesional a la hora de tomar decisiones financieras importantes."
+            },
+            {
+              "q": "¿Qué calculadora debo utilizar para planificar el presupuesto de mi coche?",
+              "a": "Para una planificación integral, utilice una calculadora de costos de propiedad de un automóvil que tenga en cuenta todos los costos: combustible, seguro, impuestos, mantenimiento y depreciación. Las calculadoras de préstamos y leasing de automóviles también son útiles para planificar la financiación."
+            },
+            {
+              "q": "¿Los cálculos son precisos para regiones específicas?",
+              "a": "Las calculadoras tienen en cuenta los coeficientes regionales (por ejemplo, para el seguro obligatorio de responsabilidad civil de automóviles y el impuesto de transporte). Sin embargo, las tarifas pueden variar entre aseguradoras y regiones, por lo que los resultados son sólo estimaciones."
+            },
+            {
+              "q": "¿Con qué frecuencia debes recalcular los gastos de tu automóvil?",
+              "a": "Se recomienda recalcular los gastos cuando cambian las tarifas (seguros, impuestos), cuando cambian el kilometraje o las condiciones de operación, y también antes de tomar decisiones importantes (compra, venta, seguro, préstamo)."
+            },
+            {
+              "q": "¿Es posible comparar varias opciones?",
+              "a": "Sí, puedes abrir la calculadora en varias pestañas del navegador y calcular diferentes opciones para comparar. Esto es especialmente útil a la hora de elegir un préstamo de coche, un seguro o un coche."
+            },
+            {
+              "q": "¿Qué hacer si los resultados del cálculo difieren de los reales?",
+              "a": "Pueden surgir diferencias debido a tarifas adicionales, términos de contrato individuales o cambios en las tarifas. Las calculadoras proporcionan resultados aproximados. Para obtener cálculos precisos, comuníquese con las organizaciones pertinentes."
+            },
+            {
+              "q": "¿Existen calculadoras para vehículos eléctricos?",
+              "a": "Las calculadoras básicas (gastos, crédito, impuestos) también son adecuadas para vehículos eléctricos. Para calcular el consumo energético utiliza la calculadora de consumo de combustible, indicando el consumo en kWh/100km en lugar de litros."
+            },
+            {
+              "q": "¿Cómo calcular el ahorro por amortización anticipada de un préstamo de coche?",
+              "a": "En la calculadora de préstamos para automóviles, ingrese pagos adicionales por amortización anticipada. La calculadora volverá a calcular el cronograma de pagos y mostrará ahorros en intereses y una reducción en el plazo del préstamo."
+            },
+            {
+              "q": "¿Se tienen en cuenta los beneficios en las calculadoras?",
+              "a": "Las calculadoras básicas no tienen en cuenta las prestaciones individuales (por ejemplo, para familias numerosas o personas discapacitadas). Para realizar cálculos teniendo en cuenta los beneficios, comuníquese directamente con las organizaciones pertinentes."
+            },
+            {
+              "q": "¿Es posible calcular el consumo de combustible de un coche híbrido?",
+              "a": "Sí, utiliza la calculadora de consumo de combustible e ingresa el consumo real de combustible de tu híbrido. Los híbridos suelen tener un consumo de 4-6 l/100 km según el modo de funcionamiento."
+            },
+            {
+              "q": "¿Cómo calcular el plazo óptimo de un préstamo de coche?",
+              "a": "Utilice una calculadora de préstamos para automóviles para calcular los diferentes términos del préstamo. Compare pagos mensuales, sobrepago total y costo de 1 km. El plazo óptimo suele ser de 4 a 5 años con un equilibrio entre pago y sobrepago."
+            },
+            {
+              "q": "¿Qué es más rentable: préstamo de coche o leasing?",
+              "a": "Compare ambas opciones: utilice calculadoras de préstamos y leasing para automóviles con los mismos parámetros. Un préstamo para un automóvil es más rentable para la propiedad a largo plazo, mientras que el arrendamiento es más rentable para los negocios y cuando se cambia de automóvil con frecuencia."
+            },
+            {
+              "q": "¿Cómo calcular el coste real de propiedad durante un año?",
+              "a": "Utilice la calculadora de costes de propiedad del coche, especificando un período de 1 año. La calculadora calculará todos los gastos anuales: combustible, seguros, impuestos, mantenimiento y depreciación."
+            },
+            {
+              "q": "¿Se tienen en cuenta los factores estacionales en las calculadoras?",
+              "a": "Las calculadoras básicas no tienen en cuenta los factores estacionales (por ejemplo, el consumo de combustible en invierno es entre un 10% y un 15% mayor). Para una planificación precisa, considere estos factores al ingresar datos."
+            }
+          ]
+        }
+      }
     },
     "time": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Hora y fecha",
+      "description": "Diferencia de fecha, edad, temporizadores.",
+      "seo": {
+        "title": "Calculadoras de hora y fecha online - Cálculo de horas, fechas y edades | calc1.ru",
+        "description": "Calculadoras de fecha y hora online gratuitas: diferencia entre fechas, cálculo de edad, cronómetros, cuenta atrás, calendario, hora mundial, suma de tiempo, cálculo de plazos. Cálculos precisos para planificar y organizar el tiempo.",
+        "keywords": "calculadoras de tiempo, calculadora de fecha, calculadora de edad, calculadora de diferencia de fecha, calculadora de días entre fechas, calculadora de tiempo, temporizador en línea, cuenta regresiva, calendario en línea, hora mundial, suma de tiempo, calculadora de fecha límite, cálculo de edad, cuántos días entre fechas, calculadora de tiempo en línea, calculadora de tiempo, calculadora de fecha, calculadora de edad, temporizador en línea, calculadora de cuenta regresiva, calculadora de tiempo gratis, calculadora de fecha en línea, calculadora de edad en línea, calculadora de diferencia de fecha en línea, calculadora de días en línea, temporizador de cuenta regresiva, temporizador en línea gratuito, calendario gratuito en línea, hora mundial en línea, agregar tiempo a una fecha, en línea cálculo de fecha límite, cálculo de la diferencia entre fechas, cuántos días quedan, cuántos años tiene una persona, calculadora de cumpleaños, calculadora de tiempo de trabajo, calculadora de tiempo de trabajo, calculadora de tiempo de reuniones, calculadora de tiempo de vuelos, calculadora de zona horaria, conversor de tiempo, calculadora de tiempo para negocios, calculadora de tiempo para planificar, calculadora de tiempo para viajar, calculadora de tiempo para estudiar, calculadora de tiempo para eventos, calculadora de tiempo en línea, calculadora de tiempo libre, calculadora de tiempo web, calculadora de tiempo interactiva, calculadora de tiempo 2024, calculadora de tiempo rusa, calculadora de hora y fecha, calculadora de diferencia de fecha, calculadora de días, cálculo de edad, calculadora de suma de tiempo, calculadora de fecha límite, calculadora de hora mundial, temporizador en línea, temporizador de cuenta regresiva, cuenta regresiva de eventos, calculadora de cumpleaños, calculadora de intervalo de fechas, conversor de zona horaria, calculadora de planificación de tiempo, calculadora de tiempo de negocios, calculadora de tiempo de viaje",
+        "overview": {
+          "title": "Calculadoras de fecha y hora Calc1.ru",
+          "content": "Calculadoras de fecha y hora Calc1.ru es un conjunto completo de herramientas en línea para trabajar con precisión con la hora y las fechas. Nuestras calculadoras lo ayudarán a calcular la diferencia entre fechas, determinar la edad, usar temporizadores y cuentas regresivas, trabajar con el calendario, averiguar la hora mundial en diferentes ciudades, agregar tiempo a las fechas y calcular plazos.",
+          "additionalContent": "Todas las calculadoras funcionan en tiempo real, tienen en cuenta automáticamente los años bisiestos, el horario de verano y admiten todas las zonas horarias del mundo. Los cálculos se realizan de forma instantánea y totalmente gratuita, sin registro ni restricciones de uso. Adecuado para planificación personal, negocios, viajes y estudio."
+        },
+        "advantages": {
+          "title": "Beneficios de las calculadoras de fecha y hora",
+          "content": "Nuestras calculadoras de fecha y hora ofrecen muchos beneficios:",
+          "comprehensive": "Un conjunto completo de herramientas: todos los cálculos de fecha y hora necesarios en un solo lugar",
+          "accurate": "Cálculos precisos teniendo en cuenta los años bisiestos, las zonas horarias y el horario de verano.",
+          "fast": "Resultados instantáneos sin esperas ni cálculos complicados",
+          "free": "Completamente gratis, sin tarifas ocultas ni restricciones",
+          "accessible": "Funciona en todos los dispositivos: ordenadores, tablets y smartphones",
+          "detailed": "Resultados detallados desglosados ​​por días, horas, minutos y segundos."
+        },
+        "tips": {
+          "title": "Consejos para usar calculadoras de fecha y hora",
+          "content": "Para obtener los resultados más precisos, siga estas pautas:",
+          "accurate": "Utilice fechas y horas precisas: verifique el formato de entrada, tenga en cuenta las zonas horarias cuando trabaje con la hora mundial",
+          "planning": "Utilice calculadoras para la planificación a largo plazo: calcule los plazos con antelación, planifique reuniones teniendo en cuenta las zonas horarias",
+          "regular": "Utilice temporizadores y cuentas atrás con regularidad para gestionar el tiempo y aumentar la productividad.",
+          "comparison": "Utilice varias calculadoras para una planificación integral del tiempo: combine calendario, cronómetros y reloj mundial"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre calculadoras de fecha y hora",
+          "faqItems": [
+            {
+              "q": "¿Qué calculadoras de fecha y hora están disponibles en Calc1.ru?",
+              "a": "Calc1.ru ofrece calculadoras: diferencia de fechas, suma de tiempo, cálculo de edad, cálculo de plazos, calendario en línea, cronómetro, cuenta regresiva y hora mundial. Todas las calculadoras funcionan en línea y son absolutamente gratuitas."
+            },
+            {
+              "q": "¿Qué tan precisas son las calculadoras de fecha y hora?",
+              "a": "Las calculadoras utilizan algoritmos precisos para calcular el tiempo, teniendo en cuenta los años bisiestos, las zonas horarias y el horario de verano. La precisión depende de la exactitud de los datos ingresados. Para la planificación y gestión del tiempo, las calculadoras proporcionan resultados muy precisos."
+            },
+            {
+              "q": "¿Las calculadoras de fecha y hora son de uso gratuito?",
+              "a": "Sí, todas las calculadoras de fecha y hora de Calc1.ru son completamente gratuitas. Puedes usarlos un número ilimitado de veces sin registro ni tarifas ocultas."
+            },
+            {
+              "q": "¿Cómo calcular la diferencia entre dos fechas?",
+              "a": "Utilice la calculadora de diferencia de fechas ingresando la fecha de inicio y finalización. La calculadora mostrará la diferencia exacta en días, semanas, meses y años, teniendo en cuenta los años bisiestos."
+            },
+            {
+              "q": "¿Cómo calcular la edad de una persona?",
+              "a": "En la calculadora de edad, ingrese su fecha de nacimiento y la calculadora mostrará su edad exacta en años, meses, días e incluso horas a partir de la fecha actual."
+            },
+            {
+              "q": "¿Cómo utilizar un temporizador para gestionar el tiempo?",
+              "a": "Configure el tiempo deseado en el temporizador (horas, minutos, segundos) e inicie la cuenta atrás. El cronómetro mostrará el tiempo restante y emitirá un pitido cuando termine. Adecuado para técnica Pomodoro, cocina, entrenamiento."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta atrás para un evento?",
+              "a": "En la calculadora de cuenta regresiva, ingrese la fecha y hora del evento. La calculadora mostrará cuántos días, horas, minutos y segundos quedan hasta el evento, actualizándose cada segundo."
+            },
+            {
+              "q": "¿Cómo utilizar un calendario en línea?",
+              "a": "Abra su calendario en línea, agregue eventos con descripciones, horarios y recordatorios. Utilice códigos de colores para diferentes tipos de eventos y exporte su calendario para sincronizarlo con otros servicios."
+            },
+            {
+              "q": "¿Cómo saber la hora mundial en diferentes ciudades?",
+              "a": "En la calculadora de hora mundial, agregue las ciudades deseadas mediante la búsqueda. La calculadora mostrará la hora actual en todas las ciudades simultáneamente, teniendo en cuenta sus zonas horarias y el horario de verano."
+            },
+            {
+              "q": "¿Cómo agregar tiempo hasta la fecha?",
+              "a": "En la calculadora de suma de tiempo, ingrese la fecha y hora de inicio, luego agregue el intervalo deseado (días, horas, minutos, segundos). La calculadora calculará la fecha y hora resultantes."
+            },
+            {
+              "q": "¿Cómo calcular el plazo del proyecto?",
+              "a": "En la calculadora de plazos, ingrese la fecha de inicio y el número de días hasta la fecha límite (o fecha de finalización). La calculadora mostrará la fecha exacta de la fecha límite y el número de días, semanas y meses antes de la misma."
+            },
+            {
+              "q": "¿Se tienen en cuenta los años bisiestos en los cálculos?",
+              "a": "Sí, todas las calculadoras tienen en cuenta automáticamente los años bisiestos (29 de febrero) al calcular las diferencias de fechas y edades, lo que garantiza la máxima precisión de los resultados."
+            },
+            {
+              "q": "¿Se admiten todas las zonas horarias en la calculadora de hora mundial?",
+              "a": "Sí, la calculadora de hora mundial admite todas las zonas horarias del mundo, incluidas las zonas horarias estándar (UTC) y local de todos los países. Puedes encontrar tiempo en cualquier ciudad del mundo."
+            },
+            {
+              "q": "¿Se pueden utilizar las calculadoras de tiempo para los negocios?",
+              "a": "Sí, las calculadoras de tiempo son excelentes para los negocios: planificar reuniones internacionales, controlar los plazos, coordinar el trabajo de equipos remotos, programar videoconferencias teniendo en cuenta las zonas horarias."
+            },
+            {
+              "q": "¿Se pueden utilizar calculadoras de tiempo para viajar?",
+              "a": "Sí, las calculadoras de tiempo son ideales para viajar: adaptarse a la hora local, planificar vuelos, calcular diferencias horarias entre países, planificar excursiones y eventos."
+            },
+            {
+              "q": "¿Cómo utilizar un cronómetro para la técnica Pomodoro?",
+              "a": "Configure un cronómetro de 25 minutos para el intervalo de trabajo, después de finalizar, tome un descanso de 5 minutos (use el cronómetro nuevamente), después de 4 ciclos, tome un descanso largo de 15 a 30 minutos."
+            },
+            {
+              "q": "¿Puedo usar un calendario para planificar eventos?",
+              "a": "Sí, un calendario en línea es excelente para la planificación de eventos. Cree eventos con descripción, hora, codificación de colores y recordatorios. Exporta tu calendario para sincronizarlo con otros servicios."
+            },
+            {
+              "q": "¿Cómo utilizar la cuenta regresiva de cumpleaños?",
+              "a": "En la calculadora de cuenta regresiva, establezca la fecha de su cumpleaños (puede seleccionar el próximo año si su cumpleaños ya pasó este año) y el cronómetro mostrará cuántos días quedan hasta este evento."
+            },
+            {
+              "q": "¿Se pueden utilizar calculadoras de tiempo para estudiar?",
+              "a": "Sí, las calculadoras de tiempo son adecuadas para estudiar: controlar los plazos de las tareas, planificar la preparación de exámenes, organizar el tiempo de estudio, calcular la edad para la investigación histórica."
+            },
+            {
+              "q": "¿Cómo utilizar la Calculadora de hora mundial para programar llamadas?",
+              "a": "Agregue las ciudades de los participantes de la llamada a la calculadora de hora mundial. Vea la hora actual en cada ciudad y elija una hora que funcione para todos, teniendo en cuenta las diferencias de zona horaria y el horario comercial normal."
+            },
+            {
+              "q": "¿Puedo usar un temporizador para cocinar?",
+              "a": "Sí, el temporizador es ideal para controlar el tiempo de cocción. Configure el tiempo deseado (por ejemplo, 8 minutos para hervir huevos, 15 minutos para hornear) y utilice la señal sonora para notificar."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora de diferencia de fechas para calcular la experiencia laboral?",
+              "a": "En la calculadora de diferencia de fechas, ingrese la fecha de inicio del trabajo y la fecha actual (o fecha de finalización del trabajo). La calculadora mostrará la duración exacta del servicio en años, meses y días."
+            },
+            {
+              "q": "¿Se pueden utilizar las cuentas atrás como motivación?",
+              "a": "Sí, la cuenta atrás para eventos importantes (vacaciones, cumpleaños, consecución de una meta) motiva y ayuda a visualizar el progreso hacia la meta. Ver cuánto tiempo queda hace que sea más fácil planificar y actuar."
+            },
+            {
+              "q": "¿Cómo utilizar un calendario para la planificación familiar?",
+              "a": "Cree eventos para todos los miembros de la familia usando diferentes colores para cada miembro de la familia o tipo de evento. Exporta tu calendario y compártelo con tu familia para sincronizarlo."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora de hora mundial con los clientes?",
+              "a": "Sí, agrega las ciudades donde se encuentran tus clientes y la calculadora mostrará su hora actual. Esto ayudará a determinar el horario óptimo para llamadas y reuniones, teniendo en cuenta el horario laboral de los clientes."
+            },
+            {
+              "q": "¿Cómo utilizar la calculadora de suma de tiempo para calcular su hora de llegada?",
+              "a": "Ingrese la hora de salida y agregue la duración del viaje (horas, minutos). La calculadora calculará la hora exacta de llegada, teniendo en cuenta todos los parámetros del viaje."
+            },
+            {
+              "q": "¿Puedo utilizar un cronómetro para el entrenamiento a intervalos?",
+              "a": "Sí, configure el cronómetro para la duración del ejercicio (por ejemplo, 30 segundos), después de la señal, configure el cronómetro para el período de descanso (15 segundos), repita el ciclo la cantidad de veces requerida."
+            },
+            {
+              "q": "¿Cómo utilizar una calculadora de plazos para planificar proyectos?",
+              "a": "Indique la fecha de inicio del proyecto y el número de días hasta la fecha límite (o fecha de finalización). La calculadora mostrará la fecha límite exacta y ayudará a controlar el tiempo que lleva completar las tareas del proyecto."
+            },
+            {
+              "q": "¿Puedo usar una cuenta regresiva para realizar un seguimiento del tiempo hasta las vacaciones?",
+              "a": "Sí, establece la fecha de inicio de tus vacaciones y el cronómetro mostrará cuántos días quedan. Esto ayuda a motivar y planificar los preparativos de sus vacaciones con anticipación."
+            },
+            {
+              "q": "¿Cómo utilizar la Calculadora de hora mundial para planificar eventos en línea?",
+              "a": "Agregue las ciudades de todos los participantes del evento en línea. La calculadora mostrará su hora actual, lo que le ayudará a elegir la hora de inicio óptima para el evento, conveniente para el número máximo de participantes."
+            }
+          ]
+        }
+      }
     },
     "health": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Salud y medicina",
+      "description": "IMC, pulso, presión arterial, vitaminas.",
+      "seo": {
+        "title": "Calculadoras médicas online - Cálculo de indicadores médicos y de salud | calc1.ru",
+        "description": "Calculadoras médicas online gratuitas: cálculo del IMC (índice de masa corporal), pulso, presión arterial, ovulación, vitaminas y minerales, nivel de estrés, dosis de medicamentos. Cálculos precisos para el seguimiento de indicadores médicos y de salud.",
+        "keywords": "calculadoras médicas, calculadora de salud, calculadora de IMC, índice de masa corporal, calculadora de pulso, frecuencia cardíaca, zonas de pulso, calculadora de presión arterial, presión normal, hipertensión, hipotensión, calculadora de ovulación, días fértiles, ciclo menstrual, calculadora de vitaminas, valor diario de vitaminas, calculadora de minerales, calculadora de estrés, nivel de estrés, prueba de estrés, calculadora de dosis, cálculo de dosis por peso, dosis de medicamentos, cálculos médicos en línea, control de salud, prevención de enfermedades, estilo de vida saludable, indicadores médicos, valores normales, calculadora de salud, calculadora de salud, calculadora de IMC, frecuencia cardíaca calculadora, calculadora de presión arterial, calculadora de ovulación, calculadora de vitaminas, prueba de esfuerzo, calculadora de dosis",
+        "overview": {
+          "title": "Calculadoras médicas Calc1.ru",
+          "content": "Calculadoras médicas Calc1.ru es un conjunto de herramientas profesionales en línea para cálculos médicos y seguimiento de la salud. Nuestras calculadoras te ayudarán a calcular tu índice de masa corporal (IMC), determinar tus zonas de frecuencia cardíaca para entrenar, estimar tu presión arterial, calcular tus días de ovulación, determinar tus necesidades de vitaminas y minerales, evaluar tus niveles de estrés y calcular la dosis correcta de medicamentos.",
+          "additionalContent": "Todas las calculadoras están desarrolladas en base a las recomendaciones de la Organización Mundial de la Salud (OMS) y los estándares médicos internacionales. Tienen en cuenta la edad, el sexo, la actividad física y otros parámetros individuales para realizar cálculos precisos y personalizados. Las calculadoras son adecuadas para el seguimiento diario de la salud, la planificación del entrenamiento, el embarazo, la toma de vitaminas y medicamentos."
+        },
+        "advantages": {
+          "title": "Beneficios de nuestras calculadoras médicas",
+          "content": "Nuestras calculadoras médicas brindan muchos beneficios para el control de la salud:",
+          "accurate": {
+            "title": "Precisión de los cálculos.",
+            "description": "Todos los cálculos se basan en estándares médicos y recomendaciones de la OMS, lo que garantiza la exactitud de los resultados."
+          },
+          "personalized": {
+            "title": "Personalización",
+            "description": "Las calculadoras tienen en cuenta parámetros individuales: edad, sexo, peso, altura, nivel de actividad."
+          },
+          "comprehensive": {
+            "title": "Integridad de la información",
+            "description": "Cada calculadora proporciona resultados detallados con interpretación y recomendaciones."
+          },
+          "free": {
+            "title": "gratis",
+            "description": "Todas las calculadoras son completamente gratuitas y están disponibles sin necesidad de registrarse en cualquier momento."
+          },
+          "mobile": {
+            "title": "Versión móvil",
+            "description": "El diseño responsivo funciona en todos los dispositivos: computadoras, tabletas y teléfonos inteligentes."
+          },
+          "professional": {
+            "title": "Recomendaciones profesionales",
+            "description": "Los resultados van acompañados de recomendaciones médicas y consejos de expertos."
+          }
+        },
+        "tips": {
+          "title": "Consejos para usar calculadoras médicas",
+          "content": "Para obtener resultados precisos y un seguimiento de la salud eficaz, siga estas recomendaciones:",
+          "regular": {
+            "title": "Control periódico",
+            "description": "Utilice calculadoras con regularidad para realizar un seguimiento de los cambios en los indicadores de salud y la eficacia de las medidas de mejora."
+          },
+          "consultation": {
+            "title": "consulta medica",
+            "description": "Los resultados de las calculadoras tienen únicamente fines informativos y no sustituyen la consulta con un especialista. Si hay desviaciones de la norma, consulte a un médico."
+          },
+          "accuracy": {
+            "title": "Precisión de los datos",
+            "description": "Ingrese datos actuales y precisos (peso, altura, edad) para obtener resultados de cálculo confiables."
+          },
+          "comprehensive": {
+            "title": "Enfoque integrado",
+            "description": "Utilice varias calculadoras juntas para realizar una evaluación de salud integral y obtener una visión completa."
+          }
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué son las calculadoras médicas?",
+              "a": "Las calculadoras médicas son herramientas en línea para calcular diversos indicadores médicos: índice de masa corporal, pulso, presión arterial, ovulación, necesidades de vitaminas, niveles de estrés, dosis de medicamentos. Ayudan a controlar su salud y reciben recomendaciones médicas basadas en parámetros individuales."
+            },
+            {
+              "q": "¿Qué precisión tienen las calculadoras médicas?",
+              "a": "Las calculadoras se basan en las recomendaciones de la OMS y los estándares médicos internacionales. La precisión depende de la exactitud de los datos ingresados ​​y de las características individuales del organismo. Para un diagnóstico y tratamiento precisos, consulte siempre a su médico."
+            },
+            {
+              "q": "¿Se pueden utilizar calculadoras en lugar de consultar a un médico?",
+              "a": "No, las calculadoras tienen únicamente fines informativos y no sustituyen la consulta con un especialista. Ayudan a controlar la salud, pero si hay desviaciones de la norma o síntomas de una enfermedad, debe consultar a un médico."
+            },
+            {
+              "q": "¿Qué calculadoras médicas están disponibles?",
+              "a": "Hay calculadoras disponibles: IMC (índice de masa corporal), pulso y zonas de pulso, presión arterial, ovulación y días fértiles, vitaminas y minerales, niveles de estrés, dosis de medicamentos por peso. Cada calculadora tiene en cuenta parámetros individuales."
+            },
+            {
+              "q": "¿Cómo utilizar correctamente la calculadora de IMC?",
+              "a": "Para calcular el IMC, ingrese su peso actual en kilogramos y su altura en centímetros. Tenga en cuenta que el IMC no tiene en cuenta la masa muscular, por lo que puede no ser del todo exacto para los deportistas. Interprete los resultados con su médico."
+            },
+            {
+              "q": "¿Qué son las zonas de pulso y por qué son necesarias?",
+              "a": "Las zonas de frecuencia cardíaca son rangos de frecuencia cardíaca para diferentes propósitos de entrenamiento: zona de descanso (50-60%), quema de grasa (60-70%), aeróbica (70-80%), anaeróbica (80-90%), máxima (90-100%). Ayudan a optimizar tus entrenamientos."
+            },
+            {
+              "q": "¿Cómo interpretar los resultados de la calculadora de presión?",
+              "a": "La calculadora clasifica la presión arterial según los estándares internacionales: normal (<130/85), elevada (130-139/85-89), hipertensión grado I (140-159/90-99), grado II (160-179/100-109), grado III (≥180/≥110). Si hay alguna desviación, consulte a un médico."
+            },
+            {
+              "q": "¿Cómo funciona la calculadora de ovulación?",
+              "a": "La calculadora de ovulación calcula su fecha de ovulación en función de su último período menstrual y la duración del ciclo. El método es adecuado para ciclos regulares. Combínelo con pruebas de ovulación y mediciones de temperatura basal para obtener una mayor precisión."
+            },
+            {
+              "q": "¿Cómo calcular la necesidad de vitaminas?",
+              "a": "La calculadora de vitaminas tiene en cuenta el sexo, la edad y el nivel de actividad física para determinar su requerimiento diario de 13 vitaminas y 8 minerales. Con alta actividad, la necesidad de determinadas vitaminas aumenta entre un 15 y un 20%."
+            },
+            {
+              "q": "¿Qué muestra una prueba de estrés?",
+              "a": "La prueba de estrés evalúa el nivel de estrés mediante 10 preguntas con un sistema de puntos (0-30 puntos). El resultado muestra: estrés bajo (0-10), medio (11-20), alto (21-30). Si el nivel es alto se recomienda consultar a un especialista."
+            },
+            {
+              "q": "¿Cómo calcular la dosis de un medicamento?",
+              "a": "La calculadora de dosis calcula la dosis mediante la fórmula: peso corporal × dosis por kg × frecuencia de administración. Muestra dosis única y diaria. Importante: consulte siempre a su médico antes de tomar medicamentos."
+            },
+            {
+              "q": "¿Son seguras las calculadoras médicas?",
+              "a": "Sí, las calculadoras son seguras de usar. Realizan cálculos matemáticos basados ​​en fórmulas médicas. Sin embargo, los resultados son sólo para fines informativos y no reemplazan el diagnóstico médico."
+            },
+            {
+              "q": "¿Se pueden utilizar calculadoras para niños?",
+              "a": "Algunas calculadoras (IMC, pulso, vitaminas, dosis) se pueden utilizar para niños, teniendo en cuenta las características de la edad. Para conocer la dosis de medicamentos para niños, asegúrese de consultar a un pediatra. Interprete los resultados junto con su pediatra."
+            },
+            {
+              "q": "¿Con qué frecuencia se deben verificar los indicadores de salud?",
+              "a": "La frecuencia depende del indicador: IMC - una vez al mes, presión - diariamente para la hipertensión, pulso - durante el entrenamiento, vitaminas - al cambiar el estilo de vida, estrés - semanalmente. Si tiene problemas de salud, controle sus lecturas según lo recomendado por su médico."
+            },
+            {
+              "q": "¿Qué hacer si el resultado de la calculadora muestra una desviación de la norma?",
+              "a": "Si hay una desviación de la norma: no entre en pánico, el resultado es aproximado; consulte a su médico para obtener un diagnóstico preciso; someterse a un examen médico si es necesario; seguir las recomendaciones del especialista."
+            },
+            {
+              "q": "¿Las calculadoras tienen en cuenta las enfermedades crónicas?",
+              "a": "Las calculadoras no tienen en cuenta enfermedades crónicas, medicamentos ni características metabólicas individuales. Si hay enfermedades, los resultados pueden requerir ajustes. Asegúrese de consultar a su médico."
+            },
+            {
+              "q": "¿Las mujeres embarazadas pueden utilizar calculadoras?",
+              "a": "Algunas calculadoras (IMC, presión arterial, vitaminas) se pueden utilizar durante el embarazo, teniendo en cuenta los cambios en el cuerpo. Para la dosificación de medicamentos y vitaminas durante el embarazo, se requiere consulta con un médico. La calculadora de ovulación no se utiliza durante el embarazo."
+            },
+            {
+              "q": "¿Cómo ayudan las calculadoras a controlar su salud?",
+              "a": "Las calculadoras ayudan: realizar un seguimiento de los cambios en los indicadores, recibir señales tempranas sobre problemas, planificar el entrenamiento y la nutrición, controlar la ingesta de medicamentos y vitaminas y motivar un estilo de vida saludable."
+            },
+            {
+              "q": "¿Necesito registrarme para usar las calculadoras?",
+              "a": "No, todas las calculadoras están disponibles de forma gratuita sin necesidad de registrarse. Puedes utilizarlos de forma anónima en cualquier momento. Los datos no se guardan ni se transfieren a terceros."
+            },
+            {
+              "q": "¿En qué dispositivos funcionan las calculadoras?",
+              "a": "Las calculadoras funcionan en todos los dispositivos: computadoras (Windows, Mac, Linux), tabletas (iPad, Android), teléfonos inteligentes (iPhone, Android). El diseño responsivo garantiza un uso cómodo en cualquier pantalla."
+            },
+            {
+              "q": "¿Es posible guardar los resultados del cálculo?",
+              "a": "Los resultados se pueden copiar o tomar una captura de pantalla. Algunas calculadoras ofrecen la posibilidad de exportar a PDF. El historial de pagos no se guarda automáticamente si no estás registrado."
+            },
+            {
+              "q": "¿Las calculadoras se basan en evidencia científica?",
+              "a": "Sí, todas las calculadoras se basan en las recomendaciones de la OMS, los estándares médicos internacionales y la investigación científica. Las fórmulas y estándares cumplen con los protocolos médicos modernos."
+            },
+            {
+              "q": "¿Qué hacer si la calculadora muestra un error?",
+              "a": "Si hay un error: verifique la exactitud de los datos ingresados, asegúrese de que todos los campos estén completos, actualice la página, verifique su conexión a Internet. Si el error persiste, escribe al soporte."
+            },
+            {
+              "q": "¿Se pueden utilizar las calculadoras para la práctica médica profesional?",
+              "a": "Las calculadoras se pueden utilizar como herramienta auxiliar, pero no reemplazan los equipos ni los diagnósticos médicos profesionales. Para la práctica médica, utilice dispositivos médicos certificados."
+            },
+            {
+              "q": "¿Cómo tiene en cuenta la calculadora de vitaminas la dieta?",
+              "a": "La calculadora de vitaminas calcula sus necesidades generales pero no tiene en cuenta su dieta específica. Para los vegetarianos y las personas con restricciones dietéticas, es posible que sea necesaria una consulta adicional con un nutricionista para ajustar las normas."
+            },
+            {
+              "q": "¿Qué afecta la precisión de la calculadora de ovulación?",
+              "a": "La precisión depende de la regularidad del ciclo, el estrés, la enfermedad, la medicación, el cambio climático. Si tu ciclo es irregular, utiliza métodos adicionales: pruebas de ovulación, temperatura basal, ecografía."
+            },
+            {
+              "q": "¿Cómo interpretar los resultados de una prueba de estrés?",
+              "a": "Nivel bajo (0-10): todo está bien; medio (11-20) – debes prestar atención al manejo del estrés; alto (21-30): se recomienda consultar a un especialista. Los resultados son sólo indicativos."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora de dosis para todos los medicamentos?",
+              "a": "La calculadora sólo es adecuada para medicamentos dosificados según el peso corporal (mg/kg). Muchos medicamentos tienen una dosis fija. Siga siempre las instrucciones del medicamento y la prescripción médica. La calculadora no sustituye el consejo médico."
+            },
+            {
+              "q": "¿Con qué frecuencia se actualizan las calculadoras?",
+              "a": "Las calculadoras se actualizan periódicamente para reflejar las últimas recomendaciones y estándares médicos. Las fórmulas y estándares cumplen con las versiones actuales de los protocolos de la OMS y los estándares internacionales."
+            },
+            {
+              "q": "¿Cómo ayudan las calculadoras a prevenir enfermedades?",
+              "a": "Las calculadoras ayudan a: controlar los indicadores de salud, identificar desviaciones en una etapa temprana, motivar un estilo de vida saludable y planificar medidas preventivas. El uso regular ayuda a identificar problemas tempranamente."
+            }
+          ]
+        }
+      }
     },
     "science": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Estudio y ciencia",
+      "description": "Física, química, geometría, estadística.",
+      "seo": {
+        "keywords": "calculadoras científicas, calculadora de física, calculadora de química, calculadora de estadísticas, geometría avanzada, cálculo de velocidad, cálculo de aceleración, cálculo de fuerza, cálculo de energía, masa molar, concentración de solución, ecuaciones químicas, media, mediana, desviación estándar, figuras geométricas complejas, cálculos científicos, calculadora de estudio, calculadora científica, calculadora de física, calculadora de química, calculadora de estadísticas",
+        "overview": "Calculadoras científicas Calc1.ru es un conjunto de herramientas en línea para cálculos científicos: física, química, geometría, estadística. Adecuado para estudiantes, científicos y cualquier persona involucrada en cálculos científicos."
+      }
     },
     "converter": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Convertidores en línea",
+      "description": "Longitud, peso, temperatura, velocidad.",
+      "seo": {
+        "title": "Conversores de unidades en línea - Convertir todas las unidades | calc1.ru",
+        "description": "Conversores de unidades gratuitos en línea: longitud (mm, cm, m, km, millas), peso (g, kg, lb), temperatura (°C, °F, K), velocidad (km/h, m/s, nudos), presión (Pa, atm, mmHg), volumen (l, gal, m³), ​​energía (J, cal, Wh), datos (bytes, KB, MB, GB, TB). Cálculos precisos para profesionales y uso diario.",
+        "keywords": "convertidores de unidades, convertidor de longitud, convertidor de peso, convertidor de temperatura, convertidor de velocidad, convertidor de presión, convertidor de volumen, convertidor de energía, convertidor de datos, conversión de unidades, convertidor de metros a pies, convertidor de kilogramos a libras, convertidor de grados, convertidor de velocidad en línea, convertidor de mm a cm, convertidor de cm a m, convertidor de km a millas, convertidor de gramos a kilogramos, convertidor de libras a kilogramos, convertidor de grados Celsius a Fahrenheit, convertidor de Fahrenheit a Celsius, convertidor de Kelvin, convertidor de km/h a m/s, convertidor de m/s a km/h convertidor, convertidor de nudos, convertidor de pascales, convertidor de atmósferas, convertidor de mmHg, convertidor de litros, convertidor de galones, convertidor de metros cúbicos, convertidor de julios, convertidor de calorías, convertidor de vatios-hora, convertidor de bytes, convertidor de kilobytes, convertidor de megabytes, convertidor de gigabytes, convertidor de terabytes, conversor de unidades en línea, calculadora convertidora, conversión de unidades, sistema métrico, sistema imperial, convertidor de unidades, longitud convertidor, convertidor de peso, convertidor de temperatura, convertidor de velocidad, convertidor de presión, convertidor de volumen, convertidor de energía, convertidor de datos",
+        "overview": {
+          "title": "Conversores de unidades en línea Calc1.ru",
+          "content": "Los convertidores en línea Calc1.ru son un conjunto completo de herramientas para la conversión precisa de todas las unidades de medida básicas. Nuestros conversores le permiten convertir instantáneamente entre diferentes unidades de longitud, peso, temperatura, velocidad, presión, volumen, energía y datos.",
+          "additionalContent": "Todos los convertidores utilizan estándares internacionales y factores de conversión precisos. Se admiten sistemas de medición métricos, imperiales y otros. Los cálculos se realizan instantáneamente con una precisión de 15 decimales. Todas las herramientas son completamente gratuitas y están disponibles sin registro."
+        },
+        "advantages": {
+          "title": "Ventajas de nuestros convertidores",
+          "content": "Nuestros conversores de unidades ofrecen muchos beneficios a los usuarios:",
+          "precise": {
+            "title": "Cálculos precisos",
+            "content": "Todos los convertidores utilizan estándares internacionales y factores de conversión precisos. Los cálculos se basan en valores oficiales aprobados por organismos metrológicos."
+          },
+          "instant": {
+            "title": "Conversión instantánea",
+            "content": "Todas las conversiones se realizan instantáneamente en tiempo real a medida que ingresa valores. No es necesario esperar a que se procesen o descarguen los resultados."
+          },
+          "comprehensive": {
+            "title": "Muchas unidades",
+            "content": "Cada convertidor admite todas las unidades de medida principales de su categoría. Puede convertir entre sistemas de medición métricos, imperiales y otros."
+          },
+          "multilingual": {
+            "title": "Interfaz multilingüe",
+            "content": "Los convertidores están disponibles en 4 idiomas: ruso, inglés, español y alemán. La interfaz se adapta automáticamente al idioma seleccionado."
+          },
+          "mobile": {
+            "title": "Versión móvil",
+            "content": "Todos los conversores están totalmente adaptados para funcionar en dispositivos móviles, tabletas y teléfonos inteligentes. La interfaz está optimizada para un uso sencillo en cualquier dispositivo."
+          },
+          "free": {
+            "title": "Gratis y sin necesidad de registrarse",
+            "content": "Todos los convertidores son completamente gratuitos y están disponibles sin registro. Puede usarlos un número ilimitado de veces sin tarifas ni restricciones ocultas."
+          }
+        },
+        "tips": {
+          "title": "Consejos útiles",
+          "content": "Para aprovechar al máximo los convertidores de unidades:",
+          "tip1": {
+            "title": "Verificar unidades de medida",
+            "content": "Asegúrese siempre de haber seleccionado las unidades correctas para el valor de entrada y el resultado. Tenga en cuenta los sistemas métrico e imperial."
+          },
+          "tip2": {
+            "title": "Utilice valores exactos",
+            "content": "Para cálculos científicos y profesionales, utilice valores exactos. Los convertidores admiten valores de hasta 15 decimales."
+          },
+          "tip3": {
+            "title": "Tenga en cuenta los sistemas de medición",
+            "content": "Diferentes países utilizan diferentes sistemas de medición (métrico, imperial, americano). Asegúrese de estar utilizando el sistema adecuado para su tarea."
+          },
+          "tip4": {
+            "title": "Comprueba los resultados",
+            "content": "Para cálculos críticos, se recomienda verificar los resultados de la conversión, especialmente cuando se trabaja con unidades de medida desconocidas."
+          }
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué unidades de medida admiten los convertidores?",
+              "a": "Los convertidores admiten todas las unidades de medida principales en cada categoría: longitud (mm, cm, m, km, millas), peso (g, kg, lb), temperatura (°C, °F, K), velocidad (km/h, m/s, nudos), presión (Pa, atm, mmHg), volumen (l, galones, m³), ​​energía (J, cal, Wh), datos (bytes, KB, MB, GB, TB)."
+            },
+            {
+              "q": "¿Son precisos los cálculos del convertidor?",
+              "a": "Sí, todos los convertidores utilizan estándares y factores de conversión internacionales precisos. Los cálculos se basan en valores oficiales aprobados por organismos metrológicos. La precisión del cálculo es de hasta 15 decimales."
+            },
+            {
+              "q": "¿Los convertidores son gratuitos?",
+              "a": "Sí, todos los conversores de unidades de Calc1.ru son completamente gratuitos. Puedes usarlos un número ilimitado de veces sin registro ni tarifas ocultas."
+            },
+            {
+              "q": "¿Cómo convertir unidades de longitud?",
+              "a": "Seleccione el convertidor de longitud, ingrese el valor en las unidades de origen (por ejemplo, metros) y seleccione la unidad de destino (por ejemplo, kilómetros). El convertidor mostrará instantáneamente el resultado."
+            },
+            {
+              "q": "¿Cómo convertir unidades de peso?",
+              "a": "Utilice el conversor de peso para ingresar el valor en gramos, kilogramos o libras. El convertidor convertirá el valor a la unidad de medida elegida."
+            },
+            {
+              "q": "¿Cómo convertir la temperatura?",
+              "a": "En el convertidor de temperatura, ingrese el valor en Celsius, Fahrenheit o Kelvin. El convertidor convertirá automáticamente el valor a todas las demás escalas."
+            },
+            {
+              "q": "¿Cómo convertir la velocidad?",
+              "a": "En el convertidor de velocidad, introduzca el valor en km/h, m/s o nudos. El convertidor mostrará instantáneamente el valor equivalente en otras unidades de velocidad."
+            },
+            {
+              "q": "¿Cómo convertir la presión?",
+              "a": "En el convertidor de presión, introduzca el valor en pascales, atmósferas o milímetros de mercurio. El convertidor convertirá el valor a la unidad seleccionada."
+            },
+            {
+              "q": "¿Cómo convertir volumen?",
+              "a": "Utilice el conversor de volumen para convertir litros, galones y metros cúbicos. Introduce un valor en una unidad y el conversor mostrará el equivalente en otras."
+            },
+            {
+              "q": "¿Cómo convertir energía?",
+              "a": "En el convertidor de energía, introduzca el valor en julios, calorías o vatios hora. El convertidor convertirá el valor entre todas las unidades de energía."
+            },
+            {
+              "q": "¿Cómo convertir datos?",
+              "a": "En el conversor de datos, ingrese el valor en bytes, kilobytes, megabytes, gigabytes o terabytes. El convertidor utiliza el sistema binario (base 1024)."
+            },
+            {
+              "q": "¿Los convertidores funcionan en dispositivos móviles?",
+              "a": "Sí, todos los conversores están totalmente adaptados para funcionar en dispositivos móviles, tabletas y smartphones. La interfaz se ajusta automáticamente al tamaño de la pantalla."
+            },
+            {
+              "q": "¿En qué idiomas están disponibles los convertidores?",
+              "a": "Los convertidores están disponibles en 4 idiomas: ruso, inglés, español y alemán. La interfaz se adapta automáticamente al idioma seleccionado."
+            },
+            {
+              "q": "¿Es posible guardar los resultados de la conversión?",
+              "a": "Puede copiar los resultados de la conversión al portapapeles o tomar una captura de pantalla de la página de resultados. Algunos convertidores ofrecen la posibilidad de descargar los resultados."
+            },
+            {
+              "q": "¿Cuál es la precisión de la conversión?",
+              "a": "Todos los convertidores realizan cálculos con una precisión de 15 decimales. Esto garantiza una alta precisión para cálculos científicos y profesionales."
+            },
+            {
+              "q": "¿Es posible convertir varios valores al mismo tiempo?",
+              "a": "Los convertidores procesan un valor a la vez. Para convertir varios valores, realice el cálculo para cada valor por separado o abra el convertidor en varias pestañas del navegador."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre el sistema métrico e imperial?",
+              "a": "El sistema métrico se basa en el sistema SI (Sistema Internacional de Unidades) y utiliza las unidades básicas: metro, kilogramo, segundo. El sistema imperial se utiliza en EE.UU., Reino Unido y algunos otros países y se basa en pies, libras y otras unidades tradicionales."
+            },
+            {
+              "q": "¿Por qué el conversor de datos utiliza el sistema 1024 y no el sistema 1000?",
+              "a": "El convertidor de datos utiliza el sistema binario (base 1024), que se utiliza en los sistemas informáticos porque las computadoras funcionan en el sistema numérico binario. Este es un estándar para medir el volumen de datos en TI."
+            },
+            {
+              "q": "¿Se pueden utilizar convertidores para cálculos científicos?",
+              "a": "Sí, los convertidores son aptos para cálculos científicos y profesionales. Todos los factores de conversión se basan en estándares internacionales y garantizan una alta precisión."
+            },
+            {
+              "q": "¿Con qué frecuencia se actualizan las tasas de conversión?",
+              "a": "Los factores de conversión se basan en constantes físicas y estándares internacionales que no cambian. Revisamos y actualizamos periódicamente los convertidores para garantizar la máxima precisión."
+            },
+            {
+              "q": "¿Existe alguna restricción sobre el uso de convertidores?",
+              "a": "No, no existen restricciones en el uso de convertidores. Puedes utilizarlos un número ilimitado de veces para cualquier fin, incluidos los comerciales."
+            },
+            {
+              "q": "¿El convertidor de temperatura admite el cero absoluto?",
+              "a": "Sí, el convertidor de temperatura maneja correctamente todos los valores de temperatura, incluido el cero absoluto (0 K = -273,15°C = -459,67°F)."
+            },
+            {
+              "q": "¿Cómo convertir valores grandes?",
+              "a": "Los convertidores pueden funcionar con cualquier valor, incluidos números muy grandes. El valor máximo está limitado únicamente por las capacidades de JavaScript, que le permite manejar números de casi cualquier tamaño."
+            },
+            {
+              "q": "¿Qué debo hacer si el resultado de la conversión parece incorrecto?",
+              "a": "Compruebe que ha seleccionado las unidades correctas para el valor de entrada y el resultado. Asegúrese de comprender la diferencia entre los sistemas métrico e imperial. Si el problema persiste, intente volver a calcular el valor manualmente para comprobarlo."
+            },
+            {
+              "q": "¿Se pueden utilizar los convertidores sin conexión?",
+              "a": "No, los convertidores requieren una conexión a Internet ya que se ejecutan en un navegador. Sin embargo, una vez cargada la página, las funciones básicas pueden funcionar incluso con una conexión a Internet lenta."
+            },
+            {
+              "q": "¿Existen conversores para otras unidades de medida?",
+              "a": "Actualmente hay convertidores disponibles para 8 categorías principales de unidades de medida. Trabajamos constantemente para agregar nuevas categorías y unidades de medida. ¡Manténganse al tanto!"
+            },
+            {
+              "q": "¿Cómo convertir unidades en recetas?",
+              "a": "Para recetas, utilice un conversor de peso (para convertir gramos a libras) y un conversor de volumen (para convertir litros a galones o mililitros). Esto es especialmente útil cuando se utilizan recetas internacionales."
+            },
+            {
+              "q": "¿El convertidor es adecuado para la educación?",
+              "a": "Sí, los convertidores son ideales para la educación. Los estudiantes y profesores pueden utilizarlos para aprender unidades de medida y completar tareas de aprendizaje que impliquen conversiones entre sistemas de medida."
+            },
+            {
+              "q": "¿Cómo convierto unidades para viajes internacionales?",
+              "a": "Para viajes internacionales, utilice un convertidor de temperatura (para convertir el clima), un convertidor de velocidad (para convertir los límites de velocidad) y un convertidor de longitud (para convertir distancias). Esto le ayudará a navegar por países con diferentes sistemas de medición."
+            },
+            {
+              "q": "¿Existen convertidores para unidades especializadas?",
+              "a": "Ya están disponibles convertidores para unidades de medida básicas. Las unidades especializadas (como las de medicina o ciencia) pueden requerir convertidores adicionales, que planeamos agregar en el futuro."
+            }
+          ]
+        }
+      }
     },
     "fun": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "Entretenimiento y pasatiempos",
+      "description": "Compatibilidad, generadores, juegos.",
+      "seo": {
+        "title": "Calculadoras de entretenimiento online - Generadores, juegos y entretenimiento | calc1.ru",
+        "description": "Calculadoras de entretenimiento online gratis: generadores de contraseñas, apodos, nombres, números aleatorios, billetes de lotería, calculadoras de compatibilidad y amor, signos del zodiaco, dados online, lanzamiento de moneda, generadores de personajes y mundos de fantasía. ¡Diversión y creatividad para todos!",
+        "keywords": "calculadoras de entretenimiento, generador de contraseñas, generador de apodos, generador de nombres, generador de números aleatorios, generador de lotería, calculadora de compatibilidad, calculadora de amor, calculadora del zodiaco, signo del zodiaco por fecha, calculadora de peso en planetas, lanzamiento de dados en línea, lanzamiento de una moneda en línea, cara cruz en línea, generador de personajes, generador de mundos de fantasía, generador de características de personajes, generador de mundos ficticios, generador de nombres para personajes, entretenimiento en línea, generadores en línea, calculadoras divertidas, generador de contraseñas, generador de números aleatorios, calculadora de compatibilidad, calculadora de amor, calculadora del zodiaco, rodillo de dados, lanzador de monedas, generador de lotería, generador de personajes, generador de mundos de fantasía, generador de nombres, generador de apodos, peso del planeta, compatibilidad por fecha de nacimiento, horóscopo online, dados D&D, juegos de mesa, juegos de rol",
+        "overview": {
+          "title": "Acerca de las calculadoras de entretenimiento",
+          "content": "Calculadoras de entretenimiento Calc1.ru es un conjunto único de herramientas en línea para entretenimiento, creatividad y pasatiempos. En nuestro catálogo encontrarás 12 calculadoras diferentes: desde generadores de contraseñas y generadores de números aleatorios hasta calculadoras de compatibilidad y simuladores de juegos.",
+          "additionalContent": "Nuestras calculadoras de entretenimiento te ayudarán: crea una contraseña única para proteger tus cuentas, crea un apodo original para juegos y redes sociales, genera un nombre para un personaje o proyecto, descubre tu signo y características del zodíaco, calcula la compatibilidad con tu pareja, crea personajes para historias y juegos, construye un mundo de fantasía para tu trabajo, juega con cubos y monedas, genera billetes de lotería para sorteos, descubre tu peso en otros planetas. Todas las calculadoras funcionan completamente en línea, no requieren registro y están disponibles de forma gratuita las 24 horas, los 7 días de la semana."
+        },
+        "advantages": {
+          "title": "Beneficios de nuestras divertidas calculadoras",
+          "content": "Ofrecemos una amplia selección de calculadoras de entretenimiento con características únicas:",
+          "free": {
+            "title": "Gratis para usar",
+            "content": "Todas las calculadoras son completamente gratuitas y no requieren registro. Úsalos tantas veces como sea necesario sin restricciones."
+          },
+          "instant": {
+            "title": "Resultados instantáneos",
+            "content": "Todos los cálculos y la generación se realizan instantáneamente en tiempo real. Los resultados aparecen inmediatamente después de presionar el botón."
+          },
+          "secure": {
+            "title": "Seguridad de datos",
+            "content": "Los generadores de contraseñas y otras herramientas se ejecutan localmente en su navegador. Los datos no se transfieren al servidor y no se guardan."
+          },
+          "comprehensive": {
+            "title": "Amplia funcionalidad",
+            "content": "12 calculadoras diferentes cubren todas tus necesidades de entretenimiento y creatividad, desde crear contraseñas hasta construir mundos de fantasía."
+          },
+          "mobile": {
+            "title": "Adaptación móvil",
+            "content": "Todas las calculadoras están totalmente adaptadas para funcionar en teléfonos inteligentes y tabletas. La interfaz está optimizada para el control táctil."
+          },
+          "creative": {
+            "title": "Herramientas creativas",
+            "content": "Los generadores de personajes, nombres y mundos ayudan a los escritores, diseñadores de juegos y todas las personas creativas a crear contenido único."
+          }
+        },
+        "tips": {
+          "title": "Consejos de uso",
+          "content": "Para aprovechar al máximo nuestras divertidas calculadoras, siga estos consejos:",
+          "tip1": "Utilice un generador de contraseñas para crear contraseñas seguras de al menos 12 caracteres con una combinación de letras, números y símbolos.",
+          "tip2": "Los generadores de nombres y personajes se pueden utilizar para crear personajes únicos para sus historias, juegos o proyectos creativos.",
+          "tip3": "La calculadora de compatibilidad y el zodíaco están destinados a fines de entretenimiento y no son un método científico de análisis de relaciones.",
+          "tip4": "Los simuladores de juegos (dados, monedas) son ideales para juegos de mesa, tomar decisiones sencillas y enseñar teoría de la probabilidad."
+        },
+        "faq": {
+          "title": "Preguntas frecuentes",
+          "faqItems": [
+            {
+              "q": "¿Qué son las calculadoras recreativas?",
+              "a": "Las calculadoras divertidas son herramientas en línea para entretenimiento, creatividad y pasatiempos. Incluyen generadores de contraseñas, generadores de nombres, generadores de caracteres, generadores de números aleatorios, calculadoras de compatibilidad, calculadoras del zodíaco y simuladores de juegos."
+            },
+            {
+              "q": "¿Cuántas calculadoras de entretenimiento hay disponibles?",
+              "a": "Actualmente hay 12 calculadoras divertidas disponibles: generador de contraseñas, generador de apodos, generador de nombres, generador de números aleatorios, generador de lotería, calculadora de compatibilidad, calculadora de amor, calculadora del zodíaco, calculadora de peso de planetas, dados en línea, lanzamiento de monedas, generador de personajes y generador de mundos de fantasía."
+            },
+            {
+              "q": "¿Las calculadoras recreativas son de uso gratuito?",
+              "a": "Sí, todas las calculadoras de entretenimiento son completamente gratuitas y no requieren registro. Úsalos tantas veces como sea necesario sin restricciones."
+            },
+            {
+              "q": "¿Es seguro utilizar un generador de contraseñas?",
+              "a": "Sí, el generador de contraseñas funciona completamente localmente en su navegador. Las contraseñas no se transmiten al servidor, no se almacenan y no pueden ser interceptadas por terceros."
+            },
+            {
+              "q": "¿Se pueden utilizar los generadores con fines comerciales?",
+              "a": "Sí, todos los generadores se pueden utilizar para cualquier fin, incluido el comercial. No hay restricciones de uso."
+            },
+            {
+              "q": "¿Las calculadoras funcionan en dispositivos móviles?",
+              "a": "Sí, todas las calculadoras de entretenimiento están totalmente adaptadas para funcionar en teléfonos inteligentes y tabletas. La interfaz está optimizada para el control táctil."
+            },
+            {
+              "q": "¿Es posible guardar los resultados de la generación?",
+              "a": "La mayoría de los generadores ofrecen la posibilidad de copiar los resultados al portapapeles o descargarlos como un archivo de texto. Algunas calculadoras también admiten la impresión de resultados."
+            },
+            {
+              "q": "¿Qué tan aleatorios son los resultados de los generadores?",
+              "a": "Todos los generadores utilizan algoritmos criptográficamente sólidos para generar resultados verdaderamente aleatorios. Cada generación es independiente e igualmente probable."
+            },
+            {
+              "q": "¿Puedes usar una calculadora del zodíaco para tomar decisiones importantes?",
+              "a": "La calculadora del zodíaco está destinada a fines de entretenimiento y no es un método científico. No se recomienda utilizarlo para tomar decisiones importantes en la vida."
+            },
+            {
+              "q": "¿La calculadora de compatibilidad es adecuada para relaciones reales?",
+              "a": "Calculadora de compatibilidad es una herramienta entretenida basada en principios astrológicos. No reemplaza la comunicación real y el entendimiento mutuo en una relación."
+            },
+            {
+              "q": "¿Puedo usar un generador de caracteres para libros?",
+              "a": "Sí, el generador de personajes es perfecto para crear personajes únicos para libros, historias, juegos y otros proyectos creativos."
+            },
+            {
+              "q": "¿Las calculadoras funcionan sin conexión?",
+              "a": "Después de cargar la primera página, la mayoría de las calculadoras pueden funcionar sin conexión, ya que todos los cálculos se realizan localmente en el navegador."
+            },
+            {
+              "q": "¿Se pueden utilizar los dados para juegos de mesa?",
+              "a": "Sí, el simulador de dados es ideal para juegos de mesa (D&D, Pathfinder, Warhammer) y admite todos los tipos de dados estándar (D4, D6, D8, D10, D12, D20, D100)."
+            },
+            {
+              "q": "¿El generador de lotería garantiza ganar?",
+              "a": "No, el generador de lotería crea combinaciones aleatorias de números. Las probabilidades de ganar dependen de las reglas de la lotería específica. Esta es una herramienta entretenida."
+            },
+            {
+              "q": "¿Puedo usar un generador de nombres para bebés?",
+              "a": "Sí, el generador de nombres admite el tipo 'nombre de bebé' con nombres populares reales. Puede elegir el género y la longitud del nombre."
+            },
+            {
+              "q": "¿Cuál es la diferencia entre un generador de apodos y un generador de nombres?",
+              "a": "El generador de apodos crea nombres cortos y sonoros para juegos y redes sociales con diversos temas y estilos. El generador de nombres crea nombres completos para niños, personajes, proyectos, libros y juegos."
+            },
+            {
+              "q": "¿Es posible crear varios personajes a la vez?",
+              "a": "Sí, el generador de personajes te permite crear de 1 a 5 personajes a la vez con diferentes características, profesiones e historias."
+            },
+            {
+              "q": "¿La calculadora de peso funciona en planetas para alguna unidad de medida?",
+              "a": "La calculadora de peso del planeta admite kilogramos y libras. Los cálculos se basan en los valores exactos de la gravedad de cada planeta."
+            },
+            {
+              "q": "¿Es posible utilizar un generador de mundos de fantasía para juegos?",
+              "a": "Sí, Fantasy World Generator es ideal para crear universos ficticios para juegos, libros, historias y otros proyectos creativos."
+            },
+            {
+              "q": "¿Cuántos mundos puedes crear a la vez?",
+              "a": "El generador de mundos de fantasía te permite crear de 1 a 3 mundos a la vez con una descripción completa del clima, la cultura, el gobierno, los recursos y los conflictos."
+            },
+            {
+              "q": "¿Un generador de números aleatorios es bueno para programar?",
+              "a": "Sí, se puede utilizar un generador de números aleatorios para probar algoritmos, generar datos de prueba y otras tareas de programación."
+            },
+            {
+              "q": "¿Es posible personalizar los parámetros del generador?",
+              "a": "Sí, la mayoría de los generadores proporcionan configuraciones para personalizar los resultados: longitud, estilo, número de elementos, filtros y otros parámetros."
+            },
+            {
+              "q": "¿Se guardan los resultados de la generación entre sesiones?",
+              "a": "Los resultados de la generación no se guardan automáticamente entre sesiones. Se recomienda copiar o descargar los resultados si desea guardarlos para usarlos en el futuro."
+            },
+            {
+              "q": "¿Se pueden utilizar generadores para entrenar?",
+              "a": "Sí, muchos generadores son excelentes para aprender: un generador de números aleatorios para aprender estadísticas, una calculadora de peso planetario para aprender física, simuladores de juegos para aprender teoría de probabilidades."
+            },
+            {
+              "q": "¿Existe alguna restricción en el número de generaciones?",
+              "a": "No, no hay restricciones en el número de generaciones. Puedes utilizar calculadoras un número ilimitado de veces."
+            },
+            {
+              "q": "¿Las calculadoras funcionan en modo de navegador privado?",
+              "a": "Sí, todas las calculadoras funcionan en cualquier modo de navegador, incluido el privado. Todas las generaciones ocurren localmente y no se salvan."
+            },
+            {
+              "q": "¿Es posible exportar los resultados a Excel?",
+              "a": "Algunas calculadoras ofrecen la posibilidad de descargar resultados en un formato de texto que se puede importar a Excel. También puedes copiar los resultados y pegarlos en Excel manualmente."
+            },
+            {
+              "q": "¿Con qué frecuencia se actualizan las calculadoras?",
+              "a": "Actualizamos periódicamente las calculadoras, agregamos nuevas funciones, mejoramos la interfaz y corregimos posibles errores. ¡Manténganse al tanto!"
+            },
+            {
+              "q": "¿Podemos sugerir una nueva calculadora de entretenimiento?",
+              "a": "Sí, siempre estamos abiertos a sugerencias de nuevas calculadoras. Contáctenos a través del formulario de comentarios en el sitio web."
+            },
+            {
+              "q": "¿Las calculadoras son aptas para todas las edades?",
+              "a": "Sí, las calculadoras divertidas son adecuadas para todas las edades. Algunas calculadoras pueden ser especialmente interesantes para niños y adolescentes, mientras que otras pueden ser de particular interés para adultos por su creatividad y entretenimiento."
+            }
+          ]
+        }
+      }
     },
     "it": {
-      "title": "",
-      "description": "",
-      "seo": {}
+      "title": "calculadoras de TI",
+      "description": "Direcciones IP, hash, codificación, cálculos de red.",
+      "seo": {
+        "title": "Calculadoras TI online - Cálculos de redes y criptomonedas | calc1.ru",
+        "description": "Calculadoras de TI en línea gratuitas: cálculo de direcciones IP y subredes (IPv4, IPv6, CIDR), calculadora de hashrate para minería de criptomonedas, cálculos de red. Herramientas precisas para desarrolladores, administradores de sistemas y especialistas de TI.",
+        "keywords": "Calculadoras de TI, calculadora de dirección IP, calculadora de hashrate, calculadora de minería, minería de Bitcoin, minería de Ethereum, calculadora de IP en línea, calculadora de CIDR, calculadora de IPv4, calculadora de IPv6, calculadora de subred, cálculos de red, cálculo de subred, herramientas de red, herramientas de TI en línea, calculadora de rentabilidad de minería, calculadora de rentabilidad minera, rentabilidad de minería, calculadora de hashrate, dificultad de red, recompensa de bloque, tiempo de bloque, minería de ROI, minería ASIC, minería de GPU, granja minera, calculadora de Bitcoin, calculadora de Ethereum, calculadora de red, calculadora de IP, calculadora de subred, Calculadora CIDR, calculadora de hashrate, calculadora de minería, calculadora de criptomonedas, calculadora de minería de Bitcoin, calculadora de minería de Ethereum",
+        "overview": {
+          "title": "Calculadoras de TI Calc1.ru",
+          "content": "Calculadoras de TI Calc1.ru es un conjunto completo de herramientas en línea para especialistas, desarrolladores y administradores de sistemas de TI. Nuestras calculadoras lo ayudan a realizar cálculos precisos de los parámetros de red, direcciones IP, subredes y la rentabilidad de la minería de criptomonedas.",
+          "additionalContent": "Todas las calculadoras utilizan fórmulas y estándares actuales, lo que garantiza cálculos precisos. Las herramientas funcionan al instante, de forma totalmente gratuita y sin registro. Adecuado para uso profesional en infraestructura de TI, desarrollo y minería de criptomonedas."
+        },
+        "advantages": {
+          "title": "Ventajas de las calculadoras informáticas",
+          "content": "Nuestras calculadoras de TI brindan muchos beneficios para los profesionales de TI:",
+          "accurate": "Cálculos precisos",
+          "accurateDesc": "Utiliza estándares actuales de direccionamiento de red y fórmulas de minería para máxima precisión.",
+          "professional": "herramientas profesionales",
+          "professionalDesc": "Diseñado para uso en entornos de TI profesionales y minería de criptomonedas.",
+          "comprehensive": "Conjunto completo de funciones",
+          "comprehensiveDesc": "Cubrir todas las necesidades básicas: desde cálculos de red hasta análisis de rentabilidad minera",
+          "fast": "Resultados instantáneos",
+          "fastDesc": "Todos los cálculos se realizan instantáneamente en tiempo real y sin demoras.",
+          "free": "gratis",
+          "freeDesc": "Completamente gratis, sin registro ni tarifas ocultas",
+          "accessible": "Disponibilidad",
+          "accessibleDesc": "Funciona en todos los dispositivos con interfaz adaptable para trabajar cómodamente en cualquier momento"
+        },
+        "tips": {
+          "title": "Consejos para usar calculadoras de TI",
+          "content": "Para obtener los resultados más precisos, siga estas pautas:",
+          "data": "Utilice datos actualizados: parámetros reales de la red, complejidad actual de la cadena de bloques, características exactas del hardware",
+          "verification": "Verifique los resultados con múltiples fuentes para confirmar la precisión",
+          "regular": "Recalcular periódicamente los parámetros cuando cambien la configuración de la red o las condiciones de minería.",
+          "planning": "Utilice calculadoras para planificar su infraestructura de red y estimar las inversiones mineras"
+        },
+        "faq": {
+          "title": "Preguntas frecuentes sobre calculadoras de TI",
+          "faqItems": [
+            {
+              "q": "¿Qué calculadoras de TI están disponibles en Calc1.ru?",
+              "a": "Calc1.ru ofrece calculadoras para: direcciones IP y subredes (IPv4/IPv6, CIDR), hashrate para minar criptomonedas (Bitcoin, Ethereum y otras). Todas las calculadoras funcionan en línea y son absolutamente gratuitas."
+            },
+            {
+              "q": "¿Qué precisión tienen las calculadoras de TI?",
+              "a": "Las calculadoras utilizan los últimos estándares de direccionamiento de red (RFC) y fórmulas de minería utilizadas en las redes blockchain. La precisión depende de la exactitud de los datos ingresados. Para uso profesional, las calculadoras proporcionan resultados muy precisos."
+            },
+            {
+              "q": "¿Las calculadoras de TI son de uso gratuito?",
+              "a": "Sí, todas las calculadoras de TI en Calc1.ru son completamente gratuitas. Puedes usarlos un número ilimitado de veces sin registro ni tarifas ocultas."
+            },
+            {
+              "q": "¿Cómo calcular los parámetros de subred por IP y CIDR?",
+              "a": "Utilice una calculadora de direcciones IP ingresando una dirección IP con notación CIDR (por ejemplo, 192.168.1.0/24). La calculadora mostrará la dirección de red, el rango de IP, la máscara de subred, la cantidad de hosts y otros parámetros."
+            },
+            {
+              "q": "¿Cómo calcular la rentabilidad de la minería de criptomonedas?",
+              "a": "Utilice la calculadora de hashrate ingresando el hashrate del hardware, la dificultad de la red, la recompensa del bloque, el tiempo del bloque, el consumo de energía y el costo de la electricidad. La calculadora calculará la rentabilidad, el beneficio y la recuperación de la inversión."
+            },
+            {
+              "q": "¿Cómo calcular la cantidad de hosts en una subred?",
+              "a": "En la calculadora de direcciones IP, ingrese la notación CIDR o IP con máscara. La calculadora calculará automáticamente la cantidad de hosts disponibles usando la fórmula: 2^(32-CIDR) - 2 para IPv4."
+            },
+            {
+              "q": "¿Cómo calcular la recuperación de la inversión de los equipos de minería?",
+              "a": "En la calculadora de hashrate, ingresa el costo del equipo y calcula la ganancia neta. Recuperación de la inversión = Costo del equipo / Beneficio neto por día. El resultado mostrará el número de días hasta la recuperación de la inversión."
+            },
+            {
+              "q": "¿La calculadora admite direcciones IPv6?",
+              "a": "Sí, la calculadora de direcciones IP es totalmente compatible con direcciones IPv4 e IPv6. Puede calcular subredes para ambas versiones del protocolo IP."
+            },
+            {
+              "q": "¿Cómo tener en cuenta la comisión del pool de minería al calcular?",
+              "a": "En la calculadora de hashrate, ingrese el porcentaje de la comisión del grupo (generalmente entre 1 y 3%). La calculadora restará automáticamente la comisión de los ingresos al calcular el beneficio neto."
+            },
+            {
+              "q": "¿Cómo calcular la dirección de transmisión de una subred?",
+              "a": "Utilice una calculadora de direcciones IP. La dirección de transmisión se calcula automáticamente como la última dirección en el rango de subred y aparece en los resultados."
+            },
+            {
+              "q": "¿Qué hashrate se necesita para una minería rentable?",
+              "a": "El hashrate requerido depende de la complejidad de la red, el valor de la criptomoneda y los costos de energía. Utilice una calculadora de hashrate y aumente gradualmente su hashrate hasta que la minería se vuelva rentable."
+            },
+            {
+              "q": "¿Cómo calcular a la inversa el rango de IP en CIDR?",
+              "a": "En la calculadora de direcciones IP, seleccione el modo \"Rango de IP\" e ingrese la primera y la última dirección IP. La calculadora determinará automáticamente el CIDR mínimo para el rango dado."
+            },
+            {
+              "q": "¿Es posible calcular rentabilidades para diferentes criptomonedas?",
+              "a": "Sí, la calculadora de hashrate admite varias criptomonedas: Bitcoin, Ethereum, Litecoin y otras. Puede seleccionar una criptomoneda preestablecida o especificar los parámetros manualmente."
+            },
+            {
+              "q": "¿Cómo calcular la máscara de subred desde CIDR?",
+              "a": "CIDR muestra la cantidad de unidades en la máscara. Por ejemplo, /24 significa que la máscara es 255.255.255.0. La calculadora de direcciones IP convierte automáticamente el CIDR en una máscara de subred."
+            },
+            {
+              "q": "¿Cómo tener en cuenta los cambios en la dificultad de la red al minar?",
+              "a": "La complejidad de la red cambia constantemente. Utilice datos de dificultad actualizados de exploradores de blockchain o grupos de minería. La calculadora admite la entrada manual de dificultad para realizar cálculos precisos."
+            },
+            {
+              "q": "¿Qué son las direcciones IP privadas?",
+              "a": "Las direcciones IP privadas se utilizan para redes internas: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 para IPv4. La calculadora determina automáticamente el tipo de dirección (privada o pública)."
+            },
+            {
+              "q": "¿Cómo calcular el tiempo que lleva minar un bloque?",
+              "a": "Tiempo para encontrar un bloque = Complejidad de la red / Hashrate. La calculadora de hashrate calcula automáticamente el tiempo de bloque teórico cuando se trabaja solo."
+            },
+            {
+              "q": "¿Se puede utilizar la calculadora para diseñar redes locales?",
+              "a": "Sí, la calculadora de direcciones IP es excelente para diseñar redes locales. Puede calcular subredes, definir rangos de IP y planificar su infraestructura de red."
+            },
+            {
+              "q": "¿Cómo calcular los costos de electricidad al minar?",
+              "a": "En la calculadora de hashrate, ingresa el consumo de energía del equipo en vatios y el costo de la electricidad por kWh. La calculadora calculará automáticamente sus costos de energía por día, mes y año."
+            },
+            {
+              "q": "¿Cómo dividir una red en varias subredes?",
+              "a": "Utilice la calculadora de direcciones IP para calcular los parámetros de cada subred. Determine la cantidad requerida de hosts en cada subred y seleccione el CIDR apropiado. La calculadora mostrará todos los parámetros de la subred."
+            },
+            {
+              "q": "¿Qué es el ROI en minería y cómo calcularlo?",
+              "a": "ROI (Return on Investment) es el retorno de la inversión. Calculado como: ROI = Costo del equipo / Beneficio neto por día. La calculadora de hashrate calcula automáticamente el ROI en función de los datos ingresados."
+            },
+            {
+              "q": "¿Cómo comprobar si la dirección IP es correcta?",
+              "a": "La calculadora de direcciones IP verifica automáticamente el formato y el rango de direcciones IP. Si ingresa una dirección incorrecta, la calculadora mostrará un error de validación."
+            },
+            {
+              "q": "¿Es posible utilizar una calculadora para calcular la rentabilidad de una granja minera?",
+              "a": "Sí, la calculadora de hashrate se puede utilizar para calcular la rentabilidad de una granja minera. Ingrese el hashrate total de todos los dispositivos y el consumo total de energía de toda la granja."
+            },
+            {
+              "q": "¿Cómo calcular la primera y última IP en una subred?",
+              "a": "Primera IP = dirección de red + 1, última IP = dirección de transmisión - 1. La calculadora de direcciones IP calcula y muestra automáticamente estas direcciones en los resultados."
+            },
+            {
+              "q": "¿Cómo tener en cuenta el halving al calcular la rentabilidad minera?",
+              "a": "Reducir a la mitad reduce la recompensa del bloque a la mitad. Al calcular la rentabilidad, utilice la recompensa del bloque actual después de la reducción a la mitad. Para Bitcoin, la recompensa disminuye cada 210.000 bloques."
+            },
+            {
+              "q": "¿Cómo calcular una subred para una infraestructura de servidor?",
+              "a": "Determine la cantidad de servidores que necesita alojar y seleccione el CIDR apropiado para la subred. La calculadora le mostrará cuántos hosts hay disponibles y si la subred es adecuada para sus necesidades."
+            },
+            {
+              "q": "¿Es posible comparar la rentabilidad de diferentes algoritmos de minería?",
+              "a": "Sí, utiliza la calculadora de hashrate para cada criptomoneda por separado. Calcule la rentabilidad de Bitcoin (SHA-256), Ethereum (Ethash), Litecoin (Scrypt) y compare los resultados."
+            },
+            {
+              "q": "¿Cómo calcular el costo óptimo de la electricidad para una minería rentable?",
+              "a": "Utilice la calculadora de hashrate y reduzca gradualmente el coste de la electricidad hasta que el beneficio sea positivo. Esto mostrará el coste máximo de la electricidad al que la minería sigue siendo rentable."
+            },
+            {
+              "q": "¿Cómo tener en cuenta los cambios en el tipo de cambio de las criptomonedas al minar?",
+              "a": "El tipo de cambio de las criptomonedas afecta la rentabilidad en rublos. Si el tipo de cambio cambia, vuelva a calcular el rendimiento en la calculadora. Ingresos en rublos = Ingresos en criptomonedas × Tipo de cambio actual."
+            },
+            {
+              "q": "¿Cómo calcular una subred para servicios en la nube?",
+              "a": "Considere los requisitos del proveedor de la nube y la escala planificada de la infraestructura. Utilice la calculadora de direcciones IP para calcular subredes teniendo en cuenta las limitaciones y requisitos de la plataforma en la nube."
+            }
+          ]
+        }
+      }
     }
   }
 }

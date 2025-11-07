@@ -1,337 +1,341 @@
 {
-	"calculators": {
-		"grade-calculator": {
-			"title": "Калькулятор оценок (GPA)",
-			"description": "Расчёт среднего балла (GPA) на основе оценок и кредитов",
-			"breadcrumbs": {
-				"category": "Учёба и наука"
-			},
-			"form": {
-				"title": "Параметры расчёта",
-				"gradingSystem": "Система оценивания",
-				"courses": "Предметы",
-				"grade": "Оценка",
-				"credits": "Кредиты",
-				"courseName": "Название предмета",
-				"addCourse": "Добавить предмет",
-				"removeCourse": "Удалить",
-				"calculate": "Рассчитать",
-				"reset": "Сбросить",
-				"gradingSystems": {
-					"5-point": "5-балльная (Россия)",
-					"4-point": "4-балльная (GPA)",
-					"100-point": "100-балльная (Процентная)",
-					"letter": "Буквенная (A-F)"
-				},
-				"gradeOptions": {
-					"5-point": {
-						"5": "5 (Отлично)",
-						"4": "4 (Хорошо)",
-						"3": "3 (Удовлетворительно)",
-						"2": "2 (Неудовлетворительно)"
-					},
-					"4-point": {
-						"4.0": "4.0 (A)",
-						"3.7": "3.7 (A-)",
-						"3.3": "3.3 (B+)",
-						"3.0": "3.0 (B)",
-						"2.7": "2.7 (B-)",
-						"2.3": "2.3 (C+)",
-						"2.0": "2.0 (C)",
-						"1.7": "1.7 (C-)",
-						"1.3": "1.3 (D+)",
-						"1.0": "1.0 (D)",
-						"0.0": "0.0 (F)"
-					},
-					"100-point": {
-						"90-100": "90-100 (Отлично)",
-						"80-89": "80-89 (Хорошо)",
-						"70-79": "70-79 (Удовлетворительно)",
-						"60-69": "60-69 (Неудовлетворительно)",
-						"0-59": "0-59 (Неудовлетворительно)"
-					},
-					"letter": {
-						"A": "A (Отлично)",
-						"B": "B (Хорошо)",
-						"C": "C (Удовлетворительно)",
-						"D": "D (Слабо)",
-						"F": "F (Неудовлетворительно)"
-					}
-				},
-				"errors": {
-					"title": "Ошибки в данных",
-					"atLeastOneCourse": "Добавьте хотя бы один предмет",
-					"courseNameRequired": "Укажите название предмета",
-					"gradeRequired": "Выберите оценку",
-					"creditsRequired": "Укажите количество кредитов",
-					"invalidCredits": "Количество кредитов должно быть больше 0",
-					"invalidGrade": "Некорректная оценка"
-				}
-			},
-			"results": {
-				"title": "Результаты расчёта",
-				"gpa": "Средний балл (GPA)",
-				"totalCredits": "Всего кредитов",
-				"weightedAverage": "Средневзвешенный балл",
-				"totalPoints": "Всего баллов",
-				"courses": "Предметы",
-				"course": "Предмет",
-				"grade": "Оценка",
-				"credits": "Кредиты",
-				"points": "Баллы",
-				"placeholder": "Добавьте предметы для расчёта GPA"
-			},
-			"hero": {
-				"accuracy": "Точность расчёта",
-				"multipleSystems": "Системы",
-				"planning": "Планирование"
-			},
-			"features": {
-				"gpaCalculation": "Расчёт GPA",
-				"multipleSystems": "Несколько систем оценивания",
-				"weightedAverage": "Средневзвешенный балл",
-				"accuracy": "Высокая точность расчётов"
-			},
-			"seo": {
-				"title": "Калькулятор оценок (GPA) онлайн — Расчёт среднего балла | Calc1.ru",
-				"description": "Бесплатный онлайн калькулятор оценок (GPA) для расчёта среднего балла на основе оценок и кредитов. Поддерживает 5-балльную, 4-балльную (GPA), 100-балльную и буквенную системы оценивания. Помогает планировать учёбу.",
-				"keywords": "калькулятор оценок, калькулятор GPA, расчёт среднего балла, средний балл онлайн, GPA калькулятор, расчёт GPA, средневзвешенный балл, калькулятор оценок студента, расчёт среднего балла по оценкам, GPA calculator, grade calculator, средний балл диплома, расчёт среднего балла аттестата, калькулятор оценок с кредитами, средний балл с учётом кредитов, weighted GPA, unweighted GPA, расчёт среднего балла для поступления, средний балл университета, калькулятор оценок для школы",
-				"overview": {
-					"title": "Калькулятор оценок (GPA) онлайн",
-					"content": "Онлайн калькулятор оценок (GPA) поможет рассчитать средний балл на основе оценок по предметам и количества кредитов (часов). Поддерживает различные системы оценивания: 5-балльную (Россия), 4-балльную (GPA, США), 100-балльную (процентную) и буквенную (A-F).",
-					"additionalContent": "GPA (Grade Point Average) - это средний балл успеваемости, который рассчитывается как средневзвешенное значение оценок с учётом кредитов (часов) каждого предмета. Формула: GPA = Сумма (Оценка × Кредиты) / Сумма кредитов. Чем больше кредитов у предмета, тем больше его влияние на общий GPA.",
-					"calculationExamples": {
-						"title": "Примеры расчёта GPA",
-						"content": "Рассмотрим практические примеры расчёта среднего балла для различных ситуаций:",
-						"example1": {
-							"title": "Пример 1: 5-балльная система, 4 предмета",
-							"description": "Студент с хорошими оценками",
-							"input": "Математика: 5 (3 кредита)\nФизика: 4 (4 кредита)\nХимия: 5 (2 кредита)\nИстория: 4 (2 кредита)",
-							"calculation": "Баллы = (5×3) + (4×4) + (5×2) + (4×2) = 15 + 16 + 10 + 8 = 49\nКредиты = 3 + 4 + 2 + 2 = 11\nGPA = 49 / 11 = 4.45",
-							"result": "GPA = 4.45 из 5.0",
-							"type": "5-балльная система",
-							"note": "Средний балл выше 4.0 считается отличным результатом"
-						},
-						"example2": {
-							"title": "Пример 2: 4-балльная система (GPA), 5 предметов",
-							"description": "Студент с различными оценками",
-							"input": "Math: 4.0 (3 кредита)\nPhysics: 3.7 (4 кредита)\nChemistry: 3.0 (3 кредита)\nEnglish: 3.3 (2 кредита)\nHistory: 2.7 (3 кредита)",
-							"calculation": "Баллы = (4.0×3) + (3.7×4) + (3.0×3) + (3.3×2) + (2.7×3) = 12 + 14.8 + 9 + 6.6 + 8.1 = 50.5\nКредиты = 3 + 4 + 3 + 2 + 3 = 15\nGPA = 50.5 / 15 = 3.37",
-							"result": "GPA = 3.37 из 4.0",
-							"type": "4-балльная система",
-							"note": "GPA 3.0-3.5 считается хорошим результатом"
-						},
-						"example3": {
-							"title": "Пример 3: Буквенная система, 6 предметов",
-							"description": "Студент с высокими оценками",
-							"input": "Math: A (4 кредита)\nPhysics: A (4 кредита)\nChemistry: B (3 кредита)\nEnglish: A (3 кредита)\nHistory: B (2 кредита)\nArt: A (2 кредита)",
-							"calculation": "A = 4.0, B = 3.0\nБаллы = (4.0×4) + (4.0×4) + (3.0×3) + (4.0×3) + (3.0×2) + (4.0×2) = 16 + 16 + 9 + 12 + 6 + 8 = 67\nКредиты = 4 + 4 + 3 + 3 + 2 + 2 = 18\nGPA = 67 / 18 = 3.72",
-							"result": "GPA = 3.72 из 4.0",
-							"type": "Буквенная система",
-							"note": "Преимущественно оценки A дают высокий GPA"
-						},
-						"example4": {
-							"title": "Пример 4: Влияние кредитов на GPA",
-							"description": "Два студента с одинаковыми оценками, но разными кредитами",
-							"input": "Студент 1:\nМатематика: 5 (6 кредитов)\nФизика: 4 (2 кредита)\n\nСтудент 2:\nМатематика: 5 (2 кредита)\nФизика: 4 (6 кредитов)",
-							"calculation": "Студент 1: GPA = (5×6 + 4×2) / (6+2) = 38/8 = 4.75\nСтудент 2: GPA = (5×2 + 4×6) / (2+6) = 34/8 = 4.25",
-							"result": "Студент 1: GPA 4.75, Студент 2: GPA 4.25",
-							"type": "Влияние кредитов",
-							"note": "Предметы с большим количеством кредитов сильнее влияют на GPA"
-						},
-						"example5": {
-							"title": "Пример 5: 100-балльная система",
-							"description": "Расчёт GPA из процентных оценок",
-							"input": "Математика: 95% (4 кредита)\nФизика: 87% (4 кредита)\nХимия: 78% (3 кредита)\nИстория: 92% (2 кредита)",
-							"calculation": "Конвертация в 4.0: 95%→4.0, 87%→3.7, 78%→3.0, 92%→4.0\nБаллы = (4.0×4) + (3.7×4) + (3.0×3) + (4.0×2) = 16 + 14.8 + 9 + 8 = 47.8\nКредиты = 4 + 4 + 3 + 2 = 13\nGPA = 47.8 / 13 = 3.68",
-							"result": "GPA = 3.68 из 4.0",
-							"type": "100-балльная система",
-							"note": "Процентные оценки конвертируются в GPA по стандартной шкале"
-						},
-						"example6": {
-							"title": "Пример 6: Улучшение GPA",
-							"description": "Расчёт необходимых оценок для повышения GPA",
-							"input": "Текущий GPA: 3.2 (45 кредитов)\nНовые предметы: 15 кредитов\nЖелаемый GPA: 3.5",
-							"calculation": "Текущие баллы = 3.2 × 45 = 144\nНужно для GPA 3.5 = 3.5 × 60 = 210\nНужно набрать = 210 - 144 = 66\nСредний балл на новых предметах = 66 / 15 = 4.4",
-							"result": "Нужен средний балл 4.4 на новых предметах",
-							"type": "Планирование",
-							"note": "Для повышения GPA нужно получать высокие оценки на предметах с большим количеством кредитов"
-						}
-					}
-				},
-				"calculation": {
-					"title": "Как рассчитывается GPA",
-					"content": "Расчёт GPA (Grade Point Average) включает несколько этапов для определения среднего балла успеваемости с учётом кредитов (часов) каждого предмета.",
-					"formula": "GPA = Сумма (Оценка × Кредиты) / Сумма кредитов",
-					"weighted": "Средневзвешенный балл учитывает количество кредитов (часов) каждого предмета",
-					"credits": "Кредиты (часы) показывают вес предмета в общей оценке",
-					"conversion": "Разные системы оценивания конвертируются в единую шкалу для сравнения",
-					"steps": {
-						"grades": "Ввод оценок по каждому предмету",
-						"credits": "Указание количества кредитов (часов) для каждого предмета",
-						"calculation": "Расчёт средневзвешенного балла",
-						"result": "Получение итогового GPA"
-					}
-				},
-				"advantages": {
-					"title": "Преимущества калькулятора оценок",
-					"content": "Использование калькулятора оценок даёт множество преимуществ: точный расчёт GPA, планирование учёбы, отслеживание успеваемости.",
-					"accuracy": "Точный расчёт GPA",
-					"planning": "Планирование учёбы",
-					"tracking": "Отслеживание успеваемости",
-					"convenience": "Удобный и быстрый расчёт"
-				},
-				"tips": {
-					"title": "Советы по расчёту GPA",
-					"content": "Для получения точного результата следуйте нашим рекомендациям при расчёте GPA.",
-					"credits": "Указывайте точное количество кредитов (часов) для каждого предмета - это критически важно для правильного расчёта",
-					"system": "Выбирайте правильную систему оценивания в соответствии с вашим учебным заведением",
-					"allGrades": "Включайте все предметы для получения точного GPA",
-					"regular": "Регулярно пересчитывайте GPA при получении новых оценок"
-				},
-				"faq": {
-					"title": "Часто задаваемые вопросы о GPA",
-					"faqItems": [
-						{
-							"q": "Что такое GPA?",
-							"a": "GPA (Grade Point Average) - это средний балл успеваемости, который рассчитывается как средневзвешенное значение оценок с учётом кредитов (часов) каждого предмета. GPA показывает общую успеваемость студента."
-						},
-						{
-							"q": "Как рассчитать GPA?",
-							"a": "GPA = Сумма (Оценка × Кредиты) / Сумма кредитов. Например, Математика 5 (3 кредита), Физика 4 (4 кредита): GPA = (5×3 + 4×4) / (3+4) = 31/7 = 4.43."
-						},
-						{
-							"q": "В чём разница между взвешенным и невзвешенным GPA?",
-							"a": "Взвешенный GPA учитывает количество кредитов (часов) каждого предмета. Невзвешенный GPA - это просто среднее арифметическое всех оценок. Взвешенный GPA более точный."
-						},
-						{
-							"q": "Что такое кредиты в GPA?",
-							"a": "Кредиты (или часы) - это единица измерения объёма учебной работы по предмету. Предметы с большим количеством кредитов сильнее влияют на общий GPA."
-						},
-						{
-							"q": "Как конвертировать оценки из 5-балльной системы в GPA?",
-							"a": "5→4.0, 4→3.0, 3→2.0, 2→0.0. Однако точная конвертация зависит от требований конкретного учебного заведения или системы."
-						},
-						{
-							"q": "Как конвертировать процентные оценки в GPA?",
-							"a": "90-100%→4.0, 80-89%→3.0-3.9, 70-79%→2.0-2.9, 60-69%→1.0-1.9, 0-59%→0.0. Точная конвертация зависит от шкалы."
-						},
-						{
-							"q": "Как конвертировать буквенные оценки в GPA?",
-							"a": "A→4.0, B→3.0, C→2.0, D→1.0, F→0.0. Для промежуточных оценок: A-→3.7, B+→3.3, B-→2.7, C+→2.3, C-→1.7, D+→1.3."
-						},
-						{
-							"q": "Влияют ли кредиты на GPA?",
-							"a": "Да, кредиты значительно влияют на GPA. Предмет с большим количеством кредитов имеет больший вес в расчёте среднего балла."
-						},
-						{
-							"q": "Какой GPA считается хорошим?",
-							"a": "GPA 3.0-3.5 считается хорошим, 3.5-4.0 - отличным. В России 4.0-4.5 из 5.0 считается хорошим результатом."
-						},
-						{
-							"q": "Можно ли улучшить GPA?",
-							"a": "Да, GPA можно улучшить, получая высокие оценки на новых предметах, особенно с большим количеством кредитов. Чем больше новых кредитов, тем больше влияние на GPA."
-						},
-						{
-							"q": "Как рассчитать, какой GPA нужен для достижения цели?",
-							"a": "Если текущий GPA = G1 (C1 кредитов), желаемый GPA = G2, новые предметы = C2 кредитов, то нужный средний балл на новых предметах = (G2×(C1+C2) - G1×C1) / C2."
-						},
-						{
-							"q": "Влияет ли пересдача на GPA?",
-							"a": "Зависит от политики учебного заведения. В некоторых случаях новая оценка заменяет старую, в других - обе оценки учитываются. Уточните правила в вашем учебном заведении."
-						},
-						{
-							"q": "Как рассчитать GPA за семестр?",
-							"a": "Используйте только оценки и кредиты текущего семестра. GPA за семестр = Сумма (Оценка × Кредиты семестра) / Сумма кредитов семестра."
-						},
-						{
-							"q": "Как рассчитать общий GPA?",
-							"a": "Используйте все оценки и кредиты за весь период обучения. Общий GPA = Сумма (Оценка × Кредиты всех предметов) / Сумма всех кредитов."
-						},
-						{
-							"q": "Что такое cumulative GPA?",
-							"a": "Cumulative GPA - это общий средний балл за весь период обучения, включая все семестры и годы. Это наиболее полный показатель успеваемости."
-						},
-						{
-							"q": "Как рассчитать GPA для поступления в университет?",
-							"a": "Для поступления обычно требуется общий GPA (cumulative GPA) за весь период обучения в школе или колледже. Убедитесь, что используете правильную систему оценивания, принятую в целевом университете."
-						},
-						{
-							"q": "Влияет ли GPA на стипендию?",
-							"a": "Да, во многих учебных заведениях GPA влияет на получение стипендии. Обычно требуется GPA выше определённого порога (например, 3.5 или 4.0)."
-						},
-						{
-							"q": "Как рассчитать GPA с учётом зачёт/незачёт?",
-							"a": "Предметы с системой зачёт/незачёт обычно не учитываются в GPA или учитываются как проходной балл. Уточните правила в вашем учебном заведении."
-						},
-						{
-							"q": "Можно ли иметь GPA выше 4.0?",
-							"a": "В стандартной 4-балльной системе максимум 4.0. Однако в некоторых системах с взвешиванием (weighted GPA) за сложные предметы могут начисляться дополнительные баллы, что позволяет получить GPA выше 4.0."
-						},
-						{
-							"q": "Как рассчитать GPA для диплома?",
-							"a": "Используйте все оценки и кредиты всех предметов, включённых в диплом. GPA диплома = Сумма (Оценка × Кредиты) / Сумма кредитов всех предметов диплома."
-						},
-						{
-							"q": "Влияет ли GPA на трудоустройство?",
-							"a": "В некоторых отраслях (особенно для выпускников) работодатели могут учитывать GPA при отборе кандидатов. Однако опыт и навыки часто важнее GPA."
-						},
-						{
-							"q": "Как рассчитать средний балл аттестата?",
-							"a": "Средний балл аттестата рассчитывается как среднее арифметическое всех оценок (без учёта кредитов). Средний балл = Сумма оценок / Количество предметов."
-						},
-						{
-							"q": "Что делать, если не помню количество кредитов?",
-							"a": "Обратитесь в учебную часть или деканат для получения информации о кредитах. Если кредиты неизвестны, можно использовать среднее арифметическое (невзвешенный GPA), но это будет менее точно."
-						},
-						{
-							"q": "Как рассчитать GPA для магистратуры?",
-							"a": "GPA магистратуры рассчитывается так же, но учитываются только оценки и кредиты магистерской программы. Некоторые программы требуют минимальный GPA для поступления (обычно 3.0-3.5)."
-						},
-						{
-							"q": "Влияет ли GPA на возможность поступления в аспирантуру?",
-							"a": "Да, для поступления в аспирантуру часто требуется высокий GPA (обычно 3.5-4.0 или выше). GPA показывает академическую успеваемость и способность к научной работе."
-						},
-						{
-							"q": "Как рассчитать GPA с учётом экзаменов и зачётов?",
-							"a": "Обычно в GPA учитываются только оценки за экзамены (числовые оценки), а зачёты не учитываются или учитываются как проходной балл. Уточните правила в вашем учебном заведении."
-						},
-						{
-							"q": "Можно ли рассчитать GPA онлайн?",
-							"a": "Да, наш калькулятор GPA позволяет рассчитать средний балл онлайн. Просто введите оценки и кредиты, и калькулятор автоматически рассчитает GPA."
-						},
-						{
-							"q": "Как часто нужно пересчитывать GPA?",
-							"a": "Рекомендуется пересчитывать GPA после получения каждой новой оценки или после окончания каждого семестра. Это поможет отслеживать прогресс и планировать учёбу."
-						},
-						{
-							"q": "Что такое качественный балл в GPA?",
-							"a": "Качественный балл - это количество баллов (Оценка × Кредиты), накопленных по всем предметам. Качественный балл используется для расчёта GPA."
-						},
-						{
-							"q": "Как рассчитать GPA для нескольких лет обучения?",
-							"a": "Используйте все оценки и кредиты за все годы обучения. Общий GPA = Сумма (Оценка × Кредиты за все годы) / Сумма кредитов за все годы."
-						},
-						{
-							"q": "Влияет ли GPA на рейтинг в группе?",
-							"a": "Да, во многих учебных заведениях студенты ранжируются по GPA. Студенты с высоким GPA обычно занимают более высокие позиции в рейтинге."
-						},
-						{
-							"q": "Как рассчитать GPA для онлайн-курсов?",
-							"a": "GPA для онлайн-курсов рассчитывается так же, как и для обычных курсов. Учитываются оценки и кредиты (часы) онлайн-курсов."
-						},
-						{
-							"q": "Что такое минимальный GPA для выпуска?",
-							"a": "Минимальный GPA для выпуска зависит от учебного заведения. Обычно требуется GPA не ниже 2.0 (4-балльная система) или 3.0 (5-балльная система)."
-						},
-						{
-							"q": "Как рассчитать GPA для студентов-переводников?",
-							"a": "При переводе GPA рассчитывается только на основе оценок, полученных в новом учебном заведении. Оценки из предыдущего заведения обычно не переносятся в GPA нового."
-						}
-					]
-				}
-			}
-		}
-	}
+  "calculators": {
+    "grade-calculator": {
+      "title": "Kalkulator ocen (GPA)",
+      "description": "Obliczanie średniej ocen (GPA) na podstawie ocen i punktów",
+      "breadcrumbs": {
+        "category": "Studia i nauka"
+      },
+      "form": {
+        "title": "Parametry obliczeniowe",
+        "gradingSystem": "System oceniania",
+        "courses": "Rzeczy",
+        "grade": "Ocena",
+        "credits": "Pożyczki",
+        "courseName": "Tytuł tematu",
+        "addCourse": "Dodaj element",
+        "removeCourse": "Usuwać",
+        "calculate": "Obliczać",
+        "reset": "Nastawić",
+        "gradingSystems": {
+          "5-point": "5 punktów (Rosja)",
+          "4-point": "4-punktowy (GPA)",
+          "100-point": "100 punktów (procentowo)",
+          "letter": "Alfabetycznie (A–F)"
+        },
+        "gradeOptions": {
+          "5-point": {
+            "5": "5 (Doskonały)",
+            "4": "4 (dobrze)",
+            "3": "3 (zadowalający)",
+            "2": "2 (niezadowalający)"
+          },
+          "4-point": {
+            "4.0": "4,0 (A)",
+            "3.7": "3,7 (A-)",
+            "3.3": "3,3 (B+)",
+            "3.0": "3,0 (B)",
+            "2.7": "2,7 (B-)",
+            "2.3": "2.3 (C+)",
+            "2.0": "2,0 (C)",
+            "1.7": "1,7 (C-)",
+            "1.3": "1,3 (D+)",
+            "1.0": "1,0 (D)",
+            "0.0": "0,0 (F)"
+          },
+          "100-point": {
+            "90-100": "90-100 (Doskonały)",
+            "80-89": "80-89 (Dobrze)",
+            "70-79": "70-79 (zadowalający)",
+            "60-69": "60-69 (niezadowalający)",
+            "0-59": "0-59 (niezadowalający)"
+          },
+          "letter": {
+            "A": "(Doskonały)",
+            "B": "B (dobrze)",
+            "C": "C (zadowalający)",
+            "D": "D (słaby)",
+            "F": "F (niezadowalający)"
+          }
+        },
+        "errors": {
+          "title": "Błędy danych",
+          "atLeastOneCourse": "Dodaj przynajmniej jeden element",
+          "courseNameRequired": "Wprowadź nazwę elementu",
+          "gradeRequired": "Wybierz ocenę",
+          "creditsRequired": "Określ liczbę kredytów",
+          "invalidCredits": "Liczba kredytów musi być większa niż 0",
+          "invalidGrade": "Nieprawidłowa ocena",
+          "courseNumber": "Pozycja {numer}"
+        },
+        "courseNamePlaceholder": "Tytuł tematu",
+        "selectPlaceholder": "Wybierać",
+        "courseNumber": "Pozycja {numer}"
+      },
+      "results": {
+        "title": "Wyniki obliczeń",
+        "gpa": "Średnia ocen (GPA)",
+        "totalCredits": "Suma kredytów (godziny)",
+        "weightedAverage": "Średnia ważona",
+        "qualityScore": "Wynik jakości",
+        "totalPoints": "Suma punktów",
+        "courses": "Rzeczy",
+        "course": "Przedmiot",
+        "grade": "Ocena",
+        "credits": "Pożyczki",
+        "points": "Zwrotnica",
+        "placeholder": "Dodaj przedmioty, aby obliczyć GPA"
+      },
+      "hero": {
+        "accuracy": "Dokładność obliczeń",
+        "multipleSystems": "Systemy",
+        "planning": "Planowanie"
+      },
+      "features": {
+        "gpaCalculation": "Obliczanie GPA",
+        "multipleSystems": "Wiele systemów oceniania",
+        "weightedAverage": "Średnia ważona",
+        "accuracy": "Wysoka dokładność obliczeń"
+      },
+      "seo": {
+        "title": "Kalkulator ocen online (GPA) - obliczanie GPA | Calc1.ru",
+        "description": "Darmowy internetowy kalkulator średniej ocen (GPA) do obliczania GPA na podstawie ocen i punktów. Obsługuje systemy oceniania 5-punktowego, 4-punktowego (GPA), 100-punktowego i listowego. Pomaga zaplanować naukę.",
+        "keywords": "kalkulator ocen, kalkulator GPA, obliczanie GPA, GPA online, kalkulator GPA, obliczanie GPA, średnia ważona, kalkulator ocen studentów, kalkulator GPA, kalkulator ocen, dyplom GPA, certyfikat obliczanie GPA, kalkulator ocen z punktami, GPA z punktami, ważona GPA, nieważona GPA, średnia kalkulacja przyjęć, GPA uniwersytecka, kalkulator ocen szkolnych",
+        "overview": {
+          "title": "Kalkulator ocen online (GPA)",
+          "content": "Internetowy kalkulator średniej ocen (GPA) pomoże Ci obliczyć średnią ocen na podstawie ocen z zajęć i liczby punktów (godzin). Obsługuje różne systemy oceniania: 5-punktowy (Rosja), 4-punktowy (GPA, USA), 100-punktowy (procentowy) i literowy (A-F).",
+          "additionalContent": "GPA (Grade Point Average) to średnia ocen, która jest obliczana jako średnia ważona ocen, biorąc pod uwagę punkty (godziny) z każdego przedmiotu. Wzór: GPA = suma (ocena × punkty) / suma punktów. Im więcej punktów ma dany przedmiot, tym większy jest jego wpływ na ogólną średnią ocen.",
+          "calculationExamples": {
+            "title": "Przykłady obliczeń GPA",
+            "content": "Spójrzmy na praktyczne przykłady obliczania średnich wyników dla różnych sytuacji:",
+            "example1": {
+              "title": "Przykład 1: system 5-punktowy, 4 pozycje",
+              "description": "Student z dobrymi ocenami",
+              "input": "Matematyka: 5 (3 punkty)\nFizyka: 4 (4 kredyty)\nChemia: 5 (2 punkty)\nHistoria: 4 (2 punkty)",
+              "calculation": "Punkty = (5x3) + (4x4) + (5x2) + (4x2) = 15 + 16 + 10 + 8 = 49\nKredyty = 3 + 4 + 2 + 2 = 11\nGPA = 49 / 11 = 4,45",
+              "result": "GPA = 4,45 z 5,0",
+              "type": "System 5-punktowy",
+              "note": "GPA powyżej 4,0 uważa się za wynik doskonały"
+            },
+            "example2": {
+              "title": "Przykład 2: System 4-punktowy (GPA), 5 przedmiotów",
+              "description": "Uczeń z różnymi ocenami",
+              "input": "Matematyka: 4,0 (3 punkty)\nFizyka: 3,7 (4 punkty)\nChemia: 3,0 (3 punkty)\nAngielski: 3,3 (2 punkty)\nHistoria: 2,7 (3 punkty)",
+              "calculation": "Punkty = (4,0×3) + (3,7×4) + (3,0×3) + (3,3×2) + (2,7×3) = 12 + 14,8 + 9 + 6,6 + 8,1 = 50,5\nKredyty = 3 + 4 + 3 + 2 + 3 = 15\nGPA = 50,5 / 15 = 3,37",
+              "result": "GPA = 3,37 z 4,0",
+              "type": "System 4-punktowy",
+              "note": "Wynik GPA 3,0-3,5 uznaje się za dobry wynik"
+            },
+            "example3": {
+              "title": "Przykład 3: System listowy, 6 pozycji",
+              "description": "Studentka z wysokimi ocenami",
+              "input": "Matematyka: A (4 punkty)\nFizyka: A (4 kredyty)\nChemia: B (3 punkty)\nAngielski: A (3 punkty)\nHistoria: B (2 punkty)\nSztuka: A (2 punkty)",
+              "calculation": "A = 4,0, B = 3,0\nPunkty = (4,0×4) + (4,0×4) + (3,0×3) + (4,0×3) + (3,0×2) + (4,0×2) = 16 + 16 + 9 + 12 + 6 + 8 = 67\nKredyty = 4 + 4 + 3 + 3 + 2 + 2 = 18\nGPA = 67/18 = 3,72",
+              "result": "GPA = 3,72 z 4,0",
+              "type": "System literowy",
+              "note": "Przeważnie oceny A dają wysoki GPA"
+            },
+            "example4": {
+              "title": "Przykład 4: Wpływ punktów na GPA",
+              "description": "Dwóch uczniów z tymi samymi ocenami, ale różnymi punktami",
+              "input": "Uczeń 1:\nMatematyka: 5 (6 punktów)\nFizyka: 4 (2 kredyty)\n\nUczeń 2:\nMatematyka: 5 (2 punkty)\nFizyka: 4 (6 kredytów)",
+              "calculation": "Student 1: GPA = (5×6 + 4×2) / (6+2) = 38/8 = 4,75\nStudent 2: GPA = (5×2 + 4×6) / (2+6) = 34/8 = 4,25",
+              "result": "Student 1: GPA 4,75, Student 2: GPA 4,25",
+              "type": "Wpływ pożyczek",
+              "note": "Przedmioty z większą liczbą punktów mają większy wpływ na GPA"
+            },
+            "example5": {
+              "title": "Przykład 5: System 100-punktowy",
+              "description": "Obliczanie GPA na podstawie ocen procentowych",
+              "input": "Matematyka: 95% (4 punkty)\nFizyka: 87% (4 punkty)\nChemia: 78% (3 punkty)\nHistoria: 92% (2 punkty)",
+              "calculation": "Konwersja do 4,0: 95% → 4,0, 87% → 3,7, 78% → 3,0, 92% → 4,0\nPunkty = (4,0×4) + (3,7×4) + (3,0×3) + (4,0×2) = 16 + 14,8 + 9 + 8 = 47,8\nKredyty = 4 + 4 + 3 + 2 = 13\nGPA = 47,8 / 13 = 3,68",
+              "result": "GPA = 3,68 z 4,0",
+              "type": "System 100 punktów",
+              "note": "Oceny procentowe przeliczane są na GPA przy użyciu standardowej skali"
+            },
+            "example6": {
+              "title": "Przykład 6: Poprawa GPA",
+              "description": "Obliczanie wymaganych ocen w celu poprawy GPA",
+              "input": "Obecny GPA: 3,2 (45 punktów)\nNowe przedmioty: 15 kredytów\nPożądana średnia ocen: 3,5",
+              "calculation": "Aktualne punkty = 3,2 × 45 = 144\nPotrzebne do GPA 3,5 = 3,5 × 60 = 210\nTrzeba wybrać = 210 - 144 = 66\nŚredni wynik z nowych przedmiotów = 66 / 15 = 4,4",
+              "result": "Na nowych kursach wymagana jest średnia ocen 4,4",
+              "type": "Planowanie",
+              "note": "Aby poprawić swoją średnią ocen, musisz uzyskiwać wysokie oceny z przedmiotów z dużą liczbą punktów"
+            }
+          }
+        },
+        "calculation": {
+          "title": "Jak oblicza się GPA?",
+          "content": "Obliczanie GPA (średniej oceny) obejmuje kilka etapów mających na celu określenie średniej ocen, biorąc pod uwagę punkty (godziny) każdego przedmiotu.",
+          "formula": "GPA = suma (ocena × punkty) / suma punktów",
+          "weighted": "Średnia ważona uwzględnia liczbę punktów (godzin) każdego przedmiotu",
+          "credits": "Punkty (godziny) pokazują wagę przedmiotu w ocenie ogólnej",
+          "conversion": "Dla porównania różne systemy ocen są przekształcane w jedną skalę",
+          "steps": {
+            "grades": "Wpisywanie ocen z każdego przedmiotu",
+            "credits": "Wskazanie liczby punktów (godzin) dla każdego przedmiotu",
+            "calculation": "Obliczanie średniego ważonego wyniku",
+            "result": "Uzyskanie końcowego GPA"
+          }
+        },
+        "advantages": {
+          "title": "Korzyści z kalkulatora ocen",
+          "content": "Korzystanie z kalkulatora ocen zapewnia wiele korzyści: dokładne obliczenie GPA, planowanie studiów, śledzenie postępów.",
+          "accuracy": "Dokładne obliczenia GPA",
+          "planning": "Planowanie studiów",
+          "tracking": "Śledzenie postępów",
+          "convenience": "Wygodna i szybka płatność"
+        },
+        "tips": {
+          "title": "Wskazówki dotyczące obliczania GPA",
+          "content": "Aby uzyskać dokładny wynik, postępuj zgodnie z naszymi zaleceniami przy obliczaniu GPA.",
+          "credits": "Podaj dokładną liczbę punktów (godzin) za każdy przedmiot – ma to kluczowe znaczenie dla prawidłowego obliczenia",
+          "system": "Wybierz odpowiedni system oceniania dla swojej instytucji",
+          "allGrades": "Uwzględnij wszystkie przedmioty, aby uzyskać dokładny GPA",
+          "regular": "Regularnie przeliczaj swoją GPA po otrzymaniu nowych ocen"
+        },
+        "faq": {
+          "title": "Częste pytania dotyczące problemów z GPA",
+          "faqItems": [
+            {
+              "q": "Co to jest GPA?",
+              "a": "GPA (Grade Point Average) to średnia ocen, która jest obliczana jako średnia ważona ocen, biorąc pod uwagę punkty (godziny) z każdego przedmiotu. GPA pokazuje ogólne wyniki w nauce studenta."
+            },
+            {
+              "q": "Jak obliczyć GPA?",
+              "a": "GPA = suma (ocena × punkty) / suma punktów. Na przykład matematyka 5 (3 punkty), fizyka 4 (4 punkty): GPA = (5 × 3 + 4 × 4) / (3 + 4) = 31/7 = 4,43."
+            },
+            {
+              "q": "Jaka jest różnica między ważonym i nieważonym GPA?",
+              "a": "Ważony GPA uwzględnia liczbę punktów (godzin) każdego przedmiotu. Nieważony GPA to po prostu średnia arytmetyczna wszystkich ocen. Ważony GPA jest dokładniejszy."
+            },
+            {
+              "q": "Co to są punkty GPA?",
+              "a": "Punkty (lub godziny) to jednostka miary ilości pracy akademickiej z danego przedmiotu. Kursy z większą liczbą punktów mają większy wpływ na ogólną średnią ocen."
+            },
+            {
+              "q": "Jak przeliczyć oceny z systemu 5-punktowego na GPA?",
+              "a": "5 → 4,0, 4 → 3,0, 3 → 2,0, 2 → 0,0. Jednak dokładna konwersja zależy od wymagań konkretnej szkoły lub systemu."
+            },
+            {
+              "q": "Jak przeliczyć oceny procentowe na GPA?",
+              "a": "90-100% → 4,0, 80-89% → 3,0-3,9, 70-79% → 2,0-2,9, 60-69% → 1,0-1,9, 0-59% → 0,0. Dokładna konwersja zależy od skali."
+            },
+            {
+              "q": "Jak przekonwertować oceny listowe na GPA?",
+              "a": "A → 4,0, B → 3,0, C → 2,0, D → 1,0, F → 0,0. Dla ocen pośrednich: A-→3,7, B+→3,3, B-→2,7, C+→2,3, C-→1,7, D+→1,3."
+            },
+            {
+              "q": "Czy punkty wpływają na GPA?",
+              "a": "Tak, kredyty mają znaczący wpływ na GPA. Kurs z większą liczbą punktów ma większe znaczenie w obliczeniach GPA."
+            },
+            {
+              "q": "Jaki GPA jest uważany za dobry?",
+              "a": "GPA 3,0-3,5 uważa się za dobrą, 3,5-4,0 - doskonałą. W Rosji za dobry wynik uważa się 4,0-4,5 na 5,0."
+            },
+            {
+              "q": "Czy można poprawić GPA?",
+              "a": "Tak, swoją średnią ocen można poprawić, uzyskując wysokie oceny z nowych kursów, szczególnie tych z większą liczbą punktów. Im więcej nowych pożyczek, tym większy wpływ na GPA."
+            },
+            {
+              "q": "Jak obliczyć, jaki GPA jest potrzebny do osiągnięcia celu?",
+              "a": "Jeśli aktualny GPA = G1 (punkty C1), pożądany GPA = G2, nowe przedmioty = punkty C2, to pożądany GPA z nowych przedmiotów = (G2×(C1+C2) - G1×C1) / C2."
+            },
+            {
+              "q": "Czy powtarzanie wpływa na GPA?",
+              "a": "Zależy od polityki instytucji edukacyjnej. W niektórych przypadkach nowa punktacja zastępuje starą, w innych pod uwagę brane są obie oceny. Sprawdź zasady w swojej szkole."
+            },
+            {
+              "q": "Jak obliczyć GPA za semestr?",
+              "a": "Używaj wyłącznie ocen i zaliczeń z bieżącego semestru. Semestr GPA = suma (ocena × punkty semestralne) / suma punktów semestralnych."
+            },
+            {
+              "q": "Jak obliczyć ogólny GPA?",
+              "a": "Korzystaj ze wszystkich ocen i punktów przez cały okres studiów. Ogólny GPA = Suma (ocena × Punkty ze wszystkich przedmiotów) / Suma wszystkich punktów."
+            },
+            {
+              "q": "Co to jest skumulowany GPA?",
+              "a": "Skumulowany GPA to ogólny średni wynik z całego okresu studiów, włączając wszystkie semestry i lata. Jest to najbardziej kompleksowy wskaźnik wyników w nauce."
+            },
+            {
+              "q": "Jak obliczyć GPA przy przyjęciu na uniwersytet?",
+              "a": "Wstęp zazwyczaj wymaga skumulowanej GPA za cały okres nauki w szkole lub na studiach. Upewnij się, że na docelowej uczelni stosujesz właściwy system oceniania."
+            },
+            {
+              "q": "Czy GPA wpływa na stypendium?",
+              "a": "Tak, w wielu instytucjach edukacyjnych GPA wpływa na stypendia. Zazwyczaj wymagana jest GPA powyżej określonego progu (na przykład 3,5 lub 4,0)."
+            },
+            {
+              "q": "Jak obliczyć GPA biorąc pod uwagę zaliczenie/niezaliczenie?",
+              "a": "Kursy z systemem zaliczenia/niezaliczenia zwykle nie są wliczane do średniej ocen lub są liczone jako ocena zaliczająca. Sprawdź zasady w swojej szkole."
+            },
+            {
+              "q": "Czy można mieć średnią powyżej 4,0?",
+              "a": "W standardowym systemie 4-punktowym maksymalna wartość to 4,0. Jednakże w niektórych systemach ważonych GPA za trudne kursy mogą zostać przyznane dodatkowe punkty, co pozwala na osiągnięcie GPA powyżej 4,0."
+            },
+            {
+              "q": "Jak obliczyć GPA do dyplomu?",
+              "a": "Wykorzystaj wszystkie oceny i zaliczenia ze wszystkich przedmiotów objętych dyplomem. Diploma GPA = Suma (ocena × punkty) / Suma punktów ze wszystkich przedmiotów dyplomowych."
+            },
+            {
+              "q": "Czy GPA wpływa na zatrudnienie?",
+              "a": "W niektórych branżach (szczególnie absolwenci) pracodawcy mogą brać pod uwagę GPA przy wyborze kandydatów. Jednak doświadczenie i umiejętności są często ważniejsze niż GPA."
+            },
+            {
+              "q": "Jak obliczyć GPA?",
+              "a": "Średni wynik certyfikatu obliczany jest jako średnia arytmetyczna wszystkich ocen (z wyłączeniem punktów). Średni wynik = Suma ocen / Liczba przedmiotów."
+            },
+            {
+              "q": "Co mam zrobić jeśli nie pamiętam liczby kredytów?",
+              "a": "Aby uzyskać informacje na temat punktów, skontaktuj się ze swoim wydziałem akademickim lub dziekanatem. Jeśli punkty nie są znane, można zastosować średnią arytmetyczną (nieważoną GPA), ale będzie to mniej dokładne."
+            },
+            {
+              "q": "Jak obliczyć GPA na stopień magistra?",
+              "a": "GPA magisterską oblicza się w ten sam sposób, ale pod uwagę brane są jedynie oceny i punkty z programu magisterskiego. Niektóre programy wymagają minimalnego GPA do przyjęcia (zwykle 3,0-3,5)."
+            },
+            {
+              "q": "Czy GPA wpływa na możliwość dostania się na studia?",
+              "a": "Tak, do przyjęcia na studia magisterskie często wymagana jest wysoka średnia ocen (zwykle 3,5–4,0 lub wyższa). GPA pokazuje wyniki w nauce i zdolność do pracy naukowej."
+            },
+            {
+              "q": "Jak obliczyć GPA biorąc pod uwagę egzaminy i testy?",
+              "a": "Zazwyczaj w GPA uwzględniane są tylko oceny z egzaminów (oceny liczbowe), a punkty nie są wliczane ani liczone jako ocena zaliczająca. Sprawdź zasady w swojej szkole."
+            },
+            {
+              "q": "Czy można obliczyć GPA online?",
+              "a": "Tak, nasz kalkulator GPA umożliwia obliczenie GPA online. Po prostu wpisz swoje oceny i punkty, a kalkulator automatycznie obliczy Twoją średnią ocen."
+            },
+            {
+              "q": "Jak często należy przeliczać GPA?",
+              "a": "Zaleca się ponowne przeliczenie średniej ocen po otrzymaniu każdej nowej oceny lub po zakończeniu każdego semestru. Pomoże Ci to śledzić swoje postępy i planować naukę."
+            },
+            {
+              "q": "Co to jest wynik jakości w GPA?",
+              "a": "Wynik jakościowy to liczba punktów (ocena × punkty) zgromadzonych ze wszystkich przedmiotów. Wynik jakościowy służy do obliczenia GPA."
+            },
+            {
+              "q": "Jak obliczyć GPA za kilka lat studiów?",
+              "a": "Wykorzystaj wszystkie oceny i zaliczenia ze wszystkich lat studiów. Ogółem GPA = suma (ocena × punkty za wszystkie lata) / suma punktów za wszystkie lata."
+            },
+            {
+              "q": "Czy GPA wpływa na ranking grupy?",
+              "a": "Tak, wiele szkół ocenia uczniów według ocen GPA. Studenci z wysokim GPA zwykle zajmują wyższą pozycję w rankingach."
+            },
+            {
+              "q": "Jak obliczyć GPA dla kursów online?",
+              "a": "GPA dla kursów online jest obliczana w taki sam sposób, jak w przypadku kursów zwykłych. Pod uwagę brane są oceny i zaliczenia (godziny) kursów online."
+            },
+            {
+              "q": "Jaki jest minimalny GPA do ukończenia studiów?",
+              "a": "Minimalna GPA do ukończenia studiów różni się w zależności od instytucji. Zazwyczaj wymagana jest GPA co najmniej 2,0 (system 4-punktowy) lub 3,0 (system 5-punktowy)."
+            },
+            {
+              "q": "Jak obliczyć GPA dla studentów transferowych?",
+              "a": "Podczas przenoszenia GPA jest obliczana wyłącznie na podstawie ocen uzyskanych w nowej instytucji edukacyjnej. Oceny z poprzedniej uczelni zwykle nie przenoszą się na GPA nowej uczelni."
+            }
+          ]
+        }
+      }
+    }
+  }
 }
-
