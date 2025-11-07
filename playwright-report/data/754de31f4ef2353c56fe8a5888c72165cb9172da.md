@@ -1,0 +1,255 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e6]:
+          - 'link "1 Calculator #1 One site. All calculators." [ref=e7] [cursor=pointer]':
+            - /url: /en
+            - generic [ref=e8]:
+              - img [ref=e9]
+              - generic [ref=e11]: "1"
+            - generic [ref=e12]:
+              - 'heading "Calculator #1" [level=1] [ref=e13]'
+              - paragraph [ref=e14]: One site. All calculators.
+          - button "Search Ctrl K" [ref=e16] [cursor=pointer]:
+            - img [ref=e17]
+            - generic [ref=e20]: Search
+            - generic [ref=e21]: Ctrl K
+          - button "🇺🇸" [ref=e23] [cursor=pointer]:
+            - img [ref=e24]
+            - generic [ref=e27]: 🇺🇸
+      - main [ref=e28]:
+        - 'region "Calculator #1" [ref=e29]':
+          - 'heading "Calculator #1" [level=1] [ref=e30]'
+          - paragraph [ref=e31]: One site. All calculators.
+          - generic [ref=e32]:
+            - heading "More than 100 calculators" [level=2] [ref=e33]
+            - paragraph [ref=e34]: Financial, mathematical, construction, health, and many other calculators to help you with daily calculations and complex problems. All calculators are free and require no registration.
+        - region "Categories" [ref=e35]:
+          - heading "Categories" [level=2] [ref=e36]
+          - list [ref=e37]:
+            - link "Financial calculators Loans, deposits, mortgages, taxes and investments 8 calculators" [ref=e38] [cursor=pointer]:
+              - /url: /en/finance
+              - generic [ref=e40]:
+                - img [ref=e43]
+                - generic [ref=e45]:
+                  - heading "Financial calculators" [level=3] [ref=e46]
+                  - paragraph [ref=e47]: Loans, deposits, mortgages, taxes and investments
+                  - generic [ref=e49]: 8 calculators
+            - link "Math calculators Basic operations, fractions, percentages, geometry 9 calculators" [ref=e50] [cursor=pointer]:
+              - /url: /en/math
+              - generic [ref=e52]:
+                - img [ref=e55]
+                - generic [ref=e57]:
+                  - heading "Math calculators" [level=3] [ref=e58]
+                  - paragraph [ref=e59]: Basic operations, fractions, percentages, geometry
+                  - generic [ref=e61]: 9 calculators
+            - link "Household calculators Calories, BMI, pregnancy, health 8 calculators" [ref=e62] [cursor=pointer]:
+              - /url: /en/life
+              - generic [ref=e64]:
+                - img [ref=e67]
+                - generic [ref=e70]:
+                  - heading "Household calculators" [level=3] [ref=e71]
+                  - paragraph [ref=e72]: Calories, BMI, pregnancy, health
+                  - generic [ref=e74]: 8 calculators
+            - link "Construction calculators Wallpaper, paint, concrete, roofing 8 calculators" [ref=e75] [cursor=pointer]:
+              - /url: /en/construction
+              - generic [ref=e77]:
+                - img [ref=e80]
+                - generic [ref=e82]:
+                  - heading "Construction calculators" [level=3] [ref=e83]
+                  - paragraph [ref=e84]: Wallpaper, paint, concrete, roofing
+                  - generic [ref=e86]: 8 calculators
+            - link "Auto calculators Fuel consumption, taxes, leasing, insurance 8 calculators" [ref=e87] [cursor=pointer]:
+              - /url: /en/auto
+              - generic [ref=e89]:
+                - img [ref=e92]
+                - generic [ref=e96]:
+                  - heading "Auto calculators" [level=3] [ref=e97]
+                  - paragraph [ref=e98]: Fuel consumption, taxes, leasing, insurance
+                  - generic [ref=e100]: 8 calculators
+            - link "Time and date Date difference, age, timers 8 calculators" [ref=e101] [cursor=pointer]:
+              - /url: /en/time
+              - generic [ref=e103]:
+                - img [ref=e106]
+                - generic [ref=e109]:
+                  - heading "Time and date" [level=3] [ref=e110]
+                  - paragraph [ref=e111]: Date difference, age, timers
+                  - generic [ref=e113]: 8 calculators
+            - link "Health and medicine BMI, pulse, blood pressure, vitamins 8 calculators" [ref=e114] [cursor=pointer]:
+              - /url: /en/health
+              - generic [ref=e116]:
+                - img [ref=e119]
+                - generic [ref=e121]:
+                  - heading "Health and medicine" [level=3] [ref=e122]
+                  - paragraph [ref=e123]: BMI, pulse, blood pressure, vitamins
+                  - generic [ref=e125]: 8 calculators
+            - link "Study and science Physics, chemistry, geometry, statistics 8 calculators" [ref=e126] [cursor=pointer]:
+              - /url: /en/science
+              - generic [ref=e128]:
+                - img [ref=e131]
+                - generic [ref=e134]:
+                  - heading "Study and science" [level=3] [ref=e135]
+                  - paragraph [ref=e136]: Physics, chemistry, geometry, statistics
+                  - generic [ref=e138]: 8 calculators
+            - link "Online converters Length, weight, temperature, speed 8 calculators" [ref=e139] [cursor=pointer]:
+              - /url: /en/converter
+              - generic [ref=e141]:
+                - img [ref=e144]
+                - generic [ref=e150]:
+                  - heading "Online converters" [level=3] [ref=e151]
+                  - paragraph [ref=e152]: Length, weight, temperature, speed
+                  - generic [ref=e154]: 8 calculators
+            - link "Entertainment and hobbies Compatibility, generators, games 8 calculators" [ref=e155] [cursor=pointer]:
+              - /url: /en/fun
+              - generic [ref=e157]:
+                - img [ref=e160]
+                - generic [ref=e163]:
+                  - heading "Entertainment and hobbies" [level=3] [ref=e164]
+                  - paragraph [ref=e165]: Compatibility, generators, games
+                  - generic [ref=e167]: 8 calculators
+            - link "IT calculators IP addresses, hashing, encoding, network calculations 6 calculators" [ref=e168] [cursor=pointer]:
+              - /url: /en/it
+              - generic [ref=e170]:
+                - img [ref=e173]
+                - generic [ref=e175]:
+                  - heading "IT calculators" [level=3] [ref=e176]
+                  - paragraph [ref=e177]: IP addresses, hashing, encoding, network calculations
+                  - generic [ref=e179]: 6 calculators
+        - region "Popular Calculators" [ref=e180]:
+          - heading "Popular Calculators" [level=2] [ref=e181]
+          - list [ref=e182]:
+            - article [ref=e183]:
+              - link "Paper Weight Calculator" [ref=e184] [cursor=pointer]:
+                - /url: /en/life/paper-weight
+                - heading "Paper Weight Calculator" [level=3] [ref=e185]
+                - paragraph [ref=e186]: Calculate paper weight by density
+            - article [ref=e187]:
+              - link "BMI Calculator" [ref=e188] [cursor=pointer]:
+                - /url: /en/health/bmihealth
+                - heading "BMI Calculator" [level=3] [ref=e189]
+                - paragraph [ref=e190]: Body Mass Index calculation
+            - article [ref=e191]:
+              - link "Mortgage Calculator" [ref=e192] [cursor=pointer]:
+                - /url: /en/finance/mortgage
+                - heading "Mortgage Calculator" [level=3] [ref=e193]
+                - paragraph [ref=e194]: Loan payment calculations
+        - region "About Calc1.ru" [ref=e195]:
+          - heading "About Calc1.ru" [level=2] [ref=e196]
+          - generic [ref=e197]:
+            - paragraph [ref=e198]: "Calc1.ru is the largest portal of free online calculators in Russia and the world. We provide more than 100 specialized calculators for various areas of life: from financial calculations to medical indicators."
+            - paragraph [ref=e199]: Our site supports 9 languages and is available to users from different countries. All calculators work online, require no installation or registration, making them extremely convenient to use.
+            - list [ref=e200]:
+              - listitem [ref=e201]: "Financial calculators: loan, mortgage, deposit, investments, taxes"
+              - listitem [ref=e202]: "Mathematical calculators: percentages, areas, volumes, equations, statistics"
+              - listitem [ref=e203]: "Construction calculators: materials, areas, volumes, costs"
+              - listitem [ref=e204]: "Health calculators: BMI, blood pressure, calories, pregnancy"
+              - listitem [ref=e205]: "Unit converters: length, weight, temperature, pressure, speed"
+    - contentinfo [ref=e206]:
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - generic [ref=e209]:
+            - 'link "Calculator #1 One site. All calculators." [ref=e210] [cursor=pointer]':
+              - /url: /en
+              - img [ref=e211]
+              - generic [ref=e213]:
+                - 'heading "Calculator #1" [level=3] [ref=e214]'
+                - paragraph [ref=e215]: One site. All calculators.
+            - paragraph [ref=e216]: Free online calculators for all areas of life. Finance, mathematics, construction, health and much more.
+          - generic [ref=e217]:
+            - heading "Categories" [level=4] [ref=e218]
+            - list [ref=e219]:
+              - listitem [ref=e220]:
+                - link "Finance" [active] [ref=e221] [cursor=pointer]:
+                  - /url: /en/finance
+              - listitem [ref=e222]:
+                - link "Auto" [ref=e223] [cursor=pointer]:
+                  - /url: /en/auto
+              - listitem [ref=e224]:
+                - link "Mathematics" [ref=e225] [cursor=pointer]:
+                  - /url: /en/math
+              - listitem [ref=e226]:
+                - link "Life" [ref=e227] [cursor=pointer]:
+                  - /url: /en/life
+              - listitem [ref=e228]:
+                - link "Construction" [ref=e229] [cursor=pointer]:
+                  - /url: /en/construction
+              - listitem [ref=e230]:
+                - link "Health" [ref=e231] [cursor=pointer]:
+                  - /url: /en/health
+              - listitem [ref=e232]:
+                - link "Time" [ref=e233] [cursor=pointer]:
+                  - /url: /en/time
+              - listitem [ref=e234]:
+                - link "Converters" [ref=e235] [cursor=pointer]:
+                  - /url: /en/converter
+              - listitem [ref=e236]:
+                - link "Entertainment" [ref=e237] [cursor=pointer]:
+                  - /url: /en/fun
+              - listitem [ref=e238]:
+                - link "IT" [ref=e239] [cursor=pointer]:
+                  - /url: /en/it
+              - listitem [ref=e240]:
+                - link "Science" [ref=e241] [cursor=pointer]:
+                  - /url: /en/science
+          - generic [ref=e242]:
+            - heading "Quick links" [level=4] [ref=e243]
+            - list [ref=e244]:
+              - listitem [ref=e245]:
+                - link "Home" [ref=e246] [cursor=pointer]:
+                  - /url: /en
+              - listitem [ref=e247]:
+                - link "Search" [ref=e248] [cursor=pointer]:
+                  - /url: /en/search
+              - listitem [ref=e249]:
+                - link "About the site" [ref=e250] [cursor=pointer]:
+                  - /url: /en/about
+              - listitem [ref=e251]:
+                - link "Contacts" [ref=e252] [cursor=pointer]:
+                  - /url: /en/contact
+              - listitem [ref=e253]:
+                - link "Cookie Policy" [ref=e254] [cursor=pointer]:
+                  - /url: /en/cookies
+          - generic [ref=e255]:
+            - heading "Share" [level=4] [ref=e256]:
+              - img [ref=e257]
+              - text: Share
+            - paragraph [ref=e263]: Share the calculator with your friends and colleagues!
+            - generic [ref=e264]:
+              - button "Share on Facebook" [ref=e265] [cursor=pointer]:
+                - img [ref=e266]
+                - generic [ref=e268]: Facebook
+              - button "Share on Twitter" [ref=e269] [cursor=pointer]:
+                - img [ref=e270]
+                - generic [ref=e272]: Twitter
+              - button "Share on VKontakte" [ref=e273] [cursor=pointer]:
+                - img [ref=e274]
+                - generic [ref=e276]: VK
+              - button "Share on Telegram" [ref=e277] [cursor=pointer]:
+                - img [ref=e278]
+                - generic [ref=e280]: Telegram
+              - button "Share on WhatsApp" [ref=e281] [cursor=pointer]:
+                - img [ref=e282]
+                - generic [ref=e284]: WhatsApp
+              - button "Share by email" [ref=e285] [cursor=pointer]:
+                - img [ref=e286]
+                - generic [ref=e289]: Email
+            - button "Copy link" [ref=e290] [cursor=pointer]:
+              - img [ref=e291]
+              - text: Copy link
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - paragraph [ref=e297]: © 2025 Calc1.ru. All rights reserved.
+            - paragraph [ref=e298]: Calculators are intended for informational purposes. Results may differ from actual values.
+          - generic [ref=e299]:
+            - link "Privacy Policy" [ref=e300] [cursor=pointer]:
+              - /url: /en/privacy
+            - link "Terms of Use" [ref=e301] [cursor=pointer]:
+              - /url: /en/terms
+            - link "Cookie Policy" [ref=e302] [cursor=pointer]:
+              - /url: /en/cookies
+  - alert [ref=e303]
+```
