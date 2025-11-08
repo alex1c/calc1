@@ -24,25 +24,49 @@ import {
 	type CarOwnershipResult,
 } from '@/lib/calculators/car-ownership';
 
+/**
+ * Car Ownership Calculator Component
+ * 
+ * A React component for calculating total car ownership costs over time.
+ * 
+ * Features:
+ * - Car price input
+ * - Ownership period input
+ * - Annual mileage input
+ * - Fuel consumption and price input
+ * - Insurance costs (OSAGO, CASCO)
+ * - Vehicle tax input
+ * - Maintenance cost input
+ * - Depreciation rate input
+ * - Total cost calculation (annual, total)
+ * - Cost breakdown by category
+ * - Cost per kilometer calculation
+ * - Responsive design
+ * 
+ * Uses the car ownership calculation library from @/lib/calculators/car-ownership
+ * for all mathematical operations.
+ */
 export default function CarOwnershipCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.car-ownership');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<CarOwnershipInput>>({
-		carPrice: 0,
-		ownershipYears: 0,
-		annualMileage: 0,
-		fuelConsumption: 0,
-		fuelPrice: 0,
-		osagoCost: 0,
-		kaskoCost: 0,
-		vehicleTax: 0,
-		maintenanceCost: 0,
-		depreciationRate: 0,
+		carPrice: 0, // Car purchase price (₽)
+		ownershipYears: 0, // Ownership period (years)
+		annualMileage: 0, // Annual mileage (km)
+		fuelConsumption: 0, // Fuel consumption (L/100km)
+		fuelPrice: 0, // Fuel price (₽/L)
+		osagoCost: 0, // OSAGO insurance cost (₽/year)
+		kaskoCost: 0, // CASCO insurance cost (₽/year)
+		vehicleTax: 0, // Vehicle tax (₽/year)
+		maintenanceCost: 0, // Maintenance cost (₽/year)
+		depreciationRate: 0, // Depreciation rate (%/year)
 	});
 
-	const [result, setResult] = useState<CarOwnershipResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<CarOwnershipResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const depreciationRates = getDepreciationRates();
 	const fuelConsumptionRates = getFuelConsumptionRates();

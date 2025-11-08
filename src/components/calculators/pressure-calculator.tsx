@@ -23,23 +23,56 @@ import {
 	PressureUnit,
 } from '@/lib/calculators/pressure';
 
+/**
+ * Pressure Calculator Component
+ * 
+ * A React component for converting between different pressure units.
+ * 
+ * Features:
+ * - Supports multiple pressure units: Pa, kPa, bar, atm, psi, mmHg, Torr
+ * - Real-time conversion with debouncing
+ * - Bidirectional conversion (from/to units)
+ * - Common conversions display
+ * - Input validation
+ * - Responsive design
+ * 
+ * Uses the pressure conversion library from @/lib/calculators/pressure
+ * for all conversion operations.
+ */
 export default function PressureCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.pressure');
+	
+	// Form state management
 	const [input, setInput] = useState<PressureInput>({
-		value: 101325,
-		fromUnit: 'Pa',
-		toUnit: 'atm',
+		value: 101325, // Pressure value to convert (default: 101325 Pa = 1 atm)
+		fromUnit: 'Pa', // Source unit (default: Pascals)
+		toUnit: 'atm', // Target unit (default: atmospheres)
 	});
-	const [result, setResult] = useState<PressureResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<PressureResult | null>(null); // Conversion result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
-	// Auto-calculate when input changes
+	/**
+	 * Auto-calculate when input changes
+	 * 
+	 * Effect hook that automatically triggers conversion when input changes.
+	 * Uses debouncing (300ms delay) to avoid excessive calculations while user is typing.
+	 * 
+	 * Dependencies:
+	 * - input: Form input values (value, fromUnit, toUnit)
+	 * 
+	 * Behavior:
+	 * - Waits 300ms after input changes before converting
+	 * - Only converts if value is defined and both units are selected
+	 * - Clears timeout if component unmounts or input changes again
+	 */
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			// Only calculate if input is valid
 			if (input.value !== undefined && input.fromUnit && input.toUnit) {
 				setIsCalculating(true);
 				try {
+					// Perform pressure conversion
 					const pressureResult = convertPressure(input);
 					setResult(pressureResult);
 				} catch (error) {
@@ -51,23 +84,33 @@ export default function PressureCalculator() {
 			} else {
 				setResult(null);
 			}
-		}, 300); // Debounce calculation
+		}, 300); // Debounce calculation by 300ms
 
-		return () => clearTimeout(timer);
+		return () => clearTimeout(timer); // Cleanup on unmount or change
 	}, [input]);
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes value or units.
+	 * Validates numeric inputs to prevent invalid values.
+	 * 
+	 * @param field - Field name to update (value, fromUnit, or toUnit)
+	 * @param value - New value (number for value field, PressureUnit for unit fields)
+	 */
 	const handleInputChange = (
 		field: keyof PressureInput,
 		value: number | PressureUnit
 	) => {
 		// Validate numeric inputs
 		if (typeof value === 'number') {
+			// Prevent extremely large values
 			if (value > 1e12) return;
 		}
 
 		setInput((prev) => ({
 			...prev,
-			[field]: value,
+			[field]: value, // Update field value
 		}));
 	};
 

@@ -11,18 +11,37 @@ import {
 	type VehicleTaxResult,
 } from '@/lib/calculators/vehicle-tax';
 
+/**
+ * Vehicle Tax Calculator Component
+ * 
+ * A React component for calculating vehicle tax based on engine power and region.
+ * 
+ * Features:
+ * - Engine power input (hp)
+ * - Region selection
+ * - Ownership period input (months)
+ * - Tax calculation based on Russian tax regulations
+ * - Regional coefficient consideration
+ * - Partial year calculation
+ * - Responsive design
+ * 
+ * Uses the vehicle tax calculation library from @/lib/calculators/vehicle-tax
+ * for all mathematical operations based on Russian tax code.
+ */
 export default function VehicleTaxCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.vehicle-tax');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<VehicleTaxInput>>({
-		enginePower: 0,
-		region: '',
-		ownershipMonths: 12,
+		enginePower: 0, // Engine power (hp)
+		region: '', // Region code
+		ownershipMonths: 12, // Ownership period (months, default: 12)
 	});
 
-	const [result, setResult] = useState<VehicleTaxResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<VehicleTaxResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const regionalOptions = getRegionalOptions();
 

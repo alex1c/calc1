@@ -17,22 +17,46 @@ import {
 	type LoanResult,
 } from '@/lib/calculators/loan';
 
+/**
+ * Consumer Loan Calculator Component
+ * 
+ * A React component for calculating consumer loan payments and schedules.
+ * 
+ * Features:
+ * - Loan amount and term input
+ * - Interest rate calculation
+ * - Down payment support
+ * - Additional payment support
+ * - Payment type selection (annuity, differentiated)
+ * - Payment schedule generation
+ * - CSV export
+ * - Responsive design
+ * 
+ * Payment types:
+ * - Annuity: Fixed monthly payment
+ * - Differentiated: Decreasing monthly payment
+ * 
+ * Uses the loan calculation library from @/lib/calculators/loan
+ * for all mathematical operations.
+ */
 export default function ConsumerLoanCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.consumer-loan');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<LoanInput>>({
-		loanAmount: 0,
-		termYears: 0,
-		termMonths: 0,
-		interestRate: 0,
-		downPayment: 0,
-		additionalPayment: 0,
-		paymentType: 'annuity',
+		loanAmount: 0, // Loan amount (₽)
+		termYears: 0, // Term in years
+		termMonths: 0, // Additional months
+		interestRate: 0, // Annual interest rate (%)
+		downPayment: 0, // Down payment (₽)
+		additionalPayment: 0, // Additional monthly payment (₽)
+		paymentType: 'annuity', // Payment type (annuity, differentiated)
 	});
 
-	const [result, setResult] = useState<LoanResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<LoanResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const handleInputChange = (
 		field: keyof LoanInput,

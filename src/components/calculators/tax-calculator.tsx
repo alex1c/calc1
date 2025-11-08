@@ -16,20 +16,42 @@ import {
 } from 'lucide-react';
 import PDFExport from '@/components/common/pdf-export';
 
+/**
+ * Tax Calculator Component
+ * 
+ * A React component for calculating VAT and taxes.
+ * 
+ * Features:
+ * - VAT calculation (with/without VAT)
+ * - Multiple VAT rates (0%, 10%, 20%, custom)
+ * - Additional taxes support
+ * - Net amount calculation
+ * - Total amount calculation
+ * - PDF export
+ * - Copy results to clipboard
+ * - Responsive design
+ * 
+ * Calculation types:
+ * - With VAT: Calculate net amount and VAT from total amount
+ * - Without VAT: Calculate total amount with VAT from net amount
+ * 
+ * Uses inline calculation logic for tax calculations.
+ */
 export default function TaxCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.tax-calculator');
 
+	// Form state management
 	const [calculationType, setCalculationType] = useState<
 		'withVat' | 'withoutVat'
-	>('withVat');
-	const [amount, setAmount] = useState('');
-	const [vatRate, setVatRate] = useState('20');
-	const [customVatRate, setCustomVatRate] = useState('');
-	const [additionalTaxes, setAdditionalTaxes] = useState('');
-	// const [currency, setCurrency] = useState('RUB'); // Removed currency selection
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<any>(null);
-	const [copied, setCopied] = useState(false);
+	>('withVat'); // Calculation type (with VAT or without VAT)
+	const [amount, setAmount] = useState(''); // Amount (as string for input)
+	const [vatRate, setVatRate] = useState('20'); // VAT rate (0, 10, 20, custom)
+	const [customVatRate, setCustomVatRate] = useState(''); // Custom VAT rate (as string)
+	const [additionalTaxes, setAdditionalTaxes] = useState(''); // Additional taxes (as string)
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<any>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Debug useEffect to track state changes - temporarily disabled
 	// useEffect(() => {
@@ -65,37 +87,49 @@ export default function TaxCalculator() {
 
 	// const currencies = []; // Removed currency selection
 
+	/**
+	 * Handle tax calculation
+	 * 
+	 * Validates inputs and calculates VAT and taxes.
+	 * 
+	 * Process:
+	 * 1. Validate amount is positive number
+	 * 2. Validate VAT rate (0-100%)
+	 * 3. Validate additional taxes if provided
+	 * 4. Calculate net amount, VAT amount, and total amount based on calculation type
+	 * 5. Update result state
+	 */
 	const calculateTax = () => {
-		if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) return;
+		if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) return; // Validate amount
 
 		// Validate VAT rate
 		const vatRateNum =
-			vatRate === 'custom' ? Number(customVatRate) : Number(vatRate);
-		if (isNaN(vatRateNum) || vatRateNum < 0 || vatRateNum > 100) return;
+			vatRate === 'custom' ? Number(customVatRate) : Number(vatRate); // Get VAT rate number
+		if (isNaN(vatRateNum) || vatRateNum < 0 || vatRateNum > 100) return; // Validate VAT rate range
 
 		// Validate additional taxes
 		const additionalTaxesNum = additionalTaxes
 			? Number(additionalTaxes)
-			: 0;
+			: 0; // Get additional taxes number
 		if (
 			additionalTaxes &&
 			(isNaN(additionalTaxesNum) || additionalTaxesNum < 0)
 		)
-			return;
+			return; // Validate additional taxes
 
 		setIsCalculating(true);
 
-		// Simulate calculation delay
+		// Simulate calculation delay for better UX
 		setTimeout(() => {
-			const amountNum = Number(amount);
+			const amountNum = Number(amount); // Convert amount to number
 
 			let netAmount, vatAmount, totalAmount;
 
 			if (calculationType === 'withVat') {
 				// Amount with VAT -> calculate net amount and VAT
-				totalAmount = amountNum;
-				netAmount = totalAmount / (1 + vatRateNum / 100);
-				vatAmount = totalAmount - netAmount;
+				totalAmount = amountNum; // Total includes VAT
+				netAmount = totalAmount / (1 + vatRateNum / 100); // Calculate net amount
+				vatAmount = totalAmount - netAmount; // Calculate VAT amount
 			} else {
 				// Amount without VAT -> calculate total with VAT
 				netAmount = amountNum;

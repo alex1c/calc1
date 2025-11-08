@@ -34,49 +34,96 @@ import {
 	TimerSettings,
 } from '@/lib/calculators/timer';
 
+/**
+ * Timer Calculator Component
+ * 
+ * A React component for countdown timers with multiple visual styles.
+ * 
+ * Features:
+ * - Countdown timer functionality
+ * - Multiple visual styles (circular, linear, digital)
+ * - Preset timers (Pomodoro, cooking, workout)
+ * - Sound notifications
+ * - Customizable colors
+ * - Pause/resume functionality
+ * - Progress tracking
+ * - Responsive design
+ * 
+ * Timer modes:
+ * - Circular: Circular progress indicator
+ * - Linear: Horizontal progress bar
+ * - Digital: Digital clock display
+ * 
+ * Uses the timer calculation library from @/lib/calculators/timer
+ * for all timer operations.
+ */
 export default function TimerCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.timer');
-	const [timer, setTimer] = useState<TimerState>(createTimer(0, 25, 0));
+	
+	// Timer state management
+	const [timer, setTimer] = useState<TimerState>(createTimer(0, 25, 0)); // Timer state (default: 25 minutes)
 	const [settings, setSettings] = useState<TimerSettings>({
-		hours: 0,
-		minutes: 25,
-		seconds: 0,
-		soundEnabled: true,
-		visualStyle: 'circular',
-		color: '#3B82F6',
+		hours: 0, // Hours (default: 0)
+		minutes: 25, // Minutes (default: 25)
+		seconds: 0, // Seconds (default: 0)
+		soundEnabled: true, // Sound notifications enabled
+		visualStyle: 'circular', // Visual style (circular, linear, digital)
+		color: '#3B82F6', // Timer color (default: blue)
 	});
-	const [isMounted, setIsMounted] = useState(false);
-	const [showPresets, setShowPresets] = useState(false);
-	const [showSettings, setShowSettings] = useState(false);
-	const intervalRef = useRef<NodeJS.Timeout | null>(null);
+	const [isMounted, setIsMounted] = useState(false); // Component mount state (for SSR)
+	const [showPresets, setShowPresets] = useState(false); // Show/hide presets panel
+	const [showSettings, setShowSettings] = useState(false); // Show/hide settings panel
+	const intervalRef = useRef<NodeJS.Timeout | null>(null); // Interval reference for timer updates
 
+	/**
+	 * Component mount effect
+	 * 
+	 * Sets mounted state to true after component mounts.
+	 * Used to prevent hydration mismatches in SSR.
+	 */
 	useEffect(() => {
 		setIsMounted(true);
 	}, []);
 
+	/**
+	 * Timer interval effect
+	 * 
+	 * Manages timer countdown interval.
+	 * Updates timer every 100ms when running and not paused.
+	 * Plays notification sound when timer finishes.
+	 * 
+	 * Dependencies:
+	 * - timer.isRunning: Timer running state
+	 * - timer.isPaused: Timer paused state
+	 * - settings.soundEnabled: Sound enabled setting
+	 */
 	useEffect(() => {
 		if (timer.isRunning && !timer.isPaused) {
+			// Start interval for timer updates
 			intervalRef.current = setInterval(() => {
 				setTimer((prevTimer) => {
-					const updatedTimer = updateTimer(prevTimer);
+					const updatedTimer = updateTimer(prevTimer); // Update timer state
 
-					// Check if timer finished
+					// Check if timer finished (transitioned from >0 to 0)
 					if (updatedTimer.timeLeft === 0 && prevTimer.timeLeft > 0) {
 						if (settings.soundEnabled) {
-							playNotificationSound();
+							playNotificationSound(); // Play finish sound
 						}
 					}
 
 					return updatedTimer;
 				});
-			}, 100);
+			}, 100); // Update every 100ms for smooth display
 		} else {
+			// Clear interval when timer stops or pauses
 			if (intervalRef.current) {
 				clearInterval(intervalRef.current);
 				intervalRef.current = null;
 			}
 		}
 
+		// Cleanup: clear interval on unmount or dependency change
 		return () => {
 			if (intervalRef.current) {
 				clearInterval(intervalRef.current);
@@ -84,60 +131,113 @@ export default function TimerCalculator() {
 		};
 	}, [timer.isRunning, timer.isPaused, settings.soundEnabled]);
 
+	/**
+	 * Handle start/resume button click
+	 * 
+	 * Starts timer if not running, resumes if paused.
+	 */
 	const handleStart = () => {
 		if (timer.isPaused) {
-			setTimer(resumeTimer(timer));
+			setTimer(resumeTimer(timer)); // Resume paused timer
 		} else {
-			setTimer(startTimer(timer));
+			setTimer(startTimer(timer)); // Start new timer
 		}
 	};
 
+	/**
+	 * Handle pause button click
+	 * 
+	 * Pauses the running timer.
+	 */
 	const handlePause = () => {
-		setTimer(pauseTimer(timer));
+		setTimer(pauseTimer(timer)); // Pause timer
 	};
 
+	/**
+	 * Handle reset button click
+	 * 
+	 * Resets timer to initial state.
+	 */
 	const handleReset = () => {
-		setTimer(resetTimer(timer));
+		setTimer(resetTimer(timer)); // Reset timer
 	};
 
+	/**
+	 * Handle time input change
+	 * 
+	 * Updates timer duration when user changes hours/minutes/seconds.
+	 * Only updates timer if not currently running.
+	 * 
+	 * @param field - Field to update (hours, minutes, seconds)
+	 * @param value - New value
+	 */
 	const handleTimeChange = (
 		field: 'hours' | 'minutes' | 'seconds',
 		value: number
 	) => {
-		const newSettings = { ...settings, [field]: value };
+		const newSettings = { ...settings, [field]: value }; // Update settings
 		setSettings(newSettings);
 
+		// Only update timer if not running (to prevent interruption)
 		if (!timer.isRunning) {
 			const newTimer = createTimer(
 				newSettings.hours,
 				newSettings.minutes,
 				newSettings.seconds
 			);
-			setTimer(newTimer);
+			setTimer(newTimer); // Create new timer with updated time
 		}
 	};
 
+	/**
+	 * Handle preset selection
+	 * 
+	 * Sets timer to preset values (Pomodoro, cooking, workout).
+	 * 
+	 * @param hours - Preset hours
+	 * @param minutes - Preset minutes
+	 * @param seconds - Preset seconds
+	 */
 	const handlePresetSelect = (
 		hours: number,
 		minutes: number,
 		seconds: number
 	) => {
-		const newSettings = { ...settings, hours, minutes, seconds };
+		const newSettings = { ...settings, hours, minutes, seconds }; // Update settings
 		setSettings(newSettings);
-		setTimer(createTimer(hours, minutes, seconds));
-		setShowPresets(false);
+		setTimer(createTimer(hours, minutes, seconds)); // Create timer with preset values
+		setShowPresets(false); // Hide presets panel
 	};
 
+	/**
+	 * Handle sound toggle
+	 * 
+	 * Toggles sound notifications on/off.
+	 */
 	const handleSoundToggle = () => {
 		setSettings((prev) => ({ ...prev, soundEnabled: !prev.soundEnabled }));
 	};
 
+	/**
+	 * Handle visual style change
+	 * 
+	 * Changes timer display style (circular, linear, digital).
+	 * 
+	 * @param style - Visual style to apply
+	 */
 	const handleVisualStyleChange = (
 		style: 'circular' | 'linear' | 'digital'
 	) => {
 		setSettings((prev) => ({ ...prev, visualStyle: style }));
 	};
 
+	/**
+	 * Handle color change
+	 * 
+	 * Updates timer color.
+	 * 
+	 * @param color - Color hex code
+	 */
 	const handleColorChange = (color: string) => {
 		setSettings((prev) => ({ ...prev, color }));
 	};

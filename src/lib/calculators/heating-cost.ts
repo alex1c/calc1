@@ -1,6 +1,36 @@
 /**
- * Heating Cost Calculator Logic
- * Calculates heating costs based on system type, area, season duration and tariffs
+ * Heating Cost Calculator Library
+ *
+ * Provides functionality for calculating heating costs based on system type, area, season duration, and tariffs.
+ *
+ * Features:
+ * - Multiple heating system types (electric, gas, solid fuel, central)
+ * - Power per m² calculation based on temperature
+ * - Total power requirement calculation
+ * - Daily and seasonal energy consumption calculation
+ * - Cost calculation based on energy tariff
+ * - Efficiency consideration
+ * - Building type recommendations
+ *
+ * Heating system types:
+ * - Electric: Electric radiators, convectors (100% efficiency, kWh)
+ * - Gas: Gas boilers, convectors (90% efficiency, m³)
+ * - Solid Fuel: Wood, coal, pellets (75% efficiency, kg)
+ * - Central: Central heating system (85% efficiency, kWh)
+ *
+ * Building types and power ranges:
+ * - Modern Insulated: 60-80 W/m²
+ * - Average Insulation: 90-120 W/m²
+ * - Old Uninsulated: 130-180 W/m²
+ * - Apartment Building: 70-100 W/m²
+ *
+ * Calculation method:
+ * - Base power per m² = 80 W/m² (for 20°C room temperature)
+ * - Power per m² = base power × (temperature / 20)
+ * - Total power = power per m² × area
+ * - Adjusted power = total power / efficiency
+ * - Consumption = (adjusted power × hours per day) / 1000 (convert W to kW)
+ * - Costs = consumption × tariff
  */
 
 export interface HeatingCostInput {
@@ -99,7 +129,19 @@ export const BUILDING_TYPES: BuildingType[] = [
 ];
 
 /**
- * Validates input parameters for heating cost calculation
+ * Validate input parameters for heating cost calculation
+ *
+ * Performs validation checks:
+ * - Area is positive and not too large (max 10000 m²)
+ * - Season days is between 1 and 365
+ * - Hours per day is between 0 and 24
+ * - Temperature is between 10°C and 30°C
+ * - Heating type is specified
+ * - Tariff is non-negative
+ * - Efficiency is between 10% and 100%
+ *
+ * @param input - Heating cost input parameters
+ * @returns Validation result with boolean status and array of error messages
  */
 export function validateHeatingCostInput(input: HeatingCostInput): {
 	isValid: boolean;
@@ -146,7 +188,27 @@ export function validateHeatingCostInput(input: HeatingCostInput): {
 }
 
 /**
- * Calculates heating costs based on input parameters
+ * Calculate heating costs based on input parameters
+ *
+ * Calculates:
+ * - Required power per m² (based on temperature)
+ * - Total required power (power per m² × area)
+ * - Daily energy consumption (adjusted for efficiency, convert W to kW)
+ * - Seasonal energy consumption (daily × season days)
+ * - Daily and seasonal costs (consumption × tariff)
+ *
+ * Algorithm:
+ * 1. Calculate base power per m² = 80 W/m² (for 20°C)
+ * 2. Adjust for temperature: power per m² = base × (temperature / 20)
+ * 3. Calculate total power = power per m² × area
+ * 4. Adjust for efficiency: adjusted power = total power / (efficiency / 100)
+ * 5. Calculate daily consumption = (adjusted power × hours) / 1000
+ * 6. Calculate seasonal consumption = daily × season days
+ * 7. Calculate costs = consumption × tariff
+ *
+ * @param input - Heating cost input parameters
+ * @returns Heating cost result with power, consumption, and costs
+ * @throws Error if validation fails or heating type is invalid
  */
 export function calculateHeatingCost(
 	input: HeatingCostInput

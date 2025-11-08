@@ -28,31 +28,59 @@ import {
 
 /**
  * Ovulation Calculator Component
- * Interactive calculator for menstrual cycle and ovulation tracking
+ * 
+ * A React component for calculating menstrual cycle and ovulation dates.
+ * 
+ * Features:
+ * - Ovulation date calculation
+ * - Fertile window calculation
+ * - Next period prediction
+ * - Calendar visualization
+ * - Cycle type classification (short, normal, long)
+ * - Date navigation
+ * - Responsive design
+ * 
+ * Calculation method:
+ * - Ovulation typically occurs 14 days before next period
+ * - Fertile window: 5 days before ovulation + ovulation day + 1 day after
+ * - Next period: last period + cycle length
+ * 
+ * Uses the ovulation calculation library from @/lib/calculators/ovulation
+ * for all date calculations.
  */
 export default function OvulationCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.ovulation');
 
 	// State for input values
-	const [lastPeriodDate, setLastPeriodDate] = useState<string>('');
-	const [cycleLength, setCycleLength] = useState<string>('28');
-	const [periodLength, setPeriodLength] = useState<string>('5');
-	const [result, setResult] = useState<OvulationResult | null>(null);
-	const [error, setError] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState<boolean>(false);
-	const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
+	const [lastPeriodDate, setLastPeriodDate] = useState<string>(''); // Last period start date (YYYY-MM-DD format)
+	const [cycleLength, setCycleLength] = useState<string>('28'); // Cycle length in days (default: 28)
+	const [periodLength, setPeriodLength] = useState<string>('5'); // Period length in days (default: 5)
+	const [result, setResult] = useState<OvulationResult | null>(null); // Calculated ovulation result
+	const [error, setError] = useState<string>(''); // Validation error message
+	const [isCalculating, setIsCalculating] = useState<boolean>(false); // Loading state during calculation
+	const [currentMonth, setCurrentMonth] = useState<Date>(new Date()); // Current month for calendar display
 
 	/**
 	 * Handle form submission and ovulation calculation
+	 * 
+	 * Validates inputs and calculates ovulation dates and fertile window.
+	 * 
+	 * Process:
+	 * 1. Parse date string to Date object
+	 * 2. Parse cycle and period lengths to numbers
+	 * 3. Validate inputs using validateOvulationInput
+	 * 4. Calculate ovulation using calculateOvulation
+	 * 5. Update result state and calendar month
 	 */
 	const handleCalculate = async () => {
-		setError('');
+		setError(''); // Clear previous errors
 		setIsCalculating(true);
 
 		try {
-			const lastPeriod = new Date(lastPeriodDate);
-			const cycleLengthNum = parseInt(cycleLength);
-			const periodLengthNum = parseInt(periodLength);
+			const lastPeriod = new Date(lastPeriodDate); // Parse date string
+			const cycleLengthNum = parseInt(cycleLength); // Parse cycle length
+			const periodLengthNum = parseInt(periodLength); // Parse period length
 
 			// Validate input
 			const validation = validateOvulationInput({
@@ -66,7 +94,7 @@ export default function OvulationCalculator() {
 				return;
 			}
 
-			// Calculate ovulation
+			// Calculate ovulation dates
 			const ovulationResult = calculateOvulation({
 				lastPeriodDate: lastPeriod,
 				cycleLength: cycleLengthNum,
@@ -86,14 +114,17 @@ export default function OvulationCalculator() {
 
 	/**
 	 * Reset form and clear results
+	 * 
+	 * Clears all form inputs and resets result and error states.
+	 * Resets calendar to current month.
 	 */
 	const handleReset = () => {
-		setLastPeriodDate('');
-		setCycleLength('28');
-		setPeriodLength('5');
-		setResult(null);
-		setError('');
-		setCurrentMonth(new Date());
+		setLastPeriodDate(''); // Clear last period date
+		setCycleLength('28'); // Reset to default cycle length
+		setPeriodLength('5'); // Reset to default period length
+		setResult(null); // Clear result
+		setError(''); // Clear errors
+		setCurrentMonth(new Date()); // Reset calendar to current month
 	};
 
 	/**

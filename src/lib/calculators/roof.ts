@@ -1,6 +1,35 @@
-// Roof calculator
-// Extensible architecture for different roof types and materials
+/**
+ * Roof Calculator Library
+ * 
+ * Provides functionality for calculating roof materials and dimensions.
+ * 
+ * Features:
+ * - Multiple roof types (single, gable, hip, mansard)
+ * - Roof angle calculation
+ * - Material quantity calculation
+ * - Overhang support
+ * - Reserve percentage calculation
+ * - Unit conversion (meters/centimeters)
+ * - Weight calculation
+ * 
+ * Roof types:
+ * - Single: One-slope roof
+ * - Gable: Two-slope roof (most common)
+ * - Hip: Four-slope roof
+ * - Mansard: Two-slope roof with different angles
+ * 
+ * Calculation method:
+ * - Calculates roof area based on house dimensions and roof type
+ * - Accounts for roof angle and overhang
+ * - Calculates material quantity based on sheet/package size
+ * - Applies reserve percentage
+ * - Calculates total weight
+ */
 
+/**
+ * Input interface for roof calculation
+ * Contains house dimensions, roof type, angle, material, and reserve percentage
+ */
 export interface RoofInput {
 	// House dimensions
 	houseLength: number; // in meters
@@ -192,7 +221,27 @@ export function calculateRoofArea(
 }
 
 /**
- * Calculate material requirements
+ * Calculate roof material requirements
+ * 
+ * Calculates number of material sheets/packages needed based on:
+ * - Roof area
+ * - Material sheet/package dimensions
+ * - Reserve percentage
+ * 
+ * Algorithm:
+ * 1. Convert material dimensions to meters if needed
+ * 2. Calculate material area per sheet/package
+ * 3. Calculate reserve area
+ * 4. Calculate total material area needed
+ * 5. Calculate number of sheets/packages needed
+ * 
+ * @param roofArea - Total roof area in m²
+ * @param material - Material type identifier
+ * @param materialLength - Material length (meters or centimeters)
+ * @param materialWidth - Material width (meters or centimeters)
+ * @param reservePercentage - Reserve percentage for waste
+ * @param units - Unit system (meters or centimeters)
+ * @returns Material requirements with counts and areas
  */
 export function calculateMaterialRequirements(
 	roofArea: number,
@@ -244,7 +293,13 @@ export function calculateMaterialRequirements(
 }
 
 /**
- * Calculate roof weight
+ * Calculate roof weight based on material and area
+ * 
+ * Calculates total roof weight by multiplying roof area by material weight per m².
+ * 
+ * @param roofArea - Total roof area in m²
+ * @param material - Material type identifier
+ * @returns Roof weight calculations with weight per m² and total weight
  */
 export function calculateRoofWeight(
 	roofArea: number,
@@ -268,7 +323,17 @@ export function calculateRoofWeight(
 }
 
 /**
- * Main calculation function
+ * Main roof calculation function
+ * 
+ * Orchestrates the complete roof calculation process:
+ * 1. Converts units if needed (centimeters to meters)
+ * 2. Calculates roof areas (total, effective, overhang)
+ * 3. Calculates material requirements (sheets/packages needed)
+ * 4. Calculates roof weight
+ * 5. Returns comprehensive result with all calculations
+ * 
+ * @param input - Roof input parameters including dimensions, type, material, and units
+ * @returns Complete roof calculation result with areas, material requirements, and weight
  */
 export function calculateRoof(input: RoofInput): RoofResult {
 	const {

@@ -1,6 +1,29 @@
 /**
- * Коэффициенты гравитации планет относительно Земли
- * Данные основаны на реальных научных измерениях
+ * Planet Weight Calculator Library
+ *
+ * Provides functionality for calculating weight on different planets based on their gravity.
+ *
+ * Features:
+ * - Multiple planets and celestial bodies (Mercury, Venus, Moon, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto)
+ * - Gravity coefficients relative to Earth
+ * - Weight conversion between kg and lb
+ * - Weight calculation for all planets
+ * - Input validation
+ *
+ * Gravity coefficients (relative to Earth):
+ * - Mercury: 0.378
+ * - Venus: 0.907
+ * - Moon: 0.166
+ * - Mars: 0.377
+ * - Jupiter: 2.364
+ * - Saturn: 0.916
+ * - Uranus: 0.889
+ * - Neptune: 1.125
+ * - Pluto: 0.071
+ *
+ * Calculation method:
+ * - Weight on planet = Earth weight × Planet gravity coefficient
+ * - All calculations use kg as base unit, then convert to lb if needed
  */
 export const PLANET_GRAVITY = {
 	mercury: 0.378, // Меркурий
@@ -34,21 +57,39 @@ export interface PlanetWeightResult {
 }
 
 /**
- * Конвертация фунтов в килограммы
+ * Convert pounds to kilograms
+ *
+ * Conversion factor: 1 lb = 0.453592 kg
+ *
+ * @param lb - Weight in pounds
+ * @returns Weight in kilograms
  */
 export function lbToKg(lb: number): number {
 	return lb * 0.453592;
 }
 
 /**
- * Конвертация килограмм в фунты
+ * Convert kilograms to pounds
+ *
+ * Conversion factor: 1 kg = 2.20462 lb
+ *
+ * @param kg - Weight in kilograms
+ * @returns Weight in pounds
  */
 export function kgToLb(kg: number): number {
 	return kg * 2.20462;
 }
 
 /**
- * Расчёт веса на другой планете
+ * Calculate weight on a specific planet
+ *
+ * Calculates weight by multiplying Earth weight by the planet's gravity coefficient.
+ *
+ * Formula: Weight on planet = Earth weight × Planet gravity coefficient
+ *
+ * @param earthWeight - Weight on Earth in kilograms
+ * @param planet - Planet type identifier
+ * @returns Weight on the specified planet in kilograms
  */
 export function calculatePlanetWeight(
 	earthWeight: number,
@@ -59,7 +100,14 @@ export function calculatePlanetWeight(
 }
 
 /**
- * Расчёт веса на всех планетах
+ * Calculate weight on all planets
+ *
+ * Calculates weight for all available planets and celestial bodies.
+ * Converts units if needed (lb to kg for calculation, then back to lb for results).
+ *
+ * @param earthWeight - Weight on Earth
+ * @param unit - Weight unit ('kg' or 'lb', default 'kg')
+ * @returns Array of PlanetWeightResult objects with weight and gravity for each planet
  */
 export function calculateAllPlanetsWeight(
 	earthWeight: number,
@@ -88,7 +136,14 @@ export function calculateAllPlanetsWeight(
 }
 
 /**
- * Валидация веса
+ * Validate weight input
+ *
+ * Performs validation checks:
+ * - Weight is a positive number
+ * - Weight is not too large (max 1000 kg)
+ *
+ * @param weight - Weight value to validate
+ * @returns Validation result with boolean status and optional error message
  */
 export function validateWeight(weight: number): {
 	isValid: boolean;

@@ -5,15 +5,35 @@ import { useTranslations } from 'next-intl';
 import { Sparkles, Copy, Download, RefreshCw } from 'lucide-react';
 import { generateNames } from '@/lib/calculators/name-generator';
 
+/**
+ * Name Generator Calculator Component
+ * 
+ * A React component for generating names with customizable options.
+ * 
+ * Features:
+ * - Multiple name types (baby, character, pet, etc.)
+ * - Gender filtering (male, female, any)
+ * - Customizable name count
+ * - Length options (short, medium, long)
+ * - Copy to clipboard
+ * - Download as text
+ * - Responsive design
+ * 
+ * Uses the name generator library from @/lib/calculators/name-generator
+ * for name generation.
+ */
 export default function NameGeneratorCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.nameGenerator');
-	const [nameType, setNameType] = useState('baby');
-	const [gender, setGender] = useState('any');
-	const [nameCount, setNameCount] = useState(5);
-	const [nameLength, setNameLength] = useState('medium');
-	const [generatedNames, setGeneratedNames] = useState<string[]>([]);
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	
+	// Generator options
+	const [nameType, setNameType] = useState('baby'); // Name type (baby, character, pet, etc.)
+	const [gender, setGender] = useState('any'); // Gender filter (male, female, any)
+	const [nameCount, setNameCount] = useState(5); // Number of names to generate
+	const [nameLength, setNameLength] = useState('medium'); // Name length (short, medium, long)
+	const [generatedNames, setGeneratedNames] = useState<string[]>([]); // Generated names array
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Debug logging
 	useEffect(() => {

@@ -12,25 +12,43 @@ import {
 	MATERIALS,
 } from '@/lib/calculators/materials';
 
+/**
+ * Plaster Calculator Component
+ * 
+ * A React component for calculating plaster needed for walls.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Doors and windows area deduction
+ * - Multiple layers support
+ * - Consumption rate calculation
+ * - Reserve percentage calculation
+ * - Package size calculation
+ * - Responsive design
+ * 
+ * Uses the materials calculation library from @/lib/calculators/materials
+ * for all mathematical operations.
+ */
 export default function PlasterCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.plaster');
-	const materialType = 'plaster';
-	const [result, setResult] = useState<MaterialResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const materialType = 'plaster'; // Material type identifier
+	const [result, setResult] = useState<MaterialResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
-	const material = MATERIALS[materialType];
+	const material = MATERIALS[materialType]; // Get material configuration
 
-	// Form state
+	// Form state management
 	const [formData, setFormData] = useState<Partial<MaterialInput>>({
-		roomLength: 0,
-		roomWidth: 0,
-		wallHeight: 0,
-		doorsWindowsArea: 0,
-		layers: 1,
-		consumptionRate: material?.defaultConsumption || 9,
-		reservePercentage: 10,
-		packageSize: material?.defaultPackageSize || 30,
+		roomLength: 0, // Room length (m)
+		roomWidth: 0, // Room width (m)
+		wallHeight: 0, // Wall height (m)
+		doorsWindowsArea: 0, // Total area of doors and windows (m²)
+		layers: 1, // Number of plaster layers
+		consumptionRate: material?.defaultConsumption || 9, // Plaster consumption rate (kg/m²)
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		packageSize: material?.defaultPackageSize || 30, // Package size (kg)
 	});
 
 	// Handle input changes

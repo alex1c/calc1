@@ -1,6 +1,29 @@
 /**
- * Love Compatibility Calculator Logic
- * Calculates compatibility between two people based on their birth dates
+ * Love Compatibility Calculator Library
+ *
+ * Provides functionality for calculating compatibility between two people based on their birth dates.
+ *
+ * Features:
+ * - Zodiac sign determination from birth dates
+ * - Elemental compatibility (Fire, Air, Water, Earth)
+ * - Quality compatibility (Cardinal, Fixed, Mutable)
+ * - Age compatibility calculation
+ * - Seasonal compatibility
+ * - Numerological compatibility
+ * - Overall compatibility percentage (20-100%)
+ * - Compatibility level assessment (Perfect Match, Excellent Match, etc.)
+ *
+ * Compatibility factors:
+ * - Elemental: Same element (20 points), compatible elements (15 points), incompatible (5 points)
+ * - Quality: Same quality (15 points), different (5 points)
+ * - Age: Similar age (20 points), decreasing with age difference
+ * - Seasonal: Same season (10 points), different (5 points)
+ * - Numerological: Similar numbers (15 points), different (5 points)
+ *
+ * Calculation method:
+ * - Sums all compatibility factors
+ * - Adds random factor (-5 to +5) for variety
+ * - Ensures result is between 20 and 100%
  */
 
 export interface LoveCompatibilityResult {
@@ -111,6 +134,13 @@ export const zodiacSigns: ZodiacSign[] = [
 
 /**
  * Get zodiac sign for a given date
+ *
+ * Determines the zodiac sign based on birth date by checking if the date
+ * falls within the sign's date range. Handles Capricorn which spans across
+ * the year boundary (December 22 - January 19).
+ *
+ * @param date - Birth date
+ * @returns ZodiacSign object with name, dates, element, and quality
  */
 export function getZodiacSign(date: Date): ZodiacSign {
 	const month = date.getMonth() + 1;
@@ -133,7 +163,16 @@ export function getZodiacSign(date: Date): ZodiacSign {
 }
 
 /**
- * Calculate numerological value
+ * Calculate numerological value from birth date
+ *
+ * Calculates a single-digit numerological number by:
+ * 1. Summing day + month + year
+ * 2. Reducing to single digit by repeatedly summing digits
+ *
+ * Example: 15/03/1990 → 1+5+3+1+9+9+0 = 28 → 2+8 = 10 → 1+0 = 1
+ *
+ * @param date - Birth date
+ * @returns Numerological value (1-9)
  */
 export function getNumerologicalValue(date: Date): number {
 	const day = date.getDate();
@@ -154,7 +193,16 @@ export function getNumerologicalValue(date: Date): number {
 }
 
 /**
- * Calculate elemental compatibility
+ * Calculate elemental compatibility between two zodiac signs
+ *
+ * Element compatibility rules:
+ * - Same element: 20 points (e.g., Fire + Fire)
+ * - Compatible elements: 15 points (Fire + Air, Water + Earth)
+ * - Incompatible elements: 5 points
+ *
+ * @param sign1 - First person's zodiac sign
+ * @param sign2 - Second person's zodiac sign
+ * @returns Compatibility points (5, 15, or 20)
  */
 export function getElementalCompatibility(
 	sign1: ZodiacSign,
@@ -178,7 +226,15 @@ export function getElementalCompatibility(
 }
 
 /**
- * Calculate quality compatibility
+ * Calculate quality compatibility between two zodiac signs
+ *
+ * Quality compatibility:
+ * - Same quality (Cardinal, Fixed, or Mutable): 15 points
+ * - Different quality: 5 points
+ *
+ * @param sign1 - First person's zodiac sign
+ * @param sign2 - Second person's zodiac sign
+ * @returns Compatibility points (5 or 15)
  */
 export function getQualityCompatibility(
 	sign1: ZodiacSign,
@@ -189,7 +245,18 @@ export function getQualityCompatibility(
 }
 
 /**
- * Calculate age compatibility
+ * Calculate age compatibility between two birth dates
+ *
+ * Age difference scoring:
+ * - 0-2 years: 20 points
+ * - 3-5 years: 15 points
+ * - 6-10 years: 10 points
+ * - 11-15 years: 5 points
+ * - 16+ years: 0 points
+ *
+ * @param date1 - First person's birth date
+ * @param date2 - Second person's birth date
+ * @returns Compatibility points (0-20)
  */
 export function getAgeCompatibility(date1: Date, date2: Date): number {
 	const age1 = new Date().getFullYear() - date1.getFullYear();
@@ -204,7 +271,21 @@ export function getAgeCompatibility(date1: Date, date2: Date): number {
 }
 
 /**
- * Calculate seasonal compatibility
+ * Calculate seasonal compatibility between two birth dates
+ *
+ * Seasonal compatibility:
+ * - Same season: 10 points
+ * - Different season: 5 points
+ *
+ * Seasons:
+ * - Spring: March-May
+ * - Summer: June-August
+ * - Autumn: September-November
+ * - Winter: December-February
+ *
+ * @param date1 - First person's birth date
+ * @param date2 - Second person's birth date
+ * @returns Compatibility points (5 or 10)
  */
 export function getSeasonalCompatibility(date1: Date, date2: Date): number {
 	const getSeason = (date: Date) => {
@@ -224,6 +305,20 @@ export function getSeasonalCompatibility(date1: Date, date2: Date): number {
 
 /**
  * Calculate love compatibility between two birth dates
+ *
+ * Main function that orchestrates the complete compatibility calculation:
+ * 1. Determines zodiac signs for both dates
+ * 2. Calculates elemental compatibility
+ * 3. Calculates quality compatibility
+ * 4. Calculates age compatibility
+ * 5. Calculates seasonal compatibility
+ * 6. Calculates numerological compatibility
+ * 7. Sums all factors and adds random variation
+ * 8. Determines compatibility level and description
+ *
+ * @param date1 - First person's birth date
+ * @param date2 - Second person's birth date
+ * @returns Love compatibility result with percentage, level, description, and metrics
  */
 export function calculateLoveCompatibility(
 	date1: Date,

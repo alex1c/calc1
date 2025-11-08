@@ -1,5 +1,23 @@
-// Ventilation calculator for rooms
-// Calculates required ventilation capacity based on room type and occupancy
+/**
+ * Ventilation Calculator Library
+ * 
+ * Provides functionality for calculating required ventilation capacity for rooms.
+ * 
+ * Features:
+ * - Room dimensions input (length, width, height)
+ * - Room type selection (living, kitchen, bathroom, office, etc.)
+ * - Occupancy-based calculation (air per person)
+ * - Volume-based calculation (air exchange rate)
+ * - Combined capacity calculation (maximum of both methods)
+ * - Recommendations for supply/exhaust/combined systems
+ * 
+ * Calculation methods:
+ * 1. Volume method: Capacity = Room Volume × Air Exchange Rate
+ * 2. Occupancy method: Capacity = People Count × Air Per Person
+ * 3. Required capacity: Maximum of both methods
+ * 
+ * Based on Russian building codes (SNiP) and ventilation standards.
+ */
 
 export interface VentilationInput {
 	// Room dimensions
@@ -112,6 +130,13 @@ export const ROOM_TYPES: Record<
 
 /**
  * Calculate room volume
+ * 
+ * Formula: Volume = Length × Width × Height
+ * 
+ * @param length - Room length in meters
+ * @param width - Room width in meters
+ * @param height - Room height in meters
+ * @returns Room volume in m³
  */
 function calculateRoomVolume(
 	length: number,
@@ -123,6 +148,12 @@ function calculateRoomVolume(
 
 /**
  * Get room type configuration
+ * 
+ * Retrieves air exchange rate and air per person values for the specified room type.
+ * Returns default values if room type is not found.
+ * 
+ * @param roomType - Room type identifier (living, kitchen, bathroom, etc.)
+ * @returns Room type configuration with air exchange rate and air per person
  */
 function getRoomTypeConfig(roomType: string) {
 	return (
@@ -136,7 +167,25 @@ function getRoomTypeConfig(roomType: string) {
 }
 
 /**
- * Main calculation function
+ * Calculate required ventilation capacity for a room
+ * 
+ * Calculates ventilation requirements using two methods:
+ * 1. Volume method: Based on room volume and air exchange rate
+ * 2. Occupancy method: Based on number of people and air per person
+ * 
+ * The required capacity is the maximum of both methods to ensure adequate
+ * ventilation for both room volume and occupancy.
+ * 
+ * Algorithm:
+ * 1. Get room type configuration (air exchange rate, air per person)
+ * 2. Calculate room volume (length × width × height)
+ * 3. Calculate capacity by volume (volume × exchange rate)
+ * 4. Calculate capacity by people (people × air per person)
+ * 5. Required capacity = max(capacityByVolume, capacityByPeople)
+ * 6. Calculate recommendations for different system types
+ * 
+ * @param input - Ventilation input parameters
+ * @returns Ventilation result with capacities and recommendations
  */
 export function calculateVentilation(
 	input: VentilationInput

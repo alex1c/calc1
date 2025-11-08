@@ -1,6 +1,49 @@
+/**
+ * Car Depreciation Calculator Library
+ * 
+ * Provides functionality for calculating car depreciation value over time.
+ * 
+ * Features:
+ * - Two depreciation methods: linear and exponential
+ * - Car segment consideration (economy, mid, premium)
+ * - Mileage adjustment factor
+ * - Age-based depreciation rates
+ * - Current value calculation
+ * - Annual depreciation rate calculation
+ * 
+ * Depreciation methods:
+ * - Linear: Constant depreciation amount per year
+ * - Exponential: Accelerated depreciation rate (compound)
+ * 
+ * Segment adjustments:
+ * - Premium: +5% depreciation rate
+ * - Economy: -2% depreciation rate
+ * - Mid: No adjustment
+ * 
+ * Mileage adjustment:
+ * - Based on average annual mileage vs. norm (15,000 km/year)
+ * - Excess mileage increases depreciation rate
+ */
+
+/**
+ * Depreciation calculation method type
+ * - linear: Constant depreciation amount per year
+ * - exponential: Accelerated depreciation rate (compound)
+ */
 export type DepreciationMethod = 'linear' | 'exponential';
+
+/**
+ * Car segment type
+ * - economy: Economy class cars
+ * - mid: Mid-range cars
+ * - premium: Premium/luxury cars
+ */
 export type CarSegment = 'economy' | 'mid' | 'premium';
 
+/**
+ * Input interface for car depreciation calculation
+ * Contains all parameters needed to calculate depreciation
+ */
 export interface DepreciationInput {
 	purchasePrice: number; // RUB
 	ageYears: number; // years
@@ -9,32 +52,65 @@ export interface DepreciationInput {
 	method: DepreciationMethod;
 }
 
+/**
+ * Result interface for car depreciation calculation
+ * Contains calculated depreciation values and rates
+ */
 export interface DepreciationResult {
-	purchasePrice: number;
-	currentValue: number;
-	totalDepreciation: number;
-	annualRatePercent: number;
-	ageYears: number;
-	mileageKm: number;
+	purchasePrice: number; // Original purchase price (₽)
+	currentValue: number; // Current car value after depreciation (₽)
+	totalDepreciation: number; // Total depreciation amount (₽)
+	annualRatePercent: number; // Average annual depreciation rate (%)
+	ageYears: number; // Car age in years
+	mileageKm: number; // Total mileage in kilometers
 }
 
-// Base annual rates by year index (1-based). After list, use the last value.
+/**
+ * Base annual depreciation rates by year index (1-based)
+ * Rates decrease over time, stabilizing after year 7
+ */
 const BASE_ANNUAL_RATES = [0.18, 0.12, 0.1, 0.08, 0.07, 0.06, 0.06];
 
+/**
+ * Get annual depreciation rate for a specific year
+ * 
+ * Uses base rates array, defaulting to last rate for years beyond array length.
+ * 
+ * @param yearIndex - Year index (1-based, where 1 is first year)
+ * @returns Annual depreciation rate (0-1)
+ */
 function getAnnualRateForYear(yearIndex: number): number {
 	return BASE_ANNUAL_RATES[
 		Math.min(yearIndex - 1, BASE_ANNUAL_RATES.length - 1)
 	];
 }
 
+/**
+ * Get segment adjustment factor for depreciation rate
+ * 
+ * Premium cars depreciate faster, economy cars depreciate slower.
+ * 
+ * @param segment - Car segment (economy, mid, premium)
+ * @returns Adjustment factor to add to base rate (+0.05 for premium, -0.02 for economy, 0 for mid)
+ */
 function getSegmentAdjustment(segment: CarSegment): number {
 	if (segment === 'premium') return 0.05; // +5% to drop
 	if (segment === 'economy') return -0.02; // -2% to drop
 	return 0; // mid
 }
 
+/**
+ * Get mileage adjustment factor for depreciation rate
+ * 
+ * Calculates adjustment based on average annual mileage vs. norm (15,000 km/year).
+ * Excess mileage increases depreciation rate by 5-10%.
+ * 
+ * @param mileageKm - Total mileage in kilometers
+ * @param ageYears - Car age in years
+ * @returns Adjustment factor to add to base rate (0 to +0.1)
+ */
 function getMileageAdjustment(mileageKm: number, ageYears: number): number {
-	const normPerYear = 15000;
+	const normPerYear = 15000; // Normal annual mileage (km/year)
 	if (ageYears <= 0) return 0;
 	const avgPerYear = mileageKm / ageYears;
 	if (avgPerYear <= normPerYear) return 0;
@@ -42,6 +118,17 @@ function getMileageAdjustment(mileageKm: number, ageYears: number): number {
 	return Math.min(0.1, Math.max(0.0, 0.05 + 0.05 * Math.min(1, excessRatio))); // +5..10%
 }
 
+/**
+ * Validate car depreciation input parameters
+ * 
+ * Checks that all required fields are present and valid:
+ * - Purchase price must be positive
+ * - Age must be non-negative
+ * - Mileage must be non-negative
+ * 
+ * @param data - Partial depreciation input to validate
+ * @returns Array of error messages (empty if valid)
+ */
 export function validateDepreciationInput(
 	data: Partial<DepreciationInput>
 ): string[] {
@@ -55,6 +142,21 @@ export function validateDepreciationInput(
 	return errors;
 }
 
+/**
+ * Calculate car depreciation value
+ * 
+ * Calculates current car value based on purchase price, age, mileage, segment, and method.
+ * 
+ * Algorithm:
+ * 1. Calculate base depreciation rate for each year
+ * 2. Apply segment and mileage adjustments
+ * 3. Apply depreciation based on method (linear or exponential)
+ * 4. Handle fractional years proportionally
+ * 5. Calculate total depreciation and annual rate
+ * 
+ * @param input - Depreciation input parameters
+ * @returns Depreciation result with current value, total depreciation, and rates
+ */
 export function calculateDepreciation(
 	input: DepreciationInput
 ): DepreciationResult {

@@ -1,4 +1,19 @@
-// Vehicle tax calculation logic and regional rates
+/**
+ * Vehicle Tax Calculator Library
+ * 
+ * Provides functionality for calculating Russian vehicle tax (transport tax).
+ * 
+ * Features:
+ * - Regional tax rates (rubles per horsepower)
+ * - Engine power input
+ * - Ownership period calculation (partial year support)
+ * - Tax amount calculation
+ * 
+ * Calculation formula:
+ * Tax = Engine Power × Regional Rate × (Ownership Months / 12)
+ * 
+ * Regional rates vary by region and are set per horsepower.
+ */
 
 export interface VehicleTaxInput {
 	enginePower: number;

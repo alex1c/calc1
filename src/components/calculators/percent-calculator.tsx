@@ -28,36 +28,61 @@ interface CalculationState {
 }
 
 /**
- * PercentCalculator Component
- *
- * A comprehensive percentage calculator with multiple calculation modes:
- * - Find percentage of a number
- * - Find what percentage one number is of another
- * - Find number from percentage
- * - Increase/decrease number by percentage
+ * Percent Calculator Component
+ * 
+ * A comprehensive React component for percentage calculations with multiple modes.
+ * 
+ * Features:
+ * - Tab-based interface for different calculation types
+ * - Real-time calculation with debouncing
+ * - Input validation with error handling
+ * - Formula display showing calculation steps
+ * - Keyboard support (Enter key to calculate)
+ * - Auto-calculation when all required fields are filled
+ * - Responsive design
+ * 
+ * Calculation modes:
+ * 1. Find percentage of a number: What is X% of Y?
+ * 2. Find what percentage: What percentage is X of Y?
+ * 3. Find number from percentage: X is Y% of what number?
+ * 4. Increase/decrease by percentage: Increase/decrease X by Y%
+ * 
+ * Uses the percentage calculation library from @/lib/calculators/percent
+ * for all mathematical operations.
  */
 export default function PercentCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.math_percent');
 
 	// State management
 	const [activeTab, setActiveTab] =
-		useState<CalculatorOperation>('percent_of_number');
+		useState<CalculatorOperation>('percent_of_number'); // Currently selected calculation mode
 	const [formData, setFormData] = useState<FormData>({
-		number: '',
-		percentage: '',
-		number1: '',
-		number2: '',
-		part: '',
-		operation: 'increase',
+		// Form input values stored as strings for controlled inputs
+		number: '', // General number input
+		percentage: '', // Percentage value input
+		number1: '', // First number for comparison calculations
+		number2: '', // Second number for comparison calculations
+		part: '', // Part value for reverse percentage calculations
+		operation: 'increase', // Operation type: increase or decrease
 	});
 	const [calculation, setCalculation] = useState<CalculationState>({
-		result: null,
-		error: null,
-		isCalculating: false,
+		result: null, // Calculated result with formula and description
+		error: null, // Error message if calculation fails
+		isCalculating: false, // Loading state during calculation
 	});
 
 	/**
 	 * Handle input changes with validation
+	 * 
+	 * Updates form data when user types in input fields.
+	 * Automatically clears previous results when inputs change
+	 * to prevent showing stale data.
+	 * 
+	 * Uses useCallback to prevent unnecessary re-renders.
+	 * 
+	 * @param name - Field name to update
+	 * @param value - New field value
 	 */
 	const handleInputChange = useCallback(
 		(name: keyof FormData, value: string) => {
@@ -67,6 +92,7 @@ export default function PercentCalculator() {
 			}));
 
 			// Clear previous results when inputs change
+			// This ensures users see fresh calculations
 			setCalculation((prev) => ({
 				...prev,
 				result: null,
@@ -78,6 +104,20 @@ export default function PercentCalculator() {
 
 	/**
 	 * Perform calculation based on active tab
+	 * 
+	 * Routes to the appropriate calculation function based on the
+	 * currently selected tab. Handles input parsing, validation,
+	 * and error handling.
+	 * 
+	 * Calculation flow:
+	 * 1. Set calculating state to true
+	 * 2. Parse string inputs to numbers
+	 * 3. Validate inputs (check for NaN)
+	 * 4. Call appropriate calculation function
+	 * 5. Update state with result or error
+	 * 
+	 * Uses useCallback with dependencies to ensure correct function
+	 * reference when called from useEffect.
 	 */
 	const performCalculation = useCallback(() => {
 		setCalculation((prev) => ({
@@ -165,6 +205,11 @@ export default function PercentCalculator() {
 
 	/**
 	 * Handle Enter key press for calculation
+	 * 
+	 * Allows users to trigger calculation by pressing Enter key
+	 * in any input field. Prevents default form submission behavior.
+	 * 
+	 * @param event - Keyboard event from input field
 	 */
 	const handleKeyPress = useCallback(
 		(event: React.KeyboardEvent) => {
@@ -178,17 +223,33 @@ export default function PercentCalculator() {
 
 	/**
 	 * Check if form is valid for current operation
+	 * 
+	 * Validates that all required fields for the current operation
+	 * are filled with valid values. Used to enable/disable calculate button
+	 * and trigger auto-calculation.
+	 * 
+	 * Validation rules:
+	 * - Required fields must not be empty
+	 * - Number fields must be valid numbers (not NaN)
+	 * - Select fields must have a selected value
+	 * 
+	 * @returns True if all required fields are valid, false otherwise
 	 */
 	const isFormValid = useCallback(() => {
+		// Find configuration for current operation
 		const operation = calculatorOperations.find(
 			(op) => op.id === activeTab
 		);
 		if (!operation) return false;
 
+		// Check all required inputs are valid
 		return operation.inputs.every((input) => {
 			const value = formData[input.name as keyof FormData];
+			
+			// Optional fields are always valid
 			if (!input.required) return true;
 
+			// Empty required fields are invalid
 			if (value === '') return false;
 
 			// For select fields, just check if value is not empty
@@ -203,16 +264,34 @@ export default function PercentCalculator() {
 
 	/**
 	 * Auto-calculate when all required fields are filled
+	 * 
+	 * Effect hook that automatically triggers calculation when form
+	 * becomes valid. Uses debouncing (500ms delay) to avoid excessive
+	 * calculations while user is typing.
+	 * 
+	 * Dependencies:
+	 * - isFormValid: Function that checks form validity
+	 * - performCalculation: Function that performs the calculation
+	 * 
+	 * Behavior:
+	 * - Waits 500ms after form becomes valid before calculating
+	 * - Clears timeout if form becomes invalid or component unmounts
 	 */
 	useEffect(() => {
 		if (isFormValid()) {
-			const timeoutId = setTimeout(performCalculation, 500); // Debounce
-			return () => clearTimeout(timeoutId);
+			const timeoutId = setTimeout(performCalculation, 500); // Debounce 500ms
+			return () => clearTimeout(timeoutId); // Cleanup on unmount or change
 		}
 	}, [isFormValid, performCalculation]);
 
 	/**
 	 * Get current operation configuration
+	 * 
+	 * Retrieves the configuration object for the currently selected
+	 * calculation operation. Used to render appropriate form fields
+	 * and labels.
+	 * 
+	 * @returns Operation configuration object or undefined if not found
 	 */
 	const currentOperation = calculatorOperations.find(
 		(op) => op.id === activeTab

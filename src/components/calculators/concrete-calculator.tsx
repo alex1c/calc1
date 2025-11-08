@@ -18,25 +18,45 @@ import {
 	ConcreteResult,
 } from '@/lib/calculators/concrete';
 
+/**
+ * Concrete Calculator Component
+ * 
+ * A React component for calculating concrete mix proportions.
+ * 
+ * Features:
+ * - Volume input with unit conversion
+ * - Concrete grade selection
+ * - Custom proportion input
+ * - Material quantity calculation (cement, sand, gravel, water)
+ * - Water-cement ratio calculation
+ * - Output unit conversion
+ * - Responsive design
+ * 
+ * Uses the concrete calculation library from @/lib/calculators/concrete
+ * for all mathematical operations.
+ */
 export default function ConcreteCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.concrete');
+	
+	// Form state management
 	const [input, setInput] = useState<Partial<ConcreteInput>>({
-		volume: 0,
-		volumeUnit: 'm3',
-		grade: '',
-		cementProportion: 1,
-		sandProportion: 3,
-		gravelProportion: 5,
-		waterCementRatio: 0.5,
+		volume: 0, // Concrete volume
+		volumeUnit: 'm3', // Volume unit (m³, liters, etc.)
+		grade: '', // Concrete grade (M100, M200, etc.)
+		cementProportion: 1, // Cement proportion in mix
+		sandProportion: 3, // Sand proportion in mix
+		gravelProportion: 5, // Gravel proportion in mix
+		waterCementRatio: 0.5, // Water-cement ratio
 		outputUnits: {
-			cement: 'kg',
-			sand: 'kg',
-			gravel: 'kg',
-			water: 'liters',
+			cement: 'kg', // Cement output unit
+			sand: 'kg', // Sand output unit
+			gravel: 'kg', // Gravel output unit
+			water: 'liters', // Water output unit
 		},
 	});
-	const [result, setResult] = useState<ConcreteResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<ConcreteResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const gradeOptions = getConcreteGradeOptions(t);
 

@@ -27,12 +27,38 @@ import {
 	StressResult,
 } from '@/lib/calculators/stress';
 
+/**
+ * Stress Calculator Component
+ * 
+ * A React component for assessing stress levels through a questionnaire.
+ * 
+ * Features:
+ * - Multi-step questionnaire interface
+ * - Stress level scoring system
+ * - Progress tracking
+ * - Color-coded stress level indicators
+ * - Recommendations based on stress level
+ * - Animated transitions between questions
+ * - Responsive design
+ * 
+ * Assessment method:
+ * - Presents series of stress-related questions
+ * - User rates each question on a scale
+ * - Total score determines stress level category
+ * - Provides personalized recommendations
+ * 
+ * Uses the stress calculation library from @/lib/calculators/stress
+ * for all scoring operations.
+ */
 export default function StressCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.stress');
-	const [currentStep, setCurrentStep] = useState(0);
-	const [answers, setAnswers] = useState<StressAnswer[]>([]);
-	const [result, setResult] = useState<StressResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	
+	// State management
+	const [currentStep, setCurrentStep] = useState(0); // Current question index (0-based)
+	const [answers, setAnswers] = useState<StressAnswer[]>([]); // Array of user answers
+	const [result, setResult] = useState<StressResult | null>(null); // Calculated stress level result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
 	const handleAnswerChange = (questionId: number, score: number) => {
 		const newAnswers = [...answers];
@@ -82,16 +108,33 @@ export default function StressCalculator() {
 		setResult(null);
 	};
 
+	/**
+	 * Get current answer for a question
+	 * 
+	 * @param questionId - ID of the question
+	 * @returns Score value if answered, -1 if not answered
+	 */
 	const getCurrentAnswer = (questionId: number): number => {
 		const answer = answers.find((a) => a.questionId === questionId);
 		return answer ? answer.score : -1;
 	};
 
+	/**
+	 * Check if a step (question) is complete
+	 * 
+	 * @param step - Step index
+	 * @returns True if question has been answered
+	 */
 	const isStepComplete = (step: number): boolean => {
 		const questionId = STRESS_QUESTIONS[step].id;
 		return getCurrentAnswer(questionId) >= 0;
 	};
 
+	/**
+	 * Check if all steps are complete
+	 * 
+	 * @returns True if all questions have been answered
+	 */
 	const isAllStepsComplete = (): boolean => {
 		return STRESS_QUESTIONS.every((_, index) => isStepComplete(index));
 	};
@@ -114,6 +157,12 @@ export default function StressCalculator() {
 		}
 	};
 
+	/**
+	 * Get color classes for stress level display
+	 * 
+	 * @param level - Stress level (low, moderate, high)
+	 * @returns Tailwind CSS classes for level styling
+	 */
 	const getLevelColorClasses = (level: string) => {
 		switch (level) {
 			case 'low':

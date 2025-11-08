@@ -1,10 +1,34 @@
 /**
- * BMI calculator library
- * Calculates Body Mass Index and determines weight categories
+ * BMI Calculator Library
+ * 
+ * Provides comprehensive Body Mass Index (BMI) calculation functionality.
+ * BMI is a measure of body fat based on height and weight that applies
+ * to adult men and women.
+ * 
+ * Formula: BMI = weight (kg) / height (m)²
+ * 
+ * Features:
+ * - BMI calculation with validation
+ * - WHO standard category classification
+ * - Normal weight range calculation
+ * - Visual scale generation for UI
+ * - Color-coded categories for display
+ * - Interpretation text generation
+ * 
+ * Categories follow WHO (World Health Organization) standards:
+ * - Underweight: BMI < 18.5
+ * - Normal: BMI 18.5-24.9
+ * - Overweight: BMI 25-29.9
+ * - Obesity Class I: BMI 30-34.9
+ * - Obesity Class II: BMI 35-39.9
+ * - Obesity Class III: BMI ≥ 40
  */
 
 /**
  * BMI categories according to WHO standards
+ * 
+ * Defines the ranges and colors for each BMI category.
+ * Used for classification and UI display purposes.
  */
 export const bmiCategories = {
 	underweight: { min: 0, max: 18.4, color: 'blue' },
@@ -40,22 +64,32 @@ export interface BMIResult {
 
 /**
  * Calculate BMI (Body Mass Index)
- * @param weight - Weight in kg
- * @param height - Height in cm
+ * 
+ * Calculates BMI using the standard formula: BMI = weight (kg) / height (m)²
+ * 
+ * Input requirements:
+ * - Weight: in kilograms (kg)
+ * - Height: in centimeters (cm) - converted to meters internally
+ * 
+ * The result is rounded to 1 decimal place for readability.
+ * 
+ * @param weight - Weight in kilograms (must be positive)
+ * @param height - Height in centimeters (must be positive)
  * @returns BMI value rounded to 1 decimal place
+ * @throws Error if height or weight is not positive
  */
 export function calculateBMI(weight: number, height: number): number {
 	if (height <= 0 || weight <= 0) {
 		throw new Error('Height and weight must be positive numbers');
 	}
 
-	// Convert height from cm to meters
+	// Convert height from cm to meters for calculation
 	const heightInMeters = height / 100;
 
-	// BMI = weight(kg) / height(m)²
+	// BMI formula: weight divided by height squared
 	const bmi = weight / (heightInMeters * heightInMeters);
 
-	// Round to 1 decimal place
+	// Round to 1 decimal place for display
 	return Math.round(bmi * 10) / 10;
 }
 

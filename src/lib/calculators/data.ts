@@ -1,3 +1,29 @@
+/**
+ * Data Converter Library
+ * 
+ * Provides functionality for converting between different data storage units.
+ * 
+ * Features:
+ * - Supports multiple data units: B, KB, MB, GB, TB
+ * - Binary conversion (1024-based)
+ * - Input validation
+ * - Formatted value output
+ * 
+ * Conversion method:
+ * - Uses binary (1024-based) conversion:
+ *   - 1 KB = 1024 B
+ *   - 1 MB = 1024 KB
+ *   - 1 GB = 1024 MB
+ *   - 1 TB = 1024 GB
+ * 
+ * Note: This uses binary conversion (1024) rather than decimal (1000),
+ * which is standard for data storage units.
+ */
+
+/**
+ * Input interface for data conversion
+ * Contains data value and source/target units
+ */
 export interface DataInput {
 	value: number;
 	fromUnit: DataUnit;
@@ -19,6 +45,18 @@ export interface DataValidation {
 
 export const DATA_UNITS: DataUnit[] = ['B', 'KB', 'MB', 'GB', 'TB'];
 
+/**
+ * Validate data conversion input
+ * 
+ * Checks that:
+ * - Value is non-negative
+ * - Value is not too large (max 1e15)
+ * - Source and target units are specified
+ * - Units are valid data units
+ * 
+ * @param input - Data input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateDataInput(input: DataInput): DataValidation {
 	const { value, fromUnit, toUnit } = input;
 
@@ -41,6 +79,19 @@ export function validateDataInput(input: DataInput): DataValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert data from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to bytes (base unit)
+ * 2. Convert bytes to target unit
+ * 
+ * Uses binary conversion (1024-based) for all conversions.
+ * 
+ * @param input - Data input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertData(input: DataInput): DataResult {
 	const validation = validateDataInput(input);
 	if (!validation.isValid) {

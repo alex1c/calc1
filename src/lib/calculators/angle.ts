@@ -1,3 +1,27 @@
+/**
+ * Angle Converter Library
+ * 
+ * Provides functionality for converting between different angle units:
+ * - Degrees (deg): 360 degrees = full circle
+ * - Radians (rad): 2π radians = full circle
+ * - Revolutions (rev): 1 revolution = full circle
+ * 
+ * Features:
+ * - Unit conversion between degrees, radians, and revolutions
+ * - Input validation
+ * - Formatted value output
+ * - Common conversions display
+ * 
+ * Conversion formulas:
+ * - Degrees to radians: rad = deg × (π/180)
+ * - Radians to degrees: deg = rad × (180/π)
+ * - Revolutions to radians: rad = rev × 2π
+ */
+
+/**
+ * Input interface for angle conversion
+ * Contains angle value and source/target units
+ */
 export interface AngleInput {
 	value: number;
 	fromUnit: AngleUnit;
@@ -27,6 +51,17 @@ export const ANGLE_TO_RADIANS: Record<AngleUnit, number> = {
 
 export const ANGLE_UNITS: AngleUnit[] = ['deg', 'rad', 'rev'];
 
+/**
+ * Validate angle conversion input
+ * 
+ * Checks that:
+ * - Value is a finite number (allows negative angles for direction)
+ * - Source and target units are specified
+ * - Units are valid angle units
+ * 
+ * @param input - Angle input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateAngleInput(input: AngleInput): AngleValidation {
 	const { value, fromUnit, toUnit } = input;
 
@@ -46,6 +81,17 @@ export function validateAngleInput(input: AngleInput): AngleValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert angle from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to radians (base unit)
+ * 2. Convert radians to target unit
+ * 
+ * @param input - Angle input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertAngle(input: AngleInput): AngleResult {
 	const validation = validateAngleInput(input);
 	if (!validation.isValid) {
@@ -65,6 +111,18 @@ export function convertAngle(input: AngleInput): AngleResult {
 	};
 }
 
+/**
+ * Format angle value for display based on unit
+ * 
+ * Uses different decimal precision based on unit:
+ * - Degrees: 2-6 decimal places depending on magnitude
+ * - Radians: 4-8 decimal places depending on magnitude
+ * - Revolutions: 4-8 decimal places depending on magnitude
+ * 
+ * @param value - Angle value to format
+ * @param unit - Angle unit (deg, rad, rev)
+ * @returns Formatted angle value string
+ */
 export function formatAngleValue(value: number, unit: AngleUnit): string {
 	// Round to appropriate decimal places based on unit
 	let decimalPlaces: number;
@@ -111,10 +169,28 @@ export function formatAngleValue(value: number, unit: AngleUnit): string {
 	return parseFloat(formatted).toString();
 }
 
+/**
+ * Get localized unit name
+ * 
+ * @param unit - Angle unit (deg, rad, rev)
+ * @param t - Translation function
+ * @returns Localized unit name string
+ */
 export function getUnitName(unit: AngleUnit, t: (key: string) => string): string {
 	return t(`units.${unit}`);
 }
 
+/**
+ * Get common conversions for an angle value
+ * 
+ * Converts the input value to all other angle units and returns
+ * an array of conversion results with formatted values.
+ * 
+ * @param value - Angle value to convert
+ * @param fromUnit - Source angle unit
+ * @param t - Translation function (unused but kept for consistency)
+ * @returns Array of conversion results for all other units
+ */
 export function getCommonConversions(
 	value: number,
 	fromUnit: AngleUnit,

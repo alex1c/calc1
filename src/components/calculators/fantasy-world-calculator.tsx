@@ -15,13 +15,32 @@ interface FantasyWorld {
 	legend: string;
 }
 
+/**
+ * Fantasy World Calculator Component
+ * 
+ * A React component for generating fantasy world descriptions and settings.
+ * 
+ * Features:
+ * - World type selection (fantasy, sci-fi, post-apocalyptic, etc.)
+ * - Multiple world generation
+ * - World attributes generation (climate, culture, government, resources, conflict, legend)
+ * - Copy to clipboard
+ * - Download as text
+ * - Responsive design
+ * 
+ * Uses the fantasy world generation library from @/lib/calculators/fantasy-world
+ * for world generation.
+ */
 export default function FantasyWorldCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.fantasyWorld');
-	const [worldType, setWorldType] = useState('fantasy');
-	const [worldCount, setWorldCount] = useState(1);
-	const [generatedWorlds, setGeneratedWorlds] = useState<FantasyWorld[]>([]);
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	
+	// Generator options
+	const [worldType, setWorldType] = useState('fantasy'); // World type (fantasy, sci-fi, etc.)
+	const [worldCount, setWorldCount] = useState(1); // Number of worlds to generate
+	const [generatedWorlds, setGeneratedWorlds] = useState<FantasyWorld[]>([]); // Array of generated worlds
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Debug logging
 	useEffect(() => {

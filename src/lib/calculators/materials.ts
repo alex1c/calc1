@@ -1,6 +1,37 @@
-// Universal building materials calculator
-// Extensible architecture for different materials
+/**
+ * Materials Calculator Library
+ * 
+ * Provides universal functionality for calculating building materials needed for construction.
+ * 
+ * Features:
+ * - Multiple material types (paint, plaster, primer, putty, tile glue)
+ * - Room dimensions input
+ * - Doors and windows area deduction
+ * - Multiple layers support
+ * - Consumption rate calculation
+ * - Reserve percentage calculation
+ * - Package size calculation
+ * 
+ * Material types:
+ * - Paint: Liquid material (liters)
+ * - Plaster: Powder material (kg)
+ * - Primer: Liquid material (liters)
+ * - Putty: Powder material (kg)
+ * - Tile glue: Powder material (kg)
+ * 
+ * Calculation method:
+ * - Calculates total wall area
+ * - Deducts doors and windows area
+ * - Calculates material needed per layer
+ * - Multiplies by number of layers
+ * - Applies reserve percentage
+ * - Calculates number of packages needed
+ */
 
+/**
+ * Input interface for material calculation
+ * Contains room dimensions, openings area, layers, consumption rate, and package size
+ */
 export interface MaterialInput {
 	// Room dimensions
 	roomLength: number;
@@ -143,7 +174,19 @@ export const MATERIALS: Record<string, MaterialConfig> = {
 	},
 };
 
-// Paint calculation
+/**
+ * Calculate paint quantity needed for walls
+ * 
+ * Calculates paint needed based on:
+ * - Total wall area (2 × (length + width) × height)
+ * - Doors and windows area deduction
+ * - Number of layers
+ * - Consumption rate (liters per m²)
+ * - Reserve percentage
+ * 
+ * @param input - Material input parameters
+ * @returns Material result with paint quantity and package count
+ */
 function calculatePaint(input: MaterialInput): MaterialResult {
 	const {
 		roomLength,
@@ -180,7 +223,19 @@ function calculatePaint(input: MaterialInput): MaterialResult {
 	};
 }
 
-// Putty calculation (same as paint)
+/**
+ * Calculate putty quantity needed for walls
+ * 
+ * Calculates putty needed based on:
+ * - Total wall area (2 × (length + width) × height)
+ * - Doors and windows area deduction
+ * - Number of layers
+ * - Consumption rate (kg per m²)
+ * - Reserve percentage
+ * 
+ * @param input - Material input parameters
+ * @returns Material result with putty quantity and package count
+ */
 function calculatePutty(input: MaterialInput): MaterialResult {
 	const {
 		roomLength,
@@ -215,7 +270,19 @@ function calculatePutty(input: MaterialInput): MaterialResult {
 	};
 }
 
-// Primer calculation (single layer)
+/**
+ * Calculate primer quantity needed for walls
+ * 
+ * Calculates primer needed based on:
+ * - Total wall area (2 × (length + width) × height)
+ * - Doors and windows area deduction
+ * - Single layer application (primer is always single layer)
+ * - Consumption rate (liters per m²)
+ * - Reserve percentage
+ * 
+ * @param input - Material input parameters
+ * @returns Material result with primer quantity and package count
+ */
 function calculatePrimer(input: MaterialInput): MaterialResult {
 	const {
 		roomLength,
@@ -248,7 +315,21 @@ function calculatePrimer(input: MaterialInput): MaterialResult {
 	};
 }
 
-// Tile glue calculation
+/**
+ * Calculate tile glue quantity needed for floor tiling
+ * 
+ * Calculates tile glue needed based on:
+ * - Floor area
+ * - Doors and windows area deduction (if applicable)
+ * - Consumption rate (kg per m²)
+ * - Tile size and grout width (affects consumption)
+ * - Reserve percentage
+ * 
+ * Note: Consumption rate is adjusted based on grout width.
+ * 
+ * @param input - Material input parameters
+ * @returns Material result with tile glue quantity and package count
+ */
 function calculateTileGlue(input: MaterialInput): MaterialResult {
 	const {
 		floorArea = 0,
@@ -285,7 +366,19 @@ function calculateTileGlue(input: MaterialInput): MaterialResult {
 	};
 }
 
-// Plaster calculation (similar to putty but for plastering)
+/**
+ * Calculate plaster quantity needed for walls
+ * 
+ * Calculates plaster needed based on:
+ * - Total wall area (2 × (length + width) × height)
+ * - Doors and windows area deduction
+ * - Number of layers
+ * - Consumption rate (kg per m², accounts for layer thickness)
+ * - Reserve percentage
+ * 
+ * @param input - Material input parameters
+ * @returns Material result with plaster quantity and package count
+ */
 function calculatePlaster(input: MaterialInput): MaterialResult {
 	const {
 		roomLength,
@@ -321,7 +414,16 @@ function calculatePlaster(input: MaterialInput): MaterialResult {
 	};
 }
 
-// Main calculation function
+/**
+ * Calculate material quantity for specified material type
+ * 
+ * Main entry point for material calculations. Routes to appropriate
+ * calculation function based on material type.
+ * 
+ * @param materialType - Material type (paint, plaster, primer, putty, tileGlue)
+ * @param input - Material input parameters
+ * @returns Material result with quantity and package count, or null if material type is unsupported
+ */
 export function calculateMaterial(
 	materialType: string,
 	input: MaterialInput
@@ -334,7 +436,19 @@ export function calculateMaterial(
 	return material.formula(input);
 }
 
-// Validation
+/**
+ * Validate material calculation input
+ * 
+ * Performs validation checks:
+ * - Reserve percentage is between 0 and 100
+ * - Consumption rate is positive
+ * - Package size is positive
+ * - Material-specific validations (floor area for tile glue, room dimensions for others)
+ * 
+ * @param input - Partial material input to validate
+ * @param materialType - Material type for material-specific validation
+ * @returns Array of error messages (empty if valid)
+ */
 export function validateMaterialInput(
 	input: Partial<MaterialInput>,
 	materialType: string

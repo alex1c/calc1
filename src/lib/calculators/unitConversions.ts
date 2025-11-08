@@ -1,11 +1,39 @@
 /**
- * Unit conversion library
- * Provides conversion rates and functions for various measurement units
+ * Unit Conversion Library
+ *
+ * Provides conversion rates and functions for various measurement units.
+ *
+ * Features:
+ * - Multiple unit types (length, mass, time, volume)
+ * - Conversion between units of the same type
+ * - Conversion factor calculation
+ * - Unit validation
+ * - Unit type detection
+ * - Formatted result output
+ *
+ * Unit types:
+ * - Length: m, km, cm, mm, inch, foot, yard, mile
+ * - Mass: kg, g, mg, tonne, lb, oz
+ * - Time: second, minute, hour, day, week
+ * - Volume: l, ml, m³, cm³, gallon, pint
+ *
+ * Conversion method:
+ * - All conversions use a base unit (marked with rate 1)
+ * - Converts source unit to base unit, then to target unit
+ * - Conversion factor = source_rate / target_rate
  */
 
 /**
  * Conversion rates for different unit types
- * All rates are relative to the base unit (marked with rate 1)
+ *
+ * All rates are relative to the base unit (marked with rate 1).
+ * To convert from unit A to unit B: value × (rate_A / rate_B)
+ *
+ * Base units:
+ * - Length: meter (m)
+ * - Mass: kilogram (kg)
+ * - Time: second
+ * - Volume: liter (l)
  */
 export const conversionRates = {
 	length: {
@@ -84,11 +112,19 @@ export function getUnitsForType(type: UnitType): string[] {
 
 /**
  * Convert a value from one unit to another
+ *
+ * Conversion process:
+ * 1. Converts source unit to base unit: baseValue = value × source_rate
+ * 2. Converts base unit to target unit: result = baseValue / target_rate
+ *
+ * Formula: result = value × (source_rate / target_rate)
+ *
  * @param value - The value to convert
- * @param fromUnit - The source unit
- * @param toUnit - The target unit
+ * @param fromUnit - The source unit name
+ * @param toUnit - The target unit name
  * @param unitType - The type of units being converted
- * @returns Conversion result
+ * @returns Conversion result with value, units, and unit type
+ * @throws Error if units are invalid for the specified type
  */
 export function convertUnit(
 	value: number,
@@ -119,9 +155,12 @@ export function convertUnit(
 
 /**
  * Format number for display
+ *
+ * Formats number with specified decimal places and removes trailing zeros.
+ *
  * @param num - Number to format
- * @param decimals - Number of decimal places
- * @returns Formatted number string
+ * @param decimals - Number of decimal places (default 6)
+ * @returns Formatted number string without trailing zeros
  */
 export function formatConversionResult(
 	num: number,
@@ -134,10 +173,15 @@ export function formatConversionResult(
 
 /**
  * Get conversion factor between two units
- * @param fromUnit - Source unit
- * @param toUnit - Target unit
+ *
+ * Returns the factor to multiply source value by to get target value.
+ * Formula: factor = source_rate / target_rate
+ *
+ * @param fromUnit - Source unit name
+ * @param toUnit - Target unit name
  * @param unitType - Unit type
- * @returns Conversion factor
+ * @returns Conversion factor (multiply source value by this to get target value)
+ * @throws Error if units are invalid for the specified type
  */
 export function getConversionFactor(
 	fromUnit: string,
@@ -158,18 +202,25 @@ export function getConversionFactor(
 
 /**
  * Validate if a unit exists for a given type
- * @param unit - Unit to validate
- * @param unitType - Unit type
- * @returns True if unit exists
+ *
+ * Checks if the unit name exists in the conversion rates for the specified type.
+ *
+ * @param unit - Unit name to validate
+ * @param unitType - Unit type to check against
+ * @returns True if unit exists for the type, false otherwise
  */
 export function isValidUnit(unit: string, unitType: UnitType): boolean {
 	return unit in conversionRates[unitType];
 }
 
 /**
- * Get unit type from unit name (if possible to determine)
- * @param unit - Unit name
- * @returns Unit type or null if ambiguous
+ * Get unit type from unit name
+ *
+ * Searches all unit types to find which one contains the specified unit name.
+ * Returns null if unit is not found in any type (ambiguous or invalid).
+ *
+ * @param unit - Unit name to look up
+ * @returns Unit type if found, null if ambiguous or not found
  */
 export function getUnitType(unit: string): UnitType | null {
 	for (const [type, rates] of Object.entries(conversionRates)) {
@@ -189,9 +240,15 @@ export function getAvailableUnitTypes(): UnitType[] {
 }
 
 /**
- * Get conversion examples for tooltips
- * @param fromUnit - Source unit
- * @param toUnit - Target unit
+ * Get conversion example for tooltips
+ *
+ * Generates an example conversion string showing how 1 unit of source
+ * converts to target unit.
+ *
+ * Example: "1 m = 100 cm"
+ *
+ * @param fromUnit - Source unit name
+ * @param toUnit - Target unit name
  * @param unitType - Unit type
  * @returns Example conversion string
  */
@@ -213,11 +270,19 @@ export function getConversionExample(
 
 /**
  * Validate conversion input
- * @param value - Input value
- * @param fromUnit - Source unit
- * @param toUnit - Target unit
+ *
+ * Performs validation checks:
+ * - Value is a valid finite number
+ * - Value is non-negative
+ * - Source unit is valid for the type
+ * - Target unit is valid for the type
+ * - Source and target units are different
+ *
+ * @param value - Input value to convert
+ * @param fromUnit - Source unit name
+ * @param toUnit - Target unit name
  * @param unitType - Unit type
- * @returns Validation result
+ * @returns Validation result with boolean status and optional error message
  */
 export function validateConversionInput(
 	value: number,

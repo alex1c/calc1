@@ -15,14 +15,33 @@ interface RollHistory {
 	timestamp: Date;
 }
 
+/**
+ * Dice Roller Component
+ * 
+ * A React component for rolling dice with customizable options.
+ * 
+ * Features:
+ * - Multiple dice support (1-10 dice)
+ * - Customizable dice types (d4, d6, d8, d10, d12, d20, d100)
+ * - Roll history tracking
+ * - Copy results to clipboard
+ * - Download history as CSV
+ * - Animated rolling effect
+ * - Responsive design
+ * 
+ * Uses inline random number generation for dice rolling.
+ */
 export default function DiceRoller() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.diceRoller');
-	const [diceCount, setDiceCount] = useState(1);
-	const [diceType, setDiceType] = useState(6);
-	const [results, setResults] = useState<DiceResult[]>([]);
-	const [isRolling, setIsRolling] = useState(false);
-	const [history, setHistory] = useState<RollHistory[]>([]);
-	const [copied, setCopied] = useState(false);
+	
+	// State management
+	const [diceCount, setDiceCount] = useState(1); // Number of dice to roll (1-10)
+	const [diceType, setDiceType] = useState(6); // Dice type (4, 6, 8, 10, 12, 20, 100)
+	const [results, setResults] = useState<DiceResult[]>([]); // Current roll results
+	const [isRolling, setIsRolling] = useState(false); // Rolling animation state
+	const [history, setHistory] = useState<RollHistory[]>([]); // Roll history
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const rollDice = (): DiceResult[] => {
 		const newResults: DiceResult[] = [];

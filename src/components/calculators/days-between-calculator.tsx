@@ -19,26 +19,66 @@ interface DaysBetweenResult {
 	endDate: string;
 }
 
+/**
+ * Days Between Calculator Component
+ * 
+ * A React component for calculating the difference between two dates.
+ * 
+ * Features:
+ * - Date difference calculation
+ * - Multiple time unit displays (days, weeks, months, years)
+ * - Copy results to clipboard
+ * - Quick "today" button
+ * - Responsive design
+ * 
+ * Calculation results:
+ * - Total days between dates
+ * - Breakdown into weeks, months, years, and remaining days
+ * - Formatted date display
+ * 
+ * Uses the days-between calculation library from @/lib/calculators/days-between
+ * for all date calculations.
+ */
 export default function DaysBetweenCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.daysBetween');
-	const [startDate, setStartDate] = useState('');
-	const [endDate, setEndDate] = useState('');
-	const [result, setResult] = useState<DaysBetweenResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [copied, setCopied] = useState(false);
-	const [isMounted, setIsMounted] = useState(false);
+	
+	// Form state management
+	const [startDate, setStartDate] = useState(''); // Start date (YYYY-MM-DD format)
+	const [endDate, setEndDate] = useState(''); // End date (YYYY-MM-DD format)
+	const [result, setResult] = useState<DaysBetweenResult | null>(null); // Calculated result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
+	const [isMounted, setIsMounted] = useState(false); // Component mount state (for SSR)
 
-	// Set today as default end date only after component mounts
+	/**
+	 * Component mount effect
+	 * 
+	 * Sets mounted state and initializes end date to today.
+	 * Prevents hydration mismatches in SSR.
+	 */
 	useEffect(() => {
 		setIsMounted(true);
 		if (!endDate) {
-			setEndDate(getTodayDate());
+			setEndDate(getTodayDate()); // Set default end date to today
 		}
 	}, []);
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates dates and calculates difference between them.
+	 * 
+	 * Process:
+	 * 1. Check if both dates are provided
+	 * 2. Validate date formats
+	 * 3. Calculate days between dates
+	 * 4. Update result state
+	 */
 	const handleCalculate = async () => {
-		if (!startDate || !endDate) return;
+		if (!startDate || !endDate) return; // Check if dates are provided
 
+		// Validate date formats
 		if (!isValidDate(startDate) || !isValidDate(endDate)) {
 			alert('Пожалуйста, введите корректные даты');
 			return;
@@ -47,6 +87,7 @@ export default function DaysBetweenCalculator() {
 		setIsCalculating(true);
 
 		try {
+			// Calculate days between dates
 			const calculation = calculateDaysBetween(startDate, endDate);
 			setResult(calculation);
 		} catch (error) {
@@ -57,20 +98,38 @@ export default function DaysBetweenCalculator() {
 		}
 	};
 
+	/**
+	 * Handle reset action
+	 * 
+	 * Clears form inputs and results.
+	 * Resets end date to today.
+	 */
 	const handleReset = () => {
-		setStartDate('');
-		setEndDate(getTodayDate());
-		setResult(null);
-		setCopied(false);
+		setStartDate(''); // Clear start date
+		setEndDate(getTodayDate()); // Reset end date to today
+		setResult(null); // Clear result
+		setCopied(false); // Reset copy state
 	};
 
+	/**
+	 * Handle set today action
+	 * 
+	 * Sets end date to today's date.
+	 */
 	const handleSetToday = () => {
-		setEndDate(getTodayDate());
+		setEndDate(getTodayDate()); // Set end date to today
 	};
 
+	/**
+	 * Handle copy result to clipboard
+	 * 
+	 * Formats result text and copies to clipboard.
+	 * Shows success feedback for 2 seconds.
+	 */
 	const handleCopyResult = async () => {
 		if (!result) return;
 
+		// Format result text for clipboard
 		const resultText = `${t('results.copyText.title')}
 ${t('results.copyText.startDate')} ${result.startDate}
 ${t('results.copyText.endDate')} ${result.endDate}
@@ -79,9 +138,9 @@ ${t('results.copyText.thisIs')} ${result.weeks} ${t('results.copyText.weeks')} $
 ${t('results.copyText.inCalculation')} ${result.years} ${t('results.copyText.years')} ${result.months} ${t('results.copyText.months')} ${result.days} ${t('results.copyText.days2')}`;
 
 		try {
-			await navigator.clipboard.writeText(resultText);
-			setCopied(true);
-			setTimeout(() => setCopied(false), 2000);
+			await navigator.clipboard.writeText(resultText); // Copy to clipboard
+			setCopied(true); // Show success state
+			setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
 		} catch (error) {
 			console.error('Copy failed:', error);
 		}

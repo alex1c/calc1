@@ -25,17 +25,36 @@ const lotteryTypes = {
 	'6-40': { total: 40, select: 6, bonus: false },
 };
 
+/**
+ * Lottery Generator Component
+ * 
+ * A React component for generating lottery tickets with random numbers.
+ * 
+ * Features:
+ * - Multiple lottery types (6-49, 5-36, 7-49, etc.)
+ * - Multiple ticket generation
+ * - Bonus number support
+ * - Copy tickets to clipboard
+ * - Download tickets as text
+ * - Print tickets
+ * - Responsive design
+ * 
+ * Uses Fisher-Yates shuffle algorithm for random number generation.
+ */
 export default function LotteryGenerator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.lotteryGenerator');
+	
+	// State management
 	const [options, setOptions] = useState<LotteryOptions>({
-		type: '6-49',
-		count: 1,
+		type: '6-49', // Lottery type (6-49, 5-36, etc.)
+		count: 1, // Number of tickets to generate
 	});
 	const [generatedTickets, setGeneratedTickets] = useState<LotteryTicket[]>(
-		[]
+		[] // Array of generated lottery tickets
 	);
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const generateTicket = (type: string): LotteryTicket => {
 		const config = lotteryTypes[type as keyof typeof lotteryTypes];

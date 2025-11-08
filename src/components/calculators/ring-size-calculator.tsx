@@ -22,17 +22,37 @@ import {
 	type RingCountry,
 } from '@/lib/calculators/ring-size';
 
+/**
+ * Ring Size Calculator Component
+ * 
+ * A React component for converting ring sizes between different country standards.
+ * 
+ * Features:
+ * - Measurement type selection (size, diameter, circumference)
+ * - Country selection (RU, US, UK, EU, etc.)
+ * - Ring size conversion to all countries
+ * - Size chart display
+ * - Diameter and circumference calculation
+ * - Real-time calculation with debouncing
+ * - Responsive design
+ * 
+ * Uses the ring size calculation library from @/lib/calculators/ring-size
+ * for all conversion operations.
+ */
 export default function RingSizeCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.ringSize');
+	
+	// Form state management
 	const [input, setInput] = useState<RingInput>({
-		measurementType: 'size',
-		country: 'RU',
-		value: 16,
+		measurementType: 'size', // Measurement type (size, diameter, circumference)
+		country: 'RU', // Source country (RU, US, UK, EU, etc.)
+		value: 16, // Ring size value
 	});
-	const [results, setResults] = useState<RingResult[]>([]);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [showChart, setShowChart] = useState(false);
-	const [error, setError] = useState<string | null>(null);
+	const [results, setResults] = useState<RingResult[]>([]); // Conversion results for all countries
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [showChart, setShowChart] = useState(false); // Show size chart flag
+	const [error, setError] = useState<string | null>(null); // Validation error message
 
 	// Auto-calculate when input changes
 	useEffect(() => {

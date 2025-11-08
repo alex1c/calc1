@@ -219,6 +219,17 @@ const VITAMIN_INFO = {
 /**
  * Validate input parameters for vitamin calculation
  */
+/**
+ * Validate vitamin calculation input
+ * 
+ * Checks that:
+ * - Gender is specified (male or female)
+ * - Age is between 1 and 120 years
+ * - Activity level is specified (low, medium, or high)
+ * 
+ * @param input - Vitamin input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateVitaminInput(input: VitaminInput): {
 	isValid: boolean;
 	error?: string;
@@ -244,7 +255,21 @@ export function validateVitaminInput(input: VitaminInput): {
 }
 
 /**
- * Calculate vitamin and mineral requirements
+ * Calculate daily vitamin and mineral requirements
+ * 
+ * Calculates adjusted vitamin and mineral values based on:
+ * - Gender (male/female) - affects base values
+ * - Activity level (low/medium/high) - affects multiplier
+ * - Age - affects recommendations
+ * 
+ * Algorithm:
+ * 1. Get base values for gender
+ * 2. Apply activity level multiplier
+ * 3. Create vitamin and mineral data arrays
+ * 4. Generate recommendations based on gender, age, and activity level
+ * 
+ * @param input - Vitamin input parameters (gender, age, activity level)
+ * @returns Vitamin result with vitamins, minerals, recommendations, and multiplier
  */
 export function calculateVitamins(input: VitaminInput): VitaminResult {
 	const { gender, age, activityLevel } = input;
@@ -328,7 +353,15 @@ export function getVitaminLevelColor(
 }
 
 /**
- * Get color classes for display
+ * Get Tailwind CSS color classes for vitamin/mineral level
+ * 
+ * Returns color classes for background, text, and border based on level:
+ * - Normal: Green colors
+ * - Increased: Yellow colors
+ * - Deficient: Red colors
+ * 
+ * @param level - Vitamin/mineral level (normal, increased, deficient)
+ * @returns Tailwind CSS color classes string
  */
 export function getColorClasses(
 	level: 'normal' | 'increased' | 'deficient'
@@ -346,7 +379,13 @@ export function getColorClasses(
 }
 
 /**
- * Format vitamin/mineral value for display
+ * Format vitamin/mineral value with unit for display
+ * 
+ * Formats value with appropriate unit (mcg, mg, etc.) in Russian locale.
+ * 
+ * @param value - Vitamin/mineral value
+ * @param unit - Unit abbreviation (mcg, mg, etc.)
+ * @returns Formatted string with value and unit
  */
 export function formatVitaminValue(value: number, unit: string): string {
 	if (unit === 'mcg') {
@@ -358,7 +397,17 @@ export function formatVitaminValue(value: number, unit: string): string {
 }
 
 /**
- * Get age-specific recommendations
+ * Get age-specific vitamin recommendations
+ * 
+ * Returns recommendation keys based on age ranges:
+ * - < 18: Teenage recommendations
+ * - 18-29: Young adult recommendations
+ * - 30-49: Adult recommendations
+ * - 50-64: Middle age recommendations
+ * - ≥ 65: Elderly recommendations
+ * 
+ * @param age - Age in years
+ * @returns Array of recommendation keys
  */
 export function getAgeRecommendations(age: number): string[] {
 	const recommendations: string[] = [];
@@ -379,7 +428,15 @@ export function getAgeRecommendations(age: number): string[] {
 }
 
 /**
- * Get activity-specific recommendations
+ * Get activity-specific vitamin recommendations
+ * 
+ * Returns recommendation keys based on activity level:
+ * - Low: Low activity tips
+ * - Medium: Medium activity tips
+ * - High: High activity tips
+ * 
+ * @param activityLevel - Activity level (low, medium, high)
+ * @returns Array of recommendation keys
  */
 export function getActivityRecommendations(activityLevel: string): string[] {
 	const recommendations: string[] = [];

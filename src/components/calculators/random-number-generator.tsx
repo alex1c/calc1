@@ -12,18 +12,39 @@ interface GeneratorOptions {
 	sort: boolean;
 }
 
+/**
+ * Random Number Generator Component
+ * 
+ * A React component for generating random numbers with customizable options.
+ * 
+ * Features:
+ * - Customizable range (min-max)
+ * - Multiple numbers generation
+ * - Duplicate control (allow/disallow)
+ * - Sorting option
+ * - Copy results to clipboard
+ * - Download results as text
+ * - Statistics display
+ * - Responsive design
+ * 
+ * Uses Math.random() for random number generation.
+ * Uses Fisher-Yates shuffle for unique number generation.
+ */
 export default function RandomNumberGenerator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.randomNumberGenerator');
+	
+	// Generator options
 	const [options, setOptions] = useState<GeneratorOptions>({
-		min: 1,
-		max: 100,
-		count: 1,
-		allowDuplicates: true,
-		sort: false,
+		min: 1, // Minimum number
+		max: 100, // Maximum number
+		count: 1, // Number of random numbers to generate
+		allowDuplicates: true, // Allow duplicate numbers
+		sort: false, // Sort generated numbers
 	});
-	const [generatedNumbers, setGeneratedNumbers] = useState<number[]>([]);
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	const [generatedNumbers, setGeneratedNumbers] = useState<number[]>([]); // Generated numbers array
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const generateRandomNumbers = (): number[] => {
 		const numbers: number[] = [];

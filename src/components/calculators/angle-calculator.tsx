@@ -23,15 +23,34 @@ import {
 	AngleUnit,
 } from '@/lib/calculators/angle';
 
+/**
+ * Angle Calculator Component
+ * 
+ * A React component for converting between different angle units.
+ * 
+ * Features:
+ * - Supports multiple angle units: degrees, radians, gradians, turns
+ * - Real-time conversion with debouncing
+ * - Bidirectional conversion (from/to units)
+ * - Common conversions display
+ * - Input validation
+ * - Responsive design
+ * 
+ * Uses the angle conversion library from @/lib/calculators/angle
+ * for all conversion operations.
+ */
 export default function AngleCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.angle-converter');
+	
+	// Form state management
 	const [input, setInput] = useState<AngleInput>({
-		value: 180,
-		fromUnit: 'deg',
-		toUnit: 'rad',
+		value: 180, // Angle value to convert (default: 180 degrees)
+		fromUnit: 'deg', // Source unit (default: degrees)
+		toUnit: 'rad', // Target unit (default: radians)
 	});
-	const [result, setResult] = useState<AngleResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<AngleResult | null>(null); // Conversion result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
 	// Auto-calculate when input changes
 	useEffect(() => {

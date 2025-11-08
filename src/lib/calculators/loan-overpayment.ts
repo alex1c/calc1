@@ -1,6 +1,23 @@
 /**
- * Loan overpayment calculator
- * Calculates overpayment amount and percentage for loans
+ * Loan Overpayment Calculator Library
+ *
+ * Provides functionality for calculating loan overpayment amount and percentage.
+ *
+ * Features:
+ * - Loan calculation using existing loan calculator
+ * - Overpayment amount calculation (total interest paid)
+ * - Overpayment percentage calculation
+ * - Total cost calculation (loan amount + overpayment)
+ * - Principal and interest breakdown
+ * - Support for annuity and differentiated payment types
+ * - Down payment and additional payment support
+ *
+ * Overpayment calculation:
+ * - Overpayment = Total Interest Paid
+ * - Overpayment Percentage = (Overpayment / Effective Loan Amount) × 100
+ * - Total Cost = Loan Amount + Overpayment
+ *
+ * Uses the loan calculator library for core loan calculations.
  */
 
 import { LoanInput, calculateLoan, LoanResult } from './loan';
@@ -41,6 +58,16 @@ export interface LoanOverpaymentResult {
 
 /**
  * Validate loan overpayment input
+ *
+ * Performs validation checks:
+ * - Loan amount is positive
+ * - Term (years or months) is positive and not too long (max 50 years)
+ * - Interest rate is non-negative and not too high (max 1000%)
+ * - Down payment is non-negative and less than loan amount
+ * - Additional payment is non-negative
+ *
+ * @param input - Partial loan overpayment input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateLoanOverpaymentInput(
 	input: Partial<LoanOverpaymentInput>
@@ -95,6 +122,20 @@ export function validateLoanOverpaymentInput(
 
 /**
  * Calculate loan overpayment
+ *
+ * Calculates overpayment amount and percentage by:
+ * 1. Calculating effective loan amount (loan amount - down payment)
+ * 2. Using loan calculator to get total interest paid
+ * 3. Calculating overpayment percentage
+ * 4. Calculating total cost
+ *
+ * Algorithm:
+ * - Overpayment = Total Interest Paid (from loan calculator)
+ * - Overpayment Percentage = (Overpayment / Effective Loan Amount) × 100
+ * - Total Cost = Loan Amount + Overpayment
+ *
+ * @param input - Loan overpayment input parameters
+ * @returns Loan overpayment result with amounts, percentages, and breakdown
  */
 export function calculateLoanOverpayment(
 	input: LoanOverpaymentInput

@@ -55,24 +55,48 @@ function convertToHashPerSecond(hashrate: number, unit: string): number {
 	return hashrate * (multipliers[unit] || 1);
 }
 
+/**
+ * Hashrate Calculator Component
+ * 
+ * A React component for calculating cryptocurrency mining profitability.
+ * 
+ * Features:
+ * - Hashrate input with unit conversion
+ * - Network difficulty input
+ * - Block reward input
+ * - Block time input
+ * - Power consumption input
+ * - Electricity cost input
+ * - Pool fee input
+ * - Cryptocurrency selection
+ * - Revenue calculation (daily, monthly, yearly)
+ * - Electricity cost calculation
+ * - Profit calculation
+ * - Profitability assessment
+ * - Responsive design
+ * 
+ * Uses inline calculation logic for mining profitability calculations.
+ */
 export default function HashrateCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.hashrate');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<HashrateFormData>>({
-		hashrate: 0,
-		hashrateUnit: 'th',
-		networkDifficulty: 0,
-		blockReward: 0,
-		blockTime: 0,
-		powerConsumption: 0,
-		electricityCost: 0,
-		poolFee: 0,
-		cryptocurrency: 'custom',
+		hashrate: 0, // Hashrate value
+		hashrateUnit: 'th', // Hashrate unit (h, kh, mh, gh, th, ph, eh)
+		networkDifficulty: 0, // Network difficulty
+		blockReward: 0, // Block reward (coins)
+		blockTime: 0, // Block time (seconds)
+		powerConsumption: 0, // Power consumption (W)
+		electricityCost: 0, // Electricity cost (₽/kWh)
+		poolFee: 0, // Pool fee (%)
+		cryptocurrency: 'custom', // Cryptocurrency type
 	});
 
-	const [result, setResult] = useState<HashrateResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<HashrateResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	// Preset configurations for cryptocurrencies
 	const cryptoPresets: {

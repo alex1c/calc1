@@ -29,25 +29,60 @@ import {
 
 /**
  * Volume Geometry Calculator Component
- * Calculates volumes of sphere, cube, and cylinder
+ * 
+ * A React component for calculating volumes of geometric shapes.
+ * 
+ * Features:
+ * - Supports three shapes: sphere, cube, and cylinder
+ * - Dynamic form fields based on selected shape
+ * - Real-time calculation with debouncing
+ * - Formula display
+ * - Shape examples and tips
+ * - Input validation
+ * - Responsive design
+ * 
+ * Shapes supported:
+ * - Sphere: V = (4/3)πr³
+ * - Cube: V = s³
+ * - Cylinder: V = πr²h
+ * 
+ * Uses the volume geometry calculation library from @/lib/calculators/volume-geometry
+ * for all mathematical operations.
  */
 export default function VolumeGeometryCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.volume');
+	
+	// Form state management
 	const [input, setInput] = useState<VolumeGeometryInput>({
-		shape: 'sphere',
-		radius: 5,
+		shape: 'sphere', // Selected geometric shape
+		radius: 5, // Radius for sphere/cylinder (default value)
 	});
-	const [result, setResult] = useState<VolumeGeometryResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [error, setError] = useState<string | null>(null);
+	const [result, setResult] = useState<VolumeGeometryResult | null>(null); // Calculated volume result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [error, setError] = useState<string | null>(null); // Validation error message
 
-	// Auto-calculate when input changes
+	/**
+	 * Auto-calculate when input changes
+	 * 
+	 * Effect hook that automatically triggers calculation when input changes.
+	 * Uses debouncing (300ms delay) to avoid excessive calculations while user is typing.
+	 * 
+	 * Dependencies:
+	 * - input: Form input values
+	 * 
+	 * Behavior:
+	 * - Waits 300ms after input changes before calculating
+	 * - Only calculates if shape is selected
+	 * - Clears timeout if component unmounts or input changes again
+	 */
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			if (input.shape) {
 				setIsCalculating(true);
 				setError(null);
 				try {
+					// Calculate volume for selected shape
 					const volumeResult = calculateVolumeGeometry(input);
 					setResult(volumeResult);
 				} catch (err) {
@@ -62,11 +97,19 @@ export default function VolumeGeometryCalculator() {
 			} else {
 				setResult(null);
 			}
-		}, 300); // Debounce calculation
+		}, 300); // Debounce calculation by 300ms
 
-		return () => clearTimeout(timer);
+		return () => clearTimeout(timer); // Cleanup on unmount or change
 	}, [input]);
 
+	/**
+	 * Handle shape type change
+	 * 
+	 * Called when user selects a different geometric shape.
+	 * Resets parameters to default values for the new shape.
+	 * 
+	 * @param shape - New shape type to select
+	 */
 	const handleShapeChange = (shape: ShapeType) => {
 		// Reset parameters when shape changes
 		const newInput: VolumeGeometryInput = { shape };

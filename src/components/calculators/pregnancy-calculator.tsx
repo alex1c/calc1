@@ -25,16 +25,41 @@ import {
 	type CalculationMethod,
 } from '@/lib/calculators/pregnancy';
 
+/**
+ * Pregnancy Calculator Component
+ * 
+ * A React component for calculating pregnancy dates and milestones.
+ * 
+ * Features:
+ * - Multiple calculation methods (LMP, conception date, due date)
+ * - Pregnancy week calculation
+ * - Trimester calculation
+ * - Due date calculation
+ * - Current pregnancy status
+ * - Calendar visualization
+ * - Share results
+ * - Copy results to clipboard
+ * - Responsive design
+ * 
+ * Calculation methods:
+ * - LMP (Last Menstrual Period): Based on first day of last period
+ * - Conception Date: Based on conception date
+ * - Due Date: Based on expected due date
+ * 
+ * Uses the pregnancy calculation library from @/lib/calculators/pregnancy
+ * for all date calculations.
+ */
 export default function PregnancyCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.pregnancy');
-	const locale = useLocale();
+	const locale = useLocale(); // Current locale for date formatting
 
-	// Form state
-	const [method, setMethod] = useState<CalculationMethod>('lmp');
-	const [date, setDate] = useState<string>('');
-	const [result, setResult] = useState<PregnancyResult | null>(null);
-	const [error, setError] = useState<string | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	// Form state management
+	const [method, setMethod] = useState<CalculationMethod>('lmp'); // Calculation method (lmp, conception, dueDate)
+	const [date, setDate] = useState<string>(''); // Input date (YYYY-MM-DD format)
+	const [result, setResult] = useState<PregnancyResult | null>(null); // Calculated result
+	const [error, setError] = useState<string | null>(null); // Validation error message
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
 	// Handle method change
 	const handleMethodChange = (newMethod: CalculationMethod) => {

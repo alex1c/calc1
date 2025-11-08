@@ -21,17 +21,41 @@ interface DeviceRow {
 	costPerKWh: number;
 }
 
+/**
+ * Electricity Cost Calculator Component
+ * 
+ * A React component for calculating electricity costs for multiple devices.
+ * 
+ * Features:
+ * - Multiple devices support
+ * - Device name, power input
+ * - Usage hours per day
+ * - Days per period
+ * - Cost per kWh input
+ * - Total consumption calculation
+ * - Total cost calculation
+ * - Per-device breakdown
+ * - Add/remove devices dynamically
+ * - CSV export
+ * - Responsive design
+ * 
+ * Uses the electricity calculation module from @/modules/calcElectricity
+ * for all mathematical operations.
+ */
 export default function ElectricityCostCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.electricityCost');
-	const locale = useLocale();
+	const locale = useLocale(); // Current locale for number formatting
+	
+	// Devices state management
 	const [rows, setRows] = useState<DeviceRow[]>([
 		{
-			id: crypto.randomUUID(),
-			name: t('defaults.kettle'),
-			power: 2000,
-			hoursPerDay: 0.5,
-			days: 30,
-			costPerKWh: 5.5,
+			id: crypto.randomUUID(), // Unique device ID
+			name: t('defaults.kettle'), // Device name
+			power: 2000, // Device power (W)
+			hoursPerDay: 0.5, // Hours of operation per day
+			days: 30, // Days per period
+			costPerKWh: 5.5, // Cost per kWh (₽)
 		},
 	]);
 

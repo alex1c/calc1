@@ -22,28 +22,57 @@ import {
 
 /**
  * Heart Rate Calculator Component
- * Interactive calculator for heart rate zones and training recommendations
+ * 
+ * A React component for calculating heart rate zones and training recommendations.
+ * 
+ * Features:
+ * - Maximum heart rate calculation (220 - age)
+ * - Heart rate zone calculation (5 zones: recovery, aerobic, anaerobic, VO2 max, maximum)
+ * - Current heart rate analysis (optional)
+ * - Training recommendations based on zones
+ * - Visual zone indicators with color coding
+ * - Progress bars for zone visualization
+ * - Responsive design
+ * 
+ * Heart rate zones:
+ * - Zone 1 (Recovery): 50-60% of max HR
+ * - Zone 2 (Aerobic): 60-70% of max HR
+ * - Zone 3 (Anaerobic): 70-80% of max HR
+ * - Zone 4 (VO2 Max): 80-90% of max HR
+ * - Zone 5 (Maximum): 90-100% of max HR
+ * 
+ * Uses the heart rate calculation library from @/lib/calculators/heart-rate
+ * for all mathematical operations.
  */
 export default function HeartRateCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.heartRate');
 
-	// State for input values
-	const [age, setAge] = useState<string>('');
-	const [currentHR, setCurrentHR] = useState<string>('');
-	const [result, setResult] = useState<HeartRateResult | null>(null);
-	const [error, setError] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState<boolean>(false);
+	// State for input values (stored as strings for controlled inputs)
+	const [age, setAge] = useState<string>(''); // Age in years
+	const [currentHR, setCurrentHR] = useState<string>(''); // Current heart rate (optional)
+	const [result, setResult] = useState<HeartRateResult | null>(null); // Calculated heart rate zones
+	const [error, setError] = useState<string>(''); // Validation error message
+	const [isCalculating, setIsCalculating] = useState<boolean>(false); // Loading state during calculation
 
 	/**
 	 * Handle form submission and heart rate calculation
+	 * 
+	 * Validates inputs and calculates heart rate zones.
+	 * 
+	 * Process:
+	 * 1. Parse string inputs to numbers
+	 * 2. Validate inputs using validateHeartRateInput
+	 * 3. Calculate heart rate zones using calculateHeartRate
+	 * 4. Update result state or error state
 	 */
 	const handleCalculate = async () => {
-		setError('');
+		setError(''); // Clear previous errors
 		setIsCalculating(true);
 
 		try {
-			const ageNum = parseInt(age);
-			const currentHRNum = currentHR ? parseInt(currentHR) : undefined;
+			const ageNum = parseInt(age); // Parse age to number
+			const currentHRNum = currentHR ? parseInt(currentHR) : undefined; // Parse current HR if provided
 
 			// Validate input
 			const validation = validateHeartRateInput(ageNum, currentHRNum);
@@ -68,16 +97,25 @@ export default function HeartRateCalculator() {
 
 	/**
 	 * Reset form and clear results
+	 * 
+	 * Clears all form inputs and resets result and error states.
+	 * Called when user clicks the reset button.
 	 */
 	const handleReset = () => {
-		setAge('');
-		setCurrentHR('');
-		setResult(null);
-		setError('');
+		setAge(''); // Clear age input
+		setCurrentHR(''); // Clear current HR input
+		setResult(null); // Clear result
+		setError(''); // Clear errors
 	};
 
 	/**
 	 * Get color classes for heart rate zone
+	 * 
+	 * Returns Tailwind CSS classes for zone display based on zone color.
+	 * Used for visual differentiation of heart rate zones.
+	 * 
+	 * @param color - Zone color identifier (blue, green, yellow, orange, red)
+	 * @returns Tailwind CSS classes for zone styling
 	 */
 	const getZoneColor = (color: string) => {
 		const colorMap = {

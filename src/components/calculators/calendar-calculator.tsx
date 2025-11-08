@@ -24,31 +24,76 @@ import {
 	CalendarMonth,
 } from '@/lib/calculators/calendar';
 
+/**
+ * Calendar Calculator Component
+ * 
+ * A React component for managing calendar events.
+ * 
+ * Features:
+ * - Monthly calendar view
+ * - Add, edit, and delete events
+ * - Color-coded events
+ * - LocalStorage persistence
+ * - Export to iCal format
+ * - Event modal for editing
+ * - Responsive design
+ * 
+ * Calendar functionality:
+ * - Navigate between months
+ * - Click dates to add events
+ * - Click events to edit/delete
+ * - Export calendar to .ics file
+ * 
+ * Uses the calendar calculation library from @/lib/calculators/calendar
+ * for all calendar operations.
+ */
 export default function CalendarCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.calendar');
-	const [currentDate, setCurrentDate] = useState(new Date());
-	const [events, setEvents] = useState<CalendarEvent[]>([]);
-	const [selectedDate, setSelectedDate] = useState<string | null>(null);
-	const [showEventModal, setShowEventModal] = useState(false);
+	
+	// Calendar state management
+	const [currentDate, setCurrentDate] = useState(new Date()); // Currently displayed month
+	const [events, setEvents] = useState<CalendarEvent[]>([]); // Array of calendar events
+	const [selectedDate, setSelectedDate] = useState<string | null>(null); // Selected date for event creation
+	const [showEventModal, setShowEventModal] = useState(false); // Show/hide event modal
 	const [editingEvent, setEditingEvent] = useState<CalendarEvent | null>(
-		null
+		null // Event being edited (null if creating new)
 	);
 	const [newEvent, setNewEvent] = useState({
-		title: '',
-		description: '',
-		color: '#3B82F6',
+		title: '', // Event title
+		description: '', // Event description
+		color: '#3B82F6', // Event color (default: blue)
 	});
-	const [isMounted, setIsMounted] = useState(false);
+	const [isMounted, setIsMounted] = useState(false); // Component mount state (for SSR)
 
+	/**
+	 * Component mount and localStorage load effect
+	 * 
+	 * Loads saved events from localStorage on mount.
+	 * Sets mounted state to prevent hydration mismatches.
+	 */
 	useEffect(() => {
 		setIsMounted(true);
 		// Load events from localStorage
 		const savedEvents = localStorage.getItem('calendar-events');
 		if (savedEvents) {
-			setEvents(JSON.parse(savedEvents));
+			try {
+				setEvents(JSON.parse(savedEvents)); // Parse and set events
+			} catch (error) {
+				console.warn('Could not load saved events:', error);
+			}
 		}
 	}, []);
 
+	/**
+	 * LocalStorage save effect
+	 * 
+	 * Saves events to localStorage whenever events change.
+	 * Persists calendar data across page refreshes.
+	 * 
+	 * Dependencies:
+	 * - events: Calendar events array
+	 */
 	useEffect(() => {
 		// Save events to localStorage
 		localStorage.setItem('calendar-events', JSON.stringify(events));
@@ -61,36 +106,60 @@ export default function CalendarCalculator() {
 		'ru'
 	);
 
+	/**
+	 * Handle previous month navigation
+	 * 
+	 * Moves calendar to previous month.
+	 */
 	const handlePreviousMonth = () => {
 		setCurrentDate(
 			new Date(currentDate.getFullYear(), currentDate.getMonth() - 1)
 		);
 	};
 
+	/**
+	 * Handle next month navigation
+	 * 
+	 * Moves calendar to next month.
+	 */
 	const handleNextMonth = () => {
 		setCurrentDate(
 			new Date(currentDate.getFullYear(), currentDate.getMonth() + 1)
 		);
 	};
 
+	/**
+	 * Handle date click
+	 * 
+	 * Opens event modal for selected date.
+	 * 
+	 * @param date - Selected date string (YYYY-MM-DD)
+	 */
 	const handleDateClick = (date: string) => {
-		setSelectedDate(date);
-		setShowEventModal(true);
-		setEditingEvent(null);
-		setNewEvent({ title: '', description: '', color: '#3B82F6' });
+		setSelectedDate(date); // Set selected date
+		setShowEventModal(true); // Show event modal
+		setEditingEvent(null); // Not editing existing event
+		setNewEvent({ title: '', description: '', color: '#3B82F6' }); // Reset form
 	};
 
+	/**
+	 * Handle add event action
+	 * 
+	 * Creates new event and adds to calendar.
+	 * Validates that date and title are provided.
+	 */
 	const handleAddEvent = () => {
-		if (!selectedDate || !newEvent.title.trim()) return;
+		if (!selectedDate || !newEvent.title.trim()) return; // Validate inputs
 
 		const event: CalendarEvent = {
-			id: Date.now().toString(),
+			id: Date.now().toString(), // Generate unique ID
 			title: newEvent.title,
 			date: selectedDate,
 			description: newEvent.description,
 			color: newEvent.color,
 		};
 
+		// Add event to calendar
 		setEvents(
 			addEvent(
 				events,
@@ -100,24 +169,38 @@ export default function CalendarCalculator() {
 				event.color
 			)
 		);
-		setShowEventModal(false);
-		setSelectedDate(null);
-		setNewEvent({ title: '', description: '', color: '#3B82F6' });
+		setShowEventModal(false); // Hide modal
+		setSelectedDate(null); // Clear selection
+		setNewEvent({ title: '', description: '', color: '#3B82F6' }); // Reset form
 	};
 
+	/**
+	 * Handle edit event action
+	 * 
+	 * Opens event modal with event data for editing.
+	 * 
+	 * @param event - Event to edit
+	 */
 	const handleEditEvent = (event: CalendarEvent) => {
-		setEditingEvent(event);
+		setEditingEvent(event); // Set event being edited
 		setNewEvent({
 			title: event.title,
 			description: event.description || '',
 			color: event.color || '#3B82F6',
-		});
-		setShowEventModal(true);
+		}); // Populate form with event data
+		setShowEventModal(true); // Show event modal
 	};
 
+	/**
+	 * Handle update event action
+	 * 
+	 * Updates existing event with new data.
+	 * Validates that event and title are provided.
+	 */
 	const handleUpdateEvent = () => {
-		if (!editingEvent || !newEvent.title.trim()) return;
+		if (!editingEvent || !newEvent.title.trim()) return; // Validate inputs
 
+		// Update event in calendar
 		setEvents(
 			updateEvent(events, editingEvent.id, {
 				title: newEvent.title,
@@ -126,26 +209,47 @@ export default function CalendarCalculator() {
 			})
 		);
 
-		setShowEventModal(false);
-		setEditingEvent(null);
-		setNewEvent({ title: '', description: '', color: '#3B82F6' });
+		setShowEventModal(false); // Hide modal
+		setEditingEvent(null); // Clear editing state
+		setNewEvent({ title: '', description: '', color: '#3B82F6' }); // Reset form
 	};
 
+	/**
+	 * Handle delete event action
+	 * 
+	 * Removes event from calendar.
+	 * 
+	 * @param eventId - ID of event to delete
+	 */
 	const handleDeleteEvent = (eventId: string) => {
-		setEvents(removeEvent(events, eventId));
+		setEvents(removeEvent(events, eventId)); // Remove event
 	};
 
+	/**
+	 * Handle export calendar action
+	 * 
+	 * Exports calendar events to iCal (.ics) format.
+	 * Downloads file with current date in filename.
+	 */
 	const handleExportCalendar = () => {
-		const icalData = exportToICal(events);
-		const blob = new Blob([icalData], { type: 'text/calendar' });
-		const url = URL.createObjectURL(blob);
-		const link = document.createElement('a');
+		const icalData = exportToICal(events); // Generate iCal data
+		const blob = new Blob([icalData], { type: 'text/calendar' }); // Create blob
+		const url = URL.createObjectURL(blob); // Create object URL
+		const link = document.createElement('a'); // Create download link
 		link.href = url;
-		link.download = `calendar-${getCurrentDate()}.ics`;
-		link.click();
-		URL.revokeObjectURL(url);
+		link.download = `calendar-${getCurrentDate()}.ics`; // Set filename
+		link.click(); // Trigger download
+		URL.revokeObjectURL(url); // Clean up object URL
 	};
 
+	/**
+	 * Get event color with fallback
+	 * 
+	 * Returns event color or default blue if not set.
+	 * 
+	 * @param color - Event color string
+	 * @returns Color string (default: '#3B82F6')
+	 */
 	const getEventColor = (color: string) => {
 		return color || '#3B82F6';
 	};

@@ -1,3 +1,26 @@
+/**
+ * Temperature Converter Library
+ * 
+ * Provides functionality for converting between different temperature units:
+ * - Celsius (°C)
+ * - Fahrenheit (°F)
+ * - Kelvin (K)
+ * 
+ * Features:
+ * - Unit conversion between temperature units
+ * - Input validation (absolute zero checks)
+ * - Formatted value output
+ * - Common conversions display
+ * 
+ * Conversion formulas:
+ * - Celsius to Fahrenheit: F = C × (9/5) + 32
+ * - Fahrenheit to Celsius: C = (F - 32) × (5/9)
+ * - Celsius to Kelvin: K = C + 273.15
+ * - Kelvin to Celsius: C = K - 273.15
+ * 
+ * All conversions use Celsius as the intermediate unit.
+ */
+
 export interface TemperatureInput {
 	value: number;
 	fromUnit: TemperatureUnit;
@@ -19,6 +42,23 @@ export interface TemperatureValidation {
 
 export const TEMPERATURE_UNITS: TemperatureUnit[] = ['C', 'F', 'K'];
 
+/**
+ * Validate temperature conversion input
+ * 
+ * Checks that:
+ * - Value is not below absolute zero for the source unit
+ * - Value is not too large
+ * - Source and target units are specified
+ * - Units are valid temperature units
+ * 
+ * Absolute zero limits:
+ * - Celsius: -273.15°C
+ * - Fahrenheit: -459.67°F
+ * - Kelvin: 0K
+ * 
+ * @param input - Temperature input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateTemperatureInput(
 	input: TemperatureInput
 ): TemperatureValidation {
@@ -54,6 +94,17 @@ export function validateTemperatureInput(
 	return { isValid: true };
 }
 
+/**
+ * Convert temperature from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to Celsius (intermediate unit)
+ * 2. Convert Celsius to target unit
+ * 
+ * @param input - Temperature input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertTemperature(input: TemperatureInput): TemperatureResult {
 	const validation = validateTemperatureInput(input);
 	if (!validation.isValid) {

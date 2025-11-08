@@ -1,6 +1,26 @@
 /**
- * Power and Root Calculator Logic
- * Handles calculations for powers and roots of any degree
+ * Power and Root Calculator Library
+ *
+ * Provides functionality for calculating powers and roots of any degree.
+ *
+ * Features:
+ * - Power calculation (base^exponent)
+ * - Root calculation (nth root of base)
+ * - Input validation
+ * - Formula generation for display
+ * - Result formatting with appropriate precision
+ * - Perfect power detection
+ * - Root simplification
+ *
+ * Calculation modes:
+ * - Power: Calculates base raised to exponent (base^exponent)
+ * - Root: Calculates nth root of base (base^(1/exponent))
+ *
+ * Validation:
+ * - Power: Cannot raise 0 to negative power
+ * - Root: Cannot take even root of negative number, cannot take 0th root
+ *
+ * Result precision: Rounded to 6 decimal places
  */
 
 export type CalculationMode = 'power' | 'root';
@@ -22,6 +42,20 @@ export interface PowerRootResult {
 
 /**
  * Calculate power or root based on mode and parameters
+ *
+ * Calculates either:
+ * - Power: base^exponent using Math.pow(base, exponent)
+ * - Root: nth root of base using Math.pow(base, 1/exponent)
+ *
+ * Algorithm:
+ * 1. Validates input based on mode
+ * 2. Calculates result using appropriate formula
+ * 3. Generates formula string for display
+ * 4. Rounds result to 6 decimal places
+ *
+ * @param input - Power-root input with mode, base, and exponent
+ * @returns Power-root result with value, formula, and display formula
+ * @throws Error if validation fails (0 to negative power, even root of negative, 0th root)
  */
 export function calculatePowerRoot(input: PowerRootInput): PowerRootResult {
 	const { mode, base, exponent } = input;
@@ -71,7 +105,16 @@ export function calculatePowerRoot(input: PowerRootInput): PowerRootResult {
 }
 
 /**
- * Validate input parameters
+ * Validate power-root input parameters
+ *
+ * Performs validation checks:
+ * - Mode is specified
+ * - Base and exponent are valid numbers
+ * - Power mode: Cannot raise 0 to negative power
+ * - Root mode: Cannot take even root of negative number, cannot take 0th root
+ *
+ * @param input - Power-root input to validate
+ * @returns Validation result with boolean status and array of error messages
  */
 export function validatePowerRootInput(input: PowerRootInput): {
 	isValid: boolean;
@@ -114,13 +157,26 @@ export function validatePowerRootInput(input: PowerRootInput): {
 
 /**
  * Get required parameters for a calculation mode
+ *
+ * Returns the list of required parameter names for the specified mode.
+ * Both power and root modes require 'base' and 'exponent'.
+ *
+ * @param mode - Calculation mode ('power' or 'root')
+ * @returns Array of required parameter names
  */
 export function getRequiredParameters(mode: CalculationMode): string[] {
 	return ['base', 'exponent'];
 }
 
 /**
- * Format result for display
+ * Format power-root result for display
+ *
+ * Formats the result as a mathematical equation string:
+ * - Power: "base^exponent = value"
+ * - Root: "exponent√base = value"
+ *
+ * @param result - Power-root result to format
+ * @returns Formatted string representation
  */
 export function formatPowerRootResult(result: PowerRootResult): string {
 	const { result: value, mode, base, exponent } = result;
@@ -134,6 +190,13 @@ export function formatPowerRootResult(result: PowerRootResult): string {
 
 /**
  * Get common examples for the calculator
+ *
+ * Returns predefined examples for the specified mode:
+ * - Power: Common power calculations (2^3, 5^2, etc.)
+ * - Root: Common root calculations (cube root of 8, square root of 16, etc.)
+ *
+ * @param mode - Calculation mode ('power' or 'root')
+ * @returns Array of example objects with base, exponent, and description
  */
 export function getCommonExamples(mode: CalculationMode): Array<{
 	base: number;
@@ -159,6 +222,15 @@ export function getCommonExamples(mode: CalculationMode): Array<{
 
 /**
  * Check if a number is a perfect power
+ *
+ * Determines if base is a perfect nth power (where n = exponent).
+ * A perfect power means the nth root of base is an integer.
+ *
+ * Example: 8 is a perfect cube (2^3), 16 is a perfect square (4^2)
+ *
+ * @param base - Number to check
+ * @param exponent - Root degree
+ * @returns True if base is a perfect power, false otherwise
  */
 export function isPerfectPower(base: number, exponent: number): boolean {
 	if (exponent === 0) return false;
@@ -169,6 +241,15 @@ export function isPerfectPower(base: number, exponent: number): boolean {
 
 /**
  * Get the simplified form of a root
+ *
+ * Attempts to simplify a root by extracting perfect powers.
+ * Finds the largest perfect power that divides the base and extracts it.
+ *
+ * Example: √72 = 6√2 (extracts 36 = 6^2)
+ *
+ * @param base - Number under the root (radicand)
+ * @param exponent - Root degree
+ * @returns Simplified root object with coefficient, radicand, and exponent, or null if cannot simplify
  */
 export function simplifyRoot(
 	base: number,

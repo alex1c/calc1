@@ -1,5 +1,32 @@
-// Customs clearance calculation logic and interfaces
+/**
+ * Customs Calculator Library
+ * 
+ * Provides functionality for calculating customs duties for imported cars.
+ * 
+ * Features:
+ * - Customs duty calculation (based on car value or engine volume)
+ * - Excise tax calculation (based on car age and engine volume)
+ * - VAT calculation (20% on car value + duty + excise)
+ * - Recycling fee (fixed amount)
+ * - Total customs cost calculation
+ * 
+ * Calculation method:
+ * - Duty: Maximum of (10% of car value) or (engine volume × rate per cm³)
+ * - Excise: Engine volume × rate per cm³ (higher for cars older than 3 years)
+ * - VAT: 20% of (car value + duty + excise)
+ * - Recycling fee: Fixed 3,400 RUB
+ * 
+ * Rates vary by engine volume:
+ * - Under 1000 cm³: Lower rates
+ * - 1001-2000 cm³: Medium rates
+ * - 2001-3000 cm³: Higher rates
+ * - Above 3000 cm³: Highest rates
+ */
 
+/**
+ * Input interface for customs calculation
+ * Contains car value, engine specifications, and age
+ */
 export interface CustomsInput {
 	carValue: number; // in EUR
 	engineVolume: number; // in cm³
@@ -48,6 +75,22 @@ export const tariffs = {
 // EUR to RUB exchange rate (approximate)
 const EUR_TO_RUB_RATE = 100;
 
+/**
+ * Calculate customs duties and fees for imported car
+ * 
+ * Calculates all customs costs including duty, excise, VAT, and recycling fee.
+ * 
+ * Algorithm:
+ * 1. Convert car value from EUR to RUB
+ * 2. Calculate duty (maximum of percentage or volume-based)
+ * 3. Calculate excise (based on age and engine volume)
+ * 4. Calculate VAT (20% of car value + duty + excise)
+ * 5. Add recycling fee (fixed)
+ * 6. Sum all costs for total
+ * 
+ * @param input - Customs input parameters
+ * @returns Customs result with all cost breakdowns
+ */
 export function calculateCustoms(input: CustomsInput): CustomsResult {
 	const { carValue, engineVolume, fuelType, carAge, enginePower } = input;
 

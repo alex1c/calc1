@@ -42,16 +42,43 @@ interface IdealWeightResult {
 	}>;
 }
 
+/**
+ * Ideal Weight Calculator Component
+ * 
+ * A React component for calculating ideal body weight using multiple formulas.
+ * 
+ * Features:
+ * - Multiple calculation formulas (Broca, Lorentz, Devine, Hamwi, Robinson, Miller)
+ * - Gender-specific calculations
+ * - Age and height input
+ * - Weight range calculation
+ * - Comparison of all formulas
+ * - Visual indicators
+ * - Responsive design
+ * 
+ * Formulas supported:
+ * - Broca: Simple height-based formula
+ * - Lorentz: Gender-specific formula
+ * - Devine: Height and gender-based formula
+ * - Hamwi: Height and frame size-based formula
+ * - Robinson: Refined height-based formula
+ * - Miller: Modern height-based formula
+ * 
+ * Uses inline calculation logic for ideal weight formulas.
+ */
 export default function IdealWeightCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.ideal-weight');
+	
+	// Form state management
 	const [input, setInput] = useState<IdealWeightInput>({
-		gender: 'male',
-		height: 175,
-		age: 30,
-		formula: 'broca',
+		gender: 'male', // Gender (male, female)
+		height: 175, // Height in cm
+		age: 30, // Age in years
+		formula: 'broca', // Selected formula (broca, lorentz, devine, hamwi, robinson, miller)
 	});
-	const [result, setResult] = useState<IdealWeightResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<IdealWeightResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	// Convert cm to inches
 	const cmToInches = (cm: number): number => {

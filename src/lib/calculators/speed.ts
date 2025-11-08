@@ -1,3 +1,25 @@
+/**
+ * Speed Converter Library
+ * 
+ * Provides functionality for converting between different speed units:
+ * - Kilometers per hour (km/h)
+ * - Meters per second (m/s)
+ * - Knots (nautical miles per hour)
+ * 
+ * Features:
+ * - Unit conversion between speed units
+ * - Input validation
+ * - Formatted value output
+ * - Common conversions display
+ * 
+ * Conversion formulas:
+ * - km/h to m/s: m/s = km/h ÷ 3.6
+ * - m/s to km/h: km/h = m/s × 3.6
+ * - Knots to m/s: m/s = knots × 0.514444
+ * 
+ * All conversions use meters per second as the base unit.
+ */
+
 export interface SpeedInput {
 	value: number;
 	fromUnit: SpeedUnit;
@@ -19,6 +41,18 @@ export interface SpeedValidation {
 
 export const SPEED_UNITS: SpeedUnit[] = ['kmh', 'ms', 'knots'];
 
+/**
+ * Validate speed conversion input
+ * 
+ * Checks that:
+ * - Value is non-negative
+ * - Value is not too large
+ * - Source and target units are specified
+ * - Units are valid speed units
+ * 
+ * @param input - Speed input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateSpeedInput(input: SpeedInput): SpeedValidation {
 	const { value, fromUnit, toUnit } = input;
 
@@ -41,6 +75,17 @@ export function validateSpeedInput(input: SpeedInput): SpeedValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert speed from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to meters per second (base unit)
+ * 2. Convert meters per second to target unit
+ * 
+ * @param input - Speed input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertSpeed(input: SpeedInput): SpeedResult {
 	const validation = validateSpeedInput(input);
 	if (!validation.isValid) {

@@ -33,32 +33,72 @@ interface ProfitMarginResult {
 	roi: number;
 }
 
+/**
+ * Profit Margin Calculator Component
+ * 
+ * A React component for calculating profit margins, markups, and ROI.
+ * 
+ * Features:
+ * - Multiple calculation types (margin, markup, revenue)
+ * - Gross margin calculation
+ * - Profit margin calculation
+ * - Markup calculation
+ * - ROI calculation
+ * - Revenue and cost calculations
+ * - Responsive design
+ * 
+ * Calculation types:
+ * - Margin: Calculate margin from revenue and cost
+ * - Markup: Calculate revenue from cost and markup percentage
+ * - Revenue: Calculate revenue from cost and margin percentage
+ * 
+ * Uses inline calculation logic for business profitability analysis.
+ */
 export default function ProfitMarginCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.profit-margin');
+	
+	// Form state management
 	const [input, setInput] = useState<ProfitMarginInput>({
-		calculationType: 'margin',
-		revenue: 1000,
-		cost: 600,
-		profit: 0,
-		margin: 0,
-		markup: 0,
+		calculationType: 'margin', // Calculation type (margin, markup, revenue)
+		revenue: 1000, // Revenue (₽)
+		cost: 600, // Cost (₽)
+		profit: 0, // Profit (₽)
+		margin: 0, // Margin (%)
+		markup: 0, // Markup (%)
 	});
-	const [result, setResult] = useState<ProfitMarginResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<ProfitMarginResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const calculationTypes = t.raw('options.calculationTypes');
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes values.
+	 * Clears validation errors on change.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof ProfitMarginInput,
 		value: string | number
 	) => {
 		setInput((prev) => ({
 			...prev,
-			[field]: value,
+			[field]: value, // Update field value
 		}));
-		setErrors([]);
+		setErrors([]); // Clear errors on input change
 	};
 
+	/**
+	 * Validate form inputs
+	 * 
+	 * Validates all form inputs based on calculation type.
+	 * 
+	 * @returns Array of validation error messages
+	 */
 	const validateInput = (): string[] => {
 		const validationErrors: string[] = [];
 

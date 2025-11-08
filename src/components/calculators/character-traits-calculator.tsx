@@ -15,18 +15,40 @@ interface Character {
 	backstory: string;
 }
 
+/**
+ * Character Traits Calculator Component
+ * 
+ * A React component for generating fictional character traits and descriptions.
+ * 
+ * Features:
+ * - Gender selection (male, female, any)
+ * - Character type selection (realistic, fantasy, sci-fi)
+ * - Age group selection (child, teen, adult, elder)
+ * - Multiple character generation
+ * - Character traits generation (personality, strengths, weaknesses)
+ * - Profession and backstory generation
+ * - Copy to clipboard
+ * - Download as text
+ * - Responsive design
+ * 
+ * Uses the character traits generation library from @/lib/calculators/character-traits
+ * for character generation.
+ */
 export default function CharacterTraitsCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.characterTraits');
-	const locale = useLocale();
-	const [gender, setGender] = useState('any');
-	const [characterType, setCharacterType] = useState('realistic');
-	const [ageGroup, setAgeGroup] = useState('adult');
-	const [characterCount, setCharacterCount] = useState(1);
+	const locale = useLocale(); // Current locale for character name generation
+	
+	// Generator options
+	const [gender, setGender] = useState('any'); // Character gender (male, female, any)
+	const [characterType, setCharacterType] = useState('realistic'); // Character type (realistic, fantasy, sci-fi)
+	const [ageGroup, setAgeGroup] = useState('adult'); // Age group (child, teen, adult, elder)
+	const [characterCount, setCharacterCount] = useState(1); // Number of characters to generate
 	const [generatedCharacters, setGeneratedCharacters] = useState<Character[]>(
-		[]
+		[] // Array of generated characters
 	);
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const handleGenerate = async () => {
 		setIsGenerating(true);

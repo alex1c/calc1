@@ -1,37 +1,77 @@
 /**
- * Deposit calculation library
- * Handles various types of deposit calculations including simple, capitalized, and compound interest
+ * Deposit Calculation Library
+ * 
+ * Provides comprehensive deposit calculation functionality for various deposit types:
+ * - Simple deposits: Interest calculated on initial principal only
+ * - Capitalized deposits: Interest added to principal at specified intervals
+ * - Compound deposits: Interest compounded monthly with principal
+ * 
+ * Features:
+ * - Monthly additions and withdrawals support
+ * - Detailed payment schedule generation
+ * - Effective interest rate calculation
+ * - Multi-currency support (RUB, USD, EUR)
+ * - CSV export functionality
+ * 
+ * All calculations use monthly compounding periods and generate
+ * detailed schedules showing month-by-month balance changes.
  */
 
+/**
+ * Input interface for deposit calculation
+ * Contains all parameters needed to calculate deposit growth
+ */
 export interface DepositInput {
-	amount: number;
-	termMonths: number;
-	interestRate: number;
-	depositType: 'simple' | 'capitalized' | 'compound';
-	capitalizationPeriod?: 'monthly' | 'quarterly' | 'yearly';
-	monthlyAddition?: number;
-	monthlyWithdrawal?: number;
-	currency: 'RUB' | 'USD' | 'EUR';
+	amount: number; // Initial deposit amount
+	termMonths: number; // Deposit term in months
+	interestRate: number; // Annual interest rate (as percentage, e.g., 5 for 5%)
+	depositType: 'simple' | 'capitalized' | 'compound'; // Type of deposit calculation
+	capitalizationPeriod?: 'monthly' | 'quarterly' | 'yearly'; // For capitalized deposits only
+	monthlyAddition?: number; // Optional monthly additions to deposit
+	monthlyWithdrawal?: number; // Optional monthly withdrawals from deposit
+	currency: 'RUB' | 'USD' | 'EUR'; // Currency for formatting
 }
 
+/**
+ * Schedule item interface for monthly deposit breakdown
+ * Represents one month in the deposit schedule
+ */
 export interface DepositScheduleItem {
-	month: number;
-	startAmount: number;
-	interestEarned: number;
-	addition: number;
-	withdrawal: number;
-	endAmount: number;
+	month: number; // Month number (1, 2, 3, ...)
+	startAmount: number; // Balance at start of month
+	interestEarned: number; // Interest earned during the month
+	addition: number; // Additional funds added this month
+	withdrawal: number; // Funds withdrawn this month
+	endAmount: number; // Balance at end of month
 }
 
+/**
+ * Result interface for deposit calculation
+ * Contains final amounts and detailed schedule
+ */
 export interface DepositResult {
-	finalAmount: number;
-	totalInterest: number;
-	effectiveRate: number;
-	depositSchedule: DepositScheduleItem[];
+	finalAmount: number; // Final deposit amount after term
+	totalInterest: number; // Total interest earned over term
+	effectiveRate: number; // Effective annual interest rate (%)
+	depositSchedule: DepositScheduleItem[]; // Month-by-month breakdown
 }
 
 /**
  * Calculate simple deposit (no capitalization)
+ * 
+ * Simple interest is calculated only on the initial principal amount.
+ * Interest is not added to the principal, so it doesn't compound.
+ * 
+ * Formula: Interest = Principal × Rate × Time
+ * 
+ * This method:
+ * - Calculates monthly interest on current balance
+ * - Applies monthly additions and withdrawals
+ * - Generates detailed month-by-month schedule
+ * - Effective rate equals nominal rate (no compounding effect)
+ * 
+ * @param input - Deposit input parameters
+ * @returns Deposit result with final amount, total interest, and schedule
  */
 export function calculateSimpleDeposit(input: DepositInput): DepositResult {
 	const {
@@ -42,18 +82,23 @@ export function calculateSimpleDeposit(input: DepositInput): DepositResult {
 		monthlyWithdrawal = 0,
 	} = input;
 
+	// Convert annual rate to monthly rate (divide by 12 and convert % to decimal)
 	const monthlyRate = interestRate / 12 / 100;
+	
+	// Calculate total interest on initial principal only (simple interest)
 	const totalInterest = amount * monthlyRate * termMonths;
 	const totalAdditions = monthlyAddition * termMonths;
 	const totalWithdrawals = monthlyWithdrawal * termMonths;
 	const finalAmount =
 		amount + totalInterest + totalAdditions - totalWithdrawals;
 
+	// Generate month-by-month schedule
 	const schedule: DepositScheduleItem[] = [];
 	let currentAmount = amount;
 
 	for (let month = 1; month <= termMonths; month++) {
 		const startAmount = currentAmount;
+		// Interest calculated on current balance (includes additions)
 		const interestEarned = currentAmount * monthlyRate;
 		const addition = monthlyAddition;
 		const withdrawal = monthlyWithdrawal;
@@ -74,13 +119,25 @@ export function calculateSimpleDeposit(input: DepositInput): DepositResult {
 	return {
 		finalAmount: Math.round(finalAmount * 100) / 100,
 		totalInterest: Math.round(totalInterest * 100) / 100,
-		effectiveRate: interestRate,
+		effectiveRate: interestRate, // No compounding, so effective = nominal
 		depositSchedule: schedule,
 	};
 }
 
 /**
  * Calculate capitalized deposit (interest added to principal at specified intervals)
+ * 
+ * Capitalized deposits add earned interest to the principal at regular intervals
+ * (monthly, quarterly, or yearly). This allows interest to earn interest,
+ * but only at the capitalization frequency.
+ * 
+ * Key differences from compound:
+ * - Interest is added to principal only at capitalization periods
+ * - Between capitalization periods, interest is calculated but not added
+ * - Effective rate is higher than simple but lower than monthly compound
+ * 
+ * @param input - Deposit input parameters including capitalization period
+ * @returns Deposit result with effective rate accounting for capitalization
  */
 export function calculateCapitalizedDeposit(
 	input: DepositInput
@@ -97,7 +154,8 @@ export function calculateCapitalizedDeposit(
 	const schedule: DepositScheduleItem[] = [];
 	let currentAmount = amount;
 
-	// Determine capitalization frequency
+	// Determine capitalization frequency in months
+	// Monthly = every 1 month, Quarterly = every 3 months, Yearly = every 12 months
 	const capitalizationMonths =
 		capitalizationPeriod === 'monthly'
 			? 1
@@ -113,6 +171,7 @@ export function calculateCapitalizedDeposit(
 		const withdrawal = monthlyWithdrawal;
 
 		// Apply capitalization if it's the right month
+		// Interest is added to principal, making it available for next period
 		if (month % capitalizationMonths === 0) {
 			currentAmount += interestEarned;
 			interestEarned = 0; // Interest is capitalized, not paid out
@@ -133,10 +192,14 @@ export function calculateCapitalizedDeposit(
 		currentAmount = endAmount;
 	}
 
+	// Calculate total interest from schedule
 	const totalInterest = schedule.reduce(
 		(sum, item) => sum + item.interestEarned,
 		0
 	);
+	
+	// Calculate effective annual rate accounting for capitalization
+	// Formula: ((Final/Initial)^(12/months) - 1) × 100
 	const effectiveRate =
 		((currentAmount / amount) ** (12 / termMonths) - 1) * 100;
 
@@ -150,6 +213,26 @@ export function calculateCapitalizedDeposit(
 
 /**
  * Calculate compound deposit (interest compounded monthly)
+ * 
+ * Compound deposits add interest to principal every month, allowing
+ * interest to earn interest continuously. This provides the highest
+ * effective rate for the same nominal rate.
+ * 
+ * Formula: A = P(1 + r/n)^(nt)
+ * Where:
+ * - A = final amount
+ * - P = principal
+ * - r = annual rate
+ * - n = compounding frequency (12 for monthly)
+ * - t = time in years
+ * 
+ * Each month:
+ * - Interest is calculated on current balance
+ * - Interest is immediately added to principal
+ * - Next month's interest includes previous month's interest
+ * 
+ * @param input - Deposit input parameters
+ * @returns Deposit result with highest effective rate due to monthly compounding
  */
 export function calculateCompoundDeposit(input: DepositInput): DepositResult {
 	const {
@@ -162,13 +245,15 @@ export function calculateCompoundDeposit(input: DepositInput): DepositResult {
 
 	const schedule: DepositScheduleItem[] = [];
 	let currentAmount = amount;
-	const monthlyRate = interestRate / 12 / 100;
+	const monthlyRate = interestRate / 12 / 100; // Monthly interest rate
 
 	for (let month = 1; month <= termMonths; month++) {
 		const startAmount = currentAmount;
+		// Interest calculated on current balance (includes previous interest)
 		const interestEarned = currentAmount * monthlyRate;
 		const addition = monthlyAddition;
 		const withdrawal = monthlyWithdrawal;
+		// Interest is added to balance immediately (compounded)
 		const endAmount = startAmount + interestEarned + addition - withdrawal;
 
 		schedule.push({
@@ -183,10 +268,14 @@ export function calculateCompoundDeposit(input: DepositInput): DepositResult {
 		currentAmount = endAmount;
 	}
 
+	// Sum all interest earned over the term
 	const totalInterest = schedule.reduce(
 		(sum, item) => sum + item.interestEarned,
 		0
 	);
+	
+	// Calculate effective annual rate accounting for monthly compounding
+	// This shows the true annual return rate
 	const effectiveRate =
 		((currentAmount / amount) ** (12 / termMonths) - 1) * 100;
 
@@ -200,6 +289,13 @@ export function calculateCompoundDeposit(input: DepositInput): DepositResult {
 
 /**
  * Main calculation function that routes to appropriate calculation method
+ * 
+ * This is the primary entry point for deposit calculations.
+ * Routes to the appropriate calculation function based on deposit type.
+ * 
+ * @param input - Deposit input parameters
+ * @returns Deposit result based on selected deposit type
+ * @throws Error if deposit type is invalid
  */
 export function calculateDeposit(input: DepositInput): DepositResult {
 	switch (input.depositType) {
@@ -216,6 +312,13 @@ export function calculateDeposit(input: DepositInput): DepositResult {
 
 /**
  * Generate deposit schedule for display
+ * 
+ * Convenience function that returns only the payment schedule
+ * without calculating other result fields. Useful when only
+ * the schedule is needed for display purposes.
+ * 
+ * @param input - Deposit input parameters
+ * @returns Array of schedule items showing month-by-month breakdown
  */
 export function generateDepositSchedule(
 	input: DepositInput
@@ -226,6 +329,18 @@ export function generateDepositSchedule(
 
 /**
  * Export deposit schedule to CSV format
+ * 
+ * Converts the deposit schedule into CSV format for download or export.
+ * Useful for users who want to analyze the schedule in spreadsheet software.
+ * 
+ * CSV format:
+ * - Header row with column names
+ * - Data rows with comma-separated values
+ * - All monetary values formatted to 2 decimal places
+ * 
+ * @param schedule - Array of deposit schedule items
+ * @param currency - Currency code (for future localization, currently unused)
+ * @returns CSV string ready for download
  */
 export function exportDepositScheduleToCSV(
 	schedule: DepositScheduleItem[],
@@ -253,6 +368,18 @@ export function exportDepositScheduleToCSV(
 
 /**
  * Validate deposit input parameters
+ * 
+ * Performs comprehensive validation of deposit input parameters:
+ * - Amount must be positive
+ * - Term must be between 1 and 600 months (50 years)
+ * - Interest rate must be between 0 and 100%
+ * - Monthly additions/withdrawals cannot be negative
+ * 
+ * Returns array of error messages for invalid inputs.
+ * Empty array indicates all inputs are valid.
+ * 
+ * @param input - Partial deposit input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateDepositInput(input: Partial<DepositInput>): string[] {
 	const errors: string[] = [];
@@ -290,6 +417,20 @@ export function validateDepositInput(input: Partial<DepositInput>): string[] {
 
 /**
  * Format currency based on selected currency
+ * 
+ * Formats a numeric amount as currency using Intl.NumberFormat.
+ * Supports RUB, USD, and EUR with appropriate locale formatting.
+ * 
+ * Formatting details:
+ * - RUB: Russian locale (ru-RU), shows as "1 234,56 ₽"
+ * - USD: US locale (en-US), shows as "$1,234.56"
+ * - EUR: German locale (de-DE), shows as "1.234,56 €"
+ * 
+ * Falls back to RUB formatting if currency is not recognized.
+ * 
+ * @param amount - Numeric amount to format
+ * @param currency - Currency code (RUB, USD, EUR)
+ * @returns Formatted currency string with appropriate symbols and separators
  */
 export function formatDepositCurrency(
 	amount: number,

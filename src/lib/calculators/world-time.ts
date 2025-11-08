@@ -1,4 +1,19 @@
-// World Time utility functions
+/**
+ * World Time Utility Library
+ * 
+ * Provides functionality for displaying current time in different cities/timezones.
+ * 
+ * Features:
+ * - Popular cities database with timezone information
+ * - Current time calculation for any city
+ * - Time formatting (12h/24h)
+ * - Date formatting (multiple formats)
+ * - Day of week calculation
+ * - Daylight Saving Time (DST) detection
+ * - UTC offset display
+ * 
+ * Uses JavaScript Date object and timezone offsets for calculations.
+ */
 
 export interface WorldTimeCity {
 	id: string;
@@ -34,6 +49,14 @@ export interface WorldTimeSettings {
 	dateFormat: 'DD/MM/YYYY' | 'MM/DD/YYYY' | 'YYYY-MM-DD';
 }
 
+/**
+ * Get list of popular cities with timezone information
+ * 
+ * Returns predefined list of major cities with their timezone data,
+ * including UTC offsets, coordinates, and country information.
+ * 
+ * @returns Array of WorldTimeCity objects
+ */
 export function getPopularCities(): WorldTimeCity[] {
 	return [
 		{
@@ -279,6 +302,15 @@ export function getUTCOffset(date: Date, timezone: string): string {
 	}
 }
 
+/**
+ * Get timezone offset in minutes from UTC
+ * 
+ * Calculates the difference between UTC time and local time in the specified timezone.
+ * 
+ * @param date - Date object
+ * @param timezone - Timezone identifier (e.g., 'America/New_York')
+ * @returns Timezone offset in minutes (positive for east of UTC, negative for west)
+ */
 function getTimezoneOffset(date: Date, timezone: string): number {
 	try {
 		const utcDate = new Date(
@@ -293,6 +325,16 @@ function getTimezoneOffset(date: Date, timezone: string): number {
 	}
 }
 
+/**
+ * Search cities by name, country, or timezone
+ * 
+ * Filters cities array by matching query against city name, country, or timezone.
+ * Case-insensitive search.
+ * 
+ * @param query - Search query string
+ * @param cities - Array of cities to search (defaults to all cities)
+ * @returns Array of matching cities
+ */
 export function searchCities(
 	query: string,
 	cities: WorldTimeCity[] = getAllCities()

@@ -1,3 +1,26 @@
+/**
+ * Pressure Converter Library
+ * 
+ * Provides functionality for converting between different pressure units.
+ * 
+ * Features:
+ * - Supports three pressure units: Pascals (Pa), atmospheres (atm), millimeters of mercury (mmHg)
+ * - Input validation
+ * - Formatted value output
+ * 
+ * Conversion formulas:
+ * - Pascals to atmospheres: atm = Pa / 101325
+ * - Atmospheres to Pascals: Pa = atm × 101325
+ * - Pascals to mmHg: mmHg = Pa / 133.322
+ * - mmHg to Pascals: Pa = mmHg × 133.322
+ * 
+ * All conversions use Pascals as the base unit.
+ */
+
+/**
+ * Input interface for pressure conversion
+ * Contains pressure value and source/target units
+ */
 export interface PressureInput {
 	value: number;
 	fromUnit: PressureUnit;
@@ -19,6 +42,18 @@ export interface PressureValidation {
 
 export const PRESSURE_UNITS: PressureUnit[] = ['Pa', 'atm', 'mmHg'];
 
+/**
+ * Validate pressure conversion input
+ * 
+ * Checks that:
+ * - Value is non-negative
+ * - Value is not too large (max 1e12)
+ * - Source and target units are specified
+ * - Units are valid pressure units
+ * 
+ * @param input - Pressure input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validatePressureInput(
 	input: PressureInput
 ): PressureValidation {
@@ -46,6 +81,17 @@ export function validatePressureInput(
 	return { isValid: true };
 }
 
+/**
+ * Convert pressure from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to Pascals (base unit)
+ * 2. Convert Pascals to target unit
+ * 
+ * @param input - Pressure input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertPressure(input: PressureInput): PressureResult {
 	const validation = validatePressureInput(input);
 	if (!validation.isValid) {

@@ -1,8 +1,28 @@
 /**
- * Credit Loan Calculator Logic
- * Calculates loan payments using annuity formula
+ * Credit Loan Calculator Library
+ * 
+ * Provides functionality for calculating loan payments using annuity and differentiated methods.
+ * 
+ * Features:
+ * - Annuity payment calculation (fixed monthly payment)
+ * - Differentiated payment calculation (decreasing monthly payment)
+ * - Payment schedule generation
+ * - Total interest calculation
+ * - Total payment calculation
+ * 
+ * Payment methods:
+ * - Annuity: Same payment every month, early payments have more interest
+ * - Differentiated: Principal payment is constant, interest decreases over time
+ * 
+ * Formula for annuity payments:
+ * P = [r × PV × (1 + r)^n] / [(1 + r)^n - 1]
+ * where P = monthly payment, r = monthly rate, PV = principal, n = number of months
  */
 
+/**
+ * Input interface for credit loan calculation
+ * Contains loan amount, interest rate, term, and payment type
+ */
 export interface CreditLoanInput {
 	principal: number; // loan amount
 	interestRate: number; // annual interest rate in %
@@ -23,6 +43,23 @@ export interface CreditLoanResult {
 	}>;
 }
 
+/**
+ * Calculate loan payments and schedule
+ * 
+ * Calculates monthly payments and generates payment schedule based on payment type.
+ * 
+ * For annuity payments:
+ * - Uses standard annuity formula
+ * - Generates schedule showing principal and interest breakdown
+ * 
+ * For differentiated payments:
+ * - Principal payment is constant (principal / term)
+ * - Interest decreases as balance decreases
+ * - Monthly payment decreases over time
+ * 
+ * @param input - Credit loan input parameters
+ * @returns Credit loan result with monthly payment, total payment, interest, and schedule
+ */
 export function calculateCreditLoan(input: CreditLoanInput): CreditLoanResult {
 	const monthlyRate = input.interestRate / 100 / 12;
 	const termMonths = input.termMonths;

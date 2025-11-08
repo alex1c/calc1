@@ -1,3 +1,22 @@
+/**
+ * Stress Calculator Library
+ * 
+ * Provides functionality for calculating stress levels based on questionnaire responses.
+ * 
+ * Features:
+ * - Stress questionnaire with 10 questions
+ * - Score-based stress level assessment (low, moderate, high)
+ * - Personalized advice based on stress level
+ * - Color-coded stress indicators
+ * 
+ * Scoring system:
+ * - Each question scored 0-3 points
+ * - Total score: 0-30 points
+ * - Low stress: 0-10 points
+ * - Moderate stress: 11-20 points
+ * - High stress: 21-30 points
+ */
+
 export interface StressQuestion {
 	id: number;
 	text: string;
@@ -106,6 +125,16 @@ export const STRESS_OPTIONS = [
 	{ value: 3, label: 'always' },
 ];
 
+/**
+ * Validate stress questionnaire answers
+ * 
+ * Checks that:
+ * - All questions are answered (answers.length === questions.length)
+ * - Each answer score is between 0 and 3
+ * 
+ * @param answers - Array of stress answers
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateStressAnswers(answers: StressAnswer[]): {
 	isValid: boolean;
 	error?: string;
@@ -123,6 +152,21 @@ export function validateStressAnswers(answers: StressAnswer[]): {
 	return { isValid: true };
 }
 
+/**
+ * Calculate stress level from questionnaire answers
+ * 
+ * Calculates total score by summing all answer scores (0-3 each),
+ * then determines stress level (low, moderate, high) based on score ranges.
+ * 
+ * Score ranges:
+ * - Low: 0-10 points
+ * - Moderate: 11-20 points
+ * - High: 21-30 points
+ * 
+ * @param answers - Array of stress answers (one per question)
+ * @returns Stress result with total score, level, description, and advice
+ * @throws Error if validation fails
+ */
 export function calculateStressLevel(answers: StressAnswer[]): StressResult {
 	const validation = validateStressAnswers(answers);
 	if (!validation.isValid) {
@@ -148,6 +192,16 @@ export function calculateStressLevel(answers: StressAnswer[]): StressResult {
 	};
 }
 
+/**
+ * Get stress level information by level name
+ * 
+ * Retrieves detailed information about a specific stress level including
+ * score ranges, description, advice, color, and icon.
+ * 
+ * @param level - Stress level (low, moderate, high)
+ * @returns Stress level information object
+ * @throws Error if level is invalid
+ */
 export function getStressLevelInfo(
 	level: 'low' | 'moderate' | 'high'
 ): StressLevel {
@@ -158,6 +212,15 @@ export function getStressLevelInfo(
 	return stressLevel;
 }
 
+/**
+ * Calculate progress percentage for questionnaire
+ * 
+ * Calculates completion percentage based on current step and total steps.
+ * 
+ * @param currentStep - Current question step (1-based)
+ * @param totalSteps - Total number of questions
+ * @returns Progress percentage (0-100)
+ */
 export function getProgressPercentage(
 	currentStep: number,
 	totalSteps: number
@@ -165,18 +228,45 @@ export function getProgressPercentage(
 	return Math.round((currentStep / totalSteps) * 100);
 }
 
+/**
+ * Get text color class based on stress score
+ * 
+ * Returns Tailwind CSS color class based on score:
+ * - Green (≤10): Low stress
+ * - Yellow (11-20): Moderate stress
+ * - Red (>20): High stress
+ * 
+ * @param score - Total stress score
+ * @returns Tailwind CSS text color class
+ */
 export function getScoreColor(score: number): string {
 	if (score <= 10) return 'text-green-600';
 	if (score <= 20) return 'text-yellow-600';
 	return 'text-red-600';
 }
 
+/**
+ * Get background color class based on stress score
+ * 
+ * Returns Tailwind CSS background color class based on score.
+ * 
+ * @param score - Total stress score
+ * @returns Tailwind CSS background color class
+ */
 export function getScoreBgColor(score: number): string {
 	if (score <= 10) return 'bg-green-100';
 	if (score <= 20) return 'bg-yellow-100';
 	return 'bg-red-100';
 }
 
+/**
+ * Get border color class based on stress score
+ * 
+ * Returns Tailwind CSS border color class based on score.
+ * 
+ * @param score - Total stress score
+ * @returns Tailwind CSS border color class
+ */
 export function getScoreBorderColor(score: number): string {
 	if (score <= 10) return 'border-green-200';
 	if (score <= 20) return 'border-yellow-200';

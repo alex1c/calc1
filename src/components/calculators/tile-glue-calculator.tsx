@@ -14,26 +14,40 @@ import {
 
 /**
  * Tile Glue Calculator Component
- * Calculates the amount of tile adhesive needed for floor tiling
+ * 
+ * A React component for calculating tile adhesive needed for floor tiling.
+ * 
+ * Features:
+ * - Floor area input
+ * - Tile size input
+ * - Grout width consideration
+ * - Consumption rate calculation
+ * - Reserve percentage calculation
+ * - Package size calculation
+ * - Responsive design
+ * 
+ * Uses the materials calculation library from @/lib/calculators/materials
+ * for all mathematical operations.
  */
 export default function TileGlueCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.tileGlue');
-	const materialType = 'tileGlue';
-	const [result, setResult] = useState<MaterialResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const materialType = 'tileGlue'; // Material type identifier
+	const [result, setResult] = useState<MaterialResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
-	const material = MATERIALS[materialType];
+	const material = MATERIALS[materialType]; // Get material configuration
 
-	// Form state
+	// Form state management
 	const [formData, setFormData] = useState<Partial<MaterialInput>>({
-		floorArea: 0,
-		doorsWindowsArea: 0,
-		consumptionRate: material?.defaultConsumption || 4,
-		reservePercentage: 10,
-		packageSize: material?.defaultPackageSize || 25,
-		tileSize: 0,
-		groutWidth: 2,
+		floorArea: 0, // Floor area (m²)
+		doorsWindowsArea: 0, // Area to exclude (m²)
+		consumptionRate: material?.defaultConsumption || 4, // Consumption rate (kg/m²)
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		packageSize: material?.defaultPackageSize || 25, // Package size (kg)
+		tileSize: 0, // Tile size (m²)
+		groutWidth: 2, // Grout width (mm)
 	});
 
 	// Handle input changes

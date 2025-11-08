@@ -1,3 +1,32 @@
+/**
+ * Ring Size Converter Library
+ * 
+ * Provides functionality for converting ring sizes between different country standards.
+ * 
+ * Features:
+ * - Multiple country standards (RU, EU, US, UK, JP, CN)
+ * - Size and diameter conversion
+ * - Input validation
+ * - Multi-country conversion
+ * 
+ * Country standards:
+ * - RU: Russian standard (numeric sizes)
+ * - EU: European standard (numeric sizes)
+ * - US: US standard (numeric sizes)
+ * - UK: UK standard (alphanumeric sizes)
+ * - JP: Japanese standard (numeric sizes)
+ * - CN: Chinese standard (numeric sizes)
+ * 
+ * Conversion method:
+ * - Uses diameter (mm) as base unit
+ * - Converts size to diameter, then to target country size
+ * - Validates diameter range (14-24mm typical)
+ */
+
+/**
+ * Input interface for ring size conversion
+ * Contains measurement type, country, and value
+ */
 export interface RingInput {
 	measurementType: 'size' | 'diameter';
 	country: RingCountry;
@@ -31,6 +60,18 @@ export const RING_COUNTRIES: RingCountry[] = [
 	'CN',
 ];
 
+/**
+ * Validate ring size conversion input
+ * 
+ * Checks that:
+ * - Measurement type is valid (size or diameter)
+ * - Country is valid
+ * - Value is positive
+ * - Diameter is within typical range (14-24mm) if measurement type is diameter
+ * 
+ * @param input - Ring input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateRingInput(input: RingInput): RingValidation {
 	const { measurementType, country, value } = input;
 
@@ -54,6 +95,22 @@ export function validateRingInput(input: RingInput): RingValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert ring size between different country standards
+ * 
+ * Converts ring size or diameter to all other country standards.
+ * 
+ * Algorithm:
+ * 1. If input is diameter, use it directly
+ * 2. If input is size, find corresponding diameter from source country data
+ * 3. For each target country, find closest matching size for the diameter
+ * 4. Return array of conversions for all countries
+ * 
+ * @param input - Ring input with measurement type, country, and value
+ * @param ringData - Ring size data for all countries
+ * @returns Array of ring size conversions for all countries
+ * @throws Error if input validation fails or data is unavailable
+ */
 export function convertRingSize(input: RingInput, ringData: any): RingResult[] {
 	const validation = validateRingInput(input);
 	if (!validation.isValid) {

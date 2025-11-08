@@ -75,20 +75,44 @@ const getFigureIcon = (figureType: FigureType) => {
 	}
 };
 
+/**
+ * Area Calculator Component
+ * 
+ * A React component for calculating the area of geometric shapes.
+ * 
+ * Features:
+ * - Supports three shapes: circle, square, and triangle
+ * - Dynamic form fields based on selected shape
+ * - Real-time calculation and validation
+ * - Visual shape icons
+ * - Formula display
+ * - Responsive design
+ * 
+ * Uses the area calculation library from @/lib/calculators/area
+ * for all mathematical operations.
+ */
 export default function AreaCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations();
+	
+	// Form state management
 	const [input, setInput] = useState<AreaInput>({
-		figureType: 'circle',
-		radius: 5,
-		side: 0,
-		base: 0,
-		height: 0,
+		figureType: 'circle', // Selected geometric shape
+		radius: 5, // Circle radius (default value)
+		side: 0, // Square side length
+		base: 0, // Triangle base length
+		height: 0, // Triangle height
 	});
-	const [result, setResult] = useState<AreaResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<AreaResult | null>(null); // Calculated area result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors array
 
 	/**
 	 * Handle figure type change and reset related fields
+	 * 
+	 * When user changes the selected shape type, resets all parameters
+	 * and sets default values for the new shape type.
+	 * 
+	 * @param figureType - New figure type to select
 	 */
 	const handleFigureTypeChange = (figureType: FigureType) => {
 		setInput((prev) => ({

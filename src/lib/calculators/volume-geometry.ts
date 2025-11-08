@@ -29,7 +29,15 @@ export interface VolumeGeometryValidation {
 }
 
 /**
- * Validates input parameters for volume calculation
+ * Validate volume geometry calculation input
+ * 
+ * Performs validation checks based on shape type:
+ * - Sphere: radius is positive and not too large
+ * - Cube: side is positive and not too large
+ * - Cylinder: radius and height are positive and not too large
+ * 
+ * @param input - Volume geometry input to validate
+ * @returns Validation result with boolean status and optional error message
  */
 export function validateVolumeGeometryInput(
 	input: VolumeGeometryInput
@@ -93,7 +101,18 @@ export function validateVolumeGeometryInput(
 }
 
 /**
- * Calculates volume of geometric shapes
+ * Calculate volume of geometric shape
+ * 
+ * Calculates volume based on shape type:
+ * - Sphere: V = (4/3) × π × r³
+ * - Cube: V = a³
+ * - Cylinder: V = π × r² × h
+ * 
+ * Also generates formula string for display.
+ * 
+ * @param input - Volume geometry input with shape type and dimensions
+ * @returns Volume geometry result with volume, formula, parameters, and shape
+ * @throws Error if input validation fails
  */
 export function calculateVolumeGeometry(
 	input: VolumeGeometryInput
@@ -140,7 +159,16 @@ export function calculateVolumeGeometry(
 }
 
 /**
- * Formats volume value with appropriate precision
+ * Format volume value with appropriate precision
+ * 
+ * Formats volume value based on magnitude:
+ * - Very small (< 0.001): Scientific notation
+ * - Small (< 1): 6 decimal places
+ * - Medium (< 1000): 3 decimal places
+ * - Large (≥ 1000): 2 decimal places
+ * 
+ * @param value - Volume value to format
+ * @returns Formatted volume string
  */
 export function formatVolumeValue(value: number): string {
 	if (value === 0) return '0';
@@ -165,7 +193,12 @@ export function formatVolumeValue(value: number): string {
 }
 
 /**
- * Gets shape-specific formula description
+ * Get formula string for shape type
+ * 
+ * Returns mathematical formula for volume calculation of the specified shape.
+ * 
+ * @param shape - Shape type (sphere, cube, cylinder)
+ * @returns Formula string (e.g., "V = (4/3) × π × r³")
  */
 export function getShapeFormula(shape: ShapeType): string {
 	const formulas = {
@@ -178,7 +211,12 @@ export function getShapeFormula(shape: ShapeType): string {
 }
 
 /**
- * Gets shape-specific parameter descriptions
+ * Get parameter descriptions for shape type
+ * 
+ * Returns localized parameter names and descriptions for the specified shape.
+ * 
+ * @param shape - Shape type (sphere, cube, cylinder)
+ * @returns Object with parameter descriptions (radius, side, height)
  */
 export function getShapeParameters(shape: ShapeType): {
 	radius?: string;

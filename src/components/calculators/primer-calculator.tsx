@@ -14,27 +14,41 @@ import {
 
 /**
  * Primer Calculator Component
- * Calculates the amount of primer needed for wall surface preparation (single layer)
+ * 
+ * A React component for calculating primer needed for wall surface preparation.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Doors and windows area deduction
+ * - Single layer application (primer is always single layer)
+ * - Consumption rate calculation
+ * - Reserve percentage calculation
+ * - Package size calculation
+ * - Responsive design
+ * 
+ * Uses the materials calculation library from @/lib/calculators/materials
+ * for all mathematical operations.
  */
 export default function PrimerCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.primer');
-	const materialType = 'primer';
-	const [result, setResult] = useState<MaterialResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const materialType = 'primer'; // Material type identifier
+	const [result, setResult] = useState<MaterialResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
-	const material = MATERIALS[materialType];
+	const material = MATERIALS[materialType]; // Get material configuration
 
-	// Form state
+	// Form state management
 	const [formData, setFormData] = useState<Partial<MaterialInput>>({
-		roomLength: 0,
-		roomWidth: 0,
-		wallHeight: 0,
-		doorsWindowsArea: 0,
-		layers: 1, // Primer is always single layer
-		consumptionRate: material?.defaultConsumption || 0.1,
-		reservePercentage: 10,
-		packageSize: material?.defaultPackageSize || 1,
+		roomLength: 0, // Room length (m)
+		roomWidth: 0, // Room width (m)
+		wallHeight: 0, // Wall height (m)
+		doorsWindowsArea: 0, // Total area of doors and windows (m²)
+		layers: 1, // Number of layers (primer is always single layer)
+		consumptionRate: material?.defaultConsumption || 0.1, // Primer consumption rate (L/m²)
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		packageSize: material?.defaultPackageSize || 1, // Package size (L)
 	});
 
 	// Handle input changes

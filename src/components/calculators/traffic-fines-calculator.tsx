@@ -19,16 +19,33 @@ import {
 	type TrafficFinesResult,
 } from '@/lib/calculators/traffic-fines';
 
+/**
+ * Traffic Fines Calculator Component
+ * 
+ * A React component for calculating total traffic fines costs.
+ * 
+ * Features:
+ * - Multiple fine selection
+ * - Fine amount display
+ * - Total fines calculation
+ * - Fine details breakdown
+ * - Responsive design
+ * 
+ * Uses the traffic fines calculation library from @/lib/calculators/traffic-fines
+ * for all mathematical operations based on Russian traffic regulations.
+ */
 export default function TrafficFinesCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.traffic-fines');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<TrafficFinesInput>>({
-		selectedFines: [],
+		selectedFines: [], // Array of selected fine IDs
 	});
 
-	const [result, setResult] = useState<TrafficFinesResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<TrafficFinesResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const finesOptions = getTrafficFinesOptions();
 

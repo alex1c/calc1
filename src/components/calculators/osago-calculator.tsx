@@ -23,21 +23,43 @@ interface OsagoResult {
 	totalCost: number;
 }
 
+/**
+ * OSAGO Calculator Component
+ * 
+ * A React component for calculating OSAGO (mandatory car insurance) costs.
+ * 
+ * Features:
+ * - Region-based calculation
+ * - Engine power coefficient
+ * - Driver age and experience coefficients
+ * - Multiple drivers support
+ * - Bonus-Malus coefficient (KBM)
+ * - Detailed cost breakdown
+ * - Responsive design
+ * 
+ * Calculation method:
+ * - Based on Russian OSAGO regulations
+ * - Base rate × territory coefficient × age/experience coefficient × power coefficient × drivers coefficient × KBM
+ * 
+ * Uses inline calculation logic based on Russian OSAGO legislation.
+ */
 export default function OsagoCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.osago');
 
+	// Form state management
 	const [formData, setFormData] = useState<OsagoFormData>({
-		region: '',
-		enginePower: 0,
-		driverAge: 0,
-		drivingExperience: 0,
-		driversCount: 'one',
-		bonusMalusCoefficient: 1.0,
+		region: '', // Region (Moscow, SPB, other)
+		enginePower: 0, // Engine power (hp)
+		driverAge: 0, // Driver age (years)
+		drivingExperience: 0, // Driving experience (years)
+		driversCount: 'one', // Number of drivers (one, several)
+		bonusMalusCoefficient: 1.0, // Bonus-Malus coefficient (KBM)
 	});
 
-	const [result, setResult] = useState<OsagoResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<OsagoResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const regions = [
 		{ value: 'moscow', label: t('form.regions.moscow') },

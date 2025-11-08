@@ -4,59 +4,131 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Calculator, AlertCircle, CheckCircle, Fuel } from 'lucide-react';
 
+/**
+ * Fuel Calculator Component
+ * 
+ * A React component for calculating fuel consumption and distance.
+ * Supports two calculation modes:
+ * 
+ * 1. Distance calculation: Calculate distance from fuel amount and consumption
+ * 2. Fuel calculation: Calculate fuel needed from distance and consumption
+ * 
+ * Features:
+ * - Dual-mode calculation (distance or fuel)
+ * - Real-time validation
+ * - Consumption rate input (liters per 100 km)
+ * - Responsive design
+ * 
+ * Formulas:
+ * - Distance = (Fuel Amount / Consumption) × 100
+ * - Fuel Needed = (Consumption × Distance) / 100
+ */
+
+/**
+ * Calculation mode type
+ * Determines which calculation to perform
+ */
 type CalculationMode = 'distance' | 'fuel';
 
+/**
+ * Fuel form data interface
+ * Contains all input values for fuel calculations
+ */
 interface FuelFormData {
-	fuelAmount: number;
-	consumption: number;
-	distance: number;
+	fuelAmount: number; // Fuel amount in liters
+	consumption: number; // Fuel consumption in liters per 100 km
+	distance: number; // Distance in kilometers
 }
 
+/**
+ * Fuel calculation result interface
+ * Contains calculated result based on mode
+ */
 interface FuelResult {
-	mode: CalculationMode;
-	distance?: number;
-	fuelNeeded?: number;
+	mode: CalculationMode; // Calculation mode used
+	distance?: number; // Calculated distance (for distance mode)
+	fuelNeeded?: number; // Calculated fuel needed (for fuel mode)
 }
 
+/**
+ * Fuel Calculator Component
+ * 
+ * Provides interface for fuel consumption calculations.
+ * Users can calculate either distance from fuel amount or
+ * fuel needed for a specific distance.
+ */
 export default function FuelCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.fuel-consumption');
 
-	const [mode, setMode] = useState<CalculationMode>('distance');
+	// State management
+	const [mode, setMode] = useState<CalculationMode>('distance'); // Current calculation mode
 	const [formData, setFormData] = useState<FuelFormData>({
-		fuelAmount: 0,
-		consumption: 0,
-		distance: 0,
+		fuelAmount: 0, // Fuel amount in liters
+		consumption: 0, // Consumption rate (L/100km)
+		distance: 0, // Distance in kilometers
 	});
 
-	const [result, setResult] = useState<FuelResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<FuelResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors array
+	const [isCalculated, setIsCalculated] = useState(false); // Flag indicating if calculation was performed
 
+	/**
+	 * Handle calculation mode change
+	 * 
+	 * Switches between distance and fuel calculation modes.
+	 * Resets calculation state when mode changes.
+	 * 
+	 * @param newMode - New calculation mode to set
+	 */
 	const handleModeChange = (newMode: CalculationMode) => {
 		setMode(newMode);
-		setIsCalculated(false);
-		setResult(null);
-		setErrors([]);
+		setIsCalculated(false); // Reset calculation flag
+		setResult(null); // Clear previous result
+		setErrors([]); // Clear previous errors
 	};
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form data when user changes input values.
+	 * Converts string inputs to numbers and resets calculation flag.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value as string
+	 */
 	const handleInputChange = (field: keyof FuelFormData, value: string) => {
-		const numValue = parseFloat(value) || 0;
+		const numValue = parseFloat(value) || 0; // Convert to number, default to 0
 		setFormData((prev) => ({ ...prev, [field]: numValue }));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation flag when inputs change
 	};
 
+	/**
+	 * Validate input values
+	 * 
+	 * Performs validation based on current calculation mode:
+	 * - Consumption must always be greater than 0
+	 * - Distance mode: fuelAmount must be greater than 0
+	 * - Fuel mode: distance must be greater than 0
+	 * 
+	 * @returns Array of error messages (empty if valid)
+	 */
 	const validateInput = (): string[] => {
 		const errors: string[] = [];
 
+		// Consumption is always required
 		if (formData.consumption <= 0) {
 			errors.push(t('form.errors.consumptionGreaterThanZero'));
 		}
 
+		// Mode-specific validation
 		if (mode === 'distance') {
+			// Distance mode requires fuel amount
 			if (formData.fuelAmount <= 0) {
 				errors.push(t('form.errors.fuelAmountGreaterThanZero'));
 			}
 		} else {
+			// Fuel mode requires distance
 			if (formData.distance <= 0) {
 				errors.push(t('form.errors.distanceGreaterThanZero'));
 			}
@@ -65,22 +137,44 @@ export default function FuelCalculator() {
 		return errors;
 	};
 
+	/**
+	 * Calculate distance from fuel amount
+	 * 
+	 * Formula: Distance = (Fuel Amount / Consumption) × 100
+	 * 
+	 * @returns FuelResult with calculated distance
+	 */
 	const calculateDistance = (): FuelResult => {
+		// Calculate distance: fuel amount divided by consumption, multiplied by 100
 		const distance = (formData.fuelAmount / formData.consumption) * 100;
 		return {
 			mode: 'distance',
-			distance: Math.round(distance * 100) / 100,
+			distance: Math.round(distance * 100) / 100, // Round to 2 decimal places
 		};
 	};
 
+	/**
+	 * Calculate fuel needed for distance
+	 * 
+	 * Formula: Fuel Needed = (Consumption × Distance) / 100
+	 * 
+	 * @returns FuelResult with calculated fuel needed
+	 */
 	const calculateFuel = (): FuelResult => {
+		// Calculate fuel needed: consumption times distance, divided by 100
 		const fuelNeeded = (formData.consumption * formData.distance) / 100;
 		return {
 			mode: 'fuel',
-			fuelNeeded: Math.round(fuelNeeded * 100) / 100,
+			fuelNeeded: Math.round(fuelNeeded * 100) / 100, // Round to 2 decimal places
 		};
 	};
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and performs calculation based on current mode.
+	 * Routes to appropriate calculation function (distance or fuel).
+	 */
 	const handleCalculate = () => {
 		const validationErrors = validateInput();
 		setErrors(validationErrors);

@@ -1,5 +1,28 @@
-// Countdown utility functions
+/**
+ * Countdown Calculator Library
+ * 
+ * Provides functionality for countdown timers to specific events.
+ * 
+ * Features:
+ * - Countdown timer creation and management
+ * - Time left calculation (days, hours, minutes, seconds)
+ * - Event name and description support
+ * - Sound notifications
+ * - Progress tracking
+ * - Popular event presets
+ * - LocalStorage persistence
+ * 
+ * Countdown calculation:
+ * - Calculates time difference between now and target date
+ * - Breaks down into days, hours, minutes, seconds
+ * - Handles past dates (returns zero)
+ * - Updates in real-time
+ */
 
+/**
+ * Countdown state interface
+ * Represents an active countdown timer with all settings
+ */
 export interface CountdownState {
 	targetDate: Date;
 	isActive: boolean;
@@ -29,6 +52,19 @@ export interface CountdownSettings {
 	showSeconds: boolean;
 }
 
+/**
+ * Create a new countdown timer
+ * 
+ * Initializes a countdown state with target date and event information.
+ * Calculates initial time left and sets up timer state.
+ * 
+ * @param eventName - Name of the event to countdown to
+ * @param targetDate - Target date and time for the countdown
+ * @param eventDescription - Optional event description
+ * @param color - Color theme for the countdown (default: #3B82F6)
+ * @param soundEnabled - Whether sound notifications are enabled (default: true)
+ * @returns Countdown state object with initial time left calculation
+ */
 export function createCountdown(
 	eventName: string,
 	targetDate: Date,
@@ -47,6 +83,17 @@ export function createCountdown(
 	};
 }
 
+/**
+ * Calculate time left until target date
+ * 
+ * Calculates the time difference between now and target date,
+ * breaking it down into days, hours, minutes, and seconds.
+ * 
+ * Returns zero values if target date has passed.
+ * 
+ * @param targetDate - Target date and time
+ * @returns Time left object with days, hours, minutes, seconds, and total seconds
+ */
 export function calculateTimeLeft(targetDate: Date): {
 	days: number;
 	hours: number;
@@ -82,6 +129,15 @@ export function calculateTimeLeft(targetDate: Date): {
 	};
 }
 
+/**
+ * Update countdown timer state
+ * 
+ * Recalculates time left and updates active status based on whether
+ * target date has been reached.
+ * 
+ * @param countdown - Current countdown state
+ * @returns Updated countdown state with new time left and active status
+ */
 export function updateCountdown(countdown: CountdownState): CountdownState {
 	const timeLeft = calculateTimeLeft(countdown.targetDate);
 	const isFinished = timeLeft.total <= 0;
@@ -93,6 +149,16 @@ export function updateCountdown(countdown: CountdownState): CountdownState {
 	};
 }
 
+/**
+ * Format time left as human-readable string
+ * 
+ * Formats time left with appropriate units based on remaining duration.
+ * Shows weeks if enabled and days >= 7, otherwise shows days/hours/minutes/seconds.
+ * 
+ * @param timeLeft - Time left object with days, hours, minutes, seconds
+ * @param showWeeks - Whether to show weeks for long durations (default: false)
+ * @returns Formatted time string (e.g., "5 дней, 3 ч, 15 мин")
+ */
 export function formatTimeLeft(timeLeft: {
 	days: number;
 	hours: number;

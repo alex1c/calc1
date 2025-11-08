@@ -1,8 +1,40 @@
-// Foundation calculator
-// Calculates materials for different foundation types
+/**
+ * Foundation Calculator Library
+ * 
+ * Provides functionality for calculating foundation materials and dimensions.
+ * 
+ * Features:
+ * - Multiple foundation types (strip, slab, columnar)
+ * - Concrete volume calculation
+ * - Rebar (reinforcement) calculation
+ * - Formwork calculation
+ * - Material quantity calculation (cement, sand, gravel)
+ * - Reserve percentage calculation
+ * 
+ * Foundation types:
+ * - Strip foundation: Continuous foundation along walls
+ * - Slab foundation: Solid slab foundation
+ * - Columnar foundation: Individual column foundations
+ * 
+ * Calculation method:
+ * - Calculates concrete volume based on foundation type and dimensions
+ * - Calculates rebar quantity and weight based on spacing and layers
+ * - Calculates formwork area for concrete pouring
+ * - Determines material quantities based on concrete grade
+ */
 
+/**
+ * Foundation type enumeration
+ * - strip: Continuous foundation along walls
+ * - slab: Solid slab foundation
+ * - columnar: Individual column foundations
+ */
 export type FoundationType = 'strip' | 'slab' | 'columnar';
 
+/**
+ * Input interface for foundation calculation
+ * Contains foundation type, dimensions, concrete grade, and reinforcement parameters
+ */
 export interface FoundationInput {
 	// Foundation type
 	foundationType: FoundationType;
@@ -260,7 +292,24 @@ function calculateMaterials(
 }
 
 /**
- * Main calculation function
+ * Calculate foundation materials and dimensions
+ * 
+ * Calculates concrete volume, rebar quantity, formwork area, and material
+ * quantities based on foundation type and dimensions.
+ * 
+ * Algorithm:
+ * 1. Calculate concrete volume based on foundation type:
+ *    - Strip: Volume = length × width × height - inner volume
+ *    - Slab: Volume = length × width × thickness
+ *    - Columnar: Volume = column count × length × width × height
+ * 2. Calculate rebar quantity based on spacing and layers
+ * 3. Calculate rebar weight using GOST 5781-82 standard
+ * 4. Calculate formwork area
+ * 5. Calculate material quantities based on concrete grade
+ * 6. Apply reserve percentage
+ * 
+ * @param input - Foundation input parameters
+ * @returns Foundation result with all material calculations
  */
 export function calculateFoundation(input: FoundationInput): FoundationResult {
 	const {

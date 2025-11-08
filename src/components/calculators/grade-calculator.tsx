@@ -37,6 +37,28 @@ interface GradeResult {
 	courses: Array<Course & { points: number }>;
 }
 
+/**
+ * Grade Calculator Component
+ * 
+ * A React component for calculating GPA and weighted averages.
+ * 
+ * Features:
+ * - Multiple grading systems (5-point, 4-point, 100-point, letter)
+ * - Multiple courses support
+ * - Credit hours/weights
+ * - GPA calculation
+ * - Weighted average calculation
+ * - Add/remove courses dynamically
+ * - Responsive design
+ * 
+ * Grading systems:
+ * - 5-point: Russian system (2-5)
+ * - 4-point: US system (0-4)
+ * - 100-point: Percentage system (0-100)
+ * - Letter: Letter grades (A-F)
+ * 
+ * Uses inline calculation logic for GPA and weighted averages.
+ */
 // Конвертация оценок в числовое значение для расчёта
 const convertGradeToNumber = (
 	grade: string,
@@ -79,16 +101,20 @@ const convert100ToGPA = (percentage: number): number => {
 };
 
 export default function GradeCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.grade-calculator');
+	
+	// Form state management
 	const [input, setInput] = useState<GradeCalculatorInput>({
-		gradingSystem: '5-point',
+		gradingSystem: '5-point', // Grading system (5-point, 4-point, 100-point, letter)
 		courses: [
+			// Default courses (example)
 			{ id: '1', name: 'Математика', grade: '5', credits: 3 },
 			{ id: '2', name: 'Физика', grade: '4', credits: 4 },
 		],
 	});
-	const [result, setResult] = useState<GradeResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<GradeResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const handleInputChange = (
 		field: keyof GradeCalculatorInput,

@@ -40,22 +40,42 @@ const FRACTION_DENSITIES: Record<string, number> = {
 	'40-70': 1350,
 };
 
+/**
+ * Gravel Calculator Component
+ * 
+ * A React component for calculating gravel needed for construction projects.
+ * 
+ * Features:
+ * - Multiple calculation types (foundation, road, drainage)
+ * - Multiple input methods (dimensions, area, volume)
+ * - Gravel fraction selection
+ * - Density calculation
+ * - Reserve percentage calculation
+ * - Volume and weight calculation
+ * - Responsive design
+ * 
+ * Uses predefined density values for different gravel fractions.
+ * Uses inline calculation logic for gravel quantity and weight.
+ */
 export default function GravelCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.gravel');
+	
+	// Form state management
 	const [input, setInput] = useState<GravelInput>({
-		calculationType: 'foundation',
-		inputMethod: 'dimensions',
-		length: 0,
-		width: 0,
-		area: 0,
-		thickness: 0.2,
-		volume: 0,
-		fraction: '20-40',
-		density: 1400,
-		reserve: 10,
+		calculationType: 'foundation', // Calculation type (foundation, road, drainage)
+		inputMethod: 'dimensions', // Input method (dimensions, area, volume)
+		length: 0, // Length (m)
+		width: 0, // Width (m)
+		area: 0, // Area (m²)
+		thickness: 0.2, // Thickness (m, default: 0.2)
+		volume: 0, // Volume (m³)
+		fraction: '20-40', // Gravel fraction (5-10, 10-20, 20-40, 40-70)
+		density: 1400, // Density (kg/m³)
+		reserve: 10, // Reserve percentage (%)
 	});
-	const [result, setResult] = useState<GravelResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<GravelResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const calculationTypes = t.raw('options.calculationTypes');
 	const fractions = t.raw('options.fractions');

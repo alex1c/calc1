@@ -38,18 +38,39 @@ interface LpgPaybackResult {
 	savingsAfterThreeYears: number;
 }
 
+/**
+ * LPG Payback Calculator Component
+ * 
+ * A React component for calculating LPG (liquefied petroleum gas) installation payback period.
+ * 
+ * Features:
+ * - Installation cost input
+ * - Annual mileage input
+ * - Fuel consumption comparison (gasoline vs LPG)
+ * - Price comparison (gasoline vs LPG)
+ * - Payback period calculation (months/years)
+ * - Annual and monthly savings calculation
+ * - Cost per kilometer calculation
+ * - Savings projection (1, 2, 3 years)
+ * - Responsive design
+ * 
+ * Uses inline calculation logic for payback analysis.
+ */
 export default function LpgPaybackCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.lpg-payback');
+	
+	// Form state management
 	const [input, setInput] = useState<LpgPaybackInput>({
-		installationCost: 45000,
-		annualMileage: 20000,
-		fuelConsumption: 10,
-		gasConsumption: 12,
-		gasolinePrice: 55,
-		gasPrice: 35,
+		installationCost: 45000, // LPG installation cost (₽)
+		annualMileage: 20000, // Annual mileage (km)
+		fuelConsumption: 10, // Gasoline consumption (L/100km)
+		gasConsumption: 12, // LPG consumption (L/100km)
+		gasolinePrice: 55, // Gasoline price (₽/L)
+		gasPrice: 35, // LPG price (₽/L)
 	});
-	const [result, setResult] = useState<LpgPaybackResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<LpgPaybackResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const handleInputChange = (
 		field: keyof LpgPaybackInput,

@@ -1,6 +1,25 @@
 /**
- * Equation solver library for linear and quadratic equations
- * Supports multiple equation types with step-by-step solutions
+ * Equation Solver Library
+ *
+ * Provides functionality for solving linear and quadratic equations with step-by-step solutions.
+ *
+ * Features:
+ * - Equation type detection (linear, quadratic, unsupported)
+ * - Linear equation solving (ax + b = 0)
+ * - Quadratic equation solving (ax² + bx + c = 0)
+ * - Discriminant calculation for quadratic equations
+ * - Step-by-step solution display
+ * - Complex roots detection
+ * - Equation parsing from string input
+ *
+ * Equation types:
+ * - Linear: Equations with x but no x² (e.g., "2x + 5 = 15")
+ * - Quadratic: Equations with x² (e.g., "x² + 2x + 1 = 0")
+ * - Unsupported: Other equation types
+ *
+ * Solution methods:
+ * - Linear: x = -b/a
+ * - Quadratic: x = (-b ± √D) / (2a) where D = b² - 4ac
  */
 
 /**

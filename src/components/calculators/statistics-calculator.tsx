@@ -14,48 +14,89 @@ import { Calculator, BarChart3, TrendingUp, Minus, Plus } from 'lucide-react';
 
 /**
  * Statistics Calculator Component
- * Calculates various statistical measures from a dataset
+ * 
+ * A React component for calculating various statistical measures from a dataset.
+ * 
+ * Features:
+ * - Accepts numbers separated by commas, spaces, or newlines
+ * - Calculates multiple statistics: mean, median, mode, range, variance, standard deviation
+ * - Input validation with error messages
+ * - Animated result cards
+ * - Responsive design
+ * 
+ * Statistical measures calculated:
+ * - Mean (average)
+ * - Median (middle value)
+ * - Mode (most frequent value)
+ * - Range (difference between max and min)
+ * - Variance (measure of spread)
+ * - Standard deviation (square root of variance)
+ * 
+ * Uses the statistics calculation library from @/lib/calculators/statistics
+ * for all mathematical operations.
  */
 export default function StatisticsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.statistics');
 
 	// State for input and results
-	const [input, setInput] = useState('');
-	const [result, setResult] = useState<StatisticsResult | null>(null);
-	const [error, setError] = useState<string | null>(null);
+	const [input, setInput] = useState(''); // Raw input string (numbers separated by commas/spaces/newlines)
+	const [result, setResult] = useState<StatisticsResult | null>(null); // Calculated statistics result
+	const [error, setError] = useState<string | null>(null); // Validation error message
 
 	/**
 	 * Handle calculate button click
+	 * 
+	 * Validates input, parses numbers, and calculates statistics.
+	 * 
+	 * Process:
+	 * 1. Clear previous errors
+	 * 2. Validate input format using validateInput
+	 * 3. Parse input string to array of numbers using parseNumbers
+	 * 4. Calculate statistics using calculateStatistics
+	 * 5. Update result state or error state
 	 */
 	const handleCalculate = () => {
-		setError(null);
+		setError(null); // Clear previous errors
 
+		// Validate input format
 		const validation = validateInput(input);
 		if (!validation.isValid) {
 			setError(validation.error || 'Invalid input');
 			return;
 		}
 
+		// Parse input string to numbers array
 		const numbers = parseNumbers(input);
+		
+		// Calculate all statistics
 		const statistics = calculateStatistics(numbers);
 		setResult(statistics);
 	};
 
 	/**
 	 * Handle clear button click
+	 * 
+	 * Resets all form inputs and clears results and errors.
+	 * Called when user clicks the clear/reset button.
 	 */
 	const handleClear = () => {
-		setInput('');
-		setResult(null);
-		setError(null);
+		setInput(''); // Clear input
+		setResult(null); // Clear result
+		setError(null); // Clear errors
 	};
 
 	/**
 	 * Handle input change
+	 * 
+	 * Updates input state when user types in textarea.
+	 * Clears error state if one exists to allow user to correct input.
+	 * 
+	 * @param e - Change event from textarea element
 	 */
 	const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		setInput(e.target.value);
-		if (error) setError(null);
+		setInput(e.target.value); // Update input value
+		if (error) setError(null); // Clear error when user starts typing
 	};
 
 	/**

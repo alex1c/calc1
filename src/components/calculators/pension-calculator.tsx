@@ -41,28 +41,73 @@ const MINIMUM_POINTS = 30; // Минимальное количество бал
 const MAX_ANNUAL_POINTS = 10; // Максимальное количество баллов за год
 const MAX_SALARY_FOR_CONTRIBUTIONS = 112000; // Максимальная зарплата для начисления баллов
 
+/**
+ * Pension Calculator Component
+ * 
+ * A React component for calculating Russian pension estimates.
+ * 
+ * Features:
+ * - Current age and work experience input
+ * - Average salary input
+ * - Retirement age selection
+ * - Pension points calculation
+ * - Estimated pension calculation
+ * - Fixed payment calculation
+ * - Years to retirement calculation
+ * - Minimum requirements check
+ * - Responsive design
+ * 
+ * Calculation method:
+ * - Based on Russian pension system (2024)
+ * - Fixed payment: 8134 ₽
+ * - Point value: 133.05 ₽
+ * - Minimum experience: 15 years
+ * - Minimum points: 30
+ * - Maximum annual points: 10
+ * 
+ * Uses inline calculation logic based on Russian pension legislation.
+ */
 export default function PensionCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.pension');
+	
+	// Form state management
 	const [input, setInput] = useState<PensionInput>({
-		currentAge: 45,
-		workExperience: 25,
-		averageSalary: 50000,
-		retirementAge: 60,
+		currentAge: 45, // Current age (years)
+		workExperience: 25, // Work experience (years)
+		averageSalary: 50000, // Average salary (₽)
+		retirementAge: 60, // Retirement age (years)
 	});
-	const [result, setResult] = useState<PensionResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<PensionResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes values.
+	 * Clears validation errors on change.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof PensionInput,
 		value: string | number
 	) => {
 		setInput((prev) => ({
 			...prev,
-			[field]: value,
+			[field]: value, // Update field value
 		}));
-		setErrors([]);
+		setErrors([]); // Clear errors on input change
 	};
 
+	/**
+	 * Validate form inputs
+	 * 
+	 * Validates all form inputs for pension calculation.
+	 * 
+	 * @returns Array of validation error messages
+	 */
 	const validateInput = (): string[] => {
 		const validationErrors: string[] = [];
 

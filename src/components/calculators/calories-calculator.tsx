@@ -31,38 +31,69 @@ import {
 
 /**
  * Calories Calculator Component
- * Calculates daily calorie needs and food calories
+ * 
+ * A comprehensive React component for calculating daily calorie needs and food calories.
+ * 
+ * Features:
+ * - Tab-based interface: BMR/TDEE calculation and Food calorie lookup
+ * - BMR (Basal Metabolic Rate) calculation using Harris-Benedict formula
+ * - TDEE (Total Daily Energy Expenditure) calculation with activity multipliers
+ * - Food database search with autocomplete
+ * - Macronutrient breakdown (protein, fat, carbs)
+ * - Weight goal recommendations (loss, maintenance, gain)
+ * - Real-time calculation and validation
+ * - Responsive design with dark mode support
+ * 
+ * Uses the calories calculation library from @/lib/calculators/calories
+ * for all mathematical operations and food database access.
  */
 export default function CaloriesCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.calories');
-	const locale = useLocale();
+	const locale = useLocale(); // Current locale for food name localization
 
-	// Tab state
-	const [activeTab, setActiveTab] = useState<'bmr' | 'food'>('bmr');
+	// Tab state management
+	const [activeTab, setActiveTab] = useState<'bmr' | 'food'>('bmr'); // Active tab: BMR or Food
 
-	// BMR form state
-	const [gender, setGender] = useState<Gender>('male');
-	const [age, setAge] = useState<string>('');
-	const [weight, setWeight] = useState<string>('');
-	const [height, setHeight] = useState<string>('');
+	// BMR form state management
+	const [gender, setGender] = useState<Gender>('male'); // User's gender
+	const [age, setAge] = useState<string>(''); // Age in years (as string for controlled input)
+	const [weight, setWeight] = useState<string>(''); // Weight in kg (as string for controlled input)
+	const [height, setHeight] = useState<string>(''); // Height in cm (as string for controlled input)
 	const [activityLevel, setActivityLevel] =
-		useState<ActivityLevel>('moderate');
-	const [bmrResult, setBmrResult] = useState<BMRResult | null>(null);
-	const [bmrError, setBmrError] = useState<string | null>(null);
+		useState<ActivityLevel>('moderate'); // Activity level multiplier
+	const [bmrResult, setBmrResult] = useState<BMRResult | null>(null); // Calculated BMR/TDEE result
+	const [bmrError, setBmrError] = useState<string | null>(null); // BMR calculation error
 
-	// Food form state
-	const [foodSearch, setFoodSearch] = useState<string>('');
-	const [selectedFood, setSelectedFood] = useState<string>('');
-	const [selectedFoodData, setSelectedFoodData] = useState<any>(null);
-	const [foodWeight, setFoodWeight] = useState<string>('');
-	const [foodResult, setFoodResult] = useState<FoodResult | null>(null);
-	const [foodError, setFoodError] = useState<string | null>(null);
+	// Food form state management
+	const [foodSearch, setFoodSearch] = useState<string>(''); // Food search query
+	const [selectedFood, setSelectedFood] = useState<string>(''); // Selected food key
+	const [selectedFoodData, setSelectedFoodData] = useState<any>(null); // Selected food data object
+	const [foodWeight, setFoodWeight] = useState<string>(''); // Food weight in grams (as string)
+	const [foodResult, setFoodResult] = useState<FoodResult | null>(null); // Calculated food calories
+	const [foodError, setFoodError] = useState<string | null>(null); // Food calculation error
 	const [searchResults, setSearchResults] = useState<
 		Array<{ key: string; data: any }>
-	>([]);
+	>([]); // Food search results array
 
 	/**
 	 * Handle BMR calculation
+	 * 
+	 * Calculates Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE)
+	 * using the Harris-Benedict revised formula with activity level multipliers.
+	 * 
+	 * Process:
+	 * 1. Parse string inputs to numbers
+	 * 2. Validate inputs using validateBMRInput
+	 * 3. Calculate calorie needs using calculateCalorieNeeds
+	 * 4. Update result state or error state
+	 * 
+	 * Results include:
+	 * - BMR: Base calories needed at rest
+	 * - TDEE: Total calories needed with activity
+	 * - Weight loss: TDEE - 15%
+	 * - Weight maintenance: TDEE
+	 * - Weight gain: TDEE + 15%
 	 */
 	const handleBMRCalculation = () => {
 		const numAge = parseFloat(age);
@@ -101,6 +132,21 @@ export default function CaloriesCalculator() {
 
 	/**
 	 * Handle food calculation
+	 * 
+	 * Calculates calories and macronutrients for a selected food item
+	 * based on the specified weight in grams.
+	 * 
+	 * Process:
+	 * 1. Parse weight input to number
+	 * 2. Validate food selection and weight using validateFoodInput
+	 * 3. Calculate calories and macronutrients using calculateFoodCalories
+	 * 4. Update result state or error state
+	 * 
+	 * Results include:
+	 * - Total calories
+	 * - Protein (grams)
+	 * - Fat (grams)
+	 * - Carbohydrates (grams)
 	 */
 	const handleFoodCalculation = () => {
 		const numWeight = parseFloat(foodWeight);
@@ -125,25 +171,43 @@ export default function CaloriesCalculator() {
 
 	/**
 	 * Handle food search
+	 * 
+	 * Performs real-time search of the food database as user types.
+	 * Searches food names in the current locale and returns matching results.
+	 * 
+	 * @param query - Search query string from input field
+	 * 
+	 * Behavior:
+	 * - If query is empty, clears search results
+	 * - If query has text, searches foods and updates results
+	 * - Results are limited to 10 items for performance
 	 */
 	const handleFoodSearch = (query: string) => {
 		setFoodSearch(query);
 		if (query.trim()) {
+			// Search foods using current locale for name matching
 			const results = searchFoods(query, locale);
 			setSearchResults(results);
 		} else {
+			// Clear results when search is empty
 			setSearchResults([]);
 		}
 	};
 
 	/**
 	 * Handle food selection
+	 * 
+	 * Called when user selects a food from search results.
+	 * Updates selected food state and clears search UI.
+	 * 
+	 * @param foodKey - Unique identifier for the selected food
+	 * @param foodData - Food data object containing nutritional information
 	 */
 	const handleFoodSelection = (foodKey: string, foodData: any) => {
 		setSelectedFood(foodKey);
 		setSelectedFoodData(foodData);
-		setFoodSearch('');
-		setSearchResults([]);
+		setFoodSearch(''); // Clear search input
+		setSearchResults([]); // Clear search results dropdown
 	};
 
 	/**

@@ -40,33 +40,74 @@ const ALIMONY_PERCENTAGES: Record<number, number> = {
 	3: 0.5, // 50% - 1/2 (for 3 or more)
 };
 
+/**
+ * Alimony Calculator Component
+ * 
+ * A React component for calculating alimony payments based on Russian Family Code.
+ * 
+ * Features:
+ * - Multiple calculation methods (percentage, fixed, mixed)
+ * - Percentage-based calculation (Article 81 of Family Code)
+ * - Fixed amount calculation
+ * - Mixed calculation (percentage + living wage multiplier)
+ * - Custom percentage option
+ * - Per-child breakdown
+ * - Remaining income calculation
+ * - Responsive design
+ * 
+ * Calculation methods:
+ * - Percentage: Based on income and number of children (25%, 33.33%, 50%)
+ * - Fixed: Fixed monthly amount
+ * - Mixed: Percentage + living wage multiplier
+ * 
+ * Uses inline calculation logic based on Russian Family Code Article 81.
+ */
 export default function AlimonyCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.alimony');
+	
+	// Form state management
 	const [input, setInput] = useState<AlimonyInput>({
-		calculationMethod: 'percentage',
-		childrenCount: 1,
-		monthlyIncome: 50000,
-		fixedAmount: 0,
-		livingWage: 12000,
-		livingWageMultiplier: 1.5,
-		customPercentage: 25,
+		calculationMethod: 'percentage', // Calculation method (percentage, fixed, mixed)
+		childrenCount: 1, // Number of children
+		monthlyIncome: 50000, // Monthly income (₽)
+		fixedAmount: 0, // Fixed monthly amount (₽)
+		livingWage: 12000, // Living wage (₽)
+		livingWageMultiplier: 1.5, // Living wage multiplier
+		customPercentage: 25, // Custom percentage (%)
 	});
-	const [result, setResult] = useState<AlimonyResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<AlimonyResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const calculationMethods = t.raw('options.calculationMethods');
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes values.
+	 * Clears validation errors on change.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof AlimonyInput,
 		value: string | number
 	) => {
 		setInput((prev) => ({
 			...prev,
-			[field]: value,
+			[field]: value, // Update field value
 		}));
-		setErrors([]);
+		setErrors([]); // Clear errors on input change
 	};
 
+	/**
+	 * Validate form inputs
+	 * 
+	 * Validates all form inputs based on calculation method.
+	 * 
+	 * @returns Array of validation error messages
+	 */
 	const validateInput = (): string[] => {
 		const validationErrors: string[] = [];
 

@@ -13,26 +13,49 @@ import {
 	MATERIALS,
 } from '@/lib/calculators/materials';
 
+/**
+ * Materials Calculator Component
+ * 
+ * A React component for calculating construction materials needed for various projects.
+ * 
+ * Features:
+ * - Multiple material types (paint, plaster, primer, putty, tile glue)
+ * - Room dimensions input
+ * - Floor area input (for floor materials)
+ * - Doors and windows area deduction
+ * - Multiple layers support
+ * - Consumption rate calculation
+ * - Reserve percentage calculation
+ * - Package size calculation
+ * - Tile size and grout width consideration (for tile glue)
+ * - Responsive design
+ * 
+ * Uses the materials calculation library from @/lib/calculators/materials
+ * for all mathematical operations.
+ */
 export default function MaterialsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.materials');
-	const [materialType, setMaterialType] = useState('paint');
-	const [result, setResult] = useState<MaterialResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	
+	// Material type and state management
+	const [materialType, setMaterialType] = useState('paint'); // Selected material type
+	const [result, setResult] = useState<MaterialResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
-	// Form state
+	// Form state management
 	const [formData, setFormData] = useState<Partial<MaterialInput>>({
-		roomLength: 0,
-		roomWidth: 0,
-		wallHeight: 0,
-		floorArea: 0,
-		doorsWindowsArea: 0,
-		layers: 2,
-		consumptionRate: MATERIALS[materialType]?.defaultConsumption || 0.12,
-		reservePercentage: 10,
-		packageSize: MATERIALS[materialType]?.defaultPackageSize || 2.5,
-		tileSize: 0,
-		groutWidth: 2,
+		roomLength: 0, // Room length (m)
+		roomWidth: 0, // Room width (m)
+		wallHeight: 0, // Wall height (m)
+		floorArea: 0, // Floor area (m², for floor materials)
+		doorsWindowsArea: 0, // Total area of doors and windows (m²)
+		layers: 2, // Number of layers
+		consumptionRate: MATERIALS[materialType]?.defaultConsumption || 0.12, // Consumption rate (L/m² or kg/m²)
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		packageSize: MATERIALS[materialType]?.defaultPackageSize || 2.5, // Package size (L or kg)
+		tileSize: 0, // Tile size (m², for tile glue)
+		groutWidth: 2, // Grout width (mm, for tile glue)
 	});
 
 	// Update form data when material type changes

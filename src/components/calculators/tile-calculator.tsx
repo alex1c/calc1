@@ -10,20 +10,41 @@ import {
 	TileResult,
 } from '@/lib/calculators/tile';
 
+/**
+ * Tile Calculator Component
+ * 
+ * A React component for calculating tile needed for a room.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Tile dimensions input
+ * - Grout width consideration
+ * - Reserve percentage calculation
+ * - Package quantity calculation
+ * - Area calculation
+ * - Number of tiles calculation
+ * - Responsive design
+ * 
+ * Uses the tile calculation library from @/lib/calculators/tile
+ * for all mathematical operations.
+ */
 export default function TileCalculator() {
+	// Internationalization hooks for translations
 	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.tile');
+	
+	// Form state management
 	const [input, setInput] = useState<Partial<TileInput>>({
-		roomLength: 0,
-		roomWidth: 0,
-		tileLength: 0,
-		tileWidth: 0,
-		packageQuantity: 0,
-		reservePercentage: 10,
-		groutWidth: 2,
+		roomLength: 0, // Room length (m)
+		roomWidth: 0, // Room width (m)
+		tileLength: 0, // Tile length (m)
+		tileWidth: 0, // Tile width (m)
+		packageQuantity: 0, // Tiles per package
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		groutWidth: 2, // Grout width (mm)
 	});
-	const [result, setResult] = useState<TileResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<TileResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const handleInputChange = (
 		field: keyof TileInput,

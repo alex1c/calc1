@@ -10,19 +10,40 @@ import {
 	LaminateResult,
 } from '@/lib/calculators/laminate';
 
+/**
+ * Laminate Calculator Component
+ * 
+ * A React component for calculating laminate flooring needed for a room.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Laminate board dimensions input
+ * - Reserve percentage calculation
+ * - Package quantity calculation
+ * - Area calculation
+ * - Number of boards calculation
+ * - Number of packages calculation
+ * - Responsive design
+ * 
+ * Uses the laminate calculation library from @/lib/calculators/laminate
+ * for all mathematical operations.
+ */
 export default function LaminateCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.laminate');
 	const tCommon = useTranslations('common');
+	
+	// Form state management
 	const [input, setInput] = useState<Partial<LaminateInput>>({
-		roomLength: 0,
-		roomWidth: 0,
-		laminateLength: 0,
-		laminateWidth: 0,
-		packageQuantity: 0,
-		reservePercentage: 10,
+		roomLength: 0, // Room length (m)
+		roomWidth: 0, // Room width (m)
+		laminateLength: 0, // Laminate board length (m)
+		laminateWidth: 0, // Laminate board width (m)
+		packageQuantity: 0, // Boards per package
+		reservePercentage: 10, // Reserve percentage for waste (%)
 	});
-	const [result, setResult] = useState<LaminateResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<LaminateResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const handleInputChange = (
 		field: keyof LaminateInput,

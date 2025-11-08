@@ -1,5 +1,32 @@
-// Leasing calculation logic and interfaces
+/**
+ * Leasing Calculator Library
+ * 
+ * Provides functionality for calculating car leasing costs and payments.
+ * 
+ * Features:
+ * - Down payment calculation (percentage or fixed amount)
+ * - Buyout value calculation (percentage or fixed amount)
+ * - Monthly payment calculation using annuity formula
+ * - Total cost calculation
+ * - Overpayment calculation
+ * - Financing amount calculation
+ * 
+ * Leasing structure:
+ * - Down payment: Initial payment (reduces financing amount)
+ * - Monthly payments: Regular payments over lease term
+ * - Buyout value: Final payment to own the car
+ * 
+ * Calculation method:
+ * - Financing amount = Car value - Down payment - Buyout value
+ * - Monthly payment calculated using annuity formula
+ * - Total cost = Down payment + Total monthly payments + Buyout value
+ * - Overpayment = Total cost - Car value
+ */
 
+/**
+ * Input interface for leasing calculation
+ * Contains car value, down payment, lease term, interest rate, and buyout value
+ */
 export interface LeasingInput {
 	carValue: number;
 	downPayment: number;
@@ -20,6 +47,24 @@ export interface LeasingResult {
 	buyoutAmount: number;
 }
 
+/**
+ * Calculate leasing costs and payments
+ * 
+ * Calculates all leasing costs including down payment, monthly payments,
+ * buyout value, and total cost.
+ * 
+ * Algorithm:
+ * 1. Calculate down payment amount (percentage or fixed)
+ * 2. Calculate buyout amount (percentage or fixed)
+ * 3. Calculate financing amount = car value - down payment - buyout
+ * 4. Calculate monthly payment using annuity formula
+ * 5. Calculate total payments = monthly payment × lease term
+ * 6. Calculate total cost = down payment + total payments + buyout
+ * 7. Calculate overpayment = total cost - car value
+ * 
+ * @param input - Leasing input parameters
+ * @returns Leasing result with all cost calculations
+ */
 export function calculateLeasing(input: LeasingInput): LeasingResult {
 	const {
 		carValue,

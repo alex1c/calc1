@@ -1,6 +1,33 @@
-// Concrete calculator
-// Extensible architecture for different concrete grades
+/**
+ * Concrete Calculator Library
+ * 
+ * Provides functionality for calculating concrete mix proportions and material quantities.
+ * 
+ * Features:
+ * - Multiple concrete grades (M100, M150, M200, M250, M300, M350, M400)
+ * - Custom proportion input
+ * - Volume unit conversion (m³, liters)
+ * - Material quantity calculation (cement, sand, gravel, water)
+ * - Water-cement ratio calculation
+ * - Output unit conversion (kg, tons, liters, m³)
+ * - Bag calculation (50kg cement bags)
+ * 
+ * Concrete grades:
+ * - Each grade has predefined proportions and cement content
+ * - Grades range from M100 (low strength) to M400 (high strength)
+ * - Water-cement ratio affects concrete strength and workability
+ * 
+ * Calculation method:
+ * - Calculates total mix volume
+ * - Determines material quantities based on proportions
+ * - Calculates water based on water-cement ratio
+ * - Converts to requested output units
+ */
 
+/**
+ * Input interface for concrete calculation
+ * Contains volume, grade, proportions, and output unit preferences
+ */
 export interface ConcreteInput {
 	// Volume
 	volume: number; // in cubic meters
@@ -157,6 +184,25 @@ export function convertTonsToKg(tons: number): number {
 
 /**
  * Calculate concrete components
+ */
+/**
+ * Calculate concrete mix proportions and material quantities
+ * 
+ * Calculates the amount of cement, sand, gravel, and water needed
+ * for a given concrete volume based on grade and proportions.
+ * 
+ * Algorithm:
+ * 1. Convert volume to cubic meters if needed
+ * 2. Get concrete grade data (cement, sand, gravel per m³)
+ * 3. Calculate material quantities per m³ based on proportions
+ * 4. Calculate water based on water-cement ratio
+ * 5. Multiply by volume to get total quantities
+ * 6. Convert to requested output units
+ * 7. Calculate number of cement bags (50kg each)
+ * 
+ * @param input - Concrete input with volume, grade, proportions, and output units
+ * @returns Concrete result with material quantities and proportions
+ * @throws Error if concrete grade is unsupported
  */
 export function calculateConcrete(input: ConcreteInput): ConcreteResult {
 	const {

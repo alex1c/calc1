@@ -22,12 +22,31 @@ interface ZodiacResult {
 	description: string;
 }
 
+/**
+ * Zodiac Calculator Component
+ * 
+ * A React component for determining zodiac signs based on birth dates.
+ * 
+ * Features:
+ * - Birth date input
+ * - Zodiac sign determination
+ * - Element and quality information
+ * - Zodiac sign description
+ * - Date range display
+ * - Copy results to clipboard
+ * - Responsive design
+ * 
+ * Supports all 12 zodiac signs with their date ranges, elements, and qualities.
+ */
 export default function ZodiacCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.zodiacCalculator');
-	const [birthDate, setBirthDate] = useState('');
-	const [result, setResult] = useState<ZodiacResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	
+	// Form state management
+	const [birthDate, setBirthDate] = useState(''); // Birth date (YYYY-MM-DD format)
+	const [result, setResult] = useState<ZodiacResult | null>(null); // Calculated zodiac result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Zodiac signs data
 	const zodiacSigns: ZodiacSign[] = [

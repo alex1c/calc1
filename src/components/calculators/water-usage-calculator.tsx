@@ -19,17 +19,40 @@ interface WaterUsageResult {
 	scenario: string;
 }
 
+/**
+ * Water Usage Calculator Component
+ * 
+ * A React component for calculating water consumption and costs.
+ * 
+ * Features:
+ * - Scenario selection (residential, apartment, office, construction, commercial)
+ * - Number of residents input
+ * - Water price input (unified, hot, cold)
+ * - Losses percentage input
+ * - Consumption calculation (daily, monthly, yearly)
+ * - Cost calculation (daily, monthly, yearly)
+ * - Hot and cold water breakdown
+ * - Copy results to clipboard
+ * - PDF export
+ * - Responsive design
+ * 
+ * Uses predefined water consumption norms based on scenario type.
+ * Uses inline calculation logic for water consumption and costs.
+ */
 export default function WaterUsageCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.waterUsage');
-	const [scenario, setScenario] = useState<string>('residential');
-	const [residents, setResidents] = useState<number>(1);
-	const [waterPrice, setWaterPrice] = useState<number>(50);
-	const [hotWaterPrice, setHotWaterPrice] = useState<number>(80);
-	const [coldWaterPrice, setColdWaterPrice] = useState<number>(30);
-	const [losses, setLosses] = useState<number>(5);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<WaterUsageResult | null>(null);
-	const [copied, setCopied] = useState(false);
+	
+	// Form state management
+	const [scenario, setScenario] = useState<string>('residential'); // Usage scenario (residential, apartment, office, etc.)
+	const [residents, setResidents] = useState<number>(1); // Number of residents
+	const [waterPrice, setWaterPrice] = useState<number>(50); // Unified water price (₽/m³)
+	const [hotWaterPrice, setHotWaterPrice] = useState<number>(80); // Hot water price (₽/m³)
+	const [coldWaterPrice, setColdWaterPrice] = useState<number>(30); // Cold water price (₽/m³)
+	const [losses, setLosses] = useState<number>(5); // Water losses percentage (%)
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<WaterUsageResult | null>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const calculateWaterUsage = () => {
 		setIsCalculating(true);

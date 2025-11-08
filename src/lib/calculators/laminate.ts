@@ -1,6 +1,28 @@
-// Laminate calculator
-// Calculation of laminate quantity for flooring
+/**
+ * Laminate Calculator Library
+ * 
+ * Provides functionality for calculating laminate flooring materials needed for a room.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Laminate board dimensions input
+ * - Reserve percentage calculation
+ * - Package quantity calculation
+ * - Area calculation
+ * - Number of boards calculation
+ * - Number of packages calculation
+ * 
+ * Calculation method:
+ * - Calculates room area
+ * - Calculates laminate board area
+ * - Calculates total boards needed with reserve
+ * - Calculates number of packages needed
+ */
 
+/**
+ * Input interface for laminate calculation
+ * Contains room dimensions, laminate dimensions, and package information
+ */
 export interface LaminateInput {
 	// Room dimensions
 	roomLength: number; // in meters
@@ -35,7 +57,22 @@ export interface LaminateResult {
 }
 
 /**
- * Calculate laminate quantity
+ * Calculate laminate quantity needed for room
+ * 
+ * Calculates the number of laminate boards and packages needed based on:
+ * - Room area (length × width)
+ * - Laminate board area (length × width)
+ * - Reserve percentage for waste
+ * - Package quantity (boards per package)
+ * 
+ * Algorithm:
+ * 1. Calculate room area in m²
+ * 2. Calculate laminate board area in m² (convert cm² to m²)
+ * 3. Calculate total boards needed = (room area / board area) × (1 + reserve%)
+ * 4. Calculate packages needed = ceil(total boards / package quantity)
+ * 
+ * @param input - Laminate input parameters
+ * @returns Laminate result with area calculations and quantities
  */
 export function calculateLaminate(input: LaminateInput): LaminateResult {
 	const {

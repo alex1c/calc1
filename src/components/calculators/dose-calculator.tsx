@@ -28,25 +28,64 @@ import {
 	DoseResult,
 } from '@/lib/calculators/dose';
 
+/**
+ * Dose Calculator Component
+ * 
+ * A React component for calculating medication dosages based on body weight.
+ * 
+ * Features:
+ * - Weight-based dosage calculation
+ * - Support for kg and lbs units
+ * - Frequency-based daily dose calculation
+ * - Maximum daily dose validation
+ * - Safety warnings for overdosage
+ * - Real-time calculation with debouncing
+ * - Responsive design
+ * 
+ * Calculation formula:
+ * - Single dose = (weight × dosage per kg) / frequency
+ * - Daily dose = single dose × frequency
+ * - Validates against maximum daily dose if provided
+ * 
+ * Uses the dose calculation library from @/lib/calculators/dose
+ * for all mathematical operations.
+ */
 export default function DoseCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.dose');
+	
+	// Form state management
 	const [input, setInput] = useState<DoseInput>({
-		weight: 70,
-		dosage: 10,
-		frequency: 2,
-		maxDailyDose: undefined,
-		unit: 'kg',
+		weight: 70, // Body weight (default: 70 kg)
+		dosage: 10, // Dosage per kg (default: 10 mg/kg)
+		frequency: 2, // Frequency per day (default: 2 times)
+		maxDailyDose: undefined, // Optional maximum daily dose limit
+		unit: 'kg', // Weight unit (kg or lbs)
 	});
-	const [result, setResult] = useState<DoseResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<DoseResult | null>(null); // Calculated dose result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
-	// Auto-calculate when input changes
+	/**
+	 * Auto-calculate when input changes
+	 * 
+	 * Effect hook that automatically triggers calculation when input changes.
+	 * Uses debouncing (500ms delay) to avoid excessive calculations while user is typing.
+	 * 
+	 * Dependencies:
+	 * - input: Form input values
+	 * 
+	 * Behavior:
+	 * - Waits 500ms after input changes before calculating
+	 * - Only calculates if all required inputs are valid (weight > 0, dosage > 0, frequency > 0)
+	 * - Clears timeout if component unmounts or input changes again
+	 */
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			// Only calculate if input is valid
 			if (input.weight > 0 && input.dosage > 0 && input.frequency > 0) {
 				setIsCalculating(true);
 				try {
+					// Calculate medication dose
 					const doseResult = calculateDose(input);
 					setResult(doseResult);
 				} catch (error) {
@@ -58,36 +97,52 @@ export default function DoseCalculator() {
 			} else {
 				setResult(null);
 			}
-		}, 500); // Debounce calculation
+		}, 500); // Debounce calculation by 500ms
 
-		return () => clearTimeout(timer);
+		return () => clearTimeout(timer); // Cleanup on unmount or change
 	}, [input]);
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes values.
+	 * Validates numeric inputs to prevent invalid values.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (number or string)
+	 */
 	const handleInputChange = (
 		field: keyof DoseInput,
 		value: number | string
 	) => {
-		// Validate numeric inputs
+		// Validate numeric inputs with field-specific ranges
 		if (typeof value === 'number') {
-			if (field === 'weight' && (value < 0 || value > 500)) return;
-			if (field === 'dosage' && (value < 0 || value > 1000)) return;
-			if (field === 'frequency' && (value < 1 || value > 4)) return;
+			if (field === 'weight' && (value < 0 || value > 500)) return; // Weight: 0-500
+			if (field === 'dosage' && (value < 0 || value > 1000)) return; // Dosage: 0-1000 mg/kg
+			if (field === 'frequency' && (value < 1 || value > 4)) return; // Frequency: 1-4 times/day
 			if (
 				field === 'maxDailyDose' &&
 				value !== undefined &&
 				(value < 0 || value > 10000)
 			)
-				return;
+				return; // Max daily dose: 0-10000
 		}
 
 		setInput((prev) => ({
 			...prev,
-			[field]: value,
+			[field]: value, // Update field value
 		}));
 	};
 
+	/**
+	 * Handle unit toggle
+	 * 
+	 * Switches between kg and lbs weight units.
+	 * Automatically converts weight value when unit changes.
+	 */
 	const handleUnitToggle = () => {
-		const newUnit = input.unit === 'kg' ? 'lbs' : 'kg';
+		const newUnit = input.unit === 'kg' ? 'lbs' : 'kg'; // Toggle unit
+		// Convert weight to new unit
 		const convertedWeight = convertWeight(
 			input.weight,
 			input.unit,
@@ -96,8 +151,8 @@ export default function DoseCalculator() {
 
 		setInput((prev) => ({
 			...prev,
-			unit: newUnit,
-			weight: convertedWeight,
+			unit: newUnit, // Update unit
+			weight: convertedWeight, // Update weight with converted value
 		}));
 	};
 

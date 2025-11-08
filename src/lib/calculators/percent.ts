@@ -1,15 +1,30 @@
 /**
- * Percentage Calculator Utility Functions
- *
- * This module provides all the calculation functions needed for the percentage calculator.
- * Each function handles a specific type of percentage calculation with proper validation.
+ * Percentage Calculator Library
+ * 
+ * Provides comprehensive percentage calculation functionality for various use cases.
+ * Supports four main calculation types:
+ * 
+ * 1. Find percentage of a number: What is X% of Y?
+ * 2. Find what percentage: What percentage is X of Y?
+ * 3. Find number from percentage: X is Y% of what number?
+ * 4. Increase/decrease by percentage: Increase/decrease X by Y%
+ * 
+ * All functions include:
+ * - Input validation
+ * - Formula generation for display
+ * - Localized description keys for i18n
+ * - Result formatting
  */
 
+/**
+ * Result interface for percentage calculations
+ * Contains the calculated result and metadata for display
+ */
 export interface PercentCalculationResult {
-	result: number;
-	formula: string;
-	descriptionKey: string;
-	descriptionParams: Record<string, number>;
+	result: number; // Calculated numeric result
+	formula: string; // Human-readable formula string
+	descriptionKey: string; // Translation key for result description
+	descriptionParams: Record<string, number>; // Parameters for description interpolation
 }
 
 /**

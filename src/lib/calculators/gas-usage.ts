@@ -1,6 +1,30 @@
 /**
- * Gas Usage Calculator Logic
- * Calculates natural gas consumption and costs for heating, cooking, or water heating
+ * Gas Usage Calculator Library
+ *
+ * Provides functionality for calculating natural gas consumption and costs for various purposes.
+ *
+ * Features:
+ * - Multiple gas usage purposes (heating, water heating, cooking)
+ * - Power-based consumption calculation
+ * - Efficiency consideration
+ * - Daily, monthly, and period consumption calculation
+ * - Cost calculation based on gas tariff
+ * - Consumption per hour calculation
+ * - Typical consumption ranges for equipment types
+ *
+ * Gas usage purposes:
+ * - Heating: Space heating with gas boiler (10-40 kW, 1.2-4.5 m³/h)
+ * - Water Heating: Hot water supply (15-30 kW, 1.5-2.5 m³/h)
+ * - Cooking: Gas stove (3-8 kW, 0.6-1.2 m³/h)
+ *
+ * Calculation method:
+ * - Energy per hour = Equipment power (kW)
+ * - Gas consumption per hour = Energy / 10 (1 m³ gas ≈ 10 kWh)
+ * - Adjusted consumption = consumption / efficiency
+ * - Daily consumption = consumption per hour × hours per day
+ * - Costs = consumption × gas tariff
+ *
+ * Conversion: 1 m³ of natural gas ≈ 10 kWh of energy
  */
 
 export interface GasUsageInput {
@@ -99,7 +123,19 @@ export const GAS_EQUIPMENT_TYPES: GasEquipmentType[] = [
 ];
 
 /**
- * Validates input parameters for gas usage calculation
+ * Validate input parameters for gas usage calculation
+ *
+ * Performs validation checks:
+ * - Gas purpose is specified
+ * - Area (for heating) is positive and not too large (max 10000 m²)
+ * - Hours per day is between 0 and 24
+ * - Power is between 0 and 100 kW
+ * - Efficiency is between 10% and 100%
+ * - Tariff is non-negative
+ * - Period days is between 1 and 365
+ *
+ * @param input - Gas usage input parameters
+ * @returns Validation result with boolean status and array of error messages
  */
 export function validateGasUsageInput(input: GasUsageInput): {
 	isValid: boolean;
@@ -146,7 +182,28 @@ export function validateGasUsageInput(input: GasUsageInput): {
 }
 
 /**
- * Calculates gas usage and costs based on input parameters
+ * Calculate gas usage and costs based on input parameters
+ *
+ * Calculates:
+ * - Gas consumption per hour (m³/h)
+ * - Daily gas consumption (m³)
+ * - Monthly gas consumption (m³, 30 days)
+ * - Period gas consumption (m³)
+ * - Total energy consumption (kWh)
+ * - Daily, monthly, and period costs
+ *
+ * Algorithm:
+ * 1. Calculate energy per hour = equipment power (kW)
+ * 2. Calculate gas consumption per hour = energy / 10 (1 m³ ≈ 10 kWh)
+ * 3. Adjust for efficiency: adjusted consumption = consumption / (efficiency / 100)
+ * 4. Calculate daily consumption = consumption per hour × hours per day
+ * 5. Calculate monthly and period consumption
+ * 6. Calculate total energy = (power × hours × days) / efficiency
+ * 7. Calculate costs = consumption × tariff
+ *
+ * @param input - Gas usage input parameters
+ * @returns Gas usage result with consumption, energy, and costs
+ * @throws Error if validation fails or gas purpose is invalid
  */
 export function calculateGasUsage(input: GasUsageInput): GasUsageResult {
 	const validation = validateGasUsageInput(input);

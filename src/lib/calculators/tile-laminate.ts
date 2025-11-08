@@ -65,7 +65,24 @@ export const FLOORING_TYPES: Record<string, FlooringConfig> = {
 };
 
 /**
- * Calculate tile quantity
+ * Calculate tile quantity needed for floor tiling
+ * 
+ * Calculates number of tiles and packages needed based on:
+ * - Room dimensions (length × width)
+ * - Tile dimensions (length × width in cm)
+ * - Package quantity (tiles per package)
+ * - Reserve percentage for waste
+ * - Grout width (affects effective tile area)
+ * 
+ * Algorithm:
+ * 1. Calculate room area in m²
+ * 2. Calculate tile area in m² (convert from cm²)
+ * 3. Adjust for grout width if specified
+ * 4. Calculate total tiles needed with reserve
+ * 5. Calculate packages needed (round up)
+ * 
+ * @param input - Tile-laminate input parameters
+ * @returns Tile calculation result with quantities and areas
  */
 export function calculateTile(input: TileLaminateInput): TileLaminateResult {
 	const {
@@ -104,7 +121,24 @@ export function calculateTile(input: TileLaminateInput): TileLaminateResult {
 }
 
 /**
- * Calculate laminate quantity
+ * Calculate laminate quantity needed for floor installation
+ * 
+ * Calculates number of laminate boards and packages needed based on:
+ * - Room dimensions (length × width)
+ * - Laminate board dimensions (length × width in cm)
+ * - Package quantity (boards per package)
+ * - Reserve percentage for waste
+ * 
+ * Algorithm:
+ * 1. Calculate room area in m²
+ * 2. Calculate board area in m² (convert from cm²)
+ * 3. Calculate total boards needed with reserve
+ * 4. Calculate packages needed (round up)
+ * 
+ * Note: Laminate does not require grout, so grout width is ignored.
+ * 
+ * @param input - Tile-laminate input parameters
+ * @returns Laminate calculation result with quantities and areas
  */
 export function calculateLaminate(
 	input: TileLaminateInput
@@ -145,7 +179,14 @@ export function calculateLaminate(
 }
 
 /**
- * Main calculation function
+ * Main calculation function for tile or laminate flooring
+ * 
+ * Routes to appropriate calculation function based on flooring type:
+ * - Tile: Uses calculateTile() with grout width consideration
+ * - Laminate: Uses calculateLaminate() without grout
+ * 
+ * @param input - Tile-laminate input parameters
+ * @returns Calculation result with quantities and areas
  */
 export function calculateTileLaminate(
 	input: TileLaminateInput
@@ -161,7 +202,17 @@ export function calculateTileLaminate(
 }
 
 /**
- * Validate input data
+ * Validate tile-laminate calculation input
+ * 
+ * Performs validation checks:
+ * - Room dimensions are positive
+ * - Element dimensions are positive
+ * - Package quantity is positive
+ * - Reserve percentage is between 0 and 100
+ * - Grout width is non-negative (for tile)
+ * 
+ * @param input - Partial tile-laminate input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateTileLaminateInput(
 	input: Partial<TileLaminateInput>

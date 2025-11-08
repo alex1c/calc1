@@ -20,23 +20,43 @@ import {
 	RoofResult,
 } from '@/lib/calculators/roof';
 
+/**
+ * Roof Calculator Component
+ * 
+ * A React component for calculating roof materials and dimensions.
+ * 
+ * Features:
+ * - Multiple roof types (gable, hip, flat, etc.)
+ * - Roof angle calculation
+ * - Material quantity calculation
+ * - Overhang support
+ * - Reserve percentage calculation
+ * - Unit conversion (meters/feet)
+ * - Responsive design
+ * 
+ * Uses the roof calculation library from @/lib/calculators/roof
+ * for all mathematical operations.
+ */
 export default function RoofCalculator() {
+	// Internationalization hooks for translations
 	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.roof');
+	
+	// Form state management
 	const [input, setInput] = useState<Partial<RoofInput>>({
-		houseLength: 0,
-		houseWidth: 0,
-		roofType: '',
-		roofAngle: 30,
-		overhang: 0.5,
-		material: '',
-		materialLength: 0,
-		materialWidth: 0,
-		reservePercentage: 10,
-		units: 'meters',
+		houseLength: 0, // House length (m or ft)
+		houseWidth: 0, // House width (m or ft)
+		roofType: '', // Roof type (gable, hip, flat, etc.)
+		roofAngle: 30, // Roof angle in degrees
+		overhang: 0.5, // Overhang length (m or ft)
+		material: '', // Roofing material type
+		materialLength: 0, // Material sheet length (m or ft)
+		materialWidth: 0, // Material sheet width (m or ft)
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		units: 'meters', // Measurement units (meters or feet)
 	});
-	const [result, setResult] = useState<RoofResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<RoofResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const roofTypeOptions = getRoofTypeOptions(t);
 	const materialOptions = getRoofMaterialOptions(t);

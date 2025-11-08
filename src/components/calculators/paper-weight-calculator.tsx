@@ -8,14 +8,32 @@ import {
 	type PaperWeightInput,
 } from '@/lib/calculators/paper-weight';
 
+/**
+ * Paper Weight Calculator Component
+ * 
+ * A React component for calculating paper weight based on sheet count, density, and format.
+ * 
+ * Features:
+ * - Number of sheets input
+ * - Paper density selection (g/m²)
+ * - Paper format selection (A4, A3, A5, etc.)
+ * - Total weight calculation
+ * - Responsive design
+ * 
+ * Uses the paper weight calculation library from @/lib/calculators/paper-weight
+ * for all mathematical operations.
+ */
 export default function PaperWeightCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations();
+	
+	// Form state management
 	const [input, setInput] = useState<PaperWeightInput>({
-		sheets: 1,
-		density: 80,
-		format: 'A4',
+		sheets: 1, // Number of sheets
+		density: 80, // Paper density (g/m²)
+		format: 'A4', // Paper format (A4, A3, A5, etc.)
 	});
-	const [result, setResult] = useState<any>(null);
+	const [result, setResult] = useState<any>(null); // Calculated result
 
 	const handleCalculate = () => {
 		const calculation = calculatePaperWeight(input);

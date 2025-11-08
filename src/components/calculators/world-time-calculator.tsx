@@ -28,26 +28,52 @@ import {
 	WorldTimeSettings,
 } from '@/lib/calculators/world-time';
 
+/**
+ * World Time Calculator Component
+ * 
+ * A React component for displaying current time in multiple cities worldwide.
+ * 
+ * Features:
+ * - Multiple city selection
+ * - Real-time clock updates
+ * - City search functionality
+ * - Popular cities quick selection
+ * - Time zone information
+ * - Daylight saving time (DST) support
+ * - Customizable display format (12h/24h)
+ * - Date format customization
+ * - Add/remove cities dynamically
+ * - Copy time to clipboard
+ * - Responsive design
+ * 
+ * Uses the world time calculation library from @/lib/calculators/world-time
+ * for all time zone calculations.
+ */
 export default function WorldTimeCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.worldTime');
+	
+	// Cities and time state management
 	const [selectedCities, setSelectedCities] = useState<WorldTimeCity[]>(
-		getPopularCities().slice(0, 4)
+		getPopularCities().slice(0, 4) // Default: first 4 popular cities
 	);
-	const [worldTimes, setWorldTimes] = useState<WorldTimeDisplay[]>([]);
-	const [searchQuery, setSearchQuery] = useState('');
-	const [searchResults, setSearchResults] = useState<WorldTimeCity[]>([]);
-	const [showSearch, setShowSearch] = useState(false);
-	const [showSettings, setShowSettings] = useState(false);
+	const [worldTimes, setWorldTimes] = useState<WorldTimeDisplay[]>([]); // Current times for selected cities
+	const [searchQuery, setSearchQuery] = useState(''); // City search query
+	const [searchResults, setSearchResults] = useState<WorldTimeCity[]>([]); // Search results
+	const [showSearch, setShowSearch] = useState(false); // Show search panel flag
+	const [showSettings, setShowSettings] = useState(false); // Show settings panel flag
+	
+	// Display settings
 	const [settings, setSettings] = useState<WorldTimeSettings>({
-		selectedCities: [],
-		showSeconds: true,
-		showDate: true,
-		showDayOfWeek: true,
-		showDST: true,
-		timeFormat: '24h',
-		dateFormat: 'DD/MM/YYYY',
+		selectedCities: [], // Selected cities for settings
+		showSeconds: true, // Show seconds in time display
+		showDate: true, // Show date in time display
+		showDayOfWeek: true, // Show day of week
+		showDST: true, // Show daylight saving time indicator
+		timeFormat: '24h', // Time format (12h, 24h)
+		dateFormat: 'DD/MM/YYYY', // Date format
 	});
-	const [isMounted, setIsMounted] = useState(false);
+	const [isMounted, setIsMounted] = useState(false); // Component mount state
 	const [copiedCity, setCopiedCity] = useState<string | null>(null);
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 

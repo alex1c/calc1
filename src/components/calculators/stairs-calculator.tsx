@@ -22,15 +22,36 @@ interface StairsResult {
 	recommendations: string[];
 }
 
+/**
+ * Stairs Calculator Component
+ * 
+ * A React component for calculating stairs dimensions and parameters.
+ * 
+ * Features:
+ * - Total height input
+ * - Step depth and height calculation
+ * - Stairs type selection (straight, L-shaped, U-shaped)
+ * - Comfort level calculation
+ * - Angle calculation
+ * - Recommendations
+ * - Copy results to clipboard
+ * - PDF export
+ * - Responsive design
+ * 
+ * Uses inline calculation logic based on building standards and ergonomics.
+ */
 export default function StairsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.stairsCalculator');
-	const [totalHeight, setTotalHeight] = useState<number>(0);
-	const [stepDepth, setStepDepth] = useState<number>(0);
-	const [stepHeight, setStepHeight] = useState<number>(0);
-	const [stairsType, setStairsType] = useState<string>('straight');
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<StairsResult | null>(null);
-	const [copied, setCopied] = useState(false);
+	
+	// Form state management
+	const [totalHeight, setTotalHeight] = useState<number>(0); // Total stairs height (m)
+	const [stepDepth, setStepDepth] = useState<number>(0); // Step depth (m)
+	const [stepHeight, setStepHeight] = useState<number>(0); // Step height (m)
+	const [stairsType, setStairsType] = useState<string>('straight'); // Stairs type (straight, L-shaped, U-shaped)
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<StairsResult | null>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const calculateStairs = () => {
 		setIsCalculating(true);

@@ -11,53 +11,89 @@ import {
 
 /**
  * Equation Calculator Component
- * Solves linear and quadratic equations with step-by-step solutions
+ * 
+ * A React component for solving linear and quadratic equations.
+ * 
+ * Features:
+ * - Two input modes: parse equation string or manual coefficient entry
+ * - Linear equation solving: ax + b = 0
+ * - Quadratic equation solving: ax² + bx + c = 0
+ * - Step-by-step solution display
+ * - Input validation
+ * - Responsive design
+ * 
+ * Equation types supported:
+ * - Linear: ax + b = 0 (solution: x = -b/a)
+ * - Quadratic: ax² + bx + c = 0 (solutions using quadratic formula)
+ * 
+ * Uses the equations calculation library from @/lib/calculators/equations
+ * for all mathematical operations.
  */
 export default function EquationsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.equations');
 
-	// State for equation input
-	const [equation, setEquation] = useState('');
-	const [mode, setMode] = useState<'parse' | 'manual'>('parse');
+	// State for equation input (parse mode)
+	const [equation, setEquation] = useState(''); // Equation string to parse
+	const [mode, setMode] = useState<'parse' | 'manual'>('parse'); // Input mode selection
 
-	// State for manual input
+	// State for manual input mode
 	const [equationType, setEquationType] = useState<'linear' | 'quadratic'>(
-		'linear'
+		'linear' // Selected equation type
 	);
-	const [linearA, setLinearA] = useState('');
-	const [linearB, setLinearB] = useState('');
-	const [quadA, setQuadA] = useState('');
-	const [quadB, setQuadB] = useState('');
-	const [quadC, setQuadC] = useState('');
+	const [linearA, setLinearA] = useState(''); // Coefficient a for linear equation
+	const [linearB, setLinearB] = useState(''); // Coefficient b for linear equation
+	const [quadA, setQuadA] = useState(''); // Coefficient a for quadratic equation
+	const [quadB, setQuadB] = useState(''); // Coefficient b for quadratic equation
+	const [quadC, setQuadC] = useState(''); // Coefficient c for quadratic equation
 
 	// State for results
-	const [result, setResult] = useState<EquationSolution | null>(null);
+	const [result, setResult] = useState<EquationSolution | null>(null); // Calculated solution
 
 	/**
 	 * Handle solve button click for parsed equation
+	 * 
+	 * Parses equation string and solves it automatically.
+	 * The parser detects equation type (linear or quadratic) and extracts coefficients.
+	 * 
+	 * Process:
+	 * 1. Check that equation string is not empty
+	 * 2. Parse equation string using parseAndSolve
+	 * 3. Update result state with solution
 	 */
 	const handleSolve = () => {
-		if (!equation.trim()) return;
+		if (!equation.trim()) return; // Don't solve empty equation
 
+		// Parse and solve equation automatically
 		const solution = parseAndSolve(equation);
 		setResult(solution);
 	};
 
 	/**
 	 * Handle solve button click for manual coefficients
+	 * 
+	 * Solves equation using manually entered coefficients.
+	 * Routes to appropriate solver based on equation type.
+	 * 
+	 * Process:
+	 * 1. Parse coefficient strings to numbers
+	 * 2. Route to linear or quadratic solver based on equationType
+	 * 3. Update result state with solution
 	 */
 	const handleManualSolve = () => {
 		let solution: EquationSolution;
 
 		if (equationType === 'linear') {
-			const a = parseFloat(linearA) || 0;
-			const b = parseFloat(linearB) || 0;
-			solution = solveLinear(a, b);
+			// Linear equation: ax + b = 0
+			const a = parseFloat(linearA) || 0; // Parse coefficient a
+			const b = parseFloat(linearB) || 0; // Parse coefficient b
+			solution = solveLinear(a, b); // Solve linear equation
 		} else {
-			const a = parseFloat(quadA) || 0;
-			const b = parseFloat(quadB) || 0;
-			const c = parseFloat(quadC) || 0;
-			solution = solveQuadratic(a, b, c);
+			// Quadratic equation: ax² + bx + c = 0
+			const a = parseFloat(quadA) || 0; // Parse coefficient a
+			const b = parseFloat(quadB) || 0; // Parse coefficient b
+			const c = parseFloat(quadC) || 0; // Parse coefficient c
+			solution = solveQuadratic(a, b, c); // Solve quadratic equation
 		}
 
 		setResult(solution);
@@ -65,15 +101,18 @@ export default function EquationsCalculator() {
 
 	/**
 	 * Reset calculator
+	 * 
+	 * Clears all form inputs and resets result state.
+	 * Called when user clicks the reset button.
 	 */
 	const handleReset = () => {
-		setEquation('');
-		setLinearA('');
-		setLinearB('');
-		setQuadA('');
-		setQuadB('');
-		setQuadC('');
-		setResult(null);
+		setEquation(''); // Clear parsed equation
+		setLinearA(''); // Clear linear coefficient a
+		setLinearB(''); // Clear linear coefficient b
+		setQuadA(''); // Clear quadratic coefficient a
+		setQuadB(''); // Clear quadratic coefficient b
+		setQuadC(''); // Clear quadratic coefficient c
+		setResult(null); // Clear result
 	};
 
 	return (

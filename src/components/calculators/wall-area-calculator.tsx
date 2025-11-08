@@ -18,13 +18,31 @@ import {
 	getWallsCountOptions,
 } from '@/lib/calculators/wall-area';
 
+/**
+ * Wall Area Calculator Component
+ * 
+ * A React component for calculating wall area for painting or finishing.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Multiple walls support
+ * - Doors and windows area deduction
+ * - Reserve percentage calculation
+ * - Total area calculation
+ * - Responsive design
+ * 
+ * Uses the wall area calculation library from @/lib/calculators/wall-area
+ * for all mathematical operations.
+ */
 export default function WallAreaCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.wallArea');
 	const tCommon = useTranslations('common');
 
-	const [result, setResult] = useState<WallAreaResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	// State management
+	const [result, setResult] = useState<WallAreaResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	// Form state
 	const [formData, setFormData] = useState<

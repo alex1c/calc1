@@ -39,15 +39,39 @@ interface ElectricityResult {
 	}>;
 }
 
+/**
+ * Electricity Usage Calculator Component
+ * 
+ * A React component for calculating electricity consumption and costs for multiple devices.
+ * 
+ * Features:
+ * - Multiple devices support
+ * - Device name, power, quantity input
+ * - Usage hours per day
+ * - Days per month
+ * - Electricity cost per kWh
+ * - Total consumption calculation (daily, monthly, yearly)
+ * - Total cost calculation
+ * - Per-device breakdown
+ * - Add/remove devices dynamically
+ * - Copy results to clipboard
+ * - CSV export
+ * - Responsive design
+ * 
+ * Uses inline calculation logic for electricity consumption and costs.
+ */
 export default function ElectricityUsageCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.electricityUsage');
+	
+	// Devices state management
 	const [devices, setDevices] = useState<Device[]>([
 		{
 			id: '1',
-			name: '',
-			power: 0,
-			quantity: 1,
-			hoursPerDay: 0,
+			name: '', // Device name
+			power: 0, // Device power (W)
+			quantity: 1, // Device quantity
+			hoursPerDay: 0, // Hours of operation per day
 			daysPerMonth: 30,
 		},
 	]);

@@ -12,41 +12,89 @@ import {
 } from '@/lib/calculators/loan';
 import PDFExport from '@/components/common/pdf-export';
 
+/**
+ * Credit Calculator Component
+ * 
+ * A React component for calculating loan payments and schedules.
+ * 
+ * Features:
+ * - Supports both annuity and differentiated payment methods
+ * - Down payment and additional payment support
+ * - Detailed payment schedule generation
+ * - CSV export functionality
+ * - PDF export functionality
+ * - Input validation with error messages
+ * - Currency formatting
+ * - Responsive design
+ * 
+ * Uses the loan calculation library from @/lib/calculators/loan
+ * for all mathematical operations.
+ */
 export default function CreditCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.credit-loan');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<LoanInput>>({
-		loanAmount: 0,
-		termYears: 0,
-		termMonths: 0,
-		interestRate: 0,
-		downPayment: 0,
-		additionalPayment: 0,
-		paymentType: 'annuity',
+		loanAmount: 0, // Total loan amount
+		termYears: 0, // Loan term in years
+		termMonths: 0, // Additional months (added to years)
+		interestRate: 0, // Annual interest rate (%)
+		downPayment: 0, // Optional down payment
+		additionalPayment: 0, // Optional additional monthly payment
+		paymentType: 'annuity', // Payment calculation method
 	});
 
-	const [result, setResult] = useState<LoanResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<LoanResult | null>(null); // Calculated loan result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors array
+	const [isCalculated, setIsCalculated] = useState(false); // Flag indicating if calculation was performed
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form data when user changes input values.
+	 * Converts string inputs to numbers and resets calculation flag.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof LoanInput,
 		value: string | number
 	) => {
+		// Convert string to number, default to 0 if invalid
 		const numValue =
 			typeof value === 'string' ? parseFloat(value) || 0 : value;
 		setFormData((prev) => ({ ...prev, [field]: numValue }));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation flag when inputs change
 	};
 
+	/**
+	 * Handle payment type change
+	 * 
+	 * Updates payment type (annuity or differentiated) and resets calculation.
+	 * 
+	 * @param value - Payment type string ('annuity' or 'differentiated')
+	 */
 	const handlePaymentTypeChange = (value: string) => {
 		setFormData((prev) => ({
 			...prev,
 			paymentType: value as 'annuity' | 'differentiated',
 		}));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation flag
 	};
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and calculates loan payments and schedule.
+	 * 
+	 * Process:
+	 * 1. Validate inputs using validateLoanInput
+	 * 2. Combine termYears and termMonths into total months
+	 * 3. Call calculateLoan with complete input
+	 * 4. Update result state or error state
+	 */
 	const handleCalculate = () => {
 		const validationErrors = validateLoanInput(formData);
 		setErrors(validationErrors);
@@ -70,19 +118,44 @@ export default function CreditCalculator() {
 		setIsCalculated(true);
 	};
 
+	/**
+	 * Handle CSV download
+	 * 
+	 * Exports the payment schedule to CSV format and triggers browser download.
+	 * Creates a blob with CSV data, generates download link, and triggers click.
+	 * 
+	 * File format:
+	 * - Headers: Month, Payment, Interest, Principal, Balance
+	 * - Data rows with comma-separated values
+	 * - All monetary values formatted to 2 decimal places
+	 */
 	const handleDownloadCSV = () => {
 		if (!result) return;
 
+		// Generate CSV string from payment schedule
 		const csv = exportPaymentScheduleToCSV(result.paymentSchedule);
+		
+		// Create blob and download link
 		const blob = new Blob([csv], { type: 'text/csv' });
 		const url = window.URL.createObjectURL(blob);
 		const link = document.createElement('a');
 		link.href = url;
 		link.download = 'payment-schedule.csv';
 		link.click();
+		
+		// Clean up object URL
 		window.URL.revokeObjectURL(url);
 	};
 
+	/**
+	 * Format currency for display
+	 * 
+	 * Formats numeric amount as Russian Ruble currency.
+	 * Uses Intl.NumberFormat for proper locale formatting.
+	 * 
+	 * @param amount - Numeric amount to format
+	 * @returns Formatted currency string (e.g., "1 234 ₽")
+	 */
 	const formatCurrency = (amount: number) => {
 		return new Intl.NumberFormat('ru-RU', {
 			style: 'currency',

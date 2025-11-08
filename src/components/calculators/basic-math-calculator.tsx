@@ -13,26 +13,54 @@ import {
 } from '@/lib/calculators/basic-math';
 
 /**
- * BasicMathCalculator Component
- *
- * A React component that provides a user interface for performing basic arithmetic
- * operations including addition, subtraction, multiplication, and division.
- * Features keyboard support, input validation, and result formatting.
+ * Basic Math Calculator Component
+ * 
+ * A React component for performing basic arithmetic operations.
+ * 
+ * Features:
+ * - Four operations: addition, subtraction, multiplication, division
+ * - Keyboard support (Enter key to calculate)
+ * - Input validation with error handling
+ * - Division by zero detection
+ * - Result formatting
+ * - Real-time calculation
+ * - Responsive design
+ * 
+ * Operations supported:
+ * - Addition: number1 + number2
+ * - Subtraction: number1 - number2
+ * - Multiplication: number1 × number2
+ * - Division: number1 ÷ number2 (with zero check)
+ * 
+ * Uses the basic math calculation library from @/lib/calculators/basic-math
+ * for all mathematical operations.
  */
 export default function BasicMathCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.basic');
 
-	// State for input values
-	const [number1, setNumber1] = useState<string>('');
-	const [number2, setNumber2] = useState<string>('');
-	const [operation, setOperation] = useState<MathOperation>('add');
+	// State for input values (stored as strings for controlled inputs)
+	const [number1, setNumber1] = useState<string>(''); // First number input
+	const [number2, setNumber2] = useState<string>(''); // Second number input
+	const [operation, setOperation] = useState<MathOperation>('add'); // Selected operation
 
 	// State for calculation results
-	const [result, setResult] = useState<BasicMathResult | null>(null);
-	const [isCalculated, setIsCalculated] = useState<boolean>(false);
+	const [result, setResult] = useState<BasicMathResult | null>(null); // Calculated result
+	const [isCalculated, setIsCalculated] = useState<boolean>(false); // Flag indicating if calculation was performed
 
 	/**
 	 * Handles the calculation when the calculate button is clicked or Enter is pressed
+	 * 
+	 * Validates inputs and performs the selected arithmetic operation.
+	 * 
+	 * Process:
+	 * 1. Parse string inputs to numbers
+	 * 2. Check if both inputs are provided
+	 * 3. Perform calculation using calculateBasicMath
+	 * 4. Handle division by zero error
+	 * 5. Update result state
+	 * 
+	 * Uses useCallback to prevent unnecessary re-renders.
 	 */
 	const handleCalculate = useCallback(() => {
 		// Convert string inputs to numbers

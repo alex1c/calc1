@@ -18,21 +18,42 @@ import {
 	type SavingsResult,
 } from '@/lib/calculators/savings';
 
+/**
+ * Savings Calculator Component
+ * 
+ * A React component for calculating savings goals and accumulation plans.
+ * 
+ * Features:
+ * - Target amount input
+ * - Initial amount input
+ * - Term in months
+ * - Monthly contribution input
+ * - Interest rate input
+ * - Interest type selection (simple, compound, none)
+ * - Savings schedule generation
+ * - CSV export
+ * - Responsive design
+ * 
+ * Uses the savings calculation library from @/lib/calculators/savings
+ * for all mathematical operations.
+ */
 export default function SavingsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.savings');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<SavingsInput>>({
-		targetAmount: 0,
-		initialAmount: 0,
-		termMonths: 0,
-		monthlyContribution: 0,
-		interestRate: 0,
-		interestType: 'none',
+		targetAmount: 0, // Target savings amount (₽)
+		initialAmount: 0, // Initial savings amount (₽)
+		termMonths: 0, // Savings term in months
+		monthlyContribution: 0, // Monthly contribution (₽)
+		interestRate: 0, // Annual interest rate (%)
+		interestType: 'none', // Interest type (simple, compound, none)
 	});
 
-	const [result, setResult] = useState<SavingsResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<SavingsResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const handleInputChange = (
 		field: keyof SavingsInput,

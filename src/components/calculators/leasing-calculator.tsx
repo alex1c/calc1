@@ -11,22 +11,43 @@ import {
 	type LeasingResult,
 } from '@/lib/calculators/leasing';
 
+/**
+ * Leasing Calculator Component
+ * 
+ * A React component for calculating car leasing payments and costs.
+ * 
+ * Features:
+ * - Car value input
+ * - Down payment input (amount or percentage)
+ * - Lease term input (months)
+ * - Interest rate input
+ * - Buyout value input (amount or percentage)
+ * - Monthly payment calculation
+ * - Total cost calculation
+ * - Payment schedule generation
+ * - Responsive design
+ * 
+ * Uses the leasing calculation library from @/lib/calculators/leasing
+ * for all mathematical operations.
+ */
 export default function LeasingCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.leasing');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<LeasingInput>>({
-		carValue: 0,
-		downPayment: 0,
-		downPaymentType: 'percent',
-		leaseTerm: 36,
-		interestRate: 0,
-		buyoutValue: 0,
-		buyoutType: 'percent',
+		carValue: 0, // Car value (₽)
+		downPayment: 0, // Down payment amount
+		downPaymentType: 'percent', // Down payment type (percent, amount)
+		leaseTerm: 36, // Lease term (months, default: 36)
+		interestRate: 0, // Annual interest rate (%)
+		buyoutValue: 0, // Buyout value amount
+		buyoutType: 'percent', // Buyout value type (percent, amount)
 	});
 
-	const [result, setResult] = useState<LeasingResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<LeasingResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const handleInputChange = (
 		field: keyof LeasingInput,

@@ -32,19 +32,42 @@ interface RebarResult {
 	};
 }
 
+/**
+ * Rebar Calculator Component
+ * 
+ * A React component for calculating rebar (reinforcement steel) needed for concrete structures.
+ * 
+ * Features:
+ * - Structure type selection (foundation, slab, wall, column)
+ * - Dimensions input (length, width, height)
+ * - Grid spacing input
+ * - Rebar diameter selection
+ * - Multiple layers support
+ * - Overlap length consideration
+ * - Total length and weight calculation
+ * - Copy results to clipboard
+ * - PDF export
+ * - Responsive design
+ * 
+ * Uses GOST 5781-82 standard for rebar weight calculations.
+ * Uses inline calculation logic for rebar quantity and weight.
+ */
 export default function RebarCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.rebarCalculator');
-	const [structureType, setStructureType] = useState<string>('foundation');
-	const [length, setLength] = useState<number>(0);
-	const [width, setWidth] = useState<number>(0);
-	const [height, setHeight] = useState<number>(0);
-	const [gridSpacing, setGridSpacing] = useState<number>(0);
-	const [rebarDiameter, setRebarDiameter] = useState<number>(0);
-	const [layers, setLayers] = useState<number>(1);
-	const [overlap, setOverlap] = useState<number>(0);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<RebarResult | null>(null);
-	const [copied, setCopied] = useState(false);
+	
+	// Form state management
+	const [structureType, setStructureType] = useState<string>('foundation'); // Structure type (foundation, slab, wall, column)
+	const [length, setLength] = useState<number>(0); // Structure length (m)
+	const [width, setWidth] = useState<number>(0); // Structure width (m)
+	const [height, setHeight] = useState<number>(0); // Structure height (m)
+	const [gridSpacing, setGridSpacing] = useState<number>(0); // Grid spacing (m)
+	const [rebarDiameter, setRebarDiameter] = useState<number>(0); // Rebar diameter (mm)
+	const [layers, setLayers] = useState<number>(1); // Number of rebar layers
+	const [overlap, setOverlap] = useState<number>(0); // Overlap length (m)
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<RebarResult | null>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Rebar weight per meter by diameter (kg/m) - GOST 5781-82
 	const rebarWeights: { [key: number]: number } = {

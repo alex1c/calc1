@@ -12,20 +12,43 @@ import {
 	type HeatingCostResult,
 } from '@/lib/calculators/heating-cost';
 
+/**
+ * Heating Cost Calculator Component
+ * 
+ * A React component for calculating heating costs for buildings.
+ * 
+ * Features:
+ * - Area input
+ * - Heating season duration
+ * - Usage hours per day
+ * - Desired temperature input
+ * - Heating type selection (electric, gas, etc.)
+ * - Tariff input
+ * - Efficiency input
+ * - Cost calculation (seasonal, monthly, daily)
+ * - Real-time calculation with debouncing
+ * - Responsive design
+ * 
+ * Uses the heating cost calculation library from @/lib/calculators/heating-cost
+ * for all mathematical operations.
+ */
 export default function HeatingCostCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.heatingCost');
+	
+	// Form state management
 	const [input, setInput] = useState<HeatingCostInput>({
-		area: 50,
-		seasonDays: 180,
-		hoursPerDay: 12,
-		temperature: 22,
-		heatingType: 'electric',
-		tariff: 5.5,
-		efficiency: 100,
+		area: 50, // Area (m²)
+		seasonDays: 180, // Heating season duration (days)
+		hoursPerDay: 12, // Hours of operation per day
+		temperature: 22, // Desired temperature (°C)
+		heatingType: 'electric', // Heating type (electric, gas, etc.)
+		tariff: 5.5, // Energy tariff (₽/kWh or ₽/m³)
+		efficiency: 100, // Efficiency (%)
 	});
-	const [result, setResult] = useState<HeatingCostResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<HeatingCostResult | null>(null); // Calculated result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	// Auto-calculate when input changes
 	useEffect(() => {

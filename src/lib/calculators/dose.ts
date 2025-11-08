@@ -1,3 +1,30 @@
+/**
+ * Dose Calculator Library
+ * 
+ * Provides functionality for calculating medication dosages based on body weight.
+ * 
+ * Features:
+ * - Weight-based dosage calculation
+ * - Support for kg and lbs units
+ * - Frequency-based daily dose calculation
+ * - Maximum daily dose validation
+ * - Safety warnings for overdosage
+ * 
+ * Calculation formula:
+ * - Single dose = (weight × dosage per kg) / frequency
+ * - Daily dose = single dose × frequency
+ * - Validates against maximum daily dose if provided
+ * 
+ * Safety features:
+ * - Validates weight range (1-500 kg)
+ * - Validates frequency range (1-4 times per day)
+ * - Checks for overdosage if maximum daily dose is specified
+ */
+
+/**
+ * Input interface for dose calculation
+ * Contains weight, dosage per kg, frequency, and optional maximum daily dose
+ */
 export interface DoseInput {
 	weight: number;
 	dosage: number;
@@ -31,6 +58,19 @@ export const UNIT_CONVERSION = {
 	lbsToKg: 0.453592,
 };
 
+/**
+ * Validate dose calculation input
+ * 
+ * Checks that:
+ * - Weight is positive
+ * - Dosage is positive
+ * - Frequency is between 1 and 4
+ * - Maximum daily dose is positive if provided
+ * - Weight is within reasonable range (1-500 kg)
+ * 
+ * @param input - Dose input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateDoseInput(input: DoseInput): DoseValidation {
 	const { weight, dosage, frequency, maxDailyDose } = input;
 
@@ -60,6 +100,21 @@ export function validateDoseInput(input: DoseInput): DoseValidation {
 	return { isValid: true };
 }
 
+/**
+ * Calculate medication dose based on body weight
+ * 
+ * Calculates single dose per intake and daily dose based on:
+ * - Body weight (converted to kg if needed)
+ * - Dosage per kg
+ * - Frequency per day
+ * 
+ * Also validates against maximum daily dose if provided and generates
+ * warnings if overdosage is detected.
+ * 
+ * @param input - Dose input parameters
+ * @returns Dose result with single dose, daily dose, and safety warnings
+ * @throws Error if input validation fails
+ */
 export function calculateDose(input: DoseInput): DoseResult {
 	const validation = validateDoseInput(input);
 	if (!validation.isValid) {

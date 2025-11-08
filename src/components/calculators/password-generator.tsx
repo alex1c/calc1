@@ -22,21 +22,41 @@ interface PasswordOptions {
 	excludeAmbiguous: boolean;
 }
 
+/**
+ * Password Generator Component
+ * 
+ * A React component for generating secure passwords.
+ * 
+ * Features:
+ * - Customizable password length
+ * - Character set options (uppercase, lowercase, numbers, symbols)
+ * - Exclude similar characters (i, l, 1, L, o, 0, O)
+ * - Exclude ambiguous characters
+ * - Password strength indicator
+ * - Copy to clipboard
+ * - Show/hide password toggle
+ * - Responsive design
+ * 
+ * Uses cryptographically secure random number generation for password creation.
+ */
 export default function PasswordGenerator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.passwordGenerator');
+	
+	// Password generation options
 	const [options, setOptions] = useState<PasswordOptions>({
-		length: 12,
-		includeUppercase: true,
-		includeLowercase: true,
-		includeNumbers: true,
-		includeSymbols: true,
-		excludeSimilar: false,
-		excludeAmbiguous: false,
+		length: 12, // Password length (default: 12)
+		includeUppercase: true, // Include uppercase letters
+		includeLowercase: true, // Include lowercase letters
+		includeNumbers: true, // Include numbers
+		includeSymbols: true, // Include symbols
+		excludeSimilar: false, // Exclude similar characters (i, l, 1, L, o, 0, O)
+		excludeAmbiguous: false, // Exclude ambiguous characters
 	});
-	const [generatedPassword, setGeneratedPassword] = useState('');
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
-	const [showPassword, setShowPassword] = useState(false);
+	const [generatedPassword, setGeneratedPassword] = useState(''); // Generated password
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
+	const [showPassword, setShowPassword] = useState(false); // Show/hide password toggle
 
 	const generatePassword = (): string => {
 		let charset = '';

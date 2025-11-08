@@ -1,3 +1,24 @@
+/**
+ * Weight Converter Library
+ * 
+ * Provides functionality for converting between different weight units:
+ * - Grams (g)
+ * - Kilograms (kg)
+ * - Pounds (lb)
+ * 
+ * Features:
+ * - Unit conversion between weight units
+ * - Input validation
+ * - Formatted value output
+ * - Common conversions display
+ * 
+ * Conversion factors:
+ * - 1 kg = 1000 g
+ * - 1 lb = 453.592 g
+ * 
+ * All conversions use grams as the base unit.
+ */
+
 export interface WeightInput {
 	value: number;
 	fromUnit: WeightUnit;
@@ -26,6 +47,18 @@ export const WEIGHT_TO_GRAMS: Record<WeightUnit, number> = {
 
 export const WEIGHT_UNITS: WeightUnit[] = ['g', 'kg', 'lb'];
 
+/**
+ * Validate weight conversion input
+ * 
+ * Checks that:
+ * - Value is non-negative
+ * - Value is not too large
+ * - Source and target units are specified
+ * - Units are valid weight units
+ * 
+ * @param input - Weight input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateWeightInput(input: WeightInput): WeightValidation {
 	const { value, fromUnit, toUnit } = input;
 
@@ -48,6 +81,17 @@ export function validateWeightInput(input: WeightInput): WeightValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert weight from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to grams (base unit)
+ * 2. Convert grams to target unit
+ * 
+ * @param input - Weight input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertWeight(input: WeightInput): WeightResult {
 	const validation = validateWeightInput(input);
 	if (!validation.isValid) {

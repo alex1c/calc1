@@ -46,6 +46,26 @@ export interface WallpaperResult {
 	windowsCount: number;
 }
 
+/**
+ * Calculate wallpaper quantity needed for a room
+ * 
+ * Calculates number of wallpaper rolls needed based on:
+ * - Room dimensions (length, width, height)
+ * - Roll dimensions (width, length)
+ * - Doors and windows area (deducted from total wall area)
+ * - Reserve percentage for waste
+ * 
+ * Algorithm:
+ * 1. Calculate total wall area: 2 × (Length + Width) × Height
+ * 2. Calculate doors and windows area
+ * 3. Calculate useful wall area (total - openings)
+ * 4. Calculate roll area (width × length)
+ * 5. Calculate rolls needed with reserve
+ * 6. Round up to recommended rolls
+ * 
+ * @param input - Wallpaper input parameters
+ * @returns Wallpaper calculation result with quantities and areas
+ */
 export function calculateWallpaper(input: WallpaperInput): WallpaperResult {
 	const {
 		roomLength,
@@ -126,6 +146,18 @@ export function calculateWallpaper(input: WallpaperInput): WallpaperResult {
 	};
 }
 
+/**
+ * Validate wallpaper calculation input
+ * 
+ * Performs validation checks:
+ * - Room dimensions are positive
+ * - Roll dimensions are positive
+ * - Reserve percentage is between 0 and 100
+ * - Doors and windows have valid dimensions
+ * 
+ * @param input - Partial wallpaper input to validate
+ * @returns Array of error messages (empty if valid)
+ */
 export function validateWallpaperInput(
 	input: Partial<WallpaperInput>
 ): string[] {

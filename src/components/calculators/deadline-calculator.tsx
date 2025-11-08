@@ -30,32 +30,75 @@ interface DeadlineResult {
 	isWorkDays: boolean;
 }
 
+/**
+ * Deadline Calculator Component
+ * 
+ * A React component for calculating project deadlines based on duration.
+ * 
+ * Features:
+ * - Deadline calculation from start date and duration
+ * - Work days vs calendar days calculation
+ * - Weekend counting
+ * - Day of week display
+ * - Copy results to clipboard
+ * - Quick "today" button
+ * - Responsive design
+ * 
+ * Calculation modes:
+ * - Work days: Excludes weekends (Saturday and Sunday)
+ * - Calendar days: Includes all days
+ * 
+ * Uses the deadline calculation library from @/lib/calculators/deadline
+ * for all deadline calculations.
+ */
 export default function DeadlineCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.deadline');
-	const [startDate, setStartDate] = useState('');
-	const [duration, setDuration] = useState(0);
-	const [isWorkDays, setIsWorkDays] = useState(true);
-	const [result, setResult] = useState<DeadlineResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [copied, setCopied] = useState(false);
-	const [isMounted, setIsMounted] = useState(false);
+	
+	// Form state management
+	const [startDate, setStartDate] = useState(''); // Start date (YYYY-MM-DD format)
+	const [duration, setDuration] = useState(0); // Duration in days
+	const [isWorkDays, setIsWorkDays] = useState(true); // Use work days (true) or calendar days (false)
+	const [result, setResult] = useState<DeadlineResult | null>(null); // Calculated result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
+	const [isMounted, setIsMounted] = useState(false); // Component mount state (for SSR)
 
-	// Set today as default start date only after component mounts
+	/**
+	 * Component mount effect
+	 * 
+	 * Sets mounted state and initializes start date to today.
+	 * Prevents hydration mismatches in SSR.
+	 */
 	useEffect(() => {
 		setIsMounted(true);
 		if (!startDate) {
-			setStartDate(getTodayDate());
+			setStartDate(getTodayDate()); // Set default start date to today
 		}
 	}, []);
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and calculates deadline.
+	 * 
+	 * Process:
+	 * 1. Check if start date and duration are provided
+	 * 2. Validate date format
+	 * 3. Validate duration is positive
+	 * 4. Calculate deadline based on work days or calendar days
+	 * 5. Update result state
+	 */
 	const handleCalculate = async () => {
-		if (!startDate || !duration) return;
+		if (!startDate || !duration) return; // Check if date and duration are provided
 
+		// Validate date format
 		if (!isValidDate(startDate)) {
 			alert('Пожалуйста, введите корректную дату');
 			return;
 		}
 
+		// Validate duration is positive
 		if (duration <= 0) {
 			alert('Количество дней должно быть больше 0');
 			return;
@@ -64,6 +107,7 @@ export default function DeadlineCalculator() {
 		setIsCalculating(true);
 
 		try {
+			// Calculate deadline
 			const calculation = calculateDeadline(startDate, duration, isWorkDays);
 			setResult(calculation);
 		} catch (error) {
@@ -74,21 +118,39 @@ export default function DeadlineCalculator() {
 		}
 	};
 
+	/**
+	 * Handle reset action
+	 * 
+	 * Clears form inputs and results.
+	 * Resets start date to today.
+	 */
 	const handleReset = () => {
-		setStartDate(getTodayDate());
-		setDuration(0);
-		setIsWorkDays(true);
-		setResult(null);
-		setCopied(false);
+		setStartDate(getTodayDate()); // Reset to today
+		setDuration(0); // Reset duration
+		setIsWorkDays(true); // Reset to work days mode
+		setResult(null); // Clear result
+		setCopied(false); // Reset copy state
 	};
 
+	/**
+	 * Handle set today action
+	 * 
+	 * Sets start date to today's date.
+	 */
 	const handleSetToday = () => {
-		setStartDate(getTodayDate());
+		setStartDate(getTodayDate()); // Set start date to today
 	};
 
+	/**
+	 * Handle copy result to clipboard
+	 * 
+	 * Formats result text and copies to clipboard.
+	 * Shows success feedback for 2 seconds.
+	 */
 	const handleCopyResult = async () => {
 		if (!result) return;
 
+		// Format result text for clipboard
 		const resultText = `${t('results.copyText.title')}
 ${t('results.copyText.startDate')} ${result.startDate}
 ${t('results.copyText.duration')} ${result.duration} ${result.isWorkDays ? t('results.copyText.workDays') : t('results.copyText.calendarDays')} ${t('results.copyText.days')}
@@ -98,9 +160,9 @@ ${t('results.copyText.workDays2')} ${result.workDays}
 ${t('results.copyText.weekends')} ${result.weekends}`;
 
 		try {
-			await navigator.clipboard.writeText(resultText);
-			setCopied(true);
-			setTimeout(() => setCopied(false), 2000);
+			await navigator.clipboard.writeText(resultText); // Copy to clipboard
+			setCopied(true); // Show success state
+			setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
 		} catch (error) {
 			console.error('Copy failed:', error);
 		}

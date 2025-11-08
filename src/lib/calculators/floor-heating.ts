@@ -1,6 +1,34 @@
 /**
- * Floor Heating Calculator Logic
- * Calculates power requirements and energy consumption for electric underfloor heating
+ * Floor Heating Calculator Library
+ *
+ * Provides functionality for calculating power requirements and energy consumption for electric underfloor heating.
+ *
+ * Features:
+ * - Multiple room types (bathroom, kitchen, living, bedroom, balcony)
+ * - Insulation quality consideration (good, average, poor)
+ * - Power per m² calculation based on room type and insulation
+ * - Total system power calculation
+ * - Daily and monthly energy consumption calculation
+ * - Cost calculation based on electricity tariff
+ * - Power range recommendations for room types
+ *
+ * Room types and power ranges:
+ * - Bathroom: 150-180 W/m² (high humidity, higher power)
+ * - Kitchen: 120-150 W/m² (medium power)
+ * - Living Room: 100-130 W/m² (comfort heating)
+ * - Bedroom: 100-120 W/m² (lower power for comfort)
+ * - Balcony/Loggia: 160-200 W/m² (high heat loss, maximum power)
+ *
+ * Insulation multipliers:
+ * - Good: 0.8 (well-insulated, lower power needed)
+ * - Average: 1.0 (standard insulation)
+ * - Poor: 1.3 (poor insulation, higher power needed)
+ *
+ * Calculation method:
+ * - Base power = average of room type power range
+ * - Recommended power = base power × insulation multiplier
+ * - Total power = recommended power × area
+ * - Consumption = (total power × hours per day) / 1000 (convert W to kW)
  */
 
 export interface FloorHeatingInput {
@@ -93,7 +121,18 @@ export const INSULATION_TYPES: InsulationType[] = [
 ];
 
 /**
- * Validates input parameters for floor heating calculation
+ * Validate input parameters for floor heating calculation
+ *
+ * Performs validation checks:
+ * - Area is positive and not too large (max 1000 m²)
+ * - Room type is specified
+ * - Insulation type is specified
+ * - Temperature is between 15°C and 35°C
+ * - Hours per day is between 0 and 24
+ * - Electricity cost is non-negative
+ *
+ * @param input - Floor heating input parameters
+ * @returns Validation result with boolean status and array of error messages
  */
 export function validateFloorHeatingInput(input: FloorHeatingInput): {
 	isValid: boolean;
@@ -136,7 +175,25 @@ export function validateFloorHeatingInput(input: FloorHeatingInput): {
 }
 
 /**
- * Calculates floor heating power and energy consumption
+ * Calculate floor heating power and energy consumption
+ *
+ * Calculates:
+ * - Recommended power per m² (based on room type and insulation)
+ * - Total system power (power per m² × area)
+ * - Daily consumption (total power × hours per day / 1000, convert W to kW)
+ * - Monthly consumption (daily consumption × 30)
+ * - Daily and monthly costs (consumption × electricity tariff)
+ *
+ * Algorithm:
+ * 1. Get room type data and calculate base power (average of power range)
+ * 2. Apply insulation multiplier to base power
+ * 3. Calculate total power = recommended power × area
+ * 4. Calculate energy consumption (convert W to kW)
+ * 5. Calculate costs based on tariff
+ *
+ * @param input - Floor heating input parameters
+ * @returns Floor heating result with power, consumption, and costs
+ * @throws Error if validation fails or room/insulation type is invalid
  */
 export function calculateFloorHeating(
 	input: FloorHeatingInput

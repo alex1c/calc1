@@ -72,24 +72,46 @@ const STANDARD_BREAKERS = [
 	6, 10, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250,
 ];
 
+/**
+ * Electrical Calculator Component
+ * 
+ * A React component for calculating electrical cable sections and circuit breakers.
+ * 
+ * Features:
+ * - Power or current input
+ * - Voltage selection
+ * - Cable length input
+ * - Material selection (copper, aluminum)
+ * - Phase type (single, three-phase)
+ * - Power factor input
+ * - Voltage drop calculation
+ * - Circuit breaker selection
+ * - Installation method selection
+ * - Responsive design
+ * 
+ * Uses inline calculation logic based on PUE (Russian Electrical Code) standards.
+ */
 export default function ElectricalCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.electrical');
+	
+	// Form state management
 	const [input, setInput] = useState<ElectricalInput>({
-		calculationType: 'both',
-		inputMethod: 'power',
-		power: 2.5,
-		current: 0,
-		voltage: 220,
-		length: 15,
-		material: 'copper',
-		phaseType: 'single',
-		powerFactor: 0.9,
-		voltageDrop: 3,
-		circuitBreakerType: 'c',
-		installationMethod: 'open',
+		calculationType: 'both', // Calculation type (cable, breaker, both)
+		inputMethod: 'power', // Input method (power, current)
+		power: 2.5, // Power (kW)
+		current: 0, // Current (A)
+		voltage: 220, // Voltage (V)
+		length: 15, // Cable length (m)
+		material: 'copper', // Cable material (copper, aluminum)
+		phaseType: 'single', // Phase type (single, three-phase)
+		powerFactor: 0.9, // Power factor
+		voltageDrop: 3, // Maximum voltage drop (%)
+		circuitBreakerType: 'c', // Circuit breaker type (B, C, D)
+		installationMethod: 'open', // Installation method (open, closed)
 	});
-	const [result, setResult] = useState<ElectricalResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<ElectricalResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const calculationTypes = t.raw('options.calculationTypes');
 	const materials = t.raw('options.materials');

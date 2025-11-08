@@ -1,5 +1,29 @@
-// Character generation algorithms for different types and settings
+/**
+ * Character Traits Generator Library
+ * 
+ * Provides functionality for generating fictional character traits and descriptions.
+ * 
+ * Features:
+ * - Multiple character types (realistic, fantasy, sci-fi)
+ * - Gender-specific name generation
+ * - Age group-specific traits
+ * - Personality traits generation
+ * - Strengths and weaknesses generation
+ * - Profession generation
+ * - Backstory generation
+ * - Multi-locale support
+ * 
+ * Character generation:
+ * - Randomly selects names from predefined lists based on gender and type
+ * - Generates age-appropriate traits
+ * - Creates balanced personality with strengths and weaknesses
+ * - Generates contextual backstory
+ */
 
+/**
+ * Character interface
+ * Represents a generated character with all traits
+ */
 interface Character {
 	name: string;
 	age: string;
@@ -453,6 +477,24 @@ const backstoryTemplates = {
 	],
 };
 
+/**
+ * Generate a fictional character with traits
+ * 
+ * Creates a complete character profile by randomly selecting:
+ * - Name from gender and type-specific lists
+ * - Age from age group ranges
+ * - Personality trait
+ * - Strengths (3-5 random selections)
+ * - Weaknesses (2-4 random selections)
+ * - Profession from age-appropriate list
+ * - Backstory template
+ * 
+ * @param gender - Character gender (male, female, any)
+ * @param characterType - Character type (realistic, fantasy, sci-fi)
+ * @param ageGroup - Age group (child, teen, adult, elder)
+ * @param locale - Locale code for name generation (default: 'en')
+ * @returns Generated character object with all traits
+ */
 export function generateCharacter(
 	gender: string,
 	characterType: string,

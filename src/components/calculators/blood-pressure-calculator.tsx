@@ -23,30 +23,58 @@ import {
 
 /**
  * Blood Pressure Calculator Component
- * Interactive calculator for blood pressure categories and health recommendations
+ * 
+ * A React component for calculating blood pressure categories and health recommendations.
+ * 
+ * Features:
+ * - Blood pressure category classification (normal, elevated, hypertension stages)
+ * - Age-specific normal ranges
+ * - Health recommendations based on category
+ * - Visual category indicators with color coding
+ * - Risk assessment
+ * - Responsive design
+ * 
+ * Blood pressure categories (based on AHA guidelines):
+ * - Normal: <120/<80 mmHg
+ * - Elevated: 120-129/<80 mmHg
+ * - Hypertension Stage 1: 130-139/80-89 mmHg
+ * - Hypertension Stage 2: ≥140/≥90 mmHg
+ * - Hypertensive Crisis: >180/>120 mmHg
+ * 
+ * Uses the blood pressure calculation library from @/lib/calculators/blood-pressure
+ * for all mathematical operations.
  */
 export default function BloodPressureCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.bloodPressure');
 
-	// State for input values
-	const [age, setAge] = useState<string>('');
-	const [systolic, setSystolic] = useState<string>('');
-	const [diastolic, setDiastolic] = useState<string>('');
-	const [result, setResult] = useState<BloodPressureResult | null>(null);
-	const [error, setError] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState<boolean>(false);
+	// State for input values (stored as strings for controlled inputs)
+	const [age, setAge] = useState<string>(''); // Age in years
+	const [systolic, setSystolic] = useState<string>(''); // Systolic pressure (top number)
+	const [diastolic, setDiastolic] = useState<string>(''); // Diastolic pressure (bottom number)
+	const [result, setResult] = useState<BloodPressureResult | null>(null); // Calculated blood pressure category
+	const [error, setError] = useState<string>(''); // Validation error message
+	const [isCalculating, setIsCalculating] = useState<boolean>(false); // Loading state during calculation
 
 	/**
 	 * Handle form submission and blood pressure calculation
+	 * 
+	 * Validates inputs and calculates blood pressure category.
+	 * 
+	 * Process:
+	 * 1. Parse string inputs to numbers
+	 * 2. Validate inputs using validateBloodPressureInput
+	 * 3. Calculate blood pressure category using calculateBloodPressure
+	 * 4. Update result state or error state
 	 */
 	const handleCalculate = async () => {
-		setError('');
+		setError(''); // Clear previous errors
 		setIsCalculating(true);
 
 		try {
-			const ageNum = parseInt(age);
-			const systolicNum = parseInt(systolic);
-			const diastolicNum = parseInt(diastolic);
+			const ageNum = parseInt(age); // Parse age to number
+			const systolicNum = parseInt(systolic); // Parse systolic pressure
+			const diastolicNum = parseInt(diastolic); // Parse diastolic pressure
 
 			// Validate input
 			const validation = validateBloodPressureInput(
@@ -76,17 +104,26 @@ export default function BloodPressureCalculator() {
 
 	/**
 	 * Reset form and clear results
+	 * 
+	 * Clears all form inputs and resets result and error states.
+	 * Called when user clicks the reset button.
 	 */
 	const handleReset = () => {
-		setAge('');
-		setSystolic('');
-		setDiastolic('');
-		setResult(null);
-		setError('');
+		setAge(''); // Clear age input
+		setSystolic(''); // Clear systolic input
+		setDiastolic(''); // Clear diastolic input
+		setResult(null); // Clear result
+		setError(''); // Clear errors
 	};
 
 	/**
 	 * Get color classes for blood pressure category
+	 * 
+	 * Returns Tailwind CSS classes for category display based on category color.
+	 * Used for visual differentiation of blood pressure categories.
+	 * 
+	 * @param color - Category color identifier (blue, green, yellow, orange, red)
+	 * @returns Tailwind CSS classes for category styling
 	 */
 	const getCategoryColor = (color: string) => {
 		const colorMap = {

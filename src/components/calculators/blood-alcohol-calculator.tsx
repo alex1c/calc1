@@ -21,21 +21,43 @@ import {
 	type AlcoholResult,
 } from '@/lib/calculators/alcohol';
 
+/**
+ * Blood Alcohol Calculator Component
+ * 
+ * A React component for calculating blood alcohol content (BAC) and elimination time.
+ * 
+ * Features:
+ * - Gender selection (male, female)
+ * - Weight input
+ * - Alcohol volume input
+ * - Alcohol strength input (%)
+ * - Start time input
+ * - BAC calculation
+ * - Elimination time calculation
+ * - Safe driving time estimation
+ * - Legal limit warnings
+ * - Responsive design
+ * 
+ * Uses the alcohol calculation library from @/lib/calculators/alcohol
+ * for all BAC calculations based on Widmark formula.
+ */
 export default function BloodAlcoholCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.bloodAlcohol');
-	const locale = useLocale();
+	const locale = useLocale(); // Current locale for date/time formatting
 
+	// Form state management
 	const [formData, setFormData] = useState<AlcoholInput>({
-		gender: 'male',
-		weight: 70,
-		volume: 500,
-		strength: 5,
-		startTime: new Date(),
+		gender: 'male', // Gender (male, female)
+		weight: 70, // Body weight (kg)
+		volume: 500, // Alcohol volume (ml)
+		strength: 5, // Alcohol strength (%)
+		startTime: new Date(), // Start time of alcohol consumption
 	});
 
-	const [result, setResult] = useState<AlcoholResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<AlcoholResult | null>(null); // Calculated BAC result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
 	// Функция для форматирования даты в формат datetime-local
 	const formatDateTimeLocal = (date: Date): string => {

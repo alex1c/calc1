@@ -1,6 +1,27 @@
 /**
  * Heart Rate Calculator Library
- * Calculates heart rate zones and training recommendations
+ *
+ * Provides functionality for calculating heart rate zones and training recommendations.
+ *
+ * Features:
+ * - Maximum heart rate calculation (220 - age formula)
+ * - Heart rate zones calculation (resting, fat burning, aerobic, anaerobic, maximum)
+ * - Zone boundaries calculation
+ * - Current heart rate zone detection
+ * - Training recommendations based on heart rate zone
+ * - Input validation
+ *
+ * Heart rate zones:
+ * - Resting: 50-60% of max HR (recovery and warm-up)
+ * - Fat Burning: 60-70% of max HR (fat burning zone)
+ * - Aerobic: 70-80% of max HR (cardio fitness)
+ * - Anaerobic: 80-90% of max HR (high intensity)
+ * - Maximum: 90-100% of max HR (maximum effort)
+ *
+ * Calculation method:
+ * - Uses standard formula: HRmax = 220 - age
+ * - Calculates zone boundaries as percentages of max HR
+ * - Determines current zone based on heart rate percentage
  */
 
 export interface HeartRateResult {
@@ -76,8 +97,13 @@ export const HEART_RATE_ZONES = {
 
 /**
  * Calculate maximum heart rate using the standard formula
- * @param age - Age in years
- * @returns Maximum heart rate (220 - age)
+ *
+ * Uses the widely accepted formula: HRmax = 220 - age
+ * This is a general estimation and may vary for individuals.
+ *
+ * @param age - Age in years (must be between 1 and 120)
+ * @returns Maximum heart rate in beats per minute
+ * @throws Error if age is out of valid range
  */
 export function calculateMaxHeartRate(age: number): number {
 	if (age <= 0 || age > 120) {
@@ -90,10 +116,18 @@ export function calculateMaxHeartRate(age: number): number {
 
 /**
  * Calculate heart rate zone boundaries
- * @param maxHR - Maximum heart rate
- * @param minPercent - Minimum percentage of max HR
- * @param maxPercent - Maximum percentage of max HR
- * @returns Zone boundaries
+ *
+ * Calculates the minimum and maximum heart rate values for a zone
+ * based on percentages of maximum heart rate.
+ *
+ * Formula:
+ * - min = maxHR × (minPercent / 100)
+ * - max = maxHR × (maxPercent / 100)
+ *
+ * @param maxHR - Maximum heart rate in beats per minute
+ * @param minPercent - Minimum percentage of max HR (0-100)
+ * @param maxPercent - Maximum percentage of max HR (0-100)
+ * @returns Object with min and max heart rate values (rounded)
  */
 export function calculateZoneBoundaries(
 	maxHR: number,
@@ -108,9 +142,22 @@ export function calculateZoneBoundaries(
 
 /**
  * Determine which zone a given heart rate falls into
- * @param currentHR - Current heart rate
- * @param maxHR - Maximum heart rate
- * @returns Zone name or null if outside normal range
+ *
+ * Calculates the percentage of max HR and determines which zone
+ * the current heart rate belongs to.
+ *
+ * Zone ranges:
+ * - Below 50%: 'below'
+ * - 50-60%: 'resting'
+ * - 60-70%: 'fatBurning'
+ * - 70-80%: 'aerobic'
+ * - 80-90%: 'anaerobic'
+ * - 90-100%: 'maximum'
+ * - Above 100%: 'above'
+ *
+ * @param currentHR - Current heart rate in beats per minute
+ * @param maxHR - Maximum heart rate in beats per minute
+ * @returns Zone name string ('resting', 'fatBurning', etc.) or null if invalid
  */
 export function getHeartRateZone(
 	currentHR: number,
@@ -129,8 +176,12 @@ export function getHeartRateZone(
 
 /**
  * Calculate all heart rate zones
- * @param maxHR - Maximum heart rate
- * @returns Array of heart rate zones with boundaries
+ *
+ * Generates an array of all heart rate zones with their boundaries,
+ * colors, descriptions, and benefits.
+ *
+ * @param maxHR - Maximum heart rate in beats per minute
+ * @returns Array of HeartRateZone objects with all zone information
  */
 export function calculateAllZones(maxHR: number): HeartRateZone[] {
 	return Object.values(HEART_RATE_ZONES).map((zone) => ({
@@ -146,8 +197,15 @@ export function calculateAllZones(maxHR: number): HeartRateZone[] {
 
 /**
  * Main function to calculate heart rate zones and recommendations
- * @param input - Age and optional current heart rate
- * @returns Complete heart rate analysis
+ *
+ * Orchestrates the complete heart rate calculation process:
+ * 1. Calculates maximum heart rate from age
+ * 2. Calculates all heart rate zones
+ * 3. Calculates individual zone boundaries
+ * 4. Returns comprehensive result with all zones
+ *
+ * @param input - Heart rate input with age and optional current heart rate
+ * @returns Complete heart rate analysis with all zones and boundaries
  */
 export function calculateHeartRate(input: HeartRateInput): HeartRateResult {
 	const maxHR = calculateMaxHeartRate(input.age);
@@ -165,10 +223,15 @@ export function calculateHeartRate(input: HeartRateInput): HeartRateResult {
 }
 
 /**
- * Validate input values
+ * Validate heart rate input values
+ *
+ * Performs validation checks:
+ * - Age is between 1 and 120 years
+ * - Current heart rate (if provided) is between 30 and 250 bpm
+ *
  * @param age - Age in years
- * @param currentHR - Optional current heart rate
- * @returns Validation result with error message if invalid
+ * @param currentHR - Optional current heart rate in beats per minute
+ * @returns Validation result with boolean status and optional error message key
  */
 export function validateHeartRateInput(
 	age: number,
@@ -197,9 +260,13 @@ export function validateHeartRateInput(
 
 /**
  * Get training recommendations based on current heart rate
- * @param currentHR - Current heart rate
- * @param result - Heart rate calculation result
- * @returns Training recommendation
+ *
+ * Determines which zone the current heart rate is in and returns
+ * an appropriate training recommendation key for translation.
+ *
+ * @param currentHR - Current heart rate in beats per minute
+ * @param result - Heart rate calculation result with max HR
+ * @returns Training recommendation key string for translation
  */
 export function getTrainingRecommendation(
 	currentHR: number,

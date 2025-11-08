@@ -17,41 +17,95 @@ import {
 	type LoanOverpaymentResult,
 } from '@/lib/calculators/loan-overpayment';
 
+/**
+ * Loan Overpayment Calculator Component
+ * 
+ * A React component for calculating loan overpayment and savings from early payments.
+ * 
+ * Features:
+ * - Loan amount and term input
+ * - Interest rate calculation
+ * - Down payment support
+ * - Additional payment support
+ * - Payment type selection (annuity, differentiated)
+ * - Overpayment calculation
+ * - Savings calculation
+ * - Payment schedule visualization
+ * - Responsive design
+ * 
+ * Payment types:
+ * - Annuity: Fixed monthly payment
+ * - Differentiated: Decreasing monthly payment
+ * 
+ * Uses the loan overpayment calculation library from @/lib/calculators/loan-overpayment
+ * for all mathematical operations.
+ */
 export default function LoanOverpaymentCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.loan-overpayment');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<LoanOverpaymentInput>>({
-		loanAmount: 1000000,
-		termYears: 5,
-		termMonths: 0,
-		interestRate: 12,
-		downPayment: 0,
-		additionalPayment: 0,
-		paymentType: 'annuity',
+		loanAmount: 1000000, // Loan amount (₽)
+		termYears: 5, // Term in years
+		termMonths: 0, // Additional months
+		interestRate: 12, // Annual interest rate (%)
+		downPayment: 0, // Down payment (₽)
+		additionalPayment: 0, // Additional monthly payment (₽)
+		paymentType: 'annuity', // Payment type (annuity, differentiated)
 	});
 
-	const [result, setResult] = useState<LoanOverpaymentResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<LoanOverpaymentResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes values.
+	 * Converts string values to numbers.
+	 * Resets calculation status.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof LoanOverpaymentInput,
 		value: string | number
 	) => {
 		const numValue =
-			typeof value === 'string' ? parseFloat(value) || 0 : value;
-		setFormData((prev) => ({ ...prev, [field]: numValue }));
-		setIsCalculated(false);
+			typeof value === 'string' ? parseFloat(value) || 0 : value; // Convert to number
+		setFormData((prev) => ({ ...prev, [field]: numValue })); // Update field value
+		setIsCalculated(false); // Reset calculation status
 	};
 
+	/**
+	 * Handle payment type change
+	 * 
+	 * Updates payment type (annuity or differentiated).
+	 * Resets calculation status.
+	 * 
+	 * @param value - Payment type value
+	 */
 	const handlePaymentTypeChange = (value: string) => {
 		setFormData((prev) => ({
 			...prev,
-			paymentType: value as 'annuity' | 'differentiated',
+			paymentType: value as 'annuity' | 'differentiated', // Update payment type
 		}));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation status
 	};
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and calculates loan overpayment.
+	 * 
+	 * Process:
+	 * 1. Validate inputs using validateLoanOverpaymentInput
+	 * 2. Build complete input object
+	 * 3. Calculate overpayment using calculateLoanOverpayment
+	 * 4. Update result state
+	 */
 	const handleCalculate = () => {
 		const validationErrors = validateLoanOverpaymentInput(formData);
 		setErrors(validationErrors);

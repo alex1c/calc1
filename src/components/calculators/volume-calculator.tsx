@@ -23,23 +23,56 @@ import {
 	VolumeUnit,
 } from '@/lib/calculators/volume';
 
+/**
+ * Volume Calculator Component
+ * 
+ * A React component for converting between different volume units.
+ * 
+ * Features:
+ * - Supports multiple volume units: liters, gallons, m³
+ * - Real-time conversion with debouncing
+ * - Bidirectional conversion (from/to units)
+ * - Common conversions display
+ * - Input validation
+ * - Responsive design
+ * 
+ * Uses the volume conversion library from @/lib/calculators/volume
+ * for all conversion operations.
+ */
 export default function VolumeCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.volume-converter');
+	
+	// Form state management
 	const [input, setInput] = useState<VolumeInput>({
-		value: 1,
-		fromUnit: 'liters',
-		toUnit: 'gallons',
+		value: 1, // Volume value to convert (default: 1 liter)
+		fromUnit: 'liters', // Source unit (default: liters)
+		toUnit: 'gallons', // Target unit (default: gallons)
 	});
-	const [result, setResult] = useState<VolumeResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<VolumeResult | null>(null); // Conversion result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
-	// Auto-calculate when input changes
+	/**
+	 * Auto-calculate when input changes
+	 * 
+	 * Effect hook that automatically triggers conversion when input changes.
+	 * Uses debouncing (300ms delay) to avoid excessive calculations while user is typing.
+	 * 
+	 * Dependencies:
+	 * - input: Form input values (value, fromUnit, toUnit)
+	 * 
+	 * Behavior:
+	 * - Waits 300ms after input changes before converting
+	 * - Only converts if value is defined and both units are selected
+	 * - Clears timeout if component unmounts or input changes again
+	 */
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			// Only calculate if input is valid
 			if (input.value !== undefined && input.fromUnit && input.toUnit) {
 				setIsCalculating(true);
 				try {
+					// Perform volume conversion
 					const volumeResult = convertVolume(input);
 					setResult(volumeResult);
 				} catch (error) {
@@ -51,23 +84,33 @@ export default function VolumeCalculator() {
 			} else {
 				setResult(null);
 			}
-		}, 300); // Debounce calculation
+		}, 300); // Debounce calculation by 300ms
 
-		return () => clearTimeout(timer);
+		return () => clearTimeout(timer); // Cleanup on unmount or change
 	}, [input]);
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes value or units.
+	 * Validates numeric inputs to prevent invalid values.
+	 * 
+	 * @param field - Field name to update (value, fromUnit, or toUnit)
+	 * @param value - New value (number for value field, VolumeUnit for unit fields)
+	 */
 	const handleInputChange = (
 		field: keyof VolumeInput,
 		value: number | VolumeUnit
 	) => {
 		// Validate numeric inputs
 		if (typeof value === 'number') {
+			// Prevent extremely large values
 			if (value > 1e12) return;
 		}
 
 		setInput((prev) => ({
 			...prev,
-			[field]: value,
+			[field]: value, // Update field value
 		}));
 	};
 

@@ -18,42 +18,96 @@ import {
 	type CompoundInterestResult,
 } from '@/lib/calculators/compound-interest';
 
+/**
+ * Compound Interest Calculator Component
+ * 
+ * A React component for calculating compound interest with regular contributions.
+ * 
+ * Features:
+ * - Principal amount input
+ * - Monthly and annual contributions
+ * - Variable interest rates
+ * - Multiple compounding frequencies (daily, monthly, quarterly, annually)
+ * - Term in years and months
+ * - Detailed breakdown (total contributions, interest earned, final amount)
+ * - Growth visualization
+ * - Responsive design
+ * 
+ * Calculation:
+ * - Compound interest formula: A = P(1 + r/n)^(nt) + PMT * (((1 + r/n)^(nt) - 1) / (r/n))
+ * - Supports multiple compounding frequencies
+ * - Accounts for regular contributions
+ * 
+ * Uses the compound interest calculation library from @/lib/calculators/compound-interest
+ * for all mathematical operations.
+ */
 export default function CompoundInterestCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.compound-interest');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<CompoundInterestInput>>({
-		principal: 100000,
-		monthlyContribution: 5000,
-		annualContribution: 0,
-		interestRate: 12,
-		termYears: 5,
-		termMonths: 0,
-		compoundingFrequency: 'monthly',
+		principal: 100000, // Initial principal amount (₽)
+		monthlyContribution: 5000, // Monthly contribution (₽)
+		annualContribution: 0, // Annual contribution (₽)
+		interestRate: 12, // Annual interest rate (%)
+		termYears: 5, // Term in years
+		termMonths: 0, // Additional months
+		compoundingFrequency: 'monthly', // Compounding frequency (daily, monthly, quarterly, annually)
 	});
 
-	const [result, setResult] = useState<CompoundInterestResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<CompoundInterestResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user changes values.
+	 * Converts string values to numbers.
+	 * Resets calculation status.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof CompoundInterestInput,
 		value: string | number
 	) => {
 		const numValue =
-			typeof value === 'string' ? parseFloat(value) || 0 : value;
-		setFormData((prev) => ({ ...prev, [field]: numValue }));
-		setIsCalculated(false);
+			typeof value === 'string' ? parseFloat(value) || 0 : value; // Convert to number
+		setFormData((prev) => ({ ...prev, [field]: numValue })); // Update field value
+		setIsCalculated(false); // Reset calculation status
 	};
 
+	/**
+	 * Handle compounding frequency change
+	 * 
+	 * Updates compounding frequency setting.
+	 * Resets calculation status.
+	 * 
+	 * @param value - Compounding frequency value
+	 */
 	const handleFrequencyChange = (value: string) => {
 		setFormData((prev) => ({
 			...prev,
 			compoundingFrequency:
-				value as CompoundInterestInput['compoundingFrequency'],
+				value as CompoundInterestInput['compoundingFrequency'], // Update frequency
 		}));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation status
 	};
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and calculates compound interest.
+	 * 
+	 * Process:
+	 * 1. Validate inputs using validateCompoundInterestInput
+	 * 2. Build complete input object
+	 * 3. Calculate compound interest using calculateCompoundInterest
+	 * 4. Update result state
+	 */
 	const handleCalculate = () => {
 		const validationErrors = validateCompoundInterestInput(formData);
 		setErrors(validationErrors);

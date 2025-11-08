@@ -12,18 +12,38 @@ interface NicknameOptions {
 	includeSymbols: boolean;
 }
 
+/**
+ * Nickname Generator Component
+ * 
+ * A React component for generating random nicknames with customizable options.
+ * 
+ * Features:
+ * - Multiple themes (gaming, fantasy, tech, etc.)
+ * - Multiple styles (cool, cute, epic, etc.)
+ * - Length options (short, medium, long)
+ * - Optional numbers and symbols
+ * - Multiple nickname generation
+ * - Copy to clipboard
+ * - Download as text
+ * - Responsive design
+ * 
+ * Uses inline nickname generation logic with predefined word lists.
+ */
 export default function NicknameGenerator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.nicknameGenerator');
+	
+	// Generator options
 	const [options, setOptions] = useState<NicknameOptions>({
-		theme: 'gaming',
-		style: 'cool',
-		length: 'medium',
-		includeNumbers: true,
-		includeSymbols: false,
+		theme: 'gaming', // Nickname theme (gaming, fantasy, tech, etc.)
+		style: 'cool', // Nickname style (cool, cute, epic, etc.)
+		length: 'medium', // Nickname length (short, medium, long)
+		includeNumbers: true, // Include numbers in nickname
+		includeSymbols: false, // Include symbols in nickname
 	});
-	const [generatedNicknames, setGeneratedNicknames] = useState<string[]>([]);
-	const [isGenerating, setIsGenerating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	const [generatedNicknames, setGeneratedNicknames] = useState<string[]>([]); // Generated nicknames array
+	const [isGenerating, setIsGenerating] = useState(false); // Generation state
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Nickname generation data
 	const nicknameData = {

@@ -19,13 +19,33 @@ import {
 	getRoomTypeOptions,
 } from '@/lib/calculators/ventilation';
 
+/**
+ * Ventilation Calculator Component
+ * 
+ * A React component for calculating ventilation requirements for rooms.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Room type selection (living, kitchen, bathroom, etc.)
+ * - People count input
+ * - Air exchange rate calculation
+ * - Air per person calculation
+ * - Ventilation capacity calculation
+ * - Multiple calculation methods
+ * - Responsive design
+ * 
+ * Uses the ventilation calculation library from @/lib/calculators/ventilation
+ * for all mathematical operations based on building codes and standards.
+ */
 export default function VentilationCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.ventilation');
 	const tCommon = useTranslations('common');
 
-	const [result, setResult] = useState<VentilationResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	// State management
+	const [result, setResult] = useState<VentilationResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	// Form state
 	const [formData, setFormData] = useState<

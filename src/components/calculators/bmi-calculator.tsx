@@ -26,21 +26,45 @@ import {
 
 /**
  * BMI Calculator Component
- * Calculates Body Mass Index and displays results with visual indicators
+ * 
+ * A React component that provides a user interface for calculating Body Mass Index (BMI).
+ * 
+ * Features:
+ * - Real-time calculation as user inputs values
+ * - Gender selection (for future use in calculations)
+ * - Input validation with error messages
+ * - Visual BMI scale with color-coded categories
+ * - Normal weight range display
+ * - Category-based interpretation
+ * - Responsive design with dark mode support
+ * - Smooth animations using Framer Motion
+ * 
+ * The component uses the BMI calculation library from @/lib/calculators/bmi
+ * and displays results with visual indicators and educational content.
  */
 export default function BMICalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.bmi');
 	const locale = useLocale();
 
-	// Form state
-	const [gender, setGender] = useState<Gender>('male');
-	const [height, setHeight] = useState<string>('');
-	const [weight, setWeight] = useState<string>('');
-	const [result, setResult] = useState<BMIResult | null>(null);
-	const [error, setError] = useState<string | null>(null);
+	// Form state management
+	const [gender, setGender] = useState<Gender>('male'); // User's gender selection
+	const [height, setHeight] = useState<string>(''); // Height input in cm (as string for controlled input)
+	const [weight, setWeight] = useState<string>(''); // Weight input in kg (as string for controlled input)
+	const [result, setResult] = useState<BMIResult | null>(null); // Calculated BMI result
+	const [error, setError] = useState<string | null>(null); // Validation error message
 
 	/**
 	 * Handle BMI calculation
+	 * 
+	 * Validates input values and calculates BMI using the calculation library.
+	 * Updates result state on success or error state on validation failure.
+	 * 
+	 * Process:
+	 * 1. Parse string inputs to numbers
+	 * 2. Validate inputs using validateBMIInput
+	 * 3. Calculate BMI using calculateBMIResult
+	 * 4. Update state with result or error
 	 */
 	const handleCalculation = () => {
 		const numHeight = parseFloat(height);
@@ -65,7 +89,10 @@ export default function BMICalculator() {
 	};
 
 	/**
-	 * Handle reset
+	 * Handle reset action
+	 * 
+	 * Clears all form inputs and resets result and error states.
+	 * Called when user clicks the reset button.
 	 */
 	const handleReset = () => {
 		setHeight('');
@@ -76,6 +103,18 @@ export default function BMICalculator() {
 
 	/**
 	 * Auto-calculate when inputs change
+	 * 
+	 * Effect hook that automatically triggers calculation when height or weight
+	 * inputs change. This provides real-time feedback to the user.
+	 * 
+	 * Dependencies:
+	 * - height: Height input value
+	 * - weight: Weight input value
+	 * - gender: Gender selection (included for future use)
+	 * 
+	 * Behavior:
+	 * - If both inputs have values, calculate BMI
+	 * - If inputs are empty, clear result
 	 */
 	useEffect(() => {
 		if (height && weight) {
@@ -86,26 +125,42 @@ export default function BMICalculator() {
 	}, [height, weight, gender]);
 
 	/**
-	 * Animation variants
+	 * Animation variants for container elements
+	 * 
+	 * Defines animation states for Framer Motion components.
+	 * Used for smooth entrance/exit animations.
 	 */
 	const containerVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: { opacity: 1, y: 0 },
-		exit: { opacity: 0, y: -20 },
+		hidden: { opacity: 0, y: 20 }, // Initial state: invisible, slightly below
+		visible: { opacity: 1, y: 0 }, // Visible state: fully opaque, in position
+		exit: { opacity: 0, y: -20 }, // Exit state: invisible, slightly above
 	};
 
+	/**
+	 * Animation variants for result display
+	 * 
+	 * Defines animation states for result cards with scale effect.
+	 * Provides visual feedback when results appear.
+	 */
 	const resultVariants = {
-		hidden: { opacity: 0, scale: 0.95 },
-		visible: { opacity: 1, scale: 1 },
-		exit: { opacity: 0, scale: 0.95 },
+		hidden: { opacity: 0, scale: 0.95 }, // Initial: invisible, slightly smaller
+		visible: { opacity: 1, scale: 1 }, // Visible: fully opaque, normal size
+		exit: { opacity: 0, scale: 0.95 }, // Exit: invisible, slightly smaller
 	};
 
 	/**
 	 * Get BMI scale position for marker
+	 * 
+	 * Calculates the horizontal position percentage for the BMI marker
+	 * on the visual scale. The scale ranges from 0 to 50 BMI.
+	 * 
+	 * @param bmi - BMI value to position
+	 * @returns Percentage position (0-100) for marker placement
 	 */
 	const getBMIScalePosition = (bmi: number): number => {
-		// Scale from 0 to 50 BMI
+		// Scale from 0 to 50 BMI (covers all categories)
 		const maxBMI = 50;
+		// Calculate percentage position, capped at 100%
 		return Math.min((bmi / maxBMI) * 100, 100);
 	};
 

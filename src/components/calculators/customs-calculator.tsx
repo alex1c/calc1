@@ -11,20 +11,41 @@ import {
 	type CustomsResult,
 } from '@/lib/calculators/customs';
 
+/**
+ * Customs Calculator Component
+ * 
+ * A React component for calculating customs duties for imported cars.
+ * 
+ * Features:
+ * - Car value input
+ * - Engine volume input
+ * - Fuel type selection (gasoline, diesel, electric)
+ * - Car age input
+ * - Engine power input
+ * - Customs duty calculation
+ * - VAT calculation
+ * - Total cost calculation
+ * - Responsive design
+ * 
+ * Uses the customs calculation library from @/lib/calculators/customs
+ * for all mathematical operations based on Russian customs regulations.
+ */
 export default function CustomsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.customs');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<CustomsInput>>({
-		carValue: 0,
-		engineVolume: 0,
-		fuelType: 'gasoline',
-		carAge: 0,
-		enginePower: 0,
+		carValue: 0, // Car value (₽ or foreign currency)
+		engineVolume: 0, // Engine volume (cm³)
+		fuelType: 'gasoline', // Fuel type (gasoline, diesel, electric)
+		carAge: 0, // Car age (years)
+		enginePower: 0, // Engine power (hp)
 	});
 
-	const [result, setResult] = useState<CustomsResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<CustomsResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const fuelTypeOptions = [
 		{ value: 'gasoline', label: t('form.fuelTypes.gasoline') },

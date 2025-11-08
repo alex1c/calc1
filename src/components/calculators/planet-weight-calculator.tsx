@@ -9,13 +9,32 @@ import {
 	type PlanetWeightResult,
 } from '@/lib/calculators/planet-weight';
 
+/**
+ * Planet Weight Calculator Component
+ * 
+ * A React component for calculating weight on different planets and celestial bodies.
+ * 
+ * Features:
+ * - Earth weight input
+ * - Weight unit selection (kg, lbs)
+ * - Weight calculation for all planets (Mercury, Venus, Mars, Jupiter, Saturn, etc.)
+ * - Moon weight calculation
+ * - Gravity comparison
+ * - Visual planet representation
+ * - Responsive design
+ * 
+ * Uses the planet weight calculation library from @/lib/calculators/planet-weight
+ * for all weight calculations based on gravitational acceleration.
+ */
 export default function PlanetWeightCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.planetWeight');
 
-	const [earthWeight, setEarthWeight] = useState<string>('70');
-	const [unit, setUnit] = useState<WeightUnit>('kg');
-	const [results, setResults] = useState<PlanetWeightResult[] | null>(null);
-	const [error, setError] = useState<string>('');
+	// Form state management
+	const [earthWeight, setEarthWeight] = useState<string>('70'); // Weight on Earth (as string for input)
+	const [unit, setUnit] = useState<WeightUnit>('kg'); // Weight unit (kg, lbs)
+	const [results, setResults] = useState<PlanetWeightResult[] | null>(null); // Calculated results for all planets
+	const [error, setError] = useState<string>(''); // Validation error message
 
 	const handleCalculate = () => {
 		const weight = parseFloat(earthWeight);

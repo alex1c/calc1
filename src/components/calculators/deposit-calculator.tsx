@@ -21,50 +21,106 @@ import {
 	type DepositResult,
 } from '@/lib/calculators/deposit';
 
+/**
+ * Deposit Calculator Component
+ * 
+ * A React component for calculating deposit growth and returns.
+ * 
+ * Features:
+ * - Supports three deposit types: simple, capitalized, and compound
+ * - Monthly additions and withdrawals support
+ * - Detailed deposit schedule generation
+ * - CSV export functionality
+ * - Multi-currency support (RUB, USD, EUR)
+ * - Effective interest rate calculation
+ * - Input validation with error messages
+ * - Responsive design
+ * 
+ * Uses the deposit calculation library from @/lib/calculators/deposit
+ * for all mathematical operations.
+ */
 export default function DepositCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.investment');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<DepositInput>>({
-		amount: 0,
-		termMonths: 0,
-		interestRate: 0,
-		depositType: 'simple',
-		capitalizationPeriod: 'monthly',
-		monthlyAddition: 0,
-		monthlyWithdrawal: 0,
-		currency: 'RUB',
+		amount: 0, // Initial deposit amount
+		termMonths: 0, // Deposit term in months
+		interestRate: 0, // Annual interest rate (%)
+		depositType: 'simple', // Deposit calculation type
+		capitalizationPeriod: 'monthly', // Capitalization frequency (for capitalized deposits)
+		monthlyAddition: 0, // Optional monthly additions
+		monthlyWithdrawal: 0, // Optional monthly withdrawals
+		currency: 'RUB', // Currency for formatting
 	});
 
-	const [result, setResult] = useState<DepositResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<DepositResult | null>(null); // Calculated deposit result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors array
+	const [isCalculated, setIsCalculated] = useState(false); // Flag indicating if calculation was performed
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form data when user changes input values.
+	 * Converts string inputs to numbers and resets calculation flag.
+	 * 
+	 * @param field - Field name to update
+	 * @param value - New value (string or number)
+	 */
 	const handleInputChange = (
 		field: keyof DepositInput,
 		value: string | number
 	) => {
+		// Convert string to number, default to 0 if invalid
 		const numValue =
 			typeof value === 'string' ? parseFloat(value) || 0 : value;
 		setFormData((prev) => ({ ...prev, [field]: numValue }));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation flag when inputs change
 	};
 
+	/**
+	 * Handle deposit type change
+	 * 
+	 * Updates deposit type (simple, capitalized, or compound) and resets calculation.
+	 * 
+	 * @param value - Deposit type string
+	 */
 	const handleDepositTypeChange = (value: string) => {
 		setFormData((prev) => ({
 			...prev,
 			depositType: value as 'simple' | 'capitalized' | 'compound',
 		}));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation flag
 	};
 
+	/**
+	 * Handle capitalization period change
+	 * 
+	 * Updates capitalization frequency (monthly, quarterly, or yearly)
+	 * for capitalized deposits. Resets calculation flag.
+	 * 
+	 * @param value - Capitalization period string
+	 */
 	const handleCapitalizationPeriodChange = (value: string) => {
 		setFormData((prev) => ({
 			...prev,
 			capitalizationPeriod: value as 'monthly' | 'quarterly' | 'yearly',
 		}));
-		setIsCalculated(false);
+		setIsCalculated(false); // Reset calculation flag
 	};
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and calculates deposit growth and schedule.
+	 * 
+	 * Process:
+	 * 1. Validate inputs using validateDepositInput
+	 * 2. Build complete DepositInput object with defaults
+	 * 3. Call calculateDeposit with complete input
+	 * 4. Update result state or error state
+	 */
 	const handleCalculate = () => {
 		const validationErrors = validateDepositInput(formData);
 		setErrors(validationErrors);

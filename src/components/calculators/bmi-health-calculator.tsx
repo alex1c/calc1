@@ -19,17 +19,31 @@ import {
 
 /**
  * BMI Health Calculator Component
- * Interactive calculator for Body Mass Index with WHO categories
+ * 
+ * A React component for calculating Body Mass Index (BMI) with WHO health categories.
+ * 
+ * Features:
+ * - Weight and height input
+ * - BMI calculation
+ * - WHO category classification (underweight, normal, overweight, obese)
+ * - Normal weight range calculation
+ * - Health recommendations
+ * - Visual indicators
+ * - Responsive design
+ * 
+ * Uses the BMI health calculation library from @/lib/calculators/bmi-health
+ * for all mathematical operations based on WHO standards.
  */
 export default function BMIHealthCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.bmiHealth');
 
-	// State for input values
-	const [weight, setWeight] = useState<string>('');
-	const [height, setHeight] = useState<string>('');
-	const [result, setResult] = useState<BMIResult | null>(null);
-	const [error, setError] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState<boolean>(false);
+	// Form state management
+	const [weight, setWeight] = useState<string>(''); // Weight in kg (as string for controlled input)
+	const [height, setHeight] = useState<string>(''); // Height in cm (as string for controlled input)
+	const [result, setResult] = useState<BMIResult | null>(null); // Calculated BMI result
+	const [error, setError] = useState<string>(''); // Validation error message
+	const [isCalculating, setIsCalculating] = useState<boolean>(false); // Loading state during calculation
 
 	/**
 	 * Handle form submission and BMI calculation

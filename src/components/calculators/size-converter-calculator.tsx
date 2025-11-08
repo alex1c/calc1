@@ -25,17 +25,37 @@ import {
 // Import size data
 import sizeData from '@/data/size-converter.json';
 
+/**
+ * Size Converter Calculator Component
+ * 
+ * A React component for converting clothing and shoe sizes between different country standards.
+ * 
+ * Features:
+ * - Category selection (clothing, shoes, etc.)
+ * - Gender selection (male, female, unisex)
+ * - Country selection (RU, US, UK, EU, etc.)
+ * - Size conversion to all countries
+ * - Size chart display
+ * - Real-time calculation with debouncing
+ * - Responsive design
+ * 
+ * Uses the size converter calculation library from @/lib/calculators/size-converter
+ * for all conversion operations.
+ */
 export default function SizeConverterCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.size-converter');
+	
+	// Form state management
 	const [input, setInput] = useState<SizeInput>({
-		category: 'clothing',
-		gender: 'male',
-		country: 'RU',
-		size: '',
+		category: 'clothing', // Size category (clothing, shoes, etc.)
+		gender: 'male', // Gender (male, female, unisex)
+		country: 'RU', // Source country (RU, US, UK, EU, etc.)
+		size: '', // Size value
 	});
-	const [results, setResults] = useState<SizeResult[]>([]);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [showChart, setShowChart] = useState(false);
+	const [results, setResults] = useState<SizeResult[]>([]); // Conversion results for all countries
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [showChart, setShowChart] = useState(false); // Show size chart flag
 
 	// Auto-calculate when input changes
 	useEffect(() => {

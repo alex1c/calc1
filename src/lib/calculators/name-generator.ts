@@ -1,5 +1,33 @@
-// Name generation algorithms for different types
+/**
+ * Name Generator Library
+ * 
+ * Provides functionality for generating names for various purposes.
+ * 
+ * Features:
+ * - Multiple name types (baby, character, pet, project, book/game, fantasy/sci-fi)
+ * - Gender-specific name generation
+ * - Length options (short, medium, long)
+ * - Multiple name generation
+ * - Multi-locale support
+ * 
+ * Name types:
+ * - Baby: Traditional baby names
+ * - Character: Fictional character names
+ * - Pet: Pet names
+ * - Project: Project/product names
+ * - Book/Game: Book and game titles
+ * - Fantasy/Sci-Fi: Fantasy and sci-fi names
+ * 
+ * Name generation:
+ * - Randomly selects names from predefined lists based on type, gender, and length
+ * - Supports multiple name generation
+ * - Filters by length preference
+ */
 
+/**
+ * Name generation options interface
+ * Contains name type, gender, count, and length preferences
+ */
 interface NameGenerationOptions {
 	nameType: string;
 	gender: string;
@@ -82,6 +110,21 @@ const fantasyNames = {
 	}
 };
 
+/**
+ * Generate names based on type, gender, and length preferences
+ * 
+ * Generates random names by:
+ * 1. Selecting appropriate name database based on type
+ * 2. Filtering by gender and length
+ * 3. Shuffling the list
+ * 4. Selecting requested number of names
+ * 
+ * @param nameType - Name type (baby, character, pet, project, book, fantasy)
+ * @param gender - Gender filter (male, female, any)
+ * @param nameCount - Number of names to generate
+ * @param nameLength - Length preference (short, medium, long)
+ * @returns Array of generated names
+ */
 export function generateNames(
 	nameType: string,
 	gender: string,
@@ -116,7 +159,12 @@ export function generateNames(
 	return shuffled.slice(0, nameCount);
 }
 
-// Helper function to get name type display name
+/**
+ * Get display name for name type
+ * 
+ * @param nameType - Name type identifier
+ * @returns Human-readable name type string
+ */
 export function getNameTypeDisplayName(nameType: string): string {
 	const typeMap: { [key: string]: string } = {
 		baby: 'Baby Name',
@@ -128,7 +176,12 @@ export function getNameTypeDisplayName(nameType: string): string {
 	return typeMap[nameType] || 'Name';
 }
 
-// Helper function to get gender display name
+/**
+ * Get display name for gender
+ * 
+ * @param gender - Gender identifier (any, male, female)
+ * @returns Human-readable gender string
+ */
 export function getGenderDisplayName(gender: string): string {
 	const genderMap: { [key: string]: string } = {
 		any: 'Any',

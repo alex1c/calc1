@@ -1,6 +1,27 @@
 /**
- * Savings calculation library
- * Handles various types of savings calculations including simple and compound interest
+ * Savings Calculator Library
+ *
+ * Provides functionality for calculating savings with different interest types.
+ *
+ * Features:
+ * - Simple interest calculation
+ * - Compound interest calculation
+ * - No interest calculation
+ * - Target amount calculation
+ * - Monthly contribution calculation
+ * - Savings schedule generation
+ * - CSV export functionality
+ * - Achievement month detection
+ *
+ * Interest types:
+ * - None: No interest, simple accumulation
+ * - Simple: Interest calculated only on initial amount
+ * - Compound: Interest calculated on accumulated amount (including previous interest)
+ *
+ * Calculation methods:
+ * - Compound: Uses future value of annuity formula
+ * - Simple: Interest = Initial Amount × Rate × Time
+ * - None: Final Amount = Initial Amount + (Monthly Contribution × Months)
  */
 
 export interface SavingsInput {
@@ -32,6 +53,24 @@ export interface SavingsResult {
 
 /**
  * Calculate savings with compound interest
+ *
+ * Calculates savings using compound interest where interest is calculated
+ * on the accumulated amount (including previous interest).
+ *
+ * Algorithm:
+ * 1. Calculates monthly interest rate
+ * 2. If target amount specified without monthly contribution, calculates required contribution
+ * 3. For each month:
+ *    - Calculates interest on current amount
+ *    - Adds monthly contribution
+ *    - Updates total amount
+ * 4. Tracks achievement month if target is reached
+ *
+ * Formula for required monthly contribution (if target specified):
+ * PMT = (Target - Initial × (1+r)^n) / (((1+r)^n - 1) / r)
+ *
+ * @param input - Savings input parameters
+ * @returns Savings result with final amount, contributions, interest, and schedule
  */
 export function calculateCompoundSavings(input: SavingsInput): SavingsResult {
 	const {
@@ -110,6 +149,19 @@ export function calculateCompoundSavings(input: SavingsInput): SavingsResult {
 
 /**
  * Calculate savings without interest
+ *
+ * Calculates simple savings accumulation without any interest.
+ * Final amount is simply initial amount plus all monthly contributions.
+ *
+ * Algorithm:
+ * 1. If target specified without monthly contribution, calculates required contribution
+ * 2. For each month: adds monthly contribution to current amount
+ * 3. No interest is applied
+ *
+ * Formula: Final Amount = Initial Amount + (Monthly Contribution × Months)
+ *
+ * @param input - Savings input parameters
+ * @returns Savings result with final amount, contributions, and schedule (no interest)
  */
 export function calculateNoInterestSavings(input: SavingsInput): SavingsResult {
 	const {
@@ -163,6 +215,22 @@ export function calculateNoInterestSavings(input: SavingsInput): SavingsResult {
 
 /**
  * Calculate savings with simple interest
+ *
+ * Calculates savings with simple interest where interest is calculated
+ * only on the initial amount, not on accumulated interest.
+ *
+ * Algorithm:
+ * 1. Calculates monthly interest rate
+ * 2. If target specified without monthly contribution, calculates required contribution
+ * 3. For each month:
+ *    - Calculates interest on initial amount only
+ *    - Adds monthly contribution
+ *    - Updates total amount
+ *
+ * Formula: Interest per month = Initial Amount × Monthly Rate
+ *
+ * @param input - Savings input parameters
+ * @returns Savings result with final amount, contributions, interest, and schedule
  */
 export function calculateSimpleSavings(input: SavingsInput): SavingsResult {
 	const {
@@ -221,6 +289,15 @@ export function calculateSimpleSavings(input: SavingsInput): SavingsResult {
 
 /**
  * Main calculation function that routes to appropriate calculation method
+ *
+ * Routes to the appropriate calculation function based on interest type:
+ * - 'none': calculateNoInterestSavings()
+ * - 'simple': calculateSimpleSavings()
+ * - 'compound': calculateCompoundSavings()
+ *
+ * @param input - Savings input parameters
+ * @returns Savings result with calculations based on interest type
+ * @throws Error if interest type is invalid
  */
 export function calculateSavings(input: SavingsInput): SavingsResult {
 	switch (input.interestType) {
@@ -237,6 +314,15 @@ export function calculateSavings(input: SavingsInput): SavingsResult {
 
 /**
  * Generate savings schedule for display
+ *
+ * Generates a month-by-month schedule showing:
+ * - Start amount
+ * - Monthly contribution
+ * - Interest earned
+ * - End amount
+ *
+ * @param input - Savings input parameters
+ * @returns Array of savings schedule items for each month
  */
 export function generateSavingsSchedule(
 	input: SavingsInput
@@ -247,6 +333,12 @@ export function generateSavingsSchedule(
 
 /**
  * Export savings schedule to CSV format
+ *
+ * Converts savings schedule array to CSV string format.
+ * Headers: Month, Start Amount, Contribution, Interest, End Amount
+ *
+ * @param schedule - Array of savings schedule items
+ * @returns CSV string with headers and data rows
  */
 export function exportSavingsScheduleToCSV(
 	schedule: SavingsScheduleItem[]
@@ -271,6 +363,17 @@ export function exportSavingsScheduleToCSV(
 
 /**
  * Validate savings input parameters
+ *
+ * Performs validation checks:
+ * - Target amount (if specified) is positive
+ * - Initial amount is non-negative
+ * - Term is positive and not too long (max 50 years)
+ * - Monthly contribution (if specified) is non-negative
+ * - Interest rate (if interest type not 'none') is between 0 and 100%
+ * - Either target amount or monthly contribution must be specified
+ *
+ * @param input - Partial savings input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateSavingsInput(input: Partial<SavingsInput>): string[] {
 	const errors: string[] = [];
@@ -317,6 +420,11 @@ export function validateSavingsInput(input: Partial<SavingsInput>): string[] {
 
 /**
  * Format currency for display
+ *
+ * Formats amount as Russian Ruble currency using Intl.NumberFormat.
+ *
+ * @param amount - Amount to format
+ * @returns Formatted currency string (e.g., "1 234 ₽")
  */
 export function formatSavingsCurrency(amount: number): string {
 	return new Intl.NumberFormat('ru-RU', {

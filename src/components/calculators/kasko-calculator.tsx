@@ -24,22 +24,44 @@ interface KaskoResult {
 	totalCost: number;
 }
 
+/**
+ * CASCO Calculator Component
+ * 
+ * A React component for calculating CASCO (comprehensive car insurance) costs.
+ * 
+ * Features:
+ * - Car value and year input
+ * - Driver age and experience coefficients
+ * - Region-based calculation
+ * - Alarm system discount
+ * - Franchise (deductible) options
+ * - Detailed cost breakdown
+ * - Responsive design
+ * 
+ * Calculation method:
+ * - Based on Russian CASCO insurance practices
+ * - Base rate × region coefficient × age coefficient × experience coefficient × alarm coefficient × franchise coefficient
+ * 
+ * Uses inline calculation logic based on Russian CASCO insurance practices.
+ */
 export default function KaskoCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.kasko');
 
+	// Form state management
 	const [formData, setFormData] = useState<KaskoFormData>({
-		carValue: 0,
-		carYear: new Date().getFullYear(),
-		driverAge: 0,
-		drivingExperience: 0,
-		region: '',
-		hasAlarmSystem: false,
-		franchise: 'none',
+		carValue: 0, // Car value (₽)
+		carYear: new Date().getFullYear(), // Car year (default: current year)
+		driverAge: 0, // Driver age (years)
+		drivingExperience: 0, // Driving experience (years)
+		region: '', // Region (Moscow, SPB, other)
+		hasAlarmSystem: false, // Alarm system installed
+		franchise: 'none', // Franchise (deductible) option
 	});
 
-	const [result, setResult] = useState<KaskoResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<KaskoResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const regions = [
 		{ value: 'moscow', label: t('form.regions.moscow') },

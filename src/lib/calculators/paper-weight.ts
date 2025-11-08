@@ -1,6 +1,27 @@
 /**
- * Paper Weight Calculator Logic
- * Calculates paper weight based on density and number of sheets
+ * Paper Weight Calculator Library
+ *
+ * Provides functionality for calculating paper weight based on density and number of sheets.
+ *
+ * Features:
+ * - Multiple paper formats (A4, A3, A5, Letter)
+ * - Paper density input (g/m²)
+ * - Weight per sheet calculation
+ * - Total weight calculation
+ * - Weight in grams and kilograms
+ * - Standard paper format dimensions
+ *
+ * Calculation method:
+ * - Converts paper dimensions from mm to meters
+ * - Calculates paper area in m²
+ * - Calculates weight per sheet = area × density
+ * - Calculates total weight = weight per sheet × number of sheets
+ *
+ * Paper formats:
+ * - A4: 210 × 297 mm
+ * - A3: 297 × 420 mm
+ * - A5: 148 × 210 mm
+ * - Letter: 216 × 279 mm
  */
 
 export interface PaperWeightInput {
@@ -29,6 +50,25 @@ const PAPER_FORMATS = {
 	Letter: { width: 216, height: 279 },
 };
 
+/**
+ * Calculate paper weight based on density and number of sheets
+ *
+ * Calculates:
+ * - Paper area in m² (converts from mm)
+ * - Weight per sheet (area × density)
+ * - Total weight (weight per sheet × sheets)
+ * - Total weight in kilograms
+ *
+ * Algorithm:
+ * 1. Get paper format dimensions
+ * 2. Convert mm to meters
+ * 3. Calculate area = width × height (in m²)
+ * 4. Calculate weight per sheet = area × density (g/m²)
+ * 5. Calculate total weight = weight per sheet × sheets
+ *
+ * @param input - Paper weight input with sheets, density, and format
+ * @returns Paper weight result with weights and dimensions
+ */
 export function calculatePaperWeight(
 	input: PaperWeightInput
 ): PaperWeightResult {

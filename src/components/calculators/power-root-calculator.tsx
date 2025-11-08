@@ -43,37 +43,89 @@ const getModeIcon = (mode: CalculationMode) => {
 	}
 };
 
+/**
+ * Power and Root Calculator Component
+ * 
+ * A React component for calculating powers and roots of numbers.
+ * 
+ * Features:
+ * - Two calculation modes: power and root
+ * - Power calculation: base^exponent
+ * - Root calculation: nth root of a number
+ * - Input validation with error handling
+ * - Visual mode icons
+ * - Formula display
+ * - Responsive design
+ * 
+ * Calculation modes:
+ * - Power: Calculates base raised to exponent (base^exponent)
+ * - Root: Calculates nth root of a number (nth root of base)
+ * 
+ * Uses the power-root calculation library from @/lib/calculators/power-root
+ * for all mathematical operations.
+ */
 export default function PowerRootCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.powerRoot');
 	const tCommon = useTranslations('common');
+	
+	// Form state management
 	const [input, setInput] = useState<PowerRootInput>({
-		mode: 'power',
-		base: 2,
-		exponent: 3,
+		mode: 'power', // Calculation mode: power or root
+		base: 2, // Base number (default value)
+		exponent: 3, // Exponent/root degree (default value)
 	});
-	const [result, setResult] = useState<PowerRootResult | null>(null);
-	const [error, setError] = useState<string | null>(null);
+	const [result, setResult] = useState<PowerRootResult | null>(null); // Calculated result
+	const [error, setError] = useState<string | null>(null); // Validation error message
 
+	/**
+	 * Handle calculation mode change
+	 * 
+	 * Switches between power and root calculation modes.
+	 * Resets result and error states when mode changes.
+	 * 
+	 * @param mode - New calculation mode to set
+	 */
 	const handleModeChange = (mode: CalculationMode) => {
 		setInput((prev) => ({
 			...prev,
-			mode,
+			mode, // Update mode
 		}));
-		setResult(null);
-		setError(null);
+		setResult(null); // Clear previous result
+		setError(null); // Clear previous errors
 	};
 
+	/**
+	 * Handle input field changes
+	 * 
+	 * Updates form input values when user types.
+	 * Converts string inputs to numbers and resets result/error states.
+	 * 
+	 * @param field - Field name to update (base or exponent)
+	 * @param value - New value as string
+	 */
 	const handleInputChange = (field: keyof PowerRootInput, value: string) => {
-		const numValue = parseFloat(value) || 0;
+		const numValue = parseFloat(value) || 0; // Convert to number, default to 0
 		setInput((prev) => ({
 			...prev,
-			[field]: numValue,
+			[field]: numValue, // Update field value
 		}));
-		setResult(null);
-		setError(null);
+		setResult(null); // Clear result when input changes
+		setError(null); // Clear error when input changes
 	};
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and performs power or root calculation.
+	 * 
+	 * Process:
+	 * 1. Validate inputs using validatePowerRootInput
+	 * 2. Perform calculation using calculatePowerRoot
+	 * 3. Update result state or error state
+	 */
 	const handleCalculate = () => {
+		// Validate inputs
 		const validation = validatePowerRootInput(input);
 		if (!validation.isValid) {
 			setError(validation.error || 'Invalid input');
@@ -82,10 +134,12 @@ export default function PowerRootCalculator() {
 		}
 
 		try {
+			// Perform calculation
 			const calculation = calculatePowerRoot(input);
 			setResult(calculation);
 			setError(null);
 		} catch (error) {
+			// Handle calculation errors
 			setError(
 				error instanceof Error
 					? error.message
@@ -95,9 +149,15 @@ export default function PowerRootCalculator() {
 		}
 	};
 
+	/**
+	 * Handle clear action
+	 * 
+	 * Resets form inputs to default values and clears result and error states.
+	 * Called when user clicks the clear/reset button.
+	 */
 	const handleClear = () => {
 		setInput({
-			mode: 'power',
+			mode: 'power', // Reset to power mode
 			base: 2,
 			exponent: 3,
 		});

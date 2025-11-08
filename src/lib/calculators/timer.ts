@@ -1,4 +1,21 @@
-// Timer utility functions
+/**
+ * Timer Utility Library
+ * 
+ * Provides functionality for managing timer state and operations.
+ * 
+ * Features:
+ * - Timer creation with hours, minutes, seconds
+ * - Start, pause, resume, reset operations
+ * - Timer state management
+ * - Time remaining calculation
+ * - Timer settings (sound, visual style, color)
+ * 
+ * Timer states:
+ * - isRunning: Timer is currently running
+ * - isPaused: Timer is paused
+ * - timeLeft: Remaining time in seconds
+ * - totalTime: Total timer duration in seconds
+ */
 
 export interface TimerState {
 	isRunning: boolean;
@@ -18,6 +35,17 @@ export interface TimerSettings {
 	color: string;
 }
 
+/**
+ * Create a new timer with specified duration
+ * 
+ * Converts hours, minutes, and seconds to total seconds and initializes
+ * timer state with isRunning=false and isPaused=false.
+ * 
+ * @param hours - Hours component of timer duration
+ * @param minutes - Minutes component of timer duration
+ * @param seconds - Seconds component of timer duration
+ * @returns New timer state with total time calculated
+ */
 export function createTimer(hours: number, minutes: number, seconds: number): TimerState {
 	const totalTime = hours * 3600 + minutes * 60 + seconds;
 	return {
@@ -28,6 +56,15 @@ export function createTimer(hours: number, minutes: number, seconds: number): Ti
 	};
 }
 
+/**
+ * Start the timer
+ * 
+ * Sets isRunning=true, isPaused=false, and records startTime timestamp.
+ * If timer is already running, returns unchanged state.
+ * 
+ * @param timer - Current timer state
+ * @returns Updated timer state with running status
+ */
 export function startTimer(timer: TimerState): TimerState {
 	if (timer.isRunning) return timer;
 	
@@ -40,6 +77,15 @@ export function startTimer(timer: TimerState): TimerState {
 	};
 }
 
+/**
+ * Pause the running timer
+ * 
+ * Sets isPaused=true and records pausedTime timestamp.
+ * If timer is not running or already paused, returns unchanged state.
+ * 
+ * @param timer - Current timer state
+ * @returns Updated timer state with paused status
+ */
 export function pauseTimer(timer: TimerState): TimerState {
 	if (!timer.isRunning || timer.isPaused) return timer;
 	
@@ -50,6 +96,15 @@ export function pauseTimer(timer: TimerState): TimerState {
 	};
 }
 
+/**
+ * Resume a paused timer
+ * 
+ * Adjusts startTime to account for paused duration and sets isPaused=false.
+ * If timer is not running or not paused, returns unchanged state.
+ * 
+ * @param timer - Current timer state
+ * @returns Updated timer state with resumed status
+ */
 export function resumeTimer(timer: TimerState): TimerState {
 	if (!timer.isRunning || !timer.isPaused) return timer;
 	
@@ -64,6 +119,15 @@ export function resumeTimer(timer: TimerState): TimerState {
 	};
 }
 
+/**
+ * Reset timer to initial state
+ * 
+ * Resets isRunning=false, isPaused=false, timeLeft=totalTime,
+ * and clears startTime and pausedTime.
+ * 
+ * @param timer - Current timer state
+ * @returns Reset timer state with initial values
+ */
 export function resetTimer(timer: TimerState): TimerState {
 	return {
 		...timer,
@@ -75,6 +139,15 @@ export function resetTimer(timer: TimerState): TimerState {
 	};
 }
 
+/**
+ * Update timer state based on elapsed time
+ * 
+ * Calculates timeLeft based on elapsed time since startTime.
+ * If timer is not running or is paused, returns unchanged state.
+ * 
+ * @param timer - Current timer state
+ * @returns Updated timer state with recalculated timeLeft
+ */
 export function updateTimer(timer: TimerState): TimerState {
 	if (!timer.isRunning || timer.isPaused) return timer;
 	
@@ -89,6 +162,16 @@ export function updateTimer(timer: TimerState): TimerState {
 	};
 }
 
+/**
+ * Format time in seconds to HH:MM:SS or MM:SS string
+ * 
+ * Formats time with leading zeros:
+ * - If hours > 0: HH:MM:SS format
+ * - Otherwise: MM:SS format
+ * 
+ * @param seconds - Time in seconds
+ * @returns Formatted time string (HH:MM:SS or MM:SS)
+ */
 export function formatTime(seconds: number): string {
 	const hours = Math.floor(seconds / 3600);
 	const minutes = Math.floor((seconds % 3600) / 60);
@@ -100,11 +183,29 @@ export function formatTime(seconds: number): string {
 	return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
+/**
+ * Calculate timer progress percentage
+ * 
+ * Calculates how much of the timer has elapsed as a percentage.
+ * 
+ * Formula: Progress = ((Total Time - Time Left) / Total Time) × 100
+ * 
+ * @param timer - Timer state
+ * @returns Progress percentage (0-100)
+ */
 export function getProgressPercentage(timer: TimerState): number {
 	if (timer.totalTime === 0) return 0;
 	return ((timer.totalTime - timer.timeLeft) / timer.totalTime) * 100;
 }
 
+/**
+ * Play notification sound when timer completes
+ * 
+ * Uses Web Audio API to generate a beep sound.
+ * Creates an oscillator with 800Hz frequency and 0.3 gain.
+ * 
+ * @returns void
+ */
 export function playNotificationSound(): void {
 	// Create audio context for sound notification
 	try {

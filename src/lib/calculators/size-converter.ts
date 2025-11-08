@@ -1,3 +1,38 @@
+/**
+ * Size Converter Library
+ * 
+ * Provides functionality for converting clothing, jeans, and shoe sizes between different country standards.
+ * 
+ * Features:
+ * - Multiple size categories (clothing, jeans, shoes)
+ * - Gender-specific conversion (male, female, child)
+ * - Multiple country standards (RU, EU, US, UK, JP, CN)
+ * - Input validation
+ * - Multi-country conversion
+ * 
+ * Size categories:
+ * - Clothing: General clothing sizes
+ * - Jeans: Jeans-specific sizes (no child gender)
+ * - Shoes: Shoe sizes
+ * 
+ * Country standards:
+ * - RU: Russian standard
+ * - EU: European standard
+ * - US: US standard
+ * - UK: UK standard
+ * - JP: Japanese standard
+ * - CN: Chinese standard
+ * 
+ * Conversion method:
+ * - Uses size index as base unit
+ * - Converts source country size to index, then to target country size
+ * - Handles alphanumeric sizes (UK shoes)
+ */
+
+/**
+ * Input interface for size conversion
+ * Contains category, gender, country, and size value
+ */
 export interface SizeInput {
 	category: SizeCategory;
 	gender: SizeGender;
@@ -30,6 +65,19 @@ export const SIZE_COUNTRIES: SizeCountry[] = [
 	'CN',
 ];
 
+/**
+ * Validate size conversion input
+ * 
+ * Checks that:
+ * - Category is valid (clothing, jeans, shoes)
+ * - Gender is valid (male, female, child)
+ * - Country is valid
+ * - Size is provided and not empty
+ * - Jeans category doesn't use child gender
+ * 
+ * @param input - Size input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateSizeInput(input: SizeInput): SizeValidation {
 	const { category, gender, country, size } = input;
 
@@ -57,6 +105,22 @@ export function validateSizeInput(input: SizeInput): SizeValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert size between different country standards
+ * 
+ * Converts size from source country to all other country standards.
+ * 
+ * Algorithm:
+ * 1. Get size data for category and gender
+ * 2. Find size index in source country
+ * 3. For each target country, get size at same index
+ * 4. Return array of conversions for all countries
+ * 
+ * @param input - Size input with category, gender, country, and size
+ * @param sizeData - Size data for all categories, genders, and countries
+ * @returns Array of size conversions for all countries
+ * @throws Error if input validation fails or data is unavailable
+ */
 export function convertSize(input: SizeInput, sizeData: any): SizeResult[] {
 	const validation = validateSizeInput(input);
 	if (!validation.isValid) {

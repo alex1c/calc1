@@ -29,23 +29,43 @@ import {
 	type Goal,
 } from '@/lib/calculators/food-ration';
 
+/**
+ * Food Ration Calculator Component
+ * 
+ * A React component for calculating daily macronutrient requirements (BJU: proteins, fats, carbs).
+ * 
+ * Features:
+ * - Gender selection (male, female)
+ * - Age, weight, height input
+ * - Activity level selection
+ * - Goal selection (maintain, lose weight, gain weight)
+ * - Daily calorie calculation
+ * - Macronutrient breakdown (proteins, fats, carbohydrates)
+ * - Visual pie chart
+ * - Recommendations
+ * - Responsive design
+ * 
+ * Uses the food ration calculation library from @/lib/calculators/food-ration
+ * for all BJU calculations based on Harris-Benedict formula and activity multipliers.
+ */
 export default function FoodRationCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.foodRation');
 
-	// Form state
+	// Form state management
 	const [formData, setFormData] = useState<BJUInput>({
-		gender: 'male',
-		age: 25,
-		weight: 70,
-		height: 175,
-		activityLevel: 'moderate',
-		goal: 'maintain',
+		gender: 'male', // Gender (male, female)
+		age: 25, // Age in years
+		weight: 70, // Weight in kg
+		height: 175, // Height in cm
+		activityLevel: 'moderate', // Activity level (sedentary, light, moderate, active, very active)
+		goal: 'maintain', // Goal (maintain, lose, gain)
 	});
 
 	// Results state
-	const [result, setResult] = useState<BJUResult | null>(null);
-	const [error, setError] = useState<string | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<BJUResult | null>(null); // Calculated BJU result
+	const [error, setError] = useState<string | null>(null); // Validation error message
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 
 	// Handle form input changes
 	const handleInputChange = (

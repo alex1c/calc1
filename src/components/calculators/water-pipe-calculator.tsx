@@ -5,29 +5,49 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Droplets, Calculator, RotateCcw, Copy, Check } from 'lucide-react';
 
+/**
+ * Water Pipe Calculator Component
+ * 
+ * A React component for calculating water pipe parameters (diameter, flow rate, pressure).
+ * 
+ * Features:
+ * - Multiple calculation types (diameter, flow rate, pressure)
+ * - Pipe material selection (steel, copper, plastic, cast iron)
+ * - Flow rate calculation
+ * - Pressure drop calculation
+ * - Velocity calculation
+ * - Pipe roughness consideration
+ * - Temperature and viscosity consideration
+ * - Copy results to clipboard
+ * - Responsive design
+ * 
+ * Uses fluid dynamics formulas (Darcy-Weisbach equation, continuity equation).
+ * Uses inline calculation logic for pipe hydraulics.
+ */
 export default function WaterPipeCalculator() {
+	// Internationalization hooks for translations
 	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.waterPipeCalculator');
 
-	// State for calculation inputs
+	// Form state management
 	const [calculationType, setCalculationType] = useState<
 		'diameter' | 'flow' | 'pressure'
-	>('diameter');
-	const [flowRate, setFlowRate] = useState<string>('');
-	const [diameter, setDiameter] = useState<string>('');
-	const [length, setLength] = useState<string>('');
-	const [pressure, setPressure] = useState<string>('');
-	const [velocity, setVelocity] = useState<string>('');
+	>('diameter'); // Calculation type (diameter, flow, pressure)
+	const [flowRate, setFlowRate] = useState<string>(''); // Flow rate (L/s or m³/s)
+	const [diameter, setDiameter] = useState<string>(''); // Pipe diameter (mm)
+	const [length, setLength] = useState<string>(''); // Pipe length (m)
+	const [pressure, setPressure] = useState<string>(''); // Pressure (bar or Pa)
+	const [velocity, setVelocity] = useState<string>(''); // Flow velocity (m/s)
 	const [material, setMaterial] = useState<
 		'steel' | 'copper' | 'plastic' | 'cast_iron'
-	>('steel');
-	const [roughness, setRoughness] = useState<string>('');
-	const [temperature, setTemperature] = useState<string>('');
-	const [viscosity, setViscosity] = useState<string>('');
-	const [density, setDensity] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<any>(null);
-	const [copied, setCopied] = useState(false);
+	>('steel'); // Pipe material
+	const [roughness, setRoughness] = useState<string>(''); // Pipe roughness (mm)
+	const [temperature, setTemperature] = useState<string>(''); // Water temperature (°C)
+	const [viscosity, setViscosity] = useState<string>(''); // Dynamic viscosity (Pa·s)
+	const [density, setDensity] = useState<string>(''); // Water density (kg/m³)
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<any>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Validation function
 	const validateInputs = () => {

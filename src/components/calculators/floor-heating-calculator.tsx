@@ -12,19 +12,42 @@ import {
 	type FloorHeatingResult,
 } from '@/lib/calculators/floor-heating';
 
+/**
+ * Floor Heating Calculator Component
+ * 
+ * A React component for calculating floor heating power consumption and costs.
+ * 
+ * Features:
+ * - Room area input
+ * - Room type selection (bathroom, kitchen, living, etc.)
+ * - Insulation level selection
+ * - Desired temperature input
+ * - Usage hours per day
+ * - Electricity cost input
+ * - Power consumption calculation
+ * - Cost calculation (daily, monthly, yearly)
+ * - Real-time calculation with debouncing
+ * - Responsive design
+ * 
+ * Uses the floor heating calculation library from @/lib/calculators/floor-heating
+ * for all mathematical operations.
+ */
 export default function FloorHeatingCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.floorHeating');
+	
+	// Form state management
 	const [input, setInput] = useState<FloorHeatingInput>({
-		area: 10,
-		roomType: 'bathroom',
-		insulation: 'average',
-		temperature: 25,
-		hoursPerDay: 8,
-		electricityCost: 5.5,
+		area: 10, // Room area (m²)
+		roomType: 'bathroom', // Room type (bathroom, kitchen, living, etc.)
+		insulation: 'average', // Insulation level (good, average, poor)
+		temperature: 25, // Desired temperature (°C)
+		hoursPerDay: 8, // Hours of operation per day
+		electricityCost: 5.5, // Electricity cost (₽/kWh)
 	});
-	const [result, setResult] = useState<FloorHeatingResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<FloorHeatingResult | null>(null); // Calculated result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	// Auto-calculate when input changes
 	useEffect(() => {

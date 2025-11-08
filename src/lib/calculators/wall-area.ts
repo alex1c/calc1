@@ -1,5 +1,21 @@
-// Wall area calculator for finishing
-// Calculates wall area for different room configurations
+/**
+ * Wall Area Calculator Library
+ * 
+ * Provides functionality for calculating wall area for finishing work.
+ * 
+ * Features:
+ * - Room dimensions input (length, width, height)
+ * - Windows and doors area deduction
+ * - Multiple wall configurations (2, 3, 4 walls)
+ * - Reserve percentage calculation
+ * - Per-wall area breakdown (for 4-wall rooms)
+ * 
+ * Calculation method:
+ * - Calculates total wall area based on room dimensions and wall count
+ * - Deducts openings (windows and doors) area
+ * - Applies reserve percentage
+ * - Provides per-wall breakdown for rectangular rooms
+ */
 
 export interface WallAreaInput {
 	// Room dimensions
@@ -101,7 +117,21 @@ function calculatePerWallAreas(
 }
 
 /**
- * Main calculation function
+ * Calculate wall area for finishing work
+ * 
+ * Calculates total wall area, useful area (after openings), and area with reserve.
+ * For 4-wall rooms, also provides per-wall area breakdown.
+ * 
+ * Algorithm:
+ * 1. Calculate room perimeter
+ * 2. Calculate total wall area based on wall count
+ * 3. Deduct windows and doors area
+ * 4. Calculate reserve area
+ * 5. Calculate useful area with reserve
+ * 6. For 4-wall rooms, calculate per-wall areas
+ * 
+ * @param input - Wall area input parameters
+ * @returns Wall area calculation result with areas and breakdown
  */
 export function calculateWallArea(input: WallAreaInput): WallAreaResult {
 	const {
@@ -178,7 +208,16 @@ export function calculateWallArea(input: WallAreaInput): WallAreaResult {
 }
 
 /**
- * Validate input data
+ * Validate wall area calculation input
+ * 
+ * Performs validation checks:
+ * - Room dimensions are positive
+ * - Windows and doors area are non-negative
+ * - Reserve percentage is between 0 and 100
+ * - Wall count is between 2 and 4
+ * 
+ * @param input - Partial wall area input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateWallAreaInput(input: Partial<WallAreaInput>): string[] {
 	const errors: string[] = [];

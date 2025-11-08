@@ -34,26 +34,59 @@ import {
 	CountdownSettings,
 } from '@/lib/calculators/countdown';
 
+/**
+ * Countdown Calculator Component
+ * 
+ * A React component for countdown timers to specific events.
+ * 
+ * Features:
+ * - Event-based countdown timers
+ * - Customizable event names and descriptions
+ * - Popular event presets (birthdays, holidays, etc.)
+ * - Quick preset options
+ * - Sound notifications
+ * - Progress tracking
+ * - LocalStorage persistence
+ * - Responsive design
+ * 
+ * Countdown display:
+ * - Days, hours, minutes, seconds
+ * - Progress bar visualization
+ * - Formatted time remaining
+ * - Event completion celebration
+ * 
+ * Uses the countdown calculation library from @/lib/calculators/countdown
+ * for all countdown operations.
+ */
 export default function CountdownCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.countdown');
-	const [countdown, setCountdown] = useState<CountdownState | null>(null);
+	
+	// Countdown state management
+	const [countdown, setCountdown] = useState<CountdownState | null>(null); // Active countdown state
 	const [settings, setSettings] = useState<CountdownSettings>({
-		eventName: '',
-		eventDescription: '',
-		targetDate: getDefaultTargetDate().toISOString().split('T')[0],
-		targetTime: '12:00',
-		color: '#3B82F6',
-		soundEnabled: true,
-		showWeeks: false,
-		showHours: true,
-		showMinutes: true,
-		showSeconds: true,
+		eventName: '', // Event name
+		eventDescription: '', // Event description
+		targetDate: getDefaultTargetDate().toISOString().split('T')[0], // Target date (YYYY-MM-DD)
+		targetTime: '12:00', // Target time (HH:MM)
+		color: '#3B82F6', // Countdown color (default: blue)
+		soundEnabled: true, // Sound notifications enabled
+		showWeeks: false, // Show weeks in display
+		showHours: true, // Show hours in display
+		showMinutes: true, // Show minutes in display
+		showSeconds: true, // Show seconds in display
 	});
-	const [isMounted, setIsMounted] = useState(false);
-	const [showSettings, setShowSettings] = useState(false);
-	const [showPresets, setShowPresets] = useState(false);
-	const intervalRef = useRef<NodeJS.Timeout | null>(null);
+	const [isMounted, setIsMounted] = useState(false); // Component mount state (for SSR)
+	const [showSettings, setShowSettings] = useState(false); // Show/hide settings panel
+	const [showPresets, setShowPresets] = useState(false); // Show/hide presets panel
+	const intervalRef = useRef<NodeJS.Timeout | null>(null); // Interval reference for countdown updates
 
+	/**
+	 * Component mount and localStorage load effect
+	 * 
+	 * Loads saved countdown from localStorage on mount.
+	 * Sets mounted state to prevent hydration mismatches.
+	 */
 	useEffect(() => {
 		setIsMounted(true);
 		// Load saved countdown from localStorage
@@ -62,6 +95,7 @@ export default function CountdownCalculator() {
 			try {
 				const data = JSON.parse(savedCountdown);
 				const targetDate = new Date(data.targetDate);
+				// Validate and restore countdown if valid
 				if (validateTargetDate(targetDate)) {
 					setCountdown(
 						createCountdown(
@@ -79,30 +113,44 @@ export default function CountdownCalculator() {
 		}
 	}, []);
 
+	/**
+	 * Countdown interval effect
+	 * 
+	 * Manages countdown updates every second.
+	 * Updates countdown state when active.
+	 * Plays sound when countdown finishes.
+	 * 
+	 * Dependencies:
+	 * - countdown?.isActive: Countdown active state
+	 * - settings.soundEnabled: Sound enabled setting
+	 */
 	useEffect(() => {
 		if (countdown && countdown.isActive) {
+			// Start interval for countdown updates
 			intervalRef.current = setInterval(() => {
 				setCountdown((prevCountdown) => {
 					if (!prevCountdown) return null;
-					const updated = updateCountdown(prevCountdown);
+					const updated = updateCountdown(prevCountdown); // Update countdown state
 
-					// Check if countdown finished
+					// Check if countdown finished (transitioned from active to inactive)
 					if (!updated.isActive && prevCountdown.isActive) {
 						if (settings.soundEnabled) {
-							playCountdownSound();
+							playCountdownSound(); // Play finish sound
 						}
 					}
 
 					return updated;
 				});
-			}, 1000);
+			}, 1000); // Update every second
 		} else {
+			// Clear interval when countdown stops
 			if (intervalRef.current) {
 				clearInterval(intervalRef.current);
 				intervalRef.current = null;
 			}
 		}
 
+		// Cleanup: clear interval on unmount or dependency change
 		return () => {
 			if (intervalRef.current) {
 				clearInterval(intervalRef.current);
@@ -110,6 +158,15 @@ export default function CountdownCalculator() {
 		};
 	}, [countdown?.isActive, settings.soundEnabled]);
 
+	/**
+	 * LocalStorage save effect
+	 * 
+	 * Saves countdown to localStorage whenever countdown changes.
+	 * Persists countdown data across page refreshes.
+	 * 
+	 * Dependencies:
+	 * - countdown: Countdown state
+	 */
 	useEffect(() => {
 		// Save countdown to localStorage
 		if (countdown) {
@@ -126,21 +183,30 @@ export default function CountdownCalculator() {
 		}
 	}, [countdown]);
 
+	/**
+	 * Handle start countdown action
+	 * 
+	 * Validates inputs and creates new countdown.
+	 * Combines target date and time into single datetime.
+	 */
 	const handleStartCountdown = () => {
 		const targetDateTime = new Date(
 			`${settings.targetDate}T${settings.targetTime}:00`
 		);
 
+		// Validate target date
 		if (!validateTargetDate(targetDateTime)) {
 			alert(t('form.errors.invalidDate'));
 			return;
 		}
 
+		// Validate event name
 		if (!settings.eventName.trim()) {
 			alert(t('form.errors.eventNameRequired'));
 			return;
 		}
 
+		// Create new countdown
 		const newCountdown = createCountdown(
 			settings.eventName,
 			targetDateTime,
@@ -150,18 +216,30 @@ export default function CountdownCalculator() {
 		);
 
 		setCountdown(newCountdown);
-		setShowSettings(false);
+		setShowSettings(false); // Hide settings panel
 	};
 
+	/**
+	 * Handle stop countdown action
+	 * 
+	 * Stops countdown and removes from localStorage.
+	 */
 	const handleStopCountdown = () => {
-		setCountdown(null);
-		localStorage.removeItem('countdown-data');
+		setCountdown(null); // Clear countdown
+		localStorage.removeItem('countdown-data'); // Remove from localStorage
 	};
 
+	/**
+	 * Handle preset selection
+	 * 
+	 * Sets countdown to quick preset (e.g., "in 7 days").
+	 * 
+	 * @param event - Preset event object with days offset
+	 */
 	const handlePresetSelect = (event: any) => {
 		const targetDate = new Date();
-		targetDate.setDate(targetDate.getDate() + event.days);
-		targetDate.setHours(12, 0, 0, 0);
+		targetDate.setDate(targetDate.getDate() + event.days); // Add days offset
+		targetDate.setHours(12, 0, 0, 0); // Set to noon
 
 		setSettings((prev) => ({
 			...prev,
@@ -173,6 +251,13 @@ export default function CountdownCalculator() {
 		}));
 	};
 
+	/**
+	 * Handle popular event selection
+	 * 
+	 * Sets countdown to popular event (e.g., New Year, Christmas).
+	 * 
+	 * @param event - Popular event object with specific date
+	 */
 	const handlePopularEventSelect = (event: any) => {
 		setSettings((prev) => ({
 			...prev,
@@ -184,6 +269,14 @@ export default function CountdownCalculator() {
 		}));
 	};
 
+	/**
+	 * Get icon component for event type
+	 * 
+	 * Returns appropriate icon based on event name.
+	 * 
+	 * @param eventName - Name of the event
+	 * @returns Icon component
+	 */
 	const getEventIcon = (eventName: string) => {
 		const name = eventName.toLowerCase();
 		if (name.includes(t('form.eventTypes.birthday')) || name.includes('birthday'))

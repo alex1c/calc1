@@ -1,5 +1,27 @@
-// Car ownership cost calculation logic and interfaces
+/**
+ * Car Ownership Calculator Library
+ * 
+ * Provides functionality for calculating total car ownership costs over time.
+ * 
+ * Features:
+ * - Annual cost calculation (fuel, insurance, tax, maintenance, depreciation)
+ * - Total cost calculation over ownership period
+ * - Cost per kilometer calculation
+ * - Cost breakdown by category with percentages
+ * - Support for OSAGO and CASCO insurance
+ * 
+ * Cost categories:
+ * - Fuel: Based on annual mileage, consumption, and fuel price
+ * - Insurance: OSAGO (mandatory) + CASCO (optional)
+ * - Tax: Annual vehicle tax
+ * - Maintenance: Annual maintenance and repair costs
+ * - Depreciation: Based on car price and depreciation rate
+ */
 
+/**
+ * Input interface for car ownership calculation
+ * Contains all parameters needed to calculate ownership costs
+ */
 export interface CarOwnershipInput {
 	carPrice: number; // Car price in RUB
 	ownershipYears: number; // Ownership period in years
@@ -44,6 +66,23 @@ export interface CarOwnershipResult {
 	};
 }
 
+/**
+ * Calculate total car ownership costs
+ * 
+ * Calculates annual and total costs over ownership period, including:
+ * - Fuel costs based on mileage and consumption
+ * - Insurance costs (OSAGO + CASCO)
+ * - Vehicle tax
+ * - Maintenance costs
+ * - Depreciation costs
+ * 
+ * Also calculates:
+ * - Cost per kilometer
+ * - Cost breakdown by category with percentages
+ * 
+ * @param input - Car ownership input parameters
+ * @returns Car ownership result with all cost calculations and breakdown
+ */
 export function calculateCarOwnership(
 	input: CarOwnershipInput
 ): CarOwnershipResult {

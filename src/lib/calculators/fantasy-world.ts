@@ -1,5 +1,28 @@
-// Fantasy world generation algorithms for different types and settings
+/**
+ * Fantasy World Generator Library
+ * 
+ * Provides functionality for generating fictional fantasy worlds with various characteristics.
+ * 
+ * Features:
+ * - Multiple world types (fantasy, sci-fi, steampunk, post-apocalyptic)
+ * - World name generation
+ * - Climate generation
+ * - Culture generation
+ * - Government type generation
+ * - Resources generation
+ * - Conflict generation
+ * - Legend/myth generation
+ * 
+ * World generation:
+ * - Randomly selects elements from predefined lists based on world type
+ * - Creates cohesive world descriptions
+ * - Generates unique world characteristics
+ */
 
+/**
+ * Fantasy world interface
+ * Represents a generated fantasy world with all characteristics
+ */
 interface FantasyWorld {
 	name: string;
 	climate: string;
@@ -394,6 +417,22 @@ const legends = {
 	],
 };
 
+/**
+ * Generate a fantasy world with random characteristics
+ * 
+ * Creates a complete fantasy world by randomly selecting:
+ * - World name from type-specific list
+ * - Climate from type-specific list
+ * - Culture from type-specific list
+ * - Government type from type-specific list
+ * - Resources from type-specific list
+ * - Conflict from type-specific list
+ * - Legend/myth from type-specific list
+ * 
+ * @param worldType - World type (fantasy, sci-fi, steampunk, post-apocalyptic)
+ * @param locale - Locale code for name generation (default: 'en')
+ * @returns Generated fantasy world object with all characteristics
+ */
 export function generateFantasyWorld(worldType: string, locale: string = 'en'): FantasyWorld {
 	// Get random world name
 	const nameList = worldNames[worldType as keyof typeof worldNames];

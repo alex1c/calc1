@@ -10,20 +10,43 @@ import {
 	type DepreciationResult,
 } from '@/lib/calculators/car-depreciation';
 
+/**
+ * Car Depreciation Calculator Component
+ * 
+ * A React component for calculating car depreciation value.
+ * 
+ * Features:
+ * - Purchase price input
+ * - Age and mileage input
+ * - Car segment selection (economy, mid, premium)
+ * - Depreciation method selection (linear, exponential)
+ * - Current value calculation
+ * - Depreciation amount calculation
+ * - Responsive design
+ * 
+ * Depreciation methods:
+ * - Linear: Constant depreciation rate
+ * - Exponential: Accelerated depreciation rate
+ * 
+ * Uses the car depreciation calculation library from @/lib/calculators/car-depreciation
+ * for all mathematical operations.
+ */
 export default function CarDepreciationCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.car-depreciation');
 
+	// Form state management
 	const [formData, setFormData] = useState<Partial<DepreciationInput>>({
-		purchasePrice: 0,
-		ageYears: 0,
-		mileageKm: 0,
-		segment: 'mid',
-		method: 'exponential',
+		purchasePrice: 0, // Car purchase price (₽)
+		ageYears: 0, // Car age in years
+		mileageKm: 0, // Car mileage in kilometers
+		segment: 'mid', // Car segment (economy, mid, premium)
+		method: 'exponential', // Depreciation method (linear, exponential)
 	});
 
-	const [result, setResult] = useState<DepreciationResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+	const [result, setResult] = useState<DepreciationResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	const segmentOptions = [
 		{ value: 'economy', label: t('form.segmentTypes.economy') },

@@ -10,13 +10,31 @@ interface CompatibilityResult {
 	compatibility: string;
 }
 
+/**
+ * Love Compatibility Calculator Component
+ * 
+ * A React component for calculating love compatibility between two people.
+ * 
+ * Features:
+ * - Two birth dates input
+ * - Compatibility percentage calculation
+ * - Compatibility description
+ * - Compatibility category
+ * - Copy results to clipboard
+ * - Responsive design
+ * 
+ * Uses numerology and date-based calculations for compatibility analysis.
+ */
 export default function LoveCompatibilityCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.loveCompatibility');
-	const [date1, setDate1] = useState('');
-	const [date2, setDate2] = useState('');
-	const [result, setResult] = useState<CompatibilityResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [copied, setCopied] = useState(false);
+	
+	// Form state management
+	const [date1, setDate1] = useState(''); // First person's birth date (YYYY-MM-DD)
+	const [date2, setDate2] = useState(''); // Second person's birth date (YYYY-MM-DD)
+	const [result, setResult] = useState<CompatibilityResult | null>(null); // Calculated compatibility result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Global error handler
 	useEffect(() => {

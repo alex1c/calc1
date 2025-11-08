@@ -25,15 +25,37 @@ interface IpResult {
 	hostRange: string;
 }
 
+/**
+ * IP Calculator Component
+ * 
+ * A React component for calculating IP network parameters and subnet information.
+ * 
+ * Features:
+ * - IPv4 and IPv6 support
+ * - CIDR notation calculation
+ * - Subnet mask calculation
+ * - Network address calculation
+ * - Host range calculation
+ * - Broadcast address calculation
+ * - Number of hosts calculation
+ * - Copy results to clipboard
+ * - PDF export
+ * - Responsive design
+ * 
+ * Uses inline calculation logic for IP network calculations.
+ */
 export default function IpCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.ipCalculator');
-	const [calculationType, setCalculationType] = useState<string>('cidr');
-	const [ipAddress, setIpAddress] = useState<string>('');
-	const [subnetMask, setSubnetMask] = useState<string>('');
-	const [ipRange, setIpRange] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<IpResult | null>(null);
-	const [copied, setCopied] = useState(false);
+	
+	// Form state management
+	const [calculationType, setCalculationType] = useState<string>('cidr'); // Calculation type (cidr, subnet, range)
+	const [ipAddress, setIpAddress] = useState<string>(''); // IP address input
+	const [subnetMask, setSubnetMask] = useState<string>(''); // Subnet mask input
+	const [ipRange, setIpRange] = useState<string>(''); // IP range input
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<IpResult | null>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const validateIpv4 = (ip: string): boolean => {
 		const ipv4Regex = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;

@@ -21,15 +21,33 @@ import {
 	getRebarDiameterOptions,
 } from '@/lib/calculators/foundation';
 
+/**
+ * Foundation Calculator Component
+ * 
+ * A React component for calculating foundation materials and dimensions.
+ * 
+ * Features:
+ * - Multiple foundation types (strip, slab, column)
+ * - Concrete volume calculation
+ * - Rebar calculation
+ * - Formwork calculation
+ * - Material cost estimation
+ * - Responsive design
+ * 
+ * Uses the foundation calculation library from @/lib/calculators/foundation
+ * for all mathematical operations.
+ */
 export default function FoundationCalculator() {
+	// Internationalization hooks for translations
 	const tCommon = useTranslations('common');
 	const t = useTranslations('calculators.foundation');
 
+	// Form state management
 	const [foundationType, setFoundationType] =
-		useState<FoundationType>('strip');
-	const [result, setResult] = useState<FoundationResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculated, setIsCalculated] = useState(false);
+		useState<FoundationType>('strip'); // Foundation type (strip, slab, column)
+	const [result, setResult] = useState<FoundationResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculated, setIsCalculated] = useState(false); // Calculation status flag
 
 	// Form state - allow empty strings for number inputs
 	const [formData, setFormData] = useState<

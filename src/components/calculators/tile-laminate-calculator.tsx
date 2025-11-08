@@ -11,20 +11,42 @@ import {
 	TileLaminateResult,
 } from '@/lib/calculators/tile-laminate';
 
+/**
+ * Tile Laminate Calculator Component
+ * 
+ * A React component for calculating tile or laminate flooring materials.
+ * 
+ * Features:
+ * - Room dimensions input
+ * - Flooring type selection (tile, laminate)
+ * - Element dimensions input
+ * - Grout width consideration (for tile)
+ * - Reserve percentage calculation
+ * - Package quantity calculation
+ * - Area calculation
+ * - Number of elements calculation
+ * - Responsive design
+ * 
+ * Uses the tile-laminate calculation library from @/lib/calculators/tile-laminate
+ * for all mathematical operations.
+ */
 export default function TileLaminateCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.tile-laminate');
+	
+	// Form state management
 	const [input, setInput] = useState<Partial<TileLaminateInput>>({
-		roomLength: 0,
-		roomWidth: 0,
-		flooringType: 'tile',
-		elementLength: 0,
-		elementWidth: 0,
-		packageQuantity: 0,
-		reservePercentage: 10,
-		groutWidth: 2,
+		roomLength: 0, // Room length (m)
+		roomWidth: 0, // Room width (m)
+		flooringType: 'tile', // Flooring type (tile, laminate)
+		elementLength: 0, // Element length (m)
+		elementWidth: 0, // Element width (m)
+		packageQuantity: 0, // Elements per package
+		reservePercentage: 10, // Reserve percentage for waste (%)
+		groutWidth: 2, // Grout width (mm, for tile only)
 	});
-	const [result, setResult] = useState<TileLaminateResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<TileLaminateResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	const flooringOptions = getFlooringTypeOptions(t);
 

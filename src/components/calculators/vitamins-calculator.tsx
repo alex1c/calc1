@@ -30,34 +30,60 @@ import {
 
 /**
  * Vitamins Calculator Component
- * Interactive calculator for daily vitamin and mineral requirements
+ * 
+ * A React component for calculating daily vitamin and mineral requirements.
+ * 
+ * Features:
+ * - Gender and age-specific recommendations
+ * - Activity level adjustments
+ * - Comprehensive vitamin and mineral calculations
+ * - Tab-based interface (vitamins/minerals)
+ * - Detailed information display
+ * - Color-coded deficiency indicators
+ * - Responsive design
+ * 
+ * Calculates recommended daily allowances (RDA) for:
+ * - Vitamins: A, B complex, C, D, E, K
+ * - Minerals: Calcium, Iron, Magnesium, Zinc, etc.
+ * 
+ * Uses the vitamins calculation library from @/lib/calculators/vitamins
+ * for all calculations.
  */
 export default function VitaminsCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.vitamins');
 
 	// State for input values
-	const [gender, setGender] = useState<'male' | 'female'>('female');
-	const [age, setAge] = useState<string>('');
+	const [gender, setGender] = useState<'male' | 'female'>('female'); // User's gender
+	const [age, setAge] = useState<string>(''); // Age in years (as string for controlled input)
 	const [activityLevel, setActivityLevel] = useState<
 		'low' | 'medium' | 'high'
-	>('medium');
-	const [result, setResult] = useState<VitaminResult | null>(null);
-	const [error, setError] = useState<string>('');
-	const [isCalculating, setIsCalculating] = useState<boolean>(false);
+	>('medium'); // Activity level for adjustments
+	const [result, setResult] = useState<VitaminResult | null>(null); // Calculated vitamin/mineral requirements
+	const [error, setError] = useState<string>(''); // Validation error message
+	const [isCalculating, setIsCalculating] = useState<boolean>(false); // Loading state during calculation
 	const [activeTab, setActiveTab] = useState<'vitamins' | 'minerals'>(
-		'vitamins'
+		'vitamins' // Active tab: vitamins or minerals
 	);
-	const [showDetails, setShowDetails] = useState<boolean>(false);
+	const [showDetails, setShowDetails] = useState<boolean>(false); // Flag to show/hide detailed information
 
 	/**
 	 * Handle form submission and vitamin calculation
+	 * 
+	 * Validates inputs and calculates vitamin and mineral requirements.
+	 * 
+	 * Process:
+	 * 1. Parse age string to number
+	 * 2. Validate inputs using validateVitaminInput
+	 * 3. Calculate vitamins using calculateVitamins
+	 * 4. Update result state or error state
 	 */
 	const handleCalculate = async () => {
-		setError('');
+		setError(''); // Clear previous errors
 		setIsCalculating(true);
 
 		try {
-			const ageNum = parseInt(age);
+			const ageNum = parseInt(age); // Parse age to number
 
 			// Validate input
 			const validation = validateVitaminInput({
@@ -71,7 +97,7 @@ export default function VitaminsCalculator() {
 				return;
 			}
 
-			// Calculate vitamins
+			// Calculate vitamin and mineral requirements
 			const vitaminResult = calculateVitamins({
 				gender,
 				age: ageNum,
@@ -88,15 +114,18 @@ export default function VitaminsCalculator() {
 
 	/**
 	 * Reset form and clear results
+	 * 
+	 * Clears all form inputs and resets result and error states.
+	 * Resets UI state (tabs, details visibility).
 	 */
 	const handleReset = () => {
-		setGender('female');
-		setAge('');
-		setActivityLevel('medium');
-		setResult(null);
-		setError('');
-		setActiveTab('vitamins');
-		setShowDetails(false);
+		setGender('female'); // Reset to default gender
+		setAge(''); // Clear age input
+		setActivityLevel('medium'); // Reset to default activity level
+		setResult(null); // Clear result
+		setError(''); // Clear errors
+		setActiveTab('vitamins'); // Reset to vitamins tab
+		setShowDetails(false); // Hide details
 	};
 
 	/**

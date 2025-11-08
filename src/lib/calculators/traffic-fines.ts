@@ -1,4 +1,19 @@
-// Traffic fines calculation logic and interfaces
+/**
+ * Traffic Fines Calculator Library
+ * 
+ * Provides functionality for calculating Russian traffic fines with discounts.
+ * 
+ * Features:
+ * - Traffic fines database with common violations
+ * - Fine amount calculation
+ * - Discount calculation (25% discount if paid within 20 days)
+ * - Multiple fines selection
+ * - Fine details retrieval
+ * 
+ * Discount rules:
+ * - 25% discount applies if fine is paid within 20 days
+ * - Discount is calculated on total fine amount
+ */
 
 export interface TrafficFine {
 	id: number;
@@ -42,6 +57,18 @@ export const trafficFines: TrafficFine[] = [
 export const DISCOUNT_RATE = 0.25; // 25% discount
 export const DISCOUNT_DAYS = 20; // Within 20 days
 
+/**
+ * Calculate total traffic fines with discount
+ * 
+ * Calculates:
+ * 1. Total fine amount from selected fines
+ * 2. Discount amount (25% of total)
+ * 3. Discounted fine amount (total - discount)
+ * 4. Selected fines details
+ * 
+ * @param input - Traffic fines input with selected fine IDs
+ * @returns Traffic fines result with total, discount, and details
+ */
 export function calculateTrafficFines(
 	input: TrafficFinesInput
 ): TrafficFinesResult {
@@ -71,6 +98,14 @@ export function calculateTrafficFines(
 	};
 }
 
+/**
+ * Validate traffic fines input
+ * 
+ * Checks that at least one fine is selected.
+ * 
+ * @param input - Partial traffic fines input to validate
+ * @returns Array of error messages (empty if valid)
+ */
 export function validateTrafficFinesInput(
 	input: Partial<TrafficFinesInput>
 ): string[] {

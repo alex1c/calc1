@@ -1,3 +1,30 @@
+/**
+ * Length Converter Library
+ * 
+ * Provides functionality for converting between different length units.
+ * 
+ * Features:
+ * - Supports multiple length units: mm, cm, m, km, mi
+ * - Input validation
+ * - Formatted value output
+ * - Common conversions display
+ * 
+ * Conversion method:
+ * - Uses meters as base unit
+ * - Converts source unit to meters, then to target unit
+ * 
+ * Supported units:
+ * - mm: millimeters
+ * - cm: centimeters
+ * - m: meters (base unit)
+ * - km: kilometers
+ * - mi: miles
+ */
+
+/**
+ * Input interface for length conversion
+ * Contains length value and source/target units
+ */
 export interface LengthInput {
 	value: number;
 	fromUnit: LengthUnit;
@@ -28,6 +55,18 @@ export const LENGTH_TO_METERS: Record<LengthUnit, number> = {
 
 export const LENGTH_UNITS: LengthUnit[] = ['mm', 'cm', 'm', 'km', 'mi'];
 
+/**
+ * Validate length conversion input
+ * 
+ * Checks that:
+ * - Value is non-negative
+ * - Value is not too large (max 1e12)
+ * - Source and target units are specified
+ * - Units are valid length units
+ * 
+ * @param input - Length input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateLengthInput(input: LengthInput): LengthValidation {
 	const { value, fromUnit, toUnit } = input;
 
@@ -50,6 +89,17 @@ export function validateLengthInput(input: LengthInput): LengthValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert length from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to meters (base unit)
+ * 2. Convert meters to target unit
+ * 
+ * @param input - Length input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertLength(input: LengthInput): LengthResult {
 	const validation = validateLengthInput(input);
 	if (!validation.isValid) {
@@ -69,6 +119,20 @@ export function convertLength(input: LengthInput): LengthResult {
 	};
 }
 
+/**
+ * Format length value for display based on unit
+ * 
+ * Uses different decimal precision based on unit and magnitude:
+ * - mm: 1-3 decimal places depending on magnitude
+ * - cm: 1-2 decimal places depending on magnitude
+ * - m: 2-3 decimal places depending on magnitude
+ * - km: 2-4 decimal places depending on magnitude
+ * - mi: 2-4 decimal places depending on magnitude
+ * 
+ * @param value - Length value to format
+ * @param unit - Length unit (mm, cm, m, km, mi)
+ * @returns Formatted length value string
+ */
 export function formatLengthValue(value: number, unit: LengthUnit): string {
 	// Round to appropriate decimal places based on unit
 	let decimalPlaces: number;
@@ -100,6 +164,13 @@ export function formatLengthValue(value: number, unit: LengthUnit): string {
 	return parseFloat(formatted).toString();
 }
 
+/**
+ * Get localized unit name
+ * 
+ * @param unit - Length unit (mm, cm, m, km, mi)
+ * @param locale - Locale code (ru, en, es, de)
+ * @returns Localized unit name string
+ */
 export function getUnitName(unit: LengthUnit, locale: string): string {
 	const unitNames: Record<string, Record<LengthUnit, string>> = {
 		ru: {
@@ -135,6 +206,13 @@ export function getUnitName(unit: LengthUnit, locale: string): string {
 	return unitNames[locale]?.[unit] || unit;
 }
 
+/**
+ * Get conversion factor between two length units
+ * 
+ * @param fromUnit - Source length unit
+ * @param toUnit - Target length unit
+ * @returns Conversion factor (multiply source value by this to get target value)
+ */
 export function getConversionFactor(
 	fromUnit: LengthUnit,
 	toUnit: LengthUnit
@@ -142,6 +220,16 @@ export function getConversionFactor(
 	return LENGTH_TO_METERS[fromUnit] / LENGTH_TO_METERS[toUnit];
 }
 
+/**
+ * Get common conversions for a length value
+ * 
+ * Converts the input value to all other length units and returns
+ * an array of conversion results with formatted values.
+ * 
+ * @param value - Length value to convert
+ * @param unit - Source length unit
+ * @returns Array of conversion results for all other units
+ */
 export function getCommonConversions(
 	value: number,
 	unit: LengthUnit
@@ -174,6 +262,13 @@ export function getCommonConversions(
 	return conversions;
 }
 
+/**
+ * Get localized unit description
+ * 
+ * @param unit - Length unit (mm, cm, m, km, mi)
+ * @param locale - Locale code (ru, en, es, de)
+ * @returns Localized unit description string
+ */
 export function getUnitDescription(unit: LengthUnit, locale: string): string {
 	const descriptions: Record<string, Record<LengthUnit, string>> = {
 		ru: {

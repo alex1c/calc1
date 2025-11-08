@@ -24,31 +24,72 @@ interface AddTimeResult {
 	formattedDate: string;
 }
 
+/**
+ * Add Time Calculator Component
+ * 
+ * A React component for adding time (days, hours, minutes) to a date and time.
+ * 
+ * Features:
+ * - Add days, hours, and minutes to a date/time
+ * - Day of week calculation
+ * - Formatted result display
+ * - Copy results to clipboard
+ * - Quick "now" button
+ * - Responsive design
+ * 
+ * Calculation:
+ * - Adds specified days, hours, and minutes to start date/time
+ * - Calculates resulting date, time, and day of week
+ * - Formats result for display
+ * 
+ * Uses the add-time calculation library from @/lib/calculators/add-time
+ * for all date/time calculations.
+ */
 export default function AddTimeCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.addTime');
-	const [startDate, setStartDate] = useState('');
-	const [startTime, setStartTime] = useState('');
-	const [addDays, setAddDays] = useState(0);
-	const [addHours, setAddHours] = useState(0);
-	const [addMinutes, setAddMinutes] = useState(0);
-	const [result, setResult] = useState<AddTimeResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [copied, setCopied] = useState(false);
-	const [isMounted, setIsMounted] = useState(false);
+	
+	// Form state management
+	const [startDate, setStartDate] = useState(''); // Start date (YYYY-MM-DD format)
+	const [startTime, setStartTime] = useState(''); // Start time (HH:MM format)
+	const [addDays, setAddDays] = useState(0); // Days to add
+	const [addHours, setAddHours] = useState(0); // Hours to add
+	const [addMinutes, setAddMinutes] = useState(0); // Minutes to add
+	const [result, setResult] = useState<AddTimeResult | null>(null); // Calculated result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
+	const [isMounted, setIsMounted] = useState(false); // Component mount state (for SSR)
 
-	// Set current date and time as default only after component mounts
+	/**
+	 * Component mount effect
+	 * 
+	 * Sets mounted state and initializes start date/time to current date/time.
+	 * Prevents hydration mismatches in SSR.
+	 */
 	useEffect(() => {
 		setIsMounted(true);
 		if (!startDate || !startTime) {
-			const { date, time } = getCurrentDateTime();
-			setStartDate(date);
-			setStartTime(time);
+			const { date, time } = getCurrentDateTime(); // Get current date and time
+			setStartDate(date); // Set default start date
+			setStartTime(time); // Set default start time
 		}
 	}, []);
 
+	/**
+	 * Handle calculation
+	 * 
+	 * Validates inputs and adds time to start date/time.
+	 * 
+	 * Process:
+	 * 1. Check if start date and time are provided
+	 * 2. Validate date and time formats
+	 * 3. Add days, hours, and minutes to start date/time
+	 * 4. Update result state
+	 */
 	const handleCalculate = async () => {
-		if (!startDate || !startTime) return;
+		if (!startDate || !startTime) return; // Check if date and time are provided
 
+		// Validate date and time formats
 		if (!isValidDate(startDate) || !isValidTime(startTime)) {
 			alert('Пожалуйста, введите корректные дату и время');
 			return;
@@ -57,6 +98,7 @@ export default function AddTimeCalculator() {
 		setIsCalculating(true);
 
 		try {
+			// Add time to date
 			const calculation = addTimeToDate(
 				startDate,
 				startTime,
@@ -73,26 +115,44 @@ export default function AddTimeCalculator() {
 		}
 	};
 
+	/**
+	 * Handle reset action
+	 * 
+	 * Clears form inputs and results.
+	 * Resets start date/time to current date/time.
+	 */
 	const handleReset = () => {
 		const { date, time } = getCurrentDateTime();
-		setStartDate(date);
-		setStartTime(time);
-		setAddDays(0);
-		setAddHours(0);
-		setAddMinutes(0);
-		setResult(null);
-		setCopied(false);
+		setStartDate(date); // Reset to current date
+		setStartTime(time); // Reset to current time
+		setAddDays(0); // Reset days
+		setAddHours(0); // Reset hours
+		setAddMinutes(0); // Reset minutes
+		setResult(null); // Clear result
+		setCopied(false); // Reset copy state
 	};
 
+	/**
+	 * Handle set now action
+	 * 
+	 * Sets start date and time to current date and time.
+	 */
 	const handleSetNow = () => {
 		const { date, time } = getCurrentDateTime();
-		setStartDate(date);
-		setStartTime(time);
+		setStartDate(date); // Set to current date
+		setStartTime(time); // Set to current time
 	};
 
+	/**
+	 * Handle copy result to clipboard
+	 * 
+	 * Formats result text and copies to clipboard.
+	 * Shows success feedback for 2 seconds.
+	 */
 	const handleCopyResult = async () => {
 		if (!result) return;
 
+		// Format result text for clipboard
 		const resultText = `${t('results.copyText.title')}
 ${t('results.copyText.startDate')} ${startDate} ${startTime}
 ${t('results.copyText.added')} ${addDays} ${t('results.copyText.days')} ${addHours} ${t('results.copyText.hours')} ${addMinutes} ${t('results.copyText.minutes')}
@@ -100,9 +160,9 @@ ${t('results.copyText.finalDate')} ${result.formattedDate} ${result.resultTime}
 ${t('results.copyText.dayOfWeek')} ${result.dayOfWeek}`;
 
 		try {
-			await navigator.clipboard.writeText(resultText);
-			setCopied(true);
-			setTimeout(() => setCopied(false), 2000);
+			await navigator.clipboard.writeText(resultText); // Copy to clipboard
+			setCopied(true); // Show success state
+			setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
 		} catch (error) {
 			console.error('Copy failed:', error);
 		}

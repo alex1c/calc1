@@ -38,7 +38,23 @@ export interface TileResult {
 }
 
 /**
- * Calculate tile quantity
+ * Calculate tile quantity needed for floor tiling
+ * 
+ * Calculates number of tiles and packages needed based on:
+ * - Room dimensions (length × width)
+ * - Tile dimensions (length × width in cm)
+ * - Package quantity (tiles per package)
+ * - Reserve percentage for waste
+ * - Grout width (affects effective tile area)
+ * 
+ * Algorithm:
+ * 1. Calculate room area in m²
+ * 2. Calculate tile area in m² (convert from cm²)
+ * 3. Calculate total tiles needed with reserve
+ * 4. Calculate packages needed (round up)
+ * 
+ * @param input - Tile input parameters
+ * @returns Tile calculation result with quantities and areas
  */
 export function calculateTile(input: TileInput): TileResult {
 	const {
@@ -76,7 +92,17 @@ export function calculateTile(input: TileInput): TileResult {
 }
 
 /**
- * Validate input data
+ * Validate tile calculation input
+ * 
+ * Performs validation checks:
+ * - Room dimensions are positive
+ * - Tile dimensions are positive
+ * - Package quantity is positive
+ * - Reserve percentage is between 0 and 100
+ * - Grout width is non-negative
+ * 
+ * @param input - Partial tile input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateTileInput(input: Partial<TileInput>): string[] {
 	const errors: string[] = [];

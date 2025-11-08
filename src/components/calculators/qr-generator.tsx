@@ -31,6 +31,23 @@ type DataType =
 
 type ErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H';
 
+/**
+ * QR Code Generator Component
+ * 
+ * A React component for generating QR codes with various data types.
+ * 
+ * Features:
+ * - Multiple data types (text, URL, email, phone, SMS, WiFi, vCard)
+ * - Customizable size and colors
+ * - Error correction levels (L, M, Q, H)
+ * - WiFi network QR code generation
+ * - vCard QR code generation
+ * - Download QR code as SVG/PNG
+ * - Copy QR code data
+ * - Responsive design
+ * 
+ * Uses qrcode.react library for QR code generation.
+ */
 interface QRGeneratorInput {
 	dataType: DataType;
 	data: string;
@@ -50,23 +67,26 @@ interface QRGeneratorInput {
 }
 
 export default function QRGenerator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.qr-generator');
+	
+	// Form state management
 	const [input, setInput] = useState<QRGeneratorInput>({
-		dataType: 'text',
-		data: '',
-		size: 256,
-		errorCorrectionLevel: 'M',
-		foregroundColor: '#000000',
-		backgroundColor: '#FFFFFF',
-		wifiSSID: '',
-		wifiPassword: '',
-		wifiSecurity: 'WPA',
-		vCardName: '',
-		vCardPhone: '',
-		vCardEmail: '',
-		vCardAddress: '',
+		dataType: 'text', // QR code data type
+		data: '', // QR code data content
+		size: 256, // QR code size in pixels
+		errorCorrectionLevel: 'M', // Error correction level (L, M, Q, H)
+		foregroundColor: '#000000', // Foreground color (black)
+		backgroundColor: '#FFFFFF', // Background color (white)
+		wifiSSID: '', // WiFi network name (for WiFi type)
+		wifiPassword: '', // WiFi password (for WiFi type)
+		wifiSecurity: 'WPA', // WiFi security type (for WiFi type)
+		vCardName: '', // vCard name (for vCard type)
+		vCardPhone: '', // vCard phone (for vCard type)
+		vCardEmail: '', // vCard email (for vCard type)
+		vCardAddress: '', // vCard address (for vCard type)
 	});
-	const [errors, setErrors] = useState<string[]>([]);
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 	const [qrData, setQrData] = useState<string>('');
 	const qrCodeRef = useRef<HTMLDivElement>(null);
 

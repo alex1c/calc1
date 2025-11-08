@@ -24,23 +24,43 @@ import {
 	type BabyGrowthResult,
 } from '@/lib/calculators/baby-growth';
 
+/**
+ * Baby Growth Calculator Component
+ * 
+ * A React component for calculating baby growth percentiles and development.
+ * 
+ * Features:
+ * - Gender selection (male, female)
+ * - Age input (months or years)
+ * - Height and weight input
+ * - Growth percentile calculation
+ * - WHO growth charts comparison
+ * - Development assessment
+ * - Recommendations
+ * - Responsive design
+ * 
+ * Uses the baby growth calculation library from @/lib/calculators/baby-growth
+ * for all percentile calculations based on WHO growth standards.
+ */
 export default function BabyGrowthCalculator() {
+	// Internationalization hooks for translations
 	const t = useTranslations('calculators.babyGrowth');
 	const tCommon = useTranslations('common');
-	const locale = useLocale();
+	const locale = useLocale(); // Current locale for date formatting
 
+	// Form state management
 	const [formData, setFormData] = useState<BabyGrowthInput>({
-		gender: 'male',
-		ageMonths: 12,
-		height: 75,
-		weight: 9.5,
+		gender: 'male', // Baby gender (male, female)
+		ageMonths: 12, // Age in months
+		height: 75, // Height in cm
+		weight: 9.5, // Weight in kg
 	});
 
-	const [result, setResult] = useState<BabyGrowthResult | null>(null);
-	const [errors, setErrors] = useState<string[]>([]);
-	const [isCalculating, setIsCalculating] = useState(false);
+	const [result, setResult] = useState<BabyGrowthResult | null>(null); // Calculated result
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
 	const [ageInputType, setAgeInputType] = useState<'months' | 'years'>(
-		'months'
+		'months' // Age input type (months or years)
 	);
 
 	const handleInputChange = (field: keyof BabyGrowthInput, value: any) => {

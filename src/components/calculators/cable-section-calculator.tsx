@@ -24,23 +24,48 @@ interface CableResult {
 	cost: number;
 }
 
+/**
+ * Cable Section Calculator Component
+ * 
+ * A React component for calculating electrical cable cross-section.
+ * 
+ * Features:
+ * - Power or current input
+ * - Voltage selection
+ * - Cable length input
+ * - Material selection (copper, aluminum)
+ * - Phase type (single, three-phase)
+ * - Power factor input
+ * - Voltage drop calculation
+ * - Temperature consideration
+ * - Installation method selection
+ * - Cable weight and cost estimation
+ * - Copy results to clipboard
+ * - PDF export
+ * - Responsive design
+ * 
+ * Uses inline calculation logic based on PUE (Russian Electrical Code) standards.
+ */
 export default function CableSectionCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.cableSectionCalculator');
-	const [calculationType, setCalculationType] = useState<string>('power');
-	const [power, setPower] = useState<number>(0);
-	const [current, setCurrent] = useState<number>(0);
-	const [voltage, setVoltage] = useState<number>(220);
-	const [length, setLength] = useState<number>(0);
-	const [material, setMaterial] = useState<string>('copper');
-	const [phaseType, setPhaseType] = useState<string>('single');
-	const [powerFactor, setPowerFactor] = useState<number>(0.8);
-	const [voltageDrop, setVoltageDrop] = useState<number>(3);
-	const [temperature, setTemperature] = useState<number>(25);
+	
+	// Form state management
+	const [calculationType, setCalculationType] = useState<string>('power'); // Calculation type (power, current)
+	const [power, setPower] = useState<number>(0); // Power (W)
+	const [current, setCurrent] = useState<number>(0); // Current (A)
+	const [voltage, setVoltage] = useState<number>(220); // Voltage (V)
+	const [length, setLength] = useState<number>(0); // Cable length (m)
+	const [material, setMaterial] = useState<string>('copper'); // Cable material (copper, aluminum)
+	const [phaseType, setPhaseType] = useState<string>('single'); // Phase type (single, three-phase)
+	const [powerFactor, setPowerFactor] = useState<number>(0.8); // Power factor
+	const [voltageDrop, setVoltageDrop] = useState<number>(3); // Maximum voltage drop (%)
+	const [temperature, setTemperature] = useState<number>(25); // Operating temperature (°C)
 	const [installationMethod, setInstallationMethod] =
-		useState<string>('open');
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [result, setResult] = useState<CableResult | null>(null);
-	const [copied, setCopied] = useState(false);
+		useState<string>('open'); // Installation method (open, closed)
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [result, setResult] = useState<CableResult | null>(null); // Calculated result
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	const calculateCableSection = () => {
 		setIsCalculating(true);

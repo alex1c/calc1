@@ -24,67 +24,110 @@ import {
 
 /**
  * Unit Converter Calculator Component
- * Converts between different units of measurement
+ * 
+ * A React component for converting between different units of measurement.
+ * 
+ * Features:
+ * - Supports multiple unit types: length, weight, temperature, speed, pressure, volume, energy, data, angle
+ * - Real-time conversion as user inputs values
+ * - Bidirectional conversion (from/to units)
+ * - Input validation with error messages
+ * - Conversion examples and formulas
+ * - Responsive design
+ * 
+ * Uses the unit conversion library from @/lib/calculators/unitConversions
+ * for all conversion operations.
  */
 export default function ConverterCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.converter');
 
 	// State for form inputs
-	const [unitType, setUnitType] = useState<UnitType>('length');
-	const [fromUnit, setFromUnit] = useState<string>('');
-	const [toUnit, setToUnit] = useState<string>('');
-	const [value, setValue] = useState<string>('');
-	const [result, setResult] = useState<ConversionResult | null>(null);
-	const [error, setError] = useState<string | null>(null);
+	const [unitType, setUnitType] = useState<UnitType>('length'); // Selected unit type category
+	const [fromUnit, setFromUnit] = useState<string>(''); // Source unit for conversion
+	const [toUnit, setToUnit] = useState<string>(''); // Target unit for conversion
+	const [value, setValue] = useState<string>(''); // Value to convert (as string for controlled input)
+	const [result, setResult] = useState<ConversionResult | null>(null); // Conversion result
+	const [error, setError] = useState<string | null>(null); // Validation error message
 
 	// Get available units for current type
+	// Dynamically updates when unitType changes
 	const availableUnits = getUnitsForType(unitType);
 
 	/**
 	 * Handle unit type change
+	 * 
+	 * Called when user selects a different unit category (e.g., length, weight).
+	 * Resets all form fields and results to start fresh with new unit type.
+	 * 
+	 * @param newType - New unit type category to select
 	 */
 	const handleUnitTypeChange = (newType: UnitType) => {
 		setUnitType(newType);
-		setFromUnit('');
-		setToUnit('');
-		setValue('');
-		setResult(null);
-		setError(null);
+		setFromUnit(''); // Reset source unit
+		setToUnit(''); // Reset target unit
+		setValue(''); // Reset input value
+		setResult(null); // Clear previous result
+		setError(null); // Clear previous errors
 	};
 
 	/**
 	 * Handle value change
+	 * 
+	 * Updates input value when user types. Clears error state
+	 * to allow user to correct input.
+	 * 
+	 * @param newValue - New input value as string
 	 */
 	const handleValueChange = (newValue: string) => {
 		setValue(newValue);
-		setError(null);
+		setError(null); // Clear error when user starts typing
 	};
 
 	/**
 	 * Handle unit change
+	 * 
+	 * Updates either source or target unit selection.
+	 * Clears error state when unit changes.
+	 * 
+	 * @param unit - Unit identifier to set
+	 * @param type - Whether updating 'from' or 'to' unit
 	 */
 	const handleUnitChange = (unit: string, type: 'from' | 'to') => {
 		if (type === 'from') {
-			setFromUnit(unit);
+			setFromUnit(unit); // Update source unit
 		} else {
-			setToUnit(unit);
+			setToUnit(unit); // Update target unit
 		}
-		setError(null);
+		setError(null); // Clear error when unit changes
 	};
 
 	/**
-	 * Handle reset
+	 * Handle reset action
+	 * 
+	 * Clears all form inputs and resets result and error states.
+	 * Called when user clicks the reset button.
 	 */
 	const handleReset = () => {
-		setFromUnit('');
-		setToUnit('');
-		setValue('');
-		setResult(null);
-		setError(null);
+		setFromUnit(''); // Clear source unit
+		setToUnit(''); // Clear target unit
+		setValue(''); // Clear input value
+		setResult(null); // Clear result
+		setError(null); // Clear errors
 	};
 
 	/**
 	 * Perform conversion
+	 * 
+	 * Validates inputs and performs unit conversion.
+	 * 
+	 * Process:
+	 * 1. Check that value, fromUnit, and toUnit are all provided
+	 * 2. Parse value string to number
+	 * 3. Validate inputs using validateConversionInput
+	 * 4. Perform conversion using convertUnit
+	 * 5. Format result using formatConversionResult
+	 * 6. Update result state or error state
 	 */
 	const performConversion = () => {
 		if (!value || !fromUnit || !toUnit) {

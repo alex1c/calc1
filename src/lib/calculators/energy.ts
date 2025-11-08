@@ -1,3 +1,26 @@
+/**
+ * Energy Converter Library
+ * 
+ * Provides functionality for converting between different energy units.
+ * 
+ * Features:
+ * - Supports three energy units: Joules (J), calories (cal), watt-hours (Wh)
+ * - Input validation
+ * - Formatted value output
+ * 
+ * Conversion formulas:
+ * - Joules to calories: cal = J / 4.184
+ * - Calories to Joules: J = cal × 4.184
+ * - Joules to watt-hours: Wh = J / 3600
+ * - Watt-hours to Joules: J = Wh × 3600
+ * 
+ * All conversions use Joules as the base unit.
+ */
+
+/**
+ * Input interface for energy conversion
+ * Contains energy value and source/target units
+ */
 export interface EnergyInput {
 	value: number;
 	fromUnit: EnergyUnit;
@@ -19,6 +42,18 @@ export interface EnergyValidation {
 
 export const ENERGY_UNITS: EnergyUnit[] = ['J', 'cal', 'Wh'];
 
+/**
+ * Validate energy conversion input
+ * 
+ * Checks that:
+ * - Value is non-negative
+ * - Value is not too large (max 1e12)
+ * - Source and target units are specified
+ * - Units are valid energy units
+ * 
+ * @param input - Energy input to validate
+ * @returns Validation result with boolean status and optional error message
+ */
 export function validateEnergyInput(input: EnergyInput): EnergyValidation {
 	const { value, fromUnit, toUnit } = input;
 
@@ -41,6 +76,17 @@ export function validateEnergyInput(input: EnergyInput): EnergyValidation {
 	return { isValid: true };
 }
 
+/**
+ * Convert energy from one unit to another
+ * 
+ * Conversion process:
+ * 1. Convert source unit to Joules (base unit)
+ * 2. Convert Joules to target unit
+ * 
+ * @param input - Energy input with value, source unit, and target unit
+ * @returns Conversion result with value, unit, and formatted value string
+ * @throws Error if input validation fails
+ */
 export function convertEnergy(input: EnergyInput): EnergyResult {
 	const validation = validateEnergyInput(input);
 	if (!validation.isValid) {

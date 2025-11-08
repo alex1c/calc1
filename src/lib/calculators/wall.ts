@@ -1,5 +1,26 @@
-// Wall calculator for bricks and blocks
-// Extensible architecture for different wall materials
+/**
+ * Wall Calculator Library
+ * 
+ * Provides functionality for calculating brick and block quantities for walls.
+ * 
+ * Features:
+ * - Multiple material types (single/double/triple brick, gas block, foam block)
+ * - Wall dimensions input (length, height, thickness)
+ * - Material dimensions input
+ * - Joint thickness consideration
+ * - Reserve percentage calculation
+ * - Mortar/glue volume calculation
+ * - Cost calculation (optional)
+ * - Unit conversion (meters/centimeters)
+ * 
+ * Calculation method:
+ * - Calculates wall area and volume
+ * - Calculates material volume per piece
+ * - Calculates number of pieces needed (with joint thickness adjustment)
+ * - Applies reserve percentage
+ * - Calculates mortar/glue volume
+ * - Calculates costs if price provided
+ */
 
 export interface WallInput {
 	// Wall dimensions
@@ -171,7 +192,17 @@ export function calculateWallVolume(
 }
 
 /**
- * Calculate material volume
+ * Calculate material volume per piece
+ * 
+ * Calculates volume of one brick/block piece.
+ * Converts dimensions from mm to meters.
+ * 
+ * Formula: Volume = Length × Width × Height (in meters)
+ * 
+ * @param length - Material length in mm
+ * @param width - Material width in mm
+ * @param height - Material height in mm
+ * @returns Material volume in m³
  */
 export function calculateMaterialVolume(
 	length: number,
@@ -186,7 +217,21 @@ export function calculateMaterialVolume(
 }
 
 /**
- * Calculate material count for wall
+ * Calculate number of material pieces needed for wall
+ * 
+ * Calculates pieces needed based on:
+ * - Wall area
+ * - Wall thickness (in bricks/blocks)
+ * - Material pieces per m² (for 1 brick thickness)
+ * - Joint thickness adjustment
+ * 
+ * Formula: Count = Wall Area × Pieces per m² × Thickness × Joint Factor
+ * 
+ * @param wallArea - Wall area in m²
+ * @param wallThickness - Wall thickness in bricks/blocks
+ * @param material - Material data with piecesPerM2
+ * @param jointThickness - Joint thickness in mm
+ * @returns Number of material pieces needed (rounded up)
  */
 export function calculateMaterialCount(
 	wallArea: number,
@@ -204,7 +249,17 @@ export function calculateMaterialCount(
 }
 
 /**
- * Calculate mortar volume
+ * Calculate mortar/glue volume needed
+ * 
+ * Calculates mortar volume as the difference between wall volume
+ * and total material volume.
+ * 
+ * Formula: Mortar Volume = Wall Volume - (Material Volume × Piece Count)
+ * 
+ * @param wallVolume - Total wall volume in m³
+ * @param materialVolume - Volume of one material piece in m³
+ * @param materialCount - Number of material pieces
+ * @returns Mortar/glue volume in m³
  */
 export function calculateMortarVolume(
 	wallVolume: number,
@@ -217,7 +272,19 @@ export function calculateMortarVolume(
 }
 
 /**
- * Main calculation function
+ * Calculate wall materials and costs
+ * 
+ * Orchestrates the complete wall calculation process:
+ * 1. Converts units if needed (centimeters to meters)
+ * 2. Calculates wall area and volume
+ * 3. Calculates material volume per piece
+ * 4. Calculates number of pieces needed (with joint thickness adjustment)
+ * 5. Applies reserve percentage
+ * 6. Calculates mortar/glue volume
+ * 7. Calculates costs if price provided
+ * 
+ * @param input - Wall input parameters including dimensions, material, and units
+ * @returns Complete wall calculation result with quantities, volumes, and costs
  */
 export function calculateWall(input: WallInput): WallResult {
 	const {
@@ -320,7 +387,18 @@ export function calculateWall(input: WallInput): WallResult {
 }
 
 /**
- * Validate input data
+ * Validate wall calculation input
+ * 
+ * Performs validation checks:
+ * - Wall dimensions are positive
+ * - Wall thickness is between 0 and 3 bricks/blocks
+ * - Material type is specified
+ * - Material dimensions are positive
+ * - Joint thickness is non-negative and not too large (max 50mm)
+ * - Reserve percentage is between 0 and 50
+ * 
+ * @param input - Partial wall input to validate
+ * @returns Array of error messages (empty if valid)
  */
 export function validateWallInput(input: Partial<WallInput>): string[] {
 	const errors: string[] = [];

@@ -12,20 +12,44 @@ import {
 	type GasUsageResult,
 } from '@/lib/calculators/gas-usage';
 
+/**
+ * Gas Usage Calculator Component
+ * 
+ * A React component for calculating natural gas consumption and costs.
+ * 
+ * Features:
+ * - Purpose selection (heating, cooking, hot water)
+ * - Area input
+ * - Usage hours per day
+ * - Equipment power input
+ * - Efficiency input
+ * - Gas tariff input
+ * - Period selection (days)
+ * - Consumption calculation (daily, monthly, yearly)
+ * - Cost calculation
+ * - Real-time calculation with debouncing
+ * - Responsive design
+ * 
+ * Uses the gas usage calculation library from @/lib/calculators/gas-usage
+ * for all mathematical operations.
+ */
 export default function GasUsageCalculator() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.gasUsage');
+	
+	// Form state management
 	const [input, setInput] = useState<GasUsageInput>({
-		purpose: 'heating',
-		area: 50,
-		hoursPerDay: 12,
-		power: 20,
-		efficiency: 90,
-		tariff: 8.5,
-		periodDays: 30,
+		purpose: 'heating', // Gas purpose (heating, cooking, hot water)
+		area: 50, // Area (m²)
+		hoursPerDay: 12, // Hours of operation per day
+		power: 20, // Equipment power (kW)
+		efficiency: 90, // Efficiency (%)
+		tariff: 8.5, // Gas tariff (₽/m³)
+		periodDays: 30, // Period in days
 	});
-	const [result, setResult] = useState<GasUsageResult | null>(null);
-	const [isCalculating, setIsCalculating] = useState(false);
-	const [errors, setErrors] = useState<string[]>([]);
+	const [result, setResult] = useState<GasUsageResult | null>(null); // Calculated result
+	const [isCalculating, setIsCalculating] = useState(false); // Loading state during calculation
+	const [errors, setErrors] = useState<string[]>([]); // Validation errors
 
 	// Auto-calculate when input changes
 	useEffect(() => {

@@ -15,13 +15,32 @@ interface FlipResult {
 	tailsCount: number;
 }
 
+/**
+ * Coin Flipper Component
+ * 
+ * A React component for flipping coins with statistics tracking.
+ * 
+ * Features:
+ * - Random coin flip (heads/tails)
+ * - Multiple coin styles (classic, gold, emoji)
+ * - Flip history tracking
+ * - Statistics (total flips, heads count, tails count)
+ * - Copy results to clipboard
+ * - Animated flipping effect
+ * - Responsive design
+ * 
+ * Uses Math.random() for coin flip generation.
+ */
 export default function CoinFlipper() {
+	// Internationalization hook for translations
 	const t = useTranslations('calculators.coinFlipper');
-	const [isFlipping, setIsFlipping] = useState(false);
-	const [result, setResult] = useState<FlipResult | null>(null);
-	const [coinStyle, setCoinStyle] = useState<CoinStyle>('classic');
-	const [flipHistory, setFlipHistory] = useState<FlipResult[]>([]);
-	const [copied, setCopied] = useState(false);
+	
+	// State management
+	const [isFlipping, setIsFlipping] = useState(false); // Flipping animation state
+	const [result, setResult] = useState<FlipResult | null>(null); // Current flip result
+	const [coinStyle, setCoinStyle] = useState<CoinStyle>('classic'); // Coin visual style
+	const [flipHistory, setFlipHistory] = useState<FlipResult[]>([]); // Flip history
+	const [copied, setCopied] = useState(false); // Copy to clipboard success state
 
 	// Coin flip animation and result
 	const flipCoin = async () => {
