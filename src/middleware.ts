@@ -108,8 +108,9 @@ const intlMiddleware = createMiddleware({
 	// Used when no locale matches
 	defaultLocale: 'ru',
 
-	// Enable automatic locale detection from Accept-Language header
-	localeDetection: true,
+	// Disable automatic locale detection - we use custom logic instead
+	// Custom logic handles Accept-Language header and cookie preferences
+	localeDetection: false,
 
 	// Always show locale prefix for consistency
 	// This ensures all routes have locale in URL
