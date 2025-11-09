@@ -28,23 +28,23 @@ echo "3️⃣ Checking container health..."
 docker inspect calc1-app --format='Status: {{.State.Status}} | Health: {{.State.Health.Status}}' 2>/dev/null || echo "❌ Cannot inspect container"
 echo ""
 
-# Check if port 3000 is listening
-echo "4️⃣ Checking if port 3000 is listening..."
-if netstat -tuln 2>/dev/null | grep -q ':3000 ' || ss -tuln 2>/dev/null | grep -q ':3000 '; then
-    echo "✅ Port 3000 is listening"
-    netstat -tuln 2>/dev/null | grep ':3000 ' || ss -tuln 2>/dev/null | grep ':3000 '
+# Check if port 3001 is listening
+echo "4️⃣ Checking if port 3001 is listening..."
+if netstat -tuln 2>/dev/null | grep -q ':3001 ' || ss -tuln 2>/dev/null | grep -q ':3001 '; then
+    echo "✅ Port 3001 is listening"
+    netstat -tuln 2>/dev/null | grep ':3001 ' || ss -tuln 2>/dev/null | grep ':3001 '
 else
-    echo "❌ Port 3000 is NOT listening"
+    echo "❌ Port 3001 is NOT listening"
 fi
 echo ""
 
 # Check if application responds
-echo "5️⃣ Checking if application responds on localhost:3000..."
-if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
-    echo "✅ Application responds on http://localhost:3000"
-    curl -I http://localhost:3000 2>/dev/null | head -5
+echo "5️⃣ Checking if application responds on localhost:3001..."
+if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
+    echo "✅ Application responds on http://localhost:3001"
+    curl -I http://localhost:3001 2>/dev/null | head -5
 else
-    echo "❌ Application does NOT respond on http://localhost:3000"
+    echo "❌ Application does NOT respond on http://localhost:3001"
     echo "   Checking container logs..."
     docker compose logs --tail=50 calc1 2>/dev/null || docker-compose logs --tail=50 calc1 2>/dev/null
 fi

@@ -18,20 +18,20 @@ else
 fi
 echo ""
 
-# Check if application responds on localhost:3000
-echo "2️⃣ Testing localhost:3000..."
-if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
-    echo "✅ Application responds on localhost:3000"
-    curl -I http://localhost:3000 2>&1 | head -3
+# Check if application responds on localhost:3001
+echo "2️⃣ Testing localhost:3001..."
+if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
+    echo "✅ Application responds on localhost:3001"
+    curl -I http://localhost:3001 2>&1 | head -3
 else
-    echo "❌ Application does NOT respond on localhost:3000"
+    echo "❌ Application does NOT respond on localhost:3001"
     echo "Container logs:"
     docker compose logs --tail=30 calc1 2>/dev/null || docker-compose logs --tail=30 calc1 2>/dev/null
     echo ""
     echo "Restarting container..."
     docker compose restart calc1
     sleep 15
-    if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
+    if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
         echo "✅ Application now responds"
     else
         echo "❌ Application still does not respond"
@@ -80,13 +80,13 @@ echo "6️⃣ Checking Docker network..."
 docker network ls | grep calc1
 echo ""
 
-# Check if port 3000 is accessible
-echo "7️⃣ Checking port 3000 accessibility..."
-if netstat -tuln 2>/dev/null | grep -q ':3000 ' || ss -tuln 2>/dev/null | grep -q ':3000 '; then
-    echo "✅ Port 3000 is listening"
-    netstat -tuln 2>/dev/null | grep ':3000 ' || ss -tuln 2>/dev/null | grep ':3000 '
+# Check if port 3001 is accessible
+echo "7️⃣ Checking port 3001 accessibility..."
+if netstat -tuln 2>/dev/null | grep -q ':3001 ' || ss -tuln 2>/dev/null | grep -q ':3001 '; then
+    echo "✅ Port 3001 is listening"
+    netstat -tuln 2>/dev/null | grep ':3001 ' || ss -tuln 2>/dev/null | grep ':3001 '
 else
-    echo "❌ Port 3000 is NOT listening"
+    echo "❌ Port 3001 is NOT listening"
 fi
 echo ""
 
@@ -120,6 +120,6 @@ echo ""
 echo "💡 If still getting 503:"
 echo "   1. Check: docker compose logs -f calc1"
 echo "   2. Check: sudo tail -f /var/log/apache2/calc1.ru_ssl_error.log"
-echo "   3. Verify: curl http://localhost:3000"
+    echo "   3. Verify: curl http://localhost:3001"
 echo "   4. Restart: docker compose restart calc1"
 

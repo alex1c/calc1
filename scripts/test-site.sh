@@ -21,12 +21,12 @@ echo "4️⃣ Testing root path with locale..."
 curl -L -I https://calc1.ru/ru 2>&1 | head -15
 echo ""
 
-echo "5️⃣ Testing direct access to localhost:3000..."
-curl -I http://localhost:3000 2>&1 | head -10
+echo "5️⃣ Testing direct access to localhost:3001..."
+curl -I http://localhost:3001 2>&1 | head -10
 echo ""
 
-echo "6️⃣ Testing localhost:3000 with follow redirects..."
-curl -L -I http://localhost:3000 2>&1 | head -15
+echo "6️⃣ Testing localhost:3001 with follow redirects..."
+curl -L -I http://localhost:3001 2>&1 | head -15
 echo ""
 
 echo "7️⃣ Checking Apache access log for recent requests..."

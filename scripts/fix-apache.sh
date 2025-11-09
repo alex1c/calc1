@@ -103,5 +103,5 @@ echo ""
 echo "💡 If issues persist:"
 echo "   1. Check logs: sudo tail -f /var/log/apache2/calc1.ru_ssl_error.log"
 echo "   2. Check Docker: docker compose logs calc1"
-echo "   3. Verify proxy: curl http://localhost:3000/ru"
+echo "   3. Verify proxy: curl http://localhost:3001/ru"
 

@@ -22,14 +22,14 @@ sleep 3
 echo "✅ Done"
 echo ""
 
-# Check if port 3000 is free
-echo "3️⃣ Checking port 3000..."
-if netstat -tuln 2>/dev/null | grep -q ':3000 ' || ss -tuln 2>/dev/null | grep -q ':3000 '; then
-    echo "⚠️  Port 3000 is still in use, killing processes..."
-    lsof -ti:3000 | xargs kill -9 2>/dev/null || fuser -k 3000/tcp 2>/dev/null || true
+# Check if port 3001 is free
+echo "3️⃣ Checking port 3001..."
+if netstat -tuln 2>/dev/null | grep -q ':3001 ' || ss -tuln 2>/dev/null | grep -q ':3001 '; then
+    echo "⚠️  Port 3001 is still in use, killing processes..."
+    lsof -ti:3001 | xargs kill -9 2>/dev/null || fuser -k 3001/tcp 2>/dev/null || true
     sleep 2
 else
-    echo "✅ Port 3000 is free"
+    echo "✅ Port 3001 is free"
 fi
 echo ""
 
@@ -63,9 +63,9 @@ echo ""
 echo "8️⃣ Testing application..."
 MAX_ATTEMPTS=10
 for i in $(seq 1 $MAX_ATTEMPTS); do
-    if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
-        echo "✅ Application responds on http://localhost:3000"
-        curl -I http://localhost:3000 2>&1 | head -5
+    if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
+        echo "✅ Application responds on http://localhost:3001"
+        curl -I http://localhost:3001 2>&1 | head -5
         exit 0
     fi
     echo "⏳ Attempt $i/$MAX_ATTEMPTS: Waiting 5 seconds..."

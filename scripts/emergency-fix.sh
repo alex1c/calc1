@@ -45,16 +45,16 @@ ps aux | grep apache2 | grep -v grep | head -5
 echo "Apache processes count: $(ps aux | grep apache2 | grep -v grep | wc -l)"
 echo ""
 
-# Check port 3000
-echo "7️⃣ Checking port 3000..."
-if netstat -tuln 2>/dev/null | grep -q ':3000 ' || ss -tuln 2>/dev/null | grep -q ':3000 '; then
-    echo "⚠️  Port 3000 is still in use:"
-    netstat -tuln 2>/dev/null | grep ':3000 ' || ss -tuln 2>/dev/null | grep ':3000 '
-    echo "Killing processes on port 3000..."
-    lsof -ti:3000 | xargs kill -9 2>/dev/null || fuser -k 3000/tcp 2>/dev/null || true
+# Check port 3001
+echo "7️⃣ Checking port 3001..."
+if netstat -tuln 2>/dev/null | grep -q ':3001 ' || ss -tuln 2>/dev/null | grep -q ':3001 '; then
+    echo "⚠️  Port 3001 is still in use:"
+    netstat -tuln 2>/dev/null | grep ':3001 ' || ss -tuln 2>/dev/null | grep ':3001 '
+    echo "Killing processes on port 3001..."
+    lsof -ti:3001 | xargs kill -9 2>/dev/null || fuser -k 3001/tcp 2>/dev/null || true
     sleep 2
 else
-    echo "✅ Port 3000 is free"
+    echo "✅ Port 3001 is free"
 fi
 echo ""
 
@@ -99,8 +99,8 @@ echo ""
 
 # Check if application responds
 echo "1️⃣3️⃣ Testing application..."
-if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
-    echo "✅ Application responds on localhost:3000"
+if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
+    echo "✅ Application responds on localhost:3001"
 else
     echo "❌ Application does NOT respond"
     echo "Container logs:"

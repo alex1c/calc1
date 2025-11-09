@@ -36,7 +36,7 @@ echo ""
 
 # Check if application responds
 echo "5️⃣ Testing application..."
-if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
+if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
     echo "✅ Application responds"
 else
     echo "❌ Application does NOT respond"

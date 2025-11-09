@@ -87,8 +87,8 @@ jobs:
             echo "🌐 Checking if application is responding..."
             MAX_ATTEMPTS=20
             for i in $(seq 1 $MAX_ATTEMPTS); do
-              if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
-                echo "✅ Application is responding on port 3000!"
+              if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
+                echo "✅ Application is responding on port 3001!"
                 exit 0
               fi
               echo "⏳ Attempt $i/$MAX_ATTEMPTS: Application not ready yet, waiting 5 seconds..."
@@ -106,8 +106,8 @@ jobs:
             echo "📋 Last 200 lines of logs:"
             docker compose logs --tail=200 calc1 2>/dev/null || docker-compose logs --tail=200 calc1 2>/dev/null || true
             echo ""
-            echo "📋 Checking if port 3000 is listening:"
-            netstat -tuln | grep 3000 || ss -tuln | grep 3000 || echo "Port 3000 is not listening"
+            echo "📋 Checking if port 3001 is listening:"
+            netstat -tuln | grep 3001 || ss -tuln | grep 3001 || echo "Port 3001 is not listening"
             echo ""
             echo "📋 Checking container processes:"
             docker top calc1-app 2>/dev/null || echo "Cannot check processes"

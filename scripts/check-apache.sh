@@ -83,13 +83,13 @@ for module in "${REQUIRED_MODULES[@]}"; do
 done
 echo ""
 
-# Test localhost:3000
-echo "6️⃣ Testing localhost:3000..."
-if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
-    echo "✅ Application responds on localhost:3000"
-    curl -I http://localhost:3000 2>&1 | head -3
+# Test localhost:3001
+echo "6️⃣ Testing localhost:3001..."
+if curl -f -s http://localhost:3001 > /dev/null 2>&1; then
+    echo "✅ Application responds on localhost:3001"
+    curl -I http://localhost:3001 2>&1 | head -3
 else
-    echo "❌ Application does NOT respond on localhost:3000"
+    echo "❌ Application does NOT respond on localhost:3001"
 fi
 echo ""
 

@@ -31,10 +31,10 @@
 		SSLCertificateFile /etc/letsencrypt/live/calc1.ru/fullchain.pem
 		SSLCertificateKeyFile /etc/letsencrypt/live/calc1.ru/privkey.pem
 
-		# Proxy to Docker container running on port 3000
+		# Proxy to Docker container running on port 3001
 		ProxyPreserveHost On
-		ProxyPass / http://localhost:3000/
-		ProxyPassReverse / http://localhost:3000/
+		ProxyPass / http://localhost:3001/
+		ProxyPassReverse / http://localhost:3001/
 
 		# Forward headers for proper request handling
 		RequestHeader set X-Forwarded-Proto "https"

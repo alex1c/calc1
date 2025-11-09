@@ -23,8 +23,8 @@ echo ""
 
 # Test the problematic URL
 echo "4️⃣ Testing problematic URL..."
-echo "Testing: http://localhost:3000/pt-BR/life"
-curl -I http://localhost:3000/pt-BR/life 2>&1 | head -10
+echo "Testing: http://localhost:3001/pt-BR/life"
+curl -I http://localhost:3001/pt-BR/life 2>&1 | head -10
 echo ""
 
 # Check if pt-BR messages exist
