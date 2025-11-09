@@ -17,6 +17,8 @@ const nextConfig = {
 	poweredByHeader: false,
 	reactStrictMode: true,
 	swcMinify: true,
+	// Enable standalone output for Docker
+	output: 'standalone',
 	// Ensure all translation files are included in the output file tracing
 	experimental: {
 		outputFileTracingIncludes: {
