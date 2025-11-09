@@ -14,6 +14,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Validate secrets
+        run: |
+          if [ -z "${{ secrets.SERVER_HOST }}" ]; then
+            echo "::error::SERVER_HOST secret is not set. Please add it in repository settings."
+            exit 1
+          fi
+          if [ -z "${{ secrets.SERVER_USER }}" ]; then
+            echo "::error::SERVER_USER secret is not set. Please add it in repository settings."
+            exit 1
+          fi
+          if [ -z "${{ secrets.SERVER_SSH_KEY }}" ]; then
+            echo "::error::SERVER_SSH_KEY secret is not set. Please add it in repository settings."
+            exit 1
+          fi
+          echo "✅ All required secrets are configured"
+
       - name: Deploy to server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
