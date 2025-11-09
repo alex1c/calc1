@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { buildSearchIndex } from '@/lib/search-utils';
+import { buildSearchIndex } from '@/lib/server/search-index';
 
 /**
  * API endpoint to get search index for calculators
@@ -11,7 +11,8 @@ export async function GET(request: NextRequest) {
 		const locale = searchParams.get('locale') || 'ru';
 
 		// Validate locale
-		const validLocales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
+		const { SUPPORTED_LOCALES } = await import('@/lib/constants');
+		const validLocales = SUPPORTED_LOCALES;
 		if (!validLocales.includes(locale)) {
 			return NextResponse.json(
 				{ error: 'Invalid locale' },

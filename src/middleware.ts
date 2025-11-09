@@ -1,9 +1,10 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '@/lib/constants';
 
 // Supported locales
-const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'] as const;
-type Locale = (typeof locales)[number];
+const locales = SUPPORTED_LOCALES;
+type Locale = SupportedLocale;
 
 /**
  * Detect locale from browser Accept-Language header

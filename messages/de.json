@@ -1451,5 +1451,10 @@
         }
       }
     }
+  },
+  "homepage": {
+    "seo": {
+      "keywords": "Online-Rechner, kostenlose Rechner, Finanzrechner, Mathematikrechner, Baukalkulatoren, Gesundheitsrechner, Einheitenumrechner, Kreditrechner, Hypothekenrechner, Kreditrechner, BMI-Rechner, Steuerrechner"
+    }
   }
 }

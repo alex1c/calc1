@@ -8,6 +8,8 @@ import NameGeneratorCalculator from '@/components/calculators/name-generator-cal
 import NameGeneratorSEO from '@/components/seo/name-generator-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/fun/name-generator`,
-			languages: {
-				ru: 'https://calc1.ru/ru/fun/name-generator',
-				en: 'https://calc1.ru/en/fun/name-generator',
-				es: 'https://calc1.ru/es/fun/name-generator',
-				de: 'https://calc1.ru/de/fun/name-generator',
-			},
+			languages: generateLanguageAlternates('/fun/name-generator'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -95,7 +92,7 @@ export async function generateMetadata({
 export default async function NameGeneratorPage({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

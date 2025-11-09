@@ -8,6 +8,8 @@ import PasswordGenerator from '@/components/calculators/password-generator';
 import PasswordGeneratorSEO from '@/components/seo/password-generator-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -18,7 +20,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
@@ -48,12 +50,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/fun/password`,
-			languages: {
-				ru: 'https://calc1.ru/ru/fun/password',
-				en: 'https://calc1.ru/en/fun/password',
-				es: 'https://calc1.ru/es/fun/password',
-				de: 'https://calc1.ru/de/fun/password',
-			},
+			languages: generateLanguageAlternates('/fun/password'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -102,7 +99,7 @@ export async function generateMetadata({
 export default async function PasswordGeneratorPage({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

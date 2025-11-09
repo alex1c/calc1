@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 
 interface Props {
 	params: { locale: string };
@@ -31,12 +32,7 @@ export async function generateMetadata({
 		metadataBase: new URL(baseUrl),
 		alternates: {
 			canonical: currentPath,
-			languages: {
-				ru: `${baseUrl}/ru/life/pregnancy`,
-				en: `${baseUrl}/en/life/pregnancy`,
-				es: `${baseUrl}/es/life/pregnancy`,
-				de: `${baseUrl}/de/life/pregnancy`,
-			},
+			languages: generateLanguageAlternates('/life/pregnancy'),
 		},
 		openGraph: {
 			title: t('title'),

@@ -880,19 +880,19 @@
 					"unlimited": "Numero illimitato"
 				},
 				"bonusMalusOptions": {
-					"0.5": "0.5 (Sconto massimo)",
-					"0.6": "0.6",
-					"0.65": "0.65",
-					"0.7": "0.7",
-					"0.8": "0.8",
-					"0.9": "0.9",
-					"1.0": "1.0 (Tariffa base)",
-					"1.4": "1.4",
-					"1.5": "1.5",
-					"1.6": "1.6",
-					"1.7": "1.7",
-					"2.0": "2.0",
-					"2.45": "2.45 (Supplemento massimo)"
+					"value_0_5": "0.5 (Sconto massimo)",
+					"value_0_6": "value_0_6",
+					"value_0_65": "value_0_65",
+					"value_0_7": "value_0_7",
+					"value_0_8": "value_0_8",
+					"value_0_9": "value_0_9",
+					"value_1_0": "1.0 (Tariffa base)",
+					"value_1_4": "value_1_4",
+					"value_1_5": "value_1_5",
+					"value_1_6": "value_1_6",
+					"value_1_7": "value_1_7",
+					"value_2_0": "value_2_0",
+					"value_2_45": "2.45 (Supplemento massimo)"
 				},
 				"errors": {
 					"title": "Errori di immissione",

@@ -8,6 +8,8 @@ import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 // Dynamic import for client component
 const FoodRationCalculator = dynamic(
 	() => import('@/components/calculators/food-ration-calculator'),
@@ -20,7 +22,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -64,12 +66,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/food-ration`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/food-ration',
-				en: 'https://calc1.ru/en/life/food-ration',
-				es: 'https://calc1.ru/es/life/food-ration',
-				de: 'https://calc1.ru/de/life/food-ration',
-			},
+			languages: generateLanguageAlternates('/life/food-ration'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -131,7 +128,7 @@ export default async function FoodRationPage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

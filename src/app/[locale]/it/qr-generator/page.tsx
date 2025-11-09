@@ -9,6 +9,8 @@ import QRGeneratorSEO from '@/components/seo/qr-generator-seo';
 import { loadMergedItTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -16,7 +18,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = await loadMergedItTranslations(locale);
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/it/qr-generator`,
-			languages: {
-				ru: 'https://calc1.ru/ru/it/qr-generator',
-				en: 'https://calc1.ru/en/it/qr-generator',
-				es: 'https://calc1.ru/es/it/qr-generator',
-				de: 'https://calc1.ru/de/it/qr-generator',
-			},
+			languages: generateLanguageAlternates('/it/qr-generator'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -114,7 +111,7 @@ export default async function QRGeneratorPage({
 	const messages = await loadMergedItTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

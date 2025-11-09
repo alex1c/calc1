@@ -8,6 +8,8 @@ import WaterPipeSEO from '@/components/seo/water-pipe-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
@@ -46,12 +48,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/construction/water-pipe`,
-			languages: {
-				ru: 'https://calc1.ru/ru/construction/water-pipe',
-				en: 'https://calc1.ru/en/construction/water-pipe',
-				es: 'https://calc1.ru/es/construction/water-pipe',
-				de: 'https://calc1.ru/de/construction/water-pipe',
-			},
+			languages: generateLanguageAlternates('/construction/water-pipe'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -108,7 +105,7 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 	const messages = await loadMergedConstructionTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

@@ -8,6 +8,8 @@ import HeatingCostSEO from '@/components/seo/heating-cost-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -68,12 +70,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/heating-cost`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/heating-cost',
-				en: 'https://calc1.ru/en/life/heating-cost',
-				es: 'https://calc1.ru/es/life/heating-cost',
-				de: 'https://calc1.ru/de/life/heating-cost',
-			},
+			languages: generateLanguageAlternates('/life/heating-cost'),
 		},
 		openGraph: {
 			title: `${t('meta.title')} | Calc1.ru`,
@@ -130,7 +127,7 @@ export default async function HeatingCostPage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

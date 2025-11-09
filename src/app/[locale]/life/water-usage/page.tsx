@@ -8,6 +8,8 @@ import WaterUsageSEO from '@/components/seo/water-usage-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -70,12 +72,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/water-usage`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/water-usage',
-				en: 'https://calc1.ru/en/life/water-usage',
-				es: 'https://calc1.ru/es/life/water-usage',
-				de: 'https://calc1.ru/de/life/water-usage',
-			},
+			languages: generateLanguageAlternates('/life/water-usage'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -132,7 +129,7 @@ export default async function WaterUsagePage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

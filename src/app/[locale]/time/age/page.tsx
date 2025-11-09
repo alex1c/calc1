@@ -8,6 +8,8 @@ import AgeCalculator from '@/components/calculators/age-calculator';
 import AgeSEO from '@/components/seo/age-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedTimeTranslations } = await import('@/lib/i18n-utils');
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/time/age`,
-			languages: {
-				ru: 'https://calc1.ru/ru/time/age',
-				en: 'https://calc1.ru/en/time/age',
-				es: 'https://calc1.ru/es/time/age',
-				de: 'https://calc1.ru/de/time/age',
-			},
+			languages: generateLanguageAlternates('/time/age'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -105,7 +102,7 @@ export default async function AgePage({
 		namespace: 'categories',
 	});
 
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

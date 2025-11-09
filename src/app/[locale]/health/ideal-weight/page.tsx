@@ -9,6 +9,8 @@ import IdealWeightSEO from '@/components/seo/ideal-weight-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 /**
  * Generate metadata for Ideal Weight Calculator page
  */
@@ -17,7 +19,7 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -50,12 +52,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/health/ideal-weight',
-				en: 'https://calc1.ru/en/health/ideal-weight',
-				es: 'https://calc1.ru/es/health/ideal-weight',
-				de: 'https://calc1.ru/de/health/ideal-weight',
-			},
+			languages: generateLanguageAlternates('/health/ideal-weight'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,
@@ -105,7 +102,7 @@ export default async function IdealWeightPage({
 }: {
 	params: { locale: string };
 }) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

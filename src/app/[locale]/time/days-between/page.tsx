@@ -8,6 +8,8 @@ import DaysBetweenCalculator from '@/components/calculators/days-between-calcula
 import DaysBetweenSEO from '@/components/seo/days-between-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedTimeTranslations } = await import('@/lib/i18n-utils');
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/time/days-between`,
-			languages: {
-				ru: 'https://calc1.ru/ru/time/days-between',
-				en: 'https://calc1.ru/en/time/days-between',
-				es: 'https://calc1.ru/es/time/days-between',
-				de: 'https://calc1.ru/de/time/days-between',
-			},
+			languages: generateLanguageAlternates('/time/days-between'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -105,7 +102,7 @@ export default async function DaysBetweenPage({
 		namespace: 'categories',
 	});
 
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

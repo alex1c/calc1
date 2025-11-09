@@ -8,6 +8,8 @@ import CreditLoanSEO from '@/components/seo/credit-loan-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -37,12 +39,7 @@ export async function generateMetadata({
 		},
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/finance/credit-loan`,
-			languages: {
-				ru: 'https://calc1.ru/ru/finance/credit-loan',
-				en: 'https://calc1.ru/en/finance/credit-loan',
-				es: 'https://calc1.ru/es/finance/credit-loan',
-				de: 'https://calc1.ru/de/finance/credit-loan',
-			},
+			languages: generateLanguageAlternates('/finance/credit-loan'),
 		},
 	};
 }
@@ -58,7 +55,7 @@ export default async function CreditLoanPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

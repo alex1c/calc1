@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/header';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/breadcrumbs';
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 import {
 	Clock,
 	Calendar,
@@ -25,7 +27,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -55,12 +57,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/time`,
-			languages: {
-				ru: 'https://calc1.ru/ru/time',
-				en: 'https://calc1.ru/en/time',
-				es: 'https://calc1.ru/es/time',
-				de: 'https://calc1.ru/de/time',
-			},
+			languages: generateLanguageAlternates('/time'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -162,7 +159,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function TimePage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

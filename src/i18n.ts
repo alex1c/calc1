@@ -1,7 +1,10 @@
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
 import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
+import { SUPPORTED_LOCALES } from '@/lib/constants';
 
-const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
+const locales = SUPPORTED_LOCALES;
 
 // Explicit imports for all locales to ensure webpack includes them in the build
 // These imports are not executed but help webpack statically analyze the module graph
@@ -40,15 +43,6 @@ function deepMerge(a: any, b: any) {
 	return b;
 }
 
-async function loadJson(path: string) {
-	try {
-		const mod = await import(path);
-		return mod?.default ?? {};
-	} catch {
-		return {};
-	}
-}
-
 export default getRequestConfig(async ({ requestLocale }) => {
 	let locale = await requestLocale;
 
@@ -59,51 +53,45 @@ export default getRequestConfig(async ({ requestLocale }) => {
 	try {
 		// 1) Базовый монолит (обратная совместимость)
 		// Use explicit locale map for better webpack static analysis
-		const baseMessagesLoader = localeMessageMap[locale];
-		const baseMessages = baseMessagesLoader
-			? (await baseMessagesLoader()).default
-			: (
-					await import(`../messages/${locale}.json`).catch(() => ({
-						default: {} as any,
-					}))
-				).default;
+		const baseMessagesLoader =
+			localeMessageMap[locale] ?? localeMessageMap['ru'];
+		const baseMessages = (await baseMessagesLoader()).default;
 
 		// 2) Подмешиваем калькуляторы из messages/{locale}/calculators/*.json если существуют
 		let calculatorsBundle: any = {};
 		try {
-			// Используем fs только на сервере
-			const fs = await import('node:fs');
-			const path = await import('node:path');
 			const dir = path.join(
 				process.cwd(),
 				'messages',
 				String(locale),
 				'calculators'
 			);
-			if (fs.existsSync(dir)) {
-				const files = fs
-					.readdirSync(dir)
-					.filter((f) => f.endsWith('.json'));
-				for (const file of files) {
-					const mod = await import(
-						`../messages/${locale}/calculators/${file}`
-					);
-					const data = mod?.default ?? {};
-					// Поддерживаем два варианта структуры файла:
-					// 1) { calculators: { name: { ... } } }
-					// 2) { name: { ... } } → оборачиваем в calculators.name
-					const name = file.replace(/\.json$/, '');
-					const normalized = data?.calculators
-						? data
-						: { calculators: { [name]: data[name] ?? data } };
-					calculatorsBundle = deepMerge(
-						calculatorsBundle,
-						normalized
-					);
-				}
+			const files = await fs
+				.readdir(dir, { withFileTypes: true })
+				.then((entries) =>
+					entries
+						.filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+						.map((entry) => entry.name)
+				);
+
+			for (const file of files) {
+				const filePath = path.join(dir, file);
+				const content = await fs.readFile(filePath, 'utf-8');
+				const data = JSON.parse(content);
+				const name = file.replace(/\.json$/, '');
+				const normalized = data?.calculators
+					? data
+					: { calculators: { [name]: data[name] ?? data } };
+				calculatorsBundle = deepMerge(calculatorsBundle, normalized);
 			}
-		} catch {
-			// игнорируем, если папки нет или рантайм не поддерживает fs
+		} catch (error) {
+			// ignore missing directory
+			if ((error as NodeJS.ErrnoException)?.code !== 'ENOENT') {
+				console.warn(
+					`Failed to load calculator messages for locale ${locale}:`,
+					error
+				);
+			}
 		}
 
 		const messages = deepMerge(baseMessages, calculatorsBundle);

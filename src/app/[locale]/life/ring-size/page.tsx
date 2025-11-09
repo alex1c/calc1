@@ -8,13 +8,15 @@ import RingSizeSEO from '@/components/seo/ring-size-seo';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -66,12 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/ring-size`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/ring-size',
-				en: 'https://calc1.ru/en/life/ring-size',
-				es: 'https://calc1.ru/es/life/ring-size',
-				de: 'https://calc1.ru/de/life/ring-size',
-			},
+			languages: generateLanguageAlternates('/life/ring-size'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -133,7 +130,7 @@ export default async function RingSizePage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

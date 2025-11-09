@@ -9,6 +9,8 @@ import BMIHealthSEO from '@/components/seo/bmi-health-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 /**
  * Generate metadata for BMI Health Calculator page
  */
@@ -17,7 +19,7 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -50,12 +52,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/health/bmihealth',
-				en: 'https://calc1.ru/en/health/bmihealth',
-				es: 'https://calc1.ru/es/health/bmihealth',
-				de: 'https://calc1.ru/de/health/bmihealth',
-			},
+			languages: generateLanguageAlternates('/health/bmihealth'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,

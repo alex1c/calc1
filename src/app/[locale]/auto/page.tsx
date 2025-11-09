@@ -4,6 +4,8 @@ import { Metadata } from 'next';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import Link from 'next/link';
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 import {
 	Car,
 	Fuel,
@@ -29,7 +31,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -74,12 +76,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/auto`,
-			languages: {
-				ru: 'https://calc1.ru/ru/auto',
-				en: 'https://calc1.ru/en/auto',
-				es: 'https://calc1.ru/es/auto',
-				de: 'https://calc1.ru/de/auto',
-			},
+			languages: generateLanguageAlternates('/auto'),
 		},
 		openGraph: {
 			title: seoTitle,
@@ -202,7 +199,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function AutoPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

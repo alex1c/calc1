@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/header';
 import CategoryCard from '@/components/category-card';
 import Link from 'next/link';
+import { isSupportedLocale } from '@/lib/constants';
 import {
 	Calculator,
 	CreditCard,
@@ -26,7 +27,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -53,9 +54,13 @@ export async function generateMetadata({
 		? `${siteDescription} Более 100 бесплатных онлайн калькуляторов: финансовые, математические, строительные, медицинские, конвертеры единиц измерения и многое другое. Точные расчёты без регистрации.`
 		: `${siteDescription} More than 100 free online calculators: financial, mathematical, construction, health, unit converters and much more. Accurate calculations without registration.`;
 
-	const keywords = locale === 'ru'
-		? 'калькулятор онлайн, бесплатные калькуляторы, финансовые калькуляторы, математические калькуляторы, строительные калькуляторы, медицинские калькуляторы, конвертеры единиц, калькулятор кредита, калькулятор ипотеки, калькулятор ипотеки онлайн, калькулятор ипотеки бесплатно, калькулятор ипотеки рассчитать, калькулятор ипотеки с досрочным погашением, калькулятор ипотеки калькулятор онлайн, калькулятор ипотеки расчет, калькулятор кредита онлайн, калькулятор кредита рассчитать, калькулятор кредита бесплатно, калькулятор кредита с досрочным погашением, калькулятор ипотеки, калькулятор ипотеки онлайн, калькулятор ипотеки бесплатно, калькулятор ипотеки рассчитать'
-		: 'online calculator, free calculators, financial calculators, math calculators, construction calculators, health calculators, unit converters, loan calculator, mortgage calculator, credit calculator, BMI calculator, tax calculator';
+	// Get keywords from translations
+	const keywordsFromTranslations = t('homepage.seo.keywords');
+	const keywords = (typeof keywordsFromTranslations === 'string' && keywordsFromTranslations !== 'homepage.seo.keywords')
+		? keywordsFromTranslations
+		: (locale === 'ru'
+			? 'калькулятор онлайн, бесплатные калькуляторы, финансовые калькуляторы, математические калькуляторы, строительные калькуляторы, медицинские калькуляторы, конвертеры единиц, калькулятор кредита, калькулятор ипотеки, калькулятор ипотеки онлайн, калькулятор ипотеки бесплатно, калькулятор ипотеки рассчитать, калькулятор ипотеки с досрочным погашением, калькулятор ипотеки калькулятор онлайн, калькулятор ипотеки расчет, калькулятор кредита онлайн, калькулятор кредита рассчитать, калькулятор кредита бесплатно, калькулятор кредита с досрочным погашением, калькулятор ипотеки, калькулятор ипотеки онлайн, калькулятор ипотеки бесплатно, калькулятор ипотеки рассчитать'
+			: 'online calculator, free calculators, financial calculators, math calculators, construction calculators, health calculators, unit converters, loan calculator, mortgage calculator, credit calculator, BMI calculator, tax calculator');
 
 	const canonicalUrl = locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`;
 
@@ -199,7 +204,7 @@ const categories = [
 ];
 
 export default async function HomePage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -223,9 +228,15 @@ export default async function HomePage({ params: { locale } }: Props) {
 		},
 		inLanguage: locale,
 		alternateName: 'Calc1',
-		keywords: locale === 'ru'
-			? 'калькулятор онлайн, бесплатные калькуляторы, финансовые калькуляторы, математические калькуляторы'
-			: 'online calculator, free calculators, financial calculators, math calculators',
+		keywords: (() => {
+			const keywordsStr = t('homepage.seo.keywords');
+			if (typeof keywordsStr === 'string' && keywordsStr !== 'homepage.seo.keywords') {
+				return keywordsStr.split(', ').slice(0, 4).join(', ');
+			}
+			return locale === 'ru'
+				? 'калькулятор онлайн, бесплатные калькуляторы, финансовые калькуляторы, математические калькуляторы'
+				: 'online calculator, free calculators, financial calculators, math calculators';
+		})(),
 	};
 
 	const organizationData = {

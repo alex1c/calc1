@@ -9,6 +9,8 @@ import OvulationSEO from '@/components/seo/ovulation-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 /**
  * Generate metadata for the ovulation calculator page
  */
@@ -17,7 +19,7 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -50,12 +52,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/health/ovulation',
-				en: 'https://calc1.ru/en/health/ovulation',
-				es: 'https://calc1.ru/es/health/ovulation',
-				de: 'https://calc1.ru/de/health/ovulation',
-			},
+			languages: generateLanguageAlternates('/health/ovulation'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,

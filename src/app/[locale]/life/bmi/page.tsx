@@ -8,13 +8,15 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -46,14 +48,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			'bmi rechner',
 			'calculateur imc',
 		],
+		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/bmi`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/bmi',
-				en: 'https://calc1.ru/en/life/bmi',
-				es: 'https://calc1.ru/es/life/bmi',
-				de: 'https://calc1.ru/de/life/bmi',
-			},
+			languages: generateLanguageAlternates('/life/bmi'),
 		},
 		openGraph: {
 			title: t('title'),
@@ -91,7 +89,7 @@ export default async function BMIPage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -186,6 +184,7 @@ export default async function BMIPage({ params: { locale } }: Props) {
 					'healthImplications',
 					'visualScale',
 				]}
+				featureNamespace='calculators.bmi.features'
 				ratingValue='4.9'
 				ratingCount='234'
 				screenshot='https://calc1.ru/images/bmi-screenshot.jpg'

@@ -8,28 +8,29 @@ import PercentCalculator from '@/components/calculators/percent-calculator'
 describe('PercentCalculator Component', () => {
 	it('renders calculator form', () => {
 		render(<PercentCalculator />)
-		const inputs = screen.getAllByRole('textbox')
-		expect(inputs.length).toBeGreaterThan(0)
+		const numberInput = screen.getByLabelText(/number/i)
+		expect(numberInput).toBeInTheDocument()
 	})
 
 	it('calculates percentage of number', async () => {
 		const user = userEvent.setup()
 		render(<PercentCalculator />)
 
-		const inputs = screen.getAllByRole('textbox')
-		if (inputs.length >= 2) {
-			await user.type(inputs[0], '100')
-			await user.type(inputs[1], '25')
+		const numberInput = screen.getByLabelText(/number/i)
+		const percentageInput = screen.getByLabelText(/percentage/i)
 
-			await waitFor(
-				() => {
-					// Look for result containing 25
-					const result = screen.queryByText(/25/)
-					expect(result).toBeInTheDocument()
-				},
-				{ timeout: 3000 }
-			)
-		}
+		await user.clear(numberInput)
+		await user.type(numberInput, '100')
+		await user.clear(percentageInput)
+		await user.type(percentageInput, '25')
+
+		await waitFor(
+			() => {
+			const results = screen.getAllByText(/25\.00/)
+			expect(results.length).toBeGreaterThan(0)
+			},
+			{ timeout: 3000 }
+		)
 	})
 })
 

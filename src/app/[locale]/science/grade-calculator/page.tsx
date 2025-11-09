@@ -9,6 +9,8 @@ import GradeCalculatorSEO from '@/components/seo/grade-calculator-seo';
 import { loadMergedScienceTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -16,7 +18,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = await loadMergedScienceTranslations(locale);
@@ -46,12 +48,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/science/grade-calculator`,
-			languages: {
-				ru: 'https://calc1.ru/ru/science/grade-calculator',
-				en: 'https://calc1.ru/en/science/grade-calculator',
-				es: 'https://calc1.ru/es/science/grade-calculator',
-				de: 'https://calc1.ru/de/science/grade-calculator',
-			},
+			languages: generateLanguageAlternates('/science/grade-calculator'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -115,7 +112,7 @@ export default async function GradeCalculatorPage({
 	const messages = await loadMergedScienceTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

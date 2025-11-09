@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import Link from 'next/link';
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 import {
 	Globe,
 	Users,
@@ -29,7 +31,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -69,12 +71,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/fun`,
-			languages: {
-				ru: 'https://calc1.ru/ru/fun',
-				en: 'https://calc1.ru/en/fun',
-				es: 'https://calc1.ru/es/fun',
-				de: 'https://calc1.ru/de/fun',
-			},
+			languages: generateLanguageAlternates('/fun'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,
@@ -204,7 +201,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function FunPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

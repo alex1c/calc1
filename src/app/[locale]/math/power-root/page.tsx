@@ -8,13 +8,15 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedMathTranslations } = await import('@/lib/i18n-utils');
@@ -47,12 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		],
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/math/power-root`,
-			languages: {
-				ru: 'https://calc1.ru/ru/math/power-root',
-				en: 'https://calc1.ru/en/math/power-root',
-				es: 'https://calc1.ru/es/math/power-root',
-				de: 'https://calc1.ru/de/math/power-root',
-			},
+			languages: generateLanguageAlternates('/math/power-root'),
 		},
 		openGraph: {
 			title: t('title'),
@@ -87,7 +84,7 @@ export default async function PowerRootPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

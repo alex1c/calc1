@@ -8,6 +8,8 @@ import PensionCalculator from '@/components/calculators/pension-calculator';
 import PensionSEO from '@/components/seo/pension-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedFinanceTranslations } = await import('@/lib/i18n-utils');
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/finance/pension`,
-			languages: {
-				ru: 'https://calc1.ru/ru/finance/pension',
-				en: 'https://calc1.ru/en/finance/pension',
-				es: 'https://calc1.ru/es/finance/pension',
-				de: 'https://calc1.ru/de/finance/pension',
-			},
+			languages: generateLanguageAlternates('/finance/pension'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -114,7 +111,7 @@ export default async function PensionPage({
 	const messages = await loadMergedFinanceTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

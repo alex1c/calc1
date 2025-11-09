@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import Link from 'next/link';
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 import {
 	Shuffle,
 	Ruler,
@@ -27,7 +29,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -70,12 +72,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/converter`,
-			languages: {
-				ru: 'https://calc1.ru/ru/converter',
-				en: 'https://calc1.ru/en/converter',
-				es: 'https://calc1.ru/es/converter',
-				de: 'https://calc1.ru/de/converter',
-			},
+			languages: generateLanguageAlternates('/converter'),
 		},
 		openGraph: {
 			title: seoTitle,
@@ -184,7 +181,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function ConverterPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

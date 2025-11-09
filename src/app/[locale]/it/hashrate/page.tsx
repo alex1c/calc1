@@ -8,6 +8,8 @@ import HashrateCalculator from '@/components/calculators/hashrate-calculator';
 import HashrateCalculatorSEO from '@/components/seo/hashrate-calculator-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedItTranslations } = await import('@/lib/i18n-utils');
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/it/hashrate`,
-			languages: {
-				ru: 'https://calc1.ru/ru/it/hashrate',
-				en: 'https://calc1.ru/en/it/hashrate',
-				es: 'https://calc1.ru/es/it/hashrate',
-				de: 'https://calc1.ru/de/it/hashrate',
-			},
+			languages: generateLanguageAlternates('/it/hashrate'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -112,7 +109,7 @@ export default async function HashratePage({ params: { locale } }: Props) {
 	const messages = await loadMergedItTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

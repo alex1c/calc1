@@ -1451,5 +1451,10 @@
         }
       }
     }
+  },
+  "homepage": {
+    "seo": {
+      "keywords": "online calculator, free calculators, financial calculators, math calculators, construction calculators, health calculators, unit converters, loan calculator, mortgage calculator, credit calculator, BMI calculator, tax calculator"
+    }
   }
 }

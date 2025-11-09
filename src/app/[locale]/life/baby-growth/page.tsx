@@ -8,6 +8,8 @@ import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 // Dynamic import for calculator component
 const BabyGrowthCalculator = dynamic(
 	() => import('@/components/calculators/baby-growth-calculator'),
@@ -20,7 +22,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -75,12 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/baby-growth`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/baby-growth',
-				en: 'https://calc1.ru/en/life/baby-growth',
-				es: 'https://calc1.ru/es/life/baby-growth',
-				de: 'https://calc1.ru/de/life/baby-growth',
-			},
+			languages: generateLanguageAlternates('/life/baby-growth'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -142,7 +139,7 @@ export default async function BabyGrowthPage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

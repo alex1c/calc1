@@ -8,6 +8,8 @@ import MortgageSEO from '@/components/seo/mortgage-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedFinanceTranslations } = await import(
@@ -47,12 +49,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/finance/mortgage`,
-			languages: {
-				ru: 'https://calc1.ru/ru/finance/mortgage',
-				en: 'https://calc1.ru/en/finance/mortgage',
-				es: 'https://calc1.ru/es/finance/mortgage',
-				de: 'https://calc1.ru/de/finance/mortgage',
-			},
+			languages: generateLanguageAlternates('/finance/mortgage'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -111,7 +108,7 @@ export default async function MortgagePage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

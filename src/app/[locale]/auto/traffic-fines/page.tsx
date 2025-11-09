@@ -7,6 +7,8 @@ import TrafficFinesSEO from '@/components/seo/traffic-fines-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -14,7 +16,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -47,12 +49,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/auto/traffic-fines`,
-			languages: {
-				ru: 'https://calc1.ru/ru/auto/traffic-fines',
-				en: 'https://calc1.ru/en/auto/traffic-fines',
-				es: 'https://calc1.ru/es/auto/traffic-fines',
-				de: 'https://calc1.ru/de/auto/traffic-fines',
-			},
+			languages: generateLanguageAlternates('/auto/traffic-fines'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -116,7 +113,7 @@ export default async function TrafficFinesPage({ params: { locale } }: Props) {
 	const messages = await loadMergedAutoTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

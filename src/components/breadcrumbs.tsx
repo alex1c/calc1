@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
+import { SUPPORTED_LOCALES } from '@/lib/constants';
 
 interface BreadcrumbItem {
 	label: string;
@@ -35,7 +36,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 		let currentPath = '';
 		segments.forEach((segment, index) => {
 			// Пропускаем locale (первый сегмент)
-			if (index === 0 && ['ru', 'en', 'de', 'es'].includes(segment)) {
+			if (index === 0 && SUPPORTED_LOCALES.includes(segment as any)) {
 				return;
 			}
 

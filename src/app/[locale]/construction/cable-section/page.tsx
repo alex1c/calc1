@@ -8,6 +8,8 @@ import CableSectionSEO from '@/components/seo/cable-section-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
@@ -62,12 +64,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/construction/cable-section`,
-			languages: {
-				ru: 'https://calc1.ru/ru/construction/cable-section',
-				en: 'https://calc1.ru/en/construction/cable-section',
-				es: 'https://calc1.ru/es/construction/cable-section',
-				de: 'https://calc1.ru/de/construction/cable-section',
-			},
+			languages: generateLanguageAlternates('/construction/cable-section'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -124,7 +121,7 @@ export default async function CableSectionPage({ params: { locale } }: Props) {
 	const messages = await loadMergedConstructionTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

@@ -7,6 +7,7 @@ import IpCalculatorSEO from '@/components/seo/ip-calculator-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
 interface Props {
 	params: { locale: string };
 }
@@ -28,7 +29,7 @@ export default async function IpCalculatorPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

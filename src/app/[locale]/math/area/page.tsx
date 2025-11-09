@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { isSupportedLocale } from '@/lib/constants';
 import {
 	Circle,
 	Square,
@@ -38,7 +39,7 @@ export default async function AreaCalculatorPage({
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

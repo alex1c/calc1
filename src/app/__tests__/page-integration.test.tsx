@@ -24,7 +24,7 @@ describe('Page Integration Tests', () => {
 
 			expect(metadata).toHaveProperty('title')
 			expect(metadata).toHaveProperty('description')
-			expect(metadata.title).toContain('Auto')
+		expect(metadata.title).toContain('Calc1.ru')
 		})
 
 		it('generates metadata with correct locale', async () => {

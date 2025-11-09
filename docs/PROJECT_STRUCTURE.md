@@ -328,7 +328,14 @@ export default async function Page({ params: { locale } }) {
 **В generateMetadata:**
 
 ```typescript
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
+
 export async function generateMetadata({ params: { locale } }) {
+	if (!isSupportedLocale(locale)) {
+		notFound();
+	}
+
 	const { loadMergedCategoryTranslations } = await import('@/lib/i18n-utils');
 	const messages = await loadMergedCategoryTranslations(locale, 'category');
 	const t = (key: string) => messages.calculators['calculator-name'].seo[key];
@@ -336,6 +343,10 @@ export async function generateMetadata({ params: { locale } }) {
 	return {
 		title: t('title'),
 		description: t('description'),
+		alternates: {
+			canonical: `https://calc1.ru/${locale}/category/calculator-name`,
+			languages: generateLanguageAlternates('/category/calculator-name'),
+		},
 	};
 }
 ```
@@ -639,9 +650,16 @@ export default async function CalculatorPage({ params: { locale } }: Props) {
 
 ### Конфигурация i18n:
 
+**Файл `src/lib/constants.ts`:**
+
+-   Централизованная константа `SUPPORTED_LOCALES` со всеми поддерживаемыми локалями
+-   Тип `SupportedLocale` для типизации
+-   Функция `isSupportedLocale()` для валидации локалей
+-   Используется во всех частях приложения для единообразия
+
 **Файл `src/i18n.ts`:**
 
--   Определяет список поддерживаемых локалей
+-   Использует `SUPPORTED_LOCALES` из константы
 -   Загружает переводы из монолитных файлов и категорийных файлов
 -   Объединяет переводы через `deepMerge`
 -   Обеспечивает fallback на русский язык при ошибках
@@ -651,6 +669,12 @@ export default async function CalculatorPage({ params: { locale } }: Props) {
 -   Утилиты для загрузки переводов в `generateMetadata`
 -   Функции `loadMergedCategoryTranslations` для каждой категории
 -   Поддержка обратной совместимости с монолитными файлами
+
+**Файл `src/lib/metadata-utils.ts`:**
+
+-   Функция `generateLanguageAlternates(path)` для генерации метаданных `alternates.languages`
+-   Автоматически создает ссылки для всех поддерживаемых локалей
+-   Используется во всех `generateMetadata` функциях для единообразия
 
 ---
 

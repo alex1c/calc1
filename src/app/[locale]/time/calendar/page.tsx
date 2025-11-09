@@ -8,6 +8,8 @@ import CalendarSEO from '@/components/seo/calendar-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedTimeTranslations } = await import('@/lib/i18n-utils');
@@ -45,12 +47,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/time/calendar`,
-			languages: {
-				ru: 'https://calc1.ru/ru/time/calendar',
-				en: 'https://calc1.ru/en/time/calendar',
-				es: 'https://calc1.ru/es/time/calendar',
-				de: 'https://calc1.ru/de/time/calendar',
-			},
+			languages: generateLanguageAlternates('/time/calendar'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -104,7 +101,7 @@ export default async function CalendarPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

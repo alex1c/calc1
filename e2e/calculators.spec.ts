@@ -31,9 +31,9 @@ test.describe('Calculator Pages', () => {
 		await page.waitForTimeout(1000)
 		
 		// Look for BMI result (around 22.8-22.9)
-		await expect(
-			page.locator('text=/22\\.[89]/')
-		).toBeVisible({ timeout: 5000 })
+		const resultValue = page.getByTestId('bmi-value')
+		await expect(resultValue).toBeVisible({ timeout: 5000 })
+		await expect(resultValue).toHaveText(/22\.(8|9)/)
 	})
 
 	test('should load percentage calculator page', async ({ page }) => {

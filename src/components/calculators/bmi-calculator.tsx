@@ -289,7 +289,10 @@ export default function BMICalculator() {
 										{t('results.bmiValue')}
 									</h3>
 								</div>
-								<div className='text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
+								<div
+									data-testid='bmi-value'
+									className='text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2'
+								>
 									{formatBMI(result.bmi)}
 								</div>
 								<div className='text-sm text-gray-600 dark:text-gray-400'>
@@ -368,7 +371,10 @@ export default function BMICalculator() {
 										)}%`,
 									}}
 								>
-									<div className='absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-medium text-gray-700 dark:text-gray-300'>
+									<div
+										data-testid='bmi-marker-value'
+										className='absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-medium text-gray-700 dark:text-gray-300'
+									>
 										{formatBMI(result.bmi)}
 									</div>
 								</div>
@@ -388,7 +394,10 @@ export default function BMICalculator() {
 
 						{/* Interpretation */}
 						<div className='bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg'>
-							<div className='text-sm text-blue-800 dark:text-blue-300'>
+							<div
+								data-testid='bmi-interpretation'
+								className='text-sm text-blue-800 dark:text-blue-300'
+							>
 								<strong>{t('results.interpretation')}:</strong>{' '}
 								{t(
 									`results.interpretations.${result.category}`

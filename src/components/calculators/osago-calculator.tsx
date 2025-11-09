@@ -74,20 +74,23 @@ export default function OsagoCalculator() {
 	];
 
 	const bonusMalusOptions = [
-		{ value: 0.5, label: t('form.bonusMalusOptions.0.5') },
-		{ value: 0.6, label: t('form.bonusMalusOptions.0.6') },
-		{ value: 0.65, label: t('form.bonusMalusOptions.0.65') },
-		{ value: 0.7, label: t('form.bonusMalusOptions.0.7') },
-		{ value: 0.8, label: t('form.bonusMalusOptions.0.8') },
-		{ value: 0.9, label: t('form.bonusMalusOptions.0.9') },
-		{ value: 1.0, label: t('form.bonusMalusOptions.1.0') },
-		{ value: 1.4, label: t('form.bonusMalusOptions.1.4') },
-		{ value: 1.5, label: t('form.bonusMalusOptions.1.5') },
-		{ value: 1.6, label: t('form.bonusMalusOptions.1.6') },
-		{ value: 1.7, label: t('form.bonusMalusOptions.1.7') },
-		{ value: 2.0, label: t('form.bonusMalusOptions.2.0') },
-		{ value: 2.45, label: t('form.bonusMalusOptions.2.45') },
-	];
+		{ value: 0.5, key: 'value_0_5' },
+		{ value: 0.6, key: 'value_0_6' },
+		{ value: 0.65, key: 'value_0_65' },
+		{ value: 0.7, key: 'value_0_7' },
+		{ value: 0.8, key: 'value_0_8' },
+		{ value: 0.9, key: 'value_0_9' },
+		{ value: 1.0, key: 'value_1_0' },
+		{ value: 1.4, key: 'value_1_4' },
+		{ value: 1.5, key: 'value_1_5' },
+		{ value: 1.6, key: 'value_1_6' },
+		{ value: 1.7, key: 'value_1_7' },
+		{ value: 2.0, key: 'value_2_0' },
+		{ value: 2.45, key: 'value_2_45' },
+	].map(({ value, key }) => ({
+		value,
+		label: t(`form.bonusMalusOptions.${key}`),
+	}));
 
 	const handleInputChange = (
 		field: keyof OsagoFormData,

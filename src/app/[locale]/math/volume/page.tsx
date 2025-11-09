@@ -8,13 +8,15 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedMathTranslations } = await import('@/lib/i18n-utils');
@@ -68,12 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		],
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/math/volume`,
-			languages: {
-				ru: 'https://calc1.ru/ru/math/volume',
-				en: 'https://calc1.ru/en/math/volume',
-				es: 'https://calc1.ru/es/math/volume',
-				de: 'https://calc1.ru/de/math/volume',
-			},
+			languages: generateLanguageAlternates('/math/volume'),
 		},
 		openGraph: {
 			title: t('title'),
@@ -134,7 +131,7 @@ export default async function VolumeGeometryPage({
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

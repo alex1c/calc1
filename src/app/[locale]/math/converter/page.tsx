@@ -8,6 +8,8 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import ConverterSEO from '@/components/seo/converter-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 // Dynamic import for calculator component
 const ConverterCalculator = dynamic(
 	() => import('@/components/calculators/converter-calculator'),
@@ -72,12 +74,7 @@ export async function generateMetadata({
 		],
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/math/converter',
-				en: 'https://calc1.ru/en/math/converter',
-				es: 'https://calc1.ru/es/math/converter',
-				de: 'https://calc1.ru/de/math/converter',
-			},
+			languages: generateLanguageAlternates('/math/converter'),
 		},
 		openGraph: {
 			title,
@@ -138,7 +135,7 @@ export default async function ConverterPage({
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

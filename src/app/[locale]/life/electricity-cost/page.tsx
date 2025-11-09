@@ -7,6 +7,8 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import ElectricityCostSEO from '@/components/seo/electricity-cost-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import { SUPPORTED_LOCALES, isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 
 const ElectricityCostCalculator = dynamic(
 	() => import('@/components/calculators/electricity-cost-calculator'),
@@ -20,7 +22,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -74,12 +76,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/electricity-cost`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/electricity-cost',
-				en: 'https://calc1.ru/en/life/electricity-cost',
-				es: 'https://calc1.ru/es/life/electricity-cost',
-				de: 'https://calc1.ru/de/life/electricity-cost',
-			},
+			languages: generateLanguageAlternates('/life/electricity-cost'),
 		},
 		openGraph: {
 			title: `${t('meta.title')} | Calc1.ru`,
@@ -122,7 +119,9 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es'].includes(locale)) notFound();
+	if (!isSupportedLocale(locale)) {
+		notFound();
+	}
 
 	const t = await getTranslations({
 		locale,

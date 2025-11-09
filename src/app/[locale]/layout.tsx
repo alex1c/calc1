@@ -2,8 +2,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/footer';
+import { SUPPORTED_LOCALES } from '@/lib/constants';
 
-const locales = ['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'];
+const locales = SUPPORTED_LOCALES;
 
 export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }));

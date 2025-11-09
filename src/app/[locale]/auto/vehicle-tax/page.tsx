@@ -7,6 +7,8 @@ import VehicleTaxSEO from '@/components/seo/vehicle-tax-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -14,7 +16,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -47,12 +49,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/auto/vehicle-tax`,
-			languages: {
-				ru: 'https://calc1.ru/ru/auto/vehicle-tax',
-				en: 'https://calc1.ru/en/auto/vehicle-tax',
-				es: 'https://calc1.ru/es/auto/vehicle-tax',
-				de: 'https://calc1.ru/de/auto/vehicle-tax',
-			},
+			languages: generateLanguageAlternates('/auto/vehicle-tax'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -116,7 +113,7 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 	const messages = await loadMergedAutoTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

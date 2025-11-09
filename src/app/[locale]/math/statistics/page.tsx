@@ -7,6 +7,8 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import StatisticsSEO from '@/components/seo/statistics-seo';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 // Dynamic import for calculator component
 const StatisticsCalculator = dynamic(
 	() => import('@/components/calculators/statistics-calculator'),
@@ -74,12 +76,7 @@ export async function generateMetadata({
 		],
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/math/statistics',
-				en: 'https://calc1.ru/en/math/statistics',
-				es: 'https://calc1.ru/es/math/statistics',
-				de: 'https://calc1.ru/de/math/statistics',
-			},
+			languages: generateLanguageAlternates('/math/statistics'),
 		},
 		openGraph: {
 			title,
@@ -138,7 +135,7 @@ export default async function StatisticsPage({ params: { locale } }: Props) {
 	});
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

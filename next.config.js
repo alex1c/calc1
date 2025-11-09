@@ -1,3 +1,4 @@
+process.env._next_intl_trailing_slash = 'false';
 const withNextIntl = require('next-intl/plugin')('./src/i18n.ts');
 
 /** @type {import('next').NextConfig} */

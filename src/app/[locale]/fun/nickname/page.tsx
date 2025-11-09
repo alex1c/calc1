@@ -8,6 +8,8 @@ import NicknameGenerator from '@/components/calculators/nickname-generator';
 import NicknameGeneratorSEO from '@/components/seo/nickname-generator-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -18,7 +20,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedFunTranslations } = await import('@/lib/i18n-utils');
@@ -48,12 +50,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/fun/nickname`,
-			languages: {
-				ru: 'https://calc1.ru/ru/fun/nickname',
-				en: 'https://calc1.ru/en/fun/nickname',
-				es: 'https://calc1.ru/es/fun/nickname',
-				de: 'https://calc1.ru/de/fun/nickname',
-			},
+			languages: generateLanguageAlternates('/fun/nickname'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -102,7 +99,7 @@ export async function generateMetadata({
 export default async function NicknameGeneratorPage({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

@@ -8,6 +8,8 @@ import WallCalculator from '@/components/calculators/wall-calculator';
 import WallSEO from '@/components/seo/wall-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
@@ -47,12 +49,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/construction/wall`,
-			languages: {
-				ru: 'https://calc1.ru/ru/construction/wall',
-				en: 'https://calc1.ru/en/construction/wall',
-				es: 'https://calc1.ru/es/construction/wall',
-				de: 'https://calc1.ru/de/construction/wall',
-			},
+			languages: generateLanguageAlternates('/construction/wall'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -109,7 +106,7 @@ export default async function WallPage({ params: { locale } }: Props) {
 	const messages = await loadMergedConstructionTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

@@ -8,6 +8,8 @@ import FuelCalculator from '@/components/calculators/fuel-calculator';
 import FuelConsumptionSEO from '@/components/seo/fuel-consumption-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -48,12 +50,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/auto/fuel-consumption`,
-			languages: {
-				ru: 'https://calc1.ru/ru/auto/fuel-consumption',
-				en: 'https://calc1.ru/en/auto/fuel-consumption',
-				es: 'https://calc1.ru/es/auto/fuel-consumption',
-				de: 'https://calc1.ru/de/auto/fuel-consumption',
-			},
+			languages: generateLanguageAlternates('/auto/fuel-consumption'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -119,7 +116,7 @@ export default async function FuelConsumptionPage({
 	const messages = await loadMergedAutoTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

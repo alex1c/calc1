@@ -8,6 +8,8 @@ import CarLoanCalculator from '@/components/calculators/car-loan-calculator';
 import CarLoanSEO from '@/components/seo/car-loan-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedAutoTranslations } = await import(
@@ -47,12 +49,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/auto/car-loan`,
-			languages: {
-				ru: 'https://calc1.ru/ru/auto/car-loan',
-				en: 'https://calc1.ru/en/auto/car-loan',
-				es: 'https://calc1.ru/es/auto/car-loan',
-				de: 'https://calc1.ru/de/auto/car-loan',
-			},
+			languages: generateLanguageAlternates('/auto/car-loan'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -114,7 +111,7 @@ export default async function CarLoanPage({ params: { locale } }: Props) {
 	const messages = await loadMergedAutoTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

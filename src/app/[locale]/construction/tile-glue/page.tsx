@@ -8,6 +8,8 @@ import TileGlueSEO from '@/components/seo/tile-glue-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -15,7 +17,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
@@ -68,12 +70,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/construction/tile-glue`,
-			languages: {
-				ru: 'https://calc1.ru/ru/construction/tile-glue',
-				en: 'https://calc1.ru/en/construction/tile-glue',
-				es: 'https://calc1.ru/es/construction/tile-glue',
-				de: 'https://calc1.ru/de/construction/tile-glue',
-			},
+			languages: generateLanguageAlternates('/construction/tile-glue'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -130,7 +127,7 @@ export default async function TileGluePage({ params: { locale } }: Props) {
 	const messages = await loadMergedConstructionTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

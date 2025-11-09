@@ -254,7 +254,21 @@ export default function GradeCalculator() {
 		const options = t.raw(`form.gradeOptions.${input.gradingSystem}`) as
 			| Record<string, string>
 			| undefined;
-		return options ? Object.entries(options) : [];
+		if (!options) {
+			return [];
+		}
+
+		const normalizeKey = (key: string): string => {
+			if (key.startsWith('value_')) {
+				return key.replace(/^value_/, '').replace(/_/g, '.');
+			}
+			return key;
+		};
+
+		return Object.entries(options).map(([key, value]) => [
+			normalizeKey(key),
+			value,
+		]) as Array<[string, string]>;
 	};
 
 	const getMaxGPA = () => {

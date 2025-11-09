@@ -3,12 +3,12 @@ import '@testing-library/jest-dom'
 
 // Mock next-intl
 jest.mock('next-intl', () => ({
-	useTranslations: () => (key: string) => key,
+	useTranslations: () => key => key,
 	useLocale: () => 'en',
 }))
 
 jest.mock('next-intl/server', () => ({
-	getTranslations: jest.fn(() => (key: string) => key),
+	getTranslations: jest.fn(() => key => key),
 	getLocale: jest.fn(() => Promise.resolve('en')),
 }))
 
@@ -27,12 +27,10 @@ jest.mock('next/navigation', () => ({
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
 	motion: {
-		div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-		section: ({ children, ...props }: any) => (
-			<section {...props}>{children}</section>
-		),
+		div: ({ children, ...props }) => <div {...props}>{children}</div>,
+		section: ({ children, ...props }) => <section {...props}>{children}</section>,
 	},
-	AnimatePresence: ({ children }: any) => children,
+	AnimatePresence: ({ children }) => children,
 }))
 
 

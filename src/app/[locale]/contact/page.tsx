@@ -5,6 +5,8 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import ContactForm from '@/components/contact-form';
 import { MessageSquare } from 'lucide-react';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -12,7 +14,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -40,12 +42,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/contact`,
-			languages: {
-				ru: 'https://calc1.ru/ru/contact',
-				en: 'https://calc1.ru/en/contact',
-				es: 'https://calc1.ru/es/contact',
-				de: 'https://calc1.ru/de/contact',
-			},
+			languages: generateLanguageAlternates('/contact'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -70,7 +67,7 @@ export async function generateMetadata({
 export default async function ContactPage({
 	params: { locale },
 }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

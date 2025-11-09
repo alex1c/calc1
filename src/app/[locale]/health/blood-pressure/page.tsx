@@ -9,6 +9,8 @@ import BloodPressureSEO from '@/components/seo/blood-pressure-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 /**
  * Generate metadata for Blood Pressure Calculator page
  */
@@ -17,7 +19,7 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -50,12 +52,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/health/blood-pressure',
-				en: 'https://calc1.ru/en/health/blood-pressure',
-				es: 'https://calc1.ru/es/health/blood-pressure',
-				de: 'https://calc1.ru/de/health/blood-pressure',
-			},
+			languages: generateLanguageAlternates('/health/blood-pressure'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,

@@ -7,6 +7,8 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import EquationsSEO from '@/components/seo/equations-seo';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 // Dynamic import for calculator component
 const EquationsCalculator = dynamic(
 	() => import('@/components/calculators/equations-calculator'),
@@ -65,12 +67,7 @@ export async function generateMetadata({
 		category: 'Mathematics',
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/math/equations',
-				en: 'https://calc1.ru/en/math/equations',
-				es: 'https://calc1.ru/es/math/equations',
-				de: 'https://calc1.ru/de/math/equations',
-			},
+			languages: generateLanguageAlternates('/math/equations'),
 		},
 		openGraph: {
 			title,
@@ -135,7 +132,7 @@ export default async function EquationsPage({ params: { locale } }: Props) {
 	const messages = await loadMergedMathTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

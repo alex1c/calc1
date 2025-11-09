@@ -7,6 +7,8 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 // Dynamic imports for client components
 const VentilationCalculator = dynamic(
 	() => import('@/components/calculators/ventilation-calculator'),
@@ -25,7 +27,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
@@ -55,12 +57,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/construction/ventilation`,
-			languages: {
-				ru: 'https://calc1.ru/ru/construction/ventilation',
-				en: 'https://calc1.ru/en/construction/ventilation',
-				es: 'https://calc1.ru/es/construction/ventilation',
-				de: 'https://calc1.ru/de/construction/ventilation',
-			},
+			languages: generateLanguageAlternates('/construction/ventilation'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -103,7 +100,7 @@ export async function generateMetadata({
 }
 
 export default async function VentilationPage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

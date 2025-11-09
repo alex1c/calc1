@@ -9,6 +9,8 @@ import HeartRateSEO from '@/components/seo/heart-rate-seo';
 import { loadMergedHealthTranslations } from '@/lib/i18n-utils';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 /**
  * Generate metadata for Heart Rate Calculator page
  */
@@ -17,7 +19,7 @@ export async function generateMetadata({
 }: {
 	params: { locale: string };
 }): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
@@ -50,12 +52,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: canonicalUrl,
-			languages: {
-				ru: 'https://calc1.ru/ru/health/heart-rate',
-				en: 'https://calc1.ru/en/health/heart-rate',
-				es: 'https://calc1.ru/es/health/heart-rate',
-				de: 'https://calc1.ru/de/health/heart-rate',
-			},
+			languages: generateLanguageAlternates('/health/heart-rate'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,

@@ -1451,5 +1451,10 @@
         }
       }
     }
+  },
+  "homepage": {
+    "seo": {
+      "keywords": "calculadora online, calculadoras gratuitas, calculadoras financeiras, calculadoras matemáticas, calculadoras de construção, calculadoras de saúde, conversores de unidades, calculadora de empréstimo, calculadora de hipoteca, calculadora de crédito, calculadora IMC, calculadora de impostos"
+    }
   }
 }

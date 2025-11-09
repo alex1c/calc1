@@ -8,13 +8,15 @@ import SizeConverterSEO from '@/components/seo/size-converter-seo';
 import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = params;
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const { loadMergedLifeTranslations } = await import('@/lib/i18n-utils');
@@ -69,12 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/life/size-converter`,
-			languages: {
-				ru: 'https://calc1.ru/ru/life/size-converter',
-				en: 'https://calc1.ru/en/life/size-converter',
-				es: 'https://calc1.ru/es/life/size-converter',
-				de: 'https://calc1.ru/de/life/size-converter',
-			},
+			languages: generateLanguageAlternates('/life/size-converter'),
 		},
 		openGraph: {
 			title: `${t('title')} | Calc1.ru`,
@@ -136,7 +133,7 @@ export default async function SizeConverterPage({ params: { locale } }: Props) {
 	const messages = await loadMergedLifeTranslations(locale);
 
 	// Validate locale
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 

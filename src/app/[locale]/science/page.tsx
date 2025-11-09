@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { GraduationCap } from 'lucide-react';
 import { loadMergedScienceTranslations } from '@/lib/i18n-utils';
 
+import { isSupportedLocale } from '@/lib/constants';
+import { generateLanguageAlternates } from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -13,7 +15,7 @@ interface Props {
 export async function generateMetadata({
 	params: { locale },
 }: Props): Promise<Metadata> {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 	const messages = (await import(`../../../../messages/${locale}.json`))
@@ -47,12 +49,7 @@ export async function generateMetadata({
 		metadataBase: new URL('https://calc1.ru'),
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/science`,
-			languages: {
-				ru: 'https://calc1.ru/ru/science',
-				en: 'https://calc1.ru/en/science',
-				es: 'https://calc1.ru/es/science',
-				de: 'https://calc1.ru/de/science',
-			},
+			languages: generateLanguageAlternates('/science'),
 		},
 		openGraph: {
 			title: `${title} | Calc1.ru`,
@@ -105,7 +102,7 @@ const getCalculators = (t: any) => [
 ];
 
 export default async function SciencePage({ params: { locale } }: Props) {
-	if (!['ru', 'en', 'de', 'es', 'fr', 'it', 'pl', 'tr', 'pt-BR'].includes(locale)) {
+	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
 
