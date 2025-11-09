@@ -38,14 +38,26 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT || 22 }}
           script: |
-            cd /var/www/calc1.ru
-            git pull origin main
-            docker compose down || docker-compose down
-            docker compose build --no-cache || docker-compose build --no-cache
-            docker compose up -d || docker-compose up -d
-            docker system prune -f
+            set -e
+            cd /var/www/calc1.ru || exit 1
+            echo "📥 Pulling latest changes..."
+            git pull origin main || exit 1
+            
+            echo "🛑 Stopping old containers..."
+            docker compose down 2>/dev/null || docker-compose down 2>/dev/null || true
+            
+            echo "🔨 Building new image..."
+            docker compose build --no-cache || docker-compose build --no-cache || exit 1
+            
+            echo "▶️ Starting containers..."
+            docker compose up -d || docker-compose up -d || exit 1
+            
+            echo "🧹 Cleaning up..."
+            docker system prune -f || true
+            
+            echo "✅ Deployment completed"
 
-            - name: Verify deployment
+      - name: Verify deployment
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -90,4 +102,3 @@ jobs:
             echo "📋 Checking container processes:"
             docker top calc1-app 2>/dev/null || echo "Cannot check processes"
             exit 1
-
