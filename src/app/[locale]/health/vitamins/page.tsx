@@ -59,44 +59,40 @@ export default async function VitaminsPage({
 		namespace: 'calculators.vitamins.seo',
 	});
 
-	// FAQ structured data
+	// FAQ structured data - with fallback for missing translations
+	const faqItems = [
+		{ key: 'dailyRequirements' },
+		{ key: 'activityImpact' },
+		{ key: 'supplements' },
+		{ key: 'accuracy' },
+	];
+
 	const faqStructuredData = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
-		mainEntity: [
-			{
-				'@type': 'Question',
-				name: tSeo('faq.dailyRequirements.question'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.dailyRequirements.answer'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: tSeo('faq.activityImpact.question'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.activityImpact.answer'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: tSeo('faq.supplements.question'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.supplements.answer'),
-				},
-			},
-			{
-				'@type': 'Question',
-				name: tSeo('faq.accuracy.question'),
-				acceptedAnswer: {
-					'@type': 'Answer',
-					text: tSeo('faq.accuracy.answer'),
-				},
-			},
-		],
+		mainEntity: faqItems
+			.map((item) => {
+				try {
+					const question = tSeo(`faq.${item.key}.question`);
+					const answer = tSeo(`faq.${item.key}.answer`);
+					// Only include if both question and answer exist
+					if (question && answer && !question.includes('MISSING_MESSAGE') && !answer.includes('MISSING_MESSAGE')) {
+						return {
+							'@type': 'Question',
+							name: question,
+							acceptedAnswer: {
+								'@type': 'Answer',
+								text: answer,
+							},
+						};
+					}
+					return null;
+				} catch {
+					// Skip if translation is missing
+					return null;
+				}
+			})
+			.filter((item): item is NonNullable<typeof item> => item !== null),
 	};
 
 	return (
