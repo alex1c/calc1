@@ -20,7 +20,9 @@ export async function generateMetadata({
 	if (!isSupportedLocale(locale)) {
 		notFound();
 	}
-	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const { loadMergedConstructionTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
 	const messages = await loadMergedConstructionTranslations(locale);
 	const t = (key: string) =>
 		messages.calculators['waterPipeCalculator'].seo[key];
@@ -101,7 +103,9 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 		namespace: 'categories',
 	});
 
-	const { loadMergedConstructionTranslations } = await import('@/lib/i18n-utils');
+	const { loadMergedConstructionTranslations } = await import(
+		'@/lib/i18n-utils'
+	);
 	const messages = await loadMergedConstructionTranslations(locale);
 
 	// Validate locale
@@ -120,7 +124,8 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 	];
 
 	// Get FAQ items for structured data
-	const faqRaw = messages.calculators?.waterPipeCalculator?.seo?.faq?.faqItems;
+	const faqRaw =
+		messages.calculators?.waterPipeCalculator?.seo?.faq?.faqItems;
 	const faq = Array.isArray(faqRaw)
 		? (faqRaw as Array<{ q: string; a: string }>)
 		: [];
@@ -199,7 +204,13 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 				category='construction'
 				calculatorId='water-pipe'
 				namespace='calculators.water-pipe.seo'
-				featureKeys={['diameterCalculation', 'flowCalculation', 'pressureCalculation', 'materialSupport', 'accuracy']}
+				featureKeys={[
+					'diameterCalculation',
+					'flowCalculation',
+					'pressureCalculation',
+					'materialSupport',
+					'accuracy',
+				]}
 				ratingValue='4.9'
 				ratingCount='89'
 				screenshot='https://calc1.ru/images/water-pipe-screenshot.jpg'
@@ -224,8 +235,8 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 				}}
 			/>
 
-						{/* BreadcrumbList Structured Data */}
-						<script
+			{/* BreadcrumbList Structured Data */}
+			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
@@ -257,7 +268,8 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 
 			{/* HowTo Structured Data */}
 			{(() => {
-				const howTo = messages.calculators?.waterPipeCalculator?.seo?.howTo;
+				const howTo =
+					messages.calculators?.waterPipeCalculator?.seo?.howTo;
 				if (!howTo || !howTo.steps) return null;
 				return (
 					<script
@@ -270,7 +282,7 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 								description: howTo.description,
 								step: Object.keys(howTo.steps)
 									.sort()
-									.map(key => ({
+									.map((key) => ({
 										'@type': 'HowToStep',
 										name: howTo.steps[key].name,
 										text: howTo.steps[key].text,
