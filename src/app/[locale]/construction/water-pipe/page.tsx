@@ -119,11 +119,11 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 		},
 	];
 
-	// Get FAQ items for structured data
-	const faqRaw = t.raw('seo.faq.faqItems');
-	const faq = Array.isArray(faqRaw)
-		? (faqRaw as Array<{ q: string; a: string }>)
-		: [];
+		// Get FAQ items for structured data
+		const faqRaw = messages.calculators?.waterPipeCalculator?.seo?.faq?.faqItems;
+		const faq = Array.isArray(faqRaw)
+			? (faqRaw as Array<{ q: string; a: string }>)
+			: [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -224,8 +224,8 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 				}}
 			/>
 
-			{/* BreadcrumbList Structured Data */}
-			<script
+						{/* BreadcrumbList Structured Data */}
+						<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
@@ -252,32 +252,34 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 							},
 						],
 					}),
-				{/* HowTo Structured Data */}
-				{(() => {
-					const howTo = messages.calculators?.waterPipeCalculator?.seo?.howTo;
-					if (!howTo || !howTo.steps) return null;
-					return (
-						<script
-							type='application/ld+json'
-							dangerouslySetInnerHTML={{
-								__html: JSON.stringify({
-									'@context': 'https://schema.org',
-									'@type': 'HowTo',
-									name: howTo.title,
-									description: howTo.description,
-									step: Object.keys(howTo.steps)
-										.sort()
-										.map(key => ({
-											'@type': 'HowToStep',
-											name: howTo.steps[key].name,
-											text: howTo.steps[key].text,
-										})),
-								}),
-							}}
-						/>
-					);
-				})()}
-			}}
+				}}
+			/>
+
+			{/* HowTo Structured Data */}
+			{(() => {
+				const howTo = messages.calculators?.waterPipeCalculator?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map(key => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }
