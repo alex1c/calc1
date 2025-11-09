@@ -119,11 +119,11 @@ export default async function WaterPipePage({ params: { locale } }: Props) {
 		},
 	];
 
-		// Get FAQ items for structured data
-		const faqRaw = messages.calculators?.waterPipeCalculator?.seo?.faq?.faqItems;
-		const faq = Array.isArray(faqRaw)
-			? (faqRaw as Array<{ q: string; a: string }>)
-			: [];
+	// Get FAQ items for structured data
+	const faqRaw = messages.calculators?.waterPipeCalculator?.seo?.faq?.faqItems;
+	const faq = Array.isArray(faqRaw)
+		? (faqRaw as Array<{ q: string; a: string }>)
+		: [];
 
 	return (
 		<div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
