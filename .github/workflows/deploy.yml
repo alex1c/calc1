@@ -45,7 +45,7 @@ jobs:
             docker compose up -d || docker-compose up -d
             docker system prune -f
 
-      - name: Verify deployment
+            - name: Verify deployment
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -53,6 +53,41 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT || 22 }}
           script: |
-            sleep 10
-            curl -f http://localhost:3000 || exit 1
+            echo "🔍 Checking container status..."
+            docker compose ps || docker-compose ps || true
+            
+            echo "⏳ Waiting for application to start (90 seconds)..."
+            sleep 90
+            
+            echo "📋 Checking container logs (last 100 lines)..."
+            docker compose logs --tail=100 calc1 2>/dev/null || docker-compose logs --tail=100 calc1 2>/dev/null || true
+            
+            echo "🌐 Checking if application is responding..."
+            MAX_ATTEMPTS=20
+            for i in $(seq 1 $MAX_ATTEMPTS); do
+              if curl -f -s http://localhost:3000 > /dev/null 2>&1; then
+                echo "✅ Application is responding on port 3000!"
+                exit 0
+              fi
+              echo "⏳ Attempt $i/$MAX_ATTEMPTS: Application not ready yet, waiting 5 seconds..."
+              sleep 5
+            done
+            
+            echo "❌ Application failed to start after $((MAX_ATTEMPTS * 5)) seconds"
+            echo ""
+            echo "📋 Final container status:"
+            docker compose ps || docker-compose ps || true
+            echo ""
+            echo "📋 Container health:"
+            docker inspect calc1-app --format='{{.State.Status}} - {{.State.Health.Status}}' 2>/dev/null || echo "Container not found"
+            echo ""
+            echo "📋 Last 200 lines of logs:"
+            docker compose logs --tail=200 calc1 2>/dev/null || docker-compose logs --tail=200 calc1 2>/dev/null || true
+            echo ""
+            echo "📋 Checking if port 3000 is listening:"
+            netstat -tuln | grep 3000 || ss -tuln | grep 3000 || echo "Port 3000 is not listening"
+            echo ""
+            echo "📋 Checking container processes:"
+            docker top calc1-app 2>/dev/null || echo "Cannot check processes"
+            exit 1
 
