@@ -1714,6 +1714,110 @@
             "question": "Hesap makinesinin hesaplamaları ne kadar doğrudur?",
             "answer": "Hesap makinesi WHO tavsiyelerine dayanmaktadır ve ana faktörleri (cinsiyet, yaş, aktivite) dikkate alır. Ancak bireysel ihtiyaçlar sağlık koşullarına, ilaçlara, iklime ve diğer faktörlere bağlı olarak değişebilir. Doğru bir değerlendirme için hekime danışılması önemlidir."
           },
+          "mostImportantVitamins": {
+            "question": "En önemli vitaminler nelerdir?",
+            "answer": "Tüm vitaminler önemlidir, ancak özellikle önemli olanlar şunlardır: D vitamini (bağışıklık, kemikler), C vitamini (bağışıklık, antioksidan), B vitaminleri (enerji, sinir sistemi), A vitamini (görme, bağışıklık), folik asit (hematopoez, hamilelik). Herhangi bir vitaminin eksikliği sağlık sorunlarına yol açabilir."
+          },
+          "vitaminDeficiencyDanger": {
+            "question": "Vitamin eksikliği neden tehlikelidir?",
+            "answer": "Vitamin eksikliği ciddi sorunlara yol açabilir: D vitamini eksikliği - osteoporoz ve zayıf bağışıklık, B12 vitamini - anemi ve nörolojik problemler, C vitamini - iskorbüt ve zayıf bağışıklık, A vitamini - görme sorunları. Eksikliğin zamanında tespit edilmesi ve kapatılması önemlidir."
+          },
+          "vitaminOverdose": {
+            "question": "Aşırı dozda vitamin almak mümkün mü?",
+            "answer": "Evet, aşırı dozda vitamin (özellikle yağda çözünen A, D, E, K vitaminleri) tehlikelidir. Suda çözünen vitaminler (B, C) idrarla atılır ancak bunların fazlası da sorunlara neden olabilir. Vitaminleri yalnızca doktorunuzun önerdiği şekilde alın ve dozu aşmayın."
+          },
+          "ageImpact": {
+            "question": "Yaş vitamin ihtiyacını nasıl etkiler?",
+            "answer": "Yaşla birlikte ihtiyaçlar değişir: 50 yıl sonra D vitamini ve kalsiyum ihtiyacı (osteoporozun önlenmesi), B12 vitamini (emilimi kötüleşir) ve B6 vitamini ihtiyacı artar. Çocuklar ve gençler büyümek için daha fazla kalsiyum, çinko ve D vitaminine ihtiyaç duyarlar. Yaşlı insanlar sıklıkla takviyeye ihtiyaç duyar."
+          },
+          "womenIron": {
+            "question": "Kadınların neden daha fazla demire ihtiyacı var?",
+            "answer": "Doğurganlık çağındaki kadınların düzenli adet görmeleri nedeniyle günde 18 mg demire ihtiyaçları vardır (erkeklerin 8-10 mg'a ihtiyacı vardır). Bu da kan ve demir kaybına neden olur. Kadınlarda demir eksikliği sıklıkla anemiye, yorgunluğa ve halsizliğe neden olur. Hamilelik sırasında ihtiyaç daha da yüksektir - 27 mg."
+          },
+          "pregnancyVitamins": {
+            "question": "Hamilelikte hangi vitaminler önemlidir?",
+            "answer": "Hamilelik sırasında aşağıdakiler kritik önem taşır: Folik asit (600 mcg, malformasyonların önlenmesi), demir (27 mg, aneminin önlenmesi), kalsiyum (1300 mg), D vitamini (600 IU), B12 vitamini. Takviye kullanımı bir doktor tarafından denetlenmelidir."
+          },
+          "vegetarianVitamins": {
+            "question": "Vejetaryenlerin vitaminlere ihtiyacı var mı?",
+            "answer": "Vejetaryenler için B12 vitamini (bitkisel besinlerde bulunmaz), demir (hem olmayan demir daha az emilir), çinko, D vitamini (az güneş varsa), omega-3'ün izlenmesi özellikle önemlidir. B12 takviyeleri almanız ve diyetinize zenginleştirilmiş gıdaları dahil etmeniz önerilir."
+          },
+          "deficiencySigns": {
+            "question": "Yeterli vitamin olmadığı nasıl anlaşılır?",
+            "answer": "Eksiklik belirtileri: Yorgunluk, halsizlik, saç dökülmesi, kırılgan tırnaklar, kuru cilt, görme sorunları, sık soğuk algınlığı, sinirlilik, uzuvlarda uyuşma. Ancak kan testlerine dayanarak yalnızca doktor doğru tanıyı koyabilir."
+          },
+          "vitaminsFromFood": {
+            "question": "Tüm vitaminleri yiyeceklerden almak mümkün mü?",
+            "answer": "Dengeli ve çeşitli bir beslenmeyle vitaminlerin çoğunu alabilirsiniz. Ancak bazı vitaminlerin (D, B12) tek başına gıdalardan yeterli miktarlarda elde edilmesi, özellikle belirli koşullarda (kış, vejetaryenlik, yaş) zordur. Bu gibi durumlarda takviyeye ihtiyaç duyulur."
+          },
+          "whenToTakeVitamins": {
+            "question": "Vitamin almak için en iyi zaman ne zaman?",
+            "answer": "Yağda çözünen vitaminlerin (A, D, E, K) daha iyi emilmesi için yağ içeren bir yemekle alınması en iyisidir. Suda çözünen (B, C) aç karnına veya yemekle birlikte alınabilir. Multivitaminler genellikle sabah veya öğleden sonra kahvaltıyla birlikte alınır."
+          },
+          "medicationsImpact": {
+            "question": "İlaçlar vitaminlerin emilimini etkiler mi?",
+            "answer": "Evet, bazı ilaçlar vitaminlerin emilimini azaltabilir: antibiyotikler B vitaminlerini etkiler, oral kontraseptifler folik asit ve B12'yi etkiler ve antikonvülzanlar folik asit ve D vitaminini etkiler. İlaç kullanıyorsanız takviye ihtiyacı konusunda doktorunuza danışın."
+          },
+          "multipleVitamins": {
+            "question": "Aynı anda birkaç vitamin almak mümkün mü?",
+            "answer": "Evet, aynı anda birden fazla vitamin alabilirsiniz. Multivitamin kompleksleri bunun için özel olarak tasarlanmıştır. Ancak günlük ödeneğin aşılmaması önemlidir. Bazı vitaminler birlikte daha iyi emilir (örneğin, D vitamini ile kalsiyum, C vitamini ile demir)."
+          },
+          "childrenVitamins": {
+            "question": "Çocukların vitaminlere ihtiyacı var mı?",
+            "answer": "Büyüme ve gelişmeye yönelik vitaminler özellikle çocuklar için önemlidir: D vitamini (raşitizm önlenmesi), kalsiyum (kemik büyümesi), demir (kansızlığın önlenmesi), çinko (bağışıklık, büyüme), A vitamini (görme). Özellikle güneşin az olduğu bölgelerde çocuklara genellikle D vitamini reçete edilir."
+          },
+          "storingVitamins": {
+            "question": "Vitaminler nasıl saklanır?",
+            "answer": "Vitaminler serin, kuru ve karanlık bir yerde, nemden ve doğrudan güneş ışığından uzakta saklanır. Nem nedeniyle banyoda saklamayın. Son kullanma tarihini kontrol edin. Bazı vitaminler (özellikle C vitamini) uygun şekilde saklanmadığı takdirde etkinliğini hızla kaybeder."
+          },
+          "naturalProducts": {
+            "question": "Vitaminleri doğal ürünlerle değiştirmek mümkün mü?",
+            "answer": "Evet, birçok vitamin doğal gıdalardan elde edilebilir: C vitamini turunçgillerden ve meyvelerden, A vitamini havuç ve karaciğerden, D vitamini balık ve yumurtadan, kalsiyum süt ürünlerinden. Ancak eksiklikler veya özel ihtiyaçlar için takviyeler gerekli olabilir."
+          },
+          "smokingImpact": {
+            "question": "Sigara içmek vitamin ihtiyacını etkiler mi?",
+            "answer": "Evet, sigara içmek artan oksidatif stres nedeniyle C vitamini ihtiyacını günde 30-50 mg artırır. Sigara içenlerin ayrıca daha fazla E vitamini ve diğer antioksidanlara ihtiyacı vardır. En iyi çözüm sigarayı bırakmaktır ancak bu yapılıncaya kadar antioksidan alımınızı arttırmanız önemlidir."
+          },
+          "stressImpact": {
+            "question": "Stres vitaminleri nasıl etkiler?",
+            "answer": "Stres B vitaminleri (özellikle B1, B5, B6, B12), C vitamini ve magnezyum ihtiyacını artırır. Kronik stres bu vitaminleri tüketir. Düzeylerini beslenme ve gerekirse takviye yoluyla korumak önemlidir."
+          },
+          "emptyStomach": {
+            "question": "Aç karnına vitamin almak mümkün mü?",
+            "answer": "Suda çözünen vitaminler (B, C) aç karnına alınabilir. Yağda çözünen (A, D, E, K) daha iyi emilim için yağ içeren bir yemekle birlikte alınması en iyisidir. Vitaminler midenizin bulanmasına neden oluyorsa, bunları yiyecekle birlikte alın. Paketin üzerindeki talimatları izleyin."
+          },
+          "checkFrequency": {
+            "question": "Vitamin seviyenizi ne sıklıkla kontrol etmelisiniz?",
+            "answer": "Eksiklik belirtileri yoksa 1-2 yılda bir test yapılabilir. Semptomlar veya risk faktörleri varsa (vejetaryenlik, hamilelik, 50+ yaş, kronik hastalıklar) - doktor tavsiyesi üzerine, genellikle 6-12 ayda bir. D, B12 vitamini ve demirin kontrol edilmesi özellikle önemlidir."
+          },
+          "expiredVitamins": {
+            "question": "Son kullanma tarihi geçmiş vitaminleri almak mümkün mü?",
+            "answer": "Son kullanma tarihi geçmiş vitaminlerin alınması tavsiye edilmez. Zamanla güçlerini kaybederler ve daha az etkili olabilirler. B vitaminleri ve C vitamini özellikle hızlı bir şekilde aktivitelerini kaybederler. Vitaminleri son kullanma tarihinden önce kullanın."
+          },
+          "immunityImpact": {
+            "question": "Vitaminler bağışıklığı nasıl etkiler?",
+            "answer": "Vitaminler bağışıklık için kritik öneme sahiptir: C vitamini (bağışıklık hücrelerinin aktivitesini güçlendirir), D vitamini (bağışıklık tepkisini düzenler), A vitamini (mukoza zarlarını destekler), çinko (bağışıklık sisteminin işleyişi için önemlidir). Bu vitaminlerin eksikliği bağışıklık sistemini zayıflatır."
+          },
+          "athletesVitamins": {
+            "question": "Sporcuların vitaminlere ihtiyacı var mı?",
+            "answer": "Evet, artan stres nedeniyle sporcuların daha fazla vitamine ihtiyacı vardır: B vitaminleri (enerji), C vitamini (iyileşme, antioksidan), D vitamini (kemikler, kaslar), magnezyum (kaslar), çinko (iyileşme). Yoğun antrenmanlarla ihtiyaç %15-20 oranında artar."
+          },
+          "diseasesVitamins": {
+            "question": "Hastaysanız vitamin almak mümkün mü?",
+            "answer": "Hastalık durumunda vitamin ihtiyacı değişebilir. Bazı hastalıklar vitaminlerin emilimini engeller (gastrointestinal sistem hastalıkları, karaciğer). Özellikle kronik hastalıklarınız varsa veya ilaç kullanıyorsanız, vitamin almadan önce doktora danışmanız önemlidir. Kendi kendinize ilaç vermeyin."
+          },
+          "skinHairImpact": {
+            "question": "Vitaminler cildi ve saçları nasıl etkiler?",
+            "answer": "Vitaminler güzellik için önemlidir: A vitamini (cilt sağlığı), C vitamini (kollajen sentezi), E vitamini (antioksidan, UV koruması), D vitamini (saç büyümesi), B vitaminleri (saç ve tırnak sağlığı), çinko (cilt onarımı). Eksiklik kuruluk ve saç dökülmesi ile kendini gösterir."
+          },
+          "alcoholImpact": {
+            "question": "Alkol vitaminleri etkiler mi?",
+            "answer": "Evet, alkol vitaminlerin emilimini bozar ve tüketimini artırır: B vitaminleri (özellikle B1, B6, folik asit), C vitamini, magnezyum. Düzenli alkol tüketimi eksiklik riskini artırır. Bu vitaminlerin alımını arttırmanız veya takviye almanız önerilir."
+          },
+          "vitaminsInteraction": {
+            "question": "Vitaminler birbirleriyle nasıl etkileşir?",
+            "answer": "Vitaminler etkileşime girer: C vitamini demirin emilimini artırır, D vitamini kalsiyumu iyileştirir, E vitamini C vitamini ile sinerjik olarak çalışır, B vitaminleri birlikte çalışır. Ancak bazı vitaminler rekabet edebilir (örneğin aşırı çinko, bakır emilimini azaltır). Denge önemlidir."
+          },
           "faqItems": [
             {
               "q": "Günlük vitamin ihtiyacı nasıl belirlenir?",

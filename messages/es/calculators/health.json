@@ -1714,6 +1714,110 @@
             "question": "¿Qué tan precisos son los cálculos de la calculadora?",
             "answer": "La calculadora se basa en las recomendaciones de la OMS y tiene en cuenta los principales factores (género, edad, actividad). Sin embargo, las necesidades individuales pueden variar según las condiciones de salud, los medicamentos, el clima y otros factores. La consulta con un médico es importante para una evaluación precisa."
           },
+          "mostImportantVitamins": {
+            "question": "¿Qué vitaminas son las más importantes?",
+            "answer": "Todas las vitaminas son importantes, pero de particular importancia son: vitamina D (inmunidad, huesos), vitamina C (inmunidad, antioxidante), vitamina B (energía, sistema nervioso), vitamina A (visión, inmunidad), ácido fólico (hematopoyesis, embarazo). Una deficiencia de cualquier vitamina puede provocar problemas de salud."
+          },
+          "vitaminDeficiencyDanger": {
+            "question": "¿Por qué es peligrosa la deficiencia de vitaminas?",
+            "answer": "La deficiencia de vitaminas puede provocar problemas graves: falta de vitamina D, osteoporosis y inmunidad debilitada, vitamina B12, anemia y problemas neurológicos, vitamina C, escorbuto y inmunidad debilitada, vitamina A, problemas de visión. Es importante identificar y cubrir el déficit de manera oportuna."
+          },
+          "vitaminOverdose": {
+            "question": "¿Es posible sufrir una sobredosis de vitaminas?",
+            "answer": "Sí, una sobredosis de vitaminas (especialmente las vitaminas liposolubles A, D, E, K) es peligrosa. Las vitaminas solubles en agua (B, C) se excretan en la orina, pero una cantidad excesiva también puede causar problemas. Tome las vitaminas únicamente según las recomendaciones de su médico y no exceda la dosis."
+          },
+          "ageImpact": {
+            "question": "¿Cómo afecta la edad a la necesidad de vitaminas?",
+            "answer": "Con la edad, las necesidades cambian: después de los 50 años, aumenta la necesidad de vitamina D y calcio (prevención de la osteoporosis), vitamina B12 (empeora la absorción) y vitamina B6. Los niños y adolescentes necesitan más calcio, zinc y vitamina D para crecer. Las personas mayores suelen necesitar suplementos."
+          },
+          "womenIron": {
+            "question": "¿Por qué las mujeres necesitan más hierro?",
+            "answer": "Las mujeres en edad fértil necesitan 18 mg de hierro al día (los hombres necesitan entre 8 y 10 mg) debido a la menstruación regular, en la que se pierde sangre y hierro. La deficiencia de hierro en las mujeres suele provocar anemia, fatiga y debilidad. Durante el embarazo, la necesidad es aún mayor: 27 mg."
+          },
+          "pregnancyVitamins": {
+            "question": "¿Qué vitaminas son importantes durante el embarazo?",
+            "answer": "Durante el embarazo son de vital importancia: ácido fólico (600 mcg, prevención de malformaciones), hierro (27 mg, prevención de la anemia), calcio (1300 mg), vitamina D (600 UI), vitamina B12. El uso de suplementos debe ser supervisado por un médico."
+          },
+          "vegetarianVitamins": {
+            "question": "¿Los vegetarianos necesitan vitaminas?",
+            "answer": "Es especialmente importante para los vegetarianos controlar la vitamina B12 (no se encuentra en los alimentos vegetales), el hierro (el hierro no hemo se absorbe menos), el zinc, la vitamina D (si hay poco sol) y los omega-3. Se recomienda tomar suplementos de B12 e incluir alimentos fortificados en su dieta."
+          },
+          "deficiencySigns": {
+            "question": "¿Cómo entender que no hay suficientes vitaminas?",
+            "answer": "Signos de deficiencia: fatiga, debilidad, caída del cabello, uñas quebradizas, piel seca, problemas de visión, resfriados frecuentes, irritabilidad, entumecimiento de las extremidades. Sin embargo, sólo un médico puede hacer un diagnóstico preciso basándose en análisis de sangre."
+          },
+          "vitaminsFromFood": {
+            "question": "¿Es posible obtener todas las vitaminas de los alimentos?",
+            "answer": "Con una dieta equilibrada y variada, puedes obtener la mayoría de las vitaminas. Sin embargo, algunas vitaminas (D, B12) son difíciles de obtener en cantidades suficientes sólo a través de los alimentos, especialmente en determinadas condiciones (invierno, vegetarianismo, edad). En tales casos, se necesitan suplementos."
+          },
+          "whenToTakeVitamins": {
+            "question": "¿Cuándo es el mejor momento para tomar vitaminas?",
+            "answer": "Las vitaminas liposolubles (A, D, E, K) se toman mejor con una comida que contenga grasa para una mejor absorción. Los hidrosolubles (B, C) se pueden tomar con el estómago vacío o con alimentos. Los multivitamínicos generalmente se toman por la mañana o temprano en la tarde con el desayuno."
+          },
+          "medicationsImpact": {
+            "question": "¿Los medicamentos afectan la absorción de vitaminas?",
+            "answer": "Sí, algunos medicamentos pueden reducir la absorción de vitaminas: los antibióticos afectan las vitaminas B, los anticonceptivos orales afectan el ácido fólico y la B12, y los anticonvulsivos afectan el ácido fólico y la vitamina D. Si está tomando medicamentos, consulte a su médico sobre la necesidad de suplementos."
+          },
+          "multipleVitamins": {
+            "question": "¿Es posible tomar varias vitaminas al mismo tiempo?",
+            "answer": "Sí, puedes tomar varias vitaminas al mismo tiempo. Los complejos multivitamínicos están especialmente diseñados para ello. Sin embargo, es importante no exceder la cantidad diaria. Algunas vitaminas se absorben mejor juntas (por ejemplo, vitamina D con calcio, vitamina C con hierro)."
+          },
+          "childrenVitamins": {
+            "question": "¿Los niños necesitan vitaminas?",
+            "answer": "Las vitaminas para el crecimiento y el desarrollo son especialmente importantes para los niños: vitamina D (prevención del raquitismo), calcio (crecimiento de los huesos), hierro (prevención de la anemia), zinc (inmunidad, crecimiento), vitamina A (visión). A los niños se les suele recetar vitamina D, especialmente en zonas con poco sol."
+          },
+          "storingVitamins": {
+            "question": "¿Cómo almacenar vitaminas?",
+            "answer": "Las vitaminas se almacenan en un lugar fresco, seco y oscuro, alejado de la humedad y de la luz solar directa. No guardar en el baño debido a la humedad. Verifique la fecha de vencimiento. Algunas vitaminas (especialmente la vitamina C) pierden actividad rápidamente si no se almacenan adecuadamente."
+          },
+          "naturalProducts": {
+            "question": "¿Es posible sustituir las vitaminas por productos naturales?",
+            "answer": "Sí, se pueden obtener muchas vitaminas de los alimentos naturales: vitamina C de los cítricos y las bayas, vitamina A de las zanahorias y el hígado, vitamina D del pescado y los huevos, calcio de los productos lácteos. Sin embargo, en caso de deficiencias o necesidades especiales, pueden ser necesarios suplementos."
+          },
+          "smokingImpact": {
+            "question": "¿Fumar afecta la necesidad de vitaminas?",
+            "answer": "Sí, fumar aumenta las necesidades de vitamina C entre 30 y 50 mg por día debido al aumento del estrés oxidativo. Los fumadores también necesitan más vitamina E y otros antioxidantes. La mejor solución es dejar de fumar, pero hasta que lo haga, es importante aumentar la ingesta de antioxidantes."
+          },
+          "stressImpact": {
+            "question": "¿Cómo afecta el estrés a las vitaminas?",
+            "answer": "El estrés aumenta la necesidad de vitaminas del grupo B (especialmente B1, B5, B6, B12), vitamina C y magnesio. El estrés crónico agota estas vitaminas. Es importante mantener sus niveles mediante nutrición y, si es necesario, suplementos."
+          },
+          "emptyStomach": {
+            "question": "¿Es posible tomar vitaminas en ayunas?",
+            "answer": "Las vitaminas hidrosolubles (B, C) se pueden tomar con el estómago vacío. Los liposolubles (A, D, E, K) se toman mejor con una comida que contenga grasa para una mejor absorción. Si las vitaminas le provocan náuseas, tómelas con las comidas. Siga las instrucciones del paquete."
+          },
+          "checkFrequency": {
+            "question": "¿Con qué frecuencia debes controlar tus niveles de vitaminas?",
+            "answer": "Si no hay síntomas de deficiencia, se pueden realizar pruebas cada 1 o 2 años. Si hay síntomas o factores de riesgo (vegetarianismo, embarazo, mayores de 50 años, enfermedades crónicas), por recomendación de un médico, generalmente una vez cada 6 a 12 meses. Es especialmente importante controlar la vitamina D, B12 y el hierro."
+          },
+          "expiredVitamins": {
+            "question": "¿Es posible tomar vitaminas caducadas?",
+            "answer": "No se recomienda tomar vitaminas caducadas. Con el tiempo, pierden potencia y pueden ser menos eficaces. Las vitaminas B y la vitamina C pierden su actividad con especial rapidez. Use vitaminas antes de la fecha de vencimiento."
+          },
+          "immunityImpact": {
+            "question": "¿Cómo afectan las vitaminas a la inmunidad?",
+            "answer": "Las vitaminas son fundamentales para la inmunidad: vitamina C (fortalece la actividad de las células inmunitarias), vitamina D (regula la respuesta inmunitaria), vitamina A (apoya las membranas mucosas), zinc (importante para el funcionamiento del sistema inmunológico). La deficiencia de estas vitaminas debilita el sistema inmunológico."
+          },
+          "athletesVitamins": {
+            "question": "¿Los deportistas necesitan vitaminas?",
+            "answer": "Sí, los deportistas necesitan más vitaminas debido al aumento del estrés: vitamina B (energía), vitamina C (recuperación, antioxidante), vitamina D (huesos, músculos), magnesio (músculos), zinc (recuperación). Con entrenamiento intenso, la necesidad aumenta entre un 15 y un 20%."
+          },
+          "diseasesVitamins": {
+            "question": "¿Es posible tomar vitaminas si estás enfermo?",
+            "answer": "En caso de enfermedad, la necesidad de vitaminas puede cambiar. Algunas enfermedades interfieren con la absorción de vitaminas (enfermedades del tracto gastrointestinal, hígado). Es importante consultar a un médico antes de tomar vitaminas, especialmente si padece enfermedades crónicas o está tomando medicamentos. No te automediques."
+          },
+          "skinHairImpact": {
+            "question": "¿Cómo afectan las vitaminas a la piel y al cabello?",
+            "answer": "Las vitaminas son importantes para la belleza: vitamina A (salud de la piel), vitamina C (síntesis de colágeno), vitamina E (antioxidante, protección UV), vitamina D (crecimiento del cabello), vitamina B (salud del cabello y las uñas), zinc (reparación de la piel). La deficiencia se manifiesta por sequedad y caída del cabello."
+          },
+          "alcoholImpact": {
+            "question": "¿El alcohol afecta las vitaminas?",
+            "answer": "Sí, el alcohol altera la absorción y aumenta el consumo de vitaminas: vitamina B (especialmente B1, B6, ácido fólico), vitamina C, magnesio. El consumo regular de alcohol aumenta el riesgo de deficiencia. Se recomienda aumentar la ingesta de estas vitaminas o tomar suplementos."
+          },
+          "vitaminsInteraction": {
+            "question": "¿Cómo interactúan las vitaminas entre sí?",
+            "answer": "Las vitaminas interactúan: la vitamina C mejora la absorción de hierro, la vitamina D mejora el calcio, la vitamina E actúa sinérgicamente con la vitamina C y las vitaminas B trabajan juntas. Sin embargo, algunas vitaminas pueden competir (por ejemplo, el exceso de zinc reduce la absorción de cobre). El equilibrio es importante."
+          },
           "faqItems": [
             {
               "q": "¿Cómo determinar la necesidad diaria de vitaminas?",

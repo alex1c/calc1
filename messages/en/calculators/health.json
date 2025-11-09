@@ -1714,6 +1714,110 @@
             "question": "How accurate are the calculator's calculations?",
             "answer": "The calculator is based on WHO recommendations and takes into account the main factors (gender, age, activity). However, individual needs may vary depending on health conditions, medications, climate, and other factors. Consultation with a physician is important for an accurate assessment."
           },
+          "mostImportantVitamins": {
+            "question": "What vitamins are the most important?",
+            "answer": "All vitamins are important, but of particular importance are: vitamin D (immunity, bones), vitamin C (immunity, antioxidant), B vitamins (energy, nervous system), vitamin A (vision, immunity), folic acid (hematopoiesis, pregnancy). A deficiency of any vitamin can lead to health problems."
+          },
+          "vitaminDeficiencyDanger": {
+            "question": "Why is vitamin deficiency dangerous?",
+            "answer": "Vitamin deficiency can lead to serious problems: lack of vitamin D - to osteoporosis and weakened immunity, vitamin B12 - to anemia and neurological problems, vitamin C - to scurvy and weakened immunity, vitamin A - to vision problems. It is important to identify and fill the deficit in a timely manner."
+          },
+          "vitaminOverdose": {
+            "question": "Is it possible to overdose on vitamins?",
+            "answer": "Yes, an overdose of vitamins (especially fat-soluble vitamins A, D, E, K) is dangerous. Water-soluble vitamins (B, C) are excreted in urine, but too much of them can also cause problems. Take vitamins only as recommended by your doctor and do not exceed the dosage."
+          },
+          "ageImpact": {
+            "question": "How does age affect the need for vitamins?",
+            "answer": "With age, needs change: after 50 years, the need for vitamin D and calcium increases (prevention of osteoporosis), vitamin B12 (absorption worsens), and vitamin B6. Children and teenagers need more calcium, zinc and vitamin D to grow. Older people often need supplements."
+          },
+          "womenIron": {
+            "question": "Why do women need more iron?",
+            "answer": "Women of childbearing age need 18 mg of iron per day (men need 8-10 mg) due to regular menstruation, which loses blood and iron. Iron deficiency in women often leads to anemia, fatigue, and weakness. During pregnancy, the need is even higher - 27 mg."
+          },
+          "pregnancyVitamins": {
+            "question": "What vitamins are important during pregnancy?",
+            "answer": "During pregnancy, the following are critically important: folic acid (600 mcg, prevention of malformations), iron (27 mg, prevention of anemia), calcium (1300 mg), vitamin D (600 IU), vitamin B12. Supplement use should be supervised by a physician."
+          },
+          "vegetarianVitamins": {
+            "question": "Do vegetarians need vitamins?",
+            "answer": "It is especially important for vegetarians to monitor vitamin B12 (it is not found in plant foods), iron (non-heme iron is less absorbed), zinc, vitamin D (if there is little sun), omega-3. It is recommended to take B12 supplements and include fortified foods in your diet."
+          },
+          "deficiencySigns": {
+            "question": "How to understand that there are not enough vitamins?",
+            "answer": "Signs of deficiency: fatigue, weakness, hair loss, brittle nails, dry skin, vision problems, frequent colds, irritability, numbness in the limbs. However, only a doctor can make an accurate diagnosis based on blood tests."
+          },
+          "vitaminsFromFood": {
+            "question": "Is it possible to get all vitamins from food?",
+            "answer": "With a balanced, varied diet, you can get most vitamins. However, some vitamins (D, B12) are difficult to obtain in sufficient quantities from food alone, especially in certain conditions (winter, vegetarianism, age). In such cases, supplements are needed."
+          },
+          "whenToTakeVitamins": {
+            "question": "When is the best time to take vitamins?",
+            "answer": "Fat-soluble vitamins (A, D, E, K) are best taken with a meal containing fat for better absorption. Water-soluble (B, C) can be taken on an empty stomach or with food. Multivitamins are usually taken in the morning or early afternoon with breakfast."
+          },
+          "medicationsImpact": {
+            "question": "Do medications affect the absorption of vitamins?",
+            "answer": "Yes, some medications can reduce the absorption of vitamins: antibiotics affect B vitamins, oral contraceptives affect folic acid and B12, and anticonvulsants affect folic acid and vitamin D. If you are taking medications, consult your doctor about the need for supplements."
+          },
+          "multipleVitamins": {
+            "question": "Is it possible to take several vitamins at the same time?",
+            "answer": "Yes, you can take several vitamins at the same time. Multivitamin complexes are specially designed for this. However, it is important not to exceed the daily allowance. Some vitamins are better absorbed together (for example, vitamin D with calcium, vitamin C with iron)."
+          },
+          "childrenVitamins": {
+            "question": "Do children need vitamins?",
+            "answer": "Vitamins for growth and development are especially important for children: vitamin D (prevention of rickets), calcium (bone growth), iron (prevention of anemia), zinc (immunity, growth), vitamin A (vision). Children are usually prescribed vitamin D, especially in areas with little sun."
+          },
+          "storingVitamins": {
+            "question": "How to store vitamins?",
+            "answer": "Vitamins are stored in a cool, dry, dark place, away from moisture and direct sunlight. Do not store in the bathroom due to humidity. Check the expiration date. Some vitamins (especially vitamin C) quickly lose activity if not stored properly."
+          },
+          "naturalProducts": {
+            "question": "Is it possible to replace vitamins with natural products?",
+            "answer": "Yes, many vitamins can be obtained from natural foods: vitamin C from citrus fruits and berries, vitamin A from carrots and liver, vitamin D from fish and eggs, calcium from dairy products. However, for deficiencies or special needs, supplements may be necessary."
+          },
+          "smokingImpact": {
+            "question": "Does smoking affect the need for vitamins?",
+            "answer": "Yes, smoking increases vitamin C requirements by 30-50 mg per day due to increased oxidative stress. Smokers also need more vitamin E and other antioxidants. The best solution is to quit smoking, but until this is done, it is important to increase your intake of antioxidants."
+          },
+          "stressImpact": {
+            "question": "How does stress affect vitamins?",
+            "answer": "Stress increases the need for B vitamins (especially B1, B5, B6, B12), vitamin C, and magnesium. Chronic stress depletes these vitamins. It is important to maintain their levels through nutrition and, if necessary, supplements."
+          },
+          "emptyStomach": {
+            "question": "Is it possible to take vitamins on an empty stomach?",
+            "answer": "Water-soluble vitamins (B, C) can be taken on an empty stomach. Fat-soluble (A, D, E, K) are best taken with a meal containing fat for better absorption. If vitamins make you feel nauseous, take them with food. Follow the instructions on the package."
+          },
+          "checkFrequency": {
+            "question": "How often should you check your vitamin levels?",
+            "answer": "If there are no symptoms of deficiency, testing can be done every 1-2 years. If there are symptoms or risk factors (vegetarianism, pregnancy, age 50+, chronic diseases) - on the recommendation of a doctor, usually once every 6-12 months. It is especially important to control vitamin D, B12, and iron."
+          },
+          "expiredVitamins": {
+            "question": "Is it possible to take expired vitamins?",
+            "answer": "It is not recommended to take expired vitamins. Over time, they lose potency and may be less effective. B vitamins and vitamin C lose their activity especially quickly. Use vitamins before the expiration date."
+          },
+          "immunityImpact": {
+            "question": "How do vitamins affect immunity?",
+            "answer": "Vitamins are critical for immunity: vitamin C (strengthens the activity of immune cells), vitamin D (regulates the immune response), vitamin A (supports mucous membranes), zinc (important for the functioning of the immune system). Deficiency of these vitamins weakens the immune system."
+          },
+          "athletesVitamins": {
+            "question": "Do athletes need vitamins?",
+            "answer": "Yes, athletes need more vitamins due to increased stress: B vitamins (energy), vitamin C (recovery, antioxidant), vitamin D (bones, muscles), magnesium (muscles), zinc (recovery). With intense training, the need increases by 15-20%."
+          },
+          "diseasesVitamins": {
+            "question": "Is it possible to take vitamins if you are sick?",
+            "answer": "In case of illness, the need for vitamins may change. Some diseases interfere with the absorption of vitamins (diseases of the gastrointestinal tract, liver). It is important to consult a doctor before taking vitamins, especially if you have chronic illnesses or are taking medications. Do not self-medicate."
+          },
+          "skinHairImpact": {
+            "question": "How do vitamins affect skin and hair?",
+            "answer": "Vitamins are important for beauty: vitamin A (skin health), vitamin C (collagen synthesis), vitamin E (antioxidant, UV protection), vitamin D (hair growth), B vitamins (hair and nail health), zinc (skin repair). Deficiency is manifested by dryness and hair loss."
+          },
+          "alcoholImpact": {
+            "question": "Does alcohol affect vitamins?",
+            "answer": "Yes, alcohol disrupts the absorption and increases the consumption of vitamins: B vitamins (especially B1, B6, folic acid), vitamin C, magnesium. Regular alcohol consumption increases the risk of deficiency. It is recommended to increase your intake of these vitamins or take supplements."
+          },
+          "vitaminsInteraction": {
+            "question": "How do vitamins interact with each other?",
+            "answer": "Vitamins interact: vitamin C improves the absorption of iron, vitamin D improves calcium, vitamin E works synergistically with vitamin C, B vitamins work together. However, some vitamins may compete (for example, excess zinc reduces copper absorption). Balance is important."
+          },
           "faqItems": [
             {
               "q": "How to determine the daily need for vitamins?",

@@ -1714,6 +1714,110 @@
             "question": "Jak dokładne są obliczenia kalkulatora?",
             "answer": "Kalkulator opiera się na zaleceniach WHO i uwzględnia główne czynniki (płeć, wiek, aktywność). Jednak indywidualne potrzeby mogą się różnić w zależności od warunków zdrowotnych, leków, klimatu i innych czynników. Dla dokładnej oceny ważna jest konsultacja z lekarzem."
           },
+          "mostImportantVitamins": {
+            "question": "Jakie witaminy są najważniejsze?",
+            "answer": "Wszystkie witaminy są ważne, ale szczególnie ważne są: witamina D (odporność, kości), witamina C (odporność, przeciwutleniacz), witaminy z grupy B (energia, układ nerwowy), witamina A (wzrok, odporność), kwas foliowy (hematopoeza, ciąża). Niedobór jakiejkolwiek witaminy może prowadzić do problemów zdrowotnych."
+          },
+          "vitaminDeficiencyDanger": {
+            "question": "Dlaczego niedobór witamin jest niebezpieczny?",
+            "answer": "Niedobór witamin może prowadzić do poważnych problemów: brak witaminy D – do osteoporozy i osłabionej odporności, witaminy B12 – do anemii i problemów neurologicznych, witaminy C – do szkorbutu i osłabionej odporności, witaminy A – do problemów ze wzrokiem. Ważne jest, aby w odpowiednim czasie zidentyfikować i uzupełnić deficyt."
+          },
+          "vitaminOverdose": {
+            "question": "Czy można przedawkować witaminy?",
+            "answer": "Tak, przedawkowanie witamin (zwłaszcza witamin rozpuszczalnych w tłuszczach A, D, E, K) jest niebezpieczne. Witaminy rozpuszczalne w wodzie (B, C) są wydalane z moczem, ale ich nadmiar również może powodować problemy. Witaminy należy przyjmować wyłącznie zgodnie z zaleceniami lekarza i nie przekraczać dawki."
+          },
+          "ageImpact": {
+            "question": "Jak wiek wpływa na zapotrzebowanie na witaminy?",
+            "answer": "Wraz z wiekiem zmieniają się potrzeby: po 50. roku życia zwiększa się zapotrzebowanie na witaminę D i wapń (zapobieganie osteoporozie), witaminę B12 (pogorszenie wchłaniania) i witaminę B6. Dzieci i nastolatki potrzebują więcej wapnia, cynku i witaminy D, aby rosnąć. Osoby starsze często potrzebują suplementów."
+          },
+          "womenIron": {
+            "question": "Dlaczego kobiety potrzebują więcej żelaza?",
+            "answer": "Kobiety w wieku rozrodczym potrzebują 18 mg żelaza dziennie (mężczyźni 8-10 mg) ze względu na regularne miesiączki, podczas których następuje utrata krwi i żelaza. Niedobór żelaza u kobiet często prowadzi do anemii, zmęczenia i osłabienia. W czasie ciąży zapotrzebowanie jest jeszcze większe – 27 mg."
+          },
+          "pregnancyVitamins": {
+            "question": "Jakie witaminy są ważne w czasie ciąży?",
+            "answer": "W czasie ciąży niezwykle ważne są: kwas foliowy (600 mcg, zapobieganie wadom rozwojowym), żelazo (27 mg, zapobieganie anemii), wapń (1300 mg), witamina D (600 j.m.), witamina B12. Stosowanie suplementu powinno być nadzorowane przez lekarza."
+          },
+          "vegetarianVitamins": {
+            "question": "Czy wegetarianie potrzebują witamin?",
+            "answer": "Szczególnie ważna dla wegetarian jest kontrola witaminy B12 (nie występuje w pokarmach roślinnych), żelaza (żelazo niehemowe jest mniej wchłaniane), cynku, witaminy D (jeśli jest mało słońca), kwasów omega-3. Zaleca się przyjmowanie suplementów witaminy B12 i włączenie do diety produktów wzbogaconych."
+          },
+          "deficiencySigns": {
+            "question": "Jak zrozumieć, że witamin jest za mało?",
+            "answer": "Objawy niedoboru: zmęczenie, osłabienie, wypadanie włosów, łamliwe paznokcie, suchość skóry, problemy ze wzrokiem, częste przeziębienia, drażliwość, drętwienie kończyn. Jednak tylko lekarz może postawić dokładną diagnozę na podstawie badań krwi."
+          },
+          "vitaminsFromFood": {
+            "question": "Czy możliwe jest dostarczenie wszystkich witamin z pożywienia?",
+            "answer": "Dzięki zbilansowanej, zróżnicowanej diecie możesz dostarczyć najwięcej witamin. Jednakże niektóre witaminy (D, B12) są trudne do uzyskania w wystarczającej ilości z samego pożywienia, zwłaszcza w określonych warunkach (zima, wegetarianizm, wiek). W takich przypadkach potrzebne są suplementy."
+          },
+          "whenToTakeVitamins": {
+            "question": "Kiedy jest najlepszy czas na przyjmowanie witamin?",
+            "answer": "Witaminy rozpuszczalne w tłuszczach (A, D, E, K) najlepiej przyjmować wraz z posiłkiem zawierającym tłuszcze, aby zapewnić ich lepsze wchłanianie. Rozpuszczalne w wodzie (B, C) można przyjmować na czczo lub z jedzeniem. Multiwitaminy są zwykle przyjmowane rano lub wczesnym popołudniem podczas śniadania."
+          },
+          "medicationsImpact": {
+            "question": "Czy leki wpływają na wchłanianie witamin?",
+            "answer": "Tak, niektóre leki mogą zmniejszać wchłanianie witamin: antybiotyki wpływają na witaminy z grupy B, doustne środki antykoncepcyjne wpływają na kwas foliowy i B12, a leki przeciwdrgawkowe wpływają na kwas foliowy i witaminę D. Jeśli zażywasz leki, skonsultuj się z lekarzem w sprawie konieczności suplementacji."
+          },
+          "multipleVitamins": {
+            "question": "Czy można przyjmować kilka witamin jednocześnie?",
+            "answer": "Tak, możesz przyjmować kilka witamin jednocześnie. Specjalnie do tego celu zaprojektowano kompleksy multiwitaminowe. Ważne jest jednak, aby nie przekraczać dziennej porcji. Niektóre witaminy lepiej wchłaniają się razem (np. witamina D z wapniem, witamina C z żelazem)."
+          },
+          "childrenVitamins": {
+            "question": "Czy dzieci potrzebują witamin?",
+            "answer": "Witaminy dla wzrostu i rozwoju są szczególnie ważne dla dzieci: witamina D (zapobieganie krzywicy), wapń (wzrost kości), żelazo (zapobieganie anemii), cynk (odporność, wzrost), witamina A (wzrok). Dzieciom zwykle przepisuje się witaminę D, zwłaszcza na obszarach o małym nasłonecznieniu."
+          },
+          "storingVitamins": {
+            "question": "Jak przechowywać witaminy?",
+            "answer": "Witaminy przechowuje się w chłodnym, suchym i ciemnym miejscu, z dala od wilgoci i bezpośredniego światła słonecznego. Nie przechowywać w łazience ze względu na wilgoć. Sprawdź datę ważności. Niektóre witaminy (zwłaszcza witamina C) szybko tracą aktywność, jeśli nie są odpowiednio przechowywane."
+          },
+          "naturalProducts": {
+            "question": "Czy można zastąpić witaminy produktami naturalnymi?",
+            "answer": "Tak, wiele witamin można uzyskać z naturalnej żywności: witamina C z owoców cytrusowych i jagód, witamina A z marchwi i wątroby, witamina D z ryb i jaj, wapń z produktów mlecznych. Jednakże w przypadku niedoborów lub specjalnych potrzeb może być konieczna suplementacja."
+          },
+          "smokingImpact": {
+            "question": "Czy palenie wpływa na zapotrzebowanie na witaminy?",
+            "answer": "Tak, palenie zwiększa zapotrzebowanie na witaminę C o 30-50 mg dziennie z powodu zwiększonego stresu oksydacyjnego. Palacze potrzebują także więcej witaminy E i innych przeciwutleniaczy. Najlepszym rozwiązaniem jest rzucenie palenia, ale do tego czasu ważne jest zwiększenie spożycia przeciwutleniaczy."
+          },
+          "stressImpact": {
+            "question": "Jak stres wpływa na witaminy?",
+            "answer": "Stres zwiększa zapotrzebowanie na witaminy z grupy B (zwłaszcza B1, B5, B6, B12), witaminę C i magnez. Przewlekły stres wyczerpuje te witaminy. Ważne jest, aby utrzymać ich poziom poprzez odżywianie i w razie potrzeby suplementację."
+          },
+          "emptyStomach": {
+            "question": "Czy można przyjmować witaminy na pusty żołądek?",
+            "answer": "Witaminy rozpuszczalne w wodzie (B, C) można przyjmować na czczo. Rozpuszczalne w tłuszczach (A, D, E, K) najlepiej przyjmować z posiłkiem zawierającym tłuszcze dla lepszego wchłaniania. Jeśli witaminy powodują mdłości, należy je przyjmować z jedzeniem. Postępuj zgodnie z instrukcjami na opakowaniu."
+          },
+          "checkFrequency": {
+            "question": "Jak często należy sprawdzać poziom witamin?",
+            "answer": "Jeżeli nie występują objawy niedoboru, badania można wykonywać co 1-2 lata. W przypadku wystąpienia objawów lub czynników ryzyka (wegetarianizm, ciąża, wiek 50+, choroby przewlekłe) – na zalecenie lekarza, zwykle raz na 6-12 miesięcy. Szczególnie ważna jest kontrola witaminy D, B12 i żelaza."
+          },
+          "expiredVitamins": {
+            "question": "Czy można przyjmować przeterminowane witaminy?",
+            "answer": "Nie zaleca się przyjmowania przeterminowanych witamin. Z biegiem czasu tracą moc i mogą być mniej skuteczne. Szczególnie szybko tracą swoją aktywność witaminy z grupy B i witamina C. Używaj witamin przed datą ważności."
+          },
+          "immunityImpact": {
+            "question": "Jak witaminy wpływają na odporność?",
+            "answer": "Witaminy są niezbędne dla odporności: witamina C (wzmacnia działanie komórek odpornościowych), witamina D (reguluje odpowiedź immunologiczną), witamina A (wspiera błony śluzowe), cynk (ważny dla funkcjonowania układu odpornościowego). Niedobór tych witamin osłabia układ odpornościowy."
+          },
+          "athletesVitamins": {
+            "question": "Czy sportowcy potrzebują witamin?",
+            "answer": "Tak, sportowcy potrzebują więcej witamin ze względu na zwiększony stres: witaminy z grupy B (energia), witamina C (regeneracja, przeciwutleniacz), witamina D (kości, mięśnie), magnez (mięśnie), cynk (regeneracja). Przy intensywnym treningu zapotrzebowanie wzrasta o 15-20%."
+          },
+          "diseasesVitamins": {
+            "question": "Czy można przyjmować witaminy w przypadku choroby?",
+            "answer": "W przypadku choroby zapotrzebowanie na witaminy może się zmienić. Niektóre choroby zakłócają wchłanianie witamin (choroby przewodu żołądkowo-jelitowego, wątroby). Przed zażyciem witamin ważne jest skonsultowanie się z lekarzem, szczególnie jeśli cierpisz na choroby przewlekłe lub zażywasz leki. Nie należy samoleczyć."
+          },
+          "skinHairImpact": {
+            "question": "Jak witaminy wpływają na skórę i włosy?",
+            "answer": "Witaminy są ważne dla urody: witamina A (zdrowie skóry), witamina C (synteza kolagenu), witamina E (przeciwutleniacz, ochrona przed promieniowaniem UV), witamina D (wzrost włosów), witaminy z grupy B (zdrowie włosów i paznokci), cynk (naprawa skóry). Niedobór objawia się suchością i wypadaniem włosów."
+          },
+          "alcoholImpact": {
+            "question": "Czy alkohol wpływa na witaminy?",
+            "answer": "Tak, alkohol zaburza wchłanianie i zwiększa spożycie witamin: witamin z grupy B (zwłaszcza B1, B6, kwasu foliowego), witaminy C, magnezu. Regularne spożywanie alkoholu zwiększa ryzyko niedoborów. Zaleca się zwiększenie spożycia tych witamin lub przyjmowanie suplementów."
+          },
+          "vitaminsInteraction": {
+            "question": "Jak witaminy oddziałują na siebie?",
+            "answer": "Witaminy oddziałują na siebie: witamina C poprawia wchłanianie żelaza, witamina D poprawia wchłanianie wapnia, witamina E działa synergistycznie z witaminą C, witaminy z grupy B współdziałają. Jednak niektóre witaminy mogą konkurować (na przykład nadmiar cynku zmniejsza wchłanianie miedzi). Równowaga jest ważna."
+          },
           "faqItems": [
             {
               "q": "Jak określić dzienne zapotrzebowanie na witaminy?",

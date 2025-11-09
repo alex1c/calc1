@@ -1714,6 +1714,110 @@
             "question": "Wie genau sind die Berechnungen des Rechners?",
             "answer": "Der Rechner basiert auf Empfehlungen der WHO und berücksichtigt die Hauptfaktoren (Geschlecht, Alter, Aktivität). Die individuellen Bedürfnisse können jedoch je nach Gesundheitszustand, Medikamenten, Klima und anderen Faktoren variieren. Für eine genaue Beurteilung ist die Rücksprache mit einem Arzt wichtig."
           },
+          "mostImportantVitamins": {
+            "question": "Welche Vitamine sind die wichtigsten?",
+            "answer": "Alle Vitamine sind wichtig, aber von besonderer Bedeutung sind: Vitamin D (Immunität, Knochen), Vitamin C (Immunität, Antioxidans), B-Vitamine (Energie, Nervensystem), Vitamin A (Sehvermögen, Immunität), Folsäure (Hämatopoese, Schwangerschaft). Ein Mangel an Vitaminen kann zu gesundheitlichen Problemen führen."
+          },
+          "vitaminDeficiencyDanger": {
+            "question": "Warum ist Vitaminmangel gefährlich?",
+            "answer": "Vitaminmangel kann zu ernsthaften Problemen führen: Mangel an Vitamin D – zu Osteoporose und geschwächter Immunität, Vitamin B12 – zu Anämie und neurologischen Problemen, Vitamin C – zu Skorbut und geschwächter Immunität, Vitamin A – zu Sehstörungen. Es ist wichtig, das Defizit rechtzeitig zu erkennen und zu schließen."
+          },
+          "vitaminOverdose": {
+            "question": "Ist eine Überdosierung von Vitaminen möglich?",
+            "answer": "Ja, eine Überdosierung von Vitaminen (insbesondere der fettlöslichen Vitamine A, D, E, K) ist gefährlich. Wasserlösliche Vitamine (B, C) werden über den Urin ausgeschieden, aber auch ein Überschuss davon kann zu Problemen führen. Nehmen Sie Vitamine nur nach ärztlicher Empfehlung ein und überschreiten Sie die Dosierung nicht."
+          },
+          "ageImpact": {
+            "question": "Wie wirkt sich das Alter auf den Bedarf an Vitaminen aus?",
+            "answer": "Mit zunehmendem Alter ändern sich die Bedürfnisse: Nach 50 Jahren steigt der Bedarf an Vitamin D und Kalzium (Vorbeugung von Osteoporose), Vitamin B12 (Resorption verschlechtert sich) und Vitamin B6. Kinder und Jugendliche benötigen zum Wachstum mehr Kalzium, Zink und Vitamin D. Ältere Menschen benötigen oft Nahrungsergänzungsmittel."
+          },
+          "womenIron": {
+            "question": "Warum brauchen Frauen mehr Eisen?",
+            "answer": "Frauen im gebärfähigen Alter benötigen aufgrund der regelmäßigen Menstruation, bei der Blut und Eisen verloren gehen, 18 mg Eisen pro Tag (Männer 8-10 mg). Eisenmangel führt bei Frauen häufig zu Anämie, Müdigkeit und Schwäche. Während der Schwangerschaft ist der Bedarf sogar noch höher – 27 mg."
+          },
+          "pregnancyVitamins": {
+            "question": "Welche Vitamine sind während der Schwangerschaft wichtig?",
+            "answer": "Während der Schwangerschaft sind von entscheidender Bedeutung: Folsäure (600 µg, Vorbeugung von Fehlbildungen), Eisen (27 mg, Vorbeugung von Anämie), Kalzium (1300 mg), Vitamin D (600 IE), Vitamin B12. Die Verwendung von Nahrungsergänzungsmitteln sollte von einem Arzt überwacht werden."
+          },
+          "vegetarianVitamins": {
+            "question": "Brauchen Vegetarier Vitamine?",
+            "answer": "Für Vegetarier ist es besonders wichtig, Vitamin B12 (kommt nicht in pflanzlichen Lebensmitteln vor), Eisen (Nicht-Häm-Eisen wird weniger absorbiert), Zink, Vitamin D (bei wenig Sonne) und Omega-3 zu überwachen. Es wird empfohlen, B12-Nahrungsergänzungsmittel einzunehmen und angereicherte Lebensmittel in Ihre Ernährung aufzunehmen."
+          },
+          "deficiencySigns": {
+            "question": "Wie kann man verstehen, dass nicht genügend Vitamine vorhanden sind?",
+            "answer": "Mangelerscheinungen: Müdigkeit, Schwäche, Haarausfall, brüchige Nägel, trockene Haut, Sehstörungen, häufige Erkältungen, Reizbarkeit, Taubheitsgefühl in den Gliedmaßen. Allerdings kann nur ein Arzt anhand von Blutuntersuchungen eine genaue Diagnose stellen."
+          },
+          "vitaminsFromFood": {
+            "question": "Ist es möglich, alle Vitamine über die Nahrung aufzunehmen?",
+            "answer": "Mit einer ausgewogenen, abwechslungsreichen Ernährung können Sie die meisten Vitamine aufnehmen. Allerdings sind einige Vitamine (D, B12) vor allem unter bestimmten Bedingungen (Winter, Vegetarismus, Alter) nur schwer in ausreichender Menge über die Nahrung aufzunehmen. In solchen Fällen sind Ergänzungen erforderlich."
+          },
+          "whenToTakeVitamins": {
+            "question": "Wann ist der beste Zeitpunkt für die Einnahme von Vitaminen?",
+            "answer": "Fettlösliche Vitamine (A, D, E, K) werden zur besseren Aufnahme am besten zusammen mit einer fetthaltigen Mahlzeit eingenommen. Wasserlösliches (B, C) kann auf nüchternen Magen oder mit einer Mahlzeit eingenommen werden. Multivitamine werden normalerweise morgens oder am frühen Nachmittag zum Frühstück eingenommen."
+          },
+          "medicationsImpact": {
+            "question": "Beeinflussen Medikamente die Aufnahme von Vitaminen?",
+            "answer": "Ja, einige Medikamente können die Aufnahme von Vitaminen verringern: Antibiotika beeinflussen B-Vitamine, orale Kontrazeptiva beeinflussen Folsäure und B12 und Antikonvulsiva beeinflussen Folsäure und Vitamin D. Wenn Sie Medikamente einnehmen, fragen Sie Ihren Arzt nach der Notwendigkeit von Nahrungsergänzungsmitteln."
+          },
+          "multipleVitamins": {
+            "question": "Ist die gleichzeitige Einnahme mehrerer Vitamine möglich?",
+            "answer": "Ja, Sie können mehrere Vitamine gleichzeitig einnehmen. Multivitaminkomplexe sind speziell dafür konzipiert. Allerdings ist es wichtig, die Tagesdosis nicht zu überschreiten. Einige Vitamine werden gemeinsam besser aufgenommen (z. B. Vitamin D mit Kalzium, Vitamin C mit Eisen)."
+          },
+          "childrenVitamins": {
+            "question": "Brauchen Kinder Vitamine?",
+            "answer": "Vitamine für Wachstum und Entwicklung sind für Kinder besonders wichtig: Vitamin D (Vorbeugung von Rachitis), Kalzium (Knochenwachstum), Eisen (Vorbeugung von Anämie), Zink (Immunität, Wachstum), Vitamin A (Sehvermögen). Kindern wird in der Regel Vitamin D verschrieben, insbesondere in Gegenden mit wenig Sonne."
+          },
+          "storingVitamins": {
+            "question": "Wie lagere ich Vitamine?",
+            "answer": "Vitamine werden an einem kühlen, trockenen und dunklen Ort aufbewahrt, geschützt vor Feuchtigkeit und direkter Sonneneinstrahlung. Aufgrund der Feuchtigkeit nicht im Badezimmer aufbewahren. Überprüfen Sie das Ablaufdatum. Einige Vitamine (insbesondere Vitamin C) verlieren schnell an Aktivität, wenn sie nicht richtig gelagert werden."
+          },
+          "naturalProducts": {
+            "question": "Ist es möglich, Vitamine durch Naturprodukte zu ersetzen?",
+            "answer": "Ja, viele Vitamine können aus natürlichen Lebensmitteln gewonnen werden: Vitamin C aus Zitrusfrüchten und Beeren, Vitamin A aus Karotten und Leber, Vitamin D aus Fisch und Eiern, Kalzium aus Milchprodukten. Bei Mängeln oder besonderen Bedürfnissen können jedoch Ergänzungen notwendig sein."
+          },
+          "smokingImpact": {
+            "question": "Beeinflusst Rauchen den Bedarf an Vitaminen?",
+            "answer": "Ja, Rauchen erhöht den Vitamin-C-Bedarf aufgrund des erhöhten oxidativen Stresses um 30–50 mg pro Tag. Raucher benötigen außerdem mehr Vitamin E und andere Antioxidantien. Die beste Lösung besteht darin, mit dem Rauchen aufzuhören. Bis dahin ist es jedoch wichtig, die Aufnahme von Antioxidantien zu erhöhen."
+          },
+          "stressImpact": {
+            "question": "Wie wirkt sich Stress auf Vitamine aus?",
+            "answer": "Stress erhöht den Bedarf an B-Vitaminen (insbesondere B1, B5, B6, B12), Vitamin C und Magnesium. Chronischer Stress führt zum Abbau dieser Vitamine. Es ist wichtig, ihren Spiegel durch Ernährung und gegebenenfalls Nahrungsergänzungsmittel aufrechtzuerhalten."
+          },
+          "emptyStomach": {
+            "question": "Ist es möglich, Vitamine auf nüchternen Magen einzunehmen?",
+            "answer": "Wasserlösliche Vitamine (B, C) können auf nüchternen Magen eingenommen werden. Fettlösliche (A, D, E, K) werden zur besseren Aufnahme am besten zusammen mit einer fetthaltigen Mahlzeit eingenommen. Wenn Vitamine bei Ihnen Übelkeit verursachen, nehmen Sie sie zusammen mit einer Mahlzeit ein. Befolgen Sie die Anweisungen auf der Verpackung."
+          },
+          "checkFrequency": {
+            "question": "Wie oft sollten Sie Ihren Vitaminspiegel überprüfen?",
+            "answer": "Liegen keine Mangelerscheinungen vor, kann alle 1-2 Jahre ein Test durchgeführt werden. Bei Vorliegen von Symptomen oder Risikofaktoren (Vegetarismus, Schwangerschaft, Alter 50+, chronische Krankheiten) – auf Empfehlung eines Arztes, in der Regel einmal alle 6-12 Monate. Besonders wichtig ist die Kontrolle von Vitamin D, B12 und Eisen."
+          },
+          "expiredVitamins": {
+            "question": "Ist es möglich, abgelaufene Vitamine einzunehmen?",
+            "answer": "Es wird nicht empfohlen, abgelaufene Vitamine einzunehmen. Mit der Zeit verlieren sie an Wirksamkeit und sind möglicherweise weniger wirksam. Besonders schnell verlieren B-Vitamine und Vitamin C ihre Wirkung. Verwenden Sie Vitamine vor dem Verfallsdatum."
+          },
+          "immunityImpact": {
+            "question": "Wie wirken sich Vitamine auf die Immunität aus?",
+            "answer": "Vitamine sind entscheidend für die Immunität: Vitamin C (stärkt die Aktivität der Immunzellen), Vitamin D (reguliert die Immunantwort), Vitamin A (unterstützt die Schleimhäute), Zink (wichtig für die Funktion des Immunsystems). Ein Mangel an diesen Vitaminen schwächt das Immunsystem."
+          },
+          "athletesVitamins": {
+            "question": "Brauchen Sportler Vitamine?",
+            "answer": "Ja, Sportler benötigen durch erhöhten Stress mehr Vitamine: B-Vitamine (Energie), Vitamin C (Regeneration, Antioxidans), Vitamin D (Knochen, Muskeln), Magnesium (Muskeln), Zink (Regeneration). Bei intensivem Training steigt der Bedarf um 15-20 %."
+          },
+          "diseasesVitamins": {
+            "question": "Ist die Einnahme von Vitaminen bei Krankheit möglich?",
+            "answer": "Im Krankheitsfall kann sich der Bedarf an Vitaminen ändern. Einige Krankheiten beeinträchtigen die Aufnahme von Vitaminen (Erkrankungen des Magen-Darm-Trakts, der Leber). Es ist wichtig, vor der Einnahme von Vitaminen einen Arzt zu konsultieren, insbesondere wenn Sie an chronischen Erkrankungen leiden oder Medikamente einnehmen. Nehmen Sie keine Selbstmedikation vor."
+          },
+          "skinHairImpact": {
+            "question": "Wie wirken sich Vitamine auf Haut und Haar aus?",
+            "answer": "Vitamine sind wichtig für die Schönheit: Vitamin A (Hautgesundheit), Vitamin C (Kollagensynthese), Vitamin E (Antioxidans, UV-Schutz), Vitamin D (Haarwachstum), B-Vitamine (Haar- und Nagelgesundheit), Zink (Hautreparatur). Ein Mangel äußert sich in Trockenheit und Haarausfall."
+          },
+          "alcoholImpact": {
+            "question": "Beeinflusst Alkohol die Vitamine?",
+            "answer": "Ja, Alkohol stört die Aufnahme und erhöht die Aufnahme von Vitaminen: B-Vitamine (insbesondere B1, B6, Folsäure), Vitamin C, Magnesium. Regelmäßiger Alkoholkonsum erhöht das Risiko eines Mangels. Es wird empfohlen, die Zufuhr dieser Vitamine zu erhöhen oder Nahrungsergänzungsmittel einzunehmen."
+          },
+          "vitaminsInteraction": {
+            "question": "Wie interagieren Vitamine miteinander?",
+            "answer": "Vitamine interagieren: Vitamin C verbessert die Eisenaufnahme, Vitamin D verbessert Kalzium, Vitamin E wirkt synergistisch mit Vitamin C, B-Vitamine wirken zusammen. Einige Vitamine können jedoch konkurrieren (z. B. verringert ein Überschuss an Zink die Kupferaufnahme). Ausgewogenheit ist wichtig."
+          },
           "faqItems": [
             {
               "q": "Wie ermittelt man den täglichen Bedarf an Vitaminen?",
