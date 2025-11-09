@@ -1,30 +1,29 @@
 version: '3.8'
 
 services:
-	calc1:
-		build:
-			context: .
-			dockerfile: Dockerfile
-		container_name: calc1-app
-		restart: unless-stopped
-		ports:
-			- '3000:3000'
-		environment:
-			- NODE_ENV=production
-			- NEXT_TELEMETRY_DISABLED=1
-		volumes:
-			# Mount messages directory for easy updates without rebuild
-			- ./messages:/app/messages:ro
-		networks:
-			- calc1-network
-		healthcheck:
-			test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://localhost:3000']
-			interval: 30s
-			timeout: 10s
-			retries: 3
-			start_period: 40s
+  calc1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: calc1-app
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    volumes:
+      # Mount messages directory for easy updates without rebuild
+      - ./messages:/app/messages:ro
+    networks:
+      - calc1-network
+    healthcheck:
+      test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://localhost:3000']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
 networks:
-	calc1-network:
-		driver: bridge
-
+  calc1-network:
+    driver: bridge
