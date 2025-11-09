@@ -40,8 +40,18 @@ jobs:
           script: |
             set -e
             cd /var/www/calc1.ru || exit 1
-            echo "📥 Pulling latest changes..."
-            git pull origin main || exit 1
+            
+            echo "🔧 Configuring Git safe directory..."
+            git config --global --add safe.directory /var/www/calc1.ru || true
+            
+            echo "📥 Fetching latest changes..."
+            git fetch origin main || exit 1
+            
+            echo "🔄 Resetting to match remote branch..."
+            git reset --hard origin/main || exit 1
+            
+            echo "🧹 Cleaning untracked files..."
+            git clean -fd || true
             
             echo "🛑 Stopping old containers..."
             docker compose down 2>/dev/null || docker-compose down 2>/dev/null || true
