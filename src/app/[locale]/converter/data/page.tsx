@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Breadcrumbs from '@/components/breadcrumbs';
 import DataCalculator from '@/components/calculators/data-calculator';
 import DataSEO from '@/components/seo/data-seo';
+import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 /**
  * Generate metadata for the data converter page

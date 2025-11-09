@@ -40,7 +40,7 @@ export default function SearchPage() {
 						<p className='text-lg text-gray-600 dark:text-gray-400'>
 							{t('common.resultsFor') || 'Результаты для:'}{' '}
 							<span className='font-semibold text-gray-900 dark:text-white'>
-								"{query}"
+								&ldquo;{query}&rdquo;
 							</span>
 						</p>
 					)}

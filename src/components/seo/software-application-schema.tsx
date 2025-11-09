@@ -29,7 +29,9 @@ export default function SoftwareApplicationSchema({
 	const locale = useLocale() as Locale
 
 	// Get feature translations if custom namespace provided
-	const tFeatures = featureNamespace ? useTranslations(featureNamespace) : null
+	// Always call hooks unconditionally to follow React rules
+	const tFeaturesBase = useTranslations(featureNamespace || namespace)
+	const tFeatures = featureNamespace ? tFeaturesBase : null
 
 	// Try to get features from seo.features first, then fallback to direct keys
 	const featureList = featureKeys.map((key) => {

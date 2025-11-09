@@ -267,28 +267,31 @@ export default async function LpgPaybackPage({
 				}}
 			/>
 
+			{/* HowTo Structured Data */}
 			{(() => {
-		const howTo = messages.calculators?.lpg-payback?.seo?.howTo;
-		if (!howTo || !howTo.steps) return null;
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'HowTo',
-			name: howTo.title,
-			description: howTo.description,
-			step: Object.keys(howTo.steps)
-				.sort()
-				.map(key => ({
-					'@type': 'HowToStep',
-					name: howTo.steps[key].name,
-					text: howTo.steps[key].text,
-				})),
-		};
-	})()} срок окупаемости ГБО, годовую и месячную экономию, стоимость топлива за год и экономию за несколько лет',
-							},
-						],
-					}),
-				}}
-			/>
+				const howTo = messages.calculators?.['lpg-payback']?.seo?.howTo;
+				if (!howTo || !howTo.steps) return null;
+				return (
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								'@context': 'https://schema.org',
+								'@type': 'HowTo',
+								name: howTo.title,
+								description: howTo.description,
+								step: Object.keys(howTo.steps)
+									.sort()
+									.map((key) => ({
+										'@type': 'HowToStep',
+										name: howTo.steps[key].name,
+										text: howTo.steps[key].text,
+									})),
+							}),
+						}}
+					/>
+				);
+			})()}
 		</div>
 	);
 }

@@ -193,7 +193,7 @@ export default function EquationsSEO() {
 							{t('quadraticEquations.twoRoots')}
 						</p>
 						<p className="text-sm text-green-800 dark:text-green-400">
-							D > 0
+							D &gt; 0
 						</p>
 					</div>
 					<div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
