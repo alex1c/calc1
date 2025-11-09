@@ -14,11 +14,25 @@ import {
 export default function VitaminsSEO() {
 	const t = useTranslations('calculators.vitamins.seo');
 
-	// Generate FAQ items array
-	const faqRaw = t.raw('faq.faqItems');
-	const faqItems = Array.isArray(faqRaw)
-		? (faqRaw as Array<{ q: string; a: string }>)
-		: [];
+	// Generate FAQ items array - with fallback for missing translations
+	let faqItems: Array<{ q: string; a: string }> = [];
+	try {
+		const faqRaw = t.raw('faq.faqItems');
+		if (Array.isArray(faqRaw)) {
+			faqItems = faqRaw.filter(
+				(item: any) =>
+					item &&
+					typeof item === 'object' &&
+					item.q &&
+					item.a &&
+					!String(item.q).includes('MISSING_MESSAGE') &&
+					!String(item.a).includes('MISSING_MESSAGE')
+			) as Array<{ q: string; a: string }>;
+		}
+	} catch {
+		// If FAQ items are missing, use empty array
+		faqItems = [];
+	}
 
 	return (
 		<div className='max-w-4xl mx-auto space-y-8'>
