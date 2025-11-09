@@ -1698,6 +1698,22 @@
         },
         "faq": {
           "title": "Perguntas frequentes",
+          "dailyRequirements": {
+            "question": "Como determinar a necessidade diária de vitaminas?",
+            "answer": "A necessidade diária depende da idade, sexo, nível de atividade física e estado de saúde. Nossa calculadora leva esses fatores em consideração para um cálculo preciso. As recomendações baseiam-se nos padrões da OMS e levam em consideração as características individuais."
+          },
+          "activityImpact": {
+            "question": "Como a atividade física afeta a necessidade de vitaminas?",
+            "answer": "Com alta atividade física, a necessidade de vitaminas B, vitamina C e alguns minerais aumenta em 10-20% devido ao metabolismo acelerado, aumento do gasto energético e aumento da sudorese. Vitaminas B, vitamina C, magnésio e zinco são especialmente importantes para atletas."
+          },
+          "supplements": {
+            "question": "Preciso tomar suplementos vitamínicos?",
+            "answer": "Com uma dieta equilibrada, a maioria das vitaminas pode ser obtida através dos alimentos. Os suplementos só são necessários em caso de deficiência ou necessidades especiais (gravidez, exercícios intensos, doenças crônicas), conforme determinação do médico. Você não deve tomar vitaminas sem receita médica."
+          },
+          "accuracy": {
+            "question": "Quão precisos são os cálculos da calculadora?",
+            "answer": "A calculadora é baseada nas recomendações da OMS e leva em consideração os principais fatores (sexo, idade, atividade). No entanto, as necessidades individuais podem variar dependendo das condições de saúde, medicamentos, clima e outros fatores. A consulta com um médico é importante para uma avaliação precisa."
+          },
           "faqItems": [
             {
               "q": "Como determinar a necessidade diária de vitaminas?",

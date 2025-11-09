@@ -1698,10 +1698,26 @@
         },
         "faq": {
           "title": "Sıkça Sorulan Sorular",
+          "dailyRequirements": {
+            "question": "Günlük vitamin ihtiyacı nasıl belirlenir?",
+            "answer": "Günlük gereksinim yaşa, cinsiyete, fiziksel aktivite düzeyine ve sağlık durumuna bağlıdır. Hesap makinemiz doğru bir hesaplama için bu faktörleri dikkate alır. Öneriler WHO standartlarına dayanmaktadır ve bireysel özellikleri dikkate almaktadır."
+          },
+          "activityImpact": {
+            "question": "Fiziksel aktivite vitamin ihtiyacını nasıl etkiler?",
+            "answer": "Yüksek fiziksel aktivite ile metabolizmanın hızlanması, enerji harcamasının artması ve terlemenin artması nedeniyle B vitaminleri, C vitamini ve bazı minerallere olan ihtiyaç %10-20 oranında artar. B vitaminleri, C vitamini, magnezyum ve çinko özellikle sporcular için önemlidir."
+          },
+          "supplements": {
+            "question": "Vitamin takviyesi almam gerekiyor mu?",
+            "answer": "Dengeli bir beslenmeyle vitaminlerin çoğu gıdalardan elde edilebilir. Takviyeler yalnızca eksiklik veya özel ihtiyaçlar (hamilelik, yoğun egzersiz, kronik hastalık) durumunda doktor tarafından belirlendiği şekilde gereklidir. Reçetesiz vitamin almamalısınız."
+          },
+          "accuracy": {
+            "question": "Hesap makinesinin hesaplamaları ne kadar doğrudur?",
+            "answer": "Hesap makinesi WHO tavsiyelerine dayanmaktadır ve ana faktörleri (cinsiyet, yaş, aktivite) dikkate alır. Ancak bireysel ihtiyaçlar sağlık koşullarına, ilaçlara, iklime ve diğer faktörlere bağlı olarak değişebilir. Doğru bir değerlendirme için hekime danışılması önemlidir."
+          },
           "faqItems": [
             {
               "q": "Günlük vitamin ihtiyacı nasıl belirlenir?",
-              "a": "Günlük gereksinim yaşa, cinsiyete, fiziksel aktivite düzeyine ve sağlık durumuna bağlıdır. Hesap makinemiz doğru bir hesaplama için bu faktörleri dikkate alır. Öneriler WHO standartlarına dayanmaktadır ve bireysel özellikleri dikkate almaktadır."
+              "a": "Günlük gereksinim yaşa, cinsiyete, fiziksel aktivite düzeyine ve sağлиk durumuna bağlıdır. Hesap makinemiz doğru bir hesaplama için bu faktörleri dikkate alır. Öneriler WHO standartlarına dayanmaktadır ve bireysel özellikleri dikkate almaktadır."
             },
             {
               "q": "Fiziksel aktivite vitamin ihtiyacını nasıl etkiler?",

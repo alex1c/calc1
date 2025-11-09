@@ -1698,6 +1698,22 @@
         },
         "faq": {
           "title": "Foire aux questions",
+          "dailyRequirements": {
+            "question": "Comment déterminer les besoins quotidiens en vitamines ?",
+            "answer": "Les besoins quotidiens dépendent de l'âge, du sexe, du niveau d'activité physique et de l'état de santé. Notre calculateur prend en compte ces facteurs pour un calcul précis. Les recommandations sont basées sur les normes de l'OMS et tiennent compte des caractéristiques individuelles."
+          },
+          "activityImpact": {
+            "question": "Comment l'activité physique affecte-t-elle les besoins en vitamines ?",
+            "answer": "Avec une activité physique élevée, les besoins en vitamines B, en vitamine C et en certains minéraux augmentent de 10 à 20 % en raison d'un métabolisme accéléré, d'une dépense énergétique accrue et d'une transpiration accrue. Les vitamines B, la vitamine C, le magnésium et le zinc sont particulièrement importants pour les sportifs."
+          },
+          "supplements": {
+            "question": "Dois-je prendre des suppléments vitaminiques ?",
+            "answer": "Avec une alimentation équilibrée, la plupart des vitamines peuvent être obtenues à partir des aliments. Les suppléments ne sont nécessaires qu'en cas de carence ou de besoins particuliers (grossesse, exercice intense, maladie chronique), déterminés par un médecin. Vous ne devez pas prendre de vitamines sans ordonnance."
+          },
+          "accuracy": {
+            "question": "Quelle est la précision des calculs de la calculatrice ?",
+            "answer": "Le calculateur s'appuie sur les recommandations de l'OMS et prend en compte les principaux facteurs (sexe, âge, activité). Cependant, les besoins individuels peuvent varier en fonction de l'état de santé, des médicaments, du climat et d'autres facteurs. La consultation d'un médecin est importante pour une évaluation précise."
+          },
           "faqItems": [
             {
               "q": "Comment déterminer les besoins quotidiens en vitamines ?",

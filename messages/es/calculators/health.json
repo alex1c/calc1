@@ -1698,6 +1698,22 @@
         },
         "faq": {
           "title": "Preguntas frecuentes",
+          "dailyRequirements": {
+            "question": "¿Cómo determinar la necesidad diaria de vitaminas?",
+            "answer": "El requerimiento diario depende de la edad, el sexo, el nivel de actividad física y el estado de salud. Nuestra calculadora tiene en cuenta estos factores para realizar un cálculo preciso. Las recomendaciones se basan en los estándares de la OMS y tienen en cuenta las características individuales."
+          },
+          "activityImpact": {
+            "question": "¿Cómo afecta la actividad física a la necesidad de vitaminas?",
+            "answer": "Con una actividad física elevada, la necesidad de vitamina B, vitamina C y algunos minerales aumenta entre un 10 y un 20% debido al metabolismo acelerado, el aumento del gasto energético y el aumento de la sudoración. Las vitaminas B, la vitamina C, el magnesio y el zinc son especialmente importantes para los deportistas."
+          },
+          "supplements": {
+            "question": "¿Necesito tomar suplementos vitamínicos?",
+            "answer": "Con una dieta equilibrada, la mayoría de las vitaminas se pueden obtener de los alimentos. Los suplementos sólo son necesarios en caso de deficiencia o necesidades especiales (embarazo, ejercicio intenso, enfermedades crónicas), según lo determine un médico. No debes tomar vitaminas sin receta."
+          },
+          "accuracy": {
+            "question": "¿Qué tan precisos son los cálculos de la calculadora?",
+            "answer": "La calculadora se basa en las recomendaciones de la OMS y tiene en cuenta los principales factores (género, edad, actividad). Sin embargo, las necesidades individuales pueden variar según las condiciones de salud, los medicamentos, el clima y otros factores. La consulta con un médico es importante para una evaluación precisa."
+          },
           "faqItems": [
             {
               "q": "¿Cómo determinar la necesidad diaria de vitaminas?",

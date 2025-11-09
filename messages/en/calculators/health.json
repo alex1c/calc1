@@ -1698,6 +1698,22 @@
         },
         "faq": {
           "title": "Frequently Asked Questions",
+          "dailyRequirements": {
+            "question": "How to determine the daily need for vitamins?",
+            "answer": "The daily requirement depends on age, gender, level of physical activity and health status. Our calculator takes these factors into account for an accurate calculation. The recommendations are based on WHO standards and take into account individual characteristics."
+          },
+          "activityImpact": {
+            "question": "How does physical activity affect the need for vitamins?",
+            "answer": "With high physical activity, the need for B vitamins, vitamin C and some minerals increases by 10-20% due to accelerated metabolism, increased energy expenditure and increased sweating. B vitamins, vitamin C, magnesium and zinc are especially important for athletes."
+          },
+          "supplements": {
+            "question": "Do I need to take vitamin supplements?",
+            "answer": "With a balanced diet, most vitamins can be obtained from food. Supplements are only necessary for deficiency or special needs (pregnancy, intense exercise, chronic illness), as determined by a physician. You should not take vitamins without a prescription."
+          },
+          "accuracy": {
+            "question": "How accurate are the calculator's calculations?",
+            "answer": "The calculator is based on WHO recommendations and takes into account the main factors (gender, age, activity). However, individual needs may vary depending on health conditions, medications, climate, and other factors. Consultation with a physician is important for an accurate assessment."
+          },
           "faqItems": [
             {
               "q": "How to determine the daily need for vitamins?",

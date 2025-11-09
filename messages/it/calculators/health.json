@@ -1698,10 +1698,26 @@
 				},
 				"faq": {
 					"title": "Domande frequenti",
+					"dailyRequirements": {
+						"question": "Come determinare il fabbisogno giornaliero di vitamine?",
+						"answer": "Il fabbisogno giornaliero dipende dall'età, dal sesso, dal livello di attività fisica e dallo stato di salute. Il nostro calcolatore tiene conto di questi fattori per un calcolo accurato. Le raccomandazioni si basano sugli standard dell'OMS e tengono conto delle caratteristiche individuali."
+					},
+					"activityImpact": {
+						"question": "In che modo l'attività fisica influisce sul fabbisogno di vitamine?",
+						"answer": "Con un'attività fisica elevata, il fabbisogno di vitamine del gruppo B, vitamina C e alcuni minerali aumenta del 10-20% a causa del metabolismo accelerato, dell'aumento del dispendio energetico e dell'aumento della sudorazione. Le vitamine del gruppo B, la vitamina C, il magnesio e lo zinco sono particolarmente importanti per gli atleti."
+					},
+					"supplements": {
+						"question": "Devo assumere integratori vitaminici?",
+						"answer": "Con una dieta equilibrata, la maggior parte delle vitamine può essere ottenuta dal cibo. Gli integratori sono necessari solo in caso di carenze o esigenze particolari (gravidanza, esercizio fisico intenso, malattie croniche), secondo quanto stabilito dal medico. Non dovresti assumere vitamine senza prescrizione medica."
+					},
+					"accuracy": {
+						"question": "Quanto sono accurati i calcoli della calcolatrice?",
+						"answer": "Il calcolatore si basa sulle raccomandazioni dell'OMS e tiene conto dei principali fattori (sesso, età, attività). Tuttavia, le esigenze individuali possono variare a seconda delle condizioni di salute, dei farmaci, del clima e di altri fattori. La consultazione con un medico è importante per una valutazione accurata."
+					},
 					"faqItems": [
 						{
 							"q": "Come determinare il fabbisogno giornaliero di vitamine?",
-							"a": "Il fabbisogno giornaliero dipende dall’età, dal sesso, dal livello di attività fisica e dallo stato di salute. Il nostro calcolatore tiene conto di questi fattori per un calcolo accurato. Le raccomandazioni si basano sugli standard dell’OMS e tengono conto delle caratteristiche individuali."
+							"a": "Il fabbisogno giornaliero dipende dall'età, dal sesso, dal livello di attività fisica e dallo stato di salute. Il nostro calcolatore tiene conto di questi fattori per un calcolo accurato. Le raccomandazioni si basano sugli standard dell'OMS e tengono conto delle caratteristiche individuali."
 						},
 						{
 							"q": "In che modo l’attività fisica influisce sul fabbisogno di vitamine?",

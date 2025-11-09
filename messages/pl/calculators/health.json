@@ -1698,6 +1698,22 @@
         },
         "faq": {
           "title": "Często zadawane pytania",
+          "dailyRequirements": {
+            "question": "Jak określić dzienne zapotrzebowanie na witaminy?",
+            "answer": "Dzienne zapotrzebowanie zależy od wieku, płci, poziomu aktywności fizycznej i stanu zdrowia. Nasz kalkulator uwzględnia te czynniki w celu dokładnego obliczenia. Zalecenia opierają się na standardach WHO i uwzględniają indywidualne cechy."
+          },
+          "activityImpact": {
+            "question": "Jak aktywność fizyczna wpływa na zapotrzebowanie na witaminy?",
+            "answer": "Przy dużej aktywności fizycznej zapotrzebowanie na witaminy z grupy B, witaminę C i niektóre minerały wzrasta o 10-20% na skutek przyspieszonego metabolizmu, zwiększonego wydatku energetycznego i zwiększonej potliwości. Szczególnie ważne dla sportowców są witaminy z grupy B, witamina C, magnez i cynk."
+          },
+          "supplements": {
+            "question": "Czy muszę przyjmować suplementy witaminowe?",
+            "answer": "Przy zbilansowanej diecie większość witamin można pozyskać z pożywienia. Suplementy są konieczne wyłącznie w przypadku niedoborów lub specjalnych potrzeb (ciąża, intensywne ćwiczenia, choroby przewlekłe), zgodnie z ustaleniami lekarza. Nie należy zażywać witamin bez recepty."
+          },
+          "accuracy": {
+            "question": "Jak dokładne są obliczenia kalkulatora?",
+            "answer": "Kalkulator opiera się na zaleceniach WHO i uwzględnia główne czynniki (płeć, wiek, aktywność). Jednak indywidualne potrzeby mogą się różnić w zależności od warunków zdrowotnych, leków, klimatu i innych czynników. Dla dokładnej oceny ważna jest konsultacja z lekarzem."
+          },
           "faqItems": [
             {
               "q": "Jak określić dzienne zapotrzebowanie na witaminy?",

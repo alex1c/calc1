@@ -1698,6 +1698,22 @@
         },
         "faq": {
           "title": "Häufig gestellte Fragen",
+          "dailyRequirements": {
+            "question": "Wie ermittelt man den täglichen Bedarf an Vitaminen?",
+            "answer": "Der Tagesbedarf ist abhängig von Alter, Geschlecht, körperlicher Aktivität und Gesundheitszustand. Unser Rechner berücksichtigt diese Faktoren für eine genaue Berechnung. Die Empfehlungen basieren auf WHO-Standards und berücksichtigen individuelle Besonderheiten."
+          },
+          "activityImpact": {
+            "question": "Wie wirkt sich körperliche Aktivität auf den Bedarf an Vitaminen aus?",
+            "answer": "Bei hoher körperlicher Aktivität steigt der Bedarf an B-Vitaminen, Vitamin C und einigen Mineralstoffen durch beschleunigten Stoffwechsel, erhöhten Energieverbrauch und vermehrtes Schwitzen um 10-20 %. Besonders wichtig für Sportler sind B-Vitamine, Vitamin C, Magnesium und Zink."
+          },
+          "supplements": {
+            "question": "Muss ich Vitaminpräparate einnehmen?",
+            "answer": "Bei einer ausgewogenen Ernährung können die meisten Vitamine über die Nahrung aufgenommen werden. Nahrungsergänzungsmittel sind nur bei einem Mangel oder besonderen Bedürfnissen (Schwangerschaft, intensive körperliche Betätigung, chronische Krankheit) nach ärztlicher Feststellung erforderlich. Ohne Rezept sollten Sie keine Vitamine einnehmen."
+          },
+          "accuracy": {
+            "question": "Wie genau sind die Berechnungen des Rechners?",
+            "answer": "Der Rechner basiert auf Empfehlungen der WHO und berücksichtigt die Hauptfaktoren (Geschlecht, Alter, Aktivität). Die individuellen Bedürfnisse können jedoch je nach Gesundheitszustand, Medikamenten, Klima und anderen Faktoren variieren. Für eine genaue Beurteilung ist die Rücksprache mit einem Arzt wichtig."
+          },
           "faqItems": [
             {
               "q": "Wie ermittelt man den täglichen Bedarf an Vitaminen?",
