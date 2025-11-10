@@ -15,6 +15,14 @@ services:
       - ./messages:/app/messages:ro
     networks:
       - calc1-network
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
     healthcheck:
       test: ['CMD', 'wget', '--quiet', '--tries=1', '--spider', 'http://localhost:3000']
       interval: 30s
