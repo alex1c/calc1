@@ -10,7 +10,14 @@ const inter = Inter({
 	display: 'swap', // Show fallback font while Inter loads for better performance
 	preload: true, // Preload font for faster rendering
 	variable: '--font-inter', // CSS variable for custom usage
-	fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'], // Fallback fonts
+	fallback: [
+		'system-ui',
+		'-apple-system',
+		'BlinkMacSystemFont',
+		'Segoe UI',
+		'Roboto',
+		'sans-serif',
+	], // Fallback fonts
 });
 
 export const metadata: Metadata = {
