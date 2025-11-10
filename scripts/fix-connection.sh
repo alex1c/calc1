@@ -107,10 +107,17 @@ else
     exit 1
 fi
 
-# 9. Reload Apache
-echo "8️⃣ Reloading Apache..."
-sudo systemctl reload apache2 || { echo "Failed to reload Apache."; exit 1; }
-echo "✅ Apache reloaded"
+# 9. Start/Reload Apache
+echo "8️⃣ Starting/Reloading Apache..."
+if sudo systemctl is-active --quiet apache2; then
+    echo "   Apache is running, reloading..."
+    sudo systemctl reload apache2 || { echo "Failed to reload Apache."; exit 1; }
+    echo "✅ Apache reloaded"
+else
+    echo "   Apache is not running, starting..."
+    sudo systemctl start apache2 || { echo "Failed to start Apache."; exit 1; }
+    echo "✅ Apache started"
+fi
 
 # 10. Test connection from Apache user
 echo "9️⃣ Testing connection from Apache user..."

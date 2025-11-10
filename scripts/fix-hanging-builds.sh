@@ -16,8 +16,8 @@ pkill -9 -f "node.*next" 2>/dev/null || true
 pkill -9 -f "next build" 2>/dev/null || true
 pkill -9 -f "node.*app/node_modules.*next" 2>/dev/null || true
 pkill -9 -f "npm.*build" 2>/dev/null || true
-# Kill processes in Docker containers (remove -it for non-interactive mode)
-docker ps -q | xargs -r -I {} docker exec {} pkill -9 -f "next" 2>/dev/null || true
+# Kill processes in Docker containers (Alpine doesn't have pkill, use killall or kill)
+docker ps -q | xargs -r -I {} docker exec {} sh -c "killall -9 node 2>/dev/null || kill -9 \$(ps aux | grep '[n]ext' | awk '{print \$1}') 2>/dev/null || true" || true
 sleep 2
 echo "✅ Done"
 
