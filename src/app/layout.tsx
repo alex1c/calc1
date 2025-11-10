@@ -4,11 +4,13 @@ import Script from 'next/script';
 import './globals.css';
 
 // Configure Inter font with support for all languages used on the site
+// fallback to system fonts if Google Fonts fails to load during build
 const inter = Inter({
 	subsets: ['latin', 'cyrillic', 'latin-ext'], // Support Russian, English, and other European languages
 	display: 'swap', // Show fallback font while Inter loads for better performance
 	preload: true, // Preload font for faster rendering
 	variable: '--font-inter', // CSS variable for custom usage
+	fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'], // Fallback fonts
 });
 
 export const metadata: Metadata = {

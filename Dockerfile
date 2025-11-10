@@ -19,6 +19,10 @@ COPY . .
 # Set environment variables for build
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
+# Increase timeout for font loading to prevent build hangs (30 seconds)
+ENV NEXT_FONT_LOADER_TIMEOUT=30000
+# Allow network requests to timeout gracefully
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # Build the application
 RUN npm run build

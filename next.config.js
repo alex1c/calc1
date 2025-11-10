@@ -33,6 +33,8 @@ const nextConfig = {
 			'/**': ['./messages/**/*.json'],
 		},
 	},
+	// Optimize fonts loading to prevent build hangs
+	optimizeFonts: true,
 	// Add security and performance headers
 	async headers() {
 		return [
