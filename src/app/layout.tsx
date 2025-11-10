@@ -46,6 +46,11 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<head>
+				{/* Yandex Webmaster verification */}
+				<meta
+					name='yandex-verification'
+					content='ae0a3b638a5ae1ab'
+				/>
 				{/* Preconnect to Google Fonts for better performance */}
 				<link
 					rel='preconnect'
