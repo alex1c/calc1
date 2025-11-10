@@ -288,6 +288,13 @@
       "breadcrumbs": {
         "category": "Otomatik"
       },
+      "hero": {
+        "totalCostAbbr": "TCO",
+        "totalCost": "Toplam maliyet",
+        "accuracy": "Doğruluk",
+        "costPerKmAbbr": "₺/km",
+        "costPerKm": "Km başına maliyet"
+      },
       "form": {
         "title": "Araç parametreleri",
         "carPrice": "Araba maliyeti (₽)",

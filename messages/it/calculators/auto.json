@@ -288,6 +288,13 @@
 			"breadcrumbs": {
 				"category": "Auto"
 			},
+			"hero": {
+				"totalCostAbbr": "CTO",
+				"totalCost": "Costo totale",
+				"accuracy": "Precisione",
+				"costPerKmAbbr": "€/km",
+				"costPerKm": "Costo per km"
+			},
 			"form": {
 				"title": "Parametri del veicolo",
 				"carPrice": "Costo dell'auto (₽)",

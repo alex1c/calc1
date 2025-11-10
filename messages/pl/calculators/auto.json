@@ -288,6 +288,13 @@
       "breadcrumbs": {
         "category": "Automatyczny"
       },
+      "hero": {
+        "totalCostAbbr": "TCO",
+        "totalCost": "Całkowity koszt",
+        "accuracy": "Dokładność",
+        "costPerKmAbbr": "zł/km",
+        "costPerKm": "Koszt za km"
+      },
       "form": {
         "title": "Parametry pojazdu",
         "carPrice": "Koszt samochodu (₽)",
