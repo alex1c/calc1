@@ -46,23 +46,28 @@ export async function generateMetadata({
 	const siteDescription = t('footer.siteDescription');
 
 	// SEO-optimized title and description
-	const title = locale === 'ru' 
-		? `${brandName} - ${siteDescription} | Calc1.ru`
-		: `${brandName} - ${siteDescription} | Calc1.ru`;
+	const title =
+		locale === 'ru'
+			? `${brandName} - ${siteDescription} | Calc1.ru`
+			: `${brandName} - ${siteDescription} | Calc1.ru`;
 
-	const description = locale === 'ru'
-		? `${siteDescription} Более 100 бесплатных онлайн калькуляторов: финансовые, математические, строительные, медицинские, конвертеры единиц измерения и многое другое. Точные расчёты без регистрации.`
-		: `${siteDescription} More than 100 free online calculators: financial, mathematical, construction, health, unit converters and much more. Accurate calculations without registration.`;
+	const description =
+		locale === 'ru'
+			? `${siteDescription} Более 100 бесплатных онлайн калькуляторов: финансовые, математические, строительные, медицинские, конвертеры единиц измерения и многое другое. Точные расчёты без регистрации.`
+			: `${siteDescription} More than 100 free online calculators: financial, mathematical, construction, health, unit converters and much more. Accurate calculations without registration.`;
 
 	// Get keywords from translations
 	const keywordsFromTranslations = t('homepage.seo.keywords');
-	const keywords = (typeof keywordsFromTranslations === 'string' && keywordsFromTranslations !== 'homepage.seo.keywords')
-		? keywordsFromTranslations
-		: (locale === 'ru'
+	const keywords =
+		typeof keywordsFromTranslations === 'string' &&
+		keywordsFromTranslations !== 'homepage.seo.keywords'
+			? keywordsFromTranslations
+			: locale === 'ru'
 			? 'калькулятор онлайн, бесплатные калькуляторы, финансовые калькуляторы, математические калькуляторы, строительные калькуляторы, медицинские калькуляторы, конвертеры единиц, калькулятор кредита, калькулятор ипотеки, калькулятор ипотеки онлайн, калькулятор ипотеки бесплатно, калькулятор ипотеки рассчитать, калькулятор ипотеки с досрочным погашением, калькулятор ипотеки калькулятор онлайн, калькулятор ипотеки расчет, калькулятор кредита онлайн, калькулятор кредита рассчитать, калькулятор кредита бесплатно, калькулятор кредита с досрочным погашением, калькулятор ипотеки, калькулятор ипотеки онлайн, калькулятор ипотеки бесплатно, калькулятор ипотеки рассчитать'
-			: 'online calculator, free calculators, financial calculators, math calculators, construction calculators, health calculators, unit converters, loan calculator, mortgage calculator, credit calculator, BMI calculator, tax calculator');
+			: 'online calculator, free calculators, financial calculators, math calculators, construction calculators, health calculators, unit converters, loan calculator, mortgage calculator, credit calculator, BMI calculator, tax calculator';
 
-	const canonicalUrl = locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`;
+	const canonicalUrl =
+		locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`;
 
 	return {
 		title,
@@ -217,12 +222,15 @@ export default async function HomePage({ params: { locale } }: Props) {
 		'@type': 'WebSite',
 		name: t('brand.name'),
 		description: t('footer.siteDescription'),
-		url: locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`,
+		url:
+			locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`,
 		potentialAction: {
 			'@type': 'SearchAction',
 			target: {
 				'@type': 'EntryPoint',
-				urlTemplate: `https://calc1.ru/${locale === 'ru' ? '' : locale + '/'}search?q={search_term_string}`,
+				urlTemplate: `https://calc1.ru/${
+					locale === 'ru' ? '' : locale + '/'
+				}search?q={search_term_string}`,
 			},
 			'query-input': 'required name=search_term_string',
 		},
@@ -230,7 +238,10 @@ export default async function HomePage({ params: { locale } }: Props) {
 		alternateName: 'Calc1',
 		keywords: (() => {
 			const keywordsStr = t('homepage.seo.keywords');
-			if (typeof keywordsStr === 'string' && keywordsStr !== 'homepage.seo.keywords') {
+			if (
+				typeof keywordsStr === 'string' &&
+				keywordsStr !== 'homepage.seo.keywords'
+			) {
 				return keywordsStr.split(', ').slice(0, 4).join(', ');
 			}
 			return locale === 'ru'
@@ -263,7 +274,8 @@ export default async function HomePage({ params: { locale } }: Props) {
 		'@type': 'CollectionPage',
 		name: t('brand.name'),
 		description: t('footer.siteDescription'),
-		url: locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`,
+		url:
+			locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`,
 		mainEntity: {
 			'@type': 'ItemList',
 			name: t('common.calculators'),
@@ -275,36 +287,44 @@ export default async function HomePage({ params: { locale } }: Props) {
 	// FAQ structured data
 	const faqItems = [
 		{
-			q: locale === 'ru'
-				? 'Сколько калькуляторов доступно на сайте?'
-				: 'How many calculators are available on the site?',
-			a: locale === 'ru'
-				? 'На Calc1.ru доступно более 100 бесплатных онлайн калькуляторов в различных категориях: финансы, математика, строительство, здоровье, время, конвертеры единиц и многое другое.'
-				: 'Calc1.ru offers more than 100 free online calculators in various categories: finance, mathematics, construction, health, time, unit converters and much more.',
+			q:
+				locale === 'ru'
+					? 'Сколько калькуляторов доступно на сайте?'
+					: 'How many calculators are available on the site?',
+			a:
+				locale === 'ru'
+					? 'На Calc1.ru доступно более 100 бесплатных онлайн калькуляторов в различных категориях: финансы, математика, строительство, здоровье, время, конвертеры единиц и многое другое.'
+					: 'Calc1.ru offers more than 100 free online calculators in various categories: finance, mathematics, construction, health, time, unit converters and much more.',
 		},
 		{
-			q: locale === 'ru'
-				? 'Нужна ли регистрация для использования калькуляторов?'
-				: 'Do I need to register to use calculators?',
-			a: locale === 'ru'
-				? 'Нет, все калькуляторы на Calc1.ru доступны бесплатно без регистрации. Вы можете использовать их сразу после перехода на страницу калькулятора.'
-				: 'No, all calculators on Calc1.ru are available for free without registration. You can use them immediately after visiting the calculator page.',
+			q:
+				locale === 'ru'
+					? 'Нужна ли регистрация для использования калькуляторов?'
+					: 'Do I need to register to use calculators?',
+			a:
+				locale === 'ru'
+					? 'Нет, все калькуляторы на Calc1.ru доступны бесплатно без регистрации. Вы можете использовать их сразу после перехода на страницу калькулятора.'
+					: 'No, all calculators on Calc1.ru are available for free without registration. You can use them immediately after visiting the calculator page.',
 		},
 		{
-			q: locale === 'ru'
-				? 'На каких языках доступен сайт?'
-				: 'In what languages is the site available?',
-			a: locale === 'ru'
-				? 'Сайт Calc1.ru доступен на 9 языках: русский, английский, немецкий, испанский, французский, итальянский, польский, турецкий и португальский (Бразилия).'
-				: 'Calc1.ru is available in 9 languages: Russian, English, German, Spanish, French, Italian, Polish, Turkish and Portuguese (Brazil).',
+			q:
+				locale === 'ru'
+					? 'На каких языках доступен сайт?'
+					: 'In what languages is the site available?',
+			a:
+				locale === 'ru'
+					? 'Сайт Calc1.ru доступен на 9 языках: русский, английский, немецкий, испанский, французский, итальянский, польский, турецкий и португальский (Бразилия).'
+					: 'Calc1.ru is available in 9 languages: Russian, English, German, Spanish, French, Italian, Polish, Turkish and Portuguese (Brazil).',
 		},
 		{
-			q: locale === 'ru'
-				? 'Точны ли расчеты калькуляторов?'
-				: 'Are calculator calculations accurate?',
-			a: locale === 'ru'
-				? 'Да, все калькуляторы используют проверенные математические формулы и алгоритмы. Однако результаты носят информационный характер и не заменяют профессиональную консультацию в финансовых и медицинских вопросах.'
-				: 'Yes, all calculators use proven mathematical formulas and algorithms. However, results are for informational purposes only and do not replace professional consultation in financial and medical matters.',
+			q:
+				locale === 'ru'
+					? 'Точны ли расчеты калькуляторов?'
+					: 'Are calculator calculations accurate?',
+			a:
+				locale === 'ru'
+					? 'Да, все калькуляторы используют проверенные математические формулы и алгоритмы. Однако результаты носят информационный характер и не заменяют профессиональную консультацию в финансовых и медицинских вопросах.'
+					: 'Yes, all calculators use proven mathematical formulas and algorithms. However, results are for informational purposes only and do not replace professional consultation in financial and medical matters.',
 		},
 	];
 
@@ -329,7 +349,10 @@ export default async function HomePage({ params: { locale } }: Props) {
 				'@type': 'ListItem',
 				position: 1,
 				name: t('breadcrumbs.home'),
-				item: locale === 'ru' ? 'https://calc1.ru' : `https://calc1.ru/${locale}`,
+				item:
+					locale === 'ru'
+						? 'https://calc1.ru'
+						: `https://calc1.ru/${locale}`,
 			},
 		],
 	};
@@ -373,7 +396,10 @@ export default async function HomePage({ params: { locale } }: Props) {
 
 				<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
 					{/* Hero Section */}
-					<section className='text-center mb-12' aria-labelledby='main-heading'>
+					<section
+						className='text-center mb-12'
+						aria-labelledby='main-heading'
+					>
 						<h1
 							id='main-heading'
 							className='text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4'
@@ -398,7 +424,10 @@ export default async function HomePage({ params: { locale } }: Props) {
 					</section>
 
 					{/* Categories Grid */}
-					<section className='mb-12' aria-labelledby='categories-heading'>
+					<section
+						className='mb-12'
+						aria-labelledby='categories-heading'
+					>
 						<h2
 							id='categories-heading'
 							className='text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center'
@@ -471,7 +500,9 @@ export default async function HomePage({ params: { locale } }: Props) {
 									}
 								>
 									<h3 className='font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 mb-2'>
-										{locale === 'ru' ? 'Калькулятор ИМТ' : 'BMI Calculator'}
+										{locale === 'ru'
+											? 'Калькулятор ИМТ'
+											: 'BMI Calculator'}
 									</h3>
 									<p className='text-sm text-gray-600 dark:text-gray-400'>
 										{locale === 'ru'
@@ -514,9 +545,7 @@ export default async function HomePage({ params: { locale } }: Props) {
 							id='about-heading'
 							className='text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6'
 						>
-							{locale === 'ru'
-								? 'О Calc1.ru'
-								: 'About Calc1.ru'}
+							{locale === 'ru' ? 'О Calc1.ru' : 'About Calc1.ru'}
 						</h2>
 						<div className='prose dark:prose-invert max-w-none'>
 							<p className='text-gray-700 dark:text-gray-300 mb-4'>
@@ -533,47 +562,50 @@ export default async function HomePage({ params: { locale } }: Props) {
 								{locale === 'ru' ? (
 									<>
 										<li>
-											Финансовые калькуляторы: кредит, ипотека, вклад,
-											инвестиции, налоги
+											Финансовые калькуляторы: кредит,
+											ипотека, вклад, инвестиции, налоги
 										</li>
 										<li>
-											Математические калькуляторы: проценты, площади, объёмы,
+											Математические калькуляторы:
+											проценты, площади, объёмы,
 											уравнения, статистика
 										</li>
 										<li>
-											Строительные калькуляторы: материалы, площади,
-											объёмы, расходы
+											Строительные калькуляторы:
+											материалы, площади, объёмы, расходы
 										</li>
 										<li>
-											Медицинские калькуляторы: ИМТ, давление, калории,
-											беременность
+											Медицинские калькуляторы: ИМТ,
+											давление, калории, беременность
 										</li>
 										<li>
-											Конвертеры единиц измерения: длина, вес, температура,
-											давление, скорость
+											Конвертеры единиц измерения: длина,
+											вес, температура, давление, скорость
 										</li>
 									</>
 								) : (
 									<>
 										<li>
-											Financial calculators: loan, mortgage, deposit,
-											investments, taxes
+											Financial calculators: loan,
+											mortgage, deposit, investments,
+											taxes
 										</li>
 										<li>
-											Mathematical calculators: percentages, areas, volumes,
+											Mathematical calculators:
+											percentages, areas, volumes,
 											equations, statistics
 										</li>
 										<li>
-											Construction calculators: materials, areas, volumes,
-											costs
+											Construction calculators: materials,
+											areas, volumes, costs
 										</li>
 										<li>
-											Health calculators: BMI, blood pressure, calories,
-											pregnancy
+											Health calculators: BMI, blood
+											pressure, calories, pregnancy
 										</li>
 										<li>
-											Unit converters: length, weight, temperature, pressure,
-											speed
+											Unit converters: length, weight,
+											temperature, pressure, speed
 										</li>
 									</>
 								)}
