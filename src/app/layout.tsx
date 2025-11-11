@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 		apple: '/apple-touch-icon.png',
 	},
 	verification: {
+		google: 'n1vw1VAXAqkdrR3O3KU2h3klhaO8KqrQefEtvWYi8RU',
 		yandex: 'ae0a3b638a5ae1ab',
 	},
 };
@@ -46,6 +47,11 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<head>
+				{/* Google Search Console verification */}
+				<meta
+					name='google-site-verification'
+					content='n1vw1VAXAqkdrR3O3KU2h3klhaO8KqrQefEtvWYi8RU'
+				/>
 				{/* Yandex Webmaster verification */}
 				<meta
 					name='yandex-verification'

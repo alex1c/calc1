@@ -127,7 +127,7 @@ export async function generateMetadata({
 			},
 		},
 		verification: {
-			google: 'your-google-verification-code',
+			google: 'n1vw1VAXAqkdrR3O3KU2h3klhaO8KqrQefEtvWYi8RU',
 			yandex: 'ae0a3b638a5ae1ab',
 		},
 		category: 'Calculator Tools',
