@@ -1,15 +1,32 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { Home, Calculator, TrendingUp, Shield } from 'lucide-react';
 import Header from '@/components/header';
-import MortgageCalculator from '@/components/calculators/mortgage-calculator';
 import MortgageSEO from '@/components/seo/mortgage-seo';
 import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
 import { generateLanguageAlternates } from '@/lib/metadata-utils';
+
+// Динамический импорт калькулятора для оптимизации загрузки
+const MortgageCalculator = dynamic(
+	() => import('@/components/calculators/mortgage-calculator'),
+	{
+		loading: () => (
+			<div className='flex items-center justify-center p-8'>
+				<div className='text-gray-500'>Загрузка калькулятора...</div>
+			</div>
+		),
+		ssr: true,
+	}
+);
+
+// Кэширование страницы на 1 час для улучшения производительности
+export const revalidate = 3600;
+
 interface Props {
 	params: { locale: string };
 }
@@ -250,6 +267,37 @@ export default async function MortgagePage({ params: { locale } }: Props) {
 									'@type': 'Answer',
 									text: tSeo('faq.faqItems.4.a'),
 								},
+							},
+						],
+					}),
+				}}
+			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{
+								'@type': 'ListItem',
+								position: 1,
+								name: tCategories('breadcrumbs.home') || 'Главная',
+								item: `https://calc1.ru/${locale}`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('finance.title'),
+								item: `https://calc1.ru/${locale}/finance`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/finance/mortgage`,
 							},
 						],
 					}),

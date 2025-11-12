@@ -470,6 +470,7 @@ export default async function HomePage({ params: { locale } }: Props) {
 							<article className='p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors'>
 								<Link
 									href={`/${locale}/life/paper-weight`}
+									prefetch={true}
 									className='block'
 									aria-label={
 										locale === 'ru'
@@ -492,6 +493,7 @@ export default async function HomePage({ params: { locale } }: Props) {
 							<article className='p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors'>
 								<Link
 									href={`/${locale}/health/bmihealth`}
+									prefetch={true}
 									className='block'
 									aria-label={
 										locale === 'ru'
@@ -514,6 +516,7 @@ export default async function HomePage({ params: { locale } }: Props) {
 							<article className='p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors'>
 								<Link
 									href={`/${locale}/finance/mortgage`}
+									prefetch={true}
 									className='block'
 									aria-label={
 										locale === 'ru'

@@ -2834,6 +2834,13 @@
         "ownershipCoefficient": "Współczynnik własności",
         "placeholder": "Wprowadź parametry i kliknij „Oblicz”"
       },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Regiony Rosji",
+        "accuracy": "Dokładność obliczeń",
+        "paymentDeadlineDate": "1 grudnia",
+        "paymentDeadline": "Termin płatności podatku"
+      },
       "seo": {
         "title": "Kalkulator podatku transportowego online: obliczanie podatku samochodowego według pojemności i regionu",
         "description": "Bezpłatny kalkulator podatku transportowego do obliczenia podatku samochodowego. Oblicz podatek transportowy online według mocy silnika, regionu rejestracji i okresu własności.",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "Jak obliczany jest podatek transportowy?",
           "content": "Podatek transportowy obliczany jest według wzoru uwzględniającego moc silnika, stawkę regionalną oraz okres posiadania.",
+          "enginePowerTitle": "Moc silnika",
           "enginePower": "Moc silnika w koniach mechanicznych (podana w tytule pojazdu)",
+          "regionTitle": "Stawka regionalna",
           "region": "Regionalną stawkę podatku ustala podmiot Federacji Rosyjskiej (₽/KM)",
+          "ownershipTitle": "Okres posiadania",
           "ownership": "Okres posiadania samochodu w ciągu roku (współczynnik od 0 do 1)",
+          "formulaTitle": "Wzór obliczeniowy",
           "formula": "Podatek = moc × stawka × (miesiące posiadania / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Wskazówki dotyczące podatku transportowego",
           "content": "Aby poprawnie obliczyć i zapłacić podatek transportowy, postępuj zgodnie z poniższymi zaleceniami:",
+          "deadlineTitle": "Terminy płatności",
           "deadline": "Śledź terminy płatności podatku (do 1 grudnia następnego roku)",
+          "paymentTitle": "Weryfikacja obliczeń",
           "payment": "Sprawdź poprawność obliczeń w urzędzie skarbowym",
+          "ownershipTitle": "Okres posiadania",
           "ownership": "Weź pod uwagę jedynie okres faktycznego posiadania samochodu",
+          "consultationTitle": "Konsultacje",
           "consultation": "W razie wątpliwości skontaktuj się ze swoimi doradcami podatkowymi"
         },
         "faq": {

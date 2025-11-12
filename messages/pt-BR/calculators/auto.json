@@ -2834,6 +2834,13 @@
         "ownershipCoefficient": "Taxa de propriedade",
         "placeholder": "Insira os parâmetros e clique em 'Calcular'"
       },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Regiões da Rússia",
+        "accuracy": "Precisão do cálculo",
+        "paymentDeadlineDate": "1º de dezembro",
+        "paymentDeadline": "Prazo de pagamento do imposto"
+      },
       "seo": {
         "title": "Calculadora de imposto de transporte online: cálculo do imposto automóvel por capacidade e região",
         "description": "Calculadora gratuita de imposto de transporte para calcular seu imposto automóvel. Calcule o imposto de transporte por potência do motor, região de registro e período de propriedade online.",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "Como é calculado o imposto sobre transporte?",
           "content": "O imposto sobre transportes é calculado através de uma fórmula que leva em consideração a potência do motor, a taxa regional e o período de propriedade.",
+          "enginePowerTitle": "Potência do motor",
           "enginePower": "Potência do motor em cavalos (indicada no título do veículo)",
+          "regionTitle": "Taxa regional",
           "region": "A taxa de imposto regional é definida pela entidade constituinte da Federação Russa (₽/hp)",
+          "ownershipTitle": "Período de propriedade",
           "ownership": "Período de propriedade do carro por ano (coeficiente de 0 a 1)",
+          "formulaTitle": "Fórmula de cálculo",
           "formula": "Imposto = Energia × Taxa × (Meses de Propriedade / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Dicas sobre impostos sobre transporte",
           "content": "Para calcular e pagar corretamente o imposto de transporte, siga estas recomendações:",
+          "deadlineTitle": "Prazos de pagamento",
           "deadline": "Acompanhe os prazos de pagamento de impostos (até 1º de dezembro do próximo ano)",
+          "paymentTitle": "Verificação do cálculo",
           "payment": "Verifique a exatidão dos cálculos junto à repartição de finanças",
+          "ownershipTitle": "Período de propriedade",
           "ownership": "Leve em consideração apenas o período de propriedade efetiva do carro",
+          "consultationTitle": "Consultas",
           "consultation": "Em caso de dúvida, entre em contato com seus consultores fiscais"
         },
         "faq": {

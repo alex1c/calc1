@@ -136,6 +136,37 @@ export default async function CreditLoanPage({ params: { locale } }: Props) {
 				ratingCount='89'
 				screenshot='https://calc1.ru/images/credit-loan-screenshot.jpg'
 			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{
+								'@type': 'ListItem',
+								position: 1,
+								name: 'Главная',
+								item: `https://calc1.ru/${locale}`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategory('title'),
+								item: `https://calc1.ru/${locale}/finance`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/finance/credit-loan`,
+							},
+						],
+					}),
+				}}
+			/>
 		</div>
 	);
 }

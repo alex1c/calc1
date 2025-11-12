@@ -199,6 +199,37 @@ export default async function PercentCalculatorPage({
 					}),
 				}}
 			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'BreadcrumbList',
+						itemListElement: [
+							{
+								'@type': 'ListItem',
+								position: 1,
+								name: tCategories('breadcrumbs.home') || 'Главная',
+								item: `https://calc1.ru/${locale}`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 2,
+								name: tCategories('math.title'),
+								item: `https://calc1.ru/${locale}/math`,
+							},
+							{
+								'@type': 'ListItem',
+								position: 3,
+								name: t('title'),
+								item: `https://calc1.ru/${locale}/math/percent`,
+							},
+						],
+					}),
+				}}
+			/>
 		</div>
 	);
 }

@@ -2834,6 +2834,13 @@
         "ownershipCoefficient": "Tasa de propiedad",
         "placeholder": "Ingrese los parámetros y haga clic en 'Calcular'"
       },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Regiones de Rusia",
+        "accuracy": "Precisión del cálculo",
+        "paymentDeadlineDate": "1 de diciembre",
+        "paymentDeadline": "Fecha límite de pago del impuesto"
+      },
       "seo": {
         "title": "Calculadora de impuestos de transporte en línea: cálculo del impuesto sobre automóviles por capacidad y región",
         "description": "Calculadora de impuestos de transporte gratuita para calcular el impuesto de su automóvil. Calcule en línea el impuesto de transporte por potencia del motor, región de registro y período de propiedad.",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "¿Cómo se calcula el impuesto de transporte?",
           "content": "El impuesto al transporte se calcula mediante una fórmula que tiene en cuenta la potencia del motor, la tasa regional y el período de propiedad.",
+          "enginePowerTitle": "Potencia del motor",
           "enginePower": "Potencia del motor en caballos de fuerza (indicada en el título del vehículo)",
+          "regionTitle": "Tasa regional",
           "region": "El tipo impositivo regional lo fija la entidad constitutiva de la Federación de Rusia (₽/hp)",
+          "ownershipTitle": "Período de propiedad",
           "ownership": "Período de propiedad del automóvil por año (coeficiente de 0 a 1)",
+          "formulaTitle": "Fórmula de cálculo",
           "formula": "Impuesto = Potencia × Tarifa × (Meses de propiedad / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Consejos sobre impuestos de transporte",
           "content": "Para calcular y pagar correctamente el impuesto de transporte, siga estas recomendaciones:",
+          "deadlineTitle": "Plazos de pago",
           "deadline": "Lleve un registro de los plazos de pago de impuestos (hasta el 1 de diciembre del próximo año)",
+          "paymentTitle": "Verificación del cálculo",
           "payment": "Verificar la exactitud de los cálculos con la oficina de impuestos.",
+          "ownershipTitle": "Período de propiedad",
           "ownership": "Tenga en cuenta únicamente el período de propiedad real del automóvil.",
+          "consultationTitle": "Consultas",
           "consultation": "En caso de duda, contacte con sus asesores fiscales"
         },
         "faq": {

@@ -5,8 +5,17 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Calculator, Search, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import SearchModal from './search-modal';
+import dynamic from 'next/dynamic';
 import { useSearchIndex } from '@/hooks/use-search-index';
+
+// Ленивая загрузка SearchModal только при необходимости
+const SearchModal = dynamic(
+	() => import('./search-modal'),
+	{
+		ssr: false,
+		loading: () => null, // Не показываем индикатор загрузки для модального окна
+	}
+);
 
 interface HeaderProps {
 	onSearch?: (query: string) => void;
@@ -160,8 +169,8 @@ export default function Header({ onSearch }: HeaderProps) {
 				</div>
 			</div>
 
-			{/* Search Modal */}
-			{!isIndexLoading && (
+			{/* Search Modal - загружается только при открытии */}
+			{showSearchModal && !isIndexLoading && (
 				<SearchModal
 					isOpen={showSearchModal}
 					onClose={() => setShowSearchModal(false)}

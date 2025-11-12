@@ -247,6 +247,14 @@ export default async function IdealWeightPage({
 				ratingCount='150'
 				screenshot='https://calc1.ru/images/ideal-weight-screenshot.jpg'
 			/>
+
+			{/* BreadcrumbList Structured Data */}
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(breadcrumbListStructuredData),
+				}}
+			/>
 			{/* FAQ Structured Data */}
 			<script
 				type='application/ld+json'

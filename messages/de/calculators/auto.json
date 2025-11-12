@@ -2834,6 +2834,13 @@
         "ownershipCoefficient": "Eigentumsquote",
         "placeholder": "Geben Sie Parameter ein und klicken Sie auf „Berechnen“."
       },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Regionen Russlands",
+        "accuracy": "Berechnungsgenauigkeit",
+        "paymentDeadlineDate": "1. Dezember",
+        "paymentDeadline": "Frist für die Steuerzahlung"
+      },
       "seo": {
         "title": "Online-Transportsteuerrechner: Berechnung der Kfz-Steuer nach Kapazität und Region",
         "description": "Kostenloser Transportsteuerrechner zur Berechnung Ihrer Kfz-Steuer. Berechnen Sie online die Transportsteuer nach Motorleistung, Zulassungsregion und Besitzdauer.",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "Wie wird die Transportsteuer berechnet?",
           "content": "Die Transportsteuer wird nach einer Formel berechnet, die Motorleistung, regionalen Steuersatz und Besitzdauer berücksichtigt.",
+          "enginePowerTitle": "Motorleistung",
           "enginePower": "Motorleistung in PS (im Fahrzeugtitel angegeben)",
+          "regionTitle": "Regionaler Steuersatz",
           "region": "Der regionale Steuersatz wird von der konstituierenden Einheit der Russischen Föderation festgelegt (₽/PS)",
+          "ownershipTitle": "Besitzdauer",
           "ownership": "Pkw-Besitzdauer pro Jahr (Koeffizient von 0 bis 1)",
+          "formulaTitle": "Berechnungsformel",
           "formula": "Steuer = Leistung × Steuersatz × (Monate des Besitzes / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Tipps zur Transportsteuer",
           "content": "Um die Transportsteuer korrekt zu berechnen und zu zahlen, befolgen Sie diese Empfehlungen:",
+          "deadlineTitle": "Zahlungsfristen",
           "deadline": "Behalten Sie die Zahlungsfristen für Steuern im Auge (bis zum 1. Dezember des nächsten Jahres)",
+          "paymentTitle": "Berechnungsüberprüfung",
           "payment": "Überprüfen Sie die Richtigkeit der Berechnungen beim Finanzamt",
+          "ownershipTitle": "Besitzdauer",
           "ownership": "Berücksichtigen Sie nur den Zeitraum, in dem Sie das Auto tatsächlich besitzen",
+          "consultationTitle": "Beratung",
           "consultation": "Im Zweifelsfall wenden Sie sich an Ihren Steuerberater"
         },
         "faq": {

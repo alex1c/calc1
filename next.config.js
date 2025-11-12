@@ -32,6 +32,8 @@ const nextConfig = {
 		outputFileTracingIncludes: {
 			'/**': ['./messages/**/*.json'],
 		},
+		// Оптимизация импортов пакетов для уменьшения bundle size
+		optimizePackageImports: ['lucide-react', 'recharts', 'framer-motion'],
 	},
 	// Optimize fonts loading to prevent build hangs
 	optimizeFonts: true,
@@ -60,6 +62,26 @@ const nextConfig = {
 					{
 						key: 'Referrer-Policy',
 						value: 'strict-origin-when-cross-origin',
+					},
+				],
+			},
+			{
+				// Кэширование статических ресурсов
+				source: '/_next/static/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=31536000, immutable',
+					},
+				],
+			},
+			{
+				// Кэширование для API routes
+				source: '/api/search-index',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, s-maxage=3600, stale-while-revalidate=86400',
 					},
 				],
 			},

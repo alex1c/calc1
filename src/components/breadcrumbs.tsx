@@ -212,46 +212,67 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 	const autoItems = getBreadcrumbs();
 	const finalItems = items || autoItems;
 
+	// Проверяем, есть ли в finalItems элемент с главной страницей
+	const hasHomeInItems = finalItems.some(
+		(item) =>
+			item.href === '/' ||
+			item.href === `/${locale}` ||
+			item.href === ''
+	);
+
 	return (
 		<nav className='bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8'>
 			<div className='max-w-7xl mx-auto py-3'>
 				<ol className='flex items-center space-x-2 text-sm'>
-					{/* Home link */}
-					<li>
-						<Link
-							href={`/${locale}`}
-							className='text-gray-500 hover:text-gray-700 transition-colors flex items-center'
-						>
-							<Home className='h-4 w-4 mr-1' />
-							{t('breadcrumbs.home')}
-						</Link>
-					</li>
+					{/* Home link - добавляем только если его нет в items */}
+					{!hasHomeInItems && (
+						<li>
+							<Link
+								href={`/${locale}`}
+								className='text-gray-500 hover:text-gray-700 transition-colors flex items-center'
+							>
+								<Home className='h-4 w-4 mr-1' />
+								{t('breadcrumbs.home')}
+							</Link>
+						</li>
+					)}
 
 					{/* Breadcrumb items */}
-					{finalItems.map((item, index) => (
-						<li
-							key={index}
-							className='flex items-center space-x-2'
-						>
-							<ChevronRight className='h-4 w-4 text-gray-400' />
-							{item.href ? (
-								<Link
-									href={
-										item.href.startsWith('/')
-											? `/${locale}${item.href}`
-											: item.href
-									}
-									className='text-gray-500 hover:text-gray-700 transition-colors'
-								>
-									{item.label}
-								</Link>
-							) : (
-								<span className='text-gray-900 font-medium'>
-									{item.label}
-								</span>
-							)}
-						</li>
-					))}
+					{finalItems.map((item, index) => {
+						// Проверяем, является ли элемент главной страницей
+						const isHomeItem =
+							item.href === '/' ||
+							item.href === `/${locale}` ||
+							item.href === '';
+
+						return (
+							<li
+								key={index}
+								className='flex items-center space-x-2'
+							>
+								<ChevronRight className='h-4 w-4 text-gray-400' />
+								{item.href ? (
+									<Link
+										href={
+											item.href.startsWith('/')
+												? `/${locale}${item.href}`
+												: item.href
+										}
+										className='text-gray-500 hover:text-gray-700 transition-colors flex items-center'
+									>
+										{isHomeItem && (
+											<Home className='h-4 w-4 mr-1' />
+										)}
+										{item.label}
+									</Link>
+								) : (
+									<span className='text-gray-900 font-medium'>
+										{item.label}
+									</span>
+								)}
+							</li>
+						);
+					})}
 				</ol>
 			</div>
 		</nav>

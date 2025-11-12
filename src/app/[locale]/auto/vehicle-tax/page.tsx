@@ -261,7 +261,7 @@ export default async function VehicleTaxPage({ params: { locale } }: Props) {
 
 			{/* HowTo Structured Data */}
 			{(() => {
-				const howTo = messages.calculators?.vehicle-tax?.seo?.howTo;
+				const howTo = messages.calculators?.['vehicle-tax']?.seo?.howTo;
 				if (!howTo || !howTo.steps) return null;
 				return (
 					<script

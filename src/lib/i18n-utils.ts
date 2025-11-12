@@ -3,6 +3,10 @@
  * Works the same way as i18n.ts but for use in page metadata generation
  */
 
+// Кэш для переводов (в памяти, для серверных компонентов)
+const translationCache = new Map<string, any>();
+const CACHE_MAX_SIZE = 100; // Максимальное количество кэшированных переводов
+
 /**
  * Deep merge function (same as in i18n.ts)
  * Arrays are replaced, objects are merged
@@ -22,11 +26,18 @@ function deepMerge(a: any, b: any): any {
 /**
  * Load merged translations for category calculators
  * Merges base messages with category-specific JSON translations
+ * Includes caching for better performance
  */
 export async function loadMergedCategoryTranslations(
 	locale: string,
 	category: 'auto' | 'finance' | 'life' | 'math' | 'construction' | 'time' | 'health' | 'converter' | 'fun' | 'it' | 'science'
 ) {
+	// Проверяем кэш
+	const cacheKey = `${locale}-${category}`;
+	if (translationCache.has(cacheKey)) {
+		return translationCache.get(cacheKey);
+	}
+
 	// Load base monolith
 	const messages = (await import(`../../messages/${locale}.json`)).default;
 
@@ -48,7 +59,17 @@ export async function loadMergedCategoryTranslations(
 		: { calculators: categoryMessages };
 
 	// Deep merge
-	return deepMerge(messages, normalized);
+	const merged = deepMerge(messages, normalized);
+
+	// Сохраняем в кэш (с ограничением размера)
+	if (translationCache.size >= CACHE_MAX_SIZE) {
+		// Удаляем самый старый элемент (FIFO)
+		const firstKey = translationCache.keys().next().value;
+		translationCache.delete(firstKey);
+	}
+	translationCache.set(cacheKey, merged);
+
+	return merged;
 }
 
 /**

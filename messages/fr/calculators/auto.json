@@ -2832,7 +2832,14 @@
         "rubPerHp": "₽/ch.",
         "ownershipPeriod": "Durée du mandat",
         "ownershipCoefficient": "Taux de propriété",
-        "placeholder": "Entrez les paramètres et cliquez sur « Calculer »"
+        "placeholder": "Entrez les paramètres et cliquez sur « Calculer »"
+      },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Régions de Russie",
+        "accuracy": "Précision du calcul",
+        "paymentDeadlineDate": "1er décembre",
+        "paymentDeadline": "Date limite de paiement de la taxe"
       },
       "seo": {
         "title": "Calculateur de taxe de transport en ligne : calcul de la taxe automobile par capacité et région",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "Comment est calculée la taxe de transport ?",
           "content": "La taxe de transport est calculée selon une formule tenant compte de la puissance du moteur, du taux régional et de la durée de possession.",
+          "enginePowerTitle": "Puissance du moteur",
           "enginePower": "Puissance du moteur en chevaux (indiquée dans le titre du véhicule)",
+          "regionTitle": "Taux régional",
           "region": "Le taux d'imposition régional est fixé par l'entité constitutive de la Fédération de Russie (₽/ch)",
+          "ownershipTitle": "Durée de possession",
           "ownership": "Durée de possession d'une voiture par an (coefficient de 0 à 1)",
+          "formulaTitle": "Formule de calcul",
           "formula": "Taxe = Puissance × Tarif × (Mois de possession / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Conseils sur la taxe de transport",
           "content": "Pour calculer et payer correctement la taxe de transport, suivez ces recommandations :",
+          "deadlineTitle": "Délais de paiement",
           "deadline": "Gardez une trace des délais de paiement des impôts (jusqu'au 1er décembre de l'année suivante)",
+          "paymentTitle": "Vérification du calcul",
           "payment": "Vérifier l'exactitude des calculs auprès du bureau des impôts",
+          "ownershipTitle": "Durée de possession",
           "ownership": "Ne prendre en compte que la période de possession effective de la voiture",
+          "consultationTitle": "Consultations",
           "consultation": "En cas de doute, contactez vos conseillers fiscaux"
         },
         "faq": {

@@ -2827,12 +2827,19 @@
         "taxDescription": "Nakliye verginiz olacak",
         "details": "Hesaplama ayrıntıları",
         "enginePower": "Motor gücü",
-        "hp": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+        "hp": "hp",
         "taxRate": "Vergi oranı",
         "rubPerHp": "₽/hp.",
         "ownershipPeriod": "Görev süresi",
         "ownershipCoefficient": "Sahiplik oranı",
         "placeholder": "Parametreleri girin ve 'Hesapla'yı tıklayın"
+      },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Rusya bölgeleri",
+        "accuracy": "Hesaplama doğruluğu",
+        "paymentDeadlineDate": "1 Aralık",
+        "paymentDeadline": "Vergi ödeme son tarihi"
       },
       "seo": {
         "title": "Çevrimiçi taşımacılık vergisi hesaplayıcısı: kapasiteye ve bölgeye göre araç vergisinin hesaplanması",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "Taşıma vergisi nasıl hesaplanır?",
           "content": "Taşıma vergisi, motor gücü, bölgesel oran ve sahiplik süresi dikkate alınarak bir formül kullanılarak hesaplanır.",
+          "enginePowerTitle": "Motor gücü",
           "enginePower": "Beygir gücü cinsinden motor gücü (araç başlığında belirtilmiştir)",
+          "regionTitle": "Bölgesel oran",
           "region": "Bölgesel vergi oranı Rusya Federasyonu'nun kurucu kuruluşu tarafından belirlenir (₽/hp)",
+          "ownershipTitle": "Sahiplik süresi",
           "ownership": "Yıllık araç sahibi olma süresi (0'dan 1'e kadar katsayı)",
+          "formulaTitle": "Hesaplama formülü",
           "formula": "Vergi = Güç × Oran × (Sahip Olma Ayı / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Taşıma vergisi ipuçları",
           "content": "Taşıma vergisini doğru hesaplamak ve ödemek için şu önerileri izleyin:",
+          "deadlineTitle": "Ödeme tarihleri",
           "deadline": "Vergi ödeme tarihlerini takip edin (gelecek yılın 1 Aralık tarihine kadar)",
+          "paymentTitle": "Hesaplama doğrulama",
           "payment": "Hesaplamaların doğruluğunu vergi dairesinden kontrol edin",
+          "ownershipTitle": "Sahiplik süresi",
           "ownership": "Yalnızca arabanın fiili sahiplik süresini dikkate alın",
+          "consultationTitle": "Danışmanlık",
           "consultation": "Şüpheniz varsa vergi danışmanlarınızla iletişime geçin"
         },
         "faq": {

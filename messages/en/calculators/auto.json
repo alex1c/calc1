@@ -2834,6 +2834,13 @@
         "ownershipCoefficient": "Ownership rate",
         "placeholder": "Enter parameters and click 'Calculate'"
       },
+      "hero": {
+        "regionsCount": "85",
+        "regions": "Regions of Russia",
+        "accuracy": "Calculation accuracy",
+        "paymentDeadlineDate": "December 1",
+        "paymentDeadline": "Tax payment deadline"
+      },
       "seo": {
         "title": "Online transport tax calculator: calculating car tax by capacity and region",
         "description": "Free transport tax calculator to calculate your car tax. Calculate transport tax by engine power, region of registration and period of ownership online.",
@@ -2927,9 +2934,13 @@
         "calculation": {
           "title": "How is transport tax calculated?",
           "content": "Transport tax is calculated using a formula taking into account engine power, regional rate and ownership period.",
+          "enginePowerTitle": "Engine power",
           "enginePower": "Engine power in horsepower (indicated in the vehicle title)",
+          "regionTitle": "Regional rate",
           "region": "The regional tax rate is set by the constituent entity of the Russian Federation (₽/hp)",
+          "ownershipTitle": "Ownership period",
           "ownership": "Car ownership period per year (coefficient from 0 to 1)",
+          "formulaTitle": "Calculation formula",
           "formula": "Tax = Power × Rate × (Months of Ownership / 12)"
         },
         "advantages": {
@@ -2943,9 +2954,13 @@
         "tips": {
           "title": "Transport tax tips",
           "content": "To correctly calculate and pay transport tax, follow these recommendations:",
+          "deadlineTitle": "Payment deadlines",
           "deadline": "Keep track of tax payment deadlines (until December 1 of the next year)",
+          "paymentTitle": "Calculation verification",
           "payment": "Check the correctness of calculations with the tax office",
+          "ownershipTitle": "Ownership period",
           "ownership": "Take into account only the period of actual ownership of the car",
+          "consultationTitle": "Consultations",
           "consultation": "If in doubt, contact your tax advisors"
         },
         "faq": {
