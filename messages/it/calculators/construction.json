@@ -5460,7 +5460,33 @@
 				"copied": "Copiato!",
 				"export": "Esportare",
 				"exportPdf": "PDF",
-				"exportExcel": "Eccellere"
+				"exportExcel": "Eccellere",
+				"calculationDetails": {
+					"title": "Descrizione dettagliata del calcolo",
+					"step1": {
+						"title": "Passo 1: Calcolo del numero di barre per strato",
+						"description": "Calcola il numero di barre di rinforzo lungo la lunghezza e la larghezza della struttura, tenendo conto della spaziatura della griglia.",
+						"barsLength": "Barre lungo la lunghezza",
+						"barsWidth": "Barre lungo la larghezza",
+						"totalBars": "Totale barre per strato"
+					},
+					"step2": {
+						"title": "Passo 2: Calcolo della lunghezza totale del rinforzo",
+						"description": "Moltiplica il numero di barre per strato per il numero di strati e l'altezza della struttura.",
+						"formula": "Lunghezza totale"
+					},
+					"step3": {
+						"title": "Passo 3: Calcolo del peso del rinforzo",
+						"description": "Determina il peso del rinforzo secondo GOST 5781-82. Per un diametro di {diameter} mm, il peso per metro è {weightPerMeter} kg.",
+						"weightPerMeter": "Peso per metro",
+						"totalWeight": "Peso totale"
+					},
+					"step4": {
+						"title": "Passo 4: Calcolo del numero di barre standard",
+						"description": "Calcola il numero di barre standard da 12 metri necessarie per il rinforzo.",
+						"formula": "Numero di barre"
+					}
+				}
 			},
 			"tips": {
 				"title": "Suggerimenti per il rinforzo",

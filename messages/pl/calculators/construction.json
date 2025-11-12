@@ -5460,7 +5460,33 @@
         "copied": "Skopiowano!",
         "export": "Eksport",
         "exportPdf": "PDF",
-        "exportExcel": "Przewyższać"
+        "exportExcel": "Przewyższać",
+        "calculationDetails": {
+          "title": "Szczegółowy opis obliczeń",
+          "step1": {
+            "title": "Krok 1: Obliczanie liczby prętów na warstwę",
+            "description": "Oblicz liczbę prętów zbrojeniowych wzdłuż długości i szerokości konstrukcji, uwzględniając odstępy siatki.",
+            "barsLength": "Pręty wzdłuż długości",
+            "barsWidth": "Pręty wzdłuż szerokości",
+            "totalBars": "Całkowita liczba prętów na warstwę"
+          },
+          "step2": {
+            "title": "Krok 2: Obliczanie całkowitej długości zbrojenia",
+            "description": "Pomnóż liczbę prętów na warstwę przez liczbę warstw i wysokość konstrukcji.",
+            "formula": "Całkowita długość"
+          },
+          "step3": {
+            "title": "Krok 3: Obliczanie masy zbrojenia",
+            "description": "Określ masę zbrojenia zgodnie z GOST 5781-82. Dla średnicy {diameter} mm masa na metr wynosi {weightPerMeter} kg.",
+            "weightPerMeter": "Masa na metr",
+            "totalWeight": "Całkowita masa"
+          },
+          "step4": {
+            "title": "Krok 4: Obliczanie liczby standardowych prętów",
+            "description": "Oblicz liczbę standardowych prętów o długości 12 metrów wymaganych do zbrojenia.",
+            "formula": "Liczba prętów"
+          }
+        }
       },
       "tips": {
         "title": "Wskazówki dotyczące wzmocnień",

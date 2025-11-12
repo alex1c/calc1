@@ -5460,7 +5460,33 @@
         "copied": "Copied!",
         "export": "Export",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Detailed Calculation Description",
+          "step1": {
+            "title": "Step 1: Calculation of bars per layer",
+            "description": "Calculate the number of reinforcement bars along the length and width of the structure, taking into account the grid spacing.",
+            "barsLength": "Bars along length",
+            "barsWidth": "Bars along width",
+            "totalBars": "Total bars per layer"
+          },
+          "step2": {
+            "title": "Step 2: Calculation of total reinforcement length",
+            "description": "Multiply the number of bars per layer by the number of layers and the height of the structure.",
+            "formula": "Total length"
+          },
+          "step3": {
+            "title": "Step 3: Calculation of reinforcement weight",
+            "description": "Determine the reinforcement weight according to GOST 5781-82. For diameter {diameter} mm, the weight per meter is {weightPerMeter} kg.",
+            "weightPerMeter": "Weight per meter",
+            "totalWeight": "Total weight"
+          },
+          "step4": {
+            "title": "Step 4: Calculation of standard bars count",
+            "description": "Calculate the number of standard 12-meter bars required for reinforcement.",
+            "formula": "Number of bars"
+          }
+        }
       },
       "tips": {
         "title": "Reinforcement Tips",
@@ -5879,7 +5905,33 @@
         "copied": "Copied!",
         "export": "Export",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Detailed Calculation Description",
+          "step1": {
+            "title": "Step 1: Calculation of bars per layer",
+            "description": "Calculate the number of reinforcement bars along the length and width of the structure, taking into account the grid spacing.",
+            "barsLength": "Bars along length",
+            "barsWidth": "Bars along width",
+            "totalBars": "Total bars per layer"
+          },
+          "step2": {
+            "title": "Step 2: Calculation of total reinforcement length",
+            "description": "Multiply the number of bars per layer by the number of layers and the height of the structure.",
+            "formula": "Total length"
+          },
+          "step3": {
+            "title": "Step 3: Calculation of reinforcement weight",
+            "description": "Determine the reinforcement weight according to GOST 5781-82. For diameter {diameter} mm, the weight per meter is {weightPerMeter} kg.",
+            "weightPerMeter": "Weight per meter",
+            "totalWeight": "Total weight"
+          },
+          "step4": {
+            "title": "Step 4: Calculation of standard bars count",
+            "description": "Calculate the number of standard 12-meter bars required for reinforcement.",
+            "formula": "Number of bars"
+          }
+        }
       },
       "tips": {
         "title": "Tips for choosing a cable",
@@ -6293,7 +6345,33 @@
         "copied": "Copied!",
         "export": "Export",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Detailed Calculation Description",
+          "step1": {
+            "title": "Step 1: Calculation of bars per layer",
+            "description": "Calculate the number of reinforcement bars along the length and width of the structure, taking into account the grid spacing.",
+            "barsLength": "Bars along length",
+            "barsWidth": "Bars along width",
+            "totalBars": "Total bars per layer"
+          },
+          "step2": {
+            "title": "Step 2: Calculation of total reinforcement length",
+            "description": "Multiply the number of bars per layer by the number of layers and the height of the structure.",
+            "formula": "Total length"
+          },
+          "step3": {
+            "title": "Step 3: Calculation of reinforcement weight",
+            "description": "Determine the reinforcement weight according to GOST 5781-82. For diameter {diameter} mm, the weight per meter is {weightPerMeter} kg.",
+            "weightPerMeter": "Weight per meter",
+            "totalWeight": "Total weight"
+          },
+          "step4": {
+            "title": "Step 4: Calculation of standard bars count",
+            "description": "Calculate the number of standard 12-meter bars required for reinforcement.",
+            "formula": "Number of bars"
+          }
+        }
       },
       "tips": {
         "title": "Tips for designing a staircase",

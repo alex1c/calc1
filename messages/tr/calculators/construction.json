@@ -5460,7 +5460,33 @@
         "copied": "Kopyalandı!",
         "export": "İhracat",
         "exportPdf": "PDF'ler",
-        "exportExcel": "excel"
+        "exportExcel": "excel",
+        "calculationDetails": {
+          "title": "Detaylı hesaplama açıklaması",
+          "step1": {
+            "title": "Adım 1: Katman başına çubuk sayısının hesaplanması",
+            "description": "Izgara aralığını dikkate alarak yapının uzunluğu ve genişliği boyunca donatı çubuklarının sayısını hesaplayın.",
+            "barsLength": "Uzunluk boyunca çubuklar",
+            "barsWidth": "Genişlik boyunca çubuklar",
+            "totalBars": "Katman başına toplam çubuk"
+          },
+          "step2": {
+            "title": "Adım 2: Toplam donatı uzunluğunun hesaplanması",
+            "description": "Katman başına çubuk sayısını katman sayısı ve yapının yüksekliği ile çarpın.",
+            "formula": "Toplam uzunluk"
+          },
+          "step3": {
+            "title": "Adım 3: Donatı ağırlığının hesaplanması",
+            "description": "GOST 5781-82'ye göre donatı ağırlığını belirleyin. {diameter} mm çap için metre başına ağırlık {weightPerMeter} kg'dır.",
+            "weightPerMeter": "Metre başına ağırlık",
+            "totalWeight": "Toplam ağırlık"
+          },
+          "step4": {
+            "title": "Adım 4: Standart çubuk sayısının hesaplanması",
+            "description": "Donatı için gerekli 12 metrelik standart çubuk sayısını hesaplayın.",
+            "formula": "Çubuk sayısı"
+          }
+        }
       },
       "tips": {
         "title": "Güçlendirme İpuçları",

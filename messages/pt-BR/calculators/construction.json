@@ -5460,7 +5460,33 @@
         "copied": "Copiado!",
         "export": "Exportar",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Descrição detalhada do cálculo",
+          "step1": {
+            "title": "Passo 1: Cálculo do número de barras por camada",
+            "description": "Calcule o número de barras de reforço ao longo do comprimento e largura da estrutura, levando em consideração o espaçamento da grade.",
+            "barsLength": "Barras ao longo do comprimento",
+            "barsWidth": "Barras ao longo da largura",
+            "totalBars": "Total de barras por camada"
+          },
+          "step2": {
+            "title": "Passo 2: Cálculo do comprimento total do reforço",
+            "description": "Multiplique o número de barras por camada pelo número de camadas e pela altura da estrutura.",
+            "formula": "Comprimento total"
+          },
+          "step3": {
+            "title": "Passo 3: Cálculo do peso do reforço",
+            "description": "Determine o peso do reforço de acordo com GOST 5781-82. Para um diâmetro de {diameter} mm, o peso por metro é {weightPerMeter} kg.",
+            "weightPerMeter": "Peso por metro",
+            "totalWeight": "Peso total"
+          },
+          "step4": {
+            "title": "Passo 4: Cálculo do número de barras padrão",
+            "description": "Calcule o número de barras padrão de 12 metros necessárias para o reforço.",
+            "formula": "Número de barras"
+          }
+        }
       },
       "tips": {
         "title": "Dicas de reforço",
@@ -5879,7 +5905,33 @@
         "copied": "Copiado!",
         "export": "Exportar",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Descrição detalhada do cálculo",
+          "step1": {
+            "title": "Passo 1: Cálculo do número de barras por camada",
+            "description": "Calcule o número de barras de reforço ao longo do comprimento e largura da estrutura, levando em consideração o espaçamento da grade.",
+            "barsLength": "Barras ao longo do comprimento",
+            "barsWidth": "Barras ao longo da largura",
+            "totalBars": "Total de barras por camada"
+          },
+          "step2": {
+            "title": "Passo 2: Cálculo do comprimento total do reforço",
+            "description": "Multiplique o número de barras por camada pelo número de camadas e pela altura da estrutura.",
+            "formula": "Comprimento total"
+          },
+          "step3": {
+            "title": "Passo 3: Cálculo do peso do reforço",
+            "description": "Determine o peso do reforço de acordo com GOST 5781-82. Para um diâmetro de {diameter} mm, o peso por metro é {weightPerMeter} kg.",
+            "weightPerMeter": "Peso por metro",
+            "totalWeight": "Peso total"
+          },
+          "step4": {
+            "title": "Passo 4: Cálculo do número de barras padrão",
+            "description": "Calcule o número de barras padrão de 12 metros necessárias para o reforço.",
+            "formula": "Número de barras"
+          }
+        }
       },
       "tips": {
         "title": "Dicas para escolher um cabo",
@@ -6293,7 +6345,33 @@
         "copied": "Copiado!",
         "export": "Exportar",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Descrição detalhada do cálculo",
+          "step1": {
+            "title": "Passo 1: Cálculo do número de barras por camada",
+            "description": "Calcule o número de barras de reforço ao longo do comprimento e largura da estrutura, levando em consideração o espaçamento da grade.",
+            "barsLength": "Barras ao longo do comprimento",
+            "barsWidth": "Barras ao longo da largura",
+            "totalBars": "Total de barras por camada"
+          },
+          "step2": {
+            "title": "Passo 2: Cálculo do comprimento total do reforço",
+            "description": "Multiplique o número de barras por camada pelo número de camadas e pela altura da estrutura.",
+            "formula": "Comprimento total"
+          },
+          "step3": {
+            "title": "Passo 3: Cálculo do peso do reforço",
+            "description": "Determine o peso do reforço de acordo com GOST 5781-82. Para um diâmetro de {diameter} mm, o peso por metro é {weightPerMeter} kg.",
+            "weightPerMeter": "Peso por metro",
+            "totalWeight": "Peso total"
+          },
+          "step4": {
+            "title": "Passo 4: Cálculo do número de barras padrão",
+            "description": "Calcule o número de barras padrão de 12 metros necessárias para o reforço.",
+            "formula": "Número de barras"
+          }
+        }
       },
       "tips": {
         "title": "Dicas para projetar uma escada",

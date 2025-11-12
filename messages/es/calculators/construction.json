@@ -5460,7 +5460,33 @@
         "copied": "¡Copiado!",
         "export": "Exportar",
         "exportPdf": "PDF",
-        "exportExcel": "Sobresalir"
+        "exportExcel": "Sobresalir",
+        "calculationDetails": {
+          "title": "Descripción detallada del cálculo",
+          "step1": {
+            "title": "Paso 1: Cálculo de barras por capa",
+            "description": "Calcule el número de barras de refuerzo a lo largo del largo y ancho de la estructura, teniendo en cuenta el espaciado de la cuadrícula.",
+            "barsLength": "Barras a lo largo del largo",
+            "barsWidth": "Barras a lo largo del ancho",
+            "totalBars": "Total de barras por capa"
+          },
+          "step2": {
+            "title": "Paso 2: Cálculo de la longitud total del refuerzo",
+            "description": "Multiplique el número de barras por capa por el número de capas y la altura de la estructura.",
+            "formula": "Longitud total"
+          },
+          "step3": {
+            "title": "Paso 3: Cálculo del peso del refuerzo",
+            "description": "Determine el peso del refuerzo según GOST 5781-82. Para un diámetro de {diameter} mm, el peso por metro es {weightPerMeter} kg.",
+            "weightPerMeter": "Peso por metro",
+            "totalWeight": "Peso total"
+          },
+          "step4": {
+            "title": "Paso 4: Cálculo del número de barras estándar",
+            "description": "Calcule el número de barras estándar de 12 metros necesarias para el refuerzo.",
+            "formula": "Número de barras"
+          }
+        }
       },
       "tips": {
         "title": "Consejos de refuerzo",

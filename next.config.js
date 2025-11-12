@@ -66,12 +66,92 @@ const nextConfig = {
 				],
 			},
 			{
-				// Кэширование статических ресурсов
+				// Кэширование статических ресурсов Next.js
 				source: '/_next/static/:path*',
 				headers: [
 					{
 						key: 'Cache-Control',
 						value: 'public, max-age=31536000, immutable',
+					},
+				],
+			},
+			{
+				// Кэширование изображений
+				source: '/images/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=604800, stale-while-revalidate=86400',
+					},
+				],
+			},
+			{
+				// Кэширование favicon
+				source: '/favicon.ico',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=604800, immutable',
+					},
+				],
+			},
+			{
+				// Кэширование favicon PNG файлов
+				source: '/favicon-:size.png',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=604800, immutable',
+					},
+				],
+			},
+			{
+				// Кэширование Apple Touch Icon
+				source: '/apple-touch-icon.png',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=604800, immutable',
+					},
+				],
+			},
+			{
+				// Кэширование Android Chrome Icons
+				source: '/android-chrome-:size.png',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=604800, immutable',
+					},
+				],
+			},
+			{
+				// Кэширование manifest.json
+				source: '/manifest.json',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=604800, stale-while-revalidate=86400',
+					},
+				],
+			},
+			{
+				// Кэширование robots.txt
+				source: '/robots.txt',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=86400, stale-while-revalidate=3600',
+					},
+				],
+			},
+			{
+				// Кэширование sitemap.xml
+				source: '/sitemap.xml',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=86400, stale-while-revalidate=3600',
 					},
 				],
 			},

@@ -5460,7 +5460,33 @@
         "copied": "Copié!",
         "export": "Exporter",
         "exportPdf": "PDF",
-        "exportExcel": "Exceller"
+        "exportExcel": "Exceller",
+        "calculationDetails": {
+          "title": "Description détaillée du calcul",
+          "step1": {
+            "title": "Étape 1 : Calcul du nombre de barres par couche",
+            "description": "Calculez le nombre de barres d'armature le long de la longueur et de la largeur de la structure, en tenant compte de l'espacement de la grille.",
+            "barsLength": "Barres le long de la longueur",
+            "barsWidth": "Barres le long de la largeur",
+            "totalBars": "Total des barres par couche"
+          },
+          "step2": {
+            "title": "Étape 2 : Calcul de la longueur totale de l'armature",
+            "description": "Multipliez le nombre de barres par couche par le nombre de couches et la hauteur de la structure.",
+            "formula": "Longueur totale"
+          },
+          "step3": {
+            "title": "Étape 3 : Calcul du poids de l'armature",
+            "description": "Déterminez le poids de l'armature selon GOST 5781-82. Pour un diamètre de {diameter} mm, le poids par mètre est de {weightPerMeter} kg.",
+            "weightPerMeter": "Poids par mètre",
+            "totalWeight": "Poids total"
+          },
+          "step4": {
+            "title": "Étape 4 : Calcul du nombre de barres standard",
+            "description": "Calculez le nombre de barres standard de 12 mètres nécessaires pour l'armature.",
+            "formula": "Nombre de barres"
+          }
+        }
       },
       "tips": {
         "title": "Conseils de renforcement",

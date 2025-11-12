@@ -5460,7 +5460,33 @@
         "copied": "Kopiert!",
         "export": "Export",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Detaillierte Berechnungsbeschreibung",
+          "step1": {
+            "title": "Schritt 1: Berechnung der Stäbe pro Schicht",
+            "description": "Berechnen Sie die Anzahl der Bewehrungsstäbe entlang der Länge und Breite der Struktur unter Berücksichtigung des Rasterabstands.",
+            "barsLength": "Stäbe entlang der Länge",
+            "barsWidth": "Stäbe entlang der Breite",
+            "totalBars": "Gesamtzahl der Stäbe pro Schicht"
+          },
+          "step2": {
+            "title": "Schritt 2: Berechnung der Gesamtlänge der Bewehrung",
+            "description": "Multiplizieren Sie die Anzahl der Stäbe pro Schicht mit der Anzahl der Schichten und der Höhe der Struktur.",
+            "formula": "Gesamtlänge"
+          },
+          "step3": {
+            "title": "Schritt 3: Berechnung des Bewehrungsgewichts",
+            "description": "Bestimmen Sie das Bewehrungsgewicht nach GOST 5781-82. Für einen Durchmesser von {diameter} mm beträgt das Gewicht pro Meter {weightPerMeter} kg.",
+            "weightPerMeter": "Gewicht pro Meter",
+            "totalWeight": "Gesamtgewicht"
+          },
+          "step4": {
+            "title": "Schritt 4: Berechnung der Anzahl der Standardstäbe",
+            "description": "Berechnen Sie die Anzahl der Standardstäbe mit einer Länge von 12 Metern, die für die Bewehrung erforderlich sind.",
+            "formula": "Anzahl der Stäbe"
+          }
+        }
       },
       "tips": {
         "title": "Verstärkungstipps",
@@ -5879,7 +5905,33 @@
         "copied": "Kopiert!",
         "export": "Export",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Detaillierte Berechnungsbeschreibung",
+          "step1": {
+            "title": "Schritt 1: Berechnung der Stäbe pro Schicht",
+            "description": "Berechnen Sie die Anzahl der Bewehrungsstäbe entlang der Länge und Breite der Struktur unter Berücksichtigung des Rasterabstands.",
+            "barsLength": "Stäbe entlang der Länge",
+            "barsWidth": "Stäbe entlang der Breite",
+            "totalBars": "Gesamtzahl der Stäbe pro Schicht"
+          },
+          "step2": {
+            "title": "Schritt 2: Berechnung der Gesamtlänge der Bewehrung",
+            "description": "Multiplizieren Sie die Anzahl der Stäbe pro Schicht mit der Anzahl der Schichten und der Höhe der Struktur.",
+            "formula": "Gesamtlänge"
+          },
+          "step3": {
+            "title": "Schritt 3: Berechnung des Bewehrungsgewichts",
+            "description": "Bestimmen Sie das Bewehrungsgewicht nach GOST 5781-82. Für einen Durchmesser von {diameter} mm beträgt das Gewicht pro Meter {weightPerMeter} kg.",
+            "weightPerMeter": "Gewicht pro Meter",
+            "totalWeight": "Gesamtgewicht"
+          },
+          "step4": {
+            "title": "Schritt 4: Berechnung der Anzahl der Standardstäbe",
+            "description": "Berechnen Sie die Anzahl der Standardstäbe mit einer Länge von 12 Metern, die für die Bewehrung erforderlich sind.",
+            "formula": "Anzahl der Stäbe"
+          }
+        }
       },
       "tips": {
         "title": "Tipps zur Kabelauswahl",
@@ -6293,7 +6345,33 @@
         "copied": "Kopiert!",
         "export": "Export",
         "exportPdf": "PDF",
-        "exportExcel": "Excel"
+        "exportExcel": "Excel",
+        "calculationDetails": {
+          "title": "Detaillierte Berechnungsbeschreibung",
+          "step1": {
+            "title": "Schritt 1: Berechnung der Stäbe pro Schicht",
+            "description": "Berechnen Sie die Anzahl der Bewehrungsstäbe entlang der Länge und Breite der Struktur unter Berücksichtigung des Rasterabstands.",
+            "barsLength": "Stäbe entlang der Länge",
+            "barsWidth": "Stäbe entlang der Breite",
+            "totalBars": "Gesamtzahl der Stäbe pro Schicht"
+          },
+          "step2": {
+            "title": "Schritt 2: Berechnung der Gesamtlänge der Bewehrung",
+            "description": "Multiplizieren Sie die Anzahl der Stäbe pro Schicht mit der Anzahl der Schichten und der Höhe der Struktur.",
+            "formula": "Gesamtlänge"
+          },
+          "step3": {
+            "title": "Schritt 3: Berechnung des Bewehrungsgewichts",
+            "description": "Bestimmen Sie das Bewehrungsgewicht nach GOST 5781-82. Für einen Durchmesser von {diameter} mm beträgt das Gewicht pro Meter {weightPerMeter} kg.",
+            "weightPerMeter": "Gewicht pro Meter",
+            "totalWeight": "Gesamtgewicht"
+          },
+          "step4": {
+            "title": "Schritt 4: Berechnung der Anzahl der Standardstäbe",
+            "description": "Berechnen Sie die Anzahl der Standardstäbe mit einer Länge von 12 Metern, die für die Bewehrung erforderlich sind.",
+            "formula": "Anzahl der Stäbe"
+          }
+        }
       },
       "tips": {
         "title": "Tipps zur Gestaltung einer Treppe",
