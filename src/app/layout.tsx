@@ -18,6 +18,8 @@ const inter = Inter({
 		'Roboto',
 		'sans-serif',
 	], // Fallback fonts
+	// Limit font weights to reduce build time
+	weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {

@@ -63,8 +63,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT || 22 }}
-          timeout: 3600s
-          command_timeout: 3600s
+          timeout: 7200s
+          command_timeout: 7200s
           script: |
             set -e
             cd /var/www/calc1.ru || exit 1
@@ -74,8 +74,10 @@ jobs:
             # Set environment variables to speed up build
             export DOCKER_BUILDKIT=1
             export COMPOSE_DOCKER_CLI_BUILD=1
+            # Set font loading timeout to prevent build hangs
+            export NEXT_FONT_LOADER_TIMEOUT=120000
             # Use cache for faster builds, but rebuild layers if needed
-            docker compose build || docker-compose build || exit 1
+            docker compose build --build-arg NEXT_FONT_LOADER_TIMEOUT=120000 || docker-compose build --build-arg NEXT_FONT_LOADER_TIMEOUT=120000 || exit 1
             
             echo "▶️ Starting containers..."
             docker compose up -d || docker-compose up -d || exit 1
