@@ -34,9 +34,9 @@ interface RebarResult {
 
 /**
  * Rebar Calculator Component
- * 
+ *
  * A React component for calculating rebar (reinforcement steel) needed for concrete structures.
- * 
+ *
  * Features:
  * - Structure type selection (foundation, slab, wall, column)
  * - Dimensions input (length, width, height)
@@ -48,14 +48,14 @@ interface RebarResult {
  * - Copy results to clipboard
  * - PDF export
  * - Responsive design
- * 
+ *
  * Uses GOST 5781-82 standard for rebar weight calculations.
  * Uses inline calculation logic for rebar quantity and weight.
  */
 export default function RebarCalculator() {
 	// Internationalization hook for translations
 	const t = useTranslations('calculators.rebarCalculator');
-	
+
 	// Form state management
 	const [structureType, setStructureType] = useState<string>('foundation'); // Structure type (foundation, slab, wall, column)
 	const [length, setLength] = useState<number>(0); // Structure length (m)
@@ -128,14 +128,17 @@ export default function RebarCalculator() {
 
 			// Get weight per meter - use table value or calculate by formula
 			let weightPerMeter = rebarWeights[rebarDiameter];
-			
+
 			// If diameter not in table, calculate using GOST 5781-82 formula
 			// Weight (kg/m) = d² × 0.006165, where d is diameter in mm
 			// Formula based on: weight = (π × d² × ρ) / 4, where ρ = 7850 kg/m³ (steel density)
 			if (!weightPerMeter && rebarDiameter > 0) {
-				weightPerMeter = Math.round((rebarDiameter * rebarDiameter * 0.006165) * 1000) / 1000;
+				weightPerMeter =
+					Math.round(
+						rebarDiameter * rebarDiameter * 0.006165 * 1000
+					) / 1000;
 			}
-			
+
 			if (!weightPerMeter || weightPerMeter <= 0) {
 				alert(t('form.errors.diameterTooSmall'));
 				setIsCalculating(false);
@@ -440,44 +443,63 @@ export default function RebarCalculator() {
 								{/* Step 1: Bars calculation */}
 								<div className='bg-white p-4 rounded-lg shadow-sm'>
 									<h4 className='font-semibold text-gray-900 mb-2'>
-										{t('results.calculationDetails.step1.title')}
+										{t(
+											'results.calculationDetails.step1.title'
+										)}
 									</h4>
 									<p className='text-gray-700 mb-2'>
-										{t('results.calculationDetails.step1.description')}
+										{t(
+											'results.calculationDetails.step1.description'
+										)}
 									</p>
 									<div className='bg-gray-50 p-3 rounded mt-2 font-mono text-sm'>
 										<div className='mb-1'>
-											{t('results.calculationDetails.step1.barsLength')}:{' '}
+											{t(
+												'results.calculationDetails.step1.barsLength'
+											)}
+											:{' '}
 											<span className='font-bold text-orange-600'>
 												{Math.ceil(
 													result.dimensions.length /
-														(result.grid.spacing / 100)
+														(result.grid.spacing /
+															100)
 												) + 1}
 											</span>{' '}
-											шт = ⌈{result.dimensions.length} м / (
-											{result.grid.spacing} см / 100)⌉ + 1
+											шт = ⌈{result.dimensions.length} м /
+											({result.grid.spacing} см / 100)⌉ +
+											1
 										</div>
 										<div className='mb-1'>
-											{t('results.calculationDetails.step1.barsWidth')}:{' '}
+											{t(
+												'results.calculationDetails.step1.barsWidth'
+											)}
+											:{' '}
 											<span className='font-bold text-orange-600'>
 												{Math.ceil(
 													result.dimensions.width /
-														(result.grid.spacing / 100)
+														(result.grid.spacing /
+															100)
 												) + 1}
 											</span>{' '}
-											шт = ⌈{result.dimensions.width} м / (
-											{result.grid.spacing} см / 100)⌉ + 1
+											шт = ⌈{result.dimensions.width} м /
+											({result.grid.spacing} см / 100)⌉ +
+											1
 										</div>
 										<div className='font-bold text-gray-900'>
-											{t('results.calculationDetails.step1.totalBars')}:{' '}
+											{t(
+												'results.calculationDetails.step1.totalBars'
+											)}
+											:{' '}
 											<span className='text-orange-600'>
 												{result.barsPerLayer}
 											</span>{' '}
-											шт = {Math.ceil(
+											шт ={' '}
+											{Math.ceil(
 												result.dimensions.length /
 													(result.grid.spacing / 100)
 											) + 1}{' '}
-											+ {Math.ceil(
+											+{' '}
+											{Math.ceil(
 												result.dimensions.width /
 													(result.grid.spacing / 100)
 											) + 1}
@@ -488,19 +510,27 @@ export default function RebarCalculator() {
 								{/* Step 2: Total length calculation */}
 								<div className='bg-white p-4 rounded-lg shadow-sm'>
 									<h4 className='font-semibold text-gray-900 mb-2'>
-										{t('results.calculationDetails.step2.title')}
+										{t(
+											'results.calculationDetails.step2.title'
+										)}
 									</h4>
 									<p className='text-gray-700 mb-2'>
-										{t('results.calculationDetails.step2.description')}
+										{t(
+											'results.calculationDetails.step2.description'
+										)}
 									</p>
 									<div className='bg-gray-50 p-3 rounded mt-2 font-mono text-sm'>
 										<div className='font-bold text-gray-900'>
-											{t('results.calculationDetails.step2.formula')}:{' '}
+											{t(
+												'results.calculationDetails.step2.formula'
+											)}
+											:{' '}
 											<span className='text-blue-600'>
 												{result.totalLength.toFixed(2)}
 											</span>{' '}
-											м = {result.barsPerLayer} шт × {result.grid.layers}{' '}
-											слоя × {result.dimensions.height} м
+											м = {result.barsPerLayer} шт ×{' '}
+											{result.grid.layers} слоя ×{' '}
+											{result.dimensions.height} м
 										</div>
 									</div>
 								</div>
@@ -508,29 +538,42 @@ export default function RebarCalculator() {
 								{/* Step 3: Weight calculation */}
 								<div className='bg-white p-4 rounded-lg shadow-sm'>
 									<h4 className='font-semibold text-gray-900 mb-2'>
-										{t('results.calculationDetails.step3.title')}
+										{t(
+											'results.calculationDetails.step3.title'
+										)}
 									</h4>
 									<p className='text-gray-700 mb-2'>
-										{t('results.calculationDetails.step3.description', {
-											diameter: result.grid.diameter,
-											weightPerMeter: result.weightPerMeter,
-										})}
+										{t(
+											'results.calculationDetails.step3.description',
+											{
+												diameter: result.grid.diameter,
+												weightPerMeter:
+													result.weightPerMeter,
+											}
+										)}
 									</p>
 									<div className='bg-gray-50 p-3 rounded mt-2 font-mono text-sm'>
 										<div className='mb-1'>
-											{t('results.calculationDetails.step3.weightPerMeter')}:{' '}
+											{t(
+												'results.calculationDetails.step3.weightPerMeter'
+											)}
+											:{' '}
 											<span className='font-bold text-green-600'>
 												{result.weightPerMeter}
 											</span>{' '}
-											кг/м (ГОСТ 5781-82, Ø{result.grid.diameter} мм)
+											кг/м (ГОСТ 5781-82, Ø
+											{result.grid.diameter} мм)
 										</div>
 										<div className='font-bold text-gray-900'>
-											{t('results.calculationDetails.step3.totalWeight')}:{' '}
+											{t(
+												'results.calculationDetails.step3.totalWeight'
+											)}
+											:{' '}
 											<span className='text-green-600'>
 												{result.totalWeight.toFixed(2)}
 											</span>{' '}
-											кг = {result.totalLength.toFixed(2)} м ×{' '}
-											{result.weightPerMeter} кг/м
+											кг = {result.totalLength.toFixed(2)}{' '}
+											м × {result.weightPerMeter} кг/м
 										</div>
 									</div>
 								</div>
@@ -538,18 +581,27 @@ export default function RebarCalculator() {
 								{/* Step 4: Bar count calculation */}
 								<div className='bg-white p-4 rounded-lg shadow-sm'>
 									<h4 className='font-semibold text-gray-900 mb-2'>
-										{t('results.calculationDetails.step4.title')}
+										{t(
+											'results.calculationDetails.step4.title'
+										)}
 									</h4>
 									<p className='text-gray-700 mb-2'>
-										{t('results.calculationDetails.step4.description')}
+										{t(
+											'results.calculationDetails.step4.description'
+										)}
 									</p>
 									<div className='bg-gray-50 p-3 rounded mt-2 font-mono text-sm'>
 										<div className='font-bold text-gray-900'>
-											{t('results.calculationDetails.step4.formula')}:{' '}
+											{t(
+												'results.calculationDetails.step4.formula'
+											)}
+											:{' '}
 											<span className='text-purple-600'>
 												{result.barCount}
 											</span>{' '}
-											шт = ⌈{result.totalLength.toFixed(2)} м / 12 м⌉
+											шт = ⌈
+											{result.totalLength.toFixed(2)} м /
+											12 м⌉
 										</div>
 									</div>
 								</div>
