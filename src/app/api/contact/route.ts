@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 /**
  * API endpoint for contact form submission
- * Sends email to calc1.ru@yandex.ru using Yandex SMTP
+ * Sends notification via Telegram Bot API
  */
 export async function POST(request: NextRequest) {
 	try {
@@ -27,83 +26,62 @@ export async function POST(request: NextRequest) {
 			);
 		}
 
-		// Prepare email content
-		const subject = `Обратная связь с Calc1.ru от ${name}`;
-		const emailBody = `
-Новое сообщение с формы обратной связи Calc1.ru
+		// Check Telegram configuration
+		const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
+		const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 
-Имя: ${name}
-Email: ${email}
+		if (!telegramBotToken || !telegramChatId) {
+			console.error(
+				'Telegram configuration is missing. TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must be set.'
+			);
+			return NextResponse.json(
+				{
+					error: 'Конфигурация Telegram не настроена. Обратитесь к администратору.',
+				},
+				{ status: 500 }
+			);
+		}
 
-Сообщение:
+		// Prepare Telegram message
+		const telegramMessage = `📧 *Новое сообщение с формы обратной связи Calc1.ru*
+
+👤 *Имя:* ${name}
+📮 *Email:* ${email}
+
+💬 *Сообщение:*
 ${message}
 
 ---
-Это сообщение было отправлено автоматически с сайта calc1.ru
-`;
+_Отправлено автоматически с сайта calc1.ru_`;
 
-		// Check if email configuration is available
-		const yandexEmail = process.env.YANDEX_EMAIL;
-		const yandexPassword = process.env.YANDEX_PASSWORD;
+		// Send message via Telegram Bot API
+		const telegramApiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
 
-		if (!yandexEmail || !yandexPassword) {
-			console.error(
-				'Email configuration is missing. YANDEX_EMAIL and YANDEX_PASSWORD must be set.'
-			);
-			return NextResponse.json(
-				{
-					error:
-						'Конфигурация почты не настроена. Обратитесь к администратору.',
-				},
-				{ status: 500 }
-			);
-		}
-
-		// Create transporter for Yandex SMTP
-		const transporter = nodemailer.createTransport({
-			host: 'smtp.yandex.ru',
-			port: 465,
-			secure: true, // true for 465, false for other ports
-			auth: {
-				user: yandexEmail,
-				pass: yandexPassword,
+		const response = await fetch(telegramApiUrl, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
 			},
-			connectionTimeout: 10000, // 10 seconds timeout for connection
-			greetingTimeout: 10000, // 10 seconds timeout for greeting
-			socketTimeout: 10000, // 10 seconds timeout for socket
+			body: JSON.stringify({
+				chat_id: telegramChatId,
+				text: telegramMessage,
+				parse_mode: 'Markdown',
+			}),
 		});
 
-		// Verify transporter configuration
-		try {
-			await transporter.verify();
-		} catch (verifyError) {
-			console.error('SMTP verification failed:', verifyError);
+		const responseData = await response.json();
+
+		if (!response.ok || !responseData.ok) {
+			console.error('Telegram API error:', responseData);
 			return NextResponse.json(
 				{
-					error:
-						'Ошибка подключения к почтовому серверу. Проверьте настройки.',
+					error: 'Ошибка отправки сообщения в Telegram. Попробуйте позже.',
 				},
 				{ status: 500 }
 			);
 		}
 
-		// Send email with timeout
-		const sendPromise = transporter.sendMail({
-			from: yandexEmail,
-			to: 'calc1.ru@yandex.ru',
-			subject,
-			text: emailBody,
-			replyTo: email, // Allow replying directly to the sender
-		});
-
-		// Add timeout wrapper
-		const timeoutPromise = new Promise((_, reject) => {
-			setTimeout(() => {
-				reject(new Error('Email sending timeout'));
-			}, 30000); // 30 seconds timeout
-		});
-
-		await Promise.race([sendPromise, timeoutPromise]);
+		console.log('Message sent successfully to Telegram');
 
 		return NextResponse.json(
 			{
@@ -114,24 +92,21 @@ ${message}
 		);
 	} catch (error) {
 		console.error('Contact form error:', error);
-		
-		// Provide more detailed error message
+
 		let errorMessage = 'Произошла ошибка при отправке сообщения';
-		
+
 		if (error instanceof Error) {
 			if (error.message.includes('timeout')) {
-				errorMessage = 'Превышено время ожидания отправки. Попробуйте позже.';
-			} else if (error.message.includes('authentication')) {
-				errorMessage = 'Ошибка аутентификации. Проверьте настройки почты.';
-			} else if (error.message.includes('connection')) {
-				errorMessage = 'Ошибка подключения к почтовому серверу.';
+				errorMessage =
+					'Превышено время ожидания отправки. Попробуйте позже.';
+			} else if (error.message.includes('fetch')) {
+				errorMessage =
+					'Ошибка подключения к серверу Telegram. Попробуйте позже.';
 			}
+
 			console.error('Error details:', error.message);
 		}
-		
-		return NextResponse.json(
-			{ error: errorMessage },
-			{ status: 500 }
-		);
+
+		return NextResponse.json({ error: errorMessage }, { status: 500 });
 	}
 }
