@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import DoseCalculator from '@/components/calculators/dose-calculator';
 import DoseSEO from '@/components/seo/dose-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the dose calculator page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.dose.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Калькулятор дозировки');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для расчёта дозировки лекарств. Точный расчёт дозы препарата на основе веса, возраста и других параметров.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

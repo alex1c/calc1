@@ -9,7 +9,11 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 // Динамический импорт калькулятора для оптимизации загрузки
 const MortgageCalculator = dynamic(
@@ -51,9 +55,15 @@ export async function generateMetadata({
 				.filter(Boolean)
 		: [];
 
+	const title = getSafeTitle(t('title'), 'Калькулятор ипотеки');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор ипотеки. Расчёт ежемесячного платежа, переплаты и графика платежей по ипотечному кредиту.'
+	);
+
 	return {
-		title: `${t('title')} | Calc1.ru`,
-		description: t('description'),
+		title,
+		description,
 		keywords,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
@@ -69,8 +79,8 @@ export async function generateMetadata({
 			languages: generateLanguageAlternates('/finance/mortgage'),
 		},
 		openGraph: {
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/finance/mortgage`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -86,8 +96,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: 'summary_large_image',
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			images: ['https://calc1.ru/images/mortgage-calculator-og.jpg'],
 		},
 		robots: {

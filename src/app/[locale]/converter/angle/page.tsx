@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import AngleCalculator from '@/components/calculators/angle-calculator';
 import AngleSEO from '@/components/seo/angle-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the angle converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.angle-converter.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер углов');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц углов: градусы, радианы, грады. Быстрый перевод между единицами измерения углов.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

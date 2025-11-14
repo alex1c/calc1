@@ -8,7 +8,11 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -34,9 +38,15 @@ export async function generateMetadata({
 				.filter(Boolean)
 		: [];
 
+	const title = getSafeTitle(t('title'), 'Калькулятор транспортного налога');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор транспортного налога. Расчёт налога на автомобиль, мотоцикл и другие транспортные средства по мощности двигателя.'
+	);
+
 	return {
-		title: `${t('title')} | Calc1.ru`,
-		description: t('description'),
+		title,
+		description,
 		keywords,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
@@ -52,8 +62,8 @@ export async function generateMetadata({
 			languages: generateLanguageAlternates('/auto/vehicle-tax'),
 		},
 		openGraph: {
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/auto/vehicle-tax`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -69,8 +79,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: 'summary_large_image',
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			images: ['https://calc1.ru/images/vehicle-tax-calculator-og.jpg'],
 		},
 		robots: {

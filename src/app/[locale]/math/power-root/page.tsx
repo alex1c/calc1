@@ -9,7 +9,11 @@ import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -23,9 +27,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const messages = await loadMergedMathTranslations(locale);
 	const t = (key: string) => messages.calculators.powerRoot.seo[key];
 
+	const title = getSafeTitle(t('title'), 'Калькулятор степеней и корней');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для возведения в степень и извлечения корня. Вычисление квадратного, кубического и корня n-й степени. Быстрые и точные расчёты.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		keywords: [
 			'калькулятор степеней',
 			'калькулятор корней',
@@ -52,8 +62,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			languages: generateLanguageAlternates('/math/power-root'),
 		},
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/math/power-root`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -61,8 +71,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		twitter: {
 			card: 'summary_large_image',
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 		},
 	};
 }

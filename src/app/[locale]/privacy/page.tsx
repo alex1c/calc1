@@ -5,7 +5,11 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import { Shield, FileText, Lock, Eye, Database, Cookie, UserCheck } from 'lucide-react';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -32,9 +36,15 @@ export async function generateMetadata({
 		return getNestedValue(privacyMessages, key);
 	};
 
+	const title = getSafeTitle(t('title'), 'Политика конфиденциальности');
+	const description = getSafeDescription(
+		t('description'),
+		'Политика конфиденциальности Calc1.ru. Информация о сборе, использовании и защите персональных данных пользователей сайта.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',
@@ -44,8 +54,8 @@ export async function generateMetadata({
 			languages: generateLanguageAlternates('/privacy'),
 		},
 		openGraph: {
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/privacy`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -53,8 +63,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: 'summary',
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 		},
 		robots: {
 			index: true,

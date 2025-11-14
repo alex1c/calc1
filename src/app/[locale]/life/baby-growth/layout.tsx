@@ -1,5 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 interface BabyGrowthLayoutProps {
 	children: React.ReactNode;
@@ -42,9 +46,15 @@ export async function generateMetadata({
 		);
 	};
 
+	const title = getSafeTitle(t('title'), 'Калькулятор роста и веса ребёнка');
+	const description = getSafeDescription(
+		t('description'),
+		'Онлайн-калькулятор роста и веса ребёнка по данным ВОЗ. Определите, соответствует ли ваш ребёнок нормам роста и массы тела.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		keywords: [
 			'калькулятор роста ребёнка',
 			'нормы роста ВОЗ',
@@ -53,8 +63,8 @@ export async function generateMetadata({
 			'развитие ребёнка',
 		],
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			type: 'website',
 			url: `https://calc1.ru/${params.locale}/life/baby-growth`,
 		},

@@ -5,7 +5,11 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import { Info, Target, Users, Award, Calculator } from 'lucide-react';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -22,9 +26,15 @@ export async function generateMetadata({
 
 	const t = (key: string) => messages.about?.[key] || key;
 
+	const title = getSafeTitle(t('title'), 'О нас');
+	const description = getSafeDescription(
+		t('description'),
+		'Calc1.ru - бесплатные онлайн калькуляторы для различных расчётов. Автомобильные, финансовые, строительные, математические и другие калькуляторы.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',
@@ -34,8 +44,8 @@ export async function generateMetadata({
 			languages: generateLanguageAlternates('/about'),
 		},
 		openGraph: {
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/about`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -43,8 +53,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: 'summary',
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 		},
 		robots: {
 			index: true,

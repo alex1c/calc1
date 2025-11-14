@@ -1,6 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 interface Props {
 	params: { locale: string };
@@ -17,10 +21,17 @@ export async function generateMetadata({
 	const baseUrl = 'https://calc1.ru';
 	const currentPath = `/${locale}/life/pregnancy`;
 
+	const title = getSafeTitle(t('title'), 'Калькулятор беременности');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор беременности. Определите срок беременности, дату родов, неделю беременности и другие важные параметры.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 		authors: [{ name: 'Calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',

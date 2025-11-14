@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import SpeedCalculator from '@/components/calculators/speed-calculator';
 import SpeedSEO from '@/components/seo/speed-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the speed converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.speed.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер скорости');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц скорости: км/ч, м/с, мили/ч, узлы. Быстрый перевод между единицами измерения скорости.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

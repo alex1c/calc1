@@ -1,5 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 interface BloodAlcoholLayoutProps {
 	children: React.ReactNode;
@@ -18,13 +22,20 @@ export async function generateMetadata({
 		namespace: 'calculators.bloodAlcohol.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Калькулятор содержания алкоголя в крови');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для определения содержания алкоголя в крови. Расчёт промилле на основе количества выпитого алкоголя, веса и времени.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			type: 'website',
 			url: `https://calc1.ru/${params.locale}/life/blood-alcohol`,
 			siteName: 'Calc1.ru',
@@ -39,8 +50,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: 'summary_large_image',
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			images: ['https://calc1.ru/og-blood-alcohol.jpg'],
 		},
 		alternates: {

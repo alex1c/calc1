@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import VolumeCalculator from '@/components/calculators/volume-calculator';
 import VolumeSEO from '@/components/seo/volume-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the volume converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.volume-converter.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер объёма');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц объёма: литры, миллилитры, галлоны, пинты, кубические метры. Быстрый перевод между метрическими и имперскими единицами измерения объёма.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

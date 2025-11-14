@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import PressureCalculator from '@/components/calculators/pressure-calculator';
 import PressureSEO from '@/components/seo/pressure-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the pressure converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.pressure.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер давления');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц давления: паскали, бары, атмосферы, psi. Быстрый перевод между единицами измерения давления.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

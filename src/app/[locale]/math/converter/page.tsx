@@ -9,7 +9,11 @@ import ConverterSEO from '@/components/seo/converter-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 // Dynamic import for calculator component
 const ConverterCalculator = dynamic(
 	() => import('@/components/calculators/converter-calculator'),
@@ -33,8 +37,11 @@ export async function generateMetadata({
 		namespace: 'calculators.converter.seo',
 	});
 
-	const title = t('title');
-	const description = t('description');
+	const title = getSafeTitle(t('title'), 'Конвертер единиц измерения');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц измерения: длина, масса, объём, температура, скорость, давление, энергия и другие. Быстрый перевод между метрическими и имперскими единицами.'
+	);
 	const canonicalUrl = `https://calc1.ru/${locale}/math/converter`;
 
 	return {

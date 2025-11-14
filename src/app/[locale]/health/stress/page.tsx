@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import StressCalculator from '@/components/calculators/stress-calculator';
 import StressSEO from '@/components/seo/stress-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the stress calculator page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.stress.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Калькулятор стресса');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для оценки уровня стресса. Определите свой уровень стресса и получите рекомендации по его снижению.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

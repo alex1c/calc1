@@ -9,7 +9,11 @@ import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -23,9 +27,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const messages = await loadMergedMathTranslations(locale);
 	const t = (key: string) => messages.calculators.volume.seo[key];
 
+	const title = getSafeTitle(t('title'), 'Калькулятор объёма геометрических тел');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для расчёта объёма геометрических тел: сфера, куб, цилиндр, конус, пирамида и другие. Точные формулы и быстрые расчёты.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		keywords: [
 			'калькулятор объёма',
 			'объём сферы',
@@ -73,8 +83,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			languages: generateLanguageAlternates('/math/volume'),
 		},
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/math/volume`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -90,8 +100,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		twitter: {
 			card: 'summary_large_image',
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			images: ['https://calc1.ru/og-volume-calculator.jpg'],
 		},
 		robots: {

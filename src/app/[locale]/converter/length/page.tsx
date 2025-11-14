@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import LengthCalculator from '@/components/calculators/length-calculator';
 import LengthSEO from '@/components/seo/length-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the length converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.length.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер длины');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц длины: метры, километры, мили, футы, дюймы, ярды. Быстрый перевод между метрическими и имперскими единицами измерения длины.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

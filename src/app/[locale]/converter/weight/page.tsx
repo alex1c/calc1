@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import WeightCalculator from '@/components/calculators/weight-calculator';
 import WeightSEO from '@/components/seo/weight-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the weight converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.weight.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер веса');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц веса: килограммы, граммы, фунты, унции, тонны. Быстрый перевод между метрическими и имперскими единицами измерения веса.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

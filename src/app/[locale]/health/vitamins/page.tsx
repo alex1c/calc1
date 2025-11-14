@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import VitaminsCalculator from '@/components/calculators/vitamins-calculator';
 import VitaminsSEO from '@/components/seo/vitamins-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the vitamins calculator page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.vitamins.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Калькулятор витаминов');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для расчёта суточной потребности в витаминах и минералах. Персонализированные рекомендации по дозировке.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

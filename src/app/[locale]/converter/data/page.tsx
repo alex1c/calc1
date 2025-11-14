@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import DataCalculator from '@/components/calculators/data-calculator';
 import DataSEO from '@/components/seo/data-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the data converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.data-converter.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер данных');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер единиц данных: биты, байты, килобайты, мегабайты, гигабайты, терабайты. Быстрый перевод между единицами измерения данных.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 		alternates: {
 			canonical: 'https://calc1.ru/converter/data',
 			languages: {
@@ -33,8 +44,8 @@ export async function generateMetadata({
 			},
 		},
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/converter/data`,
 			siteName: 'Calc1.ru',
 			images: [

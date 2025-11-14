@@ -6,7 +6,11 @@ import ContactForm from '@/components/contact-form';
 import { MessageSquare } from 'lucide-react';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -33,9 +37,15 @@ export async function generateMetadata({
 		return getNestedValue(contactMessages, key);
 	};
 
+	const title = getSafeTitle(t('title'), 'Контакты');
+	const description = getSafeDescription(
+		t('description'),
+		'Свяжитесь с нами через форму обратной связи. Мы ответим на ваши вопросы о калькуляторах Calc1.ru в ближайшее время.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',
 		publisher: 'Calc1.ru',
@@ -45,8 +55,8 @@ export async function generateMetadata({
 			languages: generateLanguageAlternates('/contact'),
 		},
 		openGraph: {
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 			url: `https://calc1.ru/${locale}/contact`,
 			siteName: 'Calc1.ru',
 			locale: locale,
@@ -54,8 +64,8 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: 'summary',
-			title: `${t('title')} | Calc1.ru`,
-			description: t('description'),
+			title,
+			description,
 		},
 		robots: {
 			index: true,

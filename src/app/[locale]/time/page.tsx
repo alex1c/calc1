@@ -5,7 +5,11 @@ import Header from '@/components/header';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/breadcrumbs';
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 import {
 	Clock,
 	Calendar,
@@ -42,9 +46,15 @@ export async function generateMetadata({
 				.filter(Boolean)
 		: [];
 
+	const title = getSafeTitle(t('title'), 'Калькуляторы времени');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатные онлайн калькуляторы времени: таймер, секундомер, календарь, возраст, дни между датами, мировое время и другие инструменты для работы со временем.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		keywords,
 		authors: [{ name: 'Calc1.ru', url: 'https://calc1.ru' }],
 		creator: 'Calc1.ru',

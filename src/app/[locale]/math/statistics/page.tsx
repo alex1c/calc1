@@ -8,7 +8,11 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import StatisticsSEO from '@/components/seo/statistics-seo';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 // Dynamic import for calculator component
 const StatisticsCalculator = dynamic(
 	() => import('@/components/calculators/statistics-calculator'),
@@ -35,8 +39,11 @@ export async function generateMetadata({
 		namespace: 'categories',
 	});
 
-	const title = t('title');
-	const description = t('description');
+	const title = getSafeTitle(t('title'), 'Калькулятор статистики');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор статистики: среднее, медиана, мода, дисперсия, стандартное отклонение. Анализ данных и описательная статистика.'
+	);
 	const canonicalUrl = `https://calc1.ru/${locale}/math/statistics`;
 
 	return {

@@ -9,7 +9,11 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -22,20 +26,27 @@ export async function generateMetadata({
 		namespace: 'calculators.credit-loan.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Калькулятор кредита');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор для расчёта кредита: ежемесячный платёж, переплата, график платежей. Расчёт потребительского, автокредита и ипотеки.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 		openGraph: {
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 			type: 'website',
 			url: `https://calc1.ru/${locale}/finance/credit-loan`,
 		},
 		twitter: {
 			card: 'summary_large_image',
-			title: t('title'),
-			description: t('description'),
+			title,
+			description,
 		},
 		alternates: {
 			canonical: `https://calc1.ru/${locale}/finance/credit-loan`,

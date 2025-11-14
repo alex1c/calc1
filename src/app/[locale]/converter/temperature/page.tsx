@@ -5,6 +5,10 @@ import Breadcrumbs from '@/components/breadcrumbs';
 import TemperatureCalculator from '@/components/calculators/temperature-calculator';
 import TemperatureSEO from '@/components/seo/temperature-seo';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
+import {
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 
 /**
  * Generate metadata for the temperature converter page
@@ -19,10 +23,17 @@ export async function generateMetadata({
 		namespace: 'calculators.temperature.seo',
 	});
 
+	const title = getSafeTitle(t('title'), 'Конвертер температуры');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн конвертер температуры: Цельсий, Фаренгейт, Кельвин. Быстрый перевод между единицами измерения температуры.'
+	);
+	const keywordsValue = t('keywords');
+
 	return {
-		title: t('title'),
-		description: t('description'),
-		keywords: t('keywords'),
+		title,
+		description,
+		keywords: keywordsValue ? keywordsValue.split(',').map((k: string) => k.trim()) : [],
 	};
 }
 

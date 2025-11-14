@@ -9,7 +9,11 @@ import { Metadata } from 'next';
 import SoftwareApplicationSchema from '@/components/seo/software-application-schema';
 
 import { isSupportedLocale } from '@/lib/constants';
-import { generateLanguageAlternates } from '@/lib/metadata-utils';
+import {
+	generateLanguageAlternates,
+	getSafeTitle,
+	getSafeDescription,
+} from '@/lib/metadata-utils';
 interface Props {
 	params: { locale: string };
 }
@@ -23,9 +27,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const messages = await loadMergedLifeTranslations(locale);
 	const t = (key: string) => messages.calculators.bmi.seo[key];
 
+	const title = getSafeTitle(t('title'), 'Калькулятор ИМТ (индекс массы тела)');
+	const description = getSafeDescription(
+		t('description'),
+		'Бесплатный онлайн калькулятор индекса массы тела (ИМТ). Определите свой нормальный вес, избыточный вес или недостаток веса. Расчёт ИМТ для мужчин и женщин.'
+	);
+
 	return {
-		title: t('title'),
-		description: t('description'),
+		title,
+		description,
 		keywords: [
 			'калькулятор имт',
 			'индекс массы тела',
