@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 /**
  * API endpoint for contact form submission
- * Sends email to calc1.ru@yandex.ru
+ * Sends email to calc1.ru@yandex.ru using Yandex SMTP
  */
 export async function POST(request: NextRequest) {
 	try {
@@ -41,39 +42,42 @@ ${message}
 Это сообщение было отправлено автоматически с сайта calc1.ru
 `;
 
-		// Send email to calc1.ru@yandex.ru
-		// Note: In production, implement actual email sending using:
-		// - Nodemailer with SMTP
-		// - SendGrid
-		// - AWS SES
-		// - Resend
-		// - Mailgun
-		
-		// For now, log the email (replace with actual sending in production)
-		console.log('Contact form submission:', {
-			to: 'calc1.ru@yandex.ru',
-			subject,
-			body: emailBody,
+		// Check if email configuration is available
+		const yandexEmail = process.env.YANDEX_EMAIL;
+		const yandexPassword = process.env.YANDEX_PASSWORD;
+
+		if (!yandexEmail || !yandexPassword) {
+			console.error(
+				'Email configuration is missing. YANDEX_EMAIL and YANDEX_PASSWORD must be set.'
+			);
+			return NextResponse.json(
+				{
+					error:
+						'Конфигурация почты не настроена. Обратитесь к администратору.',
+				},
+				{ status: 500 }
+			);
+		}
+
+		// Create transporter for Yandex SMTP
+		const transporter = nodemailer.createTransport({
+			host: 'smtp.yandex.ru',
+			port: 465,
+			secure: true, // true for 465, false for other ports
+			auth: {
+				user: yandexEmail,
+				pass: yandexPassword,
+			},
 		});
 
-		// TODO: Replace with actual email sending
-		// Example with Nodemailer (install: npm install nodemailer):
-		// const nodemailer = require('nodemailer');
-		// const transporter = nodemailer.createTransport({
-		//   host: 'smtp.yandex.ru',
-		//   port: 465,
-		//   secure: true,
-		//   auth: {
-		//     user: process.env.YANDEX_EMAIL,
-		//     pass: process.env.YANDEX_PASSWORD,
-		//   },
-		// });
-		// await transporter.sendMail({
-		//   from: process.env.YANDEX_EMAIL,
-		//   to: 'calc1.ru@yandex.ru',
-		//   subject,
-		//   text: emailBody,
-		// });
+		// Send email
+		await transporter.sendMail({
+			from: yandexEmail,
+			to: 'calc1.ru@yandex.ru',
+			subject,
+			text: emailBody,
+			replyTo: email, // Allow replying directly to the sender
+		});
 
 		return NextResponse.json(
 			{
