@@ -68,16 +68,42 @@ ${message}
 				user: yandexEmail,
 				pass: yandexPassword,
 			},
+			connectionTimeout: 10000, // 10 seconds timeout for connection
+			greetingTimeout: 10000, // 10 seconds timeout for greeting
+			socketTimeout: 10000, // 10 seconds timeout for socket
 		});
 
-		// Send email
-		await transporter.sendMail({
+		// Verify transporter configuration
+		try {
+			await transporter.verify();
+		} catch (verifyError) {
+			console.error('SMTP verification failed:', verifyError);
+			return NextResponse.json(
+				{
+					error:
+						'Ошибка подключения к почтовому серверу. Проверьте настройки.',
+				},
+				{ status: 500 }
+			);
+		}
+
+		// Send email with timeout
+		const sendPromise = transporter.sendMail({
 			from: yandexEmail,
 			to: 'calc1.ru@yandex.ru',
 			subject,
 			text: emailBody,
 			replyTo: email, // Allow replying directly to the sender
 		});
+
+		// Add timeout wrapper
+		const timeoutPromise = new Promise((_, reject) => {
+			setTimeout(() => {
+				reject(new Error('Email sending timeout'));
+			}, 30000); // 30 seconds timeout
+		});
+
+		await Promise.race([sendPromise, timeoutPromise]);
 
 		return NextResponse.json(
 			{
@@ -88,8 +114,23 @@ ${message}
 		);
 	} catch (error) {
 		console.error('Contact form error:', error);
+		
+		// Provide more detailed error message
+		let errorMessage = 'Произошла ошибка при отправке сообщения';
+		
+		if (error instanceof Error) {
+			if (error.message.includes('timeout')) {
+				errorMessage = 'Превышено время ожидания отправки. Попробуйте позже.';
+			} else if (error.message.includes('authentication')) {
+				errorMessage = 'Ошибка аутентификации. Проверьте настройки почты.';
+			} else if (error.message.includes('connection')) {
+				errorMessage = 'Ошибка подключения к почтовому серверу.';
+			}
+			console.error('Error details:', error.message);
+		}
+		
 		return NextResponse.json(
-			{ error: 'Произошла ошибка при отправке сообщения' },
+			{ error: errorMessage },
 			{ status: 500 }
 		);
 	}

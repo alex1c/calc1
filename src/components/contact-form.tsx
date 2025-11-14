@@ -27,32 +27,65 @@ export default function ContactForm({ locale }: ContactFormProps) {
 		setStatus({ type: 'idle', message: '' });
 
 		try {
+			// Create AbortController for timeout
+			const controller = new AbortController();
+			const timeoutId = setTimeout(() => controller.abort(), 35000); // 35 seconds timeout
+
 			const response = await fetch('/api/contact', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify(formData),
+				signal: controller.signal,
 			});
 
-			const data = await response.json();
+			clearTimeout(timeoutId);
 
-			if (response.ok) {
-				setStatus({
-					type: 'success',
-					message: data.message || 'Сообщение успешно отправлено',
-				});
-				setFormData({ name: '', email: '', message: '' });
-			} else {
+			// Check if response is ok before parsing JSON
+			if (!response.ok) {
+				// Try to parse error message
+				let errorMessage = 'Произошла ошибка при отправке';
+				try {
+					const errorData = await response.json();
+					errorMessage = errorData.error || errorMessage;
+				} catch {
+					// If JSON parsing fails, use status text
+					errorMessage = response.statusText || errorMessage;
+				}
+
 				setStatus({
 					type: 'error',
-					message: data.error || 'Произошла ошибка при отправке',
+					message: errorMessage,
 				});
+				return;
 			}
+
+			// Parse successful response
+			const data = await response.json();
+
+			setStatus({
+				type: 'success',
+				message: data.message || 'Сообщение успешно отправлено',
+			});
+			setFormData({ name: '', email: '', message: '' });
 		} catch (error) {
+			// Handle different types of errors
+			let errorMessage = 'Произошла ошибка при отправке сообщения';
+
+			if (error instanceof Error) {
+				if (error.name === 'AbortError') {
+					errorMessage = 'Превышено время ожидания. Проверьте подключение к интернету и попробуйте снова.';
+				} else if (error.message.includes('Failed to fetch')) {
+					errorMessage = 'Не удалось подключиться к серверу. Проверьте подключение к интернету.';
+				} else {
+					errorMessage = error.message || errorMessage;
+				}
+			}
+
 			setStatus({
 				type: 'error',
-				message: 'Произошла ошибка при отправке сообщения',
+				message: errorMessage,
 			});
 		} finally {
 			setIsSubmitting(false);
